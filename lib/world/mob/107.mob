@@ -19,6 +19,9 @@ Dex: 18
 Int: 12
 Wis: 12
 Cha: 18
+GenWimpy: 4
+GenRoam: 82
+GenFollow: 18
 E
 #10702
 cidadã otaviana~
@@ -40,6 +43,9 @@ Dex: 16
 Int: 13
 Wis: 13
 Cha: 20
+GenWimpy: 3
+GenRoam: 66
+GenFollow: 14
 E
 #10703
 fireheart diomiriano~
@@ -64,6 +70,8 @@ Dex: 18
 Int: 13
 Wis: 13
 Cha: 20
+GenWimpy: 3
+GenFollow: 14
 E
 #10704
 Waterheart armiliano~
@@ -87,6 +95,8 @@ Dex: 18
 Int: 16
 Wis: 16
 Cha: 20
+GenBrave: 2
+GenFollow: 14
 E
 #10705
 criança otaviana~
@@ -108,8 +118,11 @@ Int: 13
 Wis: 13
 Con: 10
 Cha: 20
-GenWimpy: 3
-GenRoam: 59
+GenWimpy: 12
+GenLoot: 8
+GenEquip: 1
+GenRoam: 89
+GenFollow: 14
 E
 #10706
 cidadão limpeza~
@@ -252,6 +265,9 @@ Int: 15
 Wis: 13
 Con: 13
 Cha: 18
+GenWimpy: 5
+GenLoot: 1
+GenFollow: 18
 E
 #10713
 cavaleiro lendário otaviano~
@@ -362,6 +378,8 @@ Int: 18
 Wis: 18
 Con: 15
 Cha: 18
+GenWimpy: 8
+GenFollow: 12
 E
 #10718
 grifo dourado~
@@ -387,6 +405,8 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
+GenWimpy: 5
+GenFollow: 17
 E
 #10719
 cedro gigante~
@@ -408,6 +428,8 @@ Int: 20
 Wis: 20
 Con: 16
 Cha: 13
+GenWimpy: 4
+GenFollow: 14
 E
 #10720
 gumbly~
@@ -429,8 +451,9 @@ Int: 8
 Wis: 6
 Con: 8
 Cha: 15
-GenWimpy: 5
-GenRoam: 79
+GenWimpy: 11
+GenRoam: 86
+GenFollow: 4
 E
 #10721
 guardião fogo~
@@ -454,6 +477,9 @@ Int: 22
 Wis: 22
 Con: 22
 Cha: 22
+GenWimpy: 3
+GenBrave: 1
+GenFollow: 16
 E
 #10722
 guardião água~
@@ -476,6 +502,8 @@ Int: 22
 Wis: 22
 Con: 20
 Cha: 22
+GenWimpy: 3
+GenFollow: 15
 E
 #10723
 guardião ar~
@@ -499,6 +527,8 @@ Int: 22
 Wis: 22
 Con: 20
 Cha: 20
+GenWimpy: 7
+GenFollow: 15
 E
 #10724
 guardião terra~
@@ -522,6 +552,8 @@ Int: 20
 Wis: 20
 Con: 25
 Cha: 18
+GenWimpy: 4
+GenFollow: 15
 E
 #10725
 guardião quinto~
@@ -543,6 +575,10 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenLoot: 6
+GenEquip: 1
+GenFollow: 15
 E
 #10726
 pássaro azul~
@@ -565,6 +601,7 @@ Wis: 5
 Con: 8
 Cha: 18
 GenWimpy: 3
+GenFollow: 5
 E
 #10727
 esquilo cinza~
@@ -587,6 +624,7 @@ Wis: 5
 Con: 9
 Cha: 13
 GenWimpy: 15
+GenFollow: 6
 E
 #10728
 poetisa otaviana~

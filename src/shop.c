@@ -100,6 +100,19 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
     if (IS_GOD(ch))
         return (TRUE);
 
+    /* Check emotion-based trading restrictions for mobs with AI */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(ch)) {
+        /* Use hybrid emotion system: get effective trust toward this player */
+        int effective_trust = get_effective_emotion_toward(keeper, ch, EMOTION_TYPE_TRUST);
+        
+        /* Low trust makes shopkeeper refuse service */
+        if (effective_trust < CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD) {
+            snprintf(buf, sizeof(buf), "%s Eu não confio em você o suficiente para fazer negócios.", GET_NAME(ch));
+            do_tell(keeper, buf, cmd_tell, 0);
+            return (FALSE);
+        }
+    }
+
     if ((IS_GOOD(ch) && NOTRADE_GOOD(shop_nr)) || (IS_EVIL(ch) && NOTRADE_EVIL(shop_nr)) ||
         (IS_NEUTRAL(ch) && NOTRADE_NEUTRAL(shop_nr))) {
         snprintf(buf, sizeof(buf), "%s %s", GET_NAME(ch), MSG_NO_SELL_ALIGN);
@@ -439,7 +452,33 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    float emotion_modifier = 1.0; /* Start with no emotion modifier */
+
+    /* Apply emotion-based price adjustments if keeper is a mob with AI data */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(buyer)) {
+        /* Use hybrid emotion system to get personalized emotions toward this buyer */
+        int effective_trust = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_TRUST);
+        int effective_greed = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_GREED);
+        int effective_friendship = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_FRIENDSHIP);
+        
+        /* High trust gives better prices (discount for buyer) */
+        if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.90; /* 10% discount */
+        }
+
+        /* High greed increases prices (markup for keeper) */
+        if (effective_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.15; /* 15% markup */
+        }
+
+        /* High friendship gives discounts */
+        if (effective_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.85; /* 15% discount */
+        }
+    }
+
+    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
+                 emotion_modifier);
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
@@ -448,13 +487,51 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 {
     float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float emotion_modifier = 1.0; /* Start with no emotion modifier */
+    int price;
+
+    /* Apply emotion-based price adjustments if keeper is a mob with AI data */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(seller)) {
+        /* Use hybrid emotion system to get personalized emotions toward this seller */
+        int effective_trust = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_TRUST);
+        int effective_greed = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_GREED);
+        int effective_friendship = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_FRIENDSHIP);
+        
+        /* High trust gives better prices (keeper pays more when buying from player) */
+        if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.10; /* 10% bonus */
+        }
+
+        /* High greed decreases what keeper pays (keeper wants to profit more) */
+        if (effective_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.85; /* 15% reduction */
+        }
+
+        /* High friendship gives better prices (keeper pays more) */
+        if (effective_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.15; /* 15% bonus */
+        }
+    }
+
+    sell_cost_modifier *= emotion_modifier;
+
+    /* Ensure sell_cost_modifier doesn't go to 0 or negative */
+    if (sell_cost_modifier < 0.01)
+        sell_cost_modifier = 0.01;
 
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+
+    /* Ensure we return at least 1 gold for items with non-zero cost to prevent truncation to 0 */
+    if (price < 1 && GET_OBJ_COST(obj) > 0)
+        price = 1;
+
+    return price;
 }
 
+/* The Player is Buying and the shopkeeper is selling the object */
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
     char tempstr[MAX_INPUT_LENGTH - 10], tempbuf[MAX_INPUT_LENGTH];
@@ -620,6 +697,11 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
 
     send_to_char(ch, "Agora voce tem %s.\r\n", tempstr);
 
+    /* Emotion trigger: Fair trade (Economic Action 2.5) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && bought > 0) {
+        update_mob_emotion_fair_trade(keeper, ch);
+    }
+
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);
 }
@@ -728,6 +810,7 @@ static void sort_keeper_objs(struct char_data *keeper, int shop_nr)
     }
 }
 
+/* The Player is sellin and the shopkeeper is buying the object */
 void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
     char tempstr[MAX_INPUT_LENGTH - 10], name[MAX_INPUT_LENGTH], tempbuf[MAX_INPUT_LENGTH];   // -
@@ -811,6 +894,16 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     do_tell(keeper, tempbuf, cmd_tell, 0);
 
     send_to_char(ch, "O vendedor agora tem %s.\r\n", tempstr);
+
+    /* Emotion triggers: Fair trade and receiving valuables (Economic Action 2.5) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && sold > 0) {
+        update_mob_emotion_fair_trade(keeper, ch);
+
+        /* If selling valuable items (total value > 1000 gold), trigger greed/happiness */
+        if (goldamt >= 1000) {
+            update_mob_emotion_received_valuable(keeper, ch, goldamt);
+        }
+    }
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);
@@ -963,6 +1056,24 @@ int ok_shop_room(int shop_nr, room_vnum room)
     for (mindex = 0; SHOP_ROOM(shop_nr, mindex) != NOWHERE; mindex++)
         if (SHOP_ROOM(shop_nr, mindex) == room)
             return (TRUE);
+    return (FALSE);
+}
+
+/* Check if a room is used by any shop
+ * Returns TRUE if the room is used by at least one shop, FALSE otherwise */
+int is_shop_room(room_vnum room)
+{
+    int shop_nr;
+
+    /* Safety check */
+    if (!shop_index || top_shop < 0)
+        return (FALSE);
+
+    /* Check all shops to see if this room is used by any of them */
+    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+        if (ok_shop_room(shop_nr, room))
+            return (TRUE);
+    }
     return (FALSE);
 }
 

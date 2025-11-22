@@ -12,8 +12,11 @@ rua de Vitália.
 275 1890
 9 9 1
 GenWimpy: 100
-GenLoot: 51
-GenRoam: 86
+GenLoot: 99
+GenEquip: 3
+GenRoam: 88
+GenGroup: 1
+GenFollow: 2
 E
 #10001
 magra mulher aldeã~
@@ -29,8 +32,11 @@ aparecendo pelo mal fabricado e raquítico vestido.
 175 1876
 9 9 2
 GenWimpy: 100
-GenLoot: 17
-GenRoam: 83
+GenLoot: 92
+GenEquip: 1
+GenRoam: 84
+GenGroup: 7
+GenFollow: 2
 E
 #10002
 tenente caspan soldado~
@@ -70,10 +76,11 @@ angustiante conjunto.
 18 3 0 4d7+550 15d1+19
 300 32456
 9 9 1
-GenWimpy: 48
+GenWimpy: 100
 GenLoot: 99
-GenEquip: 5
-GenRoam: 42
+GenEquip: 39
+GenRoam: 58
+GenFollow: 13
 E
 #10005
 pequena aldeia ladra menina~
@@ -88,10 +95,12 @@ pena dela?
 8 11 6 2d9+150 1d3+7
 2 3000
 9 9 2
-GenWimpy: 96
-GenLoot: 9
-GenRoam: 81
-GenGroup: 4
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 2
+GenRoam: 83
+GenGroup: 1
+GenFollow: 3
 E
 #10006
 pálida criança trapos~
@@ -106,9 +115,11 @@ inocentes, e sorri um sorriso sem dentes.
 0 3000
 9 9 1
 GenWimpy: 99
-GenLoot: 18
+GenLoot: 99
+GenEquip: 3
 GenRoam: 88
-GenGroup: 4
+GenGroup: 1
+GenFollow: 3
 E
 #10007
 grávida mulher~
@@ -137,8 +148,9 @@ tristemente para você e continua mancando em frente.
 9 9 0
 BareHandAttack: 4
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 75
+GenLoot: 9
+GenRoam: 86
+GenFollow: 3
 E
 #10009
 bruxa dente~
@@ -153,8 +165,9 @@ Ela lentamente levanta, estica suas pernas e pisca sugestivamente.
 10 15 6 3d7+200 1d4+7
 10 4200
 6 6 2
-GenWimpy: 27
-GenLoot: 2
+GenWimpy: 73
+GenLoot: 27
+GenFollow: 12
 E
 #10010
 mordecai~
@@ -181,6 +194,7 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 9 9 2
 GenWimpy: 100
 GenRoam: 87
+GenFollow: 3
 E
 #10012
 mulher piolhente~
@@ -193,8 +207,9 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 4 14 6 1d10+95 1d1+6
 37 1800
 9 9 2
-GenWimpy: 99
-GenLoot: 1
+GenWimpy: 100
+GenLoot: 22
+GenFollow: 5
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~

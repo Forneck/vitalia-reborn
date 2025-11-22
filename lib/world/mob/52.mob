@@ -12,6 +12,10 @@ sua personalidade.
 25 6 0 1d14+450 6d9+5
 28560 134000
 9 9 0
+GenWimpy: 24
+GenLoot: 99
+GenEquip: 8
+GenFollow: 14
 E
 T 3009
 #5201
@@ -27,10 +31,12 @@ para você, ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 98
-GenLoot: 53
-GenEquip: 2
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 11
+GenRoam: 84
+GenGroup: 2
+GenFollow: 7
 E
 T 3009
 #5202
@@ -45,9 +51,10 @@ na frente.
 11 10 1 1d20+130 2d7+0
 0 13000
 9 9 0
-GenWimpy: 24
-GenLoot: 86
-GenRoam: 13
+GenWimpy: 48
+GenLoot: 99
+GenEquip: 7
+GenFollow: 10
 E
 #5203
 mímico pedra esqueletos~
@@ -62,6 +69,10 @@ isso, ossos... nenhum farrapo ou nada mais parece estar preso a eles.
 14 7 1 3d15+150 3d5+1
 0 20000
 9 9 0
+GenWimpy: 6
+GenLoot: 33
+GenEquip: 2
+GenFollow: 12
 E
 #5204
 mimico piso~
@@ -75,8 +86,10 @@ destruição.
 11 11 3 2d6+110 2d6+0
 0 10500
 9 9 0
-GenWimpy: 18
-GenLoot: 2
+GenWimpy: 61
+GenLoot: 25
+GenEquip: 2
+GenFollow: 5
 E
 #5205
 mimico potes pedacos~
@@ -90,8 +103,9 @@ provavelmente antes da cidade tombar.
 11 14 0 1d8+100 2d5+3
 0 9800
 9 9 0
-GenWimpy: 28
-GenLoot: 9
+GenWimpy: 52
+GenLoot: 15
+GenFollow: 9
 E
 #5206
 mimico tábuas madeira~
@@ -105,8 +119,10 @@ que alguém esteve aqui antes de você...
 11 9 0 1d12+110 4d3+1
 0 12000
 9 9 0
-GenWimpy: 29
-GenLoot: 4
+GenWimpy: 60
+GenLoot: 27
+GenEquip: 3
+GenFollow: 9
 E
 #5207
 lagarto chifres~
@@ -120,7 +136,9 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 0 500
 9 9 0
 GenWimpy: 100
-GenLoot: 20
+GenLoot: 74
+GenRoam: 53
+GenFollow: 3
 E
 #5208
 golem pedra~
@@ -134,6 +152,10 @@ criatura de pedra. Ele encontra-se aqui ainda guardando a cidade.
 25 0 -5 6d6+500 4d7+3
 4250 145000
 9 9 0
+GenWimpy: 5
+GenLoot: 99
+GenEquip: 58
+GenFollow: 17
 E
 #5209
 lamia besta~
@@ -148,9 +170,11 @@ para você, ambiciosamente.
 9 10 3 1d12+120 1d4+5
 1500 7000
 9 9 2
-GenWimpy: 94
-GenLoot: 89
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 11
+GenRoam: 88
+GenFollow: 6
 E
 T 3009
 $

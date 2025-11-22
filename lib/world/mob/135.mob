@@ -10,8 +10,10 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 32
-GenRoam: 88
+GenWimpy: 54
+GenLoot: 6
+GenRoam: 89
+GenFollow: 15
 E
 #13501
 elfo cacador~
@@ -25,9 +27,10 @@ uma possível presa.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 15
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 40
+GenLoot: 8
+GenRoam: 89
+GenFollow: 9
 E
 #13502
 fada~
@@ -40,9 +43,11 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 42
-GenLoot: 4
-GenRoam: 87
+GenWimpy: 79
+GenLoot: 10
+GenRoam: 89
+GenGroup: 2
+GenFollow: 10
 E
 #13503
 inseto folha inseto-folha~
@@ -55,8 +60,10 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 34
-GenRoam: 88
+GenWimpy: 50
+GenLoot: 3
+GenRoam: 89
+GenFollow: 10
 E
 #13504
 inseto galho inseto-galho~
@@ -69,9 +76,10 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 28
-GenLoot: 3
+GenWimpy: 57
+GenLoot: 19
 GenRoam: 89
+GenFollow: 10
 E
 #13505
 inseto folha cinza~
@@ -84,8 +92,9 @@ An undefined string.
 20 0 2 1d1+1000 8d1+20
 0 40000
 9 9 0
-GenWimpy: 13
-GenRoam: 72
+GenWimpy: 17
+GenRoam: 85
+GenFollow: 10
 E
 #13506
 hierofante velho homem~
@@ -156,8 +165,10 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 27
-GenRoam: 83
+GenWimpy: 37
+GenLoot: 1
+GenRoam: 89
+GenFollow: 11
 E
 #13511
 cervo~
@@ -171,8 +182,10 @@ aponta a parte superior de sua cabeça para você.
 13 7 4 1d1+350 6d1+13
 0 13880
 9 9 1
-GenWimpy: 22
+GenWimpy: 44
+GenLoot: 3
 GenRoam: 89
+GenFollow: 11
 E
 #13512
 veado~
@@ -185,9 +198,10 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 100
-GenLoot: 7
-GenRoam: 89
+GenWimpy: 99
+GenLoot: 30
+GenRoam: 88
+GenFollow: 4
 E
 #13513
 coelho pequeno~
@@ -200,8 +214,10 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 42
-GenRoam: 88
+GenWimpy: 79
+GenLoot: 5
+GenRoam: 89
+GenFollow: 9
 E
 #13514
 cobra cega~
@@ -214,9 +230,10 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 44
-GenLoot: 4
-GenRoam: 88
+GenWimpy: 91
+GenLoot: 18
+GenRoam: 89
+GenFollow: 10
 E
 #13515
 druida~
@@ -230,10 +247,10 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenWimpy: 33
+GenWimpy: 42
 GenLoot: 1
 GenRoam: 89
-GenGroup: 1
+GenFollow: 11
 E
 #13516
 druidesa~
@@ -247,9 +264,10 @@ entrou aqui.
 13 7 4 1d1+350 6d1+13
 200 12880
 9 9 2
-GenWimpy: 29
-GenLoot: 3
+GenWimpy: 44
+GenLoot: 18
 GenRoam: 89
+GenFollow: 12
 E
 #13517
 ra~
@@ -262,8 +280,9 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 46
-GenLoot: 5
-GenRoam: 88
+GenWimpy: 84
+GenLoot: 16
+GenRoam: 89
+GenFollow: 10
 E
 $

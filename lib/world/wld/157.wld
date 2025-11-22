@@ -5,7 +5,7 @@ você chega num enorme campo.  A luz do sol quase lhe cega, tão desacostumado
 à luz você estava.  Bem ao longe, você avista uma pequena ponte, e além
 dela, um castelo.
 ~
-157 4 0 0 0 2
+157 32772 0 0 0 2
 D2
 Você vê uma ponte que aparenta ser bastante velha... Talvez não seja uma 
 boa idéia atravessá-la.
@@ -27,7 +27,7 @@ o sol é muito forte e a corda está quente.  Se gritar por socorro, ninguém
 irá te ouvir...  Só lhe resta subir, antes que os crocodilos do fosso pouco 
 abaixo de você lhe comam vivo...
 ~
-157 131076 0 0 0 9
+157 163844 0 0 0 9
 D0
 Você pode ver um grande campo aberto.
 ~
@@ -53,7 +53,7 @@ cabeça, tudo.  Numa hora dessas você está morto, mas sua alma ainda continua
 lá, vendo seu corpo ser estraçalhado.  É uma cena horrorosa, e é preciso ter 
 um estômago muito forte, para agüentar vê-la.
 ~
-157 2 0 0 0 0
+157 32768 0 0 0 0
 S
 #15704
 A Praça~
@@ -236,7 +236,7 @@ Algo impede que sua visão fique nítida. Estranho...
 D3
 ~
 passagem secreta~
-3 15715 15719
+1 15715 15719
 S
 #15712
 O Escritório~
@@ -451,7 +451,7 @@ grade cela~
 D9
 ~
 grade cela~
-3 15707 15725
+1 15707 15725
 S
 #15725
 A Cela Isolada~
@@ -469,7 +469,7 @@ mãos o medo que tomou seu corpo.  Ainda há tempo de fugir...
 D4
 ~
 grande porta~
-3 15705 15756
+1 15705 15756
 S
 #15726
 O Quintal~

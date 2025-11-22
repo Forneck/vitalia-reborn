@@ -159,13 +159,15 @@ adaga prata~
 uma adaga de prata~
 Uma adaga feita de prata, finamente trabalhada, está sobre o solo.~
 ~
-5 0 0 0 0 an 0 0 0 0 0 0 0
-0 3 3 11
-5 15000 1200 30 0
+5 0 0 0 0 ano 0 0 0 0 0 0 0
+0 5 3 11
+5 15000 1200 0 0
 A
 18 2
 A
 19 2
+A
+5 2
 #2518
 cimitarra~
 uma cimitarra curvada~
@@ -445,11 +447,15 @@ adaga prateada~
 uma adaga prateada~
 Uma adaga longa que parece ser feita de prata está aqui.~
 ~
-5 g 0 0 0 an 0 0 0 0 0 0 0
+5 g 0 0 0 ano 0 0 0 0 0 0 0
 0 2 4 11
-5 1200 500 30 0
+5 1200 500 0 0
 A
-18 1
+5 2
+A
+18 2
+A
+19 2
 #2550
 pergaminho~
 um pergaminho~
@@ -668,10 +674,14 @@ um bracelete de prata reluzente~
 Um reluzente aro de metal prateado está aqui.~
 ~
 9 gjk 0 0 0 am 0 0 0 0 0 0 0
-0 0 0 0
+5 0 0 0
 5 5000 500 30 0
 A
 17 -5
+A
+18 1
+A
+19 1
 #2575
 manto cinza~
 um manto longo cinzento~
@@ -721,8 +731,8 @@ bracelete onix~
 um bracelete de ônix~
 Um aro de ônix negro está aqui.~
 ~
-9 gjl 0 0 0 am 0 0 0 0 0 0 0
-0 0 0 0
+9 gj 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
 6 8500 850 30 0
 A
 19 2
@@ -765,8 +775,8 @@ bracelete ouro branco~
 um bracelete de ouro branco~
 Um aro de metal prateado está aqui.~
 ~
-9 gkl 0 0 0 am 0 0 0 0 0 0 0
-0 0 0 0
+9 gk 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
 5 5000 1000 30 0
 A
 18 2
@@ -800,7 +810,7 @@ um colar de espinhos~
 Um pequeno colar de espinhos está aqui.~
 ~
 9 g 0 0 0 ac 0 0 0 0 0 0 0
-0 0 0 0
+5 0 0 0
 9 10000 5000 30 0
 A
 17 -2

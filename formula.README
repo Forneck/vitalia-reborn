@@ -26,10 +26,11 @@ Operators : && Logical AND            Variables: GOOD     |  HITROLL
             DICE(a, b)                           MAXMOVE
             ?: Ternary operator                  GOLD
             SELF.                                EXP  
-            VICT.                                ARMOR
+            VICT. (or VICTIM.)                   ARMOR
                                                  PARAM
 
 All variables (except PARAM), must be precedes by either SELF. or VICT.
+(Note: VICTIM. is also accepted as an alias for VICT.)
 
 Return value(s):
 

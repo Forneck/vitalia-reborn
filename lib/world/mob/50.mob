@@ -10,8 +10,10 @@ precisando de um bom descanso.
 5 15 5 1d10+60 2d4+0
 70 1000
 9 9 1
-GenWimpy: 96
+GenWimpy: 100
+GenLoot: 4
 GenRoam: 88
+GenFollow: 4
 E
 #5001
 dervixe grande~
@@ -25,8 +27,10 @@ precisando de MUITO descanso.
 8 12 3 2d6+100 2d6+1
 150 7000
 9 9 1
-GenWimpy: 74
-GenRoam: 56
+GenWimpy: 100
+GenLoot: 3
+GenRoam: 89
+GenFollow: 11
 E
 #5002
 cobra coral~
@@ -41,7 +45,8 @@ vermelho, amarelo e preto.
 0 600
 9 9 0
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 86
+GenFollow: 4
 E
 #5003
 escorpiao pequeno~
@@ -56,8 +61,9 @@ pequenina.
 0 500
 9 9 0
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 88
+GenLoot: 4
+GenRoam: 87
+GenFollow: 3
 E
 #5004
 verme arroxeado gigantesco~
@@ -137,7 +143,8 @@ Ela está muito fraca e magra.
 3 18 9 1d4+25 1d5+0
 0 300
 5 5 2
-GenWimpy: 5
+GenWimpy: 8
+GenFollow: 16
 E
 #5010
 dracolich~
@@ -153,6 +160,9 @@ Obviamente que isto não teme mais a morte.
 24 0 -6 1d12+520 3d5+35
 75000 125000
 9 9 0
+GenWimpy: 97
+GenLoot: 91
+GenFollow: 14
 E
 T 3009
 #5011
@@ -167,6 +177,10 @@ Esta meio-aranha, meio-drow criatura é uma oponente formidável.
 8 12 2 1d6+95 2d6+2
 200 4000
 9 9 0
+GenWimpy: 31
+GenLoot: 1
+GenRoam: 89
+GenFollow: 16
 E
 #5012
 anao duergar sombrio~
@@ -181,6 +195,10 @@ quanto ele faz com essas pedras.
 5 16 3 1d11+60 2d5+1
 170 1250
 9 9 1
+GenWimpy: 21
+GenLoot: 1
+GenRoam: 88
+GenFollow: 6
 E
 #5013
 miconoide~
@@ -194,8 +212,10 @@ mesmo gosto).
 6 15 4 1d12+68 2d7+0
 50 600
 9 9 1
-GenWimpy: 1
-GenRoam: 23
+GenWimpy: 9
+GenLoot: 3
+GenRoam: 83
+GenFollow: 10
 E
 #5014
 xama miconoide~
@@ -209,8 +229,11 @@ O xamã está espalhando esporos pelo ar.
 14 7 1 1d12+173 2d7+2
 2500 18000
 9 9 1
-GenWimpy: 77
+GenWimpy: 100
+GenLoot: 37
+GenEquip: 6
 GenRoam: 89
+GenFollow: 10
 E
 T 3009
 #5015
@@ -225,8 +248,9 @@ Um pequeno oásis convida-lhe a um mergulho.
 450 2250
 9 9 0
 GenWimpy: 100
-GenLoot: 6
+GenLoot: 99
 GenRoam: 89
+GenFollow: 12
 E
 #5017
 camelo selvagem~

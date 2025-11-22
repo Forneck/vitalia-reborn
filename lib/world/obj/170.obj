@@ -124,8 +124,8 @@ um bracelete elemental~
 Um bracelete feito de magias elementais foi perdido aqui.~
 ~
 9 ag 0 0 0 am 0 0 0 0 0 0 0
-4 0 0 0
-4 10000 4000 8 0
+7 0 0 0
+4 10000 4000 0 0
 A
 13 15
 #17013
@@ -513,8 +513,8 @@ papeis manuscrito~
 Você vê um velho e esfarrapado manuscrito. Você percebe que ele carrega algumas
 inscrições:
 
-                  @WPara aqueles que ainda possuem alma...@n
-                  @C"Aqui jáz o fruto de seu espírito."@n
+                  	WPara aqueles que ainda possuem alma...	n
+                  	C"Aqui jáz o fruto de seu espírito."	n
 ~
 #17049
 espada sofrimento~

@@ -23,6 +23,7 @@
 #include "screen.h"
 #include "spirits.h"
 #include "mud_event.h"
+#include "act.h"
 
 /* local file scope function prototypes */
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6);
@@ -76,8 +77,6 @@ int mana_gain(struct char_data *ch)
             gain *= 2.5;
         else if (IS_CLERIC(ch) || WAS_CLERIC(ch))
             gain *= 2;
-        else if (IS_RANGER(ch) || WAS_RANGER(ch))
-            gain += (gain / 2);
 
         /* Skill/Spell calculations */
 
@@ -208,7 +207,7 @@ int move_gain(struct char_data *ch)
 
         /* Class calculatuions */
 
-        if (IS_RANGER(ch))
+        if (IS_RANGER(ch) || WAS_RANGER(ch))
             gain += (gain / 4);
 
         /* Room calculations */
@@ -219,6 +218,51 @@ int move_gain(struct char_data *ch)
 
     if (AFF_FLAGGED(ch, AFF_POISON))
         gain /= 4;
+
+    return (gain);
+}
+
+/* Breath point gain pr. game hour */
+int breath_gain(struct char_data *ch)
+{
+    int gain;
+
+    if (IS_NPC(ch)) {
+        /* NPCs don't need breath management */
+        return GET_MAX_BREATH(ch);
+    } else {
+        if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_FROZEN))
+            return (0);
+
+        /* Base breath gain - recover breath quickly in normal conditions */
+        gain = graf(age(ch)->year, 8, 10, 12, 10, 8, 6, 4);
+
+        /* Constitution affects breath recovery */
+        gain += MAX(0, (GET_CON(ch) - 10) / 2);
+
+        /* Position calculations - resting helps breath recovery */
+        switch (GET_POS(ch)) {
+            case POS_SLEEPING:
+                gain += (gain / 2); /* 150% of base - same as hit/move */
+                break;
+            case POS_RESTING:
+                gain += (gain / 4); /* 125% of base - same as hit/move */
+                break;
+            case POS_SITTING:
+                gain += (gain / 8); /* 112.5% of base - same as hit/move */
+                break;
+        }
+
+        /* Hunger and thirst affect breath recovery */
+        if ((GET_COND(ch, HUNGER) == 0) || (GET_COND(ch, THIRST) == 0))
+            gain /= 2;
+
+        /* Room calculations */
+        if (IN_ROOM(ch)) {
+            if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_FROZEN))
+                gain = 0;
+        }
+    }
 
     return (gain);
 }
@@ -376,26 +420,32 @@ void gain_condition(struct char_data *ch, int condition, int value)
     GET_COND(ch, condition) += value;
     GET_COND(ch, condition) = MAX(0, GET_COND(ch, condition));
     GET_COND(ch, condition) = MIN(24, GET_COND(ch, condition));
-    if (GET_COND(ch, condition) || PLR_FLAGGED(ch, PLR_WRITING))
+
+    /* Don't send messages if player is writing or condition is above threshold */
+    if (GET_COND(ch, condition) > 1 || PLR_FLAGGED(ch, PLR_WRITING))
         return;
+
+    /* Warning message at condition == 1 (one tick before damage starts) */
     if (GET_COND(ch, condition) == 1) {
         switch (condition) {
             case HUNGER:
-                send_to_char(ch, "Você está começando a ter fome.\r\n");
+                send_to_char(ch, "Você está com muita fome e começará a sofrer dano em breve!\r\n");
                 break;
             case THIRST:
-                send_to_char(ch, "Você está começando a ter sede.\r\n");
+                send_to_char(ch, "Você está com muita sede e começará a sofrer dano em breve!\r\n");
                 break;
             default:
                 break;
         }
-    } else
+    }
+    /* Message at condition == 0 (damage is being applied) */
+    else if (GET_COND(ch, condition) == 0) {
         switch (condition) {
             case HUNGER:
-                send_to_char(ch, "Você está com fome.\r\n");
+                send_to_char(ch, "Você está morrendo de fome!\r\n");
                 break;
             case THIRST:
-                send_to_char(ch, "Você está com sede.\r\n");
+                send_to_char(ch, "Você está morrendo de sede!\r\n");
                 break;
             case DRUNK:
                 if (intoxicated)
@@ -404,6 +454,7 @@ void gain_condition(struct char_data *ch, int condition, int value)
             default:
                 break;
         }
+    }
 }
 
 static void check_idling(struct char_data *ch)
@@ -472,6 +523,42 @@ void point_update(void)
             GET_HIT(i) = MIN(GET_HIT(i) + hit_gain(i), GET_MAX_HIT(i));
             GET_MANA(i) = MIN(GET_MANA(i) + mana_gain(i), GET_MAX_MANA(i));
             GET_MOVE(i) = MIN(GET_MOVE(i) + move_gain(i), GET_MAX_MOVE(i));
+
+            /* Breath update - handle underwater and high altitude rooms */
+            if (!IS_NPC(i) && !PLR_FLAGGED(i, PLR_FROZEN)) {
+                if (SECT(IN_ROOM(i)) == SECT_UNDERWATER || ROOM_FLAGGED(IN_ROOM(i), ROOM_HIGH)) {
+                    /* Lose breath when underwater or in high altitude */
+                    if (!has_scuba(i)) {
+                        /* Lose breath - faster in underwater than high altitude */
+                        int breath_loss = (SECT(IN_ROOM(i)) == SECT_UNDERWATER) ? 2 : 1;
+                        GET_BREATH(i) = MAX(0, GET_BREATH(i) - breath_loss);
+
+                        /* Check if character is suffocating */
+                        if (GET_BREATH(i) == 0) {
+                            /* Suffocation damage */
+                            if (SECT(IN_ROOM(i)) == SECT_UNDERWATER) {
+                                send_to_char(i, "\tRVocê está se afogando!\tn\r\n");
+                                if (damage(i, i, rand_number(5, 15), TYPE_SUFFERING) < 0)
+                                    continue;
+                            } else {
+                                send_to_char(i, "\tRVocê está sufocando na altitude!\tn\r\n");
+                                if (damage(i, i, rand_number(3, 10), TYPE_SUFFERING) < 0)
+                                    continue;
+                            }
+                        } else if (GET_BREATH(i) < 5) {
+                            /* Warning messages for low breath */
+                            if (SECT(IN_ROOM(i)) == SECT_UNDERWATER)
+                                send_to_char(i, "\tYVocê precisa urgentemente de ar!\tn\r\n");
+                            else
+                                send_to_char(i, "\tYVocê está com dificuldade para respirar!\tn\r\n");
+                        }
+                    }
+                } else {
+                    /* Recover breath in normal rooms */
+                    GET_BREATH(i) = MIN(GET_BREATH(i) + breath_gain(i), GET_MAX_BREATH(i));
+                }
+            }
+
             if (AFF_FLAGGED(i, AFF_POISON))
                 if (damage(i, i, 2, SPELL_POISON) == -1)
                     continue;                 /* Oops, they died 6/24/98 */
@@ -536,6 +623,9 @@ void point_update(void)
                     case ar_skip:
                         /* Don't touch the corpse, leave it in place */
                         break;
+                    case ar_ok:
+                        /* Successful resurrection - corpse is handled by raise functions */
+                        break;
                     case ar_dropobjs:
                         if (j->carried_by)
                             act("$p cai de suas mãos.", FALSE, j->carried_by, j, 0, TO_CHAR);
@@ -575,7 +665,8 @@ void point_update(void)
             }
         }
 
-        if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
+        else if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
+            GET_OBJ_TIMER(j)--;
             if (GET_OBJ_TIMER(j) == 1) {
                 if (j->in_room)
                     act("$p começa a desaparecer!", FALSE, 0, j, 0, TO_ROOM);
@@ -585,16 +676,28 @@ void point_update(void)
                 extract_obj(j);
             }
         }
+        /* Handle negative timers (NOLOCATE flag removal for quest items) */
+        else if (GET_OBJ_TIMER(j) < 0) {
+            GET_OBJ_TIMER(j)++;
+            if (GET_OBJ_TIMER(j) == 0) {
+                /* Timer expired - remove NOLOCATE flag but keep the object */
+                if (OBJ_FLAGGED(j, ITEM_NOLOCATE)) {
+                    REMOVE_BIT_AR(GET_OBJ_EXTRA(j), ITEM_NOLOCATE);
+                }
+            }
+        }
         /* If the timer is set, count it down and at 0, try the trigger note
            to .rej hand-patchers: make this last in your point-update() */
         else if (GET_OBJ_TIMER(j) > 0) {
             GET_OBJ_TIMER(j)--;
-            if (!GET_OBJ_TIMER(j))
+            timer_otrigger(j);
+            if (!GET_OBJ_TIMER(j)) {
                 if (j->carried_by)
                     act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
                 else if (j->in_room)
                     act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
-            timer_otrigger(j);
+                extract_obj(j);
+            }
         }
     }
 

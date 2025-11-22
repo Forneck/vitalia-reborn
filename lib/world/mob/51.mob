@@ -9,6 +9,7 @@ O indefeso goblin suplica por perdão.
 1 20 9 1d11+11 1d5+0
 0 100
 4 4 1
+GenFollow: 15
 E
 #5101
 cidadao drow~
@@ -21,6 +22,10 @@ Eu duvido que ele seja do tipo que fica dando informações.
 10 12 0 1d10+130 13d1+3
 300 10750
 9 9 1
+GenWimpy: 22
+GenLoot: 1
+GenRoam: 89
+GenFollow: 10
 E
 #5102
 nobre guerreiro drow~
@@ -33,6 +38,8 @@ Ele parece um tanto aborrecido!
 12 9 0 1d5+160 14d1+7
 1000 15000
 9 9 1
+GenWimpy: 12
+GenFollow: 16
 E
 #5103
 nobre mago drow~
@@ -45,6 +52,8 @@ O mago se prepara para conjurar uma magia... em você!!
 15 8 2 1d12+190 8d2+2
 2000 21000
 9 9 1
+GenWimpy: 10
+GenFollow: 14
 E
 T 3009
 #5104
@@ -58,6 +67,8 @@ Eu não gostaria de dormir ao lado dela!
 17 5 0 1d11+205 14d1+4
 4000 28000
 9 9 2
+GenWimpy: 14
+GenFollow: 18
 E
 T 3009
 #5105
@@ -71,6 +82,9 @@ O mestre drow está SEMPRE pronto para uma briga.
 21 0 0 1d12+248 18d1+4
 10000 60000
 9 9 1
+GenWimpy: 47
+GenLoot: 2
+GenFollow: 15
 E
 #5106
 mestre de armas drow~
@@ -83,6 +97,9 @@ Ele definitivamente sabe como lutar.
 23 0 -2 1d25+405 12d2+4
 15000 80000
 9 9 1
+GenWimpy: 100
+GenLoot: 1
+GenFollow: 12
 E
 #5107
 matriarca drow~
@@ -95,6 +112,9 @@ Ela parece realmente aborrecida de você ter percorrido o caminho até aqui.
 24 0 -3 1d50+450 15d2+4
 30000 130000
 9 9 2
+GenWimpy: 53
+GenLoot: 1
+GenFollow: 13
 E
 T 3009
 #5108
@@ -108,6 +128,8 @@ Ela parece como se estivesse para cortar sua cabeça fora e comê-la.
 25 0 -4 5d10+350 12d2+24
 40000 150000
 9 9 2
+GenWimpy: 36
+GenFollow: 12
 E
 T 3009
 #5109
@@ -121,9 +143,10 @@ Este meio aranha, meio drow é um oponente formidável.
 8 12 2 1d6+195 2d6+2
 200 4000
 9 9 0
-GenWimpy: 7
-GenLoot: 1
-GenRoam: 86
+GenWimpy: 52
+GenLoot: 9
+GenRoam: 89
+GenFollow: 11
 E
 #5110
 drow-aranha~
@@ -136,6 +159,8 @@ Este meio aranha, meio drow é um oponente formidável.
 11 10 0 1d6+295 3d6+8
 0 7000
 9 9 0
+GenWimpy: 3
+GenFollow: 15
 E
 #5111
 yochlol~
@@ -148,5 +173,7 @@ Yochlol não está com um bom humor.
 23 0 -6 25d2+450 15d2+30
 60000 80000
 9 9 2
+GenWimpy: 8
+GenFollow: 14
 E
 $

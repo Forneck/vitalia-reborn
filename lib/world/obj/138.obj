@@ -139,7 +139,7 @@ Um belíssimo par de asas de cristal foi esquecido aqui.~
 ~
 24 adegikq 0 0 0 ap 0 0 0 0 0 0 0
 0 0 -1 0
-12 2000000 200000 101 0
+12 2000000 200000 90 0
 E
 par asas cristal~
 Você observa um maravilhoso par de asas de cristal criado pelo todo poderoso
@@ -525,21 +525,21 @@ Uma enorme fonte metálica foi construída aqui.~
 100 100 15 0
 250 50000 5000 0 0
 E
-runas~
-****************************************************************************
-                                      @Y§                 
-                                   @w§ @Y§ § @w§  
-                                    @Y§   § 
-                                   @Y§  @f@C§  @Y§ 
-                                    @Y§   §   
-                                   @w§ @Y§ § @w§
-                                      @Y§  
-****************************************************************************
-~
-E
 fonte latão~
 Você observa uma enorme fonte metálica feita de latão e com várias estranhas
 runas esculpidas em sua superfície.
+~
+E
+runas~
+****************************************************************************
+                                      	Y§                 
+                                   	w§ 	Y§ § 	w§  
+                                    	Y§   § 
+                                   	Y§  	f	C§  	Y§ 
+                                    	Y§   §   
+                                   	w§ 	Y§ § 	w§
+                                      	Y§  
+****************************************************************************
 ~
 #13827
 fonte cobre~
@@ -550,21 +550,21 @@ Uma enorme fonte metálica foi construída aqui.~
 100 100 15 0
 250 50000 5000 0 0
 E
-runas~
-****************************************************************************
-                                      @Y§                 
-                                   @w§ @Y§ § @w§  
-                                    @Y§   § 
-                                   @Y§  @f@C§  @Y§ 
-                                    @Y§   §   
-                                   @w§ @Y§ § @w§
-                                      @Y§  
-****************************************************************************
-~
-E
 fonte cobre~
 Você observa uma enorme fonte metálica feita de cobre e com várias estranhas
 runas esculpidas em sua superfície.
+~
+E
+runas~
+****************************************************************************
+                                      	Y§                 
+                                   	w§ 	Y§ § 	w§  
+                                    	Y§   § 
+                                   	Y§  	f	C§  	Y§ 
+                                    	Y§   §   
+                                   	w§ 	Y§ § 	w§
+                                      	Y§  
+****************************************************************************
 ~
 #13828
 ninhos dragoes~
@@ -659,6 +659,11 @@ Um magnífico monólito colorido foi construído aqui.~
 0 0 0 0
 350 200000 20000 0 0
 E
+monolito colorido~
+Você observa um monumental monólito pintado com várias cores e sobre seu
+topo você percebe um pequeno dragão de cinco cabeças.
+~
+E
 dragao cinco cabecas~
 Você observa um belo dragão colorido de cinco cabeças, o símbolo sagrado da
 poderosa deusa Tiamat, uma dos cinco primogênitos.  Tiamat é a deusa
@@ -672,11 +677,6 @@ Yo tomou parte na formação do mesmo.  Ela é adorada por todas as raças
 cromáticas e alguns dragões maus, mas seus sacerdotes são na maioria
 vermelhos, azuis e verdes.
 ~
-E
-monolito colorido~
-Você observa um monumental monólito pintado com várias cores e sobre seu
-topo você percebe um pequeno dragão de cinco cabeças.
-~
 #13835
 monolito metalico~
 um magnífico monólito metálico~
@@ -685,6 +685,12 @@ Um belíssimo monólito metálico foi construído aqui.~
 12 ae 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 350 200000 20000 0 0
+E
+monolito metalico~
+Você observa um maravilhoso monólito metálico feito de platina e com várias
+runas em sua superfície.  Sobre o topo deste grande monumento você percebe a
+presença de uma bela estrela brilhante.
+~
 E
 estrela polar~
 Você observa a maravilhosa estrela polar sobre a Via Láctea, símbolo sagrado
@@ -697,12 +703,6 @@ forma de um humano sábio, sempre acompanhado de sete guardiões dourados,
 todos também na forma de animais ou pássaros que o acompanham por este e por
 outros mundos.  Dragões prateados e dourados são os mais devotados a
 Bahamut.
-~
-E
-monolito metalico~
-Você observa um maravilhoso monólito metálico feito de platina e com várias
-runas em sua superfície.  Sobre o topo deste grande monumento você percebe a
-presença de uma bela estrela brilhante.
 ~
 #13836
 monolito dourado~
@@ -754,13 +754,13 @@ Uma enorme chave de diamante foi esquecida aqui.~
 0 0 0 0
 10 50000 5000 0 0
 E
-runas superficie~
-Você não consegue decifrar nenhuma das runas!  Que chato!
-~
-E
 chave diamante~
 Você observa uma enorme chave feita de diamante e com pequeninas runas
 esculpidas em sua superfície.
+~
+E
+runas superficie~
+Você não consegue decifrar nenhuma das runas!  Que chato!
 ~
 #13840
 quadro pintura~
@@ -1013,7 +1013,7 @@ Um magnífico portal foi aberto aqui, emitindo um brilho azulado.~
 E
 portal~
 Você observa um enorme portal azulado que foi aberto neste lugar.
-       @B***   @gPara onde ele poderá lhe levar ?   @B***
+       	B***   	gPara onde ele poderá lhe levar ?   	B***
 ~
 #13854
 portal~
@@ -1026,7 +1026,7 @@ Um magnífico portal foi aberto aqui, emitindo um brilho azulado.~
 E
 portal~
 Você observa um enorme portal azulado que foi aberto neste lugar.
-       @B***   @gPara onde ele poderá lhe levar ?   @B***
+       	B***   	gPara onde ele poderá lhe levar ?   	B***
 ~
 #13855
 ovo~

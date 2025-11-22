@@ -1,1 +1,41 @@
+#12153
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (O Serviço de Correios). Vá até lá para receber 271 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3062 -1 -1 -1
+12 54 7 32 -1 3015 1
+271 542 65535
+S
+#12162
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (O Final Leste do Beco). Vá até lá para receber 277 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3046 -1 -1 -1
+12 55 7 32 -1 3015 1
+277 554 18614
+S
+#12164
+Buscar um barril~
+Encontrar e trazer um barril~
+o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 376 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3000 -1 -1 -1
+12 75 7 32 -1 3015 1
+376 752 65535
+S
+#12172
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (O Salão de Entrada da Associação dos Ladrões). Vá até lá para receber 247 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3027 -1 -1 -1
+12 49 7 32 -1 3015 1
+247 494 65535
+S
 $~

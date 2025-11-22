@@ -1652,7 +1652,7 @@ D6
 Você observa a suave parede de águas formada pelas cascatas.
 ~
 cascata agua parede~
-0 -1 13873
+1 -1 13873
 S
 #13873
 Uma Enorme Pedra Colorida~
@@ -1812,7 +1812,7 @@ D0
 Você observa um enorme portão de madeira.
 ~
 portao madeira~
-0 -1 13881
+1 -1 13881
 D5
 Você observa algumas nuvens.
 ~
@@ -2040,7 +2040,6 @@ Você observa a majestosa entrada do tribunal supremo de Bahamut.
 ~
 0 -1 13890
 S
-T 13800
 #13887
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
    Você está caminhando entre majestosos tronos de pedra e gigantescas
@@ -2076,7 +2075,6 @@ Você observa a majestosa entrada do tribunal supremo de Bahamut.
 ~
 0 -1 13890
 S
-T 13800
 #13888
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
    Você está caminhando entre majestosos tronos de pedra e gigantescas
@@ -2106,7 +2104,6 @@ Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 grade diamante~
 0 13839 13885
 S
-T 13800
 #13889
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
    Você está caminhando entre majestosos tronos de pedra e gigantescas
@@ -2136,7 +2133,6 @@ Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 grade diamante~
 0 13839 13885
 S
-T 13800
 #13890
 A Majestosa Entrada do Tribunal de Bahamut~
    Você está na maravilhosa entrada do tribunal de Bahamut, onde são

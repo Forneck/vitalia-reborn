@@ -25,6 +25,7 @@ SOFTWARE. */
 #define MAX_SPELL_PROTECTIONS 6 /* for e.g: spedit_save_to_disk */
 #define MAX_SPELL_OBJECTS 3
 #define MAX_SPELL_DISPEL 3
+#define MAX_SPELL_CHAIN_DEPTH 100 /* Maximum depth for prerequisite chains */
 
 #define DB_CODE_INIT_VARS 1
 #define DB_CODE_NAME 2
@@ -88,9 +89,11 @@ SOFTWARE. */
 #define NUM_ELEMENTS 13
 #define DB_CODE_PTS_GOLD 53
 #define DB_CODE_PTS_BREATH 54
-#define DB_CODE_SCHOOL 55  /* Spell school */
-#define DB_CODE_ELEMENT 56 /* Spell element */
-/* 57 to 59 are free */
+#define DB_CODE_SCHOOL 55             /* Spell school */
+#define DB_CODE_ELEMENT 56            /* Spell element */
+#define DB_CODE_PREREQUISITE_SPELL 57 /* Prerequisite spell for variants */
+#define DB_CODE_DISCOVERABLE 58       /* Can be discovered through experimentation */
+/* 59 is free */
 #define DB_CODE_PROT_1 60
 #define DB_CODE_PROT_2 61
 #define DB_CODE_PROT_3 62
@@ -112,6 +115,7 @@ SOFTWARE. */
 #define DB_CODE_MARKER 99
 
 extern char *UNDEF_SPELL;
+extern struct str_spells *list_spells;
 
 struct str_spells *get_spell_by_vnum(int vnum);
 struct str_spells *get_spell_by_name(char *name, char type);
@@ -182,11 +186,16 @@ struct str_spells {
     struct str_assign assign[NUM_CLASSES];
     struct str_mesg messages;
     struct str_pts points;
-    int school;  /* Spell school (Escola) */
-    int element; /* Spell element (hidden) */
+    int school;             /* Spell school (Escola) */
+    int element;            /* Spell element (hidden) */
+    int prerequisite_spell; /* Spell vnum needed to discover this variant (0 = none) */
+    int discoverable;       /* Can be discovered through syllable experimentation (0 = no, 1 = yes) */
     void *function;
     struct str_spells *next;
 };
+
+/* Global list of all spells */
+extern struct str_spells *list_spells;
 
 void spedit_free_spell(struct str_spells *spell);
 void spedit_main_menu(struct descriptor_data *d);

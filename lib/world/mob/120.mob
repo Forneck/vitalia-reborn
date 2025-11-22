@@ -11,6 +11,8 @@ permanece sadio e em boa forma.
 12 9 2 3d7+140 1d7+4
 2000 13000
 9 9 1
+GenWimpy: 2
+GenFollow: 8
 E
 #12001
 marcador~
@@ -36,8 +38,9 @@ O espectador está imundo, meio bêbado e gritando feito um louco.
 5 16 5 2d6+65 2d4+0
 100 900
 6 6 0
-GenWimpy: 3
-GenLoot: 1
+GenWimpy: 18
+GenLoot: 8
+GenFollow: 15
 E
 #12004
 nobre homem~
@@ -53,6 +56,8 @@ não muito fácil de se domar.
 12 9 2 4d6+140 1d7+5
 3500 13000
 9 9 1
+GenWimpy: 12
+GenFollow: 10
 E
 #12005
 escrava~
@@ -66,6 +71,8 @@ legiões Romanas invadiram e dominaram a sua terra.
 3 18 7 3d6+30 1d7+0
 10 350
 9 9 2
+GenWimpy: 2
+GenFollow: 9
 E
 #12006
 gladiador~
@@ -79,6 +86,10 @@ até os dentes. Ele vive para combater.
 14 5 0 4d7+150 1d8+6
 700 12500
 9 9 1
+GenWimpy: 67
+GenLoot: 31
+GenEquip: 3
+GenFollow: 16
 E
 #12007
 condutor~
@@ -92,6 +103,10 @@ seu trabalho com a velocidade e os cavalos.
 10 11 2 3d7+120 2d6+1
 1200 9000
 9 9 1
+GenWimpy: 29
+GenLoot: 8
+GenEquip: 2
+GenFollow: 19
 E
 #12008
 treinador~
@@ -106,6 +121,10 @@ todos os seus ossos congelarem.
 11 10 2 4d5+130 2d6+1
 500 10000
 9 9 1
+GenWimpy: 14
+GenLoot: 9
+GenEquip: 6
+GenFollow: 11
 E
 #12009
 curandeiro~
@@ -119,6 +138,10 @@ casaco branco e usando um estetoscópio.
 14 7 1 2d7+170 1d7+6
 1500 12000
 9 9 1
+GenWimpy: 66
+GenLoot: 51
+GenEquip: 9
+GenFollow: 13
 E
 T 3009
 #12010
@@ -135,6 +158,10 @@ O corpo dela é perfeitamente proporcional e ela tem aproximadamente 1 metro e
 10 11 2 3d4+110 1d7+4
 500 8000
 9 9 2
+GenWimpy: 49
+GenLoot: 54
+GenEquip: 12
+GenFollow: 9
 E
 #12011
 lojista~
@@ -175,6 +202,9 @@ aparência de um estudante.
 6 15 4 3d6+75 2d4+1
 0 1600
 9 9 1
+GenWimpy: 10
+GenLoot: 4
+GenFollow: 7
 E
 #12014
 queixoso~
@@ -187,6 +217,9 @@ Seu estado é lamentável. Absolutamente lamentável.
 11 10 2 3d6+140 2d6+3
 1000 12000
 9 9 1
+GenWimpy: 23
+GenLoot: 29
+GenFollow: 8
 E
 #12015
 cambista~
@@ -201,7 +234,10 @@ que realmente querem compra-los.
 17 4 1 4d8+210 1d6+11
 4000 28000
 9 9 1
-GenWimpy: 9
+GenWimpy: 88
+GenLoot: 16
+GenBrave: 2
+GenFollow: 15
 E
 #12016
 vendedor~
@@ -216,7 +252,9 @@ espectadores bons de discussão.
 8 13 3 2d4+13000 2d5+15
 500 3700
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
+GenEquip: 1
+GenFollow: 9
 E
 #12017
 cidadao~
@@ -229,8 +267,11 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 5 16 5 1d4+85 1d8+1
 100 1000
 9 9 1
-GenWimpy: 99
-GenRoam: 87
+GenWimpy: 100
+GenLoot: 37
+GenRoam: 88
+GenGroup: 6
+GenFollow: 6
 E
 #12018
 sentinela guarda~
@@ -243,7 +284,9 @@ Você vê um defensor público forte e leal.
 11 10 2 3d6+130 1d6+5
 500 11000
 9 9 1
-GenWimpy: 7
+GenWimpy: 27
+GenLoot: 9
+GenFollow: 3
 E
 T 3013
 #12019
@@ -259,8 +302,11 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 27
+GenWimpy: 69
+GenLoot: 10
+GenEquip: 2
 GenRoam: 89
+GenFollow: 15
 E
 #12020
 imperador julius caesar~
@@ -274,6 +320,10 @@ das comidas e morou no palácio mais opulento que Roma jamais conheceu.
 27 0 -7 10d5+650 3d7+15
 24763 150000
 9 9 1
+GenWimpy: 12
+GenLoot: 96
+GenEquip: 3
+GenFollow: 14
 E
 T 3009
 #12021
@@ -294,8 +344,10 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 14
+GenWimpy: 31
 GenLoot: 99
+GenEquip: 4
+GenFollow: 18
 E
 T 3013
 #12022
@@ -310,6 +362,9 @@ perturbá-lo agora. Quem sabe mais tarde não seria melhor.
 21 0 -1 20d5+260 1d7+11
 5000 50000
 6 6 1
+GenWimpy: 43
+GenLoot: 17
+GenFollow: 13
 E
 #12023
 mestre programador~
@@ -324,6 +379,10 @@ pergunta, 'Você gostaria de marcar um?'
 17 3 0 4d4+210 1d6+9
 3000 28000
 9 9 1
+GenWimpy: 49
+GenLoot: 41
+GenEquip: 3
+GenFollow: 12
 E
 #12024
 bola visguenta verde~
@@ -339,8 +398,10 @@ Uma bola verde de lodo escorrendo atraves das paredes.
 BareHandAttack: 9
 Int: 3
 GenWimpy: 100
-GenLoot: 3
-GenRoam: 89
+GenLoot: 40
+GenEquip: 1
+GenRoam: 83
+GenFollow: 10
 E
 #12025
 mago froboz~
@@ -369,6 +430,8 @@ recentemente afiadas e fita você com um olhar furioso!! Caia fora!
 31000 85000
 9 9 1
 BareHandAttack: 3
+GenWimpy: 3
+GenFollow: 14
 E
 #12027
 senador~
@@ -382,6 +445,10 @@ toga.
 10 11 2 3d5+120 2d6+1
 500 9000
 9 9 1
+GenWimpy: 18
+GenLoot: 7
+GenEquip: 1
+GenFollow: 15
 E
 #12028
 beleguim~
@@ -396,6 +463,10 @@ der permissão.
 16 5 1 1d5+200 2d7+4
 1000 24000
 9 9 1
+GenWimpy: 80
+GenLoot: 80
+GenEquip: 7
+GenFollow: 11
 E
 #12029
 defensora~
@@ -408,6 +479,9 @@ Ela parece ser bem organizada e cheia de confiança em si mesma.
 11 9 1 3d6+130 2d7+1
 500 11000
 9 9 2
+GenWimpy: 17
+GenLoot: 3
+GenFollow: 4
 E
 #12030
 jupiter rei deus~
@@ -429,6 +503,11 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenLoot: 99
+GenEquip: 22
+GenQuest: 4
+GenFollow: 16
 E
 T 3009
 #12031
@@ -451,6 +530,10 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 25
+GenWimpy: 9
+GenLoot: 52
+GenEquip: 3
+GenFollow: 14
 E
 T 3009
 #12032
@@ -472,6 +555,10 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
+GenWimpy: 21
+GenLoot: 3
+GenBrave: 1
+GenFollow: 12
 E
 T 3009
 #12033
@@ -492,6 +579,10 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 23
+GenWimpy: 5
+GenLoot: 3
+GenEquip: 3
+GenFollow: 15
 E
 #12034
 lojista~
@@ -520,9 +611,10 @@ Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
 20 1 0 2d6+260 2d2+14
 1000 40000
 9 9 1
-GenWimpy: 11
-GenLoot: 17
-GenEquip: 1
+GenWimpy: 60
+GenLoot: 99
+GenEquip: 29
+GenFollow: 12
 E
 #12036
 padeiro~

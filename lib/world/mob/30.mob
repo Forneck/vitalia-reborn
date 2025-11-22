@@ -186,16 +186,17 @@ extremamente perigoso para sua saúde.
 15 10 0 100d5+50 2d6+6
 5000 42000
 9 9 1
-GenWimpy: 9
-GenLoot: 17
-GenEquip: 70
-GenRoam: 87
-GenGroup: 94
-GenBrave: 47
+GenWimpy: 4
+GenLoot: 64
+GenEquip: 76
+GenRoam: 89
+GenGroup: 83
+GenBrave: 54
 GenUse: 100
 GenTrade: 100
-GenQuest: 15
+GenQuest: 36
 GenAdventurer: 50
+GenFollow: 19
 E
 #3016
 vendedor jornaleiro garoto~
@@ -211,6 +212,12 @@ oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 108 0 -10 1d1+30000 2d8+18
 0 160000
 9 9 1
+GenWimpy: 2
+GenLoot: 3
+GenEquip: 2
+GenRoam: 52
+GenGroup: 10
+GenFollow: 11
 E
 #3020
 mestre-guia mago~
@@ -282,6 +289,8 @@ de magias ofensivas e defensivas, fazem dele um oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 60000
 9 9 1
+GenWimpy: 9
+GenFollow: 13
 E
 T 3000
 #3025
@@ -298,6 +307,8 @@ um oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 6
+GenFollow: 15
 E
 T 3001
 #3026
@@ -315,6 +326,8 @@ oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 6
+GenFollow: 14
 E
 T 3002
 #3027
@@ -330,6 +343,8 @@ extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 9
+GenFollow: 14
 E
 T 3003
 #3028
@@ -361,6 +376,8 @@ poderosa magia.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 2
+GenWimpy: 9
+GenFollow: 14
 E
 T 3005
 #3030
@@ -392,6 +409,9 @@ não sabe cantar.
 33 0 -5 6d10+990 1d8+22
 2000 16000
 9 9 2
+GenWimpy: 5
+GenLoot: 2
+GenFollow: 14
 E
 T 3006
 #3032
@@ -545,6 +565,8 @@ na cabeça coberta, brilham observando tudo.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 T 3004
 #3050
@@ -624,8 +646,10 @@ Ele parece muito forte e sábio. Parece que ele não fala com QUALQUER um.
 4000 50500
 9 9 1
 BareHandAttack: 10
-GenWimpy: 4
-GenRoam: 18
+GenWimpy: 12
+GenLoot: 4
+GenRoam: 84
+GenFollow: 14
 E
 T 3013
 #3060
@@ -639,8 +663,10 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 53
-GenRoam: 81
+GenWimpy: 81
+GenLoot: 21
+GenRoam: 89
+GenFollow: 10
 E
 T 3013
 #3061
@@ -654,9 +680,10 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 21
-GenLoot: 5
-GenRoam: 86
+GenWimpy: 53
+GenLoot: 29
+GenRoam: 87
+GenFollow: 2
 E
 #3062
 cachorro fido~
@@ -671,9 +698,12 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 53
-GenLoot: 7
+GenWimpy: 100
+GenLoot: 32
+GenEquip: 2
 GenRoam: 87
+GenGroup: 26
+GenFollow: 6
 E
 T 3014
 #3063
@@ -688,7 +718,9 @@ coisa por dinheiro.
 5 15 5 2d6+60 1d6+1
 87 900
 9 9 1
-GenWimpy: 2
+GenWimpy: 21
+GenLoot: 5
+GenFollow: 13
 E
 #3064
 bebado bêbado~
@@ -701,6 +733,8 @@ Um bêbado que parece estar muito feliz, e que carrega muito dinheiro.
 2 19 8 2d6+22 1d6+0
 53 200
 9 9 1
+GenWimpy: 3
+GenFollow: 6
 E
 #3065
 mendiga~
@@ -713,6 +747,7 @@ A mendiga parece que está farta da vida.
 1 20 9 2d6+10 1d5+0
 0 100
 9 9 2
+GenFollow: 2
 E
 #3066
 odif laitseb~
@@ -726,8 +761,10 @@ O odif é um deus pequeno que foi transformado por algum cachorro.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 9
-GenRoam: 79
+GenWimpy: 23
+GenLoot: 3
+GenRoam: 87
+GenFollow: 5
 E
 T 3014
 #3067
@@ -741,7 +778,9 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 4
+GenWimpy: 53
+GenLoot: 12
+GenFollow: 14
 E
 T 3013
 #3068
@@ -756,8 +795,12 @@ Uma coisa medonha de se olhar; é enorme, esverdeado e se parece com uma bolha.
 1000 40000
 9 9 2
 BareHandAttack: 6
-GenWimpy: 4
-GenRoam: 36
+GenWimpy: 21
+GenLoot: 58
+GenEquip: 6
+GenRoam: 89
+GenGroup: 61
+GenFollow: 18
 E
 #3089
 animais loja garoto~
@@ -785,6 +828,7 @@ O gatinho parece ser um gracioso, pequenino e destemido lutador.
 BareHandAttack: 8
 GenWimpy: 2
 GenGroup: 3
+GenFollow: 6
 E
 #3091
 cachorrinho~

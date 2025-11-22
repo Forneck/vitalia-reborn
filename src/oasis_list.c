@@ -142,6 +142,11 @@ static void perform_obj_type_list(struct char_data *ch, char *arg)
 
     itemtype = atoi(arg);
 
+    if (itemtype < 0 || itemtype >= NUM_ITEM_TYPES) {
+        send_to_char(ch, "Invalid item type! Valid types are 1-%d.\r\n", NUM_ITEM_TYPES - 1);
+        return;
+    }
+
     len = snprintf(buf, sizeof(buf), "Listing all objects of type %s[%s]%s\r\n", QYEL, item_types[itemtype], QNRM);
 
     for (num = 0; num <= top_of_objt; num++) {
@@ -237,10 +242,12 @@ static void perform_obj_type_list(struct char_data *ch, char *arg)
                         break;
 
                     /* The 'normal' items - don't provide extra info */
+                    case ITEM_FURNITURE:
                     case ITEM_TREASURE:
                     case ITEM_TRASH:
                     case ITEM_OTHER:
                     case ITEM_WORN:
+                    case ITEM_TRAP:
                     case ITEM_NOTE:
                     case ITEM_PEN:
                     case ITEM_BOAT:
@@ -248,6 +255,8 @@ static void perform_obj_type_list(struct char_data *ch, char *arg)
                     case ITEM_PORTAL:
                     case ITEM_PLANT:
                     case ITEM_CORPSE:
+                    case ITEM_MAGIC_STONE:
+                    case ITEM_CARDS:
                         tmp_len = snprintf(buf + len, sizeof(buf) - len, "%s%3d%s) %s[%s%8d%s] %s%s\r\n", QGRN, ++found,
                                            QNRM, QCYN, QYEL, ov, QCYN, obj_proto[r_num].short_description, QNRM);
                         break;

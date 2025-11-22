@@ -20,6 +20,7 @@ SOFTWARE. */
 #include "spells_script.h"
 #include "spells.h"
 #include "string.h"
+#include "quest.h"
 
 int call_ASCRIPT(int (*function)(), char *str, struct char_data *self, struct char_data *vict, struct obj_data *ovict,
                  int from, int param)
@@ -127,8 +128,12 @@ ASCRIPT(scr_teleport)
     if (((location = find_target_room(vict, where)) != NOWHERE) && vict) {
         char_from_room(vict);
         char_to_room(vict, location);
-        if (!IS_NPC(vict))
+        if (!IS_NPC(vict)) {
             look_at_room(vict, 1);
+            /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+            autoquest_trigger_check(vict, 0, 0, AQ_ROOM_FIND);
+            autoquest_trigger_check(vict, 0, 0, AQ_MOB_FIND);
+        }
     } else
         effect = FALSE;
     return (effect);

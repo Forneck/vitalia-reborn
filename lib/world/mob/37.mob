@@ -137,6 +137,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 12
 E
 #3707
 espirito desespero~
@@ -233,6 +235,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 14
 E
 #3712
 grande mestre tempo~
@@ -424,9 +428,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 8
-GenLoot: 4
+GenWimpy: 5
+GenLoot: 6
 GenRoam: 89
+GenFollow: 16
 E
 #3722
 demonio ossos~
@@ -448,8 +453,10 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 87
+GenWimpy: 11
+GenLoot: 1
+GenRoam: 89
+GenFollow: 16
 E
 #3723
 esqueleto guerreiro~
@@ -466,9 +473,10 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 5
+GenLoot: 2
+GenRoam: 89
+GenFollow: 15
 E
 #3724
 esqueleto dragao~
@@ -508,8 +516,10 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 1
-GenRoam: 87
+GenLoot: 4
+GenRoam: 89
+GenBrave: 1
+GenFollow: 13
 E
 #3726
 zumbi guerreiro~
@@ -568,7 +578,8 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 5
+GenFollow: 15
 E
 #3729
 morte sombra~
@@ -588,6 +599,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 16
 E
 #3730
 anjo morte~
@@ -607,6 +620,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 12
 E
 #3731
 encurvada criatura tumulo ladrao~
@@ -624,10 +639,12 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 2
-GenRoam: 51
-GenGroup: 1
+GenWimpy: 6
+GenLoot: 94
+GenEquip: 3
+GenRoam: 89
+GenGroup: 95
+GenFollow: 14
 E
 #3732
 zumbi guarda~
@@ -647,6 +664,8 @@ BareHandAttack: 13
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 12
 E
 #3733
 gargula pedra besta estatua~

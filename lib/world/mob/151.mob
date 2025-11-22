@@ -1,6 +1,6 @@
 #15100
 Discipulo Samurai~
-Um discípulo Samurai~
+um discípulo Samurai~
 Um discípulo Samurai está aqui, tentando compreender as leis de Karma.
 ~
 Você vê um jovem Samurai perto de si.  Suas roupas e armas indicam que ele 
@@ -9,11 +9,14 @@ Você vê um jovem Samurai perto de si.  Suas roupas e armas indicam que ele
 2123778 0 0 0 0 0 0 0 250 E
 50 7 -20 3d5+1400 5d4+15
 0 50000
-8 8 1
+9 9 1
+GenWimpy: 4
+GenLoot: 3
+GenFollow: 4
 E
 #15101
 Samurai Aprendiz~
-Um aprendiz de Samurai~
+um aprendiz de Samurai~
 Um aprendiz de Samurai está meditando aqui. 
 ~
 Você vê um aprendiz de samurai perto de si.  Ele parece mesmo ser um
@@ -23,11 +26,11 @@ ausente da realidade à sua volta.
 2123778 0 0 0 0 0 0 0 300 E
 60 6 -21 3d6+1500 4d7+17
 0 70000
-8 3 1
+9 3 1
 E
 #15102
 Guerreiro Samurai~
-Um Guerreiro Samurai~
+um Guerreiro Samurai~
 Um Guerreiro Samurai está aqui, tentando parecer cruel.
 ~
 Você se encontra próximo a um dos maiores guerreiros de todos
@@ -36,11 +39,14 @@ os tempos e, pelo aspecto de sua arma, ele está pronto para lutar.
 2156802 0 0 0 0 0 0 0 350 E
 60 4 -22 3d8+1800 4d8+16
 5000 70000
-8 8 1
+9 9 1
+GenWimpy: 9
+GenLoot: 4
+GenFollow: 13
 E
 #15103
 Shogun Compreensao~
-O Shogun da Compreensão~
+o Shogun da Compreensão~
 O Shogun da Compreensão está aqui e parece que ele está distraído,
 pensando em alguma coisa.
 ~
@@ -50,11 +56,15 @@ diretamente para você, como se ele soubesse de alguma coisa.
 2222354 0 0 0 0 0 0 0 360 E
 75 0 -23 3d10+1900 4d8+20
 10000 150000
-8 5 1
+9 5 1
+GenWimpy: 5
+GenLoot: 6
+GenEquip: 7
+GenFollow: 14
 E
 #15104
 Shogun etica~
-O Shogum da Ética~
+o Shogum da Ética~
 O Shogum da Ética parece que fica incomodado com a sua aparência.
 ~
 O Shogum da Ética ergue-se em sua direção. Pelo aspecto de sua espada 
@@ -63,11 +73,14 @@ ensangüentada, você acha melhor não ser JULGADO por ele.
 2222354 0 0 0 0 0 0 0 360 E
 70 -2 -24 3d10+1950 5d8+22
 10000 200000
-8 8 1
+9 9 1
+GenWimpy: 16
+GenEquip: 5
+GenFollow: 14
 E
 #15105
 Shogum Lealdade~
-O Shogum da Lealdade~
+o Shogum da Lealdade~
 O Shogum da Lealdade está aqui, ofegante, como quem acaba de fugir de algo.
 ~
 O Shogum da Lealdade mostra-se pronto para encarar qualquer desafio.  Seria
@@ -76,11 +89,14 @@ melhor tê-lo como amigo.
 2222354 0 0 0 0 0 0 0 360 E
 75 -4 -25 3d10+2000 5d8+25
 10000 250000
-8 8 1
+9 9 1
+GenWimpy: 15
+GenEquip: 5
+GenFollow: 14
 E
 #15106
 Shogum Repeito~
-O Shogum do Respeito~
+o Shogum do Respeito~
 O Shogum do Respeito está aqui, polindo sua espada antiga.
 ~
 Você vê uma enorme figura, segurando uma arma que se parece com uma lança.
@@ -89,11 +105,14 @@ A presença do Shogum, por si só, demanda respeito.
 2222354 0 0 0 0 0 0 0 360 E
 80 -6 -26 3d10+2200 5d7+26
 10000 300000
-8 5 1
+9 5 1
+GenWimpy: 8
+GenEquip: 5
+GenFollow: 15
 E
 #15107
 Shogum Autoridade~
-O Shogum da Autoridade~
+o Shogum da Autoridade~
 O Shogum da Autoridade exige algo de você.
 ~
 Este homem te lembra de tudo o que você sempre temeu num pai.
@@ -102,11 +121,14 @@ Sua vontade é de correr de volta para seu quarto.
 2222354 0 0 0 0 0 0 0 360 E
 85 -8 -27 3d10+2400 5d7+27
 10000 350000
-8 8 1
+9 9 1
+GenWimpy: 12
+GenEquip: 6
+GenFollow: 14
 E
 #15108
 Shogum Conhecimento~
-O Shogum do Conhecimento~
+o Shogum do Conhecimento~
 O Shogum do Conhecimento exclama entusiasmado, 'Eureka!'.
 ~
 O Shogum do Conhecimento mal olha para você, e você fica imaginando
@@ -115,11 +137,15 @@ o quão sábio ele é.
 2222354 0 0 0 0 0 0 0 360 E
 90 -10 -28 3d10+2500 5d7+28
 10000 400000
-8 8 1
+9 9 1
+GenWimpy: 22
+GenLoot: 1
+GenEquip: 3
+GenFollow: 14
 E
 #15109
 Shogum Verdade~
-O Shogum da Verade~
+o Shogum da Verade~
 O Shogum da Verdade está aqui, murmurando enigmas.
 ~
 Ele é mau, forte, e tem uma arma maior que a sua.
@@ -128,11 +154,14 @@ Você treme de medo... sem brincadeira.
 2222354 0 0 0 0 0 0 0 360 E
 95 -12 -29 3d10+2700 5d7+29
 10000 350000
-8 8 1
+9 9 1
+GenWimpy: 4
+GenEquip: 3
+GenFollow: 15
 E
 #15110
 Shogum Caridade~
-O Shogum do Caridade~
+o Shogum do Caridade~
 O Shogum do Caridade está aqui, prendendo flores em seu cinto.
 ~
 O Shogum do Caridade faz com que você se lembre de alguns ensinamentos
@@ -142,7 +171,10 @@ abraço nele!
 2222354 0 0 0 0 0 0 0 360 E
 100 -14 -30 3d10+2900 5d7+30
 10000 450000
-8 8 1
+9 9 1
+GenWimpy: 5
+GenEquip: 3
+GenFollow: 15
 E
 #15111
 Tokugawa Yoshikatsu~
@@ -155,12 +187,14 @@ E, em breve, ou você ou ele estará morto.
 2222354 0 0 0 0 0 0 0 500 E
 101 -20 -32 3d10+8000 5d7+40
 40000 1500000
-3 8 1
+3 9 1
 Str: 18
 Dex: 20
 Int: 18
 Wis: 20
 Con: 18
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 $

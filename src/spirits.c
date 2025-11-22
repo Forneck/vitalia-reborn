@@ -193,7 +193,7 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse)
         raise_offline(ch, corpse);
         free_char(ch);
     } else {
-        raise_online(ch, NULL, corpse, corpse->in_room, FALSE);
+        raise_online(ch, NULL, corpse, corpse->in_room, 2);
     }
     return (ar_extract);
 }
@@ -212,7 +212,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
     }
 
     act("@GUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
-        "divina, carregando-$r por uma longa distância.",
+        "divina, carregando-$r por uma longa distância.@n",
         FALSE, ch, 0, 0, TO_CHAR);
 
     REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
@@ -295,7 +295,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
             obj_from_obj(corpse);
     } else {
         act("Não tendo corpo para voltar a vida, você volta \tRpelad$r\tn!", FALSE, ch, 0, ch, TO_CHAR);
-        act("Não tendo corpo para voltar a vida, $n volta \tRpelad$r\tn!", FALSE, raiser, 0, ch, TO_CHAR);
+        act("Não tendo corpo para voltar a vida, $N volta \tRpelad$R\tn!", FALSE, raiser, 0, ch, TO_CHAR);
     }
     save_char(ch);
 }

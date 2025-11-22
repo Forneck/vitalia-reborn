@@ -24,6 +24,8 @@
 #include "constants.h"
 #include "dg_scripts.h"
 #include "graph.h"
+#include "spedit.h"
+#include "formula.h"
 
 ACMD(do_assist)
 {
@@ -68,6 +70,8 @@ ACMD(do_assist)
             send_to_char(ch, "Você entra para a luta!\r\n");
             act("$N da assistência a você !", 0, helpee, 0, ch, TO_CHAR);
             act("$n da assistência a  $N.", FALSE, ch, 0, helpee, TO_NOTVICT);
+            /* Update mob emotions for being assisted (experimental feature) */
+            update_mob_emotion_assisted(helpee, ch);
             hit(ch, opponent, TYPE_UNDEFINED);
         }
     }
@@ -248,6 +252,28 @@ ACMD(do_backstab)
         damage(ch, vict, 0, SKILL_BACKSTAB);
     else
         hit(ch, vict, SKILL_BACKSTAB);
+
+    /* Reputation changes for backstabbing - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain reputation (infamy) for successful backstabs */
+            if (IS_GOOD(vict)) {
+                /* Backstabbing good targets increases evil reputation */
+                modify_player_reputation(ch, rand_number(1, 3) + class_bonus);
+            } else {
+                /* Any successful backstab for evil characters */
+                modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+            }
+        } else {
+            /* Good/Neutral characters LOSE reputation for dishonorable backstabbing */
+            modify_player_reputation(ch, -rand_number(3, 5));
+            /* Extra penalty for backstabbing good targets */
+            if (IS_GOOD(vict)) {
+                modify_player_reputation(ch, -rand_number(2, 4));
+            }
+        }
+    }
 
     if (GET_LEVEL(ch) < LVL_GOD)
         WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -447,6 +473,10 @@ ACMD(do_flee)
     int i, attempt, loss;
     struct char_data *was_fighting;
 
+    /* Safety check: validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     if (GET_POS(ch) < POS_FIGHTING) {
         send_to_char(ch, "Você não está em condições de fugir!\r\n");
         return;
@@ -462,9 +492,14 @@ ACMD(do_flee)
             if (AFF_FLAGGED(ch, AFF_PARALIZE)) {
                 send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
                 act("$n não pode fugir, $l está paralisad$r!", TRUE, ch, 0, 0, TO_ROOM);
+                return;
             }
 
             if (do_simple_move(ch, attempt, TRUE)) {
+                /* Safety check: character might have been extracted (e.g., death trap) */
+                if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || MOB_FLAGGED(ch, MOB_NOTDEADYET))
+                    return;
+
                 send_to_char(ch, "Você foge de pernas para o ar.\r\n");
 
                 /************************************************
@@ -478,7 +513,9 @@ ACMD(do_flee)
                         ch->ai_data->genetics.wimpy_tendency = 100;
                 }
 
-                if (was_fighting && !IS_NPC(ch)) {
+                /* Safety check: was_fighting might have been extracted or become invalid */
+                if (was_fighting && !IS_NPC(ch) && !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                    !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET)) {
                     loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
                     loss *= GET_LEVEL(was_fighting);
                     send_to_char(ch, "Você perdeu %ld pontos de experiência.\r\n", (long)loss);
@@ -487,7 +524,8 @@ ACMD(do_flee)
 
                 if (FIGHTING(ch))
                     stop_fighting(ch);
-                if (was_fighting && ch == FIGHTING(was_fighting))
+                if (was_fighting && ch == FIGHTING(was_fighting) && !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                    !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
                     stop_fighting(was_fighting);
             } else {
                 send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
@@ -769,6 +807,9 @@ ACMD(do_rescue)
     act("Você foi resgatado por $N! Você fica confuso...", FALSE, vict, 0, ch, TO_CHAR);
     act("$n heroicamente resgata $N!", FALSE, ch, 0, vict, TO_NOTVICT);
 
+    /* Update mob emotions for being rescued (experimental feature) */
+    update_mob_emotion_rescued(vict, ch);
+
     if (FIGHTING(vict) == tmp_ch)
         stop_fighting(vict);
     if (FIGHTING(tmp_ch))
@@ -847,6 +888,8 @@ EVENTFUNC(event_whirlwind)
    mud event and list systems. */
 ACMD(do_whirlwind)
 {
+    struct str_spells *spell;
+    int move_cost, num, rts_code;
 
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_WHIRLWIND)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
@@ -870,6 +913,21 @@ ACMD(do_whirlwind)
     if (char_has_mud_event(ch, eWHIRLWIND)) {
         send_to_char(ch, "Você já está tentando isto!\r\n");
         return;
+    }
+
+    /* Check movement cost */
+    spell = get_spell_by_vnum(SKILL_WHIRLWIND);
+    if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
+        num = get_spell_class(spell, GET_CLASS(ch));
+        if (num != -1 && spell->assign[num].num_mana) {
+            move_cost = formula_interpreter(ch, NULL, SKILL_WHIRLWIND, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch),
+                                            &rts_code);
+            if (GET_MOVE(ch) < move_cost) {
+                send_to_char(ch, "Você está muito cansado para realizar esse ataque.\r\n");
+                return;
+            }
+            GET_MOVE(ch) = MAX(0, MIN(GET_MAX_MOVE(ch), GET_MOVE(ch) - move_cost));
+        }
     }
 
     send_to_char(ch, "Você começa a girar rapidamente.\r\n");
@@ -965,11 +1023,17 @@ ACMD(do_bandage)
     WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     percent = rand_number(1, 101); /* 101% is a complete failure */
     prob = GET_SKILL(ch, SKILL_BANDAGE);
-    if (percent <= prob) {
+    if (percent > prob) {
         act("A sua tentativa de estabilizar a condição de $N falha.", FALSE, ch, 0, vict, TO_CHAR);
         act("$n tenta estabilizar a condição de $N mas falha miseravelmente.", TRUE, ch, 0, vict, TO_NOTVICT);
         act("Alguém tenta estabilizar a tua condição mas falha miseravelmente.", TRUE, ch, 0, vict, TO_VICT);
         damage(vict, vict, 2, TYPE_SUFFERING);
+
+        /* Genetics: Negative reinforcement for failure */
+        if (IS_NPC(ch) && ch->ai_data) {
+            ch->ai_data->genetics.healing_tendency -= 1;
+            ch->ai_data->genetics.healing_tendency = MAX(ch->ai_data->genetics.healing_tendency, 0);
+        }
         return;
     }
 
@@ -977,6 +1041,12 @@ ACMD(do_bandage)
     act("$n estabiliza a condição de $N, que parece um pouco melhor agora.", TRUE, ch, 0, vict, TO_NOTVICT);
     act("Alguém tenta estabilizar a tua condição, e você se sente melhor agora.", FALSE, ch, 0, vict, TO_VICT);
     GET_HIT(vict) = 0;
+
+    /* Genetics: Positive reinforcement for successfully healing an ally */
+    if (IS_NPC(ch) && ch->ai_data) {
+        ch->ai_data->genetics.healing_tendency += 2;
+        ch->ai_data->genetics.healing_tendency = MIN(ch->ai_data->genetics.healing_tendency, 100);
+    }
 }
 
 ACMD(do_trip)
@@ -1107,10 +1177,26 @@ ACMD(do_seize)
     }
 }
 
+/* Helper function to consume ammo from quiver */
+static void consume_ammo(struct char_data *ch)
+{
+    struct obj_data *ammo;
+
+    if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
+        if (GET_OBJ_VAL(ammo, 0) > 1) {
+            GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
+            GET_OBJ_VAL(ammo, 0)--;
+        } else {
+            extract_obj(ammo);
+        }
+    }
+}
+
 ACMD(do_shoot)
 {
-    struct char_data *vict;
+    struct char_data *vict, *tmp;
     struct obj_data *ammo, *fireweapon;
+    struct str_spells *spell;
     int percent, prob;
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
@@ -1118,6 +1204,7 @@ ACMD(do_shoot)
     int dam = 0;
     int door;
     bool found = FALSE;
+    int move_cost, num, rts_code;
 
     room_rnum vict_room = IN_ROOM(ch);
     room_rnum was_room = IN_ROOM(ch);
@@ -1151,18 +1238,40 @@ ACMD(do_shoot)
         return;
     }
 
-    percent = rand_number(1, 101); /* 101% is a complete failure */
+    /* Check movement cost - always use Ranger's base cost, then apply multiplier for other classes */
+    spell = get_spell_by_vnum(SKILL_BOWS);
+    if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
+        /* Get the Ranger's spell assignment for base cost calculation */
+        num = get_spell_class(spell, CLASS_RANGER);
+        if (num != -1 && spell->assign[num].num_mana) {
+            move_cost =
+                formula_interpreter(ch, NULL, SKILL_BOWS, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code);
+            /* Rangers are skilled with bows, other classes need 2x movement cost */
+            if (GET_CLASS(ch) != CLASS_RANGER) {
+                move_cost *= 2;
+            }
+            if (GET_MOVE(ch) < move_cost) {
+                send_to_char(ch, "Você está muito cansado para atirar.\r\n");
+                return;
+            }
+            GET_MOVE(ch) = MAX(0, MIN(GET_MAX_MOVE(ch), GET_MOVE(ch) - move_cost));
+        }
+    }
+
+    /* Calculate base probability from skill/level */
     if (!IS_NPC(ch))
         prob = GET_SKILL(ch, SKILL_BOWS);
     else
         prob = GET_LEVEL(ch);
 
-    prob += GET_OBJ_VAL(fireweapon, 0);
+    /* Apply bow accuracy bonus as percentage (val0 ranges 0-100) */
+    /* This provides a percentage-based accuracy bonus to the base skill */
+    prob = prob + (prob * GET_OBJ_VAL(fireweapon, 0) / 100);
 
-    if (percent > prob) {
-        send_to_char(ch, "Você tenta atirar mas se atrapalha.\r\n");
-        return;
-    }
+    /* Cap probability at 95 to prevent guaranteed hits */
+    prob = MIN(prob, 95);
+
+    percent = rand_number(1, 101); /* 101% is a complete failure */
 
     if ((door = search_block(arg1, dirs, FALSE)) == -1) {          /* Partial Match */
         if ((door = search_block(arg1, autoexits, FALSE)) == -1) { /* Check 'short' dirs too */
@@ -1188,49 +1297,122 @@ ACMD(do_shoot)
                 if ((vict = get_char_vis(ch, arg2, NULL, FIND_CHAR_ROOM)) != NULL) {
                     if (vict == ch) {
                         send_to_char(ch, "Melhor não tentar isso...\r\n");
+                        char_from_room(ch);
+                        char_to_room(ch, was_room);
                         return;
                     }
                     char_from_room(ch);
                     char_to_room(ch, was_room);
-                    send_to_char(ch, "Você se concentra e atira.\r\n");
-                    act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
-                    dam += GET_DAMROLL(ch);
-                    dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
-                    if (GET_POS(vict) < POS_FIGHTING)
-                        dam *= 1 + (POS_FIGHTING - GET_POS(vict)) / 3;
-                    /* at least 1 hp damage min per hit */
-                    dam = MAX(1, dam);
-                    if (OBJ_FLAGGED(ammo, ITEM_POISONED) && !MOB_FLAGGED(vict, MOB_NO_POISON)) {
-                        new_affect(&af);
-                        af.spell = SPELL_POISON;
-                        af.modifier = -2;
-                        af.location = APPLY_STR;
 
-                        if (AFF_FLAGGED(vict, AFF_POISON))
-                            af.duration = 1;
-                        else {
-                            /* Use level-based duration to match MAGIA-POISON help documentation */
-                            af.duration = GET_LEVEL(ch);
-                            act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
-                            act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
-                        }
-                        SET_BIT_AR(af.bitvector, AFF_POISON);
-                        affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
+                    /* Re-validate ch is still in the world after room changes */
+                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                        if (ch == tmp)
+                            found = TRUE;
+
+                    if (!found) {
+                        /* ch was extracted during room changes, cannot continue */
+                        return;
                     }
-                    damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
-                    remember(ch, vict);
-                    if (rand_number(0, 1) == 1)
-                        hunt_victim(ch);
-                    hitprcnt_mtrigger(vict);
-                    if (GET_OBJ_VAL(ammo, 0) > 1) {
-                        GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
-                        GET_OBJ_VAL(ammo, 0)--;
-                    } else
-                        extract_obj(ammo);
-                    found = TRUE;
+
+                    /* Validate was_room is still valid */
+                    if (IN_ROOM(ch) < 0 || IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) >= top_of_world) {
+                        log1("SYSERR: do_shoot - ch in invalid room %d after moving back", IN_ROOM(ch));
+                        return;
+                    }
+
+                    /* Check if shot hits or misses */
+                    if (percent > prob) {
+                        /* Shot missed */
+                        send_to_char(ch, "Você se concentra e atira, mas erra o alvo.\r\n");
+                        act("$n se concentra e atira, mas erra o alvo.", FALSE, ch, 0, 0, TO_ROOM);
+
+                        /* Consume ammo even on miss */
+                        consume_ammo(ch);
+                        found = TRUE;
+                    } else {
+                        /* Shot hit */
+                        send_to_char(ch, "Você se concentra e atira.\r\n");
+                        act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
+                        dam += GET_DAMROLL(ch);
+                        dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
+                        if (GET_POS(vict) < POS_FIGHTING)
+                            dam *= 1 + (POS_FIGHTING - GET_POS(vict)) / 3;
+                        /* at least 1 hp damage min per hit */
+                        dam = MAX(1, dam);
+                        if (OBJ_FLAGGED(ammo, ITEM_POISONED) && !MOB_FLAGGED(vict, MOB_NO_POISON)) {
+                            new_affect(&af);
+                            af.spell = SPELL_POISON;
+                            af.modifier = -2;
+                            af.location = APPLY_STR;
+
+                            if (AFF_FLAGGED(vict, AFF_POISON))
+                                af.duration = 1;
+                            else {
+                                /* Use level-based duration to match MAGIA-POISON help documentation */
+                                af.duration = GET_LEVEL(ch);
+                                act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
+                                act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
+                            }
+                            SET_BIT_AR(af.bitvector, AFF_POISON);
+                            affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
+                        }
+                        damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
+
+                        /* Safety check: damage() can cause extract_char for ch or vict
+                         * through death, special procedures, triggers, etc.
+                         * This is critical with mobile_activity interactions.
+                         * Re-validate both ch and vict still exist before continuing */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (ch == tmp)
+                                found = TRUE;
+
+                        if (!found) {
+                            /* ch was extracted during damage(), cannot safely continue */
+                            return;
+                        }
+
+                        /* Check if ch was marked for extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                            return;
+                        }
+
+                        /* Re-validate vict still exists before using it */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (vict == tmp)
+                                found = TRUE;
+
+                        if (found) {
+                            /* vict is still valid, safe to call remember and trigger */
+                            remember(ch, vict);
+                            if (rand_number(0, 1) == 1)
+                                hunt_victim(ch);
+                            hitprcnt_mtrigger(vict);
+                        }
+
+                        /* Re-validate ch again after remember/hunt_victim/trigger calls */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (ch == tmp)
+                                found = TRUE;
+
+                        if (!found) {
+                            /* ch was extracted during trigger/hunt, cannot continue */
+                            return;
+                        }
+
+                        /* Check extraction flag again */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                            return;
+                        }
+
+                        /* Safe to handle ammo now */
+                        consume_ammo(ch);
+                        found = TRUE;
+                    }
+                } else {
+                    /* vict not found in target room, move ch back */
+                    char_from_room(ch);
+                    char_to_room(ch, was_room);
                 }
-                char_from_room(ch);
-                char_to_room(ch, was_room);
             } else {
                 send_to_char(ch, "Você tenta mas não consegue acertar ninguém.\r\n");
                 return;

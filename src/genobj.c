@@ -312,6 +312,14 @@ void free_object_strings_proto(struct obj_data *obj)
 {
     int robj_num = GET_OBJ_RNUM(obj);
 
+    /* Safety check: Validate robj_num before accessing obj_proto array.
+     * If invalid, fall back to freeing all strings unconditionally. */
+    if (!VALID_OBJ_RNUM(obj)) {
+        /* Invalid rnum - free all strings without prototype comparison */
+        free_object_strings(obj);
+        return;
+    }
+
     if (obj->name && obj->name != obj_proto[robj_num].name)
         free(obj->name);
     if (obj->description && obj->description != obj_proto[robj_num].description)

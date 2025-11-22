@@ -250,8 +250,10 @@ int load_char(const char *name, struct char_data *ch)
         ch->affected = NULL;
         for (i = 1; i <= MAX_SKILLS; i++)
             SET_SKILL(ch, i, 0);
-        for (i = 1; i <= MAX_SKILLS; i++)
+        for (i = 1; i <= MAX_SKILLS; i++) {
             ch->player_specials->saved.retained_skills[i] = 0;
+            ch->player_specials->saved.retained_skill_incarnation[i] = -1;
+        }
         GET_SEX(ch) = PFDEF_SEX;
         GET_CLASS(ch) = PFDEF_CLASS;
         GET_LEVEL(ch) = PFDEF_LEVEL;
@@ -298,6 +300,7 @@ int load_char(const char *name, struct char_data *ch)
         GET_QUESTPOINTS(ch) = PFDEF_QUESTPOINTS;
         GET_QUEST_COUNTER(ch) = PFDEF_QUESTCOUNT;
         GET_QUEST(ch) = PFDEF_CURRQUEST;
+        GET_ESCORT_MOB_ID(ch) = NOBODY;
         GET_NUM_QUESTS(ch) = PFDEF_COMPQUESTS;
         GET_LAST_MOTD(ch) = PFDEF_LASTMOTD;
         GET_LAST_NEWS(ch) = PFDEF_LASTNEWS;
@@ -307,6 +310,7 @@ int load_char(const char *name, struct char_data *ch)
         GET_DTS(ch) = PFDEF_DTS;
         GET_REMORT(ch) = PFDEF_REMORT;
         GET_KARMA(ch) = PFDEF_KARMA;
+        ch->player_specials->saved.reputation = PFDEF_REPUTATION;
         GET_FIT(ch) = PFDEF_FIT;
 
         for (i = 0; i < AF_ARRAY_MAX; i++)
@@ -424,6 +428,8 @@ int load_char(const char *name, struct char_data *ch)
                 case 'I':
                     if (!strcmp(tag, "Id  "))
                         GET_IDNUM(ch) = atol(line);
+                    else if (!strcmp(tag, "Incarn"))
+                        GET_REMORT(ch) = atoi(line);
                     else if (!strcmp(tag, "Int "))
                         ch->real_abils.intel = atoi(line);
                     else if (!strcmp(tag, "Invs"))
@@ -496,6 +502,8 @@ int load_char(const char *name, struct char_data *ch)
                         GET_QUEST(ch) = atoi(line);
                     else if (!strcmp(tag, "Qcnt"))
                         GET_QUEST_COUNTER(ch) = atoi(line);
+                    else if (!strcmp(tag, "Qesc"))
+                        GET_ESCORT_MOB_ID(ch) = atol(line);
                     else if (!strcmp(tag, "Qest"))
                         load_quests(fl, ch);
                     break;
@@ -505,6 +513,12 @@ int load_char(const char *name, struct char_data *ch)
                         GET_LOADROOM(ch) = atoi(line);
                     if (!strcmp(tag, "Remo"))
                         GET_REMORT(ch) = atoi(line);
+                    else if (!strcmp(tag, "Repu"))
+                        ch->player_specials->saved.reputation = atoi(line);
+                    else if (!strcmp(tag, "LRGn"))
+                        ch->player_specials->saved.last_reputation_gain = atol(line);
+                    else if (!strcmp(tag, "LGRc"))
+                        ch->player_specials->saved.last_give_recipient_id = atol(line);
                     else if (!strcmp(tag, "RtSk"))
                         load_retained_skills(fl, ch);
                     break;
@@ -557,7 +571,7 @@ int load_char(const char *name, struct char_data *ch)
                         GET_WIMP_LEV(ch) = atoi(line);
                     else if (!strcmp(tag, "Wis "))
                         ch->real_abils.wis = atoi(line);
-                    else if (!strcmp(tag, "Was")) {
+                    else if (!strcmp(tag, "Was ")) {
                         if (sscanf(line, "%s %s %s %s", f1, f2, f3, f4) == 4) {
                             WAS_FLAGS(ch)[0] = asciiflag_conv(f1);
                             WAS_FLAGS(ch)[1] = asciiflag_conv(f2);
@@ -729,7 +743,7 @@ void save_char(struct char_data *ch)
     sprintascii(bits2, WAS_FLAGS(ch)[1]);
     sprintascii(bits3, WAS_FLAGS(ch)[2]);
     sprintascii(bits4, WAS_FLAGS(ch)[3]);
-    fprintf(fl, "Was: %s %s %s %s\n", bits, bits2, bits3, bits4);
+    fprintf(fl, "Was : %s %s %s %s\n", bits, bits2, bits3, bits4);
 
     if (GET_SAVE(ch, 0) != PFDEF_SAVETHROW)
         fprintf(fl, "Thr1: %d\n", GET_SAVE(ch, 0));
@@ -816,6 +830,8 @@ void save_char(struct char_data *ch)
     }
     if (GET_QUEST(ch) != PFDEF_CURRQUEST)
         fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
+    if (GET_ESCORT_MOB_ID(ch) != NOBODY)
+        fprintf(fl, "Qesc: %ld\n", GET_ESCORT_MOB_ID(ch));
 
     if (GET_DEATH(ch) != PFDEF_DEATH)
         fprintf(fl, "Dth : %d\n", GET_DEATH(ch));
@@ -825,6 +841,12 @@ void save_char(struct char_data *ch)
         fprintf(fl, "Remo: %d\n", GET_REMORT(ch));
     if (GET_KARMA(ch) != PFDEF_KARMA)
         fprintf(fl, "Karm: %d\n", GET_KARMA(ch));
+    if (GET_REPUTATION(ch) != PFDEF_REPUTATION)
+        fprintf(fl, "Repu: %d\n", GET_REPUTATION(ch));
+    if (ch->player_specials->saved.last_reputation_gain != 0)
+        fprintf(fl, "LRGn: %ld\n", (long)ch->player_specials->saved.last_reputation_gain);
+    if (ch->player_specials->saved.last_give_recipient_id != 0)
+        fprintf(fl, "LGRc: %ld\n", ch->player_specials->saved.last_give_recipient_id);
     if (GET_FIT(ch) != PFDEF_FIT)
         fprintf(fl, "Fit: %d\n", GET_FIT(ch));
 
@@ -856,9 +878,10 @@ void save_char(struct char_data *ch)
             fprintf(fl, "RtSk:\n");
             for (i = 1; i <= MAX_SKILLS; i++) {
                 if (ch->player_specials->saved.retained_skills[i])
-                    fprintf(fl, "%d %d\n", i, ch->player_specials->saved.retained_skills[i]);
+                    fprintf(fl, "%d %d %d\n", i, ch->player_specials->saved.retained_skills[i],
+                            ch->player_specials->saved.retained_skill_incarnation[i]);
             }
-            fprintf(fl, "0 0\n");
+            fprintf(fl, "0 0 0\n");
         }
 
         /* Save class history */
@@ -1090,14 +1113,30 @@ static void load_class_history(FILE *fl, struct char_data *ch)
 
 static void load_retained_skills(FILE *fl, struct char_data *ch)
 {
-    int num = 0, num2 = 0;
+    int num = 0, num2 = 0, num3 = -1;
     char line[MAX_INPUT_LENGTH + 1];
+
+    if (!ch || !ch->player_specials) {
+        /* Safety check - skip loading if character data is invalid */
+        do {
+            get_line(fl, line);
+            sscanf(line, "%d", &num);
+        } while (num != 0);
+        return;
+    }
 
     do {
         get_line(fl, line);
-        sscanf(line, "%d %d", &num, &num2);
-        if (num != 0)
+        /* Try to read 3 values (new format with incarnation), fall back to 2 (old format) */
+        if (sscanf(line, "%d %d %d", &num, &num2, &num3) < 2) {
+            num = 0; /* Invalid line, stop */
+        }
+        if (num > 0 && num <= MAX_SKILLS) {
             ch->player_specials->saved.retained_skills[num] = num2;
+            /* If num3 wasn't read (old format), it stays -1 */
+            ch->player_specials->saved.retained_skill_incarnation[num] = num3;
+        }
+        num3 = -1; /* Reset for next iteration */
     } while (num != 0);
 }
 

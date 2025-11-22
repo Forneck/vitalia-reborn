@@ -752,6 +752,176 @@ static void do_stat_object(struct char_data *ch, struct obj_data *j)
     do_sstat_object(ch, j);
 }
 
+/**
+ * Display effective emotions (hybrid: mood + relationship) of a mob toward a specific target.
+ * Only available to LVL_GOD and above.
+ */
+static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, struct char_data *target)
+{
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "Effective emotions are only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        send_to_char(ch, "The emotion system is currently disabled.\r\n");
+        return;
+    }
+
+    send_to_char(ch, "\r\n%s=== Effective Emotions of %s toward %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 GET_NAME(target), CCNRM(ch, C_NRM));
+    send_to_char(ch, "%s(Hybrid system: Mood + Relationship modifier)%s\r\n\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    /* Display all 20 effective emotions using the hybrid system */
+    int eff_fear = get_effective_emotion_toward(mob, target, EMOTION_TYPE_FEAR);
+    int eff_anger = get_effective_emotion_toward(mob, target, EMOTION_TYPE_ANGER);
+    int eff_happiness = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HAPPINESS);
+    int eff_sadness = get_effective_emotion_toward(mob, target, EMOTION_TYPE_SADNESS);
+
+    send_to_char(ch, "%sBasic Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_fear, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_fear, CCNRM(ch, C_NRM),
+                 (eff_fear > mob->ai_data->emotion_fear)   ? "(relationship increases)"
+                 : (eff_fear < mob->ai_data->emotion_fear) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Anger:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_anger, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_anger, CCNRM(ch, C_NRM),
+                 (eff_anger > mob->ai_data->emotion_anger)   ? "(relationship increases)"
+                 : (eff_anger < mob->ai_data->emotion_anger) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Happiness: [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_happiness, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_happiness, CCNRM(ch, C_NRM),
+                 (eff_happiness > mob->ai_data->emotion_happiness)   ? "(relationship increases)"
+                 : (eff_happiness < mob->ai_data->emotion_happiness) ? "(relationship decreases)"
+                                                                     : "");
+    send_to_char(ch, "  Sadness:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_sadness, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_sadness, CCNRM(ch, C_NRM),
+                 (eff_sadness > mob->ai_data->emotion_sadness)   ? "(relationship increases)"
+                 : (eff_sadness < mob->ai_data->emotion_sadness) ? "(relationship decreases)"
+                                                                 : "");
+
+    int eff_friendship = get_effective_emotion_toward(mob, target, EMOTION_TYPE_FRIENDSHIP);
+    int eff_love = get_effective_emotion_toward(mob, target, EMOTION_TYPE_LOVE);
+    int eff_trust = get_effective_emotion_toward(mob, target, EMOTION_TYPE_TRUST);
+    int eff_loyalty = get_effective_emotion_toward(mob, target, EMOTION_TYPE_LOYALTY);
+
+    send_to_char(ch, "\r\n%sSocial Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Friendship:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_friendship, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_friendship, CCNRM(ch, C_NRM),
+                 (eff_friendship > mob->ai_data->emotion_friendship)   ? "(relationship increases)"
+                 : (eff_friendship < mob->ai_data->emotion_friendship) ? "(relationship decreases)"
+                                                                       : "");
+    send_to_char(ch, "  Love:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_love, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_love, CCNRM(ch, C_NRM),
+                 (eff_love > mob->ai_data->emotion_love)   ? "(relationship increases)"
+                 : (eff_love < mob->ai_data->emotion_love) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Trust:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_trust, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_trust, CCNRM(ch, C_NRM),
+                 (eff_trust > mob->ai_data->emotion_trust)   ? "(relationship increases)"
+                 : (eff_trust < mob->ai_data->emotion_trust) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Loyalty:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_loyalty, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_loyalty, CCNRM(ch, C_NRM),
+                 (eff_loyalty > mob->ai_data->emotion_loyalty)   ? "(relationship increases)"
+                 : (eff_loyalty < mob->ai_data->emotion_loyalty) ? "(relationship decreases)"
+                                                                 : "");
+
+    int eff_curiosity = get_effective_emotion_toward(mob, target, EMOTION_TYPE_CURIOSITY);
+    int eff_greed = get_effective_emotion_toward(mob, target, EMOTION_TYPE_GREED);
+    int eff_pride = get_effective_emotion_toward(mob, target, EMOTION_TYPE_PRIDE);
+
+    send_to_char(ch, "\r\n%sMotivational Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Curiosity: [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_curiosity, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_curiosity, CCNRM(ch, C_NRM),
+                 (eff_curiosity > mob->ai_data->emotion_curiosity)   ? "(relationship increases)"
+                 : (eff_curiosity < mob->ai_data->emotion_curiosity) ? "(relationship decreases)"
+                                                                     : "");
+    send_to_char(ch, "  Greed:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_greed, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_greed, CCNRM(ch, C_NRM),
+                 (eff_greed > mob->ai_data->emotion_greed)   ? "(relationship increases)"
+                 : (eff_greed < mob->ai_data->emotion_greed) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Pride:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_pride, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_pride, CCNRM(ch, C_NRM),
+                 (eff_pride > mob->ai_data->emotion_pride)   ? "(relationship increases)"
+                 : (eff_pride < mob->ai_data->emotion_pride) ? "(relationship decreases)"
+                                                             : "");
+
+    int eff_compassion = get_effective_emotion_toward(mob, target, EMOTION_TYPE_COMPASSION);
+    int eff_envy = get_effective_emotion_toward(mob, target, EMOTION_TYPE_ENVY);
+
+    send_to_char(ch, "\r\n%sEmpathic Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Compassion:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_compassion, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_compassion, CCNRM(ch, C_NRM),
+                 (eff_compassion > mob->ai_data->emotion_compassion)   ? "(relationship increases)"
+                 : (eff_compassion < mob->ai_data->emotion_compassion) ? "(relationship decreases)"
+                                                                       : "");
+    send_to_char(ch, "  Envy:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_envy, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_envy, CCNRM(ch, C_NRM),
+                 (eff_envy > mob->ai_data->emotion_envy)   ? "(relationship increases)"
+                 : (eff_envy < mob->ai_data->emotion_envy) ? "(relationship decreases)"
+                                                           : "");
+
+    int eff_courage = get_effective_emotion_toward(mob, target, EMOTION_TYPE_COURAGE);
+    int eff_excitement = get_effective_emotion_toward(mob, target, EMOTION_TYPE_EXCITEMENT);
+
+    send_to_char(ch, "\r\n%sArousal Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Courage:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_courage, CCNRM(ch, C_NRM),
+                 (eff_courage > mob->ai_data->emotion_courage)   ? "(relationship increases)"
+                 : (eff_courage < mob->ai_data->emotion_courage) ? "(relationship decreases)"
+                                                                 : "");
+    send_to_char(ch, "  Excitement:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_excitement, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_excitement, CCNRM(ch, C_NRM),
+                 (eff_excitement > mob->ai_data->emotion_excitement)   ? "(relationship increases)"
+                 : (eff_excitement < mob->ai_data->emotion_excitement) ? "(relationship decreases)"
+                                                                       : "");
+
+    int eff_disgust = get_effective_emotion_toward(mob, target, EMOTION_TYPE_DISGUST);
+    int eff_shame = get_effective_emotion_toward(mob, target, EMOTION_TYPE_SHAME);
+    int eff_pain = get_effective_emotion_toward(mob, target, EMOTION_TYPE_PAIN);
+    int eff_horror = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HORROR);
+    int eff_humiliation = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HUMILIATION);
+
+    send_to_char(ch, "\r\n%sNegative/Aversive Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Disgust:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_disgust, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_disgust, CCNRM(ch, C_NRM),
+                 (eff_disgust > mob->ai_data->emotion_disgust)   ? "(relationship increases)"
+                 : (eff_disgust < mob->ai_data->emotion_disgust) ? "(relationship decreases)"
+                                                                 : "");
+    send_to_char(ch, "  Shame:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_shame, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_shame, CCNRM(ch, C_NRM),
+                 (eff_shame > mob->ai_data->emotion_shame)   ? "(relationship increases)"
+                 : (eff_shame < mob->ai_data->emotion_shame) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Pain:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_pain, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_pain, CCNRM(ch, C_NRM),
+                 (eff_pain > mob->ai_data->emotion_pain)   ? "(relationship increases)"
+                 : (eff_pain < mob->ai_data->emotion_pain) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Horror:    [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_horror, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_horror, CCNRM(ch, C_NRM),
+                 (eff_horror > mob->ai_data->emotion_horror)   ? "(relationship increases)"
+                 : (eff_horror < mob->ai_data->emotion_horror) ? "(relationship decreases)"
+                                                               : "");
+    send_to_char(ch, "  Humiliation:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_humiliation, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_humiliation,
+                 CCNRM(ch, C_NRM),
+                 (eff_humiliation > mob->ai_data->emotion_humiliation)   ? "(relationship increases)"
+                 : (eff_humiliation < mob->ai_data->emotion_humiliation) ? "(relationship decreases)"
+                                                                         : "");
+
+    send_to_char(ch,
+                 "\r\n%sNote:%s Effective emotions are used in combat, shopping, quests, and other interactions.\r\n",
+                 CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+}
+
 static void do_stat_character(struct char_data *ch, struct char_data *k)
 {
     char buf[MAX_STRING_LENGTH];
@@ -837,6 +1007,15 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Aventureiro (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENADVENTURER(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Follow (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENFOLLOW(k),
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Healing (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENHEALING(k),
+                     CCNRM(ch, C_NRM));
+        /* Display Emotional Profile if set */
+        if (k->ai_data && k->ai_data->emotional_profile >= 0 && k->ai_data->emotional_profile <= 7) {
+            send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),
+                         emotion_profile_types[k->ai_data->emotional_profile], CCNRM(ch, C_NRM));
+        }
         /* Futuramente, podemos adicionar outros genes aqui. */
     }
 
@@ -887,6 +1066,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "Quest Points: [%9d] Quests Completed: [%5d]\r\n", GET_QUESTPOINTS(k), GET_NUM_QUESTS(k));
         if (GET_QUEST(k) != NOTHING)
             send_to_char(ch, "Current Quest: [%5d] Time Left: [%5d]\r\n", GET_QUEST(k), GET_QUEST_TIME(k));
+        send_to_char(ch, "Incarnations: [%3d Enc.]\r\n", GET_REMORT(k));
     }
 
     if (IS_MOB(k))
@@ -968,7 +1148,309 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
     }
     if (!IS_NPC(k)) {
         send_to_char(ch, "Hometown: %d\r\n", GET_ROOM_VNUM(GET_HOMETOWN(k)));
-        send_to_char(ch, "Karma: %'d\r\n", GET_KARMA(k));
+        send_to_char(ch, "Karma: %'d, Reputation: %d\r\n", GET_KARMA(k), GET_REPUTATION(k));
+    } else if (IS_MOB(k)) {
+        /* Display mob reputation */
+        send_to_char(ch, "Reputation: %d\r\n", GET_REPUTATION(k));
+    }
+    if (IS_MOB(k) && k->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Display mob emotions when experimental feature is enabled */
+        send_to_char(ch, "%sEmotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Basic: Fear[%s%d%s] Anger[%s%d%s] Happiness[%s%d%s] Sadness[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_fear, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_anger,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_happiness, CCNRM(ch, C_NRM),
+                     CCCYN(ch, C_NRM), k->ai_data->emotion_sadness, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Social: Friendship[%s%d%s] Love[%s%d%s] Trust[%s%d%s] Loyalty[%s%d%s]\r\n",
+                     CCCYN(ch, C_NRM), k->ai_data->emotion_friendship, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_love, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_trust,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_loyalty, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Motivational: Curiosity[%s%d%s] Greed[%s%d%s] Pride[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_curiosity, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_greed,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_pride, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Empathic: Compassion[%s%d%s] Envy[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_compassion, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_envy,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Arousal: Courage[%s%d%s] Excitement[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
+                     CCNRM(ch, C_NRM));
+        send_to_char(
+            ch,
+            "  Negative/aversive: Disgust[%s%d%s] Shame[%s%d%s] Pain[%s%d%s] Horror[%s%d%s] Humiliation[%s%d%s]\r\n",
+            CCCYN(ch, C_NRM), k->ai_data->emotion_disgust, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+            k->ai_data->emotion_shame, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_pain, CCNRM(ch, C_NRM),
+            CCCYN(ch, C_NRM), k->ai_data->emotion_horror, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+            k->ai_data->emotion_humiliation, CCNRM(ch, C_NRM));
+
+        /* Display emotion memory history */
+        {
+            int i, memory_count = 0;
+            time_t current_time = time(0);
+            const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
+                                               "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
+
+            /* Safety check: ensure memory_index is within valid range */
+            if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
+                k->ai_data->memory_index = 0;
+            }
+
+            /* Count valid memories */
+            for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                if (k->ai_data->memories[i].timestamp > 0) {
+                    memory_count++;
+                }
+            }
+
+            if (memory_count > 0) {
+                send_to_char(ch, "%sEmotion Memory:%s (%d/10 slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                             memory_count);
+
+                /* Display memories in chronological order (oldest to newest) */
+                for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                    /* Calculate actual index considering circular buffer */
+                    int idx = (k->ai_data->memory_index + i) % EMOTION_MEMORY_SIZE;
+                    struct emotion_memory *mem = &k->ai_data->memories[idx];
+
+                    if (mem->timestamp > 0) {
+                        int age_seconds = current_time - mem->timestamp;
+                        int age_minutes = age_seconds / 60;
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 9)
+                                                           ? interaction_names[mem->interaction_type]
+                                                           : "Unknown";
+
+                        /* Try to resolve entity name */
+                        char entity_name[MAX_NAME_LENGTH + 20];
+                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
+                            /* For players, try to find them by ID */
+                            struct char_data *player = NULL;
+                            /* Search through character_list for player with matching IDNUM */
+                            for (player = character_list; player; player = player->next) {
+                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
+                                    /* Found the player - validate and copy name safely */
+                                    const char *name = GET_NAME(player);
+                                    if (name && *name) {
+                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
+                                    } else {
+                                        snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
+                                    }
+                                    break;
+                                }
+                            }
+                            if (!player) {
+                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
+                            }
+                        } else {
+                            /* For mobs, try to find them by script_id (runtime only) */
+                            struct char_data *mob = NULL;
+                            for (mob = character_list; mob; mob = mob->next) {
+                                if (IS_NPC(mob) && char_script_id(mob) == mem->entity_id) {
+                                    /* Found the mob - validate and copy name safely */
+                                    const char *name = GET_NAME(mob);
+                                    if (name && *name) {
+                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
+                                    } else {
+                                        snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
+                                    }
+                                    break;
+                                }
+                            }
+                            if (!mob) {
+                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
+                            }
+                        }
+
+                        /* Build emotion display - show all significant emotion values */
+                        char emotion_buf[512];
+                        size_t offset = 0;
+                        int has_emotions = 0;
+
+                        /* Show all 20 emotions that have non-zero values */
+                        if (mem->fear_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Fear:%d",
+                                             mem->fear_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->anger_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Anger:%d",
+                                             mem->anger_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->happiness_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Happy:%d",
+                                             mem->happiness_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->sadness_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Sad:%d",
+                                             mem->sadness_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->friendship_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Friend:%d",
+                                             mem->friendship_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->love_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Love:%d",
+                                             mem->love_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->trust_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Trust:%d",
+                                             mem->trust_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->loyalty_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Loyal:%d",
+                                             mem->loyalty_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->curiosity_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Curious:%d",
+                                             mem->curiosity_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->greed_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Greed:%d",
+                                             mem->greed_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->pride_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Pride:%d",
+                                             mem->pride_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->compassion_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Compassion:%d",
+                                             mem->compassion_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->envy_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Envy:%d",
+                                             mem->envy_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->courage_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Courage:%d",
+                                             mem->courage_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->excitement_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Excited:%d",
+                                             mem->excitement_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->disgust_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Disgust:%d",
+                                             mem->disgust_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->shame_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Shame:%d",
+                                             mem->shame_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->pain_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Pain:%d",
+                                             mem->pain_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->horror_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Horror:%d",
+                                             mem->horror_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+                        if (mem->humiliation_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Humiliated:%d",
+                                             mem->humiliation_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) {
+                                offset += n;
+                                has_emotions = 1;
+                            }
+                        }
+
+                        /* Build interaction details with social name if applicable */
+                        char interaction_details[128];
+                        /* Ensure social_name is null-terminated and safe to use */
+                        if (mem->social_name[0] != '\0') {
+                            /* Add safety check - ensure social_name is properly terminated */
+                            mem->social_name[sizeof(mem->social_name) - 1] = '\0';
+                            snprintf(interaction_details, sizeof(interaction_details), "%s(%s)", interaction_name,
+                                     mem->social_name);
+                        } else {
+                            snprintf(interaction_details, sizeof(interaction_details), "%s", interaction_name);
+                        }
+
+                        send_to_char(ch, "  [%s%2d min ago%s] %s %s%-18s%s%s\r\n", CCGRN(ch, C_NRM), age_minutes,
+                                     CCNRM(ch, C_NRM), entity_name, CCYEL(ch, C_NRM), interaction_details,
+                                     CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "");
+                        if (has_emotions) {
+                            send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                                         emotion_buf);
+                        }
+                    }
+                }
+            } else {
+                send_to_char(ch, "%sEmotion Memory:%s No interactions recorded yet\r\n", CCYEL(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            }
+        }
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);
@@ -1094,7 +1576,25 @@ ACMD(do_stat)
         char *name = buf1;
         int number = get_number(&name);
 
-        if ((object = get_obj_in_equip_vis(ch, name, &number, ch->equipment)) != NULL)
+        /* Check if second argument is "emotions" for emotion display */
+        if (*buf2 && is_abbrev(buf2, "emotions")) {
+            /* Find the mob to display emotions for */
+            victim = NULL;
+            if ((victim = get_char_vis(ch, name, &number, FIND_CHAR_ROOM)) != NULL ||
+                (victim = get_char_vis(ch, name, &number, FIND_CHAR_WORLD)) != NULL) {
+
+                /* Check if user has permission */
+                if (GET_LEVEL(ch) < LVL_GOD) {
+                    send_to_char(ch, "Você precisa ser nível GOD ou superior para ver emoções efetivas.\r\n");
+                    return;
+                }
+
+                /* Display effective emotions toward the command issuer */
+                do_stat_mob_emotions(ch, victim, ch);
+            } else {
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
+            }
+        } else if ((object = get_obj_in_equip_vis(ch, name, &number, ch->equipment)) != NULL)
             do_stat_object(ch, object);
         else if ((object = get_obj_in_list_vis(ch, name, &number, ch->carrying)) != NULL)
             do_stat_object(ch, object);
@@ -2944,6 +3444,8 @@ static struct set_struct {
                   {"goalitem", LVL_BUILDER, NPC, NUMBER},
                   {"goaltarget", LVL_BUILDER, NPC, NUMBER},
                   {"goaltimer", LVL_BUILDER, NPC, NUMBER},
+                  {"karma", LVL_GOD, PC, NUMBER},        /* 70 */
+                  {"reputation", LVL_GOD, BOTH, NUMBER}, /* 71 */
                   {"\n", 0, BOTH, MISC}};
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3406,9 +3908,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->current_goal = RANGE(0, 9);
             break;
@@ -3420,9 +3920,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             rnum = real_room(value);
             if (rnum == NOWHERE && value != -1) {
@@ -3439,9 +3937,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_item_vnum = (value == -1) ? NOTHING : value;
             break;
@@ -3453,9 +3949,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_target_mob_rnum = (value == -1) ? NOBODY : value;
             break;
@@ -3467,11 +3961,24 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_timer = RANGE(0, 10000);
+            break;
+        case 70: /* karma */
+            GET_KARMA(vict) = RANGE(-1000000, 1000000);
+            break;
+        case 71: /* reputation */
+            if (IS_NPC(vict)) {
+                if (!vict->ai_data) {
+                    CREATE(vict->ai_data, struct mob_ai_data, 1);
+                    memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                    init_mob_ai_data(vict);
+                }
+                vict->ai_data->reputation = RANGE(0, 100);
+            } else {
+                vict->player_specials->saved.reputation = RANGE(0, 100);
+            }
             break;
         default:
             send_to_char(ch, "Can't set that!\r\n");
@@ -5529,7 +6036,8 @@ ACMD(do_gstats)
     if (!*arg1) {
         send_to_char(ch, "Usage: gstats <target> <gene>\r\n");
         send_to_char(ch, "Target can be: mob name/vnum, zone <zone_num>, or 'all'\r\n");
-        send_to_char(ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(
+            ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, follow, healing\r\n");
         return;
     }
 
@@ -5539,7 +6047,8 @@ ACMD(do_gstats)
         if (!*arg2 || !*arg3) {
             send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
             send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                         "follow, healing\r\n");
             return;
         }
     } else {
@@ -5547,7 +6056,8 @@ ACMD(do_gstats)
         if (!*arg2) {
             send_to_char(ch, "Specify a gene to analyze.\r\n");
             send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                         "follow, healing\r\n");
             return;
         }
     }
@@ -5573,9 +6083,14 @@ ACMD(do_gstats)
         gene_name = "Quest Tendency";
     else if (!str_cmp(gene_arg, "adventurer"))
         gene_name = "Adventurer Tendency";
+    else if (!str_cmp(gene_arg, "follow"))
+        gene_name = "Follow Tendency";
+    else if (!str_cmp(gene_arg, "healing") || !str_cmp(gene_arg, "bandage"))
+        gene_name = "Healing Tendency";
     else {
-        send_to_char(
-            ch, "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(ch,
+                     "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                     "follow, healing\r\n");
         return;
     }
 
@@ -5650,6 +6165,10 @@ ACMD(do_gstats)
             gene_value = proto_mob->ai_data->genetics.quest_tendency;
         else if (!str_cmp(gene_arg, "adventurer"))
             gene_value = proto_mob->ai_data->genetics.adventurer_tendency;
+        else if (!str_cmp(gene_arg, "follow"))
+            gene_value = proto_mob->ai_data->genetics.follow_tendency;
+        else if (!str_cmp(gene_arg, "healing") || !str_cmp(gene_arg, "bandage"))
+            gene_value = proto_mob->ai_data->genetics.healing_tendency;
 
         if (count < 1000) {
             gene_values[count++] = gene_value;
@@ -5710,7 +6229,63 @@ ACMD(do_gstats)
 }
 
 /*
- * rskill command - Manage retained skills for players
+ * Display retained skills for mortals in user-friendly format
+ */
+static void show_retained_skills(struct char_data *ch)
+{
+    int found = 0;
+    int incarnation;
+    int class_num;
+
+    if (!ch) {
+        return; /* Safety check - should never happen */
+    }
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não têm habilidades de remort.\r\n");
+        return;
+    }
+
+    if (!ch->player_specials) {
+        send_to_char(ch, "Erro: dados do jogador não disponíveis.\r\n");
+        return; /* Safety check for NULL player_specials */
+    }
+
+    send_to_char(ch, "\r\n@cHabilidades e Magias Levadas por Remort@n\r\n");
+    send_to_char(ch, "@c=====================================================@n\r\n\r\n");
+
+    for (int i = 1; i <= MAX_SKILLS; i++) {
+        if (ch->player_specials->saved.retained_skills[i] > 0) {
+            incarnation = ch->player_specials->saved.retained_skill_incarnation[i];
+
+            /* Get the class from class_history if we know the incarnation */
+            if (incarnation >= 0 && incarnation < 100 && ch->player_specials->saved.class_history[incarnation] >= 0) {
+                class_num = ch->player_specials->saved.class_history[incarnation];
+                if (class_num < NUM_CLASSES) {
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
+                                 pc_class_types[class_num], incarnation + 1); /* +1 because incarnations start at 0 */
+                } else {
+                    /* Fallback for out-of-bounds class_num */
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i), "desconhecida",
+                                 incarnation + 1);
+                }
+            } else {
+                /* Fallback for old data without incarnation info */
+                send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ ??? ]\r\n", skill_name(i), "desconhecida");
+            }
+            found++;
+        }
+    }
+
+    if (!found) {
+        send_to_char(ch, "Você ainda não possui habilidades de remort.\r\n");
+    } else {
+        send_to_char(ch, "\r\n@cTotal: %d habilidades/magias de remort.@n\r\n", found);
+    }
+}
+
+/*
+ * rskill command - Manage retained skills for players (gods) or view them (mortals)
  */
 ACMD(do_rskill)
 {
@@ -5718,6 +6293,13 @@ ACMD(do_rskill)
     struct char_data *vict = NULL;
     int skill_num, skill_value;
 
+    /* Mortals can only view their own retained skills */
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        show_retained_skills(ch);
+        return;
+    }
+
+    /* Only gods/admins get past this point */
     one_argument(two_arguments(argument, arg1, arg2), arg3);
 
     if (!*arg1) {
@@ -5737,6 +6319,11 @@ ACMD(do_rskill)
     if (IS_NPC(vict)) {
         send_to_char(ch, "You can't manage retained skills for NPCs.\r\n");
         return;
+    }
+
+    if (!vict->player_specials) {
+        send_to_char(ch, "Error: Player data not available.\r\n");
+        return; /* Safety check for NULL player_specials */
     }
 
     if (!*arg2) {
@@ -5801,6 +6388,9 @@ ACMD(do_rskill)
         }
 
         vict->player_specials->saved.retained_skills[skill_num] = skill_value;
+        /* Set incarnation to current for manually added skills */
+        vict->player_specials->saved.retained_skill_incarnation[skill_num] =
+            vict->player_specials->saved.num_incarnations;
         send_to_char(ch, "Added retained skill %d (%s) with value %d for %s.\r\n", skill_num, skill_name(skill_num),
                      skill_value, GET_NAME(vict));
         return;
@@ -5825,6 +6415,7 @@ ACMD(do_rskill)
 
         int old_value = vict->player_specials->saved.retained_skills[skill_num];
         vict->player_specials->saved.retained_skills[skill_num] = 0;
+        vict->player_specials->saved.retained_skill_incarnation[skill_num] = -1;
         send_to_char(ch, "Removed retained skill %d (%s, was %d%%) from %s.\r\n", skill_num, skill_name(skill_num),
                      old_value, GET_NAME(vict));
         return;
@@ -6240,4 +6831,443 @@ ACMD(do_portal)
 
     mudlog(NRM, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "(GC) %s created portal%s from %d to %d (timer: %s)",
            GET_NAME(ch), bidirectional ? "s" : "", world[IN_ROOM(ch)].number, dest_vnum, timer_buf);
+}
+
+/* Global array to track disabled commands */
+static bool *disabled_cmd = NULL;
+static int num_of_cmds = 0;
+
+void init_disabled_commands(void)
+{
+    int i;
+
+    /* Count commands */
+    for (i = 0; *complete_cmd_info[i].command != '\n'; i++)
+        ;
+    num_of_cmds = i;
+
+    /* Allocate and initialize disabled array */
+    CREATE(disabled_cmd, bool, num_of_cmds);
+    for (i = 0; i < num_of_cmds; i++)
+        disabled_cmd[i] = FALSE;
+}
+
+bool is_command_disabled(int cmd_num)
+{
+    if (cmd_num < 0 || cmd_num >= num_of_cmds)
+        return FALSE;
+
+    return disabled_cmd[cmd_num];
+}
+
+static void list_disabled_commands(struct char_data *ch)
+{
+    int i;
+    bool found = FALSE;
+
+    send_to_char(ch, "Comandos desabilitados:\r\n");
+    for (i = 0; i < num_of_cmds; i++) {
+        if (disabled_cmd[i]) {
+            send_to_char(ch, "  %s\r\n", complete_cmd_info[i].command);
+            found = TRUE;
+        }
+    }
+    if (!found)
+        send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+}
+
+ACMD(do_disable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num;
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        list_disabled_commands(ch);
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if trying to disable 'disable' or 'enable' */
+    if (!strcmp(complete_cmd_info[cmd_num].command, "disable") ||
+        !strcmp(complete_cmd_info[cmd_num].command, "enable")) {
+        send_to_char(ch, "Você não pode desabilitar o comando '%s'!\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Check if already disabled */
+    if (disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' já está desabilitado.\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Disable the command */
+    disabled_cmd[cmd_num] = TRUE;
+    send_to_char(ch, "Comando '%s' desabilitado com sucesso.\r\n", complete_cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s desabilitou o comando: %s", GET_NAME(ch),
+           complete_cmd_info[cmd_num].command);
+}
+
+ACMD(do_enable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num;
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        list_disabled_commands(ch);
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if not disabled */
+    if (!disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' não está desabilitado.\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Enable the command */
+    disabled_cmd[cmd_num] = FALSE;
+    send_to_char(ch, "Comando '%s' habilitado com sucesso.\r\n", complete_cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s habilitou o comando: %s", GET_NAME(ch), complete_cmd_info[cmd_num].command);
+}
+
+/* Display current emotion system configuration */
+ACMD(do_emotionconfig)
+{
+    /* Safety check */
+    if (!ch || !ch->desc) {
+        return;
+    }
+
+    send_to_char(ch, "\r\n%s=== Emotion System Configuration ===%s\r\n\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    send_to_char(ch, "%sVisual Indicator Thresholds:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear Display     : %d\r\n", CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD);
+    send_to_char(ch, "  Anger Display    : %d\r\n", CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD);
+    send_to_char(ch, "  Happiness Display: %d\r\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
+    send_to_char(ch, "  Sadness Display  : %d\r\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
+    send_to_char(ch, "  Horror Display   : %d\r\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
+    send_to_char(ch, "  Pain Display     : %d\r\n\r\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+
+    send_to_char(ch, "%sCombat Flee Behavior:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear Low/High Thresholds : %d / %d\r\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD);
+    send_to_char(ch, "  Fear Low/High Modifiers  : %+d%% / %+d%%\r\n", CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER,
+                 CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER);
+    send_to_char(ch, "  Courage Low/High Thresholds: %d / %d\r\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD);
+    send_to_char(ch, "  Courage Low/High Modifiers : %+d%% / %+d%%\r\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER,
+                 CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER);
+    send_to_char(ch, "  Horror Threshold/Modifier  : %d / %+d%%\r\n\r\n", CONFIG_EMOTION_FLEE_HORROR_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_HORROR_MODIFIER);
+
+    send_to_char(ch, "%sPain System:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Damage Thresholds (%%HP): Minor:%d  Moderate:%d  Heavy:%d  Massive:%d\r\n",
+                 CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD, CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD,
+                 CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD, CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD);
+    send_to_char(ch, "  Pain Amounts: Minor:%d-%d  Moderate:%d-%d  Heavy:%d-%d  Massive:%d-%d\r\n\r\n",
+                 CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX, CONFIG_EMOTION_PAIN_MODERATE_MIN,
+                 CONFIG_EMOTION_PAIN_MODERATE_MAX, CONFIG_EMOTION_PAIN_HEAVY_MIN, CONFIG_EMOTION_PAIN_HEAVY_MAX,
+                 CONFIG_EMOTION_PAIN_MASSIVE_MIN, CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+
+    send_to_char(ch, "%sMemory System:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Weights: Recent:%d  Fresh:%d  Moderate:%d  Old:%d  Ancient:%d\r\n",
+                 CONFIG_EMOTION_MEMORY_WEIGHT_RECENT, CONFIG_EMOTION_MEMORY_WEIGHT_FRESH,
+                 CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE, CONFIG_EMOTION_MEMORY_WEIGHT_OLD,
+                 CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT);
+    send_to_char(ch, "  Age Thresholds (sec): Recent:%d  Fresh:%d  Moderate:%d  Old:%d\r\n",
+                 CONFIG_EMOTION_MEMORY_AGE_RECENT, CONFIG_EMOTION_MEMORY_AGE_FRESH, CONFIG_EMOTION_MEMORY_AGE_MODERATE,
+                 CONFIG_EMOTION_MEMORY_AGE_OLD);
+    send_to_char(ch, "  Baseline Offset: %d\r\n\r\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
+
+    send_to_char(ch, "Use %scedit%s to modify these values.\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+}
+
+/* Export emotion configuration to file */
+ACMD(do_emotionexport)
+{
+    FILE *fp;
+    char filename[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH];
+    char safe_arg[MAX_INPUT_LENGTH];
+    time_t now = time(0);
+    int i;
+
+    /* Safety checks */
+    if (!ch || !ch->desc) {
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Usage: emotionexport <filename>\r\n");
+        return;
+    }
+
+    /* Sanitize filename - only allow alphanumeric, underscore, and hyphen */
+    for (i = 0; arg[i] && i < MAX_INPUT_LENGTH - 1; i++) {
+        if (!isalnum(arg[i]) && arg[i] != '_' && arg[i] != '-') {
+            send_to_char(ch, "Invalid filename. Use only letters, numbers, underscore, and hyphen.\r\n");
+            return;
+        }
+        safe_arg[i] = arg[i];
+    }
+    safe_arg[i] = '\0';
+
+    /* Check for empty sanitized name */
+    if (!*safe_arg) {
+        send_to_char(ch, "Invalid filename.\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", safe_arg);
+
+    if (!(fp = fopen(filename, "w"))) {
+        send_to_char(ch, "Could not create file '%s'.\r\n", filename);
+        mudlog(BRF, LVL_IMMORT, TRUE, "SYSERR: %s failed to export emotion config to %s", GET_NAME(ch), filename);
+        return;
+    }
+
+    fprintf(fp, "# Emotion System Configuration Export\n");
+    fprintf(fp, "# Exported by: %s\n", GET_NAME(ch));
+    fprintf(fp, "# Date: %s\n", ctime(&now));
+    fprintf(fp, "\n# Visual Indicator Thresholds\n");
+    fprintf(fp, "display_fear_threshold=%d\n", CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD);
+    fprintf(fp, "display_anger_threshold=%d\n", CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD);
+    fprintf(fp, "display_happiness_threshold=%d\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
+    fprintf(fp, "display_sadness_threshold=%d\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
+    fprintf(fp, "display_horror_threshold=%d\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
+    fprintf(fp, "display_pain_threshold=%d\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+
+    fprintf(fp, "\n# Combat Flee Behavior Thresholds\n");
+    fprintf(fp, "flee_fear_low_threshold=%d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD);
+    fprintf(fp, "flee_fear_high_threshold=%d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD);
+    fprintf(fp, "flee_courage_low_threshold=%d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD);
+    fprintf(fp, "flee_courage_high_threshold=%d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD);
+    fprintf(fp, "flee_horror_threshold=%d\n", CONFIG_EMOTION_FLEE_HORROR_THRESHOLD);
+
+    fprintf(fp, "\n# Combat Flee Behavior Modifiers\n");
+    fprintf(fp, "flee_fear_low_modifier=%d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER);
+    fprintf(fp, "flee_fear_high_modifier=%d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER);
+    fprintf(fp, "flee_courage_low_modifier=%d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER);
+    fprintf(fp, "flee_courage_high_modifier=%d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER);
+    fprintf(fp, "flee_horror_modifier=%d\n", CONFIG_EMOTION_FLEE_HORROR_MODIFIER);
+
+    fprintf(fp, "\n# Pain System Damage Thresholds\n");
+    fprintf(fp, "pain_damage_minor_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD);
+    fprintf(fp, "pain_damage_moderate_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD);
+    fprintf(fp, "pain_damage_heavy_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD);
+    fprintf(fp, "pain_damage_massive_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD);
+
+    fprintf(fp, "\n# Pain System Pain Amounts\n");
+    fprintf(fp, "pain_minor_min=%d\n", CONFIG_EMOTION_PAIN_MINOR_MIN);
+    fprintf(fp, "pain_minor_max=%d\n", CONFIG_EMOTION_PAIN_MINOR_MAX);
+    fprintf(fp, "pain_moderate_min=%d\n", CONFIG_EMOTION_PAIN_MODERATE_MIN);
+    fprintf(fp, "pain_moderate_max=%d\n", CONFIG_EMOTION_PAIN_MODERATE_MAX);
+    fprintf(fp, "pain_heavy_min=%d\n", CONFIG_EMOTION_PAIN_HEAVY_MIN);
+    fprintf(fp, "pain_heavy_max=%d\n", CONFIG_EMOTION_PAIN_HEAVY_MAX);
+    fprintf(fp, "pain_massive_min=%d\n", CONFIG_EMOTION_PAIN_MASSIVE_MIN);
+    fprintf(fp, "pain_massive_max=%d\n", CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+
+    fprintf(fp, "\n# Memory System Weights\n");
+    fprintf(fp, "memory_weight_recent=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_RECENT);
+    fprintf(fp, "memory_weight_fresh=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_FRESH);
+    fprintf(fp, "memory_weight_moderate=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE);
+    fprintf(fp, "memory_weight_old=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_OLD);
+    fprintf(fp, "memory_weight_ancient=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT);
+
+    fprintf(fp, "\n# Memory System Age Thresholds\n");
+    fprintf(fp, "memory_age_recent=%d\n", CONFIG_EMOTION_MEMORY_AGE_RECENT);
+    fprintf(fp, "memory_age_fresh=%d\n", CONFIG_EMOTION_MEMORY_AGE_FRESH);
+    fprintf(fp, "memory_age_moderate=%d\n", CONFIG_EMOTION_MEMORY_AGE_MODERATE);
+    fprintf(fp, "memory_age_old=%d\n", CONFIG_EMOTION_MEMORY_AGE_OLD);
+
+    fprintf(fp, "\n# Memory System Baseline\n");
+    fprintf(fp, "memory_baseline_offset=%d\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
+
+    fclose(fp);
+
+    send_to_char(ch, "Emotion configuration exported to: %s\r\n", filename);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s exported emotion config to %s", GET_NAME(ch), filename);
+}
+
+/* Import emotion configuration from file */
+ACMD(do_emotionimport)
+{
+    FILE *fp;
+    char filename[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH];
+    char safe_arg[MAX_INPUT_LENGTH];
+    char line[256], key[128], value[128];
+    int imported = 0;
+    int i;
+
+    /* Safety checks */
+    if (!ch || !ch->desc) {
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Usage: emotionimport <filename>\r\n");
+        return;
+    }
+
+    /* Sanitize filename - only allow alphanumeric, underscore, and hyphen */
+    for (i = 0; arg[i] && i < MAX_INPUT_LENGTH - 1; i++) {
+        if (!isalnum(arg[i]) && arg[i] != '_' && arg[i] != '-') {
+            send_to_char(ch, "Invalid filename. Use only letters, numbers, underscore, and hyphen.\r\n");
+            return;
+        }
+        safe_arg[i] = arg[i];
+    }
+    safe_arg[i] = '\0';
+
+    /* Check for empty sanitized name */
+    if (!*safe_arg) {
+        send_to_char(ch, "Invalid filename.\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", safe_arg);
+
+    if (!(fp = fopen(filename, "r"))) {
+        send_to_char(ch, "Could not open file '%s'.\r\n", filename);
+        return;
+    }
+
+    send_to_char(ch, "Importing emotion configuration from: %s\r\n", filename);
+
+    while (fgets(line, sizeof(line), fp)) {
+        /* Skip comments and empty lines */
+        if (line[0] == '#' || line[0] == '\n' || line[0] == '\r')
+            continue;
+
+        /* Parse key=value */
+        if (sscanf(line, "%127[^=]=%127s", key, value) == 2) {
+            int val = atoi(value);
+
+            /* Display thresholds */
+            if (!strcmp(key, "display_fear_threshold"))
+                CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_anger_threshold"))
+                CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_happiness_threshold"))
+                CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_sadness_threshold"))
+                CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_horror_threshold"))
+                CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_pain_threshold"))
+                CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Flee thresholds */
+            else if (!strcmp(key, "flee_fear_low_threshold"))
+                CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_fear_high_threshold"))
+                CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_courage_low_threshold"))
+                CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_courage_high_threshold"))
+                CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_horror_threshold"))
+                CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Flee modifiers */
+            else if (!strcmp(key, "flee_fear_low_modifier"))
+                CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_fear_high_modifier"))
+                CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_courage_low_modifier"))
+                CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_courage_high_modifier"))
+                CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_horror_modifier"))
+                CONFIG_EMOTION_FLEE_HORROR_MODIFIER = LIMIT(val, -100, 100);
+
+            /* Pain thresholds */
+            else if (!strcmp(key, "pain_damage_minor_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_moderate_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_heavy_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_massive_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Pain amounts */
+            else if (!strcmp(key, "pain_minor_min"))
+                CONFIG_EMOTION_PAIN_MINOR_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_minor_max"))
+                CONFIG_EMOTION_PAIN_MINOR_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_moderate_min"))
+                CONFIG_EMOTION_PAIN_MODERATE_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_moderate_max"))
+                CONFIG_EMOTION_PAIN_MODERATE_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_heavy_min"))
+                CONFIG_EMOTION_PAIN_HEAVY_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_heavy_max"))
+                CONFIG_EMOTION_PAIN_HEAVY_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_massive_min"))
+                CONFIG_EMOTION_PAIN_MASSIVE_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_massive_max"))
+                CONFIG_EMOTION_PAIN_MASSIVE_MAX = LIMIT(val, 0, 100);
+
+            /* Memory weights */
+            else if (!strcmp(key, "memory_weight_recent"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_fresh"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_moderate"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_old"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_OLD = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_ancient"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = LIMIT(val, 1, 10);
+
+            /* Memory ages */
+            else if (!strcmp(key, "memory_age_recent"))
+                CONFIG_EMOTION_MEMORY_AGE_RECENT = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_fresh"))
+                CONFIG_EMOTION_MEMORY_AGE_FRESH = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_moderate"))
+                CONFIG_EMOTION_MEMORY_AGE_MODERATE = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_old"))
+                CONFIG_EMOTION_MEMORY_AGE_OLD = MAX(val, 1);
+
+            /* Memory baseline */
+            else if (!strcmp(key, "memory_baseline_offset"))
+                CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = LIMIT(val, 0, 100);
+            else
+                continue; /* Unknown key, skip */
+
+            imported++;
+        }
+    }
+
+    fclose(fp);
+
+    send_to_char(ch, "Import complete. %d values loaded.\r\n", imported);
+    send_to_char(ch, "Use 'cedit' and save to persist these changes.\r\n");
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s imported emotion config from %s (%d values)", GET_NAME(ch), filename,
+           imported);
 }

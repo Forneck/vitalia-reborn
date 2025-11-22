@@ -14,6 +14,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 19
 E
 T 3009
 #3903
@@ -69,7 +72,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 6
+GenLoot: 3
+GenFollow: 11
 E
 #3906
 praga negra espirito~
@@ -88,7 +93,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 1
+GenLoot: 8
+GenEquip: 1
+GenFollow: 14
 E
 #3907
 febre amarela figura~
@@ -107,8 +114,9 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 8
+GenWimpy: 10
+GenLoot: 9
+GenFollow: 14
 E
 #3908
 demilich esqueleto~
@@ -128,6 +136,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 15
 E
 #3909
 esqueleto cavaleiro morte~
@@ -145,6 +155,8 @@ mão desembanha sua grande espada e a empunha com uma facilidade mortífera.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 14
 E
 #3910
 kalas~
@@ -163,6 +175,11 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenRoam: 83
+GenFollow: 14
 E
 #3911
 mimico bau~
@@ -180,6 +197,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 13
 E
 #3912
 magistrado esqueleto ossos~
@@ -199,6 +218,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 14
 E
 #3913
 tempestade~
@@ -217,6 +238,8 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 13
 E
 #3914
 escravo criatura~
@@ -253,7 +276,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 20
+GenRoam: 19
+GenFollow: 14
 E
 #3916
 demonio bael~
@@ -272,7 +296,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 86
+GenLoot: 2
+GenRoam: 89
+GenFollow: 17
 E
 #3917
 svern demonio~
@@ -291,8 +317,11 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 19
+GenLoot: 9
 GenRoam: 89
+GenGroup: 8
+GenFollow: 12
 E
 #3918
 vrock demonio ave~
@@ -312,7 +341,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 3
+GenRoam: 78
+GenFollow: 11
 E
 #3919
 valik zumbi dragao~
@@ -332,6 +362,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 51
+GenBrave: 1
+GenFollow: 14
 E
 #3920
 damorask figura gelo~
@@ -367,6 +400,8 @@ An undefined string.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 13
 E
 #3922
 monolito gelo~
@@ -403,8 +438,9 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenLoot: 1
+GenWimpy: 5
+GenLoot: 22
+GenFollow: 10
 E
 #3924
 pilar gelo~
@@ -423,8 +459,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 2
-GenRoam: 57
+GenLoot: 8
+GenRoam: 87
+GenFollow: 9
 E
 #3925
 yeti agua~
@@ -442,8 +479,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 1
+GenLoot: 4
 GenRoam: 89
+GenFollow: 11
 E
 #3926
 pseudo-hidra pseudo hidra dragao~
@@ -484,6 +522,8 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenFollow: 11
 E
 #3928
 feiticeiro marfim homem~
@@ -502,5 +542,7 @@ para o vaso e se protege com ele.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 7
+GenFollow: 13
 E
 $

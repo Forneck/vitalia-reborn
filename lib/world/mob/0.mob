@@ -23,6 +23,8 @@ Este clone não parece significar nada.  Não, na verdade, ele é um tanto quant
 1 0 0 1d10+48 1d1+1
 0 0
 9 9 0
+GenWimpy: 2
+GenFollow: 10
 E
 #11
 zumbi humanoide~
@@ -48,6 +50,10 @@ An undefined string.
 3 10 1 2d8+30 2d4+3
 0 0
 9 9 0
+GenWimpy: 13
+GenLoot: 13
+GenGroup: 14
+GenFollow: 6
 E
 #13
 lobo~
@@ -60,6 +66,8 @@ An undefined string.
 10 5 -1 2d8+100 2d4+10
 0 0
 9 9 1
+GenWimpy: 1
+GenFollow: 6
 E
 #14
 urso~

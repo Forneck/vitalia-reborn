@@ -9,7 +9,7 @@ você e se joga um pouco para trás.
 2097344 0 0 0 2048 0 0 0 0 E
 8 13 3 3d5+95 2d5+1
 0 4000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #6401
@@ -26,7 +26,7 @@ acho que isso quer dizer que é você....
 2291762 0 0 0 2064 0 0 0 -1000 E
 12 9 2 3d5+145 2d7+1
 0 10000
-8 8 0
+9 9 0
 BareHandAttack: 8
 E
 #6402
@@ -41,7 +41,7 @@ Hhuuummmm.....
 2357298 0 0 0 2064 0 0 0 0 E
 14 7 1 1d1+199 2d8+2
 0 18000
-8 8 0
+9 9 0
 E
 #6403
 mau pressagio~
@@ -54,7 +54,7 @@ vez muito mais real...  Seria mágica???
 2357298 0 0 0 2064 0 0 0 0 E
 18 3 0 1d1+249 3d8+0
 0 40000
-8 8 0
+9 9 0
 E
 #6404
 pesadelo~
@@ -67,7 +67,7 @@ tenebrosa...  Espere um minuto!!  É VOCÊ em seu lado mais obscuro e cruel!!!
 2357298 0 0 0 2064 0 0 0 0 E
 27 -1 -2 10d20+320 4d8+10
 0 56000
-8 8 0
+9 9 0
 E
 #6405
 guardiao~
@@ -80,7 +80,19 @@ fazer...
 2291762 0 0 0 2064 0 0 0 0 E
 18 3 0 1d1+249 3d6+2
 0 35000
-8 8 0
+9 9 0
 BareHandAttack: 9
+E
+#6410
+ratinho~
+.um pequeno ratinho~
+.um ratinho escondido.
+~
+It looks unfinished.
+~
+2170880 0 0 0 131072 0 0 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+5 5 0
 E
 $

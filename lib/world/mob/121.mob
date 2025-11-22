@@ -65,8 +65,11 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 46
+GenWimpy: 99
+GenLoot: 3
+GenEquip: 1
 GenRoam: 89
+GenFollow: 14
 E
 #12104
 cerbero~
@@ -99,8 +102,9 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 99
-GenRoam: 89
+GenWimpy: 97
+GenRoam: 82
+GenFollow: 14
 E
 #12106
 anao negro~
@@ -135,6 +139,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 18
 E
 #12108
 bolor bola rastejante~
@@ -151,9 +157,10 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 39
+GenWimpy: 100
 GenLoot: 3
-GenRoam: 15
+GenRoam: 65
+GenFollow: 11
 E
 #12109
 enorme sanguessuga~
@@ -170,11 +177,11 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 96
-GenLoot: 7
+GenWimpy: 100
+GenLoot: 14
 GenEquip: 1
 GenRoam: 89
-GenBrave: 2
+GenFollow: 13
 E
 #12110
 leao jamuuran~
@@ -191,9 +198,10 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 14
-GenLoot: 2
+GenWimpy: 50
+GenLoot: 14
 GenRoam: 89
+GenFollow: 14
 E
 #12111
 jor~
@@ -227,7 +235,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 6
+GenFollow: 14
 E
 #12113
 beemonte~
@@ -262,6 +271,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
+GenFollow: 14
 E
 #12115
 drakian~
@@ -278,6 +288,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenFollow: 9
 E
 #12116
 Crixna~
@@ -295,7 +307,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 21
+GenWimpy: 60
+GenRoam: 57
+GenFollow: 13
 E
 #12117
 wyrm~
@@ -312,6 +326,8 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 13
 E
 #12118
 djinni~
@@ -330,6 +346,11 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 13
+GenLoot: 19
+GenEquip: 1
+GenRoam: 6
+GenFollow: 14
 E
 #12119
 basilisco~
@@ -363,8 +384,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 100
+GenWimpy: 99
 GenRoam: 89
+GenFollow: 12
 E
 #12121
 quimera leao bode dragao~
@@ -401,8 +423,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 20
-GenRoam: 2
+GenWimpy: 24
+GenFollow: 12
 E
 #12123
 hidra gigante~
@@ -435,6 +457,8 @@ BareHandAttack: 13
 Dex: 12
 Int: 3
 Wis: 13
+GenWimpy: 3
+GenFollow: 14
 E
 #12125
 ogro ghazban~
@@ -452,8 +476,11 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 100
-GenRoam: 88
+GenWimpy: 93
+GenLoot: 5
+GenEquip: 2
+GenRoam: 87
+GenFollow: 10
 E
 #12126
 cynamolgus peludo~
@@ -487,6 +514,8 @@ Str: 18
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 14
 E
 #12128
 Cavaleiro khordovian~
@@ -522,5 +551,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenLoot: 3
+GenEquip: 1
+GenFollow: 16
 E
 $

@@ -40,6 +40,37 @@ void sedit_save_internally(struct descriptor_data *d)
 
 static void sedit_save_to_disk(int num) { save_shops(num); }
 
+/* Helper function to parse float values accepting both comma and period as decimal separator */
+static int parse_shop_float(const char *arg, float *result)
+{
+    char buffer[MAX_INPUT_LENGTH];
+    char *comma_pos;
+    int ret;
+    float temp_value;
+
+    /* Copy the argument to a buffer we can modify */
+    strncpy(buffer, arg, sizeof(buffer) - 1);
+    buffer[sizeof(buffer) - 1] = '\0';
+
+    /* Replace comma with period for sscanf compatibility */
+    comma_pos = strchr(buffer, ',');
+    if (comma_pos) {
+        *comma_pos = '.';
+    }
+
+    /* Parse the float value */
+    ret = sscanf(buffer, "%f", &temp_value);
+    if (ret == 1) {
+        /* Validate range - shop profit rates should be reasonable positive values
+         * Typical range is 0.0 to 10.0 (0% to 1000% markup) */
+        if (temp_value < 0.0 || temp_value > 100.0) {
+            return 0; /* Invalid range */
+        }
+        *result = temp_value;
+    }
+    return ret;
+}
+
 /* utility functions */
 ACMD(do_oasis_sedit)
 {
@@ -386,7 +417,7 @@ static void sedit_disp_menu(struct descriptor_data *d)
                     "%s0%s) Keeper      : [%s%d%s] %s%s\r\n"
                     "%s1%s) Open 1      : %s%4d%s          %s2%s) Close 1     : %s%4d\r\n"
                     "%s3%s) Open 2      : %s%4d%s          %s4%s) Close 2     : %s%4d\r\n"
-                    "%s5%s) Sell rate   : %s%1.2f%s          %s6%s) Buy rate    : %s%1.2f\r\n"
+                    "%s5%s) Sell rate   : %s%4.2f%s          %s6%s) Buy rate    : %s%4.2f\r\n"
                     "%s7%s) Keeper no item : %s%s\r\n"
                     "%s8%s) Player no item : %s%s\r\n"
                     "%s9%s) Keeper no cash : %s%s\r\n"
@@ -690,10 +721,20 @@ void sedit_parse(struct descriptor_data *d, char *arg)
             S_CLOSE2(OLC_SHOP(d)) = LIMIT(atoi(arg), 0, 28);
             break;
         case SEDIT_BUY_PROFIT:
-            sscanf(arg, "%f", &S_BUYPROFIT(OLC_SHOP(d)));
+            if (parse_shop_float(arg, &S_BUYPROFIT(OLC_SHOP(d))) != 1) {
+                write_to_output(
+                    d, "Invalid value. Please enter a number between 0.0 and 100.0 (use . or , for decimal).\r\n");
+                write_to_output(d, "Enter new value : ");
+                return;
+            }
             break;
         case SEDIT_SELL_PROFIT:
-            sscanf(arg, "%f", &S_SELLPROFIT(OLC_SHOP(d)));
+            if (parse_shop_float(arg, &S_SELLPROFIT(OLC_SHOP(d))) != 1) {
+                write_to_output(
+                    d, "Invalid value. Please enter a number between 0.0 and 100.0 (use . or , for decimal).\r\n");
+                write_to_output(d, "Enter new value : ");
+                return;
+            }
             break;
         case SEDIT_TYPE_MENU:
             OLC_VAL(d) = LIMIT(atoi(arg), 0, NUM_ITEM_TYPES - 1);

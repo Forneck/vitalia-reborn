@@ -1,0 +1,28 @@
+CircleMUD v3.0 Shop File~
+#2304~
+2315
+2316
+2317
+-1
+1.10
+0.95
+10
+-1
+%s Sorry, I don't stock that item.~
+%s Tem algo errado. Cade isto?~
+%s Tente outra coisa!~
+%s Consegue voltar depois? Estou sem moedas suficientes.~
+%s Sem dinheiro suficiente, sem acordo!~
+%s Vai dar %d moedas, tudo bem?~
+%d moedas por isto, pode ser?~
+0
+0
+2304
+0
+2303
+-1
+0
+7
+0
+0
+$~

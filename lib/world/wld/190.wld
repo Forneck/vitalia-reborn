@@ -485,18 +485,18 @@ D9
 ~
 0 -1 19028
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 E
 banco~
 Não parece ser muito confortável...
 ~
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Além de ninho para
-muitos pássaros, é claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 S
 #19030
@@ -517,18 +517,18 @@ D6
 ~
 0 -1 19028
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 E
 banco~
 Não parece ser muito confortável...
 ~
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Além de ninho para
-muitos pássaros, é claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 S
 #19031
@@ -646,7 +646,7 @@ altíssimas, com uma rua de pedras irregulares passando bem ao centro.  A sul
 você vê um caminho levando a duas altas árvores muito juntas, que
 estranhamente parecem ser gêmeas.  A ruela continua a leste e oeste.
 ~
-190 64 0 0 0 2
+190 0 0 0 0 2
 D1
 ~
 ~
@@ -980,15 +980,15 @@ D5
 porta~
 1 -1 19078
 E
+estante~
+A estante de madeira é levemente curva para encaixar-se com perfeição nas
+paredes circulares da casa
+~
+E
 mapa~
 O mapa parece indicar a localização dos templos das Quatro Luas de Vitália.
 Um deles, o da Lua de Prata, está circulado na região que parece ser aqui,
 nos Bosques dos Elfos.
-~
-E
-estante~
-A estante de madeira é levemente curva para encaixar-se com perfeição nas
-paredes circulares da casa
 ~
 S
 #19053
@@ -1009,14 +1009,14 @@ D5
 ~
 0 -1 19039
 E
-fachada templo~
-Tudo remete à beleza da Lua de Prata e seu ar gélido.
-~
-E
 pedras veios degraus~
 Que estranho!  Se você olha muito tempo para os degraus, você tem a
 impressão de estar vendo, na realidade, grandes blocos de gelo envoltos por
 fios de prata.  Talvez você deva descansar um pouco....
+~
+E
+fachada templo~
+Tudo remete à beleza da Lua de Prata e seu ar gélido.
 ~
 S
 #19054
@@ -1574,13 +1574,13 @@ D5
 ~
 0 -1 19051
 E
+buraco~
+Ah! Isso é uma toca de esquilos..!
+~
+E
 ninho~
 Ninhos de todos os tipos de pássaros se abrigam aqui...  Isso deve parecer
 um coral nas manhãs de primavera...
-~
-E
-buraco~
-Ah! Isso é uma toca de esquilos..!
 ~
 S
 #19079

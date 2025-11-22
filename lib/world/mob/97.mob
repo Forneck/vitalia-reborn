@@ -43,6 +43,9 @@ ele pode facilmente devorar um boi em minutos.
 0 18500
 9 9 1
 BareHandAttack: 4
+GenWimpy: 4
+GenRoam: 72
+GenFollow: 10
 E
 #9704
 serpente~
@@ -59,6 +62,8 @@ há enormes ferrões, capazes de perfurar até a mais forte das armaduras.
 BareHandAttack: 1
 Dex: 25
 Wis: 25
+GenWimpy: 2
+GenFollow: 10
 E
 T 3008
 #9705

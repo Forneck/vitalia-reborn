@@ -168,7 +168,7 @@ Uma pequena pilha de moedas de ouro foi escondida aqui.~
 5 0 0 0 0
 #7514
 anel ouro sete pontas~
-Um anel de ouro com sete pontas.~
+um anel de ouro com sete pontas.~
 Um anel dourado foi perdido aqui.~
 ~
 11 af 0 0 0 ab 0 0 0 0 0 0 0
@@ -693,7 +693,7 @@ olhos flutuante globo ocular~
 um olho flutuante~
 Parece ser um globo ocular que flutua aqui próximo ao chão.~
 ~
-1 cjl 0 0 0 ao 0 0 0 0 0 0 0
+1 j 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 1 1000 0 20 0
 E
@@ -701,9 +701,11 @@ olhos flutuante ocular globo~
 Os olhos se movem em círculos. A pupila é vermelha com uma luz misteriosa.    
 ~
 A
-19 1
+19 2
 A
 17 -4
+A
+18 2
 #7550
 armadura malha aço flexivel~
 uma armadura de malha de aço flexível~

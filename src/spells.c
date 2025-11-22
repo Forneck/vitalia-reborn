@@ -23,9 +23,12 @@
 #include "fight.h"
 #include "spirits.h"
 #include "spedit.h"
+#include "quest.h"
+#include "screen.h"
 
 /* External declarations */
 extern struct weather_data climates[];
+extern const char *month_name[];
 
 /* Special spells appear below. */
 ASPELL(spell_create_water)
@@ -135,12 +138,20 @@ ASPELL(spell_recall)
         case 3:
             char_to_room(victim, r_hometown_3);
             break;
+        case 4:
+            char_to_room(victim, r_hometown_4);
+            break;
         default:
             char_to_room(victim, r_hometown_1);
             break;
     }
     act("$n aparece no meio da sala.", TRUE, victim, 0, 0, TO_ROOM);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);
@@ -169,6 +180,11 @@ ASPELL(spell_teleport)
     char_to_room(victim, to_room);
     act("$n lentamente entra em existencia até aparecer completamente.", FALSE, victim, 0, 0, TO_ROOM);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);
@@ -228,6 +244,11 @@ ASPELL(spell_summon)
     act("$n chega repentinamente.", TRUE, victim, 0, 0, TO_ROOM);
     act("$n lhe convocou!", FALSE, ch, 0, victim, TO_VICT);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);
@@ -298,6 +319,10 @@ ASPELL(spell_locate_object)
 
     for (i = object_list; i && (j > 0); i = i->next) {
         if (!isname_obj(name, i->name))
+            continue;
+
+        /* Skip items marked as NOLOCATE (quest reward items carried by mobs) */
+        if (OBJ_FLAGGED(i, ITEM_NOLOCATE))
             continue;
 
         send_to_char(ch, "%c%s está", UPPER(*i->short_description), i->short_description + 1);
@@ -704,6 +729,54 @@ ASPELL(spell_detect_poison)
     }
 }
 
+/**
+ * ASPELL: Control Weather
+ *
+ * Allows casters to manipulate atmospheric conditions and enhance magical energy.
+ *
+ * ENHANCED FUNCTIONALITY (New Magical Synergy System):
+ * Beyond simply altering weather parameters, this spell now creates temporary
+ * zones of concentrated magical energy (mana density boost), making it a valuable
+ * strategic tool for magical groups and solo casters alike.
+ *
+ * WEATHER MANIPULATION:
+ * - Pressure: Influences storm formation and atmospheric stability
+ * - Temperature: Makes environment hotter or colder
+ * - Wind: Increases or decreases wind intensity
+ * - Humidity: Affects rain probability and air moisture
+ *
+ * MANA DENSITY ENHANCEMENT (New):
+ * - Creates temporary 0.2-0.4 mana density boost in the zone
+ * - Duration: 2-6 game hours (scales with caster level)
+ * - Effect stacks with natural environmental density
+ * - Multiple casts extend duration and can increase magnitude
+ * - Benefits ALL casters in zone (allies and enemies)
+ * - Only Control Weather provides artificial density boost (prevents exploitation)
+ *
+ * TACTICAL APPLICATIONS:
+ * - Pre-battle preparation: Boost magical efficiency before encounters
+ * - Sustained operations: Reduce mana consumption for extended spellcasting
+ * - Group support: Weather mages become valuable party members
+ * - Environmental control: Shape battlefield to favor magical tactics
+ *
+ * FEEDBACK:
+ * - Shows resulting mana density with color-coded description
+ * - Displays exact expiration time in game calendar format
+ * - Provides immediate tactical information for decision-making
+ *
+ * LIMITATIONS:
+ * - Cannot be cast indoors (requires connection to sky)
+ * - High mana cost maintained for balance
+ * - Affects entire zone (benefits enemies too)
+ * - Effects are not instantaneous (gradual weather change)
+ *
+ * SYNERGIES:
+ * - Combines with ELEMENTOS-MAGICOS weather effects
+ * - Enhances ESCOLAS-MAGICAS school modifiers
+ * - Part of comprehensive SINERGIAS MAGICAS system
+ *
+ * See also: HELP MAGIA-CONTROL-WEATHER, HELP DENSIDADE-MAGICA, HELP SINERGIAS
+ */
 ASPELL(spell_control_weather)
 {
     int change_val;
@@ -766,8 +839,22 @@ ASPELL(spell_control_weather)
     change_val = dice(1, 6);
 
     /* Aplica a mudança na propriedade desejada na zona atual */
-    struct weather_data *weather = zone_table[world[IN_ROOM(ch)].zone].weather;
-    zone = world[IN_ROOM(ch)].zone; /* Pega o vnum da zona e converte pra rnum via zone_rnum */
+    /* Defensive programming: validate room and zone indices */
+    room_rnum room_num = IN_ROOM(ch);
+    if (room_num == NOWHERE || room_num < 0 || room_num > top_of_world) {
+        send_to_char(ch, "Erro: Localização inválida.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: spell_control_weather - invalid room %d for %s", room_num, GET_NAME(ch));
+        return;
+    }
+
+    zone = world[room_num].zone;
+    if (zone < 0 || zone > top_of_zone_table) {
+        send_to_char(ch, "Erro: Zona inválida.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: spell_control_weather - invalid zone %d for room %d", zone, room_num);
+        return;
+    }
+
+    struct weather_data *weather = zone_table[zone].weather;
     if (!weather) {
         send_to_char(ch, "O clima local está com muita instabilidade. Tente novamente mais tarde.\r\n");
         return;
@@ -815,6 +902,81 @@ ASPELL(spell_control_weather)
 
     act("$n canaliza a energia dos elementos, alterando o clima local!", TRUE, ch, 0, 0, TO_ROOM);
     send_to_zone_outdoor(zone, "O clima local parece estar mudando...\r\n");
+
+    /* Apply mana density boost to the zone for duration based on caster level */
+    /* Duration: 2-6 game hours depending on caster power */
+    int boost_duration = 2 + (GET_LEVEL(ch) / 20); /* Level 1-20: 2 hours, 21-40: 3 hours, etc. */
+    time_t boost_expire = time(NULL) + (boost_duration * SECS_PER_MUD_HOUR);
+
+    /* Boost amount: 0.2 to 0.4 based on caster level and change magnitude */
+    float boost_amount = 0.2 + (GET_LEVEL(ch) * 0.005) + (change_val * 0.02);
+    if (boost_amount > 0.4)
+        boost_amount = 0.4; /* Cap at 0.4 */
+
+    /* Set or extend the boost */
+    if (weather->mana_density_boost_expire < time(NULL)) {
+        /* No active boost, apply new one */
+        weather->mana_density_boost = boost_amount;
+        weather->mana_density_boost_expire = boost_expire;
+    } else {
+        /* Existing boost, extend duration and possibly increase amount */
+        weather->mana_density_boost_expire = boost_expire;
+        if (boost_amount > weather->mana_density_boost) {
+            weather->mana_density_boost = boost_amount;
+        }
+    }
+
+    /* Calculate and show new mana density to caster */
+    float new_density = calculate_mana_density(ch);
+    const char *density_desc;
+    int color_level;
+
+    /* Use helper function for consistent density description */
+    get_mana_density_description(new_density, &density_desc, &color_level);
+
+    /* Calculate expiration time in game time */
+    struct time_info_data expire_time = time_info;
+    int hours_to_add = boost_duration;
+
+    /* Add hours to current game time */
+    expire_time.hours += hours_to_add;
+
+    /* Handle hour overflow */
+    while (expire_time.hours >= 24) {
+        expire_time.hours -= 24;
+        expire_time.day++;
+
+        /* Handle day overflow (35 days per month, indexed 0-34) */
+        if (expire_time.day > 34) {
+            expire_time.day = 0;
+            expire_time.month++;
+
+            /* Handle month overflow (17 months per year, indexed 0-16) */
+            if (expire_time.month > 16) {
+                expire_time.month = 0;
+                expire_time.year++;
+            }
+        }
+    }
+
+    /* Determine time of day description */
+    const char *time_desc;
+    if (expire_time.hours >= 0 && expire_time.hours < 6)
+        time_desc = "madrugada";
+    else if (expire_time.hours >= 6 && expire_time.hours < 12)
+        time_desc = "manhã";
+    else if (expire_time.hours >= 12 && expire_time.hours < 18)
+        time_desc = "tarde";
+    else
+        time_desc = "noite";
+
+    send_to_char(ch,
+                 "\r\n%sVocê sente as energias mágicas se concentrarem na área!%s\r\n"
+                 "Densidade mágica agora: %s (%.2f)\r\n"
+                 "Efeito ativo até %s %d horas da %s do dia %d de %s\r\n",
+                 CBGRN(ch, C_NRM), CCNRM(ch, C_NRM), density_desc, new_density, expire_time.hours >= 12 ? "às" : "as",
+                 expire_time.hours % 12 == 0 ? 12 : expire_time.hours % 12, time_desc, expire_time.day + 1,
+                 month_name[expire_time.month]);
 }
 
 ASPELL(spell_transport_via_plants)
@@ -1182,7 +1344,7 @@ ASPELL(spell_stoneskin)
 
     new_affect(&af);
     af.spell = SPELL_STONESKIN;
-    af.duration = new_points * (60 - (level / 10)); /* 1 hour per point minus level factor */
+    af.duration = new_points; /* 1 hour per point as per help file */
     af.modifier = new_points;
     af.location = APPLY_NONE;
     SET_BIT_AR(af.bitvector, AFF_STONESKIN);
@@ -1193,10 +1355,8 @@ ASPELL(spell_stoneskin)
         act("A proteção de sua pele se torna ainda mais resistente.", FALSE, victim, 0, 0, TO_CHAR);
         act("A pele de $n se torna ainda mais dura.", FALSE, victim, 0, 0, TO_ROOM);
     } else {
-        /* First time casting */
+        /* First time casting - messages will be sent by spell system */
         affect_to_char(victim, &af);
-        act("Você sente sua pele se tornando dura como rocha.", FALSE, victim, 0, 0, TO_CHAR);
-        act("A pele de $n se torna mais dura.", FALSE, victim, 0, 0, TO_ROOM);
     }
 }
 
@@ -1365,6 +1525,280 @@ float get_weather_movement_modifier(struct char_data *ch)
         modifier = 2.0;
 
     return modifier;
+}
+
+/**
+ * Calculate mana density for the character's current location
+ *
+ * Mana density represents the concentration of magical energy in a location,
+ * forming a "secondary layer" above the world alongside weather. This creates
+ * magical synergies between environmental conditions and spellcasting.
+ *
+ * DESIGN PHILOSOPHY (Sinergias Mágicas):
+ * Just as magical schools and elements interact with weather conditions,
+ * mana density creates a holistic magical ecosystem where location, time,
+ * and climate all contribute to the potency of spellcasting.
+ *
+ * CALCULATION FACTORS:
+ * - Weather conditions (40% weight): Sky state, humidity, atmospheric pressure
+ *   - Storms and lightning: Highest density (raw magical energy in atmosphere)
+ *   - Rain/snow: High density (water conducts magical energy)
+ *   - Cloudy: Moderate density
+ *   - Clear skies: Lower density (dispersed magical energy)
+ *
+ * - Time of day (20% weight): Dawn/dusk peak, night high, day moderate
+ *   - Twilight hours: Peak magical activity (veil between worlds thinnest)
+ *   - Night: High magical resonance
+ *   - Day: Standard magical flow
+ *
+ * - Sun state (15% weight): Transitions (sunrise/sunset) highest
+ *   - Solar transitions: Maximum magical flux
+ *   - Darkness: Enhanced magical presence
+ *   - Full sunlight: Dispersed magical energy
+ *
+ * - Sector type (15% weight): Natural areas favor magic
+ *   - Water/Underwater: Highest (conducts magical currents)
+ *   - Lava: Very high (primordial fire energy)
+ *   - Forest/Hills/Ice: High (natural magical resonance)
+ *   - Mountains: High (closer to heavens, thinner barriers)
+ *   - Desert: Moderate (harsh but elemental)
+ *   - Fields/Roads: Low-moderate (developed but open)
+ *   - Cities/Indoor: Lowest (civilization dampens natural magic)
+ *
+ * - Indoor/Outdoor status (10% weight):
+ *   - Outdoor: Full weather effects
+ *   - Indoor: Only 30% of weather effects, but more stable/predictable
+ *
+ * - Control Weather boost: Temporary enhancement from spell
+ *   - Duration: 2-6 game hours based on caster level
+ *   - Magnitude: 0.2-0.4 boost based on caster power
+ *   - Only source of artificial density increase (prevents exploitation)
+ *
+ * SYNERGY WITH EXISTING SYSTEMS:
+ * - Stacks multiplicatively with element weather modifiers (ELEMENTOS-MAGICOS)
+ * - Stacks multiplicatively with school weather modifiers (ESCOLAS-MAGICAS)
+ * - Creates strategic depth: powerful outdoor vs safe indoor casting
+ * - Rewards environmental awareness and tactical positioning
+ *
+ * PERFORMANCE:
+ * - Calculated on-demand per spell cast (~28 nanoseconds)
+ * - No persistent storage required
+ * - Works for both PC and NPC casters (including dg_cast scripts)
+ *
+ * RETURN VALUE:
+ * - Float 0.0-1.5 (capped for balance)
+ * - 0.0-0.3: Very low (unfavorable) - 90% cost, 80% power
+ * - 0.3-0.5: Low - 95% cost, 90% power
+ * - 0.5-0.7: Normal (baseline) - 100% cost, 100% power
+ * - 0.7-0.9: High - 90% cost, 110% power
+ * - 0.9-1.2: Very high - 80% cost, 120% power
+ * - 1.2+: Exceptional - 70% cost, 130% power
+ *
+ * @param ch The character (PC or NPC) casting the spell
+ * @return Mana density value (0.0 to 1.5)
+ *
+ * See also: HELP DENSIDADE-MAGICA, HELP SINERGIAS, HELP CLIMA-MAGICO
+ */
+float calculate_mana_density(struct char_data *ch)
+{
+    float density = 0.5; /* Baseline normal density */
+    room_rnum room;
+    zone_rnum zone;
+    struct weather_data *weather;
+    int sector;
+    float weather_weight;
+    float weather_factor = 0.0;
+    float time_factor = 0.0;
+    float sun_factor = 0.0;
+    float sector_factor = 0.0;
+
+    /* Validate character and room */
+    if (!ch || IN_ROOM(ch) == NOWHERE)
+        return density;
+
+    room = IN_ROOM(ch);
+
+    /* Defensive programming: validate room index */
+    if (room < 0 || room > top_of_world) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: calculate_mana_density - invalid room %d for %s", room,
+               ch ? GET_NAME(ch) : "NULL");
+        return density;
+    }
+
+    zone = world[room].zone;
+
+    /* Validate zone */
+    if (zone < 0 || zone > top_of_zone_table) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: calculate_mana_density - invalid zone %d for room %d", zone, room);
+        return density;
+    }
+
+    weather = zone_table[zone].weather;
+    if (!weather)
+        return density;
+
+    sector = SECT(room);
+
+    /* Indoor rooms get reduced weather effect (30%) but more stable density */
+    weather_weight = ROOM_FLAGGED(room, ROOM_INDOORS) ? 0.3 : 1.0;
+
+    /* Weather contribution (40% of total when outdoors, 12% when indoors) */
+    /* Sky state contribution */
+    if (weather->sky == SKY_LIGHTNING)
+        weather_factor = 0.4; /* Storms have high magical energy */
+    else if (weather->sky == SKY_RAINING)
+        weather_factor = 0.3;
+    else if (weather->sky == SKY_SNOWING)
+        weather_factor = 0.25;
+    else if (weather->sky == SKY_CLOUDY)
+        weather_factor = 0.2;
+    else
+        weather_factor = 0.1; /* Clear skies have lower density */
+
+    /* Humidity factor (optimal around 50-70% for magical stability) */
+    if (weather->humidity >= 0.5 && weather->humidity <= 0.7)
+        weather_factor += 0.2;
+    else if (weather->humidity > 0.8)
+        weather_factor += 0.1;
+
+    /* Low pressure increases magical density (storms = low pressure) */
+    if (weather->pressure < 990)
+        weather_factor += 0.15;
+    else if (weather->pressure < 1000)
+        weather_factor += 0.1;
+    else if (weather->pressure > 1020)
+        weather_factor -= 0.05; /* High pressure reduces density slightly */
+
+    density += weather_factor * weather_weight * 0.4;
+
+    /* Time of day contribution (20% of total) */
+    /* Twilight hours (dawn and dusk) have peak magical density */
+    if (time_info.hours == 5 || time_info.hours == 6 || time_info.hours == 19 || time_info.hours == 20)
+        time_factor = 0.2; /* Peak at twilight */
+    else if (weather_info.sunlight == SUN_DARK)
+        time_factor = 0.15; /* High at night */
+    else if (weather_info.sunlight == SUN_LIGHT)
+        time_factor = 0.05; /* Lower during full daylight */
+    else
+        time_factor = 0.1; /* Moderate at other times */
+
+    density += time_factor;
+
+    /* Sun state contribution (15% of total) */
+    if (weather_info.sunlight == SUN_RISE || weather_info.sunlight == SUN_SET)
+        sun_factor = 0.15; /* Highest during transitions */
+    else if (weather_info.sunlight == SUN_DARK)
+        sun_factor = 0.10;
+    else
+        sun_factor = 0.05;
+
+    density += sun_factor;
+
+    /* Sector type contribution (15% of total) */
+    switch (sector) {
+        case SECT_WATER_SWIM:
+        case SECT_WATER_NOSWIM:
+        case SECT_UNDERWATER:
+            sector_factor = 0.15; /* Water enhances magical flow */
+            break;
+        case SECT_FOREST:
+        case SECT_HILLS:
+            sector_factor = 0.12; /* Natural areas have good density */
+            break;
+        case SECT_MOUNTAIN:
+        case SECT_CLIMBING:
+            sector_factor = 0.13; /* High altitude, thin air, but closer to sky */
+            break;
+        case SECT_CITY:
+        case SECT_INSIDE:
+            sector_factor = 0.05; /* Urban/developed areas have lower density */
+            break;
+        case SECT_FIELD:
+            sector_factor = 0.07; /* Open areas are neutral */
+            break;
+        case SECT_QUICKSAND:
+            sector_factor = 0.08; /* Unstable areas have moderate density */
+            break;
+        case SECT_LAVA:
+            sector_factor = 0.14; /* Lava regions have high fire energy */
+            break;
+        case SECT_ICE:
+            sector_factor = 0.12; /* Ice regions have cold energy */
+            break;
+        case SECT_FLYING:
+        case SECT_AIR_FLOW:
+            sector_factor = 0.11; /* Air sectors have wind energy */
+            break;
+        case SECT_DESERT:
+            sector_factor = 0.08; /* Arid regions have moderate density, harsh conditions */
+            break;
+        case SECT_ROAD:
+            sector_factor = 0.06; /* Roads are developed but more open than cities */
+            break;
+        default:
+            sector_factor = 0.05;
+    }
+
+    density += sector_factor;
+
+    /* Check for Control Weather boost (active spell effect) */
+    if (weather->mana_density_boost_expire > time(NULL)) {
+        density += weather->mana_density_boost;
+    }
+
+    /* Cap density between 0.0 and 1.5 */
+    if (density < 0.0)
+        density = 0.0;
+    if (density > 1.5)
+        density = 1.5;
+
+    return density;
+}
+
+/**
+ * Get mana density description
+ *
+ * This helper function centralizes the density description logic to avoid
+ * duplication across look_at_room, do_weather, and spell_control_weather.
+ *
+ * @param density The mana density value (0.0 to 1.5)
+ * @param desc Pointer to store the Portuguese description string (must not be NULL)
+ * @param color_level Pointer to store color level (must not be NULL)
+ *                    0=cyan, 1=green, 2=yellow, 3=red, 4=bright_red
+ *
+ * Callers should use the color_level to select appropriate color macros:
+ * 0 = CBCYN (exceptional), 1 = CBGRN (very high/high), 2 = CCYEL (normal),
+ * 3 = CCRED (low), 4 = CBRED (very low)
+ *
+ * SAFETY: Returns immediately if desc or color_level is NULL (defensive programming)
+ */
+void get_mana_density_description(float density, const char **desc, int *color_level)
+{
+    /* Defensive programming: validate pointers */
+    if (!desc || !color_level) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: get_mana_density_description called with NULL pointer(s)");
+        return;
+    }
+
+    if (density >= 1.2) {
+        *desc = "excepcional";
+        *color_level = 0; /* CBCYN */
+    } else if (density >= 0.9) {
+        *desc = "muito alta";
+        *color_level = 1; /* CBGRN */
+    } else if (density >= 0.7) {
+        *desc = "alta";
+        *color_level = 1; /* CBGRN */
+    } else if (density >= 0.5) {
+        *desc = "normal";
+        *color_level = 2; /* CCYEL */
+    } else if (density >= 0.3) {
+        *desc = "baixa";
+        *color_level = 3; /* CCRED */
+    } else {
+        *desc = "muito baixa";
+        *color_level = 4; /* CBRED */
+    }
 }
 
 /* Get spell school name */

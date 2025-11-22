@@ -21,6 +21,7 @@ ACMD(do_kick);
 ACMD(do_sneak);
 ACMD(do_track);
 ACMD(do_steal);
+ACMD(do_peek);
 ACMD(do_hide);
 ACMD(do_pick_lock);
 ACMD(do_whirlwind);
@@ -144,6 +145,9 @@ void set_spells_function()
 
     if ((spell = get_spell_by_vnum(SKILL_STEAL)))
         spell->function = do_steal;
+
+    if ((spell = get_spell_by_vnum(SKILL_PEEK)))
+        spell->function = do_peek;
 
     if ((spell = get_spell_by_vnum(SKILL_TRACK)))
         spell->function = do_track;
@@ -1280,7 +1284,7 @@ void create_spells_db()
     new_spell->function = spell_summon;
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
-    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+    new_spell->targ_flags = TAR_CHAR_WORLD | TAR_NOT_SELF;
     new_spell->mag_flags = MAG_MANUAL;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50");
@@ -1438,7 +1442,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_CLERIC;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N anima um corpo!!");
+    new_spell->messages.to_room = strdup("$n anima um corpo!!");
     new_spell->school = SCHOOL_NECROMANCY; /* Raises undead */
     new_spell->element = ELEMENT_UNHOLY;   /* Death magic */
 
@@ -1673,6 +1677,9 @@ void create_spells_db()
     new_spell->messages.to_self = strdup("Você lança um manto de escuridão sobre a área.");
     new_spell->messages.to_room = strdup("$N lança um manto de escuridão sobre esta área.");
 
+    new_spell->school = SCHOOL_NECROMANCY; /* Necromancy: darkness and shadow magic */
+    new_spell->element = ELEMENT_UNHOLY;   /* Unholy element, same as animate dead */
+
     spedit_save_internally(new_spell);
 
     // SPELL_TRANSPORT_VIA_PLANTS
@@ -1689,12 +1696,9 @@ void create_spells_db()
     new_spell->mag_flags = MAG_MANUAL;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 5;
+    new_spell->assign[0].class_num = CLASS_RANGER;
+    new_spell->assign[0].level = 7;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->assign[1].class_num = CLASS_RANGER;
-    new_spell->assign[1].level = 7;
-    new_spell->assign[1].num_mana = strdup(buf);
     new_spell->school = SCHOOL_CONJURATION; /* Transportation magic */
     new_spell->element = ELEMENT_EARTH;     /* Plant/nature-based transport */
 
@@ -1847,6 +1851,12 @@ void create_spells_db()
     spedit_save_internally(new_spell);
 
     // spell_improved_armor 55
+    // AC modifier formula scales from -30 to -80 based on caster level
+    // Formula: -(30 + MIN(50, self.level))
+    // At level 1: -30 - 1 = -31 AC
+    // At level 50+: -30 - 50 = -80 AC (capped)
+    // With "plus" voice modifier: doubled and clamped to sbyte range (-128 to 127)
+    // With "minus" voice modifier: halved
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
     new_spell->vnum = SPELL_IMPROVED_ARMOR;
@@ -1865,7 +1875,7 @@ void create_spells_db()
     new_spell->assign[1].level = 80;
     new_spell->assign[1].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
-    new_spell->applies[0].modifier = strdup("-80");
+    new_spell->applies[0].modifier = strdup("-(30 + (self.level < 50 ? self.level : 50))");
     new_spell->applies[0].duration = strdup("24");
     new_spell->messages.to_vict = strdup("Você sente alguém $r protegendo.");
     new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
@@ -1908,7 +1918,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um servo aéreo!!");
+    new_spell->messages.to_room = strdup("$n invoca um servo aéreo!!");
     new_spell->school = SCHOOL_CONJURATION; /* Summoning spell */
     new_spell->element = ELEMENT_AIR;       /* Air elemental */
 
@@ -2188,7 +2198,7 @@ void create_spells_db()
     new_spell->status = available;
     new_spell->name = strdup("invigor");
     new_spell->type = SPELL;
-    TAR_CHAR_ROOM;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_POINTS;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(40 - (3 * self.level)) > 15 ? (40 - (3 * self.level)) : 15");
@@ -2391,7 +2401,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um corvo para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um corvo para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_AIR;       /* Flying creature */
     spedit_save_internally(new_spell);
@@ -2414,7 +2424,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 30;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um lobo para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um lobo para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_EARTH;     /* Land creature */
     spedit_save_internally(new_spell);
@@ -2437,7 +2447,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 60;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um urso para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um urso para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_EARTH;     /* Powerful land creature */
     spedit_save_internally(new_spell);
@@ -2460,7 +2470,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 85;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um leão para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um leão para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_FIRE;      /* Fierce predator */
     spedit_save_internally(new_spell);
@@ -2491,8 +2501,10 @@ void create_spells_db()
 
     spedit_save_internally(new_spell);
     // SPELL_SOUNDBARRIER #90
+
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
+
     new_spell->vnum = SPELL_SOUNDBARRIER;
     new_spell->status = available;
     new_spell->name = strdup("soundbarrier");
@@ -2501,29 +2513,43 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+
+    /* Custo de mana baseado no nível do conjurador */
     new_spell->assign[0].class_num = CLASS_BARD;
     new_spell->assign[0].level = 15;
-    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->assign[0].num_mana = strdup("(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+
+    /* Aplicações do feitiço */
     new_spell->applies[0].appl_num = APPLY_SAVING_SPELL;
     new_spell->applies[0].modifier = strdup("-(1 + (param / 40))");
     new_spell->applies[0].duration = strdup("24");
+
     new_spell->applies[1].appl_num = APPLY_SAVING_BREATH;
     new_spell->applies[1].modifier = strdup("-(2 + (param / 40))");
     new_spell->applies[1].duration = strdup("24");
+
     new_spell->applies[2].appl_num = APPLY_SAVING_ROD;
-    new_spell->applies[2].modifier = strdup("-(1+ (param / 40))");
+    new_spell->applies[2].modifier = strdup("-(1 + (param / 40))");
     new_spell->applies[2].duration = strdup("24");
+
     new_spell->applies[3].appl_num = APPLY_AC;
-    new_spell->applies[3].modifier = strdup("self. level > (vict.level +10) ? -70 : -(vict.level -10)");
+    new_spell->applies[3].modifier =
+        strdup("((self.level > (vict.level + 10)) * -70) + ((self.level <= (vict.level + 10)) * (-(vict.level - 10)))");
     new_spell->applies[3].duration = strdup("24");
+
     new_spell->applies[4].appl_num = AFF_SOUNDBARRIER + NUM_APPLIES;
     new_spell->applies[4].duration = strdup("24");
-    new_spell->messages.to_vict = strdup("Você é envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.to_room = strdup("$N é envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.wear_off = strdup("Você percebe a barreira de som se dissipar.");
+
+    /* Mensagens de efeito */
+    new_spell->messages.to_vict = strdup("Voce e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.to_room = strdup("$N e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.wear_off = strdup("Voce percebe a barreira de som se dissipar.");
+
+    /* Escola e elemento */
     new_spell->school = SCHOOL_ABJURATION;  /* Protection spell */
     new_spell->element = ELEMENT_UNDEFINED; /* Sound-based protection */
+
+    /* Salva internamente */
     spedit_save_internally(new_spell);
 
     // SPELL_GLOOMSHIELD # 91
@@ -2653,6 +2679,7 @@ void create_spells_db()
     new_spell->name = strdup("backstab");
     new_spell->function = do_backstab;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 3;
@@ -2667,6 +2694,7 @@ void create_spells_db()
     new_spell->name = strdup("bash");
     new_spell->function = do_bash;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 12;
@@ -2699,6 +2727,7 @@ void create_spells_db()
     new_spell->name = strdup("kick");
     new_spell->function = do_kick;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 1;
@@ -2731,8 +2760,10 @@ void create_spells_db()
     new_spell->function = do_whirlwind;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(20 - (1 * self.level)) > 10 ? (20 - (1 * self.level)) : 10");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 16;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 
@@ -2745,6 +2776,7 @@ void create_spells_db()
     new_spell->name = strdup("rescue");
     new_spell->function = do_rescue;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 3;
@@ -2777,9 +2809,26 @@ void create_spells_db()
     new_spell->name = strdup("steal");
     new_spell->function = do_steal;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 4;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_PEEK # 258
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_PEEK;
+    new_spell->status = available;
+    new_spell->name = strdup("peek");
+    new_spell->function = do_peek;
+    new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 5;
 
     spedit_save_internally(new_spell);
 
@@ -2811,6 +2860,7 @@ void create_spells_db()
     new_spell->name = strdup("bandage");
     new_spell->function = do_bandage;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 7;
@@ -2864,6 +2914,7 @@ void create_spells_db()
     new_spell->name = strdup("trip");
     new_spell->function = do_trip;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_BARD;
     new_spell->assign[0].level = 35;
@@ -2892,6 +2943,7 @@ void create_spells_db()
     new_spell->name = strdup("combo attack");
     new_spell->function = do_combo;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 30;
@@ -2907,6 +2959,7 @@ void create_spells_db()
     new_spell->name = strdup("seize");
     new_spell->function = do_seize;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 20;
@@ -3038,8 +3091,10 @@ void create_spells_db()
     new_spell->function = do_shoot;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(15 - (1 * self.level)) > 2 ? (15 - (1 * self.level)) : 2");
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 30;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 
@@ -3567,7 +3622,7 @@ void create_spells_db()
     new_spell->applies[2].duration = strdup("param/4");
     new_spell->applies[3].appl_num = APPLY_DEX;
     new_spell->applies[3].modifier = strdup("1");
-    new_spell->applies[3].duration = strdup("param/");
+    new_spell->applies[3].duration = strdup("param/4");
     new_spell->applies[4].appl_num = APPLY_CON;
     new_spell->applies[4].modifier = strdup("1");
     new_spell->applies[4].duration = strdup("param/4");

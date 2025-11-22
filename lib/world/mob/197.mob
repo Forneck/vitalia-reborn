@@ -10,6 +10,9 @@ seu.  Ele olha para sua bolsa como quem olha para uma presa fácil.
 43 -3 -10 15d6+900 5d6+12
 1000 46000
 9 9 1
+GenWimpy: 2
+GenRoam: 6
+GenFollow: 11
 E
 #19701
 guarda orc negro~
@@ -24,6 +27,10 @@ direção.
 46 -10 -15 15d6+1000 5d8+16
 1000 56000
 9 9 1
+GenWimpy: 6
+GenLoot: 32
+GenEquip: 1
+GenFollow: 14
 E
 #19702
 guarda orc negro chefe~
@@ -37,6 +44,8 @@ Você vê um orc de tamanho considerável..
 50 -15 -20 15d6+1500 8d6+35
 8000 100000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #19703
 aranha negra~
@@ -51,8 +60,11 @@ VOCÊ!!
 11 14 0 15d6+100 2d6+4
 0 6000
 9 9 2
-GenWimpy: 40
+GenWimpy: 93
+GenLoot: 41
 GenRoam: 89
+GenGroup: 11
+GenFollow: 11
 E
 #19704
 cobra negra~
@@ -68,9 +80,11 @@ que você está esperando?  AO ATAQUE!
 0 8000
 9 9 2
 GenWimpy: 100
-GenLoot: 17
-GenEquip: 1
-GenRoam: 88
+GenLoot: 99
+GenEquip: 5
+GenRoam: 84
+GenGroup: 58
+GenFollow: 11
 E
 #19705
 cobra verde~
@@ -84,8 +98,9 @@ sabe?
 15 12 -1 15d6+300 2d4+10
 0 10000
 9 9 2
-GenWimpy: 21
-GenRoam: 35
+GenWimpy: 53
+GenRoam: 89
+GenFollow: 11
 E
 #19706
 enorme orc~
@@ -99,8 +114,11 @@ quase brilha.  Ele olha para você e procura sua faca..
 48 -10 -25 15d6+800 10d4+23
 3000 90000
 9 9 1
-GenWimpy: 5
-GenRoam: 79
+GenWimpy: 8
+GenLoot: 19
+GenEquip: 4
+GenRoam: 89
+GenFollow: 13
 E
 #19707
 orc negro grande~
@@ -115,10 +133,11 @@ desejá-la.
 48 -8 -20 15d6+800 10d6+28
 2000 150000
 9 9 1
-GenWimpy: 9
-GenLoot: 21
-GenEquip: 4
-GenRoam: 63
+GenWimpy: 6
+GenLoot: 83
+GenEquip: 34
+GenRoam: 89
+GenFollow: 9
 E
 #19708
 orc lider negro~
@@ -143,6 +162,9 @@ Int: 3
 Wis: 3
 Con: 18
 Cha: 3
+GenWimpy: 4
+GenRoam: 4
+GenFollow: 14
 E
 #19709
 velho druida~
@@ -162,6 +184,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 2
+GenBrave: 2
+GenFollow: 15
 E
 #19710
 feiticeiro orc~
@@ -175,6 +200,8 @@ chegada.  Parece muito ocupado fingindo-se de inteligente..
 49 5 -12 15d6+600 3d4+15
 7500 70000
 9 9 1
+GenWimpy: 5
+GenFollow: 14
 E
 #19711
 mulher bela donzela~
@@ -189,7 +216,9 @@ este...
 12 10 -2 15d6+350 6d6+12
 100 10000
 5 4 2
-GenWimpy: 6
+GenWimpy: 24
+GenLoot: 1
+GenFollow: 9
 E
 #19712
 sacerdote orc~
@@ -204,6 +233,9 @@ falta de habilidade para batalhas do que por filosofia...
 40 3 -13 15d6+500 3d6+17
 3000 77000
 9 9 1
+GenWimpy: 3
+GenLoot: 2
+GenFollow: 14
 E
 #19713
 velho homem~
@@ -220,6 +252,9 @@ história ainda está por ser contada ..
 90 -19 -25 15d6+3000 8d6+38
 15000 192000
 9 9 1
+GenWimpy: 10
+GenLoot: 46
+GenFollow: 14
 E
 #19714
 prisioneiro elfo~
@@ -260,9 +295,10 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 33
-GenLoot: 3
-GenEquip: 2
+GenWimpy: 59
+GenLoot: 37
+GenEquip: 10
+GenFollow: 13
 E
 #19717
 general orc~
@@ -276,6 +312,10 @@ cada um dos presentes nesta sala.  INCLUSIVE VOCÊ!!!
 90 -24 -35 15d6+3500 8d6+39
 3000 192000
 9 9 1
+GenWimpy: 12
+GenLoot: 12
+GenRoam: 5
+GenFollow: 19
 E
 #19718
 aventureiro perdido~
@@ -292,5 +332,8 @@ sua familia ou amigos..  Ele segue sempre em busca de novos desafios..
 76 0 -13 15d6+970 8d6+19
 1000 90000
 9 9 1
+GenWimpy: 12
+GenLoot: 1
+GenFollow: 15
 E
 $

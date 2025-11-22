@@ -1,12 +1,122 @@
-#12711
-Busca por o Card Goblins~
-um leão realmente forte precisa de o Card Goblins~
-um leão realmente forte está procurando por o Card Goblins. Se você encontrar este item, traga-o para mim ou diretamente para um leão realmente forte para receber 2305 moedas de ouro, 4610 pontos de experiência e uma bela longa espada como recompensa.~
+#12601
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 341 moedas de ouro e 1023 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 85 12 37 -1 3015 1
+341 1023 65535
+S
+#12624
+Caça o Bael~
+o caçador de aventuras oferece recompensa por o Bael~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de o Bael. Encontre e elimine este alvo para receber 762 moedas de ouro e 2286 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3916 -1 -1 -1
+15 190 12 37 -1 3015 1
+762 2286 65535
+S
+#12627
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (Além do Grande Campo de Midgaard). Vá até lá para receber 276 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3069 -1 -1 -1
+12 55 7 32 -1 3015 1
+276 552 65535
+S
+#12634
+Buscar um barril~
+Encontrar e trazer um barril~
+o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 351 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3000 -1 -1 -1
+12 70 7 32 -1 3015 1
+351 702 65535
+S
+#12653
+Buscar um barril~
+Encontrar e trazer um barril~
+o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 372 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3000 -1 -1 -1
+12 74 7 32 -1 3015 1
+372 744 65535
+S
+#12661
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
+S
+#12673
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (Atravessando o portão). Vá até lá para receber 265 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3067 -1 -1 -1
+12 53 7 32 -1 3015 1
+265 530 65535
+S
+#12691
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
+S
+#12693
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (A Loja de Armaduras). Vá até lá para receber 255 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3020 -1 -1 -1
+12 51 7 32 -1 3015 1
+255 510 65535
+S
+#12694
+Buscar um barril~
+Encontrar e trazer um barril~
+o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 352 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3000 -1 -1 -1
+12 70 7 32 -1 3015 1
+352 704 65535
+S
+#12700
+Buscar um pedaço de osso~
+Buscar e trazer um pedaço de osso~
+um cachorro esqueleto está procurando por um pedaço de osso. Se você encontrar este item, traga-o para mim ou diretamente para um cachorro esqueleto para receber 850 moedas de ouro, 1700 pontos de experiência e um pedaço de osso como recompensa.~
 Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
 Que pena que você desistiu desta busca.~
-5 3012 b 3846 -1 -1 -1
-10 0 5 30 -1 10300 1
-2305 4610 3501
+5 3012 b 3718 -1 -1 -1
+10 0 43 68 -1 3721 1
+850 1700 3718
+S
+#12712
+Buscar a garra sangrenta~
+Buscar e trazer a garra sangrenta~
+um guerreiro está procurando por a garra sangrenta. Se você encontrar este item, traga-o para mim ou diretamente para um guerreiro para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3717 -1 -1 -1
+10 0 40 65 -1 3725 1
+830 1660 65535
 S
 #12742
 Busca por uma bela longa espada~
@@ -17,6 +127,106 @@ Que pena que você desistiu desta busca.~
 5 3012 b 3501 -1 -1 -1
 10 0 9 34 -1 10300 1
 300 600 3500
+S
+#12743
+Buscar a garra da decadência~
+Buscar e trazer a garra da decadência~
+um ladrão de túmulos está procurando por a garra da decadência. Se você encontrar este item, traga-o para mim ou diretamente para um ladrão de túmulos para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3711 -1 -1 -1
+10 0 31 56 -1 3731 1
+750 1500 65535
+S
+#12744
+Caça o Bael~
+o caçador de aventuras oferece recompensa por o Bael~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de o Bael. Encontre e elimine este alvo para receber 762 moedas de ouro e 2286 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3916 -1 -1 -1
+15 190 12 37 -1 3015 1
+762 2286 65535
+S
+#12751
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
+S
+#12761
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
+S
+#12773
+Buscar uma linda aliança de noivado~
+Buscar e trazer uma linda aliança de noivado~
+o bandido sentinela está procurando por uma linda aliança de noivado. Se você encontrar este item, traga-o para mim ou diretamente para o bandido sentinela para receber 1200 moedas de ouro, 2400 pontos de experiência e uma cimitarra como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 1041 -1 -1 -1
+10 0 10 35 -1 3316 1
+1200 2400 3315
+S
+#12777
+Buscar uma espada marcada com gaivota~
+Buscar e trazer uma espada marcada com gaivota~
+um ladrão está procurando por uma espada marcada com gaivota. Se você encontrar este item, traga-o para mim ou diretamente para um ladrão para receber 120 moedas de ouro, 240 pontos de experiência e uma taça de vinho como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 2999 -1 -1 -1
+10 0 1 26 -1 2941 1
+120 240 2974
+S
+#12783
+Buscar um barril~
+Encontrar e trazer um barril~
+o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 385 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3000 -1 -1 -1
+12 77 7 32 -1 3015 1
+385 770 65535
+S
+#12803
+Encontrar o zelador~
+Encontrar e falar com o zelador~
+o caçador de aventuras está procurando por o zelador. Encontre esta pessoa para receber 154 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3061 -1 -1 -1
+8 30 7 32 -1 3015 1
+154 308 65535
+S
+#12811
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 740 moedas de ouro e 2220 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 185 12 37 -1 3015 1
+740 2220 65535
+S
+#12814
+Eliminar o Bael~
+o caçador de aventuras quer eliminar o Bael~
+o caçador de aventuras está incomodado com o Bael e quer vê-lo eliminado. Encontre e elimine esta criatura para receber 529 moedas de ouro e 1587 pontos de experiência.~
+Excelente trabalho! A ameaça foi eliminada!~
+Entendo. É uma tarefa perigosa mesmo.~
+3 3012 b 3916 -1 -1 -1
+15 132 12 37 -1 3015 1
+529 1587 65535
 S
 #12839
 Busca por a adaga das lágrimas~
@@ -38,14 +248,34 @@ Que pena que você desistiu desta busca.~
 10 0 35 60 -1 3726 1
 792 1584 65535
 S
-#12872
-Busca por a garra sangrenta~
-o guerreiro zumbi precisa de a garra sangrenta~
-o guerreiro zumbi está procurando por a garra sangrenta. Se você encontrar este item, traga-o para mim ou diretamente para o guerreiro zumbi para receber sua recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 3717 -1 -1 -1
-10 0 35 60 -1 3726 1
-208 416 65535
+#12861
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
+S
+#12864
+Eliminar o dracolich~
+o caçador de aventuras quer eliminar o dracolich~
+o caçador de aventuras está incomodado com o dracolich e quer vê-lo eliminado. Encontre e elimine esta criatura para receber 654 moedas de ouro e 1962 pontos de experiência.~
+Excelente trabalho! A ameaça foi eliminada!~
+Entendo. É uma tarefa perigosa mesmo.~
+3 3012 b 5010 -1 -1 -1
+15 163 12 37 -1 3015 1
+654 1962 65535
+S
+#12871
+Caça um Svern~
+o caçador de aventuras oferece recompensa por um Svern~
+o caçador de aventuras está oferecendo uma recompensa pela eliminação de um Svern. Encontre e elimine este alvo para receber 778 moedas de ouro e 2334 pontos de experiência.~
+Fantástico! Você eliminou o alvo. Aqui está sua recompensa!~
+Compreensível. Esta era uma tarefa perigosa.~
+8 3012 b 3917 -1 -1 -1
+15 194 12 37 -1 3015 1
+778 2334 65535
 S
 $~

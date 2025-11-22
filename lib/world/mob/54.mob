@@ -126,8 +126,9 @@ tostão?
 1 19 10 10d1+1 1d2+2
 1 0
 9 9 1
-GenWimpy: 2
-GenRoam: 40
+GenWimpy: 8
+GenRoam: 86
+GenFollow: 5
 E
 #5410
 padeiro~
@@ -451,6 +452,7 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 1 400
 9 9 1
 GenWimpy: 9
+GenFollow: 13
 E
 T 3013
 #5435
@@ -465,8 +467,9 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
-GenWimpy: 5
-GenRoam: 58
+GenWimpy: 10
+GenRoam: 81
+GenFollow: 4
 E
 #5436
 trabalhador doca~
@@ -480,6 +483,9 @@ caixa para os barcos como se esta fosse uma caixa de lírios.
 12 9 2 3d5+65 1d8+5
 1 550
 9 9 1
+GenWimpy: 4
+GenRoam: 73
+GenFollow: 6
 E
 #5437
 homem cobrador de impostos~
@@ -493,6 +499,9 @@ Sultão, por viverem nesta grande cidade.
 5 16 5 10d2+45 2d3+1
 15 431
 9 9 1
+GenWimpy: 2
+GenRoam: 44
+GenFollow: 5
 E
 #5438
 gord~
@@ -505,6 +514,9 @@ An undefined string.
 15 0 -3 5d3+105 2d6+4
 1 1000
 9 9 1
+GenWimpy: 6
+GenRoam: 66
+GenFollow: 11
 E
 #5439
 chulainn cavaleiro~
@@ -544,10 +556,10 @@ An undefined string.
 15 0 0 3d5+120 3d4+1
 1 1000
 9 9 1
-GenWimpy: 1
-GenLoot: 3
-GenRoam: 27
-GenGroup: 6
+GenWimpy: 11
+GenLoot: 5
+GenRoam: 69
+GenFollow: 7
 E
 #5442
 homem profeta vagante~
@@ -562,9 +574,10 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 35
-GenLoot: 3
-GenRoam: 72
+GenWimpy: 64
+GenLoot: 16
+GenRoam: 87
+GenFollow: 6
 E
 #5443
 gato rua~
@@ -577,8 +590,10 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 31
-GenRoam: 87
+GenWimpy: 60
+GenLoot: 1
+GenRoam: 78
+GenFollow: 6
 E
 #5444
 urubu~
@@ -592,8 +607,9 @@ deseja é um corpo.
 2 18 7 1d3+1 1d6+1
 1 10
 9 9 1
-GenWimpy: 4
-GenRoam: 61
+GenWimpy: 15
+GenRoam: 87
+GenFollow: 4
 E
 #5445
 velho homem~
@@ -631,6 +647,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 10
 9 9 1
 GenWimpy: 100
+GenFollow: 2
 E
 #5448
 lamia~
@@ -645,8 +662,10 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 99
-GenRoam: 88
+GenWimpy: 93
+GenLoot: 2
+GenRoam: 89
+GenFollow: 12
 E
 #5449
 dervixe~
@@ -660,7 +679,9 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenRoam: 63
+GenLoot: 4
+GenRoam: 73
+GenFollow: 4
 E
 #5450
 sultao~
@@ -688,6 +709,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 0 40
 9 9 2
 GenWimpy: 100
+GenFollow: 11
 E
 #5452
 carcereiro~
@@ -714,9 +736,9 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 48
-GenLoot: 10
-GenRoam: 88
+GenWimpy: 32
+GenLoot: 61
+GenFollow: 16
 E
 #5454
 garota preferida nichole~
@@ -730,8 +752,9 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 47
-GenLoot: 4
+GenWimpy: 77
+GenLoot: 6
+GenFollow: 5
 E
 #5455
 ala alá~
@@ -811,8 +834,9 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 18
+GenWimpy: 30
 GenRoam: 87
+GenFollow: 6
 E
 #5461
 guarda sultao~
@@ -826,8 +850,9 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 32
-GenRoam: 79
+GenWimpy: 58
+GenRoam: 88
+GenFollow: 13
 E
 T 3013
 #5462
@@ -854,9 +879,10 @@ Você vê um grande homem treinado para caçar e matar.
 15 0 0 4d5+251 2d8+1
 435 5000
 9 9 1
-GenWimpy: 3
-GenRoam: 54
-GenGroup: 6
+GenWimpy: 6
+GenRoam: 77
+GenGroup: 4
+GenFollow: 12
 E
 T 3013
 #5464
@@ -923,8 +949,9 @@ baixo.
 5 18 8 2d10+15 1d8+2
 500 650
 9 9 1
-GenWimpy: 1
-GenRoam: 34
+GenWimpy: 6
+GenRoam: 81
+GenFollow: 12
 E
 #5469
 ixitxachitl arraia~

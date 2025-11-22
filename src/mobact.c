@@ -26,9 +26,11 @@
 #include "spedit.h"
 #include "shop.h"
 #include "quest.h"
+#include "spec_procs.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
+static bool can_heal_based_on_alignment(struct char_data *healer, struct char_data *target);
 
 /* External function prototypes */
 void call_ACMD(void (*function)(), struct char_data *ch, char *argument, int cmd, int subcmd);
@@ -41,7 +43,9 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
+bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
+bool mob_try_heal_ally(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
 bool mob_manage_inventory(struct char_data *ch);
@@ -49,6 +53,8 @@ bool mob_handle_item_usage(struct char_data *ch);
 bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
+struct obj_data *find_bank_nearby(struct char_data *ch);
+bool mob_use_bank(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum);
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum);
@@ -63,6 +69,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 /* Function to find where a key can be obtained */
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
+bool validate_goal_obj(struct char_data *ch);
 
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
@@ -115,15 +122,413 @@ void check_mob_level_up(struct char_data *ch)
         /* Skills automatically improve with level - handled in get_mob_skill() */
 
         /* Message for nearby players to see the mob improving */
-        if (world[IN_ROOM(ch)].people) {
-            struct char_data *viewer;
-            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = viewer->next_in_room) {
-                if (!IS_MOB(viewer) && viewer != ch) {
-                    act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
-                }
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world && world[IN_ROOM(ch)].people) {
+            struct char_data *viewer, *next_viewer;
+            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = next_viewer) {
+                next_viewer = viewer->next_in_room;
+                if (IS_MOB(viewer) || viewer == ch)
+                    continue;
+                act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
             }
         }
     }
+}
+
+/**
+ * Validates that goal_obj is still valid (in mob's inventory).
+ * Objects can be extracted at any time through various means (sold, dropped, junked, etc.)
+ * so we need to verify the goal_obj pointer still points to a valid object.
+ * @param ch The mob character to validate goal_obj for.
+ * @return TRUE if goal_obj is valid and in mob's inventory, FALSE otherwise.
+ */
+bool validate_goal_obj(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data || !ch->ai_data->goal_obj)
+        return FALSE;
+
+    /* Check if the goal_obj is still in the mob's inventory */
+    struct obj_data *obj;
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (obj == ch->ai_data->goal_obj) {
+            return TRUE; /* Found it - it's still valid */
+        }
+    }
+
+    /* Object not found in inventory - it was extracted or moved */
+    ch->ai_data->goal_obj = NULL;
+    return FALSE;
+}
+
+/**
+ * Makes a mob perform a contextual social based on target's reputation, alignment, gender, position, and mob's emotions
+ * @param ch The mob performing the social
+ * @param target The target of the social (can be player or mob)
+ */
+static void mob_contextual_social(struct char_data *ch, struct char_data *target)
+{
+    /* Expanded social lists with more variety for mob usage */
+    const char *positive_socials[] = {"bow",     "smile", "nods",     "waves",      "applaud", "agree",
+                                      "beam",    "clap",  "grin",     "greet",      "thanks",  "thumbsup",
+                                      "welcome", "winks", "backclap", "sweetsmile", "happy",   NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", "growl", "snarl",
+                                      "curse", "mock",  "hate", "steam", "swear",  NULL};
+    const char *neutral_socials[] = {"ponder", "shrugs",  "peer", "blink",   "wonder", "think",
+                                     "wait",   "scratch", "yawn", "stretch", NULL};
+    const char *resting_socials[] = {"comfort", "pat", "calm", "console", "cradle", "tuck", NULL};
+    const char *fearful_socials[] = {"cower", "whimper", "cringe", "flinch",  "gasp",
+                                     "panic", "shake",   "worry",  "shivers", NULL};
+    const char *loving_socials[] = {"hug",   "cuddle", "kiss",  "bearhug", "blush",  "caress", "embrace",
+                                    "flirt", "love",   "swoon", "charm",   "huggle", "ghug",   NULL};
+    const char *proud_socials[] = {"strut", "flex", "boast", "brag", "pose", NULL};
+    const char *envious_socials[] = {"envy", "eye", "greed", NULL};
+    /* New social categories for more emotional variety */
+    const char *playful_socials[] = {"tickle", "poke", "tease", "bounce", "giggle",
+                                     "dance",  "skip", "joke",  "sing",   NULL};
+    const char *aggressive_socials[] = {"threaten", "challenge", "growl",     "snarl", "bite",
+                                        "slap",     "battlecry", "warscream", NULL};
+    const char *sad_socials[] = {"cry", "sob", "weep", "sulk", "sad", NULL};
+    const char *confused_socials[] = {"boggle", "blink", "puzzle", "wonder", "scratch", "think", NULL};
+    const char *excited_socials[] = {"bounce", "whoo", "cheers", NULL};
+    const char *respectful_socials[] = {"salute", "curtsey", "kneel", NULL};
+    /* Additional emotional categories for richer mob behavior */
+    const char *grateful_socials[] = {"thanks", "bow", "applaud", "backclap", "beam", "salute", NULL};
+    const char *mocking_socials[] = {"mock", "sneer", "snicker", "jeer", "taunt", NULL};
+    const char *submissive_socials[] = {"cower", "grovel", "bow", "kneel", "whimper", "cringe", "flinch", NULL};
+    const char *curious_socials[] = {"peer", "ponder", "wonder", "sniff", "gaze", "stare", NULL};
+    const char *triumphant_socials[] = {"cheers", "flex", "roar", "battlecry", "strut", NULL};
+    const char *protective_socials[] = {"embrace", "pat", "comfort", "console", NULL};
+    const char *mourning_socials[] = {"cry", "sob", "weep", "sulk", "despair", NULL};
+
+    const char **social_list = NULL;
+    int target_reputation;
+    int mob_alignment;
+    int target_pos;
+    int social_index;
+    int cmd_num;
+
+    /* Core emotions */
+    int mob_anger, mob_happiness, mob_fear, mob_love, mob_friendship, mob_sadness;
+    /* Extended emotions */
+    int mob_trust, mob_loyalty, mob_curiosity, mob_greed, mob_pride, mob_compassion, mob_envy, mob_courage,
+        mob_excitement;
+
+    /* Validate parameters */
+    if (!ch || !target)
+        return;
+
+    /* Only mobs with ai_data can use emotions */
+    if (!IS_NPC(ch) || !ch->ai_data)
+        return;
+
+    target_reputation = GET_REPUTATION(target);
+    mob_alignment = GET_ALIGNMENT(ch);
+    target_pos = GET_POS(target);
+
+    /* Get mob core emotions */
+    mob_anger = GET_MOB_ANGER(ch);
+    mob_happiness = GET_MOB_HAPPINESS(ch);
+    mob_fear = GET_MOB_FEAR(ch);
+    mob_love = GET_MOB_LOVE(ch);
+    mob_friendship = GET_MOB_FRIENDSHIP(ch);
+    mob_sadness = GET_MOB_SADNESS(ch);
+
+    /* Get extended emotions */
+    mob_trust = GET_MOB_TRUST(ch);
+    mob_loyalty = GET_MOB_LOYALTY(ch);
+    mob_curiosity = GET_MOB_CURIOSITY(ch);
+    mob_greed = GET_MOB_GREED(ch);
+    mob_pride = GET_MOB_PRIDE(ch);
+    mob_compassion = GET_MOB_COMPASSION(ch);
+    mob_envy = GET_MOB_ENVY(ch);
+    mob_courage = GET_MOB_COURAGE(ch);
+    mob_excitement = GET_MOB_EXCITEMENT(ch);
+
+    /* Don't perform socials if mob is busy or target is fighting/dead */
+    if (FIGHTING(ch) || FIGHTING(target) || target_pos <= POS_STUNNED)
+        return;
+
+    /* Determine which social category to use based on multiple factors */
+    /* Priority order: extreme emotions > moderate emotions > reputation > alignment > position */
+
+    /* Very high fear (80+) and very low courage (20-) - show submissive behavior */
+    if (mob_fear >= 80 && mob_courage <= 20) {
+        social_list = submissive_socials;
+    }
+    /* High fear (70+) and low courage - show fearful behavior */
+    else if (mob_fear >= 70 && mob_courage < 40) {
+        social_list = fearful_socials;
+    }
+    /* Very high pride (85+) with high courage after victory - triumphant behavior */
+    else if (mob_pride >= 85 && mob_courage >= 70 && mob_excitement >= 60) {
+        social_list = triumphant_socials;
+    }
+    /* High pride (75+) - show proud behavior */
+    else if (mob_pride >= 75) {
+        social_list = proud_socials;
+    }
+    /* High compassion (70+) with loyalty towards injured/weak target - protective behavior */
+    else if (mob_compassion >= 70 && mob_loyalty >= 60 &&
+             (target_pos <= POS_RESTING || GET_HIT(target) < GET_MAX_HIT(target) / 2)) {
+        social_list = protective_socials;
+    }
+    /* High sadness (75+) with low excitement - mourning behavior (for death responses) */
+    else if (mob_sadness >= 75 && mob_excitement < 30) {
+        social_list = mourning_socials;
+    }
+    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful behavior */
+    else if (mob_happiness >= 60 && mob_friendship >= 70 && mob_trust >= 60) {
+        social_list = grateful_socials;
+    }
+    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking behavior */
+    else if (mob_anger >= 60 && mob_pride >= 60 && mob_courage >= 50 && !FIGHTING(ch)) {
+        social_list = mocking_socials;
+    }
+    /* High curiosity (75+) with moderate excitement - curious/investigating behavior */
+    else if (mob_curiosity >= 75 && mob_excitement >= 40 && mob_excitement < 70) {
+        social_list = curious_socials;
+    }
+    /* High envy (70+) and target has good equipment/reputation */
+    else if (mob_envy >= 70 && (target_reputation >= 50 || mob_greed >= 60)) {
+        social_list = envious_socials;
+    }
+    /* High love (70+) or very high friendship with high trust */
+    else if (mob_love >= 70 || (mob_friendship >= 80 && mob_trust >= 60)) {
+        social_list = loving_socials;
+    }
+    /* High anger (70+) or high anger with low loyalty to good targets - be aggressive */
+    else if (mob_anger >= 70 || (mob_anger >= 50 && mob_loyalty < 30 && IS_GOOD(target))) {
+        social_list = aggressive_socials;
+    }
+    /* Moderate anger with low courage - show negative but not aggressive behavior */
+    else if (mob_anger >= 50 && mob_courage < 50) {
+        social_list = negative_socials;
+    }
+    /* High sadness (70+) - show sad behavior */
+    else if (mob_sadness >= 70) {
+        social_list = sad_socials;
+    }
+    /* High happiness (70+) with very high excitement (75+) - show excited behavior */
+    else if (mob_happiness >= 70 && mob_excitement >= 75) {
+        social_list = excited_socials;
+    }
+    /* High happiness (70+) with high excitement (60-74) - show playful behavior */
+    else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_excitement < 75) {
+        social_list = playful_socials;
+    }
+    /* High curiosity (70+) with moderate happiness (30-69) - show confused/wondering behavior */
+    else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
+        social_list = confused_socials;
+    }
+    /* High happiness (70+) shows positive behavior */
+    else if (mob_happiness >= 70) {
+        social_list = positive_socials;
+    }
+    /* Moderate emotions combined with other factors */
+    /* High reputation target (60+) gets positive socials from happy/friendly mobs */
+    else if (target_reputation >= 60 && (mob_happiness >= 40 || mob_friendship >= 50 || mob_alignment >= -350)) {
+        social_list = positive_socials;
+    }
+    /* Low reputation target (<20) triggers anger/negative response */
+    else if (target_reputation < 20 || mob_anger >= 40) {
+        social_list = negative_socials;
+    }
+    /* Alignment-based social selection modified by emotions */
+    else if (IS_GOOD(ch) && IS_EVIL(target) && mob_anger >= 20) {
+        social_list = negative_socials; /* Good doesn't like evil, especially if angry */
+    } else if (IS_EVIL(ch) && IS_GOOD(target) && mob_sadness < 50) {
+        social_list = negative_socials; /* Evil doesn't like good unless sad/remorseful */
+    } else if (IS_GOOD(ch) && IS_GOOD(target) && mob_friendship >= 30) {
+        social_list = positive_socials; /* Good likes good, especially if friendly */
+    } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
+        /* Evil respects reputable evil - show respect */
+        social_list = respectful_socials;
+    } else if (IS_GOOD(ch) && target_reputation >= 80) {
+        /* Good mobs respect highly reputable targets */
+        social_list = respectful_socials;
+    }
+    /* Target is resting/sitting - use comforting socials if mob has compassion (low anger, high compassion/friendship)
+     */
+    else if ((target_pos == POS_RESTING || target_pos == POS_SITTING) && mob_anger < 30 &&
+             (mob_compassion >= 50 || mob_friendship >= 40)) {
+        social_list = resting_socials;
+    }
+    /* High sadness with low excitement leads to withdrawn/neutral behavior */
+    else if (mob_sadness >= 60 && mob_excitement < 40) {
+        social_list = neutral_socials;
+    }
+    /* High curiosity with high excitement - show interest */
+    else if (mob_curiosity >= 60 && mob_excitement >= 50) {
+        social_list = neutral_socials; /* Curious/observing behavior */
+    }
+    /* Default to neutral socials */
+    else {
+        social_list = neutral_socials;
+    }
+
+    /* Select a random social from the chosen category */
+    /* Count number of non-NULL elements in the social list */
+    for (social_index = 0; social_list[social_index] != NULL; social_index++)
+        ;
+
+    if (social_index == 0)
+        return; /* No socials in this category */
+
+    social_index = rand_number(0, social_index - 1);
+
+    /* Find the social command number */
+    for (cmd_num = 0; *complete_cmd_info[cmd_num].command != '\n'; cmd_num++) {
+        if (!strcmp(complete_cmd_info[cmd_num].command, social_list[social_index]))
+            break;
+    }
+
+    if (*complete_cmd_info[cmd_num].command != '\n') {
+        /* Execute the social */
+        do_action(ch, GET_NAME(target), cmd_num, 0);
+    }
+}
+
+/**
+ * Separate heartbeat pass for mob emotion and social behavior.
+ * Called more frequently than mobile_activity() to make mobs feel more alive.
+ * Runs at PULSE_MOB_EMOTION (every 4 seconds) vs PULSE_MOBILE (every 10 seconds).
+ */
+void mob_emotion_activity(void)
+{
+    struct char_data *ch, *next_ch;
+
+    for (ch = character_list; ch; ch = next_ch) {
+        next_ch = ch->next;
+
+        /* Skip if we've reached the end of the list or if this is not a mob */
+        if (!ch || !IS_MOB(ch))
+            continue;
+
+        /* Skip mobs that have been marked for extraction */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Skip mobs that are not in a valid room */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            continue;
+
+        /* Skip if mob is fighting or not awake */
+        if (FIGHTING(ch) || !AWAKE(ch))
+            continue;
+
+        /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
+        /* Only perform if experimental feature is enabled */
+        /* Probability controlled by CONFIG_MOB_EMOTION_SOCIAL_CHANCE (configurable in cedit) */
+        /* Emotion modifiers: high happiness/anger increases chance, high sadness decreases */
+        int social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
+
+        if (ch->ai_data) {
+            /* High happiness increases social probability */
+            if (ch->ai_data->emotion_happiness >= CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD) {
+                social_chance += 15; /* +15% for high happiness */
+            }
+            /* High anger increases negative social probability */
+            if (ch->ai_data->emotion_anger >= CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD) {
+                social_chance += 10; /* +10% for high anger */
+            }
+            /* High sadness decreases social probability (withdrawal) */
+            if (ch->ai_data->emotion_sadness >= CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD) {
+                social_chance -= 15; /* -15% for high sadness (withdrawn) */
+            }
+            /* Ensure social_chance stays within reasonable bounds */
+            social_chance = MAX(1, MIN(social_chance, 95));
+        }
+
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= social_chance) {
+            struct char_data *potential_target;
+
+            /* Look for a suitable target in the room */
+            for (potential_target = world[IN_ROOM(ch)].people; potential_target;
+                 potential_target = potential_target->next_in_room) {
+                if (potential_target == ch)
+                    continue;
+
+                /* Skip if target is fighting, sleeping, or dead */
+                if (FIGHTING(potential_target) || GET_POS(potential_target) <= POS_SLEEPING)
+                    continue;
+
+                /* Can the mob see the target? */
+                if (!CAN_SEE(ch, potential_target))
+                    continue;
+
+                /* Perform contextual social */
+                mob_contextual_social(ch, potential_target);
+
+                /* Safety check: do_action can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    break; /* Exit the for loop and continue to next mob */
+
+                /* Only target one character per social action */
+                break;
+            }
+
+            /* If mob was extracted during social, continue to next mob in main loop */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        }
+
+        /* Love-based following: Mobs with high love (>80) toward specific players should follow them */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data) {
+            /* Look for a player to follow if not already following someone */
+            if (!ch->master && !MOB_FLAGGED(ch, MOB_SENTINEL) && !MOB_FLAGGED(ch, MOB_STAY_ZONE)) {
+                struct char_data *potential_love_target;
+                struct char_data *best_love_target = NULL;
+                int highest_love = 0;
+                
+                /* Find the player the mob loves most using hybrid emotion system */
+                for (potential_love_target = world[IN_ROOM(ch)].people; potential_love_target;
+                     potential_love_target = potential_love_target->next_in_room) {
+                    /* Skip self and other mobs */
+                    if (potential_love_target == ch || IS_NPC(potential_love_target))
+                        continue;
+
+                    /* Must be able to see the target */
+                    if (!CAN_SEE(ch, potential_love_target))
+                        continue;
+
+                    /* Check effective love toward this specific player */
+                    int effective_love = get_effective_emotion_toward(ch, potential_love_target, EMOTION_TYPE_LOVE);
+                    if (effective_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD && effective_love > highest_love) {
+                        highest_love = effective_love;
+                        best_love_target = potential_love_target;
+                    }
+                }
+                
+                /* Follow the most loved player if found */
+                if (best_love_target) {
+                    add_follower(ch, best_love_target);
+
+                    /* Announce the following with a loving social or message */
+                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, best_love_target,
+                        TO_NOTVICT);
+                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, best_love_target,
+                        TO_VICT);
+
+                    /* Safety check for extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        break;
+
+                    /* Only follow one player per tick */
+                    break;
+                }
+
+                /* If mob was extracted, continue to next mob */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
+            }
+        }
+
+        /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
+        /* Probability controlled by CONFIG_MOB_EMOTION_UPDATE_CHANCE (configurable in cedit) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= CONFIG_MOB_EMOTION_UPDATE_CHANCE) {
+            update_mob_emotion_passive(ch);
+        }
+
+    } /* end for() */
 }
 
 void mobile_activity(void)
@@ -135,8 +540,19 @@ void mobile_activity(void)
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
 
-        if (!IS_MOB(ch))
+        if (!ch || !IS_MOB(ch))
             continue;
+
+        /* Skip mobs that have been marked for extraction (e.g., from death traps) */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Skip mobs that are not in a valid room */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+            log1("SYSERR: Mobile %s (#%d) is in NOWHERE or invalid room in mobile_activity().",
+                 ch ? GET_NAME(ch) : "NULL", ch ? GET_MOB_VNUM(ch) : -1);
+            continue;
+        }
 
         /* Examine call for special procedure */
         if (MOB_FLAGGED(ch, MOB_SPEC) && !no_specials) {
@@ -150,7 +566,18 @@ void mobile_activity(void)
             }
         }
 
+        // *** ADDED SAFETY CHECK ***
+        // A spec proc might have extracted ch and returned FALSE.
+        // The check at the top of the loop already caught other flags,
+        // but we must re-check here before proceeding.
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         if (FIGHTING(ch) || !AWAKE(ch))
+            continue;
+
+        /* Skip paralyzed mobs - they cannot perform actions */
+        if (AFF_FLAGGED(ch, AFF_PARALIZE))
             continue;
 
         /* Check if mob can level up from gained experience */
@@ -165,6 +592,11 @@ void mobile_activity(void)
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
+            /* Re-verify room validity before complex AI operations */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+                ch->ai_data->current_goal = GOAL_NONE;
+                continue;
+            }
 
             /* Increment goal timer and check for timeout */
             ch->ai_data->goal_timer++;
@@ -176,6 +608,9 @@ void mobile_activity(void)
                  ch->ai_data->current_goal == GOAL_COMPLETE_QUEST || ch->ai_data->current_goal == GOAL_COLLECT_KEY) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
 
                 /* If abandoning quest completion, fail the quest */
                 if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -217,17 +652,36 @@ void mobile_activity(void)
                     struct char_data *target = NULL;
                     struct char_data *temp_char;
 
-                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
-                            target = temp_char;
-                            break;
+                    /* Verify room validity before accessing people list */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                            if (!IS_NPC(temp_char))
+                                continue;
+                            if (GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
+                                target = temp_char;
+                                break;
+                            }
                         }
                     }
 
                     if (target && !FIGHTING(ch)) {
                         /* Attack the target */
                         act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                            /* Target was extracted, give up hunting */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
                         hit(ch, target, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     } else if (ch->ai_data->goal_timer > 100) {
                         /* Give up hunting after too long */
                         ch->ai_data->current_goal = GOAL_NONE;
@@ -278,31 +732,40 @@ void mobile_activity(void)
                 } else if (ch->ai_data->current_goal == GOAL_EAVESDROP) {
                     /* Check if there are other people to eavesdrop on */
                     struct char_data *temp_char;
-                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                        if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING &&
-                            GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
-                            can_perform = TRUE;
-                            break;
+                    /* Verify room validity before accessing people list */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                            if (temp_char == ch)
+                                continue;
+                            if (GET_POS(temp_char) >= POS_RESTING && GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
+                                can_perform = TRUE;
+                                break;
+                            }
                         }
                     }
                 }
 
-                if (can_perform && rand_number(1, 100) <= 30) { /* 30% chance to perform action each round */
-                    /* Perform the appropriate resource action */
+                if (can_perform && rand_number(1, 100) <= 5) { /* 30% chance to perform action each round */
+                    /* Perform the appropriate resource action - disabled for reduce resources usage until fix*/
                     switch (ch->ai_data->current_goal) {
                         case GOAL_MINE:
-                            call_ACMD(do_mine, ch, "", 0, 0);
+                            // call_ACMD(do_mine, ch, "", 0, 0);
                             break;
                         case GOAL_FISH:
-                            call_ACMD(do_fishing, ch, "", 0, 0);
+                            // call_ACMD(do_fishing, ch, "", 0, 0);
                             break;
                         case GOAL_FORAGE:
-                            call_ACMD(do_forage, ch, "", 0, 0);
+                            // call_ACMD(do_forage, ch, "", 0, 0);
                             break;
                         case GOAL_EAVESDROP:
                             call_ACMD(do_eavesdrop, ch, "", 0, 0);
                             break;
                     }
+
+                    /* Safety check: call_ACMD functions might indirectly trigger extract_char
+                     * through complex chains (e.g., triggering scripts, special procedures, etc.) */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
 
                     /* After performing action, continue with this goal for a while longer */
                     if (ch->ai_data->goal_timer > rand_number(30, 60)) {
@@ -320,12 +783,43 @@ void mobile_activity(void)
 
             room_rnum dest = ch->ai_data->goal_destination;
 
+            /* Validate destination room */
+            if (dest != NOWHERE && (dest < 0 || dest > top_of_world)) {
+                ch->ai_data->current_goal = GOAL_NONE;
+                ch->ai_data->goal_destination = NOWHERE;
+                continue;
+            }
+
             /* Já chegou ao destino? */
-            if (IN_ROOM(ch) == dest) {
+            if (dest != NOWHERE && IN_ROOM(ch) == dest) {
                 if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) {
                     /* Usa a memória para encontrar o lojista correto. */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
-                    if (keeper && ch->ai_data->goal_obj) {
+
+                    /* Validate keeper exists and is not marked for extraction */
+                    if (!keeper || MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                        /* Keeper not available, abandon this goal */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        ch->ai_data->goal_destination = NOWHERE;
+                        ch->ai_data->goal_obj = NULL;
+                        ch->ai_data->goal_target_mob_rnum = NOBODY;
+                        ch->ai_data->goal_item_vnum = NOTHING;
+                        ch->ai_data->goal_timer = 0;
+                        continue;
+                    }
+
+                    if (ch->ai_data->goal_obj) {
+                        /* Validate goal_obj is still in inventory before accessing it */
+                        if (!validate_goal_obj(ch)) {
+                            /* Object was extracted, clear goal and continue */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_destination = NOWHERE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
+
                         int shop_rnum = find_shop_by_keeper(keeper->nr);
 
                         /* Check if this shop actually buys this type of item */
@@ -342,10 +836,39 @@ void mobile_activity(void)
                         if (shop_buys_this_item) {
                             /* Shop buys this item, proceed with sale */
                             shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, shop_rnum);
+                            /* Clear goal_obj pointer as the object has been extracted by shopping_sell */
+                            ch->ai_data->goal_obj = NULL;
+
+                            /* Safety check: shopping_sell can trigger DG Scripts via act(), do_tell(), etc.
+                             * which could indirectly cause extract_char for ch or keeper */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+
+                            /* Check if keeper was extracted during the transaction */
+                            if (MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                                /* Keeper was extracted, clear goal and continue */
+                                ch->ai_data->current_goal = GOAL_NONE;
+                                ch->ai_data->goal_destination = NOWHERE;
+                                ch->ai_data->goal_target_mob_rnum = NOBODY;
+                                ch->ai_data->goal_item_vnum = NOTHING;
+                                ch->ai_data->goal_timer = 0;
+                                continue;
+                            }
+
                             ch->ai_data->genetics.trade_tendency += 1;
                             ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                         } else {
                             /* Shop doesn't buy this item, find a new shop */
+                            /* Revalidate goal_obj before using it (could have been extracted during shop processing) */
+                            if (!validate_goal_obj(ch)) {
+                                ch->ai_data->current_goal = GOAL_NONE;
+                                ch->ai_data->goal_destination = NOWHERE;
+                                ch->ai_data->goal_target_mob_rnum = NOBODY;
+                                ch->ai_data->goal_item_vnum = NOTHING;
+                                ch->ai_data->goal_timer = 0;
+                                continue;
+                            }
+
                             int new_shop_rnum = find_best_shop_to_sell(ch, ch->ai_data->goal_obj);
                             if (new_shop_rnum != -1 && new_shop_rnum <= top_shop && shop_index[new_shop_rnum].in_room) {
                                 room_rnum new_target_room = real_room(SHOP_ROOM(new_shop_rnum, 0));
@@ -355,12 +878,19 @@ void mobile_activity(void)
                                     ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(new_shop_rnum);
                                     act("$n percebe que esta loja não compra o que tem e decide procurar outra.", FALSE,
                                         ch, 0, 0, TO_ROOM);
-                                    continue; /* Continue with updated goal */
+                                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                        continue;
+                                    /* Continue with updated goal - don't process other activities this tick */
+                                    continue;
                                 }
                             }
                             /* No suitable shop found, abandon goal */
                             act("$n parece frustrado por não conseguir vender os seus itens.", FALSE, ch, 0, 0,
                                 TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             ch->ai_data->current_goal = GOAL_NONE;
                             ch->ai_data->goal_destination = NOWHERE;
                             ch->ai_data->goal_obj = NULL;
@@ -409,16 +939,50 @@ void mobile_activity(void)
                 } else if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY) {
                     /* Chegou à loja para comprar um item da wishlist */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
-                    if (keeper && ch->ai_data->goal_item_vnum != NOTHING) {
+
+                    /* Validate keeper exists and is not marked for extraction */
+                    if (!keeper || MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                        /* Keeper not available, abandon this goal */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        ch->ai_data->goal_destination = NOWHERE;
+                        ch->ai_data->goal_target_mob_rnum = NOBODY;
+                        ch->ai_data->goal_item_vnum = NOTHING;
+                        ch->ai_data->goal_timer = 0;
+                        continue;
+                    }
+
+                    if (ch->ai_data->goal_item_vnum != NOTHING) {
                         /* Tenta comprar o item */
                         char buy_command[MAX_INPUT_LENGTH];
                         act("$n olha os produtos da loja.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
                         shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
+
+                        /* Safety check: shopping operations could indirectly cause extract_char
+                         * through scripts, triggers, or special procedures */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Check if keeper was extracted during the transaction */
+                        if (MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                            /* Keeper was extracted, clear goal and continue */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_destination = NOWHERE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
 
                         /* Remove o item da wishlist se a compra foi bem sucedida */
                         remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                         act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else if (ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
                     /* Chegou ao questmaster para postar uma quest */
@@ -431,7 +995,15 @@ void mobile_activity(void)
                         /* Posta a quest no questmaster */
                         mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
                         act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
+                    /* Clear goal after posting quest or if no item to post */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_destination = NOWHERE;
+                    ch->ai_data->goal_item_vnum = NOTHING;
+                    ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
                     /* Chegou ao questmaster para aceitar uma quest */
                     struct char_data *questmaster =
@@ -444,6 +1016,9 @@ void mobile_activity(void)
                             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
                                 set_mob_quest(ch, quest_rnum);
                                 act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    continue;
 
                                 /* Automatically transition to quest completion goal */
                                 ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
@@ -456,8 +1031,17 @@ void mobile_activity(void)
                         } else {
                             act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster,
                                 TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                         }
                     }
+                    /* Clear goal if quest was not accepted (no questmaster, already has quest, no quests available, or
+                     * didn't want to accept) */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_destination = NOWHERE;
+                    ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     /* Process quest completion based on quest type */
                     if (GET_QUEST(ch) != NOTHING) {
@@ -477,16 +1061,20 @@ void mobile_activity(void)
                     }
                 } else if (ch->ai_data->current_goal == GOAL_COLLECT_KEY) {
                     /* Arrived at key location - try to collect the key */
-                    struct obj_data *key_obj = NULL;
+                    struct obj_data *key_obj = NULL, *next_obj = NULL;
                     obj_vnum target_key = ch->ai_data->goal_item_vnum;
                     bool key_collected = FALSE;
 
                     /* Look for the key on the ground */
-                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = key_obj->next_content) {
+                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = next_obj) {
+                        next_obj = key_obj->next_content; /* Save next pointer before obj_from_room */
                         if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                             obj_from_room(key_obj);
                             obj_to_char(key_obj, ch);
                             act("$n pega $p do chão.", FALSE, ch, key_obj, 0, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             key_collected = TRUE;
                             break;
                         }
@@ -494,14 +1082,19 @@ void mobile_activity(void)
 
                     /* If not found on ground, look in containers */
                     if (!key_collected) {
-                        struct obj_data *container;
-                        for (container = world[IN_ROOM(ch)].contents; container; container = container->next_content) {
+                        struct obj_data *container, *next_container;
+                        for (container = world[IN_ROOM(ch)].contents; container; container = next_container) {
+                            next_container = container->next_content;
                             if (GET_OBJ_TYPE(container) == ITEM_CONTAINER && !OBJVAL_FLAGGED(container, CONT_CLOSED)) {
-                                for (key_obj = container->contains; key_obj; key_obj = key_obj->next_content) {
+                                for (key_obj = container->contains; key_obj; key_obj = next_obj) {
+                                    next_obj = key_obj->next_content; /* Save next pointer before obj_from_obj */
                                     if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                                         obj_from_obj(key_obj);
                                         obj_to_char(key_obj, ch);
                                         act("$n pega $p de $P.", FALSE, ch, key_obj, container, TO_ROOM);
+                                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                            continue;
                                         key_collected = TRUE;
                                         break;
                                     }
@@ -519,7 +1112,15 @@ void mobile_activity(void)
                         if (target_mob && !FIGHTING(ch)) {
                             /* Attack the mob to get the key */
                             act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                            if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                                continue;
                             hit(ch, target_mob, TYPE_UNDEFINED);
+                            /* Safety check: hit() can indirectly cause extract_char */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             /* Don't clear goal yet - continue fighting until key is obtained */
                             continue;
                         }
@@ -543,7 +1144,11 @@ void mobile_activity(void)
                             ch->ai_data->original_item_vnum = NOTHING;
 
                             act("$n parece satisfeito por ter encontrado o que procurava.", FALSE, ch, 0, 0, TO_ROOM);
-                            continue; /* Continue with restored goal */
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                            /* Continue with restored goal - don't clear it below */
+                            continue;
                         }
                     }
                     /* If key not found, goal will be cleared below */
@@ -558,6 +1163,9 @@ void mobile_activity(void)
             } else {
                 /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
                 mob_goal_oriented_roam(ch, dest);
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
 
             continue; /* O turno do mob foi gasto a trabalhar no seu objetivo. */
@@ -574,7 +1182,14 @@ void mobile_activity(void)
                     next_obj = current_obj->next_content;
                     if (OBJ_FLAGGED(current_obj, ITEM_TRASH)) {
                         act("$n joga $p fora.", FALSE, ch, current_obj, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         extract_obj(current_obj);
+                        /* Safety check: extract_obj could potentially trigger DG Scripts
+                         * on the object being extracted, which might indirectly affect ch */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
                 continue;
@@ -583,27 +1198,74 @@ void mobile_activity(void)
 
         if GROUP (ch) {
             mob_follow_leader(ch);
+            /* Safety check: mob_follow_leader calls perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
+        /* Charmed mobs that are not in a group should follow their master */
+        if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master && !GROUP(ch)) {
+            /* Safety check: Validate master pointer and room */
+            if (IN_ROOM(ch->master) != NOWHERE && IN_ROOM(ch->master) >= 0 && IN_ROOM(ch->master) <= top_of_world) {
+                /* Only follow if in different room from master */
+                if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+                    int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+                    if (direction >= 0 && direction < DIR_COUNT) {
+                        /* Try to move toward master - perform_move will handle doors/obstacles */
+                        perform_move(ch, direction, 1);
+                        /* Safety check: perform_move can trigger death traps */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                    }
+                }
+            }
+        }
+
+        /* Try stealth following (for non-grouped following behavior) */
+        mob_try_stealth_follow(ch);
+        /* Safety check: mob_try_stealth_follow calls perform_move which can trigger death traps */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         mob_assist_allies(ch);
+        /* Safety check: mob_assist_allies calls hit() which can cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Try to heal allies in critical condition */
+        mob_try_heal_ally(ch);
+        /* Safety check: mob_try_heal_ally calls do_bandage which can trigger scripts */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         mob_try_and_loot(ch);
 
         /* hunt a victim, if applicable */
         hunt_victim(ch);
 
-        /* Wishlist-based goal planning */
-        if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Wishlist-based goal planning - not for charmed mobs */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
+            /* Safety check: mob_process_wishlist_goals can call act() which may trigger DG scripts */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
-        /* Quest acceptance - try to find and accept quests occasionally */
-        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
+        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <=
+                0) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
             mob_try_to_accept_quest(ch);
         }
 
-        /* Mob quest processing */
-        if (ch->ai_data && rand_number(1, 100) <= 5) { /* 5% chance per tick to check quests */
+        /* Mob quest processing - not for charmed mobs */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <=
+                0) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
             /* Check if mob has a quest and handle quest-related goals */
             if (GET_MOB_QUEST(ch) != NOTHING) {
                 /* Decrement quest timer if applicable */
@@ -613,63 +1275,117 @@ void mobile_activity(void)
                         /* Quest timeout */
                         act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
                         fail_mob_quest(ch, "timeout");
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
             } else {
                 /* Mob doesn't have a quest, check if it should try to find one */
-                if (GET_GENQUEST(ch) > 30 && GET_GENADVENTURER(ch) > 20) {
+                if (ch->ai_data) {
                     /* Look for available mob-posted quests */
                     qst_rnum rnum;
                     for (rnum = 0; rnum < total_quests; rnum++) {
                         if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && mob_should_accept_quest(ch, rnum)) {
                             set_mob_quest(ch, rnum);
                             act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);
-                            break;
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                break; /* Exit the for loop, then continue to next mob in main loop */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             }
         }
 
-        /* Mob combat quest posting - chance to post bounty/revenge quests */
-        if (ch->ai_data && rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
-            /* Check if mob should post a player kill quest (revenge for being attacked) */
-            if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) > 40) {
-                /* Check if mob was recently attacked by a player (has hostile memory) */
+        /* Mob combat quest posting - chance to post bounty/revenge quests (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
+            /* Dynamic probability based on quest tendency and bravery for player kill quests */
+            int combat_quest_chance = 2; /* Base 2% chance per tick */
+
+            /* Increase chance for player kill quests if mob is being hunted and capable */
+            if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) >= 5) {
                 struct char_data *attacker = HUNTING(ch);
                 if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
-                    /* Post a player kill quest for revenge */
-                    int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
-                    mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
-                    HUNTING(ch) = NULL; /* Clear hunting after posting quest */
+                    /* Increase probability significantly for player kill quests when mob is actively hunted */
+                    combat_quest_chance = 5 + (GET_GENQUEST(ch) / 20); /* 5-10% chance based on quest tendency */
                 }
             }
 
-            /* Check if mob should post a bounty quest against hostile mobs in area */
-            if (GET_GENQUEST(ch) > 60 && GET_GOLD(ch) > 300) {
-                struct char_data *target;
-                /* Look for aggressive mobs in the same zone */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
-                        GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+            if (rand_number(1, 100) <= combat_quest_chance) {
+                /* Check if mob should post a player kill quest (revenge for being attacked) */
+                if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) >= 5) {
+                    /* Check if mob was recently attacked by a player (has hostile memory) */
+                    struct char_data *attacker = HUNTING(ch);
+                    if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
+                        /* Post a player kill quest for revenge */
+                        int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
+                        mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
+                        /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        HUNTING(ch) = NULL; /* Clear hunting after posting quest */
+                    }
+                }
 
-                        /* Post bounty quest against this aggressive mob */
-                        int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
-                        mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
-                        break; /* Only post one bounty quest per tick */
+                /* Check if mob should post a bounty quest against hostile mobs in area */
+                if (GET_GENQUEST(ch) >= 10 && GET_GOLD(ch) > 300) {
+                    /* Safety check: Validate ch's room before accessing world array */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        struct char_data *target, *next_target;
+                        /* Look for aggressive mobs in the same zone */
+                        for (target = character_list; target; target = next_target) {
+                            next_target = target->next;
+
+                            /* Safety check: Skip characters marked for extraction */
+                            if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                                continue;
+
+                            /* Safety check: Validate room before accessing world array */
+                            if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                                IN_ROOM(target) > top_of_world)
+                                continue;
+
+                            /* Skip mobs that should be excluded from quests (summoned, skill-spawned) */
+                            if (is_mob_excluded_from_quests(target))
+                                continue;
+
+                            if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                                MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
+                                GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+
+                                /* Post bounty quest against this aggressive mob */
+                                int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
+                                mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit the loop, then continue to next mob in main loop */
+                                break;     /* Only post one bounty quest per tick */
+                            }
+                        }
+                        /* Safety check after the loop in case ch was extracted */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
             }
         }
 
-        /* Additional quest posting - exploration, protection, and general kill quests */
-        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
+        /* Additional quest posting - exploration, protection, and general kill quests (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
+            /* Safety check: Validate ch's room before accessing world array */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
             struct char_data *target;
             int reward;
 
             /* Check genetics and decide what type of quest to post */
-            if (GET_GENADVENTURER(ch) > 50 && rand_number(1, 100) <= 30) {
+            if (GET_GENADVENTURER(ch) >= 5 && rand_number(1, 100) <= 30) {
                 /* Post exploration quests */
                 if (rand_number(1, 100) <= 40) {
                     /* AQ_OBJ_FIND quest - find a random object in the zone */
@@ -687,55 +1403,120 @@ void mobile_activity(void)
                     if (obj_target != NOTHING && GET_GOLD(ch) > 100) {
                         reward = MIN(GET_GOLD(ch) / 6, 200 + GET_LEVEL(ch) * 5);
                         mob_posts_exploration_quest(ch, AQ_OBJ_FIND, obj_target, reward);
+                        /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else if (rand_number(1, 100) <= 50) {
                     /* AQ_ROOM_FIND quest - explore a room in the zone */
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
-                    room_rnum room_target =
-                        zone_table[mob_zone].bot + rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
+                    room_rnum room_target_rnum = NOWHERE;
+                    int attempts = 0;
+                    const int max_attempts = 20;
 
-                    if (GET_GOLD(ch) > 75) {
+                    /* Find a suitable room: not GODROOM, not HOUSE, but DEATH is OK */
+                    while (attempts < max_attempts && room_target_rnum == NOWHERE) {
+                        room_vnum candidate_vnum = zone_table[mob_zone].bot +
+                                                   rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
+                        room_rnum candidate_rnum = real_room(candidate_vnum);
+
+                        if (candidate_rnum != NOWHERE && !ROOM_FLAGGED(candidate_rnum, ROOM_GODROOM) &&
+                            !ROOM_FLAGGED(candidate_rnum, ROOM_HOUSE)) {
+                            room_target_rnum = candidate_rnum;
+                        }
+                        attempts++;
+                    }
+
+                    if (room_target_rnum != NOWHERE && GET_GOLD(ch) > 75) {
                         reward = MIN(GET_GOLD(ch) / 8, 150 + GET_LEVEL(ch) * 3);
-                        mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[real_room(room_target)].number, reward);
+                        mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[room_target_rnum].number, reward);
+                        /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else {
                     /* AQ_MOB_FIND quest - find a friendly mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                            GET_ALIGNMENT(target) > 0 && !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        /* Safety check: Validate ch's room before zone comparison */
+                        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                            break;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
+                            !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
 
                             if (GET_GOLD(ch) > 80) {
                                 reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
                                 mob_posts_exploration_quest(ch, AQ_MOB_FIND, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit loop, then continue to next mob in main loop */
                             }
                             break; /* Only post one find quest per tick */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (GET_GENBRAVE(ch) > 60 && rand_number(1, 100) <= 25) {
                 /* Post protection quests */
                 if (rand_number(1, 100) <= 60) {
                     /* AQ_MOB_SAVE quest - protect a weak mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        /* Safety check: Validate ch's room before zone comparison */
+                        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                            break;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
                             GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
 
                             if (GET_GOLD(ch) > 120) {
                                 reward = MIN(GET_GOLD(ch) / 5, 250 + GET_LEVEL(target) * 6);
                                 mob_posts_protection_quest(ch, AQ_MOB_SAVE, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_protection_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit loop, then continue to next mob in main loop */
                             }
                             break; /* Only post one save quest per tick */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 } else {
                     /* AQ_ROOM_CLEAR quest - clear a dangerous room */
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs */
+                    /* Find a room with aggressive mobs that is not GODROOM or HOUSE */
                     for (int r = zone_table[mob_zone].bot; r <= zone_table[mob_zone].top; r++) {
                         room_rnum real_r = real_room(r);
-                        if (real_r != NOWHERE) {
+                        if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
+                            !ROOM_FLAGGED(real_r, ROOM_HOUSE)) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
                                     dangerous_room = r;
@@ -750,83 +1531,193 @@ void mobile_activity(void)
                     if (dangerous_room != NOWHERE && GET_GOLD(ch) > 150) {
                         reward = MIN(GET_GOLD(ch) / 4, 300 + GET_LEVEL(ch) * 8);
                         mob_posts_protection_quest(ch, AQ_ROOM_CLEAR, dangerous_room, reward);
+                        /* Safety check: mob_posts_protection_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
-            } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
+            } else if (GET_GENQUEST(ch) >= 5 && rand_number(1, 100) <= 20) {
                 /* Post general kill quests */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        GET_ALIGNMENT(target) < -100 && GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
+                struct char_data *next_target;
+                for (target = character_list; target; target = next_target) {
+                    next_target = target->next;
+
+                    /* Safety check: Skip characters marked for extraction */
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Safety check: Validate room before accessing world array */
+                    if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                        IN_ROOM(target) > top_of_world)
+                        continue;
+
+                    /* Safety check: Validate ch's room before zone comparison */
+                    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                        break;
+
+                    if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) < -100 &&
+                        GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
 
                         if (GET_GOLD(ch) > 100) {
                             reward = MIN(GET_GOLD(ch) / 5, 200 + GET_LEVEL(target) * 8);
                             mob_posts_general_kill_quest(ch, GET_MOB_VNUM(target), reward);
+                            /* Safety check: mob_posts_general_kill_quest calls act() which may trigger DG scripts */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                break; /* Exit loop, then continue to next mob in main loop */
                         }
                         break; /* Only post one kill quest per tick */
                     }
                 }
+                /* Safety check after the loop in case ch was extracted */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
         }
 
         mob_handle_grouping(ch);
 
-        /* Aggressive Mobs */
-        if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
+        /* Aggressive Mobs - skip if helper, blind, or charmed */
+        if (!MOB_FLAGGED(ch, MOB_HELPER) && !AFF_FLAGGED(ch, AFF_BLIND) && !AFF_FLAGGED(ch, AFF_CHARM)) {
             found = FALSE;
-            for (vict = world[IN_ROOM(ch)].people; vict && !found; vict = vict->next_in_room) {
-                //	if (IS_NPC(vict) || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
-                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
-                    continue;
+            /* Re-verify room validity before accessing room data */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
 
-                if (MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict))
+            for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
+                struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
+
+                //	if (IS_NPC(vict) || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                    vict = next_vict;
                     continue;
+                }
+
+                /* Safety check: Validate vict is still valid before checking AWAKE(vict)
+                 * This is critical when vict may be sleeping/meditating and position is changing.
+                 * Without this check, AWAKE(vict) can cause SIGSEGV if vict was extracted or
+                 * became invalid between iterations or during CAN_SEE/PRF_FLAGGED checks.
+                 * Note: vict should not be NULL here since we're iterating from room people list,
+                 * but we check NOTDEADYET flags to catch pending extractions. */
+                if (!vict || MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                    vict = next_vict;
+                    continue;
+                }
+
+                if (MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict)) {
+                    vict = next_vict;
+                    continue;
+                }
 
                 if (MOB_FLAGGED(ch, MOB_AGGRESSIVE) || (MOB_FLAGGED(ch, MOB_AGGR_EVIL) && IS_EVIL(vict)) ||
                     (MOB_FLAGGED(ch, MOB_AGGR_NEUTRAL) && IS_NEUTRAL(vict)) ||
                     (MOB_FLAGGED(ch, MOB_AGGR_GOOD) && IS_GOOD(vict))) {
 
                     /* Can a master successfully control the charmed monster? */
-                    if (aggressive_mob_on_a_leash(ch, ch->master, vict))
+                    if (aggressive_mob_on_a_leash(ch, ch->master, vict)) {
+                        vict = next_vict;
                         continue;
+                    }
 
-                    if (vict == ch)
+                    if (vict == ch) {
+                        vict = next_vict;
                         continue;
+                    }
 
                     // if (IS_NPC(vict))
                     // continue;
 
                     if (rand_number(0, 20) <= GET_CHA(vict)) {
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
+                        /* Safety check: act() can trigger DG scripts which may extract ch or vict */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                         act("$N olha para você com indiferença.", FALSE, vict, 0, ch, TO_CHAR);
+                        /* Safety check: second act() may also trigger extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         found = TRUE;
                     }
                 }
+
+                vict = next_vict; /* Move to next victim safely */
             }
         }
+
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         mob_try_and_upgrade(ch);
 
         mob_share_gear_with_group(ch);
 
+        /* Bank usage for mobs with high trade genetics */
+        mob_use_bank(ch);
+        /* Safety check: mob_use_bank() calls act() which can trigger DG scripts */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         if (handle_duty_routine(ch)) {
+            /* Safety check: handle_duty_routine calls perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
             continue;
         }
 
         /* Prioridade de Vaguear (Roam) */
         if (!mob_try_to_sell_junk(ch)) {
             mob_goal_oriented_roam(ch, NOWHERE);
+            /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        } else {
+            /* Safety check: mob_try_to_sell_junk can call mob_goal_oriented_roam internally */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Mob Memory */
         if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
             found = FALSE;
-            for (vict = world[IN_ROOM(ch)].people; vict && !found; vict = vict->next_in_room) {
-                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
+            /* Re-verify room validity before accessing room data */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
+            for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
+                struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
+
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                    vict = next_vict;
                     continue;
+                }
 
                 for (names = MEMORY(ch); names && !found; names = names->next) {
+                    if (!names)
+                        break; /* Safety check - names became NULL */
+
                     if (names->id != GET_IDNUM(vict))
                         continue;
 
@@ -837,9 +1728,18 @@ void mobile_activity(void)
                     found = TRUE;
                     act("''Ei!  Você é o demônio que me atacou!!!', exclama $n.", FALSE, ch, 0, 0, TO_ROOM);
                     hit(ch, vict, TYPE_UNDEFINED);
+                    /* Safety check: hit() can indirectly cause extract_char */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
+
+                vict = next_vict; /* Move to next victim safely */
             }
         }
+
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         /* Charmed Mob Rebellion: In order to rebel, there need to be more charmed
          * monsters than the person can feasibly control at a time.  Then the
@@ -850,13 +1750,23 @@ void mobile_activity(void)
             if (!aggressive_mob_on_a_leash(ch, ch->master, ch->master)) {
                 if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
                     hit(ch, ch->master, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
                 stop_follower(ch);
+                /* Safety check: stop_follower() calls act() which can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
         }
 
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         /* Resource gathering goal assignment for idle mobs */
-        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 5) {
-            /* 0.5% chance per tick for mob to start resource gathering if they have no other goals */
+        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 10) {
+            /* 1% chance per tick for mob to start resource gathering if they have no other goals */
 
             /* Check genetics to determine preferred resource activity */
             int activity_choice = rand_number(1, 100);
@@ -867,6 +1777,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_MINE;
                     ch->ai_data->goal_timer = 0;
                     act("$n olha ao redor procurando minerais.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (SECT(IN_ROOM(ch)) == SECT_WATER_SWIM || SECT(IN_ROOM(ch)) == SECT_WATER_NOSWIM) {
                 /* Near water, try fishing */
@@ -874,6 +1787,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_FISH;
                     ch->ai_data->goal_timer = 0;
                     act("$n olha para a água pensativamente.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_INSIDE) {
                 /* In wilderness, try foraging */
@@ -881,15 +1797,23 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_FORAGE;
                     ch->ai_data->goal_timer = 0;
                     act("$n examina a vegetação local.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (ch->ai_data->genetics.loot_tendency > 40) {
                 /* In social areas, try eavesdropping for information */
                 struct char_data *temp_char;
                 bool has_targets = FALSE;
-                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                    if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING) {
-                        has_targets = TRUE;
-                        break;
+                /* Verify room validity before accessing people list */
+                if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (temp_char == ch)
+                            continue;
+                        if (GET_POS(temp_char) >= POS_RESTING) {
+                            has_targets = TRUE;
+                            break;
+                        }
                     }
                 }
 
@@ -897,6 +1821,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_EAVESDROP;
                     ch->ai_data->goal_timer = 0;
                     act("$n discretamente presta atenção ao que acontece ao redor.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             }
         }
@@ -905,6 +1832,10 @@ void mobile_activity(void)
         if (GET_ALIGNMENT(ch) <= -350 && rand_number(1, 100) <= 10) {
             struct char_data *victim;
             struct obj_data *container;
+
+            /* Verify room validity before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
 
             /* Look for potential victims in the room */
             for (victim = world[IN_ROOM(ch)].people; victim; victim = victim->next_in_room) {
@@ -921,19 +1852,32 @@ void mobile_activity(void)
                             GET_OBJ_VAL(container, 3) = 1; /* Poison it */
 
                             /* Subtle message - victim might not notice */
-                            if (rand_number(1, 100) <= 20) {
+                            if (rand_number(1, 100) <= 50) {
                                 act("$n parece sussurrar algo enquanto se aproxima de você.", FALSE, ch, 0, victim,
                                     TO_VICT);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return;
+                                if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                                    return;
                             }
 
                             /* Observer message */
                             act("$n se aproxima discretamente de $N por um momento.", FALSE, ch, 0, victim, TO_NOTVICT);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                return;
+                            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                                return;
                             return; /* Only poison one container per round */
                         }
                     }
                 }
             }
         }
+
+        /* Note: Mob emotion and social behavior has been moved to mob_emotion_activity()
+         * which runs at PULSE_MOB_EMOTION (every 4 seconds) for better responsiveness. */
 
         /* Add new mobile actions here */
 
@@ -1130,6 +2074,10 @@ struct char_data *find_best_leader_for_new_group(struct char_data *ch)
     int count = 0;
     struct char_data *potential_members[51]; /* Buffer para potenciais membros */
 
+    /* Safety check: Validate room before accessing people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return NULL;
+
     /* 1. Reúne todos os candidatos (mobs solitários e compatíveis) na sala. */
     for (vict = world[IN_ROOM(ch)].people; vict && count < 50; vict = vict->next_in_room) {
         if (!IS_NPC(vict) || vict->master != NULL || GROUP(vict))
@@ -1216,6 +2164,10 @@ bool mob_handle_grouping(struct char_data *ch)
         /* Se ele é um líder de um grupo muito pequeno (só ele), ele pode tentar uma fusão. */
         if (GROUP_LEADER(GROUP(ch)) == ch && GROUP(ch)->members->iSize <= 1) {
             struct char_data *vict, *best_target_leader = NULL;
+            /* Safety check: Validate room before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+
             /* Procura por outros grupos maiores na sala. */
             for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
                 if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict && vict != ch) {
@@ -1241,11 +2193,19 @@ bool mob_handle_grouping(struct char_data *ch)
     /* CENÁRIO 2: O mob está sozinho. */
     else {
 
+        /* Safety check: Validate room before accessing people list */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return FALSE;
+
         /* 1. Procura pelo MELHOR grupo existente para se juntar. */
         for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
             if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict && IS_SET(GROUP_FLAGS(GROUP(vict)), GROUP_OPEN) &&
                 GROUP(vict)->members->iSize < max_group_size && is_level_compatible_with_group(ch, GROUP(vict)) &&
                 are_groupable(ch, vict)) {
+
+                /* Safety check: Validate vict's room before zone comparison */
+                if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
+                    continue;
 
                 bool is_local = (world[IN_ROOM(ch)].zone == world[IN_ROOM(vict)].zone);
 
@@ -1265,9 +2225,52 @@ bool mob_handle_grouping(struct char_data *ch)
             /* Lógica de Aceitação do Líder */
             int chance_aceitar =
                 100 - (GROUP(best_target_leader)->members->iSize * 15) + GET_GENGROUP(best_target_leader);
+
+            /* Emotion modifiers for group acceptance */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && best_target_leader->ai_data && !IS_NPC(ch)) {
+                /* High friendship makes mobs more likely to accept into group */
+                if (best_target_leader->ai_data->emotion_friendship >= CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
+                    chance_aceitar += 20; /* +20% chance to accept */
+                }
+
+                /* High envy refuses to group with better-equipped players */
+                if (best_target_leader->ai_data->emotion_envy >= CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD) {
+                    /* Check if the player is better equipped (simple heuristic: higher level or more gold) */
+                    if (GET_LEVEL(ch) > GET_LEVEL(best_target_leader) ||
+                        GET_GOLD(ch) > GET_GOLD(best_target_leader) * 2) {
+                        act("$n olha invejosamente para $N e recusa-se a formar um grupo.", TRUE, best_target_leader, 0,
+                            ch, TO_ROOM);
+                        return FALSE;
+                    }
+                }
+            }
+
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data) {
+                /* High friendship makes mobs more likely to join groups */
+                if (ch->ai_data->emotion_friendship >= CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
+                    chance_aceitar += 15; /* +15% chance to join */
+                }
+
+                /* High envy refuses to group with better-equipped players */
+                if (ch->ai_data->emotion_envy >= CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD) {
+                    /* Check if the leader is better equipped */
+                    if (!IS_NPC(best_target_leader) && (GET_LEVEL(best_target_leader) > GET_LEVEL(ch) ||
+                                                        GET_GOLD(best_target_leader) > GET_GOLD(ch) * 2)) {
+                        act("$n olha invejosamente para $N e recusa-se a juntar ao grupo.", TRUE, ch, 0,
+                            best_target_leader, TO_ROOM);
+                        return FALSE;
+                    }
+                }
+            }
+
             if (rand_number(1, 120) <= chance_aceitar) {
                 join_group(ch, GROUP(best_target_leader));
                 act("$n junta-se ao grupo de $N.", TRUE, ch, 0, best_target_leader, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(best_target_leader, MOB_NOTDEADYET) || PLR_FLAGGED(best_target_leader, PLR_NOTDEADYET))
+                    return FALSE;
                 return TRUE;
             }
         } else {
@@ -1424,6 +2427,10 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
          * APRENDIZAGEM PÓS-MOVIMENTO (VERSÃO FINAL E REFINADA)
          ******************************************************************/
         if (ch->ai_data) {
+            /* Safety check: Validate room before accessing world array */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return TRUE; /* Movement succeeded but skip learning */
+
             int roam_change = 0;
             int current_sect = world[IN_ROOM(ch)].sector_type;
 
@@ -1524,7 +2531,8 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
         struct room_direction_data *exit;
         room_rnum to_room;
 
-        if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
+        if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) != NOWHERE && to_room >= 0 &&
+            to_room <= top_of_world) {
 
             /* GESTÃO DE VOO (Ação que consome o turno) */
             if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY))
@@ -1554,6 +2562,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch))) {
                 return FALSE;
             }
+
+            /* Safety check: Validate ch's room before zone comparison */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+
             if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone)) {
                 /* For shopping goals, be more willing to cross zones */
                 int zone_cross_chance = (ch->ai_data && ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) ? 25 : 1;
@@ -1609,7 +2622,7 @@ bool handle_duty_routine(struct char_data *ch)
 
     if (is_shopkeeper) {
         int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        if (shop_nr != -1 && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
+        if (shop_nr != -1 && shop_nr <= top_shop && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
             is_on_duty = TRUE;
             home_room = real_room(SHOP_ROOM(shop_nr, 0));
         }
@@ -1758,6 +2771,7 @@ bool mob_follow_leader(struct char_data *ch)
                     }
                 }
 
+                /* Try to move - perform_move will handle doors/obstacles */
                 perform_move(ch, direction, 1);
                 return TRUE; /* Ação de seguir foi executada. */
             }
@@ -1765,6 +2779,241 @@ bool mob_follow_leader(struct char_data *ch)
     }
 
     return FALSE; /* Nenhuma ação de seguir foi executada. */
+}
+
+/**
+ * Tenta fazer o mob seguir outro personagem (player ou mob) sem formar grupo.
+ * Usado para comportamento furtivo/evil (espionagem, roubo, etc).
+ * Retorna TRUE se o mob começou ou continuou a seguir alguém.
+ */
+bool mob_try_stealth_follow(struct char_data *ch)
+{
+    /* Safety check: Validate room */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Só funciona para mobs com ai_data e que não estão em combate */
+    if (!ch->ai_data || FIGHTING(ch))
+        return FALSE;
+
+    /* Não segue se já está em grupo ou encantado */
+    if (GROUP(ch) || AFF_FLAGGED(ch, AFF_CHARM))
+        return FALSE;
+
+    /* Verifica a tendência de seguir */
+    int follow_tendency = GET_GENFOLLOW(ch);
+
+    /* Mobs sentinelas não devem seguir (ficam no posto) */
+    if (MOB_FLAGGED(ch, MOB_SENTINEL) && rand_number(1, 100) > 2)
+        return FALSE;
+
+    /* Se já está seguindo alguém, verifica se deve continuar */
+    if (ch->master) {
+        /* Safety check: Validate master pointer and room */
+        if (!ch->master || IN_ROOM(ch->master) == NOWHERE || IN_ROOM(ch->master) < 0 ||
+            IN_ROOM(ch->master) > top_of_world) {
+            /* Master is invalid or in invalid room, stop following */
+            stop_follower(ch);
+            return FALSE;
+        }
+
+        /* Check if mob can still see the target */
+        if (!CAN_SEE(ch, ch->master)) {
+            /* Lost visibility of target, stop following so we can try a new target later */
+            /* Small decrease - visibility loss can be temporary/environmental */
+            ch->ai_data->genetics.follow_tendency -= 1;
+            ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+            stop_follower(ch);
+            return FALSE;
+        }
+
+        /* Se o alvo saiu da sala, segue ele */
+        if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+            int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+            if (direction >= 0 && direction < DIR_COUNT) {
+                room_rnum to_room;
+                /* Safety check: Validate exit before accessing */
+                if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE && to_room >= 0 &&
+                    to_room <= top_of_world) {
+                    /* Resolve portas se necessário */
+                    if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
+                        IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
+                            if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
+                                has_key(ch, EXIT(ch, direction)->key)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                            }
+                            if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                            }
+                        }
+                    }
+
+                    /* Tenta mover-se discretamente */
+                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        perform_move(ch, direction, 1);
+                        /* Reward for successfully following/moving with target */
+                        ch->ai_data->genetics.follow_tendency += 1;
+                        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
+                        return TRUE;
+                    }
+                } else {
+                    /* Cannot find valid path, stop following */
+                    /* Moderate decrease for path failure */
+                    ch->ai_data->genetics.follow_tendency -= 2;
+                    ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+                    stop_follower(ch);
+                    return FALSE;
+                }
+            } else {
+                /* Cannot find path to target, stop following */
+                /* Moderate decrease for path failure */
+                ch->ai_data->genetics.follow_tendency -= 2;
+                ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+                stop_follower(ch);
+                return FALSE;
+            }
+        }
+        /* Já está na mesma sala que o alvo, mantém a observação */
+        return TRUE;
+    }
+
+    /* Não está seguindo ninguém, decide se deve começar */
+    /* Chance base ajustada pela tendência genética */
+    if (rand_number(1, 100) > follow_tendency)
+        return FALSE;
+
+    /* Procura um alvo adequado para seguir na sala */
+    struct char_data *target = NULL;
+    struct char_data *vict;
+    int best_score = 0;
+
+    /* Safety check: Validate room before iterating people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+        /* Safety check: Validate vict pointer */
+        if (!vict || vict == ch)
+            continue;
+
+        /* Only follow targets that are visible to the mob */
+        if (!CAN_SEE(ch, vict))
+            continue;
+
+        /* Safety check: Validate vict's room */
+        if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
+            continue;
+
+        /* Don't follow immortals (level LVL_IMMORT or above) */
+        if (GET_LEVEL(vict) >= LVL_IMMORT)
+            continue;
+
+        /* Preferência por players, especialmente se o mob for evil */
+        int score = 0;
+
+        if (!IS_NPC(vict)) {
+            score += 50; /* Players são alvos mais interessantes */
+
+            /* Mobs evil têm maior interesse em seguir players good */
+            if (GET_ALIGNMENT(ch) < -200 && IS_GOOD(vict))
+                score += 30;
+
+            /* Mobs com alto nível de roaming também seguem mais */
+            score += GET_GENROAM(ch) / 5;
+        } else {
+            /* Outros mobs podem ser seguidos também */
+            score += 20;
+
+            /* Prefere mobs com itens valiosos ou de nível maior */
+            if (GET_LEVEL(vict) > GET_LEVEL(ch))
+                score += 10;
+        }
+
+        /* Evita seguir mobs agressivos ou em combate */
+        if (FIGHTING(vict) || (IS_NPC(vict) && MOB_FLAGGED(vict, MOB_AGGRESSIVE)))
+            score -= 50;
+
+        if (score > best_score) {
+            best_score = score;
+            target = vict;
+        }
+    }
+
+    /* Se encontrou um bom alvo, começa a seguir */
+    if (target && best_score > 30) {
+        /* Verifica se não criaria um loop circular de seguimento */
+        if (circle_follow(ch, target)) {
+            return FALSE;
+        }
+
+        /* Stealth-aware following: Check if mob has sneak/hide affects */
+        bool is_stealthy = AFF_FLAGGED(ch, AFF_SNEAK) || AFF_FLAGGED(ch, AFF_HIDE);
+
+        /* Manually set up following relationship (like add_follower but with conditional messages) */
+        if (!ch->master) {
+            struct follow_type *k;
+            ch->master = target;
+            CREATE(k, struct follow_type, 1);
+            k->follower = ch;
+            k->next = target->followers;
+            target->followers = k;
+
+            /* Messages are conditional based on stealth */
+            if (!is_stealthy) {
+                /* Normal visible following */
+                if (IS_NPC(ch)) {
+                    /* NPCs don't get the "You will now follow" message */
+                } else {
+                    act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
+                }
+                if (CAN_SEE(target, ch)) {
+                    act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
+                }
+                act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                    return FALSE;
+            } else {
+                /* Stealthy following - only notify if target can see through stealth */
+                if (CAN_SEE(target, ch)) {
+                    /* Target can see through the stealth */
+                    act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
+                }
+                /* No message to room when sneaking/hiding */
+            }
+        }
+
+        /* Aumenta levemente a tendência de seguir se teve sucesso (menor peso que a frustração) */
+        ch->ai_data->genetics.follow_tendency += 1;
+        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
+        return TRUE;
+    }
+
+    /* Se não encontrou ninguém para seguir, pequena chance de esquecer/reduzir interesse */
+    if (rand_number(1, 100) <= 2) { /* 2% chance por tick de reduzir naturalmente */
+        ch->ai_data->genetics.follow_tendency -= 1;
+        ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+    }
+
+    return FALSE;
 }
 
 /**
@@ -1813,16 +3062,19 @@ bool mob_assist_allies(struct char_data *ch)
 
     /* PRIORIDADE 3: Ajudar outros NPCs (se tiver a flag MOB_HELPER) */
     else if (MOB_FLAGGED(ch, MOB_HELPER)) {
-        struct char_data *vict;
-        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-            if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
-                continue;
-            if (IS_NPC(FIGHTING(vict))) /* Não ajuda mobs que lutam contra outros mobs */
-                continue;
+        /* Safety check: Validate room before accessing people list */
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+            struct char_data *vict;
+            for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+                if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
+                    continue;
+                if (IS_NPC(FIGHTING(vict))) /* Não ajuda mobs que lutam contra outros mobs */
+                    continue;
 
-            ally_in_trouble = vict;
-            target_to_attack = FIGHTING(vict);
-            break; /* Ajuda o primeiro que encontrar. */
+                ally_in_trouble = vict;
+                target_to_attack = FIGHTING(vict);
+                break; /* Ajuda o primeiro que encontrar. */
+            }
         }
     }
 
@@ -1830,6 +3082,119 @@ bool mob_assist_allies(struct char_data *ch)
     if (ally_in_trouble && target_to_attack) {
         act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, ally_in_trouble, TO_NOTVICT);
         hit(ch, target_to_attack, TYPE_UNDEFINED);
+        /* Safety check: hit() can indirectly cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            return TRUE;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * Helper function to check if a healer can heal a target based on alignment.
+ * Good heals good, evil heals evil, neutral can heal anyone (they're flexible).
+ * @param healer The character attempting to heal.
+ * @param target The character to be healed.
+ * @return TRUE if healing is allowed based on alignment, FALSE otherwise.
+ */
+static bool can_heal_based_on_alignment(struct char_data *healer, struct char_data *target)
+{
+    /* Neutral characters are flexible and can heal anyone */
+    if (IS_NEUTRAL(healer))
+        return TRUE;
+
+    /* Good characters heal good characters */
+    if (IS_GOOD(healer) && IS_GOOD(target))
+        return TRUE;
+
+    /* Evil characters heal evil characters */
+    if (IS_EVIL(healer) && IS_EVIL(target))
+        return TRUE;
+
+    return FALSE;
+}
+
+/**
+ * Mob AI tries to heal an ally that is near death using bandage skill.
+ * Checks alignment compatibility and healing tendency genetics.
+ * @param ch The mob attempting to heal.
+ * @return TRUE if healing was attempted, FALSE otherwise.
+ */
+bool mob_try_heal_ally(struct char_data *ch)
+{
+    struct char_data *ally_to_heal = NULL;
+    int lowest_hp_percent = 100;
+
+    /* Only mobs with AI data and healing tendency can heal */
+    if (!ch->ai_data || ch->ai_data->genetics.healing_tendency <= 0)
+        return FALSE;
+
+    /* Must have the bandage skill */
+    if (GET_SKILL(ch, SKILL_BANDAGE) <= 0)
+        return FALSE;
+
+    /* Can't heal if fighting, blind, or not standing */
+    if (FIGHTING(ch) || AFF_FLAGGED(ch, AFF_BLIND) || GET_POS(ch) != POS_STANDING)
+        return FALSE;
+
+    /* Safety check: Validate room before accessing people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Look for an ally in critical condition (negative HP) who needs healing */
+    struct char_data *vict;
+
+    /* Priority 1: Check master first (if charmed) */
+    if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master) {
+        if (GET_HIT(ch->master) < 0 && !IS_DEAD(ch->master) && can_heal_based_on_alignment(ch, ch->master)) {
+            ally_to_heal = ch->master;
+        }
+    }
+
+    /* Priority 2 & 3: Check room if no master needs healing */
+    if (!ally_to_heal) {
+        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+            /* Skip self, dead characters, and characters not in critical condition */
+            if (ch == vict || IS_DEAD(vict) || GET_HIT(vict) >= 0)
+                continue;
+
+            /* Check alignment compatibility */
+            if (!can_heal_based_on_alignment(ch, vict))
+                continue;
+
+            /* Priority 2: Heal group members */
+            if (GROUP(ch) && GROUP(vict) && GROUP(ch) == GROUP(vict)) {
+                ally_to_heal = vict;
+                break;
+            }
+
+            /* Priority 3: Heal other NPCs with same alignment (find most critical) */
+            if (IS_NPC(vict)) {
+                int hp_percent = (GET_HIT(vict) * 100) / MAX(GET_MAX_HIT(vict), 1);
+                if (hp_percent < lowest_hp_percent) {
+                    lowest_hp_percent = hp_percent;
+                    ally_to_heal = vict;
+                }
+            }
+        }
+    }
+
+    /* If found someone to heal, check healing tendency and attempt healing */
+    if (ally_to_heal) {
+        /* Check if mob decides to heal based on genetics */
+        if (rand_number(1, 100) > ch->ai_data->genetics.healing_tendency)
+            return FALSE;
+
+        /* Attempt to bandage the ally */
+        char heal_arg[MAX_INPUT_LENGTH];
+        snprintf(heal_arg, sizeof(heal_arg), "%s", GET_NAME(ally_to_heal));
+        call_ACMD(do_bandage, ch, heal_arg, 0, 0);
+
+        /* Safety check: call_ACMD might indirectly trigger extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            return TRUE;
+
         return TRUE;
     }
 
@@ -1844,6 +3209,10 @@ bool mob_assist_allies(struct char_data *ch)
  */
 bool mob_try_and_loot(struct char_data *ch)
 {
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
     /* A IA só age se houver itens na sala, se o mob tiver genética e não estiver em combate. */
     if (!world[IN_ROOM(ch)].contents || !ch->ai_data || FIGHTING(ch))
         return FALSE;
@@ -1885,6 +3254,23 @@ bool mob_try_and_loot(struct char_data *ch)
         }
 
         if (best_obj != NULL) {
+            /* Safety check: Re-validate that best_obj is still in the room.
+             * Another player/mob might have picked it up during the evaluation loop.
+             * This prevents crashes from accessing freed memory. */
+            struct obj_data *obj_check;
+            bool obj_still_exists = FALSE;
+            for (obj_check = world[IN_ROOM(ch)].contents; obj_check; obj_check = obj_check->next_content) {
+                if (obj_check == best_obj) {
+                    obj_still_exists = TRUE;
+                    break;
+                }
+            }
+
+            if (!obj_still_exists) {
+                /* Object was taken by someone else, abort this loot attempt */
+                return FALSE;
+            }
+
             /* Chama a função do jogo para pegar o item, garantindo todas as verificações. */
             if (perform_get_from_room(ch, best_obj)) {
                 /* Aprendizagem Positiva: A decisão foi boa e bem-sucedida. */
@@ -2532,10 +3918,19 @@ bool mob_handle_item_usage(struct char_data *ch)
 
 /**
  * Encontra um mob específico em uma sala pelo seu número real (rnum).
+ * @param room The room number to search in
+ * @param rnum The mob rnum to find
+ * @return Pointer to the mob if found, NULL otherwise
  */
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_RNUM(i) == rnum) {
             return i;
@@ -2553,6 +3948,12 @@ struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
             return i;
@@ -2568,11 +3969,21 @@ struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
  */
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 {
-    struct char_data *i;
+    struct char_data *i, *next_i;
 
     /* Search through all characters in the world */
-    for (i = character_list; i; i = i->next) {
-        if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
+    for (i = character_list; i; i = next_i) {
+        next_i = i->next;
+
+        /* Safety check: Skip characters marked for extraction */
+        if (MOB_FLAGGED(i, MOB_NOTDEADYET) || PLR_FLAGGED(i, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Validate room before using the character */
+        if (!IS_NPC(i) || IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+            continue;
+
+        if (GET_MOB_VNUM(i) == vnum) {
             /* Check if this mob is a questmaster (has quest special procedure) */
             if (mob_index[GET_MOB_RNUM(i)].func == questmaster || mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
                 return i;
@@ -2591,10 +4002,11 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 {
 
     /* 1. GATILHO: A IA só age se tiver genética e se o inventário estiver > 80% cheio. */
+    /* Charmed mobs should not autonomously sell items. */
     bool inventory_full = (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch) * 0.8);
     bool inventory_heavy = (IS_CARRYING_W(ch) >= CAN_CARRY_W(ch) * 0.8);
 
-    if (!ch->ai_data || !ch->carrying || (!inventory_full && !inventory_heavy))
+    if (!ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM) || !ch->carrying || (!inventory_full && !inventory_heavy))
         return FALSE;
 
     if (rand_number(1, 100) > MAX(GET_GENTRADE(ch), 5))
@@ -2724,8 +4136,21 @@ bool mob_try_to_accept_quest(struct char_data *ch)
         return FALSE;
     }
 
-    /* Only occasionally try to accept quests - about 5% chance per call */
-    if (rand() % 100 > 5) {
+    /* Higher chance to accept quests based on quest_tendency gene and curiosity emotion */
+    int acceptance_threshold = 20; /* Base 20% chance */
+
+    /* Increase chance based on quest genetics */
+    acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
+
+    /* Further increase if mob has high curiosity (emotion system) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_curiosity >= 50) {
+        acceptance_threshold += 10; /* +10% for curious mobs */
+    }
+
+    /* Cap at reasonable maximum to avoid too aggressive quest-taking */
+    acceptance_threshold = MIN(acceptance_threshold, 60);
+
+    if (rand() % 100 > acceptance_threshold) {
         return FALSE;
     }
 
@@ -2733,6 +4158,10 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (ch->ai_data->quest_posting_frustration_timer > 0) {
         return FALSE;
     }
+
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
 
     /* Look for accessible questmasters in the current zone */
     mob_zone = world[IN_ROOM(ch)].zone;
@@ -2819,16 +4248,15 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Target mob not found, seek it */
-                /* For now, just roam randomly looking for it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
-                return TRUE;
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_MOB_KILL:
@@ -2838,18 +4266,26 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             if (target_mob && !FIGHTING(ch)) {
                 /* Attack the target mob */
                 act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
+                if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                    return TRUE;
                 hit(ch, target_mob, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             } else if (!target_mob) {
-                /* Target mob not found, seek it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
-                return TRUE;
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_OBJ_RETURN:
@@ -2864,7 +4300,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
                 if (questmaster) {
                     /* Return object to questmaster */
-                    act("$n entrega $p para $N.", FALSE, ch, target_obj, questmaster, TO_ROOM);
+                    act("$n entrega $p para quem solicitou.", FALSE, ch, target_obj, NULL, TO_ROOM);
                     obj_from_char(target_obj);
                     extract_obj(target_obj);
                     mob_complete_quest(ch);
@@ -2905,7 +4341,17 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             /* Found a mob to kill */
                             if (!FIGHTING(ch)) {
                                 act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
+                                if (MOB_FLAGGED(temp_mob, MOB_NOTDEADYET) || PLR_FLAGGED(temp_mob, PLR_NOTDEADYET)) {
+                                    found_hostile = FALSE; /* Target was extracted, continue searching */
+                                    continue;
+                                }
                                 hit(ch, temp_mob, TYPE_UNDEFINED);
+                                /* Safety check: hit() can indirectly cause extract_char */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
                             }
                             found_hostile = TRUE;
                             break;
@@ -3014,7 +4460,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
     /* Passo 3: Avaliar as opções e escolher o melhor plano */
 
     /* Opção 1: Caçar um mob */
-    if (target_mob != NOBODY) {
+    if (target_mob != NOBODY && target_mob >= 0 && target_mob < top_of_mobt) {
         /* Verifica se consegue matar o alvo (simplificado) */
         if (GET_LEVEL(ch) >= mob_proto[target_mob].player.level - 5) {
             /* Pode caçar este mob */
@@ -3035,7 +4481,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
         if (shop_room != NOWHERE && !ROOM_FLAGGED(shop_room, ROOM_NOTRACK)) {
             /* Calcula o custo do item */
             obj_rnum = real_object(desired_item->vnum);
-            if (obj_rnum != NOTHING) {
+            if (obj_rnum != NOTHING && obj_rnum >= 0 && obj_rnum < top_of_objt) {
                 item_cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
                 if (item_cost <= 0)
                     item_cost = 1;
@@ -3067,6 +4513,10 @@ void mob_process_wishlist_goals(struct char_data *ch)
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
     if (GET_GOLD(ch) >= desired_item->priority * 2) {
+        /* Safety check: Validate room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return;
+
         /* Tem ouro suficiente para oferecer uma recompensa */
         zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
         struct char_data *accessible_qm = find_accessible_questmaster_in_zone(ch, mob_zone);
@@ -3166,6 +4616,10 @@ bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse)
     /* If no corpse specified, find one in the room */
     if (!corpse) {
         struct obj_data *obj;
+
+        /* Safety check: Validate room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return FALSE;
 
         for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
             if (IS_CORPSE(obj)) {
@@ -3416,4 +4870,113 @@ bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int or
     act("$n parece estar procurando por algo específico.", FALSE, ch, 0, 0, TO_ROOM);
 
     return TRUE;
+}
+
+/**
+ * Find a bank object (ATM/cashcard) in the same room as the mob or in the mob's inventory
+ * @param ch The mob looking for a bank
+ * @return Pointer to a bank object, or NULL if none found
+ */
+struct obj_data *find_bank_nearby(struct char_data *ch)
+{
+    struct obj_data *obj;
+
+    if (!ch || !IS_NPC(ch)) {
+        return NULL;
+    }
+
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return NULL;
+
+    /* First check objects in the same room as the mob */
+    for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+        /* Check if this object has the bank special procedure */
+        if (GET_OBJ_SPEC(obj) == bank) {
+            return obj;
+        }
+    }
+
+    /* Then check objects in the mob's inventory */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        /* Check if this object has the bank special procedure */
+        if (GET_OBJ_SPEC(obj) == bank) {
+            return obj;
+        }
+    }
+
+    return NULL; /* No bank found in room or inventory */
+}
+
+/**
+ * Makes a mob use banking services if available and appropriate
+ * @param ch The mob that might use the bank
+ * @return TRUE if bank was used, FALSE otherwise
+ */
+bool mob_use_bank(struct char_data *ch)
+{
+    struct obj_data *bank_obj;
+    int current_gold, bank_gold;
+    int deposit_amount, withdraw_amount;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* Only mobs with high trade genetics use banks */
+    if (GET_GENTRADE(ch) <= 50) {
+        return FALSE;
+    }
+
+    /* Only mobs with very high trade genetics should use banks */
+    if (GET_GENTRADE(ch) <= 60) {
+        return FALSE;
+    }
+
+    /* Only intelligent mobs should use banks (Intelligence > 10) */
+    if (GET_INT(ch) <= 10) {
+        return FALSE;
+    }
+
+    /* Don't use bank if fighting or not awake */
+    if (FIGHTING(ch) || !AWAKE(ch)) {
+        return FALSE;
+    }
+
+    /* Find a bank in the same room or inventory */
+    bank_obj = find_bank_nearby(ch);
+    if (!bank_obj) {
+        return FALSE; /* No bank available */
+    }
+
+    current_gold = GET_GOLD(ch);
+    bank_gold = GET_BANK_GOLD(ch);
+
+    /* Decision logic: deposit if carrying too much, withdraw if too little */
+    if (current_gold > 5000 && rand_number(1, 100) <= 30) {
+        /* Deposit excess gold */
+        deposit_amount = current_gold / 2; /* Deposit half of current gold */
+
+        /* Simulate the deposit command */
+        decrease_gold(ch, deposit_amount);
+        increase_bank(ch, deposit_amount);
+
+        act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        return TRUE;
+
+    } else if (current_gold < 100 && bank_gold > 500 && rand_number(1, 100) <= 20) {
+        /* Withdraw gold when running low */
+        withdraw_amount = MIN(bank_gold / 3, 1000); /* Withdraw 1/3 of bank balance, max 1000 */
+
+        /* Simulate the withdraw command */
+        increase_gold(ch, withdraw_amount);
+        decrease_bank(ch, withdraw_amount);
+
+        act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        return TRUE;
+    }
+
+    return FALSE; /* No banking action taken */
 }

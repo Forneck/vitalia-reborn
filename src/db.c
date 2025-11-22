@@ -34,6 +34,7 @@
 #include "modify.h"
 #include "shop.h"
 #include "quest.h"
+#include "auction.h"
 #include "ibt.h"
 #include "mud_event.h"
 #include "msgedit.h"
@@ -103,9 +104,11 @@ room_rnum r_dead_start_room;
 room_rnum r_hometown_1;
 room_rnum r_hometown_2;
 room_rnum r_hometown_3;
+room_rnum r_hometown_4;
 room_rnum r_ress_room_1;
 room_rnum r_ress_room_2;
 room_rnum r_ress_room_3;
+room_rnum r_ress_room_4;
 
 char *credits = NULL; /* game credits */
 char *news = NULL;    /* mud news */
@@ -547,6 +550,9 @@ void boot_world(void)
 
     log1("Loading temporary quest assignments.");
     load_temp_quest_assignments();
+
+    log1("Loading auctions.");
+    load_auctions();
 }
 
 static void free_extra_descriptions(struct extra_descr_data *edesc)
@@ -825,6 +831,9 @@ void boot_db(void)
 
     log1("Sorting command list.");
     sort_commands();
+
+    log1("Initializing disabled commands system.");
+    init_disabled_commands();
 
     log1("Booting mail system.");
     if (!scan_file()) {
@@ -1608,6 +1617,10 @@ static void check_start_rooms(void)
         log1("SYSERR:  Hometown 3 does not exist.  Change in config.c.");
         r_hometown_3 = CONFIG_NEWBIE_START;
     }
+    if ((r_hometown_4 = real_room(CONFIG_HOMETOWN_4)) == NOWHERE) {
+        log1("SYSERR:  Hometown 4 does not exist.  Change in config.c.");
+        r_hometown_4 = CONFIG_NEWBIE_START;
+    }
     if ((r_ress_room_1 = real_room(CONFIG_RESS_ROOM_1)) == NOWHERE) {
         log1("SYSERR:  RessRoom 1 does not exist.  Change in config.c.");
         r_ress_room_1 = CONFIG_NEWBIE_START;
@@ -1619,6 +1632,10 @@ static void check_start_rooms(void)
     if ((r_ress_room_3 = real_room(CONFIG_RESS_ROOM_3)) == NOWHERE) {
         log1("SYSERR:  RessRoom 3 does not exist.  Change in config.c.");
         r_ress_room_3 = CONFIG_NEWBIE_START;
+    }
+    if ((r_ress_room_4 = real_room(CONFIG_RESS_ROOM_4)) == NOWHERE) {
+        log1("SYSERR:  RessRoom 4 does not exist.  Change in config.c.");
+        r_ress_room_4 = CONFIG_NEWBIE_START;
     }
 }
 
@@ -1894,6 +1911,26 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     {
         if (mob_proto[i].ai_data) {
             mob_proto[i].ai_data->genetics.adventurer_tendency = num_arg;
+        }
+    }
+    CASE("GenFollow")
+    {
+        if (mob_proto[i].ai_data) {
+            mob_proto[i].ai_data->genetics.follow_tendency = num_arg;
+        }
+    }
+    CASE("GenHealing")
+    {
+        if (mob_proto[i].ai_data) {
+            mob_proto[i].ai_data->genetics.healing_tendency = num_arg;
+        }
+    }
+    CASE("EmotionProfile")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid emotion profile values: 0-7 (EMOTION_PROFILE_*) */
+            RANGE(0, 7);
+            mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
     CASE("BareHandAttack")
@@ -2954,71 +2991,110 @@ void reset_zone(zone_rnum zone)
                 break;
 
             case 'M': /* read a mobile */
-                if (mob_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    mob = read_mobile(ZCMD.arg1, REAL);
-
-                    /* Guarda o destino ANTES de mover o mob, usando a fonte de verdade (ZCMD). */
-                    room_rnum target_room_rnum = ZCMD.arg3;
-
-                    char_to_room(mob, target_room_rnum);
-
-                    /* Verifica se o destino é uma sala válida antes de guardar. */
-                    if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
-                        mob->ai_data->guard_post = world[target_room_rnum].number;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (mob_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
 
-                    load_mtrigger(mob);
-                    tmob = mob;
-                    last_cmd = 1;
-                    /* Parts for loading non-native items in shops, if mob * load
-                       was true, see if this mob is a shopkeeper, if it * is then
-                       we should try the load function */
-                    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
-                        if (SHOP_KEEPER(shop_nr) == mob->nr)
-                            break;
-                    }
+                    if (should_load) {
+                        mob = read_mobile(ZCMD.arg1, REAL);
 
-                    if (shop_nr <= top_shop)
-                        load_shop_nonnative(shop_nr, mob);
-                } else
-                    last_cmd = 0;
-                tobj = NULL;
+                        /* Store the destination BEFORE moving the mob, using the source of truth (ZCMD). */
+                        room_rnum target_room_rnum = ZCMD.arg3;
+
+                        char_to_room(mob, target_room_rnum);
+
+                        /* Verify that the destination is a valid room before storing. */
+                        if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
+                            mob->ai_data->guard_post = world[target_room_rnum].number;
+                        }
+
+                        load_mtrigger(mob);
+                        tmob = mob;
+                        last_cmd = 1;
+                        /* Parts for loading non-native items in shops, if mob * load
+                           was true, see if this mob is a shopkeeper, if it * is then
+                           we should try the load function */
+                        for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+                            if (SHOP_KEEPER(shop_nr) == mob->nr)
+                                break;
+                        }
+
+                        if (shop_nr <= top_shop)
+                            load_shop_nonnative(shop_nr, mob);
+                    } else
+                        last_cmd = 0;
+                    tobj = NULL;
+                }
                 break;
 
             case 'O': /* read an object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    if (ZCMD.arg3 != NOWHERE) {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        obj_to_room(obj, ZCMD.arg3);
-                        last_cmd = 1;
-                        load_otrigger(obj);
-                        tobj = obj;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
                     } else {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        IN_ROOM(obj) = NOWHERE;
-                        last_cmd = 1;
-                        tobj = obj;
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        if (ZCMD.arg3 != NOWHERE) {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            obj_to_room(obj, ZCMD.arg3);
+                            last_cmd = 1;
+                            load_otrigger(obj);
+                            tobj = obj;
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = NOWHERE;
+                            last_cmd = 1;
+                            tobj = obj;
+                        }
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'P': /* object to object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    obj = read_object(ZCMD.arg1, REAL);
-                    if (!(obj_to = get_obj_num(ZCMD.arg3))) {
-                        ZONE_ERROR("target obj not found, command disabled");
-                        ZCMD.command = '*';
-                        break;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                    obj_to_obj(obj, obj_to);
-                    last_cmd = 1;
-                    load_otrigger(obj);
-                    tobj = obj;
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        if (!(obj_to = get_obj_num(ZCMD.arg3))) {
+                            ZONE_ERROR("target obj not found, command disabled");
+                            ZCMD.command = '*';
+                            break;
+                        }
+                        obj_to_obj(obj, obj_to);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'G': /* obj_to_char */
@@ -3030,15 +3106,28 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    obj = read_object(ZCMD.arg1, REAL);
-                    obj_to_char(obj, mob);
-                    last_cmd = 1;
-                    load_otrigger(obj);
-                    tobj = obj;
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
+                    }
+
+                    if (should_load) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        obj_to_char(obj, mob);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'C': /* Check mob */
@@ -3057,27 +3146,40 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
-                        char error[MAX_INPUT_LENGTH];
-                        snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
-                                 GET_NAME(mob), obj_index[ZCMD.arg2].vnum, ZCMD.arg3);
-                        ZONE_ERROR(error);
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
                     } else {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        IN_ROOM(obj) = IN_ROOM(mob);
-                        load_otrigger(obj);
-                        if (wear_otrigger(obj, mob, ZCMD.arg3)) {
-                            IN_ROOM(obj) = NOWHERE;
-                            equip_char(mob, obj, ZCMD.arg3);
-                        } else
-                            obj_to_char(obj, mob);
-                        tobj = obj;
-                        last_cmd = 1;
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
+                            char error[MAX_INPUT_LENGTH];
+                            snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
+                                     GET_NAME(mob), obj_index[ZCMD.arg1].vnum, ZCMD.arg3);
+                            ZONE_ERROR(error);
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = IN_ROOM(mob);
+                            load_otrigger(obj);
+                            if (wear_otrigger(obj, mob, ZCMD.arg3)) {
+                                IN_ROOM(obj) = NOWHERE;
+                                equip_char(mob, obj, ZCMD.arg3);
+                            } else
+                                obj_to_char(obj, mob);
+                            tobj = obj;
+                            last_cmd = 1;
+                        }
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'R': /* rem obj from room */
@@ -3670,7 +3772,8 @@ void free_obj(struct obj_data *obj)
         free_proto_script(obj, OBJ_TRIGGER);
     } else {
         free_object_strings_proto(obj);
-        if (obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)
+        /* Safety check: Validate rnum before accessing obj_proto array */
+        if (VALID_OBJ_RNUM(obj) && obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)
             free_proto_script(obj, OBJ_TRIGGER);
     }
 
@@ -3862,6 +3965,11 @@ void init_char(struct char_data *ch)
         ch->player_specials->saved.class_history[i] = -1;
     }
 
+    /* Initialize retained skill incarnation array */
+    for (int i = 0; i <= MAX_SKILLS; i++) {
+        ch->player_specials->saved.retained_skill_incarnation[i] = -1;
+    }
+
     /* If this is our first player make him IMPL. */
     if (top_of_p_table == 0) {
         GET_LEVEL(ch) = LVL_IMPL;
@@ -3886,7 +3994,9 @@ void init_char(struct char_data *ch)
     GET_QUEST(ch) = NOTHING;
 
     /* Initialize reputation to default value */
-    ch->player_specials->saved.reputation = 50; /* Default reputation */
+    ch->player_specials->saved.reputation = 50;            /* Default reputation */
+    ch->player_specials->saved.last_reputation_gain = 0;   /* No previous gains */
+    ch->player_specials->saved.last_give_recipient_id = 0; /* No previous giving */
 
     ch->player.time.birth = time(0);
     ch->player.time.logon = time(0);
@@ -4236,6 +4346,12 @@ static void load_default_config(void)
     CONFIG_MINIMAP_SIZE = default_minimap_size;
     CONFIG_SCRIPT_PLAYERS = script_players;
     CONFIG_DEBUG_MODE = debug_mode;
+    CONFIG_FIT_EVOLVE = fit_evolve;
+    CONFIG_WEATHER_AFFECTS_SPELLS = weather_affects_spells;
+    CONFIG_SCHOOL_WEATHER_AFFECTS = school_weather_affects;
+    CONFIG_MAX_PATHFIND_ITERATIONS = max_pathfind_iterations;
+    CONFIG_MAX_ZONE_PATH = max_zone_path;
+    CONFIG_MAX_HOUSE_OBJS = max_house_objs;
 
     /* Rent / crashsave options. */
     CONFIG_FREE_RENT = free_rent;
@@ -4253,13 +4369,17 @@ static void load_default_config(void)
     CONFIG_DON_ROOM_1 = donation_room_1;
     CONFIG_DON_ROOM_2 = donation_room_2;
     CONFIG_DON_ROOM_3 = donation_room_3;
+    CONFIG_DON_ROOM_4 = donation_room_4;
     CONFIG_DEAD_START = dead_start_room;
     CONFIG_HOMETOWN_1 = hometown_1;
     CONFIG_HOMETOWN_2 = hometown_2;
     CONFIG_HOMETOWN_3 = hometown_3;
+    CONFIG_HOMETOWN_4 = hometown_4;
     CONFIG_RESS_ROOM_1 = ress_room_1;
     CONFIG_RESS_ROOM_2 = ress_room_2;
     CONFIG_RESS_ROOM_3 = ress_room_3;
+    CONFIG_RESS_ROOM_4 = ress_room_4;
+    CONFIG_DT_WAREHOUSE = dt_warehouse_room;
 
     /* Game operation options. */
     CONFIG_DFLT_PORT = DFLT_PORT;
@@ -4291,6 +4411,91 @@ static void load_default_config(void)
     /* Autowiz options. */
     CONFIG_USE_AUTOWIZ = use_autowiz;
     CONFIG_MIN_WIZLIST_LEV = min_wizlist_lev;
+    /* Experimental features. */
+    CONFIG_NEW_AUCTION_SYSTEM = NO;
+    CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
+    CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
+    CONFIG_DYNAMIC_REPUTATION = NO;
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;  /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
+
+    /* Emotion system configuration defaults. */
+    /* Visual indicator thresholds */
+    CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = 80;
+    CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = 80;
+    CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = 70;
+
+    /* Combat flee behavior thresholds */
+    CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = 50;
+    CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = 50;
+    CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = 80;
+
+    /* Flee modifier values */
+    CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = 10;
+    CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = 15;
+    CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = -10;
+    CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = -15;
+    CONFIG_EMOTION_FLEE_HORROR_MODIFIER = 25;
+
+    /* Pain system thresholds and values */
+    CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = 5;
+    CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = 10;
+    CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = 25;
+    CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = 50;
+
+    CONFIG_EMOTION_PAIN_MINOR_MIN = 1;
+    CONFIG_EMOTION_PAIN_MINOR_MAX = 5;
+    CONFIG_EMOTION_PAIN_MODERATE_MIN = 6;
+    CONFIG_EMOTION_PAIN_MODERATE_MAX = 15;
+    CONFIG_EMOTION_PAIN_HEAVY_MIN = 16;
+    CONFIG_EMOTION_PAIN_HEAVY_MAX = 30;
+    CONFIG_EMOTION_PAIN_MASSIVE_MIN = 31;
+    CONFIG_EMOTION_PAIN_MASSIVE_MAX = 50;
+
+    /* Memory system weights and thresholds */
+    CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = 10;
+    CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = 7;
+    CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = 5;
+    CONFIG_EMOTION_MEMORY_WEIGHT_OLD = 3;
+    CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = 1;
+
+    CONFIG_EMOTION_MEMORY_AGE_RECENT = 300;    /* 5 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_FRESH = 600;     /* 10 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_MODERATE = 1800; /* 30 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_OLD = 3600;      /* 60 minutes */
+
+    CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = 50;
+
+    /* Trading behavior thresholds */
+    CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD = 60;
+    CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD = 30;
+    CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD = 70;
+
+    /* Quest behavior thresholds */
+    CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD = 60;
+    CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD = 30;
+
+    /* Social initiation thresholds */
+    CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD = 80;
+
+    /* Group behavior thresholds */
+    CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = 30;
+    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = 70;
 }
 
 void load_config(void)
@@ -4345,6 +4550,11 @@ void load_config(void)
                     CONFIG_DIAGONAL_DIRS = num;
                 else if (!str_cmp(tag, "dts_are_dumps"))
                     CONFIG_DTS_ARE_DUMPS = num;
+                else if (!str_cmp(tag, "dt_warehouse_room"))
+                    if (num == -1)
+                        CONFIG_DT_WAREHOUSE = NOWHERE;
+                    else
+                        CONFIG_DT_WAREHOUSE = num;
                 else if (!str_cmp(tag, "donation_room_1"))
                     if (num == -1)
                         CONFIG_DON_ROOM_1 = NOWHERE;
@@ -4360,6 +4570,11 @@ void load_config(void)
                         CONFIG_DON_ROOM_3 = NOWHERE;
                     else
                         CONFIG_DON_ROOM_3 = num;
+                else if (!str_cmp(tag, "donation_room_4"))
+                    if (num == -1)
+                        CONFIG_DON_ROOM_4 = NOWHERE;
+                    else
+                        CONFIG_DON_ROOM_4 = num;
                 else if (!str_cmp(tag, "dflt_dir")) {
                     if (CONFIG_DFLT_DIR)
                         free(CONFIG_DFLT_DIR);
@@ -4380,6 +4595,126 @@ void load_config(void)
                     CONFIG_MAP_SIZE = num;
                 else if (!str_cmp(tag, "default_minimap_size"))
                     CONFIG_MINIMAP_SIZE = num;
+                else if (!str_cmp(tag, "dynamic_reputation"))
+                    CONFIG_DYNAMIC_REPUTATION = num;
+                break;
+
+            case 'e':
+                if (!str_cmp(tag, "experimental_bank_system"))
+                    CONFIG_EXPERIMENTAL_BANK_SYSTEM = num;
+                /* Emotion System Configuration */
+                else if (!str_cmp(tag, "emotion_display_fear_threshold"))
+                    CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_anger_threshold"))
+                    CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_happiness_threshold"))
+                    CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_sadness_threshold"))
+                    CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_horror_threshold"))
+                    CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_pain_threshold"))
+                    CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_low_threshold"))
+                    CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_high_threshold"))
+                    CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_low_threshold"))
+                    CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_high_threshold"))
+                    CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_horror_threshold"))
+                    CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_low_modifier"))
+                    CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_high_modifier"))
+                    CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_low_modifier"))
+                    CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_high_modifier"))
+                    CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_horror_modifier"))
+                    CONFIG_EMOTION_FLEE_HORROR_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_minor_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_moderate_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_heavy_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_massive_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_minor_min"))
+                    CONFIG_EMOTION_PAIN_MINOR_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_minor_max"))
+                    CONFIG_EMOTION_PAIN_MINOR_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_moderate_min"))
+                    CONFIG_EMOTION_PAIN_MODERATE_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_moderate_max"))
+                    CONFIG_EMOTION_PAIN_MODERATE_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_heavy_min"))
+                    CONFIG_EMOTION_PAIN_HEAVY_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_heavy_max"))
+                    CONFIG_EMOTION_PAIN_HEAVY_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_massive_min"))
+                    CONFIG_EMOTION_PAIN_MASSIVE_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_massive_max"))
+                    CONFIG_EMOTION_PAIN_MASSIVE_MAX = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_recent"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_fresh"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_moderate"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_old"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_OLD = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_ancient"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = num;
+                else if (!str_cmp(tag, "emotion_memory_age_recent"))
+                    CONFIG_EMOTION_MEMORY_AGE_RECENT = num;
+                else if (!str_cmp(tag, "emotion_memory_age_fresh"))
+                    CONFIG_EMOTION_MEMORY_AGE_FRESH = num;
+                else if (!str_cmp(tag, "emotion_memory_age_moderate"))
+                    CONFIG_EMOTION_MEMORY_AGE_MODERATE = num;
+                else if (!str_cmp(tag, "emotion_memory_age_old"))
+                    CONFIG_EMOTION_MEMORY_AGE_OLD = num;
+                else if (!str_cmp(tag, "emotion_memory_baseline_offset"))
+                    CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = num;
+                /* Trading Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_trade_trust_high_threshold"))
+                    CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_trust_low_threshold"))
+                    CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_greed_high_threshold"))
+                    CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_friendship_high_threshold"))
+                    CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD = num;
+                /* Quest Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_quest_curiosity_high_threshold"))
+                    CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_loyalty_high_threshold"))
+                    CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_trust_high_threshold"))
+                    CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_trust_low_threshold"))
+                    CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD = num;
+                /* Social Initiation Thresholds */
+                else if (!str_cmp(tag, "emotion_social_happiness_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_anger_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_sadness_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_love_follow_threshold"))
+                    CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD = num;
+                /* Group Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_group_loyalty_high_threshold"))
+                    CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_loyalty_low_threshold"))
+                    CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_friendship_high_threshold"))
+                    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_envy_high_threshold"))
+                    CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = num;
                 break;
 
             case 'f':
@@ -4387,6 +4722,8 @@ void load_config(void)
                     CONFIG_FREE_RENT = num;
                 else if (!str_cmp(tag, "frozen_start_room"))
                     CONFIG_FROZEN_START = num;
+                else if (!str_cmp(tag, "fit_evolve"))
+                    CONFIG_FIT_EVOLVE = num;
                 break;
 
             case 'h':
@@ -4413,6 +4750,11 @@ void load_config(void)
                         CONFIG_HOMETOWN_3 = NOWHERE;
                     else
                         CONFIG_HOMETOWN_3 = num;
+                else if (!str_cmp(tag, "hometown_4"))
+                    if (num == -1)
+                        CONFIG_HOMETOWN_4 = NOWHERE;
+                    else
+                        CONFIG_HOMETOWN_4 = num;
                 break;
 
             case 'i':
@@ -4474,6 +4816,20 @@ void load_config(void)
                     CONFIG_MAP = num;
                 else if (!str_cmp(tag, "medit_advanced_stats"))
                     CONFIG_MEDIT_ADVANCED = num;
+                else if (!str_cmp(tag, "max_pathfind_iterations"))
+                    CONFIG_MAX_PATHFIND_ITERATIONS = num;
+                else if (!str_cmp(tag, "max_zone_path"))
+                    CONFIG_MAX_ZONE_PATH = num;
+                else if (!str_cmp(tag, "max_house_objs"))
+                    CONFIG_MAX_HOUSE_OBJS = num;
+                else if (!str_cmp(tag, "mob_contextual_socials"))
+                    CONFIG_MOB_CONTEXTUAL_SOCIALS = num;
+                else if (!str_cmp(tag, "mob_emotion_social_chance"))
+                    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = num;
+                else if (!str_cmp(tag, "mob_emotion_update_chance"))
+                    CONFIG_MOB_EMOTION_UPDATE_CHANCE = num;
+
+                break;
 
                 break;
 
@@ -4484,6 +4840,8 @@ void load_config(void)
                     CONFIG_NO_MORT_TO_IMMORT = num;
                 else if (!str_cmp(tag, "newbie_start_room"))
                     CONFIG_NEWBIE_START = num;
+                else if (!str_cmp(tag, "new_auction_system"))
+                    CONFIG_NEW_AUCTION_SYSTEM = num;
                 else if (!str_cmp(tag, "noperson")) {
                     char tmp[READ_SIZE];
                     if (CONFIG_NOPERSON)
@@ -4536,6 +4894,11 @@ void load_config(void)
                         CONFIG_RESS_ROOM_3 = NOWHERE;
                     else
                         CONFIG_RESS_ROOM_3 = num;
+                else if (!str_cmp(tag, "ress_room_4"))
+                    if (num == -1)
+                        CONFIG_RESS_ROOM_4 = NOWHERE;
+                    else
+                        CONFIG_RESS_ROOM_4 = num;
                 break;
 
             case 's':
@@ -4545,6 +4908,8 @@ void load_config(void)
                     CONFIG_SCRIPT_PLAYERS = num;
                 else if (!str_cmp(tag, "special_in_comm"))
                     CONFIG_SPECIAL_IN_COMM = num;
+                else if (!str_cmp(tag, "school_weather_affects"))
+                    CONFIG_SCHOOL_WEATHER_AFFECTS = num;
                 else if (!str_cmp(tag, "start_messg")) {
                     strncpy(buf, "Reading start message in load_config()", sizeof(buf));
                     if (CONFIG_START_MESSG)
@@ -4574,7 +4939,12 @@ void load_config(void)
                     if (CONFIG_WELC_MESSG)
                         free(CONFIG_WELC_MESSG);
                     CONFIG_WELC_MESSG = fread_string(fl, buf);
-                }
+                } else if (!str_cmp(tag, "weather_affects_spells"))
+                    CONFIG_WEATHER_AFFECTS_SPELLS = num;
+                else if (!str_cmp(tag, "weather_affects_emotions"))
+                    CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
+                else if (!str_cmp(tag, "weather_effect_multiplier"))
+                    CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
                 break;
 
             default:

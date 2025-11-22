@@ -37,11 +37,11 @@ molho chaves~
 #15704
 unha roida~
 uma pedaço de unha roída~
-Há um pedaço de uma unha roída aqui.~
+Ha um pedaco de uma unha roida aqui.~
 ~
-9 aegjop 0 0 0 ab 0 0 0 0 0 0 0
-6 0 0 0
-12 15000 1500 50 0
+9 aegjq 0 0 0 ab 0 0 0 o 0 0 0
+10 0 0 0
+12 15000 1500 30 0
 E
 unha roida~
 É nojenta, e a criatura a qual pertencia parecia gostar de coisas...vermelhas.
@@ -54,6 +54,10 @@ A
 13 10
 A
 6 -3
+A
+18 1
+A
+19 1
 #15705
 chave prateada~
 a chave prateada em chamas~
@@ -67,13 +71,13 @@ chave prateada~
 Seria uma chave comum, não fosse as chamas que a envolvem e queimam seus dedos. 
 ~
 #15706
-colar~
+colar chamas~
 um colar em chamas~
 Um colar em chamas foi esquecido aqui.~
 ~
-9 abejn 0 0 0 ac 0 0 0 0 0 0 0
+9 abej 0 0 0 ac 0 0 0 0 0 0 0
 5 0 0 0
-13 100000 10000 70 0
+13 100000 10000 50 0
 E
 colar~
 É estranho, porém muito bonito colar avermelhado, como se estivesse em brasas.
@@ -84,7 +88,7 @@ A
 A
 12 15
 A
-18 1
+18 3
 #15707
 cetro azul~
 um cetro azul~

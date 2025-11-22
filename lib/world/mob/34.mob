@@ -9,7 +9,9 @@ você venha a precisar.
 2353154 0 0 0 0 0 0 0 500 E
 50 10 -8 3d4+1000 5d5+13
 1000 30714
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #3401
 pegaso radiante~
@@ -23,7 +25,7 @@ perfeito.
 2353152 0 0 0 0 0 0 0 900 E
 75 10 -2 5d5+1000 6d7+10
 5000 63219
-8 8 1
+9 9 1
 E
 #3402
 mestre estabulo homem~
@@ -35,7 +37,9 @@ Ele acena para você, sem dizer nada enquanto penteia uma égua.
 2287638 0 0 0 0 0 0 0 400 E
 50 6 -8 10d10+1000 5d5+13
 3000 70714
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #3403
 guarda entrada villspah~
@@ -48,10 +52,13 @@ alguém ou algo o impeça de fazer o seu trabalho.
 2357250 0 0 0 0 0 0 0 400 E
 95 -10 -40 6d6+10000 6d8+63
 3200 517501
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
+GenWimpy: 4
+GenLoot: 8
+GenFollow: 17
 E
 #3404
 hospedeiro villspah~
@@ -64,7 +71,7 @@ no livro que ele parece nem perceber sua presença.
 2287618 0 0 0 0 0 0 0 400 E
 50 7 -2 5d7+1000 5d5+13
 3000 50714
-8 8 1
+9 9 1
 E
 #3405
 criada mulher villspah~
@@ -77,7 +84,9 @@ Ela lhe dá um rápido sorriso.
 2287618 0 0 0 0 0 0 0 400 E
 50 4 -5 6d6+500 5d5+13
 1550 30714
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #3406
 homem bondoso fregues villspah~
@@ -90,7 +99,9 @@ certeza ele está apoiado no balcão para poder se manter em pé.
 2123778 0 0 0 0 0 0 0 200 E
 55 8 0 1d1+1500 5d6+16
 1750 68422
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #3407
 local habitante Hank~
@@ -103,7 +114,7 @@ que ela teve.  Ele obviamente não está nem um pouco interessado.
 2287618 0 0 0 0 0 0 0 300 E
 46 5 -8 4d4+1300 5d5+10
 4000 51423
-8 8 1
+9 9 1
 E
 #3408
 mulher local esposa villspah~
@@ -117,7 +128,9 @@ de tricô.
 2287618 0 0 0 0 0 0 0 200 E
 27 12 -8 2d10+950 5d4+18
 900 50926
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 13
 E
 #3409
 homem velho cansado villspah~
@@ -130,7 +143,9 @@ cabeça, e uma pequena linha de saliva escorre do lado esquerdo de sua boca.
 2271234 0 0 0 0 0 0 0 600 E
 61 0 -6 5d5+1300 5d6+10
 2050 87227
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #3410
 velho villspah madeireiro~
@@ -143,7 +158,9 @@ um homem ache tanta fascinação em um inseto como aquele.
 2287634 0 0 0 0 0 0 0 400 E
 36 10 -4 1d5+1005 5d5+14
 1200 43580
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #3411
 professora escola~
@@ -156,7 +173,9 @@ sorri com timidez para você.
 2115586 0 0 0 0 0 0 0 700 E
 31 0 -5 1d1+1000 6d4+12
 1100 59763
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 13
 E
 #3412
 mulher tranquila lendo villspah~
@@ -169,7 +188,7 @@ um alerta de alguém que esteja na sala.
 2287618 0 0 0 0 0 0 0 900 E
 30 14 -5 1d1+1000 3d5+20
 4000 27376
-8 8 2
+9 9 2
 E
 #3413
 negociante alimentos pereciveis~
@@ -182,7 +201,7 @@ você precise, pode pedir a ele.
 2287634 0 0 0 0 0 0 0 600 E
 50 10 -8 5d7+1200 5d6+23
 1550 60714
-8 8 1
+9 9 1
 E
 #3414
 grande sorridente homem~
@@ -195,7 +214,7 @@ de sorrir.
 2287618 0 0 0 0 0 0 0 900 E
 50 11 -8 5d6+1240 6d5+23
 1550 60714
-8 8 1
+9 9 1
 E
 #3415
 ferreiro homem magro~
@@ -208,7 +227,7 @@ excessivo e cansativo trabalho.
 2287634 0 0 0 0 0 0 0 400 E
 50 1 -28 3d3+1400 7d5+4
 1550 60714
-8 8 1
+9 9 1
 E
 #3416
 estudante barao villspah homem jovem~
@@ -223,7 +242,7 @@ imediatamente oferecendo sua humilde assistência.
 2287634 0 0 0 0 0 0 0 500 E
 50 1 -2 2d7+1147 7d5+13
 1550 60714
-8 8 1
+9 9 1
 E
 #3417
 alegre mulher rechonchuda~
@@ -235,7 +254,9 @@ Ela sorri para você, lhe dando um sinal de bem-vindo.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #3418
 moleiro homem forte villspah~
@@ -248,7 +269,9 @@ interrompe seu trabalho.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #3419
 herborista jaane~
@@ -262,7 +285,7 @@ local.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 2
+9 9 2
 E
 #3420
 homem joalheiro~
@@ -275,7 +298,7 @@ mas certamente irá atendê-lo assim que puder.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 1
+9 9 1
 E
 #3421
 homem cartografo~
@@ -289,7 +312,7 @@ para colocar em um mapa.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 1
+9 9 1
 E
 #3422
 passaros mulher~
@@ -302,7 +325,9 @@ para frente.
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
 1550 60714
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #3423
 cavaleiro villspah~
@@ -315,10 +340,16 @@ chamar a atenção, se possível.
 2357264 0 0 0 0 0 0 0 500 E
 71 -10 -17 5d5+5100 7d7+30
 2754 159001
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 20
+GenWimpy: 7
+GenLoot: 47
+GenEquip: 1
+GenRoam: 89
+GenGroup: 13
+GenFollow: 18
 E
 #3424
 pastor vila villspah~
@@ -331,8 +362,11 @@ Sua careca parece ter sido polida atualmente.  Bom, de fato bem alimentado.
 2353168 0 0 0 0 0 0 0 800 E
 50 -3 -4 4d4+1000 9d4+9
 3200 91855
-8 8 1
+9 9 1
 BareHandAttack: 7
+GenWimpy: 3
+GenRoam: 63
+GenFollow: 14
 E
 #3425
 habitante villspah~
@@ -346,7 +380,12 @@ o bastante - não é?
 2287616 0 0 0 0 0 0 0 800 E
 46 0 -4 4d3+1870 6d7+7
 1672 71501
-8 8 1
+9 9 1
+GenWimpy: 10
+GenLoot: 13
+GenRoam: 89
+GenGroup: 72
+GenFollow: 19
 E
 #3426
 mercador viajante~
@@ -359,7 +398,10 @@ este homem um mercador?
 2287616 0 0 0 0 0 0 0 200 E
 40 1 -4 2d5+1547 6d6+6
 1421 68971
-8 8 1
+9 9 1
+GenWimpy: 7
+GenRoam: 81
+GenFollow: 14
 E
 #3427
 jovem rapaz~
@@ -372,7 +414,10 @@ Melhor deixa-lo com seu desenho.
 2353152 0 0 0 0 0 0 0 500 E
 21 8 1 2d2+847 1d4+14
 10 11024
-8 8 1
+9 9 1
+GenWimpy: 5
+GenRoam: 80
+GenFollow: 10
 E
 #3428
 guarda ponte villspah~
@@ -385,13 +430,15 @@ da estrada, fazendo você entender que a entrada do castelo é restrita.
 2353170 0 0 0 0 0 0 0 500 E
 50 -3 0 7d7+1900 10d4+7
 8750 84000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 20
 Int: 20
 Wis: 20
 Con: 20
+GenWimpy: 4
+GenFollow: 18
 E
 #3429
 guarda torre norte~
@@ -404,8 +451,10 @@ com uma severa e rigorosa postura.
 2353170 0 0 0 0 0 0 0 500 E
 51 0 -6 6d6+1500 4d9+8
 1872 86784
-8 8 1
+9 9 1
 BareHandAttack: 9
+GenWimpy: 3
+GenFollow: 14
 E
 #3430
 guarda torre sul~
@@ -418,7 +467,7 @@ um lutador muito bem treinado.
 2353170 0 0 0 0 0 0 0 500 E
 51 0 -6 6d6+1500 4d9+8
 1872 86784
-8 8 1
+9 9 1
 BareHandAttack: 9
 E
 #3431
@@ -432,13 +481,15 @@ ou discurso.  É decisivamente desconfortável.
 2357266 0 0 0 0 0 0 0 200 E
 52 0 -6 8d8+1900 4d10+5
 5450 88320
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 20
 Dex: 25
 Int: 25
 Wis: 22
 Con: 18
+GenWimpy: 3
+GenFollow: 14
 E
 #3432
 apressada cozinheira~
@@ -451,7 +502,7 @@ período de trabalho.
 2353154 0 0 0 0 0 0 0 500 E
 34 7 -2 6d6+1240 4d6+12
 450 37669
-8 8 2
+9 9 2
 E
 #3433
 ajudante cozinha~
@@ -465,7 +516,7 @@ longe de seu rosto.
 2254850 0 0 0 0 0 0 0 500 E
 21 8 1 7d6+900 3d4+14
 10 11024
-8 8 2
+9 9 2
 E
 #3434
 garota servente~
@@ -479,7 +530,7 @@ momento.
 2254850 0 0 0 0 0 0 0 900 E
 15 5 0 6d4+750 1d3+10
 0 4674
-8 8 2
+9 9 2
 E
 #3435
 homem realeza barao~
@@ -491,7 +542,9 @@ Ele sorri e graciosamente se levanta, dando um aceno com a cabeça.
 2353170 0 0 0 0 0 0 0 400 E
 51 -3 -4 5d7+1200 4d9+5
 3500 87448
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #3436
 miliciano homem~
@@ -503,7 +556,9 @@ Hm.  Porta errada, provavelmente..
 2353154 0 0 0 0 0 0 0 300 E
 60 -2 -6 10d10+1600 7d7+5
 1256 83313
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #3437
 guarda porao~
@@ -516,8 +571,10 @@ aqui.
 2357266 0 0 0 0 0 0 0 300 E
 51 -3 -6 5d7+1200 6d7+6
 1532 80802
-8 8 1
+9 9 1
 BareHandAttack: 9
+GenWimpy: 3
+GenFollow: 14
 E
 #3438
 cavalaria tenente barao~
@@ -530,8 +587,10 @@ destino - entretanto, você deve estar.
 2353170 0 0 0 0 0 0 0 400 E
 67 -3 -4 5d5+1355 6d6+7
 2350 72425
-8 8 1
+9 9 1
 BareHandAttack: 9
+GenWimpy: 3
+GenFollow: 15
 E
 #3439
 chefe homem estrategista~
@@ -544,7 +603,9 @@ reduzidas a trapos de tanto tempo que ele está jogado nesta simples cela.
 2353170 0 0 0 0 0 0 0 -500 E
 61 -3 -4 6d6+1000 7d7+7
 0 69644
-8 8 1
+9 9 1
+GenWimpy: 2
+GenFollow: 11
 E
 #3440
 membro conselho alto~
@@ -558,6 +619,8 @@ a piscar.
 56 -3 -4 6d6+1000 7d8+6
 0 84299
 2 2 1
+GenWimpy: 2
+GenFollow: 11
 E
 #3441
 guarda pessoal homem barao~
@@ -570,10 +633,12 @@ pressas, ou você sofrerá as consequências.
 2357266 0 0 0 0 0 0 0 800 E
 60 -6 -6 3d6+1200 8d8+5
 4700 98161
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 20
+GenWimpy: 4
+GenFollow: 18
 E
 #3442
 barao villspah~
@@ -586,7 +651,7 @@ levanta imóvel, na proteção de sua morada e em sua confiança.
 2353170 0 0 0 0 0 0 0 1000 E
 75 -10 -7 8d8+3000 10d7+28
 30400 215087
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 20
 Dex: 20
@@ -594,6 +659,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #3443
 servente castelo~
@@ -605,7 +672,7 @@ Ele lhe dá um rapido sorriso e continua com seu trabalho.
 2287616 0 0 0 0 0 0 0 400 E
 46 -3 -1 2d6+1300 6d5+2
 358 61423
-8 8 2
+9 9 2
 E
 #3444
 amante barao~
@@ -618,7 +685,9 @@ esconder.
 2287618 0 0 0 0 0 0 0 500 E
 32 2 -5 2d5+1250 5d5+4
 1350 64565
-8 8 2
+9 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #3445
 elegante servente~
@@ -630,6 +699,6 @@ Ele parece estar na meia-idade, com uma firme e severa conduta.
 2287616 0 0 0 0 0 0 0 0 E
 20 8 0 3d3+1231 3d4+13
 550 14735
-8 8 1
+9 9 1
 E
 $

@@ -75,7 +75,8 @@ const char *exit_bits[] = {"DOOR",      "PICKPROOF", "GHOSTPROOF", "HIDDEN",   "
  * Must end array with a single newline. */
 const char *sector_types[] = {
     "Inside",     "City",      "Field",    "Forest",   "Hills",     "Mountains", "Water (Swim)", "Water (No Swim)",
-    "Underwater", "In Flight", "Climbing", "Air Flow", "Quicksand", "Lava",      "Ice",          "\n"};
+    "Underwater", "In Flight", "Climbing", "Air Flow", "Quicksand", "Lava",      "Ice",          "Desert",
+    "Road",       "\n"};
 
 /** PC and NPC sex.
  * @pre Must be in the same order as the defines.
@@ -113,11 +114,11 @@ const char *action_bits[] = {"SPEC",      "SENTINEL", "SCAVENGER", "NO_POISON", 
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
 const char *preference_bits[] = {
-    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",  "D_MOVE",   "AUTOEX",     "NO_HASS",
-    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",      "NO_WIZ",   "L1",         "L2",
-    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",     "BLDWLK",   "AFK",        "AUTOLOOT",
-    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY", "AUTODOOR", "ZONERESETS", "HITBAR",
-    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "\n"};
+    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",     "D_MOVE",    "AUTOEX",     "NO_HASS",
+    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",         "NO_WIZ",    "L1",         "L2",
+    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",        "BLDWLK",    "AFK",        "AUTOLOOT",
+    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY",    "AUTODOOR",  "ZONERESETS", "HITBAR",
+    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "DISPEMOTE", "AUTOEXAM",   "\n"};
 
 /** Affected bits.
  * @pre Must be in the same order as the defines.
@@ -167,66 +168,87 @@ const char *connected_types[] = {"Playing",
                                  "IBT edit",
                                  "Message edit",
                                  "Protocol Detection",
-                                 "Rerolling",        // CON_REROLL
-                                 "Select hometn",    // CON_QHOME
-                                 "Rebegin: skill",   // CON_RB_SKILL
-                                 "Rebegin: class",   // CON_RB_NEW_CLASS
-                                 "Rebegin: roll",    // CON_RB_REROLL
-                                 "Rebegin: home",    // CON_RB_QHOME
-                                 "Immort: conf",     // CON_IMM_CONF
-                                 "Remote control",   // CON_REMOTE
+                                 "Rerolling",           // CON_REROLL
+                                 "Select hometn",       // CON_QHOME
+                                 "Rebegin: skill",      // CON_RB_SKILL
+                                 "Rebegin: class",      // CON_RB_NEW_CLASS
+                                 "Rebegin: roll",       // CON_RB_REROLL
+                                 "Rebegin: attrs",      // CON_RB_QATTRS
+                                 "Elevate: conf",       // CON_ELEVATE_CONF
+                                 "Immort: conf",        // CON_IMM_CONF
+                                 "Remote control",      // CON_REMOTE
+                                 "Rebegin: hometown",   // CON_RB_QHOMETOWN
                                  "\n"};
 
 /** Describes the position in the equipment listing.
  * @pre Must be in the same order as the defines.
  * Not used in sprinttype() so no \\n. */
 const char *wear_where[] = {
-    "Como luz:          ",   "No dedo:           ", "No dedo:           ", "No pescoço:        ",
-    "No pescoço:        ",   "No corpo:          ", "Na cabeça:         ", "Nas pernas:        ",
-    "Nos pés:           ",   "Nas mãos:          ", "Nos braços:        ", "Como escudo:       ",
-    "Sobre o corpo:     ",   "Sobre a cintura:   ", "No pulso direito:  ", "No pulso esquerdo: ",
-    "Empunhando:        ",   "Segurando:         ", "Como asas:         ", "Na orelha:         ",
-    "Na orelha:         ",   "No rosto:          ", "No nariz:          ", "Como insígnia:     ",
-    "Na bolsa de munições: "};
+    "Como luz:           ", /* 0  WEAR_LIGHT */
+    "Na cabeça:          ", /* 1  WEAR_HEAD */
+    "Na orelha direita:  ", /* 2  WEAR_EAR_R */
+    "Na orelha esquerda: ", /* 3  WEAR_EAR_L */
+    "No rosto:           ", /* 4  WEAR_FACE */
+    "No nariz:           ", /* 5  WEAR_NOSE */
+    "No pescoço:         ", /* 6  WEAR_NECK_1 */
+    "No pescoço:         ", /* 7  WEAR_NECK_2 */
+    "No corpo:           ", /* 8  WEAR_BODY */
+    "Nos braços:         ", /* 9  WEAR_ARMS */
+    "Nas mãos:           ", /* 10 WEAR_HANDS */
+    "No pulso direito:   ", /* 11 WEAR_WRIST_R */
+    "No pulso esquerdo:  ", /* 12 WEAR_WRIST_L */
+    "No dedo direito:    ", /* 13 WEAR_FINGER_R */
+    "No dedo esquerdo:   ", /* 14 WEAR_FINGER_L */
+    "Na cintura:         ", /* 15 WEAR_WAIST */
+    "Nas pernas:         ", /* 16 WEAR_LEGS */
+    "Nos pés:            ", /* 17 WEAR_FEET */
+    "Sobre o corpo:      ", /* 18 WEAR_ABOUT */
+    "Como escudo:        ", /* 19 WEAR_SHIELD */
+    "Empunhando:         ", /* 20 WEAR_WIELD */
+    "Segurando:          ", /* 21 WEAR_HOLD */
+    "Como asas:          ", /* 22 WEAR_WINGS */
+    "Como insígnia:      ", /* 23 WEAR_INSIGNE */
+    "Na aljava:          "  /* 24 WEAR_QUIVER */
+};
 
 /* Describes where an item can be worn.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *equipment_types[] = {"Usado como luz",
-                                 "No dedo direito",
-                                 "No dedo esquerdo",
-                                 "Usado no pescoço",
-                                 "Usado no pescoço",
-                                 "Usado no corpo",
-                                 "Usado na cabeça",
-                                 "Usado nas pernas",
-                                 "Usado nos pés",
-                                 "Usado nas mãos",
-                                 "Usado nos braços",
-                                 "Usado como escudo",
-                                 "Usado sobre o corpo",
-                                 "Usado sobre a cintura",
-                                 "Usado no pulso direito",
-                                 "Usado pulso esquerdo",
-                                 "Usado empunhando",
-                                 "Usado segurando",
-                                 "Usado como asas",
-                                 "Usado na orelha direita",
-                                 "Usado na orelha esquerda",
-                                 "Usado no rosto",
-                                 "Usado no nariz",
-                                 "Usado como insígnia",
-                                 "Usado como munição",
+const char *equipment_types[] = {"Usado como luz",           /* 0  WEAR_LIGHT */
+                                 "Usado na cabeça",          /* 1  WEAR_HEAD */
+                                 "Usado na orelha direita",  /* 2  WEAR_EAR_R */
+                                 "Usado na orelha esquerda", /* 3  WEAR_EAR_L */
+                                 "Usado no rosto",           /* 4  WEAR_FACE */
+                                 "Usado no nariz",           /* 5  WEAR_NOSE */
+                                 "Usado no pescoço",         /* 6  WEAR_NECK_1 */
+                                 "Usado no pescoço",         /* 7  WEAR_NECK_2 */
+                                 "Usado no corpo",           /* 8  WEAR_BODY */
+                                 "Usado nos braços",         /* 9  WEAR_ARMS */
+                                 "Usado nas mãos",           /* 10 WEAR_HANDS */
+                                 "Usado no pulso direito",   /* 11 WEAR_WRIST_R */
+                                 "Usado no pulso esquerdo",  /* 12 WEAR_WRIST_L */
+                                 "Usado no dedo direito",    /* 13 WEAR_FINGER_R */
+                                 "Usado no dedo esquerdo",   /* 14 WEAR_FINGER_L */
+                                 "Usado na cintura",         /* 15 WEAR_WAIST */
+                                 "Usado nas pernas",         /* 16 WEAR_LEGS */
+                                 "Usado nos pés",            /* 17 WEAR_FEET */
+                                 "Usado sobre o corpo",      /* 18 WEAR_ABOUT */
+                                 "Usado como escudo",        /* 19 WEAR_SHIELD */
+                                 "Usado empunhando",         /* 20 WEAR_WIELD */
+                                 "Usado segurando",          /* 21 WEAR_HOLD */
+                                 "Usado como asas",          /* 22 WEAR_WINGS */
+                                 "Usado como insígnia",      /* 23 WEAR_INSIGNE */
+                                 "Usado na aljava",          /* 24 WEAR_QUIVER */
                                  "\n"};
 
 /** Describes the type of object.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *item_types[] = {"UNDEFINED", "LIGHT",       "SCROLL",   "WAND",          "STAFF",  "WEAPON", "FURNITURE",
-                            "AMMO",      "TREASURE",    "ARMOR",    "POTION",        "WORN",   "OTHER",  "TRASH",
-                            "TRAP",      "CONTAINER",   "NOTE",     "LIQ CONTAINER", "KEY",    "FOOD",   "MONEY",
-                            "PEN",       "BOAT",        "FOUNTAIN", "WINGS",         "CORPSE", "PORTAL", "BOOK",
-                            "PLANT",     "FIRE WEAPON", "\n"};
+const char *item_types[] = {"UNDEFINED", "LIGHT",       "SCROLL",      "WAND",          "STAFF",  "WEAPON", "FURNITURE",
+                            "AMMO",      "TREASURE",    "ARMOR",       "POTION",        "WORN",   "OTHER",  "TRASH",
+                            "TRAP",      "CONTAINER",   "NOTE",        "LIQ CONTAINER", "KEY",    "FOOD",   "MONEY",
+                            "PEN",       "BOAT",        "FOUNTAIN",    "WINGS",         "CORPSE", "PORTAL", "BOOK",
+                            "PLANT",     "FIRE WEAPON", "MAGIC STONE", "CARDS",         "\n"};
 
 /** Describes the wear flags set on an item.
  * @pre Must be in the same order as the defines.
@@ -238,10 +260,11 @@ const char *wear_bits[] = {"TAKE", "FINGER", "NECK",  "BODY",    "HEAD",   "LEGS
 /** Describes the extra flags applied to an item.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *extra_bits[] = {"GLOW",      "HUM",         "NO_RENT",    "NO_DONATE",    "NO_INVIS",    "INVISIBLE",
-                            "MAGIC",     "NO_DROP",     "BLESS",      "ANTI_GOOD",    "ANTI_EVIL",   "ANTI_NEUTRAL",
-                            "ANTI_MAGE", "ANTI_CLERIC", "ANTI_THIEF", "ANTI_WARRIOR", "NO_SELL",     "TWO_HANDS",
-                            "POISONED",  "ANTI_DRUID",  "ANTI_BARD",  "QUEST_ITEM",   "ANTI_RANGER", "\n"};
+const char *extra_bits[] = {"GLOW",         "HUM",          "NO_RENT",     "NO_DONATE",   "NO_INVIS",
+                            "INVISIBLE",    "MAGIC",        "NO_DROP",     "BLESS",       "ANTI_GOOD",
+                            "ANTI_EVIL",    "ANTI_NEUTRAL", "ANTI_MAGE",   "ANTI_CLERIC", "ANTI_THIEF",
+                            "ANTI_WARRIOR", "NO_SELL",      "TWO_HANDS",   "POISONED",    "ANTI_DRUID",
+                            "ANTI_BARD",    "QUEST_ITEM",   "ANTI_RANGER", "NO_LOCATE",   "\n"};
 
 /** Describes the apply types.
  * @pre Must be in the same order as the defines.
@@ -435,21 +458,44 @@ cpp_extern const struct wis_app_type wis_app[] = {
 
 const char *npc_class_types[] = {"Outro", "Undead", "Humanoide", "Animal", "Dragão", "Gigante", "\n"};
 
+/* Emotional profile types for mob personality archetypes */
+const char *emotion_profile_types[] = {"Neutral",    /* EMOTION_PROFILE_NEUTRAL 0 */
+                                       "Aggressive", /* EMOTION_PROFILE_AGGRESSIVE 1 */
+                                       "Defensive",  /* EMOTION_PROFILE_DEFENSIVE 2 */
+                                       "Balanced",   /* EMOTION_PROFILE_BALANCED 3 */
+                                       "Sensitive",  /* EMOTION_PROFILE_SENSITIVE 4 */
+                                       "Confident",  /* EMOTION_PROFILE_CONFIDENT 5 */
+                                       "Greedy",     /* EMOTION_PROFILE_GREEDY 6 */
+                                       "Loyal",      /* EMOTION_PROFILE_LOYAL 7 */
+                                       "\n"};
+
 /** Define a set of opposite directions from the cardinal directions. */
 int rev_dir[] = {SOUTH, WEST, NORTH, EAST, DOWN, UP, SOUTHEAST, SOUTHWEST, NORTHWEST, NORTHEAST};
 
-/** How much movement is lost moving through a particular sector type. */
-int movement_loss[] = {1, /* Inside     */
-                       1, /* City       */
-                       2, /* Field      */
-                       3, /* Forest     */
-                       4, /* Hills      */
-                       6, /* Mountains  */
-                       4, /* Swimming   */
-                       1, /* Unswimable */
-                       5, /* Underwater */
-                       1, /* Flying     */
-                       6, 2, 3, 2, 1};
+/** How much movement is lost moving through a particular sector type.
+ * IMPORTANT: This array MUST have exactly NUM_ROOM_SECTORS (17) elements,
+ * one for each sector type from SECT_INSIDE (0) to SECT_ROAD (16).
+ * Missing entries will cause out-of-bounds memory access and bugs.
+ * When adding new sectors, update this array AND structs.h defines. */
+int movement_loss[] = {
+    1, /* Inside     */
+    1, /* City       */
+    2, /* Field      */
+    3, /* Forest     */
+    4, /* Hills      */
+    6, /* Mountains  */
+    4, /* Swimming   */
+    1, /* Unswimable */
+    5, /* Underwater */
+    1, /* Flying     */
+    6, /* Climbing   */
+    2, /* Air Flow   */
+    3, /* Quicksand  */
+    2, /* Lava       */
+    1, /* Ice        */
+    3, /* Desert     */
+    1  /* Road       */
+};
 
 const char *climate_types[] = {"TEMPERADO", "CHUVOSO", "TROPICAL", "FRIO/SECO", "DESERTO"};
 
@@ -465,6 +511,12 @@ const char *goal_names[] = {"None",               /* GOAL_NONE 0 */
                             "Go to questmaster",  /* GOAL_GOTO_QUESTMASTER 7 */
                             "Accept quest",       /* GOAL_ACCEPT_QUEST 8 */
                             "Complete quest",     /* GOAL_COMPLETE_QUEST 9 */
+                            "Mine",               /* GOAL_MINE 10 */
+                            "Fish",               /* GOAL_FISH 11 */
+                            "Forage",             /* GOAL_FORAGE 12 */
+                            "Eavesdrop",          /* GOAL_EAVESDROP 13 */
+                            "Collect key",        /* GOAL_COLLECT_KEY 14 */
+                            "Follow",             /* GOAL_FOLLOW 15 */
                             "\n"};
 
 const char *sky_conditions[] = {"CLOUDLESS", "CLOUDY", "RAINING", "LIGHTNING", "SNOWING", "\n"};

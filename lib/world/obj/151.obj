@@ -117,7 +117,7 @@ Uma pequena jóia amarela parece iluminar o local onde ela caiu.~
 ~
 9 ae 0 0 0 ac 0 0 0 0 0 0 0
 9 0 0 0
-5 10000 1000 80 0
+5 10000 1000 30 0
 E
 sol joia~
 Você percebe que aquela pedra brilha como um sol.
@@ -126,6 +126,10 @@ A
 3 1
 A
 4 1
+A
+18 2
+A
+19 1
 #15111
 Amuleto~
 o Amuleto de Sun Lu~
@@ -133,7 +137,7 @@ Um amuleto com aparência esquisita foi deixado aqui no chão.~
 ~
 9 ae 0 0 0 ac 0 0 0 0 0 0 0
 8 0 0 0
-5 10000 1000 50 0
+5 10000 1000 0 0
 E
 Amuleto~
 Este colar parece pertencer a alguém.
@@ -479,6 +483,10 @@ compaixão e honra acima de tudo."
 ~
 A
 17 -2
+A
+18 1
+A
+19 1
 #15159
 luvas samurai~
 um par de luvas samurai~
