@@ -11,18 +11,25 @@
 #define _QUEST_H_
 
 /* Aquest related defines ********************************************* */
-#define AQ_UNDEFINED -1      /* (R) Quest unavailable                */
-#define AQ_OBJ_FIND 0        /* Player must retreive object          */
-#define AQ_ROOM_FIND 1       /* Player must reach room               */
-#define AQ_MOB_FIND 2        /* Player must find mob                 */
-#define AQ_MOB_KILL 3        /* Player must kill mob                 */
-#define AQ_MOB_SAVE 4        /* Player must save mob                 */
-#define AQ_OBJ_RETURN 5      /* Player gives object to mob in val5   */
-#define AQ_ROOM_CLEAR 6      /* Player must clear room of all mobs   */
-#define AQ_PLAYER_KILL 7     /* Kill a specific player or any player killer */
-#define AQ_MOB_KILL_BOUNTY 8 /* Kill a specific mob for bounty (posted by mobs) */
-#define AQ_MOB_ESCORT 9      /* Player escorts mob to destination    */
-#define NUM_AQ_TYPES 10      /* Used in qedit functions              */
+#define AQ_UNDEFINED -1        /* (R) Quest unavailable                */
+#define AQ_OBJ_FIND 0          /* Player must retreive object          */
+#define AQ_ROOM_FIND 1         /* Player must reach room               */
+#define AQ_MOB_FIND 2          /* Player must find mob                 */
+#define AQ_MOB_KILL 3          /* Player must kill mob                 */
+#define AQ_MOB_SAVE 4          /* Player must save mob                 */
+#define AQ_OBJ_RETURN 5        /* Player gives object to mob in val5   */
+#define AQ_ROOM_CLEAR 6        /* Player must clear room of all mobs   */
+#define AQ_PLAYER_KILL 7       /* Kill a specific player or any player killer */
+#define AQ_MOB_KILL_BOUNTY 8   /* Kill a specific mob for bounty (posted by mobs) */
+#define AQ_MOB_ESCORT 9        /* Player escorts mob to destination    */
+#define AQ_EMOTION_IMPROVE 10  /* Player must improve specific emotion with target mob */
+#define AQ_MAGIC_GATHER 11     /* Player must visit locations with high magical density */
+#define AQ_DELIVERY 12         /* Player must deliver specific items to mob */
+#define AQ_RESOURCE_GATHER 13  /* Player must gather X quantity of specific item type */
+#define AQ_REPUTATION_BUILD 14 /* Player must improve reputation with faction/zone */
+#define AQ_SHOP_BUY 15         /* Player must buy specific items from shops */
+#define AQ_SHOP_SELL 16        /* Player must sell specific items to shops */
+#define NUM_AQ_TYPES 17        /* Used in qedit functions              */
 
 #define MAX_QUEST_NAME 40  /* Length of quest name                 */
 #define MAX_QUEST_DESC 75  /* Length of quest description          */
