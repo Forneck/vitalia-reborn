@@ -1448,7 +1448,15 @@ ACMD(do_gen_tog)
         {"Você não verá mais a saúde do oponente durante a luta.\r\n",
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"Seu título não será mais alterado automaticamente.\r\n",
-         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}};
+         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
+        {"", ""}, /* 31: Placeholder (SCMD_PAGELENGTH not used in do_gen_tog) */
+        {"", ""}, /* 32: Placeholder (SCMD_SCREENWIDTH not used in do_gen_tog) */
+        {"", ""}, /* 33: Placeholder (SCMD_COLOR not used in do_gen_tog) */
+        {"Você não verá mais a saúde do oponente durante a luta.\r\n",
+         "Agora você verá a saúde do oponente durante a luta.\r\n"}, /* 34: SCMD_HITBAR */
+        {"Seu título não será mais alterado automaticamente.\r\n",
+         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}, /* 35: SCMD_AUTOTITLE */
+        {"Auto-exame desligado.\r\n", "Auto-exame ligado.\r\n"}};                      /* 36: SCMD_AUTOEXAM */
 
     if (IS_NPC(ch))
         return;
