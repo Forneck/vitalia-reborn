@@ -277,15 +277,21 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
     const char *info = QST_INFO(rnum);
     char temp_buf[MAX_QUEST_MSG];
 
-    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
+    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name and add zone name */
     if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
         room_rnum room_rnum_val = real_room(QST_TARGET(rnum));
 
         if (room_rnum_val != NOWHERE) {
             const char *room_name = world[room_rnum_val].name;
+            zone_rnum zone = world[room_rnum_val].zone;
+            const char *zone_name = (zone != NOWHERE && zone_table) ? zone_table[zone].name : "Desconhecida";
+            char room_with_zone[MAX_INPUT_LENGTH];
             char room_num_str[20];
             const char *pos;
             size_t room_num_len;
+
+            /* Create combined string with room name and zone name */
+            snprintf(room_with_zone, sizeof(room_with_zone), "%s em %s", room_name, zone_name);
 
             /* Create string representation of room number to search for */
             snprintf(room_num_str, sizeof(room_num_str), "%d", QST_TARGET(rnum));
@@ -303,14 +309,14 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                 if (is_start_boundary && is_end_boundary) {
                     size_t prefix_len = pos - info;
                     size_t suffix_start = prefix_len + room_num_len;
-                    size_t room_name_len = strlen(room_name);
+                    size_t room_with_zone_len = strlen(room_with_zone);
                     size_t suffix_len = strlen(info + suffix_start);
-                    size_t total_len = prefix_len + room_name_len + suffix_len;
+                    size_t total_len = prefix_len + room_with_zone_len + suffix_len;
 
                     /* Check if the formatted string will fit in the buffer (including null terminator) */
                     if (total_len + 1 <= bufsize) {
-                        /* Build new message: prefix + room_name + suffix */
-                        snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
+                        /* Build new message: prefix + room_name_with_zone + suffix */
+                        snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_with_zone, info + suffix_start);
                         info = buf;
                         break;
                     }
