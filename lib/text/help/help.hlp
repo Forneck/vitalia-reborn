@@ -17871,15 +17871,15 @@ necessidades, genetica e situacao atual.
    - @rSEGURANCA:@n Contador validado para prevenir exploits
    - @gFUNCAO:@n mob_posts_magic_gather_quest() implementada
 
-@c12. AQ_TRADE (Comercio)@n
+@c12. AQ_DELIVERY (Entrega de Item)@n
    @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
-   - Jogador deve entregar item especifico para mob via trade/give
+   - Jogador deve entregar item especifico para mob alvo via give
    - Aumenta trust emotion com sucesso
-   - Usa sistema de reputacao para precificacao
-   - Alternativa nao-combate para aquisicao de itens
+   - Usa sistema de reputacao
+   - Foco em relacionamento entre jogador e NPC especifico
    - Requisitos: Item deve existir e ser tradeable
    - @rSEGURANCA:@n Item marcado NOLOCATE para prevenir locate exploit
-   - @gFUNCAO:@n mob_posts_trade_quest() implementada
+   - @gFUNCAO:@n mob_posts_delivery_quest() implementada
 
 @c13. AQ_RESOURCE_GATHER (Coleta de Recursos)@n
    @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
@@ -17907,7 +17907,7 @@ necessidades, genetica e situacao atual.
 1. @cContadores Validados:@n Todos os contadores (magic gather, resource gather)
    verificam > 0 antes de decrementar. Log de aviso para tentativas de exploit.
 
-2. @cItem NOLOCATE:@n Itens em quests de trade e resource gather sao marcados
+2. @cItem NOLOCATE:@n Itens em quests de delivery e resource gather sao marcados
    com flag NOLOCATE para prevenir locate object exploit. Timer de 28 ticks
    remove a flag automaticamente.
 
@@ -17925,7 +17925,7 @@ necessidades, genetica e situacao atual.
 @gTodas as 5 novas funcoes estao completas e funcionais:@n
 1. mob_posts_emotion_quest() - Cria quests de melhoria de emocao
 2. mob_posts_magic_gather_quest() - Cria quests de coleta magica
-3. mob_posts_trade_quest() - Cria quests de comercio
+3. mob_posts_delivery_quest() - Cria quests de entrega de item
 4. mob_posts_resource_gather_quest() - Cria quests de coleta de recursos
 5. mob_posts_reputation_quest() - Cria quests de construcao de reputacao
 
@@ -18101,7 +18101,7 @@ baseados nos sistemas existentes de emocoes, reputacao e densidade magica.
 @cALTA PRIORIDADE@n (aproveitam sistemas existentes):
 1. AQ_EMOTION_IMPROVE - Sistema de emocoes completo
 2. AQ_MAGIC_GATHER - Sistema de densidade ja funciona
-3. AQ_TRADE - Sistemas de reputacao e trust prontos
+3. AQ_DELIVERY - Sistemas de reputacao e trust prontos
 
 @cMEDIA PRIORIDADE@n (implementacao moderada):
 4. AQ_RESOURCE_GATHER - Logica similar a mob kill
@@ -18136,7 +18136,7 @@ Antes de adicionar novos tipos, avaliar:
 Um mob com alta curiosity e baixa friendship poderia postar:
 - AQ_MAGIC_GATHER se em area de baixa densidade
 - AQ_EMOTION_IMPROVE se muito solitario
-- AQ_TRADE se precisando de item mas nao querendo sair
+- AQ_DELIVERY se precisando entregar item mas nao querendo sair
 
 Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
 

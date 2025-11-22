@@ -41,7 +41,7 @@ const char *quest_types[] = {"Object",
                              "Escort mob",
                              "Improve emotion",
                              "Magic gather",
-                             "Trade",
+                             "Delivery",
                              "Resource gather",
                              "Reputation build",
                              "\n"};
@@ -1178,7 +1178,7 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 }
             }
             break;
-        case AQ_TRADE:
+        case AQ_DELIVERY:
             /* Check if player traded required item with target mob */
             if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && (ch != vict)) {
                 /* Check if this is the target mob and correct item */

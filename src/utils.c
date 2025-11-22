@@ -4035,13 +4035,13 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
 }
 
 /**
- * Faz um mob postar uma quest de comércio (AQ_TRADE).
+ * Faz um mob postar uma quest de entrega/delivery (AQ_DELIVERY).
  * @param ch O mob que posta a quest
- * @param target_mob_vnum VNUM do mob para negociar
- * @param item_vnum VNUM do item a ser negociado
+ * @param target_mob_vnum VNUM do mob para receber o item
+ * @param item_vnum VNUM do item a ser entregue
  * @param reward Recompensa oferecida
  */
-void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_vnum item_vnum, int reward)
+void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_vnum item_vnum, int reward)
 {
     mob_vnum questmaster_vnum;
     qst_vnum new_quest_vnum;
@@ -4065,7 +4065,7 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
 
     /* Validate mob is in a valid room */
     if (IN_ROOM(ch) == NOWHERE) {
-        log1("SYSERR: mob_posts_trade_quest called with mob %s not in valid room", GET_NAME(ch));
+        log1("SYSERR: mob_posts_delivery_quest called with mob %s not in valid room", GET_NAME(ch));
         return;
     }
 
@@ -4117,7 +4117,7 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
     }
 
     new_quest->vnum = new_quest_vnum;
-    new_quest->type = AQ_TRADE;
+    new_quest->type = AQ_DELIVERY;
     new_quest->qm = questmaster_vnum;
     new_quest->target = target_mob_vnum;
     new_quest->prereq = NOTHING;
@@ -4139,13 +4139,13 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
     new_quest->exp_reward = calculated_reward * 2;
     new_quest->obj_reward = reward_item;
 
-    snprintf(quest_name, sizeof(quest_name), "Negociar com %s", target_name);
+    snprintf(quest_name, sizeof(quest_name), "Entregar item para %s", target_name);
     snprintf(quest_desc, sizeof(quest_desc), "Entregar %s para %s", item_name, target_name);
     snprintf(quest_info, sizeof(quest_info),
-             "Alguém precisa que você negocie com %s. Entregue %s para completar a transação "
+             "Alguém precisa que você entregue um item para %s. Entregue %s para completar a entrega "
              "e receber %d moedas de ouro.",
              target_name, item_name, calculated_reward);
-    snprintf(quest_done, sizeof(quest_done), "Perfeito! A negociação foi um sucesso!");
+    snprintf(quest_done, sizeof(quest_done), "Perfeito! A entrega foi concluída com sucesso!");
 
     new_quest->name = str_udup(quest_name);
     new_quest->desc = str_udup(quest_desc);
@@ -4154,7 +4154,7 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
     new_quest->quit = str_udup("Tudo bem. Talvez alguém mais consiga negociar.");
 
     if (add_quest(new_quest) < 0) {
-        log1("SYSERR: Failed to add trade quest for %s", GET_NAME(ch));
+        log1("SYSERR: Failed to add delivery quest for %s", GET_NAME(ch));
         free_quest(new_quest);
         return;
     }
@@ -4167,7 +4167,7 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
     }
 
     act("$n escreve um pedido de negociação e o envia.", FALSE, ch, 0, 0, TO_ROOM);
-    log1("TRADE QUEST: %s created trade quest %d (trade %s with mob %d)", GET_NAME(ch), new_quest_vnum, item_name,
+    log1("DELIVERY QUEST: %s created delivery quest %d (deliver %s to mob %d)", GET_NAME(ch), new_quest_vnum, item_name,
          target_mob_vnum);
 
     if (save_quests(mob_zone)) {

@@ -24,7 +24,7 @@
 #define AQ_MOB_ESCORT 9        /* Player escorts mob to destination    */
 #define AQ_EMOTION_IMPROVE 10  /* Player must improve specific emotion with target mob */
 #define AQ_MAGIC_GATHER 11     /* Player must visit locations with high magical density */
-#define AQ_TRADE 12            /* Player must trade specific items with mob */
+#define AQ_DELIVERY 12         /* Player must deliver specific items to mob */
 #define AQ_RESOURCE_GATHER 13  /* Player must gather X quantity of specific item type */
 #define AQ_REPUTATION_BUILD 14 /* Player must improve reputation with faction/zone */
 #define NUM_AQ_TYPES 15        /* Used in qedit functions              */
