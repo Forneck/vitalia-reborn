@@ -460,10 +460,13 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
     if (QST_TYPE(rnum) == AQ_SHOP_BUY && ch && !IS_NPC(ch)) {
         int items_remaining = GET_QUEST_COUNTER(ch);
         obj_vnum item_vnum = QST_RETURNMOB(rnum);
-        const char *item_name = "item";
+        const char *item_name = "item desconhecido";
+        obj_rnum item_rnum;
 
-        if (real_object(item_vnum) != NOTHING) {
-            item_name = obj_proto[real_object(item_vnum)].short_description;
+        /* SIGSEGV protection: validate item_rnum before accessing obj_proto array */
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING && item_rnum >= 0 && obj_proto) {
+            item_name = obj_proto[item_rnum].short_description;
         }
 
         snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyDICA: Compre %s em lojas. Itens restantes: %d\tn", info,
@@ -476,10 +479,13 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
     if (QST_TYPE(rnum) == AQ_SHOP_SELL && ch && !IS_NPC(ch)) {
         int items_remaining = GET_QUEST_COUNTER(ch);
         obj_vnum item_vnum = QST_RETURNMOB(rnum);
-        const char *item_name = "item";
+        const char *item_name = "item desconhecido";
+        obj_rnum item_rnum;
 
-        if (real_object(item_vnum) != NOTHING) {
-            item_name = obj_proto[real_object(item_vnum)].short_description;
+        /* SIGSEGV protection: validate item_rnum before accessing obj_proto array */
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING && item_rnum >= 0 && obj_proto) {
+            item_name = obj_proto[item_rnum].short_description;
         }
 
         snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyDICA: Venda %s em lojas. Itens restantes: %d\tn", info,
