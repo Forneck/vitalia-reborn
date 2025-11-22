@@ -284,8 +284,10 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
         if (room_rnum_val != NOWHERE) {
             const char *room_name = world[room_rnum_val].name;
             zone_rnum zone = world[room_rnum_val].zone;
-            const char *zone_name = (zone != NOWHERE && zone_table) ? zone_table[zone].name : "Desconhecida";
-            char room_with_zone[MAX_INPUT_LENGTH];
+            const char *zone_name = (zone != NOWHERE && zone >= 0 && zone <= top_of_zone_table && zone_table)
+                                        ? zone_table[zone].name
+                                        : "Desconhecida";
+            char room_with_zone[512];
             char room_num_str[20];
             const char *pos;
             size_t room_num_len;
