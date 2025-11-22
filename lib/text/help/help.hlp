@@ -17901,6 +17901,36 @@ necessidades, genetica e situacao atual.
    - Requisitos: Mob alvo deve existir
    - @gFUNCAO:@n mob_posts_reputation_quest() implementada
 
+@c15. AQ_SHOP_BUY (Comprar em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve comprar X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_buy() quando item correto e comprado
+   - Progresso rastreado via contador (decrementa em cada compra)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Comprar 3 poção de cura em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Requisitos: Item deve existir e ser vendavel em lojas
+   - @rSEGURANCA:@n Items marcados NOLOCATE para prevenir buy-sell-buyback exploit
+   - @yPROTECAO:@n get_selling_obj() bloqueia venda de itens NOLOCATE
+   - @cTIMER:@n Flag NOLOCATE removida apos 1 dia MUD (28 ticks)
+   - @gFUNCAO:@n mob_posts_shop_buy_quest() implementada
+
+@c16. AQ_SHOP_SELL (Vender em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve vender X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_sell() quando item correto e vendido
+   - Progresso rastreado via contador (decrementa em cada venda)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Vender 10 peles de lobo em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Jogador deve adquirir itens via gameplay (caca, craft, etc)
+   - Requisitos: Item deve existir e ser comprado por lojas
+   - @rSEGURANCA:@n Validacao de item antes de aceitar venda
+   - @yPROTECAO:@n Quest completa apenas com vendas de itens corretos
+   - @gFUNCAO:@n mob_posts_shop_sell_quest() implementada
+
 @y===== MELHORIAS DE SEGURANCA =====@n
 
 @rProtecoes Contra Exploits Implementadas:@n
