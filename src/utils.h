@@ -109,6 +109,8 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
 void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_vnum item_vnum, int reward);
 void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
 void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, int target_reputation, int reward);
+void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
+void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
 bool is_mob_excluded_from_quests(struct char_data *mob);
 int count_mob_posted_quests(void);
 bool can_add_mob_posted_quest(void);

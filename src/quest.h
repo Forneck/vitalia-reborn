@@ -27,7 +27,9 @@
 #define AQ_DELIVERY 12         /* Player must deliver specific items to mob */
 #define AQ_RESOURCE_GATHER 13  /* Player must gather X quantity of specific item type */
 #define AQ_REPUTATION_BUILD 14 /* Player must improve reputation with faction/zone */
-#define NUM_AQ_TYPES 15        /* Used in qedit functions              */
+#define AQ_SHOP_BUY 15         /* Player must buy specific items from shops */
+#define AQ_SHOP_SELL 16        /* Player must sell specific items to shops */
+#define NUM_AQ_TYPES 17        /* Used in qedit functions              */
 
 #define MAX_QUEST_NAME 40  /* Length of quest name                 */
 #define MAX_QUEST_DESC 75  /* Length of quest description          */
