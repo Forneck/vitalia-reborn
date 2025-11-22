@@ -17787,4 +17787,390 @@ Veja tambem: EMOTIONEXPORT, EMOTIONCONFIG, CEDIT
 
 @rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
 #108
+MOB-AUTOQUESTS MOB-QUESTS AUTOQUEST-SYSTEM QUEST-POSTING
+
+@cSISTEMA DE AUTOQUESTS POSTADAS POR MOBS@n
+
+   O sistema de autoquests permite que mobs com IA postem quests dinamicamente
+para os jogadores. Mobs podem criar diferentes tipos de quests baseadas em suas
+necessidades, genetica e situacao atual.
+
+@y===== TIPOS DE QUESTS =====@n
+
+@c1. AQ_OBJ_FIND / AQ_OBJ_RETURN (Buscar Objeto)@n
+   - Jogador deve encontrar um objeto especifico
+   - Convertido automaticamente para AQ_OBJ_RETURN (entrega ao requisitante)
+   - Mob posta quando precisa de um item que nao possui
+   - Requisitos: Mob precisa ter ouro suficiente, item deve ser TAKE
+
+@c2. AQ_ROOM_FIND (Explorar Local)@n
+   - Jogador deve visitar uma sala especifica
+   - Mob posta quando quer informacoes sobre um local
+   - Quest mostra nome da sala E nome da zona (formato: "sala em zona")
+   - Requisitos: Sala nao pode ser GODROOM ou HOUSE
+
+@c3. AQ_MOB_FIND (Encontrar Mob)@n
+   - Jogador deve localizar e visitar um mob especifico
+   - Mob posta quando procura por outro mob
+   - Requisitos: Mob alvo deve existir no mundo
+
+@c4. AQ_MOB_KILL (Matar Mob)@n
+   - Jogador deve eliminar um mob especifico
+   - Se mob ja foi morto, pedra magica pode ser entregue
+   - Mob posta para remover uma ameaca
+   - Requisitos: Mob alvo deve existir
+
+@c5. AQ_MOB_SAVE (Salvar Mob)@n
+   - Jogador deve proteger/curar um mob especifico
+   - Quest completa quando mob esta saudavel (>80% HP) e fora de combate
+   - Raramente postada por mobs
+   - Requisitos: Mob alvo deve estar em perigo
+
+@c6. AQ_ROOM_CLEAR (Limpar Sala)@n
+   - Jogador deve eliminar todos os mobs de uma sala
+   - Mob posta para limpar uma area perigosa
+   - Requisitos: Sala deve ter mobs hostis
+
+@c7. AQ_PLAYER_KILL (Matar Jogador Assassino)@n
+   @rAVISO: Quest PvP - requer cuidado!@n
+   - Jogador deve eliminar qualquer jogador marcado como assassino (PKiller)
+   - Mob posta quando foi atacado por jogadores ou busca vinganca
+   - @yATIVA PvP@n - jogadores podem atacar uns aos outros
+   - Requisitos: Mob deve ter sido atacado ou ter baixa compassion
+   - @rRESTRICOES: Uso cuidadoso recomendado para evitar grief@n
+
+@c8. AQ_MOB_KILL_BOUNTY (Recompensa por Mob Especifico)@n
+   @yATUALMENTE DESABILITADA PARA TESTES@n
+   - Jogador deve eliminar um mob ESPECIFICO (nao qualquer do tipo)
+   - Sistema identifica instancia exata do mob alvo
+   - Pedra magica contem ID unico do alvo
+   - Requisitos: Mob alvo deve estar vivo no mundo
+
+@c9. AQ_MOB_ESCORT (Escoltar Mob)@n
+   - Jogador deve escoltar um mob ate um destino seguro
+   - Mob a ser escoltado spawna quando quest e aceita
+   - Quest falha se mob escoltado morrer
+   - Requisitos: Destino deve ser acessivel, mob nao pode ser NOKILL
+
+@c10. AQ_EMOTION_IMPROVE (Melhorar Emocao)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve melhorar emocao especifica com mob alvo
+   - Triggers: dar presentes, usar socials positivos, ajudar em combate
+   - Mob posta quando solitario (baixa friendship), desconfiado (baixa trust), ou triste
+   - Sistema de emocoes rastreia interacoes automaticamente
+   - Requisitos: Mob alvo deve existir, emocao valida (friendship, trust, loyalty, etc)
+   - @gFUNCAO:@n mob_posts_emotion_quest() implementada
+
+@c11. AQ_MAGIC_GATHER (Coleta Magica)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve visitar X locais com densidade magica alta
+   - Sistema calcula densidade baseado em clima, hora do dia, setor
+   - Mob posta quando precisa de poder magico ou energia
+   - Nao-combate, focado em exploracao magica
+   - Requisitos: Threshold de densidade configuravel
+   - @rSEGURANCA:@n Contador validado para prevenir exploits
+   - @gFUNCAO:@n mob_posts_magic_gather_quest() implementada
+
+@c12. AQ_DELIVERY (Entrega de Item)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve entregar item especifico para mob alvo via give
+   - Aumenta trust emotion com sucesso
+   - Usa sistema de reputacao
+   - Foco em relacionamento entre jogador e NPC especifico
+   - Requisitos: Item deve existir e ser tradeable
+   - @rSEGURANCA:@n Item marcado NOLOCATE para prevenir locate exploit
+   - @gFUNCAO:@n mob_posts_delivery_quest() implementada
+
+@c13. AQ_RESOURCE_GATHER (Coleta de Recursos)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve coletar e entregar X quantidade de item especifico
+   - Similar a AQ_OBJ_RETURN mas com contador
+   - Jogador entrega itens um por vez ao questmaster/requisitante
+   - Sistema mostra progresso apos cada entrega
+   - Requisitos: Item deve existir e ser takeable
+   - @yIMPORTANTE:@n Recursos devem ser ENTREGUES, nao apenas coletados
+   - @rSEGURANCA:@n Itens transferidos com NOLOCATE, contador validado
+   - @gFUNCAO:@n mob_posts_resource_gather_quest() implementada
+
+@c14. AQ_REPUTATION_BUILD (Construir Reputacao)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve melhorar reputacao/trust com mob ou faccao
+   - Usa trust emotion como proxy de reputacao
+   - Requer multiplas interacoes positivas ao longo do tempo
+   - Mob posta quando precisa melhorar relacoes
+   - Requisitos: Mob alvo deve existir
+   - @gFUNCAO:@n mob_posts_reputation_quest() implementada
+
+@c15. AQ_SHOP_BUY (Comprar em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve comprar X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_buy() quando item correto e comprado
+   - Progresso rastreado via contador (decrementa em cada compra)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Comprar 3 poção de cura em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Requisitos: Item deve existir e ser vendavel em lojas
+   - @rSEGURANCA:@n Items marcados NOLOCATE para prevenir buy-sell-buyback exploit
+   - @yPROTECAO:@n get_selling_obj() bloqueia venda de itens NOLOCATE
+   - @cTIMER:@n Flag NOLOCATE removida apos 1 dia MUD (28 ticks)
+   - @gFUNCAO:@n mob_posts_shop_buy_quest() implementada
+
+@c16. AQ_SHOP_SELL (Vender em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve vender X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_sell() quando item correto e vendido
+   - Progresso rastreado via contador (decrementa em cada venda)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Vender 10 peles de lobo em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Jogador deve adquirir itens via gameplay (caca, craft, etc)
+   - Requisitos: Item deve existir e ser comprado por lojas
+   - @rSEGURANCA:@n Validacao de item antes de aceitar venda
+   - @yPROTECAO:@n Quest completa apenas com vendas de itens corretos
+   - @gFUNCAO:@n mob_posts_shop_sell_quest() implementada
+
+@y===== MELHORIAS DE SEGURANCA =====@n
+
+@rProtecoes Contra Exploits Implementadas:@n
+1. @cContadores Validados:@n Todos os contadores (magic gather, resource gather)
+   verificam > 0 antes de decrementar. Log de aviso para tentativas de exploit.
+
+2. @cItem NOLOCATE:@n Itens em quests de delivery e resource gather sao marcados
+   com flag NOLOCATE para prevenir locate object exploit. Timer de 28 ticks
+   remove a flag automaticamente.
+
+3. @cTransferencia Segura:@n Resource gather valida que itens foram transferidos
+   com sucesso antes de contar entrega. Safety checks para NOTDEADYET.
+
+4. @cDisplay Melhorado:@n Quest info mostra dicas especificas para cada tipo:
+   - Emotion: tipo de emocao e nivel alvo
+   - Magic: densidade minima e locais restantes
+   - Resource: itens restantes e requisito de entrega
+   - Reputation: nivel de confianca necessario
+
+@y===== FUNCOES DE POSTING IMPLEMENTADAS =====@n
+
+@gTodas as 7 novas funcoes estao completas e funcionais:@n
+1. mob_posts_emotion_quest() - Cria quests de melhoria de emocao
+2. mob_posts_magic_gather_quest() - Cria quests de coleta magica
+3. mob_posts_delivery_quest() - Cria quests de entrega de item
+4. mob_posts_resource_gather_quest() - Cria quests de coleta de recursos
+5. mob_posts_reputation_quest() - Cria quests de construcao de reputacao
+6. mob_posts_shop_buy_quest() - Cria quests de compra em loja
+7. mob_posts_shop_sell_quest() - Cria quests de venda em loja
+Mobs com AI apropriada agora podem autonomamente criar estes tipos de quest
+quando suas condicoes de posting sao satisfeitas (genetics, gold, necessidade).
+
+@cSistema 100% Operacional:@n
+- ✓ Triggers funcionais
+- ✓ Display melhorado
+- ✓ Seguranca implementada
+- ✓ Posting automatico por mobs
+- ✓ Gods podem criar via QEDIT
+- ✓ Testes manuais e autonomos possiveis
+
+
+
+@y===== SISTEMA DE POSTING =====@n
+
+@gCondicoes para Mobs Postarem Quests:@n
+- Mob deve ter AI data (mob com comportamento inteligente)
+- Mob deve ter ouro suficiente para recompensa
+- Limite maximo de quests mob-posted nao pode ser excedido
+- Questmaster deve existir na zona ou zona adjacente
+- Mob deve ter genetics apropriadas (quest_tendency, adventurer_tendency, etc)
+
+@gQuestmasters:@n
+- Se questmaster normal nao acessivel, mob se torna questmaster temporario
+- Quests temporarias ficam com o mob ate serem completadas
+- Sistema salva quests em lib/etc/tempquests.dat para persistencia
+
+@gRecompensas:@n
+- Calculadas baseadas em dificuldade, nivel do mob e reputacao
+- Mobs podem oferecer itens do proprio inventario como recompensa extra
+- Ouro e deduzido do mob ao postar quest
+
+@gFalhas e Penalidades:@n
+- Quests de escolta: penalidade 2x se escoltado morrer
+- Quests de bounty: falham se outro jogador matar o alvo
+- Abandonar quest: penalidade normal em questpoints
+
+@y===== COMANDOS RELACIONADOS =====@n
+
+Para testar e gerenciar o sistema:
+- QEDIT: Editar quests manualmente
+- QUEST LIST: Ver quests disponiveis
+- QUEST STATUS <vnum>: Ver detalhes de uma quest
+- QUEST REMOVE <vnum> confirm: Remover quest mob-posted (gods)
+
+@y===== OBSERVACOES IMPORTANTES =====@n
+
+@r1. Quests PvP (AQ_PLAYER_KILL):@n
+   - Devem ser usadas com extremo cuidado
+   - Podem causar conflitos entre jogadores
+   - Recomenda-se limitar frequencia de posting
+   - Considere desabilitar se houver abuse
+
+@r2. Quests Bounty (AQ_MOB_KILL_BOUNTY):@n
+   - Atualmente desabilitadas (linha 2718 em utils.c)
+   - Sistema rastreia mobs especificos por script_id
+   - Requer mais testes antes de reativar
+
+@g3. Performance:@n
+   - Limite de MAX_MOB_POSTED_QUESTS quests ativas
+   - Quests sao salvas periodicamente
+   - Cleanup automatico de quests completadas
+
+@g4. Balanceamento:@n
+   - Genetica do mob afeta tipo e frequencia de quests
+   - Reputacao do mob afeta recompensas
+   - Dificuldade calculada automaticamente
+
+Veja tambem: QEDIT, QUEST, AUTOQUESTS, CEDIT, MEDIT, QUEST-GAPS
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
+QUEST-GAPS QUEST-FUTURE QUEST-TYPES-FUTURE MISSING-QUESTS
+
+@cANALISE DE LACUNAS NO SISTEMA DE QUESTS@n
+
+   Esta entrada documenta tipos de quest que PODERIAM ser adicionados ao sistema
+baseados nos sistemas existentes de emocoes, reputacao e densidade magica.
+
+@y===== ANALISE DOS SISTEMAS ATUAIS =====@n
+
+@gSistema de Emocoes (20 emocoes):@n
+- Basicas: Fear, Anger, Happiness, Sadness
+- Sociais: Friendship, Love, Trust, Loyalty  
+- Motivacionais: Curiosity, Greed, Pride
+- Empaticas: Compassion, Envy
+- Excitacao: Courage, Excitement
+- Negativas: Disgust, Shame, Pain
+
+@gSistema de Reputacao:@n
+- Escala 0-100
+- Afeta recompensas e aceitacao de quests
+- Aumenta com conclusao, diminui com falhas
+
+@gSistema de Densidade Magica:@n
+- Baseado em clima (tempestades = alta densidade)
+- Baseado em tempo (crepusculo = pico)
+- Baseado em setor (agua/floresta = mais alto)
+- Boosts por zona via Control Weather
+- Afeta poder e custo de magias
+
+@y===== LACUNAS IDENTIFICADAS =====@n
+
+@c1. QUESTS BASEADAS EM EMOCOES@n
+   @rAusentes: Quests Sociais/Diplomaticas@n
+   - Fazer amizades (aumentar friendship)
+   - Ganhar confianca de NPCs (aumentar trust)
+   - Mediar conflitos (reduzir anger)
+   - Confortar NPCs tristes (reduzir sadness)
+   - Construir lealdade com faccao (aumentar loyalty)
+   
+   @gImplementacao sugerida:@n AQ_EMOTION_IMPROVE (tipo 11)
+   - Mob posta quando solitario/zangado/com medo
+   - Triggers: dar presentes, socials, ajudar em combate
+   - Sistema de emocoes ja rastreia isso
+   - Requer interacao social, nao combate
+
+@c2. QUESTS BASEADAS EM MAGIA@n
+   @rAusentes: Quests Magicas@n
+   - Lancar magia em area de alta densidade
+   - Visitar locais com densidade magica especifica
+   - Estabilizar disturbio magico
+   - Aumentar densidade magica de area
+   - Coletar componentes magicos
+   
+   @gImplementacao sugerida:@n AQ_MAGIC_GATHER (tipo 12)
+   - Mob posta quando precisando de poder magico
+   - Player visita X locais com densidade > threshold
+   - Sistema de densidade magica ja calcula isso
+   - Nao-combate, exploracao magica
+
+@c3. QUESTS DE COMERCIO/INTERACAO@n
+   @rAusentes: Quests Sociais Nao-Combate@n
+   - Comerciar itens especificos com NPCs
+   - Ensinar habilidade para NPC
+   - Aprender de NPC
+   - Realizar entretenimento
+   - Espalhar informacao/rumores
+   
+   @gImplementacao sugerida:@n AQ_TRADE (tipo 13)
+   - Usa reputacao para preco
+   - Constroi trust emotion
+   - Alternativa nao-combate
+   - Mob posta quando precisando de item especifico
+
+@c4. QUESTS DE COLETA@n
+   @rAusentes: Colecao de Recursos@n
+   - Coletar X quantidade de itens especificos
+   - Colher do ambiente
+   - Minerar/forragear recursos especificos
+   
+   @gImplementacao sugerida:@n AQ_RESOURCE_GATHER (tipo 14)
+   - Similar a AQ_MOB_KILL mas para objetos
+   - Usa contador (QST_QUANTITY)
+   - Mob posta quando precisando de suprimentos
+
+@c5. QUESTS DE REPUTACAO@n
+   @rAusentes: Construcao de Reputacao@n
+   - Melhorar reputacao com faccao/zona
+   - Restaurar reputacao danificada
+   - Espalhar boa palavra sobre alguem
+   
+   @gImplementacao sugerida:@n AQ_REPUTATION_BUILD (tipo 15)
+   - Completar sub-tarefas (matar/coletar/comerciar)
+   - Sistema de reputacao ja existe
+   - Multi-objetivo complexo
+
+@y===== PRIORIDADES DE IMPLEMENTACAO =====@n
+
+@cALTA PRIORIDADE@n (aproveitam sistemas existentes):
+1. AQ_EMOTION_IMPROVE - Sistema de emocoes completo
+2. AQ_MAGIC_GATHER - Sistema de densidade ja funciona
+3. AQ_DELIVERY - Sistemas de reputacao e trust prontos
+
+@cMEDIA PRIORIDADE@n (implementacao moderada):
+4. AQ_RESOURCE_GATHER - Logica similar a mob kill
+5. AQ_REPUTATION_BUILD - Sistema base existe
+
+@cBAIXA PRIORIDADE@n (implementacao complexa):
+6. AQ_INVESTIGATE - Requer sistema de dialogos
+7. AQ_CRAFT - Requer sistema de crafting (pode nao existir)
+8. AQ_PUZZLE - Requer engine de puzzles
+
+@y===== NOTAS DE IMPLEMENTACAO =====@n
+
+Para cada novo tipo de quest:
+1. Adicionar em quest.h defines (incrementar NUM_AQ_TYPES)
+2. Adicionar em quest_types[] array (quest.c linha 31)
+3. Implementar em format_quest_info() (quest.c)
+4. Adicionar trigger em autoquest_trigger_check() (quest.c)
+5. Criar funcao mob_posts_XXX_quest() em utils.c
+6. Atualizar documentacao help
+7. Adicionar validacao em is_quest_valid()
+8. Testar com mobs de diferentes geneticas
+
+@rCONSIDERACAO IMPORTANTE:@n
+Antes de adicionar novos tipos, avaliar:
+- Balanceamento com tipos existentes
+- Impacto na performance (triggers frequentes?)
+- Complexidade para jogadores
+- Se sistemas necessarios ja existem
+- Se mobs usarao naturalmente
+
+@gEXEMPLO DE USO:@n
+Um mob com alta curiosity e baixa friendship poderia postar:
+- AQ_MAGIC_GATHER se em area de baixa densidade
+- AQ_EMOTION_IMPROVE se muito solitario
+- AQ_DELIVERY se precisando entregar item mas nao querendo sair
+
+Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
 $~
