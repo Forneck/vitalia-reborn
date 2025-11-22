@@ -1428,7 +1428,7 @@ size_t write_to_output(struct descriptor_data *t, const char *txt, ...)
 size_t vwrite_to_output(struct descriptor_data *t, const char *format, va_list args)
 {
     const char *text_overflow = "\r\nOVERFLOW\r\n";
-    static char txt[MAX_STRING_LENGTH];
+    char txt[MAX_STRING_LENGTH];
     size_t wantsize;
     int size;
 

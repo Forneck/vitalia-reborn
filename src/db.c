@@ -3772,7 +3772,8 @@ void free_obj(struct obj_data *obj)
         free_proto_script(obj, OBJ_TRIGGER);
     } else {
         free_object_strings_proto(obj);
-        if (obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)
+        /* Safety check: Validate rnum before accessing obj_proto array */
+        if (VALID_OBJ_RNUM(obj) && obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)
             free_proto_script(obj, OBJ_TRIGGER);
     }
 
