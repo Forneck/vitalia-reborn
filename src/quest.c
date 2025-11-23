@@ -306,7 +306,7 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
              * We search for it as a complete number by checking boundaries */
             pos = strstr(info, room_num_str);
 
-            while (pos != NULL) {
+            if (pos != NULL) {
                 /* Check if this is a complete number match (not part of a larger number) */
                 bool is_start_boundary = (pos == info || !isdigit((unsigned char)*(pos - 1)));
                 bool is_end_boundary = !isdigit((unsigned char)*(pos + room_num_len));
@@ -322,14 +322,10 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                     if (total_len + 1 <= bufsize) {
                         /* Build new message: prefix + room_name_with_zone + suffix */
                         snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_with_zone, info + suffix_start);
-                        info = buf;
-                        break;
+                        /* Successfully formatted, return immediately to avoid further processing */
+                        return buf;
                     }
-                    /* Buffer too small, fall through to use original */
-                    break;
                 }
-                /* Not a complete match, continue searching */
-                pos = strstr(pos + 1, room_num_str);
             }
         }
     }
