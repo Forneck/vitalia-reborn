@@ -2967,7 +2967,6 @@ ACMD(do_toggle)
         {"autogold", PRF_AUTOGOLD, 0, "Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"autosplit", PRF_AUTOSPLIT, 0, "Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
         {"autosac", PRF_AUTOSAC, 0, "Autosac desligado.\r\n", "Autosac ligado.\r\n"},
-        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"autoassist", PRF_AUTOASSIST, 0, "Autoassist desligado.\r\n", "Autoassist ligado.\r\n"},
         {"automap", PRF_AUTOMAP, 1, "Agora, você não irá mais ver o  mini-mapa.\r\n",
          "Agora, você irá ver o  mini-mapa.\r\n"},
@@ -2986,6 +2985,7 @@ ACMD(do_toggle)
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"autotitle", PRF_AUTOTITLE, 0, "Seu título não será mais alterado automaticamente.\r\n",
          "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"\n", 0, -1, "\n", "\n"} /* must be last */
     };
     if (IS_NPC(ch))
