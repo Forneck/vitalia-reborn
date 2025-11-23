@@ -3104,10 +3104,11 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         case AQ_ROOM_FIND:
             snprintf(quest_name, sizeof(quest_name), "Explorar local");
             snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
+            /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
             snprintf(quest_info, sizeof(quest_info),
-                     "Alguém precisa que alguém explore um local específico (%s). "
+                     "Alguém precisa que alguém explore um local específico (%d). "
                      "Vá até lá para receber %d moedas de ouro.",
-                     target_name, calculated_reward);
+                     target_vnum, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
@@ -3357,10 +3358,11 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     } else {
         snprintf(quest_name, sizeof(quest_name), "Limpar área");
         snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
+        /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
         snprintf(quest_info, sizeof(quest_info),
-                 "%s precisa que alguém limpe uma área específica (%s) de todas as criaturas hostis. "
+                 "%s precisa que alguém limpe uma área específica (%d) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
-                 GET_NAME(ch), target_name, calculated_reward);
+                 GET_NAME(ch), target_vnum, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Perfeito! A área está limpa e segura agora!");
     }
 
