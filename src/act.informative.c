@@ -29,7 +29,7 @@
 #include "asciimap.h"
 #include "quest.h"
 #include "spedit.h"
-#include "string.h" /* garante que strcmp/strlcpy/strtok estejam disponíveis */
+#include "string.h"  /* garante que strcmp/strlcpy/strtok estejam disponíveis */
 
 /* Mapeia nomes crus de AFF (affected_bits) para nomes amigáveis. */
 static const char *aff_pretty_name(const char *raw)
@@ -42,18 +42,12 @@ static const char *aff_pretty_name(const char *raw)
         return "";
 
     /* ---------- DEBUFFS / STATUS NEGATIVOS ---------- */
-    if (!strcmp(raw, "BLIND"))
-        return "blindness";
-    if (!strcmp(raw, "CURSE"))
-        return "curse";
-    if (!strcmp(raw, "POISON"))
-        return "poison";
-    if (!strcmp(raw, "SLEEP"))
-        return "sleep";
-    if (!strcmp(raw, "PARALYZE"))
-        return "paralyze";
-    if (!strcmp(raw, "CHARM"))
-        return "charm";
+    if (!strcmp(raw, "BLIND"))       return "blindness";
+    if (!strcmp(raw, "CURSE"))       return "curse";
+    if (!strcmp(raw, "POISON"))      return "poison";
+    if (!strcmp(raw, "SLEEP"))       return "sleep";
+    if (!strcmp(raw, "PARALYZE"))    return "paralyze";
+    if (!strcmp(raw, "CHARM"))       return "charm";
 
     /* (Opcional) você pode considerar alguns como “controle”:
      * TALKDEAD = falar com mortos (já mapeado em buff abaixo)
@@ -61,60 +55,33 @@ static const char *aff_pretty_name(const char *raw)
      */
 
     /* ---------- BUFFS / STATUS POSITIVOS E UTILITÁRIOS ---------- */
-    if (!strcmp(raw, "INVIS"))
-        return "invisibility";
-    if (!strcmp(raw, "DET-ALIGN"))
-        return "detect alignment";
-    if (!strcmp(raw, "DET-INVIS"))
-        return "detect invisibility";
-    if (!strcmp(raw, "DET-MAGIC"))
-        return "detect magic";
-    if (!strcmp(raw, "SENSE-LIFE"))
-        return "sense life";
-    if (!strcmp(raw, "WATWALK"))
-        return "waterwalk";
-    if (!strcmp(raw, "SANCT"))
-        return "sanctuary";
-    if (!strcmp(raw, "GROUP"))
-        return "group";
-    if (!strcmp(raw, "INFRA"))
-        return "infravision";
-    if (!strcmp(raw, "PROT-EVIL"))
-        return "protection from evil";
-    if (!strcmp(raw, "PROT-GOOD"))
-        return "protection from good";
-    if (!strcmp(raw, "NO_TRACK"))
-        return "no track";
-    if (!strcmp(raw, "STONESKIN"))
-        return "stoneskin";
-    if (!strcmp(raw, "FIRESHIELD"))
-        return "fireshield";
-    if (!strcmp(raw, "TALKDEAD"))
-        return "talk with dead";
-    if (!strcmp(raw, "FLYING"))
-        return "fly";
-    if (!strcmp(raw, "BREATH"))
-        return "breath";
-    if (!strcmp(raw, "LIGHT"))
-        return "light";
-    if (!strcmp(raw, "FIREFLIES"))
-        return "fireflies";
-    if (!strcmp(raw, "STINGING"))
-        return "stinging swarm";
-    if (!strcmp(raw, "THISTLECOAT"))
-        return "thistlecoat";
-    if (!strcmp(raw, "SOUNDBARRIER"))
-        return "soundbarrier";
-    if (!strcmp(raw, "ADAGIO"))
-        return "adagio";
-    if (!strcmp(raw, "ALLEGRO"))
-        return "allegro";
-    if (!strcmp(raw, "GLOOMSHIELD"))
-        return "gloomshield";
-    if (!strcmp(raw, "PROT-SPELL"))
-        return "protection from spells";
-    if (!strcmp(raw, "WINDWALL"))
-        return "windwall";
+    if (!strcmp(raw, "INVIS"))        return "invisibility";
+    if (!strcmp(raw, "DET-ALIGN"))    return "detect alignment";
+    if (!strcmp(raw, "DET-INVIS"))    return "detect invisibility";
+    if (!strcmp(raw, "DET-MAGIC"))    return "detect magic";
+    if (!strcmp(raw, "SENSE-LIFE"))   return "sense life";
+    if (!strcmp(raw, "WATWALK"))      return "waterwalk";
+    if (!strcmp(raw, "SANCT"))        return "sanctuary";
+    if (!strcmp(raw, "GROUP"))        return "group";
+    if (!strcmp(raw, "INFRA"))        return "infravision";
+    if (!strcmp(raw, "PROT-EVIL"))    return "protection from evil";
+    if (!strcmp(raw, "PROT-GOOD"))    return "protection from good";
+    if (!strcmp(raw, "NO_TRACK"))     return "no track";
+    if (!strcmp(raw, "STONESKIN"))    return "stoneskin";
+    if (!strcmp(raw, "FIRESHIELD"))   return "fireshield";
+    if (!strcmp(raw, "TALKDEAD"))     return "talk with dead";
+    if (!strcmp(raw, "FLYING"))       return "fly";
+    if (!strcmp(raw, "BREATH"))       return "breath";
+    if (!strcmp(raw, "LIGHT"))        return "light";
+    if (!strcmp(raw, "FIREFLIES"))    return "fireflies";
+    if (!strcmp(raw, "STINGING"))     return "stinging swarm";
+    if (!strcmp(raw, "THISTLECOAT"))  return "thistlecoat";
+    if (!strcmp(raw, "SOUNDBARRIER")) return "soundbarrier";
+    if (!strcmp(raw, "ADAGIO"))       return "adagio";
+    if (!strcmp(raw, "ALLEGRO"))      return "allegro";
+    if (!strcmp(raw, "GLOOMSHIELD"))  return "gloomshield";
+    if (!strcmp(raw, "PROT-SPELL"))   return "protection from spells";
+    if (!strcmp(raw, "WINDWALL"))     return "windwall";
 
     return raw;
 }
@@ -151,7 +118,7 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;
-    bool skip_modifiers = FALSE; /* controla se vamos suprimir (zunindo), (aura...), etc */
+    bool skip_modifiers = FALSE;  /* controla se vamos suprimir (zunindo), (aura...), etc */
 
     if (!obj || !ch) {
         log1("SYSERR: NULL pointer in show_obj_to_char(): obj=%p ch=%p", (void *)obj, (void *)ch);
@@ -197,42 +164,59 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
             send_to_char(ch, "%s", obj->description);
             break;
 
-        case SHOW_OBJ_SHORT:
-            /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
-            if (IN_ROOM(ch) != NOWHERE && ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) && IN_ROOM(obj) == IN_ROOM(ch) &&
-                PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
+case SHOW_OBJ_SHORT:
+    /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
+    if (IN_ROOM(ch) != NOWHERE &&
+        ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+        IN_ROOM(obj) == IN_ROOM(ch) &&
+        PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
 
 #ifdef GET_OBJ_LEVEL
-                int lvl = GET_OBJ_LEVEL(obj);
+        int lvl = GET_OBJ_LEVEL(obj);
 #else
-                int lvl = 0; /* Se não houver nível definido, mostra 0 ou ajuste conforme sua lógica */
+        int lvl = 0; /* ou outra lógica de nível */
 #endif
 
-                /* Formato:
-                 * nome do item [Nv. XX]
-                 *
-                 * - nome: branco
-                 * - colchetes: CIANO ESCURO (CCCYN)
-                 * - "Nv": VERDE ESCURO (CCGRN)
-                 * - ". XX": branco (CCNRM)
-                 */
-                send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s", CCWHT(ch, C_NRM), /* nome em branco */
-                             obj->short_description, CCCYN(ch, C_NRM),        /* abre colchete em ciano escuro */
-                             CCGRN(ch, C_NRM),                                /* 'Nv' em verde escuro */
-                             CCNRM(ch, C_NRM),                                /* volta para branco para '. XX' */
-                             lvl, CCCYN(ch, C_NRM),                           /* fecha colchete em ciano escuro */
-                             CCNRM(ch, C_NRM));                               /* reseta cor */
+        /* Modo alternativo: nome + [Nv. XX], sem flags */
+        send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
+                     CCGRN(ch, C_NRM),         /* nome em verde escuro */
+                     obj->short_description,
+                     CCCYN(ch, C_NRM),         /* [ em ciano escuro */
+                     CCGRN(ch, C_NRM),         /* Nv em verde escuro */
+                     CCNRM(ch, C_NRM),         /* . XX em branco */
+                     lvl,
+                     CCCYN(ch, C_NRM),         /* ] em ciano escuro */
+                     CCNRM(ch, C_NRM));        /* reset */
 
-                /* Não mostrar (zunindo), (aura brilhante), etc, neste modo alternativo */
-                skip_modifiers = TRUE;
-            } else {
-                /* Modo "comum" atual: S-DESC com modifiers (zunindo, aura, etc.) */
-                if (obj->short_description)
-                    send_to_char(ch, "%s", obj->short_description);
-                else
-                    send_to_char(ch, "Algo.");
-            }
-            break;
+        skip_modifiers = TRUE;  /* NÃO mostra (zunindo), (aura...), etc */
+
+    }
+    /* Casa, item no chão, mas inventário alternativo DESLIGADO:
+       só pinta o nome de verde e mantém modifiers */
+    else if (IN_ROOM(ch) != NOWHERE &&
+             ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+             IN_ROOM(obj) == IN_ROOM(ch)) {
+
+        if (obj->short_description)
+            send_to_char(ch, "%s%s%s",
+                         CCGRN(ch, C_NRM),      /* verde escuro */
+                         obj->short_description,
+                         CCNRM(ch, C_NRM));     /* reset */
+        else
+            send_to_char(ch, "%sAlgo.%s",
+                         CCGRN(ch, C_NRM),
+                         CCNRM(ch, C_NRM));
+        /* aqui NÃO mexemos em skip_modifiers → flags aparecem normalmente */
+
+    }
+    /* Qualquer outro caso (fora de casa, inventário, containers, etc.) */
+    else {
+        if (obj->short_description)
+            send_to_char(ch, "%s", obj->short_description);
+        else
+            send_to_char(ch, "Algo.");
+    }
+    break;
 
         case SHOW_OBJ_ACTION:
             switch (GET_OBJ_TYPE(obj)) {
@@ -273,6 +257,7 @@ end:
 
     send_to_char(ch, "\r\n");
 }
+
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
@@ -1002,6 +987,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
     list_char_to_char(world[IN_ROOM(ch)].people, ch);
 
+
     /* Show mana density if character has detect magic active */
     if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
         float mana_density = calculate_mana_density(ch);
@@ -1549,11 +1535,15 @@ ACMD(do_affects)
         if (aff->duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, (aff->duration == 1) ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s",
+                     aff->duration,
+                     (aff->duration == 1) ? "" : "s");
         }
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
-        send_to_char(ch, "  \tW%s\tn \tW[\tc%s\tW]\tn\r\n", skill_name(aff->spell), duration_buf);
+        send_to_char(ch, "  \tW%s\tn \tW[\tc%s\tW]\tn\r\n",
+                     skill_name(aff->spell),
+                     duration_buf);
         has_spell_affects = 1;
     }
 
@@ -2977,6 +2967,7 @@ ACMD(do_toggle)
         {"autogold", PRF_AUTOGOLD, 0, "Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"autosplit", PRF_AUTOSPLIT, 0, "Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
         {"autosac", PRF_AUTOSAC, 0, "Autosac desligado.\r\n", "Autosac ligado.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"autoassist", PRF_AUTOASSIST, 0, "Autoassist desligado.\r\n", "Autoassist ligado.\r\n"},
         {"automap", PRF_AUTOMAP, 1, "Agora, você não irá mais ver o  mini-mapa.\r\n",
          "Agora, você irá ver o  mini-mapa.\r\n"},
@@ -2995,7 +2986,6 @@ ACMD(do_toggle)
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"autotitle", PRF_AUTOTITLE, 0, "Seu título não será mais alterado automaticamente.\r\n",
          "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
-        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"\n", 0, -1, "\n", "\n"} /* must be last */
     };
     if (IS_NPC(ch))
