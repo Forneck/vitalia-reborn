@@ -2154,10 +2154,45 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
             break;
         case AQ_OBJ_FIND:
         case AQ_ROOM_FIND:
+        case AQ_MOB_FIND:
             capability += GET_GENROAM(mob); /* Exploration quests need roaming */
+            break;
+        case AQ_MOB_SAVE:
+            /* Saving mobs requires bravery (to fight off threats) and compassion */
+            capability += (GET_GENBRAVE(mob) + GET_GENHEALING(mob)) / 2;
+            break;
+        case AQ_OBJ_RETURN:
+        case AQ_DELIVERY:
+            /* Delivery quests need roaming and quest tendency */
+            capability += (GET_GENROAM(mob) + GET_GENQUEST(mob)) / 2;
             break;
         case AQ_ROOM_CLEAR:
             capability += (GET_GENBRAVE(mob) + GET_GENGROUP(mob)) / 2; /* Need both */
+            break;
+        case AQ_MOB_ESCORT:
+            /* Escort quests require bravery (to protect) and group tendency */
+            capability += (GET_GENBRAVE(mob) + GET_GENGROUP(mob)) / 2;
+            break;
+        case AQ_EMOTION_IMPROVE:
+            /* Emotion quests benefit from healing tendency (social skills) */
+            capability += GET_GENHEALING(mob);
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Magic gathering requires adventurer and roaming tendencies */
+            capability += (GET_GENADVENTURER(mob) + GET_GENROAM(mob)) / 2;
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Resource gathering needs loot and quest tendencies */
+            capability += (GET_GENLOOT(mob) + GET_GENQUEST(mob)) / 2;
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Reputation building benefits from trade and healing (social) tendencies */
+            capability += (GET_GENTRADE(mob) + GET_GENHEALING(mob)) / 2;
+            break;
+        case AQ_SHOP_BUY:
+        case AQ_SHOP_SELL:
+            /* Shop quests require trade tendency */
+            capability += GET_GENTRADE(mob);
             break;
     }
 
