@@ -23,6 +23,14 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 22
+GenLoot: 100
+GenEquip: 100
+GenBrave: 73
+GenUse: 100
+GenQuest: 8
+GenFollow: 13
+GenHealing: 100
 E
 #12601
 Herda deusa~
@@ -70,6 +78,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 14
 E
 #12603
 Ve deus criador~
@@ -137,6 +147,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 10
+GenFollow: 13
 E
 #12606
 Thor deus senhor trovoes~
@@ -159,6 +171,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 14
 E
 #12607
 Tir deus batalha~
@@ -213,6 +227,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 6
+GenFollow: 15
 E
 #12609
 Friga deusa fertilidade~
@@ -338,6 +354,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 33
+GenFollow: 15
 E
 #12614
 Njord deus~
@@ -607,6 +625,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 7
+GenFollow: 15
 E
 #12626
 Fafnir gigantesco dragao anao~
@@ -1252,6 +1272,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 7
+GenFollow: 14
 E
 #12653
 Skrymir gigante gelo~
@@ -1295,6 +1317,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 14
 E
 #12655
 Logi fogo~
@@ -1315,6 +1339,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 12
 E
 #12656
 Angerbode giganta profetisa~
@@ -1401,6 +1427,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 2
+GenLoot: 2
+GenEquip: 1
+GenFollow: 10
 E
 #12660
 Geri lobo~
@@ -1424,6 +1454,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 2
+GenFollow: 10
 E
 #12661
 Freki lobo~
@@ -1447,6 +1479,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 2
+GenFollow: 11
 E
 #12662
 Schrinnir javali~
@@ -1517,7 +1551,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 4
+GenWimpy: 17
+GenFollow: 15
 E
 #12665
 Sleipnir cavalo~
@@ -1560,7 +1595,8 @@ Wis: 18
 Con: 21
 Cha: 18
 GenWimpy: 4
-GenRoam: 84
+GenRoam: 85
+GenFollow: 10
 E
 #12667
 Jormungand serpente~
@@ -1624,6 +1660,10 @@ chegada do Ragnarok.
 9 9 1
 BareHandAttack: 1
 Cha: 18
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 61
+GenFollow: 4
 E
 #12670
 Nidhogg dragao~
@@ -1650,6 +1690,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenFollow: 16
 E
 #12671
 aguia guardia~
@@ -1688,7 +1730,8 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 6
+GenWimpy: 7
+GenFollow: 10
 E
 #12673
 Tanngrisni bode~
@@ -1706,7 +1749,8 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 5
+GenWimpy: 6
+GenFollow: 10
 E
 #12674
 Ratatosk esquilo~
@@ -1723,7 +1767,8 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 67
+GenWimpy: 87
+GenFollow: 10
 E
 #12675
 Dvalin soberano anao~
@@ -1817,6 +1862,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenRoam: 82
+GenFollow: 18
 E
 #12679
 viking noruegues~
@@ -1843,6 +1891,10 @@ Wis: 18
 Con: 18
 Cha: 18
 GenWimpy: 5
+GenLoot: 8
+GenRoam: 89
+GenGroup: 1
+GenFollow: 13
 E
 #12680
 viking islandes~
@@ -1962,8 +2014,10 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 32
-GenRoam: 66
+GenWimpy: 64
+GenLoot: 1
+GenRoam: 20
+GenFollow: 12
 E
 #12685
 cavalo selvagem~
@@ -1984,8 +2038,9 @@ Int: 15
 Wis: 15
 Con: 18
 Cha: 18
-GenWimpy: 6
+GenWimpy: 9
 GenLoot: 3
+GenFollow: 12
 E
 #12686
 navio guerra viking~
@@ -2031,6 +2086,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 15
 E
 #12688
 linda elfa luminosa~
@@ -2053,6 +2110,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 15
 E
 #12689
 anao subterraneo~
@@ -2120,8 +2179,10 @@ Int: 15
 Wis: 13
 Con: 16
 Cha: 18
-GenWimpy: 25
-GenRoam: 82
+GenWimpy: 34
+GenLoot: 2
+GenRoam: 7
+GenFollow: 14
 E
 #12692
 foca~
@@ -2197,6 +2258,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 10
+GenRoam: 66
+GenFollow: 4
 E
 #12696
 grande lobo~
@@ -2217,8 +2281,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 50
-GenRoam: 57
+GenWimpy: 100
+GenLoot: 16
+GenFollow: 10
 E
 #12697
 ave marinha~
@@ -2238,7 +2303,8 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
-GenWimpy: 18
+GenWimpy: 22
+GenFollow: 10
 E
 #12698
 berserk~
@@ -2261,8 +2327,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 8
-GenRoam: 83
+GenWimpy: 5
+GenRoam: 86
+GenFollow: 14
 E
 #12699
 sif esposa~

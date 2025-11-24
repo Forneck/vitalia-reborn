@@ -11,8 +11,10 @@ condições de dizer de que cor ele seria de verdade!
 0 150
 9 9 1
 BareHandAttack: 4
-GenWimpy: 20
-GenRoam: 87
+GenWimpy: 41
+GenLoot: 2
+GenRoam: 88
+GenFollow: 4
 E
 #2401
 fantasma pirata~
@@ -26,9 +28,10 @@ distinguir exatamente qual seria o seu aspecto.
 8 16 6 2d9+150 1d3+7
 0 3998
 9 9 1
-GenWimpy: 82
-GenLoot: 1
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 39
+GenRoam: 88
+GenFollow: 8
 E
 #2402
 capitao capitão fantasma~
@@ -42,6 +45,8 @@ viu.  E muito maior!
 50 -1 -6 10d11+2250 5d4+22
 0 66000
 9 9 1
+GenWimpy: 4
+GenFollow: 12
 E
 #2403
 fantasma cozinheiro pirata~
@@ -81,6 +86,9 @@ Esse velho não parece nem ter percebido que você adentrou em seus aposentos.
 784 23432
 6 6 1
 BareHandAttack: 5
+GenWimpy: 5
+GenLoot: 6
+GenFollow: 10
 E
 #2406
 pilha ossos~

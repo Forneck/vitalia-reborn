@@ -465,9 +465,14 @@ static void zedit_disp_menu(struct descriptor_data *d)
         write_to_output(d, "%s%d - %s", nrm, counter++, yel);
         switch (MYCMD.command) {
             case 'M':
-                write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sLoad %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'C':
                 write_to_output(d, "%sCheck %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
@@ -475,25 +480,46 @@ static void zedit_disp_menu(struct descriptor_data *d)
                                 MYCMD.arg1);
                 break;
             case 'G':
-                write_to_output(d, "%sGive it %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sGive it %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sGive it %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'O':
-                write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sLoad %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'E':
-                write_to_output(d, "%sEquip with %s [%s%d%s], %s, Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                equipment_types[MYCMD.arg3], MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sEquip with %s [%s%d%s], %s, Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    equipment_types[MYCMD.arg3], -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sEquip with %s [%s%d%s], %s, Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    equipment_types[MYCMD.arg3], MYCMD.arg2);
                 break;
             case 'P':
-                write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'R':
                 write_to_output(d, "%sRemove %s [%s%d%s] from room.", MYCMD.if_flag ? " then " : "",
@@ -609,7 +635,7 @@ static void zedit_disp_arg2(struct descriptor_data *d)
         case 'E':
         case 'P':
         case 'G':
-            write_to_output(d, "Input the maximum number that can exist on the mud : ");
+            write_to_output(d, "Input the maximum number (or negative for %% chance, e.g. -50 = 50%%) : ");
             break;
         case 'D':
             for (i = 0; *dirs[i] != '\n'; i++) {
@@ -1022,25 +1048,33 @@ void zedit_parse(struct descriptor_data *d, char *arg)
             /*-------------------------------------------------------------------*/
         case ZEDIT_ARG2:
             /* Parse the input for arg2, and goto next quiz. */
-            if (!isdigit(*arg)) {
+            if (!is_number(arg)) {
                 write_to_output(d, "Must be a numeric value, try again : ");
                 return;
             }
             switch (OLC_CMD(d).command) {
                 case 'M':
                 case 'O':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
-                    OLC_CMD(d).arg3 = real_room(OLC_NUM(d));
-                    zedit_disp_menu(d);
-                    break;
                 case 'G':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
-                    zedit_disp_menu(d);
-                    break;
                 case 'P':
                 case 'E':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
-                    zedit_disp_arg3(d);
+                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
+                     * MAX_DUPLICATES */
+                    pos = atoi(arg);
+                    if (pos < 0)
+                        OLC_CMD(d).arg2 = MAX(-100, pos);
+                    else
+                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
+
+                    /* Now handle command-specific logic */
+                    if (OLC_CMD(d).command == 'M' || OLC_CMD(d).command == 'O') {
+                        OLC_CMD(d).arg3 = real_room(OLC_NUM(d));
+                        zedit_disp_menu(d);
+                    } else if (OLC_CMD(d).command == 'G') {
+                        zedit_disp_menu(d);
+                    } else { /* 'P' or 'E' */
+                        zedit_disp_arg3(d);
+                    }
                     break;
                 case 'V':
                     OLC_CMD(d).arg2 = atoi(arg); /* context */

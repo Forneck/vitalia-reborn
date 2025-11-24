@@ -213,7 +213,7 @@ Uma bela túnica amarela foi perdida aqui.~
 ~
 9 ak 0 0 0 ak 0 0 0 0 0 0 0
 10 0 0 0
-17 100000 70000 73 0
+17 100000 70000 30 0
 E
 tunica imperial chinesa~
 Está linda túnica imperial chinesa foi feita de seda amarela, possuindo 
@@ -269,11 +269,11 @@ oracao buda~
 
 Kang ri ra wa sching kam sou
 Pen dang de wa ma lu dschung wa ne
-@Rbaohe lin tsung lee-dah@n
+	Rbaohe lin tsung lee-dah	n
 
 Chen´re zig wang ten Tzin gya Tso yi
 Schab pe si ta bar du ten gyur tchig
-@Rbaohe lin tsung lee-duh@n
+	Rbaohe lin tsung lee-duh	n
 ~
 #17626
 tunica~
@@ -393,7 +393,7 @@ esfera rosada de energia.
 A
 18 1
 A
-19 1
+19 2
 A
 17 -3
 A
@@ -419,7 +419,7 @@ Uma bela alabarda parece o chamar com o seu brilho intenso.~
 ~
 5 adgiknq 0 0 0 an 0 0 0 0 0 0 0
 0 8 5 17
-14 800000 1000 87 0
+14 800000 1000 70 0
 E
 alabarda kuan tao~
 Olhando para esta alabarda, você pode ver que ela foi de um longo pedaço 
@@ -614,4 +614,12 @@ O corpo de uma cobra morta foi perdido aqui.~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 18 0 0 0
 2 40 0 0 0
+#17650
+flecha leve bambu~
+algumas flechas leves~
+Um amontoado de flechas de bambu estao aqui.~
+~
+7 d 0 0 0 au 0 0 0 0 0 0 0
+10 3 2 16
+5 900 3 0 0
 $~

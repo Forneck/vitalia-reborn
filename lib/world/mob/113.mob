@@ -46,6 +46,8 @@ carregando como item de valor apenas o sinal do templo.
 44 0 -5 1d50+450 15d3+14
 30000 150000
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #11303
 anjali nagini graciosa sacerdotisa~
@@ -112,6 +114,8 @@ aparadas.  A barba alva, curta e bem-cuidada, envelhece o rosto jovial.
 33 0 -6 25d2+450 15d2+30
 6000 80000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #11307
 nagini sorridente mira atendente~
@@ -260,6 +264,8 @@ outra mão segura um pano para limpar as mesas.
 4 17 6 1d1+55 1d8+0
 50 600
 9 9 1
+GenWimpy: 1
+GenFollow: 4
 E
 #11316
 naga entediado~
@@ -274,6 +280,8 @@ Irá satisfazê-lo.
 19 1 -1 3d6+240 3d6+8
 1000 35000
 9 9 1
+GenWimpy: 4
+GenFollow: 13
 E
 #11317
 pisacha metal ferro demonio~
@@ -289,6 +297,8 @@ para o alvo de dardos: ele logo irá jogar.
 21 9 0 3d6+130 2d8+11
 400 21000
 9 9 1
+GenWimpy: 1
+GenFollow: 5
 E
 #11318
 naga~
@@ -303,6 +313,8 @@ a alguns metros de distância.  Ele parece bem concentrado.
 31 1 -1 6d3+550 4d6+12
 750 30500
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #11319
 naga rastreador belo~
@@ -320,6 +332,8 @@ realmente raro.
 50 -8 -9 7d7+1100 7d5+20
 6000 95000
 4 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #11320
 demonio rakshasi habilidosa~
@@ -336,6 +350,8 @@ criminosa, mas agora trabalha pela lei.
 26 0 -2 12d8+590 4d6+10
 0 50000
 9 9 1
+GenWimpy: 2
+GenFollow: 10
 E
 #11321
 kalidas naga senhor~
@@ -431,6 +447,8 @@ perceber, de relance, muitas armas brilhando à luz das poucas tochas.
 108 0 -10 10d100+2000 5d10+100
 18794 100000
 9 9 2
+GenWimpy: 3
+GenFollow: 15
 E
 #11328
 druidesa gentil mestre guia druidas~
@@ -479,6 +497,8 @@ Ele considera sua vida já plena.
 108 0 -10 10d100+2000 5d10+100
 18794 100000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #11331
 naga feiticeiro~
@@ -494,7 +514,6 @@ lhe rendeu o posto de guardião. Ele sabe ser fatal.
 2000 60000
 9 9 1
 E
-T 11300
 #11332
 nagini templar~
 a nagini templar~
@@ -509,8 +528,9 @@ alguém.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
-T 11301
 #11333
 assassina nagini~
 a nagini assassina~
@@ -525,8 +545,9 @@ como arma. Será muito difícil sobreviver a ela.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 2
+GenWimpy: 3
+GenFollow: 15
 E
-T 11302
 #11334
 nagini guerreira~
 a nagini guerreira~
@@ -543,7 +564,6 @@ aqui, e agora.
 2000 160000
 9 9 2
 E
-T 11303
 #11335
 druida naga paciente~
 o druida naga~
@@ -558,7 +578,6 @@ todo seu grande poder druídico, custe o que custar.
 2000 160000
 9 9 1
 E
-T 11305
 #11336
 serpente pequena rubi~
 uma pequena serpente de rubi~
@@ -571,6 +590,8 @@ consegue fazer na água.  Ela não parece se intimidar com sua presença.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 2
+GenWimpy: 1
+GenFollow: 7
 E
 T 3008
 #11337
@@ -601,6 +622,9 @@ azul-escuro.
 8 15 2 50d1+30 3d3+3
 0 3000
 9 9 2
+GenWimpy: 2
+GenGroup: 1
+GenFollow: 9
 E
 #11339
 lagarto ônix negro pequeno~
@@ -630,6 +654,8 @@ mágica.
 9 11 2 50d1+40 3d3+4
 0 5000
 9 9 2
+GenWimpy: 2
+GenFollow: 10
 E
 T 3008
 #11341
@@ -647,6 +673,8 @@ pintura negra nas maçãs do rosto.
 15 -2 -6 5d20+900 1d10+10
 1500 25000
 9 9 1
+GenWimpy: 4
+GenFollow: 18
 E
 T 3013
 #11342
@@ -664,6 +692,9 @@ avermelhados, presos com fios dourados, rosto limpo e unhas negras.
 15 0 -6 5d20+900 1d10+12
 1500 25000
 9 9 1
+GenWimpy: 3
+GenGroup: 25
+GenFollow: 14
 E
 T 3013
 #11343
@@ -683,6 +714,8 @@ que vão da ponta de sua cauda até a nuca. São muito perigosos.
 4000 90500
 9 9 1
 BareHandAttack: 10
+GenWimpy: 3
+GenFollow: 14
 E
 T 3013
 T 3008
@@ -706,9 +739,10 @@ portões e controlando o canal a seu redor.
 4000 110500
 9 9 1
 BareHandAttack: 10
+GenWimpy: 3
+GenFollow: 12
 E
 T 3013
-
 #11346
 artesao naga~
 um artesão naga~
@@ -721,9 +755,8 @@ por sua qualidade excepcional.
 2156546 0 0 0 0 0 0 0 600 E
 21 2 1 1d9+275 2d7+3
 950 9500
-8 8 1
+9 9 1
 E
-
 #11347
 joalheiro naga~
 o joalheiro naga~
@@ -736,9 +769,8 @@ são consideradas obras de arte.
 2156546 0 0 0 0 0 0 0 650 E
 23 1 0 1d10+300 3d6+4
 1100 11000
-8 8 1
+9 9 1
 E
-
 #11348
 sacerdote pedras~
 o sacerdote das pedras~
@@ -751,9 +783,8 @@ as gemas antes de serem transformadas em joias.
 2156546 0 0 0 0 0 0 0 625 E
 22 1 1 1d9+287 2d7+3
 1000 10000
-8 8 1
+9 9 1
 E
-
 #11349
 principe naga~
 o príncipe naga~
@@ -766,7 +797,6 @@ comandam respeito de todos os habitantes da cidade.
 2156546 0 0 0 0 0 0 0 700 E
 26 -1 -2 1d12+350 3d8+5
 1300 13000
-8 8 1
+9 9 1
 E
-
 $

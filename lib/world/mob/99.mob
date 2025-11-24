@@ -24,6 +24,8 @@ túmulo na colina.
 40 -3 -12 3d5+2200 7d5+5
 1000 112000
 9 9 2
+GenWimpy: 5
+GenFollow: 11
 E
 #9902
 banshee mulher morta~
@@ -38,6 +40,9 @@ esfarrapados.
 35 -2 -10 3d8+1590 4d9+6
 5000 100000
 9 9 2
+GenWimpy: 8
+GenRoam: 88
+GenFollow: 19
 E
 #9903
 argus monstro~
@@ -68,9 +73,9 @@ dos mais terríveis predadores.
 15 0 10 1d3+210 3d7+2
 666 22300
 9 9 1
-GenWimpy: 7
-GenRoam: 84
-GenGroup: 3
+GenWimpy: 25
+GenRoam: 89
+GenFollow: 12
 E
 #9905
 quebrado~
@@ -84,8 +89,10 @@ um pé humano, e várias outras partes de corpos incompatíveis.
 20 -1 2 1d1+666 2d9+4
 2500 39000
 9 9 1
-GenWimpy: 8
-GenRoam: 2
+GenWimpy: 21
+GenRoam: 85
+GenGroup: 3
+GenFollow: 13
 E
 #9906
 capanga~
@@ -137,6 +144,9 @@ de carne podre.
 38 -10 -20 9d6+5050 11d4+20
 33000 250000
 9 9 1
+GenWimpy: 9
+GenRoam: 63
+GenFollow: 14
 E
 #9910
 abismo dragao cobra~
@@ -164,8 +174,10 @@ branca, mas ele parece ainda bastante vigoroso.
 10 0 0 25d8+100 4d3+3
 6662 6950
 9 9 1
-GenWimpy: 61
+GenWimpy: 84
 GenLoot: 1
+GenRoam: 78
+GenFollow: 18
 E
 #9912
 elfo~
@@ -194,6 +206,10 @@ muitas cores.
 100 -40 -40 5d10+23900 11d11+70
 79000 4750000
 9 9 1
+GenWimpy: 12
+GenLoot: 1
+GenBrave: 2
+GenFollow: 14
 E
 #9914
 medusa mulher~
@@ -219,6 +235,10 @@ Ele é simplesmente horrível...
 10 5 10 25d3+5 2d6+1
 250 1300
 9 9 1
+GenWimpy: 6
+GenRoam: 78
+GenGroup: 5
+GenFollow: 7
 E
 #9916
 garcom~
@@ -231,6 +251,8 @@ Há um garçom parado aqui, aguardando por suas ordens.
 30 0 -10 1d1+5650 5d5+5
 15000 125000
 9 9 1
+GenWimpy: 16
+GenFollow: 13
 E
 #9917
 cidadão~
@@ -244,8 +266,9 @@ maravilhosa cidade.
 10 3 9 1d1+150 6d2+3
 2200 6000
 9 9 1
-GenWimpy: 4
-GenRoam: 47
+GenWimpy: 14
+GenRoam: 89
+GenFollow: 18
 E
 #9918
 senhora velha vendedora~
@@ -274,6 +297,8 @@ o ar assim que ele o ataca.
 100 -30 -40 1d8+20000 14d3+65
 100000 3250000
 9 9 1
+GenWimpy: 60
+GenFollow: 14
 E
 #9931
 parede pé~
@@ -387,6 +412,9 @@ Você vê um musculoso e careca humanóide, vestido em uma túnica.
 20 0 0 30d5+20 4d4+7
 943 10900
 9 9 1
+GenWimpy: 4
+GenRoam: 81
+GenFollow: 17
 E
 #9986
 maedar mestre~
@@ -413,6 +441,9 @@ tentando erradica-los da face do planeta.
 30 -3 0 5d5+625 4d4+10
 25000 138000
 9 9 1
+GenWimpy: 4
+GenRoam: 63
+GenFollow: 14
 E
 #9989
 dragao dragonet~
@@ -426,6 +457,9 @@ de um chihuahua.
 30 0 0 2d4+100 3d4+3
 350 5200
 9 9 1
+GenWimpy: 6
+GenRoam: 83
+GenFollow: 11
 E
 #9994
 barata~

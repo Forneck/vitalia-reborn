@@ -163,9 +163,9 @@ mandibula tam'ala~
 a mandíbula de um Tam'ala~
 A mandíbula de um Tam'ala foi abandonada aqui.~
 ~
-9 jl 0 0 0 ar 0 0 0 0 0 0 0
-2 0 0 0
-19 300 0 30 0
+9 j 0 0 0 ar 0 0 0 0 0 0 0
+8 0 0 0
+19 300 0 0 0
 A
 2 1
 A
@@ -190,8 +190,8 @@ o cajado da sabedoria~
 Um cajado forjado de rochas foi abandonado aqui.~
 ~
 4 agk 0 0 0 ao 0 0 0 0 0 0 0
-30 3 3 35
-3 0 0 30 0
+100 3 3 3
+3 0 0 0 0
 A
 4 1
 #4217
@@ -266,8 +266,8 @@ a poção da miragem~
 Uma poção parda foi esquecida na areia.~
 ~
 10 a 0 0 0 a 0 0 0 0 0 0 0
-4 42 -1 -1
-1 470 0 23 0
+100 33 2 43
+1 470 0 0 0
 #4224
 presas aspide~
 as presas de uma áspide~

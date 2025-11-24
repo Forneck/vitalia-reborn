@@ -51,6 +51,9 @@ int school_weather_affects = NO;
 int max_pathfind_iterations = 0; /* 0 = dynamic scaling, >0 = fixed value - can be adjusted in CEDIT */
 int max_zone_path = 0;           /* 0 = dynamic scaling, >0 = fixed value - can be adjusted in CEDIT */
 
+/* Maximum number of objects allowed in a player-owned house. */
+int max_house_objs = 60; /* Default limit of 60 objects per house */
+
 /* pk_allowed sets the tone of the entire game.  If pk_allowed is set to NO,
  * then players will not be allowed to kill, summon, charm, or sleep other
  * players, as well as a variety of other "asshole player" protections. However,
@@ -191,14 +194,20 @@ room_vnum frozen_start_room = 1202;
 room_vnum donation_room_1 = 3063;
 room_vnum donation_room_2 = 5510;
 room_vnum donation_room_3 = 235;
+room_vnum donation_room_4 = 11316;
 
 room_vnum dead_start_room = 1890;
 room_vnum hometown_1 = 3001;
 room_vnum hometown_2 = 5509;
 room_vnum hometown_3 = 13400;
+room_vnum hometown_4 = 11315;
 room_vnum ress_room_1 = 1803;
 room_vnum ress_room_2 = 5505;
 room_vnum ress_room_3 = 13435;
+room_vnum ress_room_4 = 11319;
+
+/* Virtual number of death trap object warehouse room. */
+room_vnum dt_warehouse_room = 2;
 
 /* GAME OPERATION OPTIONS */
 

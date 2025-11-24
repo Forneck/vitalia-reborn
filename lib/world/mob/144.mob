@@ -34,7 +34,8 @@ totalmente retalhada.
 BareHandAttack: 13
 Con: 8
 Cha: 3
-GenWimpy: 6
+GenWimpy: 7
+GenFollow: 10
 E
 #14402
 ponei bolo fofo~
@@ -479,7 +480,8 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 8
-GenRoam: 22
+GenWimpy: 11
+GenRoam: 11
+GenFollow: 7
 E
 $

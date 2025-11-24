@@ -65,15 +65,19 @@ biblia~
 uma Bíblia~
 Uma Bíblia foi esquecida aqui.~
 ~
-1 abegikoq 0 0 0 ao 0 0 0 0 0 0 0
+1 abegikq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-5 50 1 0 0
+5 50 1 20 0
 A
 17 -5
 A
 1 1
 A
 4 1
+A
+18 2
+A
+19 2
 #4315
 placa~
 uma placa de madeira~
@@ -102,7 +106,7 @@ Uma cesta foi deixada aqui.~
 3 100 10 0 0
 #4324
 anel Cardeal~
-O anel de rubi do Cardeal~
+o anel de rubi do Cardeal~
 Um valioso anel de rubi foi esquecido aqui.~
 ~
 9 aefg 0 0 0 ab 0 0 0 0 0 0 0

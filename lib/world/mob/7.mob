@@ -17,9 +17,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 5
+GenWimpy: 19
+GenLoot: 49
 GenRoam: 89
-GenGroup: 45
+GenGroup: 94
+GenQuest: 1
+GenFollow: 14
 E
 #701
 corpo zumbi morto vivo criatura~
@@ -40,9 +43,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 37
-GenLoot: 16
-GenRoam: 89
+GenWimpy: 62
+GenLoot: 98
+GenRoam: 88
+GenGroup: 2
+GenFollow: 13
 E
 #702
 planta figueira~
@@ -62,8 +67,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 54
-GenRoam: 88
+GenWimpy: 94
+GenLoot: 22
+GenRoam: 83
+GenFollow: 11
 E
 #705
 monstrinho menor criatura~
@@ -85,9 +92,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 45
-GenLoot: 7
+GenWimpy: 86
+GenLoot: 45
 GenRoam: 87
+GenFollow: 8
 E
 #706
 duende~
@@ -108,9 +116,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 35
-GenLoot: 5
-GenRoam: 89
+GenWimpy: 71
+GenLoot: 21
+GenRoam: 88
+GenFollow: 9
 E
 #707
 cristal monsto~
@@ -131,9 +140,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 24
-GenLoot: 18
+GenWimpy: 96
+GenLoot: 99
 GenEquip: 1
+GenFollow: 16
 E
 #708
 escorpião escorpiao vermelho~
@@ -154,8 +164,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 19
+GenWimpy: 44
+GenLoot: 32
 GenRoam: 87
+GenFollow: 4
 E
 #710
 maldito guarda~
@@ -176,8 +188,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 33
+GenWimpy: 69
+GenLoot: 25
+GenEquip: 1
 GenRoam: 88
+GenGroup: 7
+GenFollow: 9
 E
 #711
 guardião guardiao guarda~
@@ -199,8 +215,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 98
-GenLoot: 4
+GenWimpy: 100
+GenLoot: 78
+GenFollow: 15
 E
 #712
 impiedoso ceifeiro~
@@ -243,9 +260,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 82
-GenLoot: 14
+GenWimpy: 100
+GenLoot: 55
 GenRoam: 88
+GenFollow: 6
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -269,6 +287,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 3
+GenFollow: 15
 E
 #715
 monstro criatura maior~
@@ -290,10 +310,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 92
-GenLoot: 3
-GenRoam: 75
-GenGroup: 21
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 15
+GenRoam: 89
+GenGroup: 60
+GenFollow: 10
 E
 #716
 pequena encurvada crianca criança~
@@ -332,7 +354,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 34
+GenWimpy: 32
+GenFollow: 4
 E
 #719
 ivian senhora~
@@ -389,10 +412,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 25
-GenLoot: 2
-GenEquip: 1
+GenWimpy: 46
+GenLoot: 12
+GenEquip: 3
 GenRoam: 89
+GenFollow: 14
 E
 #750
 febre escarlate~
@@ -431,10 +455,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 34
-GenLoot: 15
+GenWimpy: 65
+GenLoot: 84
 GenEquip: 1
-GenRoam: 89
+GenRoam: 88
+GenGroup: 1
+GenFollow: 7
 E
 #780
 Mosquito inseto~
@@ -454,7 +480,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 21
+GenWimpy: 22
+GenFollow: 2
 E
 #781
 planta carnivora venus carnívora vênus~
@@ -473,9 +500,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 35
-GenLoot: 1
-GenRoam: 87
+GenWimpy: 67
+GenLoot: 20
+GenRoam: 89
+GenFollow: 8
 E
 #799
 banda~
@@ -494,8 +522,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 21
-GenLoot: 1
+GenWimpy: 38
+GenLoot: 29
 GenRoam: 89
+GenFollow: 9
 E
 $

@@ -40,8 +40,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 15
 E
-T 11500
 T 3009
 #11502
 espinhal espinhos~
@@ -86,6 +87,8 @@ Cuidado com os espinhos.  Podem ser venenosos!!
 30 0 1 15d15+900 5d5+20
 0 45000
 9 9 1
+GenWimpy: 7
+GenFollow: 11
 E
 T 3008
 T 3009
@@ -184,6 +187,9 @@ que sua presença aqui não é bem-vista.  Cuidado com sua fúria.
 45 -3 -6 6d6+1300 5d5+26
 0 81000
 9 9 2
+GenWimpy: 4
+GenLoot: 7
+GenFollow: 17
 E
 #11511
 nagini cacadora~
@@ -198,6 +204,10 @@ que há um intruso no reino... E ela o está caçando!
 56 -7 -18 7d7+1200 7d5+29
 6000 100000
 9 9 2
+GenWimpy: 4
+GenLoot: 27
+GenGroup: 1
+GenFollow: 16
 E
 #11512
 curioso geologo naga~

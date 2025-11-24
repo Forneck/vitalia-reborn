@@ -862,6 +862,8 @@ Há uma poça de estranho líquido escuro no chão.~
 11 0 0 0 0 afghi 0 0 0 0 0 0 0
 0 0 0 0
 1 110 0 0 0
+A
+18 2
 #11660
 choli amarelo amarela blusa~
 um choli amarelo~
@@ -885,9 +887,15 @@ Um pequeno brinco de cristal foi aqui perdido.~
 ~
 11 0 0 0 0 as 0 0 0 0 0 0 0
 0 0 0 0
-1 12345 0 0 0
+1 12345 0 70 0
 A
 1 1
+A
+2 1
+A
+18 1
+A
+19 1
 #11662
 shalwar verde elegantes calcas~
 um shalwar verde~
@@ -1041,7 +1049,7 @@ arco gandiva dourado~
 Gandiva~
 Arjuna perdeu seu magnífico arco dourado exatamente aqui.~
 ~
-29 agmnoqtu 0 0 0 an 0 0 0 0 0 0 0
+29 agq 0 0 0 an 0 0 0 0 0 0 0
 50 0 0 0
 10 100000 0 50 0
 E
@@ -1074,7 +1082,7 @@ Um estranho objeto emite sua luz divina mesmo estando no chão.~
 ~
 1 agq 0 0 0 ao 0 0 0 ceglv 0 0 0
 0 0 -1 0
-10 1000000 0 101 0
+10 1000000 0 0 0
 E
 Krishna olho estranho objeto luz divina~
 Uma vez, Arjuna pediu a Krishna que revelasse sua verdadeira forma.
@@ -1215,7 +1223,7 @@ cetro rainha indrani magnifico~
 o cetro de Indrani~
 Um magnífico cetro de rainha flutua à sua frente.~
 ~
-1 adgijkq 0 0 0 ao 0 0 0 ceglv 0 0 0
+1 adgijq 0 0 0 ao 0 0 0 ceglv 0 0 0
 0 0 -1 0
 10 100000 0 70 0
 E
@@ -1234,9 +1242,7 @@ A
 A
 18 2
 A
-12 -100
-A
-17 9
+19 3
 #11686
 sari amarelo~
 um sari amarelo~

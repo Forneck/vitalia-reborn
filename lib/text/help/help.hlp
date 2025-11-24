@@ -435,16 +435,56 @@ OLC to 999 and explain how it works. Use astat to see examples.
 
 Here is the much coveted list of $ codes applicable to socials:
 
-$e he/she/it person doing social
-$E he/she target of social
-$m him/her person doing social
-$M him/her target of social
-$n char name person doing social (your name)
-$N char name target of social (other persons name)
-$s his/her/its person doing social
-$S his/her target of social
-$t body part of victim
-$p object
+ENGLISH CODES:
+$n  char name - person doing social (your name)
+$N  char name - target of social (other person's name)
+$e  he/she/it - person doing social
+$E  he/she/it - target of social
+$m  him/her/it - person doing social
+$M  him/her/it - target of social
+$s  his/her/its - person doing social
+$S  his/her/its - target of social
+
+PORTUGUESE CODES (Códigos em Português):
+$l  ele/ela - person doing social (he/she)
+$L  ele/ela - target of social (he/she)
+$r  o/a - person doing social (the - definite article)
+$R  o/a - target of social (the - definite article)
+$z  seu/sua - person doing social (his/her - possessive)
+$Z  seu/sua - target of social (his/her - possessive)
+$d  dele/dela - person doing social (of his/of hers)
+$D  dele/dela - target of social (of his/of hers)
+$w  teu/tua - person doing social (your - informal possessive)
+$W  teu/tua - target of social (your - informal possessive)
+$y  um/uma - person doing social (a/an - indefinite article)
+$Y  um/uma - target of social (a/an - indefinite article)
+
+OBJECT CODES:
+$o  object name - short name of object
+$O  object name - short name of target object
+$p  object description - the short description of object
+$P  object description - the short description of target object
+$a  a/an - indefinite article for object (English)
+$A  a/an - indefinite article for target object (English)
+$q  meu/minha - possessive for object (Portuguese: my)
+$Q  meu/minha - possessive for target object (Portuguese: my)
+$v  teu/tua - possessive for object (Portuguese: your - informal)
+$V  teu/tua - possessive for target object (Portuguese: your - informal)
+$j  seu/sua - possessive for object (Portuguese: his/her/your)
+$J  seu/sua - possessive for target object (Portuguese: his/her/your)
+
+OTHER CODES:
+$t  text argument or body part
+$T  text argument (target)
+$F  first word of text argument
+$b  acts like $p if object exists, otherwise like $N
+
+SPECIAL FORMATTING:
+$u  uppercase previous word
+$U  uppercase next word
+$x(male,female) - conditional text based on char gender
+$X(male,female) - conditional text based on victim gender
+$$  literal dollar sign
 
 See also: ASTAT, SOCIALS, AUTOSAVE
 #101
@@ -2161,6 +2201,88 @@ Veja tambem a ajuda para cada magia, por exemplo:
   > help magia cure light
   > help magia burning hands
   > help magia energy drain
+
+Veja tambem: SYLLABLES, SAY, EXPERIMENT
+#1
+SYLLABLES SILABAS
+
+Uso: syllables
+
+   Este comando permite que você estude as sílabas místicas das magias que
+você conhece.  Cada magia possui palavras de poder que podem ser usadas para
+conjurá-la através do comando SAY (voz mágica).
+
+   Quando você diz as sílabas místicas de uma magia em voz alta (usando o
+comando SAY), a magia será automaticamente conjurada, desde que você a conheça.
+Isso é útil para conjurar magias rapidamente em situações de combate ou quando
+você deseja praticar suas habilidades mágicas.
+
+Exemplos:
+  > syllables
+    (mostra todas as sílabas místicas das magias que você conhece)
+  
+  > say ignisaegis
+    (conjura a magia 'fireshield' se você a conhecer)
+  
+  > say ignisaegis oponente
+    (conjura a magia 'fireshield' no oponente)
+
+   As sílabas místicas são derivadas de uma antiga linguagem mágica e cada
+palavra do nome da magia é transformada em sua forma mística.  Por exemplo:
+  - 'fire' se torna 'ignis'
+  - 'shield' se torna 'aegis'
+  - Portanto, 'fireshield' se torna 'ignisaegis'
+
+   Com o tempo e prática, você pode aprender a reconhecer padrões nas sílabas
+e entender melhor a natureza das magias que você domina.
+
+MODIFICADORES DE MAGIA:
+   Você pode usar sílabas modificadoras ANTES das sílabas da magia para alterar
+seus efeitos:
+
+  - 'minus' - Reduz o custo de mana pela metade, mas também reduz duração e
+              efeito pela metade
+  - 'plus'  - Dobra a duração e efeito, mas também dobra o custo de mana
+
+Exemplos com modificadores:
+  > say minus ignisaegis
+    (conjura fireshield com metade do custo/efeito/duração)
+  
+  > say plus ignisaegis oponente
+    (conjura fireshield amplificado no oponente - dobro do efeito/custo/duração)
+
+Veja tambem: CAST, SAY, SPELLS, EXPERIMENT
+#1
+EXPERIMENT EXPERIMENTAR
+
+Uso: experiment <silabas misticas>
+
+   Este comando permite que você experimente com combinações de sílabas místicas
+para descobrir variantes de magias que você já conhece.  Ao combinar sílabas de
+formas diferentes, você pode descobrir novas magias relacionadas às que você já
+domina.
+
+   Para descobrir uma variante de magia, você precisa:
+   1. Conhecer a magia base (pré-requisito)
+   2. Falar as sílabas corretas da variante
+   3. A variante deve ser marcada como "descobrível" pelos administradores
+
+Exemplos:
+  > experiment aquaaegis
+    (tenta descobrir uma variante de "watershield" se você conhece "fireshield")
+  
+  > syllables
+    (veja as sílabas das magias que você conhece para combinar)
+
+   Quando você descobre com sucesso uma variante, ela é automaticamente
+adicionada ao seu grimório de magias com proficiência básica.  Você pode então
+praticar e melhorar essa nova magia normalmente.
+
+   Note que nem todas as combinações de sílabas levam a variantes descobríveis.
+Os administradores do jogo criam variantes específicas usando o sistema SPEDIT,
+garantindo equilíbrio e consistência no jogo.
+
+Veja tambem: SYLLABLES, SPELLS, CAST
 #1
 CEDIT CEDIT-MENU 
 
@@ -4021,6 +4143,30 @@ voar, e ordena-las a voar com voce.
 
 Veja tambem: MAGIA FLY
 #1
+FOME HUNGER
+
+Uso: score (para ver seu nivel de fome)
+
+   A fome e um aspecto importante da sobrevivencia no mundo. Todo personagem
+precisa se alimentar regularmente para manter sua saude e energia. Quando
+voce esta com fome, seu corpo comeca a enfraquecer e voce pode sofrer
+penalidades em suas acoes.
+
+   Diferentes tipos de alimentos possuem diferentes valores nutritivos.
+Alguns alimentos sao mais substanciais e podem mante-lo saciado por mais
+tempo, enquanto outros apenas aliviam a fome temporariamente. Escolher bem
+sua alimentacao e essencial para uma jornada prolongada.
+
+   O clima e a temperatura tambem afetam a velocidade com que voce sente
+fome. Em climas quentes ou em atividades intensas, seu corpo consome mais
+energia e voce precisara se alimentar com mais frequencia.
+
+   Para saciar sua fome, utilize o comando EAT com um alimento em seu
+inventario. Planeje suas provisoes com antecedencia, especialmente ao
+explorar areas remotas ou hostis.
+
+Veja tambem: EAT, DRINK, SEDE, BIOMAS, ESTACOES, WEATHER
+#1
 FOLLOWERS UNFOLLOW
 
 Usage: follow <leader>
@@ -5838,96 +5984,45 @@ chuvoso ou pior.
 
 Veja Tambem: MAGIA-CONTROL-WEATHER, WEATHER
 #1
-MAGIA-CASCADE-OF-HAIL
-
-Uso        : cast 'cascade of hail' <alvo>
-Acumulativa: -
-Duracao    : Instantanea
-Nivel      : Druida Nivel 17
-
-Essa magia de ataque cria tres ondas de granizo que atingem a todos
-em uma sala. Deve-se ter cuidado ao usa-la.
-#1
-MAGIA-CHARM-PERSON
-
-Uso        : cast 'charm person' <alvo>
-Acumulativa: Nao
-Duracao    : (432/Inteligencia do alvo) Horas
-Nivel      : Mago Nivel 25, Clerigo Nivel 28, Druida Nivel 24
-
-Nao e possivel encantar alguem que ja esteja encantado, e tambem
-encantar a si mesmo ou alguem de nivel mais alto que o seu.
-O alvo fara um teste contra paralisar, e se nao passar fica
-encantado, obedecendo todas as ordens de quem o encantou.
-
-Um alvo encantado seguira voce e nao podera te atacar. Voce
-pode comandar um alvo encantado atraves do comando order.
-
-Se o seu alvo for outro jogador e este estiver com a protecao de
-summon (nosummon) ativada, nao sera possivel encanta-lo.
-
-Veja Tambem: FOLLOW, ORDER, NOSUMMON
-#1
-MAGIA-CHILL-TOUCH
-
-Uso        : cast 'chill touch' <alvo>
-Acumulativa: -
-Duracao    : Instantanea
-Nivel      : Mago Nivel 3
-Resistencia: Contra magia para metade do dano
-
-Esta magia e mais poderosa que magic missile.
-O alvo que nao passar em um teste de resistencia
-perdera um ponto de forca.
-
-Veja Tambem: MAGIA-MAGIC-MISSILE
-#1
-MAGIA-COLOR-SPRAY
-
-Uso        : cast 'color spray' <alvo>
-Acumulativa: -
-Duracao    : Instantanea
-Nivel      : Mago Nivel 17
-Resistencia: Contra magia para metade do dano
-
-Esta magia e mais poderosa que lightning bolt.
-
-Veja Tambem: MAGIA-LIGHTNING-BOLT
-#1
 MAGIA-CONTROL-WEATHER
 
 Uso: cast 'control weather' <propriedade>=<aumentar|diminuir>
 Acumulativa: Sim
-Duracao: -
+Duracao: Mudancas graduais + Bonus de densidade (2-6 horas)
 Nivel: Clerigo 26, Druida 55
 
 A magia Control Weather permite ao conjurador influenciar as condicoes
-climaticas da regiao. O efeito nao e imediato, mas altera gradualmente
-o clima ao longo do tempo.
+climaticas da regiao e criar zonas de alta densidade magica.
 
 Parametros:
+pressao=aumentar|diminuir - Influencia tempestades
+temperatura=aumentar|diminuir - Altera calor/frio
+vento=aumentar|diminuir - Modifica intensidade dos ventos
+umidade=aumentar|diminuir - Afeta chuva e umidade do ar
 
-pressao=aumentar|diminuir - Influencia a formacao de tempestades e 
-mudancas bruscas no clima.
+BONUS DE DENSIDADE MAGICA (Novo):
+Cria zona temporaria de alta densidade magica que:
+- Reduz custo de mana (70-100% do normal)
+- Aumenta poder magico (100-130% de efetividade)
+- Dura 2-6 horas do jogo (baseado no nivel)
+- Beneficia TODOS os conjuradores (aliados e inimigos)
 
-temperatura=aumentar|diminuir - Torna o ambiente mais quente ou mais frio.
+Ao conjurar, voce vera:
+"Voce sente as energias magicas se concentrarem na area!
+Densidade magica agora: muito alta (1.05)
+Efeito ativo ate as 3 horas da tarde do dia 15 de Maqizie"
 
-vento=aumentar|diminuir - Aumenta ou reduz a intensidade dos ventos.
+APLICACOES:
+- Pre-batalha: Vantagem magica em encontros dificeis
+- Suporte de grupo: Reduz custos para todos os magos
+- Controle de campo: Molda vantagem tatica
 
-umidade=aumentar|diminuir - Torna o ar mais seco ou mais umido, afetando
-a possibilidade de chuva.
+LIMITACOES:
+- Nao funciona em areas internas
+- Custo de mana permanece alto
+- Efeito de area (inimigos se beneficiam)
 
-
-Exemplo de uso:
-
-> cast 'control weather' pressao=aumentar
-
-Embora esta magia possa alterar significativamente o clima ao longo do
-tempo, os efeitos nao sao instantaneos. Se deseja mudancas climaticas
-imediatas, sera necessario lancar a magia varias vezes ou combinar
-diferentes modificacoes no ambiente.
-
-Veja tambem: WEATHER, TIME
+Veja tambem: WEATHER, DENSIDADE-MAGICA, SINERGIAS, TIME
 #1
 MAGIA-CREATE-FOOD
 
@@ -6023,6 +6118,31 @@ A pessoa ficara rodeada pelos pequenos insetos, sendo possivel
 ve-los quando se estiver na mesma sala.
 
 Veja tambem: MAGIA-INFRAVISION
+#1
+MAGIA-DARKNESS
+
+Uso        : cast 'darkness'
+Acumulativa: Nao
+Duracao    : 60 segundos + (2 * Nivel) segundos
+Nivel      : Clerigo Nivel 40, Druida Nivel 48
+Escola     : Necromancia
+Elemento   : Profano
+
+A magia Darkness envolve a area em um manto de escuridao sobrenatural,
+dificultando a visao de todos na sala. Esta magia e especialmente eficaz
+quando lancada durante tempestades ou em clima nublado, refletindo sua
+conexao com as forcas da necromancia e o elemento profano.
+
+Sinergias:
+- Escola de Necromancia: Mais eficaz durante clima tempestuoso
+- Elemento Profano: Compartilha o mesmo elemento da magia Animate Dead
+- Duracao aumentada em ate 20% durante tempestades
+- Duracao reduzida em 15% durante dias claros e ensolarados
+
+A escuridao persiste na sala mesmo que o conjurador saia, e dissipa-se
+naturalmente apos o termino da duracao.
+
+Veja tambem: MAGIA-ANIMATE-DEAD, INFRAVISION
 #1
 MAGIA-DETECT-ALIGNMENT
 
@@ -6352,7 +6472,16 @@ Duracao    : 24 Horas
 Nivel      : Mago Nivel 18, Clerigo Nivel 80
 
 Essa magia possui o mesmo efeito de armor, mas melhora o AC um pouco mais.
-O AC que ela diminui varia com o nivel de quem a lancou, indo de 30 a 80 AC.
+Reduz o AC do alvo em 80 pontos, proporcionando melhor protecao em combate.
+
+FORMULA DO MODIFICADOR:
+- Base: -80 AC (menor AC = melhor protecao)
+- Com voz "plus": -128 AC (dobrado e limitado ao maximo)
+- Com voz "minus": -40 AC (reduzido pela metade)
+
+IMPORTANTE: O sistema possui protecao contra overflow de AC. O valor de AC
+e automaticamente limitado entre -1000 e +1000 para prevenir bugs que
+possam inverter a protecao para vulnerabilidade.
 
 OBS: Os efeitos de "armor", "improved armor" e qualquer uma das "skin like"s
 nao sao acumulativos.
@@ -6771,6 +6900,10 @@ Nivel      : -
 
    Transporta a vitima da magia para uma sala qualquer do jogo.  Nao ha como
 definir qual sera o destino.
+
+   A magia protege a vitima de ser teleportada para locais perigosos ou
+restritos, incluindo: salas de morte (death traps), salas privadas, salas
+divinas, zonas fechadas e zonas com protecao astral.
 #1
 MAGIA-THISTLECOAT
 
@@ -6989,14 +7122,39 @@ meditar enquanto voce ganha os pontos suficientes.
 
 Veja tambem: SPELL, REST, MEDITATE, SCORE
 #1
-MAP
+MAP MAPA
 
-Agora o mapa de Midgaard deve ser comprado.
-Para conseguir um mapa para voce, va' ate' a loja de mapas. La' voce podera'
-comprar o mapa de Midgaard e tambem de outras areas do mundo.
+Uso: map [distancia] [normal | mundi]
 
-Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
-tres passos para o leste e um passo para o norte.
+O comando MAP exibe um mapa da area ao redor da sua localizacao atual,
+permitindo que voce visualize os arredores e se oriente melhor em suas
+jornadas pelo mundo.
+
+Voce pode ajustar a distancia que deseja visualizar (de 1 a 12), sendo que
+valores muito altos ou baixos serao automaticamente ajustados. Se nao
+especificar, sera usado um alcance padrao confortavel.
+
+Ha dois estilos de visualizacao:
+  normal - Um mapa detalhado, ideal para explorar dungeons e areas fechadas
+  mundi  - Um mapa panoramico, mais adequado para viagens pelo mundo aberto
+
+Em certas regioes ao ar livre e grandes planices, o mapa automaticamente se
+ajusta para mostrar uma visao mais ampla do terreno. Em outras areas, como
+dungeons e construcoes, o mapa mostra detalhes mais proximos. Voce pode
+forcar um estilo especifico se desejar uma visualizacao diferente.
+
+Exemplos:
+  map           - Exibe o mapa com alcance padrao
+  map 8         - Exibe o mapa mostrando ate 8 unidades de distancia
+  map 5 mundi   - Exibe uma visao panoramica com alcance de 5
+  map 10 normal - Exibe uma visao detalhada com alcance de 10
+
+O mapa utiliza diferentes simbolos para representar terrenos variados:
+cidades, florestas, montanhas, rios e lagos, desertos, estradas e muito
+mais. Uma legenda completa e' exibida junto com o mapa para facilitar sua
+interpretacao.
+
+Veja tambem: AUTOMAP, LOOK
 #1
 MAXLOADED MAX-LOADED ZEDIT-MAXLOADED ZEDIT-MISTAKES 
 
@@ -10963,6 +11121,35 @@ Exemplos:
 
 Veja tambem: BUY, LIST, SHOPS, VALUE
 #1
+SEDE THIRST
+
+Uso: score (para ver seu nivel de sede)
+
+   A sede e um dos aspectos mais criticos da sobrevivencia. Seu personagem
+precisa se manter hidratado para continuar suas aventuras. A desidratacao
+pode levar a consequencias graves, afetando sua capacidade de agir e ate
+mesmo ameacando sua vida.
+
+   O clima e a umidade do ambiente tem efeito direto sobre a velocidade com
+que voce sente sede. Em climas deserticos ou muito quentes, com baixa
+umidade, voce ficara com sede muito mais rapidamente. Por outro lado, em
+regioes chuvosas ou tropicais com alta umidade, a sede aumenta de forma
+mais lenta.
+
+   Diferentes tipos de bebidas possuem diferentes propriedades. Algumas
+bebidas saciam a sede por mais tempo, enquanto outras proporcionam apenas
+alivio temporario. Algumas bebidas podem ate mesmo aumentar sua sede ao
+inves de diminui-la.
+
+   A estacao do ano tambem influencia a sede. Durante o verao, especialmente
+em biomas quentes, voce precisara beber agua com maior frequencia do que
+no inverno.
+
+   Para saciar sua sede, utilize o comando DRINK. Certifique-se de carregar
+suprimentos adequados de agua ao explorar areas aridas ou deserticas.
+
+Veja tambem: DRINK, EAT, FOME, BIOMAS, ESTACOES, WEATHER, SOBRIEDADE
+#1
 SEND
 
 Usage: send [target] <message>
@@ -11354,6 +11541,35 @@ Type snoop <your name> or just snoop to stop snooping.
 
 See also: SEND
 #101
+SOBRIEDADE DRUNK DRUNKENNESS
+
+Uso: score (para ver seu nivel de embriaguez)
+
+   A sobriedade representa o nivel de embriaguez do seu personagem. Quando
+voce consome bebidas alcoolicas, seu personagem pode ficar bebado, o que
+afeta suas percepcoes e habilidades.
+
+   Diferentes tipos de bebidas alcoolicas possuem diferentes niveis de
+teor alcoolico. Bebidas mais fortes como destilados e licores podem
+embriagar seu personagem muito mais rapidamente do que cervejas ou vinhos
+leves. A quantidade e o tipo de bebida que voce consome determina quao
+embriagado voce ficara.
+
+   Estar embriagado pode ter varios efeitos sobre seu personagem. Suas
+acoes podem se tornar menos precisas, sua visao pode ficar turva, e voce
+pode ter dificuldade em manter o equilibrio. Em casos extremos de
+embriaguez, voce pode ate desmaiar.
+
+   O efeito da embriaguez diminui com o tempo, conforme seu corpo processa
+o alcool. Consumir agua ou alimentos pode ajudar a acelerar sua recuperacao,
+mas a melhor forma de evitar problemas e moderar seu consumo de bebidas
+alcoolicas.
+
+   Tenha cuidado ao beber em excesso, especialmente antes de situacoes
+perigosas como combates ou exploracoes arriscadas.
+
+Veja tambem: DRINK, SEDE, FOME
+#1
 SOCIALS SOCIAIS
 
 Uso: <social> [<vitima>]
@@ -16209,36 +16425,114 @@ errado. Agora, com o surgimento de novas teorias magicas, e' possivel
 combinar os efeitos de algumas magias com outras criando sinergias e
 efeitos melhores.
 
+   TIPOS DE SINERGIAS MAGICAS:
+
+   1. SINERGIAS DE PROTECAO ("Cebola Magica"):
+   Magos experientes podem criar camadas de protecao, como as camadas de
+   uma cebola. Magias como Fireshield, Thistlecoat, Windwall e Stoneskin
+   podem ser combinadas no mesmo alvo, criando multiplas camadas de defesa.
+   Cada camada age independentemente, proporcionando protecao abrangente.
+
+   2. SINERGIAS AMBIENTAIS (Nova Descoberta):
+   O ambiente afeta profundamente a eficacia magica. A densidade magica
+   do local, influenciada por clima, hora do dia, tipo de terreno e
+   localizacao (externo/interno), altera tanto o custo quanto o poder
+   das magias. Veja DENSIDADE-MAGICA para detalhes completos.
+
+   3. SINERGIAS ELEMENTAIS E DE ESCOLA:
+   Elementos magicos (ELEMENTOS-MAGICOS) e Escolas Arcanas (ESCOLAS-MAGICAS)
+   interagem com as condicoes climaticas. Magias de fogo prosperam em clima
+   seco, enquanto magias de agua ganham poder em alta umidade.
+
+   4. SINERGIAS DE ESTACOES E BIOMAS:
+   As quatro estacoes do ano combinam-se com diferentes biomas, criando
+   condicoes unicas que afetam sobrevivencia e eficacia magica.
+
+Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS, 
+ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER
+
 #1
-ESTACOES SEASONS                                                            
+ESTACOES SEASONS
+
 O tempo mostrado pelo comando WEATHER, sofre influencia das quatro
-estacoes do ano.                                                                                                                                        Elas estao distribuidas da seguinte maneira:
-                                                                            Kames'Hi, Teriany, Hiro, Prudis - Inverno
+estacoes do ano.
+
+Elas estao distribuidas da seguinte maneira:
+
+Kames'Hi, Teriany, Hiro, Prudis - Inverno
 Maqizie, Kadrictes, Mizu, Mysoluh - Primavera
 Karestis, Neruno, Latizie, Aminen - Verao
 Autumis, V'tah, Aqrien, Tellus e Brumis - Outono
-                                                                            Isto reflete nos limites maximos e minimos de cada parametro do             clima, como pressao, temperatura, umidade relativa e vento.
-                                                                            Com isso, algumas estacoes terao uma maior influencia sobre determinado
+
+Isto reflete nos limites maximos e minimos de cada parametro do
+clima, como pressao, temperatura, umidade relativa e vento.
+
+Com isso, algumas estacoes terao uma maior influencia sobre determinado
 parametro (que pode ser controlado pela MAGIA CONTROL WEATHER).
 
-                                                                            Veja tambem: WEATHER, BIOMAS, TIME, MAGIA-CONTROL-WEATHER
+Cada estacao traz mudancas especificas conforme o bioma:
+
+Inverno - Temperaturas mais baixas em todos os biomas. Biomas temperados
+e chuvosos podem ter nevascas. A necessidade de comida aumenta devido ao
+frio, mas a sede diminui.
+
+Primavera - Clima ameno e transicional. Chuvas mais frequentes em biomas
+temperados e chuvosos. Temperatura moderada reduz a velocidade de fome e
+sede.
+
+Verao - Temperaturas elevadas, especialmente em biomas deserticos e
+tropicais. A sede aumenta rapidamente em climas quentes e secos. Maior
+intensidade solar.
+
+Outono - Temperaturas em declinio e ventos mais fortes. Preparacao para o
+inverno, com clima mais instavel. Fome e sede em niveis moderados.
+
+As estacoes afetam diretamente a sobrevivencia do aventureiro, influenciando
+a velocidade com que sente fome e sede, bem como a disponibilidade de
+recursos naturais em cada regiao.
+
+Veja tambem: WEATHER, BIOMAS, TIME, MAGIA-CONTROL-WEATHER, FOME, SEDE
 #1
 CLIMAS BIOMAS
-                                                                            As areas tem seu proprio clima-base ou bioma. As areaa estao distribuidas   em um dos seguinres tipos:
 
-Temperado - temperaturas moderadas, variacao sutil, pressao media e
-alta umidade.
-Chuvoso - temperaturas um pouco mais baixas, pressao ligeiramente
-inferior e alta umidade.
-Tropical - clima quente, pressao media e alta umidade.
-Frio/Seco - temperaturas baixas, pressao elevada e baixa umidade.
-Desertico - clima muito quente, pressao moderada a alta, e umidade
-extremamente baixa.
+As areas tem seu proprio clima-base ou bioma. As areas estao distribuidas
+em um dos seguintes tipos:
 
-Assim, a chance de chover em um deserto e' baixa, mas por ser um clima
-quente ira afetar mais rapidamente a sede do jogador.
+Temperado - Temperaturas moderadas, variacao sutil, pressao media e
+alta umidade. Este bioma e equilibrado para a sobrevivencia, com recursos
+abundantes. A fome e sede aumentam em ritmo moderado. Chuvas regulares e
+estacoes bem definidas.
 
-Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER
+Chuvoso - Temperaturas um pouco mais baixas, pressao ligeiramente
+inferior e alta umidade. Chuvas frequentes e persistentes caracterizam
+este bioma. A sede aumenta mais lentamente devido a alta umidade, mas o
+frio pode aumentar ligeiramente a fome.
+
+Tropical - Clima quente, pressao media e alta umidade. Vegetacao densa
+e chuvas intensas sazonais. A combinacao de calor e umidade acelera a
+sede, mas a abundancia de recursos naturais facilita a alimentacao.
+
+Frio/Seco - Temperaturas baixas, pressao elevada e baixa umidade. Bioma
+hostil onde a fome aumenta rapidamente devido ao frio intenso. A vegetacao
+e escassa e as condicoes sao desafiadoras para sobrevivencia prolongada.
+
+Desertico - Clima muito quente, pressao moderada a alta, e umidade
+extremamente baixa. Este e o bioma mais desafiador para sobrevivencia.
+A sede aumenta muito rapidamente devido ao calor extremo e baixa umidade.
+Chuvas sao raras e recursos sao escassos.
+
+Cada bioma interage com as estacoes do ano, criando condicoes unicas.
+Por exemplo, um deserto no verao e extremamente perigoso, enquanto um
+bioma chuvoso no inverno pode ter nevascas. Conhecer o bioma da regiao
+que voce esta explorando e essencial para planejar suas provisoes de
+comida e agua.
+
+Assim, a chance de chover em um deserto e baixa, mas por ser um clima
+quente ira afetar mais rapidamente a sede do jogador. Da mesma forma,
+em um bioma frio, voce precisara de mais alimentos para manter sua
+energia corporal.
+
+Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER, FOME, SEDE
 #1
 MAGIA-WINDWALL
 
@@ -16409,7 +16703,8 @@ Usage: gstats <target> <gene>
    Displays genetic statistics for mobs. Target can be a specific mob name/vnum,
 zone number, or 'all' for comprehensive analysis.
 
-Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer
+Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest,
+                 adventurer, follow, healing
 
    This command analyzes genetic tendencies in mob behavior patterns and 
 provides statistical information including mean, median, standard deviation,
@@ -16419,6 +16714,7 @@ Examples:
   > gstats all wimpy
   > gstats zone 30 loot
   > gstats orc brave
+  > gstats all healing
 
 See also: MWISHLIST, MWANT, STAT
 #101
@@ -16463,26 +16759,32 @@ See also: MWISHLIST, GSTATS, STAT
 #101
 RSKILL
 
-Usage: rskill <player> <list|add|remove> [skill_num] [value]
-       rskill <player> list - Show all retained skills
-       rskill <player> add <skill_num> <value> - Add/set retained skill
-       rskill <player> remove <skill_num> - Remove retained skill
+Uso: rskill <jogador> <list|add|remove> [numero_skill] [valor]
+     rskill <jogador> list - Listar todas as habilidades retidas
+     rskill <jogador> add <numero_skill> <valor> - Adicionar/modificar habilidade
+     rskill <jogador> remove <numero_skill> - Remover habilidade retida
 
-   Manages retained skills for players who have gone through the rebegin
-process. Retained skills are preserved across character reincarnations.
+   Gerencia habilidades retidas de jogadores que passaram pelo processo de
+rebegin (renascimento). Habilidades retidas sao preservadas atraves das
+reencarnacoes do personagem.
 
-   This command allows direct manipulation of the retained skills system,
-letting immortals add, remove, or modify skills that players keep when
-they reincarnate through the rebegin system.
+   Este comando permite manipulacao direta do sistema de habilidades retidas,
+permitindo que imortais adicionem, removam ou modifiquem habilidades que
+jogadores mantem quando renascem atraves do sistema de rebegin.
 
-   Only works on player characters, not NPCs.
+   Funciona apenas com personagens de jogadores, nao com NPCs.
 
-Examples:
-  > rskill player list
-  > rskill player add 142 75
-  > rskill player remove 142
+Exemplos:
+  > rskill jogador list
+  > rskill jogador add 142 75
+  > rskill jogador remove 142
 
-See also: REBEGIN, ADVANCE, SKILLSET
+   Use este comando com cuidado, pois habilidades retidas afetam
+significativamente as capacidades do personagem. Apenas conceda
+habilidades retidas quando justificado pela historia do personagem
+ou como recompensa por eventos especiais.
+
+Veja tambem: RSKILLS, REBEGIN, ADVANCE, SKILLSET
 #107
 SYSLOG RUSAGE
 
@@ -16569,4 +16871,1306 @@ Uso: want
 ao sistema de desejos ou lista de itens desejados pelos jogadores.
 
 #0
+CLIMA-MAGICO CLIMA-E-MAGIA WEATHER-MAGIC
+
+   O clima de Vitalia nao e meramente uma questao de conforto - ele pulsa
+com as energias primordiais que permeiam todo o reino. Magos experientes
+sabem que as forcas da natureza influenciam profundamente a manifestacao
+de seus feiticos.
+
+   INFLUENCIAS CLIMATICAS:
+
+   Humidade do Ar:
+   Em dias secos, as chamas ardem com maior ferocidade, enquanto as aguas
+   e gelos tornam-se esquivos e dificeis de conjurar. Quando a umidade
+   paira pesada no ar, o oposto ocorre - as magias aquaticas fluem com
+   facilidade, mas as chamas lutam contra a saturacao do ambiente.
+
+   Tempestades e Chuvas:
+   Durante tempestades, a eletricidade crua que rasga os ceus torna os
+   raios devastadoramente poderosos. O tecido entre os planos se adelgaca,
+   facilitando invocacoes, mas as chuvas torrenciais sufocam as chamas e
+   tornam o solo lamacento, enfraquecendo magias terrestres.
+
+   Ventos:
+   Vendavais amplificam magias aereas, carregando-as com velocidade e
+   forca. Brisas suaves facilitam a concentracao, mas ventos calmos podem
+   deixar feiticos de ar letargicos.
+
+   Pressao Atmosferica:
+   Mudancas na pressao do ar afetam sutilmente a mente. Quando estavel,
+   encantamentos mentais encontram mentes mais receptivas. Em extremos,
+   tanto ilusoes quanto feiticos de clarividencia vacilam.
+
+   Temperatura:
+   Extremos de calor e frio exigem maior esforco do conjurador, tornando
+   qualquer magia mais cansativa. Condicoes moderadas permitem que a magia
+   flua naturalmente.
+
+   SABEDORIA DOS ANTIGOS:
+
+   Grandes magos aprenderam a trabalhar com as estacoes e condicoes. Um
+   piromante pode esperar por dias secos para seus rituais mais poderosos.
+   Um invocador de tempestades conhece os sinais de quando o ceu esta
+   pronto para responder seu chamado.
+
+   O verdadeiro dominio da arte arcana nao esta em lutar contra a natureza,
+   mas em dancar com ela, aproveitando seus ritmos e fluxos para amplificar
+   o poder que ja reside dentro de si.
+
+   INTERACAO COM DENSIDADE MAGICA:
+
+   Todos os elementos sao afetados pela densidade magica do local alem
+   dos bonus especificos de clima. Um fogo em alta densidade queima mais
+   intensamente, independentemente da umidade. Esta sobreposicao cria
+   sinergias poderosas quando combinadas.
+
+Veja tambem: DENSIDADE-MAGICA, WEATHER, ESCOLAS-MAGICAS, MAGIA-CONTROL-WEATHER, SINERGIAS
+#1
+ESCOLAS-MAGICAS ESCOLAS-DE-MAGIA MAGIC-SCHOOLS SCHOOLS-OF-MAGIC
+
+   As artes arcanas de Vitalia sao classificadas em oito grandes escolas,
+cada uma representando uma filosofia e abordagem diferente para manipular
+as energias misticas do mundo.
+
+   ABJURACAO (Abjuration):
+   A arte da protecao e da repulsao. Mestres da Abjuracao tecem barreiras
+   invisíveis que repelem ameacas, dissipam magias inimigas e criam santuarios
+   contra o mal. Estas magias formam a primeira linha de defesa de qualquer
+   conjurador prudente. Escudos arcanos, protecoes contra mal, e dispersoes
+   sao suas marcas registradas.
+
+   ALTERACAO (Alteration):
+   Praticantes desta escola manipulam a propria essencia da realidade,
+   transformando substancia e forma. Podem tornar pedra em carne, mudar
+   o tamanho de objetos, ou alterar as propriedades fundamentais da materia.
+   E a escola da metamorfose e da transformacao profunda.
+
+   CONJURACAO (Conjuration):
+   A arte de trazer coisas a existencia e abrir portais entre planos. 
+   Invocadores chamam criaturas de outros reinos, criam objetos do nada,
+   e teletransportam materia atraves do espaco. E uma das escolas mais
+   versateis, capaz de produzir tanto aliados quanto recursos materiais.
+   Condicoes nebulosas e umidas fortalecem estas invocacoes.
+
+   ADIVINHACAO (Divination):
+   Magos desta escola espreitam atraves dos velos do tempo e espaco,
+   revelando segredos ocultos e verdades escondidas. Podem detectar o
+   invisivel, pressentir o futuro, e ler os pensamentos alheios. Em dias
+   claros, suas visoes se tornam mais nitidas e precisas.
+
+   ENCANTAMENTO (Enchantment):
+   A escola da influencia mental e do controle da vontade. Encantadores
+   tecem sugestoes irresistiveis, dominam mentes fracas, e inspiram emocoes
+   poderosas em outros. Suas magias afetam o espirito e a psique, nao o
+   corpo fisico. Pressao atmosferica estavel favorece estas manipulacoes
+   sutis da mente.
+
+   EVOCACAO (Evocation):
+   A mais espetacular e destrutiva das escolas. Evocadores canalizam energia
+   bruta em formas devastadoras - bolas de fogo, raios congelantes, relampagos
+   chamejantes. E a escola da manifestacao direta de poder elemental, onde
+   a forca bruta supera a sutileza.
+
+   ILUSAO (Illusion):
+   Mestres da enganacao e da percepcao alterada. Ilusionistas criam imagens
+   falsas, sons enganosos, e fantasmas convincentes. Suas magias manipulam
+   os sentidos, fazendo o irreal parecer real. Em neblina e bruma, suas
+   ilusoes se tornam quase indistinguiveis da realidade.
+
+   NECROMANCIA (Necromancy):
+   A escola sombria que lida com forca vital, morte e os mortos-vivos.
+   Necromantes drenam a essencia vital, ressuscitam os mortos como servos,
+   e se comunicam com espiritos. Tempestades e escuridao amplificam seus
+   poderes profanos, pois a morte prospera nas sombras.
+
+   Cada escola oferece um caminho unico de poder. Alguns magos se
+   especializam em uma unica escola, tornando-se mestres incomparaveis
+   daquela arte. Outros buscam equilibrio, estudando multiplas escolas
+   para se tornarem versáteis em todas as situacoes.
+
+Veja tambem: ELEMENTOS-MAGICOS, CLIMA-MAGICO, CLASSES
+#1
+ELEMENTOS-MAGICOS ELEMENTOS-DE-MAGIA MAGIC-ELEMENTS SPELL-ELEMENTS
+
+   As magias de Vitalia manifestam-se atraves de doze elementos primordiais,
+cada um carregando suas proprias caracteristicas e resonancias com as
+forcas naturais do mundo.
+
+   ELEMENTOS PRIMORDIAIS:
+
+   Fogo:
+   O elemento da destruicao e da purificacao. Chamas consomem, cauterizam
+   e iluminam. Em climas secos, as magias de fogo ardem mais intensamente,
+   mas a umidade e a chuva sufocam suas chamas. Piromantes devem respeitar
+   o poder que invocam, pois o fogo nao distingue amigo de inimigo.
+
+   Agua:
+   Fluida, adaptavel e essencial para a vida. Magias aquaticas curam,
+   afogam, e moldam as correntes. Prosperam em ambientes umidos e durante
+   chuvas, mas definham em condicoes aridas. A agua e tanto gentil quanto
+   implacavel.
+
+   Ar:
+   O elemento da liberdade e do movimento. Ventos carregam magos pelos
+   ceus, criam barreiras invisiveis, e amplificam sons. Vendavais fortalecem
+   estas magias, enquanto calmaria as enfraquece. O ar e o mais esquivo
+   dos elementos.
+
+   Terra:
+   Solida, resiliente e inabalavel. Magias terrestres manipulam pedra e
+   solo, criam muralhas, e conferem resistencia sobre-humana. Chuvas
+   torrenciais podem enfraquecer a conexao com a terra firme, tornando-a
+   lamacenta e instavel.
+
+   Raio:
+   Eletricidade pura, rapida e letal. Durante tempestades, quando raios
+   rasgam os ceus, magias eletricas se tornam devastadoramente poderosas,
+   alimentadas pela energia bruta da natureza. Em dias secos, perdem parte
+   de seu vigor.
+
+   Gelo:
+   Frio cristalino que congela e preserva. Magias glaciais prosperam em
+   alta umidade, onde ha abundancia de vapor para solidificar. Em climas
+   secos e quentes, o gelo luta para se manifestar.
+
+   ELEMENTOS ESPECIALIZADOS:
+
+   Acido:
+   Corrosivo e implacavel, o acido dissolve o que toca. Nao e significativamente
+   afetado pelo clima, mantendo seu poder constante sob quaisquer condicoes.
+
+   Veneno:
+   Toxico e insidioso, opera atraves de contaminacao sutil. Como o acido,
+   mantem sua potencia independente das condicoes atmosfericas.
+
+   Sagrado:
+   Luz divina que queima o mal e cura os justos. Energia celestial canalizada
+   atraves de fe genuina. Sua forca vem de conviccao espiritual, nao de
+   condicoes mundanas.
+
+   Profano:
+   Trevas que corrompem e degradam. Poder das sombras que se opoe ao sagrado.
+   Como seu oposto divino, deriva forca de fontes sobrenaturais.
+
+   Mental:
+   Poder psiquico que ataca a mente. Telepatia, telecinese e assaltos
+   mentais que ignoram armaduras fisicas. Opera no reino do pensamento,
+   alem das leis naturais.
+
+   Fisico:
+   Forca bruta manifestada magicamente. Golpes concussivos, ondas de choque,
+   e impacto puro. Representa poder cinetico direto, simples mas eficaz.
+
+   Conhecer os elementos e essencial para qualquer conjurador. Um mago
+   sabio carrega feiticos de multiplos elementos, preparado para explorar
+   as fraquezas de seus adversarios e se adaptar as condicoes ao seu redor.
+
+Veja tambem: ESCOLAS-MAGICAS, CLIMA-MAGICO, WEATHER
+#1
+HABILIDADES-ESCOLAS ESTILOS-COMBATE SKILL-SCHOOLS COMBAT-STYLES
+
+   Alem das artes arcanas, os guerreiros e aventureiros de Vitalia dominam
+diversas escolas de habilidades, cada uma representando um estilo distinto
+de combate e sobrevivencia.
+
+   ESTILO DE COMBATE (Combat):
+   A arte da guerra corpo a corpo. Mestres deste estilo sao lutadores
+   ferozes que dominam tacticas de combate direto, tecnicas de duelo, e
+   manobras de batalha. Empunham armas com precisao mortal e conhecem
+   cada ponto vital do corpo humanoide.
+
+   ESTILO FURTIVO (Stealth):
+   A escola das sombras. Praticantes desta arte movem-se invisivelmente,
+   atacam de emboscadas, e desaparecem antes que seus inimigos percebam.
+   Esconder-se, esgueirar-se e atacar sem ser visto sao as marcas desta
+   escola. Ladinos e assassinos prosperam neste caminho.
+
+   ESTILO DE ARMAS (Weapons):
+   Especializacao profunda em instrumentos de guerra. Cada arma tem sua
+   propria linguagem - a danca da espada, o ritmo do machado, a elegancia
+   da lanca. Mestres de armas estudam proficiencias especificas, tornando-se
+   virtuosos com suas ferramentas escolhidas.
+
+   ESTILO DE SOBREVIVENCIA (Survival):
+   Conhecimento da natureza e suas licoes. Rastreamento, orientacao em
+   terrenos selvagens, reconhecimento de plantas e animais. Rangers e
+   druidas dependem destas habilidades para prosperar onde outros perecem.
+   E a escola do conhecimento pratico e da adaptacao.
+
+   ESTILO MUSICAL (Musical):
+   A arte dos bardos. Musica que inspira aliados, desmoraliza inimigos,
+   e tece magias sutis atraves de melodias. Cantos de batalha, baladas
+   de cura, e sinfonias de poder. A musica e uma forma de magia por si so,
+   trabalhando atraves da harmonia e da emocao.
+
+   ESTILO DE SUPORTE (Support):
+   Tecnicas defensivas e de apoio. Cura, protecao de aliados, e fortificacao
+   de defesas. Clerigos e paladinos frequentemente dominam este estilo,
+   tornando-se o baluarte que mantem o grupo unido. Sacrificam poder ofensivo
+   por resiliencia e utilidade.
+
+   Diferentes classes naturalmente se inclinam para diferentes estilos.
+   Guerreiros focam em combate e armas. Ladinos em furtividade. Rangers
+   em sobrevivencia. Mas verdadeiros mestres aprendem de multiplas escolas,
+   tornando-se versateis em qualquer situacao.
+
+Veja tambem: CLASSES, SKILLS, ESCOLAS-MAGICAS
+#1
+DENSIDADE-MAGICA MANA-DENSITY DENSIDADE-DE-MANA
+
+   A densidade magica representa a concentracao de energia arcana em um
+local especifico. Esta descoberta revolucionaria revela que o ambiente
+nao apenas influencia quais magias sao eficazes, mas tambem quanta energia
+e necessaria para conjura-las e quao poderosas se tornam.
+
+   A densidade magica e uma "camada secundaria" invisivel sobre o mundo,
+formando sinergias com clima, terreno, e hora do dia.
+
+   FATORES QUE AFETAM A DENSIDADE:
+
+   1. CLIMA E CONDICOES ATMOSFERICAS (40%):
+      Tempestades: Densidade maxima | Chuva/Neve: Alta densidade
+      Nublado: Moderada | Ceu Limpo: Reduzida
+      Umidade 50-70%: Ideal | Pressao Baixa: Aumenta densidade
+
+   2. HORA DO DIA (20%):
+      Amanhecer/Entardecer: Maxima | Noite: Alta | Dia: Moderada
+
+   3. ESTADO SOLAR (15%):
+      Nascer/Por do Sol: Maximo | Escuridao: Amplificada
+
+   4. TIPO DE TERRENO (15%):
+      Alta: Agua, Lava, Gelo, Florestas, Montanhas
+      Moderada: Colinas, Desertos, Campos
+      Baixa: Estradas, Cidades, Interiores
+
+   5. LOCALIZACAO (10%):
+      Ar Livre: Efeitos completos | Interior: 30% dos efeitos, mais estavel
+
+   VISUALIZANDO A DENSIDADE:
+
+   Use MAGIA-DETECT-MAGIC para perceber a densidade. Com ela ativa:
+   - LOOK mostra: "A densidade magica aqui esta excepcional/alta/normal/baixa"
+   - WEATHER mostra detalhes completos incluindo valor numerico
+
+   EFEITOS DA DENSIDADE:
+
+   Excepcional (1.2+):  70% custo, 130% poder
+   Muito Alta (0.9+):   80% custo, 120% poder
+   Alta (0.7+):         90% custo, 110% poder
+   Normal (0.5-0.7):   100% custo, 100% poder
+   Baixa (0.3-0.5):     95% custo,  90% poder
+   Muito Baixa (<0.3):  90% custo,  80% poder
+
+   AUMENTANDO A DENSIDADE:
+
+   Apenas MAGIA-CONTROL-WEATHER pode aumentar artificialmente a densidade.
+   Duracao: 2-6 horas (nivel do conjurador)
+   Magnitude: +0.2 a +0.4 (poder do conjurador)
+   Beneficia TODOS os magos na area (aliados e inimigos)
+
+   ESTRATEGIAS:
+
+   Para Magos:
+   - Procure areas naturais para eficiencia
+   - Conjure durante tempestades ou crepusculo para poder maximo
+   - Use Control Weather antes de batalhas importantes
+
+   Para Grupos:
+   - Coordene preparacao com mago de Control Weather
+   - Lembre: densidade alta beneficia inimigos tambem
+
+   SINERGIAS:
+
+   Densidade combina-se multiplicativamente com bonus elementais e de escola.
+   Exemplo: Fogo em clima seco (umidade <30%) com alta densidade magica
+   (via Control Weather) = elemento +25%, densidade +20% = ~150% poder total!
+   Raio em tempestade chuvosa (umidade >80%) = elemento +30%, densidade +20% = ~156%!
+
+Veja tambem: MAGIA-CONTROL-WEATHER, MAGIA-DETECT-MAGIC, CLIMA-MAGICO,
+SINERGIAS, ELEMENTOS-MAGICOS, ESCOLAS-MAGICAS, WEATHER, LOOK
+#1
+ACENTOS ACCENTS UTF-8 CHARSET ENCODING ACENTUACAO CARACTERES-ESPECIAIS
+
+COMO HABILITAR LEITURA E ENTRADA DE ACENTOS NO VITALIAMUD
+
+   O VitaliaMUD suporta acentuacao completa em portugues (a, e, i, o, u, a~,
+o~, c, etc.) tanto para leitura quanto para entrada de texto. Para usar
+acentos corretamente, voce precisa configurar tanto o servidor quanto seu
+cliente MUD.
+
+CONFIGURACAO NO SERVIDOR (PROTOCOLOS):
+
+   Use o comando PREFEDIT (ou TOGGLE) para acessar suas preferencias e
+   habilite os seguintes protocolos:
+
+   K) ANSI         [ ON]  - Suporte basico a cores e caracteres
+   L) Charset      [ ON]  - Negociacao de conjunto de caracteres
+   P) UTF-8        [ ON]  - Codificacao Unicode UTF-8 (RECOMENDADO)
+
+   Opcionalmente, habilite tambem:
+   J) Xterm 256    [ ON]  - Suporte estendido a cores (melhora visualizacao)
+
+CONFIGURACAO NO CLIENTE MUD:
+
+   A entrada de acentos depende primariamente da configuracao do seu cliente
+   MUD. Aqui estao instrucoes para os clientes mais populares:
+
+   MUSHCLIENT:
+   1. Abra File -> World Properties
+   2. Va para a aba "Output"
+   3. Em "Character set", selecione "UTF-8"
+   4. Marque "Use default output font" ou escolha uma fonte com suporte UTF-8
+   5. Salve e reconecte
+
+   CMUD / ZMUD:
+   1. Abra Settings -> Preferences
+   2. Va para "General" -> "Character Encoding"
+   3. Selecione "UTF-8" como encoding
+   4. Reinicie o cliente e reconecte
+
+   MUDLET:
+   1. Mudlet ja usa UTF-8 por padrao
+   2. Verifique Settings -> Preferences -> "Use UTF-8 encoding" esta marcado
+   3. Certifique-se que sua fonte suporta caracteres acentuados
+
+   TINTIN++:
+   1. No arquivo de configuracao, adicione: #charset AUTO
+   2. Ou use: #charset UTF-8
+   3. Salve e reconecte
+
+   TELNET (PUTTY, WINDOWS TELNET):
+   PuTTY:
+   1. Em "Window" -> "Translation"
+   2. Em "Character set", selecione "UTF-8"
+   3. Salve a sessao e reconecte
+   
+   Linux/Mac Terminal:
+   1. A maioria dos terminais modernos ja usa UTF-8
+   2. Verifique: echo $LANG (deve mostrar algo como pt_BR.UTF-8)
+   3. Se necessario, configure: export LANG=pt_BR.UTF-8
+
+TESTANDO A CONFIGURACAO:
+
+   Apos configurar servidor e cliente:
+
+   1. Digite: diga Testando acentuacao: a e i o u a~ o~ c
+   2. Voce deve ver os acentos corretamente tanto ao digitar quanto ao ler
+   3. Tente tambem: gritar Ola! Esta funcionando!
+
+PROBLEMAS COMUNS:
+
+   Vejo '?' no lugar dos acentos:
+   - UTF-8 esta desabilitado no servidor (use PREFEDIT)
+   - Seu cliente nao esta configurado para UTF-8
+   - Sua fonte nao suporta caracteres acentuados
+
+   Consigo ler mas nao digitar acentos:
+   - Problema de configuracao do CLIENTE
+   - Verifique se o encoding esta em UTF-8
+   - Alguns clientes antigos nao suportam entrada UTF-8
+
+   Vejo caracteres estranhos (A§, A£, etc.):
+   - Seu cliente esta enviando UTF-8 mas esperando Latin-1
+   - OU o contrario: cliente em Latin-1 mas servidor espera UTF-8
+   - Solucao: Certifique-se que AMBOS usam UTF-8
+
+   Acentos funcionam em alguns lugares mas nao em outros:
+   - Alguns comandos podem ter restricoes de caracteres
+   - Titulos e nomes de personagens podem ter limitacoes
+   - Use HELP <comando> para verificar restricoes especificas
+
+SOBRE OS PROTOCOLOS:
+
+   UTF-8: Codificacao universal que suporta todos os idiomas
+   Charset: Protocolo que negocia qual conjunto de caracteres usar
+   ANSI: Sistema basico de cores e formatacao de texto
+
+   Para melhor experiencia, recomendamos:
+   - UTF-8: ON (essencial para acentos)
+   - Charset: ON (melhora compatibilidade)
+   - ANSI: ON (cores e formatacao)
+   - Xterm 256: ON (se seu cliente suportar)
+
+CLIENTES RECOMENDADOS:
+
+   Para melhor suporte a UTF-8 e acentos:
+   1. Mudlet (Windows/Mac/Linux) - RECOMENDADO
+   2. MUSHclient (Windows)
+   3. Tintin++ (Linux/Mac)
+   4. CMUD (Windows)
+   5. PuTTY (multiplatforma, para telnet simples)
+
+   Evite clientes muito antigos que nao suportam UTF-8.
+
+NOTA IMPORTANTE:
+
+   Se voce configurou tudo corretamente e ainda tem problemas, pode ser
+   necessario ajustar a configuracao do seu sistema operacional ou terminal.
+   A maioria dos sistemas modernos (Windows 10+, Mac OS X, Linux) ja usa
+   UTF-8 por padrao.
+
+Veja tambem: PREFEDIT, TOGGLE, CORES, COLOR, PROTOCOLOS
+#1
+REPUTACAO REPUTATION REPUTAÇÃO FAMA
+
+@gREPUTAÇÃO - Sistema de Fama e Reconhecimento@n
+
+A reputação representa o quão conhecido e respeitado você é no mundo de 
+Vitalia. Ela varia de 0 (notório) até 100 (lendário) e afeta como NPCs e
+outros personagens reagem a você.
+
+@gComo Ganhar Reputação:@n
+
+@yAções Heroicas:@n
+  - Derrotar criaturas malignas (+1 a +2)
+  - Curar outros aventureiros (+1 a +3)
+  - Enfrentar inimigos mais fortes (+1 a +3 bônus)
+  - Completar missões importantes (+1 a +10)
+
+@yGenerosidade:@n
+  - Doar ouro para os necessitados (+1 a +4)
+    • 100-499 moedas: +1 reputação
+    • 500-999 moedas: +1 a +3 reputação
+    • 1000+ moedas: +2 a +4 reputação
+  - Presentear itens valiosos (+1 a +2)
+    • Itens de 100-999 moedas: +1 reputação
+    • Itens de 1000+ moedas: +1 a +2 reputação
+
+@yBônus Especiais:@n
+  - Ajudar personagens de alta reputação (≥60) concede bônus extra
+  - Curar heróis lendários (≥70) aumenta sua fama
+  - Derrotar oponentes respeitáveis aumenta seu prestígio
+
+@gComo Perder Reputação:@n
+
+@rAções Negativas:@n
+  - Morrer em combate (-1 a -3)
+  - Assassinar criaturas boas (-1 a -3)
+  - Matar outros jogadores (-5 a -10)
+    • Matar heróis de alta reputação: -5 a -15 adicional
+  - Falhar em missões importantes (-1 a -5)
+  - Acumular karma negativo (até -25)
+
+@gNíveis de Reputação e Efeitos:@n
+
+@c0-9   @r[Notório]@n      - Comerciantes recusam atendimento
+@c10-19 @r[Desconfiado]@n   - Lojas restringem serviço (se maligno)
+@c20-39 @w[Neutro]@n        - Tratamento padrão
+@c40-59 @w[Conhecido]@n     - Começa a ser reconhecido
+@c60-69 @g[Respeitável]@n   - NPCs te tratam com respeito
+@c70-79 @g[Honrado]@n       - Bônus em interações sociais
+@c80-99 @y[Lendário]@n      - Recompensas aumentadas (+20%)
+@c100   @Y[MÍTICO]@n        - Máximo reconhecimento possível
+
+@gRoleplay e Reputação:@n
+
+Sua reputação representa sua @yfama@n no mundo, não necessariamente sua 
+moralidade:
+
+@c•@n Um vilão notório pode ter alta reputação - todos o conhecem e temem
+@c•@n Um herói humilde que falha muito pode ter baixa reputação
+@c•@n Reputação mede o quanto você é @yconhecido@n e @yrespeitado@n
+
+@gDicas para Manter Boa Reputação:@n
+
+@g1.@n Seja generoso - doe ouro e itens para NPCs necessitados
+@g2.@n Proteja os fracos - combata o mal e cure os feridos
+@g3.@n Complete missões - demonstre confiabilidade e competência
+@g4.@n Evite mortes desnecessárias - preserve sua honra
+@g5.@n Escolha seus alvos - matar criaturas boas prejudica sua fama
+
+@gAlinhamento vs Reputação:@n
+
+@gReputação Baseada em Alinhamento:@n
+
+@rMalignos (Infâmia):@n
+  Personagens malignos GANHAM reputação através de atos temidos:
+  @c•@n Roubar com sucesso: +1-2 reputação (dobro de alvos bondosos)
+  @c•@n Apunhalar pelas costas: +1-3 reputação
+  @c•@n Envenenar bebidas (taint): +1-3 reputação
+  @c•@n Derrotar oponentes fortes: reputação aumenta
+  @c•@n Matar criaturas bondosas: +2-4 reputação (vilão temido!)
+  @c•@n Conjurar magia sombria: +1-3 reputação (necromantes)
+  @c•@n Lançar maldições e magias de dano: +1-2 reputação
+  @c•@n Usar magia divina maligna: +1-2 reputação (clérigos caídos)
+
+@gBondosos/Neutros (Honra):@n
+  Personagens bondosos/neutros PERDEM reputação por atos desonrosos:
+  @c•@n Roubar: -2-4 reputação (pior se alvo bondoso)
+  @c•@n Apunhalar pelas costas: -3-5 reputação
+  @c•@n Envenenar: -3-6 reputação
+  @c•@n Usar magia sombria: -3-6 reputação (ato profano!)
+  @c•@n Ser pego em crime: penalidade severa adicional
+
+@yPenalidades Universais (Todos Alinhamentos):@n
+  @c•@n Atacar aliados/grupo: -5-10 (traição grave!)
+  @c•@n Ser pego roubando: -3-6
+  @c•@n Ser pego envenenando: -4-8
+
+
+@yAlinhamento@n = Sua moralidade (Bom/Neutro/Mau)
+@yReputação@n = Seu reconhecimento e fama
+
+Você pode ser:
+@c•@n Maligno de alta reputação (vilão temido e respeitado)
+@c•@n Bondoso de baixa reputação (herói desconhecido)
+@c•@n Neutro de alta reputação (mercenário famoso)
+
+Comerciantes avaliam AMBOS - alinhamento maligno @r+@n baixa reputação resulta
+em recusa de serviço.
+
+@gObservação Importante:@n
+
+Suas ações têm consequências! Construir uma boa reputação leva tempo e 
+esforço, mas pode ser perdida rapidamente através de ações imprudentes.
+
+Veja também: @cALINHAMENTO, KARMA, MISSOES, SOCIAIS@n
+
+@gBônus por Classe:@n
+Cada classe ganha reputação extra por ações alinhadas com seu tema:
+
+@yClasses Bondosas/Neutras:@n
+@cGuerreiro:@n +1-2 em combate (especialmente contra oponentes fortes)
+@cMago:@n +1-2 em magia e estudos arcanos
+@cClérigo:@n +1 em cura e caridade, +1-2 em atos de fé
+@cLadrão:@n +1-2 em roubo/apunhalar/envenenar (apenas malignos)
+@cDruida:@n +1 em cura e interações com natureza
+@cBardo:@n +1-2 em performance social, +1 em quests/caridade
+@cRangeiro:@n +1 em caça/rastreamento, +1 em interações natureza
+
+@rClasses Malignas (Variantes Sombrias):@n
+@cNecromante (Mago Maligno):@n +1-2 em magia necromântica/profana
+  • Conjurar: Animar Mortos, Drenar Energia, Clone, Escuridão, Toque Vampírico
+  • Bônus extra ao alvos bondosos
+
+@cClérigo Caído (Clérigo Maligno):@n +1 em magia sombria, +1-2 em magias de dano
+  • Conjurar: Maldição, Ferir, Dissipar o Bem, Medo
+  • Bônus extra ao alvos bondosos
+
+@cGuerreiro Maligno:@n +1-2 em combate contra bondosos
+  • Matar guardas, paladinos e criaturas bondosas
+  • Bônus extra para oponentes fortes
+
+@cDruida Corrompido:@n +1 em magias de dano naturais
+  • Usar magia da natureza para causar dano
+  • Bônus extra ao alvos bondosos
+
+@cRangeiro Sombrio:@n +1 em caça de alvos bondosos
+  • Caçar e rastrear criaturas bondosas
+  • Bônus extra em combate
+
+@cAssassino (Ladrão Maligno):@n +1-2 em roubo/apunhalar/envenenar
+  • Especialista em atos furtivos e mortais
+  • Já disponível no sistema base
+
+@yExemplos:@n
+  Guerreiro bondoso matando demônio: +2-3 (base +1-2, bônus classe +1)
+  Clérigo bondoso curando ferido: +2-4 (base +1-3, bônus classe +1)
+  
+  @rNecromante@n lançando Animar Mortos: +2-4 (base +1-2, bônus classe +1-2)
+  @rClérigo Caído@n lançando Maldição em paladino: +2-4 (infâmia!)
+  @rGuerreiro Maligno@n matando guarda bondoso: +3-6 (temido vilão!)
+  @rLadrão Maligno@n roubando bondoso: +2-4 (base +1-2, bônus classe +1-2)
+#1
+LEILAO LEILOES AUCTION AUCTIONS
+
+Sintaxe: leilao [subcomando] [argumentos]
+         leiloes
+
+O sistema de leilões permite que jogadores vendam e comprem itens através
+de leilões públicos ou privados.
+
+Subcomandos disponíveis:
+
+  @cleilao listar@n            - Ver todos os leilões ativos
+  @cleilao criar <item> <preço>@n - Criar um novo leilão
+  @cleilao dar <id> <valor>@n  - Dar um lance em um leilão
+  @cleilao info <id>@n         - Ver detalhes de um leilão específico
+  @cleilao convidar <id> <jogador>@n - Convidar jogador para leilão fechado
+  @cleilao desconvidar <id> <jogador>@n - Remover convite de jogador
+  @cleilao convidados <id>@n   - Ver lista de convidados (apenas vendedor)
+  @cleilao passe@n             - Informações sobre passes para leilões fechados
+
+O comando @cleiloes@n é um atalho para @cleilao listar@n.
+
+@gComo Funciona:@n
+
+@y1. Criar Leilão:@n
+   - Vá até a casa de leilões (procure por Belchior)
+   - Use: @cleilao criar <item> <preço_inicial>@n
+   - O item será removido do seu inventário
+   - O leilão durará 30 minutos
+
+@y2. Dar Lances:@n
+   - Use: @cleilao dar <id_leilao> <valor_lance>@n
+   - Seu lance deve ser maior que o lance atual
+   - O dinheiro será reservado imediatamente
+   - Se você der um novo lance, o anterior será devolvido
+
+@y3. Fim do Leilão:@n
+   - Após 30 minutos, o leilão termina automaticamente
+   - O vencedor recebe o item
+   - O vendedor recebe o dinheiro
+   - Perdedores têm seus lances devolvidos
+
+@rLeilões Fechados:@n
+   Alguns leilões são fechados e exigem convite ou passe especial.
+   Fale com Belchior para obter um passe se você foi convidado.
+
+@yExemplos:@n
+
+  > leiloes
+  Lista de Leilões Ativos:
+  ========================
+  Leilão #1: espada longa (Preço: 1000 moedas) - 15 minutos restantes
+
+  > leilao info 1
+  Leilão #1
+  Item: espada longa
+  Vendedor: Fulano
+  Preço Inicial: 500 moedas
+  Preço Atual: 1000 moedas
+  Lance Vencedor: 1000 moedas por Ciclano
+  Tempo Restante: 15 minutos
+
+  > leilao dar 1 1500
+  Lance de 1500 moedas aceito no leilão #1!
+
+  > leilao criar espada 500
+  Leilão #2 criado para espada longa com preço inicial de 500 moedas.
+
+@yObservações:@n
+  - Você precisa estar na casa de leilões para criar leilões ou dar lances
+  - Tenha dinheiro suficiente antes de dar um lance
+  - Não é possível cancelar um leilão uma vez criado
+  - O sistema está em fase experimental - reporte problemas aos imortais
+
+Veja também: @cBELCHIOR, COMPRAR, VENDER@n
+#0
+LEILOES
+
+Veja: @cLEILAO@n
+#0
+AUTOEXAM
+
+Uso: autoexam
+
+   Quando ativado, esta opcao faz com que voce examine automaticamente
+objetos e criaturas ao olhar para eles. Isso permite ver detalhes
+adicionais sem precisar usar o comando 'examine' manualmente.
+
+   Esta funcionalidade e util para aventureiros que desejam observar
+cada detalhe do mundo ao seu redor, identificando itens valiosos,
+armadilhas escondidas ou caracteristicas especiais de criaturas.
+
+Veja tambem: EXAMINE, TOGGLE, LOOK
+#0
+CHANSONS CANCOES
+
+Uso: chansons [classe]
+
+   Este comando exibe uma lista completa das cancoes (chansons) disponiveis
+para a classe especificada, mostrando quais niveis sao necessarios para
+aprende-las e pratica-las.
+
+   As cancoes sao formas especiais de magia que usam o poder da musica e
+da poesia para criar efeitos magicos. Praticadas principalmente por bardos,
+estas habilidades representam a arte de tecer encantamentos atraves da
+melodia e do verso.
+
+   Se voce nao especificar uma classe, o comando mostrara as cancoes da
+sua classe atual. Caso contrario, voce pode consultar as cancoes de
+qualquer classe para fins de estudo e planejamento.
+
+Exemplos:
+  > chansons          - Lista suas cancoes disponiveis (classe atual)
+  > chansons bardo    - Lista todas as cancoes da classe bardo
+  > chansons ranger   - Lista todas as cancoes da classe ranger
+
+Classes validas: mago, clerigo, ladrao, guerreiro, druida, bardo, ranger
+
+   Use PRACTICE para aprender e aprimorar suas cancoes, e CAST para
+entoa-las durante suas aventuras.
+
+Veja tambem: SPELLS, PRACTICE, CAST, SKILLS
+#0
+SPELLS MAGIAS
+
+Uso: spells [classe]
+
+   Este comando exibe uma lista completa das magias (spells) disponiveis
+para a classe especificada, mostrando os niveis necessarios para
+aprende-las e os circulos de poder a que pertencem.
+
+   Cada classe possui um conjunto unico de magias que reflete sua
+conexao com diferentes fontes de poder: magos dominam o arcano, clerigos
+canalizam divindade, druidas comandam a natureza, e assim por diante.
+
+   Se voce nao especificar uma classe, o comando mostrara as magias da
+sua classe atual. Caso contrario, voce pode consultar as magias de
+qualquer classe para fins de estudo e planejamento de personagem.
+
+Exemplos:
+  > spells           - Lista suas magias disponiveis (classe atual)
+  > spells mago      - Lista todas as magias da classe mago
+  > spells clerigo   - Lista todas as magias da classe clerigo
+  > spells druida    - Lista todas as magias da classe druida
+
+Classes validas: mago, clerigo, ladrao, guerreiro, druida, bardo, ranger
+
+   Esta consulta e essencial para planejar o desenvolvimento do seu
+personagem e entender quais poderes estarao disponiveis em niveis futuros.
+Use PRACTICE para aprender e aprimorar suas magias.
+
+Veja tambem: CHANSONS, PRACTICE, CAST, SKILLS
+#0
+RSKILLS RETAINED-SKILLS HABILIDADES-RETIDAS
+
+Uso: rskills
+
+   Este comando exibe as habilidades retidas do seu personagem. Habilidades
+retidas sao competencias especiais que seu personagem mantem mesmo apos
+mudancas de classe ou outros eventos que normalmente as fariam desaparecer.
+
+   Estas habilidades representam o conhecimento e experiencia que seu
+personagem acumulou ao longo de sua jornada, mantendo parte de seu
+treinamento anterior mesmo quando segue um novo caminho.
+
+   As habilidades retidas sao uma marca da experiencia e versatilidade
+do seu personagem, mostrando que os ensinamentos do passado nao sao
+facilmente esquecidos.
+
+Veja tambem: SKILLS, PRACTICE, MULTICLASS
+
+@rNota:@n Este comando e apenas para visualizacao. Para gerenciar habilidades
+retidas de outros jogadores, consulte o comando de administrador RSKILL.
+#0
+DISABLE
+
+Uso: disable [comando]
+
+   Este comando permite que administradores desabilitem comandos especificos
+do jogo temporariamente. Quando um comando esta desabilitado, os jogadores
+nao poderao usa-lo ate que seja reabilitado.
+
+   Se usado sem argumentos, exibe a lista de comandos atualmente desabilitados.
+
+Exemplos:
+  > disable              - Ver comandos desabilitados
+  > disable shout        - Desabilitar o comando 'shout'
+
+   Use esta funcionalidade para manutencao do servidor, correcao de bugs,
+ou para desabilitar temporariamente funcionalidades problematicas sem
+precisar reiniciar o servidor.
+
+   Comandos desabilitados aparecem em cinza na lista de comandos e retornam
+uma mensagem informativa quando os jogadores tentam usa-los.
+
+Veja tambem: ENABLE, WIZUTIL
+
+@rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
+#108
+ENABLE
+
+Uso: enable [comando]
+
+   Este comando permite que administradores reabilitem comandos que foram
+previamente desabilitados com o comando DISABLE. Quando um comando e
+reabilitado, os jogadores voltam a ter acesso normal a ele.
+
+   Se usado sem argumentos, exibe a lista de comandos atualmente desabilitados.
+
+Exemplos:
+  > enable               - Ver comandos desabilitados
+  > enable shout         - Reabilitar o comando 'shout'
+
+   Use este comando para restaurar funcionalidades apos manutencao ou
+correcao de problemas que motivaram a desabilitacao temporaria.
+
+Veja tambem: DISABLE, WIZUTIL
+
+@rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
+#108
+EMOTIONCONFIG EMOTION-CONFIG
+
+Uso: emotionconfig
+
+   Este comando exibe a configuracao completa do sistema de emocoes de
+Vitalia. O sistema de emocoes e uma mecanica avancada que simula estados
+emocionais dos personagens (medo, raiva, felicidade, tristeza, horror e dor),
+afetando seu comportamento em combate e interacoes sociais.
+
+   O comando mostra todos os parametros configuraveis do sistema:
+
+@yLimites de Exibicao Visual:@n
+   - Limiares para mostrar indicadores emocionais nas descricoes de sala
+   - Exemplos: "(amedrontado)", "(furioso)", "(aterrorizado)"
+
+@yComportamento de Fuga em Combate:@n
+   - Limiares e modificadores que afetam quando personagens fogem
+   - Valores de medo, coragem e horror que influenciam decisoes
+
+@ySistema de Dor:@n
+   - Limiares de dano que causam diferentes niveis de dor
+   - Quantidades de dor geradas por diferentes tipos de dano
+
+@yDecaimento Emocional:@n
+   - Taxas de recuperacao natural de cada emocao ao longo do tempo
+   - Taxas especiais durante repouso e sono
+
+@yMultiplicadores de Fontes:@n
+   - Modificadores para diferentes fontes de emocoes (combate, clima, etc.)
+
+   Use o comando CEDIT para modificar estas configuracoes.
+
+Veja tambem: EMOTIONEXPORT, EMOTIONIMPORT, CEDIT, EMOTIONS
+
+@rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
+#108
+EMOTIONEXPORT EMOTION-EXPORT
+
+Uso: emotionexport <nome_arquivo>
+
+   Este comando exporta toda a configuracao atual do sistema de emocoes
+para um arquivo, permitindo fazer backup das configuracoes ou compartilha-las
+com outros administradores.
+
+   O arquivo sera salvo no diretorio de configuracao do servidor com
+um timestamp para facilitar o controle de versoes. O formato do arquivo
+e legivel e pode ser editado manualmente se necessario.
+
+Exemplos:
+  > emotionexport backup_producao
+  > emotionexport teste_balanceamento
+
+   Use este comando antes de fazer mudancas experimentais nas configuracoes
+de emocoes, permitindo restaurar facilmente as configuracoes anteriores
+caso necessario.
+
+@yDica:@n Combine com EMOTIONIMPORT para testar diferentes configuracoes
+e reverter para versoes anteriores quando necessario.
+
+Veja tambem: EMOTIONIMPORT, EMOTIONCONFIG, CEDIT
+
+@rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
+#108
+EMOTIONIMPORT EMOTION-IMPORT
+
+Uso: emotionimport <nome_arquivo>
+
+   Este comando importa configuracoes do sistema de emocoes de um arquivo
+previamente exportado com EMOTIONEXPORT. Isso permite restaurar backups,
+aplicar configuracoes testadas ou compartilhar ajustes de balanceamento.
+
+   O arquivo deve estar no diretorio de configuracao do servidor e seguir
+o formato correto de exportacao. Todas as configuracoes validas no arquivo
+serao aplicadas imediatamente.
+
+Exemplos:
+  > emotionimport backup_producao
+  > emotionimport configuracao_evento
+
+   Apos importar, use EMOTIONCONFIG para verificar se todas as configuracoes
+foram aplicadas corretamente. O sistema reportara quantos parametros foram
+importados com sucesso.
+
+@rAtencao:@n As mudancas sao aplicadas imediatamente e afetam todos os
+jogadores. Certifique-se de que o arquivo contem as configuracoes desejadas
+antes de importar.
+
+@yDica:@n Sempre exporte a configuracao atual antes de importar uma nova,
+criando um ponto de restauracao.
+
+Veja tambem: EMOTIONEXPORT, EMOTIONCONFIG, CEDIT
+
+@rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
+#108
+MOB-AUTOQUESTS MOB-QUESTS AUTOQUEST-SYSTEM QUEST-POSTING
+
+@cSISTEMA DE AUTOQUESTS POSTADAS POR MOBS@n
+
+   O sistema de autoquests permite que mobs com IA postem quests dinamicamente
+para os jogadores. Mobs podem criar diferentes tipos de quests baseadas em suas
+necessidades, genetica e situacao atual.
+
+@y===== TIPOS DE QUESTS =====@n
+
+@c1. AQ_OBJ_FIND / AQ_OBJ_RETURN (Buscar Objeto)@n
+   - Jogador deve encontrar um objeto especifico
+   - Convertido automaticamente para AQ_OBJ_RETURN (entrega ao requisitante)
+   - Mob posta quando precisa de um item que nao possui
+   - Requisitos: Mob precisa ter ouro suficiente, item deve ser TAKE
+
+@c2. AQ_ROOM_FIND (Explorar Local)@n
+   - Jogador deve visitar uma sala especifica
+   - Mob posta quando quer informacoes sobre um local
+   - Quest mostra nome da sala E nome da zona (formato: "sala em zona")
+   - Requisitos: Sala nao pode ser GODROOM ou HOUSE
+
+@c3. AQ_MOB_FIND (Encontrar Mob)@n
+   - Jogador deve localizar e visitar um mob especifico
+   - Mob posta quando procura por outro mob
+   - Requisitos: Mob alvo deve existir no mundo
+
+@c4. AQ_MOB_KILL (Matar Mob)@n
+   - Jogador deve eliminar um mob especifico
+   - Se mob ja foi morto, pedra magica pode ser entregue
+   - Mob posta para remover uma ameaca
+   - Requisitos: Mob alvo deve existir
+
+@c5. AQ_MOB_SAVE (Salvar Mob)@n
+   - Jogador deve proteger/curar um mob especifico
+   - Quest completa quando mob esta saudavel (>80% HP) e fora de combate
+   - Raramente postada por mobs
+   - Requisitos: Mob alvo deve estar em perigo
+
+@c6. AQ_ROOM_CLEAR (Limpar Sala)@n
+   - Jogador deve eliminar todos os mobs de uma sala
+   - Mob posta para limpar uma area perigosa
+   - Requisitos: Sala deve ter mobs hostis
+
+@c7. AQ_PLAYER_KILL (Matar Jogador Assassino)@n
+   @rAVISO: Quest PvP - requer cuidado!@n
+   - Jogador deve eliminar qualquer jogador marcado como assassino (PKiller)
+   - Mob posta quando foi atacado por jogadores ou busca vinganca
+   - @yATIVA PvP@n - jogadores podem atacar uns aos outros
+   - Requisitos: Mob deve ter sido atacado ou ter baixa compassion
+   - @rRESTRICOES: Uso cuidadoso recomendado para evitar grief@n
+
+@c8. AQ_MOB_KILL_BOUNTY (Recompensa por Mob Especifico)@n
+   @yATUALMENTE DESABILITADA PARA TESTES@n
+   - Jogador deve eliminar um mob ESPECIFICO (nao qualquer do tipo)
+   - Sistema identifica instancia exata do mob alvo
+   - Pedra magica contem ID unico do alvo
+   - Requisitos: Mob alvo deve estar vivo no mundo
+
+@c9. AQ_MOB_ESCORT (Escoltar Mob)@n
+   - Jogador deve escoltar um mob ate um destino seguro
+   - Mob a ser escoltado spawna quando quest e aceita
+   - Quest falha se mob escoltado morrer
+   - Requisitos: Destino deve ser acessivel, mob nao pode ser NOKILL
+
+@c10. AQ_EMOTION_IMPROVE (Melhorar Emocao)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve melhorar emocao especifica com mob alvo
+   - Triggers: dar presentes, usar socials positivos, ajudar em combate
+   - Mob posta quando solitario (baixa friendship), desconfiado (baixa trust), ou triste
+   - Sistema de emocoes rastreia interacoes automaticamente
+   - Requisitos: Mob alvo deve existir, emocao valida (friendship, trust, loyalty, etc)
+   - @gFUNCAO:@n mob_posts_emotion_quest() implementada
+
+@c11. AQ_MAGIC_GATHER (Coleta Magica)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve visitar X locais com densidade magica alta
+   - Sistema calcula densidade baseado em clima, hora do dia, setor
+   - Mob posta quando precisa de poder magico ou energia
+   - Nao-combate, focado em exploracao magica
+   - Requisitos: Threshold de densidade configuravel
+   - @rSEGURANCA:@n Contador validado para prevenir exploits
+   - @gFUNCAO:@n mob_posts_magic_gather_quest() implementada
+
+@c12. AQ_DELIVERY (Entrega de Item)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve entregar item especifico para mob alvo via give
+   - Aumenta trust emotion com sucesso
+   - Usa sistema de reputacao
+   - Foco em relacionamento entre jogador e NPC especifico
+   - Requisitos: Item deve existir e ser tradeable
+   - @rSEGURANCA:@n Item marcado NOLOCATE para prevenir locate exploit
+   - @gFUNCAO:@n mob_posts_delivery_quest() implementada
+
+@c13. AQ_RESOURCE_GATHER (Coleta de Recursos)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve coletar e entregar X quantidade de item especifico
+   - Similar a AQ_OBJ_RETURN mas com contador
+   - Jogador entrega itens um por vez ao questmaster/requisitante
+   - Sistema mostra progresso apos cada entrega
+   - Requisitos: Item deve existir e ser takeable
+   - @yIMPORTANTE:@n Recursos devem ser ENTREGUES, nao apenas coletados
+   - @rSEGURANCA:@n Itens transferidos com NOLOCATE, contador validado
+   - @gFUNCAO:@n mob_posts_resource_gather_quest() implementada
+
+@c14. AQ_REPUTATION_BUILD (Construir Reputacao)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve melhorar reputacao/trust com mob ou faccao
+   - Usa trust emotion como proxy de reputacao
+   - Requer multiplas interacoes positivas ao longo do tempo
+   - Mob posta quando precisa melhorar relacoes
+   - Requisitos: Mob alvo deve existir
+   - @gFUNCAO:@n mob_posts_reputation_quest() implementada
+
+@c15. AQ_SHOP_BUY (Comprar em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve comprar X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_buy() quando item correto e comprado
+   - Progresso rastreado via contador (decrementa em cada compra)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Comprar 3 poção de cura em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Requisitos: Item deve existir e ser vendavel em lojas
+   - @rSEGURANCA:@n Items marcados NOLOCATE para prevenir buy-sell-buyback exploit
+   - @yPROTECAO:@n get_selling_obj() bloqueia venda de itens NOLOCATE
+   - @cTIMER:@n Flag NOLOCATE removida apos 1 dia MUD (28 ticks)
+   - @gFUNCAO:@n mob_posts_shop_buy_quest() implementada
+
+@c16. AQ_SHOP_SELL (Vender em Loja)@n
+   @gNOVO - TOTALMENTE FUNCIONAL! ✓@n
+   - Jogador deve vender X quantidade de item especifico em lojas
+   - Integrado com sistema de lojas (shop.c)
+   - Triggers em shopping_sell() quando item correto e vendido
+   - Progresso rastreado via contador (decrementa em cada venda)
+   - Sistema mostra nome do item e quantidade restante
+   - Exemplo: "Vender 10 peles de lobo em lojas"
+   - Quest info mostra: item_proto.short_description do item alvo
+   - Jogador deve adquirir itens via gameplay (caca, craft, etc)
+   - Requisitos: Item deve existir e ser comprado por lojas
+   - @rSEGURANCA:@n Validacao de item antes de aceitar venda
+   - @yPROTECAO:@n Quest completa apenas com vendas de itens corretos
+   - @gFUNCAO:@n mob_posts_shop_sell_quest() implementada
+
+@y===== MELHORIAS DE SEGURANCA =====@n
+
+@rProtecoes Contra Exploits Implementadas:@n
+1. @cContadores Validados:@n Todos os contadores (magic gather, resource gather)
+   verificam > 0 antes de decrementar. Log de aviso para tentativas de exploit.
+
+2. @cItem NOLOCATE:@n Itens em quests de delivery e resource gather sao marcados
+   com flag NOLOCATE para prevenir locate object exploit. Timer de 28 ticks
+   remove a flag automaticamente.
+
+3. @cTransferencia Segura:@n Resource gather valida que itens foram transferidos
+   com sucesso antes de contar entrega. Safety checks para NOTDEADYET.
+
+4. @cDisplay Melhorado:@n Quest info mostra dicas especificas para cada tipo:
+   - Emotion: tipo de emocao e nivel alvo
+   - Magic: densidade minima e locais restantes
+   - Resource: itens restantes e requisito de entrega
+   - Reputation: nivel de confianca necessario
+
+@y===== FUNCOES DE POSTING IMPLEMENTADAS =====@n
+
+@gTodas as 7 novas funcoes estao completas e funcionais:@n
+1. mob_posts_emotion_quest() - Cria quests de melhoria de emocao
+2. mob_posts_magic_gather_quest() - Cria quests de coleta magica
+3. mob_posts_delivery_quest() - Cria quests de entrega de item
+4. mob_posts_resource_gather_quest() - Cria quests de coleta de recursos
+5. mob_posts_reputation_quest() - Cria quests de construcao de reputacao
+6. mob_posts_shop_buy_quest() - Cria quests de compra em loja
+7. mob_posts_shop_sell_quest() - Cria quests de venda em loja
+Mobs com AI apropriada agora podem autonomamente criar estes tipos de quest
+quando suas condicoes de posting sao satisfeitas (genetics, gold, necessidade).
+
+@cSistema 100% Operacional:@n
+- ✓ Triggers funcionais
+- ✓ Display melhorado
+- ✓ Seguranca implementada
+- ✓ Posting automatico por mobs
+- ✓ Gods podem criar via QEDIT
+- ✓ Testes manuais e autonomos possiveis
+
+
+
+@y===== SISTEMA DE POSTING =====@n
+
+@gCondicoes para Mobs Postarem Quests:@n
+- Mob deve ter AI data (mob com comportamento inteligente)
+- Mob deve ter ouro suficiente para recompensa
+- Limite maximo de quests mob-posted nao pode ser excedido
+- Questmaster deve existir na zona ou zona adjacente
+- Mob deve ter genetics apropriadas (quest_tendency, adventurer_tendency, etc)
+
+@gQuestmasters:@n
+- Se questmaster normal nao acessivel, mob se torna questmaster temporario
+- Quests temporarias ficam com o mob ate serem completadas
+- Sistema salva quests em lib/etc/tempquests.dat para persistencia
+
+@gRecompensas:@n
+- Calculadas baseadas em dificuldade, nivel do mob e reputacao
+- Mobs podem oferecer itens do proprio inventario como recompensa extra
+- Ouro e deduzido do mob ao postar quest
+
+@gFalhas e Penalidades:@n
+- Quests de escolta: penalidade 2x se escoltado morrer
+- Quests de bounty: falham se outro jogador matar o alvo
+- Abandonar quest: penalidade normal em questpoints
+
+@y===== COMANDOS RELACIONADOS =====@n
+
+Para testar e gerenciar o sistema:
+- QEDIT: Editar quests manualmente
+- QUEST LIST: Ver quests disponiveis
+- QUEST STATUS <vnum>: Ver detalhes de uma quest
+- QUEST REMOVE <vnum> confirm: Remover quest mob-posted (gods)
+
+@y===== OBSERVACOES IMPORTANTES =====@n
+
+@r1. Quests PvP (AQ_PLAYER_KILL):@n
+   - Devem ser usadas com extremo cuidado
+   - Podem causar conflitos entre jogadores
+   - Recomenda-se limitar frequencia de posting
+   - Considere desabilitar se houver abuse
+
+@r2. Quests Bounty (AQ_MOB_KILL_BOUNTY):@n
+   - Atualmente desabilitadas (linha 2718 em utils.c)
+   - Sistema rastreia mobs especificos por script_id
+   - Requer mais testes antes de reativar
+
+@g3. Performance:@n
+   - Limite de MAX_MOB_POSTED_QUESTS quests ativas
+   - Quests sao salvas periodicamente
+   - Cleanup automatico de quests completadas
+
+@g4. Balanceamento:@n
+   - Genetica do mob afeta tipo e frequencia de quests
+   - Reputacao do mob afeta recompensas
+   - Dificuldade calculada automaticamente
+
+Veja tambem: QEDIT, QUEST, AUTOQUESTS, CEDIT, MEDIT, QUEST-GAPS
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
+QUEST-GAPS QUEST-FUTURE QUEST-TYPES-FUTURE MISSING-QUESTS
+
+@cANALISE DE LACUNAS NO SISTEMA DE QUESTS@n
+
+   Esta entrada documenta tipos de quest que PODERIAM ser adicionados ao sistema
+baseados nos sistemas existentes de emocoes, reputacao e densidade magica.
+
+@y===== ANALISE DOS SISTEMAS ATUAIS =====@n
+
+@gSistema de Emocoes (20 emocoes):@n
+- Basicas: Fear, Anger, Happiness, Sadness
+- Sociais: Friendship, Love, Trust, Loyalty  
+- Motivacionais: Curiosity, Greed, Pride
+- Empaticas: Compassion, Envy
+- Excitacao: Courage, Excitement
+- Negativas: Disgust, Shame, Pain
+
+@gSistema de Reputacao:@n
+- Escala 0-100
+- Afeta recompensas e aceitacao de quests
+- Aumenta com conclusao, diminui com falhas
+
+@gSistema de Densidade Magica:@n
+- Baseado em clima (tempestades = alta densidade)
+- Baseado em tempo (crepusculo = pico)
+- Baseado em setor (agua/floresta = mais alto)
+- Boosts por zona via Control Weather
+- Afeta poder e custo de magias
+
+@y===== LACUNAS IDENTIFICADAS =====@n
+
+@c1. QUESTS BASEADAS EM EMOCOES@n
+   @rAusentes: Quests Sociais/Diplomaticas@n
+   - Fazer amizades (aumentar friendship)
+   - Ganhar confianca de NPCs (aumentar trust)
+   - Mediar conflitos (reduzir anger)
+   - Confortar NPCs tristes (reduzir sadness)
+   - Construir lealdade com faccao (aumentar loyalty)
+   
+   @gImplementacao sugerida:@n AQ_EMOTION_IMPROVE (tipo 11)
+   - Mob posta quando solitario/zangado/com medo
+   - Triggers: dar presentes, socials, ajudar em combate
+   - Sistema de emocoes ja rastreia isso
+   - Requer interacao social, nao combate
+
+@c2. QUESTS BASEADAS EM MAGIA@n
+   @rAusentes: Quests Magicas@n
+   - Lancar magia em area de alta densidade
+   - Visitar locais com densidade magica especifica
+   - Estabilizar disturbio magico
+   - Aumentar densidade magica de area
+   - Coletar componentes magicos
+   
+   @gImplementacao sugerida:@n AQ_MAGIC_GATHER (tipo 12)
+   - Mob posta quando precisando de poder magico
+   - Player visita X locais com densidade > threshold
+   - Sistema de densidade magica ja calcula isso
+   - Nao-combate, exploracao magica
+
+@c3. QUESTS DE COMERCIO/INTERACAO@n
+   @rAusentes: Quests Sociais Nao-Combate@n
+   - Comerciar itens especificos com NPCs
+   - Ensinar habilidade para NPC
+   - Aprender de NPC
+   - Realizar entretenimento
+   - Espalhar informacao/rumores
+   
+   @gImplementacao sugerida:@n AQ_TRADE (tipo 13)
+   - Usa reputacao para preco
+   - Constroi trust emotion
+   - Alternativa nao-combate
+   - Mob posta quando precisando de item especifico
+
+@c4. QUESTS DE COLETA@n
+   @rAusentes: Colecao de Recursos@n
+   - Coletar X quantidade de itens especificos
+   - Colher do ambiente
+   - Minerar/forragear recursos especificos
+   
+   @gImplementacao sugerida:@n AQ_RESOURCE_GATHER (tipo 14)
+   - Similar a AQ_MOB_KILL mas para objetos
+   - Usa contador (QST_QUANTITY)
+   - Mob posta quando precisando de suprimentos
+
+@c5. QUESTS DE REPUTACAO@n
+   @rAusentes: Construcao de Reputacao@n
+   - Melhorar reputacao com faccao/zona
+   - Restaurar reputacao danificada
+   - Espalhar boa palavra sobre alguem
+   
+   @gImplementacao sugerida:@n AQ_REPUTATION_BUILD (tipo 15)
+   - Completar sub-tarefas (matar/coletar/comerciar)
+   - Sistema de reputacao ja existe
+   - Multi-objetivo complexo
+
+@y===== PRIORIDADES DE IMPLEMENTACAO =====@n
+
+@cALTA PRIORIDADE@n (aproveitam sistemas existentes):
+1. AQ_EMOTION_IMPROVE - Sistema de emocoes completo
+2. AQ_MAGIC_GATHER - Sistema de densidade ja funciona
+3. AQ_DELIVERY - Sistemas de reputacao e trust prontos
+
+@cMEDIA PRIORIDADE@n (implementacao moderada):
+4. AQ_RESOURCE_GATHER - Logica similar a mob kill
+5. AQ_REPUTATION_BUILD - Sistema base existe
+
+@cBAIXA PRIORIDADE@n (implementacao complexa):
+6. AQ_INVESTIGATE - Requer sistema de dialogos
+7. AQ_CRAFT - Requer sistema de crafting (pode nao existir)
+8. AQ_PUZZLE - Requer engine de puzzles
+
+@y===== NOTAS DE IMPLEMENTACAO =====@n
+
+Para cada novo tipo de quest:
+1. Adicionar em quest.h defines (incrementar NUM_AQ_TYPES)
+2. Adicionar em quest_types[] array (quest.c linha 31)
+3. Implementar em format_quest_info() (quest.c)
+4. Adicionar trigger em autoquest_trigger_check() (quest.c)
+5. Criar funcao mob_posts_XXX_quest() em utils.c
+6. Atualizar documentacao help
+7. Adicionar validacao em is_quest_valid()
+8. Testar com mobs de diferentes geneticas
+
+@rCONSIDERACAO IMPORTANTE:@n
+Antes de adicionar novos tipos, avaliar:
+- Balanceamento com tipos existentes
+- Impacto na performance (triggers frequentes?)
+- Complexidade para jogadores
+- Se sistemas necessarios ja existem
+- Se mobs usarao naturalmente
+
+@gEXEMPLO DE USO:@n
+Um mob com alta curiosity e baixa friendship poderia postar:
+- AQ_MAGIC_GATHER se em area de baixa densidade
+- AQ_EMOTION_IMPROVE se muito solitario
+- AQ_DELIVERY se precisando entregar item mas nao querendo sair
+
+Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
 $~

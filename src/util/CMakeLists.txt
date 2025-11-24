@@ -2,12 +2,14 @@
 set(TOOLS
   asciipasswd
   autowiz
+  casasconv
   plrtoascii
   rebuildIndex
   rebuildMailIndex
   shopconv
   sign
   split
+  textextract
   wld2html
 )
 

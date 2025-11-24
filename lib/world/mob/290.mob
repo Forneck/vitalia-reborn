@@ -11,7 +11,7 @@ imperceptíveis, com exceção das duas finas linhas dos lados de sua cabeça.
 2344962 0 0 0 16432 0 0 0 800 E
 100 -30 -60 13d11+2600 6d7+46
 80200 1016419
-8 8 1
+9 9 1
 Dex: 18
 Int: 18
 Wis: 18
@@ -29,7 +29,9 @@ possa continuar seus estudos sem interrupções desnecessárias.
 2121730 0 0 0 0 0 0 0 900 E
 92 -20 -40 10d10+1405 5d7+32
 49500 787909
-8 8 2
+9 9 2
+GenWimpy: 14
+GenFollow: 13
 E
 #29002
 gilzaan filho velho~
@@ -43,7 +45,9 @@ com que todos os homem proeminentes de suas terras o conheçam.
 2103298 0 0 0 0 0 0 0 500 E
 86 -19 -39 10d10+1240 5d6+30
 36215 385396
-8 8 1
+9 9 1
+GenWimpy: 7
+GenFollow: 15
 E
 #29003
 necromocis filho novo~
@@ -58,7 +62,7 @@ certamente substituirá seu pai na hora em que for preciso.
 2117634 0 0 0 112 0 0 0 600 E
 81 -15 -40 10d10+1135 5d6+29
 21150 273866
-8 8 1
+9 9 1
 E
 #29004
 astronomo~
@@ -71,7 +75,7 @@ existência.  Ele rascunha algumas notas em um pequeno bloco de notas.
 2097154 0 0 0 0 0 0 0 300 E
 53 -11 -32 10d10+900 4d5+24
 1650 160665
-8 8 1
+9 9 1
 E
 #29005
 servo~
@@ -83,7 +87,7 @@ Ele é um elegante senhor com um longo cabelo escuro, jogado sobre seu casaco.
 2097220 0 0 0 0 0 0 0 400 E
 50 -9 -28 5d5+650 4d5+25
 900 138481
-8 8 1
+9 9 1
 E
 #29006
 homem elegante~
@@ -97,7 +101,9 @@ misteriosa.
 2097154 0 0 0 0 0 0 0 -500 E
 94 -34 -40 10d10+1450 6d7+51
 5150 374488
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #29007
 humilde peticionario~
@@ -110,7 +116,9 @@ com uma postura forte, fala em voz firme à Baronesa sobre sua causa.
 2097154 0 0 0 0 0 0 0 400 E
 54 -12 -32 10d10+987 4d5+27
 1243 168509
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #29008
 arrogante proprietaria~
@@ -123,7 +131,9 @@ seu orgulho e mal-humor.
 2097154 0 0 0 0 0 0 0 200 E
 56 -13 -32 10d10+780 4d6+28
 2800 184883
-8 8 2
+9 9 2
+GenWimpy: 8
+GenFollow: 14
 E
 #29009
 fazendeiro~
@@ -135,7 +145,7 @@ Ele segura seu chapéu amassado em suas mãos, amassando-o ainda mais com seu ne
 2097154 0 0 0 0 0 0 0 600 E
 51 -10 -32 10d10+999 4d5+25
 770 145654
-8 8 1
+9 9 1
 E
 #29010
 assistente~
@@ -147,7 +157,7 @@ Ela parece ser uma mulher de meia idade, competente e responsável.
 2097154 0 0 0 0 0 0 0 600 E
 67 -18 -40 9d9+1340 5d6+33
 1350 292085
-8 8 2
+9 9 2
 E
 #29011
 seguranca quarto~
@@ -160,7 +170,9 @@ ele obviamente leva seu trabalho muito a sério.
 2097154 0 0 0 0 0 0 0 400 E
 79 -21 -40 8d11+1476 5d6+39
 1950 444598
-8 8 1
+9 9 1
+GenWimpy: 11
+GenFollow: 17
 E
 #29012
 empregada~
@@ -173,7 +185,7 @@ Ela parece não ter notado sua presença.
 2097154 0 0 0 0 0 0 0 600 E
 52 -12 -32 1d1+990 4d5+26
 600 153048
-8 8 2
+9 9 2
 E
 #29013
 primo visitante~
@@ -185,7 +197,9 @@ Ele parece ter vindo correndo sabendo que o Barão serviria a comida logo mais.
 2115586 0 0 0 0 0 0 0 100 E
 84 -20 -40 1d1+1890 5d6+42
 300 319913
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 11
 E
 #29014
 colono~
@@ -197,7 +211,7 @@ Ele não parece ser muito simpático. Ele continua a trabalhar sem notar sua pre
 2097154 0 0 0 0 0 0 0 500 E
 51 -10 -32 9d9+990 4d5+25
 550 145654
-8 8 1
+9 9 1
 E
 #29015
 vaca~
@@ -209,7 +223,7 @@ Não importa o quanto você olhe, ela ainda parece uma imensa vaca gorda mascand
 2097216 0 0 0 0 0 0 0 0 E
 21 0 2 6d6+870 2d3+10
 0 15159
-8 8 1
+9 9 1
 E
 #29016
 mulher dona casa~
@@ -221,7 +235,7 @@ Ela ainda não deve ter percebido que você entrou em sua casa.
 2097154 0 0 0 0 0 0 0 400 E
 43 -4 -24 6d6+760 4d5+21
 800 94267
-8 8 2
+9 9 2
 E
 #29017
 fazendeiro~
@@ -234,7 +248,7 @@ roupas velhas que cheiram a gado.
 2097154 0 0 0 0 0 0 0 400 E
 50 -9 -28 7d7+980 4d5+25
 500 118481
-8 8 1
+9 9 1
 E
 #29018
 lenhador desocupado~
@@ -247,7 +261,7 @@ precisa mesmo incomodá-lo?
 2097154 0 0 0 0 0 0 0 300 E
 52 -8 -32 4d7+1000 4d5+26
 1600 133048
-8 8 1
+9 9 1
 E
 #29019
 velho homem~
@@ -259,7 +273,7 @@ Ele parece ter algo a dizer, mas apenas continua sentado.
 2097154 0 0 0 0 0 0 0 400 E
 46 -8 -24 5d5+920 4d5+23
 2625 81957
-8 8 1
+9 9 1
 E
 #29020
 dona casa mulher~
@@ -271,7 +285,7 @@ Ela não diz nada, apenas olha assustada para você esperando algo. Há medo em 
 2097154 0 0 0 0 0 0 0 800 E
 41 -2 -24 6d6+820 4d5+20
 300 73486
-8 8 2
+9 9 2
 E
 #29021
 homem~
@@ -283,7 +297,7 @@ Ele lhe cumprimenta assim que você entra, ele parece ligeiramente confuso.
 2097154 0 0 0 0 0 0 0 499 E
 48 -7 -28 6d11+543 4d5+24
 1300 104791
-8 8 1
+9 9 1
 E
 #29022
 professora~
@@ -295,7 +309,7 @@ Ela mal olha para você quando você entra, dando-lhe um 'Em que posso te ajudar
 2097154 0 0 0 0 0 0 0 800 E
 44 18 -24 7d8+1231 4d5+22
 900 99959
-8 8 2
+9 9 2
 E
 #29023
 balconista~
@@ -308,7 +322,7 @@ enquanto ele traz um belo assado.
 2097154 0 0 0 0 0 0 0 400 E
 77 -23 -40 5d8+1110 5d6+38
 1850 116457
-8 8 1
+9 9 1
 E
 #29024
 contador historias~
@@ -322,7 +336,9 @@ saber, mas histórias são sempre boas.
 2097154 0 0 0 0 0 0 0 400 E
 61 -18 -40 7d7+760 4d6+30
 2050 209937
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #29025
 homem~
@@ -334,7 +350,9 @@ Seus olhos parecem um pouco turvos, ele sem dúvida está cansado devido ao seu 
 2097154 0 0 0 0 0 0 0 600 E
 63 -20 -40 5d4+1000 5d6+31
 1150 229653
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #29026
 elegante cavalheiro~
@@ -347,7 +365,9 @@ Ele não parece ser daqui.
 2097154 0 0 0 0 0 0 0 100 E
 88 -25 -40 9d6+1530 5d6+44
 3722 485396
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #29027
 bela mulher~
@@ -359,7 +379,9 @@ Ela sorri carinhosamente para você.
 2097154 0 0 0 0 0 0 0 300 E
 76 -21 -40 10d10+750 5d6+38
 1800 152804
-8 8 2
+9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #29028
 calintra herborista~
@@ -374,7 +396,7 @@ para trás constantemente.
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 2
+9 9 2
 E
 #29029
 salaylia mulher~
@@ -386,7 +408,7 @@ Ela enxuga suas mãos em seu avental, e educadamente lhe aponta uma mesa vazia.
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 2
+9 9 2
 E
 #29030
 homem ferraria dono~
@@ -399,7 +421,7 @@ Forte, rude, um pouco sujo..
 2097154 0 0 0 0 0 0 0 400 E
 51 -12 -32 7d8+1231 4d5+25
 550 145654
-8 8 1
+9 9 1
 E
 #29031
 farmaceutico~
@@ -411,7 +433,7 @@ Ele parece já ter terminado todo seu trabalho diário e agora está descansando
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 1
+9 9 1
 E
 #29032
 mochaaska~
@@ -423,7 +445,7 @@ Mochaaska possui uma simpatia contagiante. Seus dentes são muito brancos.
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 1
+9 9 1
 E
 #29033
 proprietaria dona loja~
@@ -435,7 +457,7 @@ Ela olha para você assim que você entra, lançando-lhe um leve aceno, e volta 
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 2
+9 9 2
 E
 #29034
 ministro cidade~
@@ -450,7 +472,7 @@ precisam sentar e conversar.
 2097216 0 0 0 0 0 0 0 900 E
 57 -15 -32 7d8+1231 4d6+28
 350 173419
-8 8 1
+9 9 1
 E
 #29035
 cidadao~
@@ -462,7 +484,7 @@ Ele não parece estar muito feliz.
 2097216 0 0 0 0 0 0 0 600 E
 44 4 -24 7d7+1059 4d5+22
 789 79959
-8 8 1
+9 9 1
 E
 #29036
 garotinha~
@@ -474,7 +496,10 @@ Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente par
 2097216 0 0 0 0 0 0 0 800 E
 15 10 4 4d3+300 1d5+7
 25 6427
-8 8 2
+9 9 2
+GenWimpy: 5
+GenRoam: 30
+GenFollow: 6
 E
 #29037
 alfaite~
@@ -486,6 +511,6 @@ Ele não lhe diz nada, apenas aguarda com um sorriso simpático e paciente.
 2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
-8 8 1
+9 9 1
 E
 $

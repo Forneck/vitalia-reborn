@@ -139,13 +139,15 @@ robe froboz~
 robe do mago Froboz~
 O robe do mago Froboz foi deixado aqui.~
 ~
-11 0 0 0 0 ak 0 0 0 0 0 0 0
-0 0 0 0
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+10 0 0 0
 5 15000 2500 0 0
 A
-17 -6
+3 2
 A
-24 -4
+4 2
+A
+19 1
 #12015
 espada aco temperada~
 uma espada de aço temperado~
@@ -205,13 +207,13 @@ raio jupiter~
 a espada em forma de raio de Júpiter~
 Uma espada em forma de raio foi deixada aqui.~
 ~
-5 bgkmnrt 0 0 0 an 0 0 0 0 0 0 0
-0 6 6 12
-22 100000 25000 60 0
+5 bgk 0 0 0 an 0 0 0 0 0 0 0
+10 6 6 3
+22 100000 25000 90 0
 A
-18 3
+18 8
 A
-19 3
+19 8
 #12021
 cinturao vermelha marte~
 um cinturão vermelho~
@@ -241,7 +243,7 @@ sandalia alada mercurio~
 um par de sandálias aladas~
 As sandálias aladas de Mercúrio foram deixadas aqui.~
 ~
-9 al 0 0 0 ag 0 0 0 0 0 0 0
+9 a 0 0 0 ag 0 0 0 0 0 0 0
 13 0 0 0
 14 75000 13000 60 0
 A

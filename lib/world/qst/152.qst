@@ -1,0 +1,31 @@
+#15206
+Buscar uma navalha achatada~
+Buscar e trazer uma navalha achatada~
+a hieracoesfinge está procurando por uma navalha achatada. Se você encontrar este item, traga-o para mim ou diretamente para a hieracoesfinge para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 5302 -1 -1 -1
+10 0 6 31 -1 5312 1
+500 1000 65535
+S
+#15262
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (A Encosta do Penhasco). Vá até lá para receber 273 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 5720 -1 -1 -1
+12 54 7 32 -1 3015 1
+273 546 3055
+S
+#15288
+Buscar uma pesada maça~
+Buscar e trazer uma pesada maça~
+um serviçal está procurando por uma pesada maça. Se você encontrar este item, traga-o para mim ou diretamente para um serviçal para receber 600 moedas de ouro, 1200 pontos de experiência e uma bolsa de ervas como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 17332 -1 -1 -1
+10 0 15 40 -1 17330 1
+600 1200 12027
+S
+$~

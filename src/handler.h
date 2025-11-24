@@ -17,6 +17,7 @@ void affect_total(struct char_data *ch);
 void affect_to_char(struct char_data *ch, struct affected_type *af);
 void affect_remove(struct char_data *ch, struct affected_type *af);
 void affect_from_char(struct char_data *ch, int type);
+void affect_remove_all(struct char_data *ch);
 bool affected_by_spell(struct char_data *ch, int type);
 void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, bool avg_dur, bool add_mod,
                  bool avg_mod);
@@ -65,6 +66,7 @@ struct char_data *get_char_world_vis(struct char_data *ch, char *name, int *numb
 
 struct obj_data *get_obj_in_list_num(int num, struct obj_data *list);
 struct obj_data *get_obj_num(obj_rnum nr);
+bool char_has_obj_vnum(struct char_data *ch, obj_vnum vnum);
 struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name, int *number, struct obj_data *list);
 struct obj_data *get_obj_vis(struct char_data *ch, char *name, int *num);
 struct obj_data *get_obj_in_equip_vis(struct char_data *ch, char *arg, int *number, struct obj_data *equipment[]);
@@ -104,6 +106,7 @@ int generic_find(char *arg, bitvector_t bitvector, struct char_data *ch, struct 
 void forget(struct char_data *ch, struct char_data *victim);
 void remember(struct char_data *ch, struct char_data *victim);
 void mobile_activity(void);
+void mob_emotion_activity(void);
 void clearMemory(struct char_data *ch);
 
 /* For new last command: */

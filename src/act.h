@@ -110,6 +110,11 @@ ACMD(do_where);
 ACMD(do_who);
 ACMD(do_whois);
 ACMD(do_evaluate);
+/* Utility functions for act.informative.c */
+#define SHOW_OBJ_LONG 0
+#define SHOW_OBJ_SHORT 1
+#define SHOW_OBJ_ACTION 2
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
 
 /*****************************************************************************
  * Begin Functions and defines for act.item.c
@@ -268,6 +273,7 @@ ACMD(do_gen_tog);
 #define SCMD_COLOR 33
 #define SCMD_HITBAR 34
 #define SCMD_AUTOTITLE 35
+#define SCMD_AUTOEXAM 36
 
 /* do_quit */
 ACMD(do_quit);
@@ -285,11 +291,18 @@ ACMD(do_happyhour);
 ACMD(do_hide);
 ACMD(do_not_here);
 ACMD(do_practice);
+ACMD(do_skills);
+ACMD(do_spells);
+ACMD(do_chansons);
 ACMD(do_report);
 ACMD(do_save);
 ACMD(do_sneak);
 ACMD(do_split);
 ACMD(do_steal);
+ACMD(do_peek);
+ACMD(do_syllables);
+ACMD(do_experiment);
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level);
 ACMD(do_title);
 ACMD(do_autotitle);
 ACMD(do_visible);
@@ -410,6 +423,13 @@ ACMD(do_zpurge);
 ACMD(do_zreset);
 ACMD(do_zunlock);
 ACMD(do_portal);
+ACMD(do_disable);
+ACMD(do_enable);
+ACMD(do_emotionconfig);
+ACMD(do_emotionexport);
+ACMD(do_emotionimport);
 
+void init_disabled_commands(void);
+bool is_command_disabled(int cmd_num);
 bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group);
 #endif /* _ACT_H_ */

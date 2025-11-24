@@ -10,8 +10,9 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 0 400
 9 9 1
 GenWimpy: 100
-GenLoot: 4
-GenRoam: 70
+GenLoot: 18
+GenRoam: 4
+GenFollow: 10
 E
 #4901
 elfo gato~
@@ -24,7 +25,9 @@ Ele dorme despreocupadamente sob uma sombra fresca de uma árvore.
 3 18 7 2d6+34 1d7+0
 0 800
 4 4 1
-GenWimpy: 6
+GenWimpy: 7
+GenLoot: 1
+GenFollow: 3
 E
 #4902
 leopardo manchado~
@@ -37,7 +40,8 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 9
+GenWimpy: 18
+GenFollow: 1
 E
 #4903
 cobra madeira jaculi~
@@ -50,8 +54,10 @@ Ela parece não se importar muito com sua presença.
 3 18 8 6d5+22 1d7+1
 0 600
 9 9 1
-GenWimpy: 14
-GenRoam: 87
+GenWimpy: 17
+GenRoam: 88
+GenGroup: 2
+GenFollow: 6
 E
 #4904
 rã ra~
@@ -64,8 +70,11 @@ Ela parece estar faminta.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 2
-GenWimpy: 17
-GenRoam: 85
+GenWimpy: 24
+GenLoot: 2
+GenRoam: 88
+GenGroup: 28
+GenFollow: 5
 E
 #4905
 babuino selvagem~
@@ -78,8 +87,10 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 9
-GenRoam: 68
+GenWimpy: 13
+GenLoot: 2
+GenRoam: 83
+GenFollow: 10
 E
 #4906
 macaco carnívoro~
@@ -93,9 +104,10 @@ sobrevivência de outros animais.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 11
-GenRoam: 82
+GenWimpy: 20
+GenRoam: 87
 GenGroup: 1
+GenFollow: 5
 E
 #4907
 xamã xama atom~
@@ -109,8 +121,9 @@ concentração.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 6
-GenRoam: 70
+GenWimpy: 7
+GenRoam: 76
+GenFollow: 6
 E
 #4908
 atom~
@@ -165,6 +178,9 @@ Ela acena educadamente para você e continua seu caminho.
 5 17 5 4d6+42 1d5+1
 109 1200
 9 9 2
+GenWimpy: 1
+GenRoam: 27
+GenFollow: 6
 E
 #4912
 sílfide silfide~
@@ -178,7 +194,9 @@ contagiante.
 5 17 5 4d6+43 1d5+1
 118 1200
 9 9 2
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 61
+GenFollow: 6
 E
 #4913
 duende pequeno~
@@ -191,8 +209,10 @@ Ele olha para você com um sorriso maldoso. Assim que você pisca ele some.
 5 17 5 4d6+45 1d5+1
 127 1200
 9 9 1
-GenWimpy: 2
-GenRoam: 4
+GenWimpy: 4
+GenRoam: 38
+GenGroup: 2
+GenFollow: 8
 E
 #4914
 ettercap~
@@ -218,7 +238,8 @@ ao seu redor.
 4 17 6 1d4+50 1d6+1
 390 1000
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
+GenFollow: 6
 E
 #4916
 grigue~

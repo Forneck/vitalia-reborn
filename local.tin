@@ -1,0 +1,3 @@
+#config mccp off
+#session local localhost 4000
+

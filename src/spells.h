@@ -19,6 +19,11 @@
 #define DEFAULT_STAFF_LVL 12
 #define DEFAULT_WAND_LVL 12
 
+/* Maximum weapon dice size achievable through curse/remove curse spells */
+#define MAX_CURSE_DICE_SIZE 12
+/* Minimum dice size threshold for considering a weapon "normal" vs weakened */
+#define MIN_NORMAL_DICE_SIZE 6
+
 #define CAST_UNDEFINED (-1)
 #define CAST_SPELL 0
 #define CAST_POTION 1
@@ -213,6 +218,7 @@
 #define SKILL_FORAGE 255
 #define SKILL_EAVESDROP 256
 #define SKILL_TAINT_FLUID 257 /* Thief skill to poison liquids    */
+#define SKILL_PEEK 258        /* Thief skill to peek at inventory */
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 
@@ -359,6 +365,8 @@ float get_weather_summoning_modifier(struct char_data *ch, int spell_element, in
 float get_weather_duration_modifier(struct char_data *ch, int spell_element, int spell_school);
 float get_weather_success_modifier(struct char_data *ch, int spell_element, int spell_school);
 float get_weather_movement_modifier(struct char_data *ch);
+float calculate_mana_density(struct char_data *ch);
+void get_mana_density_description(float density, const char **desc, int *color_level);
 const char *get_spell_school_name(int school);
 const char *get_spell_element_name(int element);
 const char *get_skill_school_name(int school);
@@ -412,8 +420,12 @@ void affect_update(void);
 
 /* from spell_parser.c */
 ACMD(do_cast);
+int check_voice_cast(struct char_data *ch, const char *spoken_text);
+void spell_to_syllables_public(const char *spell_name, char *result, size_t result_size);
 
 /* Global variables */
 extern char cast_arg2[];
+extern int spell_modifier_diminish; /* Set to 1 when "minus" syllable is used */
+extern int spell_modifier_amplify;  /* Set to 1 when "plus" syllable is used */
 
 #endif /* _SPELLS_H_ */

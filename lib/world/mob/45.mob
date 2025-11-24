@@ -9,7 +9,7 @@ para carregar facilmente um Homem (ou um Anão mais um Hobbit).
 2713680 0 0 0 0 0 0 0 500 E
 60 -10 -20 10d10+2500 5d18+15
 7000 500000
-8 8 2
+9 9 2
 Dex: 20
 Int: 18
 Wis: 15
@@ -32,6 +32,8 @@ Str: 20
 Dex: 20
 Int: 20
 Wis: 18
+GenWimpy: 23
+GenFollow: 15
 E
 #4502
 tuor~
@@ -48,7 +50,7 @@ Eärendil, o Luminoso.
 2222096 0 0 0 0 0 0 0 500 E
 100 -40 -50 8d10+15000 6d20+60
 100000 2500000
-8 8 1
+9 9 1
 BareHandAttack: 3
 Str: 18
 Dex: 18
@@ -65,7 +67,7 @@ espada.  Na outra mão, segura uma lanterna élfica.
 2124034 0 0 0 0 0 0 0 600 E
 60 -8 -25 8d8+2000 8d10+20
 6500 300000
-8 8 1
+9 9 1
 E
 #4504
 sentinela madeira~
@@ -78,7 +80,9 @@ espada.
 2125826 0 0 0 0 0 0 0 500 E
 40 0 -15 6d8+800 6d8+10
 3000 150000
-8 8 1
+9 9 1
+GenWimpy: 8
+GenFollow: 18
 E
 #4505
 sentinela pedra~
@@ -90,7 +94,7 @@ O sentinela esta trajando vestes cinzas e segurando uma espada.
 2125826 0 0 0 0 0 0 0 500 E
 41 -1 -18 7d8+900 7d8+12
 3000 105000
-8 8 1
+9 9 1
 E
 #4506
 sentinela bronze~
@@ -102,7 +106,7 @@ O sentinela esta vestindo cota de malha e empunhando um machado.
 2191362 0 0 0 0 0 0 0 500 E
 42 -2 -20 8d8+900 8d8+13
 3000 100000
-8 8 1
+9 9 1
 E
 #4507
 sentinela ferro~
@@ -114,7 +118,7 @@ O sentinela veste manto e malha negras e segura um grande escudo negro.
 2191362 0 0 0 0 0 0 0 500 E
 43 -3 -20 9d8+950 9d8+14
 3000 105000
-8 8 1
+9 9 1
 E
 #4508
 sentinela prata~
@@ -126,7 +130,7 @@ O sentinela traja vestes brancas e segura um belo arco.
 2187282 0 0 0 0 0 0 0 500 E
 44 -4 -20 10d8+1000 10d8+15
 4000 110000
-8 8 1
+9 9 1
 E
 #4509
 sentinela ouro dourado~
@@ -138,7 +142,7 @@ O sentinela traja malha com detalhes de ouro e segura um longo arco.
 2187282 0 0 0 0 0 0 0 500 E
 45 -5 -20 11d8+1000 11d8+16
 5000 100000
-8 8 1
+9 9 1
 E
 #4510
 sentinela aco~
@@ -150,7 +154,7 @@ O sentinela segura uma grande lança e usa armadura de aço negro.
 2187282 0 0 0 0 0 0 0 500 E
 46 -6 -20 12d8+1000 12d8+18
 5000 120000
-8 8 1
+9 9 1
 E
 #4511
 guarnicaoo soldados pedra~
@@ -163,7 +167,7 @@ espadas de duas mãos.
 2222082 0 0 0 0 0 0 0 600 E
 80 -18 -30 9d10+5000 9d9+20
 8000 1800000
-8 8 2
+9 9 2
 E
 #4512
 guarnicao soldados bronze~
@@ -176,7 +180,7 @@ que refulgem pálidas como o fogo baço, empunham machados com lâminas vermelha
 2222082 0 0 0 0 0 0 0 600 E
 82 -21 -30 9d10+5200 10d9+23
 9000 2000000
-8 8 2
+9 9 2
 E
 #4513
 guarnicao soldados ferro~
@@ -189,7 +193,7 @@ e seus rostos mascarados por viseiras que ostentam cada uma um bico de águia.
 2222082 0 0 0 0 0 0 0 600 E
 85 -25 -30 9d10+6500 11d9+25
 10000 2200000
-8 8 2
+9 9 2
 E
 #4514
 guarnicaoo soldados prata~
@@ -202,7 +206,7 @@ de cristas brancas.
 2222098 0 0 0 0 0 0 0 600 E
 90 -28 -30 9d11+6900 11d10+28
 12000 2400000
-8 8 2
+9 9 2
 E
 #4515
 guarnicao soldados ouro~
@@ -216,7 +220,7 @@ como chamas.
 2222098 0 0 0 0 0 0 0 600 E
 95 -31 -35 9d11+7200 11d11+30
 15000 2650000
-8 8 2
+9 9 2
 E
 #4516
 ecthelion~
@@ -234,7 +238,7 @@ agora a mando de quem viestes e a quem desejas encontrar!"@n
 2222106 0 0 0 0 0 0 0 800 E
 101 -40 -40 10d12+14000 10d12+50
 100000 5000000
-8 8 1
+9 9 1
 Str: 20
 StrAdd: 80
 Dex: 20
@@ -254,7 +258,7 @@ Trajando vestes cincentas e segurando um grande arco, o arqueiro, com sua visão
 2220034 0 0 0 0 0 0 0 500 E
 40 0 -15 5d6+1500 5d5+13
 5000 200000
-8 8 1
+9 9 1
 E
 #4518
 voronwe voronwë~
@@ -268,7 +272,7 @@ Ossë e desde então aguarda o momento de voltar ao mar.
 2187328 0 0 0 0 0 0 0 700 E
 50 0 -20 5d9+2500 8d8+12
 6000 250000
-8 8 1
+9 9 1
 E
 #4519
 sentinela elfo~
@@ -281,7 +285,7 @@ com uma grande lança está sempre atento à segurança da cidade.
 2126082 0 0 0 0 0 0 0 500 E
 40 0 -15 5d4+1000 4d6+10
 2000 180000
-8 8 1
+9 9 1
 E
 #4520
 idril celebrindal~
@@ -309,7 +313,7 @@ o destino reserva a ele um futuro grandioso.
 2121792 0 0 0 0 0 0 0 700 E
 10 10 5 8d5+400 4d4+2
 600 50000
-8 8 1
+9 9 1
 E
 #4522
 turgon rei~
@@ -336,7 +340,7 @@ por Tuor, quanto à estima do Rei por este mortal.
 2189380 0 0 0 0 0 0 0 0 E
 80 -15 -25 9d8+6000 9d9+20
 30000 300000
-8 8 1
+9 9 1
 E
 #4524
 glorfindel~
@@ -349,7 +353,7 @@ Bravo entre os elfos e renomado em Gondolin.
 2193728 0 0 0 0 0 0 0 700 E
 70 -27 -25 8d7+5000 7d10+18
 25000 400000
-8 8 1
+9 9 1
 E
 #4525
 balrog demonio~
@@ -362,7 +366,7 @@ fogo que servem a Morgoth.
 2123266 0 0 0 0 0 0 0 -600 E
 70 -25 -24 6d9+6000 5d9+30
 2000 900000
-8 8 1
+9 9 1
 E
 #4526
 elfo~
@@ -374,7 +378,7 @@ An undefined string.
 2121792 0 0 0 0 0 0 0 600 E
 20 10 -10 5d5+300 3d8+5
 8000 30000
-8 8 1
+9 9 1
 E
 #4527
 elfa~
@@ -386,7 +390,7 @@ An undefined string.
 2121792 0 0 0 0 0 0 0 600 E
 20 11 -11 5d5+250 3d7+4
 6000 27000
-8 8 2
+9 9 2
 E
 #4528
 crianca elfica~
@@ -398,6 +402,6 @@ An undefined string.
 2121792 0 0 0 0 0 0 0 600 E
 10 15 -5 2d5+180 1d9+3
 1000 12000
-8 8 2
+9 9 2
 E
 $

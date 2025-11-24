@@ -11,7 +11,8 @@ bravos e destemidos entrem.
 30 1 -20 6d20+500 5d6+20
 5000 99000
 9 9 1
-GenWimpy: 5
+GenWimpy: 25
+GenFollow: 13
 E
 #19801
 centauro ~
@@ -26,8 +27,9 @@ você com um olhar indiferente..
 40 1 -30 15d6+600 6d6+21
 3500 100000
 9 9 1
-GenWimpy: 6
-GenRoam: 51
+GenWimpy: 16
+GenRoam: 89
+GenFollow: 14
 E
 #19802
 fada labirinto~
@@ -55,6 +57,9 @@ no labirinto pois ele parece estar aqui há muito tempo.
 50 3 -26 15d6+600 5d6+27
 30000 145000
 9 9 1
+GenWimpy: 3
+GenRoam: 6
+GenFollow: 14
 E
 #19804
 guerreiro lider grupo~
@@ -70,6 +75,8 @@ esse guerreiro.
 60 0 -25 15d6+870 5d6+33
 5000 200000
 9 9 1
+GenWimpy: 7
+GenFollow: 15
 E
 #19805
 mago grupo~
@@ -149,9 +156,10 @@ branco?'.
 60 5 -10 15d6+500 5d6+20
 5000 900000
 9 9 2
-GenWimpy: 16
+GenWimpy: 13
 GenLoot: 5
-GenRoam: 89
+GenRoam: 86
+GenFollow: 14
 E
 #19810
 amarelo demonio~
@@ -166,6 +174,8 @@ GRANDE perigo.
 90 -12 -20 15d6+700 5d6+40
 75000 400000
 9 9 1
+GenWimpy: 7
+GenFollow: 14
 E
 #19811
 verde demonio~
@@ -179,6 +189,8 @@ DE MORRER!!!'
 90 -12 -20 15d6+700 5d6+40
 75000 400000
 9 9 1
+GenWimpy: 5
+GenFollow: 15
 E
 #19812
 demonio vermelho~
@@ -201,6 +213,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 4
+GenWimpy: 4
+GenFollow: 14
 E
 #19813
 guardiao verde~
@@ -216,6 +230,8 @@ verde e os mistérios que esta porta esconde.
 60 -20 -35 15d6+800 4d6+20
 5000 300000
 9 9 1
+GenWimpy: 4
+GenFollow: 13
 E
 #19814
 guardiao amarelo~
@@ -231,6 +247,8 @@ chave amarela e os mistérios que esta porta esconde.
 60 -20 -35 15d6+600 5d4+20
 5000 300000
 9 9 0
+GenWimpy: 6
+GenFollow: 15
 E
 #19815
 guardiao vermelho~
@@ -246,6 +264,8 @@ chave vermelha e os mistérios que esta porta esconde.
 60 -20 -30 15d6+600 5d4+19
 5000 300000
 9 9 1
+GenWimpy: 8
+GenFollow: 15
 E
 #19816
 fantasma aventureiro~
@@ -259,8 +279,11 @@ esperava?  É um fantasma!
 50 10 -3 15d6+500 5d4+10
 20000 40000
 9 9 1
-GenWimpy: 5
-GenRoam: 50
+GenWimpy: 9
+GenLoot: 11
+GenRoam: 89
+GenGroup: 20
+GenFollow: 13
 E
 #19817
 guerreiro fantasma~
@@ -278,6 +301,8 @@ guerreiro citado na história.
 60 0 -15 15d6+700 5d6+20
 15000 100000
 9 9 1
+GenWimpy: 4
+GenFollow: 15
 E
 #19818
 dama mulher bela~
@@ -333,7 +358,11 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 70 -10 -30 600d1+250 2d8+25
 10000 200000
 9 9 1
-GenWimpy: 8
+GenWimpy: 26
+GenLoot: 78
+GenEquip: 3
 GenRoam: 89
+GenGroup: 73
+GenFollow: 14
 E
 $

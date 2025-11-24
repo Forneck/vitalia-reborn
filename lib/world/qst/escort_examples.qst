@@ -1,0 +1,97 @@
+* Escort Quest Example
+* This is a sample quest file demonstrating the escort quest feature.
+* Copy this to lib/world/qst/ directory and adjust vnums to match your world.
+*
+* IMPORTANT: Make sure the mob vnums and room vnums referenced here exist
+* in your world files before using this quest.
+
+#9001
+Escolta do Mercador~
+Um mercador precisa de escolta segura até a cidade~
+Um mercador nervoso se aproxima de você e diz:
+
+'Olá, aventureiro! Preciso de sua ajuda urgentemente!
+Tenho mercadorias valiosas para entregar na cidade,
+mas a estrada está perigosa com bandidos.
+
+Você poderia me escoltar até lá? Pagarei bem pelos seus serviços!'
+
+[ATENÇÃO: O mercador irá seguir você automaticamente.
+Leve-o até a Praça da Cidade (sala 3100) com segurança.]
+~
+O mercador sorri aliviado e diz:
+'Muito obrigado por me escoltar com segurança!
+Aqui está sua recompensa, como prometido.
+Você é um verdadeiro herói!'
+~
+O mercador suspira decepcionado:
+'Ah, que pena... Vou ter que esperar por outro aventureiro corajoso.'
+A busca foi abandonada.
+~
+9 3010 a 3050 -1 -1 -1
+100 0 5 15 30 3100 1
+500 1000 -1
+S
+
+* Quest Field Explanation:
+* Line 1: Quest vnum (9001)
+* Line 2-8: Quest name (ends with ~)
+* Line 9-19: Quest description (ends with ~)
+* Line 20-27: Accept message - instructions for player (ends with ~)
+* Line 28-31: Completion message - shown when quest succeeds (ends with ~)
+* Line 32-34: Quit message - shown when quest is abandoned (ends with ~)
+* Line 35: 
+*   9 = quest type (AQ_MOB_ESCORT)
+*   3010 = questmaster mob vnum
+*   a = flags (none set, could be 'ab' for repeatable+mob_posted)
+*   3050 = target mob vnum (the merchant to escort)
+*   -1 = previous quest vnum (none required)
+*   -1 = next quest vnum (no follow-up quest)
+*   -1 = prerequisite object vnum (none required)
+* Line 36:
+*   100 = quest points reward
+*   0 = quest points penalty for quitting
+*   5 = minimum level
+*   15 = maximum level
+*   30 = time limit in ticks (use -1 for unlimited)
+*   3100 = destination room vnum (where escort must be delivered)
+*   1 = quantity (not used for escort quests, always 1)
+* Line 37:
+*   500 = gold reward
+*   1000 = experience reward
+*   -1 = object reward vnum (none)
+* Line 38: S (marks end of quest)
+
+#9002
+Escolta da Criança Perdida~
+Uma criança está perdida e precisa voltar para casa~
+Uma criança pequena se aproxima chorando:
+
+'*soluço* Eu me perdi... não consigo encontrar minha casa!
+Você pode me levar de volta? Fica perto do templo!
+Meus pais devem estar muito preocupados...'
+
+[NOTA: A criança seguirá você. Leve-a até a Casa da Família (sala 3200).]
+~
+A criança abraça você com força:
+'Obrigado! Obrigado! Você me salvou!
+Meus pais vão ficar tão felizes!'
+
+A mãe da criança aparece e lhe entrega uma recompensa.
+~
+A criança continua chorando, perdida e sozinha.
+~
+9 3015 ab 3051 -1 -1 -1
+50 0 1 10 -1 3200 1
+200 500 3001
+S
+
+* This second example shows:
+* - Repeatable quest (flag 'a' = REPEATABLE)
+* - Mob-posted quest (flag 'b' = MOB_POSTED)
+* - No time limit (-1)
+* - Lower level range (1-10)
+* - Object reward (vnum 3001 - could be a toy or memento)
+
+$~
+* End of quest file marker

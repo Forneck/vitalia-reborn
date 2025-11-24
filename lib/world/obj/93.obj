@@ -5,7 +5,7 @@ O Coração do dragão está aqui, emitindo sua energia para todos os lados.~
 ~
 1 abdegikq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-10 1000000 100000 101 0
+10 1000000 100000 90 0
 E
 coracao dragao~
 Você observa um enorme coração de dragão, envolvido por uma aura brilhante e
@@ -21,9 +21,9 @@ A
 A
 13 42
 A
-18 2
+18 3
 A
-19 2
+19 3
 A
 22 -2
 #9301
@@ -48,9 +48,9 @@ erradas, ele pode significar um grande perigo.
 A
 5 1
 A
-18 3
+18 10
 A
-19 3
+19 8
 A
 2 2
 #9302
@@ -58,7 +58,7 @@ arco aventureiro~
 o arco do aventureiro~
 O Arco do aventureiro foi esquecido aqui.~
 ~
-29 adegimnqt 0 0 0 an 0 0 0 0 0 0 0
+29 adegiqt 0 0 0 an 0 0 0 0 0 0 0
 60 0 0 0
 19 500000 50000 60 0
 E
@@ -69,13 +69,15 @@ dizem que quando esse arco brilhar e arremessar um flecha de fogo para o céu,
 será um sinal de que ele encontrou seu verdadeiro dono.
 ~
 A
-4 2
+2 2
 A
 3 2
 A
-18 3
+4 2
 A
-19 3
+18 8
+A
+19 8
 #9303
 olho morte~
 o olho da morte~
@@ -144,15 +146,15 @@ batalhas e vitórias.
 A
 1 1
 A
-18 2
+18 8
 A
-19 2
+19 8
 #9306
 coroa cristal~
 uma coroa de cristal~
 Uma Coroa de cristal foi deixada aqui, emitindo seu esplendor para os céus.~
 ~
-9 abegiq 0 0 0 ae 0 0 0 0 0 0 0
+9 abegq 0 0 0 ae 0 0 0 0 0 0 0
 9 0 0 0
 5 500000 50000 60 0
 E
@@ -167,6 +169,10 @@ A
 4 2
 A
 6 1
+A
+18 3
+A
+19 1
 A
 24 -2
 #9307
@@ -189,6 +195,8 @@ A
 12 25
 A
 13 30
+A
+6 5
 #9308
 sol deserto~
 o sol do deserto~
@@ -220,9 +228,9 @@ anel ossos~
 um anel de ossos~
 Um anel de ossos, sombrio e misterioso, foi esquecido aqui.~
 ~
-9 begjlnq 0 0 0 ab 0 0 0 0 0 0 0
+9 begjnq 0 0 0 ab 0 0 0 0 0 0 0
 12 0 0 0
-5 5000000 500000 65 0
+5 5000000 500000 60 0
 E
 anel osso~
 Você observa um sombrio e macabro anel, feito com ossos de antigos dragões
@@ -246,7 +254,7 @@ A Espada espírito foi deixada aqui.~
 ~
 5 abeiq 0 0 0 an 0 0 0 0 0 0 0
 0 4 7 3
-12 6000000 600000 80 0
+12 6000000 600000 60 0
 E
 espada espirito~
 Você observa uma das mais esplendorosas e magníficas espadas do mundo de
@@ -261,17 +269,17 @@ A
 A
 13 15
 A
-18 2
+18 7
 A
-19 2
+19 7
 #9311
 medalhao pestilencia~
 o medalhão da pestilência~
 O Medalhão da pestilência foi deixado aqui.~
 ~
-11 aegjlnq 0 0 0 ac 0 0 0 0 0 0 0
-0 0 0 0
-5 6000000 600000 80 0
+9 aegjq 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+5 6000000 600000 90 0
 E
 medalhao pestilencia~
 Você observa um maravilhoso medalhão, feito de prata e com uma grande esfera
@@ -285,11 +293,15 @@ criaturas maléficas que não mereciam perdão.
 A
 1 2
 A
-5 -3
+2 2
 A
-18 2
+4 2
 A
-19 2
+3 2
+A
+18 1
+A
+19 3
 #9312
 coroa flores~
 uma coroa de flores~
@@ -996,9 +1008,9 @@ argolas douradas anciao~
 as argolas douradas do ancião~
 As argolas douradas do ancião foi esquecida aqui.~
 ~
-11 aegklq 0 0 0 aq 0 0 0 dn 0 0 0
+11 aegkq 0 0 0 aq 0 0 0 dn 0 0 0
 0 0 0 0
-5 2000000 200000 85 0
+5 2000000 200000 70 0
 E
 argolas douradas anciao~
 Você observa uma linda argola dourada, criada pelo poderoso Ancião Dragão
@@ -1042,7 +1054,7 @@ Um brinco de penas foi esquecido aqui.~
 ~
 11 egq 0 0 0 aq 0 0 0 f 0 0 0
 0 0 0 0
-5 1400000 140000 60 0
+5 1400000 140000 0 0
 E
 brinco penas~
 Você observa um colorido brinco de penas, feito com três penas de diferentes
@@ -1084,7 +1096,7 @@ O brinco do bravo foi esquecido aqui.~
 ~
 11 aegkq 0 0 0 aq 0 0 0 dn 0 0 0
 0 0 0 0
-5 2000000 200000 55 0
+5 2000000 200000 30 0
 E
 brinco bravo~
 Você observa um maravilhoso brinco, feito de bronze e ornamentado com alguns
@@ -1101,4 +1113,6 @@ A
 13 25
 A
 18 1
+A
+19 1
 $~

@@ -1,43 +1,3 @@
-Text      corpo~
-Body      corpo no  recipiente no fim da luta
-~
-Name      Forneck~
-IdNum     2
-Dated     1591249071
-Level     1
-Room      18602
-Flags     0 0 0 0
-End
-Text      Set Help~
-Body      Set help derruba o mud
-~
-Name      Cansian~
-IdNum     1
-Dated     1603240361
-Level     110
-Room      1204
-Flags     0 0 0 0
-End
-Text      Help~
-Body      Arquivos de Help causam crash.
-~
-Name      Cansian~
-IdNum     1
-Dated     1603257557
-Level     110
-Room      1204
-Flags     0 0 0 0
-End
-Text      guilda ranger~
-Body      fazer guilda de ranger em mid e nt
-~
-Name      Cansian~
-IdNum     1
-Dated     1603325631
-Level     110
-Room      3001
-Flags     0 0 0 0
-End
 Text      practice~
 Body      Diz que so pode praticar no mestre mas acaba praticando.
 ~
@@ -56,7 +16,7 @@ IdNum     1
 Dated     1604000874
 Level     110
 Room      3001
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      away vazado~
 Body      o verde no away na hora de mostrar na sala ta vazando
@@ -66,7 +26,7 @@ IdNum     1
 Dated     1604012800
 Level     110
 Room      3001
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      autoequip~
 Body      brincos, rosto e asas
@@ -86,37 +46,7 @@ IdNum     1
 Dated     1604403156
 Level     110
 Room      3054
-Flags     0 0 0 0
-End
-Text      stoneskin~
-Body      remover carga de stoneskin no dano
-~
-Name      Cansian~
-IdNum     1
-Dated     1604403203
-Level     110
-Room      3054
-Flags     0 0 0 0
-End
-Text      'animate dead'~
-Body      No aceita corpo. talvez deixar como tar ignore?
-~
-Name      Cansian~
-IdNum     1
-Dated     1604421180
-Level     110
-Room      3001
-Flags     0 0 0 0
-End
-Text      fly~
-Body      Ao tentar usar o comando fly o mesmo no levanta voo.
-~
-Name      Motharo~
-IdNum     25
-Dated     1604590442
-Level     12
-Room      3045
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      pick~
 Body      pick lock so deveria funcionar com lad
@@ -126,16 +56,6 @@ IdNum     1
 Dated     1605402159
 Level     110
 Room      3469
-Flags     0 0 0 0
-End
-Text      cor vazando~
-Body      cor ta vazando dos status tipo "Cansian  (escrevendo) est em p aqui." tudo depois de escrevendo ta azul
-~
-Name      Anyte~
-IdNum     6
-Dated     1605560060
-Level     79
-Room      11559
 Flags     0 0 0 0
 End
 Text      kanakajja~
@@ -178,33 +98,6 @@ IdNum     6
 Dated     1605661964
 Level     79
 Room      17853
-Flags     0 0 0 0
-End
-Text      sense life~
-Body      mobs que precisa de sense life pra ver tem como ver sem sense life
-~
-Name      Anyte~
-IdNum     6
-Dated     1605662531
-Level     79
-Room      17854
-Flags     0 0 0 0
-End
-Text      fly~
-Body      Comandos fly e land nao implementados. Nao ta tendo que usar o comando fly pra entrar em salas que precisa estar voando.
-"< 801Hp 1214Mn 209Mv > 
-land
-Voc aterrissa.
-< 801Hp 1214Mn 209Mv > 
-fly
-Voc levanta vo.
-< 801Hp 1214Mn 209Mv > "
-~
-Name      Anyte~
-IdNum     6
-Dated     1605756277
-Level     80
-Room      10812
 Flags     0 0 0 0
 End
 Text      quadro sem cores~
@@ -282,4 +175,439 @@ Dated     1740709013
 Level     110
 Room      206
 Flags     1 0 0 0
+End
+Text      stoneskin~
+Body      A stone agora melhorou mais do que o normal, aparentemente se eu lanco algumas muitas vezes (preciso checar a quantidade), ela fica "eterna". Mostra no score um valor negativo de pontos e a duracao acima de 9999hs. Com isso, independente da quantidade de golpes ela nao acaba e depende so da duracao da magia.
+Ah, e o fireshield tb ta repassando o dano, mesmo que o golpe seja anulado pela stoneskin.
+~
+Name      Laguna~
+IdNum     50
+Dated     1760884252
+Level     100
+Room      17370
+Flags     0 0 0 0
+End
+Text      Help~
+Body      Nao sei se  exatamente bug, mas quando mandei "help comm" pra ser help command, apareceu "Nao encontrei ajuda para comm." seguido das linhas "Voce queria dizer: < send link = "help combo">combo" etc. O send link  para aparecer tambm?
+~
+Name      Yazid~
+IdNum     37
+Dated     1760988493
+Level     96
+Room      3054
+Flags     1 0 0 0
+End
+Text      invigor~
+Body      Invigor est sem self cast
+~
+Name      Henzo~
+IdNum     562
+Dated     1761006043
+Level     61
+Room      10713
+Flags     1 0 0 0
+End
+Text      eval para fireweapon~
+Body      arcos (fire weapon) ver evaluate e revisar
+~
+Name      Cansian~
+IdNum     1
+Dated     1761007566
+Level     110
+Room      3054
+Flags     0 0 0 0
+End
+Text      remort e transcender~
+Body      Uma coisa do remort: quando transcende, nao ta bloqueando luta. Da pra lutar, nao leva golpe nenhum, bate de volta normal
+~
+Name      Laguna~
+IdNum     50
+Dated     1761078839
+Level     100
+Room      9386
+Flags     0 0 0 0
+End
+Text      Prox_nivel~
+Body      a barra de prox nivel nao esta atualizando  Prox Nivel.:     4,501,443xp [>>>>>>>>>>] (deveria estar proxima do meio uma vez que o total para meu level atual  de 9.999.999
+~
+Name      Roscoe~
+IdNum     293
+Dated     1761129282
+Level     94
+Room      3001
+Flags     0 0 0 0
+End
+Text      Paralyze + Wimp~
+Body      Mobs com paralyze nao deveriam ser capazes de fugir (wimpy) nem pelo wimpy_tendency.
+~
+Name      Cansian~
+IdNum     1
+Dated     1761146422
+Level     110
+Room      1204
+Flags     1 0 0 0
+End
+Text      Fome e sede no est avisando um tickantes. quando passa sede ja perde o tick direto.~
+Body      Fome e sede no est avisando um tickantes. quando passa sede ja perde o tick direto.
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761165942
+Level     95
+Room      1016
+Flags     1 0 0 0
+End
+Text      Sala Shogum Tei (antes do topo dos shoguns)~
+Body      Saida a up da sala Shogum Tei com problemas, o nome da saida deveria ser "campo", destrancada com um dos amuletos dos shoguns, pra chegar no Tokugawa. Porem, atualmente nao da pra destrancar a saida.
+~
+Name      Laguna~
+IdNum     50
+Dated     1761166445
+Level     36
+Room      15132
+Flags     1 0 0 0
+End
+Text      Portas com Palavras~
+Body      nenhuma porta que abre com palavras esta funcionando. Fenix na china, fenda, gondolin, etc.
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761224673
+Level     95
+Room      5429
+Flags     0 0 0 0
+End
+Text      fly~
+Body      Lupulis tagarela, 'nao adianta aterrisar, que voa de novo sozinho'
+~
+Name      Cansian~
+IdNum     1
+Dated     1761239432
+Level     110
+Room      3001
+Flags     0 0 0 0
+End
+Text      retorno pro templo apos o quit~
+Body      Faz uns 72 horas que dei quit na area do Abismo e nao voltei pro templo de Midgaard
+~
+Name      Yazid~
+IdNum     37
+Dated     1761244501
+Level     96
+Room      9752
+Flags     0 0 0 0
+End
+Text      sem cor aps titulo colorido~
+Body      Usuarios com titulo colorido, ficam com o resto da descricao na sala sem cor aps a flag
+~
+Name      Yazid~
+IdNum     37
+Dated     1761245474
+Level     96
+Room      3000
+Flags     0 0 0 0
+End
+Text      magia errada quando fez o port dos remorts~
+Body      recordo que levei de Druida skin like diamond, e nao skin like steel, que esta agora entre minhas magias
+~
+Name      Yazid~
+IdNum     37
+Dated     1761246003
+Level     96
+Room      3019
+Flags     0 0 0 0
+End
+Text      armazem do chaoyan - china~
+Body      A lista de itens vendidos ta incompleta, por exemplo, a pequena mochila chinesa.
+O mob Chaoyang tem ela equipada, mas no list da loja dele, so contem o frasco.
+~
+Name      Laguna~
+IdNum     50
+Dated     1761249290
+Level     53
+Room      17680
+Flags     0 0 0 0
+End
+Text      habilidades de remorts~
+Body      Ola, acho que na hora de transferir as habililidades e magias dos remorts, alguma coisa deu errado.
+Eu estou com vampiric touch quando na verdade levei fireshield de mago
+
+Acho que tem mais coisa, mas nao lembro de tudo, essa foi a mais marcante, Yazid se nao me engano viu algo trocado no personagem dele tambem
+~
+Name      Astus~
+IdNum     517
+Dated     1761249522
+Level     80
+Room      3008
+Flags     0 0 0 0
+End
+Text      transport via plants impossivel de praticar~
+Body      < 333Hp 439Mn 294Mv > prac transport via plants Voce nao pode praticar essa magia.
+~
+Name      Yazid~
+IdNum     37
+Dated     1761250173
+Level     96
+Room      3019
+Flags     0 0 0 0
+End
+Text      O portao de madeira - Gondolin~
+Body      O primeiro portao em Gondolin, O Portao de Madeira, nao da pra destrancer.
+O caminho a norte diz que o nome e "portao", mas nao aceita o open/unlock, mesmo com a chave do sentinela.
+/s
+~
+Name      Laguna~
+IdNum     50
+Dated     1761275576
+Level     67
+Room      4520
+Flags     0 0 0 0
+End
+Text      Fenda Entre Mundos - Sala com Caos de Guarda antes do Yama~
+Body      A senha pra porta trancada a leste (onde fica o Yama) nao esta funcionando.
+A senha 'avarohana' (disponivel na placa na mesma sala dando read insc) deveria destrancar e abrir a porta (chamada 'escuridao'), porem nada acontece.
+~
+Name      Laguna~
+IdNum     50
+Dated     1761308923
+Level     70
+Room      11417
+Flags     0 0 0 0
+End
+Text      Rua Luar de Safira, casas 3 e 4~
+Body      Rua Luar de Safira, casas 3 e 4
+
+Porta nao abre
+
+< 716Hp 384Mn 249Mv  (invis)> 
+op porta
+Voce nao pode abre  isso!!
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761525771
+Level     59
+Room      1021
+Flags     1 0 0 0
+End
+Text      Sala "Muitos Caminhos" - Loctus~
+Body      Na sala "muitos caminhos", a 4n do Loctus, a saida a sul chamada "pedra" nao pode ser aberta, mesmo com a chave correda (A Chave de Pedra).
+~
+Name      Laguna~
+IdNum     50
+Dated     1761541606
+Level     88
+Room      8310
+Flags     1 0 0 0
+End
+Text      Polearms~
+Body      Atualmente, nenhuma classe aprende polearms.
+Pelo que a memoria me permite, antigamente polearms era uma habilidade nivel 40 de guerreiro, hoje a lista vai ate combo attack no 30:
+
+kick                           [Nvel Mnimo:   1]
+rescue                         [Nvel Mnimo:   3]
+swords                         [Nvel Mnimo:   3]
+daggers                        [Nvel Mnimo:   3]
+bandage                        [Nvel Mnimo:   7]
+whips                          [Nvel Mnimo:   8]
+bash                           [Nvel Mnimo:  12]
+talonous arms                  [Nvel Mnimo:  13]
+bludgeons                      [Nvel Mnimo:  15]
+mine                           [Nvel Mnimo:  15]
+whirlwind                      [Nvel Mnimo:  16]
+exotics                        [Nvel Mnimo:  20]
+combo attack                   [Nvel Mnimo:  30]
+~
+Name      Laguna~
+IdNum     50
+Dated     1761568059
+Level     90
+Room      10984
+Flags     0 0 0 0
+End
+Text      Porta aqui nessa sala nao abre~
+Body      porta aqui nessa sala nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761590548
+Level     85
+Room      766
+Flags     1 0 0 0
+End
+Text      pocao de Cura~
+Body      as pocoes nomidades como "pocao de Cura" esto conjurando invigorate ao invez de cura.
+/s
+~
+Name      Roscoe~
+IdNum     293
+Dated     1761730488
+Level     92
+Room      3415
+Flags     0 0 0 0
+End
+Text      PLUS IUM~
+Body      AID aumentado diminuiu minha vida. 
+Antes de usar a magia, minha vida mxima era 1253 e apos o uso da magia amplificada, caiu para 1237
+~
+Name      Henzo~
+IdNum     562
+Dated     1761875258
+Level     90
+Room      3001
+Flags     0 0 0 0
+End
+Text      flee~
+Body      i110 < 472Hp 4000Mn 1000Mv (away)>                            Panoramix tagarela, 'o Anciao Dragao Vermelhori triunfante,
+tendo derrotado Panoramix, um aventureiro lendario!'          
+i110 < 472Hp 4000Mn 1000Mv (away)>
+Panoramix tagarela, 'o fle tem falhado demais... '
+i110 < 472Hp 4000Mn 1000Mv (away)> goss certo
+Voc tagarela, 'certo'
+i110 < 472Hp 4000Mn 1000Mv (away)> goss vou rever o pq das
+falhas
+Voc tagarela, 'vou rever o pq das falhas'
+~
+Name      Cansian~
+IdNum     1
+Dated     1761915714
+Level     110
+Room      2
+Flags     0 0 0 0
+End
+Text      Quest encerrada sem atingir objetivo~
+Body      Ola, eu assumi a quest "proteger o lobo de gelo" ou algo assim... Imagino que seja chegar na sala do mob. Contudo, antes de ir la eu matei um bispo negro do xadrez e ao mata-lo encerrou a quest do logo de gelo, me dando as recompensas. acredito ser um bug.
+~
+Name      Durandal~
+IdNum     720
+Dated     1761932837
+Level     43
+Room      3603
+Flags     0 0 0 0
+End
+Text      A Pocao de Cura de Cailveh esta recuperando Mov~
+Body      Prezados, reportando que o item Pocao de Cura na loja do farmaceutico em Cailveh esta recuperando Mov em vez de Hp.
+~
+Name      Durandal~
+IdNum     720
+Dated     1761957452
+Level     47
+Room      29042
+Flags     0 0 0 0
+End
+Text      Folego~
+Body      Por acidente, fiquei preso em uma das salas adjacentes ao Poseidon.
+Essas salas precisam de breath pra andar pois sao submerdas, porem tambem sao !magic e !sound.
+Como fiquei sem o efeito do breath e nao consegui repor, nao consegui andar para nenhuma delas nem retornar, nisso reparei que mesmo com a mensagem de que eu preciso de ar, o meu folego no score continua em 100%.
+~
+Name      Laguna~
+IdNum     50
+Dated     1762011469
+Level     100
+Room      10936
+Flags     0 0 0 0
+End
+Text      taxa de praticas por nivel x Wisdom~
+Body      Aparentemente a quantidade de praticas por nivel nao esta usando o atributo WIS (Wisdom) para calculo, pois estou com 18 de WIS recebendo apenas 2 praticas por level
+~
+Name      Roscoe~
+IdNum     293
+Dated     1762027500
+Level     9
+Room      3001
+Flags     0 0 0 0
+End
+Text      Mira~
+Body      Mira de Boghavati, vendedora, equipou todos os itens e nao vende nada
+~
+Name      Henzo~
+IdNum     562
+Dated     1762038169
+Level     96
+Room      11327
+Flags     0 0 0 0
+End
+Text      Balraj~
+Body      Vendedor de Boghavati equipou a aljavva e nao vende.
+Na aljava:          um tir de aco (aura brilhante)
+~
+Name      Henzo~
+IdNum     562
+Dated     1762038265
+Level     96
+Room      11325
+Flags     0 0 0 0
+End
+Text      PEDRA fechada~
+Body      A PEDRA para entrar no Loctus na aldeia Maldita esta bugada
+~
+Name      Henzo~
+IdNum     562
+Dated     1762058790
+Level     100
+Room      8310
+Flags     0 0 0 0
+End
+Text      skills remort~
+Body      as skills / spells de remorts passados (fui Guerreiro, Mago, Clerigo e Ranger), ao remortar pela ultima vez de Ranger para Druida, as skills/spells das 3 primeiras enc no foram transmitidas, seriam elas, Swords, Fireshield e Heal, apenas Bow da ultima encarnacao de Ranger que esta disponivel
+~
+Name      Roscoe~
+IdNum     293
+Dated     1762086791
+Level     11
+Room      3001
+Flags     0 0 0 0
+End
+Text      Magia nao aparecendo no affect~
+Body      Tomei uma pocao de sleep (efeito negativo), n aparecendo o tempo de duracao no affected. Sugiro adicionar magias de debuff (curse, blind etc).
+~
+Name      Durandal~
+IdNum     734
+Dated     1762125132
+Level     44
+Room      29041
+Flags     0 0 0 0
+End
+Text      porta aqui nao abre NW~
+Body      porta aqui nao abre NW
+
+cascata
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1762197373
+Level     100
+Room      13872
+Flags     1 0 0 0
+End
+Text      Pessegueiro aqui t bugado~
+Body      Pessegueiro aqui t bugado
+~
+Name      Lupulis~
+IdNum     175
+Dated     1762230694
+Level     100
+Room      14060
+Flags     1 0 0 0
+End
+Text      porta aqui nao abre para norte~
+Body      porta aqui nao abre para norte
+~
+Name      Lupulis~
+IdNum     175
+Dated     1762288766
+Level     100
+Room      13879
+Flags     1 0 0 0
+End
+Text      TREMOR~
+Body      A cancao tremor nao esta causando dano. Ela inicia a luta, mas nao danifica os oponentes.
+~
+Name      Henzo~
+IdNum     562
+Dated     1762355324
+Level     100
+Room      1000
+Flags     0 0 0 0
 End

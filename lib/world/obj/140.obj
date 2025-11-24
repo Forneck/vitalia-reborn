@@ -402,6 +402,8 @@ Alguém perdeu sua touca de dormir bem aqui.~
 9 ag 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
 2 1230 0 0 0
+A
+9 10
 #14035
 martelo marceneiro~
 um martelo de marceneiro~
@@ -576,6 +578,8 @@ Uma manta felpuda foi deixada aqui.~
 3 1000 0 0 0
 A
 17 -3
+A
+9 8
 #14047
 liana florida longa~
 uma liana florida~
@@ -823,9 +827,11 @@ travesseiro branco~
 um travesseiro branco~
 Um grande travesseiro branco literalmente descansa aqui.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag 0 0 0 aco 0 0 0 0 0 0 0
 0 0 0 0
 1 1900 0 0 0
+A
+9 5
 #14072
 linda fada escultura~
 a escultura de uma fada~
@@ -989,7 +995,7 @@ Uma laranja de tamanho desproporcional caiu no chão.~
 #14091
 arvore grande pessegueiro~
 um grande pessegueiro~
-Undefined~
+.Um grande pessegueiro foi plantado aqui.~
 ~
 12 ag 0 0 0 0 0 0 0 0 0 0 0
 14092 0 0 0

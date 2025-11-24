@@ -28,6 +28,63 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
+#include "spedit.h"
+#include "string.h"  /* garante que strcmp/strlcpy/strtok estejam disponíveis */
+
+/* Mapeia nomes crus de AFF (affected_bits) para nomes amigáveis. */
+static const char *aff_pretty_name(const char *raw)
+{
+    if (!raw || !*raw)
+        return "";
+
+    /* Itens sem bits de efeito (NOBITS) não devem aparecer em 'affects'. */
+    if (!strcmp(raw, "NOBITS"))
+        return "";
+
+    /* ---------- DEBUFFS / STATUS NEGATIVOS ---------- */
+    if (!strcmp(raw, "BLIND"))       return "blindness";
+    if (!strcmp(raw, "CURSE"))       return "curse";
+    if (!strcmp(raw, "POISON"))      return "poison";
+    if (!strcmp(raw, "SLEEP"))       return "sleep";
+    if (!strcmp(raw, "PARALYZE"))    return "paralyze";
+    if (!strcmp(raw, "CHARM"))       return "charm";
+
+    /* (Opcional) você pode considerar alguns como “controle”:
+     * TALKDEAD = falar com mortos (já mapeado em buff abaixo)
+     * NO_TRACK = impedir tracking (já está em buffs utilitários)
+     */
+
+    /* ---------- BUFFS / STATUS POSITIVOS E UTILITÁRIOS ---------- */
+    if (!strcmp(raw, "INVIS"))        return "invisibility";
+    if (!strcmp(raw, "DET-ALIGN"))    return "detect alignment";
+    if (!strcmp(raw, "DET-INVIS"))    return "detect invisibility";
+    if (!strcmp(raw, "DET-MAGIC"))    return "detect magic";
+    if (!strcmp(raw, "SENSE-LIFE"))   return "sense life";
+    if (!strcmp(raw, "WATWALK"))      return "waterwalk";
+    if (!strcmp(raw, "SANCT"))        return "sanctuary";
+    if (!strcmp(raw, "GROUP"))        return "group";
+    if (!strcmp(raw, "INFRA"))        return "infravision";
+    if (!strcmp(raw, "PROT-EVIL"))    return "protection from evil";
+    if (!strcmp(raw, "PROT-GOOD"))    return "protection from good";
+    if (!strcmp(raw, "NO_TRACK"))     return "no track";
+    if (!strcmp(raw, "STONESKIN"))    return "stoneskin";
+    if (!strcmp(raw, "FIRESHIELD"))   return "fireshield";
+    if (!strcmp(raw, "TALKDEAD"))     return "talk with dead";
+    if (!strcmp(raw, "FLYING"))       return "fly";
+    if (!strcmp(raw, "BREATH"))       return "breath";
+    if (!strcmp(raw, "LIGHT"))        return "light";
+    if (!strcmp(raw, "FIREFLIES"))    return "fireflies";
+    if (!strcmp(raw, "STINGING"))     return "stinging swarm";
+    if (!strcmp(raw, "THISTLECOAT"))  return "thistlecoat";
+    if (!strcmp(raw, "SOUNDBARRIER")) return "soundbarrier";
+    if (!strcmp(raw, "ADAGIO"))       return "adagio";
+    if (!strcmp(raw, "ALLEGRO"))      return "allegro";
+    if (!strcmp(raw, "GLOOMSHIELD"))  return "gloomshield";
+    if (!strcmp(raw, "PROT-SPELL"))   return "protection from spells";
+    if (!strcmp(raw, "WINDWALL"))     return "windwall";
+
+    return raw;
+}
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -40,11 +97,14 @@ static void look_at_char(struct char_data *i, struct char_data *ch);
 static void look_at_target(struct char_data *ch, char *arg);
 static void look_in_direction(struct char_data *ch, int dir);
 static void look_in_obj(struct char_data *ch, char *arg);
+/* Emotion system helper */
+static void get_highest_emotion_display(struct char_data *mob, struct char_data *viewer, const char **out_text,
+                                        const char **out_color);
 /* do_look, do_inventory utility functions */
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show);
 /* do_look, do_equipment, do_examine, do_inventory */
-static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
-static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch);
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
+static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode);
 /* do_where utility functions */
 static void perform_immort_where(char_data *ch, const char *arg);
 static void perform_mortal_where(struct char_data *ch, char *arg);
@@ -52,15 +112,13 @@ static size_t print_object_location(int num, const obj_data *obj, const char_dat
                                     size_t buf_size, int recur);
 extern void look_at_sky(struct char_data *ch);
 /* Subcommands */
-/* For show_obj_to_char 'mode'. /-- arbitrary */
-#define SHOW_OBJ_LONG 0
-#define SHOW_OBJ_SHORT 1
-#define SHOW_OBJ_ACTION 2
+/* For show_obj_to_char 'mode'. /-- arbitrary - defined in act.h */
 
-static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;
+    bool skip_modifiers = FALSE;  /* controla se vamos suprimir (zunindo), (aura...), etc */
 
     if (!obj || !ch) {
         log1("SYSERR: NULL pointer in show_obj_to_char(): obj=%p ch=%p", (void *)obj, (void *)ch);
@@ -106,18 +164,59 @@ static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mod
             send_to_char(ch, "%s", obj->description);
             break;
 
-        case SHOW_OBJ_SHORT:
-            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
-                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
-                if (SCRIPT(obj)) {
-                    if (!TRIGGERS(SCRIPT(obj))->next)
-                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
-                    else
-                        send_to_char(ch, "[TRIGS] ");
-                }
-            }
+case SHOW_OBJ_SHORT:
+    /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
+    if (IN_ROOM(ch) != NOWHERE &&
+        ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+        IN_ROOM(obj) == IN_ROOM(ch) &&
+        PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
+
+#ifdef GET_OBJ_LEVEL
+        int lvl = GET_OBJ_LEVEL(obj);
+#else
+        int lvl = 0; /* ou outra lógica de nível */
+#endif
+
+        /* Modo alternativo: nome + [Nv. XX], sem flags */
+        send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
+                     CCGRN(ch, C_NRM),         /* nome em verde escuro */
+                     obj->short_description,
+                     CCCYN(ch, C_NRM),         /* [ em ciano escuro */
+                     CCGRN(ch, C_NRM),         /* Nv em verde escuro */
+                     CCNRM(ch, C_NRM),         /* . XX em branco */
+                     lvl,
+                     CCCYN(ch, C_NRM),         /* ] em ciano escuro */
+                     CCNRM(ch, C_NRM));        /* reset */
+
+        skip_modifiers = TRUE;  /* NÃO mostra (zunindo), (aura...), etc */
+
+    }
+    /* Casa, item no chão, mas inventário alternativo DESLIGADO:
+       só pinta o nome de verde e mantém modifiers */
+    else if (IN_ROOM(ch) != NOWHERE &&
+             ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+             IN_ROOM(obj) == IN_ROOM(ch)) {
+
+        if (obj->short_description)
+            send_to_char(ch, "%s%s%s",
+                         CCGRN(ch, C_NRM),      /* verde escuro */
+                         obj->short_description,
+                         CCNRM(ch, C_NRM));     /* reset */
+        else
+            send_to_char(ch, "%sAlgo.%s",
+                         CCGRN(ch, C_NRM),
+                         CCNRM(ch, C_NRM));
+        /* aqui NÃO mexemos em skip_modifiers → flags aparecem normalmente */
+
+    }
+    /* Qualquer outro caso (fora de casa, inventário, containers, etc.) */
+    else {
+        if (obj->short_description)
             send_to_char(ch, "%s", obj->short_description);
-            break;
+        else
+            send_to_char(ch, "Algo.");
+    }
+    break;
 
         case SHOW_OBJ_ACTION:
             switch (GET_OBJ_TYPE(obj)) {
@@ -153,26 +252,59 @@ static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mod
     }
 end:
 
-    show_obj_modifiers(obj, ch);
+    if (!skip_modifiers)
+        show_obj_modifiers(obj, ch, mode);
+
     send_to_char(ch, "\r\n");
 }
 
-static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch)
+
+static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
-    if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
-        send_to_char(ch, " (invisivel)");
 
-    if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
-        send_to_char(ch, " ..Isso brilha azul!");
+    if (mode == SHOW_OBJ_SHORT) {
+        bool has_aura = FALSE;
 
-    if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
-        send_to_char(ch, " ..Isso brilha amarelo!");
+        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE)) {
+            send_to_char(ch, " (invis)\tW");
+            has_aura = TRUE;
+        }
 
-    if (OBJ_FLAGGED(obj, ITEM_GLOW))
-        send_to_char(ch, " ..Isso tem uma aura brilhante!");
+        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
+            send_to_char(ch, "\tC (aura azul)\tW");
+            has_aura = TRUE;
+        }
 
-    if (OBJ_FLAGGED(obj, ITEM_HUM))
-        send_to_char(ch, " ..Isso emite uma fraca melodia!");
+        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+            send_to_char(ch, "\tC (aura amarela)\tW");
+            has_aura = TRUE;
+        }
+
+        if (OBJ_FLAGGED(obj, ITEM_GLOW)) {
+            send_to_char(ch, "\tC (aura brilhante)\tW");
+            has_aura = TRUE;
+        }
+
+        if (OBJ_FLAGGED(obj, ITEM_HUM)) {
+            send_to_char(ch, "\tC (zunindo)\tW");
+            has_aura = TRUE;
+        }
+    } else {
+        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
+            send_to_char(ch, " \tw(invisivel)\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
+            send_to_char(ch, " \tn..Isso brilha azul!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
+            send_to_char(ch, " \tn..Isso brilha amarelo!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_GLOW))
+            send_to_char(ch, " \tn..Isso tem uma aura brilhante!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_HUM))
+            send_to_char(ch, " \tn..Isso emite uma fraca melodia!\tn");
+    }
 }
 
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show)
@@ -293,13 +425,171 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
         act("$n está usando:", FALSE, i, 0, ch, TO_VICT);
         for (j = 0; j < NUM_WEARS; j++)
             if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j))) {
-                send_to_char(ch, "%s", wear_where[j]);
+                send_to_char(ch, "\tW%s\tn", wear_where[j]);
                 show_obj_to_char(GET_EQ(i, j), ch, SHOW_OBJ_SHORT);
             }
     }
     if (ch != i && (IS_THIEF(ch) || GET_LEVEL(ch) >= LVL_IMMORT)) {
         act("\r\nVocê consegue ver em seu inventário:", FALSE, i, 0, ch, TO_VICT);
         list_obj_to_char(i->carrying, ch, SHOW_OBJ_SHORT, TRUE);
+    }
+
+    /* Emotion trigger: NPCs seeing powerful equipment on players (Environmental 2.2) */
+    if (IS_NPC(ch) && !IS_NPC(i) && ch->ai_data && found && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Check if player has high-value equipment that triggers envy */
+        int total_eq_value = 0;
+        for (j = 0; j < NUM_WEARS; j++) {
+            if (GET_EQ(i, j)) {
+                total_eq_value += GET_OBJ_COST(GET_EQ(i, j));
+            }
+        }
+        /* Trigger envy if equipment value is significant (threshold: 10000 gold) */
+        if (total_eq_value >= 10000) {
+            update_mob_emotion_saw_equipment(ch, i);
+        }
+    }
+}
+
+/**
+ * Helper function to determine the highest emotion above threshold for display.
+ * Checks all 20 emotions and returns the text and color for the dominant emotion.
+ *
+ * @param mob The mob whose emotions to check
+ * @param viewer The character viewing the mob
+ * @param out_text Output pointer for emotion text (e.g., "(furioso)")
+ * @param out_color Output pointer for color code
+ */
+static void get_highest_emotion_display(struct char_data *mob, struct char_data *viewer, const char **out_text,
+                                        const char **out_color)
+{
+    int highest_value = 0;
+    *out_text = NULL;
+    *out_color = NULL;
+
+    /* Use hybrid emotion system to get emotions toward the viewer */
+    int effective_fear = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_FEAR);
+    int effective_anger = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_ANGER);
+    int effective_happiness = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HAPPINESS);
+    int effective_sadness = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_SADNESS);
+    int effective_trust = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_TRUST);
+    int effective_friendship = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_FRIENDSHIP);
+    int effective_love = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_LOVE);
+    int effective_disgust = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_DISGUST);
+    int effective_envy = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_ENVY);
+    int effective_horror = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HORROR);
+    int effective_courage = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_COURAGE);
+    int effective_pride = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_PRIDE);
+
+    /* Check all emotions and find the highest one above threshold */
+    if (effective_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && effective_fear > highest_value) {
+        highest_value = effective_fear;
+        *out_text = "(amedrontado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (effective_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && effective_anger > highest_value) {
+        highest_value = effective_anger;
+        *out_text = "(furioso)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    if (effective_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && effective_happiness > highest_value) {
+        highest_value = effective_happiness;
+        *out_text = "(feliz)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (effective_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && effective_sadness > highest_value) {
+        highest_value = effective_sadness;
+        *out_text = "(triste)";
+        *out_color = CCBLU(viewer, C_NRM);
+    }
+    if (effective_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && effective_horror > highest_value) {
+        highest_value = effective_horror;
+        *out_text = "(aterrorizado)";
+        *out_color = CBMAG(viewer, C_NRM);
+    }
+    /* Pain and some emotions are more mood-based, use mob's direct value */
+    if (mob->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD &&
+        mob->ai_data->emotion_pain > highest_value) {
+        highest_value = mob->ai_data->emotion_pain;
+        *out_text = "(sofrendo)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    int effective_compassion = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_COMPASSION);
+    if (effective_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && effective_compassion > highest_value) {
+        highest_value = effective_compassion;
+        *out_text = "(compassivo)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    if (effective_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && effective_courage > highest_value) {
+        highest_value = effective_courage;
+        *out_text = "(corajoso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    int effective_curiosity = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_CURIOSITY);
+    if (effective_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && effective_curiosity > highest_value) {
+        highest_value = effective_curiosity;
+        *out_text = "(curioso)";
+        *out_color = CCCYN(viewer, C_NRM);
+    }
+    if (effective_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && effective_disgust > highest_value) {
+        highest_value = effective_disgust;
+        *out_text = "(enojado)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    if (effective_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && effective_envy > highest_value) {
+        highest_value = effective_envy;
+        *out_text = "(invejoso)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    int effective_excitement = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_EXCITEMENT);
+    if (effective_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && effective_excitement > highest_value) {
+        highest_value = effective_excitement;
+        *out_text = "(animado)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (effective_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && effective_friendship > highest_value) {
+        highest_value = effective_friendship;
+        *out_text = "(amigavel)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    int effective_greed = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_GREED);
+    if (effective_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && effective_greed > highest_value) {
+        highest_value = effective_greed;
+        *out_text = "(ganancioso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    int effective_humiliation = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HUMILIATION);
+    if (effective_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD &&
+        effective_humiliation > highest_value) {
+        highest_value = effective_humiliation;
+        *out_text = "(humilhado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (effective_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && effective_love > highest_value) {
+        highest_value = effective_love;
+        *out_text = "(apaixonado)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    int effective_loyalty = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_LOYALTY);
+    if (effective_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && effective_loyalty > highest_value) {
+        highest_value = effective_loyalty;
+        *out_text = "(leal)";
+        *out_color = CCBLU(viewer, C_NRM);
+    }
+    if (effective_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && effective_pride > highest_value) {
+        highest_value = effective_pride;
+        *out_text = "(orgulhoso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    int effective_shame = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_SHAME);
+    if (effective_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && effective_shame > highest_value) {
+        highest_value = effective_shame;
+        *out_text = "(envergonhado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (effective_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && effective_trust > highest_value) {
+        highest_value = effective_trust;
+        *out_text = "(confiante)";
+        *out_color = CCGRN(viewer, C_NRM);
     }
 }
 
@@ -340,12 +630,34 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             else if (IS_GOOD(i))
                 send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
         }
+
+        /* Check if this mob is a bounty target for the viewer */
+        if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
+            GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
+            send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
+        }
+
+        /* EMOTION SYSTEM: Add emotion indicators based on high emotion levels */
+        /* Only display if player has DISPEMOTE preference enabled */
+        /* Shows the highest emotion that exceeds its threshold */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            const char *emotion_text = NULL;
+            const char *emotion_color = NULL;
+
+            get_highest_emotion_display(i, ch, &emotion_text, &emotion_color);
+
+            /* Display the highest emotion if any was found */
+            if (emotion_text && emotion_color) {
+                send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCYEL(ch, C_NRM));
+            }
+        }
+
         send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.long_descr);
 
         if (AFF_FLAGGED(i, AFF_SANCTUARY))
-            act("\tW...$l brilha com uma luz branca!", FALSE, i, 0, ch, TO_VICT);
+            act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
         else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
-            act("\tL...$l é resguardad$r por um espesso escudo de trevas!", FALSE, i, 0, ch, TO_VICT);
+            act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_FIRESHIELD))
             act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_WINDWALL))
@@ -361,26 +673,47 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         return;
     }
 
-    if (IS_NPC(i))
+    if (IS_NPC(i)) {
+        /* Check if this mob is a bounty target for the viewer */
+        if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
+            GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
+            send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
+        }
+
+        /* EMOTION SYSTEM: Add emotion indicators for mobs not in default position */
+        /* Only display if player has DISPEMOTE preference enabled */
+        /* Shows the highest emotion that exceeds its threshold */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            const char *emotion_text = NULL;
+            const char *emotion_color = NULL;
+
+            get_highest_emotion_display(i, ch, &emotion_text, &emotion_color);
+
+            /* Display the highest emotion if any was found */
+            if (emotion_text && emotion_color) {
+                send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCNRM(ch, C_NRM));
+            }
+        }
+
         send_to_char(ch, "%c%s", UPPER(*i->player.short_descr), i->player.short_descr + 1);
-    else {
+    } else {
         if (IS_DEAD(i))
             send_to_char(ch, "O espírito de ");
         send_to_char(ch, "%s %s%s", i->player.name, *GET_TITLE(i) ? "" : "", GET_TITLE(i));
     }
 
     if (AFF_FLAGGED(i, AFF_INVISIBLE))
-        send_to_char(ch, "%s (invisível)", CCWHT(ch, C_NRM));
+        send_to_char(ch, "%s (invisível)\ty", CCWHT(ch, C_NRM));
     if (AFF_FLAGGED(i, AFF_HIDE))
-        send_to_char(ch, "%s (escondid%c)", CCWHT(ch, C_NRM), art);
+        send_to_char(ch, "%s (escondid%c)%s", CCWHT(ch, C_NRM), art, CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && !i->desc)
-        send_to_char(ch, " %s(%slinkless%s)", CCGRN(ch, C_NRM), CBWHT(ch, C_CMP), CCGRN(ch, C_CMP));
+        send_to_char(ch, " %s(%slinkless%s)%s", CCGRN(ch, C_NRM), CBWHT(ch, C_CMP), CCGRN(ch, C_CMP), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PLR_FLAGGED(i, PLR_WRITING))
-        send_to_char(ch, "%s (escrevendo)", CCBLU(ch, C_NRM));
+        send_to_char(ch, "%s (escrevendo)%s", CCBLU(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_BUILDWALK))
-        send_to_char(ch, "%s (construindo)", CBRED(ch, C_NRM));
+        send_to_char(ch, "%s (construindo)%s", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
-        send_to_char(ch, "%s (%saway%s)", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP));
+        send_to_char(ch, "%s (away)%s", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
 
     if (GET_POS(i) != POS_FIGHTING) {
 
@@ -488,11 +821,11 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 
     if (AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
         if (IS_EVIL(i))
-            send_to_char(ch, "%s(Aura Vermelha) ", CBRED(ch, C_NRM));
+            send_to_char(ch, "%s(Aura Vermelha)%s ", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
         else if (IS_GOOD(i))
-            send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
+            send_to_char(ch, "%s(Aura Azul)%s ", CBBLU(ch, C_NRM), CCNRM(ch, C_NRM));
     }
-    send_to_char(ch, "\ty\r\n");
+    send_to_char(ch, "\tn\r\n");
     if (AFF_FLAGGED(i, AFF_SANCTUARY))
         act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
     else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD)) {
@@ -602,7 +935,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     struct room_data *rm = &world[IN_ROOM(ch)];
     room_vnum target_room;
     target_room = IN_ROOM(ch);
-    int i;
+    int i, obj_list_mode;
     if (!ch->desc)
         return;
     if (IS_DARK(IN_ROOM(ch)) && !CAN_SEE_IN_DARK(ch)) {
@@ -637,7 +970,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
 
     if (!PLR_FLAGGED(ch, PLR_GHOST)) {
         for (i = 0; i < NUM_OF_DIRS; i++)
-            if (EXIT(ch, i) && EXIT(ch, i)->to_room && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+            if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
                 send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
                 break;
             }
@@ -647,8 +980,47 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
         do_auto_exits(ch);
     /* now list characters & objects */
-    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, SHOW_OBJ_LONG, FALSE);
+    obj_list_mode = SHOW_OBJ_LONG;
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
+        obj_list_mode = SHOW_OBJ_SHORT;
+
+    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
     list_char_to_char(world[IN_ROOM(ch)].people, ch);
+
+
+    /* Show mana density if character has detect magic active */
+    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+        float mana_density = calculate_mana_density(ch);
+        const char *density_desc;
+        int color_level;
+        const char *density_color;
+
+        /* Get description and color level from helper function */
+        get_mana_density_description(mana_density, &density_desc, &color_level);
+
+        /* Map color level to color macro */
+        switch (color_level) {
+            case 0:
+                density_color = CBCYN(ch, C_NRM);
+                break;
+            case 1:
+                density_color = CBGRN(ch, C_NRM);
+                break;
+            case 2:
+                density_color = CCYEL(ch, C_NRM);
+                break;
+            case 3:
+                density_color = CCRED(ch, C_NRM);
+                break;
+            case 4:
+            default:
+                density_color = CBRED(ch, C_NRM);
+                break;
+        }
+
+        send_to_char(ch, "\r\n%sA densidade mágica aqui está %s%s%s.%s\r\n", CCMAG(ch, C_NRM), density_color,
+                     density_desc, CCNRM(ch, C_NRM), CCNRM(ch, C_NRM));
+    }
 }
 
 static void look_in_direction(struct char_data *ch, int dir)
@@ -801,7 +1173,7 @@ static void look_at_target(struct char_data *ch, char *arg)
         if (!found)
             show_obj_to_char(found_obj, ch, SHOW_OBJ_ACTION);
         else {
-            show_obj_modifiers(found_obj, ch);
+            show_obj_modifiers(found_obj, ch, 0);
             send_to_char(ch, "\r\n");
         }
     } else if (!found)
@@ -921,9 +1293,9 @@ ACMD(do_score)
                  GET_MANA(ch), GET_MAX_MANA(ch), gauge(0, 0, GET_MANA(ch), GET_MAX_MANA(ch)), GET_ALIGNMENT(ch),
                  align_gauge(GET_ALIGNMENT(ch)));
 
-    send_to_char(ch, " \tW Movimento\tb..:\tn %5d\tgMv\tn (%5d) %s \tn \tW Fôlego\tb.....:\tn%5d%s %s\tn\r\n",
-                 GET_MOVE(ch), GET_MAX_MOVE(ch), gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)), (50 * 100) / 50, "%",
-                 gauge(0, 0, 50, 50));
+    send_to_char(ch, " \tW Movimento\tb..:\tn %5d\tgMv\tn (%5d) %s \tn \tW Fôlego\tb.....:\tn%5d (%5d) %s\tn\r\n",
+                 GET_MOVE(ch), GET_MAX_MOVE(ch), gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)), GET_BREATH(ch),
+                 GET_MAX_BREATH(ch), gauge(0, 0, GET_BREATH(ch), GET_MAX_BREATH(ch)));
 
     send_to_char(ch, "\r\n");
 
@@ -931,7 +1303,10 @@ ACMD(do_score)
                  GET_EXP(ch), GET_GOLD(ch));
     send_to_char(ch, " \tW Prox Nível\tb.:\tn %'13ld\tgxp\tn %s\r\n ",
                  level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch),
-                 gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)));
+                 gauge(0, 0, GET_EXP(ch) - level_exp(GET_CLASS(ch), GET_LEVEL(ch)),
+                       level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - level_exp(GET_CLASS(ch), GET_LEVEL(ch))));
+    send_to_char(ch, " \tW Reputação\tb.:\tn %14d         \tn %s\r\n ", GET_REPUTATION(ch),
+                 reputation_gauge(GET_REPUTATION(ch)));
     send_to_char(ch, "\r\n");
 
     send_to_char(ch,
@@ -969,12 +1344,16 @@ ACMD(do_score)
     send_to_char(ch, "Você tem \tg%d\tn pontos de busca e ", GET_QUESTPOINTS(ch));
     send_to_char(ch, "completou \tg%d\tn busca%s.\r\n", GET_NUM_QUESTS(ch), GET_NUM_QUESTS(ch) == 1 ? " " : "s");
     if (GET_QUEST(ch) != NOTHING) {
-        send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(real_quest(GET_QUEST(ch))));
-        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
-            send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
-        else
-            send_to_char(ch, " \tn\r\n");
+        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+        if (quest_rnum != NOTHING) {
+            send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(quest_rnum));
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+                send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
+            else
+                send_to_char(ch, " \tn\r\n");
+        }
     }
+    send_to_char(ch, "Você tem \tg%3d Enc.\tn (Encarnações).\r\n", GET_REMORT(ch));
 
     if (PLR_FLAGGED(ch, PLR_TRNS))
         send_to_char(ch, "Você transcendeu.\r\n");
@@ -1080,6 +1459,9 @@ ACMD(do_score)
     else if (affected_by_spell(ch, SPELL_SKIN_LIKE_WOOD))
         send_to_char(ch, "Você está protegid%s pelo Grande Carvalho.\r\n", OA(ch));
 
+    if (get_nighthammer(ch, false) > 0)
+        send_to_char(ch, "Você está protegid%s pelo manto da noite.\r\n", OA(ch));
+
     if (affected_by_spell(ch, SPELL_FLY))
         send_to_char(ch, "Você sente bem leve.\r\n");
 
@@ -1140,26 +1522,99 @@ ACMD(do_affects)
 {
     struct affected_type *aff;
     char duration_buf[128];
-    int has_affects = 0;
+    int has_spell_affects = 0;
+    int has_item_affects = 0;
 
     if (IS_NPC(ch))
         return;
 
+    /* 1) Efeitos vindos de magias (lista de affects do char) */
     send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
 
     for (aff = ch->affected; aff; aff = aff->next) {
         if (aff->duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, aff->duration == 1 ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s",
+                     aff->duration,
+                     (aff->duration == 1) ? "" : "s");
         }
 
-        send_to_char(ch, "  %s [%s]\r\n", skill_name(aff->spell), duration_buf);
-        has_affects = 1;
+        /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
+        send_to_char(ch, "  \tW%s\tn \tW[\tc%s\tW]\tn\r\n",
+                     skill_name(aff->spell),
+                     duration_buf);
+        has_spell_affects = 1;
     }
 
-    if (!has_affects) {
-        send_to_char(ch, "  Nenhum efeito ativo.\r\n");
+    /* 2) Efeitos vindos de itens equipados (AFF_XXX em GET_OBJ_AFFECT) */
+    {
+        int i;
+        struct obj_data *obj = NULL;
+        char bitbuf[MAX_STRING_LENGTH];
+        char localbuf[MAX_STRING_LENGTH];
+        char *tok;
+
+        /* Primeiro pass: apenas verificar se existe ALGUM efeito de item. */
+        for (i = 0; i < NUM_WEARS && !has_item_affects; i++) {
+            if (!(obj = GET_EQ(ch, i)))
+                continue;
+
+            sprintbitarray(GET_OBJ_AFFECT(obj), affected_bits, AF_ARRAY_MAX, bitbuf);
+            if (!*bitbuf)
+                continue;
+
+            strlcpy(localbuf, bitbuf, sizeof(localbuf));
+            tok = strtok(localbuf, " ");
+            while (tok != NULL) {
+                const char *pretty = aff_pretty_name(tok);
+
+                if (*pretty && strcmp(pretty, "\n") != 0) {
+                    has_item_affects = 1;
+                    break;
+                }
+
+                tok = strtok(NULL, " ");
+            }
+        }
+
+        /* Se houver efeitos de item, imprimimos o cabeçalho e listamos por item */
+        if (has_item_affects) {
+            send_to_char(ch, "\r\n\tWEfeitos de equipamentos:\tn\r\n");
+
+            for (i = 0; i < NUM_WEARS; i++) {
+                if (!(obj = GET_EQ(ch, i)))
+                    continue;
+
+                sprintbitarray(GET_OBJ_AFFECT(obj), affected_bits, AF_ARRAY_MAX, bitbuf);
+                if (!*bitbuf)
+                    continue;
+
+                strlcpy(localbuf, bitbuf, sizeof(localbuf));
+                tok = strtok(localbuf, " ");
+
+                /* Vamos imprimir um bloco por item assim:
+                 * [nome do item em ciano escuro, colchetes brancos]
+                 *     -> nome da magia em branco
+                 */
+                int printed_header_for_this_item = 0;
+
+                while (tok != NULL) {
+                    const char *pretty = aff_pretty_name(tok);
+
+                    if (*pretty && strcmp(pretty, "\n") != 0) {
+                        if (!printed_header_for_this_item) {
+                            send_to_char(ch, "\tW[\tc%s\tW]\tn\r\n",
+                                         obj->short_description ? obj->short_description : "(item sem descrição)");
+                            printed_header_for_this_item = 1;
+                        }
+                        send_to_char(ch, "    -> \tW%s\tn\r\n", pretty);
+                    }
+
+                    tok = strtok(NULL, " ");
+                }
+            }
+        }
     }
 }
 
@@ -1171,22 +1626,26 @@ ACMD(do_inventory)
 
 ACMD(do_equipment)
 {
-    int i, found = 0;
-    send_to_char(ch, "\tWVocê está usando:\r\n");
+    int i, found = FALSE;
+    struct obj_data *obj;
+
+    send_to_char(ch, "\tWVocê está usando:\tn\r\n");
+
     for (i = 0; i < NUM_WEARS; i++) {
-        if (GET_EQ(ch, i)) {
+        if ((obj = GET_EQ(ch, i))) {
             found = TRUE;
-            if (CAN_SEE_OBJ(ch, GET_EQ(ch, i))) {
-                send_to_char(ch, "%s", wear_where[i]);
-                show_obj_to_char(GET_EQ(ch, i), ch, SHOW_OBJ_SHORT);
-            } else {
-                send_to_char(ch, "%s", wear_where[i]);
+
+            send_to_char(ch, "\tW%-12s\tn\tw", wear_where[i]);
+
+            if (CAN_SEE_OBJ(ch, obj))
+                show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+            else
                 send_to_char(ch, "algo.\r\n");
-            }
         }
     }
+
     if (!found)
-        send_to_char(ch, " Nada.\r\n");
+        send_to_char(ch, "  Nada.\r\n");
 }
 
 ACMD(do_time)
@@ -1211,18 +1670,348 @@ ACMD(do_time)
     send_to_char(ch, " O %d%s dia do %s, Ano %d. \r\n ", day, suf, month_name[time_info.month], time_info.year);
 }
 
+/* Helper function to get element color for weather display */
+static const char *get_weather_element_color(struct char_data *ch, int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return CBRED(ch, C_NRM);
+        case ELEMENT_WATER:
+        case ELEMENT_ICE:
+            return CBBLU(ch, C_NRM);
+        case ELEMENT_AIR:
+            return CBWHT(ch, C_NRM);
+        case ELEMENT_EARTH:
+            return CCYEL(ch, C_NRM);
+        case ELEMENT_LIGHTNING:
+            return CBCYN(ch, C_NRM);
+        case ELEMENT_ACID:
+            return CBGRN(ch, C_NRM);
+        case ELEMENT_POISON:
+            return CCGRN(ch, C_NRM);
+        case ELEMENT_HOLY:
+            return CBYEL(ch, C_NRM);
+        case ELEMENT_UNHOLY:
+            return CBMAG(ch, C_NRM);
+        case ELEMENT_MENTAL:
+            return CCMAG(ch, C_NRM);
+        case ELEMENT_PHYSICAL:
+            return CCWHT(ch, C_NRM);
+        default:
+            return CCNRM(ch, C_NRM);
+    }
+}
+
+/* Helper function to get school color for weather display */
+static const char *get_weather_school_color(struct char_data *ch, int school)
+{
+    switch (school) {
+        case SCHOOL_EVOCATION:
+            return CBRED(ch, C_NRM);
+        case SCHOOL_CONJURATION:
+            return CBGRN(ch, C_NRM);
+        case SCHOOL_ILLUSION:
+            return CBMAG(ch, C_NRM);
+        case SCHOOL_DIVINATION:
+            return CBCYN(ch, C_NRM);
+        case SCHOOL_NECROMANCY:
+            return CBBLK(ch, C_NRM);
+        case SCHOOL_ENCHANTMENT:
+            return CBYEL(ch, C_NRM);
+        case SCHOOL_ABJURATION:
+            return CBBLU(ch, C_NRM);
+        case SCHOOL_ALTERATION:
+            return CBWHT(ch, C_NRM);
+        default:
+            return CCNRM(ch, C_NRM);
+    }
+}
+
+/**
+ * Safely append formatted string to buffer with overflow protection
+ *
+ * This helper prevents buffer overflows that can freeze players (requiring reconnect).
+ * If overflow would occur, appends "***OVERFLOW***" message and returns FALSE.
+ *
+ * @param buffer The destination buffer
+ * @param bufsize Total size of the buffer
+ * @param overflow_occurred Pointer to flag that tracks if overflow has occurred
+ * @param format Printf-style format string
+ * @param ... Variable arguments for format string
+ * @return TRUE if append succeeded, FALSE if overflow would occur
+ */
+static int safe_strcat_formatted(char *buffer, size_t bufsize, int *overflow_occurred, const char *format, ...)
+{
+    size_t current_len;
+    size_t remaining;
+    int written;
+    va_list args;
+
+    /* If overflow already occurred, don't append anything more */
+    if (*overflow_occurred)
+        return FALSE;
+
+    current_len = strlen(buffer);
+    remaining = bufsize - current_len;
+
+    /* Reserve space for potential overflow message */
+    if (remaining < 100) {
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    va_start(args, format);
+    written = vsnprintf(buffer + current_len, remaining, format, args);
+    va_end(args);
+
+    /* Check if output was truncated */
+    if (written < 0 || (size_t)written >= remaining) {
+        /* Truncation occurred, add overflow message */
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+/* Analyze weather conditions and show magical effects */
+static void show_magical_conditions(struct char_data *ch, struct weather_data *weather)
+{
+    /* Defensive programming: validate inputs */
+    if (!ch || !weather) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: show_magical_conditions called with NULL pointer(s)");
+        return;
+    }
+
+    /* Use reasonable buffer sizes for weather display (1KB each is more than enough) */
+    char favored_schools[1024] = "";
+    char unfavored_schools[1024] = "";
+    char favored_elements[1024] = "";
+    char unfavored_elements[1024] = "";
+    int has_favored_schools = 0, has_unfavored_schools = 0;
+    int has_favored_elements = 0, has_unfavored_elements = 0;
+    size_t len; /* For safe buffer management */
+
+    /* Check spell schools */
+    if (weather->sky >= SKY_RAINING && weather->humidity > 0.6) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEvocação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_EVOCATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky <= SKY_CLOUDLESS && weather->humidity < 0.4) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEvocação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->humidity >= 0.4 && weather->humidity <= 0.7) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sConjuração%s (+10%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_CONJURATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    }
+
+    if (weather->sky == SKY_CLOUDY && weather->humidity > 0.8) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sIlusão%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ILLUSION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky == SKY_CLOUDLESS) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sIlusão%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->sky == SKY_CLOUDLESS && weather->humidity < 0.5) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sAdivinhação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_DIVINATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky >= SKY_RAINING) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sAdivinhação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->sky >= SKY_RAINING) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sNecromancia%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_NECROMANCY), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky == SKY_CLOUDLESS) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sNecromancia%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->pressure > 1020) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEncantamento%s (+5%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ENCHANTMENT), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->pressure < 980) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEncantamento%s (-5%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    /* Check spell elements */
+    if (weather->humidity < 0.3) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sFogo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_FIRE), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity > 0.7) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sFogo%s (-25%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->humidity > 0.7) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sÁgua%s (+25%%), %sGelo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_WATER), CCNRM(ch, C_NRM),
+                     get_weather_element_color(ch, ELEMENT_ICE), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity < 0.3) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len,
+                     "  %sÁgua%s (-25%%), %sGelo%s (-25%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM), CCRED(ch, C_NRM),
+                     CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->humidity > 0.8 && weather->sky >= SKY_RAINING) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sRaio%s (+30%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_LIGHTNING), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity < 0.2) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sRaio%s (-20%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->winds > 15.0) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sAr%s (+20%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_AIR), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->winds < 2.0) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sAr%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    /* Display magical conditions if character level is high enough */
+    if (GET_LEVEL(ch) >= 5 &&
+        (has_favored_schools || has_unfavored_schools || has_favored_elements || has_unfavored_elements)) {
+        send_to_char(ch, "\r\n%s=== Condições Mágicas ===%s\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+        if (has_favored_schools) {
+            send_to_char(ch, "%sEscolas Favorecidas:%s\r\n", CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", favored_schools);
+        }
+
+        if (has_unfavored_schools) {
+            send_to_char(ch, "%sEscolas Desfavorecidas:%s\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", unfavored_schools);
+        }
+
+        if (has_favored_elements) {
+            send_to_char(ch, "%sElementos Favorecidos:%s\r\n", CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", favored_elements);
+        }
+
+        if (has_unfavored_elements) {
+            send_to_char(ch, "%sElementos Desfavorecidos:%s\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", unfavored_elements);
+        }
+    }
+}
+
 ACMD(do_weather)
 {
     zone_rnum zona;
-    zona = world[IN_ROOM(ch)].zone;
+    room_rnum room_num;
+    struct weather_data *weather;
     const char *sky_look[] = {"limpo", "nublado", "chuvoso", "relampejando", "nevando"};
 
-    int pressure = zone_table[zona].weather->pressure;
-    int press_diff = zone_table[zona].weather->press_diff;
-    int sky = zone_table[zona].weather->sky;
-    int temperature = zone_table[zona].weather->temperature;
-    float humidity = zone_table[zona].weather->humidity;
-    float wind = zone_table[zona].weather->winds;
+    /* Defensive programming: validate room and zone */
+    room_num = IN_ROOM(ch);
+    if (room_num == NOWHERE || room_num < 0 || room_num > top_of_world) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid room %d for %s", room_num, GET_NAME(ch));
+        return;
+    }
+
+    zona = world[room_num].zone;
+    if (zona < 0 || zona > top_of_zone_table) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid zone %d for room %d", zona, room_num);
+        return;
+    }
+
+    weather = zone_table[zona].weather;
+    if (!weather) {
+        send_to_char(ch, "O clima local está muito instável para ser percebido.\r\n");
+        return;
+    }
+
+    int pressure = weather->pressure;
+    int press_diff = weather->press_diff;
+    int sky = weather->sky;
+    int temperature = weather->temperature;
+    float humidity = weather->humidity;
+    float wind = weather->winds;
 
     const char *weather_feel;
     const char *temp_feel;
@@ -1258,6 +2047,59 @@ ACMD(do_weather)
             send_to_char(ch, "Temperatura %d º.C, Umidade %.2f\r\n", temperature, humidity);
             send_to_char(ch, "Vento: %.2f m/s\r\n", wind);
         }
+
+        /* Show mana density if character has detect magic active */
+        if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+            float mana_density = calculate_mana_density(ch);
+            const char *density_desc;
+            int color_level;
+            const char *density_color;
+
+            /* Get description and color level from helper function */
+            get_mana_density_description(mana_density, &density_desc, &color_level);
+
+            /* Map color level to color macro */
+            switch (color_level) {
+                case 0:
+                    density_color = CBCYN(ch, C_NRM);
+                    break;
+                case 1:
+                    density_color = CBGRN(ch, C_NRM);
+                    break;
+                case 2:
+                    density_color = CCYEL(ch, C_NRM);
+                    break;
+                case 3:
+                    density_color = CCRED(ch, C_NRM);
+                    break;
+                case 4:
+                default:
+                    density_color = CBRED(ch, C_NRM);
+                    break;
+            }
+
+            send_to_char(ch, "\r\n%sDensidade Mágica:%s %s%s%s (%.2f)\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                         density_color, density_desc, CCNRM(ch, C_NRM), mana_density);
+
+            /* Explain what the density means for spellcasting */
+            if (mana_density >= 0.9) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas fluem abundantemente aqui!%s\r\n"
+                             "  Magias consomem menos mana e são mais poderosas.\r\n",
+                             CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            } else if (mana_density >= 0.7) {
+                send_to_char(ch, "  %sAs condições são favoráveis para conjuração.%s\r\n", CCGRN(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            } else if (mana_density < 0.5) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas estão fracas neste local.%s\r\n"
+                             "  Magias serão menos eficientes aqui.\r\n",
+                             CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            }
+        }
+
+        /* Show magical conditions based on weather */
+        show_magical_conditions(ch, weather);
     } else {
         send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n");
     }
@@ -1344,6 +2186,7 @@ ACMD(do_help)
 #define WHO_FORMAT "Uso: who [minlev[-maxlev]] [-n nome] [-c classe] [-k] [-l] [-n] [-q] [-r] [-s] [-z]\r\n"
 
 /* Written by Rhade */
+/* Written by Rhade */
 ACMD(do_who)
 {
     struct descriptor_data *d;
@@ -1354,49 +2197,52 @@ ACMD(do_who)
     int low = 0, high = LVL_IMPL, localwho = 0, questwho = 0;
     int showclass = 0, short_list = 0, outlaws = 0;
     int who_room = 0, showgroup = 0, showleader = 0;
+
     struct {
-        char *disp;
+        const char *disp;
         int min_level;
         int max_level;
-        int count; /* must always start as 0 */
+        int count;
     } rank[] = {{"\tC-\tG=\tY> \tWImortais:\tn\r\n", LVL_IMMORT, LVL_IMPL, 0},
                 {"\tC-\tG=\tY> \tWMortais:\tn\r\n", 11, LVL_IMMORT - 1, 0},
                 {"\tC-\tG=\tY> \tWIniciantes:\tn\r\n", 1, 10, 0},
                 {"\n", 0, 0, 0}};
+
     skip_spaces(&argument);
-    strcpy(buf, argument); /* strcpy: OK (sizeof: argument == buf) */
+    strcpy(buf, argument);
     name_search[0] = '\0';
+
     while (*buf) {
         char arg[MAX_INPUT_LENGTH], buf1[MAX_INPUT_LENGTH];
         half_chop(buf, arg, buf1);
         if (isdigit(*arg)) {
             sscanf(arg, "%d-%d", &low, &high);
-            strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+            strcpy(buf, buf1);
         } else if (*arg == '-') {
-            mode = *(arg + 1); /* just in case; we destroy arg in the switch */
+            mode = *(arg + 1);
             switch (mode) {
                 case 'k':
                     outlaws = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 'z':
                     localwho = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 's':
                     short_list = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 'q':
                     questwho = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 'n':
                     half_chop(buf1, name_search, buf);
                     break;
                 case 'r':
                     who_room = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 'c':
                     half_chop(buf1, arg, buf);
@@ -1404,11 +2250,11 @@ ACMD(do_who)
                     break;
                 case 'l':
                     showleader = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 case 'g':
                     showgroup = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+                    strcpy(buf, buf1);
                     break;
                 default:
                     send_to_char(ch, "%s", WHO_FORMAT);
@@ -1420,161 +2266,152 @@ ACMD(do_who)
         }
     }
 
+    /* Contagem dos ranks */
     for (d = descriptor_list; d && !short_list; d = d->next) {
         if (d->original)
             tch = d->original;
         else if (!(tch = d->character))
             continue;
-        if (CAN_SEE(ch, tch) && IS_PLAYING(d)) {
-            if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
-                continue;
-            if (!CAN_SEE(ch, tch) || GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
-                continue;
-            if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
-                continue;
-            if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
-                continue;
-            if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
-                continue;
-            if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
-                continue;
-            if (showclass && !(showclass & (1 << GET_CLASS(tch))))
-                continue;
-            if (showgroup && !GROUP(tch))
-                continue;
-            if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
-                continue;
-            for (i = 0; *rank[i].disp != '\n'; i++)
-                if (GET_LEVEL(tch) >= rank[i].min_level && GET_LEVEL(tch) <= rank[i].max_level)
-                    rank[i].count++;
-        }
+        if (!IS_PLAYING(d))
+            continue;
+        if (!CAN_SEE(ch, tch))
+            continue;
+        if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
+            continue;
+        if (GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
+            continue;
+        if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
+            continue;
+        if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
+            continue;
+        if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
+            continue;
+        if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
+            continue;
+        if (showclass && !(showclass & (1 << GET_CLASS(tch))))
+            continue;
+        if (showgroup && !GROUP(tch))
+            continue;
+        if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
+            continue;
+
+        for (i = 0; *rank[i].disp != '\n'; i++)
+            if (GET_LEVEL(tch) >= rank[i].min_level && GET_LEVEL(tch) <= rank[i].max_level)
+                rank[i].count++;
     }
 
+    /* Impressão das listas */
     for (i = 0; *rank[i].disp != '\n'; i++) {
         if (!rank[i].count && !short_list)
             continue;
-        if (short_list)
-            send_to_char(ch, "\tC-\tG=\tY> \tWMortais:\tn\r\n");
-        else
-            send_to_char(ch, "%s", rank[i].disp);
+
+        send_to_char(ch, "%s", rank[i].disp);
+
         for (d = descriptor_list; d; d = d->next) {
             if (d->original)
                 tch = d->original;
             else if (!(tch = d->character))
                 continue;
-            if ((GET_LEVEL(tch) < rank[i].min_level || GET_LEVEL(tch) > rank[i].max_level) && !short_list)
-                continue;
             if (!IS_PLAYING(d))
                 continue;
-            if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
-                continue;
-            if (!CAN_SEE(ch, tch) || GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
-                continue;
-            if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
-                continue;
-            if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
-                continue;
-            if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
-                continue;
-            if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
-                continue;
-            if (showclass && !(showclass & (1 << GET_CLASS(tch))))
-                continue;
-            if (showgroup && !GROUP(tch))
-                continue;
-            if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
-                continue;
-            if (short_list) {
-                send_to_char(ch, "%s[%2d %s] %-12.12s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), CCNRM(ch, C_SPR),
-                             ((!(++num_can_see % 4)) ? "\r\n" : ""));
-            } else {
-                num_can_see++;
-                send_to_char(ch, "%s[%2d %s] %s%s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), (*GET_TITLE(tch) ? " " : ""),
-                             GET_TITLE(tch), CCNRM(ch, C_SPR));
-                if (GET_INVIS_LEV(tch))
-                    send_to_char(ch, " (i%d)", GET_INVIS_LEV(tch));
-                else if (AFF_FLAGGED(tch, AFF_INVISIBLE))
-                    send_to_char(ch, " (invis)");
-                if (PLR_FLAGGED(tch, PLR_MAILING))
-                    send_to_char(ch, " (correios)");
-                else if (d->olc)
-                    send_to_char(ch, " (OLC)");
-                else if (PLR_FLAGGED(tch, PLR_WRITING))
-                    send_to_char(ch, " (escrevendo)");
-                if (d->original)
-                    send_to_char(ch, " (fora do corpo)");
-                if (d->connected == CON_OEDIT)
-                    send_to_char(ch, " (Editando Items)");
-                if (d->connected == CON_MEDIT)
-                    send_to_char(ch, " (Editando Mobs)");
-                if (d->connected == CON_ZEDIT)
-                    send_to_char(ch, " (Editando Zonas)");
-                if (d->connected == CON_SEDIT)
-                    send_to_char(ch, "(Editando Lojas)");
-                if (d->connected == CON_REDIT)
-                    send_to_char(ch, " (Editando Salas)");
-                if (d->connected == CON_TEDIT)
-                    send_to_char(ch, " (Editando Textos)");
-                if (d->connected == CON_TRIGEDIT)
-                    send_to_char(ch, " (Editando Triggers)");
-                if (d->connected == CON_AEDIT)
-                    send_to_char(ch, " (Editando Sociais)");
-                if (d->connected == CON_CEDIT)
-                    send_to_char(ch, " (Editando Configurações)");
-                if (d->connected == CON_HEDIT)
-                    send_to_char(ch, " (Editando Ajuda)");
-                if (d->connected == CON_QEDIT)
-                    send_to_char(ch, " (Editando Aventuras)");
-                if (d->connected == CON_SPEDIT)
-                    send_to_char(ch, " (Editando Habilidades)");
-                if (PRF_FLAGGED(tch, PRF_BUILDWALK))
-                    send_to_char(ch, " (Construindo)");
-                if (PRF_FLAGGED(tch, PRF_AFK))
-                    send_to_char(ch, " (AUSENTE)");
-                if (PRF_FLAGGED(tch, PRF_NOGOSS))
-                    send_to_char(ch, " (nogos)");
-                if (PRF_FLAGGED(tch, PRF_NOWIZ))
-                    send_to_char(ch, " (nowiz)");
-                if (PRF_FLAGGED(tch, PRF_NOSHOUT))
-                    send_to_char(ch, " (noshout)");
-                if (PRF_FLAGGED(tch, PRF_NOTELL))
-                    send_to_char(ch, " (notell)");
-                if (PRF_FLAGGED(tch, PRF_QUEST))
-                    send_to_char(ch, " (aventura)");
-                if (PLR_FLAGGED(tch, PLR_THIEF)) {
-                    if (IS_FEMALE(tch))
-                        send_to_char(ch, " (LADRA)");
-                    else
-                        send_to_char(ch, " (LADRÃO)");
-                }
-                if (PLR_FLAGGED(tch, PLR_KILLER)) {
-                    if (IS_FEMALE(tch))
-                        send_to_char(ch, "(ASSASSINA)");
-                    else
-                        send_to_char(ch, " (ASSASSINO)");
-                }
-                send_to_char(ch, "\r\n");
-            }
-        }
-        send_to_char(ch, "\r\n");
-        if (short_list)
-            break;
-    }
-    if (short_list && num_can_see % 4)
-        send_to_char(ch, "\r\n");
-    if (!num_can_see)
-        send_to_char(ch, "Ninguem!\r\n");
-    else if (num_can_see == 1)
-        send_to_char(ch, "Apenas um personagem solitario!\r\n");
-    else
-        send_to_char(ch, "Você pode ver %d personagens mostrados.\r\n", num_can_see);
-    if (IS_HAPPYHOUR > 0) {
-        send_to_char(ch, "É Happy Hour! Digite \tRhappyhour\tW para ver os bonus atuais.\r\n");
-    }
-}
 
+            if ((GET_LEVEL(tch) < rank[i].min_level || GET_LEVEL(tch) > rank[i].max_level) && !short_list)
+                continue;
+            if (!CAN_SEE(ch, tch))
+                continue;
+
+            num_can_see++;
+
+            /* === BLOCO DE IMPRESSÃO COM CORES ESTILO who_tag === */
+
+            const char *statusFlag = IS_DEAD(tch) ? "\tR+\tn" : /* morto */
+                                         PLR_FLAGGED(tch, PLR_TRNS) ? "\tW*\tn"
+                                                                    : /* transcendido */
+                                         (GET_REMORT(tch) > 4) ? "\tG*\tn"
+                                                               : " "; /* várias encarnações */
+
+            /* define cor dos colchetes */
+            const char *corNivel = (GET_LEVEL(tch) >= LVL_IMMORT) ? "\tY" : "\tW";
+
+            /* monta o texto de encarnação */
+            char enc_buf[32];
+            if (GET_REMORT(tch) > 0)
+                // Usando %3d para garantir 3 dígitos para o número (ex: "  1", " 10")
+                snprintf(enc_buf, sizeof(enc_buf), " (%3da. Enc.)", GET_REMORT(tch));
+            else
+                enc_buf[0] = '\0';
+
+            /* ----------------------------------- */
+            /* --- Lógica de Alinhamento à Direita --- */
+            /* ----------------------------------- */
+
+            // Coluna fixa onde o texto da encarnação deve começar.
+            // Ajuste este valor se a largura da sua tela for diferente.
+            const int COLUNA_FIXA_ENC = 65;
+
+            // 1. Calcula o comprimento do texto antes do padding.
+            //    Formato inicial: cor + [LVL CLS FLG] + espaço + Nome + (espaço condicional + Título)
+            //    Tamanho da parte fixa (Cor + Colchetes + LVL + CLS + Flag): ~10 caracteres visíveis.
+
+            // **IMPORTANTE**: Este é um cálculo simplificado. Você deve contar o número de caracteres VISÍVEIS.
+            // Os colchetes e as flags dão cerca de 10 caracteres fixos:
+            // [ 11 CLS * ] - 10 caracteres visíveis
+
+            int len_linha_prefixo = 10;
+            len_linha_prefixo += strlen(GET_NAME(tch));
+
+            // Adiciona o tamanho do título + o espaço condicional (se existir)
+            if (*GET_TITLE(tch)) {
+                len_linha_prefixo += strlen(GET_TITLE(tch));
+                // len_linha_prefixo += 1; // Espaço condicional
+            }
+
+            // 2. Calcula o padding necessário.
+            int padding_needed = COLUNA_FIXA_ENC - len_linha_prefixo;
+
+            // 3. Prevenção: Se Nome+Título for muito longo, usamos 1 espaço como separador mínimo.
+            if (padding_needed < 1) {
+                padding_needed = 1;
+            }
+
+            // 4. Cria e preenche o buffer de padding com espaços.
+            char padding_buf[COLUNA_FIXA_ENC + 1];
+            // Preenche o buffer com ' ' (espaços)
+            memset(padding_buf, ' ', padding_needed);
+            // Garante que o buffer seja uma string terminada em NULL
+            padding_buf[padding_needed] = '\0';
+
+            /* imprime a linha */
+            // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
+            send_to_char(ch, "%s[%3d \tC%-3s\tn%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+                         corNivel,                       // %s (1) Cor do colchete/nível
+                         GET_LEVEL(tch),                 // %-3d (2) Nível
+                         CLASS_ABBR(tch),                // \tC%-3s (3) Classe
+                         statusFlag,                     // %s (4) Flag
+                         corNivel,                       // %s (5) Cor para fechar o colchete
+                         GET_NAME(tch),                  // \tB%s (6) Nome
+                         (*GET_TITLE(tch) ? " " : ""),   // %s (7) ESPAÇO CONDICIONAL
+                         GET_TITLE(tch),                 // \tW%s (8) Título
+                         padding_buf,                    // %s (9) **PADDING DE ALINHAMENTO**
+                         enc_buf                         // %s (10) Encarnação
+            );
+        }
+
+        send_to_char(ch, "\r\n");
+    }
+
+    /* Rodapé */
+    if (!num_can_see)
+        send_to_char(ch, "\tWNinguém!\tn\r\n");
+    else if (num_can_see == 1)
+        send_to_char(ch, "\tGApenas um personagem solitário!\tn\r\n");
+    else
+        send_to_char(ch, "\tGVocê pode ver %d\tG %s.\tn\r\n", num_can_see,
+                     PLURAL(num_can_see, "personagem", "personagens"));
+
+    if (IS_HAPPYHOUR > 0)
+        send_to_char(ch, "\tWÉ Happy Hour! Digite \tRhappyhour\tW para ver os bônus atuais.\tn\r\n");
+}
 #define USERS_FORMAT "formato: users [-l minlevel[-maxlevel]] [-n nome] [-h host] [-c classe] [-o] [-p]\r\n"
 
 ACMD(do_users)
@@ -2148,6 +2985,7 @@ ACMD(do_toggle)
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"autotitle", PRF_AUTOTITLE, 0, "Seu título não será mais alterado automaticamente.\r\n",
          "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"\n", 0, -1, "\n", "\n"} /* must be last */
     };
     if (IS_NPC(ch))

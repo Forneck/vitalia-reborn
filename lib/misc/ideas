@@ -39,7 +39,7 @@ Level     37
 Room      3605
 Flags     0 0 0 0
 End
-Text       skill cooking~
+Text      skill cooking~
 Body      Misturar alimentos tipo comida e aumentar a saciedade.
 ~
 Name      Cansian~
@@ -47,5 +47,201 @@ IdNum     1
 Dated     1605561181
 Level     110
 Room      11687
+Flags     0 0 0 0
+End
+Text      aspas para cast~
+Body      Nao recordo se sempre foi assim, mas a minha lembranca era de que as aspas so eram absolutamente necessarias para lanar magias de nome composto, e nao como agora que sempre precisa colocar as aspas simples, mesmo que seja apenas um nome. Assim, a ideia e que as aspas simples nao sejam necessarias, apenas quando for nomes compostos mesmo
+~
+Name      Yazid~
+IdNum     37
+Dated     1760989193
+Level     96
+Room      3063
+Flags     0 0 0 0
+End
+Text      uso de virgulas para identificar item~
+Body      Recordo que antes tambem era possvel usar virgulas para juntar 2 aliases dos itens. Por exemplo, buy pao,via permitia comprar pao de viagem, ao tentar agora no padeiro, disse que "Nao tenho isso no estoque - tente listar!"
+~
+Name      Yazid~
+IdNum     37
+Dated     1760989609
+Level     96
+Room      3009
+Flags     0 0 0 0
+End
+Text      buffer de mensagens quando estiver em idea, typo, mail etc~
+Body      criar um buffer de msgs quando entramos nesses sistemas de mail, submit idea typo etc.
+~
+Name      Yazid~
+IdNum     37
+Dated     1761249985
+Level     96
+Room      3008
+Flags     0 0 0 0
+End
+Text      adicionar alias da direo nas portas~
+Body      Ja diz o titulo, adicionar entre os aliases de cada sala, as direcoes onde estao as portas. Pelo que percebi, soh da para abrir por exemplo "open porta" "open grade" e nao abrir a direcao
+~
+Name      Yazid~
+IdNum     37
+Dated     1761337211
+Level     96
+Room      12043
+Flags     0 0 0 0
+End
+Text      mascara de anubis~
+Body      Alterar a mascara de anubis para usar no rosto ao invs de na cabea.
+~
+Name      Henzo~
+IdNum     562
+Dated     1761439474
+Level     100
+Room      3013
+Flags     0 0 0 0
+End
+Text      mascara-de-anubis~
+Body      Voltou a ser item de cabeca.
+~
+Name      Henzo~
+IdNum     562
+Dated     1761510912
+Level     80
+Room      1059
+Flags     0 0 0 0
+End
+Text      Mostrar o Dano causado ao lado de cada ataque~
+Body      Mostrar o Dano causado ao lado de cada ataque
+
+exemplo
+Voce OBLITERA o mestre espadachim de Ghenna com a sua furada mortal!! (100)
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761528970
+Level     62
+Room      9949
+Flags     0 0 0 0
+End
+Text      mascara de prata do egito~
+Body      Mudar a Mascara de Prata do Egito para usar no rosto. Se tornaria um timo item utilizavel
+~
+Name      Henzo~
+IdNum     562
+Dated     1761565928
+Level     92
+Room      3063
+Flags     0 0 0 0
+End
+Text      affects~
+Body      Para os affects mostrar os efeitos fixos, ex. Magico dando santuario, colocar uma linha como santuario [item]
+~
+Name      Roscoe~
+IdNum     293
+Dated     1761574552
+Level     80
+Room      1525
+Flags     0 0 0 0
+End
+Text      Criar a magia Emaranhar (Entangle) para druida. Efeito similar ao paralyse de magos e clerigos :). Raizes prendem os ps do alvo no chao.~
+Body      Criar a magia Emaranhar (Entangle) para druida. Efeito similar ao paralyse de magos e clerigos :). Raizes prendem os ps do alvo no chao.
+~
+Name      Kasper~
+IdNum     507
+Dated     1761746180
+Level     38
+Room      3063
+Flags     0 0 0 0
+End
+Text      Seria legal a opcao de auto-flecha para ja equipar as flechas que temos na mao em luta.~
+Body      Seria legal a opcao de auto-flecha para ja equipar as flechas que temos na mao em luta.
+~
+Name      Panoramix~
+IdNum     46
+Dated     1761911049
+Level     39
+Room      1508
+Flags     0 0 0 0
+End
+Text      Melhoria no Locate Object~
+Body      Como nao eh possivel usar o direcionamento especifico ao nome do item com virgula (exemplo: anel,dourado ; manto,verde ; etc) sugestao aumentar o resultado do locate de 1 por lvl ao inves de dividir por 2. 
+~
+Name      Lupulis~
+IdNum     175
+Dated     1761923383
+Level     100
+Room      3000
+Flags     0 0 0 0
+End
+Text      SPELL SILENCE~
+Body      Spell Silence deve impedir de usar cast e canais de comunicacao say, goss, gemote, shout e holler
+~
+Name      Cansian~
+IdNum     1
+Dated     1761960877
+Level     110
+Room      5536
+Flags     0 0 0 0
+End
+Text      Sugestao de Melhoria em item - argolas douradas do anciao~
+Body      Bom dia
+
+Minha sugestao seria para o brinco as argolas do anciao do anciao dragao dourado
+
+Pelo contexto,  o dragao soberano do paraiso dos dragoes, e hoje temos varios itens melhores que os itens dele. tanto as argolas quanto ate mesmo o coracao.
+
+Minha sugestao seria dar uma melhorada nos itens dele, principalmente nas argolas, visto que por exemplo temos o brinco do bravo com um dragao inferior na mesma area que eh teoricamente melhor
+
+iden anc
+As palavras misticas ressoam com poder... [Reduzido]
+Pronto.
+Voce consegue sentir:
+Objeto 'as argolas douradas do anciao' do tipo WORN
+O item vai dar as seguintes habilidades:  DET-ALIGN PROT-EVIL 
+Item e': GLOW NO_INVIS MAGIC ANTI_EVIL NO_SELL 
+Peso: 5, Valor: 2000000, Aluguel: 200000, Nivel: 70
+Pode te afetar com :
+   Afeta: STR em 1
+   Afeta: WIS em 1
+   Afeta: MAXMANA em 20
+   Afeta: HITROLL em 1
+   Afeta: DAMROLL em 1
+< 1014Hp 604Mn 178Mv  (invis)> 
+iden bravo
+As palavras misticas ressoam com poder... [Reduzido]
+Pronto.
+Voce consegue sentir:
+Objeto 'o brinco do bravo' do tipo WORN
+O item vai dar as seguintes habilidades:  DET-ALIGN PROT-EVIL 
+Item e': GLOW NO_INVIS MAGIC ANTI_EVIL NO_SELL 
+Peso: 5, Valor: 2000000, Aluguel: 200000, Nivel: 30
+Pode te afetar com :
+   Afeta: INT em 2
+   Afeta: WIS em 2
+   Afeta: MAXHIT em 25
+   Afeta: HITROLL em 1
+   Afeta: DAMROLL em 1
+o proprio brinco de perolas do anciao vermelho  o melhor brinco do jogo , mas no contexto o do anciao dourado poderia ser bem atrativo ate pela maior dificuldade
+
+somente uma sugestao!  
+obrigado, abracos
+~
+Name      Lupulis~
+IdNum     175
+Dated     1762176280
+Level     100
+Room      9839
+Flags     0 0 0 0
+End
+Text       rskills - listar skills/spells de remort~
+Body      Ter um comando chamado 'rskills' onde ele listaria as habilidades e magias levadas por remort, por exemplo:
+
+[ swords ] -------- [ guerreiro ] ---- [ 1a enc. ]
+[ fireshield ] ---- [ mago ] --------- [ 2a enc. ]
+~
+Name      Laguna~
+IdNum     50
+Dated     1762347941
+Level     100
+Room      1000
 Flags     0 0 0 0
 End

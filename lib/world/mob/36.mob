@@ -11,6 +11,9 @@ Coroa.
 4 14 8 3d3+25 2d3+1
 100 400
 9 9 1
+GenWimpy: 64
+GenLoot: 6
+GenFollow: 6
 E
 #3601
 peao branco~
@@ -25,6 +28,9 @@ dar sua vida pela Coroa.
 4 14 8 3d3+25 2d3+1
 100 400
 9 9 1
+GenWimpy: 33
+GenLoot: 3
+GenFollow: 3
 E
 #3602
 torre negra castelo~
@@ -38,6 +44,10 @@ Apenas por sua aparência, ela será provavelmente a SUA tumba.
 14 11 5 2d4+250 3d6+3
 1000 20000
 9 9 2
+GenWimpy: 100
+GenLoot: 27
+GenEquip: 2
+GenFollow: 12
 E
 #3603
 torre branca castelo~
@@ -51,6 +61,10 @@ Apenas por sua aparência, ela será provavelmente a SUA tumba.
 14 11 5 2d4+250 3d6+3
 1000 20000
 9 9 2
+GenWimpy: 78
+GenLoot: 7
+GenEquip: 2
+GenFollow: 11
 E
 #3604
 cavaleiro negro~
@@ -64,7 +78,11 @@ como o ébano. Seus olhos flamejam por vingança, por trás de sua viseira.
 9 11 3 3d5+175 2d4+1
 1000 8000
 9 9 1
-GenWimpy: 16
+GenWimpy: 100
+GenLoot: 34
+GenEquip: 4
+GenRoam: 89
+GenFollow: 12
 E
 #3605
 cavaleiro branco~
@@ -78,6 +96,11 @@ como o marfim. Seus olhos brilham de alegria, por trás de sua viseira.
 9 11 3 3d5+175 2d4+1
 1000 8000
 9 9 1
+GenWimpy: 95
+GenLoot: 20
+GenEquip: 2
+GenRoam: 62
+GenFollow: 16
 E
 #3606
 bispo negro~
@@ -91,6 +114,10 @@ assim ele poderá abençoá-lo apropriadamente.
 12 11 5 2d3+175 3d4+6
 1300 13000
 9 9 1
+GenWimpy: 80
+GenLoot: 31
+GenEquip: 1
+GenFollow: 10
 E
 #3607
 bispo branco~
@@ -104,6 +131,9 @@ para que assim ele possa atingir a um grau de espiritualidade mais alto.
 12 11 5 2d3+175 3d4+6
 1300 13000
 9 9 1
+GenWimpy: 100
+GenLoot: 4
+GenFollow: 10
 E
 #3608
 rainha negra~
@@ -118,6 +148,10 @@ negra. Se olhares pudessem matar, você já estaria morto.
 16 8 1 4d6+450 4d4+6
 2000 26000
 9 9 2
+GenWimpy: 8
+GenLoot: 5
+GenEquip: 1
+GenFollow: 9
 E
 #3609
 rainha branca~
@@ -132,6 +166,10 @@ raio de sol dourado. Para você, isto é seguramente amor a primeira vista.
 16 8 1 4d6+450 4d4+6
 2000 26000
 9 9 2
+GenWimpy: 7
+GenLoot: 15
+GenEquip: 1
+GenFollow: 14
 E
 #3610
 rei negro~
@@ -145,6 +183,11 @@ facilmente consegue entender o porque dele ser o rei e não você.
 18 8 -1 8d5+700 5d5+8
 6000 34000
 9 9 1
+GenWimpy: 16
+GenLoot: 14
+GenEquip: 2
+GenQuest: 1
+GenFollow: 14
 E
 #3611
 rei branco~
@@ -158,5 +201,9 @@ você facilmente consegue entender o porque dele ser o rei e não você.
 18 8 -1 8d5+700 5d5+8
 6000 34000
 9 9 1
+GenWimpy: 3
+GenLoot: 16
+GenEquip: 2
+GenFollow: 14
 E
 $

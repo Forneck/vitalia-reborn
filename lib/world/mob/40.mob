@@ -9,9 +9,10 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 32
-GenLoot: 26
+GenWimpy: 63
+GenLoot: 99
 GenEquip: 1
+GenFollow: 8
 E
 T 3008
 #4001
@@ -25,6 +26,8 @@ Ela parece gelada.
 7 12 4 3d10+30 2d6+1
 0 2500
 9 9 0
+GenBrave: 1
+GenFollow: 7
 E
 T 3008
 #4002
@@ -51,7 +54,9 @@ Ele é horrível.
 50 800
 9 9 0
 GenWimpy: 100
+GenLoot: 46
 GenRoam: 88
+GenFollow: 5
 E
 #4004
 orc~
@@ -64,9 +69,10 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 98
-GenLoot: 3
-GenRoam: 84
+GenWimpy: 100
+GenLoot: 34
+GenRoam: 87
+GenFollow: 5
 E
 #4005
 orc enorme~
@@ -79,8 +85,10 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 31
-GenRoam: 87
+GenWimpy: 49
+GenLoot: 13
+GenRoam: 89
+GenFollow: 11
 E
 #4050
 guerreiro~
@@ -106,9 +114,10 @@ Ele parece ter jeito com armas.
 7 13 5 3d10+80 2d5+0
 200 2500
 9 9 1
-GenWimpy: 99
-GenLoot: 6
+GenWimpy: 100
+GenLoot: 19
 GenRoam: 89
+GenFollow: 10
 E
 #4052
 hobgoblin~
@@ -121,8 +130,10 @@ O hobgoblin parece um tanto perdido.
 6 12 6 3d8+70 2d4+0
 100 1500
 9 9 1
-GenWimpy: 79
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 4
+GenRoam: 89
+GenFollow: 7
 E
 #4053
 serpente cobra marrom~
@@ -160,8 +171,11 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 22
+GenWimpy: 48
+GenLoot: 34
 GenRoam: 89
+GenGroup: 18
+GenFollow: 10
 E
 #4056
 orc~
@@ -174,8 +188,11 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
-GenWimpy: 48
+GenWimpy: 100
+GenLoot: 28
 GenRoam: 89
+GenGroup: 2
+GenFollow: 10
 E
 #4057
 leao montanha~
@@ -188,8 +205,10 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 81
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 14
+GenRoam: 86
+GenFollow: 3
 E
 #4058
 gigante colina~
@@ -203,8 +222,12 @@ logo chega a conclusão que ele não é muito inteligente.
 13 8 2 1d10+160 2d10+0
 1000 16500
 9 9 1
-GenWimpy: 3
-GenRoam: 13
+GenWimpy: 16
+GenLoot: 32
+GenEquip: 1
+GenRoam: 89
+GenGroup: 28
+GenFollow: 14
 E
 #4100
 mago~
@@ -218,8 +241,11 @@ Parece que ele lida bem com magia.
 13 10 2 3d20+100 2d6+0
 2500 21000
 9 9 1
-GenWimpy: 36
-GenBrave: 2
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 3
+GenRoam: 60
+GenFollow: 13
 E
 T 3009
 #4101
@@ -259,9 +285,10 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 67
+GenWimpy: 93
+GenLoot: 13
 GenRoam: 89
-GenBrave: 1
+GenFollow: 18
 E
 T 3007
 #4104
@@ -288,7 +315,9 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenRoam: 85
+GenLoot: 75
+GenRoam: 88
+GenFollow: 11
 E
 #4106
 guerreiro~
@@ -301,10 +330,12 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 67
-GenLoot: 1
-GenEquip: 2
+GenWimpy: 100
+GenLoot: 90
+GenEquip: 7
 GenRoam: 89
+GenGroup: 1
+GenFollow: 11
 E
 #4107
 kobold~
@@ -318,7 +349,8 @@ Ele parece lodoso..
 20 3000
 9 9 1
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 89
+GenLoot: 45
+GenRoam: 85
+GenFollow: 8
 E
 $

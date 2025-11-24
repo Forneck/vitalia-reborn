@@ -11,17 +11,25 @@
 #define _QUEST_H_
 
 /* Aquest related defines ********************************************* */
-#define AQ_UNDEFINED -1      /* (R) Quest unavailable                */
-#define AQ_OBJ_FIND 0        /* Player must retreive object          */
-#define AQ_ROOM_FIND 1       /* Player must reach room               */
-#define AQ_MOB_FIND 2        /* Player must find mob                 */
-#define AQ_MOB_KILL 3        /* Player must kill mob                 */
-#define AQ_MOB_SAVE 4        /* Player must save mob                 */
-#define AQ_OBJ_RETURN 5      /* Player gives object to mob in val5   */
-#define AQ_ROOM_CLEAR 6      /* Player must clear room of all mobs   */
-#define AQ_PLAYER_KILL 7     /* Kill a specific player or any player killer */
-#define AQ_MOB_KILL_BOUNTY 8 /* Kill a specific mob for bounty (posted by mobs) */
-#define NUM_AQ_TYPES 9       /* Used in qedit functions              */
+#define AQ_UNDEFINED -1        /* (R) Quest unavailable                */
+#define AQ_OBJ_FIND 0          /* Player must retreive object          */
+#define AQ_ROOM_FIND 1         /* Player must reach room               */
+#define AQ_MOB_FIND 2          /* Player must find mob                 */
+#define AQ_MOB_KILL 3          /* Player must kill mob                 */
+#define AQ_MOB_SAVE 4          /* Player must save mob                 */
+#define AQ_OBJ_RETURN 5        /* Player gives object to mob in val5   */
+#define AQ_ROOM_CLEAR 6        /* Player must clear room of all mobs   */
+#define AQ_PLAYER_KILL 7       /* Kill a specific player or any player killer */
+#define AQ_MOB_KILL_BOUNTY 8   /* Kill a specific mob for bounty (posted by mobs) */
+#define AQ_MOB_ESCORT 9        /* Player escorts mob to destination    */
+#define AQ_EMOTION_IMPROVE 10  /* Player must improve specific emotion with target mob */
+#define AQ_MAGIC_GATHER 11     /* Player must visit locations with high magical density */
+#define AQ_DELIVERY 12         /* Player must deliver specific items to mob */
+#define AQ_RESOURCE_GATHER 13  /* Player must gather X quantity of specific item type */
+#define AQ_REPUTATION_BUILD 14 /* Player must improve reputation with faction/zone */
+#define AQ_SHOP_BUY 15         /* Player must buy specific items from shops */
+#define AQ_SHOP_SELL 16        /* Player must sell specific items to shops */
+#define NUM_AQ_TYPES 17        /* Used in qedit functions              */
 
 #define MAX_QUEST_NAME 40  /* Length of quest name                 */
 #define MAX_QUEST_DESC 75  /* Length of quest description          */
@@ -33,6 +41,8 @@
 #define SCMD_QUEST_LEAVE 3    /* Leave a quest                        */
 #define SCMD_QUEST_PROGRESS 4 /* Show progress of current quest       */
 #define SCMD_QUEST_STATUS 5   /* Show complete details of a quest     */
+#define SCMD_QUEST_REMOVE 6   /* Remove a mob-posted quest (GOD+)     */
+#define SCMD_QUEST_CLEAR 7    /* Clear a player's current quest (GOD+) */
 /* AQ Flags (much room for expansion) ********************************* */
 #define AQ_REPEATABLE (1 << 0) /* Quest can be repeated                */
 #define AQ_MOB_POSTED (1 << 1) /* Quest posted by a mob (not immortal) */
@@ -106,6 +116,15 @@ void check_timed_quests(void);
 SPECIAL(questmaster);
 ACMD(do_quest);
 
+/* Escort Quest Functions */
+bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum);
+bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum);
+void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer);
+
+/* Bounty Quest Functions */
+bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum);
+void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer);
+
 /* Quest display functions for temporary quest masters */
 void quest_show_temp(struct char_data *ch, struct char_data *qm);
 void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg);
@@ -134,6 +153,13 @@ SPECIAL(temp_questmaster);
 void save_temp_quest_assignments(void);
 void load_temp_quest_assignments(void);
 void init_mob_ai_data(struct char_data *mob);
+
+/* Helper function to check for active kill quests */
+bool has_active_kill_quest_for_mob(mob_vnum target_vnum);
+
+/* Helper function to fail quest when player quits with magic stone */
+void check_and_fail_quest_with_magic_stone(struct char_data *ch);
+
 /* Implemented in qedit.c  */
 void qedit_parse(struct descriptor_data *d, char *arg);
 void qedit_string_cleanup(struct descriptor_data *d, int terminator);
@@ -177,5 +203,8 @@ int save_quests(zone_rnum zone_num);
 /* AQ Global Variables ************************************************ */
 extern const char *aq_flags[];    /* names for quest flags (quest.c) */
 extern const char *quest_types[]; /* named for quest types (quest.c) */
+
+/* Quest accept confirmation - called from interpreter.c */
+void accept_pending_quest(struct descriptor_data *d);
 
 #endif /* _QUEST_H_ */

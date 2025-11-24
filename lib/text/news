@@ -6,6 +6,186 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
+@C-@G=@Y>@W Outubro/Novembro de 2025 @C@Y<@G=@C-@n
+
+   @RCorreções de Bugs e Estabilidade@n
+   Corrigido travamento em combate quando magias de contra-ataque matam o atacante.
+   Implementado sistema de interação pedra-papel-tesoura para magias de contra-ataque.
+   Corrigido travamento ao tentar fugir durante combate.
+   Corrigido travamento no comando @YAWAY@n.
+   Corrigido travamento quando personagens morrem em certas situações.
+   Corrigido problema de comparação de texto que causava travamentos.
+   Corrigido travamento quando mobs coletam itens de corpos.
+   Corrigido problema ao recuperar objetos após travamentos do servidor.
+   Corrigido travamento ao carregar objetos com ordem de posição incorreta.
+   Corrigido problema no @Yspedit@n que causava travamentos.
+   
+   @BSistema de Reputação@n
+   Novo sistema completo de reputação jogador-mob com bônus por classe.
+   Sistema de reputação agora aparece no comando @Yscore@n e @Ystat@n.
+   Comandos @Yset@n para karma/reputação disponíveis para imortais.
+   Reputação inicial corrigida para prevenir bloqueio de acesso a lojas.
+   Sistema de reputação para jogadores malignos com bônus em todas classes.
+   Reputação de mobs agora aparece no comando @Ystat@n.
+   
+   @MSistema de Emoções para Mobs@n
+   Sistema completo de comportamento baseado em emoções para mobs.
+   20 emoções rastreadas com indicadores visuais e memória aprimorada.
+   Gatilhos emocionais para eventos ambientais, magias, quests e comércio.
+   Perfis emocionais (agressivo, defensivo, equilibrado, sensível, confiante, ganancioso, leal).
+   Sistema de emoções expandido com configuração completa de parâmetros.
+   Integração do sistema de emoções na aceitação de quests por mobs.
+   Sistema de comportamento emocional e emotes com probabilidades configuráveis.
+   Sistema de @Ysocials@n expandido para mobs usarem 102 emotes com categorias emocionais.
+   Sistema de @Ysocials@n mapeado: TODOS os 490 socials em 25 categorias com respostas contextuais.
+   Configuração de emoções agora disponível em @YCEDIT@n com presets (Mercantil, Eremita, Leal).
+   Perfil emocional agora aparece em @YMEDIT@n e @YSTAT@n com exibição nomeada.
+   
+   @GSistema de Quests@n
+   Quests agora falham ao fazer logout.
+   Comando @Yquest list@n corrigido para questmasters sem quests atribuídos.
+   Bug no @Yquest list@n corrigido com prompt de confirmação adicionado.
+   Requisitos de nível de quest corrigidos para mobs acima do nível 100.
+   
+   @YSistema de Rebegin@n
+   Lógica de seleção de classe no @Yrebegin@n corrigida para permitir reseleção.
+   Sistema de remoção de efeitos no rebegin corrigido e otimizado.
+   Custo de mana de magias e habilidades retidas no rebegin corrigidos.
+   Habilidades do remort agora são mantidas corretamente.
+   
+   @CSistema de Magias e Combate@n
+   Sistema de sílabas expandido com mecânicas de modificadores para voice casting.
+   Novo comando @Ysyllables@n e descoberta de variantes de magias.
+   Suporte no @Yspedit@n para campos de variantes de magias com sistema de pré-requisitos.
+   Variantes de magias permitem usar cartas para evocar mobs.
+   Magias manuais agora exibem mensagens após conjuração.
+   Recompensas de experiência adicionadas para magias sem dano.
+   Problema de acúmulo excessivo de efeitos mágicos corrigido.
+   Exploit de curse/remove curse limitado para prevenir dano infinito.
+   Cálculo de custo de mana de magias corrigido.
+   
+   @RLojas e Comércio@n
+   Comerciantes oferecendo 0 ouro corrigido.
+   Arredondamento de preços de loja e lógica de saque/depósito bancário corrigidos.
+   Mensagem de compra mostrando 0 moedas quando ocorrem depósitos automáticos corrigida.
+   Transações de comerciantes padronizando para 1 moeda para itens sem valor corrigidas.
+   Cálculo de preços de venda corrigido.
+   Parsing de valores monetários no @Ysedit@n corrompido pela locale pt_BR corrigido.
+   
+   @WCidades e Ambientes@n
+   Nova cidade natal: @YBhogavati@n (cidade natal 4) adicionada.
+   Bug da sala de doação 0 corrigido.
+   Sistema de respiração implementado para salas subaquáticas e de alta altitude.
+   Umidade do clima corrigida para prevenir valores negativos em climas desérticos.
+   
+   @BHabilidades e Classes@n
+   Nova habilidade @Ypeek@n para Ladrões visualizarem inventário do alvo.
+   Habilidade @Ynighthammer@n corrigida para usar estado natural da noite.
+   Status do @Ynighthammer@n adicionado ao comando @Yscore@n.
+   Custo de movimento do comando @Yshoot@n reduzido de 5 para 2.
+   
+   @MSistema de Interface@n
+   Preferências @Yviewdamage@n e @Yshowemotions@n movidas para menu principal.
+   Preferência de visualização de dano corrigida.
+   Barra de progresso de XP no comando @Yscore@n corrigida.
+   Sistema de respiração exibido no @Yscore@n corrigido.
+   Sangramento de cores em tags de status, exibição de equipamento e saída de comandos corrigido.
+   
+   @YSistema de Objetos@n
+   Itens @YHANDS@n equipando no slot de @YWRIST@n corrigido.
+   Persistência de objetos de casas com rastreamento recursivo de contêineres corrigido.
+   Sistema de equipamento de mergulho corrigido.
+   
+   @RSistema de Comunicação@n
+   Sistema de correio com data embaralhada corrigido.
+   Erros de digitação em português no comando @Ypeek@n corrigidos.
+   
+   @GSistema de Mobs com IA@n
+   Mobs encantados agora seguem corretamente seus mestres.
+   Código @Yfollow_tendency@n adicionado ao sistema de genes de mobs.
+   Mobs inteligentes com chaves podem abrir portas automaticamente.
+   
+   @CEditor de Áreas e Ferramentas@n
+   Códigos possessivos em português para objetos adicionados.
+   Códigos de gênero em português e documentação abrangente do @YAEDIT@n adicionados.
+   Exibição de @Ystoneskin@n no score corrigida para atualizar conforme duração diminui.
+   Casa de leilão Belchior com sala correta.
+   
+   @WOutras Melhorias@n
+   Atualização de triggers do mundo.
+   Múltiplas correções de typos e pequenos ajustes em Rangers, portais e corpos.
+   Sistema de quests para mobs não aceita mais quests para reduzir lag.
+   Coleta de recursos desabilitada para mobs para reduzir lag.
+
+@C-@G=@Y>@W Outubro de 2025 @C@Y<@G=@C-@n
+
+   @RCorreções de Bugs e Estabilidade@n
+   Corrigido bug crítico onde @YStoneskin@n não protegia contra dano de raios e scripts.
+   Corrigido cálculo de duração da magia @YStoneskin@n para 1 hora/ponto conforme ajuda.
+   Sistema de duração/pontos de @YStoneskin@n agora reduz proporcionalmente em combate.
+   Corrigido bug no @Yrebegin@n que fazia jogadores pularem encarnações (2→4→6).
+   Sistema de @Yrebegin@n agora limpa corretamente todas as habilidades retidas.
+   Removida geração de mobs nas habilidades @Yforage@n, @Ymine@n e @Yfishing@n.
+   Corrigido problema com magia @YDarkness@n que tinha duração muito curta.
+   Magia @YAnimate Dead@n agora funciona corretamente com todos os tipos de corpo.
+   Corrigido erro que permitia conjurar magias usando @YSay@n em salas sem magia.
+   Magia @YParalyze@n agora impede corretamente a fuga de mobs e jogadores.
+   Magia @YFly@n agora requer ser conjurada novamente após pousar com @Yland@n.
+   Sistema de bancos agora funciona corretamente após mudanças de nível.
+   Corrigidos travamentos relacionados com @YDeath Traps@n.
+   Corrigido travamento quando mobs invocados ou encantados morrem.
+   Múltiplas correções de estabilidade em @Ymobile_activity()@n.
+   Corrigido problema onde comandos mostravam caracteres estranhos.
+   
+   @GSistema de Comandos e Interface@n
+   Nova opção @YVer Dano@n no @Yprefedit@n para mostrar valores de dano em combate.
+   Jogadores podem escolher nova cidade natal ao fazer @Yrebegin@n.
+   Novo comando @Yskills@n lista todas habilidades da sua classe por nível.
+   Novo comando @Yspells@n lista todas magias da sua classe por nível.
+   Novo comando @Ychansons@n lista todas canções da sua classe por nível.
+   Comando @Yvoice cast@n melhorado com suporte a alvos e sílabas com espaços.
+   Números agora aparecem formatados com separadores brasileiros (1.234.567).
+   Comando @Yuptime@n corrigido para não mostrar caracteres estranhos.
+   
+   @BSistema de Magias e Combate@n
+   Sistema de sílabas mágicas expandido com 35 novas transformações.
+   Novos arquivos de ajuda: @YHELP CLIMA-MAGICO@n, @YHELP ESCOLAS-MAGICAS@n,
+     @YHELP ELEMENTOS-MÁGICOS@n e @YHELP HABILIDADES-ESCOLAS@n.
+   Interpretador de fórmulas agora aceita @YVICTIM.@n como alternativa a @YVICT.@n.
+   Mensagens de sala para magias sem alvo agora aparecem corretamente.
+   
+   @CMobs e IA@n
+   Novo gene @Yfollow_tendency@n permite mobs seguirem jogadores/outros mobs.
+   Mobs com alta genética de comércio agora podem usar bancos.
+   Sistema de genes de mob agora aparece no comando @Ystat@n para wizards.
+   Mobs inteligentes com chaves podem abrir portas automaticamente.
+   Sistema de pathfinding otimizado para melhor performance.
+   Múltiplas melhorias na segurança contra travamentos em @Ymobile_activity@n.
+   
+   @YSistema de Quests@n
+   Jogadores agora veem mensagem quando completam quests na sala.
+   Corrigido loop infinito em recompensas de objetos de quests.
+   Quests de objetos agora requerem entrega ao questmaster.
+   Sistema de quests mais robusto contra condições de corrida.
+   
+   @MSistema de Leilões (Experimental)@n
+   Sistema completo de leilões com controle de acesso por convite.
+   Casa de leilões secreta acessível através da loja do Belchior.
+   Comandos: @Yleilao criar@n, @Yleilao listar@n, @Yleilao dar@n, @Yleilao convidar@n.
+   Sistema controlável via @YCEDIT@n (opção experimental).
+   Acesso de teste disponível para imortais (nível 101+).
+   
+   @RFerramentas e Desenvolvimento@n
+   Nova ferramenta @Ytextextract@n para extrair texto dos arquivos do mundo.
+   Sistema de build melhorado com suporte a múltiplas plataformas.
+   Correções para compilação no Termux e outros sistemas Unix.
+   
+   @WOutras Melhorias@n
+   Editor de magias (@Yspedit@n) corrigido para escolas e elementos.
+   Sistema de configuração (@Ycedit@n) agora carrega todas opções corretamente.
+   Sistema de rusage melhorado para monitoramento de performance.
+   Múltiplas correções de segurança e validação de dados.
+
 @C-@G=@Y>@W Agosto de 2025 @C@Y<@G=@C-@n
    
    Habilidades novas para coletar recursos: @Yforage@n, @Ymine@n, @Yfishing@n e @Yeavesdrop@n.

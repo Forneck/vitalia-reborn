@@ -76,6 +76,7 @@ char *stristr3(const char *haystack, const char *needle);
 
 const char *gauge(char *buf, int type, float pos, float total);
 const char *align_gauge(int align);
+const char *reputation_gauge(int reputation);
 
 /* Funções de avaliação para a IA Genética */
 int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
@@ -101,13 +102,43 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
 void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int reward);
+void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room_vnum destination_room, int reward);
+void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int emotion_type, int target_level,
+                             int reward);
+void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, int location_count, int reward);
+void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_vnum item_vnum, int reward);
+void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
+void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, int target_reputation, int reward);
+void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
+void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
+bool is_mob_excluded_from_quests(struct char_data *mob);
+int count_mob_posted_quests(void);
+bool can_add_mob_posted_quest(void);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);
 int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
 int calculate_player_reputation(struct char_data *ch);
-void modify_player_reputation(struct char_data *ch, int amount);
+int modify_player_reputation(struct char_data *ch, int amount);
+
+/* Class-based reputation action types */
+#define CLASS_REP_COMBAT_KILL 1        /* Killing in combat (Warriors, Rangers) */
+#define CLASS_REP_HEALING 2            /* Healing others (Clerics, Druids) */
+#define CLASS_REP_MAGIC_CAST 3         /* Casting spells (Magic Users) */
+#define CLASS_REP_QUEST_COMPLETE 4     /* Completing quests (Rangers, Bards) */
+#define CLASS_REP_SOCIAL_PERFORMANCE 5 /* Social/performance actions (Bards) */
+#define CLASS_REP_NATURE_INTERACTION 6 /* Nature-related actions (Druids, Rangers) */
+#define CLASS_REP_GENEROSITY 7         /* Giving/charity (Clerics, Bards) */
+#define CLASS_REP_SCHOLARLY 8          /* Scholarly pursuits (Magic Users) */
+#define CLASS_REP_FAITHFULNESS 9       /* Acts of faith (Clerics) */
+#define CLASS_REP_STEALTH_ACTION 10    /* Stealth actions (Thieves) - stealing, backstabbing */
+#define CLASS_REP_POISONING 11         /* Poisoning (Thieves) */
+#define CLASS_REP_DARK_MAGIC 12        /* Dark/harmful magic (Evil Magic Users, Fallen Clerics) */
+#define CLASS_REP_HARM_SPELL 13        /* Harmful spells (Evil Clerics) */
+
+int get_class_reputation_modifier(struct char_data *ch, int action_type, struct char_data *target);
+
 int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty,
                                            struct char_data *player);
 obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
@@ -115,10 +146,57 @@ struct char_data *find_item_owner(obj_vnum item_vnum);
 int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
+/* Mob emotion system functions */
+void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
+void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
+void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
+void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
+void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
+void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
+void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thief);
+void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer);
+void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
+void update_mob_emotion_passive(struct char_data *mob);
+void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
+void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
+void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
+void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);
+void update_mob_emotion_entered_dangerous_area(struct char_data *mob);
+void update_mob_emotion_entered_safe_area(struct char_data *mob);
+void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);
+void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader);
+void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value);
+
+/* Emotion memory system functions */
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
+                        const char *social_name);
+int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
+void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
+
+/* Hybrid emotion system - combines mood (global) with relationship (per-entity) emotions */
+int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
+int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
+
+/* Weather-emotion integration - applies weather effects to mob moods */
+/**
+ * Applies weather effects to mob moods.
+ * @param mob The mob whose mood is affected.
+ * @param weather Zone-specific weather data (does NOT include global sunlight).
+ * @param sunlight Global sunlight value (from weather_info.sunlight), which is updated in another_hour().
+ *        Sunlight is passed separately because it is global, while other weather data is zone-specific.
+ */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
 bool reduce_stoneskin_points(struct char_data *ch, int reduction);
+bool apply_stoneskin_protection(struct char_data *ch, int *dam);
 
 /* String utility functions */
 void remove_from_string(char *str, const char *substr);
@@ -177,6 +255,8 @@ int perform_move(struct char_data *ch, int dir, int following);
 int mana_gain(struct char_data *ch);
 int hit_gain(struct char_data *ch);
 int move_gain(struct char_data *ch);
+int breath_gain(struct char_data *ch);
+
 void set_title(struct char_data *ch, char *title);
 void gain_exp(struct char_data *ch, int gain);
 void gain_exp_regardless(struct char_data *ch, int gain);
@@ -247,6 +327,10 @@ void char_from_furniture(struct char_data *ch);
 
 /* integer utils */
 #define URANGE(a, b, c) ((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
+
+/* float utils */
+#define FMAX(a, b) ((a) > (b) ? (a) : (b))
+#define FMIN(a, b) ((a) < (b) ? (a) : (b))
 
 /* Various string utils. */
 /** If a is not null, FALSE or '0', return "YES"; if it is, return "NO" */
@@ -568,6 +652,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENTRADE(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.trade_tendency : 0)
 #define GET_GENQUEST(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.quest_tendency : 0)
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
+#define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
+#define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
@@ -575,6 +661,39 @@ void char_from_furniture(struct char_data *ch);
 #define GET_MOB_QUEST(ch) ((ch)->ai_data ? (ch)->ai_data->current_quest : NOTHING)
 #define GET_MOB_QUEST_TIME(ch) ((ch)->ai_data ? (ch)->ai_data->quest_timer : 0)
 #define GET_MOB_QUEST_COUNTER(ch) ((ch)->ai_data ? (ch)->ai_data->quest_counter : 0)
+
+/* Mob emotion system macros (0-100 scale) */
+/* Basic emotions */
+#define GET_MOB_FEAR(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_fear : 0)
+#define GET_MOB_ANGER(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_anger : 0)
+#define GET_MOB_HAPPINESS(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_happiness : 0)
+#define GET_MOB_SADNESS(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_sadness : 0)
+
+/* Social emotions */
+#define GET_MOB_FRIENDSHIP(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_friendship : 0)
+#define GET_MOB_LOVE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_love : 0)
+#define GET_MOB_TRUST(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_trust : 0)
+#define GET_MOB_LOYALTY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_loyalty : 0)
+
+/* Motivational emotions */
+#define GET_MOB_CURIOSITY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_curiosity : 0)
+#define GET_MOB_GREED(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_greed : 0)
+#define GET_MOB_PRIDE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_pride : 0)
+
+/* Empathic emotions */
+#define GET_MOB_COMPASSION(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_compassion : 0)
+#define GET_MOB_ENVY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_envy : 0)
+
+/* Arousal emotions */
+#define GET_MOB_COURAGE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_courage : 0)
+#define GET_MOB_EXCITEMENT(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_excitement : 0)
+
+/* Negative/aversive emotions */
+#define GET_MOB_DISGUST(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_disgust : 0)
+#define GET_MOB_SHAME(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_shame : 0)
+#define GET_MOB_PAIN(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_pain : 0)
+#define GET_MOB_HORROR(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_horror : 0)
+#define GET_MOB_HUMILIATION(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_humiliation : 0)
 
 /* Temporary Quest Master macros */
 #define IS_TEMP_QUESTMASTER(ch) ((ch)->ai_data ? (ch)->ai_data->is_temp_questmaster : FALSE)
@@ -702,6 +821,10 @@ void char_from_furniture(struct char_data *ch);
 #define GET_QUEST_COUNTER(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.quest_counter))
 /** Time remaining to complete the quest ch is currently on. */
 #define GET_QUEST_TIME(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.quest_time))
+/** ID of the mob being escorted in an escort quest. */
+#define GET_ESCORT_MOB_ID(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.escort_mob_id))
+/** ID of the specific mob targeted by a bounty quest. */
+#define GET_BOUNTY_TARGET_ID(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.bounty_target_id))
 /** The number of quests completed by ch. */
 #define GET_NUM_QUESTS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_completed_quests))
 /** The type of quest ch is currently participating in. */
@@ -833,7 +956,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 
 /** Defines if an obj is a corpse. */
 #define IS_CORPSE(obj)                                                                                                 \
-    (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE)
+    ((GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE))
 
 /** Can the obj be worn on body part? */
 #define CAN_WEAR(obj, part) OBJWEAR_FLAGGED((obj), (part))
@@ -860,11 +983,27 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define TANA(obj) (strchr("aeiouAEIOU", *(obj)) ? "an" : "a")
 
 #define PLURAL(num, ws, wp) (num == 1 ? ws : wp)
+/* Portuguese language gender macros */
 #define ELEA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "ele" : "ela") : "ele")
 #define ELEAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "Ele" : "Ela") : "Ele")
 #define OAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "O" : "A") : "O")
 #define OA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "o" : "a") : "o")
 #define SEUSUA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "seu" : "sua") : "seu")
+#define DELA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "dele" : "dela") : "dele")
+#define TEUTUA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "teu" : "tua") : "teu")
+#define UMUMA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "um" : "uma") : "um")
+
+/* Portuguese language gender macros for objects */
+/* Determines object gender by last character of name (a=feminine, default=masculine)
+ * Note: This is a simplified heuristic. Portuguese has many exceptions:
+ * - Some feminine words don't end in 'a' (e.g., 'mão', 'razão')
+ * - Some masculine words end in 'a' (e.g., 'problema', 'sistema')
+ * For most common MUD objects (espada, adaga, escudo, machado), this works well.
+ */
+#define OBJ_IS_FEMININE(obj) ((obj) && (obj)->name && (obj)->name[0] && (obj)->name[strlen((obj)->name) - 1] == 'a')
+#define MEUMINHA(obj) (OBJ_IS_FEMININE(obj) ? "minha" : "meu")
+#define TEUTUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "tua" : "teu")
+#define SEUSUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "sua" : "seu")
 /* Various macros building up to CAN_SEE */
 
 /** Defines if there is enough light for sub to see in. */
@@ -1061,6 +1200,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MAX_PATHFIND_ITERATIONS config_info.play.max_pathfind_iterations
 /** Maximum zones in a pathfinding path */
 #define CONFIG_MAX_ZONE_PATH config_info.play.max_zone_path
+/** Maximum objects allowed in player houses */
+#define CONFIG_MAX_HOUSE_OBJS config_info.play.max_house_objs
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT config_info.play.level_can_shout
 /** How many move points does holler cost? */
@@ -1140,15 +1281,23 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_DON_ROOM_2 config_info.room_nums.donation_room_2
 /** Ge the third dontation room. */
 #define CONFIG_DON_ROOM_3 config_info.room_nums.donation_room_3
+/** Get the fourth donation room. */
+#define CONFIG_DON_ROOM_4 config_info.room_nums.donation_room_4
 
 #define CONFIG_DEAD_START config_info.room_nums.dead_start_room
 #define CONFIG_HOMETOWN_1 config_info.room_nums.hometown_1
 #define CONFIG_HOMETOWN_2 config_info.room_nums.hometown_2
 #define CONFIG_HOMETOWN_3 config_info.room_nums.hometown_3
+/** Get the 4th hometown room. */
+#define CONFIG_HOMETOWN_4 config_info.room_nums.hometown_4
 
 #define CONFIG_RESS_ROOM_1 config_info.room_nums.ress_room_1
 #define CONFIG_RESS_ROOM_2 config_info.room_nums.ress_room_2
 #define CONFIG_RESS_ROOM_3 config_info.room_nums.ress_room_3
+/** Get the fourth resurrection room. */
+#define CONFIG_RESS_ROOM_4 config_info.room_nums.ress_room_4
+/** Get the death trap object warehouse room. */
+#define CONFIG_DT_WAREHOUSE config_info.room_nums.dt_warehouse_room
 
 /* Game Operation */
 /** Get the default mud connection port. */
@@ -1201,5 +1350,124 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_NEW_AUCTION_SYSTEM config_info.experimental.new_auction_system
 /** Experimental bank system enabled? */
 #define CONFIG_EXPERIMENTAL_BANK_SYSTEM config_info.experimental.experimental_bank_system
+/** Mob contextual socials based on reputation/alignment/position enabled? */
+#define CONFIG_MOB_CONTEXTUAL_SOCIALS config_info.experimental.mob_contextual_socials
+/** Dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests) enabled? */
+#define CONFIG_DYNAMIC_REPUTATION config_info.experimental.dynamic_reputation
+/** Probability (%) of mob performing social per emotion tick */
+#define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
+/** Probability (%) of mob updating emotions per emotion tick */
+#define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
+/** Weather affects mob emotions? */
+#define CONFIG_WEATHER_AFFECTS_EMOTIONS config_info.experimental.weather_affects_emotions
+/** Weather emotion effect multiplier (0-200%, stored as 0-200 integer) */
+#define CONFIG_WEATHER_EFFECT_MULTIPLIER config_info.experimental.weather_effect_multiplier
+
+/* Emotion System Configuration Macros */
+/** Visual indicator thresholds */
+#define CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD config_info.emotion_config.display_fear_threshold
+#define CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD config_info.emotion_config.display_anger_threshold
+#define CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD config_info.emotion_config.display_happiness_threshold
+#define CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD config_info.emotion_config.display_sadness_threshold
+#define CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD config_info.emotion_config.display_horror_threshold
+#define CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD config_info.emotion_config.display_pain_threshold
+#define CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD config_info.emotion_config.display_compassion_threshold
+#define CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD config_info.emotion_config.display_courage_threshold
+#define CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD config_info.emotion_config.display_curiosity_threshold
+#define CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD config_info.emotion_config.display_disgust_threshold
+#define CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD config_info.emotion_config.display_envy_threshold
+#define CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD config_info.emotion_config.display_excitement_threshold
+#define CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD config_info.emotion_config.display_friendship_threshold
+#define CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD config_info.emotion_config.display_greed_threshold
+#define CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD config_info.emotion_config.display_humiliation_threshold
+#define CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD config_info.emotion_config.display_love_threshold
+#define CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD config_info.emotion_config.display_loyalty_threshold
+#define CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD config_info.emotion_config.display_pride_threshold
+#define CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD config_info.emotion_config.display_shame_threshold
+#define CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD config_info.emotion_config.display_trust_threshold
+
+/** Combat flee behavior thresholds */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD config_info.emotion_config.flee_fear_low_threshold
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD config_info.emotion_config.flee_fear_high_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD config_info.emotion_config.flee_courage_low_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD config_info.emotion_config.flee_courage_high_threshold
+#define CONFIG_EMOTION_FLEE_HORROR_THRESHOLD config_info.emotion_config.flee_horror_threshold
+
+/** Flee modifier values */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER config_info.emotion_config.flee_fear_low_modifier
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER config_info.emotion_config.flee_fear_high_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER config_info.emotion_config.flee_courage_low_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER config_info.emotion_config.flee_courage_high_modifier
+#define CONFIG_EMOTION_FLEE_HORROR_MODIFIER config_info.emotion_config.flee_horror_modifier
+
+/** Pain system thresholds */
+#define CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD config_info.emotion_config.pain_damage_minor_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD config_info.emotion_config.pain_damage_moderate_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD config_info.emotion_config.pain_damage_heavy_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD config_info.emotion_config.pain_damage_massive_threshold
+
+/** Pain values */
+#define CONFIG_EMOTION_PAIN_MINOR_MIN config_info.emotion_config.pain_minor_min
+#define CONFIG_EMOTION_PAIN_MINOR_MAX config_info.emotion_config.pain_minor_max
+#define CONFIG_EMOTION_PAIN_MODERATE_MIN config_info.emotion_config.pain_moderate_min
+#define CONFIG_EMOTION_PAIN_MODERATE_MAX config_info.emotion_config.pain_moderate_max
+#define CONFIG_EMOTION_PAIN_HEAVY_MIN config_info.emotion_config.pain_heavy_min
+#define CONFIG_EMOTION_PAIN_HEAVY_MAX config_info.emotion_config.pain_heavy_max
+#define CONFIG_EMOTION_PAIN_MASSIVE_MIN config_info.emotion_config.pain_massive_min
+#define CONFIG_EMOTION_PAIN_MASSIVE_MAX config_info.emotion_config.pain_massive_max
+
+/** Memory system weights */
+#define CONFIG_EMOTION_MEMORY_WEIGHT_RECENT config_info.emotion_config.memory_weight_recent
+#define CONFIG_EMOTION_MEMORY_WEIGHT_FRESH config_info.emotion_config.memory_weight_fresh
+#define CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE config_info.emotion_config.memory_weight_moderate
+#define CONFIG_EMOTION_MEMORY_WEIGHT_OLD config_info.emotion_config.memory_weight_old
+#define CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT config_info.emotion_config.memory_weight_ancient
+
+/** Memory age thresholds */
+#define CONFIG_EMOTION_MEMORY_AGE_RECENT config_info.emotion_config.memory_age_recent
+#define CONFIG_EMOTION_MEMORY_AGE_FRESH config_info.emotion_config.memory_age_fresh
+#define CONFIG_EMOTION_MEMORY_AGE_MODERATE config_info.emotion_config.memory_age_moderate
+#define CONFIG_EMOTION_MEMORY_AGE_OLD config_info.emotion_config.memory_age_old
+
+/** Memory baseline offset */
+#define CONFIG_EMOTION_MEMORY_BASELINE_OFFSET config_info.emotion_config.memory_baseline_offset
+
+/* Trading behavior thresholds */
+#define CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD config_info.emotion_config.trade_trust_high_threshold
+#define CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD config_info.emotion_config.trade_trust_low_threshold
+#define CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD config_info.emotion_config.trade_greed_high_threshold
+#define CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD config_info.emotion_config.trade_friendship_high_threshold
+
+/* Quest behavior thresholds */
+#define CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD config_info.emotion_config.quest_curiosity_high_threshold
+#define CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD config_info.emotion_config.quest_loyalty_high_threshold
+#define CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD config_info.emotion_config.quest_trust_high_threshold
+#define CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD config_info.emotion_config.quest_trust_low_threshold
+
+/* Social initiation thresholds */
+#define CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD config_info.emotion_config.social_happiness_high_threshold
+#define CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD config_info.emotion_config.social_anger_high_threshold
+#define CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD config_info.emotion_config.social_sadness_high_threshold
+#define CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD config_info.emotion_config.social_love_follow_threshold
+
+/* Group behavior thresholds */
+#define CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD config_info.emotion_config.group_loyalty_high_threshold
+#define CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD config_info.emotion_config.group_loyalty_low_threshold
+#define CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD config_info.emotion_config.group_friendship_high_threshold
+#define CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD config_info.emotion_config.group_envy_high_threshold
+
+/* Combat emotion behavior */
+#define CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD config_info.emotion_config.combat_anger_high_threshold
+#define CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS config_info.emotion_config.combat_anger_damage_bonus
+#define CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS config_info.emotion_config.combat_anger_attack_bonus
+#define CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD config_info.emotion_config.combat_pain_low_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD config_info.emotion_config.combat_pain_moderate_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD config_info.emotion_config.combat_pain_high_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW config_info.emotion_config.combat_pain_accuracy_penalty_low
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD config_info.emotion_config.combat_pain_accuracy_penalty_mod
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH config_info.emotion_config.combat_pain_accuracy_penalty_high
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW config_info.emotion_config.combat_pain_damage_penalty_low
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD config_info.emotion_config.combat_pain_damage_penalty_mod
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH config_info.emotion_config.combat_pain_damage_penalty_high
 
 #endif /* _UTILS_H_ */

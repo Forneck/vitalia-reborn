@@ -62,6 +62,7 @@ static struct char_data *next_combat_list = NULL;
 static void perform_group_gain(struct char_data *ch, int base, struct char_data *victim);
 static void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type);
 static void make_corpse(struct char_data *ch);
+static void make_magic_stone(struct char_data *ch, long target_id);
 static void change_alignment(struct char_data *ch, struct char_data *victim);
 static void group_gain(struct char_data *ch, struct char_data *victim);
 static void solo_gain(struct char_data *ch, struct char_data *victim);
@@ -257,14 +258,116 @@ static void make_corpse(struct char_data *ch)
                  GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
         } else {
             /* sem cidade natal */
-            obj_to_room(corpse, IN_ROOM(ch));
-            log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)),
-                 GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
-            act("Uma enorme mão aparece e pega o corpo de $n em segurança.", TRUE, ch, 0, 0, TO_ROOM);
-            act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0, TO_ROOM);
+            /* Safety check: validate room before placing corpse */
+            if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                obj_to_room(corpse, IN_ROOM(ch));
+                log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)),
+                     GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
+                act("Uma enorme mão aparece e pega o corpo de $n em segurança.", TRUE, ch, 0, 0, TO_ROOM);
+                act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0, TO_ROOM);
+            } else {
+                /* If character is in invalid room, place corpse in first resurrection room as fallback */
+                log1("AVISO: Personagem '%s' em sala inválida #%d - corpo movido para sala de ressurreição",
+                     GET_NAME(ch), IN_ROOM(ch));
+                obj_to_room(corpse, r_ress_room_1);
+            }
         }
-    } else
-        obj_to_room(corpse, IN_ROOM(ch));
+    } else {
+        /* Safety check: validate room before placing NPC corpse */
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+            obj_to_room(corpse, IN_ROOM(ch));
+        } else {
+            log1("AVISO: NPC '%s' em sala inválida #%d - corpo descartado", GET_NAME(ch), IN_ROOM(ch));
+            /* Could extract_obj(corpse) here, but safer to just not place it */
+        }
+    }
+}
+
+/* Create a magic stone when a quest target mob is killed */
+static void make_magic_stone(struct char_data *ch, long target_id)
+{
+    char buf2[MAX_NAME_LENGTH + 128];
+    struct obj_data *stone;
+    const char *mob_name;
+
+    /* Safety checks */
+    if (!ch || !IS_NPC(ch))
+        return;
+
+    /* Validate mob has a name */
+    if (!GET_NAME(ch) || !*GET_NAME(ch)) {
+        log1("SYSERR: make_magic_stone called on mob without name (vnum %d)", GET_MOB_VNUM(ch));
+        return;
+    }
+
+    stone = create_obj();
+    if (!stone) {
+        log1("SYSERR: Failed to create magic stone object for mob %s", GET_NAME(ch));
+        return;
+    }
+
+    stone->item_number = NOTHING;
+    IN_ROOM(stone) = NOWHERE;
+
+    /* Allocate name with error checking */
+    stone->name = strdup("pedra magica stone");
+    if (!stone->name) {
+        log1("SYSERR: Failed to allocate name for magic stone");
+        extract_obj(stone);
+        return;
+    }
+
+    /* Use mob name safely */
+    mob_name = GET_NAME(ch);
+    snprintf(buf2, sizeof(buf2), "Uma pedra mágica brilhante de %s está aqui.", mob_name);
+    stone->description = strdup(buf2);
+    if (!stone->description) {
+        log1("SYSERR: Failed to allocate description for magic stone");
+        extract_obj(stone);
+        return;
+    }
+
+    snprintf(buf2, sizeof(buf2), "uma pedra mágica de %s", mob_name);
+    stone->short_description = strdup(buf2);
+    if (!stone->short_description) {
+        log1("SYSERR: Failed to allocate short_description for magic stone");
+        extract_obj(stone);
+        return;
+    }
+
+    GET_OBJ_TYPE(stone) = ITEM_MAGIC_STONE;
+
+    /* Clear all flags */
+    for (int x = 0; x < EF_ARRAY_MAX; x++)
+        GET_OBJ_EXTRA_AR(stone, x) = 0;
+    for (int y = 0; y < TW_ARRAY_MAX; y++)
+        stone->obj_flags.wear_flags[y] = 0;
+
+    /* Set flags: no donate, no sell, no rent (disappears on quit) */
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NODONATE);
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NORENT);
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NOSELL);
+    SET_BIT_AR(GET_OBJ_WEAR(stone), ITEM_WEAR_TAKE);
+
+    /* Store mob species vnum in val0 and specific mob ID in val1 */
+    GET_OBJ_VAL(stone, 0) = GET_MOB_VNUM(ch); /* Species vnum */
+    GET_OBJ_VAL(stone, 1) = target_id;        /* Specific mob ID for bounty quests */
+    GET_OBJ_VAL(stone, 2) = 0;                /* Reserved */
+    GET_OBJ_VAL(stone, 3) = 1;                /* Magic stone identifier */
+
+    GET_OBJ_WEIGHT(stone) = 1;
+    GET_OBJ_RENT(stone) = 0;
+    /* Set decay timer to prevent infinite accumulation - 48 ticks (~1 hour at 75 sec/tick) */
+    GET_OBJ_TIMER(stone) = 48;
+
+    /* Place stone in the room where mob died - with safety checks */
+    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+        obj_to_room(stone, IN_ROOM(ch));
+        act("Uma pedra mágica brilhante cai no chão quando $n morre.", FALSE, ch, stone, 0, TO_ROOM);
+    } else {
+        log1("AVISO: Mob '%s' em sala inválida #%d - pedra mágica descartada", mob_name, IN_ROOM(ch));
+        extract_obj(stone);
+    }
 }
 
 /* When ch kills victim */
@@ -278,6 +381,11 @@ static void change_alignment(struct char_data *ch, struct char_data *victim)
 void death_cry(struct char_data *ch)
 {
     int door;
+
+    /* Safety check: validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     act("Você se arrepia ao escutar o grito de morte de $n.", FALSE, ch, 0, 0, TO_ROOM);
     for (door = 0; door < DIR_COUNT; door++)
         if (CAN_GO(ch, door))
@@ -301,20 +409,42 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         death_cry(ch);
     if (killer) {
         if (killer->group) {
-            while ((i = (struct char_data *)simple_list(killer->group->members)) != NULL)
-                if (IN_ROOM(i) == IN_ROOM(ch) || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone))
+            while ((i = (struct char_data *)simple_list(killer->group->members)) != NULL) {
+                /* Safety check: validate rooms before accessing world array */
+                if (IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+                    continue;
+                if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                    continue;
+
+                if (IN_ROOM(i) == IN_ROOM(ch) || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone)) {
                     autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL);
-        } else
+                    autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL_BOUNTY);
+                }
+            }
+        } else {
             autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
+            autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL_BOUNTY);
+        }
     }
 
     /* Check mob quest triggers for all mobs in the area */
     if (IS_NPC(ch)) {
         struct char_data *mob;
-        for (mob = character_list; mob; mob = mob->next) {
-            if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
-                if (IN_ROOM(mob) == IN_ROOM(ch) || (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
-                    mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
+
+        /* Safety check: validate ch room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+            /* Skip mob quest triggers if ch is not in a valid room */
+        } else {
+            for (mob = character_list; mob; mob = mob->next) {
+                if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
+                    /* Safety check: validate mob room before accessing world array */
+                    if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
+                        continue;
+
+                    if (IN_ROOM(mob) == IN_ROOM(ch) || (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
+                        mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
+                        mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL_BOUNTY);
+                    }
                 }
             }
         }
@@ -325,6 +455,175 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         mob_autoquest_trigger_check(killer, ch, NULL, AQ_PLAYER_KILL);
     }
 
+    /* Mob bragging when killing a high-reputation player */
+    if (!IS_NPC(ch) && killer && IS_NPC(killer) && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        int victim_reputation = GET_REPUTATION(ch);
+
+        /* High reputation victim (60+) triggers bragging */
+        if (victim_reputation >= 60) {
+            char brag_msg[MAX_STRING_LENGTH];
+
+            /* Very high reputation (80+) gets more enthusiastic bragging */
+            if (victim_reputation >= 80) {
+                snprintf(brag_msg, sizeof(brag_msg), "ri triunfante, tendo derrotado %s, um aventureiro lendário!",
+                         GET_NAME(ch));
+            } else {
+                snprintf(brag_msg, sizeof(brag_msg),
+                         "sorri com satisfação após derrotar %s, um aventureiro respeitado.", GET_NAME(ch));
+            }
+
+            do_gmote(killer, brag_msg, 0, 0);
+
+            /* Increase mob's own reputation for defeating a reputable opponent */
+            if (killer->ai_data && killer->ai_data->reputation < 100) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + 5, 100);
+            }
+        }
+    }
+
+    /* Reputation changes based on kills (players and mobs) */
+    /* Dynamic reputation changes (configurable, excludes quests) */
+    if (CONFIG_DYNAMIC_REPUTATION && killer && !IS_NPC(killer)) {
+        /* Player killed someone */
+        int class_bonus;
+        if (IS_NPC(ch)) {
+            /* Different reputation changes based on killer's alignment */
+            if (IS_EVIL(killer)) {
+                /* Evil killers gain reputation (infamy) for killing good targets */
+                if (IS_GOOD(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(2, 4) + class_bonus);
+                }
+                /* Evil killers gain small reputation for any kill */
+                else if (IS_EVIL(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                }
+            } else {
+                /* Good/Neutral killers */
+                /* Killing good-aligned mobs lowers reputation */
+                if (IS_GOOD(ch)) {
+                    modify_player_reputation(killer, -rand_number(1, 3));
+                }
+                /* Killing evil-aligned mobs increases reputation slightly */
+                else if (IS_EVIL(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                }
+            }
+            /* Killing high-level mobs increases reputation more (for all alignments) */
+            if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
+                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                modify_player_reputation(killer, rand_number(1, 3) + class_bonus);
+            }
+        } else {
+            /* Player killed another player - major reputation loss */
+            modify_player_reputation(killer, -rand_number(5, 10));
+            /* Killing high-reputation players causes even more loss */
+            if (GET_REPUTATION(ch) >= 60) {
+                modify_player_reputation(killer, -rand_number(5, 15));
+            }
+        }
+    }
+    /* Mob killed someone */
+    else if (killer && IS_NPC(killer) && killer->ai_data) {
+        if (IS_NPC(ch)) {
+            /* Mob killing high-reputation mob gains reputation */
+            if (GET_MOB_REPUTATION(ch) >= 50) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + rand_number(2, 4), 100);
+            }
+        }
+        /* Killing players handled above in bragging section */
+    }
+
+    /* Reputation loss for the victim (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        /* Dying lowers reputation slightly */
+        modify_player_reputation(ch, -rand_number(1, 3));
+    } else if (ch->ai_data) {
+        /* Mob dying lowers its reputation */
+        ch->ai_data->reputation = MAX(0, ch->ai_data->reputation - rand_number(1, 2));
+    }
+
+    /* Mob emotion updates and mourning system (experimental feature) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Notify mobs in the room about the death for mourning/emotion updates */
+        struct char_data *witness, *next_witness;
+        bool should_mourn;
+
+        /* Use safe iteration - mourning can trigger extraction */
+        for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+            next_witness = witness->next_in_room;
+
+            if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == killer)
+                continue;
+
+            /* Check if witness should mourn (same group, same alignment, high friendship) */
+            should_mourn = FALSE;
+
+            /* Group members mourn */
+            if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                should_mourn = TRUE;
+            }
+            /* Same alignment with decent relationship */
+            else if (GET_ALIGNMENT(witness) * GET_ALIGNMENT(ch) > 0 && witness->ai_data->emotion_friendship >= 40) {
+                should_mourn = TRUE;
+            }
+            /* High compassion mobs mourn anyone non-evil */
+            else if (witness->ai_data->emotion_compassion >= 70 && !IS_EVIL(ch)) {
+                should_mourn = TRUE;
+            }
+
+            if (should_mourn) {
+                mob_mourn_death(witness, ch);
+
+                /* Safety check: mourning can trigger extraction */
+                if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                    continue;
+
+                /* Revalidate ai_data */
+                if (!witness->ai_data)
+                    continue;
+            }
+
+            /* Update witness emotions based on the death */
+            if (IS_NPC(ch) && witness->ai_data) {
+                /* Witnessing mob death */
+                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                    /* Ally died */
+                    update_mob_emotion_ally_died(witness, ch);
+                } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
+                    /* Enemy died - good witness might feel satisfaction */
+                    if (witness->ai_data) {
+                        witness->ai_data->emotion_happiness =
+                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                    }
+                }
+            } else if (!IS_NPC(ch) && witness->ai_data) {
+                /* Witnessing player death - new trigger for Environmental 2.2 */
+                update_mob_emotion_witnessed_death(witness, ch, killer);
+            }
+        }
+    }
+
+    /* Check for bounty quest failures - if this mob was a bounty target for someone else */
+    if (IS_NPC(ch)) {
+        fail_bounty_quest(ch, killer);
+
+        /* Emotion trigger: Quest betrayal if a questmaster is killed (Quest-Related 2.4) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && killer && GET_MOB_RNUM(ch) != NOBODY && GET_MOB_RNUM(ch) >= 0 &&
+            GET_MOB_RNUM(ch) <= top_of_mobt && mob_index[GET_MOB_RNUM(ch)].func == questmaster) {
+            /* Notify witnesses that a questmaster was killed */
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (IS_NPC(witness) && witness->ai_data && witness != ch && witness != killer) {
+                    update_mob_emotion_quest_betrayal(witness, killer);
+                }
+            }
+        }
+    }
+
     /* Alert Group if Applicable */
     if (GROUP(ch))
         send_to_group(ch, GROUP(ch), "%s morreu.\r\n", GET_NAME(ch));
@@ -333,8 +632,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
     /*************************************************************************
      * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
+     * Não atualizamos a genética de mobs encantados/evocados (AFF_CHARM),   *
+     * pois são criaturas temporárias e sua morte não representa seleção     *
+     * natural da espécie.                                                    *
      *************************************************************************/
-    if (IS_NPC(ch) && ch->ai_data) {
+    if (IS_NPC(ch) && ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
         update_mob_prototype_genetics(ch);
     }
     /*************************************************************************
@@ -342,6 +644,13 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
      *************************************************************************/
 
     make_corpse(ch);
+
+    /* DISABLED: Magic stone generation temporarily disabled for testing */
+    /* Create magic stone if this mob is a target for any active kill quest */
+    /* if (ch && IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
+        make_magic_stone(ch, char_script_id(ch));
+    } */
+
     // -- jr - Mar 17, 2000 * Enhancement of player death
     if (!IS_NPC(ch)) {
         if (GET_LEVEL(ch) < LVL_IMMORT) {
@@ -527,30 +836,79 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
         const char *to_victim;
     } dam_weapons[] = {
 
-        /* use #w for singular (i.e. "slash") and #W for plural (i.e.
-           "slashes") */
+        {/* 0 */
+         "$n tenta #W $N, mas erra.", "\tyVocê tenta #W $N, mas erra.\tn", "\tr$n tenta #W você, mas erra.\tn"},
 
-        {"$n tenta #W $N, mas erra.", /* 0: 0 */
-         "\tyVocê tenta #W $N, mas erra.\tn", "\tr$n tenta #W você, mas erra.\tn"},
-        {"$n faz cócegas em $N quando $e #w $M.", /* 1: 1..2 */
-         "\tyVocê faz cócegas em $N quando você #w $M.\tn", "\tr$n faz cócegas em você quando $e #w você.\tn"},
-        {"$n fracamente #w $N.", /* 2: 3..4 */
-         "\tyVocê fracamente #w $N.\tn", "\tr$n fracamente #w você.\tn"},
-        {"$n #w $N.", /* 3: 5..6 */
-         "\tyVocê #w $N.\tn", "\tr$n #w você.\tn"},
-        {"$n #w $N forte.", /* 4: 7..10 */
-         "\tyVocê #w $N forte.\tn", "\tr$n #w você forte.\tn"},
-        {"$n #w $N muito forte.", /* 5: 11..14 */
-         "\tyVocê #w $N muito forte.\tn", "\tr$n #w você muito forte.\tn"},
-        {"$n #w $N extremamente forte.", /* 6: 15..19 */
-         "\tyVocê #w $N extremamente forte.\tn", "\tr$n #w você extremamente forte.\tn"},
-        {"$n massacra $N em pequenos fragmentos com a sua #n.", /* 7: 19..23 */
-         "\tyVocê massacra $N em pequenos fragmentos com a sua #n.\tn",
-         "\tr$n massacra você em pequenos fragmentos com a sua #n.\tn"},
-        {"$n OBLITERA $N com a sua #n mortal!!", /* 8: > 23 */
-         "\tyVocê OBLITERA $N com a sua #n mortal!!\tn", "\ty$n OBLITERA você com a sua #n mortal!!\tn"}};
+        {/* 1 */
+         "$n faz cócegas em $N tentando #W $L.", "\tyVocê faz cócegas em $N ao tentar #W $L.\tn",
+         "\tr$n faz cócegas em você, tentando lhe #W.\tn"},
+
+        {/* 2 */
+         "Com muita dificuldade, $n #w $N.", "\tyCom muita dificuldade, você #w $N.\tn",
+         "\trCom muita dificuldade, $n #w você.\tn"},
+
+        {/* 3 */
+         "$n #w $N.", "\tyVocê #w $N.\tn", "\tr$n #w você.\tn"},
+
+        {/* 4 */
+         "$n #w $N com força.", "\tyVocê #w $N com força.\tn", "\tr$n #w você com força.\tn"},
+
+        {/* 5 */
+         "$n #w $N com muita força.", "\tyVocê #w $N com muita força.\tn", "\tr$n #w você com muita força.\tn"},
+
+        {/* 6 */
+         "$n #w $N extremamente forte.", "\tyVocê #w $N extremamente forte.\tn",
+         "\tr$n #w você extremamente forte.\tn"},
+
+        {/* 7 */
+         "$n massacra $N com #n.", "\tyVocê massacra $N com sua #n.\tn", "\tr$n massacra você com sua #n.\tn"},
+
+        {/* 8 */
+         "$n esmigalha $N com um forte #n!", "\tyVocê esmigalha $N com um forte #n!\tn",
+         "\tr$n esmigalha você com um forte #n!\tn"},
+
+        {/* 9 */
+         "$n estraçalha $N com um poderoso #n!", "\tyVocê estraçalha $N com um poderoso #n!\tn",
+         "\tr$n estraçalha você com um poderoso #n!\tn"},
+
+        {/* 10 */
+         "$n ANIQUILA $N com um #n mortal!!", "\tyVocê ANIQUILA $N com um #n mortal!!\tn",
+         "\tr$n ANIQUILA você com um #n mortal!!\tn"},
+
+        {/* 11 */
+         "$n EXTERMINA $N com um #n devastador!!", "\tyVocê EXTERMINA $N com um #n devastador!!\tn",
+         "\tr$n EXTERMINA você com um #n devastador!!\tn"}};
+
     w_type -= TYPE_HIT; /* Change to base of table with text */
+
+    int vh = GET_MAX_HIT(victim);
+
     if (dam == 0)
+        msgnum = 0;
+    else if (dam <= vh * .01)
+        msgnum = 1;
+    else if (dam <= vh * .02)
+        msgnum = 2;
+    else if (dam <= vh * .05)
+        msgnum = 3;
+    else if (dam <= vh * .08)
+        msgnum = 4;
+    else if (dam <= vh * .12)
+        msgnum = 5;
+    else if (dam <= vh * .28)
+        msgnum = 6;
+    else if (dam <= vh * .35)
+        msgnum = 7;
+    else if (dam <= vh * .50)
+        msgnum = 8;
+    else if (dam <= vh * .70)
+        msgnum = 9;
+    else if (dam <= vh * .90)
+        msgnum = 10;
+    else
+        msgnum = 11;
+
+    /*if (dam == 0)
         msgnum = 0;
     else if (dam <= 2)
         msgnum = 1;
@@ -567,18 +925,19 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
     else if (dam <= 23)
         msgnum = 7;
     else
-        msgnum = 8;
+        msgnum = 8;*/
+
     /* damage message to onlookers */
     buf = replace_string(dam_weapons[msgnum].to_room, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_NOTVICT);
     /* damage message to damager */
-    if (GET_LEVEL(ch) >= LVL_IMMORT)
+    if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
         send_to_char(ch, "(%d) ", dam);
     buf = replace_string(dam_weapons[msgnum].to_char, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_CHAR);
     send_to_char(ch, CCNRM(ch, C_CMP));
     /* damage message to damagee */
-    if (GET_LEVEL(victim) >= LVL_IMMORT)
+    if (GET_LEVEL(victim) >= LVL_IMMORT || PRF_FLAGGED(victim, PRF_VIEWDAMAGE))
         send_to_char(victim, "\tR(%d)", dam);
     buf = replace_string(dam_weapons[msgnum].to_victim, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_VICT | TO_SLEEP);
@@ -621,11 +980,17 @@ int skill_message(int dam, struct char_data *ch, struct char_data *vict, int att
                     act(msg->die_msg.room_msg, FALSE, ch, weap, vict, TO_NOTVICT);
                 } else {
                     if (msg->hit_msg.attacker_msg) {
+                        /* Display damage value if PRF_VIEWDAMAGE is set */
+                        if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
+                            send_to_char(ch, "(%d) ", dam);
                         send_to_char(ch, CCYEL(ch, C_CMP));
                         act(msg->hit_msg.attacker_msg, FALSE, ch, weap, vict, TO_CHAR);
                         send_to_char(ch, CCNRM(ch, C_CMP));
                     }
 
+                    /* Display damage value to victim if PRF_VIEWDAMAGE is set */
+                    if (GET_LEVEL(vict) >= LVL_IMMORT || PRF_FLAGGED(vict, PRF_VIEWDAMAGE))
+                        send_to_char(vict, "\tR(%d)", dam);
                     send_to_char(vict, CCRED(vict, C_CMP));
                     act(msg->hit_msg.victim_msg, FALSE, ch, weap, vict, TO_VICT | TO_SLEEP);
                     send_to_char(vict, CCNRM(vict, C_CMP));
@@ -686,13 +1051,22 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = 0;
     if (victim != ch) {
         /* Start the attacker fighting the victim */
-        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL))
+        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL)) {
             set_fighting(ch, victim);
+            /* Update mob emotions when starting combat (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch)) {
+                update_mob_emotion_attacking(ch, victim);
+            }
+        }
         /* Start the victim fighting the attacker */
         if (GET_POS(victim) > POS_STUNNED && (FIGHTING(victim) == NULL)) {
             set_fighting(victim, ch);
             if (MOB_FLAGGED(victim, MOB_MEMORY) && !IS_NPC(ch))
                 remember(victim, ch);
+            /* Update mob emotions when being attacked (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim)) {
+                update_mob_emotion_attacked(victim, ch);
+            }
         }
     }
 
@@ -702,19 +1076,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     /* If the attacker is invisible, he becomes visible */
     if (AFF_FLAGGED(ch, AFF_INVISIBLE) || AFF_FLAGGED(ch, AFF_HIDE))
         appear(ch);
-    if (AFF_FLAGGED(victim, AFF_STONESKIN)) {
-        /* Stoneskin absorbs damage and loses 1 point */
-        if (reduce_stoneskin_points(victim, 1)) {
-            /* Stoneskin was removed (no more points) */
-            act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
-        } else {
-            /* Still has points left */
-            act("Sua pele dura absorve o impacto!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n absorve o golpe.", FALSE, victim, 0, 0, TO_ROOM);
-        }
-        dam = 0; /* no damage when using stoneskin */
-    }
+
+    /* Check for stoneskin protection */
+    apply_stoneskin_protection(victim, &dam);
+
     /* Cut damage in half if victim has sanct, to a minimum 1 */
     if (AFF_FLAGGED(victim, AFF_SANCTUARY) && dam >= 2)
         dam /= 2;
@@ -735,6 +1100,33 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         (dam > GET_HIT(victim)))
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
+
+    /* EMOTION SYSTEM: Update pain based on damage taken (experimental feature) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim) && victim->ai_data && dam > 0) {
+        int pain_amount = 0;
+        int damage_percent = (dam * 100) / MAX(GET_MAX_HIT(victim), 1);
+
+        /* Pain scales with damage percentage */
+        if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD) {
+            /* Massive damage (50%+ of max HP) */
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MASSIVE_MIN, CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD) {
+            /* Heavy damage (25-49% of max HP) */
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_HEAVY_MIN, CONFIG_EMOTION_PAIN_HEAVY_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD) {
+            /* Moderate damage (10-24% of max HP) */
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MODERATE_MIN, CONFIG_EMOTION_PAIN_MODERATE_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD) {
+            /* Light damage (5-9% of max HP) */
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX);
+        } else {
+            /* Minimal damage (< 5% of max HP) */
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX);
+        }
+
+        adjust_emotion(victim, &victim->ai_data->emotion_pain, pain_amount);
+    }
+
     /* Gain exp for the hit */
     if (ch != victim)
         gain_exp(ch, GET_LEVEL(victim) * dam);
@@ -794,7 +1186,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                 send_to_char(victim, "Isto realmente DOEU!\r\n");
 
             if (GET_HIT(victim) < (GET_MAX_HIT(victim) / 4)) {
-                send_to_char(victim, "\trVocê espera que seus ferimentos parem de %sSANGRAR%s tanto!\tn\r\n",
+                send_to_char(victim, "\trVocê espera que seus ferimentos parem de %sSANGRAR tanto!%s\tn\r\n",
                              CCRED(victim, C_SPR), CCNRM(victim, C_SPR));
             }
 
@@ -805,20 +1197,63 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
             if (ch != victim && IS_NPC(victim) && GET_POS(victim) > POS_STUNNED) {
                 int flee_threshold = 0;
                 int base_wimpy = 0;
+                int emotion_modifier = 0;
+
                 /* 1. O mob tem a flag MOB_WIMPY? Se sim, ele já tem uma base de medo. */
                 if (MOB_FLAGGED(victim, MOB_WIMPY)) {
                     base_wimpy = 20; /* Valor base de 20% de vida para fuga. */
                 }
 
-                /* 2. Adicionamos a tendência genética à base. */
+                /* 2. Adicionamos a tendência genética à base (scaled to 0-40% to make room for emotions). */
                 if (victim->ai_data) {
-                    flee_threshold = base_wimpy + victim->ai_data->genetics.wimpy_tendency;
+                    /* Scale wimpy_tendency (0-100) to 0-40% range for balanced flee behavior */
+                    int genetic_component = (victim->ai_data->genetics.wimpy_tendency * 40) / 100;
+                    flee_threshold = base_wimpy + genetic_component;
+
+                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions (hybrid system) */
+                    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+                        struct char_data *attacker = FIGHTING(victim);
+                        int effective_fear, effective_courage, effective_horror;
+
+                        /* Use hybrid emotion system: mood + relationship toward attacker */
+                        if (attacker) {
+                            effective_fear = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_FEAR);
+                            effective_courage = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_COURAGE);
+                            effective_horror = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_HORROR);
+                        } else {
+                            /* No specific attacker, use mood only */
+                            effective_fear = victim->ai_data->emotion_fear;
+                            effective_courage = victim->ai_data->emotion_courage;
+                            effective_horror = victim->ai_data->emotion_horror;
+                        }
+
+                        /* High fear increases flee threshold (flee sooner) */
+                        if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER; /* Flee at +15% HP */
+                        } else if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER; /* Flee at +10% HP */
+                        }
+
+                        /* High courage reduces flee threshold (flee later) */
+                        if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
+                            emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER; /* Flee at -15% HP */
+                        } else if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
+                            emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER; /* Flee at -10% HP */
+                        }
+
+                        /* Horror overrides other emotions */
+                        if (effective_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_HORROR_MODIFIER; /* Panic flee at +25% HP */
+                        }
+
+                        flee_threshold += emotion_modifier;
+                    }
                 } else {
                     flee_threshold = base_wimpy;
                 }
-                /* 3. Garante que o limiar não passa de um valor razoável (ex: 80%) */
-                flee_threshold = MIN(flee_threshold, 80);
-                /* 4. Compara com a vida atual e tenta fugir se necessário. */
+                /* 4. Garante que o limiar não passa de um valor razoável (10-90%) */
+                flee_threshold = MIN(MAX(flee_threshold, 10), 90);
+                /* 5. Compara com a vida atual e tenta fugir se necessário. */
                 if (flee_threshold > 0) {
                     /* Fuga DETERMINÍSTICA: Baseada na genética e na flag wimpy. */
                     if (GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {
@@ -827,8 +1262,26 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                          * O medo pode levar à traição. Este é o local ideal.
                          ************************************************************/
                         if (GROUP(victim) && GROUP_LEADER(GROUP(victim)) != victim) {
+                            int abandon_chance = GET_GENWIMPY(victim);
+
+                            /* Emotion modifiers for group loyalty when hurt/scared */
+                            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && victim->ai_data) {
+                                /* High loyalty makes mobs stay in group even when hurt */
+                                if (victim->ai_data->emotion_loyalty >= CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD) {
+                                    abandon_chance -= 30; /* -30 to abandon chance (more loyal) */
+                                }
+                                /* Low loyalty makes mobs abandon group when scared */
+                                else if (victim->ai_data->emotion_loyalty <
+                                         CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD) {
+                                    abandon_chance += 30; /* +30 to abandon chance (less loyal) */
+                                }
+
+                                /* Ensure abandon_chance stays reasonable */
+                                abandon_chance = MAX(0, MIN(abandon_chance, 150));
+                            }
+
                             /* A chance de abandonar é proporcional à sua tendência de fugir (Wimpy). */
-                            if (rand_number(1, 150) <= GET_GENWIMPY(victim)) {
+                            if (rand_number(1, 150) <= abandon_chance) {
                                 act("$n entra em pânico, abandona os seus companheiros e foge!", TRUE, victim, 0, 0,
                                     TO_ROOM);
                                 send_to_char(victim, "Você não aguenta mais e abandona o seu grupo!\r\n");
@@ -945,6 +1398,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOLOOT)) {
             do_get(ch, "all corpo", 0, 0);
         }
+        /* AUTOEXAM must run before AUTOSAC so player can see corpse contents before it's sacrificed */
+        if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOEXAM)) {
+            do_examine(ch, "corpo", 0, 0);
+        }
         if (IS_NPC(victim) && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOSAC)) {
             do_sac(ch, "corpo", 0, 0);
         }
@@ -989,6 +1446,17 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     /* Check that the attacker and victim exist */
     if (!ch || !victim)
         return;
+
+    /* Reputation penalty for attacking allies/group members (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && !IS_NPC(victim)) {
+        /* Check if they share same master (grouped) */
+        if ((ch->master && victim->master && ch->master == victim->master) || (ch->master && ch->master == victim) ||
+            (victim->master && victim->master == ch)) {
+            /* Attacking a group member severely damages reputation */
+            modify_player_reputation(ch, -rand_number(5, 10));
+        }
+    }
+
     /* check if the character has a fight trigger */
     fight_mtrigger(ch);
     /* Do some sanity checking, in case someone flees, etc. */
@@ -1025,6 +1493,22 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
     /* Calculate chance of hit. Lower THAC0 is better for attacker. */
     calc_thaco = compute_thaco(ch, victim);
+
+    /* HYBRID EMOTION SYSTEM: Pain affects accuracy (THAC0) for NPCs */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+        int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based */
+        if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD) {
+            /* High pain: severe accuracy penalty (default +4 to THAC0 = worse) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH;
+        } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD) {
+            /* Moderate pain: moderate accuracy penalty (default +2 to THAC0) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD;
+        } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD) {
+            /* Low pain: minor accuracy penalty (default +1 to THAC0) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
+        }
+    }
+
     // check to see if the victim has prot from evil on, and if the
     // attacker
     // is in fact evil
@@ -1138,6 +1622,30 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
            POSITION_XXX constants. */
         if (GET_POS(victim) < POS_FIGHTING)
             dam *= 1 + (POS_FIGHTING - GET_POS(victim)) / 3;
+
+        /* HYBRID EMOTION SYSTEM: Anger and Pain affect combat effectiveness for NPCs */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            /* High anger increases damage */
+            int effective_anger = get_effective_emotion_toward(ch, victim, EMOTION_TYPE_ANGER);
+            if (effective_anger >= CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD) {
+                /* Anger damage bonus (default 15%) */
+                dam += (dam * CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS) / 100;
+            }
+
+            /* Pain reduces damage output */
+            int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based, not relational */
+            if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD) {
+                /* High pain: significant damage reduction (default 20%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH) / 100;
+            } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD) {
+                /* Moderate pain: moderate damage reduction (default 10%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD) / 100;
+            } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD) {
+                /* Low pain: minor damage reduction (default 5%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW) / 100;
+            }
+        }
+
         /* at least 1 hp damage min per hit */
         dam = MAX(1, dam);
         if (type == SKILL_BACKSTAB)
@@ -1200,6 +1708,48 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             else
                 damage(victim, ch, dam, SPELL_WINDWALL);
         }
+
+        /* Check if the attacker died from counter-attack damage */
+        if (IS_NPC(ch)) {
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        } else {
+            if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        }
+    } else if (dam > 0) {
+        /* Counter-attack spell interactions - rock-paper-scissors mechanic */
+        /* FIRESHIELD burns THISTLECOAT, THISTLECOAT blocks WINDWALL, WINDWALL extinguishes FIRESHIELD */
+
+        /* Attacker has FIRESHIELD, victim has THISTLECOAT - Fire burns thorns */
+        if (AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) {
+            act("Sua barreira de fogo queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de fogo de $n queima sua barreira de espinhos!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de fogo de $n queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_THISTLECOAT);
+        }
+        /* Attacker has THISTLECOAT, victim has WINDWALL - Thorns block wind */
+        else if (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_WINDWALL)) {
+            act("Sua barreira de espinhos bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de espinhos de $n bloqueia sua parede de vento!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de espinhos de $n bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_WINDWALL);
+        }
+        /* Attacker has WINDWALL, victim has FIRESHIELD - Wind extinguishes fire */
+        else if (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) {
+            act("Sua parede de vento apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A parede de vento de $n apaga sua barreira de fogo!", FALSE, ch, 0, victim, TO_VICT);
+            act("A parede de vento de $n apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_FIRESHIELD);
+        }
+        /* Both attacker and victim have the same counter-attack spell - they cancel each other */
+        else if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
+                 (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
+                 (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
+            act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
+            act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+        }
     }
     /* check if the victim has a hitprcnt trigger */
     hitprcnt_mtrigger(victim);
@@ -1259,8 +1809,24 @@ void perform_violence(void)
 
         for (loop_attacks = 0;
              loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET);
-             loop_attacks++)
+             loop_attacks++) {
             hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+
+            /* Check if the attacker died from counter-attack (e.g., FIRESHIELD) */
+            if (IS_NPC(ch)) {
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            } else {
+                if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            }
+        }
+
+        /* Check if ch is still valid before calling mob special */
+        if (IS_NPC(ch) && (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
+        if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";
@@ -1294,16 +1860,31 @@ void beware_lightning()
 
         for (victim = character_list; victim; victim = temp) {
             temp = victim->next;
+
+            /* Skip characters that are already marked for extraction */
+            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                continue;
+
+            /* Safety check: validate room before accessing zone */
+            if (IN_ROOM(victim) == NOWHERE || IN_ROOM(victim) < 0 || IN_ROOM(victim) > top_of_world)
+                continue;
+
             zona_vitima = world[IN_ROOM(victim)].zone;   // pega a zona (vnum para rnum) da sala da vitima
             if (zona_vitima != zone)
                 continue;
             if (OUTSIDE(victim) == TRUE) {      // Apenas personagens ao ar livre
                 if (rand_number(0, 9) == 0) {   // 1% de chance de acertar alguém
                     dam = dice(1, (GET_MAX_HIT(victim) * 2));
-                    if (IS_AFFECTED(victim, AFF_SANCTUARY))
-                        dam = MIN(dam, 18);
-                    if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
-                        dam = MIN(dam, 33);
+
+                    /* Check for stoneskin protection first */
+                    if (!apply_stoneskin_protection(victim, &dam)) {
+                        /* Stoneskin was not active, check other protections */
+                        if (IS_AFFECTED(victim, AFF_SANCTUARY))
+                            dam = MIN(dam, 18);
+                        if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
+                            dam = MIN(dam, 33);
+                    }
+
                     dam = MIN(dam, 100);
                     dam = MAX(dam, 0);
                     if (GET_LEVEL(victim) >= LVL_IMMORT)
@@ -1311,8 +1892,10 @@ void beware_lightning()
 
                     GET_HIT(victim) -= dam;
 
-                    act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
-                    act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    if (dam > 0) {
+                        act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    }
 
                     if (dam > (GET_MAX_HIT(victim) >> 2))
                         act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
@@ -1478,11 +2061,19 @@ int get_nighthammer(struct char_data *ch, bool real)
     if (!(learned = GET_SKILL(ch, SKILL_NIGHTHAMMER)))
         return (0);
 
-    if (time_info.hours > 4 && time_info.hours < 21)
+    /* Check if it's actually night time based on sunlight */
+    if (weather_info.sunlight == SUN_LIGHT || weather_info.sunlight == SUN_RISE)
         return (0);
 
     mod = 1;
-    mod += (time_info.hours < 4 || time_info.hours > 21);
+    /* Extra bonus during deep night (SUN_DARK) */
+    if (weather_info.sunlight == SUN_DARK)
+        mod++;
+    /* Weather conditions that obscure moonlight provide additional bonus */
+    if (weather_info.sky == SKY_CLOUDY || weather_info.sky == SKY_RAINING || weather_info.sky == SKY_LIGHTNING ||
+        weather_info.sky == SKY_SNOWING)
+        mod++;
+
     mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
     mod = MIN(mod, 8);
 
@@ -1501,8 +2092,23 @@ int attacks_per_round(struct char_data *ch)
         struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
         if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
             n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
-    } else
+    } else {
         n += ((int)GET_LEVEL(ch) / 25);
+
+        /* HYBRID EMOTION SYSTEM: High anger increases attack frequency for NPCs */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data && FIGHTING(ch)) {
+            /* Use hybrid system: check effective anger toward opponent */
+            int effective_anger = get_effective_emotion_toward(ch, FIGHTING(ch), EMOTION_TYPE_ANGER);
+
+            /* High anger (>= threshold) gives chance for extra attack */
+            if (effective_anger >= CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD) {
+                /* Random chance based on config (default 25%) */
+                if (rand_number(1, 100) <= CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS) {
+                    n++; /* Furious attack - one extra attack */
+                }
+            }
+        }
+    }
 
     return (n);
 }
@@ -1714,6 +2320,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_trade = mob->ai_data->genetics.trade_tendency;
     int final_quest = mob->ai_data->genetics.quest_tendency;
     int final_adventurer = mob->ai_data->genetics.adventurer_tendency;
+    int final_follow = mob->ai_data->genetics.follow_tendency;
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
@@ -1744,6 +2351,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene_with_fitness(&proto->ai_data->genetics.brave_prevalence, final_brave, fitness, 0, 75);
     update_single_gene_with_fitness(&proto->ai_data->genetics.quest_tendency, final_quest, fitness, 0, 100);
     update_single_gene_with_fitness(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.follow_tendency, final_follow, fitness, 0, 100);
 
     /* 4. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;

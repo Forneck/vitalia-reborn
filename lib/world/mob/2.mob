@@ -22,7 +22,8 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
-GenWimpy: 6
+GenWimpy: 15
+GenFollow: 19
 E
 T 201
 #201
@@ -38,7 +39,8 @@ que reflete a luz de forma hipnotizante.
 22 6 1 1d5+350 2d8+6
 1200 12000
 9 9 1
-GenWimpy: 10
+GenWimpy: 25
+GenFollow: 14
 E
 #202
 servo gelo~
@@ -64,7 +66,9 @@ SavingRod: 4
 SavingPetri: 4
 SavingBreath: 4
 SavingSpell: 4
-GenWimpy: 8
+GenWimpy: 18
+GenLoot: 1
+GenFollow: 8
 E
 #203
 capitao gelo~
@@ -91,13 +95,13 @@ SavingPetri: 8
 SavingBreath: 8
 SavingSpell: 8
 GenLoot: 54
-GenEquip: 23
-GenRoam: 44
-GenGroup: 98
+GenEquip: 26
+GenGroup: 92
 GenBrave: 75
 GenUse: 50
 GenTrade: 100
 GenQuest: 1
+GenFollow: 11
 E
 #204
 rainha gelada~
@@ -124,6 +128,9 @@ SavingRod: 11
 SavingPetri: 11
 SavingBreath: 11
 SavingSpell: 11
+GenWimpy: 46
+GenLoot: 1
+GenFollow: 12
 E
 T 202
 #205
@@ -144,7 +151,8 @@ SavingRod: 3
 SavingPetri: 3
 SavingBreath: 3
 SavingSpell: 3
-GenWimpy: 8
+GenWimpy: 10
+GenFollow: 7
 E
 #206
 espírito gelo~
@@ -170,7 +178,9 @@ SavingRod: 5
 SavingPetri: 5
 SavingBreath: 5
 SavingSpell: 5
-GenBrave: 8
+GenLoot: 1
+GenBrave: 20
+GenFollow: 11
 E
 #207
 construto gelo~
@@ -196,6 +206,8 @@ SavingRod: 7
 SavingPetri: 7
 SavingBreath: 7
 SavingSpell: 7
+GenWimpy: 3
+GenFollow: 16
 E
 #208
 elemental gelo~
@@ -221,7 +233,10 @@ SavingRod: 7
 SavingPetri: 7
 SavingBreath: 7
 SavingSpell: 7
-GenBrave: 1
+GenLoot: 25
+GenEquip: 5
+GenBrave: 12
+GenFollow: 12
 E
 T 205
 #209
@@ -242,8 +257,11 @@ SavingRod: 3
 SavingPetri: 3
 SavingBreath: 3
 SavingSpell: 3
-GenLoot: 3
-GenBrave: 1
+GenWimpy: 19
+GenLoot: 13
+GenEquip: 8
+GenRoam: 6
+GenFollow: 18
 E
 #210
 lobo gelo~
@@ -269,6 +287,8 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
+GenWimpy: 16
+GenFollow: 15
 E
 #211
 bibliotecario gelo~
@@ -294,6 +314,10 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
+GenWimpy: 15
+GenLoot: 3
+GenEquip: 1
+GenFollow: 11
 E
 #212
 cozinheiro gelo~
@@ -319,8 +343,10 @@ SavingRod: 5
 SavingPetri: 5
 SavingBreath: 5
 SavingSpell: 5
+GenWimpy: 5
 GenLoot: 50
 GenUse: 50
 GenTrade: 50
+GenFollow: 10
 E
 $

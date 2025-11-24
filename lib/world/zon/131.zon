@@ -2,6 +2,8 @@
 Vitalia~
 Torin~
 13100 13199 200 1 j 0 0 0 7 50 0
+M 0 13137 1 13160 	(um clérigo da luz)
+E 1 3816 10 21 	(o Card Bastão de Bruenor)
 M 0 13101 3 13101 	(um guarda preguiçoso)
 E 1 13100 99 16 	(uma antiga espada enferrujada)
 E 1 13118 100 11 	(um escudo enferrujado)
@@ -46,8 +48,6 @@ E 1 13110 99 5 	(um armadura de placas brilhantes)
 M 0 13135 2 13161 	(o aprendiz de mendo)
 E 1 13115 99 16 	(uma espada longa bem trabalhada)
 E 1 13117 99 11 	(um escudo brilhante)
-M 0 13137 1 13160 	(um clérigo da luz)
-E 1 3816 1 17 	(o Card Bastão de Bruenor)
 M 0 13112 4 13158 	(um sentinela de Torin)
 E 1 13107 99 16 	(uma lâmina que carrega o símbolo de Torin)
 E 1 13108 99 11 	(um escudo que possui o símbolo de Torin)

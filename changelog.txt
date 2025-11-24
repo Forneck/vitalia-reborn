@@ -2,6 +2,34 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Nov 15 2024] - Vitalia Reborn Development
+  feature: Percentual Load System for Zone Resets
+    - Added percentage-based loading for mobs and objects in zone files
+    - Negative values in arg2 now represent percentage chance (e.g., -50 = 50% chance)
+    - Positive values maintain traditional behavior (absolute max count)
+    - Fully backward compatible with existing zone files
+    - Supports all load commands: M (mob), O (object), G (give), E (equip), P (put)
+    - Zone editor (zedit) displays "Chance: X%" for percentual loads
+    - Zone editor displays "Max: X" for traditional loads
+    - Enables dynamic content and rare item drops
+    - See docs/PERCENTUAL_LOAD.md for complete documentation
+@
+[Oct 30 2024] - Vitalia Reborn Development
+  feature: Evil Player Reputation System
+    - Added reputation routes (infamy) for evil players of all classes
+    - Evil Magic Users (Necromancers) gain reputation for dark/necromantic magic
+    - Evil Clerics (Fallen Clerics) gain reputation for harmful divine magic
+    - Evil Warriors gain reputation for killing good-aligned targets
+    - Evil Druids (Blighted Druids) gain reputation for harmful nature magic
+    - Evil Rangers gain reputation for hunting good targets
+    - System uses spell school (SCHOOL_NECROMANCY) and element (ELEMENT_UNHOLY) to identify evil spells
+    - New reputation action types: CLASS_REP_DARK_MAGIC, CLASS_REP_HARM_SPELL
+    - Enhanced combat reputation to reward evil killers for targeting good mobs
+    - Evil players gain reputation for cursing objects (+1 reputation + class bonus)
+    - Evil players gain reputation for poisoning food/drinks (+1-2 reputation + class bonus)
+    - BONUS: Evil players cursing weapons get +1 damage instead of -1 damage penalty!
+    - See EVIL_REPUTATION_SYSTEM.md for full documentation
+@
 Development moved to Github in 2013, this document is no longer updated:
 https://github.com/tbamud/tbamud
 Changelog also available on Github:

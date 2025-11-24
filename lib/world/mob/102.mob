@@ -25,6 +25,8 @@ cumprimentá-lo.
 25 4 -10 9d7+890 3d4+17
 1000 73646
 9 9 2
+GenWimpy: 7
+GenFollow: 13
 E
 #10202
 dama companhia~
@@ -52,6 +54,8 @@ Ele o cumprimenta claramente, seus olhos demonstram total adoração ao que faz 
 28 5 -9 7d8+900 4d4+16
 750 61308
 9 9 1
+GenWimpy: 4
+GenFollow: 12
 E
 #10204
 irmão bêbado~
@@ -155,6 +159,8 @@ preocupado com o sentido da mesma.
 25 5 -8 6d6+1000 4d4+17
 700 19117
 9 9 1
+GenWimpy: 9
+GenFollow: 13
 E
 #10212
 dama~
@@ -247,6 +253,8 @@ Ele sorri para vocé quando você entra, o convidando a entrar e se sentar.
 27 3 -5 6d6+1000 3d4+19
 750 68308
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 T 3009
 $

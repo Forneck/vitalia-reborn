@@ -24,9 +24,13 @@
 static struct house_control_rec house_control[MAX_HOUSES];
 static int num_of_houses = 0;
 
+/* Maximum nesting depth for containers in houses */
+#define MAX_BAG_ROWS 5
+
 /* local functions */
 static int House_get_filename(room_vnum vnum, char *filename, size_t maxlen);
 static int House_load(room_vnum vnum);
+static int House_load_obj(struct obj_data *obj, room_rnum room, int locate, struct obj_data **cont_row);
 static void House_restore_weight(struct obj_data *obj);
 static void House_delete_file(room_vnum vnum);
 static int find_house(room_vnum vnum);
@@ -35,6 +39,7 @@ static void hcontrol_build_house(struct char_data *ch, char *arg);
 static void hcontrol_destroy_house(struct char_data *ch, char *arg);
 static void hcontrol_pay_house(struct char_data *ch, char *arg);
 static void House_listrent(struct char_data *ch, room_vnum vnum);
+static int House_count_objs(struct obj_data *obj);
 /* CONVERSION code starts here -- see comment below. */
 static int ascii_convert_house(struct char_data *ch, obj_vnum vnum);
 static void hcontrol_convert_houses(struct char_data *ch);
@@ -59,6 +64,8 @@ static int House_load(room_vnum vnum)
     char filename[MAX_STRING_LENGTH];
     obj_save_data *loaded, *current;
     room_rnum rnum;
+    struct obj_data *cont_row[MAX_BAG_ROWS];
+    int j;
 
     if ((rnum = real_room(vnum)) == NOWHERE)
         return (0);
@@ -67,13 +74,17 @@ static int House_load(room_vnum vnum)
     if (!(fl = fopen(filename, "r"))) /* no file found */
         return (0);
 
+    /* Initialize container rows */
+    for (j = 0; j < MAX_BAG_ROWS; j++)
+        cont_row[j] = NULL;
+
     loaded = objsave_parse_objects(fl);
 
     for (current = loaded; current != NULL; current = current->next)
-        obj_to_room(current->obj, rnum);
+        House_load_obj(current->obj, rnum, current->locate, cont_row);
 
     /* now it's safe to free the obj_save_data list - all members of it
-     * have been put in the correct lists by obj_to_room()
+     * have been put in the correct lists by House_load_obj()
      */
     while (loaded != NULL) {
         current = loaded;
@@ -86,17 +97,117 @@ static int House_load(room_vnum vnum)
     return (1);
 }
 
+/* Helper function to load an object and place it correctly based on location.
+ * This handles container nesting similar to handle_obj() in objsave.c but
+ * adapted for rooms instead of characters. */
+static int House_load_obj(struct obj_data *obj, room_rnum room, int locate, struct obj_data **cont_row)
+{
+    int j;
+    struct obj_data *obj1;
+
+    if (!obj) /* this should never happen, but.... */
+        return (0);
+
+    /* For objects at room level (locate == 0), place them in the room */
+    if (locate == 0) {
+        /* Check if there's pending container contents */
+        for (j = MAX_BAG_ROWS - 1; j > 0; j--) {
+            if (cont_row[j]) { /* no container for these items -> place in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Check if this object should contain items from cont_row[0] */
+        if (cont_row[0]) {
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+                /* This is a container, put pending items inside it */
+                obj->contains = NULL; /* should be empty - but who knows */
+                for (; cont_row[0]; cont_row[0] = obj1) {
+                    obj1 = cont_row[0]->next_content;
+                    obj_to_obj(cont_row[0], obj);
+                }
+            } else {
+                /* Object isn't a container -> place pending items in room */
+                for (; cont_row[0]; cont_row[0] = obj1) {
+                    obj1 = cont_row[0]->next_content;
+                    obj_to_room(cont_row[0], room);
+                }
+                cont_row[0] = NULL;
+            }
+        }
+
+        /* Place the object in the room */
+        obj_to_room(obj, room);
+
+    } else if (locate < 0) {
+        /* Object should be inside a container */
+        /* First, flush any deeper nested containers that lost their parent */
+        for (j = MAX_BAG_ROWS - 1; j > -locate; j--) {
+            if (cont_row[j]) { /* no container -> place in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Check if we have pending contents for this container */
+        if (j == -locate && cont_row[j]) {
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+                /* Place pending items inside this container */
+                obj->contains = NULL;
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_obj(cont_row[j], obj);
+                }
+            } else {
+                /* Object isn't a container -> place pending items in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Add this object to the appropriate container row */
+        if (locate < 0 && locate >= -MAX_BAG_ROWS) {
+            /* Place object at the end of the container row list to maintain order */
+            if ((obj1 = cont_row[-locate - 1])) {
+                while (obj1->next_content)
+                    obj1 = obj1->next_content;
+                obj1->next_content = obj;
+            } else
+                cont_row[-locate - 1] = obj;
+        } else {
+            /* Invalid location value, place in room */
+            obj_to_room(obj, room);
+        }
+    } else {
+        /* locate > 0 is not used for houses (that's for equipped items) */
+        /* Just place the object in the room */
+        obj_to_room(obj, room);
+    }
+
+    return (1);
+}
+
 /* Save all objects for a house (recursive; initial call must be followed by a
  * call to House_restore_weight)  Assumes file is open already. */
-int House_save(struct obj_data *obj, FILE *fp)
+int House_save(struct obj_data *obj, FILE *fp, int location)
 {
     struct obj_data *tmp;
     int result;
 
     if (obj) {
-        House_save(obj->contains, fp);
-        House_save(obj->next_content, fp);
-        result = objsave_save_obj_record(obj, fp, 0);
+        House_save(obj->next_content, fp, location);
+        House_save(obj->contains, fp, MIN(0, location) - 1);
+        result = objsave_save_obj_record(obj, fp, location);
         if (!result)
             return (0);
 
@@ -128,14 +239,15 @@ void House_crashsave(room_vnum vnum)
         return;
     if (!House_get_filename(vnum, buf, sizeof(buf)))
         return;
-    if (!(fp = fopen(buf, "wb"))) {
+    if (!(fp = fopen(buf, "w"))) {
         perror("SYSERR: Error saving house file");
         return;
     }
-    if (!House_save(world[rnum].contents, fp)) {
+    if (!House_save(world[rnum].contents, fp, 0)) {
         fclose(fp);
         return;
     }
+    fprintf(fp, "$~\n");
     fclose(fp);
     House_restore_weight(world[rnum].contents);
     REMOVE_BIT_AR(ROOM_FLAGS(rnum), ROOM_HOUSE_CRASH);
@@ -512,16 +624,62 @@ ACMD(do_hcontrol)
 /* The house command, used by mortal house owners to assign guests */
 ACMD(do_house)
 {
-    char arg[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int i, j, id;
+    room_vnum house_vnum;
 
-    one_argument(argument, arg);
+    two_arguments(argument, arg, arg2);
 
+    /* Gods can specify house vnum as first argument to manage any house remotely */
+    if (GET_LEVEL(ch) >= LVL_GOD && *arg && is_number(arg)) {
+        house_vnum = atoi(arg);
+        if ((i = find_house(house_vnum)) == NOWHERE) {
+            send_to_char(ch, "Casa desconhecida.\r\n");
+            return;
+        }
+        /* If god specified a house vnum, the guest name is in arg2 */
+        if (!*arg2) {
+            House_list_guests(ch, i, FALSE);
+            return;
+        }
+        /* Process guest management for gods */
+        if ((id = get_id_by_name(arg2)) < 0) {
+            send_to_char(ch, "Não existe esta pessoa.\r\n");
+            return;
+        }
+        if (id == house_control[i].owner) {
+            send_to_char(ch, "Você não pode adicionar o dono da casa como hóspede!\r\n");
+            return;
+        }
+        /* Check if guest already exists to remove them */
+        for (j = 0; j < house_control[i].num_of_guests; j++) {
+            if (house_control[i].guests[j] == id) {
+                for (; j < house_control[i].num_of_guests - 1; j++)
+                    house_control[i].guests[j] = house_control[i].guests[j + 1];
+                house_control[i].num_of_guests--;
+                House_save_control();
+                send_to_char(ch, "Hóspede excluído.\r\n");
+                return;
+            }
+        }
+        /* Add new guest */
+        if (house_control[i].num_of_guests == MAX_GUESTS) {
+            send_to_char(ch, "Esta casa já tem muitos hóspedes.\r\n");
+            return;
+        }
+        j = house_control[i].num_of_guests++;
+        house_control[i].guests[j] = id;
+        House_save_control();
+        send_to_char(ch, "Hóspede adicionado.\r\n");
+        return;
+    }
+
+    /* Standard flow for house owners in their own houses */
     if (!ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
         send_to_char(ch, "Você precisa estar em sua casa para definir seus hóspedes.\r\n");
     else if ((i = find_house(GET_ROOM_VNUM(IN_ROOM(ch)))) == NOWHERE)
         send_to_char(ch, "Hum.. esta casa parece ter fracassado.\r\n");
-    else if ((GET_IDNUM(ch) != house_control[i].owner) || (GET_LEVEL(ch) != LVL_IMPL))
+    else if (GET_IDNUM(ch) != house_control[i].owner && GET_LEVEL(ch) < LVL_GOD)
         send_to_char(ch, "Somente o dono da casa pode definir seus hóspedes.\r\n");
     else if (!*arg)
         House_list_guests(ch, i, FALSE);
@@ -532,7 +690,7 @@ ACMD(do_house)
     else {
         for (j = 0; j < house_control[i].num_of_guests; j++)
             if (house_control[i].guests[j] == id) {
-                for (; j < house_control[i].num_of_guests; j++)
+                for (; j < house_control[i].num_of_guests - 1; j++)
                     house_control[i].guests[j] = house_control[i].guests[j + 1];
                 house_control[i].num_of_guests--;
                 House_save_control();
@@ -567,6 +725,10 @@ void House_save_all(void)
 int House_can_enter(struct char_data *ch, room_vnum house)
 {
     int i, j;
+
+    /* NPCs cannot enter player-owned houses */
+    if (IS_NPC(ch))
+        return (0);
 
     if (GET_LEVEL(ch) >= LVL_GRGOD || (i = find_house(house)) == NOWHERE)
         return (1);
@@ -610,6 +772,40 @@ void House_list_guests(struct char_data *ch, int i, int quiet)
 
     send_to_char(ch, "\r\n");
 }
+
+/* Count objects recursively including those in containers */
+static int House_count_objs(struct obj_data *obj)
+{
+    int count = 0;
+
+    while (obj) {
+        count++;
+        if (obj->contains)
+            count += House_count_objs(obj->contains);
+        obj = obj->next_content;
+    }
+
+    return count;
+}
+
+/* Check if a house has reached its object limit */
+int House_can_add_obj(room_rnum room)
+{
+    int count, max_objs;
+
+    /* If max_house_objs is 0, no limit */
+    max_objs = CONFIG_MAX_HOUSE_OBJS;
+    if (max_objs <= 0)
+        return 1;
+
+    /* Count current objects in the room */
+    count = House_count_objs(world[room].contents);
+
+    return (count < max_objs);
+}
+
+/* Get the current object count for a house room */
+int House_get_obj_count(room_rnum room) { return House_count_objs(world[room].contents); }
 
 /*************************************************************************
  * All code below this point and the code above, marked "CONVERSION"     *
