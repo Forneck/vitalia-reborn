@@ -2,6 +2,21 @@
 Kasper~
 Takamagahara - O Plano Celestial~
 15300 15399 45 1 b 0 0 0 70 -1 0
+M 0 15313 2 15309 	(um guardião celestial)
+M 0 15312 2 15308 	(um espírito das flores)
+M 0 15311 4 15307 	(um guardião da névoa)
+O 0 15307 1 15306 	(uma caixa de oferendas sagrada)
+M 0 15304 2 15306 	(um tanuki astral)
+M 0 15310 2 15306 	(um monge silencioso)
+M 0 15309 4 15305 	(um ancião fantasmagórico)
+M 0 15303 3 15304 	(um monge guardiao dos estandartes)
+M 0 15308 2 15304 	(um guerreiro ancestral)
+O 0 15305 1 15303 	(uma pedra de meditacao zen)
+M 0 15307 2 15303 	(um monge sombra)
+O 0 15303 1 15302 	(um recipiente rustico de agua sagrada)
+M 0 15306 6 15302 	(um kappa guardiao)
+O 0 15302 1 15301 	(uma lanterna espiritual ancestral)
+M 0 15305 10 15301 	(um espectro peregrino)
 T 0 2 15300 15300 	(Portal de entrada - Ciclo Sol e Lua)
 M 0 15300 2 15300 	(um komainu de jade branco)
 M 0 15301 2 15300 	(uma kitsune de obsidiana)

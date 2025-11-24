@@ -147,14 +147,13 @@ switch %i%
 ~
 #15207
 eremita_transformacao~
-0 fk 100
+0 k 100
 ~
 * Trigger de Combate (k) que dispara uma vez para transformar o Eremita.
 emote 	Yao ser atingido, o corpo do eremita frágil dissolve-se numa poça de lodo borbulhante!	n
 say 	R'GRRRRAAAAAAAARRRGGGHHH!'	n
 %echo% 	YDo chão, uma monstruosidade de lama e ossos ergue-se, virando os seus olhos brilhantes para %actor.name%!	n
 %load% mob 15210
-%purge% %self%
 ~
 #15208
 furia_do_pantano_nascimento~
@@ -213,7 +212,7 @@ end
 orbe_eterno_drop~
 1 h 100
 ~
-%send% %actor% O orbe de musgo reage com @rfúria @nquando você tenta se separar dele. Filamentos de uma substância viscosa o seguram, filamentos que pulsam com uma vontade própria e aterradora. A orbe irrompe com uma @wluz anêmica e pálida@n, e seus sussurros tornam-se gritos agônicos numa língua morta. Você sente a presença gélida da floresta concentrando-se no objeto, seus fios negros ondulando como serpentes enfurecidas, recusando qualquer separação. @cNão... nunca... somente você... @n.
+%send% %actor% O orbe de musgo reage com 	rfúria 	nquando você tenta se separar dele. Filamentos de uma substância viscosa o seguram, filamentos que pulsam com uma vontade própria e aterradora. A orbe irrompe com uma 	wluz anêmica e pálida	n, e seus sussurros tornam-se gritos agônicos numa língua morta. Você sente a presença gélida da floresta concentrando-se no objeto, seus fios negros ondulando como serpentes enfurecidas, recusando qualquer separação. 	cNão... nunca... somente você... 	n.
 %echoaround% %actor% %actor.name% tenta desesperadamente se separar do orbe, mas ele retorna sempre para suas mãos. %actor.name% está condenado a carregá-lo. 
 return 0
 ~
@@ -299,7 +298,10 @@ end
 purificacao_da_lamina~
 1 l 0
 ~
-if %self.room.vnum% == 15248
+%ECHO% [DEBUG 15217] eval vnum %self.vnum()%
+if %self.vnum()% != 15208
+return 1
+elseif %self.room.vnum% == 15248
   wait 1s
   %echoaround% %actor% 	wUm zumbido baixo e harmonioso emana do Grande Portão de Shizuka, a sua luz prateada focando-se com uma intensidade súbita na lâmina negra empunhada por %actor.name%.	n
   %send% %actor% 	yA sua 	rKatana Muramasa	y grita na sua mão, não um som que seus ouvidos possam captar, mas um uivo de agonia psíquica que reverbera na sua alma. A lâmina vibra violentamente, expelindo uma 	Cfumaça negra e fétida	y, como se a própria maldição estivesse a sangrar para fora do aço amaldiçoado.	n
@@ -308,15 +310,15 @@ if %self.room.vnum% == 15248
   %send% %actor% 	wA luz fria e pura inunda você, não para queimar, mas para limpar. Você sente o peso de mil almas torturadas a ser erguido dos seus ombros, e o sussurro sedento de sangue na sua mente finalmente se cala, substituído por um silêncio pacífico e profundo.	n
   
   * Carrega nova Masamune no inventário do jogador
-  %load% obj 15260 %actor.name%
+  %transform% 15260
   wait 1s
   %send% %actor% 	cA provação terminou. A maldição foi desfeita. Onde antes havia um demonio de aço, agora repousa em seu inventário a 	wMasamune Sagrada	c, a sua lâmina a brilhar com uma promessa de justiça.	n
   
-  * Remove a Muramasa antiga
-  %purge% %self%
   return 0
 else
   return 1
+else
+return 1
 end
 ~
 #15218
@@ -596,16 +598,11 @@ eval perg51 24400
 eval perg52 29008
 * ===============================================
 * Carregar 10 seleções aleatórias
-* Cada seleção terá 10 unidades do mesmo item
+* Cada seleção terá 05 unidades do mesmo item
 * ===============================================
 * --- Seleção 1 ---
 eval random1 %random.52%
 eval vnum1 %%perg%random1%%%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
 %load% obj %vnum1%
 %load% obj %vnum1%
 %load% obj %vnum1%
@@ -619,19 +616,9 @@ eval vnum2 %%perg%random2%%%
 %load% obj %vnum2%
 %load% obj %vnum2%
 %load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
 * --- Seleção 3 ---
 eval random3 %random.52%
 eval vnum3 %%perg%random3%%%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
 %load% obj %vnum3%
 %load% obj %vnum3%
 %load% obj %vnum3%
@@ -645,19 +632,9 @@ eval vnum4 %%perg%random4%%%
 %load% obj %vnum4%
 %load% obj %vnum4%
 %load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
 * --- Seleção 5 ---
 eval random5 %random.52%
 eval vnum5 %%perg%random5%%%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
 %load% obj %vnum5%
 %load% obj %vnum5%
 %load% obj %vnum5%
@@ -671,19 +648,9 @@ eval vnum6 %%perg%random6%%%
 %load% obj %vnum6%
 %load% obj %vnum6%
 %load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
 * --- Seleção 7 ---
 eval random7 %random.52%
 eval vnum7 %%perg%random7%%%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
 %load% obj %vnum7%
 %load% obj %vnum7%
 %load% obj %vnum7%
@@ -697,19 +664,9 @@ eval vnum8 %%perg%random8%%%
 %load% obj %vnum8%
 %load% obj %vnum8%
 %load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
 * --- Seleção 9 ---
 eval random9 %random.52%
 eval vnum9 %%perg%random9%%%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
 %load% obj %vnum9%
 %load% obj %vnum9%
 %load% obj %vnum9%
@@ -724,384 +681,190 @@ eval vnum10 %%perg%random10%%%
 %load% obj %vnum10%
 %load% obj %vnum10%
 %load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
 ~
 #15223
 Lojista Entalhador de Sonhos - Aleatorios~
 0 n 100
 ~
 * Criar array com todos os 100 vnums
-eval item1 2312
-eval item2 2335
-eval item3 2563
-eval item4 2947
-eval item5 5217
-eval item6 5250
-eval item7 5251
-eval item8 11335
-eval item9 11337
-eval item10 11338
-eval item11 11346
-eval item12 15278
-eval item13 19012
-eval item14 3082
-eval item15 1202
-eval item16 2528
-eval item17 2912
-eval item18 3054
-eval item19 3055
-eval item20 4388
-eval item21 5481
-eval item22 5707
-eval item23 6407
-eval item24 6506
-eval item25 12028
-eval item26 12103
-eval item27 13120
-eval item28 14015
-eval item29 14023
-eval item30 15271
-eval item31 17317
-eval item32 19010
-eval item33 20117
-eval item34 11329
-eval item35 2310
-eval item36 2368
-eval item37 2369
-eval item38 2938
-eval item39 14017
-eval item40 14053
-eval item41 15251
-eval item42 19046
-eval item43 19048
-eval item44 14508
-eval item45 11351
-eval item46 2311
-eval item47 1026
-eval item48 2309
-eval item49 2370
-eval item50 4305
-eval item51 1028
-eval item52 1701
-eval item53 2812
-eval item54 15272
-eval item55 15281
-eval item56 2974
-eval item57 2318
-eval item58 2333
-eval item59 2337
-eval item60 2345
-eval item61 2556
-eval item62 6103
-eval item63 14063
-eval item64 15256
-eval item65 15274
-eval item66 15275
-eval item67 15284
-eval item68 15285
-eval item69 15289
-eval item70 15296
-eval item71 2365
-eval item72 12602
-eval item73 12608
-eval item74 12615
-eval item75 12617
-eval item76 14528
-eval item77 1611
-eval item78 2568
-eval item79 2555
-eval item80 3033
-eval item81 5007
-eval item82 5008
-eval item83 5009
-eval item84 5010
-eval item85 7904
-eval item86 11534
-eval item87 11359
-eval item88 14085
-eval item89 14536
-eval item90 2987
-eval item91 3034
-eval item92 3037
-eval item93 3116
-eval item94 4841
-eval item95 6113
-eval item96 5482
-eval item97 10019
-eval item98 14084
-eval item99 20118
-eval item100 3083
-* Carregar 10 itens aleatórios
-eval random1 %random.100%
+eval item1 1000
+eval item2 1001
+eval item3 1002
+eval item4 1003
+eval item5 1004
+eval item6 1005
+eval item7 1006
+eval item8 1007
+eval item9 1008
+eval item10 1009
+eval item11 1010
+eval item12 1011
+eval item13 1012
+eval item14 1013
+eval item15 1014
+eval item16 1015
+eval item17 1016
+eval item18 1017
+eval item19 1018
+eval item20 1019
+eval item21 1020
+eval item22 1021
+eval item23 1022
+eval item24 1023
+eval item25 1024
+eval item26 1025
+eval item27 1026
+eval item28 1027
+eval item29 1028
+eval item30 1030
+eval item31 1031
+eval item32 1032
+eval item33 1033
+eval item34 1034
+eval item35 1035
+eval item36 1036
+eval item37 1037
+eval item38 1038
+eval item39 1039
+* Carregar 5 itens aleatórios
+eval random1 %random.39%
 eval vnum1 %%item%random1%%%
 %load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-eval random2 %random.100%
+eval random2 %random.39%
 eval vnum2 %%item%random2%%%
 %load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-eval random3 %random.100%
+eval random3 %random.39%
 eval vnum3 %%item%random3%%%
 %load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-eval random4 %random.100%
+eval random4 %random.39%
 eval vnum4 %%item%random4%%%
 %load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-eval random5 %random.100%
+eval random5 %random.39%
 eval vnum5 %%item%random5%%%
 %load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-eval random6 %random.100%
-eval vnum6 %%item%random6%%%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-eval random7 %random.100%
-eval vnum7 %%item%random7%%%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-eval random8 %random.100%
-eval vnum8 %%item%random8%%%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-eval random9 %random.100%
-eval vnum9 %%item%random9%%%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-eval random10 %random.100%
-eval vnum10 %%item%random10%%%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
 ~
 #15224
 Lojista Ferreiro - Aleatórios~
 0 n 100
 ~
 * Criar array com todos os 100 vnums
-eval item1 34
-eval item2 215
-eval item3 215
-eval item4 702
-eval item5 707
-eval item6 1019
-eval item7 701
-eval item8 904
-eval item9 1506
-eval item10 1507
-eval item11 1724
-eval item12 2918
-eval item13 3030
-eval item14 3031
-eval item15 3037
-eval item16 3116
-eval item17 4311
-eval item18 4345
-eval item19 4507
-eval item20 4839
-eval item21 5214
-eval item22 5435
-eval item23 5439
-eval item24 6004
-eval item25 8106
-eval item26 8122
-eval item27 11375
-eval item28 13415
-eval item29 13718
-eval item30 14409
-eval item31 2312
-eval item32 2335
-eval item33 2563
-eval item34 2947
-eval item35 5217
-eval item36 5250
-eval item37 5251
-eval item38 11335
-eval item39 11337
-eval item40 11338
-eval item41 11346
-eval item42 15278
-eval item43 19012
-eval item44 3082
-eval item45 1202
-eval item46 2528
-eval item47 2912
-eval item48 3054
-eval item49 3055
-eval item50 4388
-eval item51 5481
-eval item52 5707
-eval item53 6407
-eval item54 6506
-eval item55 12028
-eval item56 12103
-eval item57 13120
-eval item58 14015
-eval item59 14023
-eval item60 15271
-eval item61 17317
-eval item62 19010
-eval item63 20117
-eval item64 11329
-eval item65 2310
-eval item66 2368
-eval item67 2369
-eval item68 2938
-eval item69 14017
-eval item70 14053
-eval item71 15251
-eval item72 19046
-eval item73 19048
-eval item74 14508
-eval item75 11351
-eval item76 2311
-eval item77 1026
-eval item78 2309
-eval item79 2370
-eval item80 4305
-eval item81 1028
-eval item82 1701
-eval item83 2812
-eval item84 15272
-eval item85 15281
-eval item86 2974
-eval item87 2318
-eval item88 2333
-eval item89 2337
-eval item90 2345
-eval item91 2556
-eval item92 6103
-eval item93 14063
-eval item94 15256
-eval item95 15274
-eval item96 15275
-eval item97 15284
-eval item98 15285
-eval item99 15289
-eval item100 15296
+eval item1 12011
+eval item2 2735
+eval item3 12011
+eval item4 2735
+eval item5 11309
+eval item6 12610
+eval item7 12618
+eval item8 7190
+eval item9 9981
+eval item10 11309
+eval item11 12610
+eval item12 12618
+eval item13 13419
+eval item14 14543
+eval item15 19003
+eval item16 19023
+eval item17 19040
+eval item18 7190
+eval item19 9981
+eval item20 11318
+eval item21 12601
+eval item22 2574
+eval item23 8407
+eval item24 11318
+eval item25 12601
+eval item26 14418
+eval item27 14423
+eval item28 20115
+eval item29 2574
+eval item30 2909
+eval item31 808
+eval item32 8407
+eval item33 10004
+eval item34 10007
+eval item35 10211
+eval item36 10835
+eval item37 10849
+eval item38 10854
+eval item39 11110
+eval item40 11301
+eval item41 11314
+eval item42 11320
+eval item43 11369
+eval item44 11519
+eval item45 12008
+eval item46 12611
+eval item47 12626
+eval item48 12629
+eval item49 12639
+eval item50 12652
+eval item51 12663
+eval item52 12672
+eval item53 12685
+eval item54 12753
+eval item55 1725
+eval item56 1726
+eval item57 2742
+eval item58 2766
+eval item59 2767
+eval item60 2767
+eval item61 3043
+eval item62 3044
+eval item63 3045
+eval item64 3071
+eval item65 3076
+eval item66 3081
+eval item67 3086
+eval item68 3318
+eval item69 3414
+eval item70 3503
+eval item71 4511
+eval item72 4909
+eval item73 5423
+eval item74 5424
+eval item75 5425
+eval item76 5426
+eval item77 5427
+eval item78 5428
+eval item79 5429
+eval item80 5430
+eval item81 5431
+eval item82 5432
+eval item83 5433
+eval item84 5916
+eval item85 5918
+eval item86 5921
+eval item87 6002
+eval item88 6119
+eval item89 6511
+eval item90 7514
+eval item91 7517
+eval item92 7528
+eval item93 7529
+eval item94 7547
+eval item95 7914
+eval item96 7916
+eval item97 7917
+eval item98 7920
+eval item99 8158
+eval item100 8159
 * Debug: Array criado
-* Carregar 10 itens aleatórios
+* Carregar 5 itens aleatórios
 eval random1 %random.100%
 eval vnum1 %%item%random1%%%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
-%load% obj %vnum1%
 %load% obj %vnum1%
 eval random2 %random.100%
 eval vnum2 %%item%random2%%%
 %load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
-%load% obj %vnum2%
 eval random3 %random.100%
 eval vnum3 %%item%random3%%%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
-%load% obj %vnum3%
 %load% obj %vnum3%
 eval random4 %random.100%
 eval vnum4 %%item%random4%%%
 %load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
-%load% obj %vnum4%
 eval random5 %random.100%
 eval vnum5 %%item%random5%%%
 %load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-%load% obj %vnum5%
-eval random6 %random.100%
-eval vnum6 %%item%random6%%%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-%load% obj %vnum6%
-eval random7 %random.100%
-eval vnum7 %%item%random7%%%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-%load% obj %vnum7%
-eval random8 %random.100%
-eval vnum8 %%item%random8%%%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-%load% obj %vnum8%
-eval random9 %random.100%
-eval vnum9 %%item%random9%%%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-%load% obj %vnum9%
-eval random10 %random.100%
-eval vnum10 %%item%random10%%%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-%load% obj %vnum10%
-~
-#15225
-Kodama - Drop manto~
-0 f 30
-~
-%load% obj 15224
-~
-#15226
-KAPPA - DROP CASCO~
-0 f 30
-~
-%load% obj 15226
-~
-#15227
-Kappa - Drop Suneate~
-0 f 30
-~
-%load% obj 15240
 ~
 #15228
 Orbe Sacrifice~
