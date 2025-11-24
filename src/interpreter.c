@@ -684,11 +684,23 @@ ACMD(do_alias)
         if ((a = GET_ALIASES(ch)) == NULL)
             send_to_char(ch, "Não há atalhos definidos.\r\n");
         else {
-            send_to_char(ch, "\tWAtalhos definidos:\tn\r\n");
-            while (a != NULL) {
-                send_to_char(ch, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
+            char buf[MAX_STRING_LENGTH];
+            size_t len = 0;
+
+            /* Check if player has a descriptor for pagination */
+            if (!ch->desc) {
+                send_to_char(ch, "Você não pode ver a lista de atalhos no momento.\r\n");
+                return;
+            }
+
+            len += snprintf(buf + len, sizeof(buf) - len, "\tWAtalhos definidos:\tn\r\n");
+            while (a != NULL && len < sizeof(buf) - 1) {
+                len += snprintf(buf + len, sizeof(buf) - len, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
                 a = a->next;
             }
+
+            /* Use page_string for paginated output */
+            page_string(ch->desc, buf, TRUE);
         }
     } else { /* otherwise, add or remove aliases */
         /* is this an alias we've already defined? */

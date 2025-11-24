@@ -4452,7 +4452,6 @@ void advance_level(struct char_data *ch)
         case CLASS_RANGER:
             add_hp += rand_number(7, 13);
             add_mana = rand_number((int)(0.5 * GET_LEVEL(ch)), (int)GET_LEVEL(ch));
-            add_mana = MIN(add_mana, 5);
             add_move = rand_number(2, 4);
             break;
     }
@@ -4472,9 +4471,9 @@ void advance_level(struct char_data *ch)
             add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.7));
         else if (WAS_CLERIC(ch))
             add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.5));
-        add_mana = MIN(add_mana, 15);
+        add_mana = MAX(add_mana, 15);
     } else
-        add_mana = MIN(add_mana, 10);
+        add_mana = MAX(add_mana, 10);
 
     ch->points.max_hit += MAX(1, add_hp);
     ch->points.max_move += MAX(1, add_move);
@@ -4483,7 +4482,7 @@ void advance_level(struct char_data *ch)
         ch->points.max_mana += add_mana;
 
     send_to_char(ch, "\tWVocê recebeu: Hp: %d | Mn: %d | Mv: %d \tn\r\n", add_hp, add_mana, add_move);
-    if (IS_MAGIC_USER(ch) || IS_CLERIC(ch))
+    if (IS_MAGIC_USER(ch) || IS_CLERIC(ch) || WAS_MAGIC_USER(ch) || WAS_CLERIC(ch))
         GET_PRACTICES(ch) += MAX(2, wis_app[GET_WIS(ch)].bonus);
     else
         GET_PRACTICES(ch) += MIN(2, MAX(1, wis_app[GET_WIS(ch)].bonus));

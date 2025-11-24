@@ -118,6 +118,7 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;
+    bool skip_modifiers = FALSE;  /* controla se vamos suprimir (zunindo), (aura...), etc */
 
     if (!obj || !ch) {
         log1("SYSERR: NULL pointer in show_obj_to_char(): obj=%p ch=%p", (void *)obj, (void *)ch);
@@ -163,18 +164,59 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
             send_to_char(ch, "%s", obj->description);
             break;
 
-        case SHOW_OBJ_SHORT:
-            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
-                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
-                if (SCRIPT(obj)) {
-                    if (!TRIGGERS(SCRIPT(obj))->next)
-                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
-                    else
-                        send_to_char(ch, "[TRIGS] ");
-                }
-            }
+case SHOW_OBJ_SHORT:
+    /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
+    if (IN_ROOM(ch) != NOWHERE &&
+        ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+        IN_ROOM(obj) == IN_ROOM(ch) &&
+        PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
+
+#ifdef GET_OBJ_LEVEL
+        int lvl = GET_OBJ_LEVEL(obj);
+#else
+        int lvl = 0; /* ou outra lógica de nível */
+#endif
+
+        /* Modo alternativo: nome + [Nv. XX], sem flags */
+        send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
+                     CCGRN(ch, C_NRM),         /* nome em verde escuro */
+                     obj->short_description,
+                     CCCYN(ch, C_NRM),         /* [ em ciano escuro */
+                     CCGRN(ch, C_NRM),         /* Nv em verde escuro */
+                     CCNRM(ch, C_NRM),         /* . XX em branco */
+                     lvl,
+                     CCCYN(ch, C_NRM),         /* ] em ciano escuro */
+                     CCNRM(ch, C_NRM));        /* reset */
+
+        skip_modifiers = TRUE;  /* NÃO mostra (zunindo), (aura...), etc */
+
+    }
+    /* Casa, item no chão, mas inventário alternativo DESLIGADO:
+       só pinta o nome de verde e mantém modifiers */
+    else if (IN_ROOM(ch) != NOWHERE &&
+             ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+             IN_ROOM(obj) == IN_ROOM(ch)) {
+
+        if (obj->short_description)
+            send_to_char(ch, "%s%s%s",
+                         CCGRN(ch, C_NRM),      /* verde escuro */
+                         obj->short_description,
+                         CCNRM(ch, C_NRM));     /* reset */
+        else
+            send_to_char(ch, "%sAlgo.%s",
+                         CCGRN(ch, C_NRM),
+                         CCNRM(ch, C_NRM));
+        /* aqui NÃO mexemos em skip_modifiers → flags aparecem normalmente */
+
+    }
+    /* Qualquer outro caso (fora de casa, inventário, containers, etc.) */
+    else {
+        if (obj->short_description)
             send_to_char(ch, "%s", obj->short_description);
-            break;
+        else
+            send_to_char(ch, "Algo.");
+    }
+    break;
 
         case SHOW_OBJ_ACTION:
             switch (GET_OBJ_TYPE(obj)) {
@@ -210,9 +252,12 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
     }
 end:
 
-    show_obj_modifiers(obj, ch, mode);
+    if (!skip_modifiers)
+        show_obj_modifiers(obj, ch, mode);
+
     send_to_char(ch, "\r\n");
 }
+
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
@@ -2922,7 +2967,6 @@ ACMD(do_toggle)
         {"autogold", PRF_AUTOGOLD, 0, "Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"autosplit", PRF_AUTOSPLIT, 0, "Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
         {"autosac", PRF_AUTOSAC, 0, "Autosac desligado.\r\n", "Autosac ligado.\r\n"},
-        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"autoassist", PRF_AUTOASSIST, 0, "Autoassist desligado.\r\n", "Autoassist ligado.\r\n"},
         {"automap", PRF_AUTOMAP, 1, "Agora, você não irá mais ver o  mini-mapa.\r\n",
          "Agora, você irá ver o  mini-mapa.\r\n"},
@@ -2941,6 +2985,7 @@ ACMD(do_toggle)
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"autotitle", PRF_AUTOTITLE, 0, "Seu título não será mais alterado automaticamente.\r\n",
          "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"\n", 0, -1, "\n", "\n"} /* must be last */
     };
     if (IS_NPC(ch))

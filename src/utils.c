@@ -2363,7 +2363,7 @@ int count_mob_posted_quests(void)
  */
 bool can_add_mob_posted_quest(void)
 {
-    const int MAX_MOB_POSTED_QUESTS = 150;
+    const int MAX_MOB_POSTED_QUESTS = 450;
     return (count_mob_posted_quests() < MAX_MOB_POSTED_QUESTS);
 }
 
@@ -3104,10 +3104,11 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         case AQ_ROOM_FIND:
             snprintf(quest_name, sizeof(quest_name), "Explorar local");
             snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
+            /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
             snprintf(quest_info, sizeof(quest_info),
-                     "Alguém precisa que alguém explore um local específico (%s). "
+                     "Alguém precisa que alguém explore um local específico (%d). "
                      "Vá até lá para receber %d moedas de ouro.",
-                     target_name, calculated_reward);
+                     target_vnum, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
@@ -3357,10 +3358,11 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     } else {
         snprintf(quest_name, sizeof(quest_name), "Limpar área");
         snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
+        /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
         snprintf(quest_info, sizeof(quest_info),
-                 "%s precisa que alguém limpe uma área específica (%s) de todas as criaturas hostis. "
+                 "%s precisa que alguém limpe uma área específica (%d) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
-                 GET_NAME(ch), target_name, calculated_reward);
+                 GET_NAME(ch), target_vnum, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Perfeito! A área está limpa e segura agora!");
     }
 
@@ -3749,6 +3751,992 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         log1("ESCORT QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save escort quest %d to disk", new_quest_vnum);
+    }
+}
+/**
+ * Faz um mob postar uma quest de melhoria de emoção (AQ_EMOTION_IMPROVE).
+ * @param ch O mob que posta a quest
+ * @param target_mob_vnum VNUM do mob alvo para melhorar emoção
+ * @param emotion_type Tipo de emoção a melhorar (EMOTION_TYPE_*)
+ * @param target_level Nível alvo da emoção (0-100)
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int emotion_type, int target_level,
+                             int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    const char *emotion_name = "emoção";
+    const char *target_name = "alguém";
+    mob_rnum target_mob_rnum = NOBODY;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_emotion_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Get emotion name */
+    switch (emotion_type) {
+        case EMOTION_TYPE_FRIENDSHIP:
+            emotion_name = "amizade";
+            break;
+        case EMOTION_TYPE_TRUST:
+            emotion_name = "confiança";
+            break;
+        case EMOTION_TYPE_LOYALTY:
+            emotion_name = "lealdade";
+            break;
+        case EMOTION_TYPE_HAPPINESS:
+            emotion_name = "felicidade";
+            break;
+        case EMOTION_TYPE_COMPASSION:
+            emotion_name = "compaixão";
+            break;
+        case EMOTION_TYPE_LOVE:
+            emotion_name = "afeto";
+            break;
+    }
+
+    /* Get target mob name */
+    if (target_mob_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_mob_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = GET_NAME(&mob_proto[target_mob_rnum]);
+        }
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    difficulty = 30 + (target_level / 2);
+    calculated_reward = reward + (difficulty * 2);
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(50, GET_GOLD(ch) / 2);
+    }
+
+    CREATE(new_quest, struct aq_data, 1);
+
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_EMOTION_IMPROVE;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_mob_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = emotion_type;
+    new_quest->value[6] = target_level;
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Melhorar %s", emotion_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Ganhar %s de %s", emotion_name, target_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa melhorar a %s com %s. Interaja positivamente através de presentes, "
+             "ajuda em combate ou socials amigáveis para alcançar nível %d de %s e receber %d moedas de ouro.",
+             emotion_name, target_name, target_level, emotion_name, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Obrigado por melhorar meu relacionamento!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. Relacionamentos são difíceis mesmo.");
+
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add emotion quest for %s", GET_NAME(ch));
+        free_quest(new_quest);
+        return;
+    }
+
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    GET_GOLD(ch) -= calculated_reward;
+
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n parece precisar de ajuda social e escreve uma solicitação.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("EMOTION QUEST: %s created emotion quest %d (improve %s with %s to %d)", GET_NAME(ch), new_quest_vnum,
+         emotion_name, target_name, target_level);
+
+    if (save_quests(mob_zone)) {
+        log1("EMOTION QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de coleta mágica (AQ_MAGIC_GATHER).
+ * @param ch O mob que posta a quest
+ * @param target_density Densidade mágica mínima necessária (0.0-2.0)
+ * @param location_count Número de locais a visitar
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, int location_count, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_magic_gather_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    difficulty = 30 + (int)(target_density * 20) + (location_count * 5);
+    calculated_reward = reward + (difficulty * 2);
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(75, GET_GOLD(ch) / 2);
+    }
+
+    CREATE(new_quest, struct aq_data, 1);
+
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_MAGIC_GATHER;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = NOTHING;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    if (GET_GENADVENTURER(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENADVENTURER(ch) > 40) {
+        base_questpoints += 1;
+    }
+
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = location_count;              /* Counter stored in value[5] initially */
+    new_quest->value[6] = (int)(target_density * 100); /* Density * 100 */
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Coleta Mágica");
+    snprintf(quest_desc, sizeof(quest_desc), "Coletar energia mágica em %d locais", location_count);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa de energia mágica coletada. Visite %d locais com densidade mágica de pelo menos %.2f "
+             "para receber %d moedas de ouro.",
+             location_count, target_density, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Excelente! Você coletou a energia mágica que eu precisava!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. É uma tarefa que requer conhecimento arcano.");
+
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add magic gather quest for %s", GET_NAME(ch));
+        free_quest(new_quest);
+        return;
+    }
+
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    GET_GOLD(ch) -= calculated_reward;
+
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n desenha símbolos arcanos e envia um pedido de coleta mágica.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("MAGIC QUEST: %s created magic gather quest %d (%d locations, density %.2f)", GET_NAME(ch), new_quest_vnum,
+         location_count, target_density);
+
+    if (save_quests(mob_zone)) {
+        log1("MAGIC QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de entrega/delivery (AQ_DELIVERY).
+ * @param ch O mob que posta a quest
+ * @param target_mob_vnum VNUM do mob para receber o item
+ * @param item_vnum VNUM do item a ser entregue
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_vnum item_vnum, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    const char *target_name = "alguém";
+    const char *item_name = "um item";
+    mob_rnum target_mob_rnum = NOBODY;
+    obj_rnum item_rnum = NOTHING;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_delivery_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Get target mob name */
+    if (target_mob_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_mob_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = GET_NAME(&mob_proto[target_mob_rnum]);
+        }
+    }
+
+    /* Get item name */
+    if (item_vnum != NOTHING) {
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING) {
+            item_name = obj_proto[item_rnum].short_description;
+        }
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    difficulty = 40 + rand_number(0, 20);
+    calculated_reward = reward + (difficulty * 2);
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(60, GET_GOLD(ch) / 2);
+    }
+
+    CREATE(new_quest, struct aq_data, 1);
+
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_DELIVERY;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_mob_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = item_vnum; /* Item vnum in RETURNMOB field */
+    new_quest->value[6] = 1;
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Entregar item para %s", target_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Entregar %s para %s", item_name, target_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa que você entregue um item para %s. Entregue %s para completar a entrega "
+             "e receber %d moedas de ouro.",
+             target_name, item_name, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Perfeito! A entrega foi concluída com sucesso!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Tudo bem. Talvez alguém mais consiga negociar.");
+
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add delivery quest for %s", GET_NAME(ch));
+        free_quest(new_quest);
+        return;
+    }
+
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    GET_GOLD(ch) -= calculated_reward;
+
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n escreve um pedido de negociação e o envia.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("DELIVERY QUEST: %s created delivery quest %d (deliver %s to mob %d)", GET_NAME(ch), new_quest_vnum, item_name,
+         target_mob_vnum);
+
+    if (save_quests(mob_zone)) {
+        log1("TRADE QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de coleta de recursos (AQ_RESOURCE_GATHER).
+ * @param ch O mob que posta a quest
+ * @param item_vnum VNUM do item a coletar
+ * @param quantity Quantidade necessária
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    const char *item_name = "itens";
+    obj_rnum item_rnum = NOTHING;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_resource_gather_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Get item name */
+    if (item_vnum != NOTHING) {
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING) {
+            item_name = obj_proto[item_rnum].short_description;
+
+            /* Don't post quest for untakeable items */
+            if (!CAN_WEAR(&obj_proto[item_rnum], ITEM_WEAR_TAKE)) {
+                log1("RESOURCE QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), item_vnum,
+                     item_name);
+                return;
+            }
+        }
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    difficulty = 35 + (quantity * 5);
+    calculated_reward = reward + (difficulty * 2);
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(70, GET_GOLD(ch) / 2);
+    }
+
+    CREATE(new_quest, struct aq_data, 1);
+
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_RESOURCE_GATHER;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = item_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = quantity;         /* Quantity initially set here, becomes counter when accepted */
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Coletar Recursos");
+    snprintf(quest_desc, sizeof(quest_desc), "Coletar %d x %s", quantity, item_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa de recursos. Colete e entregue %d unidades de %s ao questmaster ou requisitante "
+             "para receber %d moedas de ouro.",
+             quantity, item_name, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Excelente! Você coletou todos os recursos!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Tudo bem. É muito trabalho mesmo.");
+
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add resource gather quest for %s", GET_NAME(ch));
+        free_quest(new_quest);
+        return;
+    }
+
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    GET_GOLD(ch) -= calculated_reward;
+
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n precisa de recursos e escreve um pedido de coleta.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("RESOURCE QUEST: %s created resource gather quest %d (collect %d x %s)", GET_NAME(ch), new_quest_vnum,
+         quantity, item_name);
+
+    if (save_quests(mob_zone)) {
+        log1("RESOURCE QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de construção de reputação (AQ_REPUTATION_BUILD).
+ * @param ch O mob que posta a quest
+ * @param target_mob_vnum VNUM do mob alvo para melhorar reputação
+ * @param target_reputation Nível de confiança/reputação necessário (0-100)
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, int target_reputation, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    const char *target_name = "alguém";
+    mob_rnum target_mob_rnum = NOBODY;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_reputation_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Get target mob name */
+    if (target_mob_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_mob_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = GET_NAME(&mob_proto[target_mob_rnum]);
+        }
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    difficulty = 35 + (target_reputation / 2);
+    calculated_reward = reward + (difficulty * 2);
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(55, GET_GOLD(ch) / 2);
+    }
+
+    CREATE(new_quest, struct aq_data, 1);
+
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_REPUTATION_BUILD;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_mob_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 3;
+    if (GET_MOB_REPUTATION(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_MOB_REPUTATION(ch) > 40) {
+        base_questpoints += 1;
+    }
+
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = GET_MOB_VNUM(ch);  /* Return mob */
+    new_quest->value[6] = target_reputation; /* Target reputation/trust level */
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Construir Reputação");
+    snprintf(quest_desc, sizeof(quest_desc), "Ganhar confiança de %s", target_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa que você construa uma reputação positiva com %s. "
+             "Interaja positivamente, complete tarefas e faça negociações até alcançar nível %d de confiança "
+             "para receber %d moedas de ouro.",
+             target_name, target_reputation, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Excelente! Você conquistou a confiança necessária!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. Construir reputação leva tempo.");
+
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add reputation quest for %s", GET_NAME(ch));
+        free_quest(new_quest);
+        return;
+    }
+
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    GET_GOLD(ch) -= calculated_reward;
+
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    if (ch->ai_data->reputation < 100) {
+        ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
+    }
+
+    act("$n escreve um pedido de mediação diplomática.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("REPUTATION QUEST: %s created reputation quest %d (build trust with %s to %d)", GET_NAME(ch), new_quest_vnum,
+         target_name, target_reputation);
+
+    if (save_quests(mob_zone)) {
+        log1("REPUTATION QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de compra em loja (AQ_SHOP_BUY).
+ * @param ch O mob que posta a quest
+ * @param item_vnum VNUM do item a ser comprado
+ * @param quantity Quantidade de itens a comprar
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward)
+{
+    struct aq_data *new_quest;
+    qst_vnum new_quest_vnum;
+    char quest_name[MAX_QUEST_NAME + 1];
+    char quest_desc[MAX_QUEST_DESC + 1];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    const char *item_name = "item";
+    obj_rnum item_rnum;
+    zone_rnum mob_zone;
+    mob_vnum questmaster_vnum;
+    int difficulty, calculated_reward;
+    obj_vnum reward_item = NOTHING;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_shop_buy_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+
+    /* Validate item exists */
+    item_rnum = real_object(item_vnum);
+    if (item_rnum == NOTHING) {
+        log1("SYSERR: mob_posts_shop_buy_quest called with invalid item vnum %d", item_vnum);
+        return;
+    }
+    item_name = obj_proto[item_rnum].short_description;
+
+    /* Check if we can add another quest */
+    if (!can_add_mob_posted_quest()) {
+        log1("SHOP BUY QUEST: %s cannot post quest - quest limit reached", GET_NAME(ch));
+        return;
+    }
+
+    /* Find questmaster for this zone */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        log1("SHOP BUY QUEST: No questmaster found for zone %d (%s)", mob_zone,
+             zone_table[mob_zone].name ? zone_table[mob_zone].name : "Unknown");
+        return;
+    }
+
+    /* Calculate difficulty based on quantity and item value */
+    difficulty = 40 + (quantity * 5) + dice(1, 15);
+    difficulty = URANGE(35, difficulty, 75);
+
+    /* Calculate reward based on difficulty and mob's genetics */
+    calculated_reward = difficulty * 10;
+    if (ch->ai_data->genetics.quest_tendency > 50) {
+        calculated_reward += (calculated_reward * (ch->ai_data->genetics.quest_tendency - 50)) / 100;
+    }
+
+    /* Try to select a reward item from mob's inventory */
+    if (ch->carrying) {
+        struct obj_data *obj;
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            if (!OBJ_FLAGGED(obj, ITEM_QUEST) && GET_OBJ_TYPE(obj) != ITEM_MONEY &&
+                GET_OBJ_COST(obj) >= calculated_reward / 2 && GET_OBJ_COST(obj) <= calculated_reward * 2) {
+                reward_item = GET_OBJ_VNUM(obj);
+                break;
+            }
+        }
+    }
+
+    /* Deduct cost from mob */
+    if (GET_GOLD(ch) < calculated_reward) {
+        log1("SHOP BUY QUEST: %s doesn't have enough gold (%d < %d)", GET_NAME(ch), GET_GOLD(ch), calculated_reward);
+        return;
+    }
+    decrease_gold(ch, calculated_reward);
+
+    /* Generate unique quest vnum */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+
+    /* Create the quest */
+    CREATE(new_quest, struct aq_data, 1);
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_SHOP_BUY;
+    new_quest->target = questmaster_vnum;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = item_vnum; /* Item vnum in RETURNMOB field */
+    new_quest->value[6] = quantity;  /* Quantity becomes counter when accepted */
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Comprar %s em lojas", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Comprar %d %s", quantity, item_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa que você compre %d %s em lojas. "
+             "Visite comerciantes e adquira os itens para receber %d moedas de ouro.",
+             quantity, item_name, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Excelente! Você comprou todos os %s necessários!", item_name);
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Você abandonou a busca de compras.");
+    new_quest->flags = AQ_MOB_POSTED;
+
+    /* Add quest to the system */
+    add_quest(new_quest);
+
+    /* Track quest tendency */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n escreve um pedido de compras comerciais.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("SHOP BUY QUEST: %s created shop buy quest %d (buy %d %s)", GET_NAME(ch), new_quest_vnum, quantity, item_name);
+
+    if (save_quests(mob_zone)) {
+        log1("SHOP BUY QUEST: Saved quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de venda em loja (AQ_SHOP_SELL).
+ * @param ch O mob que posta a quest
+ * @param item_vnum VNUM do item a ser vendido
+ * @param quantity Quantidade de itens a vender
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward)
+{
+    struct aq_data *new_quest;
+    qst_vnum new_quest_vnum;
+    char quest_name[MAX_QUEST_NAME + 1];
+    char quest_desc[MAX_QUEST_DESC + 1];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    const char *item_name = "item";
+    obj_rnum item_rnum;
+    zone_rnum mob_zone;
+    mob_vnum questmaster_vnum;
+    int difficulty, calculated_reward;
+    obj_vnum reward_item = NOTHING;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_shop_sell_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+
+    /* Validate item exists */
+    item_rnum = real_object(item_vnum);
+    if (item_rnum == NOTHING) {
+        log1("SYSERR: mob_posts_shop_sell_quest called with invalid item vnum %d", item_vnum);
+        return;
+    }
+    item_name = obj_proto[item_rnum].short_description;
+
+    /* Check if we can add another quest */
+    if (!can_add_mob_posted_quest()) {
+        log1("SHOP SELL QUEST: %s cannot post quest - quest limit reached", GET_NAME(ch));
+        return;
+    }
+
+    /* Find questmaster for this zone */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        log1("SHOP SELL QUEST: No questmaster found for zone %d (%s)", mob_zone,
+             zone_table[mob_zone].name ? zone_table[mob_zone].name : "Unknown");
+        return;
+    }
+
+    /* Calculate difficulty based on quantity and item value */
+    difficulty = 35 + (quantity * 5) + dice(1, 15);
+    difficulty = URANGE(30, difficulty, 70);
+
+    /* Calculate reward based on difficulty and mob's genetics */
+    calculated_reward = difficulty * 10;
+    if (ch->ai_data->genetics.quest_tendency > 50) {
+        calculated_reward += (calculated_reward * (ch->ai_data->genetics.quest_tendency - 50)) / 100;
+    }
+
+    /* Try to select a reward item from mob's inventory */
+    if (ch->carrying) {
+        struct obj_data *obj;
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            if (!OBJ_FLAGGED(obj, ITEM_QUEST) && GET_OBJ_TYPE(obj) != ITEM_MONEY &&
+                GET_OBJ_COST(obj) >= calculated_reward / 2 && GET_OBJ_COST(obj) <= calculated_reward * 2) {
+                reward_item = GET_OBJ_VNUM(obj);
+                break;
+            }
+        }
+    }
+
+    /* Deduct cost from mob */
+    if (GET_GOLD(ch) < calculated_reward) {
+        log1("SHOP SELL QUEST: %s doesn't have enough gold (%d < %d)", GET_NAME(ch), GET_GOLD(ch), calculated_reward);
+        return;
+    }
+    decrease_gold(ch, calculated_reward);
+
+    /* Generate unique quest vnum */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+
+    /* Create the quest */
+    CREATE(new_quest, struct aq_data, 1);
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_SHOP_SELL;
+    new_quest->target = questmaster_vnum;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+
+    int base_questpoints = calculated_reward / 20 + 2;
+    new_quest->value[0] = URANGE(2, base_questpoints, 12);
+    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
+    new_quest->value[4] = -1;
+    new_quest->value[5] = item_vnum; /* Item vnum in RETURNMOB field */
+    new_quest->value[6] = quantity;  /* Quantity becomes counter when accepted */
+
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = reward_item;
+
+    snprintf(quest_name, sizeof(quest_name), "Vender %s em lojas", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Vender %d %s", quantity, item_name);
+    snprintf(quest_info, sizeof(quest_info),
+             "Alguém precisa que você venda %d %s em lojas. "
+             "Consiga os itens e venda-os a comerciantes para receber %d moedas de ouro.",
+             quantity, item_name, calculated_reward);
+    snprintf(quest_done, sizeof(quest_done), "Perfeito! Você vendeu todos os %s solicitados!", item_name);
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Você abandonou a busca de vendas.");
+    new_quest->flags = AQ_MOB_POSTED;
+
+    /* Add quest to the system */
+    add_quest(new_quest);
+
+    /* Track quest tendency */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    act("$n escreve um pedido de vendas comerciais.", FALSE, ch, 0, 0, TO_ROOM);
+    log1("SHOP SELL QUEST: %s created shop sell quest %d (sell %d %s)", GET_NAME(ch), new_quest_vnum, quantity,
+         item_name);
+
+    if (save_quests(mob_zone)) {
+        log1("SHOP SELL QUEST: Saved quest %d to disk", new_quest_vnum);
     }
 }
 

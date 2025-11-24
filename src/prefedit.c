@@ -251,7 +251,8 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  "\r\n"
                  "%sOutras Flags\r\n"
                  "%sF%s) No Summon    %s[%s%3s%s]      %sH%s) Breve    %s[%s%3s%s]\r\n"
-                 "%sG%s) Nao Repetir  %s[%s%3s%s]      %sI%s) Compacto %s[%s%3s%s]\r\n",
+                 "%sG%s) Nao Repetir  %s[%s%3s%s]      %sI%s) Compacto %s[%s%3s%s]\r\n"
+                 "%sZ%s) Casas - Exibir Nv. do item %s[%s%3s%s]\r\n",
                  CBWHT(d->character, C_NRM),
                  /* Line 10 - nosummon and brief */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
@@ -262,7 +263,10 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_NOREPEAT)), CCCYN(d->character, C_NRM),
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_COMPACT)), CCCYN(d->character, C_NRM));
+                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_COMPACT)), CCCYN(d->character, C_NRM),
+                 /* Line 12 - Inv. Casa alt */
+                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_HOUSE_ALTINV)), CCCYN(d->character, C_NRM));
 
     /* The bottom section of the toggles menu */
     send_to_char(
@@ -279,24 +283,31 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
         CBWHT(d->character, C_NRM),
         /* Line 12 - 256 and mxp */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt), CCCYN(d->character, C_NRM),
-        CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->pVariables[eMSDP_MXP]->ValueInt), CCCYN(d->character, C_NRM),
+        ONOFF(d->pProtocol && d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]
+                  ? d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt
+                  : 0),
+        CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+        CCYEL(d->character, C_NRM),
+        ONOFF(d->pProtocol && d->pProtocol->pVariables[eMSDP_MXP] ? d->pProtocol->pVariables[eMSDP_MXP]->ValueInt : 0),
+        CCCYN(d->character, C_NRM),
         /* Line 13 - ansi and msdp */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->pVariables[eMSDP_ANSI_COLORS]->ValueInt), CCCYN(d->character, C_NRM),
-        CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->bMSDP), CCCYN(d->character, C_NRM),
+        ONOFF(d->pProtocol && d->pProtocol->pVariables[eMSDP_ANSI_COLORS]
+                  ? d->pProtocol->pVariables[eMSDP_ANSI_COLORS]->ValueInt
+                  : 0),
+        CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+        CCYEL(d->character, C_NRM), ONOFF(d->pProtocol ? d->pProtocol->bMSDP : 0), CCCYN(d->character, C_NRM),
         /* Line 14 - charset and atcp */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->bCHARSET), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
-        CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bATCP),
-        CCCYN(d->character, C_NRM),
+        ONOFF(d->pProtocol ? d->pProtocol->bCHARSET : 0), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
+        CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
+        ONOFF(d->pProtocol ? d->pProtocol->bATCP : 0), CCCYN(d->character, C_NRM),
         /* Line 15 - utf-8 and msp */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
-        CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMSP),
-        CCCYN(d->character, C_NRM),
+        ONOFF(d->pProtocol && d->pProtocol->pVariables[eMSDP_UTF_8] ? d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt
+                                                                    : 0),
+        CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+        CCYEL(d->character, C_NRM), ONOFF(d->pProtocol ? d->pProtocol->bMSP : 0), CCCYN(d->character, C_NRM),
         /* Line 16 - mccp and autosize */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
         PREFEDIT_FLAGGED(PRF_MCCP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
@@ -306,7 +317,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
         ONOFF(PREFEDIT_FLAGGED(PRF_AUTOSIZE)), CCCYN(d->character, C_NRM),
         /* Line 17 - gmcp */
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-        ONOFF(d->pProtocol->bGMCP), CCCYN(d->character, C_NRM));
+        ONOFF(d->pProtocol ? d->pProtocol->bGMCP : 0), CCCYN(d->character, C_NRM));
     /* Finishing Off */
     send_to_char(d->character, "%sQ%s) Sair das preferencias...\r\n", CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM));
@@ -722,42 +733,58 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
 
                 case 'j':
                 case 'J':
-                    TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt);
+                    if (d->pProtocol && d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]) {
+                        TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt);
+                    }
                     break;
 
                 case 'k':
                 case 'K':
-                    TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_ANSI_COLORS]->ValueInt);
+                    if (d->pProtocol && d->pProtocol->pVariables[eMSDP_ANSI_COLORS]) {
+                        TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_ANSI_COLORS]->ValueInt);
+                    }
                     break;
 
                 case 'l':
                 case 'L':
-                    TOGGLE_VAR(d->pProtocol->bCHARSET);
+                    if (d->pProtocol) {
+                        TOGGLE_VAR(d->pProtocol->bCHARSET);
+                    }
                     break;
 
                 case 'm':
                 case 'M':
-                    TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_MXP]->ValueInt);
+                    if (d->pProtocol && d->pProtocol->pVariables[eMSDP_MXP]) {
+                        TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_MXP]->ValueInt);
+                    }
                     break;
 
                 case 'n':
                 case 'N':
-                    TOGGLE_VAR(d->pProtocol->bMSDP);
+                    if (d->pProtocol) {
+                        TOGGLE_VAR(d->pProtocol->bMSDP);
+                    }
                     break;
 
                 case 'o':
                 case 'O':
-                    TOGGLE_VAR(d->pProtocol->bATCP);
+                    if (d->pProtocol) {
+                        TOGGLE_VAR(d->pProtocol->bATCP);
+                    }
                     break;
 
                 case 'p':
                 case 'P':
-                    TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt);
+                    if (d->pProtocol && d->pProtocol->pVariables[eMSDP_UTF_8]) {
+                        TOGGLE_VAR(d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt);
+                    }
                     break;
 
                 case 'r':
                 case 'R':
-                    TOGGLE_VAR(d->pProtocol->bMSP);
+                    if (d->pProtocol) {
+                        TOGGLE_VAR(d->pProtocol->bMSP);
+                    }
                     break;
 
                 case 's':
@@ -785,7 +812,17 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
 
                 case 'u':
                 case 'U':
-                    TOGGLE_VAR(d->pProtocol->bGMCP);
+                    if (d->pProtocol) {
+                        TOGGLE_VAR(d->pProtocol->bGMCP);
+                    }
+                    break;
+
+                case 'z':
+                case 'Z':
+                    if (PREFEDIT_FLAGGED(PRF_HOUSE_ALTINV))
+                        REMOVE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HOUSE_ALTINV);
+                    else
+                        SET_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HOUSE_ALTINV);
                     break;
 
                 default:

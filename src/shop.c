@@ -28,6 +28,7 @@
 #include "fight.h"
 #include <sys/stat.h> /* for mkdir() */
 #include "graph.h"
+#include "quest.h" /* for autoquest triggers */
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
@@ -47,6 +48,7 @@ static void sort_keeper_objs(struct char_data *keeper, int shop_nr);
 static char *read_shop_message(int mnum, room_vnum shr, FILE *shop_f, const char *why);
 static int read_type_list(FILE *shop_f, struct shop_buy_data *list, int new_format, int max);
 static int read_list(FILE *shop_f, struct shop_buy_data *list, int new_format, int max, int type);
+static void check_shop_buy_quest(struct char_data *ch, struct obj_data *obj);
 static void shopping_list(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 static bool shopping_identify(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 static void shopping_value(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
@@ -104,7 +106,7 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(ch)) {
         /* Use hybrid emotion system: get effective trust toward this player */
         int effective_trust = get_effective_emotion_toward(keeper, ch, EMOTION_TYPE_TRUST);
-        
+
         /* Low trust makes shopkeeper refuse service */
         if (effective_trust < CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD) {
             snprintf(buf, sizeof(buf), "%s Eu não confio em você o suficiente para fazer negócios.", GET_NAME(ch));
@@ -460,7 +462,7 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
         int effective_trust = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_TRUST);
         int effective_greed = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_GREED);
         int effective_friendship = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_FRIENDSHIP);
-        
+
         /* High trust gives better prices (discount for buyer) */
         if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
             emotion_modifier *= 0.90; /* 10% discount */
@@ -496,7 +498,7 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
         int effective_trust = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_TRUST);
         int effective_greed = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_GREED);
         int effective_friendship = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_FRIENDSHIP);
-        
+
         /* High trust gives better prices (keeper pays more when buying from player) */
         if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
             emotion_modifier *= 1.10; /* 10% bonus */
@@ -529,6 +531,32 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
         price = 1;
 
     return price;
+}
+
+/* Helper function to check and process shop buy quest progress */
+static void check_shop_buy_quest(struct char_data *ch, struct obj_data *obj)
+{
+    if (IS_NPC(ch) || GET_QUEST(ch) == NOTHING)
+        return;
+
+    qst_rnum rnum = real_quest(GET_QUEST(ch));
+    if (rnum == NOTHING || QST_TYPE(rnum) != AQ_SHOP_BUY)
+        return;
+
+    obj_vnum quest_item_vnum = QST_RETURNMOB(rnum);
+    if (GET_OBJ_VNUM(obj) != quest_item_vnum || GET_QUEST_COUNTER(ch) <= 0)
+        return;
+
+    /* Mark item with NOLOCATE and timer to prevent sell-buyback exploit */
+    SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NOLOCATE);
+    GET_OBJ_TIMER(obj) = -28; /* Negative timer = don't extract, just remove flag after 1 MUD day */
+
+    GET_QUEST_COUNTER(ch)--;
+    send_to_char(ch, "\tyProgresso da busca: %d item(ns) restante(s) para comprar.\tn\r\n", GET_QUEST_COUNTER(ch));
+
+    if (GET_QUEST_COUNTER(ch) <= 0) {
+        generic_complete_quest(ch);
+    }
 }
 
 /* The Player is Buying and the shopkeeper is selling the object */
@@ -622,6 +650,9 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
             }
             obj_to_char(obj, ch);
 
+            /* Check for AQ_SHOP_BUY quest completion */
+            check_shop_buy_quest(ch, obj);
+
             goldamt += GET_OBJ_COST(obj);
             if (!IS_GOD(ch))
                 GET_QUESTPOINTS(ch) -= GET_OBJ_COST(obj);
@@ -646,6 +677,9 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
                 SHOP_SORT(shop_nr)--;
             }
             obj_to_char(obj, ch);
+
+            /* Check for AQ_SHOP_BUY quest completion */
+            check_shop_buy_quest(ch, obj);
 
             charged = buy_price(obj, shop_nr, keeper, ch);
             goldamt += charged;
@@ -722,6 +756,16 @@ static struct obj_data *get_selling_obj(struct char_data *ch, char *name, struct
         }
         return (NULL);
     }
+
+    /* Prevent selling NOLOCATE items (quest items from shop buy quests) */
+    if (OBJ_FLAGGED(obj, ITEM_NOLOCATE) && !IS_GOD(ch)) {
+        if (msg) {
+            snprintf(buf, sizeof(buf), "%s Este item não pode ser vendido agora.", GET_NAME(ch));
+            do_tell(keeper, buf, cmd_tell, 0);
+        }
+        return (NULL);
+    }
+
     if ((result = trade_with(obj, shop_nr)) == OBJECT_OK)
         return (obj);
 
@@ -867,6 +911,23 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
 
         sold++;
         obj_from_char(obj);
+
+        /* Check for AQ_SHOP_SELL quest completion - check BEFORE slide_obj */
+        if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING) {
+            qst_rnum rnum = real_quest(GET_QUEST(ch));
+            if (rnum != NOTHING && QST_TYPE(rnum) == AQ_SHOP_SELL) {
+                obj_vnum quest_item_vnum = QST_RETURNMOB(rnum);
+                if (GET_OBJ_VNUM(obj) == quest_item_vnum && GET_QUEST_COUNTER(ch) > 0) {
+                    GET_QUEST_COUNTER(ch)--;
+                    send_to_char(ch, "\tyProgresso da busca: %d item(ns) restante(s) para vender.\tn\r\n",
+                                 GET_QUEST_COUNTER(ch));
+                    if (GET_QUEST_COUNTER(ch) <= 0) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+        }
+
         slide_obj(obj, keeper, shop_nr); /* Seems we don't use return
                                                                             value. */
         obj = get_selling_obj(ch, name, keeper, shop_nr, FALSE);

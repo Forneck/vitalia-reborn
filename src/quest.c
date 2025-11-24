@@ -22,15 +22,18 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
+#include "spells.h"     /* for calculate_mana_density */
 #include "act.h"        /* for do_tell */
 #include "dg_scripts.h" /* for char_script_id */
+#include "modify.h"     /* for page_string */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
  *--------------------------------------------------------------------------*/
-const char *quest_types[] = {
-    "Object",     "Room",        "Find mob",          "Kill mob",   "Save mob", "Return object",
-    "Clear room", "Kill player", "Kill mob (bounty)", "Escort mob", "\n"};
+const char *quest_types[] = {"Object",          "Room",         "Find mob",    "Kill mob",          "Save mob",
+                             "Return object",   "Clear room",   "Kill player", "Kill mob (bounty)", "Escort mob",
+                             "Improve emotion", "Magic gather", "Delivery",    "Resource gather",   "Reputation build",
+                             "Shop buy",        "Shop sell",    "\n"};
 const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
 
 /*--------------------------------------------------------------------------
@@ -277,15 +280,24 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
     const char *info = QST_INFO(rnum);
     char temp_buf[MAX_QUEST_MSG];
 
-    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
+    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name and add zone name */
     if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
         room_rnum room_rnum_val = real_room(QST_TARGET(rnum));
 
         if (room_rnum_val != NOWHERE) {
             const char *room_name = world[room_rnum_val].name;
+            zone_rnum zone = world[room_rnum_val].zone;
+            /* Note: top_of_zone_table is the last valid zone index (not count), so <= is correct */
+            const char *zone_name = (zone != NOWHERE && zone >= 0 && zone <= top_of_zone_table && zone_table)
+                                        ? zone_table[zone].name
+                                        : "Desconhecida";
+            char room_with_zone[512];
             char room_num_str[20];
             const char *pos;
             size_t room_num_len;
+
+            /* Create combined string with room name and zone name */
+            snprintf(room_with_zone, sizeof(room_with_zone), "%s em %s", room_name, zone_name);
 
             /* Create string representation of room number to search for */
             snprintf(room_num_str, sizeof(room_num_str), "%d", QST_TARGET(rnum));
@@ -295,7 +307,7 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
              * We search for it as a complete number by checking boundaries */
             pos = strstr(info, room_num_str);
 
-            while (pos != NULL) {
+            if (pos != NULL) {
                 /* Check if this is a complete number match (not part of a larger number) */
                 bool is_start_boundary = (pos == info || !isdigit((unsigned char)*(pos - 1)));
                 bool is_end_boundary = !isdigit((unsigned char)*(pos + room_num_len));
@@ -303,22 +315,18 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                 if (is_start_boundary && is_end_boundary) {
                     size_t prefix_len = pos - info;
                     size_t suffix_start = prefix_len + room_num_len;
-                    size_t room_name_len = strlen(room_name);
+                    size_t room_with_zone_len = strlen(room_with_zone);
                     size_t suffix_len = strlen(info + suffix_start);
-                    size_t total_len = prefix_len + room_name_len + suffix_len;
+                    size_t total_len = prefix_len + room_with_zone_len + suffix_len;
 
                     /* Check if the formatted string will fit in the buffer (including null terminator) */
                     if (total_len + 1 <= bufsize) {
-                        /* Build new message: prefix + room_name + suffix */
-                        snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
-                        info = buf;
-                        break;
+                        /* Build new message: prefix + room_name_with_zone + suffix */
+                        snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_with_zone, info + suffix_start);
+                        /* Successfully formatted, return immediately to avoid further processing */
+                        return buf;
                     }
-                    /* Buffer too small, fall through to use original */
-                    break;
                 }
-                /* Not a complete match, continue searching */
-                pos = strstr(pos + 1, room_num_str);
             }
         }
     }
@@ -369,6 +377,116 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                  "%s\r\n\tyDICA: Se o alvo já foi eliminado, procure por uma pedra mágica\tn\r\n"
                  "\tyque pode ter sido deixada e a entregue ao responsável pela busca.\tn",
                  info);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_EMOTION_IMPROVE quests, add emotion type and target level info */
+    if (QST_TYPE(rnum) == AQ_EMOTION_IMPROVE) {
+        int emotion_type = QST_RETURNMOB(rnum);
+        int target_level = QST_QUANTITY(rnum);
+        const char *emotion_name = "emoção";
+
+        switch (emotion_type) {
+            case EMOTION_TYPE_FRIENDSHIP:
+                emotion_name = "amizade";
+                break;
+            case EMOTION_TYPE_TRUST:
+                emotion_name = "confiança";
+                break;
+            case EMOTION_TYPE_LOYALTY:
+                emotion_name = "lealdade";
+                break;
+            case EMOTION_TYPE_HAPPINESS:
+                emotion_name = "felicidade";
+                break;
+            case EMOTION_TYPE_COMPASSION:
+                emotion_name = "compaixão";
+                break;
+            case EMOTION_TYPE_LOVE:
+                emotion_name = "afeto";
+                break;
+        }
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Interaja positivamente através de presentes, socials amigáveis\tn\r\n"
+                 "\tyou ajuda em combate para alcançar nível %d de %s.\tn",
+                 info, target_level, emotion_name);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_MAGIC_GATHER quests, add density and location count info */
+    if (QST_TYPE(rnum) == AQ_MAGIC_GATHER && ch && !IS_NPC(ch)) {
+        float target_density = QST_QUANTITY(rnum) / 100.0;
+        int locations_remaining = GET_QUEST_COUNTER(ch);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Visite locais com densidade mágica >= %.2f.\tn\r\n"
+                 "\tyLocais restantes: %d\tn",
+                 info, target_density, locations_remaining);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_RESOURCE_GATHER quests, add quantity info */
+    if (QST_TYPE(rnum) == AQ_RESOURCE_GATHER && ch && !IS_NPC(ch)) {
+        int items_remaining = GET_QUEST_COUNTER(ch);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyIMPORTANTE: Entregue os itens ao questmaster ou requisitante.\tn\r\n"
+                 "\tyItens restantes: %d\tn",
+                 info, items_remaining);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_REPUTATION_BUILD quests, add reputation target info */
+    if (QST_TYPE(rnum) == AQ_REPUTATION_BUILD) {
+        int target_reputation = QST_QUANTITY(rnum);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Interaja positivamente, complete tarefas e faça trades\tn\r\n"
+                 "\typara alcançar nível %d de confiança.\tn",
+                 info, target_reputation);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_SHOP_BUY quests, add item type and quantity info */
+    if (QST_TYPE(rnum) == AQ_SHOP_BUY && ch && !IS_NPC(ch)) {
+        int items_remaining = GET_QUEST_COUNTER(ch);
+        obj_vnum item_vnum = QST_RETURNMOB(rnum);
+        const char *item_name = "item desconhecido";
+        obj_rnum item_rnum;
+
+        /* SIGSEGV protection: validate item_rnum before accessing obj_proto array */
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING && item_rnum >= 0 && obj_proto) {
+            item_name = obj_proto[item_rnum].short_description;
+        }
+
+        snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyDICA: Compre %s em lojas. Itens restantes: %d\tn", info,
+                 item_name, items_remaining);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_SHOP_SELL quests, add item type and quantity info */
+    if (QST_TYPE(rnum) == AQ_SHOP_SELL && ch && !IS_NPC(ch)) {
+        int items_remaining = GET_QUEST_COUNTER(ch);
+        obj_vnum item_vnum = QST_RETURNMOB(rnum);
+        const char *item_name = "item desconhecido";
+        obj_rnum item_rnum;
+
+        /* SIGSEGV protection: validate item_rnum before accessing obj_proto array */
+        item_rnum = real_object(item_vnum);
+        if (item_rnum != NOTHING && item_rnum >= 0 && obj_proto) {
+            item_name = obj_proto[item_rnum].short_description;
+        }
+
+        snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyDICA: Venda %s em lojas. Itens restantes: %d\tn", info,
+                 item_name, items_remaining);
         snprintf(buf, bufsize, "%s", temp_buf);
         return buf;
     }
@@ -1040,6 +1158,194 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
         case AQ_MOB_ESCORT:
             /* Escort quest completion is handled separately in check_escort_quest_completion() */
             break;
+        case AQ_EMOTION_IMPROVE:
+            /* Check if player improved specific emotion with target mob */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
+                /* Check if this is the target mob */
+                if (QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                    /* Get the emotion type and target level from quest values */
+                    int emotion_type = QST_RETURNMOB(rnum); /* Reusing RETURNMOB for emotion type */
+                    int target_level = QST_QUANTITY(rnum);  /* Target emotion level */
+
+                    /* Get current emotion level toward player */
+                    int current_level = get_effective_emotion_toward(vict, ch, emotion_type);
+
+                    /* Check if target level reached */
+                    if (current_level >= target_level) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Check if player visited location with sufficient magical density */
+            if (!IS_NPC(ch) && type == AQ_ROOM_FIND) {
+                /* Get current magical density */
+                float current_density = calculate_mana_density(ch);
+                /* Target density threshold stored in value[6] as int (multiplied by 100) */
+                float target_density = QST_QUANTITY(rnum) / 100.0;
+
+                if (current_density >= target_density) {
+                    /* Validate counter before decrement */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        /* Decrement counter for number of locations to visit */
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            generic_complete_quest(ch);
+                        } else {
+                            send_to_char(ch, "Você coletou energia mágica. Ainda precisa visitar %d locais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
+                    } else {
+                        log1("EXPLOIT WARNING: AQ_MAGIC_GATHER counter already at 0 for %s", GET_NAME(ch));
+                    }
+                }
+            }
+            break;
+        case AQ_DELIVERY:
+            /* Check if player traded required item with target mob */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && (ch != vict)) {
+                /* Check if this is the target mob and correct item */
+                if (GET_MOB_VNUM(vict) == QST_TARGET(rnum) && GET_OBJ_VNUM(object) == QST_RETURNMOB(rnum)) {
+                    /* Verify the object is in the NPC's inventory (was traded/given) */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    if (vict->carrying) {
+                        for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                            if (obj_check == object) {
+                                has_object = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (has_object) {
+                        /* Mark item with NOLOCATE to prevent locate object exploit */
+                        SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                        /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                        GET_OBJ_TIMER(object) = -28;
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Player must deliver multiple items to questmaster or requester */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_VNUM(object) == QST_TARGET(rnum)) {
+                /* Check if the object is in the NPC's inventory (was given/traded) */
+                struct obj_data *obj_check;
+                bool has_object = false;
+
+                if (vict->carrying) {
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!has_object) {
+                    /* Object not in NPC's inventory - don't count it */
+                    break;
+                }
+
+                /* Check if giving to questmaster or original requester */
+                if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
+                    /* Given to questmaster - transfer to original requester if different */
+                    mob_rnum original_requester_rnum = real_mobile(QST_RETURNMOB(rnum));
+
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
+
+                    if (original_requester_rnum != NOBODY) {
+                        struct char_data *original_requester = NULL;
+
+                        /* Find the original requester in the world */
+                        for (original_requester = character_list; original_requester;
+                             original_requester = original_requester->next) {
+                            if (IS_NPC(original_requester) &&
+                                GET_MOB_RNUM(original_requester) == original_requester_rnum) {
+                                break;
+                            }
+                        }
+
+                        if (original_requester && original_requester != vict) {
+                            /* Transfer item from questmaster to original requester */
+                            obj_from_char(object);
+                            obj_to_char(object, original_requester);
+
+                            /* Safety check: act() can trigger DG scripts which may extract object or characters */
+                            if (!MOB_FLAGGED(vict, MOB_NOTDEADYET) && !PLR_FLAGGED(vict, PLR_NOTDEADYET) &&
+                                !MOB_FLAGGED(original_requester, MOB_NOTDEADYET) &&
+                                !PLR_FLAGGED(original_requester, PLR_NOTDEADYET) &&
+                                object->carried_by == original_requester) {
+                                act("$n transfere $p para o requisitante.", FALSE, vict, object, NULL, TO_ROOM);
+                            }
+                        }
+                    }
+
+                    /* Count this delivery - validate counter first */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            /* All resources delivered, complete quest */
+                            generic_complete_quest(ch);
+                        } else {
+                            /* Still need more items */
+                            send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
+                    } else {
+                        log1("EXPLOIT WARNING: AQ_RESOURCE_GATHER counter already at 0 for %s", GET_NAME(ch));
+                    }
+                } else if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                    /* Given directly to original requester */
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
+
+                    /* Count this delivery - validate counter first */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            /* All resources delivered, complete quest */
+                            generic_complete_quest(ch);
+                        } else {
+                            /* Still need more items */
+                            send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
+                    } else {
+                        log1("EXPLOIT WARNING: AQ_RESOURCE_GATHER counter already at 0 for %s", GET_NAME(ch));
+                    }
+                }
+            }
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Reputation build quests check reputation level with target mob or zone */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict)) {
+                /* Check if this is the target mob */
+                if (GET_MOB_VNUM(vict) == QST_TARGET(rnum)) {
+                    /* For now, use trust emotion as reputation proxy */
+                    int current_trust = get_effective_emotion_toward(vict, ch, EMOTION_TYPE_TRUST);
+                    int target_reputation = QST_QUANTITY(rnum);
+
+                    if (current_trust >= target_reputation) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_SHOP_BUY:
+            /* Shop buy quests are triggered from shopping_buy() in shop.c */
+            /* Counter decrements there when buying matching items */
+            break;
+        case AQ_SHOP_SELL:
+            /* Shop sell quests are triggered from shopping_sell() in shop.c */
+            /* Counter decrements there when selling matching items */
+            break;
         default:
             log1("SYSERR: Invalid quest type passed to autoquest_trigger_check");
             break;
@@ -1097,22 +1403,34 @@ static void quest_hist(struct char_data *ch)
 {
     int i = 0, counter = 0;
     qst_rnum rnum = NOTHING;
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
 
-    send_to_char(ch,
-                 "Você completou as seguintes buscas:\r\n"
-                 "Num.  Descrição                                            Responsável\r\n"
-                 "----- ---------------------------------------------------- -----------\r\n");
-    for (i = 0; i < GET_NUM_QUESTS(ch); i++) {
-        if ((rnum = real_quest(ch->player_specials->saved.completed_quests[i])) != NOTHING)
-            send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n", ++counter, QST_DESC(rnum),
-                         (real_mobile(QST_MASTER(rnum)) == NOBODY)
-                             ? "Desconhecido"
-                             : GET_NAME(&mob_proto[(real_mobile(QST_MASTER(rnum)))]));
-        else
-            send_to_char(ch, "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n", ++counter);
+    /* Check if player has a descriptor for pagination */
+    if (!ch->desc) {
+        send_to_char(ch, "Você não pode ver o histórico de buscas no momento.\r\n");
+        return;
     }
-    if (!counter)
-        send_to_char(ch, "Você não completou nenhuma busca ainda.\r\n");
+
+    len += snprintf(buf + len, sizeof(buf) - len,
+                    "Você completou as seguintes buscas:\r\n"
+                    "Num.  Descrição                                            Responsável\r\n"
+                    "----- ---------------------------------------------------- -----------\r\n");
+    for (i = 0; i < GET_NUM_QUESTS(ch) && len < sizeof(buf) - 1; i++) {
+        if ((rnum = real_quest(ch->player_specials->saved.completed_quests[i])) != NOTHING)
+            len += snprintf(
+                buf + len, sizeof(buf) - len, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n", ++counter, QST_DESC(rnum),
+                (real_mobile(QST_MASTER(rnum)) == NOBODY) ? "Desconhecido"
+                                                          : GET_NAME(&mob_proto[(real_mobile(QST_MASTER(rnum)))]));
+        else
+            len += snprintf(buf + len, sizeof(buf) - len, "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n",
+                            ++counter);
+    }
+    if (!counter && len < sizeof(buf) - 1)
+        len += snprintf(buf + len, sizeof(buf) - len, "Você não completou nenhuma busca ainda.\r\n");
+
+    /* Use page_string for paginated output */
+    page_string(ch->desc, buf, TRUE);
 }
 
 /* Unified quest finding function - searches both regular and temporary quests */
@@ -1240,14 +1558,22 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     int counter = 0, i;
     int quest_completed, quest_repeatable;
     mob_vnum qm_vnum = GET_MOB_VNUM(qm);
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
 
-    send_to_char(ch,
-                 "A lista de buscas disponiveis:\r\n"
-                 "Num.  Descrição                   Dificuldade Níveis    Feita?\r\n"
-                 "----- ---------------------------- ----------- --------- ------\r\n");
+    /* Check if player has a descriptor for pagination */
+    if (!ch->desc) {
+        send_to_char(ch, "Você não pode ver a lista de buscas no momento.\r\n");
+        return;
+    }
+
+    len += snprintf(buf + len, sizeof(buf) - len,
+                    "A lista de buscas disponiveis:\r\n"
+                    "Num.  Descrição                   Dificuldade Níveis    Feita?\r\n"
+                    "----- ---------------------------- ----------- --------- ------\r\n");
 
     /* First, show regular quests assigned to this questmaster */
-    for (rnum = 0; rnum < total_quests; rnum++) {
+    for (rnum = 0; rnum < total_quests && len < sizeof(buf) - 1; rnum++) {
         if (qm_vnum == QST_MASTER(rnum)) {
             quest_completed = is_complete(ch, QST_NUM(rnum));
             quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
@@ -1262,16 +1588,17 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 if (!is_bounty_target_available(rnum, ch))
                     continue;
 
-                send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
-                             QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
-                             (quest_completed ? "Sim" : "Não "));
+                len += snprintf(buf + len, sizeof(buf) - len,
+                                "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
+                                QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum),
+                                QST_MAXLEVEL(rnum), (quest_completed ? "Sim" : "Não "));
             }
         }
     }
 
     /* Then, show temporary quests if this mob is a temporary questmaster */
-    if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
-        for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+    if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0 && len < sizeof(buf) - 1) {
+        for (i = 0; i < GET_NUM_TEMP_QUESTS(qm) && len < sizeof(buf) - 1; i++) {
             rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
             if (rnum == NOTHING)
                 continue;
@@ -1289,15 +1616,16 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 if (!is_bounty_target_available(rnum, ch))
                     continue;
 
-                send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
-                             QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
-                             (quest_completed ? "Sim" : "Não "));
+                len += snprintf(buf + len, sizeof(buf) - len,
+                                "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
+                                QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum),
+                                QST_MAXLEVEL(rnum), (quest_completed ? "Sim" : "Não "));
             }
         }
     }
 
-    if (!counter) {
-        send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
+    if (!counter && len < sizeof(buf) - 1) {
+        len += snprintf(buf + len, sizeof(buf) - len, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
 
         /* Debug information for immortals */
         if (GET_LEVEL(ch) >= LVL_IMMORT) {
@@ -1315,10 +1643,15 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 total_temp = GET_NUM_TEMP_QUESTS(qm);
             }
 
-            send_to_char(ch, "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n", qm_vnum,
-                         total_regular, total_temp, IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
+            if (len < sizeof(buf) - 1)
+                len += snprintf(buf + len, sizeof(buf) - len,
+                                "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n",
+                                qm_vnum, total_regular, total_temp, IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
         }
     }
+
+    /* Use page_string for paginated output */
+    page_string(ch->desc, buf, TRUE);
 }
 
 /* Unified quest join function - uses unified quest finding */
@@ -1845,10 +2178,45 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
             break;
         case AQ_OBJ_FIND:
         case AQ_ROOM_FIND:
+        case AQ_MOB_FIND:
             capability += GET_GENROAM(mob); /* Exploration quests need roaming */
+            break;
+        case AQ_MOB_SAVE:
+            /* Saving mobs requires bravery (to fight off threats) and compassion */
+            capability += (GET_GENBRAVE(mob) + GET_GENHEALING(mob)) / 2;
+            break;
+        case AQ_OBJ_RETURN:
+        case AQ_DELIVERY:
+            /* Delivery quests need roaming and quest tendency */
+            capability += (GET_GENROAM(mob) + GET_GENQUEST(mob)) / 2;
             break;
         case AQ_ROOM_CLEAR:
             capability += (GET_GENBRAVE(mob) + GET_GENGROUP(mob)) / 2; /* Need both */
+            break;
+        case AQ_MOB_ESCORT:
+            /* Escort quests require bravery (to protect) and group tendency */
+            capability += (GET_GENBRAVE(mob) + GET_GENGROUP(mob)) / 2;
+            break;
+        case AQ_EMOTION_IMPROVE:
+            /* Emotion quests benefit from healing tendency (social skills) */
+            capability += GET_GENHEALING(mob);
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Magic gathering requires adventurer and roaming tendencies */
+            capability += (GET_GENADVENTURER(mob) + GET_GENROAM(mob)) / 2;
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Resource gathering needs loot and quest tendencies */
+            capability += (GET_GENLOOT(mob) + GET_GENQUEST(mob)) / 2;
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Reputation building benefits from trade and healing (social) tendencies */
+            capability += (GET_GENTRADE(mob) + GET_GENHEALING(mob)) / 2;
+            break;
+        case AQ_SHOP_BUY:
+        case AQ_SHOP_SELL:
+            /* Shop quests require trade tendency */
+            capability += GET_GENTRADE(mob);
             break;
     }
 
