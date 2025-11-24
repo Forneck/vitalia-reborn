@@ -1403,8 +1403,8 @@ static void quest_hist(struct char_data *ch)
 {
     int i = 0, counter = 0;
     qst_rnum rnum = NOTHING;
-    char *buf;
-    size_t len = 0, bufsize = MAX_STRING_LENGTH;
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
 
     /* Check if player has a descriptor for pagination */
     if (!ch->desc) {
@@ -1412,25 +1412,22 @@ static void quest_hist(struct char_data *ch)
         return;
     }
 
-    /* Allocate buffer for quest history output */
-    CREATE(buf, char, bufsize);
-
-    len += snprintf(buf + len, bufsize - len,
+    len += snprintf(buf + len, sizeof(buf) - len,
                     "Você completou as seguintes buscas:\r\n"
                     "Num.  Descrição                                            Responsável\r\n"
                     "----- ---------------------------------------------------- -----------\r\n");
     for (i = 0; i < GET_NUM_QUESTS(ch); i++) {
         if ((rnum = real_quest(ch->player_specials->saved.completed_quests[i])) != NOTHING)
             len += snprintf(
-                buf + len, bufsize - len, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n", ++counter, QST_DESC(rnum),
+                buf + len, sizeof(buf) - len, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n", ++counter, QST_DESC(rnum),
                 (real_mobile(QST_MASTER(rnum)) == NOBODY) ? "Desconhecido"
                                                           : GET_NAME(&mob_proto[(real_mobile(QST_MASTER(rnum)))]));
         else
-            len += snprintf(buf + len, bufsize - len, "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n",
+            len += snprintf(buf + len, sizeof(buf) - len, "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n",
                             ++counter);
     }
     if (!counter)
-        len += snprintf(buf + len, bufsize - len, "Você não completou nenhuma busca ainda.\r\n");
+        len += snprintf(buf + len, sizeof(buf) - len, "Você não completou nenhuma busca ainda.\r\n");
 
     /* Use page_string for paginated output */
     page_string(ch->desc, buf, TRUE);
@@ -1561,8 +1558,8 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     int counter = 0, i;
     int quest_completed, quest_repeatable;
     mob_vnum qm_vnum = GET_MOB_VNUM(qm);
-    char *buf;
-    size_t len = 0, bufsize = MAX_STRING_LENGTH;
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
 
     /* Check if player has a descriptor for pagination */
     if (!ch->desc) {
@@ -1570,10 +1567,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
         return;
     }
 
-    /* Allocate buffer for quest list output */
-    CREATE(buf, char, bufsize);
-
-    len += snprintf(buf + len, bufsize - len,
+    len += snprintf(buf + len, sizeof(buf) - len,
                     "A lista de buscas disponiveis:\r\n"
                     "Num.  Descrição                   Dificuldade Níveis    Feita?\r\n"
                     "----- ---------------------------- ----------- --------- ------\r\n");
@@ -1594,7 +1588,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 if (!is_bounty_target_available(rnum, ch))
                     continue;
 
-                len += snprintf(buf + len, bufsize - len,
+                len += snprintf(buf + len, sizeof(buf) - len,
                                 "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                                 QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum),
                                 QST_MAXLEVEL(rnum), (quest_completed ? "Sim" : "Não "));
@@ -1622,7 +1616,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 if (!is_bounty_target_available(rnum, ch))
                     continue;
 
-                len += snprintf(buf + len, bufsize - len,
+                len += snprintf(buf + len, sizeof(buf) - len,
                                 "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                                 QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum),
                                 QST_MAXLEVEL(rnum), (quest_completed ? "Sim" : "Não "));
@@ -1631,7 +1625,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     }
 
     if (!counter) {
-        len += snprintf(buf + len, bufsize - len, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
+        len += snprintf(buf + len, sizeof(buf) - len, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
 
         /* Debug information for immortals */
         if (GET_LEVEL(ch) >= LVL_IMMORT) {
@@ -1649,7 +1643,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 total_temp = GET_NUM_TEMP_QUESTS(qm);
             }
 
-            len += snprintf(buf + len, bufsize - len,
+            len += snprintf(buf + len, sizeof(buf) - len,
                             "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n", qm_vnum,
                             total_regular, total_temp, IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
         }
