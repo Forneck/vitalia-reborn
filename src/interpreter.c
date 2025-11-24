@@ -694,7 +694,7 @@ ACMD(do_alias)
             }
 
             len += snprintf(buf + len, sizeof(buf) - len, "\tWAtalhos definidos:\tn\r\n");
-            while (a != NULL) {
+            while (a != NULL && len < sizeof(buf) - 1) {
                 len += snprintf(buf + len, sizeof(buf) - len, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
                 a = a->next;
             }

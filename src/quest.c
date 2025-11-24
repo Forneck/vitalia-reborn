@@ -1416,7 +1416,7 @@ static void quest_hist(struct char_data *ch)
                     "Você completou as seguintes buscas:\r\n"
                     "Num.  Descrição                                            Responsável\r\n"
                     "----- ---------------------------------------------------- -----------\r\n");
-    for (i = 0; i < GET_NUM_QUESTS(ch); i++) {
+    for (i = 0; i < GET_NUM_QUESTS(ch) && len < sizeof(buf) - 1; i++) {
         if ((rnum = real_quest(ch->player_specials->saved.completed_quests[i])) != NOTHING)
             len += snprintf(
                 buf + len, sizeof(buf) - len, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n", ++counter, QST_DESC(rnum),
@@ -1426,7 +1426,7 @@ static void quest_hist(struct char_data *ch)
             len += snprintf(buf + len, sizeof(buf) - len, "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n",
                             ++counter);
     }
-    if (!counter)
+    if (!counter && len < sizeof(buf) - 1)
         len += snprintf(buf + len, sizeof(buf) - len, "Você não completou nenhuma busca ainda.\r\n");
 
     /* Use page_string for paginated output */
@@ -1573,7 +1573,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                     "----- ---------------------------- ----------- --------- ------\r\n");
 
     /* First, show regular quests assigned to this questmaster */
-    for (rnum = 0; rnum < total_quests; rnum++) {
+    for (rnum = 0; rnum < total_quests && len < sizeof(buf) - 1; rnum++) {
         if (qm_vnum == QST_MASTER(rnum)) {
             quest_completed = is_complete(ch, QST_NUM(rnum));
             quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
@@ -1597,8 +1597,8 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     }
 
     /* Then, show temporary quests if this mob is a temporary questmaster */
-    if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
-        for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+    if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0 && len < sizeof(buf) - 1) {
+        for (i = 0; i < GET_NUM_TEMP_QUESTS(qm) && len < sizeof(buf) - 1; i++) {
             rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
             if (rnum == NOTHING)
                 continue;
@@ -1624,7 +1624,7 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
         }
     }
 
-    if (!counter) {
+    if (!counter && len < sizeof(buf) - 1) {
         len += snprintf(buf + len, sizeof(buf) - len, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
 
         /* Debug information for immortals */
@@ -1643,9 +1643,10 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 total_temp = GET_NUM_TEMP_QUESTS(qm);
             }
 
-            len += snprintf(buf + len, sizeof(buf) - len,
-                            "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n", qm_vnum,
-                            total_regular, total_temp, IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
+            if (len < sizeof(buf) - 1)
+                len += snprintf(buf + len, sizeof(buf) - len,
+                                "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n",
+                                qm_vnum, total_regular, total_temp, IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
         }
     }
 
