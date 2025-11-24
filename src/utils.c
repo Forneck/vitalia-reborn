@@ -2363,7 +2363,7 @@ int count_mob_posted_quests(void)
  */
 bool can_add_mob_posted_quest(void)
 {
-    const int MAX_MOB_POSTED_QUESTS = 150;
+    const int MAX_MOB_POSTED_QUESTS = 450;
     return (count_mob_posted_quests() < MAX_MOB_POSTED_QUESTS);
 }
 
