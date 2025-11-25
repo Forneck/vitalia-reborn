@@ -746,7 +746,9 @@ ACMD(do_combo)
         if (IN_ROOM(ch) != IN_ROOM(vict))
             break;
     }
+    /*improve*/
     improve = GET_SKILL(ch, SKILL_COMBO_ATTACK) + 1;
+
     SET_SKILL(ch, SKILL_COMBO_ATTACK, MIN(100,improve));
     WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
 }
