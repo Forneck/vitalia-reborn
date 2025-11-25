@@ -633,14 +633,14 @@ ACMD(do_bash)
          * we only set them sitting if they didn't flee. -gg 9/21/98
          */
         if (damage(ch, vict, 1, SKILL_BASH) > 0) { /* -1 = dead, 0 = miss */
-            WAIT_STATE(vict, PULSE_VIOLENCE * 2);
+            WAIT_STATE(vict, PULSE_VIOLENCE * 3);
             if (IN_ROOM(ch) == IN_ROOM(vict))
                 GET_POS(vict) = POS_SITTING;
         }
     }
 
     if (GET_LEVEL(ch) < LVL_GOD)
-        WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+        WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 }
 
 /*
@@ -742,7 +742,8 @@ ACMD(do_combo)
         if (IN_ROOM(ch) != IN_ROOM(vict))
             break;
     }
-
+    
+    SET_SKILL(ch, SKILL_COMBO, GET_SKILL(ch)++);
     WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
 }
 
@@ -993,7 +994,8 @@ ACMD(do_bandage)
     char arg[MAX_INPUT_LENGTH];
     struct char_data *vict;
     int percent, prob;
-    if (!GET_SKILL(ch, SKILL_BANDAGE)) {
+    
+    if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BANDAGE)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
         return;
     }
@@ -1022,7 +1024,12 @@ ACMD(do_bandage)
 
     WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     percent = rand_number(1, 101); /* 101% is a complete failure */
-    prob = GET_SKILL(ch, SKILL_BANDAGE);
+    if (!IS_NPC(ch)) {
+	prob = GET_SKILL(ch, SKILL_BANDAGE);
+    }
+    else {
+        prob = GET_LEVEL(ch);
+    }
     if (percent > prob) {
         act("A sua tentativa de estabilizar a condição de $N falha.", FALSE, ch, 0, vict, TO_CHAR);
         act("$n tenta estabilizar a condição de $N mas falha miseravelmente.", TRUE, ch, 0, vict, TO_NOTVICT);
@@ -1076,26 +1083,26 @@ ACMD(do_trip)
     }
 
     percent = rand_number(1, 101); /* 101% is a complete failure */
-    prob = GET_SKILL(ch, SKILL_TRIP);
+    prob = GET_SKILL(ch, SKILL_TRIP) + dex_app[GET_DEX(ch)].reaction;
 
     if (MOB_FLAGGED(vict, MOB_NOBASH) || MOB_FLAGGED(vict, MOB_MOUNTABLE) || MOB_FLAGGED(vict, MOB_CAN_FLY))
         percent = 101;
 
     if (percent > prob) {
         damage(ch, vict, 0, SKILL_TRIP);
-        if (damage(ch, ch, 2, TYPE_UNDEFINED) > 0 && (GET_LEVEL(ch) < LVL_GOD)) {
+        if (GET_LEVEL(ch) < LVL_GOD) {
             GET_POS(ch) = POS_SITTING;
             GET_WAIT_STATE(ch) += 3 * PULSE_VIOLENCE;
         }
     } else {
         if (damage(ch, vict, 2, SKILL_TRIP) > 0) {   // -1 = dead, 0 = miss
-            GET_WAIT_STATE(vict) += 2 * PULSE_VIOLENCE;
+            GET_WAIT_STATE(vict) += 3 * PULSE_VIOLENCE;
             if (IN_ROOM(ch) == IN_ROOM(vict))
                 GET_POS(vict) = POS_SITTING;
         }
 
         if (GET_LEVEL(ch) < LVL_GOD)
-            GET_WAIT_STATE(ch) += 4 * PULSE_VIOLENCE;
+            GET_WAIT_STATE(ch) += 3 * PULSE_VIOLENCE;
     }
 }
 
@@ -1266,7 +1273,7 @@ ACMD(do_shoot)
 
     /* Apply bow accuracy bonus as percentage (val0 ranges 0-100) */
     /* This provides a percentage-based accuracy bonus to the base skill */
-    prob = prob + (prob * GET_OBJ_VAL(fireweapon, 0) / 100);
+    prob = prob + (prob * GET_OBJ_VAL(fireweapon, 0) / 100) + dex_app[GET_DEX(ch)].miss_att;
 
     /* Cap probability at 95 to prevent guaranteed hits */
     prob = MIN(prob, 95);

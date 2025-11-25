@@ -1591,7 +1591,7 @@ struct dex_skill_type {
 };
 
 /** Describes the bonuses applied for a specific value of a character's
- * strength attribute. */
+ * dexterity attribute. */
 struct dex_app_type {
     sh_int reaction;  /**< Historically affects reaction savings throws. */
     sh_int miss_att;  /**< Historically affects missile attacks */

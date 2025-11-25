@@ -228,7 +228,7 @@ bitvector_t find_class_bitvector(const char *arg)
 
 int prac_params[4][NUM_CLASSES] = {
     /* MAG CLE THE WAR DRU BAR RAN */
-    {95, 95, 85, 80, 95, 85, 90},                        /* learned level */
+    {95, 95, 85, 85, 95, 85, 90},                        /* learned level */
     {90, 90, 12, 12, 90, 28, 30},                        /* max per practice */
     {25, 25, 0, 0, 25, 14, 10},                          /* min per practice */
     {SPELL, SPELL, SKILL, SKILL, SPELL, CHANSON, SKILL}, /* prac name */
