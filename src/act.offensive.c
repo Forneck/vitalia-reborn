@@ -27,6 +27,8 @@
 #include "spedit.h"
 #include "formula.h"
 
+#define LEARNED(ch) (prac_params[LEARNED_LEVEL][(int)GET_CLASS(ch)])
+
 ACMD(do_assist)
 {
     char arg[MAX_INPUT_LENGTH];
@@ -656,7 +658,9 @@ ACMD(do_combo)
     struct char_data *vict;
     struct obj_data *weapon;
     int perc, prob, hits, basedam, dam, i;
+    int improve;
 
+    improve = 0;
     one_argument(argument, arg);
 
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_COMBO_ATTACK)) {
@@ -742,8 +746,8 @@ ACMD(do_combo)
         if (IN_ROOM(ch) != IN_ROOM(vict))
             break;
     }
-    
-    SET_SKILL(ch, SKILL_COMBO, GET_SKILL(ch)++);
+    improve = GET_SKILL(ch, SKILL_COMBO_ATTACK) + 1;
+    SET_SKILL(ch, SKILL_COMBO_ATTACK, MIN(100,improve));
     WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
 }
 
@@ -1225,7 +1229,11 @@ ACMD(do_shoot)
         send_to_char(ch, "Atirar em quem?\r\n");
         return;
     }
-    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_BOWS)) {
+    if (!CONFIG_PK_ALLOWED && !IS_NPC(vict)) {                                                  /* prevent accidental pkill */
+        act("Use 'murder' se voce realmente deseja atacar $L.", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    }
+    if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BOWS)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
         return;
     } else if (IS_AFFECTED(ch, AFF_BLIND)) {
