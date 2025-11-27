@@ -1638,11 +1638,11 @@ ACMD(do_affects)
             continue;
 
         /* Skip if this spell was already displayed */
-        if (IS_SET(displayed_spells[Q_FIELD(aff->spell)], Q_BIT(aff->spell)))
+        if (IS_SET_AR(displayed_spells, aff->spell))
             continue;
 
         /* Mark this spell as displayed */
-        SET_BIT(displayed_spells[Q_FIELD(aff->spell)], Q_BIT(aff->spell));
+        SET_BIT_AR(displayed_spells, aff->spell);
 
         /* Find the maximum duration among all affects from the same spell.
          * This handles spells with multiple applies that may have different durations. */
