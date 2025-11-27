@@ -307,13 +307,13 @@
 #define PRF_ZONERESETS 34
 #define PRF_HITBAR 35
 #define PRF_AUTOTITLE 36
-#define PRF_NOCLAN 37     /**< Can't hear gossip channel */
-#define PRF_MCCP 38       /**< Auto MCCP compression (MCCP3 > MCCP2) */
-#define PRF_AUTOSIZE 39   /**< Auto NAWS terminal size configuration */
-#define PRF_VERBOSE 40    /**< Listings like where are more verbose */
-#define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
-#define PRF_DISPEMOTE 42  /**< Display mob emotion indicators in room descriptions */
-#define PRF_AUTOEXAM 43   /**< Automatically examine corpses after killing */
+#define PRF_NOCLAN 37       /**< Can't hear gossip channel */
+#define PRF_MCCP 38         /**< Auto MCCP compression (MCCP3 > MCCP2) */
+#define PRF_AUTOSIZE 39     /**< Auto NAWS terminal size configuration */
+#define PRF_VERBOSE 40      /**< Listings like where are more verbose */
+#define PRF_VIEWDAMAGE 41   /**< Display damage values after attack messages */
+#define PRF_DISPEMOTE 42    /**< Display mob emotion indicators in room descriptions */
+#define PRF_AUTOEXAM 43     /**< Automatically examine corpses after killing */
 #define PRF_HOUSE_ALTINV 44 /**< Alternate house inventory display */
 
 /** Total number of available PRF flags */
@@ -357,9 +357,25 @@
 #define AFF_GLOOMSHIELD 33
 #define AFF_PROTECT 34 /**< Char protected from spell */
 #define AFF_WINDWALL 35
+/* Aura shield affect flags for elemental damage reflection */
+#define AFF_WATERSHIELD 36     /**< Water aura - damage reflection */
+#define AFF_ROCKSHIELD 37      /**< Rock/Earth aura - damage reflection */
+#define AFF_POISONSHIELD 38    /**< Poison aura - damage reflection */
+#define AFF_LIGHTNINGSHIELD 39 /**< Lightning aura - damage reflection */
+#define AFF_ICESHIELD 40       /**< Ice/Cold aura - damage reflection */
+#define AFF_ACIDSHIELD 41      /**< Acid aura - damage reflection */
+#define AFF_MINDSHIELD 42      /**< Mental aura - damage reflection */
+#define AFF_FORCESHIELD 43     /**< Physical/Force aura - damage reflection */
+/* Elemental debuff affect flags from aura special effects */
+#define AFF_BURNING 44   /**< On fire - takes fire damage over time */
+#define AFF_SOAKED 45    /**< Wet/Soaked - reduced dexterity */
+#define AFF_CHILLED 46   /**< Chilled by ice - reduced hitroll and movement */
+#define AFF_CORRODED 47  /**< Corroded by acid - reduced AC */
+#define AFF_CONFUSED 48  /**< Mentally confused - reduced wisdom */
+#define AFF_STAGGERED 49 /**< Knocked off balance - reduced movement */
 
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS 36
+#define NUM_AFF_FLAGS 50
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING 0       /**< Playing - Nominal state 		*/

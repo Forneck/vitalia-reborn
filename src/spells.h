@@ -47,7 +47,8 @@
 #define MAG_ACCDUR (1 << 13)
 #define MAG_ACCMOD (1 << 14)
 #define MAG_PROTECTION (1 << 15)
-#define NUM_MAG 16
+#define MAG_AURA (1 << 16) /* Aura spells with damage reflection */
+#define NUM_MAG 17
 
 #define TYPE_UNDEFINED (-1)
 #define SPELL_RESERVED_DBC 0 /* SKILL NUMBER ZERO -- RESERVED */
@@ -151,9 +152,18 @@
 #define SPELL_BLESS_OBJECT 97
 /* To make an affect induced by dg_affect look correct on 'stat' we need to define it with a 'spellname'. */
 #define SPELL_DG_AFFECT 98
+/* Aura shield spell variants - elemental damage reflection */
+#define SPELL_WATERSHIELD 99      /* Water/Aqua aegis */
+#define SPELL_ROCKSHIELD 100      /* Earth/Petra aegis */
+#define SPELL_POISONSHIELD 101    /* Poison/Venenum aegis */
+#define SPELL_LIGHTNINGSHIELD 102 /* Lightning/Diesilla aegis */
+#define SPELL_ICESHIELD 103       /* Ice/Cold aegis */
+#define SPELL_ACIDSHIELD 104      /* Acid aegis */
+#define SPELL_MINDSHIELD 105      /* Mental aegis */
+#define SPELL_FORCESHIELD 106     /* Physical/Force aegis */
 
 /** Total Number of defined spells */
-#define NUM_SPELLS 98
+#define NUM_SPELLS 106
 
 /* Insert new spells here, up to MAX_SPELLS */
 #define MAX_SPELLS 160

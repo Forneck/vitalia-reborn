@@ -478,7 +478,7 @@ void mob_emotion_activity(void)
                 struct char_data *potential_love_target;
                 struct char_data *best_love_target = NULL;
                 int highest_love = 0;
-                
+
                 /* Find the player the mob loves most using hybrid emotion system */
                 for (potential_love_target = world[IN_ROOM(ch)].people; potential_love_target;
                      potential_love_target = potential_love_target->next_in_room) {
@@ -492,12 +492,13 @@ void mob_emotion_activity(void)
 
                     /* Check effective love toward this specific player */
                     int effective_love = get_effective_emotion_toward(ch, potential_love_target, EMOTION_TYPE_LOVE);
-                    if (effective_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD && effective_love > highest_love) {
+                    if (effective_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD &&
+                        effective_love > highest_love) {
                         highest_love = effective_love;
                         best_love_target = potential_love_target;
                     }
                 }
-                
+
                 /* Follow the most loved player if found */
                 if (best_love_target) {
                     add_follower(ch, best_love_target);
@@ -3709,6 +3710,30 @@ bool mob_handle_item_usage(struct char_data *ch)
                 } else if (skillnum == SPELL_SOUNDBARRIER && !IS_AFFECTED(ch, AFF_SOUNDBARRIER)) {
                     current_score = 110;
                     target_char = ch;
+                } else if (skillnum == SPELL_WATERSHIELD && !IS_AFFECTED(ch, AFF_WATERSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ROCKSHIELD && !IS_AFFECTED(ch, AFF_ROCKSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_POISONSHIELD && !IS_AFFECTED(ch, AFF_POISONSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_LIGHTNINGSHIELD && !IS_AFFECTED(ch, AFF_LIGHTNINGSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ICESHIELD && !IS_AFFECTED(ch, AFF_ICESHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ACIDSHIELD && !IS_AFFECTED(ch, AFF_ACIDSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_MINDSHIELD && !IS_AFFECTED(ch, AFF_MINDSHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
+                } else if (skillnum == SPELL_FORCESHIELD && !IS_AFFECTED(ch, AFF_FORCESHIELD)) {
+                    current_score = 115;
+                    target_char = ch;
                 }
 
                 // PRIORIDADE 6: Buffs de combate
@@ -3803,6 +3828,30 @@ bool mob_handle_item_usage(struct char_data *ch)
                     target_char = ch;
                 } else if (skillnum == SPELL_SOUNDBARRIER && !IS_AFFECTED(ch, AFF_SOUNDBARRIER)) {
                     current_score = 120;
+                    target_char = ch;
+                } else if (skillnum == SPELL_WATERSHIELD && !IS_AFFECTED(ch, AFF_WATERSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ROCKSHIELD && !IS_AFFECTED(ch, AFF_ROCKSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_POISONSHIELD && !IS_AFFECTED(ch, AFF_POISONSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_LIGHTNINGSHIELD && !IS_AFFECTED(ch, AFF_LIGHTNINGSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ICESHIELD && !IS_AFFECTED(ch, AFF_ICESHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_ACIDSHIELD && !IS_AFFECTED(ch, AFF_ACIDSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_MINDSHIELD && !IS_AFFECTED(ch, AFF_MINDSHIELD)) {
+                    current_score = 125;
+                    target_char = ch;
+                } else if (skillnum == SPELL_FORCESHIELD && !IS_AFFECTED(ch, AFF_FORCESHIELD)) {
+                    current_score = 125;
                     target_char = ch;
                 }
 
