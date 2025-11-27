@@ -1620,7 +1620,7 @@ ACMD(do_affects)
     char duration_buf[128];
     int has_spell_affects = 0;
     int has_item_affects = 0;
-    int displayed_spells[TOP_SPELL_DEFINE / 32 + 1]; /* Bitmask to track displayed spells */
+    int displayed_spells[Q_FIELD(TOP_SPELL_DEFINE) + 1]; /* Bitmask to track displayed spells */
     int max_duration;
 
     if (IS_NPC(ch))
@@ -1633,15 +1633,19 @@ ACMD(do_affects)
     send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
 
     for (aff = ch->affected; aff; aff = aff->next) {
-        /* Skip if this spell was already displayed */
-        if (aff->spell > 0 && aff->spell < TOP_SPELL_DEFINE) {
-            if (IS_SET(displayed_spells[aff->spell / 32], 1 << (aff->spell % 32)))
-                continue;
-            /* Mark this spell as displayed */
-            SET_BIT(displayed_spells[aff->spell / 32], 1 << (aff->spell % 32));
-        }
+        /* Skip reserved spell 0 and out-of-range spells */
+        if (aff->spell <= 0 || aff->spell >= TOP_SPELL_DEFINE)
+            continue;
 
-        /* Find the maximum duration among all affects from the same spell */
+        /* Skip if this spell was already displayed */
+        if (IS_SET(displayed_spells[Q_FIELD(aff->spell)], Q_BIT(aff->spell)))
+            continue;
+
+        /* Mark this spell as displayed */
+        SET_BIT(displayed_spells[Q_FIELD(aff->spell)], Q_BIT(aff->spell));
+
+        /* Find the maximum duration among all affects from the same spell.
+         * This handles spells with multiple applies that may have different durations. */
         max_duration = aff->duration;
         for (aff2 = aff->next; aff2; aff2 = aff2->next) {
             if (aff2->spell == aff->spell && aff2->duration > max_duration)
