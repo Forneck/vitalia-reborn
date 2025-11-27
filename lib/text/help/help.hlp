@@ -16553,6 +16553,207 @@ evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
 #1
+MAGIA-WATERSHIELD AQUAAEGIS
+
+Uso        : cast 'watershield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 35
+
+Uma fluida aura azul envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: A agua da aura tem chance de encharcar o atacante, reduzindo
+sua Destreza em 2 pontos temporariamente. Atacantes ja encharcados nao sofrem
+este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa (Fireshield, Thistlecoat,
+Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
+essas mesmas protecoes, evitando loops infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "aquaaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, EXPERIMENT
+#1
+MAGIA-ROCKSHIELD SAXUMAEGIS
+
+Uso        : cast 'rockshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 38
+
+Uma solida aura marrom envolve o alvo, proporcionando forte protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 6 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O impacto contra a aura de pedra tem chance de danificar a
+armadura do atacante, piorando seu AC em 10 pontos temporariamente.
+Atacantes ja atordoados nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "saxumaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-WATERSHIELD, EXPERIMENT
+#1
+MAGIA-POISONSHIELD VENENUMAEGIS
+
+Uso        : cast 'poisonshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 33
+
+Uma toxica aura verde envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O veneno da aura tem chance de contaminar o atacante,
+aplicando o efeito de veneno que reduz a Forca em 2 pontos. Atacantes ja
+envenenados nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "venenumaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-POISON, EXPERIMENT
+#1
+MAGIA-LIGHTNINGSHIELD DIESILLAAEGIS
+
+Uso        : cast 'lightningshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 36
+
+Uma eletrica aura amarela envolve o alvo, proporcionando protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O choque eletrico da aura tem chance de paralisar o atacante
+momentaneamente por 1 hora de jogo. Atacantes ja paralisados nao sofrem este
+efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "diesillaaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-LIGHTNING-BOLT, EXPERIMENT
+#1
+MAGIA-ICESHIELD UQOAEGIS
+
+Uso        : cast 'iceshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 34
+
+Uma gelida aura branca envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O gelo da aura tem chance de enregelar os movimentos do
+atacante, reduzindo seu Hitroll em 3 pontos temporariamente. Atacantes ja
+resfriados nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "uqoaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-CHILL-TOUCH, EXPERIMENT
+#1
+MAGIA-ACIDSHIELD IQUMAEGIS
+
+Uso        : cast 'acidshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 37
+
+Uma corrosiva aura esverdeada envolve o alvo, proporcionando protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O acido da aura tem chance de corroer a armadura do atacante,
+piorando seu AC em 15 pontos temporariamente. Atacantes com armadura ja
+corroida nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "iqumaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, EXPERIMENT
+#1
+MAGIA-MINDSHIELD WUBMAEGIS
+
+Uso        : cast 'mindshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 39
+
+Uma eterea aura violeta envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: A aura mental tem chance de confundir a mente do atacante,
+reduzindo sua Sabedoria em 3 pontos temporariamente. Atacantes ja confusos
+nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "wubmaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SLEEP, EXPERIMENT
+#1
+MAGIA-FORCESHIELD YAFQOAEGIS
+
+Uso        : cast 'forceshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Nivel      : Mago Nivel 40
+
+Uma translucida aura de forca envolve o alvo, proporcionando forte protecao
+contra ataques fisicos. Todo dano causado no alvo sera parcialmente
+redirecionado para o atacante. Se o atacante passar em um teste de
+resistencia, sofrera metade do dano. O AC tambem melhora em 5 pontos
+enquanto durar a magia.
+
+EFEITO ESPECIAL: A forca da aura tem chance de empurrar o atacante para tras,
+reduzindo seu movimento em 20 pontos temporariamente. Atacantes ja atordoados
+nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
+silaba "yafqoaegis" se voce conhece Fireshield.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SANCTUARY, EXPERIMENT
+#1
 MAGIA-CLONE
 
 Uso        : cast 'clone'
