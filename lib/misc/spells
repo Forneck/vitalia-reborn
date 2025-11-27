@@ -1684,7 +1684,7 @@
 13 Uma fluida aura azul envolve $N.
 80 17 -4
 99 self.level
-81 60 
+81 61 
 99 self.level
 90 0 35 
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
@@ -1700,7 +1700,7 @@
 13 Uma sólida aura marrom envolve $N.
 80 17 -6
 99 self.level
-81 61 
+81 62 
 99 self.level
 90 0 38 
 99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
@@ -1716,7 +1716,7 @@
 13 Uma tóxica aura verde envolve $N.
 80 17 -3
 99 self.level
-81 62 
+81 63 
 99 self.level
 90 0 33 
 99 (140 - (10 * self.level)) > 90 ? (140 - (10 * self.level)) : 90
@@ -1732,7 +1732,7 @@
 13 Uma elétrica aura amarela envolve $N.
 80 17 -4
 99 self.level
-81 63 
+81 64 
 99 self.level
 90 0 36 
 99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
@@ -1748,7 +1748,7 @@
 13 Uma gélida aura branca envolve $N.
 80 17 -4
 99 self.level
-81 64 
+81 65 
 99 self.level
 90 0 34 
 99 (145 - (10 * self.level)) > 95 ? (145 - (10 * self.level)) : 95
@@ -1764,7 +1764,7 @@
 13 Uma corrosiva aura esverdeada envolve $N.
 80 17 -4
 99 self.level
-81 65 
+81 66 
 99 self.level
 90 0 37 
 99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
@@ -1780,7 +1780,7 @@
 13 Uma etérea aura violeta envolve $N.
 80 17 -3
 99 self.level
-81 66 
+81 67 
 99 self.level
 90 0 39 
 99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
@@ -1796,7 +1796,7 @@
 13 Uma translúcida aura de força envolve $N.
 80 17 -5
 99 self.level
-81 67 
+81 68 
 99 self.level
 90 0 40 
 99 (165 - (10 * self.level)) > 115 ? (165 - (10 * self.level)) : 115

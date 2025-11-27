@@ -1465,10 +1465,26 @@ ACMD(do_score)
         send_to_char(ch, "Você está protegid%s pelo Santuario.\r\n", OA(ch));
     else if (AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
         send_to_char(ch, "Você está protegid%s por um espesso escudo de trevas!.\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_FIRESHIELD))
+    if (AFF_FLAGGED(ch, AFF_FIRESHIELD) || affected_by_spell(ch, SPELL_FIRESHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura de fogo!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_WINDWALL))
+    if (AFF_FLAGGED(ch, AFF_WINDWALL) || affected_by_spell(ch, SPELL_WINDWALL))
         send_to_char(ch, "Você está protegid%s por uma parede de vento!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_WATERSHIELD) || affected_by_spell(ch, SPELL_WATERSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de água!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD) || affected_by_spell(ch, SPELL_ROCKSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de pedra!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_POISONSHIELD) || affected_by_spell(ch, SPELL_POISONSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura venenosa!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD) || affected_by_spell(ch, SPELL_LIGHTNINGSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura elétrica!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ICESHIELD) || affected_by_spell(ch, SPELL_ICESHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura gélida!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD) || affected_by_spell(ch, SPELL_ACIDSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura ácida!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_MINDSHIELD) || affected_by_spell(ch, SPELL_MINDSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura mental!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_FORCESHIELD) || affected_by_spell(ch, SPELL_FORCESHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de força!\r\n", OA(ch));
 
     if (AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
         send_to_char(ch, "Você se sente protegid%s contra seres bons.\r\n", OA(ch));
@@ -1551,19 +1567,43 @@ ACMD(do_score)
 
 ACMD(do_affects)
 {
-    struct affected_type *aff;
+    struct affected_type *aff, *aff2;
     char duration_buf[128];
     int has_spell_affects = 0;
     int has_item_affects = 0;
+    int displayed_spells[Q_FIELD(TOP_SPELL_DEFINE) + 1]; /* Bitmask to track displayed spells */
+    int max_duration;
 
     if (IS_NPC(ch))
         return;
+
+    /* Initialize the displayed spells bitmask */
+    memset(displayed_spells, 0, sizeof(displayed_spells));
 
     /* 1) Efeitos vindos de magias (lista de affects do char) */
     send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
 
     for (aff = ch->affected; aff; aff = aff->next) {
-        if (aff->duration == -1) {
+        /* Skip reserved spell 0 and out-of-range spells */
+        if (aff->spell <= 0 || aff->spell >= TOP_SPELL_DEFINE)
+            continue;
+
+        /* Skip if this spell was already displayed */
+        if (IS_SET_AR(displayed_spells, aff->spell))
+            continue;
+
+        /* Mark this spell as displayed */
+        SET_BIT_AR(displayed_spells, aff->spell);
+
+        /* Find the maximum duration among all affects from the same spell.
+         * This handles spells with multiple applies that may have different durations. */
+        max_duration = aff->duration;
+        for (aff2 = aff->next; aff2; aff2 = aff2->next) {
+            if (aff2->spell == aff->spell && aff2->duration > max_duration)
+                max_duration = aff2->duration;
+        }
+
+        if (max_duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
             snprintf(duration_buf, sizeof(duration_buf), "%d h%s",
