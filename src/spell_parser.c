@@ -78,6 +78,7 @@ static struct syllable syls[] = {{" ", " "},
                                  {"steel", "ferrum"},
                                  {"ball", "globus"},
                                  {"heal", "sanitas"},
+                                 {"aid", "auxilium"},
                                  {"harm", "nocere"},
                                  {"cure", "medere"},
                                  {"poison", "venenum"},
@@ -1084,8 +1085,8 @@ ACMD(do_cast)
         return;
     }
 
-    // only spell cost mana
-    if ((spell->type == SPELL) && (GET_LEVEL(ch) < LVL_IMMORT)) {
+    // spells and chansons cost mana
+    if (((spell->type == SPELL) || (spell->type == CHANSON)) && (GET_LEVEL(ch) < LVL_IMMORT)) {
         mana = mag_manacost(ch, tch, spell->vnum);
         if (GET_MANA(ch) < mana) {
             send_to_char(ch, "Você não tem energia para %s!\r\n",

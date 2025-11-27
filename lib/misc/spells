@@ -236,7 +236,7 @@
  4 100
 55 1
 56 9
- 1 P 23 1 1 4224 8 300
+ 1 P 23 1 1 4225 8 300
  2 earthquake
  3 dice(2, 10) + param
 11 Você gesticula e a terra toda começa a tremer em a sua volta!
@@ -589,7 +589,7 @@
  4 100
  1 P 56 1 18 4097 8 600
  2 disintegrate
- 3 dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180
+ 3 dice(3, self.class == 0 ? 8 : 6) + (self.class == 0 ? 195 : 180)
 90 0 85 
 99 (90 - (10 * self.level)) > 50 ? (90 - (10 * self.level)) : 5
  4 100
@@ -748,7 +748,7 @@
 56 4
  1 P 71 1 18 4097 8 100
  2 burst of flame
- 3 dice(3, self.class == 4 ? 5 : 3) + self.class == 4 ? 6 : 4
+ 3 dice(3, self.class == 4 ? 5 : 3) + (self.class == 4 ? 6 : 4)
 90 4 1 
 99 (20 - (3 * self.level)) > 10 ? (20 - (3 * self.level)) : 20
  4 100
@@ -756,7 +756,7 @@
 56 1
  1 P 72 1 18 4097 8 100
  2 burst of fire
- 3 dice(3, self.class == 4 ? 7 : 5) + self.class == 4 ? 9 : 6
+ 3 dice(3, self.class == 4 ? 7 : 5) + (self.class == 4 ? 9 : 6)
 90 4 5 
 99 (25 - (3 * self.level)) > 15 ? (25 - (3 * self.level)) : 25
  4 100
@@ -764,7 +764,7 @@
 56 1
  1 P 73 1 18 4097 8 100
  2 ignite
- 3 dice(3, self.class == 4 ? 9 : 3) + self.class == 4 ? 13 : 9
+ 3 dice(3, self.class == 4 ? 9 : 3) + (self.class == 4 ? 13 : 9)
 90 4 9 
 99 (30 - (3 * self.level)) > 20 ? (30 - (3 * self.level)) : 20
  4 100
@@ -824,7 +824,7 @@
  4 100
 55 2
 56 4
- 1 P 79 1 1 4224 8 100
+ 1 P 79 1 1 4225 8 100
  2 cascade of hail
  3 12+rand(8)
 90 4 17 
@@ -905,7 +905,7 @@
  4 100
 55 3
 56 2
- 1 P 89 1 1 4224 8 100
+ 1 P 89 1 1 4225 8 100
  2 voice explosion
  3 dice(3,6) + param
 11 Com sua voz você emite um som de extrema violência, ferindo tudo que $r cerca!
@@ -1047,7 +1047,7 @@
  4 100
 55 5
 56 11
- 1 C 164 1 1 4224 8 300
+ 1 C 164 1 1 4225 8 300
  2 tremor
  3 dice(3, 7) + param
 11 Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!
@@ -1066,7 +1066,7 @@
 99 (50 - (4 * self.level)) > 13 ? (50 - (4 * self.level)) : 13
  4 100
 55 3
- 1 C 166 1 18 4097 8 0
+ 1 C 166 1 18 4097 8 100
  2 o grito da morte
  3 dice(9,9) + 20
 11 Morte, o Ceifeiro Cruel responde ao seu chamado causando dano a $N!

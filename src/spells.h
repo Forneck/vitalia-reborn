@@ -234,7 +234,29 @@
 #define SPELL_ACID_BREATH 305
 #define SPELL_LIGHTNING_BREATH 306
 #define SPELL_YOUTH 307
-#define SPELL_FIRESTORM 308 /* -- jr - Apr 08, 2001	 */
+#define SPELL_SHIELD 308          /* Shield spell - evoke spells chain */
+#define SPELL_MANA_CONTROL 309    /* Mana control for evoke spells */
+#define SPELL_EVOKE_FIDO 310      /* Evoke fido creature */
+#define SPELL_ODIF_EKOVE 311      /* Reverse evoke fido */
+#define SPELL_AWAKEN 312          /* Awaken sleeping targets */
+#define SPELL_EVOKE_TIAMAT 313    /* Evoke tiamat creature */
+#define SPELL_EVOKE_ORC 314       /* Evoke orc creature */
+#define SPELL_EVOKE_HOBGOBLIN 315 /* Evoke hobgoblin creature */
+#define SPELL_EVOKE_GOBLIN 316    /* Evoke goblin creature */
+#define SPELL_EVOKE_HOBBIT 317    /* Evoke hobbit creature */
+#define SPELL_EVOKE_ROMANO 318    /* Evoke romano creature */
+#define SPELL_EVOKE_ANAO 319      /* Evoke dwarf creature */
+#define SPELL_EVOKE_GNOMO 320     /* Evoke gnome creature */
+#define SPELL_EVOKE_ELFO 321      /* Evoke elf creature */
+#define SPELL_EVOKE_BARALHO 322   /* Evoke card creature */
+#define SPELL_EVOKE_XADREZ 323    /* Evoke chess creature */
+#define SPELL_EVOKE_LAMIA 324     /* Evoke lamia creature */
+#define SPELL_EVOKE_MICONOIDE 325 /* Evoke myconid creature */
+#define SPELL_EVOKE_LAGARTO 326   /* Evoke lizard creature */
+#define SPELL_EVOKE_BOLHA 327     /* Evoke bubble creature */
+#define SPELL_EVOKE_ATOM 328      /* Evoke atom creature */
+#define SPELL_EVOKE_URUBU 329     /* Evoke vulture creature */
+#define SPELL_EVOKE_NOVATO 330    /* Evoke newbie creature */
 
 #define TOP_SPELL_DEFINE 399
 /* NEW NPC/OBJECT SPELLS can be inserted here up to 399 */

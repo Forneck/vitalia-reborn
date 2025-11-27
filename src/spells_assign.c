@@ -851,7 +851,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25");
     new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -860,8 +860,8 @@ void create_spells_db()
     new_spell->assign[1].class_num = CLASS_DRUID;
     new_spell->assign[1].level = 70;
     new_spell->assign[1].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(2, 8) + param");
-    // new_spell->max_dam = 100;
+    new_spell->damages = strdup("dice(2, 10) + param");
+    new_spell->max_dam = 300;
     new_spell->messages.to_self = strdup("Você gesticula e a terra toda começa a tremer em a sua volta!");
     new_spell->messages.to_room = strdup("$n faz alguns gestos graciosos e a terra começa a tremer violentamente!");
     new_spell->school = SCHOOL_EVOCATION; /* Area damage spell */
@@ -1896,7 +1896,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_MAGIC_USER;
     new_spell->assign[0].level = 85;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180");
+    new_spell->damages = strdup("dice(3, self.class == 0 ? 8 : 6) + (self.class == 0 ? 195 : 180)");
     new_spell->school = SCHOOL_EVOCATION;   /* Pure destruction */
     new_spell->element = ELEMENT_UNDEFINED; /* Disintegration force */
     spedit_save_internally(new_spell);
@@ -2143,7 +2143,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 1;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, self.class == 4 ? 5 : 3) + self.class == 4 ? 6 : 4");
+    new_spell->damages = strdup("dice(3, self.class == 4 ? 5 : 3) + (self.class == 4 ? 6 : 4)");
     new_spell->max_dam = 100;
     new_spell->school = SCHOOL_EVOCATION; /* Damage spell */
     new_spell->element = ELEMENT_FIRE;    /* Fire damage */
@@ -2164,7 +2164,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 5;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, self.class == 4 ? 7 : 5) + self.class == 4 ? 9 : 6");
+    new_spell->damages = strdup("dice(3, self.class == 4 ? 7 : 5) + (self.class == 4 ? 9 : 6)");
     new_spell->max_dam = 100;
     new_spell->school = SCHOOL_EVOCATION; /* Damage spell */
     new_spell->element = ELEMENT_FIRE;    /* Fire damage */
@@ -2185,7 +2185,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 9;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, self.class == 4 ? 9 : 3) + self.class == 4 ? 13 : 9");
+    new_spell->damages = strdup("dice(3, self.class == 4 ? 9 : 3) + (self.class == 4 ? 13 : 9)");
     new_spell->max_dam = 100;
     new_spell->school = SCHOOL_EVOCATION; /* Damage spell */
     new_spell->element = ELEMENT_FIRE;    /* Fire damage */
@@ -2319,7 +2319,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(62 - (4 * self.level)) > 57 ? (62 - (4 * self.level)) : 57");
     new_spell->assign[0].class_num = CLASS_DRUID;
@@ -2485,7 +2485,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20");
     new_spell->assign[0].class_num = CLASS_BARD;
@@ -3344,14 +3344,14 @@ void create_spells_db()
     new_spell->type = CHANSON;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(60 - (4 * self.level)) > 20 ? (60 - (4 * self.level)) : 20");
     new_spell->assign[0].class_num = CLASS_BARD;
     new_spell->assign[0].level = 72;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, 6) + param");
-    // new_spell->max_dam = 100;
+    new_spell->damages = strdup("dice(3, 7) + param");
+    new_spell->max_dam = 300;
     new_spell->messages.to_self = strdup("Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!");
     new_spell->messages.to_room = strdup("Ao cantar sua cancao, $n faz com que o chao comece a tremer e fender-se!");
     new_spell->school = SCHOOL_EVOCATION; /* Area damage spell */
@@ -3396,7 +3396,7 @@ void create_spells_db()
     new_spell->assign[0].level = 40;
     new_spell->assign[0].num_mana = strdup(buf);
     new_spell->damages = strdup("dice(9,9) + 20");
-    // new_spell->max_dam = 100;
+    new_spell->max_dam = 100;
     new_spell->messages.to_self = strdup("Morte, o Ceifeiro Cruel responde ao seu chamado causando dano a $N!");
     new_spell->messages.to_room = strdup("Morte, o Ceifeiro Cruel responde ao chamado de $n e causa dano a $N!");
     new_spell->messages.to_vict = strdup("A propria Morte aparece e causa dano a voce!");
@@ -3745,6 +3745,511 @@ void create_spells_db()
     new_spell->effectiveness = strdup("100");
     new_spell->school = SCHOOL_UNDEFINED;   /* Script-triggered effect */
     new_spell->element = ELEMENT_UNDEFINED; /* No specific element */
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_SHIELD # 308
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_SHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("shield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_SELF | TAR_FIGHT_VICT;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+    new_spell->effectiveness = strdup("100");
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-10");
+    new_spell->applies[0].duration = strdup("12");
+    new_spell->messages.wear_off = strdup("Um enorme escudo se desfaz.");
+    new_spell->messages.to_self = strdup("Voce consegue fazer aparecer um enorme escudo.");
+    new_spell->messages.to_vict = strdup("Um enorme escudo aparece para te proteger.");
+    new_spell->messages.to_room = strdup("Um enorme escudo aparece do nada.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_ARMOR;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_MANA_CONTROL # 309
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_MANA_CONTROL;
+    new_spell->status = available;
+    new_spell->name = strdup("mana control");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("20");   // Mob vnum 20 - base mana control creature
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 5;
+    new_spell->assign[0].prac_gain = strdup("0");
+    new_spell->assign[0].num_mana = strdup("0");
+    new_spell->assign[1].class_num = CLASS_CLERIC;
+    new_spell->assign[1].level = 5;
+    new_spell->assign[1].prac_gain = strdup("0");
+    new_spell->assign[1].num_mana = strdup("0");
+    new_spell->assign[2].class_num = CLASS_DRUID;
+    new_spell->assign[2].level = 5;
+    new_spell->assign[2].prac_gain = strdup("0");
+    new_spell->assign[2].num_mana = strdup("0");
+    new_spell->assign[3].class_num = CLASS_RANGER;
+    new_spell->assign[3].level = 5;
+    new_spell->assign[3].prac_gain = strdup("0");
+    new_spell->assign[3].num_mana = strdup("0");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_HOLY;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_FIDO # 310
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_FIDO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke fido");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS | MAG_AREAS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("3062");   // Mob vnum 3062 - fido creature
+    new_spell->summon_req = strdup("3833");   // Required object vnum 3833 - summoning reagent
+    new_spell->messages.to_room = strdup("$n invoca um fido para atrapalhar!");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_ODIF_EKOVE # 311
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_ODIF_EKOVE;
+    new_spell->status = available;
+    new_spell->name = strdup("odif ekove");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("3066");   // Mob vnum 3066 - reverse fido creature
+    new_spell->summon_req = strdup("3833");   // Required object vnum 3833 - summoning reagent
+    new_spell->messages.to_room = strdup("Um odif laitseb foi atrapalhado por $n!");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_HOLY;
+    new_spell->prerequisite_spell = SPELL_EVOKE_FIDO;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_AWAKEN # 312
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_AWAKEN;
+    new_spell->status = available;
+    new_spell->name = strdup("awaken");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+    new_spell->mag_flags = MAG_UNAFFECTS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->dispel[0] = strdup("38");   // Dispels SPELL_SLEEP (vnum 38)
+    new_spell->messages.to_self = strdup("Hora de acordar!");
+    new_spell->messages.to_vict = strdup("$n te chacoalha para acordar.");
+    new_spell->messages.to_room = strdup("$n chacoalha $N para acordar.");
+    new_spell->school = SCHOOL_ILLUSION;
+    new_spell->element = ELEMENT_MENTAL;
+    new_spell->prerequisite_spell = SPELL_SLEEP;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_TIAMAT # 313
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_TIAMAT;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke tiamat");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("9303");   // Mob vnum 9303 - tiamat creature
+    new_spell->summon_req = strdup("3862");   // Required object vnum 3862 - summoning reagent
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_UNHOLY;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_ORC # 314
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_ORC;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke orc");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("19700");
+    new_spell->summon_req = strdup("3848");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_EARTH;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_HOBGOBLIN # 315
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_HOBGOBLIN;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke hobgoblin");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("4055");
+    new_spell->summon_req = strdup("3837");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_GOBLIN # 316
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_GOBLIN;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke goblin");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("3501");
+    new_spell->summon_req = strdup("3846");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_HOBBIT # 317
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_HOBBIT;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke hobbit");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("14500");
+    new_spell->summon_req = strdup("3845");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_EARTH;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_ROMANO # 318
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_ROMANO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke romano");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("12017");
+    new_spell->summon_req = strdup("3844");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_ANAO # 319
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_ANAO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke anao");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_RESTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("6509");
+    new_spell->summon_req = strdup("3843");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_HOLY;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_GNOMO # 320
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_GNOMO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke gnomo");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("1601");
+    new_spell->summon_req = strdup("3842");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_EARTH;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_ELFO # 321
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_ELFO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke elfo");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_RESTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("19017");
+    new_spell->summon_req = strdup("3841");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_HOLY;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_BARALHO # 322
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_BARALHO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke baralho");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("9230");
+    new_spell->summon_req = strdup("3840");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_MENTAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_XADREZ # 323
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_XADREZ;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke xadrez");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("3609");
+    new_spell->summon_req = strdup("3839");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_MENTAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_LAMIA # 324
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_LAMIA;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke lamia");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS | MAG_AREAS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("5201");
+    new_spell->summon_req = strdup("3838");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_AIR;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_MICONOIDE # 325
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_MICONOIDE;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke miconoide");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS | MAG_AREAS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("5014");
+    new_spell->summon_req = strdup("3837");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_WATER;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_LAGARTO # 326
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_LAGARTO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke lagarto");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("2204");
+    new_spell->summon_req = strdup("3836");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_WATER;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_BOLHA # 327
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_BOLHA;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke bolha");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS | MAG_AREAS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("3068");
+    new_spell->summon_req = strdup("3835");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_ACID;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_ATOM # 328
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_ATOM;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke atom");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("4909");
+    new_spell->summon_req = strdup("3834");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_EARTH;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_URUBU # 329
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_URUBU;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke urubu");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_FIGHTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("4252");
+    new_spell->summon_req = strdup("3832");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_UNHOLY;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
+
+    spedit_save_internally(new_spell);
+
+    // SPELL_EVOKE_NOVATO # 330
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_EVOKE_NOVATO;
+    new_spell->status = available;
+    new_spell->name = strdup("evoke novato");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_RESTING;
+    new_spell->targ_flags = TAR_IGNORE;
+    new_spell->mag_flags = MAG_SUMMONS;
+    new_spell->effectiveness = strdup("100");
+    new_spell->summon_mob = strdup("18615");
+    new_spell->summon_req = strdup("3831");
+    new_spell->school = SCHOOL_EVOCATION;
+    new_spell->element = ELEMENT_MENTAL;
+    new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
+    new_spell->discoverable = 1;
 
     spedit_save_internally(new_spell);
 
