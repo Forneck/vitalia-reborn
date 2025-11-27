@@ -16553,12 +16553,12 @@ evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
 #1
-MAGIA-WATERSHIELD AQUAAEGIS
+MAGIA-WATERSHIELD
 
 Uso        : cast 'watershield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 35
+Origem     : Variante descobrivel de Fireshield
 
 Uma fluida aura azul envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
@@ -16573,17 +16573,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa (Fireshield, Thistlecoat
 Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
 essas mesmas protecoes, evitando loops infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "aquaaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
 #1
-MAGIA-ROCKSHIELD SAXUMAEGIS
+MAGIA-ROCKSHIELD
 
 Uso        : cast 'rockshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 38
+Origem     : Variante descobrivel de Fireshield
 
 Uma solida aura marrom envolve o alvo, proporcionando forte protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16592,23 +16589,20 @@ metade do dano. O AC tambem melhora em 6 pontos enquanto durar a magia.
 
 EFEITO ESPECIAL: O impacto contra a aura de pedra tem chance de danificar a
 armadura do atacante, piorando seu AC em 10 pontos temporariamente.
-Atacantes ja atordoados nao sofrem este efeito adicional.
+Atacantes com armadura ja danificada nao sofrem este efeito adicional.
 
 SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "saxumaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-WATERSHIELD, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-WATERSHIELD
 #1
-MAGIA-POISONSHIELD VENENUMAEGIS
+MAGIA-POISONSHIELD
 
 Uso        : cast 'poisonshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 33
+Origem     : Variante descobrivel de Fireshield
 
 Uma toxica aura verde envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
@@ -16623,17 +16617,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "venenumaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-POISON, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-POISON
 #1
-MAGIA-LIGHTNINGSHIELD DIESILLAAEGIS
+MAGIA-LIGHTNINGSHIELD
 
 Uso        : cast 'lightningshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 36
+Origem     : Variante descobrivel de Fireshield
 
 Uma eletrica aura amarela envolve o alvo, proporcionando protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16648,42 +16639,36 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "diesillaaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-LIGHTNING-BOLT, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-LIGHTNING-BOLT
 #1
-MAGIA-ICESHIELD UQOAEGIS
+MAGIA-ICESHIELD
 
 Uso        : cast 'iceshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 34
+Origem     : Variante descobrivel de Fireshield
 
 Uma gelida aura branca envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
 atacante. Se o atacante passar em um teste de resistencia, sofrera metade
 do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
 
-EFEITO ESPECIAL: O gelo da aura tem chance de enregelar os movimentos do
+EFEITO ESPECIAL: O gelo da aura tem chance de congelar os movimentos do
 atacante, reduzindo seu Hitroll em 3 pontos temporariamente. Atacantes ja
-resfriados nao sofrem este efeito adicional.
+congelados nao sofrem este efeito adicional.
 
 SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "uqoaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-CHILL-TOUCH, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-CHILL-TOUCH
 #1
-MAGIA-ACIDSHIELD IQUMAEGIS
+MAGIA-ACIDSHIELD
 
 Uso        : cast 'acidshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 37
+Origem     : Variante descobrivel de Fireshield
 
 Uma corrosiva aura esverdeada envolve o alvo, proporcionando protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16698,17 +16683,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "iqumaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
 #1
-MAGIA-MINDSHIELD WUBMAEGIS
+MAGIA-MINDSHIELD
 
 Uso        : cast 'mindshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 39
+Origem     : Variante descobrivel de Fireshield
 
 Uma eterea aura violeta envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
@@ -16723,17 +16705,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "wubmaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-SLEEP, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SLEEP
 #1
-MAGIA-FORCESHIELD YAFQOAEGIS
+MAGIA-FORCESHIELD
 
 Uso        : cast 'forceshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Nivel      : Mago Nivel 40
+Origem     : Variante descobrivel de Fireshield
 
 Uma translucida aura de forca envolve o alvo, proporcionando forte protecao
 contra ataques fisicos. Todo dano causado no alvo sera parcialmente
@@ -16742,17 +16721,14 @@ resistencia, sofrera metade do dano. O AC tambem melhora em 5 pontos
 enquanto durar a magia.
 
 EFEITO ESPECIAL: A forca da aura tem chance de empurrar o atacante para tras,
-reduzindo seu movimento em 20 pontos temporariamente. Atacantes ja atordoados
+reduzindo seu movimento em 20 pontos temporariamente. Atacantes ja empurrados
 nao sofrem este efeito adicional.
 
 SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-DESCOBERTA: Esta magia pode ser descoberta usando o comando EXPERIMENT com a
-silaba "yafqoaegis" se voce conhece Fireshield.
-
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-SANCTUARY, EXPERIMENT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SANCTUARY
 #1
 MAGIA-CLONE
 

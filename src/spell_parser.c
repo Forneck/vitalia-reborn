@@ -183,6 +183,15 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
         return 100;
     }
 
+    /* For discoverable variant spells with a prerequisite, use the prerequisite spell's mana cost */
+    if (spell->discoverable && spell->prerequisite_spell > 0) {
+        struct str_spells *prereq_spell = get_spell_by_vnum(spell->prerequisite_spell);
+        if (prereq_spell) {
+            /* Recursively get the mana cost of the prerequisite spell */
+            return mag_manacost(ch, tch, spell->prerequisite_spell);
+        }
+    }
+
     num = get_spell_class(spell, GET_CLASS(ch));
     if (num == -1) {
         if (GET_LEVEL(ch) < LVL_IMMORT) {
