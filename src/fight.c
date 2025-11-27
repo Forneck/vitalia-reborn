@@ -190,7 +190,7 @@ static int get_element_interaction(int attacker_element, int defender_element)
     /* Water interactions */
     if (attacker_element == ELEMENT_WATER) {
         if (defender_element == ELEMENT_FIRE)
-            return ELEM_BEATS; /* Water extinguishes fire */
+            return ELEM_NULLIFY; /* Water and fire cancel */
         if (defender_element == ELEMENT_LIGHTNING)
             return ELEM_NULLIFY; /* Water conducts but disperses lightning */
         if (defender_element == ELEMENT_ACID)
