@@ -171,10 +171,17 @@ void call_ACMD(void (*function)(), struct char_data *ch, char *argument, int cmd
     (*function)(ch, argument, cmd, subcmd);
 }
 
-int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
+/* Helper function to get mana cost with recursion depth protection */
+static int mag_manacost_internal(struct char_data *ch, struct char_data *tch, int spellnum, int depth)
 {
     struct str_spells *spell;
     int mana, num, rts_code, i;
+
+    /* Prevent infinite recursion - max depth of 10 should be more than enough */
+    if (depth > 10) {
+        log1("SYSERR: mag_manacost exceeded max recursion depth for spell %d", spellnum);
+        return 100;
+    }
 
     spell = get_spell_by_vnum(spellnum);
 
@@ -188,7 +195,7 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
         struct str_spells *prereq_spell = get_spell_by_vnum(spell->prerequisite_spell);
         if (prereq_spell) {
             /* Recursively get the mana cost of the prerequisite spell */
-            return mag_manacost(ch, tch, spell->prerequisite_spell);
+            return mag_manacost_internal(ch, tch, spell->prerequisite_spell, depth + 1);
         }
     }
 
@@ -266,6 +273,12 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
     mana = MAX(1, mana); /* Always cost at least 1 mana */
 
     return mana;
+}
+
+/* Public wrapper function for mag_manacost */
+int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
+{
+    return mag_manacost_internal(ch, tch, spellnum, 0);
 }
 
 static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch, struct obj_data *tobj)
