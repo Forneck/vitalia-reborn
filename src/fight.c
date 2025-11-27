@@ -1965,14 +1965,16 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura de água de $N encharca $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Rock Shield - chance to reduce attacker's AC */
-            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, 3) == 0) {
+            /* Special effect: Rock Shield - chance to reduce attacker's AC (stagger) */
+            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, 3) == 0 &&
+                !AFF_FLAGGED(ch, AFF_STAGGERED)) {
                 struct affected_type rock_af;
                 new_affect(&rock_af);
                 rock_af.spell = SPELL_ROCKSHIELD;
                 rock_af.duration = rand_number(2, 4);
                 rock_af.modifier = 10;
                 rock_af.location = APPLY_AC;
+                SET_BIT_AR(rock_af.bitvector, AFF_STAGGERED);
                 affect_join(ch, &rock_af, FALSE, FALSE, FALSE, FALSE);
                 act("O impacto contra a aura de pedra de $N danifica sua armadura!", FALSE, ch, 0, victim, TO_CHAR);
                 act("Sua aura de pedra danifica a armadura de $n!", FALSE, ch, 0, victim, TO_VICT);
