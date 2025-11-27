@@ -200,7 +200,7 @@ static int get_element_interaction(int attacker_element, int defender_element)
     /* Ice interactions */
     if (attacker_element == ELEMENT_ICE) {
         if (defender_element == ELEMENT_FIRE)
-            return ELEM_NULLIFY; /* Ice melts against fire */
+            return ELEM_BEATS; /* Ice melts against fire - ice is beaten */
         if (defender_element == ELEMENT_WATER)
             return ELEM_AMPLIFY; /* Ice freezes water - amplified */
         if (defender_element == ELEMENT_LIGHTNING)
