@@ -204,6 +204,12 @@ struct str_spells *get_spell_by_name(char *name, char type)
     struct str_spells *ptr, *first = NULL;
     int cpt = 0;
 
+    /* First pass: look for an exact match */
+    for (ptr = list_spells; ptr; ptr = ptr->next)
+        if (!str_cmp(name, ptr->name) && ((type == SPSK) || (ptr->type == type)))
+            return ptr;
+
+    /* Second pass: look for abbreviation match */
     for (ptr = list_spells; ptr; ptr = ptr->next)
         if (is_abbrev(name, ptr->name) && ((type == SPSK) || (ptr->type == type))) {
             if (++cpt > 1)
