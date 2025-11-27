@@ -1677,4 +1677,132 @@
 56 11
 57 309
 58 1
+ 1 P 99 1 2 73730 1 0
+ 2 watershield
+10 A aura de água ao redor de seu corpo desaparece.
+12 Uma fluida aura azul envolve você.
+13 Uma fluida aura azul envolve $N.
+80 17 -4
+99 self.level
+81 60 
+99 self.level
+90 0 35 
+99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
+ 4 100
+55 1
+56 2
+57 54
+58 1
+ 1 P 100 1 2 73730 1 0
+ 2 rockshield
+10 A aura de pedra ao redor de seu corpo desaparece.
+12 Uma sólida aura marrom envolve você.
+13 Uma sólida aura marrom envolve $N.
+80 17 -6
+99 self.level
+81 61 
+99 self.level
+90 0 38 
+99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
+ 4 100
+55 1
+56 4
+57 54
+58 1
+ 1 P 101 1 2 73730 1 0
+ 2 poisonshield
+10 A aura venenosa ao redor de seu corpo desaparece.
+12 Uma tóxica aura verde envolve você.
+13 Uma tóxica aura verde envolve $N.
+80 17 -3
+99 self.level
+81 62 
+99 self.level
+90 0 33 
+99 (140 - (10 * self.level)) > 90 ? (140 - (10 * self.level)) : 90
+ 4 100
+55 1
+56 8
+57 54
+58 1
+ 1 P 102 1 2 73730 1 0
+ 2 lightningshield
+10 A aura de raios ao redor de seu corpo desaparece.
+12 Uma elétrica aura amarela envolve você.
+13 Uma elétrica aura amarela envolve $N.
+80 17 -4
+99 self.level
+81 63 
+99 self.level
+90 0 36 
+99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
+ 4 100
+55 1
+56 5
+57 54
+58 1
+ 1 P 103 1 2 73730 1 0
+ 2 iceshield
+10 A aura de gelo ao redor de seu corpo desaparece.
+12 Uma gélida aura branca envolve você.
+13 Uma gélida aura branca envolve $N.
+80 17 -4
+99 self.level
+81 64 
+99 self.level
+90 0 34 
+99 (145 - (10 * self.level)) > 95 ? (145 - (10 * self.level)) : 95
+ 4 100
+55 1
+56 6
+57 54
+58 1
+ 1 P 104 1 2 73730 1 0
+ 2 acidshield
+10 A aura ácida ao redor de seu corpo desaparece.
+12 Uma corrosiva aura esverdeada envolve você.
+13 Uma corrosiva aura esverdeada envolve $N.
+80 17 -4
+99 self.level
+81 65 
+99 self.level
+90 0 37 
+99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
+ 4 100
+55 1
+56 7
+57 54
+58 1
+ 1 P 105 1 2 73730 1 0
+ 2 mindshield
+10 A aura mental ao redor de seu corpo desaparece.
+12 Uma etérea aura violeta envolve você.
+13 Uma etérea aura violeta envolve $N.
+80 17 -3
+99 self.level
+81 66 
+99 self.level
+90 0 39 
+99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
+ 4 100
+55 1
+56 11
+57 54
+58 1
+ 1 P 106 1 2 73730 1 0
+ 2 forceshield
+10 A aura de força ao redor de seu corpo desaparece.
+12 Uma translúcida aura de força envolve você.
+13 Uma translúcida aura de força envolve $N.
+80 17 -5
+99 self.level
+81 67 
+99 self.level
+90 0 40 
+99 (165 - (10 * self.level)) > 115 ? (165 - (10 * self.level)) : 115
+ 4 100
+55 1
+56 12
+57 54
+58 1
  7
