@@ -1514,25 +1514,25 @@ ACMD(do_score)
         send_to_char(ch, "Você está protegid%s pelo Santuario.\r\n", OA(ch));
     else if (AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
         send_to_char(ch, "Você está protegid%s por um espesso escudo de trevas!.\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_FIRESHIELD))
+    if (AFF_FLAGGED(ch, AFF_FIRESHIELD) || affected_by_spell(ch, SPELL_FIRESHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura de fogo!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_WINDWALL))
+    if (AFF_FLAGGED(ch, AFF_WINDWALL) || affected_by_spell(ch, SPELL_WINDWALL))
         send_to_char(ch, "Você está protegid%s por uma parede de vento!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_WATERSHIELD))
+    if (AFF_FLAGGED(ch, AFF_WATERSHIELD) || affected_by_spell(ch, SPELL_WATERSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura de água!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD))
+    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD) || affected_by_spell(ch, SPELL_ROCKSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura de pedra!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_POISONSHIELD))
+    if (AFF_FLAGGED(ch, AFF_POISONSHIELD) || affected_by_spell(ch, SPELL_POISONSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura venenosa!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD))
+    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD) || affected_by_spell(ch, SPELL_LIGHTNINGSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura elétrica!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_ICESHIELD))
+    if (AFF_FLAGGED(ch, AFF_ICESHIELD) || affected_by_spell(ch, SPELL_ICESHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura gélida!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD))
+    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD) || affected_by_spell(ch, SPELL_ACIDSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura ácida!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_MINDSHIELD))
+    if (AFF_FLAGGED(ch, AFF_MINDSHIELD) || affected_by_spell(ch, SPELL_MINDSHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura mental!\r\n", OA(ch));
-    if (AFF_FLAGGED(ch, AFF_FORCESHIELD))
+    if (AFF_FLAGGED(ch, AFF_FORCESHIELD) || affected_by_spell(ch, SPELL_FORCESHIELD))
         send_to_char(ch, "Você está protegid%s por uma aura de força!\r\n", OA(ch));
 
     if (AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
