@@ -218,7 +218,7 @@ void get_check_money(struct char_data *ch, struct obj_data *obj)
 {
     int value;
     struct obj_data *check_obj;
-    bool obj_in_list = FALSE;
+    bool object_still_exists = FALSE;
 
     /* Safety check: obj might be NULL if extracted by triggers */
     if (obj == NULL)
@@ -230,15 +230,17 @@ void get_check_money(struct char_data *ch, struct obj_data *obj)
      * comparison in the caller's validation loop is not reliable because
      * freed memory can be reused and the same address could point to a
      * different object. By checking the global object_list, we ensure the
-     * object hasn't been extracted. */
+     * object hasn't been extracted.
+     * Note: This traversal only runs for money objects being picked up,
+     * which is relatively rare, so the performance impact is minimal. */
     for (check_obj = object_list; check_obj; check_obj = check_obj->next) {
         if (check_obj == obj) {
-            obj_in_list = TRUE;
+            object_still_exists = TRUE;
             break;
         }
     }
 
-    if (!obj_in_list) {
+    if (!object_still_exists) {
         /* Object was extracted/deleted, do not proceed */
         return;
     }
