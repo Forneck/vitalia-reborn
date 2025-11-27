@@ -48,6 +48,7 @@
 99 (35 - (1 * self.level)) > 25 ? (35 - (1 * self.level)) : 25
  4 100
 55 8
+56 10
  1 P 5 1 18 4097 8 100
  2 burning hands
  3 dice(3, self.class == 0 ? 8 : 6) + 3
@@ -235,9 +236,9 @@
  4 100
 55 1
 56 9
- 1 P 23 1 1 4224 8 0
+ 1 P 23 1 1 4224 8 300
  2 earthquake
- 3 dice(2, 8) + param
+ 3 dice(2, 10) + param
 11 Você gesticula e a terra toda começa a tremer em a sua volta!
 13 $n faz alguns gestos graciosos e a terra começa a tremer violentamente!
 90 1 18 
@@ -579,14 +580,14 @@
  2 improved armor
 10 Você se sente menos protegid$r.
 12 Você sente alguém $r protegendo.
-80 17 (-30 - (self.level / 2)) < -80 ? -80 : (-30 - (self.level / 2))
+80 17 -(30 + (self.level < 50 ? self.level : 50) - 1)
 99 24
 90 0 18 
 99 (80 - (5 * self.level)) > 30 ? (80 - (5 * self.level)) : 30
 91 1 80 
 99 (80 - (5 * self.level)) > 30 ? (80 - (5 * self.level)) : 30
  4 100
- 1 P 56 1 18 4097 8 0
+ 1 P 56 1 18 4097 8 600
  2 disintegrate
  3 dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180
 90 0 85 
@@ -599,7 +600,7 @@
  8 19
 90 6 14 
 99 (130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 
- 4 50
+ 4 99
 55 3
 56 3
  1 P 58 1 34 8194 9 0
@@ -797,6 +798,8 @@
 90 4 80 
 99 (150 - (40 * self.level)) > 75 ? (150 - (40 * self.level)) : 75
  4 100
+55 1
+56 5
  1 P 77 1 2 8 8 0
  2 regeneration
 12 Você sente o poder da natureza curando seu corpo.
@@ -943,6 +946,8 @@
 90 1 21 
 99 (110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85
  4 100
+55 1
+56 10
  1 P 92 1 1 2048 9 0
  2 darkness
 11 Você lança um manto de escuridão sobre a área.
@@ -980,7 +985,9 @@
 91 6 12 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
  4 100
- 1 P 96 1 2 8194 9 0
+55 3
+56 4
+ 1 P 96 1 2 2 9 0
  2 windwall
 10 A parede de vento ao redor de seu corpo desaparece.
 12 Uma parede de vento envolve você.
@@ -1040,9 +1047,9 @@
  4 100
 55 5
 56 11
- 1 C 164 1 1 4224 8 0
+ 1 C 164 1 1 4224 8 300
  2 tremor
- 3 dice(3, 6) + param
+ 3 dice(3, 7) + param
 11 Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!
 13 Ao cantar sua cancao, $n faz com que o chao comece a tremer e fender-se!
 90 5 72 
@@ -1103,7 +1110,7 @@
  1 C 169 1 2 8 8 0
  2 invocacao aos deuses
 12 Os ecos de uma canção divina preenchem sua cabeça e curam seu corpo.
-50 (dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15) : 1
+50 (dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15)) : 1
 90 5 95 
 99 (90 - (5 * self.level)) > 50 ? (90 - (5 * self.level)) : 50
  4 100
@@ -1114,15 +1121,15 @@
 10 Você se sente menos vulnerável.
 12 Você se sente muito vulnerável.
 25 174
-80 45 3
+80 20 3
 99 24
-81 46 2
+81 21 2
 99 24
-82 47 2
+82 22 2
 99 24
-83 48 2
+83 23 2
 99 24
-84 49 3
+84 24 3
 99 24
 90 5 68 
 99 (50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20
@@ -1158,15 +1165,15 @@
 10 Você se sente mais vulnerável.
 12 Você se sente menos vulnerável.
 25 170
-80 45 -3
+80 20 -3
 99 24
-81 46 -2
+81 21 -2
 99 24
-82 47 -2
+82 22 -2
 99 24
-83 48 +2
+83 23 2
 99 24
-84 49 -3
+84 24 -3
 99 24
 90 5 52 
 99 (40 - (3 * self.level)) > 10 ? (40 - (3 * self.level)) : 10
@@ -1340,6 +1347,11 @@
 90 3 30 
 99 
  4 100
+ 1 P 246 1 0 0 0 0
+ 2 polearms
+90 3 40 
+99 
+ 4 100
  1 K 247 1 32 6 8 0
  2 adagio
 10 Você para de vibrar em adagio.
@@ -1445,7 +1457,7 @@
  2 youth
  4 100
 55 2
- 1 P 308 1 32 8194 8 0
+ 1 P 308 1 26 8194 8 0
  2 shield
 10 Um enorme escudo se desfaz.
 11 Voce consegue fazer aparecer um enorme escudo.
@@ -1458,26 +1470,35 @@
 56 12
 57 1
 58 1
- 1 P 309 1 18 4097 8 150
- 2 mana missile
- 3 dice(1, self.class == 0 ? 10 : 5) + 2 
- 4 95
+ 1 P 309 1 1 256 8 0
+ 2 mana control
+ 8 20
+90 0 0 5
+99 0
+91 1 0 5
+99 0
+92 4 0 5
+99 0
+93 6 0 5
+99 0
+ 4 100
 55 6
-57 32
-58 1
- 1 P 310 1 1 256 9 0
+56 9
+ 1 P 310 1 1 4352 8 0
  2 evoke fido
 13 $n invoca um fido para atrapalhar!
  8 3062
+ 9 3833
  4 100
 55 6
 56 12
-57 83
+57 309
 58 1
  1 P 311 1 1 256 9 0
  2 odif ekove
 13 Um odif laitseb foi atrapalhado por $n!
  8 3066
+ 9 3833
  4 100
 55 6
 56 9
@@ -1493,5 +1514,167 @@
 55 7
 56 11
 57 38
+58 1
+ 1 P 313 1 1 256 9 0
+ 2 evoke tiamat
+ 8 9303
+ 9 3862
+ 4 100
+55 6
+56 10
+57 309
+58 1
+ 1 P 314 1 1 256 8 0
+ 2 evoke orc
+ 8 19700
+ 9 3848
+ 4 100
+55 6
+56 4
+57 309
+58 1
+ 1 P 315 1 2 256 8 0
+ 2 evoke hobgoblin
+ 8 4055
+ 9 3837
+ 4 100
+55 6
+56 12
+57 309
+58 1
+ 1 P 316 1 1 256 8 0
+ 2 evoke goblin
+ 8 3501
+ 9 3846
+ 4 100
+55 6
+56 12
+57 309
+58 1
+ 1 P 317 1 1 256 8 0
+ 2 evoke hobbit
+ 8 14500
+ 9 3845
+ 4 100
+55 6
+56 4
+57 309
+58 1
+ 1 P 318 1 1 256 8 0
+ 2 evoke romano
+ 8 12017
+ 9 3844
+ 4 100
+55 6
+56 12
+57 309
+58 1
+ 1 P 319 1 1 256 6 0
+ 2 evoke anao
+ 8 6509
+ 9 3843
+ 4 100
+55 6
+56 9
+57 309
+58 1
+ 1 P 320 1 1 256 8 0
+ 2 evoke gnomo
+ 8 1601
+ 9 3842
+ 4 100
+55 6
+56 4
+57 309
+58 1
+ 1 P 321 1 1 256 6 0
+ 2 evoke elfo
+ 8 19017
+ 9 3841
+ 4 100
+55 6
+56 9
+57 309
+58 1
+ 1 P 322 1 1 256 8 0
+ 2 evoke baralho
+ 8 9230
+ 9 3840
+ 4 100
+55 6
+56 11
+57 309
+58 1
+ 1 P 323 1 1 256 9 0
+ 2 evoke xadrez
+ 8 3609
+ 9 3839
+ 4 100
+55 6
+56 11
+57 309
+58 1
+ 1 P 324 1 1 4352 8 0
+ 2 evoke lamia
+ 8 5201
+ 9 3838
+ 4 100
+55 6
+56 3
+57 309
+58 1
+ 1 P 325 1 1 4352 8 0
+ 2 evoke miconoide
+ 8 5014
+ 9 3837
+ 4 100
+55 6
+56 2
+57 309
+58 1
+ 1 P 326 1 1 256 8 0
+ 2 evoke lagarto
+ 8 2204
+ 9 3836
+ 4 100
+55 6
+56 2
+57 309
+58 1
+ 1 P 327 1 1 4352 8 0
+ 2 evoke bolha
+ 8 3068
+ 9 3835
+ 4 100
+55 6
+56 7
+57 309
+58 1
+ 1 P 328 1 1 256 8 0
+ 2 evoke atom
+ 8 4909
+ 9 3834
+ 4 100
+55 6
+56 4
+57 309
+58 1
+ 1 P 329 1 1 256 8 0
+ 2 evoke urubu
+ 8 4252
+ 9 3832
+ 4 100
+55 6
+56 10
+57 309
+58 1
+ 1 P 330 1 1 256 6 0
+ 2 evoke novato
+ 8 18615
+ 9 3831
+ 4 100
+55 6
+56 11
+57 309
 58 1
  7
