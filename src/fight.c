@@ -1271,13 +1271,9 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         return (0);
 
     /* Check if characters have been marked for extraction */
-    if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_NOTDEADYET))
+    if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || MOB_FLAGGED(ch, MOB_NOTDEADYET))
         return (0);
-    if (!IS_NPC(ch) && PLR_FLAGGED(ch, PLR_NOTDEADYET))
-        return (0);
-    if (IS_NPC(victim) && MOB_FLAGGED(victim, MOB_NOTDEADYET))
-        return (0);
-    if (!IS_NPC(victim) && PLR_FLAGGED(victim, PLR_NOTDEADYET))
+    if (PLR_FLAGGED(victim, PLR_NOTDEADYET) || MOB_FLAGGED(victim, MOB_NOTDEADYET))
         return (0);
 
     /* Validate rooms - prevent crashes from characters in invalid rooms */
