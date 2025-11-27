@@ -860,8 +860,8 @@ void create_spells_db()
     new_spell->assign[1].class_num = CLASS_DRUID;
     new_spell->assign[1].level = 70;
     new_spell->assign[1].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(2, 8) + param");
-    // new_spell->max_dam = 100;
+    new_spell->damages = strdup("dice(2, 10) + param");
+    new_spell->max_dam = 300;
     new_spell->messages.to_self = strdup("Você gesticula e a terra toda começa a tremer em a sua volta!");
     new_spell->messages.to_room = strdup("$n faz alguns gestos graciosos e a terra começa a tremer violentamente!");
     new_spell->school = SCHOOL_EVOCATION; /* Area damage spell */
@@ -3350,8 +3350,8 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_BARD;
     new_spell->assign[0].level = 72;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, 6) + param");
-    // new_spell->max_dam = 100;
+    new_spell->damages = strdup("dice(3, 7) + param");
+    new_spell->max_dam = 300;
     new_spell->messages.to_self = strdup("Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!");
     new_spell->messages.to_room = strdup("Ao cantar sua cancao, $n faz com que o chao comece a tremer e fender-se!");
     new_spell->school = SCHOOL_EVOCATION; /* Area damage spell */
@@ -3396,7 +3396,7 @@ void create_spells_db()
     new_spell->assign[0].level = 40;
     new_spell->assign[0].num_mana = strdup(buf);
     new_spell->damages = strdup("dice(9,9) + 20");
-    // new_spell->max_dam = 100;
+    new_spell->max_dam = 100;
     new_spell->messages.to_self = strdup("Morte, o Ceifeiro Cruel responde ao seu chamado causando dano a $N!");
     new_spell->messages.to_room = strdup("Morte, o Ceifeiro Cruel responde ao chamado de $n e causa dano a $N!");
     new_spell->messages.to_vict = strdup("A propria Morte aparece e causa dano a voce!");
@@ -3786,7 +3786,7 @@ void create_spells_db()
     new_spell->targ_flags = TAR_IGNORE;
     new_spell->mag_flags = MAG_SUMMONS;
     new_spell->effectiveness = strdup("100");
-    new_spell->summon_mob = strdup("20");
+    new_spell->summon_mob = strdup("20");   // Mob vnum 20 - base mana control creature
     new_spell->assign[0].class_num = CLASS_MAGIC_USER;
     new_spell->assign[0].level = 5;
     new_spell->assign[0].prac_gain = strdup("0");
@@ -3820,8 +3820,8 @@ void create_spells_db()
     new_spell->targ_flags = TAR_IGNORE;
     new_spell->mag_flags = MAG_SUMMONS | MAG_AREAS;
     new_spell->effectiveness = strdup("100");
-    new_spell->summon_mob = strdup("3062");
-    new_spell->summon_req = strdup("3833");
+    new_spell->summon_mob = strdup("3062");   // Mob vnum 3062 - fido creature
+    new_spell->summon_req = strdup("3833");   // Required object vnum 3833 - summoning reagent
     new_spell->messages.to_room = strdup("$n invoca um fido para atrapalhar!");
     new_spell->school = SCHOOL_EVOCATION;
     new_spell->element = ELEMENT_PHYSICAL;
@@ -3842,8 +3842,8 @@ void create_spells_db()
     new_spell->targ_flags = TAR_IGNORE;
     new_spell->mag_flags = MAG_SUMMONS;
     new_spell->effectiveness = strdup("100");
-    new_spell->summon_mob = strdup("3066");
-    new_spell->summon_req = strdup("3833");
+    new_spell->summon_mob = strdup("3066");   // Mob vnum 3066 - reverse fido creature
+    new_spell->summon_req = strdup("3833");   // Required object vnum 3833 - summoning reagent
     new_spell->messages.to_room = strdup("Um odif laitseb foi atrapalhado por $n!");
     new_spell->school = SCHOOL_EVOCATION;
     new_spell->element = ELEMENT_HOLY;
@@ -3864,7 +3864,7 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
     new_spell->mag_flags = MAG_UNAFFECTS;
     new_spell->effectiveness = strdup("100");
-    new_spell->dispel[0] = strdup("38");   // Dispels sleep
+    new_spell->dispel[0] = strdup("38");   // Dispels SPELL_SLEEP (vnum 38)
     new_spell->messages.to_self = strdup("Hora de acordar!");
     new_spell->messages.to_vict = strdup("$n te chacoalha para acordar.");
     new_spell->messages.to_room = strdup("$n chacoalha $N para acordar.");
@@ -3887,8 +3887,8 @@ void create_spells_db()
     new_spell->targ_flags = TAR_IGNORE;
     new_spell->mag_flags = MAG_SUMMONS;
     new_spell->effectiveness = strdup("100");
-    new_spell->summon_mob = strdup("9303");
-    new_spell->summon_req = strdup("3862");
+    new_spell->summon_mob = strdup("9303");   // Mob vnum 9303 - tiamat creature
+    new_spell->summon_req = strdup("3862");   // Required object vnum 3862 - summoning reagent
     new_spell->school = SCHOOL_EVOCATION;
     new_spell->element = ELEMENT_UNHOLY;
     new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
