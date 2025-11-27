@@ -423,14 +423,16 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
                     victim = ch;
                 break;
             case SPELL_FIRESHIELD:
-                if (!victim)
-                    victim = ch;
-                break;
             case SPELL_THISTLECOAT:
-                if (!victim)
-                    victim = ch;
-                break;
             case SPELL_WINDWALL:
+            case SPELL_WATERSHIELD:
+            case SPELL_ROCKSHIELD:
+            case SPELL_POISONSHIELD:
+            case SPELL_LIGHTNINGSHIELD:
+            case SPELL_ICESHIELD:
+            case SPELL_ACIDSHIELD:
+            case SPELL_MINDSHIELD:
+            case SPELL_FORCESHIELD:
                 if (!victim)
                     victim = ch;
                 break;

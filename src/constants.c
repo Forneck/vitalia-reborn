@@ -125,11 +125,14 @@ const char *preference_bits[] = {
  * Must end array with a single newline. */
 const char *affected_bits[] = {
     "\0", /* DO NOT REMOVE!! */
-    "BLIND",       "INVIS",      "DET-ALIGN", "DET-INVIS", "DET-MAGIC",   "SENSE-LIFE",   "WATWALK", "SANCT",
-    "GROUP",       "CURSE",      "INFRA",     "POISON",    "PROT-EVIL",   "PROT-GOOD",    "SLEEP",   "NO_TRACK",
-    "STONESKIN",   "FIRESHIELD", "SNEAK",     "HIDE",      "TALKDEAD",    "CHARM",        "FLYING",  "BREATH",
-    "PARALYZE",    "LIGHT",      "FIREFLIES", "STINGING",  "THISTLECOAT", "SOUNDBARRIER", "ADAGIO",  "ALLEGRO",
-    "GLOOMSHIELD", "PROT-SPELL", "WINDWALL",  "\n",
+    "BLIND",       "INVIS",        "DET-ALIGN",    "DET-INVIS",       "DET-MAGIC",   "SENSE-LIFE", "WATWALK",
+    "SANCT",       "GROUP",        "CURSE",        "INFRA",           "POISON",      "PROT-EVIL",  "PROT-GOOD",
+    "SLEEP",       "NO_TRACK",     "STONESKIN",    "FIRESHIELD",      "SNEAK",       "HIDE",       "TALKDEAD",
+    "CHARM",       "FLYING",       "BREATH",       "PARALYZE",        "LIGHT",       "FIREFLIES",  "STINGING",
+    "THISTLECOAT", "SOUNDBARRIER", "ADAGIO",       "ALLEGRO",         "GLOOMSHIELD", "PROT-SPELL", "WINDWALL",
+    "WATERSHIELD", "ROCKSHIELD",   "POISONSHIELD", "LIGHTNINGSHIELD", "ICESHIELD",   "ACIDSHIELD", "MINDSHIELD",
+    "FORCESHIELD", "BURNING",      "SOAKED",       "CHILLED",         "CORRODED",    "CONFUSED",   "STAGGERED",
+    "\n",
 };
 
 /** Connection type descriptions.

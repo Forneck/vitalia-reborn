@@ -1182,7 +1182,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS | MAG_AURA;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85");
     new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -1766,7 +1766,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100");
     new_spell->assign[0].class_num = CLASS_MAGIC_USER;
@@ -2291,7 +2291,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_AURA;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20");
     new_spell->assign[0].class_num = CLASS_DRUID;
@@ -2511,7 +2511,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_AURA;
     new_spell->effectiveness = strdup("100");
 
     /* Custo de mana baseado no nível do conjurador */
@@ -2561,7 +2561,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS | MAG_AURA;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85");
     new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -2576,6 +2576,8 @@ void create_spells_db()
     new_spell->messages.to_vict = strdup("Um escudo de trevas resguarda o seu corpo.");
     new_spell->messages.to_room = strdup("Um escudo de trevas resguarda o corpo de $N.");
     new_spell->messages.wear_off = strdup("O escudo de trevas que $r resguardava se desvanece lentamente.");
+    new_spell->school = SCHOOL_ABJURATION; /* Protective spell */
+    new_spell->element = ELEMENT_UNHOLY;   /* Dark protection */
     spedit_save_internally(new_spell);
 
     // spell raise_dead
@@ -2632,7 +2634,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(80 - (4* self.level)) > 40 ? (80 - ( 4 * self.level)) : 40");
     new_spell->assign[0].class_num = CLASS_RANGER;
@@ -4251,6 +4253,246 @@ void create_spells_db()
     new_spell->prerequisite_spell = SPELL_MANA_CONTROL;
     new_spell->discoverable = 1;
 
+    spedit_save_internally(new_spell);
+
+    // SPELL_WATERSHIELD #99 - Water/Aqua aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_WATERSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("watershield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 35;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-4");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_WATERSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma fluida aura azul envolve você.");
+    new_spell->messages.to_room = strdup("Uma fluida aura azul envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura de água ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_WATER;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_ROCKSHIELD #100 - Earth/Petra aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_ROCKSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("rockshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 38;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-6");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_ROCKSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma sólida aura marrom envolve você.");
+    new_spell->messages.to_room = strdup("Uma sólida aura marrom envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura de pedra ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_EARTH;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_POISONSHIELD #101 - Poison/Venenum aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_POISONSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("poisonshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(140 - (10 * self.level)) > 90 ? (140 - (10 * self.level)) : 90");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 33;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-3");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_POISONSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma tóxica aura verde envolve você.");
+    new_spell->messages.to_room = strdup("Uma tóxica aura verde envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura venenosa ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_POISON;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_LIGHTNINGSHIELD #102 - Lightning/Diesilla aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_LIGHTNINGSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("lightningshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 36;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-4");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_LIGHTNINGSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma elétrica aura amarela envolve você.");
+    new_spell->messages.to_room = strdup("Uma elétrica aura amarela envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura de raios ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_LIGHTNING;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_ICESHIELD #103 - Ice/Cold aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_ICESHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("iceshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(145 - (10 * self.level)) > 95 ? (145 - (10 * self.level)) : 95");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 34;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-4");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_ICESHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma gélida aura branca envolve você.");
+    new_spell->messages.to_room = strdup("Uma gélida aura branca envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura de gelo ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_ICE;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_ACIDSHIELD #104 - Acid aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_ACIDSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("acidshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 37;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-4");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_ACIDSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma corrosiva aura esverdeada envolve você.");
+    new_spell->messages.to_room = strdup("Uma corrosiva aura esverdeada envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura ácida ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_ACID;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_MINDSHIELD #105 - Mental aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_MINDSHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("mindshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 39;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-3");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_MINDSHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma etérea aura violeta envolve você.");
+    new_spell->messages.to_room = strdup("Uma etérea aura violeta envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura mental ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_MENTAL;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
+    spedit_save_internally(new_spell);
+
+    // SPELL_FORCESHIELD #106 - Physical/Force aegis (discoverable variant of fireshield)
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SPELL_FORCESHIELD;
+    new_spell->status = available;
+    new_spell->name = strdup("forceshield");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
+    new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(165 - (10 * self.level)) > 115 ? (165 - (10 * self.level)) : 115");
+    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[0].level = 40;
+    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->applies[0].appl_num = APPLY_AC;
+    new_spell->applies[0].modifier = strdup("-5");
+    new_spell->applies[0].duration = strdup("self.level");
+    new_spell->applies[1].appl_num = AFF_FORCESHIELD + NUM_APPLIES;
+    new_spell->applies[1].duration = strdup("self.level");
+    new_spell->messages.to_vict = strdup("Uma translúcida aura de força envolve você.");
+    new_spell->messages.to_room = strdup("Uma translúcida aura de força envolve $N.");
+    new_spell->messages.wear_off = strdup("A aura de força ao redor de seu corpo desaparece.");
+    new_spell->school = SCHOOL_ABJURATION;
+    new_spell->element = ELEMENT_PHYSICAL;
+    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
     spedit_save_to_disk();

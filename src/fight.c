@@ -73,6 +73,231 @@ int get_nighthammer(struct char_data *ch, bool real);
 int attacks_per_round(struct char_data *ch);
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
+
+/* Check if a spell has the MAG_AURA flag */
+static int is_aura_spell(int spellnum) { return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA); }
+
+/* Get the element of a spell from the spell database */
+static int get_spell_element(int spellnum)
+{
+    struct str_spells *spell = get_spell_by_vnum(spellnum);
+    if (spell)
+        return spell->element;
+    return ELEMENT_UNDEFINED;
+}
+
+/* Get the first active aura shield spell affecting a character by scanning affects */
+static int get_aura_shield_spell(struct char_data *ch)
+{
+    struct affected_type *af;
+
+    for (af = ch->affected; af; af = af->next) {
+        if (af->spell > 0 && is_aura_spell(af->spell))
+            return af->spell;
+    }
+    return 0;
+}
+
+/* Helper function to check if character has any aura shield active */
+static int has_aura_shield(struct char_data *ch) { return (get_aura_shield_spell(ch) > 0); }
+
+/* Get damage reflection ratio for an aura spell based on element
+ * Different elements have different reflection characteristics */
+static float get_aura_reflect_ratio(int spellnum, int saved)
+{
+    int element = get_spell_element(spellnum);
+
+    /* Base reflection ratios by element when saving throw fails */
+    if (!saved) {
+        return 1.0; /* Full damage reflection on failed save */
+    }
+
+    /* Reduced reflection ratios when saving throw succeeds */
+    switch (element) {
+        case ELEMENT_FIRE:
+            return 0.5; /* Fire - moderate reflection */
+        case ELEMENT_WATER:
+            return 0.4; /* Water - slightly lower reflection */
+        case ELEMENT_AIR:
+            return 0.4; /* Air - slightly lower reflection */
+        case ELEMENT_EARTH:
+            return 0.25; /* Earth/Rock - lower reflection but more defense */
+        case ELEMENT_LIGHTNING:
+            return 0.5; /* Lightning - moderate reflection */
+        case ELEMENT_ICE:
+            return 0.33; /* Ice - lower reflection */
+        case ELEMENT_POISON:
+            return 0.33; /* Poison - lower reflection */
+        case ELEMENT_ACID:
+            return 0.45; /* Acid - moderate-high reflection */
+        case ELEMENT_MENTAL:
+            return 0.35; /* Mental - lower reflection */
+        case ELEMENT_PHYSICAL:
+            return 0.4; /* Physical/Force - moderate reflection */
+        case ELEMENT_HOLY:
+            return 0.5; /* Holy - damage reduction (sanctuary) */
+        case ELEMENT_UNHOLY:
+            return 0.33; /* Unholy - damage reduction (gloomshield) */
+        default:
+            return 0.33; /* Default for unknown elements */
+    }
+}
+
+/* Element interaction types */
+#define ELEM_NEUTRAL 0 /* No special interaction */
+#define ELEM_BEATS 1   /* Attacker element destroys defender */
+#define ELEM_NULLIFY 2 /* Both elements cancel each other */
+#define ELEM_AMPLIFY 3 /* Attacker element is amplified against defender */
+
+/* Check elemental interaction between two elements
+ * Returns: ELEM_NEUTRAL (0), ELEM_BEATS (1), ELEM_NULLIFY (2), or ELEM_AMPLIFY (3) */
+static int get_element_interaction(int attacker_element, int defender_element)
+{
+    /* Same element always nullifies */
+    if (attacker_element == defender_element && attacker_element != ELEMENT_UNDEFINED)
+        return ELEM_NULLIFY;
+
+    /* Fire interactions */
+    if (attacker_element == ELEMENT_FIRE) {
+        if (defender_element == ELEMENT_ICE)
+            return ELEM_AMPLIFY; /* Fire melts ice - amplified damage */
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_NULLIFY; /* Fire and water cancel */
+        if (defender_element == ELEMENT_EARTH)
+            return ELEM_BEATS; /* Fire burns earth/plants */
+        if (defender_element == ELEMENT_AIR)
+            return ELEM_AMPLIFY; /* Air feeds fire - amplified */
+    }
+
+    /* Water interactions */
+    if (attacker_element == ELEMENT_WATER) {
+        if (defender_element == ELEMENT_FIRE)
+            return ELEM_BEATS; /* Water extinguishes fire */
+        if (defender_element == ELEMENT_LIGHTNING)
+            return ELEM_NULLIFY; /* Water conducts but disperses lightning */
+        if (defender_element == ELEMENT_ACID)
+            return ELEM_BEATS; /* Water dilutes acid */
+    }
+
+    /* Ice interactions */
+    if (attacker_element == ELEMENT_ICE) {
+        if (defender_element == ELEMENT_FIRE)
+            return ELEM_NULLIFY; /* Ice melts against fire */
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_AMPLIFY; /* Ice freezes water - amplified */
+        if (defender_element == ELEMENT_LIGHTNING)
+            return ELEM_BEATS; /* Cold slows electricity */
+        if (defender_element == ELEMENT_AIR)
+            return ELEM_BEATS; /* Cold freezes air */
+    }
+
+    /* Lightning interactions */
+    if (attacker_element == ELEMENT_LIGHTNING) {
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_AMPLIFY; /* Lightning conducts through water - amplified */
+        if (defender_element == ELEMENT_EARTH)
+            return ELEM_NULLIFY; /* Earth grounds lightning */
+        if (defender_element == ELEMENT_PHYSICAL)
+            return ELEM_AMPLIFY; /* Lightning conducts through metal/physical */
+    }
+
+    /* Air/Wind interactions */
+    if (attacker_element == ELEMENT_AIR) {
+        if (defender_element == ELEMENT_FIRE)
+            return ELEM_NULLIFY; /* Wind can extinguish or feed fire - neutralizes */
+        if (defender_element == ELEMENT_POISON)
+            return ELEM_BEATS; /* Wind disperses poison */
+        if (defender_element == ELEMENT_EARTH)
+            return ELEM_NULLIFY; /* Earth blocks wind */
+    }
+
+    /* Earth interactions */
+    if (attacker_element == ELEMENT_EARTH) {
+        if (defender_element == ELEMENT_AIR)
+            return ELEM_BEATS; /* Earth blocks wind */
+        if (defender_element == ELEMENT_LIGHTNING)
+            return ELEM_BEATS; /* Earth grounds lightning */
+        if (defender_element == ELEMENT_POISON)
+            return ELEM_BEATS; /* Earth absorbs poison */
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_NULLIFY; /* Water erodes earth */
+    }
+
+    /* Poison interactions */
+    if (attacker_element == ELEMENT_POISON) {
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_AMPLIFY; /* Poison spreads in water - amplified */
+        if (defender_element == ELEMENT_AIR)
+            return ELEM_NULLIFY; /* Air disperses poison */
+    }
+
+    /* Acid interactions */
+    if (attacker_element == ELEMENT_ACID) {
+        if (defender_element == ELEMENT_EARTH)
+            return ELEM_AMPLIFY; /* Acid dissolves rock - amplified */
+        if (defender_element == ELEMENT_PHYSICAL)
+            return ELEM_AMPLIFY; /* Acid corrodes armor - amplified */
+        if (defender_element == ELEMENT_WATER)
+            return ELEM_NULLIFY; /* Water dilutes acid */
+    }
+
+    /* Holy interactions */
+    if (attacker_element == ELEMENT_HOLY) {
+        if (defender_element == ELEMENT_UNHOLY)
+            return ELEM_AMPLIFY; /* Holy destroys unholy - amplified */
+    }
+
+    /* Unholy interactions */
+    if (attacker_element == ELEMENT_UNHOLY) {
+        if (defender_element == ELEMENT_HOLY)
+            return ELEM_AMPLIFY; /* Unholy destroys holy - amplified */
+    }
+
+    /* Mental interactions */
+    if (attacker_element == ELEMENT_MENTAL) {
+        if (defender_element == ELEMENT_PHYSICAL)
+            return ELEM_BEATS; /* Mind over matter */
+    }
+
+    /* Physical interactions */
+    if (attacker_element == ELEMENT_PHYSICAL) {
+        if (defender_element == ELEMENT_MENTAL)
+            return ELEM_BEATS; /* Physical disrupts mental focus */
+    }
+
+    return ELEM_NEUTRAL;
+}
+
+/* Backward compatible wrapper - returns 1 if attacker beats or amplifies against defender */
+static int element_beats(int attacker_element, int defender_element)
+{
+    int interaction = get_element_interaction(attacker_element, defender_element);
+    return (interaction == ELEM_BEATS || interaction == ELEM_AMPLIFY);
+}
+
+/* Check if two elements nullify each other */
+static int elements_nullify(int element1, int element2)
+{
+    return (get_element_interaction(element1, element2) == ELEM_NULLIFY);
+}
+
+/* Get damage multiplier based on elemental interaction */
+static float get_element_damage_multiplier(int attacker_element, int defender_element)
+{
+    int interaction = get_element_interaction(attacker_element, defender_element);
+
+    switch (interaction) {
+        case ELEM_AMPLIFY:
+            return 1.5; /* 50% more damage */
+        case ELEM_BEATS:
+            return 1.25; /* 25% more damage */
+        case ELEM_NULLIFY:
+            return 0.5; /* 50% less damage */
+        default:
+            return 1.0; /* Normal damage */
+    }
+}
+
 /* The Fight related routines */
 void appear(struct char_data *ch)
 {
@@ -1094,10 +1319,9 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 
     /* Set the maximum damage per round and subtract the hit points */
     dam = MAX(dam, 0);
-    /* -- jr - Mar 16, 2000 * Fireshield protection */
-    /* -- mp - Nov 05, 2001 * Added Thistlecoat protection */
-    if ((attacktype == SPELL_FIRESHIELD || attacktype == SPELL_THISTLECOAT || attacktype == SPELL_WINDWALL) &&
-        (dam > GET_HIT(victim)))
+    /* Aura spells (MAG_AURA) cannot deal more damage than the victim has HP
+     * This prevents aura reflection from overkilling */
+    if (is_aura_spell(attacktype) && (dam > GET_HIT(victim)))
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
 
@@ -1681,32 +1905,151 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             REMOVE_BIT_AR(GET_OBJ_EXTRA(wielded), ITEM_POISONED);
     }
 
-    /* Counter-attack spells */
-    if (dam > 0 && !AFF_FLAGGED(ch, AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_THISTLECOAT) &&
-        !AFF_FLAGGED(ch, AFF_WINDWALL)) {
+    /* Counter-attack spells - aura shields (MAG_AURA) reflect damage to attacker */
+    if (dam > 0 && !has_aura_shield(ch) && has_aura_shield(victim)) {
+        /* Victim has an aura shield and attacker does not - reflect damage */
+        int victim_aura = get_aura_shield_spell(victim);
+        if (victim_aura > 0) {
+            int saved = mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch));
+            float ratio = get_aura_reflect_ratio(victim_aura, saved);
+            int reflect_dam = (int)(dam * ratio);
 
-        /* -- jr - Mar 16, 2000 */
-        if (AFF_FLAGGED(victim, AFF_FIRESHIELD)) {
-            if (mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch)))
+            if (reflect_dam > 0)
+                damage(victim, ch, reflect_dam, victim_aura);
 
-                damage(victim, ch, dam / 2, SPELL_FIRESHIELD);
-            else
-                damage(victim, ch, dam, SPELL_FIRESHIELD);
-        }
+            /* Special effect: Fire Shield - chance to apply burning */
+            if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_BURNING)) {
+                struct affected_type fire_af;
+                new_affect(&fire_af);
+                fire_af.spell = SPELL_FIRESHIELD;
+                fire_af.duration = rand_number(1, 2);
+                fire_af.modifier = -2;
+                fire_af.location = APPLY_HITROLL;
+                SET_BIT_AR(fire_af.bitvector, AFF_BURNING);
+                affect_join(ch, &fire_af, FALSE, FALSE, FALSE, FALSE);
+                act("As chamas da aura de $N queimam você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Suas chamas queimam $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("As chamas de $N queimam $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
 
-        /* -- mp - Nov 05, 2001 */
-        else if (AFF_FLAGGED(victim, AFF_THISTLECOAT)) {
-            if (mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch)))
-                damage(victim, ch, dam / 3, SPELL_THISTLECOAT);
-            else
-                damage(victim, ch, dam, SPELL_THISTLECOAT);
-        }
-        /* -- Forneck - Nov 09, 2020 */
-        else if (AFF_FLAGGED(victim, AFF_WINDWALL)) {
-            if (mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch)))
-                damage(victim, ch, dam / 2.5, SPELL_WINDWALL);
-            else
-                damage(victim, ch, dam, SPELL_WINDWALL);
+            /* Special effect: Water Shield - chance to soak (dexterity penalty) */
+            if (victim_aura == SPELL_WATERSHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_SOAKED)) {
+                struct affected_type water_af;
+                new_affect(&water_af);
+                water_af.spell = SPELL_WATERSHIELD;
+                water_af.duration = rand_number(1, 3);
+                water_af.modifier = -2;
+                water_af.location = APPLY_DEX;
+                SET_BIT_AR(water_af.bitvector, AFF_SOAKED);
+                affect_join(ch, &water_af, FALSE, FALSE, FALSE, FALSE);
+                act("A água da aura de $N encharca você, reduzindo sua agilidade!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura de água encharca $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura de água de $N encharca $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Rock Shield - chance to reduce attacker's AC */
+            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, 3) == 0) {
+                struct affected_type rock_af;
+                new_affect(&rock_af);
+                rock_af.spell = SPELL_ROCKSHIELD;
+                rock_af.duration = rand_number(2, 4);
+                rock_af.modifier = 10;
+                rock_af.location = APPLY_AC;
+                affect_join(ch, &rock_af, FALSE, FALSE, FALSE, FALSE);
+                act("O impacto contra a aura de pedra de $N danifica sua armadura!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura de pedra danifica a armadura de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura de pedra de $N danifica a armadura de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Poison Shield applies poison to attacker */
+            if (victim_aura == SPELL_POISONSHIELD && !saved && !AFF_FLAGGED(ch, AFF_POISON)) {
+                struct affected_type poison_af;
+                new_affect(&poison_af);
+                poison_af.spell = SPELL_POISON;
+                poison_af.duration = rand_number(2, 4);
+                poison_af.modifier = -2;
+                poison_af.location = APPLY_STR;
+                SET_BIT_AR(poison_af.bitvector, AFF_POISON);
+                affect_join(ch, &poison_af, FALSE, FALSE, FALSE, FALSE);
+                act("O veneno da aura de $N contamina você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura venenosa contamina $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura venenosa de $N contamina $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Lightning Shield - chance to briefly stun (paralysis) */
+            if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, 4) == 0 &&
+                !AFF_FLAGGED(ch, AFF_PARALIZE)) {
+                struct affected_type light_af;
+                new_affect(&light_af);
+                light_af.spell = SPELL_LIGHTNINGSHIELD;
+                light_af.duration = 1;
+                SET_BIT_AR(light_af.bitvector, AFF_PARALIZE);
+                affect_join(ch, &light_af, FALSE, FALSE, FALSE, FALSE);
+                act("O choque elétrico da aura de $N paralisa você momentaneamente!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura elétrica paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty) */
+            if (victim_aura == SPELL_ICESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_CHILLED)) {
+                struct affected_type ice_af;
+                new_affect(&ice_af);
+                ice_af.spell = SPELL_ICESHIELD;
+                ice_af.duration = rand_number(2, 3);
+                ice_af.modifier = -3;
+                ice_af.location = APPLY_HITROLL;
+                SET_BIT_AR(ice_af.bitvector, AFF_CHILLED);
+                affect_join(ch, &ice_af, FALSE, FALSE, FALSE, FALSE);
+                act("O gelo da aura de $N enregela seus movimentos!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura gélida enregela os movimentos de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura gélida de $N enregela os movimentos de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Acid Shield applies corrosion (AC penalty) */
+            if (victim_aura == SPELL_ACIDSHIELD && !saved && !AFF_FLAGGED(ch, AFF_CORRODED)) {
+                struct affected_type acid_af;
+                new_affect(&acid_af);
+                acid_af.spell = SPELL_ACIDSHIELD;
+                acid_af.duration = rand_number(1, 3);
+                acid_af.modifier = 15;
+                acid_af.location = APPLY_AC;
+                SET_BIT_AR(acid_af.bitvector, AFF_CORRODED);
+                affect_join(ch, &acid_af, FALSE, FALSE, FALSE, FALSE);
+                act("O ácido da aura de $N corrói sua armadura!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura ácida corrói a armadura de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura ácida de $N corrói a armadura de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Mind Shield - chance to confuse (wisdom penalty) */
+            if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, 3) == 0 && !AFF_FLAGGED(ch, AFF_CONFUSED)) {
+                struct affected_type mind_af;
+                new_affect(&mind_af);
+                mind_af.spell = SPELL_MINDSHIELD;
+                mind_af.duration = rand_number(1, 2);
+                mind_af.modifier = -3;
+                mind_af.location = APPLY_WIS;
+                SET_BIT_AR(mind_af.bitvector, AFF_CONFUSED);
+                affect_join(ch, &mind_af, FALSE, FALSE, FALSE, FALSE);
+                act("A aura mental de $N confunde sua mente!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura mental confunde a mente de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura mental de $N confunde a mente de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+
+            /* Special effect: Force Shield - chance to stagger (movement penalty) */
+            if (victim_aura == SPELL_FORCESHIELD && !saved && rand_number(0, 3) == 0 &&
+                !AFF_FLAGGED(ch, AFF_STAGGERED)) {
+                struct affected_type force_af;
+                new_affect(&force_af);
+                force_af.spell = SPELL_FORCESHIELD;
+                force_af.duration = rand_number(1, 2);
+                force_af.modifier = -20;
+                force_af.location = APPLY_MOVE;
+                SET_BIT_AR(force_af.bitvector, AFF_STAGGERED);
+                affect_join(ch, &force_af, FALSE, FALSE, FALSE, FALSE);
+                act("A força da aura de $N empurra você para trás!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura de força empurra $n para trás!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura de força de $N empurra $n para trás!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
         }
 
         /* Check if the attacker died from counter-attack damage */
@@ -1717,38 +2060,52 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
                 return;
         }
-    } else if (dam > 0) {
-        /* Counter-attack spell interactions - rock-paper-scissors mechanic */
-        /* FIRESHIELD burns THISTLECOAT, THISTLECOAT blocks WINDWALL, WINDWALL extinguishes FIRESHIELD */
+    } else if (dam > 0 && has_aura_shield(ch) && has_aura_shield(victim)) {
+        /* Both attacker and victim have aura shields - element-based interactions */
+        int attacker_spell = get_aura_shield_spell(ch);
+        int victim_spell = get_aura_shield_spell(victim);
+        int attacker_element = get_spell_element(attacker_spell);
+        int victim_element = get_spell_element(victim_spell);
+        int interaction = get_element_interaction(attacker_element, victim_element);
 
-        /* Attacker has FIRESHIELD, victim has THISTLECOAT - Fire burns thorns */
-        if (AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) {
-            act("Sua barreira de fogo queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_CHAR);
-            act("A barreira de fogo de $n queima sua barreira de espinhos!", FALSE, ch, 0, victim, TO_VICT);
-            act("A barreira de fogo de $n queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
-            affect_from_char(victim, SPELL_THISTLECOAT);
-        }
-        /* Attacker has THISTLECOAT, victim has WINDWALL - Thorns block wind */
-        else if (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_WINDWALL)) {
-            act("Sua barreira de espinhos bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_CHAR);
-            act("A barreira de espinhos de $n bloqueia sua parede de vento!", FALSE, ch, 0, victim, TO_VICT);
-            act("A barreira de espinhos de $n bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
-            affect_from_char(victim, SPELL_WINDWALL);
-        }
-        /* Attacker has WINDWALL, victim has FIRESHIELD - Wind extinguishes fire */
-        else if (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) {
-            act("Sua parede de vento apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_CHAR);
-            act("A parede de vento de $n apaga sua barreira de fogo!", FALSE, ch, 0, victim, TO_VICT);
-            act("A parede de vento de $n apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
-            affect_from_char(victim, SPELL_FIRESHIELD);
-        }
-        /* Both attacker and victim have the same counter-attack spell - they cancel each other */
-        else if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
-                 (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
-                 (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
-            act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
-            act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
-            act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+        /* Handle different element interactions */
+        if (interaction == ELEM_AMPLIFY) {
+            /* Attacker's element is amplified - destroys victim's shield with extra effect */
+            act("Sua aura elemental \tRdestrói\tn a barreira de $N com força amplificada!", FALSE, ch, 0, victim,
+                TO_CHAR);
+            act("A aura elemental de $n \tRdestrói\tn sua barreira com força amplificada!", FALSE, ch, 0, victim,
+                TO_VICT);
+            act("A aura elemental de $n \tRdestrói\tn a barreira de $N com força amplificada!", FALSE, ch, 0, victim,
+                TO_NOTVICT);
+            affect_from_char(victim, victim_spell);
+        } else if (interaction == ELEM_BEATS) {
+            /* Attacker's element beats victim's - destroys victim's shield */
+            act("Sua aura elemental destrói a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A aura elemental de $n destrói sua barreira!", FALSE, ch, 0, victim, TO_VICT);
+            act("A aura elemental de $n destrói a barreira de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, victim_spell);
+        } else if (interaction == ELEM_NULLIFY) {
+            /* Elements nullify each other - both shields are removed */
+            act("Sua aura e a barreira de $N se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_CHAR);
+            act("Sua barreira e a aura de $n se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_VICT);
+            act("As auras de $n e $N se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(ch, attacker_spell);
+            affect_from_char(victim, victim_spell);
+        } else {
+            /* Check reverse interaction (victim vs attacker) */
+            int reverse_interaction = get_element_interaction(victim_element, attacker_element);
+            if (reverse_interaction == ELEM_AMPLIFY || reverse_interaction == ELEM_BEATS) {
+                act("A barreira de $N destrói sua aura elemental!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira destrói a aura elemental de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A barreira de $N destrói a aura elemental de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                affect_from_char(ch, attacker_spell);
+            }
+            /* Same spell type - both cancel */
+            else if (attacker_spell == victim_spell) {
+                act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
+                act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
+                act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
         }
     }
     /* check if the victim has a hitprcnt trigger */
