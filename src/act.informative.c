@@ -1616,22 +1616,42 @@ ACMD(do_score)
 
 ACMD(do_affects)
 {
-    struct affected_type *aff;
+    struct affected_type *aff, *aff2;
     char duration_buf[128];
     int has_spell_affects = 0;
     int has_item_affects = 0;
+    int displayed_spells[TOP_SPELL_DEFINE / 32 + 1]; /* Bitmask to track displayed spells */
+    int max_duration;
 
     if (IS_NPC(ch))
         return;
+
+    /* Initialize the displayed spells bitmask */
+    memset(displayed_spells, 0, sizeof(displayed_spells));
 
     /* 1) Efeitos vindos de magias (lista de affects do char) */
     send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
 
     for (aff = ch->affected; aff; aff = aff->next) {
-        if (aff->duration == -1) {
+        /* Skip if this spell was already displayed */
+        if (aff->spell > 0 && aff->spell < TOP_SPELL_DEFINE) {
+            if (IS_SET(displayed_spells[aff->spell / 32], 1 << (aff->spell % 32)))
+                continue;
+            /* Mark this spell as displayed */
+            SET_BIT(displayed_spells[aff->spell / 32], 1 << (aff->spell % 32));
+        }
+
+        /* Find the maximum duration among all affects from the same spell */
+        max_duration = aff->duration;
+        for (aff2 = aff->next; aff2; aff2 = aff2->next) {
+            if (aff2->spell == aff->spell && aff2->duration > max_duration)
+                max_duration = aff2->duration;
+        }
+
+        if (max_duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, (aff->duration == 1) ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", max_duration, (max_duration == 1) ? "" : "s");
         }
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
