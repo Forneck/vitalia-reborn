@@ -2118,11 +2118,12 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A barreira de $N destrói a aura elemental de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
                 affect_from_char(ch, attacker_spell);
             }
-            /* Same spell type - both cancel */
-            else if (attacker_spell == victim_spell) {
-                act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
-                act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
-                act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+            /* True neutral interaction: shields do not interact */
+            else {
+                act("Sua aura elemental e a barreira de $N não interagem.", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira e a aura elemental de $n não interagem.", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura elemental de $n e a barreira de $N não interagem.", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Nenhuma barreira é removida */
             }
         }
     }
