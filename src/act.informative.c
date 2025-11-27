@@ -910,6 +910,12 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         act("\tY...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_ICESHIELD))
         act("\tC...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
+    if (AFF_FLAGGED(i, AFF_ACIDSHIELD))
+        act("\tg...$l está envolvid$r por uma aura corrosiva!\tn", FALSE, i, 0, ch, TO_VICT);
+    if (AFF_FLAGGED(i, AFF_MINDSHIELD))
+        act("\tM...$l está envolvid$r por uma aura psíquica!\tn", FALSE, i, 0, ch, TO_VICT);
+    if (AFF_FLAGGED(i, AFF_FORCESHIELD))
+        act("\tW...$l está envolvid$r por uma barreira de força!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_BLIND))
         act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_FIREFLIES))
