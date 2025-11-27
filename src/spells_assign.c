@@ -851,7 +851,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25");
     new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -2319,7 +2319,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(62 - (4 * self.level)) > 57 ? (62 - (4 * self.level)) : 57");
     new_spell->assign[0].class_num = CLASS_DRUID;
@@ -2485,7 +2485,7 @@ void create_spells_db()
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20");
     new_spell->assign[0].class_num = CLASS_BARD;
@@ -3344,7 +3344,7 @@ void create_spells_db()
     new_spell->type = CHANSON;
     new_spell->min_pos = POS_FIGHTING;
     new_spell->targ_flags = TAR_IGNORE;
-    new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_AREAS | MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(60 - (4 * self.level)) > 20 ? (60 - (4 * self.level)) : 20");
     new_spell->assign[0].class_num = CLASS_BARD;
@@ -3769,7 +3769,7 @@ void create_spells_db()
     new_spell->messages.to_room = strdup("Um enorme escudo aparece do nada.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_PHYSICAL;
-    new_spell->prerequisite_spell = 1;
+    new_spell->prerequisite_spell = SPELL_ARMOR;
     new_spell->discoverable = 1;
 
     spedit_save_internally(new_spell);
