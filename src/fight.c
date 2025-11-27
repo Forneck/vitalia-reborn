@@ -75,12 +75,22 @@ int attacks_per_round(struct char_data *ch);
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
 
 /* Check if a spell has the MAG_AURA flag */
-static int is_aura_spell(int spellnum) { return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA); }
+static int is_aura_spell(int spellnum)
+{
+    if (spellnum <= 0)
+        return 0;
+    return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA);
+}
 
 /* Get the element of a spell from the spell database */
 static int get_spell_element(int spellnum)
 {
-    struct str_spells *spell = get_spell_by_vnum(spellnum);
+    struct str_spells *spell;
+
+    if (spellnum <= 0)
+        return ELEMENT_UNDEFINED;
+
+    spell = get_spell_by_vnum(spellnum);
     if (spell)
         return spell->element;
     return ELEMENT_UNDEFINED;
@@ -91,6 +101,9 @@ static int get_aura_shield_spell(struct char_data *ch)
 {
     struct affected_type *af;
 
+    if (!ch)
+        return 0;
+
     for (af = ch->affected; af; af = af->next) {
         if (af->spell > 0 && is_aura_spell(af->spell))
             return af->spell;
@@ -99,7 +112,12 @@ static int get_aura_shield_spell(struct char_data *ch)
 }
 
 /* Helper function to check if character has any aura shield active */
-static int has_aura_shield(struct char_data *ch) { return (get_aura_shield_spell(ch) > 0); }
+static int has_aura_shield(struct char_data *ch)
+{
+    if (!ch)
+        return 0;
+    return (get_aura_shield_spell(ch) > 0);
+}
 
 /* Get damage reflection ratio for an aura spell based on element
  * Different elements have different reflection characteristics */

@@ -1512,6 +1512,22 @@ ACMD(do_score)
         send_to_char(ch, "Você está protegid%s por uma aura de fogo!\r\n", OA(ch));
     if (AFF_FLAGGED(ch, AFF_WINDWALL))
         send_to_char(ch, "Você está protegid%s por uma parede de vento!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_WATERSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de água!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de pedra!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_POISONSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura venenosa!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura elétrica!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ICESHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura gélida!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura ácida!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_MINDSHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura mental!\r\n", OA(ch));
+    if (AFF_FLAGGED(ch, AFF_FORCESHIELD))
+        send_to_char(ch, "Você está protegid%s por uma aura de força!\r\n", OA(ch));
 
     if (AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
         send_to_char(ch, "Você se sente protegid%s contra seres bons.\r\n", OA(ch));

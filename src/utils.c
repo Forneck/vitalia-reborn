@@ -1760,7 +1760,15 @@ int get_item_apply_score(struct char_data *ch, struct obj_data *obj)
     // --- Escudos de Dano (Damage Shields) ---
     if ((IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_FIRESHIELD)) ||
         (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_THISTLECOAT) && !AFF_FLAGGED(ch, AFF_THISTLECOAT)) ||
-        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WINDWALL) && !AFF_FLAGGED(ch, AFF_WINDWALL)))
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WINDWALL) && !AFF_FLAGGED(ch, AFF_WINDWALL)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WATERSHIELD) && !AFF_FLAGGED(ch, AFF_WATERSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_ROCKSHIELD) && !AFF_FLAGGED(ch, AFF_ROCKSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_POISONSHIELD) && !AFF_FLAGGED(ch, AFF_POISONSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_LIGHTNINGSHIELD) && !AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_ICESHIELD) && !AFF_FLAGGED(ch, AFF_ICESHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_ACIDSHIELD) && !AFF_FLAGGED(ch, AFF_ACIDSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_MINDSHIELD) && !AFF_FLAGGED(ch, AFF_MINDSHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FORCESHIELD) && !AFF_FLAGGED(ch, AFF_FORCESHIELD)))
         total_score += 120;
 
     // --- Bónus de Alinhamento ---
