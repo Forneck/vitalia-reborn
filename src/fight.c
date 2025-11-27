@@ -222,7 +222,7 @@ static int get_element_interaction(int attacker_element, int defender_element)
     /* Air/Wind interactions */
     if (attacker_element == ELEMENT_AIR) {
         if (defender_element == ELEMENT_FIRE)
-            return ELEM_NULLIFY; /* Wind can extinguish or feed fire - neutralizes */
+            return ELEM_AMPLIFY; /* Wind feeds fire - amplified */
         if (defender_element == ELEMENT_POISON)
             return ELEM_BEATS; /* Wind disperses poison */
         if (defender_element == ELEMENT_EARTH)
