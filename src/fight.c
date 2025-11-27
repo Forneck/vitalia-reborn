@@ -1265,6 +1265,25 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     char local_buf[256];
     struct char_data *tmp_char;
     struct obj_data *corpse_obj;
+
+    /* Safety checks to prevent segfaults when ch or victim is NULL or invalid */
+    if (ch == NULL || victim == NULL)
+        return (0);
+
+    /* Check if characters have been marked for extraction */
+    if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_NOTDEADYET))
+        return (0);
+    if (!IS_NPC(ch) && PLR_FLAGGED(ch, PLR_NOTDEADYET))
+        return (0);
+    if (IS_NPC(victim) && MOB_FLAGGED(victim, MOB_NOTDEADYET))
+        return (0);
+    if (!IS_NPC(victim) && PLR_FLAGGED(victim, PLR_NOTDEADYET))
+        return (0);
+
+    /* Validate rooms - prevent crashes from characters in invalid rooms */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(victim) == NOWHERE)
+        return (0);
+
     if (GET_POS(victim) <= POS_DEAD) {
         /* This is "normal"-ish now with delayed extraction. -gg 3/15/2001 */
         if (PLR_FLAGGED(victim, PLR_NOTDEADYET) || MOB_FLAGGED(victim, MOB_NOTDEADYET)) {
