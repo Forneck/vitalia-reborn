@@ -4267,10 +4267,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 35;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-4");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4297,10 +4293,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 38;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-6");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4327,10 +4319,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(140 - (10 * self.level)) > 90 ? (140 - (10 * self.level)) : 90");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 33;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-3");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4357,10 +4345,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 36;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-4");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4387,10 +4371,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(145 - (10 * self.level)) > 95 ? (145 - (10 * self.level)) : 95");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 34;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-4");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4417,10 +4397,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 37;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-4");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4447,10 +4423,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 39;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-3");
     new_spell->applies[0].duration = strdup("self.level");
@@ -4477,10 +4449,6 @@ void create_spells_db()
     new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_AURA;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(165 - (10 * self.level)) > 115 ? (165 - (10 * self.level)) : 115");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 40;
-    new_spell->assign[0].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
     new_spell->applies[0].modifier = strdup("-5");
     new_spell->applies[0].duration = strdup("self.level");

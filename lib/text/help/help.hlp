@@ -16553,6 +16553,183 @@ evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
 #1
+MAGIA-WATERSHIELD
+
+Uso        : cast 'watershield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma fluida aura azul envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: A agua da aura tem chance de encharcar o atacante, reduzindo
+sua Destreza em 2 pontos temporariamente. Atacantes ja encharcados nao sofrem
+este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa (Fireshield, Thistlecoat,
+Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
+essas mesmas protecoes, evitando loops infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
+#1
+MAGIA-ROCKSHIELD
+
+Uso        : cast 'rockshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma solida aura marrom envolve o alvo, proporcionando forte protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 6 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O impacto contra a aura de pedra tem chance de danificar a
+armadura do atacante, piorando seu AC em 10 pontos temporariamente.
+Atacantes com armadura ja danificada nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-WATERSHIELD
+#1
+MAGIA-POISONSHIELD
+
+Uso        : cast 'poisonshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma toxica aura verde envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O veneno da aura tem chance de contaminar o atacante,
+aplicando o efeito de veneno que reduz a Forca em 2 pontos. Atacantes ja
+envenenados nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-POISON
+#1
+MAGIA-LIGHTNINGSHIELD
+
+Uso        : cast 'lightningshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma eletrica aura amarela envolve o alvo, proporcionando protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O choque eletrico da aura tem chance de paralisar o atacante
+momentaneamente por 1 hora de jogo. Atacantes ja paralisados nao sofrem este
+efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-LIGHTNING-BOLT
+#1
+MAGIA-ICESHIELD
+
+Uso        : cast 'iceshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma gelida aura branca envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O gelo da aura tem chance de congelar os movimentos do
+atacante, reduzindo seu Hitroll em 3 pontos temporariamente. Atacantes ja
+congelados nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-CHILL-TOUCH
+#1
+MAGIA-ACIDSHIELD
+
+Uso        : cast 'acidshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma corrosiva aura esverdeada envolve o alvo, proporcionando protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
+para o atacante. Se o atacante passar em um teste de resistencia, sofrera
+metade do dano. O AC tambem melhora em 4 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: O acido da aura tem chance de corroer a armadura do atacante,
+piorando seu AC em 15 pontos temporariamente. Atacantes com armadura ja
+corroida nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
+#1
+MAGIA-MINDSHIELD
+
+Uso        : cast 'mindshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma eterea aura violeta envolve o alvo, proporcionando protecao contra ataques
+fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
+atacante. Se o atacante passar em um teste de resistencia, sofrera metade
+do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
+
+EFEITO ESPECIAL: A aura mental tem chance de confundir a mente do atacante,
+reduzindo sua Sabedoria em 3 pontos temporariamente. Atacantes ja confusos
+nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SLEEP
+#1
+MAGIA-FORCESHIELD
+
+Uso        : cast 'forceshield' <alvo>
+Acumulativa: Duracao
+Duracao    : Nivel em Horas
+Origem     : Variante descobrivel de Fireshield
+
+Uma translucida aura de forca envolve o alvo, proporcionando forte protecao
+contra ataques fisicos. Todo dano causado no alvo sera parcialmente
+redirecionado para o atacante. Se o atacante passar em um teste de
+resistencia, sofrera metade do dano. O AC tambem melhora em 5 pontos
+enquanto durar a magia.
+
+EFEITO ESPECIAL: A forca da aura tem chance de empurrar o atacante para tras,
+reduzindo seu movimento em 20 pontos temporariamente. Atacantes ja empurrados
+nao sofrem este efeito adicional.
+
+SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
+contra-ataques de vitimas com essas mesmas protecoes, evitando loops
+infinitos de dano.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-SANCTUARY
+#1
 MAGIA-CLONE
 
 Uso        : cast 'clone'
@@ -16580,6 +16757,352 @@ guardiao, podendo ajudar em combate e outras tarefas.
 Como toda invocacao, requer componentes especiais.
 
 Veja Tambem: EVOKE-CROW, EVOKE-WOLF, EVOKE-BEAR, EVOKE-LION
+#1
+MAGIA-MANA-CONTROL MANACONTROL
+
+Uso        : cast 'mana control'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Nivel      : Mago Nivel 5, Clerigo Nivel 5, Druida Nivel 5, Ranger Nivel 5
+
+Mana Control e uma magia fundamental que permite ao conjurador manipular
+e controlar energia magica de forma mais eficiente. Ao dominar esta magia,
+o personagem ganha acesso a um vasto repertorio de invocacoes que podem
+ser descobertas atraves de experimentacao com silabas misticas.
+
+Esta magia serve como base para descobrir diversas variantes de invocacao,
+incluindo criaturas de diferentes racas e elementos. Cada invocacao requer
+componentes especiais para ser lancada.
+
+O custo de mana desta magia e zero, servindo principalmente como pre-requisito
+para outras magias descobriveis.
+
+Veja tambem: EXPERIMENT, SYLLABLES, MAGIA-EVOKE-CROW
+#1
+MAGIA-EVOKE-FIDO
+
+Uso        : cast 'evoke fido'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um fido, uma criatura canina conhecida por sua natureza travessa.
+O fido ira seguir e obedecer ao conjurador, podendo participar de combates
+e causar confusao entre os inimigos.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-ODIF-EKOVE
+
+Uso        : cast 'odif ekove'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Evoke Fido
+
+Invoca um odif, a versao invertida do fido comum. Esta criatura mistica
+possui propriedades diferentes de sua contraparte normal.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-EVOKE-FIDO, ORDER
+#1
+MAGIA-AWAKEN DESPERTAR
+
+Uso        : cast 'awaken' <alvo>
+Acumulativa: Nao
+Duracao    : Instantanea
+Origem     : Variante descobrivel de Sleep
+
+Desperta instantaneamente um alvo que esteja sob efeito da magia Sleep.
+Esta magia e util para acordar aliados que foram adormecidos em combate.
+
+Ao contrario de outras magias, Awaken nao pode ser usado em si mesmo
+e funciona apenas em outros personagens.
+
+Veja tambem: MAGIA-SLEEP
+#1
+MAGIA-EVOKE-TIAMAT
+
+Uso        : cast 'evoke tiamat'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca uma manifestacao de Tiamat, uma poderosa criatura das trevas.
+Esta invocacao e considerada uma das mais perigosas e requer grande
+habilidade magica para controlar.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-ORC
+
+Uso        : cast 'evoke orc'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um orc guerreiro para lutar ao seu lado. Os orcs sao conhecidos
+por sua forca bruta e resistencia em combate.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-HOBGOBLIN
+
+Uso        : cast 'evoke hobgoblin' <alvo>
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um hobgoblin, uma versao maior e mais organizada dos goblins comuns.
+Os hobgoblins sao guerreiros disciplinados e eficientes em combate.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, MAGIA-EVOKE-GOBLIN, ORDER
+#1
+MAGIA-EVOKE-GOBLIN
+
+Uso        : cast 'evoke goblin'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um goblin para auxiliar o conjurador. Goblins sao criaturas
+pequenas mas astutas, uteis para diversas tarefas.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, MAGIA-EVOKE-HOBGOBLIN, ORDER
+#1
+MAGIA-EVOKE-HOBBIT
+
+Uso        : cast 'evoke hobbit'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um hobbit, uma criatura pequena e agil conhecida por sua
+furtividade e destreza. Hobbits sao excelentes companheiros para
+missoes que requerem discrição.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-ROMANO
+
+Uso        : cast 'evoke romano'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um guerreiro romano, um soldado disciplinado e bem treinado
+nas artes da guerra. Romanos sao conhecidos por suas formacoes
+taticas e eficiencia em combate.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-ANAO
+
+Uso        : cast 'evoke anao'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um anao, uma criatura robusta e resistente conhecida por suas
+habilidades em combate corpo a corpo e sua natureza teimosa.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-GNOMO
+
+Uso        : cast 'evoke gnomo'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um gnomo, uma criatura pequena e inteligente com afinidade
+pela terra e minerais. Gnomos sao conhecidos por sua astúcia.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-ELFO
+
+Uso        : cast 'evoke elfo'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um elfo, uma criatura gracil e longeva com grande afinidade
+magica. Elfos sao conhecidos por sua destreza e percepcao aguçada.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-BARALHO
+
+Uso        : cast 'evoke baralho'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca uma criatura mistica associada aos arcanos do baralho.
+Esta invocacao possui propriedades mentais unicas.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-XADREZ
+
+Uso        : cast 'evoke xadrez'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca uma peca de xadrez animada, uma criatura estrategica e calculista.
+Esta invocacao possui propriedades mentais e taticas unicas.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-LAMIA
+
+Uso        : cast 'evoke lamia'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca uma lamia, uma criatura mistica com corpo de serpente e
+torso humanoide. Lamias sao conhecidas por suas habilidades aereas
+e magicas.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-MICONOIDE
+
+Uso        : cast 'evoke miconoide'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um miconoide, uma criatura fungoide inteligente que habita
+areas umidas e subterraneas. Miconoides possuem habilidades unicas
+relacionadas a esporos e comunicacao telepática.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-LAGARTO
+
+Uso        : cast 'evoke lagarto'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um homem-lagarto, uma criatura reptiliana com afinidade
+pela água. Lagartos sao conhecidos por sua adaptabilidade e
+resistencia em ambientes aquáticos.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-BOLHA
+
+Uso        : cast 'evoke bolha'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca uma bolha acida animada, uma criatura gelatinosa com
+propriedades corrosivas. Bolhas sao perigosas em combate devido
+a sua natureza acida.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-ATOM
+
+Uso        : cast 'evoke atom'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um elemental atomico, uma criatura composta de particulas
+elementares da terra. Atoms sao conhecidos por sua solidez e
+resistencia.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-URUBU
+
+Uso        : cast 'evoke urubu'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um urubu das trevas, uma ave carniceira com afinidade
+pelo elemento sombrio. Urubus sao conhecidos por sua resistencia
+e natureza macabra.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
+#1
+MAGIA-EVOKE-NOVATO
+
+Uso        : cast 'evoke novato'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte da criatura)
+Origem     : Variante descobrivel de Mana Control
+
+Invoca um novato, um aventureiro inexperiente mas cheio de
+potencial. Novatos podem ser uteis como companheiros de viagem.
+
+Esta magia requer componentes especiais para ser lancada. A criatura
+invocada permanecera ate ser derrotada ou dispensada.
+
+Veja tambem: MAGIA-MANA-CONTROL, ORDER
 #1
 MAGIA-PARALYSE
 

@@ -1686,8 +1686,6 @@
 99 self.level
 81 61 
 99 self.level
-90 0 35 
-99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
  4 100
 55 1
 56 2
@@ -1702,8 +1700,6 @@
 99 self.level
 81 62 
 99 self.level
-90 0 38 
-99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
  4 100
 55 1
 56 4
@@ -1718,8 +1714,6 @@
 99 self.level
 81 63 
 99 self.level
-90 0 33 
-99 (140 - (10 * self.level)) > 90 ? (140 - (10 * self.level)) : 90
  4 100
 55 1
 56 8
@@ -1734,8 +1728,6 @@
 99 self.level
 81 64 
 99 self.level
-90 0 36 
-99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
  4 100
 55 1
 56 5
@@ -1750,8 +1742,6 @@
 99 self.level
 81 65 
 99 self.level
-90 0 34 
-99 (145 - (10 * self.level)) > 95 ? (145 - (10 * self.level)) : 95
  4 100
 55 1
 56 6
@@ -1766,8 +1756,6 @@
 99 self.level
 81 66 
 99 self.level
-90 0 37 
-99 (155 - (10 * self.level)) > 105 ? (155 - (10 * self.level)) : 105
  4 100
 55 1
 56 7
@@ -1782,8 +1770,6 @@
 99 self.level
 81 67 
 99 self.level
-90 0 39 
-99 (160 - (10 * self.level)) > 110 ? (160 - (10 * self.level)) : 110
  4 100
 55 1
 56 11
@@ -1798,8 +1784,6 @@
 99 self.level
 81 68 
 99 self.level
-90 0 40 
-99 (165 - (10 * self.level)) > 115 ? (165 - (10 * self.level)) : 115
  4 100
 55 1
 56 12
