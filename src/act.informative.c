@@ -164,59 +164,90 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
             send_to_char(ch, "%s", obj->description);
             break;
 
-case SHOW_OBJ_SHORT:
-    /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
-    if (IN_ROOM(ch) != NOWHERE &&
-        ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
-        IN_ROOM(obj) == IN_ROOM(ch) &&
-        PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
+    case SHOW_OBJ_SHORT:
+        /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
+        if (IN_ROOM(ch) != NOWHERE &&
+            ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+            IN_ROOM(obj) == IN_ROOM(ch) &&
+            PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
 
 #ifdef GET_OBJ_LEVEL
-        int lvl = GET_OBJ_LEVEL(obj);
+            int lvl = GET_OBJ_LEVEL(obj);
 #else
-        int lvl = 0; /* ou outra lógica de nível */
+            int lvl = 0; /* ou outra lógica de nível */
 #endif
 
-        /* Modo alternativo: nome + [Nv. XX], sem flags */
-        send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
-                     CCGRN(ch, C_NRM),         /* nome em verde escuro */
-                     obj->short_description,
-                     CCCYN(ch, C_NRM),         /* [ em ciano escuro */
-                     CCGRN(ch, C_NRM),         /* Nv em verde escuro */
-                     CCNRM(ch, C_NRM),         /* . XX em branco */
-                     lvl,
-                     CCCYN(ch, C_NRM),         /* ] em ciano escuro */
-                     CCNRM(ch, C_NRM));        /* reset */
+            /* Se o jogador tem PRF_SHOWVNUMS, mostra o vnum antes, como no modo padrão */
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
+                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
+                if (SCRIPT(obj)) {
+                    if (!TRIGGERS(SCRIPT(obj))->next)
+                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+                    else
+                        send_to_char(ch, "[TRIGS] ");
+                }
+            }
 
-        skip_modifiers = TRUE;  /* NÃO mostra (zunindo), (aura...), etc */
+            /* Modo alternativo: nome + [Nv. XX], sem flags */
+            send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
+                         CCGRN(ch, C_NRM),         /* nome em verde escuro */
+                         obj->short_description ? obj->short_description : "Algo",
+                         CCCYN(ch, C_NRM),         /* [ em ciano escuro */
+                         CCGRN(ch, C_NRM),         /* Nv em verde escuro */
+                         CCNRM(ch, C_NRM),         /* . XX em branco */
+                         lvl,
+                         CCCYN(ch, C_NRM),         /* ] em ciano escuro */
+                         CCNRM(ch, C_NRM));        /* reset */
 
-    }
-    /* Casa, item no chão, mas inventário alternativo DESLIGADO:
-       só pinta o nome de verde e mantém modifiers */
-    else if (IN_ROOM(ch) != NOWHERE &&
-             ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
-             IN_ROOM(obj) == IN_ROOM(ch)) {
+            /* Não queremos (zunindo), (aura...), etc. no modo alternativo */
+            skip_modifiers = TRUE;
+        }
+        /* Casa, item no chão, mas inventário alternativo DESLIGADO:
+           pinta o nome de verde, mantém modifiers E respeita PRF_SHOWVNUMS */
+        else if (IN_ROOM(ch) != NOWHERE &&
+                 ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+                 IN_ROOM(obj) == IN_ROOM(ch)) {
 
-        if (obj->short_description)
-            send_to_char(ch, "%s%s%s",
-                         CCGRN(ch, C_NRM),      /* verde escuro */
-                         obj->short_description,
-                         CCNRM(ch, C_NRM));     /* reset */
-        else
-            send_to_char(ch, "%sAlgo.%s",
-                         CCGRN(ch, C_NRM),
-                         CCNRM(ch, C_NRM));
-        /* aqui NÃO mexemos em skip_modifiers → flags aparecem normalmente */
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
+                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
+                if (SCRIPT(obj)) {
+                    if (!TRIGGERS(SCRIPT(obj))->next)
+                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+                    else
+                        send_to_char(ch, "[TRIGS] ");
+                }
+            }
 
-    }
-    /* Qualquer outro caso (fora de casa, inventário, containers, etc.) */
-    else {
-        if (obj->short_description)
-            send_to_char(ch, "%s", obj->short_description);
-        else
-            send_to_char(ch, "Algo.");
-    }
-    break;
+            if (obj->short_description)
+                send_to_char(ch, "%s%s%s",
+                             CCGRN(ch, C_NRM),      /* verde escuro */
+                             obj->short_description,
+                             CCNRM(ch, C_NRM));     /* reset */
+            else
+                send_to_char(ch, "%sAlgo.%s",
+                             CCGRN(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            /* aqui NÃO mexemos em skip_modifiers → flags aparecem normalmente */
+        }
+        /* Qualquer outro caso (fora de casa, inventário, containers, etc.) */
+        else {
+            /* Aqui volta o comportamento antigo: [vnum] short_description */
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
+                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
+                if (SCRIPT(obj)) {
+                    if (!TRIGGERS(SCRIPT(obj))->next)
+                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+                    else
+                        send_to_char(ch, "[TRIGS] ");
+                }
+            }
+
+            if (obj->short_description)
+                send_to_char(ch, "%s", obj->short_description);
+            else
+                send_to_char(ch, "Algo.");
+        }
+        break;
 
         case SHOW_OBJ_ACTION:
             switch (GET_OBJ_TYPE(obj)) {
