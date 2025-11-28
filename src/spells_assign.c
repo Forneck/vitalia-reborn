@@ -4281,7 +4281,7 @@ void create_spells_db()
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_ROCKSHIELD #100 - Earth/Petra aegis (discoverable variant of fireshield)
+    // SPELL_ROCKSHIELD #100 - Earth/Petra aegis (discoverable variant requiring thistlecoat)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4303,11 +4303,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura de pedra ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_EARTH;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_THISTLECOAT;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_POISONSHIELD #101 - Poison/Venenum aegis (discoverable variant of fireshield)
+    // SPELL_POISONSHIELD #101 - Poison/Venenum aegis (discoverable variant requiring thistlecoat)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4329,11 +4329,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura venenosa ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_POISON;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_THISTLECOAT;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_LIGHTNINGSHIELD #102 - Lightning/Diesilla aegis (discoverable variant of fireshield)
+    // SPELL_LIGHTNINGSHIELD #102 - Lightning/Diesilla aegis (discoverable variant requiring windwall)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4355,11 +4355,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura de raios ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_LIGHTNING;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_WINDWALL;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_ICESHIELD #103 - Ice/Cold aegis (discoverable variant of fireshield)
+    // SPELL_ICESHIELD #103 - Ice/Cold aegis (discoverable variant requiring watershield)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4381,11 +4381,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura de gelo ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_ICE;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_WATERSHIELD;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_ACIDSHIELD #104 - Acid aegis (discoverable variant of fireshield)
+    // SPELL_ACIDSHIELD #104 - Acid aegis (discoverable variant requiring poisonshield)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4407,11 +4407,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura ácida ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_ACID;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_POISONSHIELD;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_MINDSHIELD #105 - Mental aegis (discoverable variant of fireshield)
+    // SPELL_MINDSHIELD #105 - Mental aegis (discoverable variant requiring soundbarrier)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4433,11 +4433,11 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura mental ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_MENTAL;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_SOUNDBARRIER;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
-    // SPELL_FORCESHIELD #106 - Physical/Force aegis (discoverable variant of fireshield)
+    // SPELL_FORCESHIELD #106 - Physical/Force aegis (discoverable variant requiring shield)
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
@@ -4459,7 +4459,7 @@ void create_spells_db()
     new_spell->messages.wear_off = strdup("A aura de força ao redor de seu corpo desaparece.");
     new_spell->school = SCHOOL_ABJURATION;
     new_spell->element = ELEMENT_PHYSICAL;
-    new_spell->prerequisite_spell = SPELL_FIRESHIELD;
+    new_spell->prerequisite_spell = SPELL_SHIELD;
     new_spell->discoverable = 1;
     spedit_save_internally(new_spell);
 
