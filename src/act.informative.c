@@ -718,17 +718,17 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         if (AFF_FLAGGED(i, AFF_ROCKSHIELD))
             act("\ty...$l está envolvid$r por uma aura de pedra!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_POISONSHIELD))
-            act("\tG...$l está envolvid$r por uma aura venenosa!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tg...$l está envolvid$r por uma aura venenosa!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_LIGHTNINGSHIELD))
-            act("\tY...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tC...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_ICESHIELD))
-            act("\tC...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tB...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_ACIDSHIELD))
-            act("\tM...$l está envolvid$r por uma aura ácida!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tG...$l está envolvid$r por uma aura ácida!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_MINDSHIELD))
-            act("\tw...$l está envolvid$r por uma aura mental!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tm...$l está envolvid$r por uma aura mental!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_FORCESHIELD))
-            act("\tW...$l está envolvid$r por uma aura de força!\tn", FALSE, i, 0, ch, TO_VICT);
+            act("\tw...$l está envolvid$r por uma aura de força!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_WINDWALL))
             act("\tw...$l está envolvid$r por uma parede de vento!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_BLIND))
@@ -907,17 +907,17 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     if (AFF_FLAGGED(i, AFF_ROCKSHIELD))
         act("\ty...$l está envolvid$r por uma aura de pedra!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_POISONSHIELD))
-        act("\tG...$l está envolvid$r por uma aura venenosa!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tg...$l está envolvid$r por uma aura venenosa!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_LIGHTNINGSHIELD))
-        act("\tY...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tC...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_ICESHIELD))
-        act("\tC...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tB...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_ACIDSHIELD))
-        act("\tM...$l está envolvid$r por uma aura ácida!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tG...$l está envolvid$r por uma aura ácida!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_MINDSHIELD))
-        act("\tw...$l está envolvid$r por uma aura mental!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tm...$l está envolvid$r por uma aura mental!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_FORCESHIELD))
-        act("\tW...$l está envolvid$r por uma aura de força!\tn", FALSE, i, 0, ch, TO_VICT);
+        act("\tw...$l está envolvid$r por uma aura de força!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_WINDWALL))
         act("\tw...$l está envolvid$r por uma parede de vento!\tn", FALSE, i, 0, ch, TO_VICT);
     if (AFF_FLAGGED(i, AFF_BLIND))
