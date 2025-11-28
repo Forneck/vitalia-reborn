@@ -217,10 +217,33 @@ static int can_take_obj(struct char_data *ch, struct obj_data *obj)
 void get_check_money(struct char_data *ch, struct obj_data *obj)
 {
     int value;
+    struct obj_data *check_obj;
+    bool object_still_exists = FALSE;
 
     /* Safety check: obj might be NULL if extracted by triggers */
     if (obj == NULL)
         return;
+
+    /* Safety check: Verify the object is still in the global object_list.
+     * This prevents use-after-free when an object is deleted via oedit or
+     * other means while a mob is in the middle of looting it. The pointer
+     * comparison in the caller's validation loop is not reliable because
+     * freed memory can be reused and the same address could point to a
+     * different object. By checking the global object_list, we ensure the
+     * object hasn't been extracted.
+     * Note: This traversal only runs for money objects being picked up,
+     * which is relatively rare, so the performance impact is minimal. */
+    for (check_obj = object_list; check_obj; check_obj = check_obj->next) {
+        if (check_obj == obj) {
+            object_still_exists = TRUE;
+            break;
+        }
+    }
+
+    if (!object_still_exists) {
+        /* Object was extracted/deleted, do not proceed */
+        return;
+    }
 
     value = GET_OBJ_VAL(obj, 0);
 
