@@ -127,7 +127,7 @@ void sub_write(char *arg, char_data *ch, byte find_invis, int targets)
     int i, tmp;
     int to_sleeping = 1; /* mainly for windows compiles */
 
-    if (!arg)
+    if (!arg || !ch || IN_ROOM(ch) == NOWHERE)
         return;
 
     tokens[0] = str;
