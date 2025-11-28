@@ -1115,10 +1115,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                          CCNRM(ch, C_NRM));
 
             if (aff->modifier) {
-                if (!IS_SET_AR(AFF_FLAGS(k), AFF_PROTECT))
+                if (!IS_SET_AR(aff->bitvector, AFF_PROTECT))
                     send_to_char(ch, "%+d to %s", aff->modifier, apply_types[(int)aff->location]);
                 else
-                    send_to_char(ch, "%%%d resist spell (%d): '%s'", aff->modifier, aff->location,
+                    send_to_char(ch, "%d%% resist spell (%d): '%s'", aff->modifier, aff->location,
                                  get_spell_name(aff->location));
             }
 
