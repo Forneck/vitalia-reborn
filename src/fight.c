@@ -1985,8 +1985,19 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             float ratio = get_aura_reflect_ratio(victim_aura, saved);
             int reflect_dam = (int)(dam * ratio);
 
-            if (reflect_dam > 0)
+            if (reflect_dam > 0) {
+                /* Send reflection messages before damage is applied */
+                if (saved) {
+                    act("A aura de $N reflete parte do dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                    act("Sua aura reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura de $N reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                } else {
+                    act("A aura de $N reflete o dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                    act("Sua aura reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura de $N reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                }
                 damage(victim, ch, reflect_dam, victim_aura);
+            }
 
             /* Special effect: Fire Shield - chance to apply burning */
             if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_BURNING)) {
