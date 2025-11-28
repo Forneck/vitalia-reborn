@@ -96,17 +96,55 @@ static int get_spell_element(int spellnum)
     return ELEMENT_UNDEFINED;
 }
 
-/* Get the first active aura shield spell affecting a character by scanning affects */
+/* Check if an affect is an actual aura shield (not just a side effect from aura damage).
+ * Returns the AFF flag that corresponds to the aura spell, or -1 if not a shield spell. */
+static int get_aura_shield_aff(int spellnum)
+{
+    switch (spellnum) {
+        case SPELL_FIRESHIELD:
+            return AFF_FIRESHIELD;
+        case SPELL_THISTLECOAT:
+            return AFF_THISTLECOAT;
+        case SPELL_WINDWALL:
+            return AFF_WINDWALL;
+        case SPELL_WATERSHIELD:
+            return AFF_WATERSHIELD;
+        case SPELL_ROCKSHIELD:
+            return AFF_ROCKSHIELD;
+        case SPELL_POISONSHIELD:
+            return AFF_POISONSHIELD;
+        case SPELL_LIGHTNINGSHIELD:
+            return AFF_LIGHTNINGSHIELD;
+        case SPELL_ICESHIELD:
+            return AFF_ICESHIELD;
+        case SPELL_ACIDSHIELD:
+            return AFF_ACIDSHIELD;
+        case SPELL_MINDSHIELD:
+            return AFF_MINDSHIELD;
+        case SPELL_FORCESHIELD:
+            return AFF_FORCESHIELD;
+        default:
+            return -1;
+    }
+}
+
+/* Get the first active aura shield spell affecting a character by scanning affects.
+ * Only returns spells that have the actual shield bitvector set, not side effects. */
 static int get_aura_shield_spell(struct char_data *ch)
 {
     struct affected_type *af;
+    int shield_aff;
 
     if (!ch)
         return 0;
 
     for (af = ch->affected; af; af = af->next) {
-        if (af->spell > 0 && is_aura_spell(af->spell))
-            return af->spell;
+        if (af->spell > 0 && is_aura_spell(af->spell)) {
+            /* Verify this is an actual shield, not a side effect (like burning/soaked) */
+            shield_aff = get_aura_shield_aff(af->spell);
+            if (shield_aff >= 0 && IS_SET_AR(af->bitvector, shield_aff))
+                return af->spell;
+        }
     }
     return 0;
 }
