@@ -6364,11 +6364,15 @@ de resistencia, sofre metade do dano. O seu AC tambem melhora
 em 5 pontos. Se dois oponentes se enfrentarem com fireshield,
 o dano e anulado para ambas as partes.
 
+EFEITO ESPECIAL: As chamas da aura tem chance de queimar o atacante,
+aplicando o efeito de queimadura que reduz o Hitroll em 2 pontos
+temporariamente. Atacantes ja queimados nao sofrem este efeito adicional.
+
 SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
 #1
 MAGIA-FLY
 
@@ -6977,7 +6981,7 @@ Nivel      : Clerigo Nivel 18, Mago Nivel 65, Druida Nivel 37
 
 O alvo sera enviado de volta para a cidade natal do jogador.
 #1
-MAGIAS
+MAGIA MAGIAS
 
    Magias podem ser usadas apenas por clerigos, magos, druidas e bardos.
 Para se lancar uma magia, e necessario ter pontos de magia (mana)
@@ -16580,7 +16584,7 @@ MAGIA-ROCKSHIELD
 Uso        : cast 'rockshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Thistlecoat
 
 Uma solida aura marrom envolve o alvo, proporcionando forte protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16595,14 +16599,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-WATERSHIELD
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
 #1
 MAGIA-POISONSHIELD
 
 Uso        : cast 'poisonshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Thistlecoat
 
 Uma toxica aura verde envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
@@ -16617,14 +16621,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-POISON
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON
 #1
 MAGIA-LIGHTNINGSHIELD
 
 Uso        : cast 'lightningshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Windwall
 
 Uma eletrica aura amarela envolve o alvo, proporcionando protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16639,14 +16643,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-LIGHTNING-BOLT
+Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT
 #1
 MAGIA-ICESHIELD
 
 Uso        : cast 'iceshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Watershield
 
 Uma gelida aura branca envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
@@ -16661,14 +16665,14 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-CHILL-TOUCH
+Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH
 #1
 MAGIA-ACIDSHIELD
 
 Uso        : cast 'acidshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Poisonshield
 
 Uma corrosiva aura esverdeada envolve o alvo, proporcionando protecao contra
 ataques fisicos. Todo dano causado no alvo sera parcialmente redirecionado
@@ -16683,36 +16687,36 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
+Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD
 #1
 MAGIA-MINDSHIELD
 
 Uso        : cast 'mindshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Soundbarrier
 
 Uma eterea aura violeta envolve o alvo, proporcionando protecao contra ataques
 fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
 atacante. Se o atacante passar em um teste de resistencia, sofrera metade
 do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
 
-EFEITO ESPECIAL: A aura mental tem chance de confundir a mente do atacante,
-reduzindo sua Sabedoria em 3 pontos temporariamente. Atacantes ja confusos
-nao sofrem este efeito adicional.
+EFEITO ESPECIAL: A aura mental tem chance de drenar a mente do atacante,
+reduzindo sua Inteligencia em 3 pontos e sua Mana temporariamente. Atacantes
+ja confusos nao sofrem este efeito adicional.
 
 SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-SLEEP
+Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP
 #1
 MAGIA-FORCESHIELD
 
 Uso        : cast 'forceshield' <alvo>
 Acumulativa: Duracao
 Duracao    : Nivel em Horas
-Origem     : Variante descobrivel de Fireshield
+Origem     : Variante descobrivel de Shield (requer Armor -> Shield)
 
 Uma translucida aura de forca envolve o alvo, proporcionando forte protecao
 contra ataques fisicos. Todo dano causado no alvo sera parcialmente
@@ -16728,7 +16732,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-SANCTUARY
+Veja tambem: MAGIA-SHIELD, MAGIA-ARMOR, MAGIA-SANCTUARY
 #1
 MAGIA-CLONE
 

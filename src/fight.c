@@ -96,17 +96,55 @@ static int get_spell_element(int spellnum)
     return ELEMENT_UNDEFINED;
 }
 
-/* Get the first active aura shield spell affecting a character by scanning affects */
+/* Check if an affect is an actual aura shield (not just a side effect from aura damage).
+ * Returns the AFF flag that corresponds to the aura spell, or -1 if not a shield spell. */
+static int get_aura_shield_aff(int spellnum)
+{
+    switch (spellnum) {
+        case SPELL_FIRESHIELD:
+            return AFF_FIRESHIELD;
+        case SPELL_THISTLECOAT:
+            return AFF_THISTLECOAT;
+        case SPELL_WINDWALL:
+            return AFF_WINDWALL;
+        case SPELL_WATERSHIELD:
+            return AFF_WATERSHIELD;
+        case SPELL_ROCKSHIELD:
+            return AFF_ROCKSHIELD;
+        case SPELL_POISONSHIELD:
+            return AFF_POISONSHIELD;
+        case SPELL_LIGHTNINGSHIELD:
+            return AFF_LIGHTNINGSHIELD;
+        case SPELL_ICESHIELD:
+            return AFF_ICESHIELD;
+        case SPELL_ACIDSHIELD:
+            return AFF_ACIDSHIELD;
+        case SPELL_MINDSHIELD:
+            return AFF_MINDSHIELD;
+        case SPELL_FORCESHIELD:
+            return AFF_FORCESHIELD;
+        default:
+            return -1;
+    }
+}
+
+/* Get the first active aura shield spell affecting a character by scanning affects.
+ * Only returns spells that have the actual shield bitvector set, not side effects. */
 static int get_aura_shield_spell(struct char_data *ch)
 {
     struct affected_type *af;
+    int shield_aff;
 
     if (!ch)
         return 0;
 
     for (af = ch->affected; af; af = af->next) {
-        if (af->spell > 0 && is_aura_spell(af->spell))
-            return af->spell;
+        if (af->spell > 0 && is_aura_spell(af->spell)) {
+            /* Verify this is an actual shield, not a side effect (like burning/soaked) */
+            shield_aff = get_aura_shield_aff(af->spell);
+            if (shield_aff >= 0 && IS_SET_AR(af->bitvector, shield_aff))
+                return af->spell;
+        }
     }
     return 0;
 }
@@ -1947,8 +1985,19 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             float ratio = get_aura_reflect_ratio(victim_aura, saved);
             int reflect_dam = (int)(dam * ratio);
 
-            if (reflect_dam > 0)
+            if (reflect_dam > 0) {
+                /* Send reflection messages before damage is applied */
+                if (saved) {
+                    act("A aura de $N reflete parte do dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                    act("Sua aura reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura de $N reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                } else {
+                    act("A aura de $N reflete o dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                    act("Sua aura reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura de $N reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                }
                 damage(victim, ch, reflect_dam, victim_aura);
+            }
 
             /* Special effect: Fire Shield - chance to apply burning */
             if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_BURNING)) {
@@ -2055,19 +2104,27 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura ácida de $N corrói a armadura de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Mind Shield - chance to confuse (wisdom penalty) */
+            /* Special effect: Mind Shield - chance to confuse (intelligence and mana penalty) */
             if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, 3) == 0 && !AFF_FLAGGED(ch, AFF_CONFUSED)) {
                 struct affected_type mind_af;
+                struct affected_type mana_af;
                 new_affect(&mind_af);
                 mind_af.spell = SPELL_MINDSHIELD;
                 mind_af.duration = rand_number(1, 2);
                 mind_af.modifier = -3;
-                mind_af.location = APPLY_WIS;
+                mind_af.location = APPLY_INT;
                 SET_BIT_AR(mind_af.bitvector, AFF_CONFUSED);
                 affect_join(ch, &mind_af, FALSE, FALSE, FALSE, FALSE);
-                act("A aura mental de $N confunde sua mente!", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua aura mental confunde a mente de $n!", FALSE, ch, 0, victim, TO_VICT);
-                act("A aura mental de $N confunde a mente de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Also reduce mana */
+                new_affect(&mana_af);
+                mana_af.spell = SPELL_MINDSHIELD;
+                mana_af.duration = rand_number(1, 2);
+                mana_af.modifier = -(GET_LEVEL(victim) * 2);
+                mana_af.location = APPLY_MANA;
+                affect_join(ch, &mana_af, FALSE, FALSE, FALSE, FALSE);
+                act("A aura mental de $N drena sua inteligência e mana!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura mental drena a inteligência e mana de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura mental de $N drena a inteligência e mana de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
             /* Special effect: Force Shield - chance to stagger (movement penalty) */
