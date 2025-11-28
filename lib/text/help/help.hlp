@@ -16701,9 +16701,9 @@ fisicos. Todo dano causado no alvo sera parcialmente redirecionado para o
 atacante. Se o atacante passar em um teste de resistencia, sofrera metade
 do dano. O AC tambem melhora em 3 pontos enquanto durar a magia.
 
-EFEITO ESPECIAL: A aura mental tem chance de confundir a mente do atacante,
-reduzindo sua Sabedoria em 3 pontos temporariamente. Atacantes ja confusos
-nao sofrem este efeito adicional.
+EFEITO ESPECIAL: A aura mental tem chance de drenar a mente do atacante,
+reduzindo sua Inteligencia em 3 pontos e sua Mana temporariamente. Atacantes
+ja confusos nao sofrem este efeito adicional.
 
 SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops

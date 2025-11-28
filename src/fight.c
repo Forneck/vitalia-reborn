@@ -2104,19 +2104,27 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura ácida de $N corrói a armadura de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Mind Shield - chance to confuse (wisdom penalty) */
+            /* Special effect: Mind Shield - chance to confuse (intelligence and mana penalty) */
             if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, 3) == 0 && !AFF_FLAGGED(ch, AFF_CONFUSED)) {
                 struct affected_type mind_af;
+                struct affected_type mana_af;
                 new_affect(&mind_af);
                 mind_af.spell = SPELL_MINDSHIELD;
                 mind_af.duration = rand_number(1, 2);
                 mind_af.modifier = -3;
-                mind_af.location = APPLY_WIS;
+                mind_af.location = APPLY_INT;
                 SET_BIT_AR(mind_af.bitvector, AFF_CONFUSED);
                 affect_join(ch, &mind_af, FALSE, FALSE, FALSE, FALSE);
-                act("A aura mental de $N confunde sua mente!", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua aura mental confunde a mente de $n!", FALSE, ch, 0, victim, TO_VICT);
-                act("A aura mental de $N confunde a mente de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Also reduce mana */
+                new_affect(&mana_af);
+                mana_af.spell = SPELL_MINDSHIELD;
+                mana_af.duration = rand_number(1, 2);
+                mana_af.modifier = -(GET_LEVEL(victim) * 2);
+                mana_af.location = APPLY_MANA;
+                affect_join(ch, &mana_af, FALSE, FALSE, FALSE, FALSE);
+                act("A aura mental de $N drena sua inteligência e mana!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura mental drena a inteligência e mana de $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura mental de $N drena a inteligência e mana de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
             /* Special effect: Force Shield - chance to stagger (movement penalty) */
