@@ -749,7 +749,7 @@ ACMD(do_combo)
     /*improve*/
     improve = GET_SKILL(ch, SKILL_COMBO_ATTACK) + 1;
 
-    SET_SKILL(ch, SKILL_COMBO_ATTACK, MIN(100,improve));
+    SET_SKILL(ch, SKILL_COMBO_ATTACK, MIN(100, improve));
     WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
 }
 
@@ -1000,7 +1000,7 @@ ACMD(do_bandage)
     char arg[MAX_INPUT_LENGTH];
     struct char_data *vict;
     int percent, prob;
-    
+
     if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BANDAGE)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
         return;
@@ -1031,9 +1031,8 @@ ACMD(do_bandage)
     WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     percent = rand_number(1, 101); /* 101% is a complete failure */
     if (!IS_NPC(ch)) {
-	prob = GET_SKILL(ch, SKILL_BANDAGE);
-    }
-    else {
+        prob = GET_SKILL(ch, SKILL_BANDAGE);
+    } else {
         prob = GET_LEVEL(ch);
     }
     if (percent > prob) {
@@ -1231,10 +1230,6 @@ ACMD(do_shoot)
         send_to_char(ch, "Atirar em quem?\r\n");
         return;
     }
-    if (!CONFIG_PK_ALLOWED && !IS_NPC(vict)) {                                                  /* prevent accidental pkill */
-        act("Use 'murder' se voce realmente deseja atacar $L.", FALSE, ch, 0, vict, TO_CHAR);
-        return;
-    }
     if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BOWS)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
         return;
@@ -1334,6 +1329,12 @@ ACMD(do_shoot)
                     /* Validate was_room is still valid */
                     if (IN_ROOM(ch) < 0 || IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) >= top_of_world) {
                         log1("SYSERR: do_shoot - ch in invalid room %d after moving back", IN_ROOM(ch));
+                        return;
+                    }
+
+                    /* prevent accidental pkill */
+                    if (!CONFIG_PK_ALLOWED && !IS_NPC(vict)) {
+                        act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
                         return;
                     }
 
