@@ -557,13 +557,13 @@ const char *history_types[] = {"all",   "say",  "gossip",  "wiznet", "tell",  "s
 const char *ibt_bits[] = {"Resolved", "Important", "InProgress", "\n"};
 
 /* spells flags used by spedit OLC */
-const char *targ_flags[] = {"IGNORE",  "CHAR_ROOM", "CHAR_WORLD", "FIGHT_SELF", "FIGHT_VICT", "SELF_ONLY", "NOT_SELF",
-                            "OBJ_INV", "OBJ_ROOM",  "OBJ_WORLD",  "OBJ_EQUIP",  "GROUP",      "GROUP_VICT"};
+const char *targ_flags[] = {"IGNORE",  "CHAR_ROOM", "CHAR_WORLD", "FIGHT_SELF", "FIGHT_VICT", "SELF_ONLY",  "NOT_SELF",
+                            "OBJ_INV", "OBJ_ROOM",  "OBJ_WORLD",  "OBJ_EQUIP",  "GROUP",      "GROUP_VICT", "\n"};
 
 /* Magic aff flags used by spedit OLC system */
-const char *mag_flags[] = {"DAMAGE",  "AFFECTS", "UNAFFECTS", "POINTS",    "ALTER_OBJS", "GROUPS",
-                           "MASSES",  "AREAS",   "SUMMONS",   "CREATIONS", "MANUAL",     "ROOMS",
-                           "VIOLENT", "ACCDUR",  "ACCMOD",    "PROTECTION"};
+const char *mag_flags[] = {"DAMAGE",  "AFFECTS", "UNAFFECTS", "POINTS",     "ALTER_OBJS", "GROUPS",
+                           "MASSES",  "AREAS",   "SUMMONS",   "CREATIONS",  "MANUAL",     "ROOMS",
+                           "VIOLENT", "ACCDUR",  "ACCMOD",    "PROTECTION", "AURA",       "\n"};
 
 cpp_extern const struct weapon_prof_data wpn_prof[] = {
     {0, 0, 0, 0},  /* not warriors or non-learned weapons */
