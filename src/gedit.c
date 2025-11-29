@@ -119,44 +119,53 @@ static void gedit_setup(struct descriptor_data *d, struct char_data *mob)
 static void gedit_disp_menu(struct descriptor_data *d)
 {
     struct char_data *mob;
+    room_vnum room_display;
+    mob_vnum target_display;
 
     mob = OLC_MOB(d);
     get_char_colors(d->character);
     clear_screen(d);
 
-    write_to_output(
-        d,
-        "-- Goal Editor for: %s%s%s [%s%d%s] --\r\n"
-        "\r\n"
-        "%s1%s) Current Goal    : %s%s (%d)%s\r\n"
-        "%s2%s) Goal Room      : %s%d%s %s\r\n"
-        "%s3%s) Goal Item      : %s%d%s %s\r\n"
-        "%s4%s) Goal Target    : %s%d%s %s\r\n"
-        "%s5%s) Goal Timer     : %s%d%s\r\n"
-        "\r\n"
-        "%sL%s) List all available goals\r\n"
-        "%sQ%s) Quit (save changes)\r\n"
-        "Enter choice : ",
+    /* Convert rnum to vnum for display */
+    room_display =
+        (mob->ai_data->goal_destination != NOWHERE) ? GET_ROOM_VNUM(mob->ai_data->goal_destination) : NOWHERE;
+    target_display = (mob->ai_data->goal_target_mob_rnum != NOBODY && mob->ai_data->goal_target_mob_rnum >= 0 &&
+                      mob->ai_data->goal_target_mob_rnum < top_of_mobt)
+                         ? mob_index[mob->ai_data->goal_target_mob_rnum].vnum
+                         : NOBODY;
 
-        cyn, GET_NAME(mob), nrm, yel, GET_MOB_VNUM(mob), nrm,
+    write_to_output(d,
+                    "-- Goal Editor for: %s%s%s [%s%d%s] --\r\n"
+                    "\r\n"
+                    "%s1%s) Current Goal    : %s%s (%d)%s\r\n"
+                    "%s2%s) Goal Room      : %s%d%s %s\r\n"
+                    "%s3%s) Goal Item      : %s%d%s %s\r\n"
+                    "%s4%s) Goal Target    : %s%d%s %s\r\n"
+                    "%s5%s) Goal Timer     : %s%d%s\r\n"
+                    "\r\n"
+                    "%sL%s) List all available goals\r\n"
+                    "%sQ%s) Quit (save changes)\r\n"
+                    "Enter choice : ",
 
-        grn, nrm, yel,
-        (mob->ai_data->current_goal >= 0 && mob->ai_data->current_goal <= 9 && goal_names[mob->ai_data->current_goal] &&
-         *goal_names[mob->ai_data->current_goal] != '\n')
-            ? goal_names[mob->ai_data->current_goal]
-            : "Unknown",
-        mob->ai_data->current_goal, nrm,
+                    cyn, GET_NAME(mob), nrm, yel, GET_MOB_VNUM(mob), nrm,
 
-        grn, nrm, yel, mob->ai_data->goal_destination, nrm, mob->ai_data->goal_destination == NOWHERE ? "(none)" : "",
+                    grn, nrm, yel,
+                    (mob->ai_data->current_goal >= 0 && mob->ai_data->current_goal <= 9 &&
+                     goal_names[mob->ai_data->current_goal] && *goal_names[mob->ai_data->current_goal] != '\n')
+                        ? goal_names[mob->ai_data->current_goal]
+                        : "Unknown",
+                    mob->ai_data->current_goal, nrm,
 
-        grn, nrm, yel, mob->ai_data->goal_item_vnum, nrm, mob->ai_data->goal_item_vnum == NOTHING ? "(none)" : "",
+                    grn, nrm, yel, room_display, nrm, room_display == NOWHERE ? "(none)" : "",
 
-        grn, nrm, yel, mob->ai_data->goal_target_mob_rnum, nrm,
-        mob->ai_data->goal_target_mob_rnum == NOBODY ? "(none)" : "",
+                    grn, nrm, yel, mob->ai_data->goal_item_vnum, nrm,
+                    mob->ai_data->goal_item_vnum == NOTHING ? "(none)" : "",
 
-        grn, nrm, yel, mob->ai_data->goal_timer, nrm,
+                    grn, nrm, yel, target_display, nrm, target_display == NOBODY ? "(none)" : "",
 
-        grn, nrm, grn, nrm);
+                    grn, nrm, yel, mob->ai_data->goal_timer, nrm,
+
+                    grn, nrm, grn, nrm);
 
     OLC_MODE(d) = GEDIT_MAIN_MENU;
 }
@@ -273,7 +282,7 @@ void gedit_parse(struct descriptor_data *d, char *arg)
                     return;
 
                 case '4':
-                    write_to_output(d, "Enter target mob rnum (-1 to clear): ");
+                    write_to_output(d, "Enter target mob vnum (-1 to clear): ");
                     OLC_MODE(d) = GEDIT_GOAL_TARGET;
                     return;
 
@@ -420,9 +429,14 @@ void gedit_parse(struct descriptor_data *d, char *arg)
                 OLC_MOB(d)->ai_data->goal_target_mob_rnum = NOBODY;
                 write_to_output(d, "Goal target cleared.\r\n");
             } else {
-                /* TODO: Add mob rnum validation if needed */
-                OLC_MOB(d)->ai_data->goal_target_mob_rnum = value;
-                write_to_output(d, "Goal target set to %d.\r\n", value);
+                /* Convert VNUM to RNUM */
+                mob_rnum rnum = real_mobile(value);
+                if (rnum == NOBODY) {
+                    write_to_output(d, "Mob vnum %d does not exist. Try again: ", value);
+                    return;
+                }
+                OLC_MOB(d)->ai_data->goal_target_mob_rnum = rnum;
+                write_to_output(d, "Goal target set to mob vnum %d.\r\n", value);
             }
             OLC_VAL(d) = TRUE;
             gedit_disp_menu(d);
