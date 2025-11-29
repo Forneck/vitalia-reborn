@@ -2261,6 +2261,45 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
     mob->ai_data->current_quest = QST_NUM(rnum);
     mob->ai_data->quest_timer = QST_TIME(rnum);
     mob->ai_data->quest_counter = QST_QUANTITY(rnum) > 0 ? QST_QUANTITY(rnum) : 1;
+
+    /* Automatically set the goal to GOAL_COMPLETE_QUEST so the mob actively pursues the quest.
+     * This ensures that when a mob accepts a quest, it will immediately start working on it
+     * rather than waiting for a random chance to trigger quest processing. */
+    mob->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+    mob->ai_data->goal_timer = 0;
+
+    /* Initialize goal fields based on quest type */
+    switch (QST_TYPE(rnum)) {
+        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
+            /* For object quests, set the target item vnum */
+            mob->ai_data->goal_item_vnum = QST_TARGET(rnum);
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+        case AQ_ROOM_FIND:
+        case AQ_ROOM_CLEAR:
+            /* For room quests, set the destination room */
+            mob->ai_data->goal_destination = real_room(QST_TARGET(rnum));
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+        case AQ_MOB_FIND:
+        case AQ_MOB_KILL:
+        case AQ_MOB_KILL_BOUNTY:
+        case AQ_MOB_SAVE:
+            /* For mob quests, set the target mob */
+            mob->ai_data->goal_target_mob_rnum = real_mobile(QST_TARGET(rnum));
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_destination = NOWHERE;
+            break;
+        default:
+            /* For other quest types, initialize to safe defaults */
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+    }
 }
 
 /* Clear a quest from a mob */

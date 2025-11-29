@@ -1021,12 +1021,8 @@ void mobile_activity(void)
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                     continue;
 
-                                /* Automatically transition to quest completion goal */
-                                ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
-                                ch->ai_data->goal_destination = NOWHERE;
-                                ch->ai_data->goal_target_mob_rnum = NOBODY;
-                                ch->ai_data->goal_item_vnum = NOTHING;
-                                ch->ai_data->goal_timer = 0;
+                                /* set_mob_quest() now automatically sets GOAL_COMPLETE_QUEST
+                                 * and initializes goal fields based on quest type */
                                 continue; /* Process quest completion immediately */
                             }
                         } else {
@@ -1258,15 +1254,13 @@ void mobile_activity(void)
 
         /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <=
-                0) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
+            rand_number(1, 100) <= 5) { /* 5% chance per tick to seek quests */
             mob_try_to_accept_quest(ch);
         }
 
         /* Mob quest processing - not for charmed mobs */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <=
-                0) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
+            rand_number(1, 100) <= 10) { /* 10% chance per tick to check quest timer */
             /* Check if mob has a quest and handle quest-related goals */
             if (GET_MOB_QUEST(ch) != NOTHING) {
                 /* Decrement quest timer if applicable */
