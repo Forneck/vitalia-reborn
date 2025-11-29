@@ -2278,21 +2278,25 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
             mob->ai_data->goal_target_mob_rnum = NOBODY;
             break;
         case AQ_ROOM_FIND:
-        case AQ_ROOM_CLEAR:
-            /* For room quests, set the destination room */
-            mob->ai_data->goal_destination = real_room(QST_TARGET(rnum));
+        case AQ_ROOM_CLEAR: {
+            /* For room quests, set the destination room with validation */
+            room_rnum dest = real_room(QST_TARGET(rnum));
+            mob->ai_data->goal_destination = (dest != NOWHERE) ? dest : NOWHERE;
             mob->ai_data->goal_item_vnum = NOTHING;
             mob->ai_data->goal_target_mob_rnum = NOBODY;
             break;
+        }
         case AQ_MOB_FIND:
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-        case AQ_MOB_SAVE:
-            /* For mob quests, set the target mob */
-            mob->ai_data->goal_target_mob_rnum = real_mobile(QST_TARGET(rnum));
+        case AQ_MOB_SAVE: {
+            /* For mob quests, set the target mob with validation */
+            mob_rnum target = real_mobile(QST_TARGET(rnum));
+            mob->ai_data->goal_target_mob_rnum = (target != NOBODY) ? target : NOBODY;
             mob->ai_data->goal_item_vnum = NOTHING;
             mob->ai_data->goal_destination = NOWHERE;
             break;
+        }
         default:
             /* For other quest types, initialize to safe defaults */
             mob->ai_data->goal_destination = NOWHERE;

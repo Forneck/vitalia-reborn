@@ -1021,8 +1021,8 @@ void mobile_activity(void)
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                     continue;
 
-                                /* set_mob_quest() now automatically sets GOAL_COMPLETE_QUEST
-                                 * and initializes goal fields based on quest type */
+                                /* Removed manual goal setting - set_mob_quest() now handles this automatically,
+                                 * setting GOAL_COMPLETE_QUEST and initializing goal fields based on quest type */
                                 continue; /* Process quest completion immediately */
                             }
                         } else {
