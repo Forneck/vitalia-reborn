@@ -4400,6 +4400,108 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             }
             break;
 
+        case AQ_SHOP_BUY:
+            /* Mob needs to buy specific item from a shop */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Already has the item, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Need to buy - add to wishlist and let wishlist system handle shopping */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
+                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
+                return TRUE;
+            }
+            break;
+
+        case AQ_SHOP_SELL:
+            /* Mob needs to sell specific item to a shop */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (!target_obj) {
+                /* Item not in inventory - might have already sold it, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Has the item, set goal to sell it */
+                ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
+                ch->ai_data->goal_obj = target_obj;
+                ch->ai_data->goal_item_vnum = GET_OBJ_VNUM(target_obj);
+                return TRUE;
+            }
+            break;
+
+        case AQ_DELIVERY:
+            /* Similar to OBJ_RETURN - deliver item to specific mob */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Has item, find delivery target mob */
+                target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_RETURNMOB(quest_rnum));
+                if (target_mob) {
+                    /* Deliver item */
+                    act("$n entrega $p para $N.", FALSE, ch, target_obj, target_mob, TO_ROOM);
+                    obj_from_char(target_obj);
+                    obj_to_char(target_obj, target_mob);
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                } else {
+                    /* Seek the delivery target */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    return TRUE;
+                }
+            } else {
+                /* Don't have item, add to wishlist */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            }
+            break;
+
+        case AQ_RESOURCE_GATHER:
+            /* Mob must gather X quantity of specific item - check if enough collected */
+            {
+                int count = 0;
+                struct obj_data *obj;
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_VNUM(obj) == QST_TARGET(quest_rnum))
+                        count++;
+                }
+                if (count >= ch->ai_data->quest_counter) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                } else {
+                    /* Need more - add to wishlist */
+                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+            }
+            break;
+
+        case AQ_MOB_ESCORT:
+            /* Escort mob to destination - simplified: follow target mob */
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found escort target, check if at destination */
+                target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
+                if (target_room != NOWHERE && IN_ROOM(target_mob) == target_room) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+                /* Stay near escort target - don't move away */
+                return TRUE;
+            } else {
+                /* Lost escort target, search for them */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
+            }
+            break;
+
         default:
             /* Unknown quest type, abandon quest */
             fail_mob_quest(ch, "unknown quest type");

@@ -2272,13 +2272,16 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
     switch (QST_TYPE(rnum)) {
         case AQ_OBJ_FIND:
         case AQ_OBJ_RETURN:
+        case AQ_DELIVERY:
+        case AQ_RESOURCE_GATHER:
             /* For object quests, set the target item vnum */
             mob->ai_data->goal_item_vnum = QST_TARGET(rnum);
             mob->ai_data->goal_destination = NOWHERE;
             mob->ai_data->goal_target_mob_rnum = NOBODY;
             break;
         case AQ_ROOM_FIND:
-        case AQ_ROOM_CLEAR: {
+        case AQ_ROOM_CLEAR:
+        case AQ_MAGIC_GATHER: {
             /* For room quests, set the destination room with validation */
             room_rnum dest = real_room(QST_TARGET(rnum));
             mob->ai_data->goal_destination = (dest != NOWHERE) ? dest : NOWHERE;
@@ -2289,7 +2292,9 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
         case AQ_MOB_FIND:
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-        case AQ_MOB_SAVE: {
+        case AQ_MOB_SAVE:
+        case AQ_MOB_ESCORT:
+        case AQ_EMOTION_IMPROVE: {
             /* For mob quests, set the target mob with validation */
             mob_rnum target = real_mobile(QST_TARGET(rnum));
             mob->ai_data->goal_target_mob_rnum = (target != NOBODY) ? target : NOBODY;
@@ -2297,8 +2302,16 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
             mob->ai_data->goal_destination = NOWHERE;
             break;
         }
+        case AQ_SHOP_BUY:
+        case AQ_SHOP_SELL:
+            /* For shop quests, set the target item vnum - mob will find shop via AI */
+            mob->ai_data->goal_item_vnum = QST_TARGET(rnum);
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
         default:
-            /* For other quest types, initialize to safe defaults */
+            /* For other quest types (AQ_PLAYER_KILL, AQ_REPUTATION_BUILD, etc.)
+             * initialize to safe defaults - these may not be suitable for mobs */
             mob->ai_data->goal_destination = NOWHERE;
             mob->ai_data->goal_item_vnum = NOTHING;
             mob->ai_data->goal_target_mob_rnum = NOBODY;
