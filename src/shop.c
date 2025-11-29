@@ -838,6 +838,13 @@ static void sort_keeper_objs(struct char_data *keeper, int shop_nr)
 
     while (SHOP_SORT(shop_nr) < IS_CARRYING_N(keeper)) {
         temp = keeper->carrying;
+        if (!temp) {
+            log1("SYSERR: sort_keeper_objs: keeper carrying NULL but IS_CARRYING_N=%d, shop %d", IS_CARRYING_N(keeper),
+                 SHOP_NUM(shop_nr));
+            /* Correct the inconsistent state to prevent future issues */
+            IS_CARRYING_N(keeper) = 0;
+            break;
+        }
         obj_from_char(temp);
         temp->next_content = list;
         list = temp;
