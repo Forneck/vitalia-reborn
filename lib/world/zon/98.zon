@@ -1,7 +1,14 @@
 #98
 Vitalia~
 O Abismo~
-9800 9899 300 0 bdj 0 0 0 40 -1 3
+9800 9899 300 1 bdj 0 0 0 40 -1 3
+M 0 9804 1 9840 	(o Mal Supremo)
+G 1 9804 1 -1 	(uma chave de cristal)
+R 0 9840 9805 -1 	(uma cúpula de vidro)
+O 0 9805 -99 9840 	(uma cúpula de vidro)
+P 1 9807 -33 9805 	(um manto dourado)
+O 0 9805 1 9840 	(uma cúpula de vidro)
+P 1 9817 -5 9805 	(um manto dourado)
 M 0 9801 1 9809 	(Cérbero)
 M 0 9802 1 9814 	(o Ciclope gigante)
 G 1 9801 1 -1 	(uma chave de prata)
@@ -10,16 +17,11 @@ G 1 9803 1 -1 	(uma chave negra)
 M 0 9805 1 9839 	(o dragão invisível)
 E 1 3860 16 17 	(o Card Dragão Invisível)
 G 1 9806 1 -1 	(um escudo negro)
-M 0 9804 1 9840 	(o Mal Supremo)
-G 1 9804 1 -1 	(uma chave de cristal)
 M 0 9806 1 9871 	(o Anjo da Luz)
 M 0 9807 1 9878 	(o Anjo do Amor)
 M 0 9808 1 9886 	(o Anjo da Honestidade)
 M 0 9809 1 9890 	(o Anjo da Vitória)
 G 1 9808 2 -1 	(um pergaminho dourado)
-R 0 9840 9805 -1 	(uma cúpula de vidro)
-O 0 9805 1 9840 	(uma cúpula de vidro)
-P 1 9807 1 9805 	(um manto dourado)
 R 0 9849 9802 -1 	(uma chave muito suja)
 O 0 9802 1 9849 	(uma chave muito suja)
 R 0 9823 9808 -1 	(um pergaminho dourado)

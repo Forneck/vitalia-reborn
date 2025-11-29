@@ -12,8 +12,13 @@ jardins.
 102 -21 -30 10d10+5999 7d10+45
 0 400000
 9 9 1
-GenWimpy: 19
-GenFollow: 11
+GenWimpy: 4
+GenLoot: 5
+GenQuest: 100
+GenAdventurer: 50
+GenFollow: 6
+GenHealing: 100
+EmotionProfile: 3
 E
 #1501
 miguel anjo arcanjo~
@@ -28,8 +33,13 @@ isto também vai se esvanecendo e você não vê mais nada...
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
-GenWimpy: 18
-GenFollow: 11
+GenLoot: 2
+GenBrave: 75
+GenQuest: 100
+GenAdventurer: 50
+GenFollow: 9
+GenHealing: 50
+EmotionProfile: 7
 E
 #1502
 gabriel anjo arcanjo~
@@ -44,9 +54,15 @@ de uma miraculosa jornada para a sagrada cidade de Jerusalém.
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
-GenWimpy: 13
-GenLoot: 1
+GenWimpy: 1
+GenLoot: 9
+GenEquip: 2
+GenBrave: 75
+GenQuest: 100
+GenAdventurer: 75
 GenFollow: 12
+GenHealing: 100
+EmotionProfile: 4
 E
 #1503
 rafael anjo arcanjo~
@@ -61,8 +77,16 @@ em sua mente.
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 5
+GenEquip: 50
+GenBrave: 73
+GenUse: 100
+GenTrade: 50
+GenQuest: 50
+GenAdventurer: 30
+GenFollow: 11
+GenHealing: 100
+EmotionProfile: 5
 E
 #1504
 uriel anjo arcanjo~
@@ -77,7 +101,14 @@ e foi esse anjo, Uriel, que subiu os degraus mais altos.
 0 280000
 9 9 1
 GenWimpy: 3
-GenFollow: 12
+GenLoot: 5
+GenBrave: 74
+GenUse: 100
+GenQuest: 75
+GenAdventurer: 100
+GenFollow: 9
+GenHealing: 100
+EmotionProfile: 5
 E
 #1505
 querubim~
@@ -93,6 +124,16 @@ estridente gargalhada, puxa sua espada e bloqueia o caminho.
 70 -5 -5 10d5+1260 3d6+14
 0 40000
 9 9 0
+GenLoot: 1
+GenEquip: 100
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 25
+GenAdventurer: 50
+GenFollow: 13
+GenHealing: 100
+EmotionProfile: 5
 E
 #1506
 zombeteiro~
@@ -105,10 +146,15 @@ império.  Ele ri de você e toma outro aperitivo.
 ~
 2121730 0 0 0 0 0 0 0 -300 E
 70 -5 -5 10d2+1180 2d8+12
-3450 21000
+3450 150000
 6 6 1
-GenWimpy: 20
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 100
+GenUse: 75
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
+EmotionProfile: 6
 E
 #1507
 gênio duende genio~
@@ -122,12 +168,19 @@ pequeno duende.
 ~
 2121796 0 0 0 4 0 0 0 0 E
 75 -6 -7 25d2+1400 3d9+13
-0 70000
+0 150000
 9 9 0
-GenWimpy: 93
-GenLoot: 2
+GenWimpy: 94
+GenLoot: 100
+GenEquip: 26
 GenRoam: 89
-GenFollow: 11
+GenBrave: 54
+GenUse: 75
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 20
+GenFollow: 3
+EmotionProfile: 6
 E
 #1508
 velho homem fracassado~
@@ -143,10 +196,14 @@ testa, e sua mão direita treme e treme...
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
-GenWimpy: 38
-GenLoot: 3
-GenEquip: 1
-GenFollow: 16
+GenWimpy: 89
+GenLoot: 100
+GenEquip: 50
+GenGroup: 50
+GenUse: 50
+GenTrade: 25
+GenFollow: 15
+EmotionProfile: 6
 E
 #1509
 califa hakim hakin~
@@ -161,8 +218,15 @@ há dias e ainda assim, seu sorriso é tão encantador...
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
-GenWimpy: 54
-GenFollow: 16
+GenWimpy: 81
+GenLoot: 3
+GenGroup: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 10
+GenFollow: 10
+EmotionProfile: 6
 E
 #1510
 judas escariotes~
@@ -176,10 +240,13 @@ Deus.
 100 -13 -10 5d10+2650 6d6+25
 30 145000
 9 9 1
-GenWimpy: 41
-GenLoot: 4
-GenEquip: 2
-GenFollow: 12
+GenWimpy: 71
+GenLoot: 75
+GenGroup: 100
+GenTrade: 100
+GenQuest: 75
+GenAdventurer: 100
+GenFollow: 67
 E
 #1511
 faraó farao~
@@ -193,9 +260,14 @@ ele olha para você com ares de um forçado contentamento.
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 63
-GenLoot: 1
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 99
+GenGroup: 10
+GenUse: 100
+GenTrade: 100
+GenQuest: 79
+GenAdventurer: 25
+GenFollow: 5
 E
 #1512
 abu baquir primeiro califa~
@@ -210,8 +282,12 @@ nunca morreria.
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 40
-GenFollow: 14
+GenWimpy: 77
+GenLoot: 51
+GenTrade: 75
+GenQuest: 80
+GenAdventurer: 20
+GenFollow: 8
 E
 #1513
 umar segundo califa~
@@ -226,9 +302,9 @@ verdade da Palavra, então eu devo."
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 44
+GenWimpy: 82
 GenLoot: 1
-GenFollow: 13
+GenFollow: 9
 E
 #1514
 otomano terceiro califa~
@@ -244,9 +320,9 @@ final foi morto por seus inimigos.
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
-GenWimpy: 23
-GenLoot: 1
-GenEquip: 1
+GenWimpy: 69
+GenLoot: 9
+GenEquip: 6
 GenFollow: 16
 E
 #1515
@@ -263,8 +339,8 @@ decida por si só.
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
-GenWimpy: 32
-GenFollow: 13
+GenWimpy: 75
+GenFollow: 10
 E
 #1516
 anjo belo iblis~
@@ -280,10 +356,14 @@ que serão suas se você o seguir.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 53
-GenLoot: 6
-GenEquip: 1
-GenFollow: 14
+GenLoot: 100
+GenEquip: 100
+GenBrave: 75
+GenUse: 25
+GenTrade: 50
+GenQuest: 1
+GenFollow: 10
+EmotionProfile: 6
 E
 #1517
 iblis satã sata tentação tentacao voz~
@@ -297,9 +377,15 @@ risada atormentada, gemendo, gritando e implorando.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 41
-GenLoot: 1
-GenFollow: 14
+GenLoot: 100
+GenEquip: 100
+GenGroup: 100
+GenBrave: 75
+GenTrade: 10
+GenQuest: 86
+GenAdventurer: 50
+GenFollow: 95
+EmotionProfile: 6
 E
 #1518
 serpente dragão dragao satã sata iblis~
@@ -315,9 +401,11 @@ humanidade sucumbir diante de seu poder, olha para você como se você fosse a
 27 -12 -10 75d2+1825 6d8+25
 40000 180000
 9 9 1
-GenWimpy: 38
-GenLoot: 2
-GenFollow: 9
+GenLoot: 53
+GenBrave: 75
+GenQuest: 2
+GenFollow: 6
+EmotionProfile: 1
 E
 #1519
 demônio demonio fogo~
@@ -331,10 +419,14 @@ inferior que você teme ser seu destino.
 80 -12 -10 75d2+1825 6d8+25
 40000 180000
 9 9 1
-GenWimpy: 74
-GenLoot: 2
+GenLoot: 100
 GenEquip: 1
-GenFollow: 16
+GenBrave: 75
+GenTrade: 75
+GenQuest: 67
+GenAdventurer: 50
+GenFollow: 10
+EmotionProfile: 1
 E
 #1520
 bebê bebe inocente~
@@ -347,7 +439,7 @@ O Bebê está pouco atento a sua presença, perdido em um sonolento bocejo.
 100 -10 -10 5d100+3000 8d6+30
 20000 145000
 4 4 1
-GenWimpy: 34
+GenWimpy: 61
 GenLoot: 1
 GenFollow: 15
 E
@@ -363,8 +455,8 @@ nota que ele está contemplando as belezas da lua.
 74 -12 -12 5d10+1680 6d6+25
 22000 145000
 9 9 1
-GenWimpy: 27
-GenFollow: 15
+GenWimpy: 100
+GenFollow: 11
 E
 #1522
 homem~
@@ -378,7 +470,7 @@ ajoelhado, ele é a imagem perfeita do contentamento.
 80 -14 -14 75d2+1820 6d8+27
 40000 180000
 5 5 1
-GenWimpy: 18
+GenWimpy: 85
 GenFollow: 15
 E
 #1523
@@ -393,7 +485,7 @@ explicar ou descrever esta perfeição, esta felicidade absoluta.
 90 -15 -15 100d2+2820 7d8+29
 0 190000
 9 9 1
-GenWimpy: 18
-GenFollow: 12
+GenWimpy: 46
+GenFollow: 10
 E
 $

@@ -11,9 +11,10 @@ precisando de um bom descanso.
 70 1000
 9 9 1
 GenWimpy: 100
-GenLoot: 4
+GenLoot: 21
 GenRoam: 88
-GenFollow: 4
+GenGroup: 4
+GenFollow: 3
 E
 #5001
 dervixe grande~
@@ -28,9 +29,10 @@ precisando de MUITO descanso.
 150 7000
 9 9 1
 GenWimpy: 100
-GenLoot: 3
-GenRoam: 89
-GenFollow: 11
+GenLoot: 26
+GenEquip: 2
+GenRoam: 84
+GenFollow: 7
 E
 #5002
 cobra coral~
@@ -45,8 +47,9 @@ vermelho, amarelo e preto.
 0 600
 9 9 0
 GenWimpy: 100
-GenRoam: 86
-GenFollow: 4
+GenLoot: 2
+GenRoam: 85
+GenFollow: 5
 E
 #5003
 escorpiao pequeno~
@@ -61,9 +64,10 @@ pequenina.
 0 500
 9 9 0
 GenWimpy: 100
-GenLoot: 4
-GenRoam: 87
-GenFollow: 3
+GenLoot: 8
+GenEquip: 1
+GenRoam: 88
+GenFollow: 2
 E
 #5004
 verme arroxeado gigantesco~
@@ -76,8 +80,9 @@ Ele é grande, mal-encarado e roxo. Caia fora!
 21 0 3 2d10+320 3d7+14
 2540 65000
 9 9 0
-GenWimpy: 3
-GenLoot: 1
+GenWimpy: 15
+GenLoot: 13
+GenFollow: 14
 E
 #5005
 dragao bronze~
@@ -143,7 +148,7 @@ Ela está muito fraca e magra.
 3 18 9 1d4+25 1d5+0
 0 300
 5 5 2
-GenWimpy: 8
+GenWimpy: 22
 GenFollow: 16
 E
 #5010
@@ -160,9 +165,10 @@ Obviamente que isto não teme mais a morte.
 24 0 -6 1d12+520 3d5+35
 75000 125000
 9 9 0
-GenWimpy: 97
-GenLoot: 91
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 6
+GenFollow: 6
 E
 T 3009
 #5011
@@ -177,10 +183,10 @@ Esta meio-aranha, meio-drow criatura é uma oponente formidável.
 8 12 2 1d6+95 2d6+2
 200 4000
 9 9 0
-GenWimpy: 31
-GenLoot: 1
+GenWimpy: 100
+GenLoot: 22
 GenRoam: 89
-GenFollow: 16
+GenFollow: 10
 E
 #5012
 anao duergar sombrio~
@@ -195,9 +201,9 @@ quanto ele faz com essas pedras.
 5 16 3 1d11+60 2d5+1
 170 1250
 9 9 1
-GenWimpy: 21
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 2
+GenRoam: 89
 GenFollow: 6
 E
 #5013
@@ -212,9 +218,9 @@ mesmo gosto).
 6 15 4 1d12+68 2d7+0
 50 600
 9 9 1
-GenWimpy: 9
-GenLoot: 3
-GenRoam: 83
+GenWimpy: 20
+GenLoot: 4
+GenRoam: 87
 GenFollow: 10
 E
 #5014
@@ -230,10 +236,10 @@ O xamã está espalhando esporos pelo ar.
 2500 18000
 9 9 1
 GenWimpy: 100
-GenLoot: 37
-GenEquip: 6
+GenLoot: 56
+GenEquip: 9
 GenRoam: 89
-GenFollow: 10
+GenFollow: 7
 E
 T 3009
 #5015
@@ -249,8 +255,8 @@ Um pequeno oásis convida-lhe a um mergulho.
 9 9 0
 GenWimpy: 100
 GenLoot: 99
-GenRoam: 89
-GenFollow: 12
+GenRoam: 85
+GenFollow: 6
 E
 #5017
 camelo selvagem~
@@ -263,5 +269,7 @@ Não brinque com este animal.
 5 12 6 1d6+60 2d4+3
 270 900
 9 9 0
+GenWimpy: 6
+GenFollow: 8
 E
 $

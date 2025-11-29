@@ -45,7 +45,7 @@ A Estrada da Vila~
 central da zona residencial de Midgaard.  A leste, as escadarias levam de
 volta à sala de leitura do templo.
 ~
-10 0 0 0 0 1
+10 4 0 0 0 1
 D1
 As escadarias levam de volta até a sala de leitura do templo.
 ~
@@ -875,7 +875,7 @@ A Rua da Luz~
 final dessa rua.  Para leste e oeste estão as casas 9 e 10.  A rua continua
 para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -929,7 +929,7 @@ A Casa 3 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 3.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
@@ -1064,7 +1064,7 @@ D2
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1011
+1 -1 1011
 S
 #1063
 A Casa 4 da Rua do Luar de Fogo~
@@ -1267,12 +1267,12 @@ A Casa 9 da Rua da Luz~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua da Luz, número 9.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1044
+1 -1 1044
 S
 #1079
 A Casa 10 da Rua da Luz~
@@ -1280,12 +1280,12 @@ A Casa 10 da Rua da Luz~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua da Luz, número 10.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1044
+1 -1 1044
 S
 #1080
 A Casa 1 da Rua do Luar de Safira~

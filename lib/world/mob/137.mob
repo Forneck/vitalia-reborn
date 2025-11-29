@@ -62,6 +62,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 43
+GenRoam: 29
+GenFollow: 12
 E
 #13703
 Rumil elfo~
@@ -83,8 +86,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 7
+GenFollow: 13
 E
 #13704
 Orophin elfo~
@@ -106,6 +109,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 13
+GenFollow: 13
 E
 #13705
 Galadriel elfa senhora~
@@ -131,6 +136,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenEquip: 1
+GenRoam: 70
+GenFollow: 15
 E
 #13706
 Celeborn elfo senhor~
@@ -153,6 +162,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 7
+GenLoot: 1
+GenRoam: 54
+GenFollow: 14
 E
 #13707
 elfo~
@@ -174,6 +187,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 27
+GenLoot: 2
+GenRoam: 35
+GenFollow: 12
 E
 #13708
 elfa~
@@ -229,8 +246,8 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 10
-GenLoot: 4
+GenWimpy: 43
+GenLoot: 7
 GenRoam: 87
 GenFollow: 4
 E
@@ -251,8 +268,9 @@ Str: 7
 Wis: 8
 Con: 8
 Cha: 18
-GenWimpy: 6
-GenRoam: 83
+GenWimpy: 27
+GenLoot: 6
+GenRoam: 88
 GenFollow: 5
 E
 $

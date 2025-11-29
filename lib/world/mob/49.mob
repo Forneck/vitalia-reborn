@@ -10,9 +10,9 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 0 400
 9 9 1
 GenWimpy: 100
-GenLoot: 18
-GenRoam: 4
-GenFollow: 10
+GenLoot: 23
+GenRoam: 9
+GenFollow: 2
 E
 #4901
 elfo gato~
@@ -25,7 +25,7 @@ Ele dorme despreocupadamente sob uma sombra fresca de uma árvore.
 3 18 7 2d6+34 1d7+0
 0 800
 4 4 1
-GenWimpy: 7
+GenWimpy: 22
 GenLoot: 1
 GenFollow: 3
 E
@@ -40,8 +40,8 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 18
-GenFollow: 1
+GenWimpy: 62
+GenFollow: 4
 E
 #4903
 cobra madeira jaculi~
@@ -54,10 +54,10 @@ Ela parece não se importar muito com sua presença.
 3 18 8 6d5+22 1d7+1
 0 600
 9 9 1
-GenWimpy: 17
-GenRoam: 88
-GenGroup: 2
-GenFollow: 6
+GenWimpy: 57
+GenLoot: 2
+GenRoam: 87
+GenFollow: 5
 E
 #4904
 rã ra~
@@ -70,10 +70,10 @@ Ela parece estar faminta.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 2
-GenWimpy: 24
+GenWimpy: 59
 GenLoot: 2
-GenRoam: 88
-GenGroup: 28
+GenRoam: 87
+GenGroup: 21
 GenFollow: 5
 E
 #4905
@@ -87,9 +87,10 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 13
-GenLoot: 2
-GenRoam: 83
+GenWimpy: 43
+GenLoot: 3
+GenRoam: 87
+GenGroup: 7
 GenFollow: 10
 E
 #4906
@@ -104,10 +105,10 @@ sobrevivência de outros animais.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 20
-GenRoam: 87
-GenGroup: 1
-GenFollow: 5
+GenWimpy: 49
+GenLoot: 2
+GenRoam: 88
+GenFollow: 4
 E
 #4907
 xamã xama atom~
@@ -121,9 +122,10 @@ concentração.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 7
-GenRoam: 76
-GenFollow: 6
+GenWimpy: 26
+GenLoot: 1
+GenRoam: 88
+GenFollow: 3
 E
 #4908
 atom~
@@ -137,7 +139,8 @@ nas árvores em que residem.
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 1
-GenWimpy: 2
+GenWimpy: 7
+GenFollow: 4
 E
 #4909
 atom~
@@ -151,7 +154,8 @@ povo, e parece um tanto quanto prematura.
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 2
-GenWimpy: 2
+GenWimpy: 15
+GenFollow: 4
 E
 #4910
 criança crianca atom~
@@ -165,7 +169,8 @@ qualquer coisa.
 3 18 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
+GenFollow: 6
 E
 #4911
 dríade driade~
@@ -178,9 +183,12 @@ Ela acena educadamente para você e continua seu caminho.
 5 17 5 4d6+42 1d5+1
 109 1200
 9 9 2
-GenWimpy: 1
-GenRoam: 27
-GenFollow: 6
+GenWimpy: 35
+GenLoot: 11
+GenEquip: 2
+GenRoam: 88
+GenGroup: 7
+GenFollow: 5
 E
 #4912
 sílfide silfide~
@@ -194,8 +202,10 @@ contagiante.
 5 17 5 4d6+43 1d5+1
 118 1200
 9 9 2
-GenWimpy: 3
-GenRoam: 61
+GenWimpy: 24
+GenLoot: 1
+GenRoam: 88
+GenGroup: 1
 GenFollow: 6
 E
 #4913
@@ -209,10 +219,10 @@ Ele olha para você com um sorriso maldoso. Assim que você pisca ele some.
 5 17 5 4d6+45 1d5+1
 127 1200
 9 9 1
-GenWimpy: 4
-GenRoam: 38
-GenGroup: 2
-GenFollow: 8
+GenWimpy: 29
+GenRoam: 88
+GenGroup: 1
+GenFollow: 7
 E
 #4914
 ettercap~
@@ -225,6 +235,8 @@ Ele parece estar acordado, mas sua cabeça tomba a todo momento.
 5 16 5 4d6+38 2d4+0
 900 1200
 9 9 1
+GenWimpy: 10
+GenFollow: 11
 E
 #4915
 xamã xama grigue~
@@ -238,7 +250,7 @@ ao seu redor.
 4 17 6 1d4+50 1d6+1
 390 1000
 9 9 1
-GenWimpy: 2
+GenWimpy: 6
 GenFollow: 6
 E
 #4916
@@ -252,6 +264,8 @@ Ele trabalha duro para o bem-estar da árvore.
 3 18 7 2d6+40 1d7+0
 200 800
 9 9 1
+GenWimpy: 1
+GenFollow: 4
 E
 #4917
 grigue~
@@ -264,7 +278,8 @@ Ela parece preocupada.  Ela anda incessantemente procurando algo errado.
 3 18 6 2d6+34 1d7+0
 200 850
 9 9 2
-GenWimpy: 1
+GenWimpy: 4
+GenFollow: 5
 E
 #4918
 grigue criança~
@@ -278,5 +293,6 @@ Ela parece calma, muito mais do que todos os grigues na árvore.
 0 300
 9 9 1
 GenWimpy: 1
+GenFollow: 7
 E
 $

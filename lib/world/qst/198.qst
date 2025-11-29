@@ -1,1 +1,51 @@
+#19806
+Buscar a armadura do tenente~
+Encontrar e trazer a armadura do tenente~
+Alguém perdeu a armadura do tenente e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 94 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 11312 b 10004 -1 -1 -1
+4 18 10 35 -1 10004 1
+94 188 65535
+S
+#19816
+Buscar a armadura do tenente~
+Encontrar e trazer a armadura do tenente~
+Alguém perdeu a armadura do tenente e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 119 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 11312 b 10004 -1 -1 -1
+7 23 5 21 -1 10001 1
+119 238 65535
+S
+#19836
+Encontrar a magra aldeâ~
+Encontrar e falar com a magra aldeâ~
+Alguém está procurando por a magra aldeâ. Encontre esta pessoa para receber 69 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 11312 b 10001 -1 -1 -1
+3 13 5 21 -1 10000 1
+69 138 65535
+S
+#19846
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (10018). Vá até lá para receber 82 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 11312 b 10018 -1 -1 -1
+4 16 5 21 -1 10000 1
+82 164 65535
+S
+#19886
+Encontrar a mulher grávida~
+Encontrar e falar com a mulher grávida~
+Alguém está procurando por a mulher grávida. Encontre esta pessoa para receber 134 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 11312 b 10007 -1 -1 -1
+6 26 11 36 -1 10004 1
+134 268 10006
+S
 $~

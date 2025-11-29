@@ -2,6 +2,9 @@
 Vitalia~
 Qui'Lur~
 4400 4499 45 1 j 0 0 0 40 50 2
+M 0 4400 1 4433 	(Elkain)
+E 1 4400 10 18 	(um capote escuro)
+E 1 4401 5 20 	(um amaldiçoado cajado de madeira Nirin)
 M 0 4413 1 4462 	(um elfo)
 G 1 4402 99 -1 	(um peixe grande)
 R 0 4462 4403 -1 	(uma estranha noz)
@@ -62,8 +65,5 @@ M 0 4403 1 4467 	(o Sentinela do portão)
 D 0 4456 3 1 	(Em Frente ao Portão de Madeira)
 O 0 4457 1 4456 	(uma placa de madeira)
 D 0 4455 1 1 	(Uma Trilha Através da Aldeia)
-M 0 4400 1 4433 	(Elkain)
-E 1 4400 10 3 	(um capote escuro)
-E 1 4401 5 17 	(um amaldiçoado cajado de madeira Nirin)
 S
 $

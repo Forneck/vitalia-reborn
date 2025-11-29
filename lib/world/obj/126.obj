@@ -769,8 +769,8 @@ Cinto Couro Foca Forca Thor~
 o cinto da força de Thor~
 Um belo cinto de couro de foca foi deixado aqui.~
 ~
-11 aegiq 0 0 0 al 0 0 0 0 0 0 0
-0 0 0 0
+9 aegq 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
 3 600000 60000 75 0
 E
 Cinto Couro Foca Forca Thor~
@@ -784,12 +784,14 @@ A
 13 40
 A
 17 -10
+A
+19 2
 #12630
 Luvas Ferro Thor~
 as luvas de ferro dos trovões~
 Um par de magníficas luvas de ferro foi esquecida aqui.~
 ~
-9 aegiq 0 0 0 ah 0 0 0 0 0 0 0
+9 aegq 0 0 0 ah 0 0 0 0 0 0 0
 10 0 0 0
 5 5500000 550000 60 0
 E
@@ -800,7 +802,7 @@ anões e entregue ao senhor dos trovões, o deus Thor.
 A
 2 1
 A
-18 2
+19 2
 #12631
 elmo virgens virgem diamantes~
 o elmo das virgens~
@@ -982,7 +984,7 @@ Balmung, a espada sagrada de Sigmund~
 Uma magnífica espada azul está fincada aqui no chão.~
 ~
 5 aegikq 0 0 0 an 0 0 0 0 0 0 0
-0 4 8 3
+0 8 4 3
 10 6500000 650000 75 0
 E
 espada balmung azul~
@@ -1449,7 +1451,7 @@ armadura solar freyr~
 a magnífica armadura solar do Deus Freyr~
 Uma grandiosa armadura dourada foi deixada aqui, brilhando como o sol.~
 ~
-9 aegikq 0 0 0 ad 0 0 0 0 0 0 0
+9 aegkq 0 0 0 ad 0 0 0 l 0 0 0
 18 0 0 0
 20 5000000 500000 90 0
 E
@@ -1466,7 +1468,7 @@ A
 A
 18 1
 #12669
-d~
+armadura sanguinolenta tir~
 a armadura sanguinolenta de Tir~
 Uma poderosa armadura vermelha-metálica foi deixada aqui.~
 ~
@@ -2514,10 +2516,6 @@ Uma tábua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
 0 0 0 0
 30 3000 300 0 0
 E
-tabua ragnarok~
-Você observa uma magnífica tábua dourada com algumas runas e inscrições.
-~
-E
 inscricoes~
 O celestial e poderoso exercito de Odin deverá está sempre pronto para o
 pavoroso dia do Ragnarök.  Lembrem-se que este dia não virá inesperadamente.
@@ -2540,6 +2538,10 @@ Vigrid, onde também apareceriam o lobo Fenris, a serpente de Midgaard, o
 deus caluniador dos deuses e impostor com todos os seguidores de Hela e os
 gigantes do gelo.  Heindall levantar-se-ia e soaria a trombeta Gjall, para
 chamar à luta todos os deuses e heróis.
+~
+E
+tabua ragnarok~
+Você observa uma magnífica tábua dourada com algumas runas e inscrições.
 ~
 #12733
 pedra trono Odin~

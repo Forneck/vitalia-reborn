@@ -11,8 +11,8 @@ corpo possui um brilho luminoso.
 15 3 -4 3d8+300 4d4+6
 1000 25000
 9 9 2
-GenWimpy: 8
-GenFollow: 19
+GenWimpy: 16
+GenFollow: 17
 E
 #28002
 trabalhador~
@@ -28,8 +28,8 @@ agora em atividades braçais.
 12 8 1 3d5+250 3d3+7
 800 3000
 9 9 1
-GenWimpy: 6
-GenFollow: 12
+GenWimpy: 28
+GenFollow: 11
 E
 #28003
 trabalhadora~
@@ -45,7 +45,8 @@ vida callyuni e trabalham agora em atividades braçais.
 12 8 1 3d5+250 3d3+7
 800 3000
 9 9 2
-GenWimpy: 14
+GenWimpy: 31
+GenLoot: 1
 GenFollow: 12
 E
 #28004
@@ -60,10 +61,9 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 73
-GenLoot: 98
-GenRoam: 5
-GenFollow: 13
+GenWimpy: 42
+GenLoot: 99
+GenFollow: 8
 E
 #28005
 espantalho boneco palha~
@@ -77,6 +77,8 @@ proteger os campos contra os ataques dos pássaros.
 15 4 0 4d5+380 2d9+6
 0 25000
 9 9 0
+GenWimpy: 2
+GenFollow: 10
 E
 #28006
 goblin~
@@ -89,11 +91,11 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 100
+GenWimpy: 99
 GenLoot: 99
-GenEquip: 4
-GenRoam: 79
-GenFollow: 9
+GenEquip: 12
+GenRoam: 89
+GenFollow: 6
 E
 #28007
 gafanhoto inseto~
@@ -106,6 +108,8 @@ Um pequeno inseto marrom e verde que parece ser extremamente voraz.
 10 10 10 2d5+130 2d4+8
 1 1000
 9 9 0
+GenWimpy: 2
+GenFollow: 5
 E
 #28008
 vaca louca~
@@ -118,9 +122,11 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 12 7 0 3d5+200 3d5+7
 1000 13000
 9 9 0
-GenWimpy: 98
-GenLoot: 66
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 1
+GenRoam: 80
+GenFollow: 7
 E
 #28009
 estatua idolo metal guerreiro~
@@ -135,6 +141,8 @@ Você vê uma placa em sua base.  Há uma inscrição ali:
 40 -3 -15 10d25+2000 6d8+21
 0 200000
 9 9 0
+GenWimpy: 3
+GenFollow: 11
 E
 #28010
 vaca~
@@ -148,7 +156,7 @@ Apenas uma vaquinha...
 0 13000
 9 9 0
 GenWimpy: 100
-GenLoot: 11
+GenLoot: 20
 GenRoam: 89
 GenFollow: 6
 E
@@ -163,6 +171,9 @@ Você vê um magnífico cavalo Árabe.
 12 7 1 2d3+210 3d5+5
 0 15000
 9 9 0
+GenWimpy: 13
+GenLoot: 5
+GenFollow: 16
 E
 #28012
 mulher vendedora~
@@ -189,7 +200,7 @@ em inúmeras outras formas.
 30 -10 -20 8d20+1200 4d8+25
 0 120000
 9 9 0
-GenWimpy: 2
+GenWimpy: 22
 GenFollow: 10
 E
 #28014
@@ -204,8 +215,9 @@ uma sombra esfumaçada, movendo-se por entre a folhagem.
 30 -10 -20 5d30+1200 4d8+25
 0 80000
 9 9 0
-GenWimpy: 2
-GenRoam: 7
+GenWimpy: 60
+GenRoam: 88
+GenGroup: 2
 GenFollow: 10
 E
 #28015
@@ -222,8 +234,8 @@ e os grandes olhos vermelhos.
 30 -8 -18 8d25+1150 4d9+21
 0 120000
 9 9 0
-GenWimpy: 3
-GenFollow: 10
+GenWimpy: 19
+GenFollow: 9
 E
 #28016
 ninfa~
@@ -237,6 +249,8 @@ existe alguma coisa diferente nela e você não consegue saber o que.
 18 3 -5 5d6+490 4d4+5
 2000 20000
 9 9 2
+GenWimpy: 14
+GenFollow: 16
 E
 #28017
 guarda cally~
@@ -250,10 +264,12 @@ treinado para proteger os cidadãos callyunis dos problemas e dos rufiões.
 20 -5 -5 5d6+800 4d4+12
 1500 90000
 9 9 1
-GenWimpy: 18
-GenLoot: 1
+GenWimpy: 63
+GenLoot: 10
+GenEquip: 1
 GenRoam: 89
-GenFollow: 14
+GenGroup: 48
+GenFollow: 13
 E
 #28018
 almirante dasher~
@@ -268,8 +284,8 @@ Callyus.
 50 -15 -60 10d15+1700 5d7+25
 100000 400000
 9 9 1
-GenWimpy: 5
-GenFollow: 14
+GenWimpy: 9
+GenFollow: 12
 E
 #28019
 secretaria ginger~
@@ -286,8 +302,8 @@ almirante...
 27 -2 -25 12d5+800 3d8+12
 20000 40000
 9 9 2
-GenWimpy: 4
-GenFollow: 14
+GenWimpy: 12
+GenFollow: 13
 E
 #28020
 salomao mestre estaleiro~
@@ -316,8 +332,11 @@ navios, coordenar os trabalhadores e manter as instalações das docas.
 20 10 -8 4d5+990 3d6+12
 500 7000
 9 9 1
-GenWimpy: 3
-GenRoam: 55
+GenWimpy: 40
+GenLoot: 4
+GenRoam: 89
+GenGroup: 2
+GenFollow: 13
 E
 #28022
 trabalhador estivador~
@@ -330,9 +349,11 @@ O estivador é um homem forte.
 15 5 -5 6d10+650 3d5+8
 500 5000
 9 9 1
-GenWimpy: 8
-GenRoam: 83
-GenFollow: 13
+GenWimpy: 32
+GenLoot: 4
+GenRoam: 89
+GenGroup: 4
+GenFollow: 12
 E
 #28023
 marinheiro~
@@ -345,9 +366,10 @@ Você vê um homem vestindo uma farda branca.
 15 7 -2 1d10+490 2d5+12
 7500 2000
 9 9 1
-GenWimpy: 7
+GenWimpy: 26
+GenLoot: 3
 GenRoam: 89
-GenGroup: 11
+GenGroup: 15
 GenFollow: 14
 E
 $

@@ -164,7 +164,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 3
+GenWimpy: 4
 GenFollow: 14
 E
 T 3009
@@ -201,6 +201,8 @@ Ela aparenta ter uns 50 anos, mas ainda sonha em ser rainha.
 40 6 -20 3d10+800 6d5+10
 2000 50000
 9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #15714
 morcego~

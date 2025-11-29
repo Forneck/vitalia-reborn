@@ -14,7 +14,7 @@ BareHandAttack: 6
 Dex: 25
 Int: 25
 Wis: 25
-GenWimpy: 6
+GenWimpy: 5
 GenFollow: 16
 E
 #8302
@@ -35,6 +35,8 @@ Int: 25
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 15
 E
 #8303
 serpente fogo~
@@ -87,7 +89,7 @@ pronta para destruí-lo.
 BareHandAttack: 4
 Dex: 25
 Int: 25
-GenWimpy: 4
+GenWimpy: 7
 GenFollow: 16
 E
 #8306
@@ -174,8 +176,9 @@ Wis: 13
 Con: 14
 Cha: 15
 GenWimpy: 5
-GenRoam: 14
+GenRoam: 5
 GenGroup: 5
+GenFollow: 19
 E
 #8312
 nativa~
@@ -195,7 +198,9 @@ Int: 13
 Wis: 13
 Con: 14
 Cha: 25
-GenWimpy: 3
+GenWimpy: 6
+GenRoam: 59
+GenFollow: 14
 E
 #8313
 nativa crianca~
@@ -215,8 +220,10 @@ Int: 13
 Wis: 13
 Con: 14
 Cha: 25
-GenWimpy: 3
+GenWimpy: 4
 GenLoot: 1
+GenRoam: 5
+GenFollow: 18
 E
 #8314
 guardia sentinela nativa~
@@ -236,8 +243,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 25
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 5
+GenFollow: 13
 E
 #8315
 guerreira~

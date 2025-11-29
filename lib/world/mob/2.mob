@@ -22,8 +22,10 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
-GenWimpy: 15
-GenFollow: 19
+GenWimpy: 45
+GenLoot: 2
+GenTrade: 100
+GenFollow: 13
 E
 T 201
 #201
@@ -39,8 +41,10 @@ que reflete a luz de forma hipnotizante.
 22 6 1 1d5+350 2d8+6
 1200 12000
 9 9 1
-GenWimpy: 25
-GenFollow: 14
+GenWimpy: 86
+GenLoot: 1
+GenTrade: 30
+GenFollow: 8
 E
 #202
 servo gelo~
@@ -66,9 +70,10 @@ SavingRod: 4
 SavingPetri: 4
 SavingBreath: 4
 SavingSpell: 4
-GenWimpy: 18
-GenLoot: 1
-GenFollow: 8
+GenWimpy: 65
+GenLoot: 6
+GenTrade: 44
+GenFollow: 7
 E
 #203
 capitao gelo~
@@ -94,14 +99,16 @@ SavingRod: 8
 SavingPetri: 8
 SavingBreath: 8
 SavingSpell: 8
-GenLoot: 54
-GenEquip: 26
-GenGroup: 92
+GenLoot: 92
+GenEquip: 44
+GenGroup: 67
 GenBrave: 75
 GenUse: 50
 GenTrade: 100
-GenQuest: 1
-GenFollow: 11
+GenQuest: 7
+GenAdventurer: 50
+GenFollow: 10
+GenHealing: 50
 E
 #204
 rainha gelada~
@@ -113,10 +120,10 @@ olhos azuis gelados não demonstram qualquer calor humano. Vestida com um
 manto que parece ser feito de neve cristalizada, ela controla todos os
 aspectos do inverno eterno deste castelo.
 ~
-2156562 0 0 0 0 0 0 0 -1000 E
+10545170 0 0 0 0 0 0 0 -1000 E
 45 5 -17 9d9+450 7d7+7
 450 202500
-4 4 2
+7 7 2
 Str: 18
 Dex: 18
 Int: 18
@@ -128,9 +135,13 @@ SavingRod: 11
 SavingPetri: 11
 SavingBreath: 11
 SavingSpell: 11
-GenWimpy: 46
-GenLoot: 1
-GenFollow: 12
+GenLoot: 99
+GenEquip: 65
+GenBrave: 75
+GenUse: 100
+GenTrade: 39
+GenQuest: 6
+GenFollow: 10
 E
 T 202
 #205
@@ -151,7 +162,8 @@ SavingRod: 3
 SavingPetri: 3
 SavingBreath: 3
 SavingSpell: 3
-GenWimpy: 10
+GenWimpy: 23
+GenTrade: 100
 GenFollow: 7
 E
 #206
@@ -178,9 +190,11 @@ SavingRod: 5
 SavingPetri: 5
 SavingBreath: 5
 SavingSpell: 5
-GenLoot: 1
-GenBrave: 20
-GenFollow: 11
+GenLoot: 17
+GenEquip: 2
+GenBrave: 57
+GenTrade: 100
+GenFollow: 8
 E
 #207
 construto gelo~
@@ -206,8 +220,10 @@ SavingRod: 7
 SavingPetri: 7
 SavingBreath: 7
 SavingSpell: 7
-GenWimpy: 3
-GenFollow: 16
+GenWimpy: 58
+GenLoot: 3
+GenTrade: 100
+GenFollow: 12
 E
 #208
 elemental gelo~
@@ -233,10 +249,11 @@ SavingRod: 7
 SavingPetri: 7
 SavingBreath: 7
 SavingSpell: 7
-GenLoot: 25
-GenEquip: 5
-GenBrave: 12
-GenFollow: 12
+GenLoot: 99
+GenEquip: 79
+GenBrave: 75
+GenTrade: 41
+GenFollow: 7
 E
 T 205
 #209
@@ -257,11 +274,12 @@ SavingRod: 3
 SavingPetri: 3
 SavingBreath: 3
 SavingSpell: 3
-GenWimpy: 19
-GenLoot: 13
-GenEquip: 8
-GenRoam: 6
-GenFollow: 18
+GenWimpy: 81
+GenLoot: 99
+GenEquip: 58
+GenGroup: 46
+GenTrade: 19
+GenFollow: 13
 E
 #210
 lobo gelo~
@@ -287,8 +305,9 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
-GenWimpy: 16
-GenFollow: 15
+GenWimpy: 40
+GenTrade: 100
+GenFollow: 13
 E
 #211
 bibliotecario gelo~
@@ -314,10 +333,13 @@ SavingRod: 6
 SavingPetri: 6
 SavingBreath: 6
 SavingSpell: 6
-GenWimpy: 15
-GenLoot: 3
-GenEquip: 1
-GenFollow: 11
+GenWimpy: 100
+GenLoot: 39
+GenEquip: 6
+GenTrade: 100
+GenQuest: 100
+GenFollow: 10
+GenHealing: 50
 E
 #212
 cozinheiro gelo~
@@ -343,10 +365,12 @@ SavingRod: 5
 SavingPetri: 5
 SavingBreath: 5
 SavingSpell: 5
-GenWimpy: 5
+GenWimpy: 19
 GenLoot: 50
 GenUse: 50
-GenTrade: 50
+GenTrade: 100
+GenQuest: 100
 GenFollow: 10
+GenHealing: 50
 E
 $

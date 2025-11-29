@@ -11,10 +11,10 @@ penetrante.
 0 4466
 9 9 1
 BareHandAttack: 8
-GenWimpy: 100
-GenLoot: 2
+GenWimpy: 98
+GenLoot: 3
 GenRoam: 89
-GenFollow: 10
+GenFollow: 4
 E
 #801
 cigano zigeuner~
@@ -30,9 +30,12 @@ coisa que ele esperaria encontrar.
 9 9 1
 GenWimpy: 5
 GenLoot: 12
-GenEquip: 3
+GenEquip: 6
 GenRoam: 89
-GenGroup: 68
+GenGroup: 36
+GenTrade: 100
+GenQuest: 52
+GenAdventurer: 50
 GenFollow: 15
 E
 #802
@@ -46,9 +49,13 @@ Parece estar em sua maneira de cuidar de algo...'
 23 8 -7 10d10+1600 2d2+16
 900 46544
 9 9 1
-GenWimpy: 20
+GenWimpy: 5
+GenLoot: 3
 GenRoam: 89
-GenFollow: 15
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 10
 E
 #803
 cigano Ornah~
@@ -62,11 +69,14 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 87
-GenLoot: 27
-GenEquip: 2
-GenRoam: 89
-GenGroup: 11
+GenWimpy: 28
+GenLoot: 55
+GenEquip: 5
+GenRoam: 88
+GenGroup: 64
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 12
 E
 #804
@@ -99,10 +109,10 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 1600 69345
 9 9 1
 GenWimpy: 5
-GenLoot: 50
-GenEquip: 2
+GenLoot: 51
+GenEquip: 3
 GenRoam: 89
-GenFollow: 15
+GenFollow: 11
 E
 #806
 Soberano Vampiro~
@@ -115,5 +125,9 @@ Ele se movimenta com muita rapidez...é muito difícil dizer algo sobre ele.
 50 -10 -30 10d10+3500 5d5+29
 4300 231087
 9 9 1
+GenWimpy: 9
+GenLoot: 14
+GenEquip: 1
+GenFollow: 15
 E
 $

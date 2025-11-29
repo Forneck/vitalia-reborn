@@ -30,7 +30,7 @@ Um pão de viagem foi deixado aqui.~
 ~
 19 g 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
-1 50 50 0 0
+1 50 50 0 24
 E
 pao viagem lemba~
 O pão de viagem é a comida tradicional dos elfos durante viagens, sendo
@@ -44,7 +44,7 @@ Um punhado de apetitosos morangos silvestres foi deixado aqui.~
 ~
 19 g 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
-1 50 50 0 0
+1 50 50 0 6
 E
 punhado morangos silvestres~
 Esses morangos devem ter vindo de algum lugar muito especial... São grandes,
@@ -90,7 +90,7 @@ Várias bandagens foram deixadas aqui.~
 ~
 11 0 0 0 0 abcdefghilm 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0 0
+1 1 0 0 2
 #60
 jornal~
 um jornal~

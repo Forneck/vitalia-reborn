@@ -11,6 +11,8 @@ uma informação.
 108 0 -10 1d1+30000 2d8+18
 0 160000
 9 9 2
+GenWimpy: 3
+GenFollow: 13
 E
 #22021
 vendedor jornaleiro garoto~
@@ -22,9 +24,9 @@ pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
 Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
 oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 ~
-2285634 0 0 0 16 0 0 0 150 E
-108 0 -10 1d1+30000 2d8+18
-0 160000
+2285634 0 0 0 16 0 0 0 0 E
+2 20 9 0d0+10 1d2+0
+10 100
 9 9 1
 E
 #22022

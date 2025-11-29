@@ -11,6 +11,9 @@ Sedento por sangue, ele olha faminto para você.
 0 40000
 9 9 1
 BareHandAttack: 4
+GenWimpy: 8
+GenRoam: 87
+GenFollow: 16
 E
 T 3008
 #9702
@@ -29,6 +32,8 @@ fogo, ele demonstra ser terrivelmente forte e hábil.
 BareHandAttack: 12
 Dex: 25
 Wis: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #9703
 escaravelho~
@@ -43,8 +48,8 @@ ele pode facilmente devorar um boi em minutos.
 0 18500
 9 9 1
 BareHandAttack: 4
-GenWimpy: 4
-GenRoam: 72
+GenWimpy: 49
+GenRoam: 89
 GenFollow: 10
 E
 #9704
@@ -62,8 +67,8 @@ há enormes ferrões, capazes de perfurar até a mais forte das armaduras.
 BareHandAttack: 1
 Dex: 25
 Wis: 25
-GenWimpy: 2
-GenFollow: 10
+GenWimpy: 5
+GenFollow: 9
 E
 T 3008
 #9705
@@ -79,6 +84,8 @@ enormes pelos.  Seu veneno pode ser mortal.
 0 17500
 4 4 2
 BareHandAttack: 1
+GenWimpy: 6
+GenFollow: 15
 E
 T 3008
 #9706
@@ -101,5 +108,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 15
 E
 $

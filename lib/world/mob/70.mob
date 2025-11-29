@@ -12,10 +12,12 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
-GenWimpy: 10
-GenRoam: 85
-GenGroup: 42
-GenFollow: 12
+GenWimpy: 7
+GenLoot: 5
+GenEquip: 4
+GenRoam: 83
+GenGroup: 94
+GenFollow: 11
 E
 #7001
 morcego pequeno ameacador~
@@ -31,7 +33,7 @@ ossos gelam só de você pensar em acordar essa cruel criatura.
 1 20 5 5d2+6 1d5+0
 0 150
 4 9 0
-GenWimpy: 7
+GenWimpy: 39
 GenFollow: 11
 E
 #7002
@@ -45,10 +47,11 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 89
-GenLoot: 12
-GenRoam: 87
-GenFollow: 4
+GenWimpy: 75
+GenLoot: 17
+GenEquip: 1
+GenRoam: 86
+GenFollow: 2
 E
 #7003
 aranha pequena peluda~
@@ -61,10 +64,10 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 100
-GenLoot: 9
-GenRoam: 84
-GenFollow: 4
+GenWimpy: 97
+GenLoot: 8
+GenRoam: 82
+GenFollow: 5
 E
 #7004
 besouro gigante terra~
@@ -77,8 +80,9 @@ An undefined string.
 8 13 3 2d10+98 2d4+2
 1000 3750
 4 9 1
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 40
+GenRoam: 55
+GenFollow: 10
 E
 #7005
 larva gigante~
@@ -91,10 +95,10 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 99
-GenLoot: 15
-GenRoam: 88
-GenFollow: 4
+GenWimpy: 90
+GenLoot: 18
+GenRoam: 87
+GenFollow: 2
 E
 #7006
 cobra~
@@ -108,9 +112,10 @@ An undefined string.
 1 1000
 9 9 2
 GenWimpy: 100
-GenLoot: 6
+GenLoot: 12
 GenRoam: 88
-GenFollow: 7
+GenGroup: 1
+GenFollow: 1
 E
 T 3008
 #7007
@@ -166,9 +171,10 @@ brilhantes.  A parte de baixo tem uma cor alaranjada.
 12 9 2 2d26+148 2d7+1
 1500 13000
 9 9 0
-GenWimpy: 35
+GenWimpy: 78
 GenLoot: 13
 GenRoam: 89
+GenGroup: 7
 GenFollow: 12
 E
 #7040
@@ -184,8 +190,8 @@ se para perto de você, 'Eu NUNCA posso dormir em paz...Hssss...'
 19 2 0 5d4+230 3d6+3
 16842 40000
 9 9 0
-GenWimpy: 6
-GenLoot: 2
+GenWimpy: 11
+GenLoot: 4
 GenFollow: 14
 E
 #7041
@@ -202,11 +208,11 @@ da beleza.
 14 7 1 1d8+172 2d8+1
 0 18000
 9 9 2
-GenWimpy: 56
-GenLoot: 6
-GenRoam: 89
-GenGroup: 19
-GenFollow: 16
+GenWimpy: 74
+GenLoot: 7
+GenRoam: 84
+GenGroup: 16
+GenFollow: 15
 E
 #7042
 naga guardiao~
@@ -222,6 +228,8 @@ dourados.  Ela nota que você está olhando fixamente para ela, então ela diz
 12 9 2 1d18+148 2d7+1
 100 13500
 9 9 2
+GenWimpy: 5
+GenFollow: 6
 E
 #7043
 basilisco escamoso~
@@ -236,11 +244,11 @@ verde pálido.
 13 11 0 1d12+160 2d7+2
 350 16000
 9 9 0
-GenWimpy: 46
+GenWimpy: 67
 GenLoot: 15
 GenRoam: 89
-GenGroup: 2
-GenFollow: 9
+GenGroup: 1
+GenFollow: 7
 E
 #7044
 bolha lemure~
@@ -255,10 +263,10 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 100
-GenLoot: 16
+GenWimpy: 98
+GenLoot: 27
 GenRoam: 89
-GenFollow: 3
+GenFollow: 4
 E
 #7045
 jones esmagador ettin~
@@ -273,6 +281,9 @@ roupa, imunda e comida pelas traças.  Jones realmente fede...
 10 11 2 1d5+130 2d6+2
 60 11000
 5 5 1
+GenWimpy: 4
+GenRoam: 7
+GenFollow: 6
 E
 #7046
 herald rato assassino ettin~
@@ -287,5 +298,7 @@ cintura estão vários ratos e camundongos mortos.  Ele não cheira bem.
 6 14 4 3d5+70 1d8+0
 40 1500
 5 5 1
+GenWimpy: 2
+GenFollow: 5
 E
 $

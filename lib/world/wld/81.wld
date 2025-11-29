@@ -1635,7 +1635,7 @@ D2
 Nao ha nada alem de uma escuridao infinita.
 ~
 ~
-3 -1 8189
+1 -1 8189
 D9
 Nao ha nada alem de uma escuridao infinita.
 ~
@@ -1735,7 +1735,7 @@ D3
 Nao ha nada alem de uma escuridao infinita.
 ~
 ~
-3 -1 8175
+1 -1 8175
 S
 #8193
 Uma Sala Escura~
@@ -1834,7 +1834,7 @@ Não há nada além de uma escuridão infinita.
 D5
 ~
 ~
-3 0 8198
+1 0 8198
 S
 #8198
 Uma Sala Clara~
@@ -1873,7 +1873,7 @@ a devorar-lhe avidamente...  Você morrerá logo..  A dor é insuportável e as
 paredes abafam seus gritos.  Há milhares deles percorrendo sua carne..  A
 maldição de Hatshepsut fez mais uma vítima...
 ~
-81 10 0 0 0 0
+81 8 0 0 0 0
 S
 #8202
 Uma Passagem Secreta~

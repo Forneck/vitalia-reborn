@@ -2,6 +2,8 @@
 4~
 A Floresta Sombria~
 700 799 50 2 j 0 0 0 10 90 1
+M 0 775 2 715 	(o caçador Drow)
+G 1 3830 -5 -1 	(o Card Drows)
 M 0 712 1 779 	(o Ceifeiro Impiedoso)
 G 1 715 15 -1 	(a chave da Morte)
 E 1 3827 10 21 	(o Card Aro de Phanzyenon)
@@ -17,7 +19,6 @@ E 1 738 15 1 	(o capacete de um Guardião)
 M 0 700 1 737 	(o Cavaleiro sem Cabeça)
 E 1 704 15 20 	(a cimitarra negra do cavaleiro)
 O 0 730 1 743 	(a Chave D)
-M 0 775 2 715 	(o caçador Drow)
 O 0 716 1 770 	(o telescópio)
 M 0 781 3 747 	(a Vênus carnívora)
 M 0 780 12 746 	(um Mosquito)

@@ -61,11 +61,10 @@ dentro houvesse um precioso tesouro.
 30 10 -5 1d10+400 1d15+1
 2000 40000
 9 9 1
-GenWimpy: 3
-GenLoot: 25
+GenWimpy: 12
+GenLoot: 27
 GenEquip: 5
-GenRoam: 66
-GenGroup: 2
+GenRoam: 68
 GenFollow: 14
 E
 T 3800

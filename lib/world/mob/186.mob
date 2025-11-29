@@ -11,7 +11,7 @@ existir algo assim?
 5 17 5 4d6+42 1d5+1
 100 1200
 9 9 0
-GenWimpy: 13
+GenWimpy: 26
 GenFollow: 5
 E
 #18602
@@ -30,10 +30,10 @@ Melhor matar mesmo!
 250 400
 9 9 1
 GenWimpy: 100
-GenLoot: 36
-GenEquip: 1
+GenLoot: 97
+GenEquip: 5
 GenRoam: 87
-GenFollow: 4
+GenFollow: 1
 E
 #18603
 dragão bebê dragao bebe~
@@ -49,11 +49,11 @@ mesmo os dragões pequenos podem causar um grande problema.
 4 17 6 1d4+50 1d6+1
 0 1000
 9 9 1
-GenWimpy: 43
-GenLoot: 11
-GenRoam: 56
-GenGroup: 5
-GenFollow: 5
+GenWimpy: 87
+GenLoot: 15
+GenEquip: 2
+GenRoam: 81
+GenFollow: 4
 E
 #18604
 novato guarda monstro~
@@ -69,11 +69,12 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 3 18 7 2d6+34 1d7+0
 500 800
 9 9 1
-GenWimpy: 75
-GenLoot: 61
-GenEquip: 2
+GenWimpy: 81
+GenLoot: 98
+GenEquip: 3
+GenRoam: 10
 GenUse: 20
-GenFollow: 7
+GenFollow: 3
 E
 #18605
 alquimista novato~
@@ -87,11 +88,11 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 91
-GenLoot: 45
-GenEquip: 4
-GenRoam: 81
-GenFollow: 8
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 21
+GenRoam: 82
+GenFollow: 6
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -106,9 +107,9 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 0 100
 9 9 0
 GenWimpy: 100
-GenLoot: 12
-GenEquip: 1
-GenRoam: 87
+GenLoot: 58
+GenEquip: 5
+GenRoam: 84
 GenFollow: 3
 E
 #18607
@@ -124,11 +125,12 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 96
-GenLoot: 37
-GenRoam: 87
-GenGroup: 4
-GenFollow: 4
+GenWimpy: 89
+GenLoot: 99
+GenEquip: 14
+GenRoam: 89
+GenGroup: 3
+GenFollow: 3
 E
 #18608
 demônio demonio diabo travesso~
@@ -143,11 +145,12 @@ dar uma boa examinada nela, a coisa dispara na direção das sombras e some.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 84
-GenLoot: 17
+GenWimpy: 100
+GenLoot: 57
+GenEquip: 8
 GenRoam: 89
-GenGroup: 13
-GenFollow: 6
+GenGroup: 14
+GenFollow: 5
 E
 #18609
 minotauro~
@@ -164,11 +167,12 @@ direção.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 81
-GenLoot: 35
-GenEquip: 3
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 34
 GenRoam: 89
-GenGroup: 79
+GenGroup: 92
+GenQuest: 2
 GenFollow: 12
 E
 #18610
@@ -183,7 +187,7 @@ de uma chance de levar à morte qualquer um que cruze o seu caminho.
 6 16 3 3d5+62 2d4+0
 0 1600
 9 9 0
-GenWimpy: 13
+GenWimpy: 33
 GenFollow: 5
 E
 #18611
@@ -200,12 +204,12 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 82
-GenLoot: 13
-GenEquip: 1
-GenRoam: 88
-GenGroup: 2
-GenFollow: 5
+GenWimpy: 100
+GenLoot: 58
+GenEquip: 5
+GenRoam: 89
+GenGroup: 21
+GenFollow: 2
 E
 #18612
 novato retardado ignorante~
@@ -222,9 +226,10 @@ acabar logo com a mediocridade dele.
 50 220
 9 9 1
 GenWimpy: 100
-GenLoot: 14
-GenRoam: 88
-GenFollow: 4
+GenLoot: 68
+GenEquip: 3
+GenRoam: 87
+GenFollow: 2
 E
 #18613
 novata tagarela~
@@ -239,11 +244,12 @@ ela estar aqui, ao contrário dos outros que você já viu.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 62
-GenLoot: 21
-GenEquip: 2
-GenRoam: 88
-GenFollow: 7
+GenWimpy: 98
+GenLoot: 33
+GenEquip: 4
+GenRoam: 89
+GenGroup: 7
+GenFollow: 6
 E
 #18614
 novato perdido~
@@ -259,10 +265,11 @@ não o ajuda um pouco.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 60
-GenLoot: 11
+GenWimpy: 100
+GenLoot: 31
+GenEquip: 3
 GenRoam: 88
-GenFollow: 5
+GenFollow: 4
 E
 #18615
 novato esperto~
@@ -276,10 +283,14 @@ leu os arquivos de ajuda?
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 82
-GenLoot: 15
+GenWimpy: 100
+GenLoot: 34
+GenEquip: 57
 GenRoam: 89
-GenGroup: 4
-GenFollow: 9
+GenUse: 50
+GenTrade: 50
+GenFollow: 7
+GenHealing: 100
+EmotionProfile: 3
 E
 $

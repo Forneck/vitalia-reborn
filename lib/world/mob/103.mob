@@ -13,10 +13,10 @@ Tomara que ele não esteja com fome!
 BareHandAttack: 4
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 11
+GenEquip: 42
 GenRoam: 89
-GenGroup: 94
-GenFollow: 10
+GenGroup: 96
+GenFollow: 8
 E
 #10301
 guarda nativo~
@@ -30,8 +30,8 @@ mês, você pode ver que ele não é nada civilizado!
 15 7 1 3d4+300 5d4+10
 100 4000
 9 9 1
-GenWimpy: 11
-GenLoot: 2
+GenWimpy: 31
+GenLoot: 5
 GenFollow: 10
 E
 #10302
@@ -47,11 +47,11 @@ Este aqui tem pedaços de carne e sangue por todo o corpo. Adivinhe, de onde ser
 100 6500
 9 9 1
 BareHandAttack: 4
-GenWimpy: 49
-GenLoot: 40
-GenEquip: 1
+GenWimpy: 55
+GenLoot: 61
+GenEquip: 2
 GenRoam: 89
-GenFollow: 11
+GenFollow: 10
 E
 #10303
 canibal~
@@ -65,11 +65,11 @@ uma pobre garotinha que acidentalmente encontrou esse lugar!
 15 10 0 6d6+260 5d5+10
 100 6500
 9 9 1
-GenWimpy: 19
-GenLoot: 30
-GenEquip: 1
-GenRoam: 89
-GenFollow: 12
+GenWimpy: 94
+GenLoot: 59
+GenEquip: 3
+GenRoam: 85
+GenFollow: 8
 E
 #10304
 mulher~
@@ -83,10 +83,10 @@ poderia acabar com o sofrimento dela!
 5 17 5 4d4+100 3d4+1
 50 1000
 9 9 2
-GenWimpy: 72
-GenLoot: 17
+GenWimpy: 100
+GenLoot: 24
 GenRoam: 88
-GenFollow: 3
+GenFollow: 2
 E
 #10305
 mulher canibal~
@@ -102,10 +102,10 @@ algo sério!
 0 3500
 9 9 2
 GenWimpy: 100
-GenLoot: 98
-GenEquip: 17
+GenLoot: 99
+GenEquip: 37
 GenRoam: 89
-GenFollow: 12
+GenFollow: 2
 E
 #10306
 chefe canibal~
@@ -120,6 +120,8 @@ refeição. Tomara que você não vire o próximo prato!
 3000 6000
 9 9 1
 BareHandAttack: 4
+GenWimpy: 4
+GenFollow: 14
 E
 #10307
 cobra~
@@ -133,12 +135,11 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 100
-GenLoot: 19
-GenEquip: 2
+GenWimpy: 98
+GenLoot: 81
+GenEquip: 8
 GenRoam: 89
-GenGroup: 2
-GenFollow: 10
+GenFollow: 3
 E
 #10308
 macaco pequeno~
@@ -153,10 +154,10 @@ Esse macaquinho é muito mal educado!
 9 9 1
 BareHandAttack: 7
 GenWimpy: 100
-GenLoot: 30
-GenEquip: 1
+GenLoot: 65
+GenEquip: 4
 GenRoam: 89
-GenFollow: 12
+GenFollow: 4
 E
 #10309
 primata~
@@ -170,11 +171,11 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 99
-GenLoot: 36
-GenEquip: 2
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 9
 GenRoam: 89
-GenFollow: 9
+GenFollow: 6
 E
 #10310
 primata fêmea~
@@ -189,10 +190,10 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 9 9 2
 BareHandAttack: 4
 GenWimpy: 100
-GenLoot: 47
-GenEquip: 5
+GenLoot: 98
+GenEquip: 10
 GenRoam: 89
-GenFollow: 16
+GenFollow: 6
 E
 #10311
 chefe primata~
@@ -207,9 +208,10 @@ fedorento!
 3000 6000
 9 9 1
 BareHandAttack: 5
-GenWimpy: 3
-GenLoot: 23
-GenRoam: 66
+GenWimpy: 7
+GenLoot: 25
+GenRoam: 87
+GenGroup: 4
 GenFollow: 14
 E
 #10312
@@ -226,9 +228,9 @@ grosso couro.  Em sua boca você vê enormes dentes, pronto para atacá-lo.
 5 5 1
 BareHandAttack: 4
 GenWimpy: 100
-GenLoot: 12
-GenRoam: 21
-GenFollow: 15
+GenLoot: 14
+GenRoam: 12
+GenFollow: 9
 E
 #10313
 troll~
@@ -241,9 +243,9 @@ Este Troll é enorme e aparenta ser muito forte.
 20 0 0 5d5+1000 5d5+15
 1500 7000
 9 9 1
-GenWimpy: 5
-GenLoot: 18
-GenEquip: 4
+GenWimpy: 7
+GenLoot: 54
+GenEquip: 12
 GenFollow: 14
 E
 #10314
@@ -258,9 +260,9 @@ Este perigoso morcego pode ser uma tarefa difícil para você.
 500 1000
 4 4 1
 BareHandAttack: 4
-GenWimpy: 37
+GenWimpy: 88
 GenLoot: 3
-GenFollow: 10
+GenFollow: 9
 E
 #10315
 mulher zumbi~
@@ -276,9 +278,9 @@ sua última refeição.
 9 9 2
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 42
-GenRoam: 87
-GenFollow: 4
+GenEquip: 43
+GenRoam: 88
+GenFollow: 1
 E
 #10316
 zumbi~
@@ -291,12 +293,12 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 16
+GenWimpy: 6
 GenLoot: 99
-GenEquip: 39
-GenRoam: 89
-GenGroup: 93
-GenFollow: 14
+GenEquip: 45
+GenRoam: 87
+GenGroup: 86
+GenFollow: 13
 E
 #10317
 zumbi kenuthi~
@@ -310,9 +312,9 @@ tremenda.
 20 10 10 5d5+900 6d5+8
 5000 6000
 9 9 1
-GenWimpy: 36
+GenWimpy: 29
 GenLoot: 99
-GenEquip: 30
-GenFollow: 14
+GenEquip: 31
+GenFollow: 9
 E
 $

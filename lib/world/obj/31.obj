@@ -43,15 +43,15 @@ Uma garrafa de água mineral francesa está aqui.~
 24 24 15 0
 29 10 6 0 0
 E
-garrafa~
-É uma garrafa bem clara e grande.  E há um rótulo bem grande grudado em um
-dos seus lados.
-~
-E
 rotulo~
 Você foi enganado!  Na parte de baixo do rótulo, está escrito em letras bem
 miudinhas "Engarrafada em Midgaard pela Evian Inc.".  Esta água vem do quase
 sempre limpo Rio de Midgaard.
+~
+E
+garrafa~
+É uma garrafa bem clara e grande.  E há um rótulo bem grande grudado em um
+dos seus lados.
 ~
 #3104
 cantil agua~
@@ -125,13 +125,13 @@ Uma escrivaninha foi colocada em frente à parede oeste da sala.~
 34 15 3107 0
 100 0 0 0 0
 E
-gaveta~
-Você percebe uma fechadura na gaveta.
-~
-E
 escrivaninha~
 A escrivaninha parece ser bastante espaçosa.  Há uma gaveta do lado
 esquerdo.
+~
+E
+gaveta~
+Você percebe uma fechadura na gaveta.
 ~
 #3110
 cofre~
@@ -246,7 +246,7 @@ flecha pesada perfurante~
 algumas flechas perfurantes~
 3~
 ~
-7 0 0 0 0 au 0 0 0 0 0 0 0
+7 mnt 0 0 0 au 0 0 0 0 0 0 0
 10 4 7 15
 20 1800 0 0 0
 #3199

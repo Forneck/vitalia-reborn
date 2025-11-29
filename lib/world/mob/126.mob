@@ -23,12 +23,12 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 22
+GenWimpy: 100
 GenLoot: 100
 GenEquip: 100
-GenBrave: 73
+GenBrave: 75
 GenUse: 100
-GenQuest: 8
+GenQuest: 54
 GenFollow: 13
 GenHealing: 100
 E
@@ -79,7 +79,9 @@ Wis: 25
 Con: 25
 Cha: 25
 GenWimpy: 5
-GenFollow: 14
+GenLoot: 3
+GenEquip: 1
+GenFollow: 13
 E
 #12603
 Ve deus criador~
@@ -107,6 +109,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 13
 E
 #12604
 Frei deus fertilidade~
@@ -127,6 +131,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 10
 E
 #12605
 Freyr deus sol~
@@ -147,8 +154,10 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 10
-GenFollow: 13
+GenWimpy: 5
+GenLoot: 1
+GenEquip: 1
+GenFollow: 12
 E
 #12606
 Thor deus senhor trovoes~
@@ -171,7 +180,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 3
+GenWimpy: 9
 GenFollow: 14
 E
 #12607
@@ -204,6 +213,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenBrave: 2
+GenFollow: 15
 E
 #12608
 Loge deus caluniador~
@@ -227,8 +238,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 6
-GenFollow: 15
+GenWimpy: 5
+GenFollow: 14
 E
 #12609
 Friga deusa fertilidade~
@@ -250,6 +261,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #12610
 Freia deusa~
@@ -271,6 +284,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenLoot: 1
+GenFollow: 13
 E
 #12611
 Balder deus~
@@ -354,8 +370,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 33
-GenFollow: 15
+GenWimpy: 5
+GenFollow: 14
 E
 #12614
 Njord deus~
@@ -376,6 +392,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 14
 E
 #12615
 Urdur norns deusa~
@@ -399,6 +417,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #12616
 Verdande norns deusa~
@@ -421,6 +441,10 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenLoot: 3
+GenEquip: 1
+GenFollow: 14
 E
 #12617
 Skuld norns deusa~
@@ -442,6 +466,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenLoot: 30
+GenFollow: 14
 E
 #12618
 Trudr forca~
@@ -534,6 +561,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 6
+GenFollow: 14
 E
 #12622
 Siegfried~
@@ -560,6 +589,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 14
 E
 #12623
 Haquem~
@@ -625,7 +656,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 7
+GenWimpy: 100
+GenBrave: 75
+GenQuest: 29
 GenFollow: 15
 E
 #12626
@@ -648,6 +681,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 11
 E
 #12627
 gigante~
@@ -671,6 +707,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 7
+GenLoot: 8
+GenEquip: 2
+GenFollow: 9
 E
 #12628
 Einherjar~
@@ -724,6 +764,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 14
 E
 #12630
 Helmwige~
@@ -805,6 +847,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 14
 E
 #12633
 Rossweisse~
@@ -832,6 +876,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 15
 E
 #12634
 Siegrune~
@@ -984,6 +1030,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenEquip: 1
+GenFollow: 15
 E
 #12640
 Anidhogge escuridao~
@@ -1006,6 +1055,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 6
+GenFollow: 12
 E
 #12641
 Gerda~
@@ -1030,6 +1081,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 21
+GenWimpy: 32
+GenLoot: 12
+GenEquip: 3
+GenFollow: 8
 E
 #12642
 Tialfi criado~
@@ -1051,6 +1106,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 21
+GenWimpy: 14
+GenFollow: 13
 E
 #12643
 Hermod agil~
@@ -1075,6 +1132,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 4
+GenFollow: 14
 E
 #12644
 atraso criado~
@@ -1095,6 +1154,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 8
+GenFollow: 12
 E
 #12645
 avareza criada~
@@ -1116,6 +1177,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 8
+GenFollow: 12
 E
 #12646
 Eric ruivo~
@@ -1205,6 +1268,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 4
+GenFollow: 15
 E
 #12650
 Irpa gigante gelo~
@@ -1225,6 +1290,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 3
+GenFollow: 15
 E
 #12651
 Mime anao nibelungo~
@@ -1250,6 +1317,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 14
 E
 #12652
 Thryn rei gigante gelo~
@@ -1295,6 +1364,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 5
+GenFollow: 15
 E
 #12654
 utgard~
@@ -1317,8 +1388,10 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 1
+GenEquip: 1
+GenFollow: 10
 E
 #12655
 Logi fogo~
@@ -1339,8 +1412,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 12
+GenLoot: 1
+GenFollow: 11
 E
 #12656
 Angerbode giganta profetisa~
@@ -1363,6 +1437,8 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 4
+GenFollow: 15
 E
 #12657
 Greyfell cavalo~
@@ -1454,7 +1530,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
+GenWimpy: 3
+GenLoot: 2
+GenEquip: 1
 GenFollow: 10
 E
 #12661
@@ -1479,8 +1557,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
-GenFollow: 11
+GenWimpy: 3
+GenLoot: 1
+GenEquip: 1
+GenFollow: 10
 E
 #12662
 Schrinnir javali~
@@ -1551,7 +1631,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 17
+GenWimpy: 21
+GenLoot: 3
 GenFollow: 15
 E
 #12665
@@ -1621,6 +1702,9 @@ Int: 21
 Wis: 21
 Con: 21
 Cha: 21
+GenWimpy: 4
+GenEquip: 2
+GenFollow: 14
 E
 #12668
 Verme~
@@ -1660,9 +1744,9 @@ chegada do Ragnarok.
 9 9 1
 BareHandAttack: 1
 Cha: 18
-GenWimpy: 3
-GenLoot: 1
-GenRoam: 61
+GenWimpy: 14
+GenLoot: 2
+GenRoam: 29
 GenFollow: 4
 E
 #12670
@@ -1690,8 +1774,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 4
-GenFollow: 16
+GenWimpy: 18
+GenEquip: 1
+GenQuest: 4
+GenFollow: 15
 E
 #12671
 aguia guardia~
@@ -1712,7 +1798,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
+GenWimpy: 9
+GenFollow: 8
 E
 #12672
 Tanngnost bode~
@@ -1730,7 +1817,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 7
+GenWimpy: 8
 GenFollow: 10
 E
 #12673
@@ -1749,7 +1836,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 6
+GenWimpy: 9
 GenFollow: 10
 E
 #12674
@@ -1767,8 +1854,8 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 87
-GenFollow: 10
+GenWimpy: 100
+GenFollow: 9
 E
 #12675
 Dvalin soberano anao~
@@ -1792,6 +1879,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
+GenWimpy: 4
+GenFollow: 14
 E
 #12676
 Dain soberano elfo~
@@ -1836,8 +1925,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
-GenWimpy: 10
-GenRoam: 52
+GenWimpy: 32
+GenRoam: 88
+GenFollow: 10
 E
 #12678
 viking sueco~
@@ -1862,8 +1952,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 4
-GenRoam: 82
+GenWimpy: 5
+GenEquip: 1
+GenRoam: 89
+GenGroup: 3
 GenFollow: 18
 E
 #12679
@@ -1890,11 +1982,11 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 5
-GenLoot: 8
+GenWimpy: 9
+GenLoot: 16
+GenEquip: 3
 GenRoam: 89
-GenGroup: 1
-GenFollow: 13
+GenFollow: 12
 E
 #12680
 viking islandes~
@@ -1944,6 +2036,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenRoam: 63
+GenFollow: 14
 E
 #12682
 viking norueguesa~
@@ -1968,10 +2063,11 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 10
-GenLoot: 1
-GenRoam: 87
-GenGroup: 1
+GenWimpy: 47
+GenLoot: 4
+GenEquip: 1
+GenRoam: 89
+GenFollow: 13
 E
 #12683
 viking islandesa~
@@ -2014,9 +2110,10 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 64
-GenLoot: 1
-GenRoam: 20
+GenWimpy: 100
+GenLoot: 4
+GenEquip: 4
+GenRoam: 89
 GenFollow: 12
 E
 #12685
@@ -2038,9 +2135,9 @@ Int: 15
 Wis: 15
 Con: 18
 Cha: 18
-GenWimpy: 9
+GenWimpy: 21
 GenLoot: 3
-GenFollow: 12
+GenFollow: 9
 E
 #12686
 navio guerra viking~
@@ -2064,6 +2161,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 21
+GenFollow: 6
 E
 #12687
 belo elfo luminoso~
@@ -2086,8 +2185,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 6
+GenFollow: 14
 E
 #12688
 linda elfa luminosa~
@@ -2135,6 +2234,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
+GenWimpy: 4
+GenFollow: 17
 E
 #12690
 ana subterraneo~
@@ -2158,6 +2259,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
+GenWimpy: 5
+GenFollow: 18
 E
 #12691
 rena~
@@ -2179,9 +2282,10 @@ Int: 15
 Wis: 13
 Con: 16
 Cha: 18
-GenWimpy: 34
-GenLoot: 2
-GenRoam: 7
+GenWimpy: 88
+GenLoot: 11
+GenEquip: 2
+GenRoam: 83
 GenFollow: 14
 E
 #12692
@@ -2238,6 +2342,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenRoam: 52
+GenFollow: 10
 E
 #12695
 alce~
@@ -2258,8 +2365,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 10
-GenRoam: 66
+GenWimpy: 20
+GenRoam: 79
 GenFollow: 4
 E
 #12696
@@ -2282,8 +2389,10 @@ Wis: 18
 Con: 18
 Cha: 18
 GenWimpy: 100
-GenLoot: 16
-GenFollow: 10
+GenLoot: 30
+GenEquip: 4
+GenRoam: 55
+GenFollow: 6
 E
 #12697
 ave marinha~
@@ -2303,7 +2412,7 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
-GenWimpy: 22
+GenWimpy: 41
 GenFollow: 10
 E
 #12698
@@ -2327,8 +2436,12 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 5
-GenRoam: 86
+GenWimpy: 76
+GenLoot: 3
+GenEquip: 1
+GenRoam: 89
+GenBrave: 75
+GenQuest: 10
 GenFollow: 14
 E
 #12699

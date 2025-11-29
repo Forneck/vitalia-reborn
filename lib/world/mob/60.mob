@@ -12,10 +12,10 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 33
-GenLoot: 30
+GenWimpy: 64
+GenLoot: 48
+GenEquip: 1
 GenRoam: 88
-GenGroup: 24
 GenFollow: 6
 E
 #6001
@@ -30,9 +30,10 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 60
 9 9 0
 GenWimpy: 100
-GenLoot: 71
+GenLoot: 94
+GenEquip: 1
 GenRoam: 87
-GenFollow: 3
+GenFollow: 1
 E
 #6002
 urso marrom~
@@ -47,9 +48,9 @@ lindinhos.
 8 13 3 1d12+98 2d6+2
 0 4000
 4 9 0
-GenWimpy: 7
+GenWimpy: 8
 GenLoot: 6
-GenRoam: 14
+GenRoam: 9
 GenFollow: 8
 E
 #6003
@@ -78,10 +79,10 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 66
-GenLoot: 10
-GenRoam: 84
-GenFollow: 3
+GenWimpy: 100
+GenLoot: 17
+GenRoam: 87
+GenFollow: 2
 E
 #6005
 raposa marrom~
@@ -95,10 +96,11 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 98
-GenLoot: 42
+GenWimpy: 100
+GenLoot: 71
+GenEquip: 1
 GenRoam: 87
-GenFollow: 8
+GenFollow: 5
 E
 #6006
 passaro grande~
@@ -112,7 +114,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 25
 9 9 0
 GenWimpy: 100
-GenLoot: 76
+GenLoot: 96
 GenFollow: 3
 E
 #6007
@@ -127,8 +129,8 @@ pássaro, se você lhe der chance.
 5 15 5 1d12+60 2d4+3
 0 1100
 9 9 0
-GenWimpy: 31
-GenLoot: 97
+GenWimpy: 79
+GenLoot: 99
 GenFollow: 8
 E
 #6008
@@ -143,10 +145,9 @@ O pardal parece estar aproveitando bem a vida.
 0 25
 9 9 0
 GenWimpy: 100
-GenLoot: 25
+GenLoot: 68
 GenRoam: 87
-GenGroup: 6
-GenFollow: 8
+GenFollow: 2
 E
 #6009
 tordo~
@@ -160,9 +161,9 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 25
 9 9 0
 GenWimpy: 100
-GenLoot: 34
+GenLoot: 55
 GenRoam: 87
-GenFollow: 4
+GenFollow: 1
 E
 #6010
 esquilo~
@@ -177,8 +178,8 @@ silenciosamente para que você saia dali e o deixe sózinho.
 0 120
 9 9 0
 GenWimpy: 6
-GenLoot: 2
-GenFollow: 5
+GenLoot: 3
+GenFollow: 3
 E
 #6011
 texugo~
@@ -193,7 +194,7 @@ prendem a sua atenção, enquanto você fica considerando se deve ou não matá-
 4 17 5 1d5+48 2d3+2
 0 650
 9 9 0
-GenWimpy: 3
+GenWimpy: 12
 GenFollow: 4
 E
 #6012
@@ -210,9 +211,9 @@ no chão.
 0 200
 9 9 0
 GenWimpy: 100
-GenLoot: 33
+GenLoot: 74
 GenRoam: 87
-GenFollow: 7
+GenFollow: 8
 E
 #6013
 esquilinho~
@@ -229,10 +230,9 @@ pensa você.
 0 40
 9 9 0
 GenWimpy: 100
-GenLoot: 57
+GenLoot: 93
 GenRoam: 85
-GenGroup: 11
-GenFollow: 2
+GenFollow: 1
 E
 #6014
 corvo negro passaro~
@@ -248,7 +248,7 @@ comida.
 9 9 0
 GenWimpy: 100
 GenLoot: 98
-GenFollow: 7
+GenFollow: 4
 E
 #6015
 grotesco abutre urubu~
@@ -265,9 +265,10 @@ de proteger o seu banquete.
 6 15 4 1d12+68 2d3+2
 14 1750
 9 9 0
-GenWimpy: 83
+GenWimpy: 100
 GenLoot: 99
-GenFollow: 10
+GenRoam: 28
+GenFollow: 9
 E
 #6016
 alce gamo~
@@ -282,9 +283,9 @@ certeza serão bastante expressivas dentro de alguns anos.
 4 17 4 1d12+48 1d5+3
 0 750
 9 9 1
-GenWimpy: 4
+GenWimpy: 19
 GenLoot: 6
-GenFollow: 4
+GenFollow: 3
 E
 #6017
 peixe~
@@ -297,9 +298,9 @@ O peixe tem exatamente o tamanho certo para um excelente refeição.
 0 20 10 2d5+0 1d3+0
 0 30
 9 9 0
-GenWimpy: 7
-GenLoot: 1
-GenFollow: 2
+GenWimpy: 3
+GenLoot: 2
+GenFollow: 1
 E
 #6018
 patinho~
@@ -312,8 +313,8 @@ O patinho é adorável!   Ele se parece com uma bolinha de penugem.
 0 20 10 1d1+0 1d1+0
 0 1
 9 9 0
-GenWimpy: 3
-GenFollow: 6
+GenWimpy: 2
+GenFollow: 5
 E
 #6019
 pato~
@@ -327,8 +328,8 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenLoot: 35
-GenRoam: 86
-GenFollow: 2
+GenLoot: 67
+GenRoam: 80
+GenFollow: 1
 E
 $

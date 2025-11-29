@@ -31,6 +31,10 @@ acabar com você facilmente
 40 0 -4 10d10+750 8d8+18
 4000 50500
 9 9 1
+GenWimpy: 6
+GenLoot: 17
+GenEquip: 1
+GenFollow: 13
 E
 #6902
 perereca cinzenta~
@@ -43,6 +47,8 @@ A pequena perereca cinzenta olha para você com curiosidade.
 10 10 1 2d12+123 2d8+5
 500 9000
 9 9 12
+GenWimpy: 2
+GenFollow: 11
 E
 T 3008
 #6903
@@ -56,8 +62,8 @@ O pequeno girino preto tenta se esconder assim que vê você.
 1 2 9 2d6+10 1d5+2
 34 100
 9 9 1
-GenWimpy: 8
-GenFollow: 4
+GenWimpy: 18
+GenFollow: 3
 E
 #6904
 grande templo guarda sapo~

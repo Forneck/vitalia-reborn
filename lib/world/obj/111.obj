@@ -11,7 +11,7 @@ pedra velha~
 Uma pedra muito velha e empoeirada.
 ~
 #11101
-pedra velha~
+pedravelha~
 uma pedra~
 Uma velha pedra.~
 ~
@@ -169,4 +169,16 @@ um bau escondido~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 15 11102 0
 9999 0 0 0 0
+#11121
+argola argolinha fogo~
+uma pequena argola cor de fogo~
+Uma misteriosa argola cor de fogo foi deixada aqui.~
+~
+9 abgq 0 0 0 as 0 0 0 s 0 0 0
+5 0 0 0
+1 100000 10000 90 0
+A
+6 2
+A
+19 2
 $~

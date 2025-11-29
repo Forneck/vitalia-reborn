@@ -233,16 +233,6 @@ Uma estátua de forma abstrata encontra-se aqui.~
 0 0 0 0
 80 10000 1000 0 0
 E
-estátua abstrata~
-   Na verdade, essa estátua possui uma forma mais abstrata, por isso se
-destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
-você nem ao menos é capaz de identificar seu sexo, ou sua profissão.  Ainda
-assim ela te lembra muito alguém que você conhece... só não está conseguindo
-lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
-a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
-inscrição.
-~
-E
 inscrição~
    "Esta estátua representa você, sim, você!  Assim como também representa
 todos os grandes homens e mulheres que se aventuram ou já se aventuraram
@@ -251,6 +241,16 @@ conquistar é a amizade de seus companheiros, e o amor deles será a melhor
 recompensa que irá receber.  Mantenha isso em mente e você nunca será
 esquecido, e ao mesmo tempo levará para sempre Vitália em seu coração.
 A AMIZADE irá abrir o mundo para você."
+~
+E
+estátua abstrata~
+   Na verdade, essa estátua possui uma forma mais abstrata, por isso se
+destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
+você nem ao menos é capaz de identificar seu sexo, ou sua profissão.  Ainda
+assim ela te lembra muito alguém que você conhece... só não está conseguindo
+lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
+a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
+inscrição.
 ~
 #3809
 lista personalidades~
@@ -276,7 +276,7 @@ carta card itens alaric~
 o Card Lâmina Élfica de Alaric~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -294,7 +294,7 @@ carta card itens fogo~
 o Card Escudo de Fogo~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -312,7 +312,7 @@ carta card itens zoghtu~
 o Card Manoplas de Zoghtu~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -330,7 +330,7 @@ carta card itens horus~
 o Card Olho de Horus~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -347,7 +347,7 @@ carta card itens carnax~
 o Card Carnax~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -364,7 +364,7 @@ carta card itens huthven~
 o Card Manto das Trevas de Huthven~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -381,7 +381,7 @@ carta card itens bruenor~
 o Card Bastão de Bruenor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -398,7 +398,7 @@ carta card itens caliope~
 o Card Tiara de Calíope~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -414,7 +414,7 @@ carta card itens jupiter~
 o Card Machado de Júpiter~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -431,7 +431,7 @@ carta card itens cranaloc~
 o Card Anel de Cranaloc~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -449,7 +449,7 @@ carta card itens nabaqila~
 o Card Chave de Nabaqila~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -467,7 +467,7 @@ carta card itens rosa~
 o Card Rosa Vermelha~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -484,7 +484,7 @@ carta card itens calice~
 o Card Cálice Sagrado~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -501,7 +501,7 @@ carta card itens inverno~
 o Card Manto do Inverno~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -518,7 +518,7 @@ carta card itens verao~
 o Card Bracelete do Verão~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -535,7 +535,7 @@ carta card itens primavera~
 o Card Anel da Primavera~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -552,7 +552,7 @@ carta card itens outono~
 o Card Cinturão do Outono~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -571,7 +571,7 @@ carta card itens phanzyenon~
 o Card Aro de Phanzyenon~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -589,7 +589,7 @@ carta card itens pena~
 o Card Pena Dourada do Escritor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -608,7 +608,7 @@ carta card mobs floresta~
 o Card Guardião da Floresta~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -623,7 +623,7 @@ carta card mobs drows~
 o Card Drows~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -643,7 +643,7 @@ carta card mobs novatos~
 o Card Novatos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -667,7 +667,7 @@ carta card mobs urubu~
 o Card Urubu~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -683,7 +683,7 @@ carta card mobs fido~
 o Card Fido~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -699,7 +699,7 @@ carta card mobs atoms~
 o Card Atoms~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -718,7 +718,7 @@ carta card mobs bolha~
 o Card Bolha Gelatinosa Verde~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -735,7 +735,7 @@ carta card mobs lagarto~
 o Card Homens Lagarto~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -753,7 +753,7 @@ carta card mobs miconoides~
 o Card Miconóides~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -771,7 +771,7 @@ carta card mobs lamia~
 o Card Lâmia~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -788,7 +788,7 @@ carta card mobs xadrez~
 o Card Peças de Xadrez~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -804,7 +804,7 @@ carta card mobs baralho~
 o Card Cartas de Baralho~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -822,7 +822,7 @@ carta card mobs elfos~
 o Card Elfos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -841,7 +841,7 @@ carta card mobs gnomos~
 o Card Gnomos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -860,7 +860,7 @@ carta card mobs anoes~
 o Card Anões~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -878,7 +878,7 @@ carta card mobs romano~
 o Card Cidadão Romano~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -898,7 +898,7 @@ carta card mobs hobbits~
 o Card Hobbits~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -918,7 +918,7 @@ carta card mobs goblins~
 o Card Goblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -936,7 +936,7 @@ carta card mobs hobgoblins~
 o Card Hobgoblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -955,7 +955,7 @@ carta card mobs orcs~
 o Card Orcs~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -970,7 +970,7 @@ carta card mobsII puff~
 o Card Puff~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -986,7 +986,7 @@ carta card mobsII apocalipse~
 o Card Dragão do Apocalipse~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1002,7 +1002,7 @@ carta card mobsII esqueleto~
 o Card Dragão Esqueleto~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1019,7 +1019,7 @@ carta card mobsII bebe~
 o Card Bebê Dragão~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -1036,7 +1036,7 @@ carta card mobsII nidhogg~
 o Card Nidhogg~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -1053,7 +1053,7 @@ carta card mobsII aglandiir~
 o Card Aglandiir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1070,7 +1070,7 @@ carta card mobsII fada~
 o Card Dragão Fada~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1086,7 +1086,7 @@ carta card mobsII draco~
 o Card Draco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1102,7 +1102,7 @@ carta card mobsII fafnir~
 o Card Fafnir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1118,7 +1118,7 @@ carta card mobsII dracolich~
 o Card Dracolich~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1134,7 +1134,7 @@ carta card mobsII valik~
 o Card Valik~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1151,7 +1151,7 @@ carta card mobsII invisivel~
 o Card Dragão Invisível~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1168,7 +1168,7 @@ carta card mobsII rainha~
 o Card Rainha Dragoneza~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1184,7 +1184,7 @@ carta card mobsII tiamat~
 o Card Tiamat~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1201,7 +1201,7 @@ carta card mobsII dourado~
 o Card Ancião Dragão Dourado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1218,7 +1218,7 @@ carta card mobsII prateado~
 o Card Ancião Dragão Prateado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1235,7 +1235,7 @@ carta card mobsII bronze~
 o Card Ancião Dragão de Bronze~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1251,7 +1251,7 @@ carta card mobsII anciao~
 o Card Dracolich Ancião~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1268,7 +1268,7 @@ carta card mobsII fantasma~
 o Card Dragão Fantasma~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1284,7 +1284,7 @@ carta card mobsII vermelho~
 o Card Ancião Dragão Vermelho~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1300,7 +1300,7 @@ carta card mobsII azul~
 o Card Ancião Dragão Azul~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1316,7 +1316,7 @@ carta card mobsII amarelo~
 o Card Ancião Dragão Amarelo~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1333,7 +1333,7 @@ carta card mobsII verde~
 o Card Ancião Dragão Verde~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1349,7 +1349,7 @@ carta card mobsII negro~
 o Card Ancião Dragão Negro~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1365,7 +1365,7 @@ carta card mobsII branco~
 o Card Ancião Dragão Branco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1378,11 +1378,11 @@ de madre-pérola, no meio de sua testa você vê apenas um chifre.
 ~
 #3874
 pochete colecionador~
-a pochete do colecionador~
+@ca pochete do colecionador@n~
 Uma linda pochete preta está caída no chão.~
 ~
 15 dq 0 0 0 al 0 0 0 0 0 0 0
-500 9 -1 0
+500 5 -1 0
 8 500000 50000 0 0
 E
 pochete~
@@ -1400,14 +1400,16 @@ A
 A
 4 2
 A
+18 2
+A
 19 2
 #3875
 lupa colecionador~
-a lupa do colecionador~
+@ca lupa do colecionador@n~
 Uma pequena lupa está refletindo a luz em direção aos seus olhos.~
 ~
-9 dq 0 0 0 aor 0 0 0 defg 0 0 0
-8 0 0 0
+12 dq 0 0 0 ao 0 0 0 defg 0 0 0
+0 0 0 0
 5 500000 50000 0 0
 E
 lupa~
@@ -1423,10 +1425,12 @@ A
 A
 6 2
 A
-19 2
+19 16
+A
+18 10
 #3876
 luvas colecionador~
-as luvas do colecionador~
+@cas luvas do colecionador@n~
 Um par de luvas brilham com uma pequena aura caídas ao chão.~
 ~
 9 dq 0 0 0 ah 0 0 0 0 0 0 0
@@ -1449,12 +1453,12 @@ A
 19 3
 #3877
 olho dragao gema~
-o olho do dragão~
+@co olho do dragao@n~
 Uma linda gema vermelha do tamanho de uma maçã está caída no chão.~
 ~
-9 dq 0 0 0 ar 0 0 0 0 c 0 0
+9 dq 0 0 0 ar 0 0 0 y h 0 0
 10 0 0 0
-10 600000 60000 15 0
+10 600000 60000 0 0
 E
 olho~
 Você vê uma linda gema vermelha com um risco negro no meio, assim como
@@ -1467,17 +1471,17 @@ A
 A
 4 2
 A
-19 2
+19 4
 A
 18 2
 #3878
 calcas dragao~
-as calças com bolsos do dragão~
+@cas calcas com bolsos do dragao@n~
 Você uma calça com vários bolsos caída.~
 ~
 9 dq 0 0 0 af 0 0 0 t 0 0 0
 10 0 0 0
-15 600000 60000 15 0
+15 600000 60000 0 0
 E
 calças~
 Estas calças de couro azul são feitas com as escamas de um Dragão
@@ -1492,15 +1496,15 @@ A
 A
 18 2
 A
-19 2
+19 3
 #3879
 medalha dragao bons~
-a medalha do matador de dragões bons~
+@ca medalha do matador de dragoes bons@n~
 Um pequeno pingente de um dragão vermelho está caído aqui.~
 ~
-11 djq 0 0 0 ac 0 0 0 o 0 0 0
+11 djq 0 0 0 ac 0 0 0 oB 0 0 0
 0 0 0 0
-9 600000 60000 15 0
+9 600000 60000 0 0
 E
 medalha~
 Você vê um lindo pinguente de um Dragão Vermelho com suas asas
@@ -1514,14 +1518,20 @@ A
 18 3
 A
 19 3
+A
+12 50
+A
+13 50
+A
+14 50
 #3880
 medalha dragao maus~
-a medalha do matador de dragões maus~
+@ca medalha do matador de dragoes maus@n~
 Um pequeno pingente de um dragão dourado está caído aqui.~
 ~
-11 dkq 0 0 0 ac 0 0 0 n 0 0 0
+11 dkq 0 0 0 ac 0 0 0 n k 0 0
 0 0 0 0
-9 600000 60000 15 0
+9 600000 60000 0 0
 E
 medalha~
 Você vê um lindo pinguente de um Dragão Dourado com suas asas
@@ -1535,12 +1545,18 @@ A
 18 3
 A
 19 3
+A
+12 50
+A
+13 50
+A
+14 50
 #3881
 carta card itens ossos~
 o Card Bracelete de Ossos~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1557,7 +1573,7 @@ carta card itens geandrias~
 o Card Espada de Geandrias~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1574,7 +1590,7 @@ carta card coringa~
 o Card Coringa~
 Jogada ao chao encontre-se uma carta multicolorida.~
 ~
-8 deg 0 0 0 ao 0 0 0 0 0 0 0
+31 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1000000 3000 0 0
 $~

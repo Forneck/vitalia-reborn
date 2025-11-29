@@ -34,7 +34,7 @@ totalmente retalhada.
 BareHandAttack: 13
 Con: 8
 Cha: 3
-GenWimpy: 7
+GenWimpy: 5
 GenFollow: 10
 E
 #14402
@@ -113,6 +113,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 12
+GenWimpy: 3
+GenLoot: 2
+GenFollow: 14
 E
 #14406
 gato negro~
@@ -177,6 +180,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 7
+GenFollow: 13
 E
 #14409
 mulher bri~
@@ -197,6 +202,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 14
 E
 #14410
 anao viajante~
@@ -261,6 +268,9 @@ Str: 18
 Dex: 18
 Int: 18
 Wis: 18
+GenWimpy: 5
+GenRoam: 37
+GenFollow: 14
 E
 #14413
 hobbit bri~
@@ -279,6 +289,9 @@ são como os seus parentes do Condado imaginam.
 9 9 1
 BareHandAttack: 13
 Dex: 18
+GenWimpy: 15
+GenRoam: 87
+GenFollow: 13
 E
 #14414
 hobbit bri~
@@ -297,6 +310,9 @@ são como os seus parentes do Condado imaginam.
 9 9 2
 BareHandAttack: 13
 Dex: 18
+GenWimpy: 3
+GenRoam: 66
+GenFollow: 14
 E
 #14415
 homem forasteiro~
@@ -403,6 +419,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 5
+GenFollow: 14
 E
 #14420
 velho porteiro~
@@ -464,7 +482,7 @@ Con: 18
 Cha: 18
 E
 #14423
-passaro colorido~
+passaro colorido passarocolorido~
 um lindo pássaro colorido~
 Um lindo pássaro colorido está aqui, cantando sem parar belas melodias.
 ~
@@ -480,8 +498,7 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 11
-GenRoam: 11
-GenFollow: 7
+GenWimpy: 33
+GenFollow: 6
 E
 $

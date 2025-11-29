@@ -9,6 +9,7 @@ Um velho homem está aqui a perscrutar antigos livros.
 16 -10 -10 1d1+10000 5d5+5
 1 0
 9 9 1
+GenTrade: 100
 E
 #5401
 clerigo mestre guilda~
@@ -22,6 +23,7 @@ concentrar.
 16 -10 -10 1d1+10000 5d5+5
 1 0
 9 9 1
+GenTrade: 100
 E
 #5402
 guerreiro mestre guilda~
@@ -35,6 +37,7 @@ treiná-lo.
 16 -10 -10 1d1+10000 5d5+5
 1 0
 9 9 1
+GenTrade: 100
 E
 #5403
 ladrao mestre guilda~
@@ -49,6 +52,7 @@ orelha esquerda.  'Nós começaremos agora', é tudo o que ele diz.
 16 -10 -10 1d1+10000 5d5+5
 1 0
 9 9 1
+GenTrade: 100
 E
 #5404
 mulher recepcionista~
@@ -59,12 +63,12 @@ Esta beleza árabe é certamente a filha de algum alto oficial.  Quando você
 discretamente levanta seu véu, você pode notar uma pequena marca de nascença
 em sua bochecha esquerda em forma de meia-lua.
 ~
-2123778 0 0 0 0 0 0 0 800 E
+3172355 0 0 0 0 0 0 0 800 E
 10 -10 -10 1d1+1871 10d20+10
 1 5000
 6 6 2
+GenTrade: 100
 E
-T 3009
 #5405
 mago garcom velho homem~
 o velho caquético~
@@ -76,6 +80,7 @@ Ele parece distraído enquanto coloca cinco bebidas de uma vez sem errar.
 108 9 -1 1d1+12000 1d5+3
 1 1000
 9 9 1
+GenTrade: 100
 E
 #5406
 john irmao cantor vocalista~
@@ -89,6 +94,7 @@ Você vê o vocalista dos Lokettes cantando muito alto uma melodia.
 21 1350
 9 9 1
 GenWimpy: 1
+GenTrade: 100
 E
 #5407
 crente~
@@ -101,6 +107,8 @@ Um homem franzino descansa aqui, esperando encontrar um bom coração.
 2 19 10 10d1+1 1d4+2
 1 5
 5 5 1
+GenTrade: 100
+GenFollow: 3
 E
 #5408
 crente~
@@ -113,6 +121,8 @@ Um homem franzino descansa aqui olhando para suas roupas.
 3 19 10 10d1+1 1d3+3
 1 5
 5 5 1
+GenTrade: 100
+GenFollow: 3
 E
 #5409
 mendigo~
@@ -126,9 +136,10 @@ tostão?
 1 19 10 10d1+1 1d2+2
 1 0
 9 9 1
-GenWimpy: 8
-GenRoam: 86
-GenFollow: 5
+GenWimpy: 35
+GenRoam: 87
+GenTrade: 74
+GenFollow: 4
 E
 #5410
 padeiro~
@@ -141,6 +152,7 @@ Você vê um grande homem de avental branco coberto de farinha.
 108 0 0 1d1+30000 2d10+2
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5411
 lojista~
@@ -154,6 +166,7 @@ registradora.
 108 0 0 1d1+30000 2d10+2
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5412
 banqueiro~
@@ -166,6 +179,7 @@ Este pequeno homem parece estar apto para contar dinheiro.
 10 1 0 1d1+30000 3d6+2
 1 0
 9 9 1
+GenTrade: 100
 E
 #5413
 ahkeem alfaiate~
@@ -179,6 +193,7 @@ sugere um novo guarda-roupa.
 108 10 5 1d1+30000 1d5+5
 1 200
 9 9 1
+GenTrade: 100
 E
 #5414
 vera verdureira~
@@ -191,6 +206,7 @@ Uma esbelta e alta mulher que sorri francamente para você.
 108 10 5 1d1+30000 1d5+5
 1 2000
 9 9 2
+GenTrade: 100
 E
 #5415
 butch~
@@ -203,6 +219,7 @@ Este anão atarracado tem um brilho maldoso em seu olhar.
 108 10 5 1d1+30000 1d5+5
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5416
 abdul vendedor~
@@ -216,6 +233,7 @@ seu frio olhar e faz seu pedido.
 108 10 5 1d1+30000 1d5+5
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5417
 igor armeiro~
@@ -228,6 +246,7 @@ Você vê um pequeno anão com um grande corcunda em seu ombro esquerdo.
 108 10 5 1d1+30000 1d5+5
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5418
 cassandra~
@@ -242,6 +261,7 @@ cheiro que está no ar.
 108 0 0 1d1+30000 1d5+5
 1 2000
 9 9 2
+GenTrade: 100
 E
 #5419
 capataz homem~
@@ -255,6 +275,9 @@ tomando conta dos trabalhadores.
 15 6 -2 3d10+40 1d8+2
 1 100
 9 9 1
+GenWimpy: 1
+GenTrade: 100
+GenFollow: 4
 E
 #5420
 trabalhador~
@@ -268,6 +291,7 @@ Um grande homem muito suado nem ao menos retorna seu olhar.
 1 50
 9 9 1
 GenWimpy: 1
+GenTrade: 100
 E
 #5421
 estatua brahman~
@@ -281,6 +305,9 @@ em um combate mágico.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5422
@@ -295,6 +322,9 @@ em um combate mágico.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5423
@@ -308,6 +338,9 @@ Está estátua se parece com um enorme elefante.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5424
@@ -321,6 +354,9 @@ Esta é a estátua do Deus da Morte.  Ela está coberta com estranhas runas.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5425
@@ -335,6 +371,9 @@ fogo.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5426
@@ -349,6 +388,9 @@ prateadas.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 1
+GenTrade: 100
+GenFollow: 7
 E
 T 3009
 #5427
@@ -363,6 +405,9 @@ mármore resistente.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenBrave: 2
+GenTrade: 100
+GenFollow: 14
 E
 T 3009
 #5428
@@ -377,6 +422,9 @@ como se ela tivesse atravessado um longo caminho pelas estradas.
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
 9 9 0
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 13
 E
 T 3009
 #5429
@@ -390,6 +438,7 @@ An undefined string.
 11 14 0 2d11+40 2d5+2
 1 384
 9 9 1
+GenTrade: 100
 E
 #5430
 mustafah humano ladrao~
@@ -402,6 +451,11 @@ An undefined string.
 7 17 10 3d8+41 2d4+1
 1 99
 9 9 1
+GenWimpy: 10
+GenRoam: 61
+GenGroup: 5
+GenTrade: 100
+GenFollow: 9
 E
 #5431
 fatima elfa elfica invocadora~
@@ -414,6 +468,10 @@ An undefined string.
 9 18 10 2d6+25 3d3+0
 1 93
 9 9 1
+GenWimpy: 5
+GenRoam: 68
+GenTrade: 100
+GenFollow: 4
 E
 #5432
 kareem anao mercenario~
@@ -426,6 +484,10 @@ An undefined string.
 12 9 0 4d4+50 2d6+5
 1 939
 9 9 1
+GenWimpy: 6
+GenRoam: 78
+GenTrade: 100
+GenFollow: 6
 E
 #5433
 nomade mercador~
@@ -439,6 +501,7 @@ para não confiar muito nele.
 108 11 -10 1d1+1500 1d8+2
 15000 800
 9 9 1
+GenTrade: 100
 E
 #5434
 guarda costa guarda-costa~
@@ -451,7 +514,8 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 12 10 3 3d10+100 1d6+3
 1 400
 9 9 1
-GenWimpy: 9
+GenWimpy: 6
+GenTrade: 100
 GenFollow: 13
 E
 T 3013
@@ -467,8 +531,12 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
-GenWimpy: 10
-GenRoam: 81
+GenWimpy: 30
+GenLoot: 10
+GenEquip: 2
+GenRoam: 63
+GenGroup: 21
+GenTrade: 74
 GenFollow: 4
 E
 #5436
@@ -483,9 +551,11 @@ caixa para os barcos como se esta fosse uma caixa de lírios.
 12 9 2 3d5+65 1d8+5
 1 550
 9 9 1
-GenWimpy: 4
-GenRoam: 73
-GenFollow: 6
+GenWimpy: 16
+GenRoam: 88
+GenGroup: 5
+GenTrade: 54
+GenFollow: 5
 E
 #5437
 homem cobrador de impostos~
@@ -499,9 +569,10 @@ Sultão, por viverem nesta grande cidade.
 5 16 5 10d2+45 2d3+1
 15 431
 9 9 1
-GenWimpy: 2
-GenRoam: 44
-GenFollow: 5
+GenWimpy: 13
+GenRoam: 80
+GenTrade: 74
+GenFollow: 4
 E
 #5438
 gord~
@@ -514,8 +585,9 @@ An undefined string.
 15 0 -3 5d3+105 2d6+4
 1 1000
 9 9 1
-GenWimpy: 6
-GenRoam: 66
+GenWimpy: 25
+GenRoam: 82
+GenTrade: 100
 GenFollow: 11
 E
 #5439
@@ -530,6 +602,13 @@ ironicamente.
 15 0 -10 4d1+231 2d8+5
 650 8700
 9 9 1
+GenWimpy: 10
+GenLoot: 13
+GenEquip: 2
+GenRoam: 48
+GenGroup: 10
+GenTrade: 100
+GenFollow: 13
 E
 #5440
 daghdha~
@@ -542,7 +621,10 @@ Este homem está vestido em longos robes marrons e tem um olhar penetrante.
 15 5 3 5d2+180 1d6+2
 0 8700
 9 9 1
-GenWimpy: 2
+GenWimpy: 4
+GenRoam: 52
+GenTrade: 100
+GenFollow: 11
 E
 T 3009
 #5441
@@ -556,9 +638,10 @@ An undefined string.
 15 0 0 3d5+120 3d4+1
 1 1000
 9 9 1
-GenWimpy: 11
-GenLoot: 5
-GenRoam: 69
+GenWimpy: 13
+GenLoot: 6
+GenRoam: 47
+GenTrade: 100
 GenFollow: 7
 E
 #5442
@@ -574,10 +657,13 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 64
-GenLoot: 16
-GenRoam: 87
-GenFollow: 6
+GenWimpy: 100
+GenLoot: 28
+GenEquip: 1
+GenRoam: 86
+GenGroup: 22
+GenTrade: 19
+GenFollow: 3
 E
 #5443
 gato rua~
@@ -590,10 +676,11 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 60
+GenWimpy: 100
 GenLoot: 1
-GenRoam: 78
-GenFollow: 6
+GenRoam: 87
+GenTrade: 21
+GenFollow: 2
 E
 #5444
 urubu~
@@ -607,9 +694,11 @@ deseja é um corpo.
 2 18 7 1d3+1 1d6+1
 1 10
 9 9 1
-GenWimpy: 15
+GenWimpy: 51
+GenLoot: 2
 GenRoam: 87
-GenFollow: 4
+GenTrade: 100
+GenFollow: 2
 E
 #5445
 velho homem~
@@ -622,6 +711,7 @@ Ele parece concentrado em sua vitória.
 4 17 8 2d3+1 1d3+1
 1 20
 6 6 1
+GenTrade: 100
 E
 #5446
 lugh bibliotecário~
@@ -634,6 +724,9 @@ A grande massa forte se levanta assim que alguém lhe faz uma pergunta.
 10 1 0 10d10+430 3d6+5
 1231 23000
 6 6 1
+GenWimpy: 2
+GenTrade: 100
+GenFollow: 9
 E
 #5447
 sujo vento diabo po~
@@ -647,7 +740,8 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 10
 9 9 1
 GenWimpy: 100
-GenFollow: 2
+GenTrade: 100
+GenFollow: 1
 E
 #5448
 lamia~
@@ -662,10 +756,12 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 93
-GenLoot: 2
+GenWimpy: 100
+GenLoot: 32
+GenEquip: 3
 GenRoam: 89
-GenFollow: 12
+GenTrade: 100
+GenFollow: 4
 E
 #5449
 dervixe~
@@ -679,9 +775,11 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenLoot: 4
-GenRoam: 73
-GenFollow: 4
+GenLoot: 7
+GenRoam: 64
+GenGroup: 41
+GenTrade: 72
+GenFollow: 2
 E
 #5450
 sultao~
@@ -695,6 +793,7 @@ Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
 1200 25000
 5 5 1
 GenWimpy: 4
+GenTrade: 100
 E
 #5451
 garota harem~
@@ -709,7 +808,8 @@ azul.   Sua lealdade para com o Sultão é eterna.
 0 40
 9 9 2
 GenWimpy: 100
-GenFollow: 11
+GenTrade: 100
+GenFollow: 6
 E
 #5452
 carcereiro~
@@ -723,6 +823,7 @@ caiu em desgraça com o Sultão.
 18 4 0 3d4+100 1d6+6
 157 1200
 4 4 1
+GenTrade: 100
 E
 #5453
 eunuco~
@@ -732,13 +833,15 @@ Um eunuco está aqui tomando conta das garotas.
 Você vê um grande homem cuja única função é proteger o harém.  Ele foi
 castrado para a segurança das garotas.
 ~
-2097186 0 0 0 0 0 0 0 0 E
+2097154 0 0 0 0 0 0 0 0 E
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 32
-GenLoot: 61
-GenFollow: 16
+GenWimpy: 63
+GenLoot: 99
+GenRoam: 2
+GenTrade: 100
+GenFollow: 12
 E
 #5454
 garota preferida nichole~
@@ -752,8 +855,9 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 77
-GenLoot: 6
+GenWimpy: 79
+GenLoot: 19
+GenTrade: 100
 GenFollow: 5
 E
 #5455
@@ -767,6 +871,7 @@ Você vê o todo poderoso Alá.
 11 0 0 2d3+2300 2d20+20
 0 45000
 5 5 0
+GenTrade: 100
 E
 T 3009
 #5456
@@ -780,6 +885,7 @@ Este homem parece um Mago-Guerreiro e eu não me atreveria a mexer com ele.
 8 -1 -10 2d5+500 3d8+10
 0 500
 9 9 1
+GenTrade: 100
 E
 T 5400
 #5457
@@ -794,6 +900,7 @@ ele.
 8 -1 -10 2d5+500 3d8+10
 0 500
 9 9 1
+GenTrade: 100
 E
 T 5401
 #5458
@@ -807,6 +914,7 @@ Este homem parece o primo do Conan e eu não me atreveria a desafiá-lo.
 8 -1 -10 2d5+500 3d8+10
 0 500
 9 9 1
+GenTrade: 100
 E
 T 5403
 #5459
@@ -821,6 +929,7 @@ você caminha em direção a onde ele está.
 8 -1 -10 2d5+500 3d8+10
 0 500
 9 9 1
+GenTrade: 100
 E
 T 5402
 #5460
@@ -834,8 +943,9 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 30
+GenWimpy: 45
 GenRoam: 87
+GenTrade: 100
 GenFollow: 6
 E
 #5461
@@ -850,9 +960,12 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 58
+GenWimpy: 100
+GenLoot: 5
+GenEquip: 2
 GenRoam: 88
-GenFollow: 13
+GenTrade: 35
+GenFollow: 10
 E
 T 3013
 #5462
@@ -866,6 +979,7 @@ Você vê um lutador treinado, pronto para defender a cidade.
 10 10 8 2d4+120 1d8+1
 150 2500
 9 9 1
+GenTrade: 100
 E
 T 3013
 #5463
@@ -879,9 +993,10 @@ Você vê um grande homem treinado para caçar e matar.
 15 0 0 4d5+251 2d8+1
 435 5000
 9 9 1
-GenWimpy: 6
-GenRoam: 77
-GenGroup: 4
+GenWimpy: 9
+GenRoam: 85
+GenGroup: 2
+GenTrade: 100
 GenFollow: 12
 E
 T 3013
@@ -896,6 +1011,7 @@ Você vê um assassino procurando por um trabalho qualquer.
 5 15 9 1d8+14 1d4+2
 1 50
 9 9 1
+GenTrade: 100
 E
 #5465
 capitao porto~
@@ -910,6 +1026,7 @@ direção.
 108 0 0 1d1+30000 5d5+5
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5466
 ferreiro~
@@ -923,6 +1040,7 @@ dar as boas-vindas.
 108 0 0 1d1+30000 4d4+4
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5467
 cavalo~
@@ -935,6 +1053,9 @@ Você vê um dos belos animais árabes conhecidos por sua força e beleza.
 4 20 5 10d1+1 2d4+2
 0 10
 9 9 1
+GenWimpy: 1
+GenTrade: 100
+GenFollow: 11
 E
 #5468
 turista~
@@ -949,8 +1070,11 @@ baixo.
 5 18 8 2d10+15 1d8+2
 500 650
 9 9 1
-GenWimpy: 6
-GenRoam: 81
+GenWimpy: 25
+GenLoot: 6
+GenRoam: 88
+GenGroup: 1
+GenTrade: 100
 GenFollow: 12
 E
 #5469
@@ -964,6 +1088,9 @@ Você vê uma grande arraia com dentes afiados e um rabo cheio espinhento.
 10 0 -5 3d3+120 3d4+1
 0 2000
 9 9 0
+GenWimpy: 1
+GenTrade: 100
+GenFollow: 6
 E
 #5470
 cryohydra~
@@ -976,6 +1103,7 @@ Um réptil acinzentado com olhos cor de âmbar está bem à sua frente.
 8 9 5 10d1+1 1d10+0
 0 100
 9 9 1
+GenTrade: 100
 E
 #5471
 lagarto minotauro~
@@ -988,6 +1116,7 @@ Um grande lagarto com chifres de minotauro.
 8 8 5 1d10+55 3d5+0
 0 100
 9 9 1
+GenTrade: 100
 E
 #5472
 cao morte~
@@ -1000,6 +1129,7 @@ Um grande cão com duas cabeças está aqui latindo para você.
 4 19 7 1d15+76 1d10+1
 0 900
 9 9 0
+GenTrade: 100
 E
 #5473
 leao manchado~
@@ -1012,6 +1142,7 @@ Um grande e feroz leão com pelagem manchada o encara.
 5 17 6 5d5+45 1d8+1
 0 1500
 9 9 1
+GenTrade: 100
 E
 #5474
 behir~
@@ -1024,6 +1155,7 @@ Você vê algo parecido com uma grande cobra e com mais de doze pernas.
 12 9 4 4d3+146 2d8+4
 0 1000
 9 9 0
+GenTrade: 100
 E
 #5475
 quimera criatura leao bode dragao~
@@ -1036,6 +1168,7 @@ A quimera é ainda um mistério.
 9 5 0 5d5+261 3d4+4
 0 3500
 9 9 0
+GenTrade: 100
 E
 #5476
 couatl~
@@ -1048,6 +1181,7 @@ Uma linda criatura com o corpo de serpente e lindas asas da cor do arco-íris.
 15 10 1 10d5+130 2d4+2
 0 2400
 9 9 0
+GenTrade: 100
 E
 #5477
 gigante chifrudo~
@@ -1060,6 +1194,7 @@ Ele é chifrudo, o que mais podemos dizer??
 5 15 4 1d1+5 1d4+0
 0 45
 9 9 0
+GenTrade: 100
 E
 #5478
 pegasus~
@@ -1073,6 +1208,7 @@ viu no estábulo.
 10 4 0 1d5+700 2d10+5
 0 6500
 9 9 0
+GenTrade: 100
 E
 #5479
 elriva~
@@ -1087,6 +1223,7 @@ Você vê uma mulher vestida em negro, com longos cabelos negros para combinar.
 9 9 2
 Cha: 18
 GenWimpy: 1
+GenTrade: 100
 E
 #5480
 braheem~
@@ -1099,6 +1236,7 @@ Você vê um mago poderoso porém insano.
 108 -10 -10 1d1+30000 10d10+40
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5481
 alto sacerdote~
@@ -1111,6 +1249,7 @@ Ele não parece feliz por você o ter perturbado.
 8 2 0 10d5+1200 2d8+5
 15000 35000
 9 9 1
+GenTrade: 100
 E
 T 5409
 #5482
@@ -1125,6 +1264,9 @@ treinamento.
 15 0 -6 5d20+900 1d10+6
 1500 25000
 9 9 1
+GenWimpy: 5
+GenTrade: 100
+GenFollow: 13
 E
 T 3013
 #5483
@@ -1138,6 +1280,7 @@ Você vê um homem realmente grande que parece ter perdido um olho.
 108 0 -10 1d1+30000 3d8+10
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5484
 stitch~
@@ -1151,6 +1294,7 @@ algum otário, uhm.., cliente.
 108 -10 -5 1d1+30000 3d6+6
 1 2000
 9 9 1
+GenTrade: 100
 E
 #5485
 elfo jardineiro~
@@ -1164,6 +1308,7 @@ jardim.
 10 10 6 5d5+100 2d8+2
 56 1500
 9 9 1
+GenTrade: 100
 E
 #5486
 pesadelo demonio cavalo~
@@ -1177,6 +1322,7 @@ narinas emanam chamas e ele está pronto para atacar você.
 10 0 -5 3d9+300 3d5+7
 0 5500
 9 9 0
+GenTrade: 100
 E
 #5487
 wolverine lobo~
@@ -1190,6 +1336,7 @@ lâmina.
 15 0 0 10d2+230 2d10+10
 0 5000
 9 9 0
+GenTrade: 100
 E
 #5488
 mimico pintura~
@@ -1202,6 +1349,7 @@ Como ela é feia!
 10 10 0 5d8+321 2d8+4
 0 6000
 9 9 1
+GenTrade: 100
 E
 #5489
 prefeito~
@@ -1214,6 +1362,10 @@ Você vê um roliço coelho vestido em seu melhor terno.
 10 0 0 2d8+600 3d6+6
 1200 15675
 9 9 1
+GenWimpy: 9
+GenRoam: 87
+GenTrade: 100
+GenFollow: 13
 E
 #5490
 chefe~
@@ -1226,6 +1378,7 @@ Você vê um homem realmente grande, que parece provar tudo o que faz.
 14 6 6 10d2+5 2d10+5
 16 40
 9 9 1
+GenTrade: 100
 E
 #5491
 druida mestre guilda~
@@ -1241,6 +1394,7 @@ exigirá de você a conduta daquele que acredita em um ideal.
 16 -10 -10 1d1+10000 5d5+5
 1 0
 9 9 1
+GenTrade: 100
 E
 #5492
 druida guardia~
@@ -1254,6 +1408,7 @@ antigos da Confraria.
 8 -1 -10 2d5+500 3d8+10
 0 500
 9 9 1
+GenTrade: 100
 E
 T 5405
 #5493
@@ -1266,10 +1421,21 @@ pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
 Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
 oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 ~
-2285632 0 0 0 0 0 0 0 150 E
-108 0 -10 1d1+30000 2d8+18
-0 160000
+2285632 0 0 0 0 0 0 0 0 E
+1 20 9 0d0+10 1d2+0
+10 100
 9 9 1
+GenWimpy: 24
+GenLoot: 41
+GenEquip: 8
+GenRoam: 88
+GenBrave: 39
+GenUse: 83
+GenTrade: 100
+GenQuest: 41
+GenAdventurer: 41
+GenFollow: 14
+GenHealing: 33
 E
 #5494
 agente postal velho senhor~
@@ -1282,10 +1448,15 @@ porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
 ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
 melhor.
 ~
-2287618 0 0 0 0 0 0 0 1000 E
+3336194 0 0 0 0 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+18
 2000 0
 9 9 1
+GenWimpy: 3
+GenRoam: 3
+GenTrade: 100
+GenQuest: 1
+GenFollow: 9
 E
 #5495
 trovadora guardia mulher~
@@ -1303,6 +1474,7 @@ que a guardiã não permitirá arruaças por aqui.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 2
+GenTrade: 100
 E
 T 5404
 #5496
@@ -1320,6 +1492,7 @@ nada que esteja segurando. Está aí um garçom de talento!
 108 1 2 6d10+390 1d8+12
 2000 80000
 9 9 1
+GenTrade: 100
 E
 #5497
 mestra trova senhora~
@@ -1336,5 +1509,6 @@ coisas nunca serão esquecidas.  E você se encaixa nisso.
 108 0 -10 10d100+2000 5d10+100
 18794 100000
 9 9 2
+GenTrade: 100
 E
 $

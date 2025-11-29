@@ -11,6 +11,10 @@ e braceletes da melhor qualidade.
 108 2 2 1d1+30000 2d8+18
 30000 160000
 9 9 1
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+EmotionProfile: 7
 E
 #3001
 padeiro~
@@ -24,6 +28,10 @@ cicatrizes em seu corpo.
 108 0 -10 1d1+30000 2d8+18
 100 160000
 9 9 1
+GenWimpy: 3
+GenTrade: 100
+GenFollow: 12
+EmotionProfile: 4
 E
 #3002
 merceeiro~
@@ -37,6 +45,9 @@ libras cada um, em seus ombros.
 108 0 -10 1d1+30000 2d8+18
 30000 160000
 9 9 1
+GenWimpy: 8
+GenTrade: 100
+GenFollow: 18
 E
 #3003
 vendedor~
@@ -47,10 +58,13 @@ Ele é um jovem vendedor de armas, que ainda tem muita coisa para aprender,
 mas que está ansioso para lhe vender os seus mais novos instrumentos de
 carnificina e destruição.
 ~
-2156546 0 0 0 0 0 0 0 900 E
+3205120 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 30000 160000
 9 9 1
+GenRoam: 50
+GenTrade: 100
+GenAdventurer: 10
 E
 #3004
 armeiro~
@@ -64,6 +78,9 @@ que você poderia imaginar.
 108 0 -10 1d1+30000 2d8+18
 28500 160000
 9 9 1
+GenWimpy: 4
+GenTrade: 100
+GenFollow: 18
 E
 #3006
 capitao stolar~
@@ -76,6 +93,8 @@ Este capitão comeu mais tubarões em sua vida do que você matou insetos.
 108 2 2 1d1+30000 2d8+12
 2000 160000
 9 9 1
+GenRoam: 50
+GenTrade: 100
 E
 #3007
 marinheiro~
@@ -88,6 +107,10 @@ Ele parece ser forte como um lobo-do-mar.
 108 0 -10 1d1+30000 2d8+12
 2000 160000
 9 9 1
+GenRoam: 50
+GenUse: 100
+GenTrade: 100
+GenAdventurer: 50
 E
 #3008
 tio juan~
@@ -100,6 +123,7 @@ Olhando para ele não se sabe ao certo se ele é um clandestino ou não.
 108 0 -10 1d1+30000 2d8+18
 2000 160000
 9 9 1
+GenTrade: 100
 E
 #3009
 wally vendedor~
@@ -115,6 +139,7 @@ orgulha.
 108 0 -10 1d1+30000 1d8+18
 1000 160000
 9 9 1
+GenTrade: 100
 E
 #3010
 carteiro agente postal~
@@ -127,10 +152,11 @@ porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
 ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
 melhor.
 ~
-2287618 0 0 0 0 0 0 0 1000 E
+3336194 0 0 0 0 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+18
 2000 0
 9 9 1
+GenTrade: 100
 E
 #3011
 moe cartografo cartógrafo~
@@ -142,11 +168,31 @@ para ajudar aos novos aventureiros a atingirem suas conquistas pelo mundo
 afora.
 ~
 2156548 0 0 0 0 0 0 0 300 E
-108 0 -10 1d1+30000 1d8+18
-1200 200000
+50 4 -20 10d10+500 8d8+8
+500 250000
 6 6 1
-GenWimpy: 100
-GenRoam: 100
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 12
+SavingRod: 12
+SavingPetri: 12
+SavingBreath: 12
+SavingSpell: 12
+GenWimpy: 20
+GenLoot: 99
+GenEquip: 6
+GenGroup: 5
+GenBrave: 13
+GenUse: 7
+GenTrade: 100
+GenQuest: 8
+GenAdventurer: 14
+GenFollow: 25
+GenHealing: 100
 E
 #3012
 recepcionista~
@@ -158,7 +204,7 @@ diversos rasgos e furos, provavelmente causados pelas tracas que sobrevivem em
 meio a tantos papeis velhos.
 ~
 3205122 0 0 0 80 0 0 0 900 E
-110 -16 -56 22d22+1100 18d18+18
+105 -16 -56 22d22+1100 18d18+18
 1100 1210000
 9 9 2
 Str: 18
@@ -172,6 +218,10 @@ SavingRod: 27
 SavingPetri: 27
 SavingBreath: 27
 SavingSpell: 27
+GenEquip: 100
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
 E
 #3015
 caçador aventuras~
@@ -182,21 +232,23 @@ O caçador de aventuras é um homem bem alto e forte, muito bem treinado nas
 artes de caçar e matar. Se eu fosse você, eu não o aborreceria. Pode ser
 extremamente perigoso para sua saúde.
 ~
-2271248 0 0 0 0 0 0 0 -100 E
+2271248 0 0 0 0 0 0 0 0 E
 15 10 0 100d5+50 2d6+6
 5000 42000
 9 9 1
-GenWimpy: 4
-GenLoot: 64
-GenEquip: 76
+GenWimpy: 14
+GenLoot: 100
+GenEquip: 100
 GenRoam: 89
-GenGroup: 83
-GenBrave: 54
+GenGroup: 22
+GenBrave: 75
 GenUse: 100
 GenTrade: 100
-GenQuest: 36
-GenAdventurer: 50
-GenFollow: 19
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 18
+GenHealing: 100
+EmotionProfile: 5
 E
 #3016
 vendedor jornaleiro garoto~
@@ -209,15 +261,17 @@ Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
 oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 ~
 2285632 0 0 0 0 0 0 0 150 E
-108 0 -10 1d1+30000 2d8+18
-0 160000
+1 20 9 0d0+10 1d2+0
+10 100
 9 9 1
-GenWimpy: 2
-GenLoot: 3
-GenEquip: 2
-GenRoam: 52
-GenGroup: 10
+GenWimpy: 31
+GenLoot: 13
+GenEquip: 4
+GenRoam: 86
+GenGroup: 8
+GenTrade: 100
 GenFollow: 11
+EmotionProfile: 4
 E
 #3020
 mestre-guia mago~
@@ -289,8 +343,10 @@ de magias ofensivas e defensivas, fazem dele um oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 60000
 9 9 1
-GenWimpy: 9
-GenFollow: 13
+GenWimpy: 28
+GenLoot: 4
+GenEquip: 1
+GenFollow: 12
 E
 T 3000
 #3025
@@ -307,8 +363,10 @@ um oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
-GenWimpy: 6
-GenFollow: 15
+GenWimpy: 27
+GenLoot: 43
+GenEquip: 7
+GenFollow: 10
 E
 T 3001
 #3026
@@ -326,7 +384,7 @@ oponente mortal.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
-GenWimpy: 6
+GenWimpy: 19
 GenFollow: 14
 E
 T 3002
@@ -343,7 +401,9 @@ extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
-GenWimpy: 9
+GenWimpy: 33
+GenLoot: 10
+GenEquip: 1
 GenFollow: 14
 E
 T 3003
@@ -377,6 +437,7 @@ poderosa magia.
 2000 160000
 9 9 2
 GenWimpy: 9
+GenBrave: 1
 GenFollow: 14
 E
 T 3005
@@ -393,6 +454,8 @@ Ele está vestido de verde, de um tom um pouco mais escuro que a pele dele.
 34 0 -10 6d10+640 1d8+24
 18794 100000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #3031
 guarda cacadora~
@@ -409,7 +472,7 @@ não sabe cantar.
 33 0 -5 6d10+990 1d8+22
 2000 16000
 9 9 2
-GenWimpy: 5
+GenWimpy: 9
 GenLoot: 2
 GenFollow: 14
 E
@@ -550,6 +613,8 @@ o mundo por trás do mundo...
 108 0 -10 10d100+2000 5d10+100
 18794 100000
 9 9 2
+GenWimpy: 7
+GenFollow: 15
 E
 #3049
 bardo sentinela~
@@ -565,8 +630,8 @@ na cabeça coberta, brilham observando tudo.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 7
+GenFollow: 15
 E
 T 3004
 #3050
@@ -599,6 +664,10 @@ a vida mais cheia de belezas e que uma de suas mais sérias missões
 108 0 -10 10d100+2000 5d10+100
 18794 100000
 9 9 1
+GenWimpy: 4
+GenLoot: 12
+GenEquip: 1
+GenFollow: 16
 E
 #3052
 gambrinus senhor~
@@ -616,6 +685,8 @@ só para experimentar, mas tente imaginá-lo após um dia de trabalho...
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #3053
 bardo bernardo~
@@ -633,6 +704,8 @@ instrumentos e tocando-os com maestria e emoção.
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #3059
 pacificador~
@@ -646,10 +719,17 @@ Ele parece muito forte e sábio. Parece que ele não fala com QUALQUER um.
 4000 50500
 9 9 1
 BareHandAttack: 10
-GenWimpy: 12
-GenLoot: 4
-GenRoam: 84
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 100
+GenEquip: 100
+GenRoam: 89
+GenGroup: 17
+GenBrave: 75
+GenUse: 50
+GenTrade: 100
+GenFollow: 50
+GenHealing: 100
+EmotionProfile: 5
 E
 T 3013
 #3060
@@ -663,10 +743,17 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 81
-GenLoot: 21
+GenLoot: 99
+GenEquip: 100
 GenRoam: 89
-GenFollow: 10
+GenGroup: 37
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 6
+EmotionProfile: 7
 E
 T 3013
 #3061
@@ -680,10 +767,13 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 53
-GenLoot: 29
+GenWimpy: 100
+GenLoot: 50
+GenEquip: 1
 GenRoam: 87
-GenFollow: 2
+GenGroup: 12
+GenFollow: 1
+EmotionProfile: 3
 E
 #3062
 cachorro fido~
@@ -699,11 +789,11 @@ cheios de pedaços de carne apodrecida grudadas.
 9 9 1
 BareHandAttack: 4
 GenWimpy: 100
-GenLoot: 32
-GenEquip: 2
-GenRoam: 87
+GenLoot: 89
+GenEquip: 6
+GenRoam: 84
 GenGroup: 26
-GenFollow: 6
+GenFollow: 3
 E
 T 3014
 #3063
@@ -718,9 +808,16 @@ coisa por dinheiro.
 5 15 5 2d6+60 1d6+1
 87 900
 9 9 1
-GenWimpy: 21
-GenLoot: 5
-GenFollow: 13
+GenWimpy: 19
+GenLoot: 51
+GenEquip: 50
+GenBrave: 48
+GenUse: 50
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 10
+EmotionProfile: 1
 E
 #3064
 bebado bêbado~
@@ -733,8 +830,12 @@ Um bêbado que parece estar muito feliz, e que carrega muito dinheiro.
 2 19 8 2d6+22 1d6+0
 53 200
 9 9 1
-GenWimpy: 3
-GenFollow: 6
+GenWimpy: 31
+GenLoot: 31
+GenTrade: 100
+GenQuest: 50
+GenFollow: 1
+EmotionProfile: 4
 E
 #3065
 mendiga~
@@ -747,6 +848,7 @@ A mendiga parece que está farta da vida.
 1 20 9 2d6+10 1d5+0
 0 100
 9 9 2
+GenWimpy: 2
 GenFollow: 2
 E
 #3066
@@ -761,10 +863,13 @@ O odif é um deus pequeno que foi transformado por algum cachorro.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 23
-GenLoot: 3
+GenWimpy: 64
+GenLoot: 22
+GenEquip: 1
 GenRoam: 87
-GenFollow: 5
+GenGroup: 20
+GenTrade: 13
+GenFollow: 4
 E
 T 3014
 #3067
@@ -778,9 +883,15 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 53
-GenLoot: 12
-GenFollow: 14
+GenWimpy: 3
+GenLoot: 71
+GenEquip: 100
+GenBrave: 74
+GenTrade: 100
+GenQuest: 56
+GenAdventurer: 50
+GenFollow: 3
+EmotionProfile: 7
 E
 T 3013
 #3068
@@ -795,11 +906,12 @@ Uma coisa medonha de se olhar; é enorme, esverdeado e se parece com uma bolha.
 1000 40000
 9 9 2
 BareHandAttack: 6
-GenWimpy: 21
-GenLoot: 58
-GenEquip: 6
+GenWimpy: 83
+GenLoot: 99
+GenEquip: 10
 GenRoam: 89
-GenGroup: 61
+GenGroup: 85
+GenTrade: 32
 GenFollow: 18
 E
 #3089
@@ -810,9 +922,22 @@ O Garoto da Loja da Animais está aqui, acariciando algo peludo em suas mãos.
 Assim que você olha para ele, ele abre suas mãos e mostra um rato!
 ~
 2156546 0 0 0 0 0 0 0 1000 E
-108 10 1 1d1+30000 20d4+10
-500 9000
+5 19 7 1d1+50 1d2+0
+50 2500
 9 9 1
+SavingPara: 1
+SavingRod: 1
+SavingPetri: 1
+SavingBreath: 1
+SavingSpell: 1
+GenWimpy: 28
+GenLoot: 27
+GenBrave: 12
+GenUse: 9
+GenQuest: 5
+GenAdventurer: 6
+GenFollow: 13
+GenHealing: 25
 E
 #3090
 gatinho~
@@ -868,6 +993,8 @@ O rottweiler parece ser um forte e destemido lutador.
 0 800
 9 9 0
 BareHandAttack: 4
+GenWimpy: 1
+GenFollow: 6
 E
 #3094
 lobo~
@@ -883,6 +1010,7 @@ O lobo parece ser forte e um lutador que desconhece o medo.
 BareHandAttack: 4
 GenWimpy: 2
 GenGroup: 8
+GenFollow: 3
 E
 #3095
 belchior gerente~
@@ -897,6 +1025,9 @@ Pelo jeito dele, as vendas não andam muito boas.
 108 0 -10 1d1+30000 1d8+18
 1200 200000
 9 9 1
+GenUse: 75
+GenTrade: 100
+GenQuest: 50
 E
 #3096
 Maria novata instrutora~
@@ -907,7 +1038,7 @@ Cabelos curtos e castanhos claros.
 Apesar de possuir apenas um olho, ela esta atenta a tudo oque seus alunos fazem. Parece ser uma aventureira bem experiente.
 ~
 3145730 0 0 0 2048 0 0 0 0 E
-10 17 4 2d2+100 1d2+1
+105 17 4 2d2+100 1d2+1
 100 10000
 9 9 2
 SavingPara: 2
@@ -915,6 +1046,11 @@ SavingRod: 2
 SavingPetri: 2
 SavingBreath: 2
 SavingSpell: 2
+GenUse: 100
+GenQuest: 75
+GenAdventurer: 100
+GenHealing: 50
+EmotionProfile: 7
 E
 T 3011
 T 3012

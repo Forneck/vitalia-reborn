@@ -27,7 +27,7 @@ local para os Imortais.
 E
 #1270
 armeiro~
-O armeiro~
+o armeiro~
 O armeiro esta aqui trabalhando em algo.
 ~
 Digite list para ajuda.
@@ -50,7 +50,7 @@ SavingSpell: 26
 E
 #1271
 ferreira~
-A ferreira~
+a ferreira~
 A ferreira esta trabalhando em alguma arma aqui.
 ~
 Digite list para ajuda.
@@ -98,6 +98,10 @@ Int: 16
 Wis: 16
 Con: 7
 Cha: 7
+GenWimpy: 2
+GenLoot: 1
+GenRoam: 48
+GenFollow: 10
 E
 #1291
 fera apocalipse~
@@ -122,6 +126,10 @@ Int: 16
 Wis: 16
 Con: 7
 Cha: 7
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 66
+GenFollow: 14
 E
 #1292
 fera apocalipse~
@@ -149,6 +157,10 @@ Int: 16
 Wis: 16
 Con: 7
 Cha: 7
+GenWimpy: 2
+GenLoot: 2
+GenRoam: 52
+GenFollow: 11
 E
 #1293
 dragao apocalipse~
@@ -172,5 +184,9 @@ Int: 16
 Wis: 16
 Con: 7
 Cha: 7
+GenWimpy: 2
+GenLoot: 1
+GenRoam: 52
+GenFollow: 11
 E
 $

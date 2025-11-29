@@ -11,8 +11,9 @@ encara repentinamente.
 10 11 2 70d2+200 2d6+9
 50 10000
 9 9 1
-GenWimpy: 7
-GenFollow: 3
+GenWimpy: 26
+GenLoot: 1
+GenFollow: 2
 E
 #13302
 estatua prata~
@@ -26,7 +27,7 @@ diabos ela foi virar para olhar para você?
 15 6 1 150d1+40 2d8+4
 1000 15000
 9 9 0
-GenWimpy: 2
+GenWimpy: 6
 GenFollow: 7
 E
 #13303
@@ -43,8 +44,7 @@ se vira lentamente e o olha sem expressão.
 9 9 1
 GenWimpy: 5
 GenLoot: 99
-GenEquip: 14
-GenRoam: 35
+GenEquip: 28
 GenFollow: 17
 E
 #13304
@@ -60,9 +60,9 @@ chegar PERTO do homem mascarado.
 5000 40000
 9 9 1
 GenWimpy: 5
-GenLoot: 97
-GenEquip: 2
-GenFollow: 14
+GenLoot: 99
+GenEquip: 9
+GenFollow: 11
 E
 #13305
 arrumadeira mulher~
@@ -76,8 +76,9 @@ estar simplesmente aterrorizada.
 10 15 3 100d1+10 2d6+1
 500 1000
 9 9 2
-GenWimpy: 2
-GenFollow: 10
+GenWimpy: 39
+GenLoot: 12
+GenFollow: 8
 E
 #13306
 taurus homem~
@@ -94,9 +95,10 @@ pensa.
 60 -19 -7 700d1+50 6d6+38
 10000 100000
 9 9 1
-GenWimpy: 6
-GenLoot: 1
-GenFollow: 14
+GenWimpy: 16
+GenLoot: 97
+GenEquip: 18
+GenFollow: 12
 E
 #13307
 acolito~
@@ -110,11 +112,10 @@ fingir que você não existe.
 10 12 3 100d1+10 2d5+4
 200 10000
 9 9 1
-GenWimpy: 72
-GenLoot: 86
-GenEquip: 6
+GenWimpy: 90
+GenLoot: 98
+GenEquip: 12
 GenRoam: 88
-GenGroup: 15
-GenFollow: 5
+GenFollow: 1
 E
 $

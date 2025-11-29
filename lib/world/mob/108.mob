@@ -19,9 +19,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 4
+GenWimpy: 15
 GenLoot: 1
-GenFollow: 15
+GenFollow: 12
 E
 #10801
 Tritao~
@@ -95,6 +95,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 15
 E
 #10804
 Aquiles~
@@ -118,6 +120,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 14
 E
 #10805
 Peleus~
@@ -167,6 +171,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenFollow: 15
 E
 #10807
 Priamos~
@@ -215,8 +221,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 20
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 4
+GenFollow: 14
 E
 #10809
 Quiron~
@@ -352,6 +358,10 @@ Int: 18
 Wis: 18
 Con: 21
 Cha: 18
+GenWimpy: 4
+GenLoot: 7
+GenEquip: 4
+GenFollow: 13
 E
 #10815
 Ajax~
@@ -374,12 +384,11 @@ Int: 13
 Wis: 15
 Con: 22
 Cha: 18
-GenWimpy: 10
-GenLoot: 37
-GenEquip: 1
-GenRoam: 6
+GenWimpy: 5
+GenLoot: 46
+GenEquip: 2
 GenQuest: 3
-GenFollow: 14
+GenFollow: 13
 E
 #10816
 Ulisses~
@@ -446,6 +455,10 @@ Int: 18
 Wis: 18
 Con: 22
 Cha: 18
+GenWimpy: 6
+GenLoot: 25
+GenEquip: 4
+GenFollow: 11
 E
 #10819
 Eaco~
@@ -467,6 +480,8 @@ Int: 22
 Wis: 22
 Con: 17
 Cha: 18
+GenWimpy: 3
+GenFollow: 15
 E
 #10820
 Patroclo~
@@ -575,6 +590,8 @@ Int: 18
 Wis: 18
 Con: 16
 Cha: 20
+GenWimpy: 4
+GenFollow: 13
 E
 #10825
 guarda troiano~
@@ -596,6 +613,8 @@ Int: 18
 Wis: 15
 Con: 18
 Cha: 15
+GenWimpy: 3
+GenFollow: 14
 E
 #10826
 soldado troiano~
@@ -617,7 +636,7 @@ Int: 18
 Wis: 14
 Con: 18
 Cha: 16
-GenWimpy: 3
+GenWimpy: 4
 GenFollow: 15
 E
 #10827
@@ -640,8 +659,10 @@ Int: 20
 Wis: 18
 Con: 22
 Cha: 18
-GenWimpy: 3
-GenFollow: 11
+GenWimpy: 52
+GenLoot: 99
+GenEquip: 32
+GenFollow: 4
 E
 #10828
 batalhao grego~
@@ -664,8 +685,10 @@ Int: 20
 Wis: 18
 Con: 22
 Cha: 18
-GenWimpy: 6
-GenFollow: 17
+GenWimpy: 44
+GenLoot: 99
+GenEquip: 28
+GenFollow: 9
 E
 #10829
 guarda grego~
@@ -686,6 +709,8 @@ Int: 18
 Wis: 15
 Con: 18
 Cha: 15
+GenWimpy: 4
+GenFollow: 11
 E
 #10830
 soldado grego~
@@ -728,6 +753,10 @@ Int: 20
 Wis: 18
 Con: 22
 Cha: 18
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenFollow: 9
 E
 #10832
 cidadao troiano~
@@ -879,6 +908,10 @@ Int: 18
 Wis: 18
 Con: 15
 Cha: 14
+GenWimpy: 3
+GenLoot: 2
+GenRoam: 63
+GenFollow: 14
 E
 #10839
 Sinon~
@@ -901,6 +934,8 @@ Int: 18
 Wis: 14
 Con: 14
 Cha: 16
+GenWimpy: 3
+GenFollow: 14
 E
 #10840
 Eneias~
@@ -1097,6 +1132,9 @@ Int: 18
 Wis: 18
 Con: 16
 Cha: 22
+GenWimpy: 18
+GenBrave: 1
+GenFollow: 14
 E
 #10849
 Pastor~
@@ -1243,6 +1281,9 @@ Int: 16
 Wis: 15
 Con: 17
 Cha: 18
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 14
 E
 #10856
 tartaruga marinha~
@@ -1263,6 +1304,8 @@ Dex: 18
 Int: 12
 Con: 18
 Cha: 14
+GenWimpy: 1
+GenFollow: 6
 E
 #10857
 cisne Egina~
@@ -1285,6 +1328,8 @@ Int: 9
 Wis: 10
 Con: 10
 Cha: 18
+GenWimpy: 1
+GenFollow: 5
 E
 #10858
 serpente guardia~
@@ -1324,6 +1369,8 @@ Int: 10
 Wis: 8
 Con: 13
 Cha: 18
+GenWimpy: 3
+GenFollow: 8
 E
 #10860
 cavalo selvagem~
@@ -1343,10 +1390,10 @@ Int: 15
 Wis: 13
 Con: 17
 Cha: 18
-GenWimpy: 32
-GenLoot: 27
-GenEquip: 1
-GenFollow: 12
+GenWimpy: 76
+GenLoot: 31
+GenEquip: 2
+GenFollow: 10
 E
 #10861
 golfinho~
@@ -1366,7 +1413,8 @@ Int: 18
 Wis: 10
 Con: 15
 Cha: 18
-GenWimpy: 2
+GenWimpy: 6
+GenFollow: 10
 E
 #10862
 octopos~
@@ -1391,7 +1439,7 @@ Wis: 13
 Con: 25
 Cha: 5
 GenWimpy: 4
-GenLoot: 5
+GenLoot: 19
 GenFollow: 13
 E
 #10863
@@ -1432,7 +1480,7 @@ Int: 7
 Wis: 7
 Con: 8
 Cha: 18
-GenWimpy: 51
+GenWimpy: 52
 GenFollow: 7
 E
 #10865
@@ -1473,7 +1521,7 @@ Int: 6
 Wis: 4
 Con: 10
 Cha: 8
-GenWimpy: 3
+GenWimpy: 7
 GenFollow: 7
 E
 #10867
@@ -1494,9 +1542,9 @@ Int: 18
 Wis: 10
 Con: 17
 Cha: 18
-GenWimpy: 11
-GenLoot: 13
-GenFollow: 8
+GenWimpy: 24
+GenLoot: 14
+GenFollow: 6
 E
 #10868
 navio grego~
@@ -1604,5 +1652,7 @@ Int: 15
 Wis: 12
 Con: 20
 Cha: 15
+GenWimpy: 4
+GenFollow: 12
 E
 $

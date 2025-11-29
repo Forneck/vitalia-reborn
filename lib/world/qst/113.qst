@@ -1,0 +1,151 @@
+#11300
+Encontrar um cigano~
+Encontrar e falar com um cigano~
+Alguém está procurando por um cigano. Encontre esta pessoa para receber 366 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2311 -1 -1 -1
+12 73 13 38 -1 2305 1
+366 732 2317
+S
+#11301
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (2351). Vá até lá para receber 283 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2351 -1 -1 -1
+12 56 13 38 -1 2305 1
+283 566 2317
+S
+#11302
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (2328). Vá até lá para receber 292 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2328 -1 -1 -1
+12 58 13 38 -1 2305 1
+292 584 2317
+S
+#11315
+Encontrar Senhor Hooper~
+Encontrar e falar com Senhor Hooper~
+Alguém está procurando por Senhor Hooper. Encontre esta pessoa para receber 148 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2206 -1 -1 -1
+10 29 5 24 -1 2204 1
+148 296 65535
+S
+#11321
+Encontrar um cigano~
+Encontrar e falar com um cigano~
+Alguém está procurando por um cigano. Encontre esta pessoa para receber 366 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2311 -1 -1 -1
+12 73 13 38 -1 2305 1
+366 732 2317
+S
+#11335
+Buscar uma cimitarra~
+Encontrar e trazer uma cimitarra~
+Alguém perdeu uma cimitarra e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 420 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 1700 -1 -1 -1
+12 84 16 41 -1 1702 1
+420 840 1709
+S
+#11341
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (1744). Vá até lá para receber 277 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 1744 -1 -1 -1
+12 55 15 40 -1 1702 1
+277 554 1700
+S
+#11345
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (1626). Vá até lá para receber 334 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 5404 b 1626 -1 -1 -1
+12 66 32 57 -1 1605 1
+334 668 65535
+S
+#11351
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (2207). Vá até lá para receber 91 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2207 -1 -1 -1
+4 18 5 24 -1 2204 1
+91 182 65535
+S
+#11355
+Limpar área~
+Eliminar criaturas hostis~
+um guarda gnomo precisa que alguém limpe uma área específica (1624) de todas as criaturas hostis. Elimine todos os inimigos da área para receber 749 moedas de ouro.~
+Perfeito! A área está limpa e segura agora!~
+Compreendo. É uma tarefa perigosa mesmo.~
+6 3012 b 1624 -1 -1 -1
+14 187 30 56 -1 1604 1
+749 1872 65535
+S
+#11361
+Limpar área~
+Eliminar criaturas hostis~
+Iblis o anjo caído precisa que alguém limpe uma área específica (1501) de todas as criaturas hostis. Elimine todos os inimigos da área para receber 1075 moedas de ouro.~
+Perfeito! A área está limpa e segura agora!~
+Compreendo. É uma tarefa perigosa mesmo.~
+6 3012 b 1501 -1 -1 -1
+14 268 73 99 -1 1516 1
+1075 2687 65535
+S
+#11366
+Limpar área~
+Eliminar criaturas hostis~
+o dragão da fúria precisa que alguém limpe uma área específica (1501) de todas as criaturas hostis. Elimine todos os inimigos da área para receber 716 moedas de ouro.~
+Perfeito! A área está limpa e segura agora!~
+Compreendo. É uma tarefa perigosa mesmo.~
+6 3012 b 1501 -1 -1 -1
+14 179 26 52 -1 1518 1
+716 1790 65535
+S
+#11381
+Buscar uma chave ensanguentada~
+Encontrar e trazer uma chave ensanguentada~
+Alguém perdeu uma chave ensanguentada e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 427 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 5404 b 1600 -1 -1 -1
+12 85 18 43 -1 1601 1
+427 854 65535
+S
+#11385
+Encontrar Senhor Hooper~
+Encontrar e falar com Senhor Hooper~
+Alguém está procurando por Senhor Hooper. Encontre esta pessoa para receber 75 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2206 -1 -1 -1
+6 15 5 24 -1 2204 1
+75 150 65535
+S
+#11395
+Encontrar Senhor Hooper~
+Encontrar e falar com Senhor Hooper~
+Alguém está procurando por Senhor Hooper. Encontre esta pessoa para receber 148 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2206 -1 -1 -1
+10 29 5 24 -1 2204 1
+148 296 65535
+S
+$~

@@ -2,6 +2,8 @@
 Vitalia~
 O Escaldante Deserto de Kubalai~
 4200 4299 260 2 j 0 0 0 20 30 4
+M 0 4252 4 4274 	(um urubu)
+E 1 3832 5 21 	(o Card Urubu)
 M 0 4215 1 4264 	(um íbis)
 E 1 4220 10 2 	(o selo de Osíris)
 E 1 4221 10 17 	(o fogo de Anúbis)
@@ -75,8 +77,6 @@ M 0 4244 3 4223 	(um verme de areia)
 E 1 4215 20 12 	(a pele de um verme de areia)
 M 0 4204 4 4221 	(um gigantesco redemoinho)
 M 0 4256 4 4220 	(um camelo)
-M 0 4252 4 4274 	(um urubu)
-E 1 3832 1 17 	(o Card Urubu)
 M 0 4205 5 4271 	(um cão Gra'lan)
 M 0 4205 5 4215 	(um cão Gra'lan)
 M 0 4256 4 4216 	(um camelo)

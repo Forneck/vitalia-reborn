@@ -16,7 +16,7 @@ Dex: 16
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 17
+GenWimpy: 40
 GenLoot: 9
 GenFollow: 11
 E
@@ -87,8 +87,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 23
-GenFollow: 14
+GenWimpy: 5
+GenFollow: 13
 E
 #8404
 arwen undomiel elfa~
@@ -113,7 +113,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 8
+GenWimpy: 5
 GenFollow: 15
 E
 #8405
@@ -136,7 +136,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 5
+GenWimpy: 7
 GenFollow: 14
 E
 #8406
@@ -160,7 +160,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 4
+GenWimpy: 13
 GenFollow: 15
 E
 #8407
@@ -266,6 +266,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 5
+GenLoot: 1
+GenFollow: 17
 E
 #8412
 elfo~
@@ -289,7 +292,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
+GenWimpy: 5
 GenFollow: 14
 E
 #8413
@@ -313,6 +316,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 6
+GenFollow: 14
 E
 #8414
 crianca elfa~
@@ -327,6 +332,8 @@ brincando com alguns pequeninos pássaros, que saltam sobre ela.
 1000 45000
 9 9 2
 BareHandAttack: 13
+GenWimpy: 4
+GenFollow: 18
 E
 #8415
 passaro verde~
@@ -346,8 +353,8 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 42
+GenWimpy: 100
 GenRoam: 87
-GenFollow: 9
+GenFollow: 2
 E
 $

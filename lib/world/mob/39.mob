@@ -14,9 +14,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 28
 GenLoot: 1
-GenFollow: 19
+GenFollow: 16
 E
 T 3009
 #3903
@@ -36,6 +36,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 10
+GenFollow: 8
 E
 #3904
 traira besta arvore~
@@ -54,6 +56,10 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 11
+GenLoot: 6
+GenEquip: 4
+GenFollow: 8
 E
 #3905
 morte vermelha fossas sangue criatura~
@@ -72,9 +78,10 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenLoot: 3
-GenFollow: 11
+GenWimpy: 12
+GenLoot: 16
+GenEquip: 3
+GenFollow: 8
 E
 #3906
 praga negra espirito~
@@ -93,9 +100,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 8
-GenEquip: 1
-GenFollow: 14
+GenLoot: 13
+GenEquip: 4
+GenFollow: 12
 E
 #3907
 febre amarela figura~
@@ -114,9 +121,10 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 10
-GenLoot: 9
-GenFollow: 14
+GenWimpy: 7
+GenLoot: 17
+GenEquip: 1
+GenFollow: 9
 E
 #3908
 demilich esqueleto~
@@ -136,8 +144,10 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 33
+GenLoot: 28
+GenEquip: 4
+GenFollow: 14
 E
 #3909
 esqueleto cavaleiro morte~
@@ -155,8 +165,8 @@ mão desembanha sua grande espada e a empunha com uma facilidade mortífera.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 27
+GenFollow: 11
 E
 #3910
 kalas~
@@ -175,10 +185,11 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenLoot: 1
+GenWimpy: 6
+GenLoot: 10
 GenEquip: 1
-GenRoam: 83
+GenRoam: 89
+GenGroup: 36
 GenFollow: 14
 E
 #3911
@@ -197,8 +208,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 13
+GenWimpy: 12
+GenFollow: 11
 E
 #3912
 magistrado esqueleto ossos~
@@ -218,8 +229,10 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 38
+GenLoot: 27
+GenEquip: 13
+GenFollow: 9
 E
 #3913
 tempestade~
@@ -238,8 +251,10 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 13
+GenWimpy: 36
+GenLoot: 10
+GenEquip: 5
+GenFollow: 12
 E
 #3914
 escravo criatura~
@@ -256,8 +271,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 13
-GenRoam: 87
+GenWimpy: 17
+GenLoot: 2
+GenRoam: 89
+GenFollow: 9
 E
 #3915
 zumbi guerreiro abismo~
@@ -275,8 +292,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 19
+GenWimpy: 55
 GenFollow: 14
 E
 #3916
@@ -295,10 +311,11 @@ mãos, agora livres, vêm na direção de sua alma.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 2
+GenWimpy: 6
+GenLoot: 60
+GenEquip: 5
 GenRoam: 89
-GenFollow: 17
+GenFollow: 15
 E
 #3917
 svern demonio~
@@ -317,11 +334,11 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 19
-GenLoot: 9
+GenWimpy: 5
+GenLoot: 16
+GenEquip: 3
 GenRoam: 89
-GenGroup: 8
-GenFollow: 12
+GenFollow: 11
 E
 #3918
 vrock demonio ave~
@@ -340,9 +357,11 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 78
-GenFollow: 11
+GenWimpy: 20
+GenLoot: 16
+GenEquip: 3
+GenRoam: 84
+GenFollow: 10
 E
 #3919
 valik zumbi dragao~
@@ -362,9 +381,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 51
-GenBrave: 1
-GenFollow: 14
+GenWimpy: 8
+GenLoot: 6
+GenFollow: 7
 E
 #3920
 damorask figura gelo~
@@ -385,6 +404,10 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenLoot: 25
+GenEquip: 6
+GenFollow: 13
 E
 #3921
 mimico estatueta~
@@ -400,8 +423,8 @@ An undefined string.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenFollow: 13
+GenWimpy: 10
+GenFollow: 10
 E
 #3922
 monolito gelo~
@@ -420,6 +443,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenLoot: 4
+GenFollow: 14
 E
 #3923
 besta neve~
@@ -438,9 +464,10 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 10
 GenLoot: 22
-GenFollow: 10
+GenRoam: 63
+GenFollow: 7
 E
 #3924
 pilar gelo~
@@ -458,10 +485,11 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 8
+GenWimpy: 6
+GenLoot: 13
+GenEquip: 1
 GenRoam: 87
-GenFollow: 9
+GenFollow: 8
 E
 #3925
 yeti agua~
@@ -478,10 +506,10 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 4
-GenRoam: 89
-GenFollow: 11
+GenWimpy: 6
+GenLoot: 7
+GenRoam: 87
+GenFollow: 7
 E
 #3926
 pseudo-hidra pseudo hidra dragao~
@@ -504,6 +532,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenFollow: 10
 E
 #3927
 hidra gigante~
@@ -522,7 +552,7 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 17
 GenFollow: 11
 E
 #3928
@@ -542,7 +572,9 @@ para o vaso e se protege com ele.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenFollow: 13
+GenWimpy: 5
+GenLoot: 8
+GenEquip: 7
+GenFollow: 11
 E
 $

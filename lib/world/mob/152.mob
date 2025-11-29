@@ -86,10 +86,10 @@ Int: 16
 Wis: 15
 Con: 18
 GenWimpy: 8
-GenLoot: 1
-GenEquip: 1
+GenLoot: 2
+GenEquip: 2
 GenRoam: 89
-GenGroup: 2
+GenGroup: 4
 GenFollow: 14
 E
 #15203
@@ -160,6 +160,9 @@ BareHandAttack: 4
 Str: 14
 Dex: 14
 Con: 16
+GenWimpy: 3
+GenRoam: 63
+GenFollow: 14
 E
 T 15209
 #15206
@@ -180,11 +183,12 @@ BareHandAttack: 7
 Str: 14
 Dex: 12
 Con: 13
-GenWimpy: 4
-GenLoot: 1
-GenEquip: 1
-GenRoam: 63
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 2
+GenEquip: 2
+GenRoam: 80
+GenGroup: 1
+GenFollow: 13
 E
 T 15209
 #15207
@@ -227,6 +231,11 @@ emana um cheiro a peixe podre e a malícia pura.~
 57 7 -35 10d10+1200 5d8+20
 1500 72000
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 59
+GenGroup: 4
+GenFollow: 13
 E
 T 15206
 #15209
@@ -432,7 +441,8 @@ Dex: 18
 Int: 25
 Wis: 25
 Con: 25
-GenBrave: 4
+GenWimpy: 99
+GenBrave: 8
 GenFollow: 15
 E
 #15217

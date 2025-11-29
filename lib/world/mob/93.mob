@@ -19,9 +19,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 8
+GenWimpy: 5
 GenLoot: 4
-GenFollow: 14
+GenFollow: 13
 E
 #9301
 dragao anciao prateado~
@@ -43,6 +43,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 12
 E
 #9302
 dragao anciao bronze~
@@ -67,7 +69,9 @@ Wis: 25
 Con: 25
 Cha: 25
 GenWimpy: 5
-GenFollow: 15
+GenLoot: 6
+GenEquip: 1
+GenFollow: 11
 E
 #9303
 dragao tiamat~
@@ -95,9 +99,10 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 4
-GenLoot: 2
-GenFollow: 15
+GenWimpy: 8
+GenLoot: 22
+GenGroup: 6
+GenFollow: 13
 E
 #9304
 dragao anciao branco~
@@ -121,6 +126,10 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
+GenWimpy: 4
+GenLoot: 3
+GenEquip: 1
+GenFollow: 13
 E
 #9305
 dragao anciao azul~
@@ -144,6 +153,9 @@ Int: 25
 Wis: 20
 Con: 20
 Cha: 20
+GenWimpy: 4
+GenLoot: 7
+GenFollow: 16
 E
 #9306
 dragao anciao verde~
@@ -167,6 +179,9 @@ Int: 20
 Wis: 20
 Con: 25
 Cha: 20
+GenWimpy: 5
+GenLoot: 6
+GenFollow: 15
 E
 #9307
 dragao anciao negro~
@@ -190,6 +205,9 @@ Int: 20
 Wis: 20
 Con: 25
 Cha: 20
+GenWimpy: 5
+GenLoot: 2
+GenFollow: 13
 E
 #9308
 dragao anciao vermelho~
@@ -212,9 +230,10 @@ Int: 20
 Wis: 20
 Con: 25
 Cha: 25
-GenWimpy: 7
-GenLoot: 88
-GenFollow: 16
+GenWimpy: 5
+GenLoot: 99
+GenEquip: 1
+GenFollow: 14
 E
 #9309
 dragao anciao amarelo~
@@ -239,7 +258,8 @@ Wis: 25
 Con: 20
 Cha: 25
 GenWimpy: 5
-GenFollow: 15
+GenLoot: 1
+GenFollow: 14
 E
 #9310
 anciao dracolich~
@@ -266,6 +286,9 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 5
+GenLoot: 16
+GenFollow: 13
 E
 #9311
 dragao fantasma~
@@ -288,9 +311,10 @@ Dex: 25
 Int: 20
 Wis: 20
 Con: 20
-GenWimpy: 10
-GenLoot: 19
-GenFollow: 16
+GenWimpy: 5
+GenLoot: 31
+GenBrave: 2
+GenFollow: 14
 E
 #9312
 dragoneza fada rainha~
@@ -312,6 +336,8 @@ Dex: 25
 Int: 25
 Wis: 25
 Cha: 25
+GenWimpy: 19
+GenFollow: 11
 E
 #9313
 dragao fada guarda real~
@@ -334,6 +360,8 @@ Int: 18
 Wis: 18
 Con: 13
 Cha: 20
+GenWimpy: 5
+GenFollow: 14
 E
 #9314
 dragao fada~
@@ -354,8 +382,8 @@ Dex: 18
 Int: 15
 Wis: 15
 Cha: 20
-GenWimpy: 5
-GenRoam: 63
+GenWimpy: 18
+GenRoam: 68
 GenFollow: 14
 E
 #9315
@@ -377,6 +405,9 @@ Dex: 18
 Int: 15
 Wis: 15
 Cha: 23
+GenWimpy: 5
+GenRoam: 82
+GenFollow: 14
 E
 #9316
 guardiao harmonia~
@@ -398,9 +429,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 4
-GenLoot: 21
-GenFollow: 15
+GenWimpy: 6
+GenLoot: 25
+GenFollow: 12
 E
 #9317
 guardiao paz~
@@ -422,6 +453,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenLoot: 6
+GenFollow: 14
 E
 #9318
 tempo~
@@ -442,6 +476,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 15
 E
 #9319
 duende~
@@ -460,9 +496,9 @@ ele mesmo e pintadas com vários tons de tinta.
 Str: 8
 Dex: 15
 Con: 8
-GenWimpy: 28
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 68
+GenLoot: 3
+GenRoam: 89
 GenFollow: 9
 E
 #9320
@@ -482,10 +518,10 @@ ela mesma e pintadas com vários tons de tinta.
 Str: 8
 Con: 8
 Cha: 15
-GenWimpy: 24
-GenLoot: 4
+GenWimpy: 72
+GenLoot: 15
 GenRoam: 89
-GenFollow: 10
+GenFollow: 7
 E
 #9322
 fada~
@@ -506,10 +542,10 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 35
-GenLoot: 2
-GenRoam: 89
-GenFollow: 8
+GenWimpy: 76
+GenLoot: 12
+GenRoam: 88
+GenFollow: 6
 E
 #9323
 filhote dragao verde~
@@ -530,7 +566,7 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 39
+GenWimpy: 69
 GenFollow: 12
 E
 #9324
@@ -551,7 +587,7 @@ A Aranha-de-fogo é do mesmo tamanho de um cão-de-guarda.
 BareHandAttack: 1
 Str: 12
 Con: 13
-GenWimpy: 5
+GenWimpy: 22
 GenFollow: 14
 E
 #9325
@@ -571,9 +607,9 @@ Str: 13
 Wis: 8
 Con: 13
 GenWimpy: 100
-GenLoot: 3
-GenRoam: 89
-GenFollow: 13
+GenLoot: 5
+GenRoam: 88
+GenFollow: 12
 E
 #9326
 serpente negra~
@@ -593,6 +629,9 @@ BareHandAttack: 4
 Str: 15
 Dex: 15
 Con: 15
+GenWimpy: 3
+GenLoot: 3
+GenFollow: 14
 E
 #9327
 aparicao~
@@ -614,6 +653,8 @@ Int: 13
 Wis: 12
 Con: 15
 Cha: 8
+GenWimpy: 3
+GenFollow: 13
 E
 #9328
 cardume peixes~
@@ -634,7 +675,7 @@ Int: 7
 Wis: 7
 Con: 8
 Cha: 18
-GenWimpy: 3
+GenWimpy: 6
 GenLoot: 1
 GenFollow: 7
 E

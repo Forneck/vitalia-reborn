@@ -15,6 +15,8 @@ imperceptíveis, com exceção das duas finas linhas dos lados de sua cabeça.
 Dex: 18
 Int: 18
 Wis: 18
+GenWimpy: 4
+GenFollow: 15
 E
 #29001
 melinna cailveh baronesa esposa~
@@ -30,8 +32,8 @@ possa continuar seus estudos sem interrupções desnecessárias.
 92 -20 -40 10d10+1405 5d7+32
 49500 787909
 9 9 2
-GenWimpy: 14
-GenFollow: 13
+GenWimpy: 38
+GenFollow: 12
 E
 #29002
 gilzaan filho velho~
@@ -46,8 +48,8 @@ com que todos os homem proeminentes de suas terras o conheçam.
 86 -19 -39 10d10+1240 5d6+30
 36215 385396
 9 9 1
-GenWimpy: 7
-GenFollow: 15
+GenWimpy: 23
+GenFollow: 14
 E
 #29003
 necromocis filho novo~
@@ -63,6 +65,8 @@ certamente substituirá seu pai na hora em que for preciso.
 81 -15 -40 10d10+1135 5d6+29
 21150 273866
 9 9 1
+GenWimpy: 6
+GenFollow: 15
 E
 #29004
 astronomo~
@@ -76,6 +80,8 @@ existência.  Ele rascunha algumas notas em um pequeno bloco de notas.
 53 -11 -32 10d10+900 4d5+24
 1650 160665
 9 9 1
+GenWimpy: 4
+GenFollow: 14
 E
 #29005
 servo~
@@ -102,8 +108,8 @@ misteriosa.
 94 -34 -40 10d10+1450 6d7+51
 5150 374488
 9 9 1
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 21
+GenFollow: 14
 E
 #29007
 humilde peticionario~
@@ -117,7 +123,7 @@ com uma postura forte, fala em voz firme à Baronesa sobre sua causa.
 54 -12 -32 10d10+987 4d5+27
 1243 168509
 9 9 1
-GenWimpy: 3
+GenWimpy: 10
 GenFollow: 13
 E
 #29008
@@ -132,7 +138,7 @@ seu orgulho e mal-humor.
 56 -13 -32 10d10+780 4d6+28
 2800 184883
 9 9 2
-GenWimpy: 8
+GenWimpy: 15
 GenFollow: 14
 E
 #29009
@@ -146,6 +152,8 @@ Ele segura seu chapéu amassado em suas mãos, amassando-o ainda mais com seu ne
 51 -10 -32 10d10+999 4d5+25
 770 145654
 9 9 1
+GenWimpy: 10
+GenFollow: 12
 E
 #29010
 assistente~
@@ -158,6 +166,8 @@ Ela parece ser uma mulher de meia idade, competente e responsável.
 67 -18 -40 9d9+1340 5d6+33
 1350 292085
 9 9 2
+GenWimpy: 3
+GenFollow: 15
 E
 #29011
 seguranca quarto~
@@ -171,8 +181,8 @@ ele obviamente leva seu trabalho muito a sério.
 79 -21 -40 8d11+1476 5d6+39
 1950 444598
 9 9 1
-GenWimpy: 11
-GenFollow: 17
+GenWimpy: 23
+GenFollow: 16
 E
 #29012
 empregada~
@@ -186,6 +196,8 @@ Ela parece não ter notado sua presença.
 52 -12 -32 1d1+990 4d5+26
 600 153048
 9 9 2
+GenWimpy: 3
+GenFollow: 12
 E
 #29013
 primo visitante~
@@ -198,7 +210,7 @@ Ele parece ter vindo correndo sabendo que o Barão serviria a comida logo mais.
 84 -20 -40 1d1+1890 5d6+42
 300 319913
 9 9 1
-GenWimpy: 3
+GenWimpy: 11
 GenFollow: 11
 E
 #29014
@@ -224,6 +236,9 @@ Não importa o quanto você olhe, ela ainda parece uma imensa vaca gorda mascand
 21 0 2 6d6+870 2d3+10
 0 15159
 9 9 1
+GenWimpy: 2
+GenRoam: 52
+GenFollow: 11
 E
 #29016
 mulher dona casa~
@@ -310,6 +325,8 @@ Ela mal olha para você quando você entra, dando-lhe um 'Em que posso te ajudar
 44 18 -24 7d8+1231 4d5+22
 900 99959
 9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #29023
 balconista~
@@ -323,6 +340,8 @@ enquanto ele traz um belo assado.
 77 -23 -40 5d8+1110 5d6+38
 1850 116457
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #29024
 contador historias~
@@ -337,7 +356,7 @@ saber, mas histórias são sempre boas.
 61 -18 -40 7d7+760 4d6+30
 2050 209937
 9 9 1
-GenWimpy: 3
+GenWimpy: 6
 GenFollow: 13
 E
 #29025
@@ -351,7 +370,7 @@ Seus olhos parecem um pouco turvos, ele sem dúvida está cansado devido ao seu 
 63 -20 -40 5d4+1000 5d6+31
 1150 229653
 9 9 1
-GenWimpy: 3
+GenWimpy: 6
 GenFollow: 15
 E
 #29026
@@ -366,7 +385,7 @@ Ele não parece ser daqui.
 88 -25 -40 9d6+1530 5d6+44
 3722 485396
 9 9 1
-GenWimpy: 3
+GenWimpy: 6
 GenFollow: 14
 E
 #29027
@@ -380,7 +399,7 @@ Ela sorri carinhosamente para você.
 76 -21 -40 10d10+750 5d6+38
 1800 152804
 9 9 2
-GenWimpy: 3
+GenWimpy: 6
 GenFollow: 14
 E
 #29028
@@ -422,6 +441,8 @@ Forte, rude, um pouco sujo..
 51 -12 -32 7d8+1231 4d5+25
 550 145654
 9 9 1
+GenWimpy: 5
+GenFollow: 12
 E
 #29031
 farmaceutico~
@@ -497,8 +518,9 @@ Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente par
 15 10 4 4d3+300 1d5+7
 25 6427
 9 9 2
-GenWimpy: 5
-GenRoam: 30
+GenWimpy: 14
+GenLoot: 1
+GenRoam: 85
 GenFollow: 6
 E
 #29037

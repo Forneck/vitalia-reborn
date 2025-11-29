@@ -3,7 +3,7 @@ coracao dragao~
 o coração do dragão~
 O Coração do dragão está aqui, emitindo sua energia para todos os lados.~
 ~
-1 abdegikq 0 0 0 ao 0 0 0 0 0 0 0
+1 abdegikq 0 0 0 ao 0 0 0 eg 0 0 0
 0 0 -1 0
 10 1000000 100000 90 0
 E
@@ -83,7 +83,7 @@ olho morte~
 o olho da morte~
 O Olho da morte está aqui, olhando para você de forma sinistra.~
 ~
-9 aegjq 0 0 0 ac 0 0 0 v 0 0 0
+9 aejq 0 0 0 ac 0 0 0 v b 0 0
 4 0 0 0
 5 4500000 450000 60 0
 E
@@ -114,7 +114,7 @@ Um Escudo de escamas foi deixado aqui.~
 ~
 9 aegq 0 0 0 aj 0 0 0 0 0 0 0
 11 0 0 0
-12 4500000 450000 55 0
+12 4500000 450000 0 0
 E
 escudo escamas~
 Você observa um magnífico escudo feito com as mais belas escamas verdes de
@@ -123,7 +123,7 @@ tão resistente quanto a rocha mais dura.  Essas escamas com certeza eram de
 um mal-humorado ancião dragão verde.
 ~
 A
-5 1
+5 2
 A
 18 2
 A
@@ -228,9 +228,9 @@ anel ossos~
 um anel de ossos~
 Um anel de ossos, sombrio e misterioso, foi esquecido aqui.~
 ~
-9 begjnq 0 0 0 ab 0 0 0 0 0 0 0
+9 begjq 0 0 0 ab 0 0 0 0 0 0 0
 12 0 0 0
-5 5000000 500000 60 0
+5 5000000 500000 0 0
 E
 anel osso~
 Você observa um sombrio e macabro anel, feito com ossos de antigos dragões
@@ -252,8 +252,8 @@ espada espirito~
 a espada espírito~
 A Espada espírito foi deixada aqui.~
 ~
-5 abeiq 0 0 0 an 0 0 0 0 0 0 0
-0 4 7 3
+5 abeq 0 0 0 an 0 0 0 0 0 0 0
+0 6 4 3
 12 6000000 600000 60 0
 E
 espada espirito~
@@ -458,17 +458,17 @@ Um enorme monólito de pedra foi fixado aqui.~
 0 0 0 0
 80 0 0 1 0
 E
-monolito pedra rocha~
-Você observa as estranhas escrituras, feitas numa linguagem nunca vista
-antes por você em todo Mundo de Vitália.  No topo do monólito você observa
-uma escultura rudimentar de um Dragão.
-~
-E
 escultura rudimentar dragao~
 Você observa a escultura do Dragão, feita da rocha mais resistente do reino.
 Ao olhar para os olhos da figura, você sente uma estranha sensação de medo,
 ao mesmo tempo que observa que eles, antes petrificados, se acenderam como
 chamas de fogo.
+~
+E
+monolito pedra rocha~
+Você observa as estranhas escrituras, feitas numa linguagem nunca vista
+antes por você em todo Mundo de Vitália.  No topo do monólito você observa
+uma escultura rudimentar de um Dragão.
 ~
 #9323
 algas azuis~
@@ -850,11 +850,6 @@ A Estátua do dragão de ouro foi fixada aqui.~
 0 0 0 0
 100 6000000 600000 1 0
 E
-estatua ouro dragao~
-Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
-escrituras em sua base.
-~
-E
 escrituras base~
 Você observa as escrituras que trazem as seguintes mensagens:
 ****************************************************************************
@@ -868,6 +863,11 @@ vida à maldade e se reproduzem em sofrimento"
                                              O Ancião de Ouro.
  
 ****************************************************************************
+~
+E
+estatua ouro dragao~
+Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
+escrituras em sua base.
 ~
 #9344
 ossos dragoes~
@@ -904,11 +904,6 @@ Um totem de pedra foi fixado aqui.~
 0 0 0 0
 65 0 0 1 0
 E
-totem pedra~
-Você observa um totem de pedra formado por esculturas de dragões. Em seu
-topo você percebe a existência de uma escritura.
-~
-E
 escritura topo~
 Você observa a escritura no topo do totem de pedra, que diz:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -917,6 +912,11 @@ Você observa a escritura no topo do totem de pedra, que diz:
 você conseguir vê-la, então será tarde demais.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+~
+E
+totem pedra~
+Você observa um totem de pedra formado por esculturas de dragões. Em seu
+topo você percebe a existência de uma escritura.
 ~
 #9347
 trono ouro branco prata~
@@ -1019,15 +1019,13 @@ devem ser muito bem guardadas e protegidas, pois são uma das últimas
 lembranças deixadas pelo magnífico Ancião.
 ~
 A
-1 1
+3 2
 A
-4 1
+4 2
 A
-12 20
+12 50
 A
-18 1
-A
-19 1
+19 2
 #9354
 brinco perolas~
 um brinco de pérolas~
@@ -1042,7 +1040,7 @@ Você observa um majestoso brinco, feito com pérolas raras.  Para
 colecionadores de tesouros isto valeria muitas moedas de ouro.
 ~
 A
-2 1
+2 2
 A
 19 2
 A
@@ -1072,9 +1070,9 @@ argola firmamento~
 a argola do firmamento~
 A argola do firmamento foi esquecida aqui.~
 ~
-11 aegkq 0 0 0 aq 0 0 0 n 0 0 0
+11 aegkq 0 0 0 aqs 0 0 0 n 0 0 0
 0 0 0 0
-3 1000000 100000 30 0
+3 1000000 100000 15 0
 E
 argola firmamento~
 Você observa uma misteriosa argola prateada com uma esfera em seu centro.  O
@@ -1106,9 +1104,9 @@ lendário mago de Camelot como recompensa a um de seus atos de bravura e coragem
 em favor daquele reino.
 ~
 A
-3 2
+1 1
 A
-4 2
+5 2
 A
 13 25
 A

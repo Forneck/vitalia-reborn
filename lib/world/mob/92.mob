@@ -11,9 +11,9 @@ pergunta gentilmente:
 11 12 1 2d5+100 3d5+2
 1250 15000
 9 6 2
-GenWimpy: 16
-GenLoot: 1
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 89
+GenFollow: 9
 E
 #9201
 valete guarda copas~
@@ -29,9 +29,9 @@ exclama com imponência:
 15 8 0 3d6+150 2d6+3
 2500 18000
 9 9 1
-GenWimpy: 35
-GenLoot: 6
-GenFollow: 15
+GenWimpy: 93
+GenLoot: 42
+GenFollow: 11
 E
 #9202
 valete guarda ouros~
@@ -47,9 +47,9 @@ exclama com imponência:
 15 8 0 3d6+150 2d6+3
 2500 18000
 9 9 1
-GenWimpy: 40
-GenLoot: 9
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 49
+GenFollow: 12
 E
 #9203
 valete guarda espadas~
@@ -65,9 +65,9 @@ exclama com imponência:
 15 8 0 3d6+150 2d6+3
 2500 18000
 9 9 1
-GenWimpy: 22
-GenLoot: 16
-GenFollow: 16
+GenWimpy: 83
+GenLoot: 48
+GenFollow: 12
 E
 #9204
 valete guarda paus~
@@ -83,9 +83,9 @@ exclama com imponência:
 15 8 0 3d6+150 2d6+3
 2500 18000
 9 9 1
-GenWimpy: 35
-GenLoot: 11
-GenFollow: 16
+GenWimpy: 92
+GenLoot: 38
+GenFollow: 12
 E
 #9205
 valete guarda coringa~
@@ -101,9 +101,11 @@ exclama com imponência:
 15 8 0 3d6+150 2d6+3
 2500 18000
 9 9 1
-GenWimpy: 30
-GenLoot: 3
-GenFollow: 14
+GenWimpy: 96
+GenLoot: 99
+GenEquip: 1
+GenQuest: 2
+GenFollow: 11
 E
 #9206
 sete copas~
@@ -116,10 +118,10 @@ Apenas sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 30
-GenLoot: 1
-GenRoam: 87
-GenFollow: 11
+GenWimpy: 63
+GenLoot: 4
+GenRoam: 85
+GenFollow: 9
 E
 #9207
 sete ouros~
@@ -132,10 +134,10 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 34
-GenLoot: 2
-GenRoam: 84
-GenFollow: 12
+GenWimpy: 68
+GenLoot: 12
+GenRoam: 89
+GenFollow: 9
 E
 #9208
 sete espadas~
@@ -148,9 +150,10 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 33
+GenWimpy: 58
+GenLoot: 1
 GenRoam: 89
-GenFollow: 16
+GenFollow: 12
 E
 #9209
 sete paus~
@@ -163,9 +166,11 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 23
-GenRoam: 78
-GenFollow: 17
+GenWimpy: 60
+GenLoot: 2
+GenEquip: 1
+GenRoam: 89
+GenFollow: 12
 E
 #9210
 sete coringa~
@@ -178,10 +183,11 @@ Apenas um sete (?) comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 28
-GenLoot: 9
-GenRoam: 85
-GenFollow: 12
+GenWimpy: 77
+GenLoot: 25
+GenEquip: 1
+GenRoam: 89
+GenFollow: 6
 E
 #9211
 tres copas~
@@ -194,10 +200,10 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 58
+GenWimpy: 100
 GenLoot: 4
-GenRoam: 85
-GenFollow: 5
+GenRoam: 84
+GenFollow: 4
 E
 #9212
 tres ouros~
@@ -210,9 +216,10 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 54
-GenRoam: 36
-GenFollow: 7
+GenWimpy: 100
+GenLoot: 2
+GenRoam: 84
+GenFollow: 5
 E
 #9213
 tres espadas~
@@ -225,10 +232,10 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 67
+GenWimpy: 100
 GenLoot: 6
-GenRoam: 58
-GenFollow: 10
+GenRoam: 85
+GenFollow: 6
 E
 #9214
 tres paus~
@@ -241,10 +248,10 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 66
+GenWimpy: 100
 GenLoot: 2
-GenRoam: 16
-GenFollow: 10
+GenRoam: 83
+GenFollow: 4
 E
 #9215
 tres coringa~
@@ -257,10 +264,10 @@ Apenas um três (?) comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 71
-GenLoot: 8
-GenRoam: 66
-GenFollow: 5
+GenWimpy: 100
+GenLoot: 14
+GenRoam: 87
+GenFollow: 2
 E
 #9216
 canastra cartas copas~
@@ -274,9 +281,9 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 10 10 2 3d6+100 2d5+2
 2500 15000
 9 9 2
-GenWimpy: 7
+GenWimpy: 49
 GenLoot: 1
-GenFollow: 14
+GenFollow: 13
 E
 #9217
 canastra cartas ouros~
@@ -290,9 +297,9 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 10 10 2 3d6+100 2d5+2
 2500 15000
 9 9 2
-GenWimpy: 12
-GenLoot: 9
-GenFollow: 17
+GenWimpy: 83
+GenLoot: 56
+GenFollow: 15
 E
 #9218
 canastra cartas espadas~
@@ -306,8 +313,9 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 10 10 2 3d6+100 2d5+2
 2500 15000
 9 9 2
-GenWimpy: 4
-GenFollow: 17
+GenWimpy: 45
+GenLoot: 13
+GenFollow: 16
 E
 #9219
 canastra cartas paus~
@@ -321,8 +329,9 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 10 10 2 3d6+100 2d5+2
 2500 15000
 9 9 2
-GenWimpy: 7
-GenFollow: 17
+GenWimpy: 43
+GenLoot: 6
+GenFollow: 16
 E
 #9220
 canastra cartas suja~
@@ -337,8 +346,9 @@ suja...
 10 10 2 3d6+100 2d5+2
 2500 15000
 9 9 2
-GenWimpy: 29
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 2
+GenFollow: 11
 E
 #9221
 rei copas figura~
@@ -352,8 +362,9 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 20 7 -1 8d1+500 4d6+3
 5000 60000
 9 6 1
-GenWimpy: 8
-GenFollow: 13
+GenWimpy: 70
+GenLoot: 19
+GenFollow: 11
 E
 #9222
 rei ouros figura~
@@ -367,8 +378,8 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 20 7 -1 8d1+500 4d6+3
 5000 60000
 9 6 1
-GenWimpy: 7
-GenLoot: 2
+GenWimpy: 51
+GenLoot: 15
 GenFollow: 13
 E
 #9223
@@ -383,7 +394,8 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 20 7 -1 8d1+500 4d6+3
 5000 60000
 9 6 1
-GenWimpy: 3
+GenWimpy: 53
+GenLoot: 4
 GenFollow: 13
 E
 #9224
@@ -398,6 +410,9 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 20 7 -1 8d1+500 4d6+3
 5000 60000
 9 6 1
+GenWimpy: 38
+GenLoot: 12
+GenFollow: 13
 E
 #9225
 rei figura coringa~
@@ -411,9 +426,9 @@ sua sabedoria e força o levaram a ocupar um cargo tão nobre!
 20 7 -1 8d1+500 4d6+3
 5000 60000
 9 6 1
-GenWimpy: 15
-GenLoot: 7
-GenFollow: 13
+GenWimpy: 79
+GenLoot: 41
+GenFollow: 11
 E
 #9226
 as pacificador copas figura~
@@ -427,9 +442,9 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 20 5 -2 8d1+600 6d4+5
 5000 70000
 9 9 1
-GenWimpy: 4
-GenLoot: 25
-GenFollow: 12
+GenWimpy: 9
+GenLoot: 70
+GenFollow: 11
 E
 #9227
 as pacificador ouros figura~
@@ -443,6 +458,9 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 20 5 -2 8d1+600 6d4+5
 5000 70000
 9 9 1
+GenWimpy: 12
+GenLoot: 98
+GenFollow: 13
 E
 #9228
 as pacificador espadas figura~
@@ -456,6 +474,9 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 20 5 -2 8d1+600 6d4+5
 5000 70000
 9 9 1
+GenWimpy: 16
+GenLoot: 84
+GenFollow: 14
 E
 #9229
 as pacificador paus figura~
@@ -469,6 +490,9 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 20 5 -2 8d1+600 6d4+5
 5000 70000
 9 9 1
+GenWimpy: 4
+GenLoot: 73
+GenFollow: 13
 E
 #9230
 as pacificador figura falso~
@@ -482,9 +506,10 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 20 5 -2 8d1+600 6d4+5
 5000 70000
 9 9 1
-GenWimpy: 6
-GenLoot: 63
-GenFollow: 13
+GenWimpy: 31
+GenLoot: 99
+GenQuest: 4
+GenFollow: 10
 E
 #9231
 dama princesa donzela copas~
@@ -498,6 +523,10 @@ força descomunal!  Você não deveria mexer com ela.
 19 4 -3 3d5+400 3d6+4
 5000 80000
 9 9 2
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenFollow: 13
 E
 #9232
 dama princesa donzela ouros~
@@ -511,6 +540,10 @@ força descomunal!  Você não deveria mexer com ela.
 19 4 -3 3d5+400 3d6+4
 5000 80000
 9 9 2
+GenWimpy: 4
+GenLoot: 74
+GenEquip: 4
+GenFollow: 12
 E
 #9233
 dama princesa donzela espadas~
@@ -524,6 +557,10 @@ força descomunal!  Você não deveria mexer com ela.
 19 4 -3 3d5+400 3d6+4
 5000 80000
 9 9 2
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenFollow: 13
 E
 #9234
 dama princesa donzela paus~
@@ -537,6 +574,8 @@ força descomunal!  Você não deveria mexer com ela.
 19 4 -3 3d5+400 3d6+4
 5000 80000
 9 9 2
+GenWimpy: 4
+GenFollow: 12
 E
 #9235
 dama princesa donzela coringa~
@@ -550,9 +589,10 @@ força descomunal!  Você não deveria mexer com ela.
 19 4 -3 3d5+400 3d6+4
 5000 80000
 9 9 2
-GenWimpy: 4
-GenLoot: 5
-GenFollow: 13
+GenWimpy: 6
+GenLoot: 99
+GenEquip: 12
+GenFollow: 10
 E
 #9236
 pequeno falsificador chaveiro~
@@ -566,9 +606,9 @@ louváveis ...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 19
-GenLoot: 1
-GenRoam: 85
-GenFollow: 6
+GenWimpy: 69
+GenLoot: 5
+GenRoam: 87
+GenFollow: 3
 E
 $

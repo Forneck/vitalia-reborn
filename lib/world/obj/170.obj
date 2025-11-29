@@ -47,11 +47,13 @@ Um par de curiosas botas parecem praticamente flutuar no chão.~
 ~
 9 bfg 0 0 0 ag 0 0 0 0 0 0 0
 6 0 0 0
-1 10000 2000 15 0
+1 10000 2000 0 0
 A
 2 1
 A
-14 5
+5 2
+A
+14 50
 #17006
 capacete furacao~
 o capacete furacão~
@@ -540,4 +542,18 @@ A
 3 1
 A
 12 10
+#17055
+botas vento~
+as botas do vento~
+Um par de curiosas botas parecem praticamente flutuar no chao.~
+~
+9 bfg 0 0 0 ag 0 0 0 0 d 0 0
+6 0 0 0
+1 10000 2000 0 0
+A
+2 1
+A
+5 2
+A
+14 50
 $~

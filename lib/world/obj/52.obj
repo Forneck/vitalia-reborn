@@ -134,7 +134,7 @@ um pergaminho rasgado~
 Um pergaminho usado e rasgado foi deixado aqui.~
 ~
 2 g 0 0 0 a 0 0 0 0 0 0 0
-24 24 44 4
+56 24 44 97
 15 11000 4000 0 0
 #5216
 pergaminho amarrotado~
@@ -227,7 +227,7 @@ Há um pequeno selo de ébano esculpido aqui.~
 #5225
 escrivaninha torta~
 a escrivaninha~
-undefined~
+.Uma escrivaninha antiga foi esquecida no canto.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 13 5224 0
@@ -243,7 +243,7 @@ Há um pequeno selo de marfim escupido aqui.~
 #5227
 armario cristal~
 o armário de cristal~
-undefined~
+.Um armario feito de cristal brilha intensamente aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 13 5226 0

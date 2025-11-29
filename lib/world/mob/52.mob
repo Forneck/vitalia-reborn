@@ -12,10 +12,10 @@ sua personalidade.
 25 6 0 1d14+450 6d9+5
 28560 134000
 9 9 0
-GenWimpy: 24
+GenWimpy: 100
 GenLoot: 99
-GenEquip: 8
-GenFollow: 14
+GenEquip: 58
+GenFollow: 9
 E
 T 3009
 #5201
@@ -31,12 +31,11 @@ para você, ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 100
+GenWimpy: 97
 GenLoot: 99
-GenEquip: 11
-GenRoam: 84
-GenGroup: 2
-GenFollow: 7
+GenEquip: 19
+GenRoam: 88
+GenFollow: 4
 E
 T 3009
 #5202
@@ -51,9 +50,9 @@ na frente.
 11 10 1 1d20+130 2d7+0
 0 13000
 9 9 0
-GenWimpy: 48
+GenWimpy: 36
 GenLoot: 99
-GenEquip: 7
+GenEquip: 8
 GenFollow: 10
 E
 #5203
@@ -69,10 +68,10 @@ isso, ossos... nenhum farrapo ou nada mais parece estar preso a eles.
 14 7 1 3d15+150 3d5+1
 0 20000
 9 9 0
-GenWimpy: 6
-GenLoot: 33
-GenEquip: 2
-GenFollow: 12
+GenWimpy: 16
+GenLoot: 99
+GenEquip: 3
+GenFollow: 7
 E
 #5204
 mimico piso~
@@ -86,10 +85,10 @@ destruição.
 11 11 3 2d6+110 2d6+0
 0 10500
 9 9 0
-GenWimpy: 61
-GenLoot: 25
+GenWimpy: 55
+GenLoot: 75
 GenEquip: 2
-GenFollow: 5
+GenFollow: 4
 E
 #5205
 mimico potes pedacos~
@@ -104,8 +103,8 @@ provavelmente antes da cidade tombar.
 0 9800
 9 9 0
 GenWimpy: 52
-GenLoot: 15
-GenFollow: 9
+GenLoot: 60
+GenFollow: 6
 E
 #5206
 mimico tábuas madeira~
@@ -119,10 +118,11 @@ que alguém esteve aqui antes de você...
 11 9 0 1d12+110 4d3+1
 0 12000
 9 9 0
-GenWimpy: 60
-GenLoot: 27
-GenEquip: 3
-GenFollow: 9
+GenWimpy: 34
+GenLoot: 99
+GenEquip: 15
+GenRoam: 19
+GenFollow: 6
 E
 #5207
 lagarto chifres~
@@ -135,10 +135,10 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 3 17 4 1d14+30 2d4+0
 0 500
 9 9 0
-GenWimpy: 100
-GenLoot: 74
-GenRoam: 53
-GenFollow: 3
+GenWimpy: 99
+GenLoot: 99
+GenRoam: 77
+GenFollow: 2
 E
 #5208
 golem pedra~
@@ -152,10 +152,10 @@ criatura de pedra. Ele encontra-se aqui ainda guardando a cidade.
 25 0 -5 6d6+500 4d7+3
 4250 145000
 9 9 0
-GenWimpy: 5
+GenWimpy: 57
 GenLoot: 99
-GenEquip: 58
-GenFollow: 17
+GenEquip: 99
+GenFollow: 7
 E
 #5209
 lamia besta~
@@ -172,8 +172,8 @@ para você, ambiciosamente.
 9 9 2
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 11
-GenRoam: 88
+GenEquip: 16
+GenRoam: 89
 GenFollow: 6
 E
 T 3009

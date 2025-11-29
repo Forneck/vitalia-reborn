@@ -11,6 +11,8 @@ sussurra algumas palavras e preces que parecem não ter sentido.
 80 -7 -7 4d10+1840 4d9+16
 1234 176000
 9 9 1
+GenWimpy: 10
+GenFollow: 15
 E
 #5901
 seguidor crente~
@@ -24,6 +26,8 @@ parece não tirar os olhos da lâmina que seu líder aponta aos céus.
 24 9 -3 1d50+450 15d2+14
 978 65000
 9 9 1
+GenWimpy: 5
+GenFollow: 13
 E
 #5902
 corcunda~
@@ -37,6 +41,8 @@ parece estar tentando falar com você.
 15 6 -6 5d20+900 1d10+6
 150 25000
 9 9 1
+GenWimpy: 7
+GenFollow: 9
 E
 #5903
 elfo enjoado~
@@ -50,7 +56,7 @@ ajuda.
 21 8 -3 2d4+250 3d6+12
 1000 29000
 6 6 1
-GenWimpy: 3
+GenWimpy: 12
 GenFollow: 13
 E
 #5904
@@ -65,6 +71,8 @@ ou amedrontada.  Ela está extremamente desconfortável, parece temer algo.
 12 11 5 3d3+275 3d4+6
 130 23000
 9 9 2
+GenWimpy: 8
+GenFollow: 10
 E
 #5905
 mendigo homem~
@@ -77,6 +85,8 @@ Ele está extremamente sujo. E seu cheiro...
 16 8 1 4d6+450 4d3+6
 2000 33000
 9 9 1
+GenWimpy: 2
+GenFollow: 11
 E
 #5906
 crianca apavorada~
@@ -115,8 +125,8 @@ Um rato comum e desagradável.
 8 16 6 2d9+150 1d3+7
 0 3300
 9 9 1
-GenWimpy: 8
-GenRoam: 86
+GenWimpy: 21
+GenRoam: 88
 GenFollow: 9
 E
 #5909
@@ -172,9 +182,10 @@ restrições em suas faculdades mentais.
 22 11 1 7d10+1400 1d6+10
 500 44000
 9 9 1
-GenWimpy: 3
-GenLoot: 1
-GenRoam: 55
+GenWimpy: 6
+GenLoot: 31
+GenRoam: 89
+GenFollow: 12
 E
 #5913
 seguidora~
@@ -187,6 +198,8 @@ Ela percebe que você a viu, e faz uma leve reverência com a cabeça.
 40 0 -5 6d12+1650 6d8+3
 800 60000
 9 9 2
+GenWimpy: 3
+GenFollow: 13
 E
 #5914
 morcego marrom~
@@ -200,6 +213,8 @@ diretamente para sua cabeça...
 9 11 3 3d5+175 2d4+4
 0 8000
 9 9 1
+GenWimpy: 6
+GenFollow: 9
 E
 #5915
 aranha tarantula~
@@ -213,6 +228,8 @@ uma aranha, desagradável e traiçoeira aranha.
 9 14 5 3d5+105 2d3+6
 0 2000
 9 9 1
+GenWimpy: 1
+GenFollow: 5
 E
 #5916
 morte cavaleiro entorpecido~
@@ -225,6 +242,8 @@ Parece ser a primeira vez que ele usa sua arma. Há uma fina linha de baba saind
 23 8 -1 8d5+700 5d5+12
 600 34000
 9 9 1
+GenWimpy: 9
+GenFollow: 13
 E
 #5917
 homem aventureiro~
@@ -237,6 +256,8 @@ Parece que ele estava tirando um cochilo aonde ele pensava ser seguro.
 26 0 -4 10d8+1800 4d4+22
 1500 100000
 9 9 1
+GenWimpy: 4
+GenFollow: 12
 E
 #5918
 corcunda humanoide~
@@ -249,6 +270,8 @@ Esta desagradável criatura parece querer jogar sangue em você.
 27 9 0 9d11+2100 2d4+12
 0 58000
 9 9 1
+GenWimpy: 2
+GenFollow: 9
 E
 #5919
 seguidor~

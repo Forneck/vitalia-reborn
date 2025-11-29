@@ -2,6 +2,9 @@
 Cansian~
 O Castelo da Rainha Gelada~
 200 299 60 1 bgj 0 0 0 10 45 3
+M 0 204 1 224 	(a Rainha Gelada)
+E 1 209 -10 8 	(um manto real do inverno)
+E 1 210 -5 1 	(a coroa da Rainha de Gelo)
 M 0 211 1 281 	(o bibliotecário de gelo)
 G 1 204 10 -1 	(um cajado do inverno eterno)
 G 1 206 10 -1 	(um pergaminho de congelamento)
@@ -10,9 +13,6 @@ O 0 213 3 279 	(um orbe de poder glacial)
 M 0 209 3 279 	(uma aranha de cristal)
 G 1 203 10 -1 	(um anel de proteção gélida)
 O 0 215 10 233 	(uma lanterna eterna de gelo)
-M 0 204 1 224 	(a Rainha Gelada)
-E 1 210 5 1 	(a coroa da Rainha de Gelo)
-E 1 209 10 18 	(um manto real do inverno)
 M 0 203 1 243 	(o Capitão de Gelo)
 G 1 200 10 -1 	(uma espada de gelo cristalina)
 E 1 201 10 8 	(uma armadura de placas de gelo)

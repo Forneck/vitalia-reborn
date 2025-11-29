@@ -30,6 +30,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 T 3009
 #13801
@@ -183,7 +185,7 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
-GenWimpy: 3
+GenWimpy: 4
 GenFollow: 15
 E
 #13807
@@ -264,6 +266,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #13810
 dragao aquatico~
@@ -331,7 +335,7 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 14
-GenWimpy: 5
+GenWimpy: 7
 GenFollow: 10
 E
 #13813
@@ -457,6 +461,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 15
 E
 #13818
 dragao sombras~
@@ -544,7 +550,8 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 2
-GenRoam: 14
+GenWimpy: 13
+GenRoam: 86
+GenFollow: 9
 E
 $

@@ -15,6 +15,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 10
 E
 #4201
 areia redemoinho demonio~
@@ -35,8 +37,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenLoot: 5
-GenFollow: 13
+GenLoot: 6
+GenRoam: 26
+GenFollow: 12
 E
 #4202
 parda aspide cobra~
@@ -53,7 +56,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 10
 GenFollow: 9
 E
 T 3008
@@ -75,6 +78,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 17
 E
 #4204
 redemoinho gigantesco funil ar~
@@ -91,6 +96,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 17
 E
 #4205
 cao gra'lan~
@@ -110,10 +117,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 15
-GenLoot: 2
-GenRoam: 79
-GenFollow: 12
+GenWimpy: 44
+GenLoot: 3
+GenRoam: 89
+GenFollow: 11
 E
 #4206
 escorpiao~
@@ -130,8 +137,9 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 20
-GenRoam: 88
+GenWimpy: 43
+GenLoot: 1
+GenRoam: 89
 GenFollow: 12
 E
 #4207
@@ -223,6 +231,8 @@ indicam que algo de muito perigoso está perante você.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 12
 E
 #4212
 sir'kas felino~
@@ -242,6 +252,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 19
 E
 #4213
 estatua~
@@ -261,6 +273,8 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 13
 E
 #4214
 mumia múmia~
@@ -276,6 +290,8 @@ Essa múmia está caindo aos pedaços! E fedendo...
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 8
+GenFollow: 18
 E
 #4215
 ibis íbis passaro~
@@ -295,6 +311,8 @@ BareHandAttack: 11
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 7
+GenFollow: 13
 E
 #4244
 verme areia~
@@ -313,7 +331,9 @@ bocarra e engolem-na inteira.  Parece que você teve sorte...
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 21
+GenLoot: 8
+GenFollow: 19
 E
 #4252
 urubu~
@@ -330,6 +350,8 @@ BareHandAttack: 11
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 25
+GenFollow: 17
 E
 #4256
 camelo~
@@ -346,6 +368,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 7
+GenFollow: 19
 E
 #4268
 farao faraó~
@@ -366,6 +390,9 @@ BareHandAttack: 13
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 7
+GenLoot: 1
+GenFollow: 13
 E
 #4270
 miragem~
@@ -381,6 +408,8 @@ Você está vendo coisa...
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 19
 E
 #4274
 esfinge~
@@ -400,5 +429,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 7
+GenFollow: 12
 E
 $

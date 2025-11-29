@@ -126,6 +126,8 @@ sempre os rostos mais inocentes são os mais indefesos.
 54 -2 -12 10d10+800 4d4+20
 1000 90020
 9 9 1
+GenWimpy: 10
+GenFollow: 12
 E
 #11609
 kanakajja naga dourado lotus ouro~
@@ -409,7 +411,7 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 72
+GenWimpy: 74
 GenLoot: 1
 GenEquip: 1
 GenFollow: 17
@@ -426,7 +428,7 @@ e como os "plebeus" são desagradáveis. Você conclui que não gosta dele...
 45 3 -4 10d10+700 4d3+15
 8000 34020
 9 9 1
-GenWimpy: 16
+GenWimpy: 22
 GenFollow: 15
 E
 #11629
@@ -473,7 +475,8 @@ para a festa.  E agora?
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 19
+GenWimpy: 24
+GenFollow: 13
 E
 #11632
 senhor elegante~
@@ -488,7 +491,8 @@ convidados...
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 16
+GenWimpy: 22
+GenFollow: 14
 E
 #11633
 mensageiro estranho~
@@ -506,7 +510,7 @@ que fez com que Lorde Indra saísse imediatamente do salão...
 67 -4 -8 10d10+970 4d5+23
 10000 104020
 9 9 1
-GenWimpy: 32
+GenWimpy: 31
 GenFollow: 15
 E
 T 3008
@@ -550,10 +554,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 30
-GenLoot: 4
+GenWimpy: 37
+GenLoot: 5
 GenEquip: 1
-GenFollow: 15
+GenFollow: 14
 E
 T 3009
 #11636
@@ -588,7 +592,8 @@ favorita...
 93 -14 -19 10d10+1670 9d6+32
 12000 244020
 9 9 1
-GenWimpy: 9
+GenWimpy: 12
+GenFollow: 15
 E
 T 3009
 #11638
@@ -608,8 +613,8 @@ palácio...
 97 -25 -33 10d10+8670 12d6+42
 18000 744020
 9 9 1
-GenWimpy: 43
-GenFollow: 15
+GenWimpy: 44
+GenFollow: 13
 E
 T 3009
 #11639
@@ -641,7 +646,8 @@ acontecesse...
 60 -2 -12 10d10+870 5d4+23
 1000 84020
 9 9 1
-GenWimpy: 15
+GenWimpy: 18
+GenFollow: 15
 E
 #11641
 gandhava musico~

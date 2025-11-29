@@ -2,6 +2,9 @@
 Vitalia~
 Norte da Cidade de Midgaard~
 3000 3099 15 2 j 0 0 0 -1 -1 0
+R 0 3081 3199 -1 	(um quadro de recados)
+O 0 3199 10 3081 	(um quadro de recados)
+M 0 3095 1 3081 	(Belchior, o Gerente do Brechó)
 M 0 3010 1 3062 	(o agente postal)
 M 0 3015 5 3062 	(o caçador de aventuras)
 R 0 3062 3019 -1 	(um cartaz de 'Procurado')
@@ -10,8 +13,6 @@ M 0 3062 15 3024 	(o fido bestial)
 G 1 3015 30 -1 	(um pedaço de carne)
 D 0 3024 0 1 	(O Final Leste do Beco Miserável)
 D 0 3024 0 2 	(O Final Leste do Beco Miserável)
-R 0 3081 3199 -1 	(um quadro de recados)
-O 0 3199 10 3081 	(um quadro de recados)
 D 0 3030 5 1 	(O Depósito de Lixo)
 D 1 3030 5 2 	(O Depósito de Lixo)
 M 0 3040 1 3007 	(o barman)

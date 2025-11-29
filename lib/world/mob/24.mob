@@ -11,10 +11,10 @@ condições de dizer de que cor ele seria de verdade!
 0 150
 9 9 1
 BareHandAttack: 4
-GenWimpy: 41
-GenLoot: 2
+GenWimpy: 99
+GenLoot: 6
 GenRoam: 88
-GenFollow: 4
+GenFollow: 1
 E
 #2401
 fantasma pirata~
@@ -29,9 +29,10 @@ distinguir exatamente qual seria o seu aspecto.
 0 3998
 9 9 1
 GenWimpy: 100
-GenLoot: 39
-GenRoam: 88
-GenFollow: 8
+GenLoot: 56
+GenRoam: 89
+GenTrade: 23
+GenFollow: 1
 E
 #2402
 capitao capitão fantasma~
@@ -73,6 +74,11 @@ Este homem deve ter sido um maníaco, até mesmo quando era vivo!
 27 9 0 9d11+2100 2d4+12
 0 57000
 9 9 1
+GenWimpy: 54
+GenLoot: 7
+GenEquip: 9
+GenRoam: 87
+GenFollow: 11
 E
 #2405
 velho marinheiro~

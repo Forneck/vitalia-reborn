@@ -3,9 +3,9 @@ espada lamina elfica alaric~
 @Ya Lâmina Élfica de Alaric@n~
 Uma longa espada vermelha, com um rubi em sua lâmina foi deixada aqui.~
 ~
-5 bdeginopqrt 0 0 0 an 0 0 0 d 0 0 0
-0 7 9 3
-17 10000000 0 40 0
+5 bdegq 0 0 0 an 0 0 0 di 0 0 0
+10 12 4 11
+17 10000000 0 15 0
 E
 espada lamina elfica alaric~
 Você vê a sua frente uma arma de formidável aparência, digna do resgate de um
@@ -20,40 +20,42 @@ Se informe sobre a história desta espada com o comando HELP ALARIC.
 A
 2 2
 A
-6 1
+6 2
 A
-18 8
+18 10
 A
-19 8
+19 10
 #1401
 escudo fogo~
 @Yum escudo de fogo@n~
 Um escudo incandescente foi deixado aqui.~
 ~
 9 bdegq 0 0 0 aj 0 0 0 s 0 0 0
-5 0 0 0
-12 10000000 0 40 0
+15 0 0 0
+12 10000000 0 15 0
 E
 escudo fogo~
 Este escudo foi feito por um Avatar da Magia, e há chamas todo ao redor dele.
 	WEste escudo é muito especial! Cuide dele com a sua vida!	n
 ~
 A
-18 2
-A
 1 2
 A
-19 1
+5 2
 A
-6 1
+18 4
+A
+19 4
+A
+13 50
 #1402
 manoplas zoghtu~
 @Yas Manoplas de Zoghtu@n~
 As manoplas de Zoghtu, o Arqui-Necromante foram deixadas aqui.~
 ~
-9 bdegq 0 0 0 ah 0 0 0 s 0 0 0
+9 bdegq 0 0 0 ah 0 0 0 0 n 0 0
 10 0 0 0
-12 10000000 0 40 0
+12 10000000 0 15 0
 E
 manoplas zoghtu~
 Você vê uma manopla de exótico aspecto. É confeccionada com couro de dragão
@@ -65,19 +67,19 @@ extremidades dos dedos. Sobre a palma da manopla há uma gema cor de sangue.
 Se informe da história destas manoplas com o comando HELP ZOGHTU.
 ~
 A
-2 -1
+2 2
 A
-18 4
+18 5
 A
-19 4
+19 5
 #1403
 olho horus~
 @Yo Olho de Hórus@n~
 O olho de Hórus foi deixado aqui.~
 ~
-1 bdegkq 0 0 0 ao 0 0 0 s 0 0 0
+1 bdegjq 0 0 0 ao 0 0 0 go 0 0 0
 0 0 -1 0
-6 10000000 0 40 0
+6 10000000 0 15 0
 E
 olho horus~
 Esta é uma jóia de rara beleza.  Lapidada de um diamante azul, a gema possui
@@ -88,19 +90,25 @@ ao seu redor.
 Se informe sobre a históriaste olho com o comando HELP HORUS.
 ~
 A
-18 6
+18 5
 A
 19 5
 A
-17 -3
+17 -5
+A
+1 3
+A
+2 3
+A
+14 100
 #1404
 armadura carnax~
 @YCarnax, a Armadura Viva@n~
 Uma estranha armadura feita de carne jaz esquecida ao chão.~
 ~
-9 bdegnq 0 0 0 ad 0 0 0 0 0 0 0
+9 bdegq 0 0 0 ad 0 0 0 C jp 0 0
 18 0 0 0
-16 10000000 0 40 0
+16 10000000 0 15 0
 E
 armadura carnax~
 Você vê uma armadura moldada a partir de carne e músculos, sendo que estes 
@@ -113,7 +121,7 @@ Se informe sobre a históriasta armadura com o comando HELP CARNAX.
 A
 1 2
 A
-13 -40
+5 2
 A
 19 5
 #1405
@@ -121,9 +129,9 @@ manto trevas huthven~
 @Yo Manto de Trevas de Huthven@n~
 Um manto escuro jaz abandonado ao chão.~
 ~
-11 bdegmnpqtu 0 0 0 ak 0 0 0 0 0 0 0
-0 0 0 0
-3 10000000 0 40 0
+9 bdegq 0 0 0 ak 0 0 0 0 b 0 0
+15 0 0 0
+3 10000000 0 15 0
 E
 manto trevas huthven~
 Você vê um manto de cor negra, cujo tecido parece ser frio ao toque.
@@ -133,19 +141,25 @@ Um broche de ônix na forma de um corvo prende as abas do manto.
 Se informe sobre a história deste manto com o comando HELP HUTHVEN.
 ~
 A
+1 2
+A
 2 2
 A
-17 -16
+5 2
 A
-18 2
+18 3
+A
+19 3
+A
+13 50
 #1406
 bastao bruenor~
 @Yo Bastão de Bruenor@n~
 Um bastão de exótica aparência está no chão, abandonado.~
 ~
-5 bdegiklmopqt 0 0 0 an 0 0 0 i 0 0 0
-0 4 10 6
-15 10000000 0 40 0
+5 bdegkq 0 0 0 an 0 0 0 fi 0 0 0
+10 12 4 6
+15 10000000 0 15 0
 E
 bastao bruenor~
 O bastão tem seu cabo feito por uma rara espécie de madeira branca, polida,
@@ -162,19 +176,17 @@ A
 A
 4 3
 A
-18 5
+18 10
 A
-19 5
-A
-1 3
+19 10
 #1407
 tiara caliope~
 @Ya Tiara de Calíope, a Sereia@n~
 Uma frágil tiara de coral está abandonada ao chão.~
 ~
-11 bdegq 0 0 0 ae 0 0 0 y 0 0 0
+11 bdegq 0 0 0 ae 0 0 0 hy 0 0 0
 0 0 0 0
-2 10000000 0 40 0
+2 10000000 0 15 0
 E
 tiara caliope~
 De aparência frágil, apesar de leve, a tiara é feita de um coral muito
@@ -186,23 +198,25 @@ valor.
 Se informe sobre a história desta tiara com o comando HELP CALIOPE.
 ~
 A
-13 30
+17 -30
 A
-17 -20
+6 5
 A
-18 2
+18 5
 A
-6 3
+19 5
 A
-19 1
+12 50
+A
+14 50
 #1408
 machado dourado jupiter~
 @Yo Machado Dourado de Júpiter@n~
 Um machado dourado encontra-se deitado ao chão.~
 ~
-5 bdegjmnoqrt 0 0 0 an 0 0 0 0 0 0 0
-0 7 10 3
-27 10000000 0 40 0
+5 bdegq 0 0 0 an 0 0 0 lo 0 0 0
+10 12 4 3
+27 10000000 0 15 0
 E
 machado dourado jupiter~
 O machado parece ter sido feito do mais puro ouro, cujas lâminas de mithrill
@@ -212,17 +226,21 @@ e jóias cravejadas em sua extensão parecem brilhar magicamente à luz da tocha
 Se informe sobre a história deste machado com o comando HELP JUPITER.
 ~
 A
-18 8
+1 2
 A
-19 7
+5 2
+A
+18 10
+A
+19 10
 #1409
 anel cranaloc ouro esfericas pedras~
 @Yo anel de Cranaloc@n~
 Um belo anel de ouro, com duas pedras esféricas incrustradas, foi perdido aqui.~
 ~
-9 bdejq 0 0 0 ab 0 0 0 cdf 0 0 0
+9 bdejq 0 0 0 ab 0 0 0 cdf l 0 0
 4 0 0 0
-17 10000000 0 40 0
+17 10000000 0 15 0
 E
 anel cranaloc ouro esfericas pedras~
 O pesado anel de Cranaloc é feito de puro ouro.  Em seu centro duas pedras
@@ -236,21 +254,23 @@ ecoa em sua cabeça...
 Se informe sobre a história deste anel com o comando HELP CRANALOC.
 ~
 A
-12 -106
+18 3
+A
+19 4
+A
+12 50
 A
 13 50
 A
-19 2
-A
-18 2
+14 100
 #1410
 espada chave nabaqila cristal~
 @Ya Chave de Nabaqila@n~
 Você percebe que uma magnífica espada de cristal foi cuidadosamente depositada aqui.~
 ~
-5 bdegikqr 0 0 0 an 0 0 0 0 0 0 0
-0 8 8 3
-23 10000000 0 40 0
+5 bdegkq 0 0 0 an 0 0 0 gln 0 0 0
+10 12 4 3
+23 10000000 0 15 0
 E
 espada chave nabaqila cristal~
 Você contempla a bela espada que é a Chave de Nabaqila: seu cabo foi
@@ -264,21 +284,21 @@ afiado corte nunca se desgastou...
 Se informe sobre a história desta espada com o comando HELP NABAQILA.
 ~
 A
-2 1
+17 -10
 A
-17 -6
+2 2
 A
-18 9
+18 10
 A
-19 9
+19 10
 #1411
 rosa vermelha~
 @Ya rosa vermelha@n~
 Uma bela rosa vermelha como sangue, foi deixada aqui.~
 ~
-1 abdegnoq 0 0 0 ao 0 0 0 0 0 0 0
+1 abdegq 0 0 0 ao 0 0 0 nD 0 0 0
 0 0 -1 0
-5 10000000 0 40 0
+5 10000000 0 15 0
 E
 rosa vermelha espinhos prateados~
 Por trás da aparência frágil desta delicada rosa, está uma poderosa 
@@ -291,25 +311,25 @@ adocicado odor extremamente agradável.
 Se informe sobre a história desta rosa com o comando HELP ROSA.
 ~
 A
-2 2
-A
-3 3
-A
-18 3
-A
-4 3
-A
-6 2
-A
 17 -10
+A
+18 5
+A
+19 5
+A
+6 5
+A
+13 50
+A
+14 50
 #1412
 calice sagrado~
 @Yum cálice sagrado@n~
 O cálice sagrado está aqui, refletindo uma luz que quase cega você.~
 ~
-1 adegikmopqt 0 0 0 ao 0 0 0 0 0 0 0
+1 adegikq 0 0 0 ao 0 0 0 i 0 0 0
 0 0 -1 0
-7 10000000 0 40 0
+7 10000000 0 15 0
 E
 calice ouro imagens sagrado~
 Diversas imagens sagradas estão esculpidas neste pesado cálice de ouro maciço.
@@ -320,21 +340,25 @@ belamente esculpida.
 Se informe sobre a história deste cálice com o comando HELP CALICE.
 ~
 A
-2 3
+3 3
 A
-18 3
+4 3
 A
-19 4
+18 5
 A
-17 -5
+19 5
+A
+12 50
+A
+13 50
 #1413
 manto inverno neve~
 @YO Manto do Inverno@n~
 Um manto que parece ser de pura neve parece congelar tudo a seu redor.~
 ~
-9 adegq 0 0 0 ak 0 0 0 i 0 0 0
-14 0 0 0
-8 100000000 0 40 0
+9 adegq 0 0 0 ak 0 0 0 0 i 0 0
+15 0 0 0
+8 100000000 0 15 0
 E
 manto inverno neve~
 Você segura entre suas mãos um manto de suave textura, branco como a mais
@@ -348,23 +372,23 @@ Teriany.
 Se informe sobre a história deste mando com o comando HELP TERIANY.
 ~
 A
-3 1
+3 3
 A
-6 1
+4 3
 A
-18 2
+18 3
 A
-19 2
+19 3
 A
-2 1
+12 50
 #1414
 bracelete verao dourado~
 @YO Bracelete do Verão@n~
 Um estranho bracelete dourado emite intenso calor à sua frente.~
 ~
 9 adegq 0 0 0 am 0 0 0 s 0 0 0
-6 0 0 0
-8 100000000 0 40 0
+8 0 0 0
+8 100000000 0 15 0
 E
 bracelete verao dourado~
 O belo bracelete, feito de ouro puro, cobre não só o pulso como também
@@ -382,9 +406,9 @@ A
 A
 13 50
 A
-19 2
+19 4
 A
-18 1
+18 3
 #1415
 cinturao outono ouro cobre~
 @YO Cinturão do Outono@n~
@@ -392,7 +416,7 @@ Um belíssimo cinturão de ouro e cobre parece trazer uma ventania dentro de si.
 ~
 9 adegq 0 0 0 al 0 0 0 D 0 0 0
 14 0 0 0
-7 100000000 0 40 0
+7 100000000 0 15 0
 E
 cinturao outono ouro cobre~
 O ouro e cobre foram trabalhados de tal maneira que o cinturão parece ser
@@ -411,17 +435,19 @@ A
 A
 2 1
 A
-18 2
+18 3
 A
-19 1
+19 3
+A
+14 100
 #1416
 anel primavera verde delicado esverdeado~
 @YO Anel da Primavera@n~
 Um delicado anel emite estranha luz esverdeada para todos os lados.~
 ~
-9 adegq 0 0 0 ab 0 0 0 lB 0 0 0
+9 adegq 0 0 0 ab 0 0 0 lB e 0 0
 11 0 0 0
-7 100000000 0 40 0
+7 100000000 0 15 0
 E
 anel primavera verde delicado esverdeado~
 O delicado anel foi esculpido em um grande pedaço da mais nobre jade
@@ -436,9 +462,9 @@ Prata, Kadrictes.
 Se informe sobre a história deste mando com o comando HELP KADRICTES.
 ~
 A
-19 2
+19 4
 A
-18 2
+18 3
 A
 3 1
 A
@@ -452,9 +478,9 @@ Phanzyenon aro~
 @Yo Aro de Phanzyenon@n~
 Um aro feito com fios de metal puro e brilhante foi perdido aqui.~
 ~
-9 adgjnq 0 0 0 aq 0 0 0 gtv 0 0 0
+9 adgjq 0 0 0 aq 0 0 0 gtv g 0 0
 8 0 0 0
-10 100000000 1000000 45 0
+10 100000000 1000000 15 0
 E
 Phanzyenon aro~
 Ao olhar para este artefato você parece sentir que está sendo avaliado
@@ -470,13 +496,11 @@ desconhecido aos olhos mortais.
 Se informe sobre a história desse anel com o comando HELP PHANZYENON.
 ~
 A
-6 -3
+3 2
 A
-12 -56
+4 2
 A
-13 -56
-A
-18 4
+18 3
 A
 19 3
 #1418
@@ -484,9 +508,9 @@ pena dourada escritor~
 @YA Pena Dourada do Escritor@n~
 Uma delicada pena de um dourado avermelhado foi deixada aqui..~
 ~
-1 bdegkq 0 0 0 ao 0 0 0 gtv 0 0 0
+1 bdegkq 0 0 0 ao 0 0 0 n d 0 0
 0 0 -1 0
-6 10000000 0 40 0
+6 2000000 0 15 0
 E
 pena dourada escritor Zhar-Netitsa~
 Esta pequenina pena parece ser capaz de absorver raios de sol e refletí-los,
@@ -500,24 +524,22 @@ aquilo que era lhe era incompreensível até então.
 Se informe sobre a história desta pena com o comando HELP Zhar-Netitsa.
 ~
 A
-4 2
+2 3
 A
-3 2
+3 3
 A
-17 -5
+18 5
 A
-6 2
+19 5
 A
-19 3
-A
-18 2
+12 100
 #1419
 anel olho mente~
 @Yo Anel do Olho da Mente@n~
 Um Anel totalmente feito de prata, está aqui, procurando seu dono, o Grande
 Mestre dos Dragões.~
 ~
-9 bdeq 0 0 0 ab 0 0 0 0 0 0 0
+9 bdeq 0 0 0 ab 0 0 0 efl k 0 0
 5 0 0 0
 12 10000000 1000 15 0
 E
@@ -533,21 +555,23 @@ Se informe sobre a história deste anel com o comando HELP MENTE.
 A
 9 5
 A
-12 50
+3 3
 A
-13 50
+4 3
 A
-18 1
+18 4
 A
-19 3
+18 4
+A
+12 100
 #1420
 elmo poder~
 @Yo Elmo do Poder@n~
 Um pedaço de pedra em chamas está aqui, mas ele bem que se parece com um elmo,
 talves possa ser útil.~
 ~
-9 bdegq 0 0 0 ae 0 0 0 0 0 0 0
-15 0 0 0
+9 bdegq 0 0 0 ae 0 0 0 E 0 0 0
+20 0 0 0
 18 10000000 1000 15 0
 E
 elmo poder~
@@ -561,18 +585,22 @@ Se informe sobre a história deste elmo com o comando HELP PODER.
 A
 1 2
 A
-13 50
+2 2
 A
-18 2
+5 2
 A
-19 3
+18 5
+A
+19 5
+A
+13 100
 #1421
 pingente sabedoria~
 @Yo Pingente da Sabedoria@n~
 Um pingente muito bonito, foi esquecido aqui por um grande aventureiro, talvez
 seja melhor devolver a ele.~
 ~
-9 bdegq 0 0 0 ac 0 0 0 0 0 0 0
+9 bdegq 0 0 0 ac 0 0 0 0 ck 0 0
 6 0 0 0
 10 10000000 1000 15 0
 E
@@ -584,17 +612,21 @@ deserto.   Ele parece ser muito útil, já pertenceu ao Grande Dyne.
 Se informe sobre a história deste pingente com o comando HELP PINGENTE.
 ~
 A
+3 3
+A
 4 3
 A
-18 3
+12 100
 A
-19 3
+18 5
+A
+19 5
 #1422
 bracelete ossos~
 @Yo Bracelete de Ossos@n~
 Um Bracelete todo feito de ossos foi esquecido aqui.~
 ~
-9 bdejq 0 0 0 am 0 0 0 0 0 0 0
+9 bdejq 0 0 0 am 0 0 0 o 0 0 0
 5 0 0 0
 8 10000000 1000 15 0
 E
@@ -608,19 +640,19 @@ em sua vida.
 Se informe sobre a história deste bracelete com o comando HELP OSSOS.
 ~
 A
-4 -2
+5 3
 A
-12 35
+14 50
 A
-18 2
+18 3
 A
-19 3
+19 4
 #1423
 armadura polar~
 @Ya Armadura Polar@n~
 A Armadura Polar está aqui emitindo estranho brilho azulado.~
 ~
-9 adegq 0 0 0 ad 0 0 0 0 0 0 0
+9 adegq 0 0 0 ad 0 0 0 0 di 0 0
 16 0 0 0
 20 10000000 1000 15 0
 E
@@ -633,18 +665,18 @@ ao fogo.
 Se informe sobre a história desta armadura com o comando HELP POLAR.
 ~
 A
-18 2
+2 2
 A
-19 4
+19 5
 A
-24 -2
+14 50
 #1424
 escudo dourado dragoes~
 @Yo Escudo Dourado dos Dragões@n~
 Um Escudo feito de ouro puro, parecendo ser muito pesado, atrai a sua atenção.~
 ~
-9 adegq 0 0 0 aj 0 0 0 0 0 0 0
-10 0 0 0
+9 adegq 0 0 0 aj 0 0 0 0 f 0 0
+15 0 0 0
 15 10000000 1000 15 0
 E
 escudo dourado dragoes~
@@ -656,17 +688,19 @@ aumentar muito sua resistência.
 Se informe sobre a história deste escudo com o comando HELP DOURADO.
 ~
 A
-2 1
+2 3
 A
-18 3
+18 4
 A
-19 3
+19 4
+A
+14 100
 #1425
 esfera apocalipse~
 @Ya Esfera do Apocalipse@n~
 A Esfera Do Apocalipse foi esquecida por aqui.~
 ~
-1 bdfgq 0 0 0 ao 0 0 0 0 0 0 0
+1 bdfgjq 0 0 0 ao 0 0 0 0 b 0 0
 0 0 -1 0
 8 10000000 1000 15 0
 E
@@ -677,20 +711,22 @@ esfera apocalipse~
 Se informe sobre a história desta esfera com o comando HELP APOCALIPSE.
 ~
 A
-6 2
+1 3
 A
-12 65
+5 3
 A
 18 5
 A
-19 4
+19 5
+A
+13 100
 #1426
 espada Geandrias~
 @Ya Espada de Geandrias@n~
 A Grande Espada de Geandrias está aqui, atraindo-o de forma quase hipnótica.~
 ~
-5 adegiq 0 0 0 an 0 0 0 0 0 0 0
-0 7 7 1
+5 adegq 0 0 0 an 0 0 0 ei 0 0 0
+10 12 4 3
 20 10000000 1000 15 0
 E
 espada Geandrias~
@@ -702,11 +738,11 @@ todos os Dragões e no sangue de Geandrias.
 Se informe sobre a história desta espada com o comando HELP GEANDRIAS.
 ~
 A
-1 1
+1 2
 A
-3 1
+2 1
 A
-4 1
+5 1
 A
 18 10
 A

@@ -10,6 +10,10 @@ de forma majestosa e firme.  Ele olha para você e pisca.
 20 12 2 5d7+600 2d3+10
 550 13385
 9 9 1
+GenWimpy: 7
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2301
 malabarista mulher~
@@ -25,6 +29,10 @@ extremamente entusiasmadas.
 8 13 2 2d10+100 2d4+5
 400 4500
 9 9 2
+GenWimpy: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2302
 bardo musico músico rua~
@@ -39,6 +47,8 @@ nos espíritos de quem a ouve, tornando o dia mais bonito e mais ensolarado.
 17 13 0 5d8+600 2d5+9
 63 28000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2303
 menestrel errante~
@@ -52,8 +62,10 @@ fechados, envolvida por profunda emoção e sensibilidade.
 15 14 -1 4d9+500 2d5+8
 498 16000
 9 9 2
-GenWimpy: 1
-GenRoam: 33
+GenWimpy: 4
+GenRoam: 57
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2304
@@ -66,11 +78,13 @@ E então ele murmurando, conta para você sobre as qualidades impressionantes do
 tônicos que transformam um homem burro em um quase gênio e no outro, que faz
 com que a mulher dos seus sonhos se apaixone perdidamente por você. 
 ~
-2127956 0 0 0 0 0 0 0 600 E
+2127940 0 0 0 2099280 0 0 0 600 E
 21 11 1 7d9+1200 4d6+11
 3 40000
 9 9 1
 GenWimpy: 1
+GenTrade: 100
+GenQuest: 50
 E
 #2305
 Milissin historia história contadora~
@@ -86,6 +100,9 @@ contadora de histórias...talvez A MELHOR DE TODAS!
 22 11 -5 7d10+1400 5d6+12
 45000 43000
 9 9 2
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 E
 #2306
 macaco pequeno~
@@ -99,6 +116,11 @@ que o macado está usando.
 6 15 3 4d6+69 2d4+2
 50 1500
 9 9 1
+GenWimpy: 8
+GenRoam: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 5
 E
 #2307
 garoto menino criança pequeno~
@@ -113,9 +135,11 @@ conseguir deter!!
 11 10 1 6d3+130 2d6+2
 200 5200
 9 9 1
-GenWimpy: 3
-GenLoot: 1
-GenRoam: 54
+GenWimpy: 17
+GenLoot: 2
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #2308
@@ -131,7 +155,10 @@ pensar que talvez ela seja completamente cega.
 24 9 0 8d10+1400 2d3+14
 150 55000
 9 9 2
-GenWimpy: 2
+GenWimpy: 3
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 #2309
@@ -146,6 +173,8 @@ alguma coisa importante ali, pelo modo como estão arrumadas no chão.
 24 9 0 8d10+1400 2d3+14
 150 55000
 6 6 2
+GenTrade: 100
+GenQuest: 50
 E
 #2310
 dancarina dançarina cigana~
@@ -160,6 +189,8 @@ arte milenar de um povo e deve ser encarada de forma séria.
 26 9 4 7d10+670 3d8+2
 3000 50000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2311
 dançarino dancarino cigano~
@@ -173,6 +204,8 @@ mais interessante de ser assistida do que ele.
 34 2 -2 2d5+1150 5d8+2
 8000 70000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2312
 vendedor comida cigano homem~
@@ -186,6 +219,8 @@ houvesse outro lugar em Vitália que ele gostaria de estar.
 22 10 1 4d10+1400 3d6+12
 35 43000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2313
 Joaozinho garoto garotinho batedor carteira mao leve~
@@ -200,8 +235,10 @@ intenções.
 12 15 7 3d6+445 3d4+3
 150 40000
 9 9 1
-GenWimpy: 2
-GenRoam: 33
+GenWimpy: 3
+GenRoam: 63
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2314
@@ -216,6 +253,8 @@ exatamente muito boa - os atores, definitivamente, não são profissionais.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2315
 vendedora mulher cigana~
@@ -225,10 +264,12 @@ Uma vendedora anda pela feira, carregando consigo um cesto repleto de comida.
 Ela grita em plenos pulmões para todos que a escutem possam  vir e comprar
 suas delícias enquanto os estoques ainda duram.
 ~
-2355392 0 0 0 0 0 0 0 1000 E
+2355392 0 0 0 134219776 0 0 0 1000 E
 35 2 -5 6d12+1050 5d8+4
 5000 60000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2316
 mendigo andarilho vagabundo~
@@ -243,7 +284,10 @@ com sua aparentemente inofensiva rotina de caminhar.
 25 9 8 8d11+2000 4d4+15
 566 52000
 9 9 1
-GenWimpy: 14
+GenWimpy: 29
+GenEquip: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 11
 E
 #2317
@@ -259,6 +303,11 @@ estar tão concentrado em sua própria música.
 19 12 2 6d9+900 1d6+9
 176 34000
 6 6 1
+GenWimpy: 2
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #2318
 mulher trovadora flautista~
@@ -273,6 +322,11 @@ sua melodia.
 17 13 3 5d8+700 1d5+9
 266 28000
 6 6 2
+GenWimpy: 8
+GenEquip: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2319
 mulher gata atriz~
@@ -287,6 +341,8 @@ seu papel.
 35 2 -5 5d12+1050 5d8+9
 5000 60000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2320
 ator homem cogumelo~
@@ -301,6 +357,8 @@ e firmeza.
 35 2 -5 5d12+1050 5d8+7
 5000 60000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2321
 cigana mulher~
@@ -315,6 +373,8 @@ suas roupas no rio.
 35 2 -5 5d12+1050 5d8+7
 5000 60000
 6 6 2
+GenTrade: 100
+GenQuest: 50
 E
 #2322
 homem carroca forte~
@@ -332,6 +392,8 @@ SavingRod: 9
 SavingPetri: 9
 SavingBreath: 9
 SavingSpell: 9
+GenTrade: 100
+GenQuest: 50
 E
 #2323
 cigano ferreiro~
@@ -345,6 +407,10 @@ Os braços dele são muito musculosos bronzeados.
 29 3 -4 5d10+822 4d8+8
 1000 35000
 9 9 1
+GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #2324
 mímico mimico~
@@ -360,7 +426,11 @@ sofrimento deste aqui.
 18 9 3 3d5+400 2d6+5
 5000 12000
 9 9 1
-GenWimpy: 1
+GenWimpy: 10
+GenRoam: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #2325
 mulher cigana maquiadora~
@@ -375,6 +445,8 @@ e saltam da cadeira dela, rindo em total felicidade.
 26 8 0 9d10+2050 2d4+16
 550 43385
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2326
 homem artista~
@@ -388,6 +460,10 @@ consequência do seu esforço no palco.
 20 9 3 3d10+450 3d7+1
 700 40000
 6 6 1
+GenWimpy: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #2327
 mulher artista~
@@ -401,6 +477,10 @@ pensamentos.
 20 12 2 5d7+600 2d3+10
 550 43385
 9 9 2
+GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2328
 homem cidadao~
@@ -415,6 +495,8 @@ bem atentos.
 29 7 -3 10d10+2200 2d4+19
 376 74000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2329
 homem camponês~
@@ -427,6 +509,11 @@ Este homem rústico não faz nenhuma tentativa para esconder o fato que ele só 
 17 13 7 5d8+700 6d5+9
 107 68000
 9 9 1
+GenWimpy: 2
+GenRoam: 49
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2330
 mulher camponesa~
@@ -441,6 +528,8 @@ deles não estão nem aí para ela.
 25 2 -3 4d10+950 5d6+4
 5000 60000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2331
 elfo errante~
@@ -455,6 +544,8 @@ surpresa.
 20 9 3 3d10+450 3d7+4
 700 40000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2332
 robusta camponesa esposa~
@@ -468,6 +559,8 @@ Pobrezinha, com certeza ela não deve passear muito.
 35 2 -5 5d12+1050 5d8+2
 5000 60000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2333
 homem fazendeiro~
@@ -481,6 +574,8 @@ conheceu muito da boa vida.  Tudo isto parece ser demais para o coitado.
 29 3 -4 5d10+822 4d8+4
 1000 38000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2334
 esposa fazendeiro mulher~
@@ -493,6 +588,8 @@ Ela olha em todas as direções, tentando ver tudo ao mesmo tempo.
 29 3 -4 5d10+822 4d8+2
 1000 35000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2335
 anão anao saltitante~
@@ -507,6 +604,12 @@ chão e passando entre as pernas dos expectadores admirados.
 18 12 2 6d7+800 1d5+9
 450 31000
 9 9 1
+GenWimpy: 5
+GenEquip: 1
+GenRoam: 54
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #2336
 homem perna-de-pau~
@@ -520,6 +623,8 @@ hesita ou dá tropeções.
 17 13 3 5d8+700 2d5+9
 400 28000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2337
 vadio cigano~
@@ -535,7 +640,10 @@ parecem estar ocupados, trabalhando duro para ganhar uns cobres.
 30 6 -2 10d11+2250 2d5+20
 967 47000
 5 5 1
-GenWimpy: 21
+GenWimpy: 32
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 14
 E
 #2338
@@ -551,6 +659,8 @@ arranca aplaudos da platéia encantada.
 35 2 -5 5d12+1050 5d8+8
 5000 60000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2339
 atirador facas vermelho~
@@ -565,6 +675,8 @@ para os dois.
 35 2 -5 5d12+1050 5d8+8
 5000 60000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2340
 tratadora~
@@ -578,6 +690,8 @@ crianças que as acariciam.  E isso é exatamente isso que ela faz.
 24 9 10 8d11+1800 2d3+14
 787 69000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2341
 crianca pintura leao~
@@ -591,6 +705,12 @@ Ele sorri maliciosamente e faz: ' Roarrrrr. '
 10 15 6 3d7+200 1d4+7
 56 4400
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 71
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2342
 homem ator~
@@ -604,6 +724,8 @@ com tudo aquilo que ele está dizendo, preparando-se assim, psicologicamente.
 17 13 7 5d8+700 3d5+9
 460 28000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2343
 atriz concentrada~
@@ -617,6 +739,8 @@ na arte de cantar e dançar, munindo-se assim de auto-confiança.
 34 2 -2 2d5+1150 5d9+1
 8000 90000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2344
 crianca pintura gatinho gato~
@@ -630,6 +754,11 @@ mesmo tempo.
 26 9 4 7d10+670 3d8+2
 3000 60000
 9 9 2
+GenWimpy: 4
+GenRoam: 63
+GenTrade: 100
+GenQuest: 50
+GenFollow: 14
 E
 #2345
 crianca pintura caveira~
@@ -643,6 +772,8 @@ a sério.
 26 9 4 7d10+670 3d8+2
 3000 60000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2346
 vendedor cigano~
@@ -652,11 +783,13 @@ Um homem dentro de uma carroça, acena para que você veja suas mercadorias.
 Ele é gordo e ruivo, cheio de sardas, e usa um turbante sujo em sua cabeça.
 Ele veste uma encardida túnica que perdeu a cor, de tanto uso.      
 ~
-2158722 0 0 0 0 0 0 0 700 E
+2158722 0 0 0 134219776 0 0 0 700 E
 22 10 5 7d10+1400 5d6+12
 167 44000
 9 9 1
 GenWimpy: 1
+GenTrade: 100
+GenQuest: 50
 E
 #2347
 vendedora cigana mulher~
@@ -670,6 +803,8 @@ podem ser encontradas do outro lado do mundo.  Serão falsificações apenas?
 22 10 5 7d10+1400 4d6+12
 230 43000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2348
 bijouterias vendedora mulher~
@@ -680,10 +815,12 @@ Ela o incita a dar uma boa olhada em suas bonitas mercadorias, tudo a um preço
 que não pode ser desprezado e muito especial para você - mas é só hoje, 
 aproveite agora mesmo!      
 ~
-2158722 0 0 0 0 0 0 0 700 E
+2158722 0 0 0 2128 0 0 0 700 E
 22 10 5 7d10+1400 4d6+12
 657 43000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2349
 mestre marionete boneco~
@@ -698,6 +835,11 @@ homem com nariz de rato parece concentrado no próprio trabalho.
 24 9 0 8d10+1400 2d3+14
 150 25000
 9 9 1
+GenWimpy: 2
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2350
 cavalo robusto~
@@ -711,6 +853,10 @@ rabo que não para de balançar, como se estivesse profundamente entediado, ali.
 19 2 -1 3d6+200 3d3+6
 1000 35000
 9 9 1
+GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #2351
 cigano malicioso~
@@ -724,6 +870,11 @@ um tanto cínico demais. Ele parece ter tomado uns copos a mais...
 6 18 10 2d4+300 3d2+4
 200 18000
 9 9 1
+GenWimpy: 5
+GenLoot: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #2352
 bebedor cerveja~
@@ -736,6 +887,10 @@ Ele é um homem alto, que parece levar seu hábito de beber muito a sério.
 20 16 0 4d3+600 4d3+8
 7000 44000
 9 9 1
+GenWimpy: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2353
 fazendeiro cerveja~
@@ -750,6 +905,12 @@ a leve embora...
 20 16 0 4d3+600 4d3+8
 7000 45000
 9 9 1
+GenWimpy: 7
+GenLoot: 2
+GenRoam: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #2354
 cerveja inglesa bebado~
@@ -763,6 +924,12 @@ quase tudo. Você vai arriscar ficar ouvindo conversa mole?
 10 10 0 2d2+400 3d3+8
 6000 24600
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 63
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #2355
 colono expectador~
@@ -775,6 +942,8 @@ Ele não deve ter mais que quinze ou dezesseis, e tem sardas e tudo.
 14 14 4 4d8+400 2d4+8
 83 31000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2356
 expectador rapaz cidade~
@@ -788,6 +957,8 @@ sequer piscar.
 15 14 4 4d9+500 4d5+8
 56 26000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2357
 mulher balzaquiana~
@@ -803,6 +974,8 @@ jovens rapazes que se exibem no palco.
 16 13 3 5d7+600 2d5+8
 68 33000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2358
 expectador cigano~
@@ -815,6 +988,8 @@ Ele parece estar descansando no intervalo entre dois espetáculos.
 26 0 -4 1d50+500 4d6+10
 789 175000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2359
 jovem camponesa~
@@ -828,6 +1003,10 @@ Ela parece estar se apaixonando por um dos dançarinos ciganos.
 15 14 4 4d9+500 2d4+8
 672 36000
 9 9 2
+GenWimpy: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #2360
 cozinheira cigana~
@@ -841,6 +1020,8 @@ tirando nem um pouco o seu prazer por estar ali.
 22 10 0 7d12+1023 2d8+12
 654 43000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2361
 crianca pintura ansiosa inquieta~
@@ -855,6 +1036,8 @@ ante a expectativa.
 15 10 -1 3d6+240 3d5+8
 2100 29000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2362
 crianca olhos arregalados~
@@ -869,6 +1052,8 @@ se achasse que o mesmo faz parte da história que está sendo contada.
 12 15 7 3d6+145 3d4+7
 150 40000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2363
 pequena menina~
@@ -883,6 +1068,8 @@ como se fosse quebrar a qualquer minuto, por causa da tensão nervosa.
 10 15 7 3d9+305 2d5+8
 800 20000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #2364
 rapaz jovem~
@@ -896,6 +1083,8 @@ devaneios do enredo da história, que perdeu o contato com o real mundo.
 29 3 -4 5d10+822 4d8+7
 1000 35000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2398
 monstro inacabado criatura~
@@ -909,6 +1098,8 @@ algo que, de tão feio, parece não ter sido acabado.
 50 -15 1 10d12+1800 5d6+9
 0 5000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #2399
 duvois mordomo~
@@ -924,5 +1115,7 @@ retilínea demonstra toda a classe que um mordomo inglês precisa ter.
 99 -30 -10 30d100+3000 30d100+50
 1 120000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 $

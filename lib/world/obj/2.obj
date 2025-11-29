@@ -4,7 +4,7 @@ uma espada de gelo cristalina~
 Uma espada de gelo cristalina está aqui, irradiando frio.~
 ~
 5 h 0 0 0 an 0 0 0 0 0 0 0
-2 4 3 0
+2 4 3 3
 5 2400 12000 0 0
 A
 18 2
@@ -17,7 +17,7 @@ Uma armadura de placas de gelo está aqui.~
 0 0 0 0
 8 4800 24000 0 0
 A
-16 3
+20 -3
 A
 17 1
 #202
@@ -42,14 +42,12 @@ Um anel de proteção gélida brilha com luz azulada.~
 0 480 2400 0 0
 A
 13 2
-A
-15 1
 #204
 cajado inverno~
 um cajado do inverno eterno~
 Um cajado do inverno eterno está fincado no chão.~
 ~
-4 hj 0 0 0 an 0 0 0 0 0 0 0
+4 hj 0 0 0 ao 0 0 0 0 0 0 0
 100 1 1 8
 3 2400 12000 0 0
 A
@@ -62,7 +60,7 @@ uma poção de resistência ao frio~
 Uma pequena poção azulada está aqui.~
 ~
 10 h 0 0 0 a 0 0 0 0 0 0 0
-0 0 0 0
+20 54 -1 -1
 1 240 1200 0 0
 #206
 pergaminho congelamento~
@@ -130,8 +128,8 @@ escudo cristal protetor~
 um escudo de cristal protetor~
 Um escudo translúcido está aqui, refletindo a luz.~
 ~
-20 h 0 0 0 aj 0 0 0 0 0 0 0
-0 0 0 0
+9 h 0 0 0 aj 0 0 0 0 0 0 0
+1 0 0 0
 3 1800 9000 0 0
 A
 17 3

@@ -9,10 +9,10 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 100
-GenLoot: 6
-GenRoam: 87
-GenFollow: 6
+GenWimpy: 99
+GenLoot: 12
+GenRoam: 88
+GenFollow: 4
 E
 #20101
 enfermeira curandeira e conselheira~
@@ -38,8 +38,10 @@ Esse Guarda parece forte. Ele carrega uma clava e parece ser terrível.
 3 18 7 2d6+34 1d7+0
 500 800
 9 9 1
-GenWimpy: 11
-GenFollow: 9
+GenWimpy: 48
+GenLoot: 8
+GenBrave: 1
+GenFollow: 7
 E
 #20103
 medico Asilo~
@@ -54,9 +56,9 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 57
+GenWimpy: 91
 GenLoot: 1
-GenFollow: 12
+GenFollow: 11
 E
 #20104
 paciente mental~
@@ -71,9 +73,9 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 64
-GenRoam: 88
-GenFollow: 4
+GenWimpy: 100
+GenRoam: 87
+GenFollow: 2
 E
 #20105
 paciente mental~
@@ -87,7 +89,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 95
+GenWimpy: 99
+GenLoot: 7
 GenRoam: 85
 GenFollow: 2
 E
@@ -107,10 +110,10 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 93
-GenLoot: 1
-GenRoam: 20
-GenGroup: 22
+GenWimpy: 100
+GenLoot: 17
+GenRoam: 85
+GenGroup: 43
 GenFollow: 12
 E
 #20107
@@ -128,10 +131,11 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 63
-GenLoot: 3
-GenRoam: 89
-GenFollow: 9
+GenWimpy: 71
+GenLoot: 14
+GenEquip: 2
+GenRoam: 88
+GenFollow: 7
 E
 #20108
 assistente~
@@ -148,11 +152,11 @@ azuis, ela demonstra seu lado sério.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 2
-GenWimpy: 27
-GenLoot: 6
-GenEquip: 1
-GenRoam: 88
-GenGroup: 19
+GenWimpy: 50
+GenLoot: 30
+GenEquip: 4
+GenRoam: 89
+GenGroup: 75
 GenFollow: 9
 E
 #20109
@@ -168,10 +172,10 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 75
-GenLoot: 2
-GenRoam: 86
-GenFollow: 7
+GenWimpy: 91
+GenLoot: 15
+GenRoam: 72
+GenFollow: 1
 E
 #20110
 jovem mulher Sybila~
@@ -186,10 +190,10 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 83
-GenLoot: 4
-GenRoam: 88
-GenFollow: 7
+GenWimpy: 97
+GenLoot: 6
+GenRoam: 82
+GenFollow: 6
 E
 #20111
 jovem mulher Anouk~
@@ -204,12 +208,11 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 73
-GenLoot: 8
+GenWimpy: 91
+GenLoot: 26
 GenEquip: 1
-GenRoam: 87
-GenGroup: 5
-GenFollow: 6
+GenRoam: 88
+GenFollow: 4
 E
 #20112
 jovem mulher Tricia~
@@ -224,11 +227,12 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 75
-GenLoot: 3
-GenEquip: 1
-GenRoam: 84
-GenFollow: 8
+GenWimpy: 95
+GenLoot: 20
+GenEquip: 4
+GenRoam: 89
+GenGroup: 1
+GenFollow: 7
 E
 #20113
 jovem mulher Lorraine~
@@ -243,11 +247,12 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 80
-GenLoot: 4
-GenRoam: 88
-GenGroup: 2
-GenFollow: 8
+GenWimpy: 99
+GenLoot: 13
+GenEquip: 1
+GenRoam: 83
+GenGroup: 7
+GenFollow: 6
 E
 #20114
 jovem mulher Renee~
@@ -262,11 +267,11 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 93
-GenLoot: 12
-GenEquip: 2
+GenWimpy: 94
+GenLoot: 23
+GenEquip: 3
 GenRoam: 88
-GenFollow: 4
+GenFollow: 2
 E
 #20115
 jovem mulher Stela~
@@ -281,10 +286,11 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 78
-GenLoot: 4
-GenRoam: 89
-GenFollow: 10
+GenWimpy: 100
+GenLoot: 16
+GenEquip: 1
+GenRoam: 88
+GenFollow: 6
 E
 #20116
 jovem mulher dorothy~
@@ -301,10 +307,10 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 65
-GenLoot: 1
+GenWimpy: 97
+GenLoot: 3
 GenRoam: 88
-GenFollow: 8
+GenFollow: 3
 E
 #20117
 jovem mulher gabrielle~
@@ -320,9 +326,11 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 90
-GenRoam: 88
-GenFollow: 10
+GenWimpy: 96
+GenLoot: 3
+GenEquip: 1
+GenRoam: 89
+GenFollow: 7
 E
 #20118
 jovem mulher nancy~
@@ -337,10 +345,11 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 76
-GenLoot: 2
+GenWimpy: 99
+GenLoot: 9
+GenEquip: 1
 GenRoam: 88
-GenFollow: 6
+GenFollow: 4
 E
 #20119
 Spike~
@@ -356,7 +365,8 @@ algum dia alguém traga-lhe água.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 51
+GenWimpy: 100
+GenLoot: 2
 GenRoam: 87
 GenFollow: 4
 E
@@ -374,9 +384,11 @@ Apesar dos tratamentos aqui, ele permanece tão insano como sempre.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 15
-GenLoot: 4
-GenRoam: 88
+GenWimpy: 35
+GenLoot: 11
+GenEquip: 3
+GenRoam: 89
+GenGroup: 12
 GenFollow: 7
 E
 #20121
@@ -393,11 +405,11 @@ todos pudessem viver com relativa calma e paz de espírito.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 7
-GenLoot: 12
+GenWimpy: 13
+GenLoot: 22
 GenEquip: 1
-GenRoam: 81
-GenGroup: 15
+GenRoam: 87
+GenGroup: 19
 GenFollow: 6
 E
 #20122
@@ -414,11 +426,11 @@ dessa rainha tirana. Ela permanece aqui, recebendo o melhor tratamento possível
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 2
-GenWimpy: 3
-GenLoot: 4
-GenEquip: 2
-GenRoam: 60
-GenGroup: 17
+GenWimpy: 12
+GenLoot: 9
+GenEquip: 3
+GenRoam: 85
+GenGroup: 9
 GenFollow: 10
 E
 #20123
@@ -435,11 +447,11 @@ moscas atraídas pelo mel. Cuidado.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 3
-GenLoot: 3
+GenWimpy: 12
+GenLoot: 5
 GenEquip: 1
-GenRoam: 74
-GenGroup: 14
+GenRoam: 86
+GenGroup: 18
 GenFollow: 9
 E
 #20124
@@ -457,11 +469,11 @@ marionetes venha e lhe tire desse lugar morto.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 6
-GenLoot: 3
+GenWimpy: 13
+GenLoot: 7
 GenEquip: 1
-GenRoam: 77
-GenGroup: 20
+GenRoam: 85
+GenGroup: 17
 GenFollow: 9
 E
 #20125
@@ -477,9 +489,10 @@ constantemente fala algo sobre homens que viajaram no espaço.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 6
-GenLoot: 1
-GenRoam: 78
+GenWimpy: 5
+GenLoot: 7
+GenRoam: 88
+GenGroup: 15
 GenFollow: 6
 E
 #20126
@@ -497,11 +510,11 @@ sedado ser.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 6
-GenLoot: 9
-GenEquip: 5
-GenRoam: 78
-GenGroup: 50
+GenWimpy: 13
+GenLoot: 16
+GenEquip: 7
+GenRoam: 88
+GenGroup: 72
 GenFollow: 9
 E
 #20127
@@ -518,9 +531,11 @@ pessoas inocentes para prender em sua teia de maldade.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 3
-GenRoam: 68
-GenGroup: 3
+GenWimpy: 14
+GenLoot: 9
+GenEquip: 2
+GenRoam: 85
+GenGroup: 29
 GenFollow: 9
 E
 #20128
@@ -536,10 +551,11 @@ sobre os pais que nunca teve.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 6
-GenLoot: 4
-GenRoam: 82
-GenGroup: 5
+GenWimpy: 18
+GenLoot: 25
+GenEquip: 1
+GenRoam: 89
+GenGroup: 26
 GenFollow: 11
 E
 #20129
@@ -557,9 +573,9 @@ feitiço.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 3
-GenRoam: 59
-GenGroup: 6
+GenWimpy: 12
+GenLoot: 2
+GenRoam: 87
 GenFollow: 6
 E
 #20130
@@ -576,10 +592,10 @@ inimaginável que, de alguma forma, levará à liberdade eterna.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 9
+GenWimpy: 12
 GenLoot: 10
-GenRoam: 78
-GenGroup: 34
+GenRoam: 87
+GenGroup: 33
 GenFollow: 6
 E
 #20131
@@ -596,11 +612,11 @@ em solidariedade a ele.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 3
-GenLoot: 3
-GenRoam: 59
-GenGroup: 18
-GenFollow: 10
+GenWimpy: 8
+GenLoot: 5
+GenRoam: 87
+GenGroup: 16
+GenFollow: 9
 E
 #20132
 Galenzi~
@@ -615,10 +631,11 @@ ele parece ser apenas um pacato cidadão vitaliano.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 4
-GenEquip: 1
-GenRoam: 55
-GenGroup: 18
+GenWimpy: 13
+GenLoot: 2
+GenEquip: 2
+GenRoam: 87
+GenGroup: 57
 GenFollow: 8
 E
 #20133
@@ -635,9 +652,11 @@ mulher foi cortada. Preso e mandado de volta, ele espera por reabilitação.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 2
-GenRoam: 47
-GenGroup: 11
+GenWimpy: 8
+GenLoot: 6
+GenEquip: 1
+GenRoam: 87
+GenGroup: 40
 GenFollow: 6
 E
 #20134
@@ -656,11 +675,11 @@ possa garantir sua presença aqui.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 10
-GenLoot: 6
-GenEquip: 3
+GenWimpy: 15
+GenLoot: 17
+GenEquip: 4
 GenRoam: 88
-GenGroup: 31
+GenGroup: 38
 GenFollow: 11
 E
 #20135
@@ -677,11 +696,11 @@ ele pensa na sua próxima vítima.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 5
-GenLoot: 6
+GenWimpy: 12
+GenLoot: 9
 GenEquip: 2
-GenRoam: 83
-GenGroup: 40
+GenRoam: 88
+GenGroup: 60
 GenFollow: 7
 E
 #20160
@@ -695,8 +714,8 @@ O cervo parece estar com bastante fome, pois não para de mastigar.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 14
-GenLoot: 18
+GenWimpy: 46
+GenLoot: 68
 GenRoam: 87
 GenFollow: 4
 E

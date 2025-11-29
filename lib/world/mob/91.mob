@@ -13,8 +13,8 @@ BareHandAttack: 8
 Dex: 13
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenFollow: 13
+GenWimpy: 12
+GenFollow: 11
 E
 #9101
 galo insano~
@@ -48,7 +48,8 @@ BareHandAttack: 4
 Dex: 13
 Int: 13
 Wis: 13
-GenWimpy: 11
+GenWimpy: 8
+GenFollow: 13
 E
 #9103
 vaca louca~
@@ -83,7 +84,8 @@ BareHandAttack: 7
 Dex: 13
 Int: 13
 Wis: 13
-GenWimpy: 14
+GenWimpy: 17
+GenFollow: 13
 E
 #9105
 cavalo maluco~

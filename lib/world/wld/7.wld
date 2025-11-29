@@ -395,7 +395,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 32769 0 0 0 3
 D2
 ~
 ~
@@ -409,7 +409,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 32769 0 0 0 3
 D0
 ~
 ~
@@ -423,7 +423,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 32769 0 0 0 3
 D0
 ~
 ~
@@ -1040,7 +1040,7 @@ alcançam todo o corredor.
 D0
 ~
 porta passagem secreta~
-0 -1 709
+3 -1 709
 D1
 ~
 ~
@@ -1220,7 +1220,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 32777 0 0 0 0
+7 9 0 0 0 0
 D0
 ~
 ~

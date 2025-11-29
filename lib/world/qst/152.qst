@@ -1,31 +1,31 @@
-#15206
-Buscar uma navalha achatada~
-Buscar e trazer uma navalha achatada~
-a hieracoesfinge está procurando por uma navalha achatada. Se você encontrar este item, traga-o para mim ou diretamente para a hieracoesfinge para receber sua recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 5302 -1 -1 -1
-10 0 6 31 -1 5312 1
-500 1000 65535
-S
-#15262
+#15203
 Explorar local~
 Explorar um local específico~
-o caçador de aventuras precisa que alguém explore um local específico (A Encosta do Penhasco). Vá até lá para receber 273 moedas de ouro.~
+Alguém precisa que alguém explore um local específico (5702). Vá até lá para receber 191 moedas de ouro.~
 Excelente! Você chegou ao local que eu precisava explorar!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-1 3012 b 5720 -1 -1 -1
-12 54 7 32 -1 3015 1
-273 546 3055
+1 5404 b 5702 -1 -1 -1
+11 38 15 40 -1 5704 1
+191 382 65535
 S
-#15288
-Buscar uma pesada maça~
-Buscar e trazer uma pesada maça~
-um serviçal está procurando por uma pesada maça. Se você encontrar este item, traga-o para mim ou diretamente para um serviçal para receber 600 moedas de ouro, 1200 pontos de experiência e uma bolsa de ervas como recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 17332 -1 -1 -1
-10 0 15 40 -1 17330 1
-600 1200 12027
+#15226
+Buscar um aviso~
+Encontrar e trazer um aviso~
+Alguém perdeu um aviso e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 380 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 5404 b 6101 -1 -1 -1
+12 76 11 36 -1 6117 1
+380 760 65535
+S
+#15236
+Buscar a chave secreta~
+Encontrar e trazer a chave secreta~
+Alguém perdeu a chave secreta e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 256 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 5404 b 5701 -1 -1 -1
+12 51 15 40 -1 5704 1
+256 512 65535
 S
 $~

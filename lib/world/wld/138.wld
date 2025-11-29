@@ -1988,22 +1988,22 @@ D6
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13888
+1 13839 13888
 D7
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13889
+1 13839 13889
 D8
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13886
+1 13839 13886
 D9
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13887
+1 13839 13887
 S
 #13886
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
@@ -2102,7 +2102,7 @@ D8
 Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 ~
 grade diamante~
-0 13839 13885
+1 13839 13885
 S
 #13889
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
@@ -2186,8 +2186,8 @@ Você observa uma longa escadaria.
 ~
 0 -1 13883
 E
-janela~
-Você observa a exuberante beleza da ilha de Yo.
+quadros~
+Você observa algumas manchas coloridas emolduradas com pedras brilhantes.
 ~
 E
 colunas~
@@ -2195,8 +2195,8 @@ Você observa várias runas esculpidas na superfície das pedras que formam
 esta coluna.
 ~
 E
-quadros~
-Você observa algumas manchas coloridas emolduradas com pedras brilhantes.
+janela~
+Você observa a exuberante beleza da ilha de Yo.
 ~
 S
 #13892

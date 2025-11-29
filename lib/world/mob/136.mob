@@ -9,10 +9,9 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 65
-GenLoot: 11
+GenWimpy: 74
+GenLoot: 15
 GenRoam: 89
-GenGroup: 1
 GenFollow: 7
 E
 #13601
@@ -45,11 +44,10 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 55
-GenLoot: 11
+GenWimpy: 99
+GenLoot: 13
 GenRoam: 89
-GenGroup: 1
-GenFollow: 18
+GenFollow: 15
 E
 #13603
 cervo corca~
@@ -62,9 +60,9 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 57
+GenWimpy: 97
 GenLoot: 3
-GenRoam: 89
+GenRoam: 87
 GenFollow: 6
 E
 #13604
@@ -78,10 +76,10 @@ Um veado, um cervo fêmea...    Ah Chega!!
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 43
-GenLoot: 7
-GenRoam: 89
-GenFollow: 8
+GenWimpy: 73
+GenLoot: 12
+GenRoam: 88
+GenFollow: 6
 E
 #13605
 duende floresta~
@@ -94,10 +92,10 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 62
-GenLoot: 11
+GenWimpy: 100
+GenLoot: 22
 GenRoam: 89
-GenFollow: 16
+GenFollow: 14
 E
 #13606
 agil raposa~
@@ -110,8 +108,8 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 69
-GenLoot: 14
+GenWimpy: 81
+GenLoot: 18
 GenRoam: 89
 GenFollow: 7
 E
@@ -126,10 +124,10 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 0
-GenWimpy: 65
-GenLoot: 17
-GenRoam: 89
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 21
+GenRoam: 88
+GenFollow: 11
 E
 #13608
 girassol grande~
@@ -142,10 +140,10 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 61
-GenLoot: 5
+GenWimpy: 84
+GenLoot: 14
 GenRoam: 89
-GenFollow: 10
+GenFollow: 9
 E
 #13609
 arvore nirin odiosa~
@@ -158,10 +156,10 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 27
+GenWimpy: 49
 GenLoot: 1
-GenRoam: 86
-GenFollow: 9
+GenRoam: 89
+GenFollow: 8
 E
 #13610
 inseto pedra inseto-pedra~
@@ -174,9 +172,10 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 100
-GenLoot: 34
+GenWimpy: 98
+GenLoot: 72
+GenEquip: 3
 GenRoam: 89
-GenFollow: 10
+GenFollow: 1
 E
 $

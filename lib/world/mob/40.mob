@@ -9,10 +9,10 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 63
+GenWimpy: 93
 GenLoot: 99
-GenEquip: 1
-GenFollow: 8
+GenEquip: 2
+GenFollow: 4
 E
 T 3008
 #4001
@@ -26,8 +26,8 @@ Ela parece gelada.
 7 12 4 3d10+30 2d6+1
 0 2500
 9 9 0
-GenBrave: 1
-GenFollow: 7
+GenWimpy: 1
+GenFollow: 6
 E
 T 3008
 #4002
@@ -41,6 +41,8 @@ Ela parece completamente sem calor.
 3 20 6 2d10+20 1d6+0
 0 400
 9 9 0
+GenWimpy: 2
+GenFollow: 4
 E
 #4003
 kobold~
@@ -54,9 +56,9 @@ Ele é horrível.
 50 800
 9 9 0
 GenWimpy: 100
-GenLoot: 46
+GenLoot: 69
 GenRoam: 88
-GenFollow: 5
+GenFollow: 1
 E
 #4004
 orc~
@@ -70,9 +72,9 @@ Você percebe toda a maldade no seu olhar...
 100 900
 9 9 0
 GenWimpy: 100
-GenLoot: 34
-GenRoam: 87
-GenFollow: 5
+GenLoot: 57
+GenRoam: 89
+GenFollow: 1
 E
 #4005
 orc enorme~
@@ -85,10 +87,11 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 49
-GenLoot: 13
+GenWimpy: 88
+GenLoot: 19
+GenEquip: 1
 GenRoam: 89
-GenFollow: 11
+GenFollow: 9
 E
 #4050
 guerreiro~
@@ -115,9 +118,10 @@ Ele parece ter jeito com armas.
 200 2500
 9 9 1
 GenWimpy: 100
-GenLoot: 19
+GenLoot: 56
+GenEquip: 1
 GenRoam: 89
-GenFollow: 10
+GenFollow: 1
 E
 #4052
 hobgoblin~
@@ -131,9 +135,10 @@ O hobgoblin parece um tanto perdido.
 100 1500
 9 9 1
 GenWimpy: 100
-GenLoot: 4
-GenRoam: 89
-GenFollow: 7
+GenLoot: 24
+GenEquip: 1
+GenRoam: 88
+GenFollow: 5
 E
 #4053
 serpente cobra marrom~
@@ -146,6 +151,8 @@ A serpente parece ter segundas intenções.
 10 10 4 4d10+60 3d5+1
 0 12000
 9 9 0
+GenWimpy: 1
+GenFollow: 6
 E
 T 3008
 #4054
@@ -159,6 +166,8 @@ A centopéia não parece realmente perceber você.
 5 17 5 1d10+50 1d7+0
 0 1000
 9 9 0
+GenWimpy: 2
+GenFollow: 5
 E
 #4055
 hobgoblin~
@@ -171,11 +180,11 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 48
-GenLoot: 34
+GenWimpy: 67
+GenLoot: 42
 GenRoam: 89
-GenGroup: 18
-GenFollow: 10
+GenGroup: 2
+GenFollow: 9
 E
 #4056
 orc~
@@ -189,10 +198,10 @@ Bem, ele não parece ser muito amigável.
 150 4000
 9 9 1
 GenWimpy: 100
-GenLoot: 28
+GenLoot: 63
+GenEquip: 4
 GenRoam: 89
-GenGroup: 2
-GenFollow: 10
+GenFollow: 4
 E
 #4057
 leao montanha~
@@ -206,9 +215,9 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 0 900
 9 9 1
 GenWimpy: 100
-GenLoot: 14
-GenRoam: 86
-GenFollow: 3
+GenLoot: 23
+GenRoam: 85
+GenFollow: 6
 E
 #4058
 gigante colina~
@@ -222,11 +231,11 @@ logo chega a conclusão que ele não é muito inteligente.
 13 8 2 1d10+160 2d10+0
 1000 16500
 9 9 1
-GenWimpy: 16
-GenLoot: 32
-GenEquip: 1
+GenWimpy: 53
+GenLoot: 39
+GenEquip: 2
 GenRoam: 89
-GenGroup: 28
+GenGroup: 32
 GenFollow: 14
 E
 #4100
@@ -243,9 +252,9 @@ Parece que ele lida bem com magia.
 9 9 1
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 3
-GenRoam: 60
-GenFollow: 13
+GenEquip: 14
+GenRoam: 21
+GenFollow: 7
 E
 T 3009
 #4101
@@ -259,6 +268,8 @@ Bem, ele parece perigoso!
 12 8 1 2d10+100 2d7+1
 500 13000
 9 9 1
+GenWimpy: 1
+GenFollow: 7
 E
 #4102
 serpente cobra verde enorme~
@@ -271,6 +282,8 @@ Você vê uma criatura demoníaca.
 10 8 5 6d10+50 3d5+2
 0 9000
 9 9 1
+GenWimpy: 6
+GenFollow: 17
 E
 T 3008
 #4103
@@ -285,10 +298,11 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 93
-GenLoot: 13
+GenWimpy: 97
+GenLoot: 61
+GenEquip: 2
 GenRoam: 89
-GenFollow: 18
+GenFollow: 7
 E
 T 3007
 #4104
@@ -315,9 +329,10 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenLoot: 75
-GenRoam: 88
-GenFollow: 11
+GenLoot: 99
+GenEquip: 2
+GenRoam: 87
+GenFollow: 5
 E
 #4106
 guerreiro~
@@ -331,11 +346,11 @@ Ele não parece muito amigável...
 500 9000
 9 9 1
 GenWimpy: 100
-GenLoot: 90
-GenEquip: 7
+GenLoot: 99
+GenEquip: 43
 GenRoam: 89
-GenGroup: 1
-GenFollow: 11
+GenGroup: 12
+GenFollow: 4
 E
 #4107
 kobold~
@@ -349,8 +364,9 @@ Ele parece lodoso..
 20 3000
 9 9 1
 GenWimpy: 100
-GenLoot: 45
-GenRoam: 85
-GenFollow: 8
+GenLoot: 91
+GenEquip: 6
+GenRoam: 89
+GenFollow: 2
 E
 $

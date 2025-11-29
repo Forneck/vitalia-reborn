@@ -36,11 +36,13 @@ cabelos dourados.   Você se encanta ao ouvi-la dizer: "Olá..."  Seu traje
 elegante e discreto, revela o caráter firme e sólido de alguém, que mesmo
 estando em serviço, continua sereno e feliz.
 ~
-2156608 0 0 0 0 0 0 0 0 E
+3205184 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-9 9 1
+9 9 2
 Cha: 18
+GenQuest: 100
+GenAdventurer: 75
 E
 T 400
 T 401

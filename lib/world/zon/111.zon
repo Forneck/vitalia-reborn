@@ -1,10 +1,11 @@
 #111
 Vitalia~
 O Reino das Pedras~
-11100 11199 180 0 j 0 0 0 100 -1 3
-M 0 11105 1 11194 	(.um pedregulho estranho)
+11100 11199 240 1 j 0 0 0 100 -1 3
+R 0 11166 11120 -1 	(um bau escondido)
 O 0 11120 1 11166 	(um bau escondido)
-P 1 10721 20 11120 	(uma redoma de fogo)
+P 1 11121 5 11120 	(uma pequena argola cor de fogo)
+M 0 11105 1 11194 	(.um pedregulho estranho)
 M 0 11101 1 11176 	(o Guardião de Pedra)
 G 1 11105 1 -1 	(uma chave antiga e suja)
 E 1 11107 20 19 	(um escudo negro petrificado)

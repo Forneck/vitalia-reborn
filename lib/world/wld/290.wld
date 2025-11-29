@@ -1117,7 +1117,7 @@ D1
 D3
 ~
 porta~
-0 2 29071
+1 -1 29071
 S
 #29067
 A Câmara Privada de Gilzaan~
@@ -1209,14 +1209,14 @@ D4
 lareira~
 1 -1 29075
 E
+pedra pedras~
+Elas parecem que não foram bem assentadas, como se você pudesse ser capaz de movê-las. 
+~
+E
 lareira~
 É uma enorme peça de pedra, tomando toda a parede.  A maioria de suas
 pedras são regulares e cinzentas, mas há algumas mais escuras, parecem
 diferentes das outras.
-~
-E
-pedra pedras~
-Elas parecem que não foram bem assentadas, como se você pudesse ser capaz de movê-las. 
 ~
 S
 #29072

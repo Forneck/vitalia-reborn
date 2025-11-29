@@ -11,6 +11,9 @@ missionário.
 30 -2 -8 1d15+1200 9d3+3
 9436 108000
 9 9 1
+GenWimpy: 15
+GenLoot: 1
+GenFollow: 12
 E
 #9901
 tumular criatura ossos~
@@ -40,8 +43,10 @@ esfarrapados.
 35 -2 -10 3d8+1590 4d9+6
 5000 100000
 9 9 2
-GenWimpy: 8
-GenRoam: 88
+GenWimpy: 65
+GenLoot: 12
+GenRoam: 89
+GenGroup: 28
 GenFollow: 19
 E
 #9903
@@ -57,8 +62,12 @@ sobre as muitas e afiadas bocas dentadas...
 30 10 1 1d1+690 5d10+4
 7500 50000
 9 9 1
-GenWimpy: 3
-GenRoam: 10
+GenWimpy: 39
+GenLoot: 4
+GenEquip: 1
+GenRoam: 89
+GenGroup: 6
+GenFollow: 17
 E
 #9904
 bicho-papão bicho papao papão~
@@ -73,9 +82,10 @@ dos mais terríveis predadores.
 15 0 10 1d3+210 3d7+2
 666 22300
 9 9 1
-GenWimpy: 25
+GenWimpy: 76
+GenLoot: 7
 GenRoam: 89
-GenFollow: 12
+GenFollow: 10
 E
 #9905
 quebrado~
@@ -89,10 +99,11 @@ um pé humano, e várias outras partes de corpos incompatíveis.
 20 -1 2 1d1+666 2d9+4
 2500 39000
 9 9 1
-GenWimpy: 21
-GenRoam: 85
-GenGroup: 3
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 6
+GenRoam: 89
+GenGroup: 11
+GenFollow: 12
 E
 #9906
 capanga~
@@ -144,8 +155,8 @@ de carne podre.
 38 -10 -20 9d6+5050 11d4+20
 33000 250000
 9 9 1
-GenWimpy: 9
-GenRoam: 63
+GenWimpy: 20
+GenRoam: 88
 GenFollow: 14
 E
 #9910
@@ -174,10 +185,11 @@ branca, mas ele parece ainda bastante vigoroso.
 10 0 0 25d8+100 4d3+3
 6662 6950
 9 9 1
-GenWimpy: 84
+GenWimpy: 99
 GenLoot: 1
-GenRoam: 78
-GenFollow: 18
+GenRoam: 80
+GenBrave: 1
+GenFollow: 16
 E
 #9912
 elfo~
@@ -192,6 +204,9 @@ flexível e ágil.
 30 -5 -10 250d1+1000 10d3+8
 1500 100000
 9 9 1
+GenWimpy: 36
+GenRoam: 87
+GenFollow: 14
 E
 #9913
 efreeti espirito~
@@ -206,9 +221,9 @@ muitas cores.
 100 -40 -40 5d10+23900 11d11+70
 79000 4750000
 9 9 1
-GenWimpy: 12
-GenLoot: 1
-GenBrave: 2
+GenWimpy: 29
+GenLoot: 4
+GenBrave: 4
 GenFollow: 14
 E
 #9914
@@ -223,6 +238,8 @@ realmente feia.  Mas suponho que você queira saber o quão feia.
 50 0 -10 6d66+3666 4d10+22
 30250 389000
 9 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #9915
 estúpido orc~
@@ -235,9 +252,9 @@ Ele é simplesmente horrível...
 10 5 10 25d3+5 2d6+1
 250 1300
 9 9 1
-GenWimpy: 6
-GenRoam: 78
-GenGroup: 5
+GenWimpy: 19
+GenLoot: 1
+GenRoam: 89
 GenFollow: 7
 E
 #9916
@@ -251,8 +268,9 @@ Há um garçom parado aqui, aguardando por suas ordens.
 30 0 -10 1d1+5650 5d5+5
 15000 125000
 9 9 1
-GenWimpy: 16
-GenFollow: 13
+GenWimpy: 30
+GenRoam: 32
+GenFollow: 12
 E
 #9917
 cidadão~
@@ -266,9 +284,10 @@ maravilhosa cidade.
 10 3 9 1d1+150 6d2+3
 2200 6000
 9 9 1
-GenWimpy: 14
+GenWimpy: 60
+GenLoot: 5
 GenRoam: 89
-GenFollow: 18
+GenFollow: 15
 E
 #9918
 senhora velha vendedora~
@@ -282,6 +301,9 @@ carrega uma caixa de papel crepe em forma de coração.
 10 -5 10 1d1+450 2d10+2
 5000 7000
 9 9 2
+GenWimpy: 23
+GenRoam: 89
+GenFollow: 14
 E
 #9923
 mestre espadachim homem~
@@ -297,7 +319,7 @@ o ar assim que ele o ataca.
 100 -30 -40 1d8+20000 14d3+65
 100000 3250000
 9 9 1
-GenWimpy: 60
+GenWimpy: 5
 GenFollow: 14
 E
 #9931
@@ -351,6 +373,8 @@ de altura, e parece ser de argila.
 5 7 1 1d1+175 2d5+5
 200 5900
 9 9 2
+GenWimpy: 2
+GenFollow: 5
 E
 #9971
 mulher~
@@ -363,6 +387,8 @@ Ela encara você, e pisca o olho.
 20 0 0 1d1+375 5d3+5
 5300 9000
 6 6 2
+GenWimpy: 4
+GenFollow: 17
 E
 #9972
 lester~
@@ -400,6 +426,8 @@ Você não vê nada de especial.
 1 1 0 1d1+10 1d1+80
 250 250
 6 5 1
+GenWimpy: 9
+GenFollow: 9
 E
 #9985
 maedar~
@@ -412,9 +440,10 @@ Você vê um musculoso e careca humanóide, vestido em uma túnica.
 20 0 0 30d5+20 4d4+7
 943 10900
 9 9 1
-GenWimpy: 4
-GenRoam: 81
-GenFollow: 17
+GenWimpy: 34
+GenLoot: 6
+GenRoam: 89
+GenFollow: 13
 E
 #9986
 maedar mestre~
@@ -427,6 +456,8 @@ Você vê um musculoso e careca humanóide, vestido em uma túnica.
 25 0 0 8d6+375 3d6+10
 2500 30950
 9 9 1
+GenWimpy: 8
+GenFollow: 19
 E
 #9987
 elfo roger~
@@ -441,9 +472,10 @@ tentando erradica-los da face do planeta.
 30 -3 0 5d5+625 4d4+10
 25000 138000
 9 9 1
-GenWimpy: 4
-GenRoam: 63
-GenFollow: 14
+GenWimpy: 62
+GenRoam: 89
+GenGroup: 3
+GenFollow: 13
 E
 #9989
 dragao dragonet~
@@ -457,8 +489,9 @@ de um chihuahua.
 30 0 0 2d4+100 3d4+3
 350 5200
 9 9 1
-GenWimpy: 6
-GenRoam: 83
+GenWimpy: 35
+GenLoot: 1
+GenRoam: 89
 GenFollow: 11
 E
 #9994

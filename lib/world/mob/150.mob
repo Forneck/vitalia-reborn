@@ -11,7 +11,10 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 2
+GenWimpy: 10
+GenLoot: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 4
 E
 #15001
@@ -28,9 +31,11 @@ tem uma reputação tanto como sábio, como soberano.
 52 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
-GenWimpy: 37
-GenLoot: 4
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 33
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #15002
 fantasma horrivel~
@@ -43,6 +48,10 @@ O fantasma é quase transparente e parece muito ASSUSTADOR!
 15 6 -6 9d6+150 2d8+2
 3000 22000
 9 9 0
+GenWimpy: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #15003
 jim guarda real~
@@ -57,10 +66,18 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 9
-GenRoam: 87
-GenGroup: 30
+GenWimpy: 15
+GenLoot: 56
+GenEquip: 50
+GenRoam: 88
+GenGroup: 58
+GenBrave: 48
+GenUse: 50
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 GenFollow: 4
+GenHealing: 50
 E
 #15004
 brian guarda real~
@@ -75,9 +92,11 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 2
-GenLoot: 15
-GenFollow: 6
+GenWimpy: 8
+GenLoot: 25
+GenTrade: 100
+GenQuest: 50
+GenFollow: 5
 E
 #15005
 mick guarda real~
@@ -92,9 +111,11 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 3
-GenLoot: 7
-GenFollow: 5
+GenWimpy: 7
+GenLoot: 22
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #15006
 matt guarda real~
@@ -109,10 +130,12 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 5
-GenLoot: 1
-GenRoam: 65
-GenGroup: 15
+GenWimpy: 30
+GenLoot: 5
+GenRoam: 88
+GenGroup: 65
+GenTrade: 100
+GenQuest: 50
 GenFollow: 6
 E
 #15007
@@ -129,9 +152,11 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 6 6 1
-GenWimpy: 8
-GenLoot: 5
-GenGroup: 39
+GenWimpy: 20
+GenLoot: 21
+GenGroup: 93
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #15008
@@ -148,10 +173,12 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 2
-GenWimpy: 19
-GenLoot: 16
+GenWimpy: 54
+GenLoot: 60
 GenRoam: 89
-GenGroup: 69
+GenGroup: 94
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 #15009
@@ -168,9 +195,12 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 26
-GenLoot: 29
+GenWimpy: 57
+GenLoot: 41
 GenRoam: 89
+GenGroup: 93
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #15010
@@ -186,11 +216,14 @@ suas cicatrizes com orgulho. Este cara parece duro...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 1
-GenWimpy: 13
-GenLoot: 1
+GenWimpy: 81
+GenLoot: 19
+GenEquip: 1
 GenRoam: 89
-GenGroup: 3
-GenFollow: 11
+GenGroup: 79
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #15011
 jeanette guarda real~
@@ -205,10 +238,12 @@ suas cicatrizes com orgulho. Esta garota poderia desagradável se quisesse...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 2
-GenWimpy: 25
-GenLoot: 7
+GenWimpy: 76
+GenLoot: 20
 GenRoam: 89
-GenGroup: 50
+GenGroup: 91
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #15012
@@ -228,12 +263,14 @@ voltar a si ao ver ele.
 19 1 -1 3d6+240 2d6+8
 1000 35000
 9 9 1
-GenWimpy: 24
-GenLoot: 15
+GenWimpy: 61
+GenLoot: 29
 GenEquip: 2
 GenRoam: 89
-GenGroup: 84
-GenFollow: 14
+GenGroup: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #15013
 mestre treinador~
@@ -247,9 +284,11 @@ de praticamente qualquer tipo de arma inventada pelo homem.
 18 1 1 2d6+220 1d8+8
 1000 30000
 9 9 1
-GenWimpy: 6
-GenLoot: 50
-GenFollow: 13
+GenWimpy: 34
+GenLoot: 99
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #15014
 mensageiro real~
@@ -263,10 +302,13 @@ Este é um jovem de constituição poderosa, e sua função principal
 18 1 -1 3d6+220 1d8+9
 500 30000
 9 9 1
-GenWimpy: 18
-GenLoot: 9
+GenWimpy: 78
+GenLoot: 29
+GenEquip: 1
 GenRoam: 89
-GenGroup: 77
+GenGroup: 93
+GenTrade: 100
+GenQuest: 50
 GenFollow: 13
 E
 #15015
@@ -284,6 +326,10 @@ como se o fosse.
 13 8 2 3d6+155 2d8+2
 0 18000
 6 6 1
+GenWimpy: 14
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #15016
 mordomo james~
@@ -297,10 +343,13 @@ uma respeitável barriga.
 8 13 3 1d6+100 1d9+2
 200 3750
 9 9 1
-GenWimpy: 10
-GenLoot: 7
+GenWimpy: 41
+GenLoot: 10
 GenRoam: 89
-GenFollow: 9
+GenGroup: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #15017
 mulher limpeza~
@@ -313,11 +362,13 @@ Apesar dela ter um trabalho servil, ela parece gostar dele.
 1 20 9 4d6+1 1d5+0
 10 100
 9 9 2
-GenWimpy: 21
-GenLoot: 12
+GenWimpy: 77
+GenLoot: 17
 GenRoam: 87
-GenGroup: 21
-GenFollow: 8
+GenGroup: 76
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #15018
 barata~
@@ -330,6 +381,10 @@ Muito larga mesmo, e eles dizem que baratas são difíceis de matar...
 4 20 3 2d6+120 1d3+0
 5 750
 9 9 0
+GenWimpy: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #15019
 astrologo~
@@ -344,6 +399,8 @@ orientando o Destino e que a astrologia é capaz de ver o futuro.
 108 0 -2 1d1+30000 3d8+30
 2000 80000
 6 6 1
+GenTrade: 100
+GenQuest: 50
 E
 #15020
 tim guarda guarda-costas~
@@ -358,9 +415,12 @@ pelo Rei, se necessário.
 17 4 1 3d6+205 1d8+8
 1000 28000
 9 9 1
-GenWimpy: 7
-GenLoot: 1
-GenFollow: 11
+GenWimpy: 100
+GenLoot: 5
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #15021
 tom guarda guarda-costas~
@@ -375,10 +435,12 @@ pelo Rei, se necessário.
 17 4 1 3d6+205 1d8+8
 1000 28000
 9 9 1
-GenWimpy: 7
-GenLoot: 2
+GenWimpy: 100
+GenLoot: 7
 GenEquip: 1
-GenFollow: 12
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #15022
 chefe cozinheiro~
@@ -392,6 +454,8 @@ Ele é, em outras palavras, um tanto gordo.
 108 4 -1 2d6+1283 4d4+14
 1000 40000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #15023
 cozinheiro~
@@ -404,7 +468,10 @@ Um jovem cozinheiro, ansioso em fazer o que o Cozinheiro-chefe ordena.
 4 17 6 2d7+46 1d8+0
 50 600
 9 9 1
-GenWimpy: 1
+GenWimpy: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #15024
 david homem guarda~
@@ -418,9 +485,11 @@ gentil com quem tentasse de passar por ele.
 19 2 0 2d6+235 1d7+10
 2000 35000
 9 9 1
-GenWimpy: 7
-GenLoot: 1
-GenFollow: 13
+GenWimpy: 87
+GenLoot: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #15025
 dick homem guarda~
@@ -434,7 +503,9 @@ gentil com quem tentasse de passar por ele.
 19 2 0 2d6+235 1d7+10
 2000 35000
 9 9 1
-GenWimpy: 7
+GenWimpy: 36
+GenTrade: 100
+GenQuest: 50
 GenFollow: 13
 E
 #15026
@@ -450,10 +521,12 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
-GenWimpy: 18
-GenRoam: 47
-GenGroup: 6
-GenFollow: 11
+GenWimpy: 60
+GenRoam: 29
+GenGroup: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #15027
 michael guarda real~
@@ -468,7 +541,9 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
-GenWimpy: 13
+GenWimpy: 53
+GenTrade: 100
+GenQuest: 50
 GenFollow: 11
 E
 #15028
@@ -485,8 +560,12 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 8
-GenRoam: 85
+GenWimpy: 46
+GenLoot: 2
+GenRoam: 89
+GenGroup: 77
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #15029
@@ -502,10 +581,12 @@ suas cicatrizes com orgulho. Este cara parece duro...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 1
-GenWimpy: 23
-GenLoot: 2
+GenWimpy: 65
+GenLoot: 19
 GenRoam: 89
-GenGroup: 52
+GenGroup: 86
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #15030
@@ -522,10 +603,11 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 98
-GenLoot: 10
-GenRoam: 30
-GenFollow: 10
+GenWimpy: 93
+GenLoot: 40
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #15031
 esqueleto aldeao~
@@ -542,8 +624,10 @@ desejo de vingança.
 0 8000
 9 9 0
 GenWimpy: 100
-GenLoot: 7
-GenFollow: 14
+GenLoot: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #15032
 poço demonio~
@@ -558,10 +642,12 @@ Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 33 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
-GenWimpy: 6
-GenLoot: 96
-GenEquip: 4
-GenRoam: 8
-GenFollow: 14
+GenWimpy: 20
+GenLoot: 99
+GenEquip: 5
+GenRoam: 23
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 $

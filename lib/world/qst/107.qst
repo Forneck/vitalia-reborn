@@ -1,0 +1,21 @@
+#10755
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (O Calabouço). Vá até lá para receber 303 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 5404 b 1676 -1 -1 -1
+12 60 18 43 -1 1601 1
+303 606 65535
+S
+#10785
+Limpar área~
+Eliminar criaturas hostis~
+um guarda gnomo precisa que alguém limpe uma área específica (A Gruta Mais Escura) de todas as criaturas hostis. Elimine todos os inimigos da área para receber 742 moedas de ouro.~
+Perfeito! A área está limpa e segura agora!~
+Compreendo. É uma tarefa perigosa mesmo.~
+6 3012 b 1624 -1 -1 -1
+14 185 30 56 -1 1604 1
+742 1855 65535
+S
+$~

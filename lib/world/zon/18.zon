@@ -2,17 +2,18 @@
 Vitalia~
 Os Campos de Midgaard~
 1800 1899 20 2 cdj 0 0 0 -1 -1 0
-R 0 1802 1803 -1 	(.uma luz azul brilhando forte)
-O 1 1803 1 1802 	(.uma luz azul brilhando forte)
+D 0 1810 1 2 	(A Sala)
+D 0 1810 0 1 	(A Sala)
+D 0 1810 2 1 	(A Sala)
+M 0 2399 1 1810 	(o mordomo Duvois)
+R 0 1802 1803 -1 	(uma luz azul brilhando forte)
+O 1 1803 1 1802 	(uma luz azul brilhando forte)
 M 0 1899 1 1899 	(Morte)
 E 1 1899 1 20 	(a Foice da Morte)
 D 0 1890 2 1 	(A Entrada do Reino da Morte)
 D 0 1890 2 2 	(A Entrada do Reino da Morte)
 D 0 1806 3 2 	(Em Frente a uma Pequena Casa)
-D 0 1810 1 2 	(A Sala)
-D 0 1810 0 1 	(A Sala)
 D 0 1812 2 1 	(O Banheiro)
-D 0 1810 2 1 	(A Sala)
 D 0 1813 0 1 	(O Quarto)
 D 0 1811 3 2 	(A Cozinha)
 D 0 1809 1 2 	(Atrás da Pequena Casa)

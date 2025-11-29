@@ -9,9 +9,10 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 37
-GenLoot: 20
-GenFollow: 9
+GenWimpy: 100
+GenLoot: 43
+GenEquip: 4
+GenFollow: 6
 E
 #17002
 ciclope~
@@ -26,9 +27,9 @@ Ele parece estar atrás de um almoço..
 9 9 1
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 3
-GenRoam: 59
-GenFollow: 13
+GenEquip: 11
+GenRoam: 78
+GenFollow: 12
 E
 #17003
 elemental~
@@ -42,8 +43,8 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 1100 6000
 9 9 1
 GenWimpy: 100
-GenLoot: 25
-GenFollow: 17
+GenLoot: 58
+GenFollow: 12
 E
 #17004
 elemental guardiao~
@@ -57,7 +58,8 @@ a todos?
 20 -4 -5 1d5+650 8d4+17
 3000 50000
 9 9 1
-GenWimpy: 3
+GenWimpy: 7
+GenFollow: 13
 E
 #17005
 pequeno elemental~
@@ -71,7 +73,8 @@ An undefined string.
 1000 6000
 9 9 1
 GenWimpy: 100
-GenLoot: 27
+GenLoot: 56
+GenEquip: 1
 GenRoam: 89
 GenFollow: 10
 E
@@ -86,10 +89,12 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 91
-GenLoot: 32
-GenRoam: 89
-GenFollow: 11
+GenWimpy: 97
+GenLoot: 76
+GenEquip: 1
+GenRoam: 82
+GenTrade: 6
+GenFollow: 5
 E
 #17007
 elemental grande~
@@ -102,12 +107,11 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 100
-GenLoot: 48
-GenEquip: 1
-GenRoam: 87
-GenGroup: 2
-GenFollow: 14
+GenWimpy: 99
+GenLoot: 99
+GenEquip: 6
+GenRoam: 86
+GenFollow: 12
 E
 #17008
 lider elemental terra~
@@ -122,6 +126,8 @@ e aonde termina a parede.
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 9 9 1
+GenWimpy: 4
+GenFollow: 14
 E
 #17009
 lider elemental fogo~
@@ -134,6 +140,8 @@ Assim que você olha para ele, ele se mistura ao fogo de seu trono.
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 9 9 1
+GenWimpy: 7
+GenFollow: 14
 E
 #17010
 lider elemental ar~
@@ -146,6 +154,8 @@ Você parece estar olhando para os céus.
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #17011
 lider elemental trovao~
@@ -172,6 +182,8 @@ em sua direção.
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #17014
 poca agua elemental~
@@ -185,9 +197,10 @@ Ela percorre o chão em sua direção.
 980 5000
 9 9 2
 GenWimpy: 100
-GenLoot: 33
+GenLoot: 97
+GenEquip: 4
 GenRoam: 89
-GenFollow: 12
+GenFollow: 4
 E
 #17015
 chama elemental fogo~
@@ -200,11 +213,11 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 100
-GenLoot: 59
-GenEquip: 1
-GenRoam: 79
-GenFollow: 11
+GenWimpy: 97
+GenLoot: 99
+GenEquip: 2
+GenRoam: 72
+GenFollow: 2
 E
 #17016
 elemental neve humanoide cristal~
@@ -217,9 +230,9 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 74
-GenLoot: 23
-GenFollow: 4
+GenWimpy: 100
+GenLoot: 30
+GenFollow: 3
 E
 #17017
 elemental rocha humanoide~
@@ -245,9 +258,9 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 92
-GenLoot: 18
-GenFollow: 12
+GenWimpy: 98
+GenLoot: 44
+GenFollow: 3
 E
 #17019
 elemental acido liquido humanoide~
@@ -260,8 +273,8 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 99
-GenLoot: 5
+GenWimpy: 100
+GenLoot: 11
 GenFollow: 4
 E
 #17020
@@ -277,10 +290,10 @@ que suas calças sequem rápido.
 1000 4000
 9 9 2
 GenWimpy: 100
-GenLoot: 54
+GenLoot: 96
 GenEquip: 1
-GenRoam: 87
-GenFollow: 12
+GenRoam: 60
+GenFollow: 6
 E
 #17021
 lama monstro elemental~
@@ -293,11 +306,10 @@ O que há de interessante nisso?  Terra, água... garras??
 7 12 -2 1d5+250 3d5+6
 1000 4000
 9 9 1
-GenWimpy: 62
-GenLoot: 38
+GenWimpy: 93
+GenLoot: 72
 GenRoam: 89
-GenGroup: 7
-GenFollow: 15
+GenFollow: 6
 E
 #17022
 tufao elemental~
@@ -310,11 +322,10 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 70
-GenLoot: 8
+GenWimpy: 100
+GenLoot: 38
 GenRoam: 89
-GenGroup: 1
-GenFollow: 12
+GenFollow: 8
 E
 #17023
 particula elemental coisa~
@@ -327,11 +338,10 @@ Uma intrigante manifestação de energia.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 40
-GenLoot: 9
+GenWimpy: 96
+GenLoot: 21
 GenRoam: 89
-GenGroup: 2
-GenFollow: 11
+GenFollow: 8
 E
 #17024
 nuvem poeira elemental~
@@ -344,8 +354,9 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 49
-GenLoot: 4
+GenWimpy: 85
+GenLoot: 15
+GenEquip: 1
 GenRoam: 89
 GenFollow: 11
 E
@@ -361,9 +372,9 @@ An undefined string.
 450 1000
 9 9 1
 GenWimpy: 100
-GenLoot: 36
-GenRoam: 88
-GenFollow: 9
+GenLoot: 65
+GenRoam: 89
+GenFollow: 1
 E
 #17026
 chama elemental azul humanoide~
@@ -377,13 +388,13 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 90
-GenLoot: 67
-GenEquip: 1
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 3
 GenRoam: 87
-GenGroup: 33
-GenQuest: 4
-GenFollow: 14
+GenGroup: 41
+GenQuest: 6
+GenFollow: 10
 E
 #17027
 magneto elemental humanoide~
@@ -396,12 +407,13 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 90
-GenLoot: 97
-GenEquip: 3
-GenRoam: 89
-GenGroup: 31
-GenFollow: 14
+GenWimpy: 93
+GenLoot: 99
+GenEquip: 10
+GenRoam: 86
+GenGroup: 73
+GenQuest: 5
+GenFollow: 12
 E
 #17028
 neve bandido~
@@ -415,12 +427,13 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 95
-GenLoot: 92
-GenEquip: 1
-GenRoam: 87
-GenGroup: 89
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 7
+GenRoam: 81
+GenGroup: 77
+GenQuest: 4
+GenFollow: 12
 E
 #17029
 rochas monstro~
@@ -435,11 +448,12 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 3000 30000
 9 9 1
 GenWimpy: 100
-GenLoot: 39
-GenRoam: 82
-GenGroup: 4
-GenQuest: 1
-GenFollow: 13
+GenLoot: 99
+GenEquip: 2
+GenRoam: 87
+GenGroup: 62
+GenQuest: 4
+GenFollow: 9
 E
 #17030
 furacao~
@@ -453,13 +467,13 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 100
-GenLoot: 98
-GenEquip: 1
-GenRoam: 77
-GenGroup: 67
-GenQuest: 1
-GenFollow: 13
+GenWimpy: 99
+GenLoot: 99
+GenEquip: 3
+GenRoam: 84
+GenGroup: 39
+GenQuest: 8
+GenFollow: 12
 E
 #17031
 anciao mago elemental~
@@ -474,7 +488,9 @@ a Pedra da Rendição. Afaste-se.. enquanto ainda possui sua alma..."
 25 -4 -7 1d5+700 6d4+18
 6000 40000
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
+GenLoot: 38
+GenFollow: 14
 E
 #17032
 guerreiro alvorecer~
@@ -488,6 +504,9 @@ Você sente uma sensação de perigo passar por você como um trovão.
 18 -4 -9 1d5+910 5d5+19
 4000 45000
 9 9 1
+GenWimpy: 14
+GenLoot: 10
+GenFollow: 13
 E
 #17033
 ilusionista homem~
@@ -503,11 +522,11 @@ enquanto cria outra bola negra nas mãos.
 20 -4 -9 2d10+900 10d4+19
 9000 45000
 9 9 1
-GenWimpy: 8
-GenLoot: 18
+GenWimpy: 17
+GenLoot: 19
 GenEquip: 1
 GenRoam: 89
-GenGroup: 35
+GenGroup: 32
 GenFollow: 14
 E
 #17034
@@ -521,10 +540,10 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 90
-GenLoot: 33
-GenRoam: 37
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 63
+GenRoam: 89
+GenFollow: 12
 E
 #17035
 bebe dragao~
@@ -538,10 +557,9 @@ todos os elementos da natureza.
 16 0 -5 1d5+1090 3d15+12
 2400 30000
 9 9 1
-GenWimpy: 18
-GenLoot: 36
-GenRoam: 1
-GenFollow: 13
+GenWimpy: 47
+GenLoot: 44
+GenFollow: 12
 E
 #17036
 escravo~
@@ -555,9 +573,9 @@ Ele se assemelha bastante a um desagradável inseto.
 800 1000
 9 9 1
 GenWimpy: 100
-GenLoot: 41
+GenLoot: 91
 GenRoam: 88
-GenFollow: 6
+GenFollow: 7
 E
 #17037
 gigantesco elemental~
@@ -570,9 +588,12 @@ GIGANTESCO, é preciso mais??
 20 -6 -8 1d5+1970 5d6+19
 3000 68000
 9 9 1
-GenWimpy: 6
-GenLoot: 30
-GenRoam: 68
+GenWimpy: 5
+GenLoot: 69
+GenEquip: 1
+GenRoam: 84
+GenGroup: 2
+GenTrade: 1
 GenFollow: 14
 E
 #17038
@@ -586,5 +607,7 @@ Ele possui um olhar misterioso.. parece ter muitos segredos em suas mangas.
 30 0 -10 1d1+1600 2d6+5
 5400 10000
 9 9 1
+GenWimpy: 4
+GenFollow: 14
 E
 $

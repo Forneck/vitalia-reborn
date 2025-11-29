@@ -11,6 +11,8 @@ E você deveria deixa-lo exatamente daquele jeito ou então matá-lo.
 0 212
 4 9 0
 BareHandAttack: 4
+GenTrade: 100
+GenQuest: 50
 E
 #4304
 pobre cidadao~
@@ -25,6 +27,8 @@ pedinte, que está implorando por algumas moedas ou por um pedaço de carne.
 1 5760
 6 9 1
 BareHandAttack: 13
+GenTrade: 100
+GenQuest: 50
 E
 #4311
 padre tintoreto~
@@ -41,6 +45,8 @@ lado dele, portanto, nada de importuná-lo.
 2500 4358
 6 9 1
 BareHandAttack: 13
+GenTrade: 100
+GenQuest: 50
 E
 #4316
 crente~
@@ -54,9 +60,12 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 8 12 1 5d3+115 3d4+10
 2853 6578
 9 9 1
-GenWimpy: 19
+GenWimpy: 68
+GenLoot: 5
 GenRoam: 89
-GenFollow: 14
+GenTrade: 30
+GenQuest: 15
+GenFollow: 11
 E
 #4321
 menino cantor coral~
@@ -71,9 +80,11 @@ qualquer música por algum dinheiro.
 10 14 3 5d2+155 3d3+5
 1200 4800
 9 9 1
-GenWimpy: 12
+GenWimpy: 37
 GenRoam: 89
-GenFollow: 13
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #4322
 crente~
@@ -89,6 +100,8 @@ roupas brancas.
 6 15 5 2d3+85 4d3+6
 1200 4325
 6 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #4324
 Richelieu Cardeal~
@@ -103,6 +116,8 @@ peculiar bigode.
 33 5 -4 4d6+3575 5d6+15
 9000 53672
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4325
 pombo~
@@ -116,9 +131,11 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 31
-GenRoam: 86
-GenFollow: 4
+GenWimpy: 59
+GenRoam: 85
+GenTrade: 100
+GenQuest: 50
+GenFollow: 3
 E
 #4326
 homem corcunda~
@@ -134,6 +151,8 @@ roupas coloridas.
 2500 45753
 9 9 1
 GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 14
 E
 #4330
@@ -150,9 +169,12 @@ Ele está vestido com uma túnica marrom.
 8 17 5 3d4+75 4d2+2
 3825 2567
 9 9 1
-GenWimpy: 78
-GenRoam: 88
-GenFollow: 9
+GenWimpy: 100
+GenLoot: 1
+GenRoam: 74
+GenTrade: 46
+GenQuest: 23
+GenFollow: 7
 E
 #4334
 estatua gargula pedra~
@@ -170,6 +192,8 @@ maldades e tristezas do mundo. Este monstro horrível parece ser perigoso.
 BareHandAttack: 10
 GenWimpy: 7
 GenLoot: 4
+GenTrade: 100
+GenQuest: 50
 GenFollow: 14
 E
 #4337
@@ -185,6 +209,11 @@ olhar demonstra que ele talvez esteja meio perdido e distraído. Talvez você de
 12675 28653
 9 9 1
 BareHandAttack: 3
+GenWimpy: 4
+GenRoam: 63
+GenTrade: 100
+GenQuest: 50
+GenFollow: 14
 E
 #4340
 cidadao cidadão Lyon~
@@ -199,8 +228,10 @@ um grande lutador.
 8 15 1 3d4+75 3d3+8
 1000 1200
 9 9 1
-GenWimpy: 10
-GenRoam: 88
+GenWimpy: 20
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #4341
@@ -215,6 +246,8 @@ Parece que seu dono o deixou aqui, enquanto foi fazer algumas compras pelas loja
 0 3567
 9 9 1
 BareHandAttack: 4
+GenTrade: 100
+GenQuest: 50
 E
 #4343
 Pierre~
@@ -227,6 +260,8 @@ Ele é um homem muito ocupado, que está trabalhando em uma poção muito especi
 50 0 1 10d20+1000 7d5+18
 10000 80000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4345
 mercador~
@@ -241,6 +276,8 @@ de Lyon.
 15 6 -1 5d5+250 2d3+10
 150 5678
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4347
 Mulher francesa~
@@ -255,6 +292,8 @@ feito com um tecido caro e exótico.
 5 14 6 3d3+72 2d3+4
 2500 2836
 5 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #4348
 rato preto~
@@ -269,6 +308,8 @@ morda você, pois isto seria extremamente perigoso.
 0 250
 9 9 1
 BareHandAttack: 4
+GenTrade: 100
+GenQuest: 50
 E
 #4349
 Ladrao ladrão Renoir~
@@ -284,6 +325,8 @@ caminho por onde você veio.
 1845 35865
 6 9 1
 BareHandAttack: 3
+GenTrade: 100
+GenQuest: 50
 E
 #4351
 degas eremita~
@@ -300,9 +343,12 @@ em seu bolso.
 150 3275
 9 9 1
 BareHandAttack: 13
-GenWimpy: 3
-GenRoam: 71
-GenFollow: 9
+GenWimpy: 12
+GenLoot: 1
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #4355
 esquilo marrom~
@@ -316,9 +362,11 @@ Um esquilo marrom está aqui, a procura de nozes.
 0 85
 9 9 1
 BareHandAttack: 4
-GenWimpy: 6
-GenRoam: 69
-GenFollow: 4
+GenWimpy: 23
+GenRoam: 87
+GenTrade: 100
+GenQuest: 50
+GenFollow: 3
 E
 #4357
 cigana misteriosa linda Esmeralda~
@@ -334,6 +382,8 @@ grandes.
 15275 17546
 9 9 2
 BareHandAttack: 3
+GenTrade: 100
+GenQuest: 50
 E
 #4363
 cidadao Paris~
@@ -348,9 +398,11 @@ de insegurança que todos na França estão vivendo neste momento.
 1250 1873
 9 9 1
 BareHandAttack: 13
-GenWimpy: 6
-GenRoam: 78
-GenFollow: 10
+GenWimpy: 13
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #4367
 Revolucionario Robespierre~
@@ -366,6 +418,11 @@ que seja muito forte.
 12000 16250
 9 9 1
 BareHandAttack: 13
+GenWimpy: 4
+GenRoam: 82
+GenTrade: 100
+GenQuest: 50
+GenFollow: 14
 E
 #4368
 Guarda mosqueteiro~
@@ -383,6 +440,8 @@ se torne Mosqueteiro.
 4 9 1
 BareHandAttack: 3
 GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #4371
@@ -397,6 +456,8 @@ contar com a proteção da guarda pessoal do rei Luís XIV.
 35 0 -1 10d10+800 3d4+13
 5000 50000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4372
 Portos~
@@ -410,6 +471,8 @@ Você deveria pensar duas vezes antes de puxar uma briga com ele.
 35 2 -5 10d50+1258 5d5+18
 5000 42055
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4377
 Atos mosqueteuri~
@@ -424,6 +487,8 @@ o trabalho dele com muita seriedade e com isso ele ganhou o respeito de todos.
 5000 40000
 9 9 1
 BareHandAttack: 3
+GenTrade: 100
+GenQuest: 50
 E
 #4378
 Aramis mosqueteiro inteligente astuto~
@@ -438,6 +503,8 @@ inteligente de todos...pelo menos é isso que ele diz.
 5000 40000
 9 9 1
 BareHandAttack: 3
+GenTrade: 100
+GenQuest: 50
 E
 #4387
 cavalo treinado~
@@ -452,6 +519,8 @@ e são usados pelos guardas do rei francês.
 0 3500
 9 9 0
 BareHandAttack: 4
+GenTrade: 100
+GenQuest: 50
 E
 #4388
 recepcionista~
@@ -464,6 +533,8 @@ Ela é uma linda jovem que parece estar bastante interessada em ajudar você.
 15 13 0 4d6+500 5d5+5
 8500 6750
 6 9 2
+GenTrade: 100
+GenQuest: 50
 E
 #4389
 Mosqueteiro real~
@@ -477,6 +548,8 @@ dos Mosqueteiros que pessoalmente protegem a vida do Rei.
 20 5 10 6d8+650 2d1+10
 2500 6750
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4390
 mascara homem~
@@ -492,6 +565,8 @@ importante no passado.
 22 14 -3 1d2+896 2d1+15
 1 12675
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4392
 pulga~
@@ -507,6 +582,8 @@ por estes insetos nojentos.
 0 150
 9 9 0
 BareHandAttack: 4
+GenTrade: 100
+GenQuest: 50
 E
 #4393
 Jean Paul prisioneiro~
@@ -521,6 +598,8 @@ fácilmente matá-lo mesmo com uma das mãos amarradas às costas.
 5000 90000
 9 9 1
 BareHandAttack: 10
+GenTrade: 100
+GenQuest: 50
 E
 #4395
 sentinela~
@@ -535,6 +614,8 @@ ser complicado.
 22 6 1 5d5+525 3d2+10
 12650 12765
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4396
 guardiao~
@@ -551,6 +632,8 @@ que abre os portais para muitos mundos de fanstasia.
 5000 12000
 9 9 1
 BareHandAttack: 6
+GenTrade: 100
+GenQuest: 50
 E
 #4398
 Toulouse~
@@ -564,6 +647,8 @@ mais diferentes e interessantes que turistas em geral procuram para comprar.
 35 5 1 3d3+1000 3d3+10
 10000 12000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #4399
 rei Luis XIV~
@@ -576,5 +661,7 @@ Ele é o responsável por todos os problemas que estão acontecendo neste país.
 48 0 -10 10d100+2500 3d9+25
 25000 90000
 6 9 1
+GenTrade: 100
+GenQuest: 50
 E
 $

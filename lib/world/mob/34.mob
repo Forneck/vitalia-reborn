@@ -10,7 +10,7 @@ você venha a precisar.
 50 10 -8 3d4+1000 5d5+13
 1000 30714
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 GenFollow: 14
 E
 #3401
@@ -38,8 +38,8 @@ Ele acena para você, sem dizer nada enquanto penteia uma égua.
 50 6 -8 10d10+1000 5d5+13
 3000 70714
 9 9 1
-GenWimpy: 3
-GenFollow: 13
+GenWimpy: 4
+GenFollow: 12
 E
 #3403
 guarda entrada villspah~
@@ -326,7 +326,7 @@ para frente.
 50 1 -2 3d4+1201 7d5+13
 1550 60714
 9 9 2
-GenWimpy: 3
+GenWimpy: 6
 GenFollow: 14
 E
 #3423
@@ -344,11 +344,12 @@ chamar a atenção, se possível.
 BareHandAttack: 9
 Str: 25
 Dex: 20
-GenWimpy: 7
-GenLoot: 47
-GenEquip: 1
+GenWimpy: 6
+GenLoot: 73
+GenEquip: 2
 GenRoam: 89
-GenGroup: 13
+GenGroup: 25
+GenBrave: 2
 GenFollow: 18
 E
 #3424
@@ -364,8 +365,10 @@ Sua careca parece ter sido polida atualmente.  Bom, de fato bem alimentado.
 3200 91855
 9 9 1
 BareHandAttack: 7
-GenWimpy: 3
-GenRoam: 63
+GenWimpy: 4
+GenLoot: 11
+GenRoam: 81
+GenGroup: 2
 GenFollow: 14
 E
 #3425
@@ -381,10 +384,10 @@ o bastante - não é?
 46 0 -4 4d3+1870 6d7+7
 1672 71501
 9 9 1
-GenWimpy: 10
-GenLoot: 13
+GenWimpy: 26
+GenLoot: 30
 GenRoam: 89
-GenGroup: 72
+GenGroup: 97
 GenFollow: 19
 E
 #3426
@@ -399,8 +402,11 @@ este homem um mercador?
 40 1 -4 2d5+1547 6d6+6
 1421 68971
 9 9 1
-GenWimpy: 7
-GenRoam: 81
+GenWimpy: 5
+GenLoot: 4
+GenEquip: 2
+GenRoam: 89
+GenGroup: 5
 GenFollow: 14
 E
 #3427
@@ -415,9 +421,9 @@ Melhor deixa-lo com seu desenho.
 21 8 1 2d2+847 1d4+14
 10 11024
 9 9 1
-GenWimpy: 5
-GenRoam: 80
-GenFollow: 10
+GenWimpy: 22
+GenRoam: 87
+GenFollow: 8
 E
 #3428
 guarda ponte villspah~
@@ -438,7 +444,7 @@ Int: 20
 Wis: 20
 Con: 20
 GenWimpy: 4
-GenFollow: 18
+GenFollow: 17
 E
 #3429
 guarda torre norte~

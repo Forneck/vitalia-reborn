@@ -11,6 +11,10 @@ você e se joga um pouco para trás.
 0 4000
 9 9 1
 BareHandAttack: 4
+GenWimpy: 13
+GenLoot: 3
+GenRoam: 88
+GenFollow: 9
 E
 #6401
 demonio podridao~
@@ -28,6 +32,8 @@ acho que isso quer dizer que é você....
 0 10000
 9 9 0
 BareHandAttack: 8
+GenWimpy: 3
+GenFollow: 15
 E
 #6402
 livro monstro guardiao~
@@ -42,6 +48,8 @@ Hhuuummmm.....
 14 7 1 1d1+199 2d8+2
 0 18000
 9 9 0
+GenWimpy: 3
+GenFollow: 10
 E
 #6403
 mau pressagio~
@@ -55,6 +63,8 @@ vez muito mais real...  Seria mágica???
 18 3 0 1d1+249 3d8+0
 0 40000
 9 9 0
+GenWimpy: 2
+GenFollow: 8
 E
 #6404
 pesadelo~
@@ -68,6 +78,8 @@ tenebrosa...  Espere um minuto!!  É VOCÊ em seu lado mais obscuro e cruel!!!
 27 -1 -2 10d20+320 4d8+10
 0 56000
 9 9 0
+GenWimpy: 5
+GenFollow: 15
 E
 #6405
 guardiao~
@@ -82,6 +94,8 @@ fazer...
 0 35000
 9 9 0
 BareHandAttack: 9
+GenWimpy: 2
+GenFollow: 11
 E
 #6410
 ratinho~

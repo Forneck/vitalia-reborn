@@ -1,0 +1,21 @@
+#13124
+Buscar uma laranja~
+Encontrar e trazer uma laranja~
+Alguém perdeu uma laranja e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 360 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3300 -1 -1 -1
+12 72 5 27 -1 3309 1
+360 720 65535
+S
+#13144
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (3354). Vá até lá para receber 273 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3354 -1 -1 -1
+12 54 15 40 -1 3308 1
+273 546 3315
+S
+$~

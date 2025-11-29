@@ -10,8 +10,9 @@ Você vai ficar igual a ele se não for cuidadoso.
 100 600
 9 9 1
 GenWimpy: 100
-GenRoam: 86
-GenFollow: 6
+GenLoot: 6
+GenRoam: 87
+GenFollow: 2
 E
 #9502
 estrela prateada~
@@ -25,7 +26,8 @@ realmente!
 8 15 2 4d5+80 2d3+5
 500 2000
 9 9 2
-GenWimpy: 45
+GenWimpy: 78
+GenLoot: 2
 GenRoam: 1
 GenFollow: 8
 E
@@ -41,8 +43,8 @@ poeira cósmica.
 10 10 0 3d6+340 2d4+10
 1000 5000
 9 9 2
-GenWimpy: 11
-GenLoot: 3
+GenWimpy: 17
+GenLoot: 4
 GenFollow: 13
 E
 #9504
@@ -58,9 +60,9 @@ parece querer lançar toda sua ira contra você.
 1500 5000
 9 9 1
 GenWimpy: 100
-GenLoot: 4
-GenRoam: 29
-GenFollow: 17
+GenLoot: 29
+GenRoam: 2
+GenFollow: 14
 E
 #9505
 gigante vermelha~
@@ -101,6 +103,8 @@ ninguém.
 37 -4 -10 8d5+1000 4d5+33
 6000 80000
 6 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #9508
 andromeda~
@@ -117,6 +121,8 @@ puniram seu reino...  O sacrifício da princesa salvaria a todos, mas ela não
 25 0 -4 8d5+500 4d4+20
 7500 33000
 9 9 2
+GenWimpy: 15
+GenFollow: 13
 E
 #9509
 hercules~
@@ -133,6 +139,8 @@ realizar. Tendo êxito nos doze trabalhos, Hércules pode seguir com sua vida.
 72 -11 -26 6d7+1800 6d5+31
 7500 180000
 9 9 1
+GenWimpy: 12
+GenFollow: 15
 E
 #9510
 pegasus~
@@ -163,8 +171,9 @@ seu algoz.
 71 -14 -14 6d7+2000 6d4+41
 7500 220000
 9 9 1
-GenWimpy: 8
-GenFollow: 14
+GenWimpy: 21
+GenBrave: 3
+GenFollow: 12
 E
 #9512
 pleiade merope~
@@ -179,6 +188,8 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
+GenWimpy: 3
+GenFollow: 13
 E
 #9513
 draco dragao cabeca~
@@ -194,6 +205,8 @@ interior da galáxia é muito poderoso!
 74 -20 -25 5d4+1200 8d5+42
 15000 380000
 9 9 1
+GenWimpy: 7
+GenFollow: 7
 E
 #9514
 draco bebe~
@@ -222,6 +235,10 @@ os forasteiros.  E parece que ele já o esperava...
 73 -12 -19 6d4+2500 8d5+35
 8000 280000
 6 9 1
+GenWimpy: 30
+GenLoot: 1
+GenEquip: 1
+GenFollow: 14
 E
 #9516
 touro~
@@ -236,6 +253,9 @@ sobreviveu...
 70 -18 -18 5d8+2500 8d6+30
 8000 270000
 9 9 1
+GenWimpy: 4
+GenLoot: 3
+GenFollow: 16
 E
 #9517
 gemeo~
@@ -249,6 +269,8 @@ Assim que você o vê, você percebe que ele é o homem mais perfeito já visto.
 65 -16 -25 7d3+2200 5d4+38
 10000 280000
 9 9 1
+GenWimpy: 4
+GenFollow: 15
 E
 #9518
 gemeo~
@@ -262,6 +284,8 @@ visto.  Como pode haver tamanho contraste?  Bem que você queria saber...
 65 -16 -25 7d3+2200 6d3+38
 5000 280000
 9 9 1
+GenWimpy: 5
+GenFollow: 14
 E
 #9519
 cancer~
@@ -279,6 +303,9 @@ servidor colocando-o aqui.
 61 -19 -23 10d2+2900 7d4+41
 12000 280000
 9 9 1
+GenWimpy: 9
+GenLoot: 1
+GenFollow: 14
 E
 #9520
 leao~
@@ -294,6 +321,9 @@ partí-lo em dois a partir de sua boca!
 71 -19 -23 20d2+2234 8d3+43
 10000 380000
 9 9 1
+GenWimpy: 9
+GenLoot: 3
+GenFollow: 14
 E
 #9521
 virgem~
@@ -308,8 +338,8 @@ movimento seu, seja ele qual for...
 66 -12 -35 8d3+1850 4d5+44
 10000 280000
 6 9 2
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 7
+GenFollow: 14
 E
 #9522
 libra~
@@ -323,6 +353,10 @@ olhos. Neste momento o que ele vê de você é pura ambição e sede de sangue..
 74 -14 -35 4d5+3611 6d6+42
 10000 480000
 9 9 1
+GenWimpy: 18
+GenLoot: 9
+GenEquip: 16
+GenFollow: 15
 E
 #9523
 escorpiao~
@@ -336,9 +370,9 @@ Sagitário eternamente apontada para seu coração.  Vai entender...
 76 -18 -35 4d3+3770 7d6+41
 10000 580000
 9 9 1
-GenWimpy: 14
-GenLoot: 3
-GenFollow: 16
+GenWimpy: 11
+GenLoot: 11
+GenFollow: 13
 E
 #9524
 sagitario centauro~
@@ -352,6 +386,8 @@ arqueiro.  Ninguém escapa de suas flechas.
 72 -21 -25 5d6+3600 9d4+42
 10000 500000
 9 9 1
+GenWimpy: 5
+GenFollow: 14
 E
 #9525
 bode capricornio~
@@ -366,6 +402,10 @@ passe o resto de sua vida em paz.
 73 -24 -25 4d4+3520 13d3+39
 10000 500000
 9 9 1
+GenWimpy: 8
+GenLoot: 4
+GenEquip: 1
+GenFollow: 13
 E
 #9526
 aquario~
@@ -379,6 +419,8 @@ seria melhor dar-lhe uma mãozinha em sua tarefa de segurar o vaso...
 72 -26 -23 3d5+3234 2d10+37
 10000 480000
 9 9 2
+GenWimpy: 4
+GenFollow: 15
 E
 #9527
 pisces sereia~
@@ -392,10 +434,10 @@ um peixe.  Ela merece sua piedade...
 68 -10 -20 5d5+2600 7d3+30
 10000 399999
 6 9 2
-GenWimpy: 5
+GenWimpy: 8
 GenLoot: 20
 GenEquip: 2
-GenRoam: 70
+GenRoam: 88
 GenFollow: 15
 E
 #9528
@@ -411,9 +453,10 @@ que seja mais bela (ou menos feia) que ele.
 72 -14 -20 7d3+2600 3d6+32
 0 380000
 9 9 1
-GenWimpy: 5
-GenLoot: 20
+GenWimpy: 23
+GenLoot: 23
 GenEquip: 3
+GenRoam: 83
 GenFollow: 14
 E
 #9529
@@ -428,8 +471,11 @@ voltar...  Enquanto ainda pode.
 90 -20 -37 10d4+6000 10d5+43
 15000 930000
 9 9 2
-GenWimpy: 5
-GenFollow: 15
+GenWimpy: 9
+GenLoot: 2
+GenEquip: 1
+GenBrave: 2
+GenFollow: 8
 E
 #9530
 cassiopeia rainha~
@@ -443,6 +489,8 @@ desaparecer...
 101 -24 -46 10d5+6800 10d7+43
 42000 1710000
 6 9 2
+GenWimpy: 5
+GenFollow: 12
 E
 #9531
 cefeu rei~
@@ -456,6 +504,8 @@ e inútil diante dele.
 102 -26 -46 10d5+6800 10d8+41
 42000 1710000
 6 9 1
+GenWimpy: 5
+GenFollow: 13
 E
 #9532
 polaris polar estrela~
@@ -471,6 +521,10 @@ ter vindo aqui...
 105 -29 -50 8d8+12900 8d8+43
 50000 5000000
 9 9 2
+GenWimpy: 4
+GenLoot: 11
+GenEquip: 3
+GenFollow: 10
 E
 #9533
 pleiade elektra~
@@ -485,6 +539,8 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
+GenWimpy: 7
+GenFollow: 13
 E
 #9534
 pleiade alcione~
@@ -499,6 +555,8 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
+GenWimpy: 6
+GenFollow: 13
 E
 #9535
 pleiade maia~
@@ -513,7 +571,7 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
-GenBrave: 2
+GenWimpy: 6
 GenFollow: 13
 E
 #9536
@@ -529,8 +587,9 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
-GenWimpy: 3
-GenFollow: 13
+GenWimpy: 16
+GenLoot: 9
+GenFollow: 12
 E
 #9537
 pleiade taigete~
@@ -545,7 +604,7 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
-GenWimpy: 3
+GenWimpy: 9
 GenFollow: 13
 E
 #9538
@@ -561,7 +620,7 @@ escondeu do caçador justamente aqui...
 21 5 3 3d4+120 2d7+15
 3000 37000
 9 9 2
-GenWimpy: 3
+GenWimpy: 9
 GenFollow: 13
 E
 $

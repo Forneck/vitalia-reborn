@@ -19,7 +19,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 3
+GenWimpy: 4
+GenLoot: 9
 GenFollow: 12
 E
 #11102
@@ -42,6 +43,10 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenLoot: 15
+GenRoam: 69
+GenFollow: 11
 E
 #11103
 urso enorme grande forte~
@@ -61,6 +66,8 @@ Str: 25
 StrAdd: 25
 Dex: 25
 Con: 25
+GenWimpy: 4
+GenFollow: 10
 E
 #11104
 horrivel gargula~
@@ -94,7 +101,7 @@ It looks unfinished.
 2334784 0 0 0 131072 0 0 0 0 E
 50 4 -20 10d10+500 8d8+8
 500 250000
-9 9 0
+5 5 0
 BareHandAttack: 7
 Str: 18
 Dex: 18

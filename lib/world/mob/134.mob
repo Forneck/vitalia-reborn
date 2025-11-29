@@ -46,6 +46,8 @@ Ela é muito bonita, para um elfo.
 108 -20 -6 1d1+2525 21d1+40
 50000 42840
 9 9 2
+GenWimpy: 10
+GenFollow: 15
 E
 #13404
 mestre-guia mestre guia feiticeiros mago~
@@ -124,10 +126,10 @@ An undefined string.
 10 10 6 1d1+200 5d1+10
 125 1785
 9 9 1
-GenWimpy: 17
-GenLoot: 2
+GenWimpy: 79
+GenLoot: 9
 GenRoam: 89
-GenFollow: 11
+GenFollow: 8
 E
 #13410
 pacificador elfo~
@@ -154,9 +156,9 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
-GenWimpy: 22
+GenWimpy: 64
 GenRoam: 87
-GenFollow: 5
+GenFollow: 4
 E
 #13412
 esquilo~
@@ -315,10 +317,13 @@ Quétos, o Capitão da Guarda está em sua mesa.
 ~
 An undefined string.
 ~
-2123778 0 0 0 0 0 0 0 900 E
+3172354 0 0 0 0 0 0 0 900 E
 40 -10 -2 1d1+2250 13d1+30
 625 223337
 9 9 1
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 13
 E
 #13425
 sion~
@@ -392,10 +397,10 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
-GenWimpy: 14
+GenWimpy: 61
 GenLoot: 2
 GenRoam: 86
-GenFollow: 5
+GenFollow: 4
 E
 #13431
 fada~
@@ -408,8 +413,10 @@ Esta bela fada flutua levemente sorrindo para quem olha para ela.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
-GenWimpy: 7
-GenRoam: 83
+GenWimpy: 46
+GenLoot: 10
+GenRoam: 89
+GenFollow: 13
 E
 #13432
 elfo~
@@ -423,9 +430,10 @@ maravilhas espalhadas por Vitália.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
-GenWimpy: 7
-GenLoot: 1
-GenRoam: 78
+GenWimpy: 41
+GenLoot: 11
+GenRoam: 89
+GenFollow: 11
 E
 #13433
 aranha negra pequena~
@@ -438,9 +446,9 @@ Uma pequena aranha com grande colmilhos e seis olhos vermelhos.
 45 2 -6 1d1+800 7d1+18
 0 50769
 9 9 2
-GenWimpy: 7
-GenRoam: 82
-GenFollow: 10
+GenWimpy: 52
+GenRoam: 89
+GenFollow: 8
 E
 #13434
 minhoca viscosa~
@@ -453,9 +461,9 @@ Ecow! Que bicho nojento!
 48 -5 -5 1d1+900 8d3+19
 0 62571
 9 9 2
-GenWimpy: 5
-GenRoam: 82
-GenFollow: 10
+GenWimpy: 37
+GenRoam: 89
+GenFollow: 9
 E
 #13435
 rato~
@@ -469,6 +477,9 @@ perceber que é inútil sua tentativa ele olha fixamente para você.
 49 -4 -6 1d1+1000 8d3+20
 0 63056
 9 9 1
+GenWimpy: 33
+GenRoam: 89
+GenFollow: 16
 E
 #13436
 morcego~
@@ -482,9 +493,9 @@ hematófago?
 50 -1 -7 1d1+1200 9d4+21
 0 74625
 9 9 1
-GenWimpy: 2
-GenRoam: 52
-GenFollow: 11
+GenWimpy: 33
+GenRoam: 89
+GenFollow: 10
 E
 #13437
 cobra verde~
@@ -510,6 +521,9 @@ Ohh..  ele é lindo!
 43 -3 -10 1d1+1600 5d6+23
 0 80666
 9 9 1
+GenWimpy: 20
+GenRoam: 89
+GenFollow: 10
 E
 T 3009
 #13439
@@ -523,6 +537,9 @@ Ele possui o corpo de um homem, mas com a cabeça de um rato.
 44 -4 -12 1d1+1800 6d5+24
 475 84178
 9 9 1
+GenWimpy: 22
+GenRoam: 89
+GenFollow: 15
 E
 T 3008
 #13440
@@ -536,6 +553,10 @@ Ele possui o corpo de um homem, mas com a cabeça de um rato.
 55 -5 -13 1d1+2000 6d6+25
 500 89074
 9 9 1
+GenWimpy: 29
+GenLoot: 1
+GenRoam: 89
+GenFollow: 15
 E
 #13441
 cobra verde~
@@ -549,8 +570,8 @@ você não pode definir.
 60 -6 -12 4d5+800 7d4+18
 0 90769
 9 9 2
-GenWimpy: 2
-GenRoam: 48
+GenWimpy: 11
+GenRoam: 87
 GenFollow: 10
 E
 T 3008
@@ -566,6 +587,8 @@ guarda estaria protegendo?
 80 -9 -9 1d1+2050 6d8+26
 525 139234
 9 9 1
+GenWimpy: 7
+GenFollow: 13
 E
 #13443
 homem-rato rei homem rato~
@@ -579,6 +602,8 @@ aparencia serena e mesmo sábia..
 100 -13 -14 4d4+2050 8d5+36
 15250 188857
 4 9 1
+GenWimpy: 11
+GenFollow: 15
 E
 #13444
 homem-rato guarda rato homem~
@@ -592,6 +617,8 @@ guarda estaria protegendo?
 90 -10 -13 1d1+2050 7d6+31
 10025 169234
 9 9 1
+GenWimpy: 4
+GenFollow: 14
 E
 #13445
 nobre elfo~
@@ -606,8 +633,10 @@ de linhagem nobre.
 25 1 2 1d6+300 3d8+5
 1200 12000
 9 9 1
-GenWimpy: 7
-GenFollow: 18
+GenWimpy: 100
+GenLoot: 5
+GenRoam: 5
+GenFollow: 15
 E
 #13446
 bibliotecario elfo~
@@ -622,6 +651,8 @@ pesquisa e estudo.
 22 2 1 1d5+275 2d8+4
 1000 10000
 9 9 1
+GenWimpy: 48
+GenFollow: 12
 E
 #13447
 arquivista elfo~
@@ -636,8 +667,9 @@ aos primeiros dias da cidade élfica.
 28 0 0 1d7+350 3d8+6
 1400 14000
 9 9 1
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 24
+GenLoot: 3
+GenFollow: 11
 E
 #13448
 comerciante elfo~
@@ -652,6 +684,9 @@ produtos élficos é reconhecida em toda a região.
 20 3 3 1d4+250 2d7+3
 900 9000
 9 9 1
+GenWimpy: 27
+GenLoot: 7
+GenFollow: 13
 E
 #13449
 artesao elfo~
@@ -711,5 +746,8 @@ tradicional élfica com magia natural.
 24 1 1 1d6+300 2d8+4
 1100 11000
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenFollow: 13
 E
 $

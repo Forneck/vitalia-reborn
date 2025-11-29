@@ -10,7 +10,7 @@ de louro douradas.
 2160658 0 0 0 0 0 0 0 250 E
 101 -40 -20 6d10+1500 8d10+50
 3 60000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 18
@@ -29,7 +29,7 @@ cheio de insígnias e o quepe com três estrelas sob fundos negros.
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16002
 coronel verde~
@@ -42,7 +42,7 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 70 -20 -20 8d6+2000 4d6+35
 10000 150000
-8 8 1
+9 9 1
 E
 #16003
 major verde~
@@ -55,7 +55,7 @@ quepe com três estrelas, uma sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16004
 capitao verde~
@@ -68,7 +68,7 @@ na cabeça um quepe com três estrelas.
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
 10000 120000
-8 8 1
+9 9 1
 E
 #16005
 tenente verde~
@@ -81,7 +81,7 @@ estrela no centro.
 2349200 0 0 0 591952 0 0 0 350 E
 40 -10 -14 5d5+1200 4d4+26
 10000 100000
-8 8 1
+9 9 1
 E
 #16006
 sargento verde~
@@ -94,7 +94,7 @@ listras brancas uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 30 -8 -12 4d3+1000 3d4+24
 1000 10000
-8 8 1
+9 9 1
 E
 #16007
 cabo verde~
@@ -107,7 +107,7 @@ uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 25 -6 -10 3d3+900 3d3+22
 1000 8000
-8 8 1
+9 9 1
 E
 #16008
 soldado verde~
@@ -120,7 +120,7 @@ apenas uma listra branca.
 2349072 0 0 0 591952 0 0 0 300 E
 20 -1 -8 3d2+200 3d2+10
 1000 6000
-8 8 1
+9 9 1
 E
 #16009
 espiao verde~
@@ -133,7 +133,7 @@ aquela faixa verde amarrada em seu braço.
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16010
 marechal azul~
@@ -147,13 +147,15 @@ de louro douradas.
 2160658 0 0 0 0 0 0 0 250 E
 101 -40 -20 6d10+1500 8d10+50
 3 60000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 11
 E
 #16011
 general azul~
@@ -166,7 +168,7 @@ cheio de insígnias e o quepe com três estrelas sob fundos negros.
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16012
 coronel azul~
@@ -179,7 +181,7 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 2349200 0 0 0 788496 0 0 0 1000 E
 90 -20 -20 10d8+2500 4d4+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16013
 major azul~
@@ -192,7 +194,7 @@ quepe com três estrelas, uma sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16014
 capitao azul~
@@ -205,7 +207,7 @@ na cabeça um quepe com três estrelas.
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
 10000 120000
-8 8 1
+9 9 1
 E
 #16015
 tenente azul~
@@ -218,7 +220,7 @@ estrela no centro.
 2349200 0 0 0 591952 0 0 0 350 E
 40 -10 -14 5d5+1200 4d4+26
 10000 100000
-8 8 1
+9 9 1
 E
 #16016
 sargento azul~
@@ -231,7 +233,7 @@ listras brancas uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 30 -8 -12 4d3+1000 3d4+24
 1000 10000
-8 8 1
+9 9 1
 E
 #16017
 cabo azul~
@@ -244,7 +246,7 @@ uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 25 -6 -10 3d3+900 3d3+22
 1000 8000
-8 8 1
+9 9 1
 E
 #16018
 soldado azul~
@@ -257,7 +259,7 @@ apenas uma listra branca.
 2349072 0 0 0 591952 0 0 0 300 E
 20 -1 -8 3d2+200 3d2+10
 1000 6000
-8 8 1
+9 9 1
 E
 #16019
 espiao azul~
@@ -270,7 +272,7 @@ Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16020
 marechal vermelho~
@@ -284,7 +286,7 @@ entre folhas de louro douradas.
 2160658 0 0 0 0 0 0 0 250 E
 101 -40 -20 6d10+1500 8d10+50
 3 60000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 18
@@ -303,7 +305,7 @@ vermelho cheio de insígnias e o quepe com três estrelas sob fundos negros.
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16022
 coronel vermelho~
@@ -316,7 +318,7 @@ com insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 2349200 0 0 0 788496 0 0 0 1000 E
 90 -20 -20 10d8+2500 4d4+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16023
 major vermelho~
@@ -329,7 +331,7 @@ insígnias e seu quepe com três estrelas, uma sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16024
 capitao vermelho~
@@ -342,7 +344,7 @@ exército e na cabeça um quepe com três estrelas.
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
 10000 120000
-8 8 1
+9 9 1
 E
 #16025
 tenente vermelho~
@@ -355,7 +357,7 @@ estrela no centro.
 2349200 0 0 0 591952 0 0 0 350 E
 40 -10 -14 5d5+1200 4d4+26
 10000 100000
-8 8 1
+9 9 1
 E
 #16026
 sargento vermelho~
@@ -368,7 +370,7 @@ listras brancas uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 30 -8 -12 4d3+1000 3d4+24
 1000 10000
-8 8 1
+9 9 1
 E
 #16027
 cabo vermelho~
@@ -381,7 +383,7 @@ brancas uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 25 -6 -10 3d3+900 3d3+22
 1000 8000
-8 8 1
+9 9 1
 E
 #16028
 soldado vermelho~
@@ -394,7 +396,7 @@ apenas uma listra branca.
 2349072 0 0 0 591952 0 0 0 300 E
 20 -1 -8 3d2+200 3d2+10
 1000 6000
-8 8 1
+9 9 1
 E
 #16029
 espiao vermelho~
@@ -407,7 +409,7 @@ Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16030
 marechal amarelo~
@@ -421,7 +423,7 @@ entre folhas de louro douradas.
 2160658 0 0 0 0 0 0 0 250 E
 101 -40 -20 6d10+1500 8d10+50
 3 60000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 18
@@ -440,7 +442,7 @@ amarelo cheio de insígnias e o quepe com três estrelas sob fundos negros.
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
 15000 170000
-8 8 1
+9 9 1
 E
 #16032
 coronel amarelo~
@@ -453,7 +455,7 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 70 -20 -20 8d6+2000 4d6+35
 10000 150000
-8 8 1
+9 9 1
 E
 #16033
 major amarelo~
@@ -466,7 +468,7 @@ e seu quepe com três estrelas, uma sob fundo negro.
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16034
 capitao amarelo~
@@ -479,7 +481,7 @@ exército e na cabeça um quepe com três estrelas.
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
 10000 120000
-8 8 1
+9 9 1
 E
 #16035
 tenente amarelo~
@@ -492,7 +494,7 @@ estrela no centro.
 2349200 0 0 0 591952 0 0 0 350 E
 40 -10 -14 5d5+1200 4d4+26
 10000 100000
-8 8 1
+9 9 1
 E
 #16036
 sargento amarelo~
@@ -505,7 +507,7 @@ listras brancas uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 30 -8 -12 4d3+1000 3d4+24
 1000 10000
-8 8 1
+9 9 1
 E
 #16037
 cabo amarelo~
@@ -518,7 +520,7 @@ branca s uma acima da outra.
 2349200 0 0 0 591952 0 0 0 300 E
 25 -6 -10 3d3+900 3d3+22
 1000 8000
-8 8 1
+9 9 1
 E
 #16038
 soldado amarelo~
@@ -531,7 +533,7 @@ apenas uma listra branca.
 2349072 0 0 0 591952 0 0 0 300 E
 20 -1 -8 3d2+200 3d2+10
 1000 6000
-8 8 1
+9 9 1
 E
 #16039
 espiao amarelo~
@@ -544,7 +546,7 @@ Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
 10000 130000
-8 8 1
+9 9 1
 E
 #16040
 enorme crocodilo~
@@ -558,6 +560,6 @@ parece não ter comido há muito tempo e deve estar com muita fome.
 2353186 0 0 0 1114240 0 0 0 -500 E
 50 14 -30 8d10+2000 3d4+1
 0 90000
-5 8 1
+5 9 1
 E
 $

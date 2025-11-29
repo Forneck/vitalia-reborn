@@ -81,6 +81,9 @@ tranqüilas terras do Condado.
 9 9 2
 BareHandAttack: 3
 Dex: 18
+GenWimpy: 5
+GenRoam: 66
+GenFollow: 14
 E
 #14505
 hobbit pequenino brandebuque~
@@ -303,6 +306,9 @@ banquete, os pequeninos são realmente criaturas notáveis.
 9 9 1
 BareHandAttack: 3
 Dex: 18
+GenWimpy: 3
+GenRoam: 59
+GenFollow: 13
 E
 #14518
 hobbit pequenina pe soberbo~
@@ -489,6 +495,8 @@ dos Hobbits.
 9 9 1
 BareHandAttack: 3
 Dex: 15
+GenWimpy: 3
+GenFollow: 14
 E
 #14528
 velho noques hobbit~
@@ -523,8 +531,8 @@ dias eles visitam a Vila dos Hobbits só para observar a magnífica toca.
 BareHandAttack: 3
 Str: 15
 Dex: 18
-GenWimpy: 5
-GenRoam: 66
+GenWimpy: 27
+GenRoam: 84
 GenFollow: 14
 E
 #14530
@@ -697,6 +705,9 @@ Condado.
 9 9 2
 BareHandAttack: 3
 Dex: 18
+GenWimpy: 7
+GenRoam: 59
+GenFollow: 12
 E
 #14540
 hugo justa correia hobbit~
@@ -729,6 +740,9 @@ um grande bom-humor.
 9 9 1
 BareHandAttack: 3
 Dex: 18
+GenWimpy: 7
+GenRoam: 81
+GenFollow: 14
 E
 #14542
 folco boffin hobbit~
@@ -997,6 +1011,8 @@ Int: 5
 Wis: 5
 Con: 5
 Cha: 18
+GenWimpy: 2
+GenFollow: 5
 E
 #14556
 passaro pequeno~

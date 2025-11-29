@@ -1,51 +1,11 @@
-#13333
-Busca por um punhal de ladrão~
-o guerreiro precisa de um punhal de ladrão~
-o guerreiro está procurando por um punhal de ladrão. Se você encontrar este item, traga-o para mim ou diretamente para o guerreiro para receber sua recompensa.~
+#13396
+Buscar um cajado do inverno eterno~
+Buscar e trazer um cajado do inverno eterno~
+Alguém está procurando por um cajado do inverno eterno. Se você encontrar este item, traga-o para mim ou diretamente para o solicitante para receber sua recompensa.~
 Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
 Que pena que você desistiu desta busca.~
-5 3012 b 4053 -1 -1 -1
-10 0 1 24 -1 4106 1
-250 500 65535
-S
-#13342
-Buscar um pedaço de osso~
-Buscar e trazer um pedaço de osso~
-um dragão esqueleto está procurando por um pedaço de osso. Se você encontrar este item, traga-o para mim ou diretamente para um dragão esqueleto para receber sua recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 3718 -1 -1 -1
-10 0 42 67 -1 3724 1
-936 1872 65535
-S
-#13343
-Buscar uma brilhante adaga nova~
-Buscar e trazer uma brilhante adaga nova~
-o cavaleiro negro está procurando por uma brilhante adaga nova. Se você encontrar este item, traga-o para mim ou diretamente para o cavaleiro negro para receber sua recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 18606 -1 -1 -1
-10 0 1 24 -1 3604 1
-118 236 65535
-S
-#13381
-Buscar a adaga do Clamor~
-Buscar e trazer a adaga do Clamor~
-um ladrão de túmulos está procurando por a adaga do Clamor. Se você encontrar este item, traga-o para mim ou diretamente para um ladrão de túmulos para receber sua recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 3709 -1 -1 -1
-10 0 31 56 -1 3731 1
-664 1328 65535
-S
-#13392
-Buscar um punhal de ladrão~
-Buscar e trazer um punhal de ladrão~
-o mago está procurando por um punhal de ladrão. Se você encontrar este item, traga-o para mim ou diretamente para o mago para receber 425 moedas de ouro, 850 pontos de experiência e um pergaminho onde se lê 'ysafg' como recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 4053 -1 -1 -1
-10 0 4 29 -1 4100 1
-425 850 4102
+5 3012 b 204 -1 -1 -1
+10 0 40 65 -1 3729 1
+1150 2300 65535
 S
 $~

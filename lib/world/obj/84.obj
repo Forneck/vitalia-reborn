@@ -60,14 +60,14 @@ Uma rocha está aqui sobre o capim.~
 0 0 0 0
 10 10 1 1 0
 E
-runas marcas secretas~
-Você observa atentamente as runas de anões e marcas secretas, porém não
-consegue identificar nada que faça sentido.
-~
-E
 antiga rocha pedra~
 Você observa uma desgastada rocha com algumas runas de anões e estranhas
 marcas secretas entalhadas em sua superfície.
+~
+E
+runas marcas secretas~
+Você observa atentamente as runas de anões e marcas secretas, porém não
+consegue identificar nada que faça sentido.
 ~
 #8405
 diadema prata~
@@ -363,13 +363,13 @@ Uma pequenina chave verde foi esquecida aqui.~
 0 0 0 0
 3 500 50 0 0
 E
-runas antigas estranhas~
-Você não consegue entendê-las.
-~
-E
 chave jade~
 Você observa uma pequenina chave esculpida numa pedra jade.  Em sua
 superfície você observa estranhas e antigas runas.
+~
+E
+runas antigas estranhas~
+Você não consegue entendê-las.
 ~
 #8427
 cetro annuminas~
@@ -638,7 +638,7 @@ arco guardiao marfim prata~
 o arco guardião de Elrohir~
 Um belo arco de marfim e prata foi deixado aqui, brilhando como uma estrela.~
 ~
-29 adnr 0 0 0 an 0 0 0 0 0 0 0
+29 adn 0 0 0 an 0 0 0 0 0 0 0
 20 0 0 0
 12 2000000 200000 20 0
 E
@@ -654,6 +654,8 @@ A
 18 2
 A
 19 3
+A
+14 50
 #8444
 flauta dourada~
 a encantadora flauta dourada de Lindir~

@@ -10,11 +10,15 @@ pessoas mais chatas do mundo.
 7 14 4 3d5+83 2d4+1
 1000 2250
 9 9 1
-GenWimpy: 46
-GenLoot: 17
-GenEquip: 1
+GenWimpy: 99
+GenLoot: 77
+GenEquip: 2
 GenRoam: 89
-GenFollow: 9
+GenUse: 30
+GenTrade: 100
+GenQuest: 11
+GenAdventurer: 10
+GenFollow: 8
 E
 #3301
 comerciante~
@@ -28,6 +32,9 @@ que você compre alguma coisa.
 108 1 -40 3d5+245 3d6+6
 10000 40000
 9 9 1
+GenTrade: 100
+GenQuest: 33
+GenAdventurer: 20
 E
 #3302
 amazona~
@@ -41,6 +48,14 @@ Ela é realmente uma mulher que deve ser tratada com respeito...
 20 1 -6 3d5+245 3d6+4
 8000 40000
 9 9 2
+GenLoot: 25
+GenEquip: 100
+GenGroup: 50
+GenBrave: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenHealing: 50
 E
 #3303
 cavalo~
@@ -55,8 +70,10 @@ delicados olhos marrons e você sente-se com vontade de lhe dar uma cenoura.
 0 1000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 6
-GenFollow: 11
+GenWimpy: 27
+GenGroup: 75
+GenBrave: 25
+GenFollow: 10
 E
 #3304
 mulher do fazendeiro~
@@ -70,6 +87,11 @@ comprar.  Ela parece aborrecida, porêm.
 108 1 -40 3d5+245 3d6+6
 10000 40000
 9 9 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 20
+EmotionProfile: 3
 E
 #3305
 dragao aglandiir~
@@ -91,10 +113,16 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 16
-GenWimpy: 4
-GenLoot: 49
-GenEquip: 1
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 100
+GenEquip: 100
+GenBrave: 75
+GenUse: 100
+GenTrade: 10
+GenQuest: 88
+GenAdventurer: 50
+GenFollow: 12
+EmotionProfile: 6
 E
 #3306
 ciclope~
@@ -110,8 +138,13 @@ Este Cíclope atira pedras realmente bem.  Com um olho, porêm, acertar o alvo
 10000 24000
 9 9 1
 BareHandAttack: 13
-GenWimpy: 15
-GenFollow: 14
+GenWimpy: 98
+GenLoot: 14
+GenEquip: 11
+GenBrave: 25
+GenQuest: 2
+GenAdventurer: 50
+GenFollow: 5
 E
 #3307
 salle woman~
@@ -128,10 +161,15 @@ Sua boca contrai-se zombando de você...
 15 6 -3 3d5+200 2d6+6
 6500 24000
 9 9 2
-GenWimpy: 9
-GenLoot: 7
-GenEquip: 2
-GenFollow: 13
+GenWimpy: 20
+GenLoot: 33
+GenEquip: 75
+GenGroup: 20
+GenTrade: 100
+GenQuest: 75
+GenAdventurer: 10
+GenFollow: 50
+GenHealing: 50
 E
 #3308
 homem duwick~
@@ -148,10 +186,18 @@ Um pequena arma para um grande homem!
 22 0 -7 3d5+400 3d6+10
 15000 70000
 9 9 1
-GenWimpy: 48
+GenWimpy: 38
 GenLoot: 99
-GenEquip: 10
-GenFollow: 10
+GenEquip: 14
+GenGroup: 26
+GenBrave: 12
+GenUse: 26
+GenTrade: 75
+GenQuest: 82
+GenAdventurer: 75
+GenFollow: 16
+GenHealing: 50
+EmotionProfile: 1
 E
 #3309
 recepcionista~
@@ -165,9 +211,15 @@ trabalhando na hospedaria.  Mais poder para ele!
 12 9 -3 3d5+140 2d7+1
 8000 8000
 9 9 1
-GenWimpy: 20
-GenLoot: 1
-GenFollow: 13
+GenWimpy: 40
+GenLoot: 10
+GenEquip: 20
+GenUse: 30
+GenTrade: 100
+GenQuest: 52
+GenAdventurer: 30
+GenFollow: 11
+GenHealing: 20
 E
 #3310
 dono da hospedaria~
@@ -183,9 +235,13 @@ não aparenta estar tão aterrorizado com isso.
 10 11 2 3d5+120 2d6+1
 2000 9000
 9 9 1
-GenWimpy: 24
+GenWimpy: 43
 GenLoot: 4
 GenEquip: 1
+GenBrave: 25
+GenTrade: 100
+GenQuest: 25
+GenAdventurer: 25
 GenFollow: 12
 E
 #3311
@@ -202,11 +258,17 @@ quando ele passa.
 11 10 -2 3d5+133 2d6+2
 1200 11000
 9 9 1
-GenWimpy: 48
-GenLoot: 3
-GenEquip: 7
-GenRoam: 88
-GenFollow: 9
+GenWimpy: 52
+GenLoot: 100
+GenEquip: 100
+GenRoam: 89
+GenBrave: 56
+GenUse: 25
+GenTrade: 100
+GenQuest: 28
+GenAdventurer: 75
+GenFollow: 8
+GenHealing: 25
 E
 #3312
 garcom~
@@ -222,8 +284,13 @@ passa por você.
 5 16 7 3d5+60 2d4+0
 500 850
 9 9 1
-GenWimpy: 4
-GenFollow: 5
+GenWimpy: 8
+GenLoot: 3
+GenRoam: 25
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 4
 E
 #3313
 garconete~
@@ -239,8 +306,8 @@ passa por você.
 5 16 7 3d5+60 2d4+0
 500 850
 9 9 2
-GenWimpy: 3
-GenLoot: 2
+GenWimpy: 9
+GenLoot: 6
 GenFollow: 6
 E
 #3314
@@ -270,12 +337,11 @@ dentes cariados.  Porém, sua espada é polida e limpa...
 16 5 -2 3d5+195 2d8+3
 1000 25000
 9 9 1
-GenWimpy: 67
+GenWimpy: 45
 GenLoot: 99
-GenEquip: 9
+GenEquip: 10
 GenRoam: 89
-GenGroup: 49
-GenFollow: 8
+GenFollow: 4
 E
 #3316
 bandido sentinela~
@@ -292,10 +358,11 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 54
+GenWimpy: 44
 GenLoot: 99
-GenEquip: 10
-GenFollow: 12
+GenEquip: 16
+GenRoam: 23
+GenFollow: 2
 E
 #3317
 mineiro escravo~
@@ -310,9 +377,9 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 97
+GenWimpy: 98
 GenLoot: 98
-GenFollow: 9
+GenFollow: 7
 E
 #3318
 fazendeiro~
@@ -326,8 +393,9 @@ pessoas mais chatas do mundo.
 7 14 4 3d5+83 2d4+1
 1000 2250
 9 9 1
-GenWimpy: 14
-GenFollow: 9
+GenWimpy: 28
+GenLoot: 3
+GenFollow: 8
 E
 #3319
 cacador caçador~
@@ -343,8 +411,8 @@ quando ele passa.
 11 10 -2 3d5+133 2d6+2
 1200 11000
 9 9 1
-GenWimpy: 6
-GenLoot: 6
-GenFollow: 7
+GenWimpy: 12
+GenLoot: 15
+GenFollow: 6
 E
 $

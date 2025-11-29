@@ -10,10 +10,10 @@ com um tom amarelado,  garras sujas e afiadas.
 13 8 1 4d6+565 2d7+11
 0 16000
 9 9 1
-GenWimpy: 33
+GenWimpy: 54
 GenLoot: 99
-GenEquip: 2
-GenFollow: 10
+GenEquip: 5
+GenFollow: 3
 E
 #1701
 vibora víbora~
@@ -27,10 +27,9 @@ Esta pequena cobra parece muito perigosa,  melhor desviar de seu caminho.
 0 14000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 4
-GenLoot: 20
+GenWimpy: 6
+GenLoot: 21
 GenEquip: 1
-GenFollow: 3
 E
 T 3008
 #1702
@@ -49,9 +48,13 @@ Como essa coisa meiga tornou-se a líder dessa seita?  Um poeta escreveu:
 23 0 -5 4d6+825 3d8+17
 14786 60000
 9 9 2
-GenWimpy: 3
-GenLoot: 71
-GenEquip: 1
+GenWimpy: 4
+GenLoot: 97
+GenEquip: 50
+GenGroup: 100
+GenUse: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 13
 E
 #1703
@@ -68,9 +71,9 @@ da a libertação... os necromantes o reanimam.
 13238 35900
 9 9 1
 GenWimpy: 5
-GenLoot: 18
+GenLoot: 38
 GenEquip: 2
-GenFollow: 13
+GenFollow: 12
 E
 #1704
 besouro morto vivo~
@@ -86,9 +89,9 @@ econômica...e também divertida!
 0 11000
 9 9 1
 GenWimpy: 100
-GenLoot: 55
+GenLoot: 99
 GenEquip: 3
-GenFollow: 13
+GenFollow: 10
 E
 #1705
 cavaleiro fantasma~
@@ -103,10 +106,10 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 60
+GenWimpy: 58
 GenLoot: 99
-GenEquip: 14
-GenFollow: 18
+GenEquip: 21
+GenFollow: 9
 E
 #1706
 guardiao guardião cripta~
@@ -123,7 +126,7 @@ todos os seus movimentos. Cuidado com ele.
 20225 70000
 9 9 1
 GenWimpy: 4
-GenFollow: 14
+GenFollow: 13
 E
 #1707
 eremita~
@@ -156,8 +159,9 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 32
-GenFollow: 10
+GenWimpy: 54
+GenLoot: 2
+GenFollow: 9
 E
 #1708
 bolha lama~
@@ -185,9 +189,9 @@ adorando seu estado.
 14 7 1 1d10+475 2d8+11
 18000 18000
 6 6 1
-GenWimpy: 14
-GenLoot: 2
-GenFollow: 13
+GenWimpy: 24
+GenLoot: 3
+GenFollow: 12
 E
 #1710
 aranha verde~
@@ -201,11 +205,11 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 8 13 3 2d6+296 2d5+11
 0 13750
 9 9 2
-GenWimpy: 30
+GenWimpy: 16
 GenLoot: 99
-GenEquip: 68
+GenEquip: 99
 GenRoam: 89
-GenFollow: 5
+GenFollow: 1
 E
 #1711
 aranha amarela~
@@ -219,11 +223,11 @@ feita de uma substância cristalina viva que brilha amarelo.
 7 14 4 1d8+285 2d4+11
 351 12250
 9 9 2
-GenWimpy: 32
+GenWimpy: 14
 GenLoot: 99
-GenEquip: 66
+GenEquip: 99
 GenRoam: 89
-GenFollow: 8
+GenFollow: 1
 E
 #1712
 guarda petrificado~
@@ -236,6 +240,8 @@ Ele exibe o olhar de desprezo de um frio controle sob sua face pedregosa.
 12 10 2 2d4+355 2d7+13
 1009 13000
 9 9 1
+GenWimpy: 6
+GenFollow: 8
 E
 #1713
 batelao batelão avermelhado~
@@ -249,12 +255,12 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 59
+GenWimpy: 31
 GenLoot: 99
-GenEquip: 25
+GenEquip: 40
 GenRoam: 89
-GenGroup: 14
-GenFollow: 12
+GenGroup: 52
+GenFollow: 3
 E
 #1714
 gelatina ocre~
@@ -269,11 +275,11 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 89
+GenWimpy: 62
 GenLoot: 99
-GenEquip: 47
+GenEquip: 66
 GenRoam: 89
-GenFollow: 5
+GenFollow: 2
 E
 #1715
 necromante~
@@ -287,9 +293,9 @@ unhas que são manchadas com pomadas malignas e líquidos embalsamadores.
 17 2 -3 1d6+666 2d8+17
 666 28000
 9 9 1
-GenWimpy: 8
-GenLoot: 78
-GenEquip: 1
-GenFollow: 18
+GenWimpy: 20
+GenLoot: 93
+GenEquip: 2
+GenFollow: 17
 E
 $

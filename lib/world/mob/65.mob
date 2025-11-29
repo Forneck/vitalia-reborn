@@ -10,10 +10,12 @@ como se não tivesse tomado banho por um mês.
 21 0 -1 4d20+336 2d8+9
 10000 60000
 9 9 1
-GenWimpy: 47
-GenLoot: 19
-GenEquip: 1
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 5
 E
 T 3013
 #6501
@@ -27,11 +29,13 @@ Ele é muito sujo e parece extremamente exausto pelo excesso de trabalho.
 13 7 2 25d5+170 2d4+6
 3500 16000
 9 9 1
-GenWimpy: 41
-GenLoot: 53
-GenEquip: 1
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 3
 GenRoam: 89
-GenGroup: 95
+GenGroup: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #6502
@@ -45,9 +49,11 @@ Um fantasma negro e quase transparente.
 25 4 -6 9d7+500 4d5+25
 45708 125000
 9 9 1
-GenWimpy: 28
-GenLoot: 1
-GenFollow: 12
+GenWimpy: 56
+GenLoot: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 T 3009
 #6503
@@ -61,6 +67,8 @@ O lojista é muito arredondado, mas parece em excelente condição.
 108 0 -10 1d1+30000 2d8+32
 33500 800000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #6504
 padeiro granito cabeca~
@@ -73,6 +81,8 @@ Cabeça de Granito está coberto de farinha e cereais.
 108 0 -10 1d1+30000 2d8+22
 55000 800000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #6505
 lagarto gigante~
@@ -86,11 +96,13 @@ Ele aparenta ser muito poderoso.
 21 0 1 4d20+340 3d7+4
 200 55000
 9 9 1
-GenWimpy: 12
-GenLoot: 23
-GenEquip: 1
+GenWimpy: 44
+GenLoot: 72
+GenEquip: 5
 GenRoam: 89
-GenGroup: 78
+GenGroup: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 16
 E
 #6506
@@ -105,11 +117,14 @@ estar em excelentes condições físicas.
 19 2 0 4d20+300 3d3+8
 2000 45000
 9 9 1
-GenWimpy: 12
-GenLoot: 4
+GenWimpy: 79
+GenLoot: 60
+GenEquip: 1
 GenRoam: 89
-GenGroup: 18
-GenFollow: 18
+GenGroup: 94
+GenTrade: 100
+GenQuest: 50
+GenFollow: 17
 E
 #6507
 mineiro anao~
@@ -122,6 +137,11 @@ O mineiro está muito cansado e muito sujo, e ele tem os músculos inchados.
 4 16 7 3d13+40 1d3+2
 600 700
 9 9 1
+GenWimpy: 38
+GenLoot: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #6508
 chefe mina anao~
@@ -135,8 +155,11 @@ razoavelmente inteligente também para ter conseguido este posto.
 19 1 0 50d2+270 3d4+6
 18000 35000
 9 9 1
-GenWimpy: 6
-GenFollow: 13
+GenWimpy: 81
+GenLoot: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #6509
 medico anao curandeiro~
@@ -149,6 +172,11 @@ Ele é um curandeiro muito habilidoso e extremamente leal ao seu deus.
 22 0 -1 9d4+375 3d8+4
 20000 60000
 9 9 1
+GenWimpy: 52
+GenLoot: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 T 3009
 #6510
@@ -162,8 +190,11 @@ An undefined string.
 3 18 7 10d3+35 2d3+2
 75 350
 9 9 1
-GenWimpy: 1
-GenFollow: 11
+GenWimpy: 17
+GenLoot: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #6511
 anao~
@@ -176,6 +207,11 @@ An undefined string.
 6 15 4 1d15+70 3d3+1
 625 1500
 9 9 1
+GenWimpy: 27
+GenLoot: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #6514
 guarda quartel~
@@ -189,8 +225,11 @@ An undefined string.
 14 6 1 5d10+170 2d5+4
 1300 20000
 9 9 1
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 56
+GenLoot: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #6516
 labirinto guardião guardiao~
@@ -203,6 +242,10 @@ Ele parece MUITO forte.
 29 0 -7 250d4+2000 4d3+5
 2000 1700000
 9 9 1
+GenWimpy: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 16
 E
 T 3009
 #6517
@@ -216,6 +259,10 @@ An undefined string.
 33 0 -10 300d6+600 4d4+22
 3000 800000
 9 9 2
+GenWimpy: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 17
 E
 #6518
 taverneiro anao~
@@ -230,6 +277,10 @@ quanto suas receitas de família.
 18 2 1 1d8+250 2d6+3
 800 8000
 9 9 1
+GenWimpy: 15
+GenTrade: 100
+GenQuest: 50
+GenFollow: 11
 E
 #6519
 cozinheiro anao~
@@ -243,6 +294,10 @@ que satisfazem mesmo os apetites mais robustos dos trabalhadores das minas.
 16 3 2 1d7+225 2d5+2
 700 7000
 9 9 1
+GenWimpy: 13
+GenTrade: 100
+GenQuest: 50
+GenFollow: 12
 E
 #6520
 mestre ferreiro anao~
@@ -256,6 +311,8 @@ armaduras da realeza anã. Sua habilidade é lendária mesmo entre os anões.
 22 0 -1 1d10+300 3d6+4
 1000 10000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #6521
 guarda real anao~
@@ -270,6 +327,8 @@ militares do reino. Sua lealdade e habilidade de combate são inabaláveis.
 900 9000
 9 9 1
 BareHandAttack: 5
+GenTrade: 100
+GenQuest: 50
 E
 #6522
 conselheiro anao~
@@ -283,6 +342,8 @@ Sua sabedoria é respeitada por toda a hierarquia do reino de Strangelove.
 19 2 0 1d8+262 2d6+3
 850 8500
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #6523
 rei anao anões~
@@ -297,6 +358,8 @@ comanda respeito imediato, e sua coroa de mithril simboliza seu poder.
 1200 12000
 9 9 1
 BareHandAttack: 6
+GenTrade: 100
+GenQuest: 50
 E
 #6524
 minerador mithril anao~
@@ -311,6 +374,8 @@ invaluável para o reino.
 17 3 1 1d8+237 2d6+2
 750 7500
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #6525
 refinador mithril anao~
@@ -325,5 +390,7 @@ o mithril mais puro conhecido.
 19 2 0 1d8+262 2d6+3
 850 8500
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 $

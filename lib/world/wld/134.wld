@@ -584,7 +584,7 @@ O Escritório do Capitão~
 visão  de  Thewster. Há uma larga mesa no meio da sala, cheia de papéis. Há
 degraus levando para baixo.
 ~
-134 8 0 0 0 0
+134 184 0 0 0 0
 D5
 ~
 ~
@@ -1340,12 +1340,12 @@ D0
 porta sul~
 1 13437 13479
 E
-carpete corpos~
-Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
-~
-E
 peles pele animais paredes~
 As peles tem um estranho símbolo de um olho e um dente marcada nelas.
+~
+E
+carpete corpos~
+Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
 ~
 S
 #13482

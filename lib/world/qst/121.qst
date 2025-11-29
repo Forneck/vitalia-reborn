@@ -1,41 +1,181 @@
-#12153
+#12100
+Salvar o pato~
+Proteger o pato de perigos~
+o sentinela está preocupado com a segurança de o pato. Ajude a garantir que esta pessoa esteja segura para receber 163 moedas de ouro.~
+Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!~
+Compreendo. É uma tarefa perigosa mesmo.~
+4 3012 b 3123 -1 -1 -1
+11 40 8 28 -1 3060 1
+163 407 3105
+S
+#12101
+Encontrar o pato~
+Encontrar e falar com o pato~
+Alguém está procurando por o pato. Encontre esta pessoa para receber 101 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3123 -1 -1 -1
+7 20 5 25 -1 3060 1
+101 202 65535
+S
+#12102
+Encontrar o pato~
+Encontrar e falar com o pato~
+Alguém está procurando por o pato. Encontre esta pessoa para receber 71 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3123 -1 -1 -1
+5 14 5 25 -1 3060 1
+71 142 3105
+S
+#12103
+Salvar o pato~
+Proteger o pato de perigos~
+o sentinela está preocupado com a segurança de o pato. Ajude a garantir que esta pessoa esteja segura para receber 142 moedas de ouro.~
+Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!~
+Compreendo. É uma tarefa perigosa mesmo.~
+4 3012 b 3123 -1 -1 -1
+9 35 8 28 -1 3060 1
+142 355 65535
+S
+#12104
 Explorar local~
 Explorar um local específico~
-o caçador de aventuras precisa que alguém explore um local específico (O Serviço de Correios). Vá até lá para receber 271 moedas de ouro.~
+Alguém precisa que alguém explore um local específico (3152). Vá até lá para receber 87 moedas de ouro.~
 Excelente! Você chegou ao local que eu precisava explorar!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-1 3012 b 3062 -1 -1 -1
-12 54 7 32 -1 3015 1
-271 542 65535
+1 3012 b 3152 -1 -1 -1
+8 17 5 25 -1 3060 1
+87 174 3105
 S
-#12162
+#12114
 Explorar local~
 Explorar um local específico~
-o caçador de aventuras precisa que alguém explore um local específico (O Final Leste do Beco). Vá até lá para receber 277 moedas de ouro.~
+Alguém precisa que alguém explore um local específico (2675). Vá até lá para receber 180 moedas de ouro.~
 Excelente! Você chegou ao local que eu precisava explorar!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-1 3012 b 3046 -1 -1 -1
-12 55 7 32 -1 3015 1
-277 554 18614
+1 3012 b 2675 -1 -1 -1
+11 36 7 32 -1 2539 1
+180 360 65535
 S
-#12164
-Buscar um barril~
-Encontrar e trazer um barril~
-o caçador de aventuras perdeu um barril e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 376 moedas de ouro.~
+#12124
+Buscar uma chave de diamante~
+Encontrar e trazer uma chave de diamante~
+Alguém perdeu uma chave de diamante e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 241 moedas de ouro.~
 Perfeito! Você encontrou o que eu estava procurando!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-5 3012 b 3000 -1 -1 -1
-12 75 7 32 -1 3015 1
-376 752 65535
+5 3012 b 2500 -1 -1 -1
+12 48 7 32 -1 2539 1
+241 482 65535
 S
-#12172
+#12134
+Encontrar o escrivã~
+Encontrar e falar com o escrivã~
+Alguém está procurando por o escrivã. Encontre esta pessoa para receber 229 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2531 -1 -1 -1
+12 45 15 40 -1 2554 1
+229 458 2574
+S
+#12144
 Explorar local~
 Explorar um local específico~
-o caçador de aventuras precisa que alguém explore um local específico (O Salão de Entrada da Associação dos Ladrões). Vá até lá para receber 247 moedas de ouro.~
+Alguém precisa que alguém explore um local específico (2561). Vá até lá para receber 146 moedas de ouro.~
 Excelente! Você chegou ao local que eu precisava explorar!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-1 3012 b 3027 -1 -1 -1
-12 49 7 32 -1 3015 1
-247 494 65535
+1 3012 b 2561 -1 -1 -1
+9 29 6 31 -1 2531 1
+146 292 65535
+S
+#12148
+Salvar o zelador~
+Proteger o zelador de perigos~
+o sentinela está preocupado com a segurança de o zelador. Ajude a garantir que esta pessoa esteja segura para receber 130 moedas de ouro.~
+Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!~
+Compreendo. É uma tarefa perigosa mesmo.~
+4 3012 b 3061 -1 -1 -1
+9 32 8 28 -1 3067 1
+130 325 65535
+S
+#12154
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (2678). Vá até lá para receber 167 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2678 -1 -1 -1
+8 33 5 30 -1 2521 1
+167 334 65535
+S
+#12155
+Buscar uma xícara~
+Encontrar e trazer uma xícara~
+Alguém perdeu uma xícara e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 127 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 3100 -1 -1 -1
+10 25 5 25 -1 3060 1
+127 254 3105
+S
+#12166
+Encontrar o estudante de magias~
+Encontrar e falar com o estudante de magias~
+Alguém está procurando por o estudante de magias. Encontre esta pessoa para receber 58 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2522 -1 -1 -1
+2 11 5 23 -1 2522 1
+58 116 65535
+S
+#12168
+Salvar o pardal~
+Proteger o pardal de perigos~
+o sentinela está preocupado com a segurança de o pardal. Ajude a garantir que esta pessoa esteja segura para receber 163 moedas de ouro.~
+Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!~
+Compreendo. É uma tarefa perigosa mesmo.~
+4 3012 b 3122 -1 -1 -1
+11 40 8 28 -1 3060 1
+163 407 65535
+S
+#12174
+Encontrar o escrivã~
+Encontrar e falar com o escrivã~
+Alguém está procurando por o escrivã. Encontre esta pessoa para receber 229 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2531 -1 -1 -1
+12 45 15 40 -1 2536 1
+229 458 2556
+S
+#12184
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (2957). Vá até lá para receber 88 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2957 -1 -1 -1
+6 17 5 26 -1 2913 1
+88 176 65535
+S
+#12185
+Encontrar o pato~
+Encontrar e falar com o pato~
+Alguém está procurando por o pato. Encontre esta pessoa para receber 101 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3123 -1 -1 -1
+7 20 5 25 -1 3060 1
+101 202 65535
+S
+#12194
+Buscar uma chave de diamante~
+Encontrar e trazer uma chave de diamante~
+Alguém perdeu uma chave de diamante e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 114 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 2500 -1 -1 -1
+9 22 5 22 -1 2518 1
+114 228 65535
 S
 $~

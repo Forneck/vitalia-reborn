@@ -10,9 +10,10 @@ Você vê um jovem Samurai perto de si.  Suas roupas e armas indicam que ele
 50 7 -20 3d5+1400 5d4+15
 0 50000
 9 9 1
-GenWimpy: 4
-GenLoot: 3
-GenFollow: 4
+GenWimpy: 58
+GenLoot: 46
+GenEquip: 5
+GenFollow: 15
 E
 #15101
 Samurai Aprendiz~
@@ -27,6 +28,10 @@ ausente da realidade à sua volta.
 60 6 -21 3d6+1500 4d7+17
 0 70000
 9 3 1
+GenWimpy: 57
+GenLoot: 16
+GenEquip: 4
+GenFollow: 6
 E
 #15102
 Guerreiro Samurai~
@@ -40,9 +45,10 @@ os tempos e, pelo aspecto de sua arma, ele está pronto para lutar.
 60 4 -22 3d8+1800 4d8+16
 5000 70000
 9 9 1
-GenWimpy: 9
-GenLoot: 4
-GenFollow: 13
+GenWimpy: 60
+GenLoot: 12
+GenEquip: 2
+GenFollow: 4
 E
 #15103
 Shogun Compreensao~
@@ -57,10 +63,10 @@ diretamente para você, como se ele soubesse de alguma coisa.
 75 0 -23 3d10+1900 4d8+20
 10000 150000
 9 5 1
-GenWimpy: 5
-GenLoot: 6
-GenEquip: 7
-GenFollow: 14
+GenWimpy: 41
+GenLoot: 91
+GenEquip: 59
+GenFollow: 10
 E
 #15104
 Shogun etica~
@@ -74,9 +80,10 @@ ensangüentada, você acha melhor não ser JULGADO por ele.
 70 -2 -24 3d10+1950 5d8+22
 10000 200000
 9 9 1
-GenWimpy: 16
-GenEquip: 5
-GenFollow: 14
+GenWimpy: 36
+GenLoot: 63
+GenEquip: 59
+GenFollow: 8
 E
 #15105
 Shogum Lealdade~
@@ -90,9 +97,10 @@ melhor tê-lo como amigo.
 75 -4 -25 3d10+2000 5d8+25
 10000 250000
 9 9 1
-GenWimpy: 15
-GenEquip: 5
-GenFollow: 14
+GenWimpy: 44
+GenLoot: 33
+GenEquip: 43
+GenFollow: 10
 E
 #15106
 Shogum Repeito~
@@ -106,9 +114,10 @@ A presença do Shogum, por si só, demanda respeito.
 80 -6 -26 3d10+2200 5d7+26
 10000 300000
 9 5 1
-GenWimpy: 8
-GenEquip: 5
-GenFollow: 15
+GenWimpy: 35
+GenLoot: 17
+GenEquip: 38
+GenFollow: 13
 E
 #15107
 Shogum Autoridade~
@@ -122,9 +131,10 @@ Sua vontade é de correr de volta para seu quarto.
 85 -8 -27 3d10+2400 5d7+27
 10000 350000
 9 9 1
-GenWimpy: 12
-GenEquip: 6
-GenFollow: 14
+GenWimpy: 35
+GenLoot: 14
+GenEquip: 34
+GenFollow: 11
 E
 #15108
 Shogum Conhecimento~
@@ -138,10 +148,10 @@ o quão sábio ele é.
 90 -10 -28 3d10+2500 5d7+28
 10000 400000
 9 9 1
-GenWimpy: 22
-GenLoot: 1
-GenEquip: 3
-GenFollow: 14
+GenWimpy: 29
+GenLoot: 12
+GenEquip: 24
+GenFollow: 12
 E
 #15109
 Shogum Verdade~
@@ -155,9 +165,10 @@ Você treme de medo... sem brincadeira.
 95 -12 -29 3d10+2700 5d7+29
 10000 350000
 9 9 1
-GenWimpy: 4
-GenEquip: 3
-GenFollow: 15
+GenWimpy: 29
+GenLoot: 19
+GenEquip: 34
+GenFollow: 14
 E
 #15110
 Shogum Caridade~
@@ -172,9 +183,10 @@ abraço nele!
 100 -14 -30 3d10+2900 5d7+30
 10000 450000
 9 9 1
-GenWimpy: 5
-GenEquip: 3
-GenFollow: 15
+GenWimpy: 17
+GenLoot: 5
+GenEquip: 19
+GenFollow: 13
 E
 #15111
 Tokugawa Yoshikatsu~
@@ -194,7 +206,7 @@ Int: 18
 Wis: 20
 Con: 18
 Cha: 20
-GenWimpy: 3
-GenFollow: 15
+GenWimpy: 4
+GenFollow: 14
 E
 $

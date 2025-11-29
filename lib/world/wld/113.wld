@@ -5,7 +5,7 @@ que o rio parece ser menos violento.  Uma agradável luz violeta parece vir
 do fundo, parecendo tentar atraí-lo para si.  Você pode voltar à tona,
 subindo, ou descer ainda mais, para o fundo do rio.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D4
 ~
 ~
@@ -29,7 +29,7 @@ cintilam intensamente.  Esses lótus formam um círculo que parece demarcar a
 na superfície.  A partir do círculo você vê ainda que os lótus,
 enfileirados, seguem oeste.  É possível ainda nadar para norte ou para cima.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D0
 ~
 ~
@@ -52,7 +52,7 @@ profundo, cobrem o solo formando estranhos mosaicos que brilham à luz das
 flores.  Mais à frente você repara que a trilha cintilante termina, levando
 a um local extremamente escuro.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D1
 ~
 ~
@@ -71,7 +71,7 @@ profundo, cobrem o solo formando estranhos mosaicos que brilham à luz das
 flores.  O cintilar dos lótus para abruptamente abaixo de você, logo na
 borda do que parece ser um buraco no rio.  Ali você não enxergar luz alguma.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D1
 ~
 ~
@@ -89,7 +89,7 @@ Ikshumati.  A iluminação aqui é inexistente, sendo extremamente desagradável
 a sensação de estranhos seres de corpo liso nadando à sua volta, tocando-o
 vez ou outra. O túnel segue para baixo e para cima.
 ~
-113 325 0 0 0 8
+113 261 0 0 0 8
 D4
 Ali há luz.
 ~
@@ -109,7 +109,7 @@ a sensação de estranhos seres de corpo liso nadando à sua volta, tocando-o
 vez ou outra.  Há uma repentina curva no túnel, seguindo oeste.  Para cima
 está o leito do rio Ikshumati.
 ~
-113 325 0 0 0 8
+113 261 0 0 0 8
 D3
 Um forte brilho vem dessa direção.
 ~
@@ -134,7 +134,7 @@ próprios cristais, está uma enorme flor de lótus, de diâmetro próximo à su
 altura, fechada como botão prestes a se abrir.  Ela parece muito bem
 guardada.
 ~
-113 620 0 0 0 0
+113 556 0 0 0 0
 D1
 Você vê o escuro túnel.
 ~
@@ -150,7 +150,7 @@ continuar a nadar e procurar uma saída do que arriscar-se em
 uma interminável subida rumo à tona.  Nadar a norte ou sul parece
 ser sua única opção.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D0
 ~
 ~
@@ -169,7 +169,7 @@ continuar a nadar e procurar uma saída do que arriscar-se em
 uma interminável subida rumo à tona.  Nadar para norte ou sul parece
 ser sua única opção.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D0
 ~
 ~
@@ -189,7 +189,7 @@ Mais à frente você vê que o rio faz uma curva para oeste, parecendo entrar
 num gigantesco buraco, em uma rocha.  Mas por enquanto, nadar para norte ou
 sul são suas únicas opções aqui.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D0
 ~
 ~
@@ -211,7 +211,7 @@ alto, mas você não tem como saber...  A correnteza parece ser muito forte
 por ali, sendo que uma vez entrando lá, difícilmente você voltará.  Vale a
 pena arriscar?  Se sim, continue a seguir norte.  Se não, nada para sul.
 ~
-113 68 0 0 0 8
+113 4 0 0 0 8
 D0
 ~
 ~
@@ -227,7 +227,7 @@ Atravessando o Buraco~
 um túnel.  Ainda é possível nadar até sul, pois a correnteza que segue norte
 não está tão forte.
 ~
-113 69 0 0 0 8
+113 5 0 0 0 8
 D0
 ~
 ~
@@ -242,7 +242,7 @@ No Tunel~
    Voce nao ve quase nada. A correnteza aqui tornou-se muito intensa, sendo impossivel
 nadar para sul. Voce nao ve saida alguma.
 ~
-113 69 0 0 0 8
+113 5 0 0 0 8
 D4
 ~
 ~
@@ -253,7 +253,7 @@ No Túnel~
    Você não vê quase nada. A forte correnteza o atrai cada vez mais para cima.
 Lá, parece haver alguma coisa iluminando um dos lados do túnel.
 ~
-113 69 0 0 0 8
+113 5 0 0 0 8
 D4
 ~
 ~
@@ -268,7 +268,7 @@ que atravessa o túnel, permitindo que você se segure.
 norte no túnel, rente à grade que o mantém aqui, outra grade, mas dourada,
 que mais parece uma porta. Parece ser sua única saída.
 ~
-113 69 0 0 0 8
+113 5 0 0 0 8
 D0
 ~
 grade dourada~
@@ -288,7 +288,7 @@ vê um salão abarrotado de coisas, a leste vê uma sala repleta de livros e
 pergaminhos, a sul um local pouco iluminado, a oeste uma espécie de altar
 e pátios a noroeste e sudeste, externos ao templo.
 ~
-113 152 0 0 0 0
+113 216 0 0 0 0
 D0
 Ali fica a Sala de oferendas.
 ~
@@ -313,7 +313,7 @@ D5
 Você vê, na piscina dourada, a grade que leva até o Ikshumati.
 ~
 grade dourada~
-1 -1 11314
+1 -1 7030
 D6
 Você vê um pátio.
 ~
@@ -325,15 +325,15 @@ Você vê um pátio.
 ~
 0 -1 11384
 E
+pinturas teto~
+Há diversas pinturas representando Sesha sustentando o mundo e sendo
+reverenciado pelos senhores de Patala.
+~
+E
 pilares~
 O que cobre os pilares parece ser ouro puro. Os desenhos que os adornam,
 feito por ourives de fantástica habilidade, represetam quatro naginis
 segurando as pedras dos senhores do norte, do sul, do leste e oeste.
-~
-E
-pinturas teto~
-Há diversas pinturas representando Sesha sustentando o mundo e sendo
-reverenciado pelos senhores de Patala.
 ~
 S
 #11316
@@ -350,7 +350,7 @@ entanto, o que ocupa maior espaço são os grandes baús de pedra que parecem
 encerrar em si os maiores tesouros.
   Na parede oeste há uma abertura que leva a um pátio.
 ~
-113 152 0 0 0 0
+113 216 0 0 0 0
 D0
 Você vê a Via Norte.
 ~
@@ -382,7 +382,7 @@ esse lugar.  Uma interessante inscrição em um pilar exatamente no centro da
 sala chama sua atenção.
    A parede sul possui uma abertura, esta levando a um pátio.
 ~
-113 152 0 0 0 0
+113 216 0 0 0 0
 D1
 Você vê a Via Leste.
 ~
@@ -427,7 +427,7 @@ canaletas de ouro que o atravessam.  O ambiente parece ser ideal para
 meditação ou simplesmente para o repouso de uma mente e corpo cansados.
    Há, na parede leste, a passagem para um pátio externo ao templo. 
 ~
-113 153 0 0 0 0
+113 217 0 0 0 0
 D0
 Você vê o Centro do Templo.
 ~
@@ -461,7 +461,7 @@ sem razão aparente. Diga-se de passagem, você até agora não entendeu para
 que serve esse salão.
    Uma passagem, na parede norte, leva a um pátio externo ao templo.
 ~
-113 152 0 0 0 0
+113 216 0 0 0 0
 D0
 Você vê um pátio.
 ~
@@ -490,7 +490,7 @@ pungente, mas todos agradáveis.  Você pode seguir pela via por norte ou
 nordeste, voltar para o templo, que fica a sul, ou entrar em uma discreta
 loja a oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -519,7 +519,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis.  Você pode seguir pela via por norte, sul
 ou oeste ou entrar em uma grande loja a leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -548,7 +548,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis.  Você pode seguir pela via por norte, sul,
 entrar em uma grande loja a leste ou em uma barulhenta loja a oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -576,7 +576,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 é claro...), e sim é repleta de aromas que vão do mais suave ao mais
 pungente, mas todos agradáveis.  Você pode seguir pela via leste e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -604,7 +604,7 @@ incessantemente, os martelos não param nunca de bater, o metal nunca para de
 bilhar aqui.  Não é algo que costume ser bonito, mas a oficina do velho
 artesão consegue ser.
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
 D6
 ~
 ~
@@ -627,7 +627,7 @@ maças em grandes baús...  Infelizmente, pela qualidade dos itens ser
 excepcional, os preços também o são.  
    A sudeste parece ficar a oficina e a oeste a Via Norte.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D3
 ~
 ~
@@ -652,7 +652,11 @@ algodão leve e calças de tecido, provando a variedade dos artigos oferecidos
 pela armoraria.
    A nordeste parece ficar a oficina e a oeste a Via Norte.
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
+D2
+~
+~
+0 0 -1
 D3
 ~
 ~
@@ -674,7 +678,7 @@ Enormes candelabros de ferro negro, completamente sem adornos, iluminam
 apenas o local em que as jóias se encontram: tudo aqui parece ser feito para
 que as jóias pareçam ainda mais majestosa do que são, se isso for possível.
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
 D1
 ~
 ~
@@ -693,7 +697,7 @@ bastões mágicos, além de pergaminhos, poções e o que mais for
 possível. 
    A leste fica a Via Norte.
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
 D1
 ~
 ~
@@ -709,7 +713,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -736,7 +740,7 @@ voltar para o templo a oeste, se aproximar da entrada para a Congregação de
 Clérigos de Bhogavati indo norte, ou seguir em direção a uma casa de ar
 furtivo, a sul.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -766,7 +770,7 @@ pungente, mas todos agradáveis.  Você pode seguir pela via indo leste, oeste
 ou sul, ou ainda ir em direção ao norte, onde fica a Confraria de Druidas de
 Bhogavati.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -796,7 +800,7 @@ pungente, mas todos agradáveis.  A via segue leste oeste, sendo possível
 chegar a norte à Associação de Guerreiros de Bhogavati e a sul para uma
 filial da Irmandade dos Magos.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -825,7 +829,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis.  A via segue nas direções norte, sul, leste
 e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -853,7 +857,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 é claro...), e sim é repleta de aromas que vão do mais suave ao mais
 pungente, mas todos agradáveis. A via segue oeste, norte e sul.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -873,7 +877,7 @@ A Entrada da Congregação de Clérigos de Bhogavati~
 impecável com portas e janelas de brilhante azul-escuro.  Um pequeno jardim
 floresce às margens da via leste, que está a sul.  A casa fica a norte.
 ~
-113 76 0 0 0 1
+113 12 0 0 0 1
 D0
 A Congregação fica ali.
 ~
@@ -893,7 +897,7 @@ paredes, uma grande estante de livros e um pequeno altar feito de ouro.  O
 ambiente é muito calmo, sendo possível recuperar suas forças e sua fé apenas
 estando aqui por alguns momentos.  A entrada fica a sul.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D2
 A entrada da Congregação fica ali.
 ~
@@ -911,7 +915,7 @@ encapuzados ou de face oculta pela escuridão cochicham enquanto o examinam,
 apontando para você.  A sul fica o coração da Sociedade, enquanto a norte
 corre a via leste.
 ~
-113 77 0 0 0 0
+113 13 0 0 0 0
 D0
 ~
 ~
@@ -930,7 +934,7 @@ apenas quatro tochas, duas ao lado da passagem para o local, uma na parede
 leste e outra a oeste.  Alguns bancos de madeiras foram dispostos em volta
 do centro da sala, facilitando a conversa em uma eventual reunião.
 ~
-113 77 0 0 0 0
+113 13 0 0 0 0
 D0
 ~
 ~
@@ -947,7 +951,7 @@ enormes candelabros fixados às paredes.  Aqui os guerreiros parecem parar
 apenas para descansar ou conversar, sentados em poltronas confortáveis,
 enquanto a oeste eles reproduzem o que um guerreiro faz tão bem.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D2
 ~
 ~
@@ -966,7 +970,7 @@ centro, havendo atrás deles uma série de cadeiras e bancos para aqueles que
 querem assistir o que ali ocorre ou para os que estão se exercitando e
 querem descansar um pouco.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D1
 ~
 ~
@@ -980,7 +984,7 @@ pedra, cuja fachada imita a de uma torre de castelo com suas ameias.  A alta
 porta de madeira, de duas folhas, está aberta, porém não se vê o que há no
 interior do lugar.  O terraço desce até a via leste por norte.
 ~
-113 76 0 0 0 1
+113 12 0 0 0 1
 D0
 ~
 ~
@@ -1001,7 +1005,7 @@ carvalho espalhadas pelo lugar.  Em um canto há uma grande estante
 abarrotada de livros, enquanto em outro parecem estar expostas obras que
 retratam membros ilustres da Irmandade.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D3
 ~
 porta portas~
@@ -1019,7 +1023,7 @@ pungente, mas todos agradáveis.  A via continua a sul, o templo fica a
 norte, havendo ainda a oeste um grande barco ancorado em uma ramificação do
 rio.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1044,7 +1048,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis. A via continua a norte, sul e leste,
 e a loja de música Sublime Música fica a oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1073,7 +1077,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis. A via segue norte, sul e oeste, havendo
 a leste uma pequena construção sobre um braço do rio.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1101,7 +1105,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 é claro...), e sim é repleta de aromas que vão do mais suave ao mais
 pungente, mas todos agradáveis. A via segue norte, leste e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1126,7 +1130,7 @@ que possui uma grande cabine para armazenar coisas e alguns mastros sem
 velas.  Um aviso foi preso a um dos mastros (que parece inútil), havendo ao
 seu lado uma bonita mesa de madeira, também marrom-dourada.
 ~
-113 204 0 0 0 0
+113 156 0 0 0 0
 D1
 ~
 ~
@@ -1161,7 +1165,7 @@ da mesma madeira apoiada sobre a de baixo.  Um grande número de barcos foi
 deixado para fora, bioando no braço do rio, sendo presos por firmes cordas
 de fios de dourado bem escurecido
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
 D3
 ~
 ~
@@ -1178,7 +1182,7 @@ colocados à venda, tão bem feitos que são como jóias.  De uma fonte,
 colocada no extremo oeste na loja, é emitida uma suave música que fala sobre
 a beleza da união da luz dos céus e com as gotas de chuva, o arco-íris.
 ~
-113 204 0 0 0 0
+113 140 0 0 0 0
 D1
 ~
 ~
@@ -1195,7 +1199,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis. O templo fica a leste e a estalagem
 Pedra Preciosa a sul. A via, por sua vez, continua a oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1220,7 +1224,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis.  A via parece continuar a sul, leste e
 oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1245,7 +1249,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis. A via segue norte, leste e oeste, estando
 a sul a taverna Cobra Voando.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1274,7 +1278,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 pungente, mas todos agradáveis. A via continua a leste e oeste, enquanto a
 norte fica a loja do senhor Kalidas.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1303,7 +1307,7 @@ descalço.  Um largo balcão de granito negro serve de recepção para a
 estalagem.
    A Via Oeste fica a norte, enquanto que o salão fica a oeste.
 ~
-113 140 0 0 0 0
+113 172 0 0 0 0
 D0
 ~
 ~
@@ -1376,7 +1380,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para sul, sudeste e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D2
 ~
 ~
@@ -1400,7 +1404,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para noroeste, sudeste e sudoeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D6
 ~
 ~
@@ -1424,7 +1428,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para noroeste, sul e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D2
 ~
 ~
@@ -1448,7 +1452,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para norte, oeste e sudoeste, passando por baixo uma grande ponte.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1471,7 +1475,7 @@ esse pátio até a saída sudeste da cidade passa por cima dela, formando uma
 das únicas vias por "terra" daqui.  Você pode entrar no templo seguindo
 sul, leste ou sudeste, além de seguir pela ponte noroeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D1
 ~
 ~
@@ -1499,7 +1503,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para norte, oeste e nordeste, passando por baixo uma grande ponte.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1524,7 +1528,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas correm por norte,
 leste e passam debaixo de uma ponte a noroeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1552,7 +1556,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tão característicos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D6
 ~
 ~
@@ -1573,7 +1577,7 @@ brilham lindamente às luzes da Cidade das Jóias.  As límpidas águas douradas
 encontram caminho livre para norte e leste, passando ainda por baixo de uma
 grande ponte, a sudeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1598,7 +1602,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para sul, leste e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1622,7 +1626,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para norte, sul e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1646,7 +1650,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para leste, oeste, norte e sul.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1674,7 +1678,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para leste e oeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1694,7 +1698,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As águas do pequeno rio
 se derramam nas direções norte, sul e sudeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1718,7 +1722,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas do pequeno rio
 seguem por leste e noroeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1738,7 +1742,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas do afluente segue
 oeste, sul e norte.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1762,7 +1766,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas do rio encontram
 caminho para norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1786,7 +1790,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As águas do rio se espalham
 entre a direção norte, sudeste e leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1810,7 +1814,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As águas do rio se espalham
 por oeste, leste e sul.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1834,7 +1838,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias. As águas encontram caminho
 para norte, nordeste, leste e sudoeste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1862,7 +1866,7 @@ atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
 é claro...), e sim é repleta de aromas que vão do mais suave ao mais
 pungente, mas todos agradáveis. A via segue norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 ~
 ~
@@ -1886,7 +1890,7 @@ curarem de ferimentos ou doenças.  Um grande círculo de pedras, monólitos
 cinzentos com traços de musgos e liquens, se ergue, digno de reverência, a
 norte.  A Via Leste corre passando por sul.
 ~
-113 76 0 0 0 1
+113 12 0 0 0 1
 D0
 ~
 ~
@@ -1906,7 +1910,7 @@ do altar, cada um com cerca de vinte centímetros de diâmetro, voltados para
 os pontos cardeais, iluminando o local quando necessário.  Há sempre um
 experiente druida aqui, zelando pelo pequeno santuário.
 ~
-113 76 0 0 0 2
+113 12 0 0 0 2
 D2
 ~
 ~
@@ -1925,7 +1929,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tão característicos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D6
 ~
 ~
@@ -1945,7 +1949,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para nordeste, sob uma grande ponte, a leste e a sul.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1969,7 +1973,7 @@ afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
 brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para sudoeste, sob uma grande ponte, a sul e leste.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D1
 ~
 ~
@@ -1995,7 +1999,7 @@ espalhados por sobre as estantes, cadeiras, baús, cabideiros e tantas e
 tantas caixas que obstruem sua passagem. Há um pequeno balcão no fundo da loja,
 além de uma saída a sul, que leva à Via Oeste.
 ~
-113 76 0 0 0 0
+113 12 0 0 0 0
 D2
 ~
 ~
@@ -2009,7 +2013,7 @@ esse pátio até a saída sudeste da cidade passa por cima dela, formando uma
 das únicas vias por "terra" daqui.  Você pode entrar no templo seguindo
 norte, oeste ou noroeste, além de seguir pela ponte sudeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D0
 ~
 ~
@@ -2040,7 +2044,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tão característicos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D6
 ~
 ~
@@ -2063,7 +2067,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tão característicos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D6
 ~
 ~
@@ -2083,12 +2087,12 @@ lados do portão serem abertos, você pouca coisa vê além de água.
 Para seguir pela ponte, vá para noroeste; e para sair da cidade, siga sul,
 pelo portão.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D2
 A saída de Bhogavati fica por ali.
 ~
 portao cristal negro~
-1 -1 11388
+1 0 11388
 D6
 ~
 ~
@@ -2101,17 +2105,16 @@ alto portão de cristal negro.  A partir dele, uma estreita estrada de pedra
 azulada segue sul quase em linha reta, cercada esta de água imóvel como
 vidro até onde a vista alcança.  A cidade fica a norte.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D0
 A Cidade das Jóias está ali.
 ~
 portao cristal negro~
-1 -1 11387
+1 0 11387
 D2
-A estrada segue nessa direção.
 ~
 ~
-0 -1 2998
+0 0 2998
 S
 #11389
 O Pátio Noroeste~
@@ -2123,7 +2126,7 @@ lados do portão serem abertos, você somente vê escuridão além do canal.
 Indo sudeste você atravessa a ponte, enquanto a oeste está o outro lado do
 portão.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D3
 A saída de Bhogavati fica por ali.
 ~
@@ -2143,7 +2146,7 @@ ao observar as altas e escuras árvores do lugar, tudo parecendo ameaçador
 demais para ser seguro. A entrada da floresta fica a oeste, enquanto a leste
 está a cidade.
 ~
-113 68 0 0 0 1
+113 4 0 0 0 1
 D1
 A Cidade das Jóias está ali.
 ~
@@ -2158,7 +2161,7 @@ dourados, cada uma especializada em diferentes artes: joalheria, escultura
 em pedras preciosas, forjaria de metais nobres. O som suave de ferramentas
 delicadas mistura-se com o murmúrio das águas.
 ~
-113 0 0 0 0 7
+113 64 0 0 0 7
 D0
 O canal principal leva ao norte.
 ~
@@ -2177,7 +2180,7 @@ materiais preciosos entre as oficinas. As águas aqui têm uma tonalidade
 dourada mais intensa, resultado dos resíduos de metais nobres que são
 cuidadosamente filtrados e reaproveitados pelos artesãos nagas.
 ~
-113 131136 0 0 0 7
+113 131072 0 0 0 7
 D0
 O templo das pedras preciosas fica ao norte.
 ~
@@ -2197,7 +2200,7 @@ feitas de mithril, e cofres seguros guardam gemas raras. A luz é projetada
 através de cristais especiais para revelar cada faceta das pedras preciosas
 em sua verdadeira beleza.
 ~
-113 8 0 0 0 0
+113 72 0 0 0 0
 D3
 O distrito dos artífices fica a oeste.
 ~
@@ -2211,7 +2214,7 @@ preciosos nas profundezas da terra. Estátuas de nagas ancestrais, esculpidas
 em diamante e safira, guardam altares onde oferendas de pedras brutas são
 deixadas para serem abençoadas antes da lapidação.
 ~
-113 4 0 0 0 0
+113 68 0 0 0 0
 D1
 Os aposentos reais ficam a leste.
 ~

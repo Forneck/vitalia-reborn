@@ -1,21 +1,81 @@
-#10804
-Explorar local~
-Explorar um local específico~
-o caçador de aventuras precisa que alguém explore um local específico (O Final da Trilha). Vá até lá para receber 267 moedas de ouro.~
-Excelente! Você chegou ao local que eu precisava explorar!~
+#10864
+Encontrar o eremita~
+Encontrar e falar com o eremita~
+Alguém está procurando por o eremita. Encontre esta pessoa para receber 190 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
 Tudo bem. Talvez outro aventureiro possa ajudar.~
-1 3012 b 1106 -1 -1 -1
-12 53 7 32 -1 3015 1
-267 534 65535
+2 3012 b 1707 -1 -1 -1
+11 38 16 41 -1 1702 1
+190 380 1700
 S
 #10874
-Buscar um martelo de túmulo~
-Buscar e trazer um martelo de túmulo~
-um batelão avermelhado está procurando por um martelo de túmulo. Se você encontrar este item, traga-o para mim ou diretamente para um batelão avermelhado para receber 389 moedas de ouro, 778 pontos de experiência e uma cimitarra como recompensa.~
-Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
-Que pena que você desistiu desta busca.~
-5 3012 b 1720 -1 -1 -1
-10 0 11 36 -1 1713 1
-389 778 1700
+Encontrar um prisioneiro humano~
+Encontrar e falar com um prisioneiro humano~
+Alguém está procurando por um prisioneiro humano. Encontre esta pessoa para receber 162 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 5404 b 1623 -1 -1 -1
+9 32 32 57 -1 1605 1
+162 324 65535
+S
+#10898
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (923). Vá até lá para receber 101 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 923 -1 -1 -1
+9 20 5 28 -1 905 1
+101 202 65535
+S
+#10904
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (1653). Vá até lá para receber 295 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 5404 b 1653 -1 -1 -1
+12 59 18 43 -1 1601 1
+295 590 65535
+S
+#10946
+Encontrar uma borboleta~
+Encontrar e falar com uma borboleta~
+Alguém está procurando por uma borboleta. Encontre esta pessoa para receber 174 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 2721 -1 -1 -1
+10 34 7 32 -1 3015 1
+174 348 65535
+S
+#10954
+Encontrar um prisioneiro humano~
+Encontrar e falar com um prisioneiro humano~
+Alguém está procurando por um prisioneiro humano. Encontre esta pessoa para receber 162 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 5404 b 1623 -1 -1 -1
+8 32 18 43 -1 1601 1
+162 324 65535
+S
+#10958
+Encontrar um gnomo cientista~
+Encontrar e falar com um gnomo cientista~
+Alguém está procurando por um gnomo cientista. Encontre esta pessoa para receber 366 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 5404 b 1603 -1 -1 -1
+12 73 32 57 -1 1605 1
+366 732 65535
+S
+#10974
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (1621). Vá até lá para receber 288 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 5404 b 1621 -1 -1 -1
+12 57 18 43 -1 1601 1
+288 576 65535
 S
 $~

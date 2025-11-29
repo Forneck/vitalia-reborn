@@ -168,7 +168,7 @@ aqui, ou Lírio terá de agir...
 27 2 -4 4d8+819 7d5+17
 3330 50999
 9 9 1
-GenWimpy: 3
+GenWimpy: 7
 GenFollow: 14
 E
 #14010
@@ -248,6 +248,8 @@ ela também é ótima em consertar varinhas.
 27 4 -4 4d8+600 4d5+13
 3330 47999
 9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 #14015
 lilas fada~
@@ -324,8 +326,8 @@ para as guardiãs daqui.
 35 0 -5 4d8+900 6d4+18
 3330 59999
 9 9 1
-GenWimpy: 8
-GenFollow: 14
+GenWimpy: 14
+GenFollow: 12
 E
 #14020
 rosa-bebe rosa bebe~
@@ -503,7 +505,7 @@ próprio Girassol brilha no escuro.
 18 4 1 4d8+716 4d4+14
 3330 33999
 9 9 1
-GenWimpy: 3
+GenWimpy: 9
 GenFollow: 13
 E
 #14033

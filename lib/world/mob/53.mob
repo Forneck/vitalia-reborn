@@ -11,10 +11,10 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 10 1000
 9 9 0
 GenWimpy: 100
-GenLoot: 15
-GenEquip: 1
-GenRoam: 85
-GenFollow: 3
+GenLoot: 59
+GenEquip: 2
+GenRoam: 73
+GenFollow: 6
 E
 T 3008
 #5301
@@ -33,10 +33,10 @@ vítimas antes do bote.
 25 2000
 9 9 0
 GenWimpy: 100
-GenLoot: 8
-GenEquip: 2
-GenRoam: 87
-GenFollow: 3
+GenLoot: 42
+GenEquip: 4
+GenRoam: 76
+GenFollow: 8
 E
 T 3008
 #5302
@@ -54,9 +54,9 @@ mãos.
 9 9 2
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 27
-GenRoam: 89
-GenFollow: 5
+GenEquip: 84
+GenRoam: 86
+GenFollow: 2
 E
 #5303
 guardiao piramide~
@@ -72,10 +72,10 @@ roupas cor de areia.
 200 3750
 9 9 1
 GenWimpy: 100
-GenLoot: 78
-GenEquip: 9
-GenRoam: 77
-GenFollow: 14
+GenLoot: 99
+GenEquip: 34
+GenRoam: 85
+GenFollow: 5
 E
 #5304
 ladrao tumba~
@@ -88,11 +88,11 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 97
+GenWimpy: 100
 GenLoot: 99
-GenEquip: 27
+GenEquip: 66
 GenRoam: 89
-GenFollow: 2
+GenFollow: 13
 E
 T 3007
 #5305
@@ -109,12 +109,12 @@ não hoje...
 18 2 0 18d18+180 3d8+2
 1000 30000
 9 9 1
-GenWimpy: 97
-GenLoot: 86
-GenEquip: 15
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 40
 GenRoam: 89
-GenGroup: 23
-GenFollow: 14
+GenGroup: 1
+GenFollow: 4
 E
 T 3007
 #5306
@@ -130,6 +130,8 @@ chão!  Na verdade ele parece estar VIVO!
 9 11 7 9d9+90 2d5+2
 250 6000
 9 9 0
+GenWimpy: 2
+GenFollow: 10
 E
 #5307
 mumia cadaver~
@@ -143,11 +145,11 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 97
+GenWimpy: 100
 GenLoot: 99
-GenEquip: 32
+GenEquip: 67
 GenRoam: 89
-GenFollow: 2
+GenFollow: 12
 E
 #5308
 homem areia~
@@ -164,9 +166,10 @@ quentes e arenosos.
 9 9 1
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 12
-GenRoam: 88
-GenFollow: 4
+GenEquip: 23
+GenRoam: 89
+GenQuest: 1
+GenFollow: 3
 E
 #5309
 efreeti~
@@ -180,7 +183,7 @@ desprezo, com os braços cruzados sobre seu poderoso peito.
 20 0 -10 20d20+700 4d6+20
 11000 40000
 9 9 1
-GenWimpy: 4
+GenWimpy: 13
 GenFollow: 13
 E
 T 3009
@@ -197,6 +200,8 @@ pedra, nas mãos de cada figura.
 24 -4 -13 24d24+940 4d6+20
 35000 100000
 9 9 2
+GenWimpy: 7
+GenFollow: 17
 E
 #5311
 genio~
@@ -212,6 +217,8 @@ seu cavanhaque.
 28 -8 -36 28d28+880 6d6+28
 60000 310000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 T 3009
 #5312
@@ -228,12 +235,12 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 72
+GenWimpy: 41
 GenLoot: 99
-GenEquip: 24
+GenEquip: 41
 GenRoam: 89
-GenGroup: 90
-GenFollow: 17
+GenGroup: 57
+GenFollow: 14
 E
 #5313
 ginoesfinge esfinge~
@@ -250,8 +257,8 @@ enigma de sua prima crioesfinge.
 19 -12 -30 19d19+590 3d10+29
 10000 35000
 9 9 2
-GenWimpy: 5
-GenLoot: 15
+GenWimpy: 8
+GenLoot: 18
 GenFollow: 17
 E
 T 3009
@@ -269,10 +276,10 @@ confundidos.
 23 -13 -32 23d23+930 6d10+25
 25000 80000
 9 9 2
-GenWimpy: 4
-GenLoot: 32
-GenEquip: 4
-GenFollow: 17
+GenWimpy: 11
+GenLoot: 47
+GenEquip: 5
+GenFollow: 15
 E
 T 3009
 #5315
@@ -289,9 +296,9 @@ ouvir o poderoso rugido desta esfinge.
 27 -10 -36 27d27+970 4d10+27
 50000 200000
 9 9 2
-GenWimpy: 9
-GenLoot: 79
-GenEquip: 4
+GenWimpy: 26
+GenLoot: 96
+GenEquip: 5
 GenFollow: 14
 E
 T 3009
@@ -309,8 +316,8 @@ muitas regras.
 80 -21 -40 41d41+1410 6d10+37
 125000 2900000
 9 9 2
-GenWimpy: 5
-GenLoot: 95
+GenWimpy: 28
+GenLoot: 99
 GenEquip: 4
 GenFollow: 15
 E
@@ -330,6 +337,8 @@ chocolate, e seu peito quase nem se mexe quando respira.
 50 -18 -48 38d38+1380 8d6+40
 88000 2400000
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 T 3009
 $

@@ -10,7 +10,8 @@ total.
 4 16 5 2d10+40 1d8+4
 100 1500
 9 9 0
-GenWimpy: 3
+GenWimpy: 13
+GenFollow: 12
 E
 #901
 espadachim~
@@ -23,6 +24,15 @@ Este é o maior espadachim.
 7 12 3 3d10+80 2d5+2
 250 3000
 9 9 1
+GenWimpy: 30
+GenLoot: 13
+GenEquip: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 11
+EmotionProfile: 1
 E
 #902
 mumia rabscuttle~
@@ -35,6 +45,8 @@ Só bandagens, sem personalidade.
 11 10 1 6d3+130 2d6+2
 750 10500
 9 9 2
+GenWimpy: 37
+GenFollow: 11
 E
 #903
 lagarto gigante~
@@ -48,6 +60,8 @@ Ele parece muito poderoso.
 16 6 2 10d2+220 3d4+5
 1200 26000
 9 9 1
+GenWimpy: 29
+GenFollow: 13
 E
 #904
 woundwort general demonio~
@@ -60,6 +74,16 @@ Ele vagamente parece como um coelho, mas certamente não age como um.
 25 0 -1 10d8+520 3d5+12
 10000 28000
 9 9 1
+GenWimpy: 12
+GenLoot: 100
+GenEquip: 100
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 13
+EmotionProfile: 1
 E
 #905
 franz capanga~
@@ -73,6 +97,15 @@ espremer sua cabeça como uma uva.
 12 7 4 5d10+120 2d8+4
 1000 14000
 9 9 1
+GenWimpy: 19
+GenLoot: 2
+GenEquip: 50
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 7
+EmotionProfile: 2
 E
 #906
 hanz capanga~
@@ -86,6 +119,8 @@ um dragão.
 12 7 4 5d10+120 2d8+4
 1000 14000
 9 9 1
+GenWimpy: 21
+GenFollow: 10
 E
 #907
 minos rei minotauro~
@@ -98,6 +133,10 @@ Ele cheira muito ruim.
 26 0 -2 12d8+590 4d6+10
 0 50000
 9 9 1
+GenWimpy: 5
+GenLoot: 4
+GenEquip: 2
+GenFollow: 7
 E
 #908
 tartaruga dragao~
@@ -123,11 +162,10 @@ A harpia do mar é uma terrivel combatente e tem dentes afiados e cortantes.
 4 16 6 4d4+35 2d5+0
 100 750
 9 9 2
-GenWimpy: 27
+GenWimpy: 9
 GenLoot: 99
-GenEquip: 14
-GenGroup: 10
-GenFollow: 4
+GenEquip: 24
+GenFollow: 1
 E
 #910
 tritao~
@@ -140,7 +178,9 @@ O tritão tem uma poderosa cauda em vez de pernas.
 5 14 5 5d5+65 2d4+2
 1500 1000
 9 9 1
-GenWimpy: 1
+GenWimpy: 11
+GenLoot: 15
+GenFollow: 8
 E
 #911
 caranguejo cascudo~
@@ -153,10 +193,10 @@ Isto se parace como um caranguejo...o que mais pode ser dito?
 2 18 4 5d2+25 1d5+0
 0 150
 9 9 0
-GenWimpy: 41
-GenLoot: 26
-GenEquip: 1
-GenRoam: 82
-GenFollow: 9
+GenWimpy: 88
+GenLoot: 97
+GenEquip: 6
+GenRoam: 81
+GenFollow: 7
 E
 $

@@ -2,6 +2,10 @@
 Vitalia~
 A Vila dos Gnomos~
 1600 1699 60 1 j 0 0 0 3 45 0
+M 0 1604 6 1619 	(um guarda gnomo)
+E 1 1607 15 7 	(um manto sangrento)
+G 1 1600 3 -1 	(uma chave ensanguentada)
+G 1 1606 10 -1 	(uma poção sangrenta)
 M 0 1605 1 1658 	(o chefe gnomo)
 E 1 1608 10 13 	(um anel de morcego)
 E 1 1609 12 6 	(um colar de contas)
@@ -47,10 +51,6 @@ M 0 1604 6 1630 	(um guarda gnomo)
 E 1 1604 20 20 	(uma espada de gnomo)
 M 0 1604 6 1627 	(um guarda gnomo)
 E 1 1604 20 20 	(uma espada de gnomo)
-M 0 1604 3 1619 	(um guarda gnomo)
-E 1 1607 15 7 	(um manto sangrento)
-G 1 1600 3 -1 	(uma chave ensanguentada)
-G 1 1606 10 -1 	(uma poção sangrenta)
 M 0 1600 3 1609 	(uma criança gnomo)
 G 1 1602 20 -1 	(um bumerangue de brinquedo)
 M 0 1601 3 1609 	(uma mulher gnomo)

@@ -87,8 +87,8 @@ Cuidado com os espinhos.  Podem ser venenosos!!
 30 0 1 15d15+900 5d5+20
 0 45000
 9 9 1
-GenWimpy: 7
-GenFollow: 11
+GenWimpy: 16
+GenFollow: 9
 E
 T 3008
 T 3009
@@ -112,6 +112,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 11
 E
 T 3009
 #11506

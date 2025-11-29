@@ -9,9 +9,9 @@ Este é um elfo robusto na melhor fase de sua vida, até onde você pode ver.
 19 8 -1 3d6+240 3d5+8
 2100 29000
 9 9 1
-GenWimpy: 28
-GenLoot: 2
-GenFollow: 16
+GenWimpy: 89
+GenLoot: 49
+GenFollow: 12
 E
 #19002
 elfo soldado guarda~
@@ -25,8 +25,9 @@ para proteger o caminho dos intrusos indesejados aqui.
 17 10 0 1d12+123 1d8+5
 654 18000
 9 9 1
-GenWimpy: 14
-GenFollow: 9
+GenWimpy: 100
+GenLoot: 6
+GenFollow: 1
 E
 #19003
 elfa soldada guarda~
@@ -40,8 +41,10 @@ para protegê-la dos intrusos.
 12 10 2 1d12+123 1d8+4
 654 14500
 9 9 2
-GenWimpy: 11
-GenFollow: 16
+GenWimpy: 97
+GenLoot: 6
+GenBrave: 1
+GenFollow: 3
 E
 #19004
 elfo vendedor armas~
@@ -54,6 +57,7 @@ Você nota uma expressão cansada em seu belo rosto.
 107 2 2 6d10+390 1d8+12
 10000 80000
 9 9 1
+EmotionProfile: 3
 E
 #19005
 elfo armeiro lojista~
@@ -114,6 +118,9 @@ Você nota um expressão cansada em seu belo rosto.
 23 2 2 6d10+390 1d8+12
 2000 80000
 9 9 2
+GenWimpy: 12
+GenLoot: 2
+GenFollow: 14
 E
 #19010
 elfo chefe guarda~
@@ -129,7 +136,9 @@ obviamente participou de muitas batalhas nos seus dias de glória.
 26 0 -4 1d50+500 4d6+10
 789 175000
 4 4 1
-GenWimpy: 3
+GenWimpy: 20
+GenLoot: 1
+GenRoam: 52
 GenFollow: 13
 E
 #19011
@@ -144,9 +153,10 @@ para proteger o caminho dos intrusos indesejados aqui.
 13 10 0 1d12+123 1d8+5
 654 12000
 6 6 1
-GenWimpy: 21
-GenLoot: 1
-GenFollow: 14
+GenWimpy: 62
+GenLoot: 5
+GenEquip: 1
+GenFollow: 9
 E
 #19012
 elfo jardineiro~
@@ -161,6 +171,8 @@ conversa.
 10 9 0 2d5+260 14d2+7
 4500 16900
 9 9 1
+GenWimpy: 6
+GenFollow: 13
 E
 #19013
 elfo cidadao~
@@ -175,11 +187,10 @@ presença.
 10 10 0 2d2+400 4d3+8
 6000 14600
 9 9 1
-GenWimpy: 8
-GenLoot: 3
-GenRoam: 82
-GenGroup: 14
-GenFollow: 17
+GenWimpy: 44
+GenLoot: 8
+GenRoam: 87
+GenFollow: 15
 E
 #19014
 elfa cidada~
@@ -194,8 +205,11 @@ presença.
 10 10 0 2d2+400 4d3+8
 6000 14600
 9 9 2
-GenWimpy: 3
-GenRoam: 73
+GenWimpy: 30
+GenLoot: 5
+GenEquip: 1
+GenRoam: 87
+GenGroup: 70
 GenFollow: 14
 E
 #19015
@@ -227,6 +241,8 @@ para você.
 16 10 -5 3d3+560 3d3+9
 6000 32000
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #19017
 elfa sacerdotisa~
@@ -243,6 +259,8 @@ insignificante presença...
 17 9 -6 3d3+580 3d3+10
 7000 34500
 9 9 2
+GenWimpy: 6
+GenFollow: 8
 E
 #19018
 sacerdote elfo~
@@ -258,6 +276,9 @@ para você.
 12 10 0 3d3+420 3d3+7
 5000 23000
 9 9 1
+GenWimpy: 4
+GenRoam: 59
+GenFollow: 13
 E
 #19019
 elfa sacerdotisa~
@@ -274,6 +295,12 @@ insignificante presença...
 13 11 -1 3d3+450 3d3+8
 5000 24500
 9 9 2
+GenWimpy: 15
+GenLoot: 2
+GenEquip: 1
+GenRoam: 88
+GenGroup: 40
+GenFollow: 14
 E
 #19020
 elfa dona dona-de-casa senhora elfica~
@@ -288,6 +315,9 @@ Quanta disposição!
 10 13 2 4d4+280 3d3+5
 4000 13400
 9 9 2
+GenWimpy: 9
+GenLoot: 5
+GenFollow: 11
 E
 #19021
 elfa crianca~
@@ -300,6 +330,9 @@ Ela parece estar bem feliz brincando sem você se intrometer...
 6 18 4 2d2+100 2d2+4
 200 8000
 9 9 2
+GenWimpy: 16
+GenLoot: 1
+GenFollow: 11
 E
 #19022
 elfo apressado~
@@ -314,10 +347,10 @@ muito apressado para isso..
 11 12 0 4d4+367 4d3+7
 6000 21000
 9 9 1
-GenWimpy: 4
-GenLoot: 2
-GenRoam: 63
-GenFollow: 14
+GenWimpy: 16
+GenLoot: 4
+GenRoam: 89
+GenFollow: 13
 E
 #19023
 sabia vermelho passarinho passaro~
@@ -331,6 +364,8 @@ antiga canção que você já não se lembra mais...  Estranho...
 2 18 7 2d2+100 2d2+3
 0 2000
 9 9 1
+GenWimpy: 1
+GenFollow: 3
 E
 #19024
 rouxinou azul passarinho passaro~
@@ -357,6 +392,7 @@ desaprovar sua presença aqui!  Talvez seja melhor o deixar em paz.
 2 18 7 2d2+100 2d2+3
 0 2000
 9 9 1
+GenFollow: 3
 E
 #19026
 elfo bardo~
@@ -370,6 +406,8 @@ alaúde feito com a mais fina madeira e com cordas prateadas.
 19 2 -1 3d6+200 3d3+6
 1000 35000
 6 6 1
+GenWimpy: 17
+GenFollow: 11
 E
 #19027
 velho homem humano druida~
@@ -383,6 +421,10 @@ segurando um cajado de carvalho nas mãos.
 50 0 -13 3d12+1033 1d8+19
 18000 180000
 9 9 1
+GenWimpy: 3
+GenLoot: 2
+GenRoam: 63
+GenFollow: 14
 E
 #19028
 elemental fogo enorme~
@@ -395,8 +437,8 @@ Você só vê as chamas em formato humanóide.
 33 -4 -10 2d12+700 4d8+16
 9000 160000
 9 9 1
-GenWimpy: 16
-GenFollow: 14
+GenWimpy: 61
+GenFollow: 13
 E
 #19029
 grande crescido urso animal~
@@ -409,6 +451,9 @@ Um urso crescido está rondando a clareira.
 29 2 1 2d10+190 1d6+6
 0 27000
 9 9 0
+GenWimpy: 48
+GenRoam: 89
+GenFollow: 15
 E
 #19030
 grnde tigre animal~
@@ -421,9 +466,9 @@ Você vê que é grande, listrado e está furioso.
 30 2 1 2d10+160 1d8+8
 0 29000
 9 9 0
-GenWimpy: 4
-GenRoam: 55
-GenFollow: 12
+GenWimpy: 44
+GenRoam: 69
+GenFollow: 11
 E
 #19031
 elfo campeao~
@@ -437,10 +482,10 @@ pode ver.
 37 -14 -20 21d40+428 7d6+37
 90000 800000
 9 9 1
-GenWimpy: 45
-GenLoot: 8
-GenEquip: 2
-GenFollow: 13
+GenWimpy: 43
+GenLoot: 33
+GenEquip: 3
+GenFollow: 9
 E
 #19032
 enorme corvo negro~
@@ -455,8 +500,8 @@ as garras parecem afiados como navalhas...  Talvez seja melhor se afastar...
 22 10 1 2d5+110 2d4+7
 0 17450
 9 9 1
-GenWimpy: 16
-GenRoam: 88
-GenFollow: 12
+GenWimpy: 53
+GenRoam: 89
+GenFollow: 11
 E
 $

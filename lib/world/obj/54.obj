@@ -858,6 +858,32 @@ estatua~
 0 0 0 0
 0 0 0 0 0
 T 5411
+#5503
+pocao escura cafe~
+uma pocao extremamente escura~
+Uma pocao extremamente escura como a noite esta aqui.~
+Isto tem gosto de cafe!
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+100 312 -1 -1
+1 5000 500 0 0
+E
+pocao escura cafe~
+Essa pocao escura possui um pequeno rotulo onde se le: 'Nao te deixa dormir'
+~
+#5504
+pocao escura cafe dupla media~
+uma pocao dupla extremamente escura~
+Uma pocao extremamente escura como a noite esta aqui.~
+Isto tem gosto de cafe!
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+100 312 312 -1
+1 5000 500 0 0
+E
+pocao escura cafe~
+Essa pocao escura possui um pequeno rotulo onde se le: 'Nao te deixa dormir'
+~
 #5690
 mapa nova thalos~
 um mapa de Nova Thalos~

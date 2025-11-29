@@ -19,8 +19,10 @@ Dex: 18
 Int: 12
 Wis: 12
 Cha: 18
-GenWimpy: 4
-GenRoam: 82
+GenWimpy: 22
+GenLoot: 5
+GenEquip: 2
+GenRoam: 89
 GenFollow: 18
 E
 #10702
@@ -43,8 +45,9 @@ Dex: 16
 Int: 13
 Wis: 13
 Cha: 20
-GenWimpy: 3
-GenRoam: 66
+GenWimpy: 11
+GenEquip: 1
+GenRoam: 84
 GenFollow: 14
 E
 #10703
@@ -70,8 +73,8 @@ Dex: 18
 Int: 13
 Wis: 13
 Cha: 20
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 28
+GenFollow: 13
 E
 #10704
 Waterheart armiliano~
@@ -95,7 +98,7 @@ Dex: 18
 Int: 16
 Wis: 16
 Cha: 20
-GenBrave: 2
+GenWimpy: 11
 GenFollow: 14
 E
 #10705
@@ -118,11 +121,11 @@ Int: 13
 Wis: 13
 Con: 10
 Cha: 20
-GenWimpy: 12
-GenLoot: 8
-GenEquip: 1
+GenWimpy: 36
+GenLoot: 9
+GenEquip: 2
 GenRoam: 89
-GenFollow: 14
+GenFollow: 13
 E
 #10706
 cidadão limpeza~
@@ -164,6 +167,10 @@ Dex: 18
 Int: 12
 Wis: 12
 Cha: 16
+GenWimpy: 11
+GenLoot: 1
+GenEquip: 1
+GenFollow: 17
 E
 #10708
 escultor otaviano~
@@ -184,6 +191,8 @@ Int: 15
 Wis: 15
 Con: 10
 Cha: 16
+GenWimpy: 4
+GenFollow: 14
 E
 #10709
 pintor otaviano~
@@ -204,6 +213,8 @@ Int: 15
 Wis: 15
 Con: 10
 Cha: 16
+GenWimpy: 4
+GenFollow: 14
 E
 #10710
 profetisa otaviana~
@@ -224,6 +235,8 @@ Dex: 14
 Int: 13
 Wis: 13
 Cha: 20
+GenWimpy: 31
+GenFollow: 13
 E
 #10711
 trovador otaviano~
@@ -244,6 +257,9 @@ Dex: 18
 Int: 12
 Wis: 12
 Cha: 18
+GenWimpy: 4
+GenRoam: 63
+GenFollow: 14
 E
 #10712
 guarda real otaviano~
@@ -265,9 +281,10 @@ Int: 15
 Wis: 13
 Con: 13
 Cha: 18
-GenWimpy: 5
-GenLoot: 1
-GenFollow: 18
+GenWimpy: 70
+GenLoot: 5
+GenEquip: 2
+GenFollow: 14
 E
 #10713
 cavaleiro lendário otaviano~
@@ -355,6 +372,8 @@ Dex: 17
 Int: 15
 Wis: 18
 Cha: 18
+GenWimpy: 11
+GenFollow: 17
 E
 #10717
 yasmim líder otaviana~
@@ -378,8 +397,10 @@ Int: 18
 Wis: 18
 Con: 15
 Cha: 18
-GenWimpy: 8
-GenFollow: 12
+GenWimpy: 56
+GenLoot: 12
+GenEquip: 1
+GenFollow: 10
 E
 #10718
 grifo dourado~
@@ -405,8 +426,8 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
-GenWimpy: 5
-GenFollow: 17
+GenWimpy: 8
+GenFollow: 16
 E
 #10719
 cedro gigante~
@@ -428,7 +449,7 @@ Int: 20
 Wis: 20
 Con: 16
 Cha: 13
-GenWimpy: 4
+GenWimpy: 6
 GenFollow: 14
 E
 #10720
@@ -451,9 +472,10 @@ Int: 8
 Wis: 6
 Con: 8
 Cha: 15
-GenWimpy: 11
-GenRoam: 86
-GenFollow: 4
+GenWimpy: 33
+GenLoot: 1
+GenRoam: 87
+GenFollow: 3
 E
 #10721
 guardião fogo~
@@ -477,9 +499,8 @@ Int: 22
 Wis: 22
 Con: 22
 Cha: 22
-GenWimpy: 3
-GenBrave: 1
-GenFollow: 16
+GenWimpy: 4
+GenFollow: 14
 E
 #10722
 guardião água~
@@ -600,8 +621,8 @@ Int: 12
 Wis: 5
 Con: 8
 Cha: 18
-GenWimpy: 3
-GenFollow: 5
+GenWimpy: 1
+GenFollow: 4
 E
 #10727
 esquilo cinza~
@@ -646,6 +667,8 @@ Dex: 14
 Int: 13
 Wis: 13
 Cha: 20
+GenWimpy: 7
+GenFollow: 13
 E
 #10729
 cozinheira otaviana~
@@ -666,5 +689,7 @@ Int: 13
 Wis: 13
 Con: 13
 Cha: 20
+GenWimpy: 4
+GenFollow: 14
 E
 $

@@ -9,9 +9,9 @@ Este veado é muito bonito.
 3 18 1 3d5+33 1d7+0
 0 350
 9 9 0
-GenWimpy: 12
+GenWimpy: 55
 GenRoam: 87
-GenFollow: 5
+GenFollow: 4
 E
 #6201
 coelho~
@@ -24,12 +24,11 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 0 20 3 1d5+3 1d3+0
 0 25
 9 9 0
-GenWimpy: 11
+GenWimpy: 55
 GenLoot: 1
-GenEquip: 1
+GenEquip: 2
 GenRoam: 87
-GenGroup: 3
-GenFollow: 9
+GenFollow: 6
 E
 #6202
 esquilo~
@@ -42,7 +41,7 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 0 20 -1 1d3+0 1d1+1
 0 10
 9 9 0
-GenWimpy: 13
+GenWimpy: 81
 GenRoam: 87
 GenFollow: 7
 E
@@ -58,11 +57,11 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 7 14 5 3d5+83 2d3+2
 0 2250
 9 9 1
-GenWimpy: 39
-GenLoot: 28
+GenWimpy: 100
+GenLoot: 37
+GenEquip: 3
 GenRoam: 89
-GenGroup: 21
-GenFollow: 11
+GenFollow: 7
 E
 #6204
 chefe orc~
@@ -77,6 +76,9 @@ como ele é bom em ambas as coisas.
 10 11 2 3d5+120 2d7+2
 17 9000
 9 9 1
+GenWimpy: 20
+GenLoot: 7
+GenFollow: 10
 E
 #6205
 mulher orc~
@@ -90,9 +92,10 @@ dissesse "Não me mate!!".
 5 16 7 3d5+58 2d4+0
 0 900
 9 9 2
-GenWimpy: 10
-GenRoam: 87
-GenFollow: 10
+GenWimpy: 46
+GenLoot: 4
+GenRoam: 88
+GenFollow: 7
 E
 #6206
 crianca orc~
@@ -105,10 +108,10 @@ Ela é escabrosa e parece estar coberta por chagas.
 3 18 9 3d5+30 1d7+0
 0 350
 9 9 2
-GenWimpy: 8
-GenLoot: 7
-GenRoam: 84
-GenFollow: 4
+GenWimpy: 41
+GenLoot: 12
+GenRoam: 87
+GenFollow: 2
 E
 #6207
 mulher orc~
@@ -121,6 +124,8 @@ Ela está muito longe de mover-se rápido.  Você pode matá-la facilmente.
 5 16 10 3d5+58 1d4+0
 0 750
 6 6 2
+GenWimpy: 13
+GenFollow: 4
 E
 #6208
 orc mutante mutado~
@@ -149,10 +154,10 @@ mais.
 6 20 1 3d5+60 1d1+0
 0 10
 9 9 0
-GenWimpy: 13
+GenWimpy: 52
 GenLoot: 1
 GenRoam: 87
-GenFollow: 4
+GenFollow: 3
 E
 #6210
 feiticeiro elfo elfico elstar~
@@ -167,6 +172,9 @@ destruir você, não é mesmo?
 15 6 -8 3d5+183 2d8+2
 10000 21000
 9 9 1
+GenWimpy: 35
+GenLoot: 1
+GenFollow: 14
 E
 #6211
 crianca elfo duende aprendiz~
@@ -180,6 +188,8 @@ aqui.
 3 18 6 3d5+35 2d4+0
 0 400
 9 9 1
+GenWimpy: 16
+GenFollow: 3
 E
 #6212
 coisa mutante~
@@ -193,10 +203,10 @@ para longe do seu caminho para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 100
-GenRoam: 89
-GenBrave: 1
-GenFollow: 7
+GenWimpy: 41
+GenLoot: 2
+GenRoam: 86
+GenFollow: 3
 E
 #6213
 coisa mutante~
@@ -210,8 +220,8 @@ para longe de seu caminho, para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 95
-GenRoam: 88
-GenFollow: 8
+GenWimpy: 98
+GenRoam: 89
+GenFollow: 7
 E
 $

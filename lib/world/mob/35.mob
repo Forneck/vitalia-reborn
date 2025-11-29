@@ -11,7 +11,8 @@ a poucas polegadas de sua cabeça, batendo suas asas e chiando muito alto.
 0 3575
 9 9 0
 GenWimpy: 100
-GenFollow: 15
+GenRoam: 2
+GenFollow: 8
 E
 #3501
 montanha goblin~
@@ -27,11 +28,10 @@ para o jantar.
 50 600
 9 9 1
 GenWimpy: 100
-GenLoot: 98
-GenEquip: 2
+GenLoot: 99
+GenEquip: 4
 GenRoam: 88
-GenGroup: 25
-GenFollow: 3
+GenFollow: 1
 E
 #3502
 goblin tenente~
@@ -46,10 +46,10 @@ homens para bater, mas talvez quem bata seja você...
 300 2000
 9 9 1
 GenWimpy: 100
-GenLoot: 96
-GenEquip: 5
+GenLoot: 99
+GenEquip: 20
 GenRoam: 89
-GenFollow: 10
+GenFollow: 2
 E
 #3503
 goblin lider~
@@ -63,8 +63,9 @@ espada curta e dispara em direção ao seu pescoço.
 9 10 1 1d12+120 2d5+3
 1000 8000
 9 9 1
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 12
+GenLoot: 1
+GenFollow: 13
 E
 #3504
 garoto pequeno~
@@ -78,7 +79,8 @@ Aparentemente, ele foi o único sobrevivente da emboscada.
 4 17 6 1d12+47 1d8+0
 0 600
 5 5 1
-GenWimpy: 17
+GenWimpy: 64
+GenLoot: 1
 GenFollow: 4
 E
 #3505
@@ -94,9 +96,10 @@ hospedaria não é mais o lugar feliz que foi no passado.
 10 8 1 1d12+200 2d8+1
 1500 7000
 9 9 1
-GenWimpy: 47
-GenLoot: 1
-GenFollow: 12
+GenWimpy: 81
+GenLoot: 39
+GenEquip: 6
+GenFollow: 7
 E
 #3506
 bardo~
@@ -111,10 +114,10 @@ esquecimento.
 8 13 3 1d12+110 2d6+0
 1500 3750
 6 6 1
-GenWimpy: 49
-GenLoot: 43
-GenEquip: 2
-GenFollow: 10
+GenWimpy: 100
+GenLoot: 57
+GenEquip: 3
+GenFollow: 8
 E
 #3507
 cavaleiro negro~
@@ -128,11 +131,10 @@ pequenos pedaços.
 8 12 4 1d12+97 1d5+7
 1000 4000
 9 9 1
-GenWimpy: 99
-GenLoot: 73
-GenEquip: 3
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 26
 GenRoam: 89
-GenGroup: 2
-GenFollow: 8
+GenFollow: 1
 E
 $

@@ -2,6 +2,9 @@
 Vitalia~
 Uma Noite em Notre Dame~
 4300 4399 30 2 j 0 0 0 -1 50 0
+D 0 4311 3 1 	(Uma Pequena Capela)
+M 0 4311 1 4311 	(Tintoreto o padre)
+G 1 4311 -50 -1 	(uma Bíblia)
 M 0 4398 1 4398 	(Toulouse, o lojista)
 G 1 4398 99 -1 	(uma corrente de ferro)
 G 1 4396 99 -1 	(um colar de pérolas negras)
@@ -106,9 +109,6 @@ E 1 4349 3 17 	(um punhal ensanguentado)
 M 0 4324 1 4324 	(o Cardeal Richelieu)
 E 1 4324 20 1 	(o anel de rubi do Cardeal)
 E 1 4300 5 12 	(uma capa vermelha de cardeal)
-D 0 4311 3 1 	(Uma Pequena Capela)
-M 0 4311 1 4311 	(Tintoreto o padre)
-G 1 4311 5 -1 	(uma Bíblia)
 M 0 4348 2 4348 	(um rato preto)
 D 0 4325 4 1 	(O Segundo Andar de Notre Dame)
 M 0 4325 2 4325 	(um pombo)

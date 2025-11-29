@@ -11,8 +11,11 @@ bravos e destemidos entrem.
 30 1 -20 6d20+500 5d6+20
 5000 99000
 9 9 1
-GenWimpy: 25
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 7
+GenEquip: 2
+GenRoam: 73
+GenFollow: 12
 E
 #19801
 centauro ~
@@ -27,8 +30,12 @@ você com um olhar indiferente..
 40 1 -30 15d6+600 6d6+21
 3500 100000
 9 9 1
-GenWimpy: 16
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 23
 GenRoam: 89
+GenGroup: 91
+GenTrade: 66
 GenFollow: 14
 E
 #19802
@@ -43,6 +50,12 @@ mesmo desconhece..  Ela é a guardiã do labirinto e de seus segredos.
 50 1 -16 15d6+850 5d6+30
 5000 150000
 9 9 2
+GenWimpy: 17
+GenLoot: 16
+GenEquip: 7
+GenRoam: 89
+GenGroup: 38
+GenFollow: 10
 E
 #19803
 aventureiro perdido~
@@ -57,9 +70,10 @@ no labirinto pois ele parece estar aqui há muito tempo.
 50 3 -26 15d6+600 5d6+27
 30000 145000
 9 9 1
-GenWimpy: 3
-GenRoam: 6
-GenFollow: 14
+GenWimpy: 50
+GenLoot: 3
+GenRoam: 86
+GenFollow: 13
 E
 #19804
 guerreiro lider grupo~
@@ -75,8 +89,10 @@ esse guerreiro.
 60 0 -25 15d6+870 5d6+33
 5000 200000
 9 9 1
-GenWimpy: 7
-GenFollow: 15
+GenWimpy: 41
+GenLoot: 1
+GenBrave: 2
+GenFollow: 11
 E
 #19805
 mago grupo~
@@ -92,6 +108,8 @@ batalhas sangrentas.
 60 6 -10 15d6+300 3d4+25
 15000 99000
 9 9 1
+GenWimpy: 24
+GenFollow: 11
 E
 #19806
 ladrao grupo~
@@ -108,6 +126,9 @@ cintura.
 60 4 -20 15d6+600 5d6+25
 15000 100000
 9 9 1
+GenWimpy: 15
+GenLoot: 1
+GenFollow: 14
 E
 #19807
 clerigo padre grupo~
@@ -121,6 +142,11 @@ ajudar seu grupo com suas magias de cura e suas auras poderosas.
 60 7 -20 15d6+400 5d6+21
 5000 87000
 9 9 1
+GenWimpy: 25
+GenLoot: 7
+GenEquip: 2
+GenBrave: 1
+GenFollow: 13
 E
 #19808
 unicornio cavalo~
@@ -142,6 +168,12 @@ Int: 18
 Wis: 15
 Con: 15
 Cha: 25
+GenWimpy: 41
+GenLoot: 1
+GenEquip: 2
+GenRoam: 89
+GenGroup: 8
+GenFollow: 14
 E
 #19809
 amazona mulher~
@@ -156,10 +188,13 @@ branco?'.
 60 5 -10 15d6+500 5d6+20
 5000 900000
 9 9 2
-GenWimpy: 13
-GenLoot: 5
-GenRoam: 86
-GenFollow: 14
+GenWimpy: 63
+GenLoot: 62
+GenEquip: 1
+GenRoam: 89
+GenGroup: 51
+GenQuest: 1
+GenFollow: 12
 E
 #19810
 amarelo demonio~
@@ -174,7 +209,7 @@ GRANDE perigo.
 90 -12 -20 15d6+700 5d6+40
 75000 400000
 9 9 1
-GenWimpy: 7
+GenWimpy: 30
 GenFollow: 14
 E
 #19811
@@ -189,8 +224,8 @@ DE MORRER!!!'
 90 -12 -20 15d6+700 5d6+40
 75000 400000
 9 9 1
-GenWimpy: 5
-GenFollow: 15
+GenWimpy: 32
+GenFollow: 14
 E
 #19812
 demonio vermelho~
@@ -213,7 +248,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 4
-GenWimpy: 4
+GenWimpy: 14
 GenFollow: 14
 E
 #19813
@@ -230,7 +265,7 @@ verde e os mistérios que esta porta esconde.
 60 -20 -35 15d6+800 4d6+20
 5000 300000
 9 9 1
-GenWimpy: 4
+GenWimpy: 21
 GenFollow: 13
 E
 #19814
@@ -247,8 +282,8 @@ chave amarela e os mistérios que esta porta esconde.
 60 -20 -35 15d6+600 5d4+20
 5000 300000
 9 9 0
-GenWimpy: 6
-GenFollow: 15
+GenWimpy: 16
+GenFollow: 13
 E
 #19815
 guardiao vermelho~
@@ -264,8 +299,8 @@ chave vermelha e os mistérios que esta porta esconde.
 60 -20 -30 15d6+600 5d4+19
 5000 300000
 9 9 1
-GenWimpy: 8
-GenFollow: 15
+GenWimpy: 9
+GenFollow: 13
 E
 #19816
 fantasma aventureiro~
@@ -279,11 +314,12 @@ esperava?  É um fantasma!
 50 10 -3 15d6+500 5d4+10
 20000 40000
 9 9 1
-GenWimpy: 9
-GenLoot: 11
+GenWimpy: 77
+GenLoot: 13
+GenEquip: 1
 GenRoam: 89
-GenGroup: 20
-GenFollow: 13
+GenGroup: 6
+GenFollow: 8
 E
 #19817
 guerreiro fantasma~
@@ -301,8 +337,11 @@ guerreiro citado na história.
 60 0 -15 15d6+700 5d6+20
 15000 100000
 9 9 1
-GenWimpy: 4
-GenFollow: 15
+GenWimpy: 19
+GenLoot: 1
+GenEquip: 1
+GenRoam: 14
+GenFollow: 14
 E
 #19818
 dama mulher bela~
@@ -316,6 +355,8 @@ vida pode ser bela e descomplicada.
 25 15 0 15d6+100 5d3+5
 1000 50000
 9 9 2
+GenWimpy: 5
+GenFollow: 14
 E
 #19819
 necromante figura estranha sombria~
@@ -330,6 +371,9 @@ dos mortos.  Ao olhar para esta figura você reconhece este NECROMANTE.
 60 5 -18 15d6+600 5d4+15
 15000 200000
 9 9 1
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 14
 E
 #19820
 guardiao esperanca~
@@ -344,6 +388,8 @@ embora você não saiba bem como...
 80 5 -25 15d6+800 5d4+16
 1000 300000
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #19821
 ladrao fantasma~
@@ -358,11 +404,13 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 70 -10 -30 600d1+250 2d8+25
 10000 200000
 9 9 1
-GenWimpy: 26
-GenLoot: 78
-GenEquip: 3
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 21
 GenRoam: 89
-GenGroup: 73
+GenGroup: 92
+GenTrade: 70
+GenQuest: 5
 GenFollow: 14
 E
 $

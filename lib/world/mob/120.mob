@@ -11,7 +11,9 @@ permanece sadio e em boa forma.
 12 9 2 3d7+140 1d7+4
 2000 13000
 9 9 1
-GenWimpy: 2
+GenWimpy: 18
+GenTrade: 100
+GenQuest: 50
 GenFollow: 8
 E
 #12001
@@ -26,6 +28,11 @@ seu bloco de anotações.
 7 14 4 3d5+80 1d4+3
 500 2250
 9 9 1
+GenWimpy: 10
+GenLoot: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #12003
 espectador~
@@ -38,9 +45,11 @@ O espectador está imundo, meio bêbado e gritando feito um louco.
 5 16 5 2d6+65 2d4+0
 100 900
 6 6 0
-GenWimpy: 18
-GenLoot: 8
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 16
+GenTrade: 100
+GenQuest: 50
+GenFollow: 5
 E
 #12004
 nobre homem~
@@ -56,8 +65,11 @@ não muito fácil de se domar.
 12 9 2 4d6+140 1d7+5
 3500 13000
 9 9 1
-GenWimpy: 12
-GenFollow: 10
+GenWimpy: 72
+GenLoot: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #12005
 escrava~
@@ -71,8 +83,11 @@ legiões Romanas invadiram e dominaram a sua terra.
 3 18 7 3d6+30 1d7+0
 10 350
 9 9 2
-GenWimpy: 2
-GenFollow: 9
+GenWimpy: 15
+GenLoot: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #12006
 gladiador~
@@ -86,10 +101,12 @@ até os dentes. Ele vive para combater.
 14 5 0 4d7+150 1d8+6
 700 12500
 9 9 1
-GenWimpy: 67
-GenLoot: 31
-GenEquip: 3
-GenFollow: 16
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 14
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #12007
 condutor~
@@ -103,10 +120,12 @@ seu trabalho com a velocidade e os cavalos.
 10 11 2 3d7+120 2d6+1
 1200 9000
 9 9 1
-GenWimpy: 29
-GenLoot: 8
-GenEquip: 2
-GenFollow: 19
+GenWimpy: 100
+GenLoot: 41
+GenEquip: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #12008
 treinador~
@@ -121,10 +140,12 @@ todos os seus ossos congelarem.
 11 10 2 4d5+130 2d6+1
 500 10000
 9 9 1
-GenWimpy: 14
-GenLoot: 9
-GenEquip: 6
-GenFollow: 11
+GenWimpy: 73
+GenLoot: 18
+GenEquip: 30
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #12009
 curandeiro~
@@ -138,10 +159,12 @@ casaco branco e usando um estetoscópio.
 14 7 1 2d7+170 1d7+6
 1500 12000
 9 9 1
-GenWimpy: 66
-GenLoot: 51
-GenEquip: 9
-GenFollow: 13
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 47
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 T 3009
 #12010
@@ -158,10 +181,12 @@ O corpo dela é perfeitamente proporcional e ela tem aproximadamente 1 metro e
 10 11 2 3d4+110 1d7+4
 500 8000
 9 9 2
-GenWimpy: 49
-GenLoot: 54
-GenEquip: 12
-GenFollow: 9
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 26
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #12011
 lojista~
@@ -177,6 +202,8 @@ falsa impressão de que ele está sempre sorrindo.
 108 0 -2 4d10+400 3d8+12
 5000 80000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #12012
 pedinte~
@@ -189,6 +216,8 @@ Você vê um homem pequeno e sujo, que não parece muito saudável.
 4 17 6 3d4+40 1d8+0
 100 600
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #12013
 pajem~
@@ -202,9 +231,11 @@ aparência de um estudante.
 6 15 4 3d6+75 2d4+1
 0 1600
 9 9 1
-GenWimpy: 10
-GenLoot: 4
-GenFollow: 7
+GenWimpy: 36
+GenLoot: 61
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #12014
 queixoso~
@@ -217,9 +248,12 @@ Seu estado é lamentável. Absolutamente lamentável.
 11 10 2 3d6+140 2d6+3
 1000 12000
 9 9 1
-GenWimpy: 23
-GenLoot: 29
-GenFollow: 8
+GenWimpy: 77
+GenLoot: 99
+GenEquip: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #12015
 cambista~
@@ -234,10 +268,12 @@ que realmente querem compra-los.
 17 4 1 4d8+210 1d6+11
 4000 28000
 9 9 1
-GenWimpy: 88
-GenLoot: 16
-GenBrave: 2
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 51
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #12016
 vendedor~
@@ -254,10 +290,12 @@ espectadores bons de discussão.
 9 9 1
 GenWimpy: 4
 GenEquip: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #12017
-cidadao~
+cidadao romano~
 o cidadão~
 Um cidadão de Roma está parado aqui.
 ~
@@ -268,10 +306,12 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 100 1000
 9 9 1
 GenWimpy: 100
-GenLoot: 37
+GenLoot: 99
+GenEquip: 13
 GenRoam: 88
-GenGroup: 6
-GenFollow: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 1
 E
 #12018
 sentinela guarda~
@@ -284,9 +324,11 @@ Você vê um defensor público forte e leal.
 11 10 2 3d6+130 1d6+5
 500 11000
 9 9 1
-GenWimpy: 27
-GenLoot: 9
-GenFollow: 3
+GenWimpy: 100
+GenLoot: 14
+GenTrade: 100
+GenQuest: 50
+GenFollow: 2
 E
 T 3013
 #12019
@@ -302,11 +344,13 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 69
-GenLoot: 10
-GenEquip: 2
+GenWimpy: 59
+GenLoot: 71
+GenEquip: 14
 GenRoam: 89
-GenFollow: 15
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #12020
 imperador julius caesar~
@@ -320,9 +364,11 @@ das comidas e morou no palácio mais opulento que Roma jamais conheceu.
 27 0 -7 10d5+650 3d7+15
 24763 150000
 9 9 1
-GenWimpy: 12
-GenLoot: 96
-GenEquip: 3
+GenWimpy: 28
+GenLoot: 99
+GenEquip: 26
+GenTrade: 100
+GenQuest: 50
 GenFollow: 14
 E
 T 3009
@@ -344,10 +390,12 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 31
+GenWimpy: 29
 GenLoot: 99
-GenEquip: 4
-GenFollow: 18
+GenEquip: 99
+GenTrade: 100
+GenQuest: 50
+GenFollow: 17
 E
 T 3013
 #12022
@@ -362,9 +410,11 @@ perturbá-lo agora. Quem sabe mais tarde não seria melhor.
 21 0 -1 20d5+260 1d7+11
 5000 50000
 6 6 1
-GenWimpy: 43
-GenLoot: 17
-GenFollow: 13
+GenWimpy: 69
+GenLoot: 22
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #12023
 mestre programador~
@@ -379,10 +429,13 @@ pergunta, 'Você gostaria de marcar um?'
 17 3 0 4d4+210 1d6+9
 3000 28000
 9 9 1
-GenWimpy: 49
-GenLoot: 41
-GenEquip: 3
-GenFollow: 12
+GenWimpy: 96
+GenLoot: 99
+GenEquip: 18
+GenBrave: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #12024
 bola visguenta verde~
@@ -398,10 +451,12 @@ Uma bola verde de lodo escorrendo atraves das paredes.
 BareHandAttack: 9
 Int: 3
 GenWimpy: 100
-GenLoot: 40
-GenEquip: 1
-GenRoam: 83
-GenFollow: 10
+GenLoot: 99
+GenEquip: 7
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #12025
 mago froboz~
@@ -415,6 +470,10 @@ quanto defensiva, é lendário. Ele literalmente brilha com uma aura rosada.
 23 0 -3 5d10+425 1d8+14
 32000 95000
 9 9 1
+GenWimpy: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 17
 E
 T 3009
 #12026
@@ -430,8 +489,10 @@ recentemente afiadas e fita você com um olhar furioso!! Caia fora!
 31000 85000
 9 9 1
 BareHandAttack: 3
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 19
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
 E
 #12027
 senador~
@@ -445,10 +506,12 @@ toga.
 10 11 2 3d5+120 2d6+1
 500 9000
 9 9 1
-GenWimpy: 18
-GenLoot: 7
-GenEquip: 1
-GenFollow: 15
+GenWimpy: 50
+GenLoot: 57
+GenEquip: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 14
 E
 #12028
 beleguim~
@@ -463,10 +526,12 @@ der permissão.
 16 5 1 1d5+200 2d7+4
 1000 24000
 9 9 1
-GenWimpy: 80
-GenLoot: 80
-GenEquip: 7
-GenFollow: 11
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 29
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #12029
 defensora~
@@ -479,8 +544,11 @@ Ela parece ser bem organizada e cheia de confiança em si mesma.
 11 9 1 3d6+130 2d7+1
 500 11000
 9 9 2
-GenWimpy: 17
-GenLoot: 3
+GenWimpy: 55
+GenLoot: 7
+GenEquip: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 4
 E
 #12030
@@ -503,11 +571,16 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 5
+GenWimpy: 100
 GenLoot: 99
-GenEquip: 22
-GenQuest: 4
-GenFollow: 16
+GenEquip: 99
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 58
+GenFollow: 13
+GenHealing: 30
+EmotionProfile: 5
 E
 T 3009
 #12031
@@ -530,10 +603,16 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 25
-GenWimpy: 9
-GenLoot: 52
-GenEquip: 3
-GenFollow: 14
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 66
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenFollow: 13
+GenHealing: 100
+EmotionProfile: 4
 E
 T 3009
 #12032
@@ -555,10 +634,15 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
-GenWimpy: 21
-GenLoot: 3
-GenBrave: 1
-GenFollow: 12
+GenWimpy: 100
+GenLoot: 100
+GenEquip: 100
+GenBrave: 75
+GenUse: 100
+GenTrade: 100
+GenQuest: 60
+GenFollow: 41
+EmotionProfile: 1
 E
 T 3009
 #12033
@@ -579,10 +663,18 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 23
-GenWimpy: 5
-GenLoot: 3
-GenEquip: 3
-GenFollow: 15
+GenWimpy: 100
+GenLoot: 83
+GenEquip: 26
+GenGroup: 50
+GenBrave: 75
+GenUse: 50
+GenTrade: 100
+GenQuest: 68
+GenAdventurer: 100
+GenFollow: 40
+GenHealing: 50
+EmotionProfile: 6
 E
 #12034
 lojista~
@@ -598,6 +690,8 @@ impressão de que ele está sempre sorrindo.
 60 0 -2 4d10+400 1d8+14
 5000 80000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #12035
 carrasco~
@@ -611,10 +705,12 @@ Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
 20 1 0 2d6+260 2d2+14
 1000 40000
 9 9 1
-GenWimpy: 60
+GenWimpy: 78
 GenLoot: 99
-GenEquip: 29
-GenFollow: 12
+GenEquip: 84
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #12036
 padeiro~
@@ -628,6 +724,8 @@ cicatrizes em seu corpo.
 108 0 -10 6d10+30000 2d8+22
 2000 80000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 #12037
 merceeiro~
@@ -641,5 +739,7 @@ libras cada um, em seus ombros.
 108 0 -10 1d1+30000 2d8+22
 20000 80000
 9 9 1
+GenTrade: 100
+GenQuest: 50
 E
 $

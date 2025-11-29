@@ -17,11 +17,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 19
-GenLoot: 49
+GenWimpy: 7
+GenLoot: 79
+GenEquip: 1
 GenRoam: 89
-GenGroup: 94
-GenQuest: 1
+GenGroup: 96
+GenQuest: 2
 GenFollow: 14
 E
 #701
@@ -43,11 +44,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 62
-GenLoot: 98
-GenRoam: 88
-GenGroup: 2
-GenFollow: 13
+GenWimpy: 71
+GenLoot: 99
+GenEquip: 1
+GenRoam: 89
+GenFollow: 9
 E
 #702
 planta figueira~
@@ -67,10 +68,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 94
-GenLoot: 22
-GenRoam: 83
-GenFollow: 11
+GenWimpy: 100
+GenLoot: 54
+GenRoam: 89
+GenFollow: 1
 E
 #705
 monstrinho menor criatura~
@@ -92,10 +93,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 86
-GenLoot: 45
-GenRoam: 87
-GenFollow: 8
+GenWimpy: 100
+GenLoot: 63
+GenRoam: 89
+GenFollow: 6
 E
 #706
 duende~
@@ -116,10 +117,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 71
-GenLoot: 21
-GenRoam: 88
-GenFollow: 9
+GenWimpy: 100
+GenLoot: 44
+GenEquip: 1
+GenRoam: 89
+GenFollow: 4
 E
 #707
 cristal monsto~
@@ -140,10 +142,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 96
+GenWimpy: 59
 GenLoot: 99
-GenEquip: 1
-GenFollow: 16
+GenEquip: 3
+GenFollow: 10
 E
 #708
 escorpião escorpiao vermelho~
@@ -164,10 +166,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 44
-GenLoot: 32
+GenWimpy: 81
+GenLoot: 49
 GenRoam: 87
-GenFollow: 4
+GenFollow: 3
 E
 #710
 maldito guarda~
@@ -188,12 +190,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 69
-GenLoot: 25
-GenEquip: 1
-GenRoam: 88
-GenGroup: 7
-GenFollow: 9
+GenWimpy: 97
+GenLoot: 46
+GenEquip: 3
+GenRoam: 86
+GenBrave: 1
+GenFollow: 6
 E
 #711
 guardião guardiao guarda~
@@ -216,8 +218,9 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 100
-GenLoot: 78
-GenFollow: 15
+GenLoot: 99
+GenEquip: 5
+GenFollow: 8
 E
 #712
 impiedoso ceifeiro~
@@ -240,6 +243,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 9
+GenLoot: 99
+GenEquip: 9
+GenFollow: 15
 E
 #713
 zumbi legionario legionário~
@@ -261,9 +268,10 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 100
-GenLoot: 55
-GenRoam: 88
-GenFollow: 6
+GenLoot: 65
+GenEquip: 1
+GenRoam: 87
+GenFollow: 1
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -287,8 +295,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 3
+GenWimpy: 5
+GenQuest: 11
+GenAdventurer: 11
 GenFollow: 15
+EmotionProfile: 1
 E
 #715
 monstro criatura maior~
@@ -310,12 +321,12 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 100
+GenWimpy: 97
 GenLoot: 99
-GenEquip: 15
+GenEquip: 20
 GenRoam: 89
-GenGroup: 60
-GenFollow: 10
+GenGroup: 94
+GenFollow: 8
 E
 #716
 pequena encurvada crianca criança~
@@ -335,6 +346,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 2
+GenFollow: 11
 E
 #717
 prisioneiro desesperado~
@@ -354,8 +367,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 32
-GenFollow: 4
+GenWimpy: 27
+GenFollow: 1
 E
 #719
 ivian senhora~
@@ -379,6 +392,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenEquip: 75
+GenBrave: 75
+GenQuest: 44
+GenFollow: 12
 E
 #730
 guarda condenado armadura~
@@ -412,11 +429,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 46
-GenLoot: 12
+GenWimpy: 95
+GenLoot: 65
 GenEquip: 3
 GenRoam: 89
-GenFollow: 14
+GenFollow: 9
 E
 #750
 febre escarlate~
@@ -428,13 +445,18 @@ Ele é um guerreiro temido por sua sede de sangue. Sua espada e armadura estão 
 2097152 0 0 0 0 0 0 0 0 E
 70 20 -2 30d60+1000 1d10+10
 4000 30000
-9 9 2
+9 9 1
 Str: 15
 Dex: 15
 Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenEquip: 100
+GenBrave: 100
+GenUse: 100
+GenQuest: 75
+EmotionProfile: 1
 E
 #775
 negro drow cacador caçador~
@@ -455,12 +477,11 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 65
-GenLoot: 84
-GenEquip: 1
-GenRoam: 88
-GenGroup: 1
-GenFollow: 7
+GenWimpy: 98
+GenLoot: 98
+GenEquip: 2
+GenRoam: 89
+GenFollow: 4
 E
 #780
 Mosquito inseto~
@@ -480,7 +501,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 22
+GenWimpy: 25
+GenLoot: 8
 GenFollow: 2
 E
 #781
@@ -500,10 +522,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 67
-GenLoot: 20
-GenRoam: 89
-GenFollow: 8
+GenWimpy: 98
+GenLoot: 39
+GenRoam: 88
+GenFollow: 4
 E
 #799
 banda~
@@ -522,9 +544,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 38
-GenLoot: 29
+GenWimpy: 56
+GenLoot: 30
 GenRoam: 89
-GenFollow: 9
+GenFollow: 7
 E
 $

@@ -1,1 +1,31 @@
+#10025
+Buscar o Anel de Sangue dos Anciões ~
+Encontrar e trazer o Anel de Sangue dos Anciões ~
+Alguém perdeu o Anel de Sangue dos Anciões  e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 213 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 800 -1 -1 -1
+12 42 27 52 -1 801 1
+213 426 808
+S
+#10073
+Salvar o tritão~
+Proteger o tritão de perigos~
+General Woundwort está preocupado com a segurança de o tritão. Ajude a garantir que esta pessoa esteja segura para receber 343 moedas de ouro.~
+Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!~
+Compreendo. É uma tarefa perigosa mesmo.~
+4 3012 b 910 -1 -1 -1
+14 85 18 44 -1 904 1
+343 857 902
+S
+#10085
+Explorar local~
+Explorar um local específico~
+Alguém precisa que alguém explore um local específico (802). Vá até lá para receber 160 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 802 -1 -1 -1
+10 32 11 36 -1 803 1
+160 320 65535
+S
 $~

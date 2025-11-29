@@ -187,12 +187,12 @@ folhagem parece abrir caminho para algum lugar.
 D1
 ~
 arbustos~
-3 -1 2300
+1 -1 2300
 D2
 Além do barulho, você não vê nada de especial.
 ~
-~
-0 -1 1108
+arbustos~
+1 -1 1108
 D3
 Este caminho retorna de volta ao Templo de Midgaard.
 ~
@@ -229,7 +229,7 @@ Dentro da Lagoa Escura~
 muito além. Sem poder ver muito, suas únicas opções são voltar à superficie,
 ou nadar até o fundo da lagoa.
 ~
-11 393313 0 0 0 8
+11 393249 0 0 0 8
 D4
 Está muito escuro para você ver alguma coisa.
 ~
@@ -243,11 +243,16 @@ Está muito escuro para você ver alguma coisa.
 S
 #1110
 Dentro da Lagoa Escura~
-   Você continua nadando, sem com isso chegar ao fundo da lagoa.  Você nota
-a uma grande tubulação desembocando aquí, vindo do leste.
-   Você ainda pode voltar a superficie deste ponto.
+Você continua nadando, sem com isso chegar ao fundo da lagoa.  Você nota a uma
+grande tubulação desembocando aquí, vindo do leste.  Você ainda pode voltar
+a superficie deste ponto.
+Uma correnteza parece se formar ao norte.
 ~
-11 393313 0 0 0 8
+11 393249 0 0 0 8
+D0
+~
+~
+0 0 11314
 D1
 Parece que não é usada a anos.
 ~

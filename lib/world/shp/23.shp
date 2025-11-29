@@ -8,21 +8,101 @@ CircleMUD v3.0 Shop File~
 0.95
 10
 -1
-%s Sorry, I don't stock that item.~
+%s Sinto muito, mas isto esgotou!~
 %s Tem algo errado. Cade isto?~
 %s Tente outra coisa!~
 %s Consegue voltar depois? Estou sem moedas suficientes.~
 %s Sem dinheiro suficiente, sem acordo!~
 %s Vai dar %d moedas, tudo bem?~
-%d moedas por isto, pode ser?~
+%s Que tal %d moedas?~
 0
-0
+6
 2304
 0
 2303
 -1
+18
+0
 0
 7
+#2315~
+2327
+2328
+-1
+1.10
+0.95
+19
+-1
+%s Sinto muito, mas isto esgotou!~
+%s Tem algo errado. Cade isto?~
+%s Tente outra coisa!~
+%s Consegue voltar depois? Estou sem moedas suficientes.~
+%s Sem dinheiro suficiente, sem acordo!~
+%s Vai dar %d moedas, tudo bem?~
+%s Que tal %d moedas?~
 0
 0
+2315
+0
+2317
+-1
+18
+0
+0
+7
+#2346~
+2359
+2360
+2361
+-1
+1.10
+0.95
+9
+13
+-1
+%s Sinto muito, mas isto esgotou!~
+%s Tem algo errado. Cade isto?~
+%s Tente outra coisa!~
+%s Consegue voltar depois? Estou sem moedas suficientes.~
+%s Sem dinheiro suficiente, sem acordo!~
+%s Vai dar %d moedas, tudo bem?~
+%s Que tal %d moedas?~
+0
+0
+2346
+0
+2304
+-1
+18
+0
+0
+7
+#2348~
+2365
+2366
+2367
+-1
+1.01
+0.99
+9brinco
+9anel
+9colar
+-1
+%s Sinto muito, mas isto esgotou!~
+%s Tem algo errado. Cade isto?~
+%s Tente outra coisa!~
+%s Consegue voltar depois? Estou sem moedas suficientes.~
+%s Sem dinheiro suficiente, sem acordo!~
+%s Vai dar %d moedas, tudo bem?~
+%s Que tal %d moedas?~
+0
+0
+2348
+0
+2322
+-1
+18
+0
+0
+7
 $~

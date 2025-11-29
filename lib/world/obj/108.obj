@@ -579,7 +579,7 @@ bela armadura ajax~
 a armadura de Ajax~
 Uma bela armadura dourada foi deixada aqui.~
 ~
-9 aegiq 0 0 0 ad 0 0 0 c 0 0 0
+9 aegq 0 0 0 ad 0 0 0 c 0 0 0
 12 0 0 0
 20 650000 65000 65 0
 E
@@ -739,7 +739,7 @@ o imponente tridente de Poseidon~
 Um magnífico tridente azul foi esquecido aqui.~
 ~
 5 aegiq 0 0 0 an 0 0 0 y 0 0 0
-10 6 6 11
+10 8 3 11
 10 1500000 150000 70 0
 E
 tridente poseidon azul~
@@ -1882,16 +1882,16 @@ Uma bela maçã de ouro foi jogada aqui.~
 0 0 0 0
 5 2000000 200000 0 0
 E
+inscricoes~
+                              <=-À Mais Bela -=>
+~
+E
 maca ouro pomo discordia~
 Você observa o fruto que deu origem a guerra de Tróia.  O pomo da discórdia,
 incorporada por uma bela maçã de ouro, que foi jogada por Éris, a deusa da
 discórdia, entre as deusas Atena, Hera e Afrodite.  E que gerou uma disputa
 entre as três para se saber quem era "à mais bela".  Você observa a bela
 maçã de ouro e percebe algumas inscrições esculpidas no ouro.
-~
-E
-inscricoes~
-                              <=-À Mais Bela -=>
 ~
 #10917
 portal magico pegaso~
@@ -2131,4 +2131,20 @@ Algumas felechas troianas foram largadas aqui.~
 5 500 0 0 0
 A
 14 50
+#10942
+bota ferro cracas~
+um par de botas de ferro~
+Um par de botas de ferro coberdo de cracas foi deixada aqui.~
+~
+9 q 0 0 0 ag 0 0 0 h 0 0 0
+8 0 0 0
+7 100 10 60 0
+A
+2 2
+A
+18 1
+A
+19 2
+A
+14 100
 $~

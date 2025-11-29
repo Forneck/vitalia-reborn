@@ -23,7 +23,6 @@ Este clone não parece significar nada.  Não, na verdade, ele é um tanto quant
 1 0 0 1d10+48 1d1+1
 0 0
 9 9 0
-GenWimpy: 2
 GenFollow: 10
 E
 #11
@@ -38,6 +37,8 @@ Este estranho humanóide move-se lentamente, e parece ser um corpo, um corpo and
 0 0
 9 9 0
 BareHandAttack: 7
+GenLoot: 2
+GenFollow: 4
 E
 #12
 corvo~
@@ -105,6 +106,7 @@ um humanóide em forma de núvem.
 1 0 0 1d1+1 1d1+1
 0 0
 9 9 0
+GenFollow: 3
 E
 #20
 elementar~
@@ -118,5 +120,8 @@ pacientemente que algo ocorra.
 1 0 0 1d1+1 1d1+1
 0 0
 9 9 0
+GenWimpy: 5
+GenLoot: 1
+GenFollow: 3
 E
 $

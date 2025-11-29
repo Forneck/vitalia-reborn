@@ -260,7 +260,7 @@ arco galadhrim~
 um belo arco dos Galadhrim~
 Um grande arco foi deixado aqui.~
 ~
-29 r 0 0 0 an 0 0 0 0 0 0 0
+29 q 0 0 0 an 0 0 0 0 0 0 0
 20 0 0 0
 10 150000 15000 20 0
 E
@@ -270,9 +270,9 @@ de cabelo élfico.  Esses poderosos arcos são utilizados pelos Galadhrim, o
 povo das árvores.
 ~
 A
-18 2
+18 3
 A
-19 2
+19 4
 #13714
 manto cinza Lorien~
 um belo manto de Lórien~
@@ -462,7 +462,7 @@ folha mallorn~
 uma folha dourada de mallorn~
 Uma grande e bela folha dourada caiu aqui.~
 ~
-12 aei 0 0 0 ao 0 0 0 0 0 0 0
+28 aei 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 80 8 1 0
 E

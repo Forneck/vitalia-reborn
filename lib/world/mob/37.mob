@@ -17,7 +17,10 @@ BareHandAttack: 11
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 100
+GenLoot: 1
+GenRoam: 89
+GenFollow: 13
 E
 #3701
 enguia satanica flamejante~
@@ -38,6 +41,10 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 100
+GenLoot: 8
+GenRoam: 86
+GenFollow: 15
 E
 #3702
 tubarao demoníaco~
@@ -57,7 +64,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 100
+GenRoam: 22
+GenFollow: 12
 E
 #3703
 ixitxachityl raia~
@@ -77,6 +86,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 20
+GenFollow: 10
 E
 #3704
 espirito lagrimas forma agua~
@@ -97,6 +108,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 8
+GenFollow: 9
 E
 #3705
 espirito sofrimento~
@@ -117,6 +130,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 19
+GenFollow: 11
 E
 #3706
 espirito tristeza~
@@ -137,8 +152,9 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 30
+GenLoot: 2
+GenFollow: 11
 E
 #3707
 espirito desespero~
@@ -158,6 +174,8 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 10
+GenFollow: 12
 E
 #3708
 morte esqueleto~
@@ -177,6 +195,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 25
+GenLoot: 1
+GenFollow: 11
 E
 #3709
 fome figura~
@@ -196,6 +217,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 29
+GenLoot: 1
+GenFollow: 12
 E
 #3710
 pestilencia figura~
@@ -216,6 +240,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 13
+GenFollow: 11
 E
 #3711
 guerra ser~
@@ -235,8 +261,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 14
+GenWimpy: 12
+GenLoot: 2
+GenFollow: 13
 E
 #3712
 grande mestre tempo~
@@ -257,6 +284,10 @@ BareHandAttack: 13
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 27
+GenLoot: 15
+GenEquip: 4
+GenFollow: 11
 E
 #3713
 apocalipse~
@@ -278,6 +309,10 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenLoot: 93
+GenEquip: 6
+GenFollow: 14
 E
 #3714
 clotho mulher bonita jovem~
@@ -296,6 +331,9 @@ prazer de ver o nascimento de incontáveis seres.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 19
+GenLoot: 2
+GenFollow: 14
 E
 #3715
 atropos mulher maduro madura~
@@ -314,6 +352,10 @@ sabe que é assim que a vida funciona.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 23
+GenLoot: 1
+GenEquip: 1
+GenFollow: 15
 E
 #3716
 lachesis velha mulher~
@@ -333,6 +375,9 @@ mesma maneira.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 20
+GenLoot: 9
+GenFollow: 13
 E
 #3717
 mumia caos~
@@ -354,6 +399,8 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
+GenFollow: 12
 E
 #3718
 fantasma horror~
@@ -372,6 +419,9 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 17
+GenLoot: 1
+GenFollow: 13
 E
 #3719
 chyron esqueleto~
@@ -391,6 +441,10 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenLoot: 2
+GenEquip: 1
+GenFollow: 12
 E
 #3720
 cerbero cachorro~
@@ -409,6 +463,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 5
+GenFollow: 11
 E
 #3721
 cachorro esqueleto~
@@ -428,10 +484,12 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 6
+GenWimpy: 32
+GenLoot: 45
+GenEquip: 3
 GenRoam: 89
-GenFollow: 16
+GenGroup: 1
+GenFollow: 4
 E
 #3722
 demonio ossos~
@@ -453,10 +511,12 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 11
-GenLoot: 1
+GenWimpy: 5
+GenLoot: 6
+GenEquip: 2
 GenRoam: 89
-GenFollow: 16
+GenQuest: 2
+GenFollow: 3
 E
 #3723
 esqueleto guerreiro~
@@ -473,10 +533,11 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 2
+GenWimpy: 7
+GenLoot: 21
+GenEquip: 2
 GenRoam: 89
-GenFollow: 15
+GenFollow: 6
 E
 #3724
 esqueleto dragao~
@@ -497,7 +558,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 65
+GenFollow: 13
 E
 #3725
 guereiro~
@@ -515,11 +577,11 @@ negras de combate, este guerreiro é um notável oponente.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 4
+GenWimpy: 6
+GenLoot: 17
 GenRoam: 89
-GenBrave: 1
-GenFollow: 13
+GenQuest: 1
+GenFollow: 1
 E
 #3726
 zumbi guerreiro~
@@ -538,9 +600,11 @@ de simplesmente matar aqueles que não se encaixaram.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 4
+GenWimpy: 37
+GenLoot: 5
 GenRoam: 89
+GenQuest: 1
+GenFollow: 7
 E
 #3727
 general~
@@ -559,6 +623,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 21
+GenFollow: 14
 E
 #3728
 guardiao almas~
@@ -578,8 +644,9 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenFollow: 15
+GenWimpy: 45
+GenLoot: 1
+GenFollow: 11
 E
 #3729
 morte sombra~
@@ -599,8 +666,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenFollow: 16
+GenWimpy: 35
+GenFollow: 9
 E
 #3730
 anjo morte~
@@ -620,8 +687,9 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenFollow: 12
+GenWimpy: 9
+GenLoot: 5
+GenFollow: 8
 E
 #3731
 encurvada criatura tumulo ladrao~
@@ -639,11 +707,11 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenLoot: 94
-GenEquip: 3
-GenRoam: 89
-GenGroup: 95
+GenWimpy: 10
+GenLoot: 99
+GenEquip: 11
+GenRoam: 78
+GenGroup: 74
 GenFollow: 14
 E
 #3732
@@ -664,8 +732,9 @@ BareHandAttack: 13
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenFollow: 12
+GenWimpy: 34
+GenLoot: 1
+GenFollow: 7
 E
 #3733
 gargula pedra besta estatua~
@@ -687,5 +756,7 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 18
+GenFollow: 12
 E
 $

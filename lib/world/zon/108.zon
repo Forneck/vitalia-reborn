@@ -2,6 +2,10 @@
 Vitalia~
 A Cidade de Tróia~
 10800 10999 180 1 j 0 0 0 5 -1 2
+M 0 10862 1 10940 	(o Octopos)
+O 1 10931 -90 10940 	(uma caveira humana)
+P 1 10932 -95 10931 	(um par de botas de ferro)
+P 1 10942 -5 10931 	(um par de botas de ferro)
 M 0 10848 2 10938 	(uma sereia)
 E 1 10809 10 20 	(um brinco de corais)
 E 1 3817 10 21 	(o Card Tiara de Calíope)
@@ -33,9 +37,6 @@ E 1 10858 10 6 	(um colar de marfim africano)
 E 1 10835 10 8 	(a armadura de Pândaro)
 E 1 10880 14 20 	(uma lança de combate)
 D 0 10920 0 2 	(Os Jardins do Palácio)
-M 0 10862 1 10940 	(o Octopos)
-O 1 10931 20 10940 	(uma caveira humana)
-P 1 10932 20 10931 	(um par de botas de ferro)
 M 0 10803 1 10941 	(Pégaso)
 G 1 10822 10 -1 	(a ferradura de Pégaso)
 E 1 13806 20 22 	(um celestial par de asas)

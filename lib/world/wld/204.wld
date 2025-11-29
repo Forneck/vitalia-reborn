@@ -1423,7 +1423,7 @@ Correio~
    Aqui está o Correio.  Simplesmente escreva MAIL <pessoa> escreva sua
 carta.  As cartas geralmente são entregues.
 ~
-204 0 0 0 0 0
+204 1048592 0 0 0 0
 D3
 ~
 ~
@@ -1435,7 +1435,7 @@ Sala de Descanso dos Ladrões~
 dos quartos são aqui.  Qualquer ladrão que queira morar aqui quando
 iniciar seu jogo em Vitália pode ficar aqui.
 ~
-204 0 0 0 0 1
+204 16 0 0 0 1
 D5
 ~
 ~
@@ -2042,7 +2042,7 @@ S
 Esta Poderia Ser SUA Casa~
    Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
+são oferecidos para os ladrões que atingiram no mínimo o nível cinqüenta por um
 preço muito bom.  
 ~
 204 0 0 0 0 0

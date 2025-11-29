@@ -51,15 +51,15 @@ Um caminho empoeirado.
 ~
 0 -1 17303
 E
+pegadas~
+Você se ajoelha e examina as pegadas.  A direção principal segue os caminhos
+ao leste e ao sul.
+~
+E
 poeira~
 Você cuidadosamente examina a sujeira e, além das pegadas de cavalo, percebe
 que há um estranho rastro de marcas feitas por garras seguindo na direção
 oeste.
-~
-E
-pegadas~
-Você se ajoelha e examina as pegadas.  A direção principal segue os caminhos
-ao leste e ao sul.
 ~
 S
 #17303
@@ -183,12 +183,15 @@ Uma porta de madeira.
 porta~
 2 17336 17305
 E
-amarelas estranhas manchas~
-Você examina as manchas amarelas.  Elas cheiram a enxofre.
+bancada~
+A bancada de trabalho está coberta por um tampo de vidro que protege os
+vários tubos e frascos de diversas cores.  Talvez seja melhor deixar isto em
+paz..
 ~
 E
-vigas~
-As vigas estão escurecidas pela fumaça e com estranhas manchas amarelas.
+lareira~
+O fogo há muito tempo se extinguiu.  Tudo o que você vê são restos de papéis
+amassados e lenha na lareira
 ~
 E
 papeis amassados restos~
@@ -199,15 +202,12 @@ encontrar comigo.  Há algo que você possa fazer?
 Isolda
 ~
 E
-lareira~
-O fogo há muito tempo se extinguiu.  Tudo o que você vê são restos de papéis
-amassados e lenha na lareira
+vigas~
+As vigas estão escurecidas pela fumaça e com estranhas manchas amarelas.
 ~
 E
-bancada~
-A bancada de trabalho está coberta por um tampo de vidro que protege os
-vários tubos e frascos de diversas cores.  Talvez seja melhor deixar isto em
-paz..
+amarelas estranhas manchas~
+Você examina as manchas amarelas.  Elas cheiram a enxofre.
 ~
 S
 #17309
@@ -316,13 +316,13 @@ Um caminho empoeirado.
 ~
 0 -1 17309
 E
+esquilos~
+Sim, eles estão acasalando.
+~
+E
 trilha pegadas cavalo~
 Você descobriu marcas deixadas por cascos de cavalos.  A maioria delas
 apontam tráfego intenso em direção a leste e sul.
-~
-E
-esquilos~
-Sim, eles estão acasalando.
 ~
 S
 #17314
@@ -400,14 +400,14 @@ Uma estrada sinuosa.
 ~
 0 -1 17315
 E
-humanas faces~
-Elas lhe parecem, de fato, almas amaldiçoadas e em eterna agonia.
-~
-E
 portao portoes ferro negro~
 Os grandes portões de ferro foram forjados a partir de lingotes e
 estranhamente não há nenhum sinal de ferrugem.  As grades, feitas com imensa
 habilidade e cuidado, formam retorcidas faces humanas.
+~
+E
+humanas faces~
+Elas lhe parecem, de fato, almas amaldiçoadas e em eterna agonia.
 ~
 S
 #17317
@@ -546,13 +546,12 @@ Em frente à cabana aconchegante.
 porta~
 1 -1 17318
 E
-cadeira~
-Por que você não se senta um pouco e faz uma agradável refeição?
+calice~
+Examinando mais detalhadamente, percebe-se que este não é o Santo Graal.
 ~
 E
-vela~
-É uma vela negra.  O que você lembra a respeito de velas negras?  Ah sim!
-Elas são usadas pelas bruxas em missas negras.
+cama~
+A cama parece ser bem confortável.  Convidativa.
 ~
 E
 carne vinho~
@@ -560,12 +559,13 @@ A carne está suculenta, e o vinho tem um delicioso aroma seco e é de um
 vermelho profundo e escuro.
 ~
 E
-cama~
-A cama parece ser bem confortável.  Convidativa.
+vela~
+É uma vela negra.  O que você lembra a respeito de velas negras?  Ah sim!
+Elas são usadas pelas bruxas em missas negras.
 ~
 E
-calice~
-Examinando mais detalhadamente, percebe-se que este não é o Santo Graal.
+cadeira~
+Por que você não se senta um pouco e faz uma agradável refeição?
 ~
 S
 #17324
@@ -894,17 +894,17 @@ enquanto passa dançando entre elas.
 D0
 Entrada da Fortaleza.
 ~
-~
+porta~
 1 -1 17333
-E
-demoniaco rapaz jovem~
-Você sacode sua cabeça e olha de novo.  O rapaz desaparece.  Um vil feitiço
-o atingiu!
-~
 E
 pira chamas~
 Você examina a pira.  Um enorme corpo está queimando aqui.  Parece ser
 humano!
+~
+E
+demoniaco rapaz jovem~
+Você sacode sua cabeça e olha de novo.  O rapaz desaparece.  Um vil feitiço
+o atingiu!
 ~
 S
 #17341
@@ -960,14 +960,14 @@ O Caminho dos Cavaleiros.
 ~
 0 -1 17341
 E
+estabulos~
+Há muitos cavalos e escudeiros correndo apressados pelos estábulos.
+~
+E
 muralhas altas~
 As altas muralhas elevam-se sobre você, feitas de fulgentes pedras alvas.
 Os blocos são enormes- deve ter sido necessária uma grande máquina para os
 erguer.  Pendões rasgam a brisa nas inúmeras torres de Camelot.
-~
-E
-estabulos~
-Há muitos cavalos e escudeiros correndo apressados pelos estábulos.
 ~
 S
 #17343
@@ -1107,12 +1107,12 @@ O Caminho dos Cavaleiros.
 ~
 0 -1 17344
 E
-armas penduradas prateleiras~
-As prateleiras de armas contém várias adagas, algumas lanças e maças.
-~
-E
 armadura~
 As peças de armaduras são feitas de um magnífico aço trabalhado.
+~
+E
+armas penduradas prateleiras~
+As prateleiras de armas contém várias adagas, algumas lanças e maças.
 ~
 S
 #17349
@@ -1448,17 +1448,17 @@ A Estrada Nobre.
 ~
 0 -1 17354
 E
-inscricao~
-Aqui está nossa lembrança e homenagem a Miles O'the Lands, honrado e
-graduado cavaleiro da Távola Redonda.  Ele lutou valentemente defendendo a
-rainha no Campo de Batalha de Arden.
-~
-E
 estatua cavaleiro~
 A estátua representa um cavaleiro montado, cavalgando em direção ao Portão
 Sul.  Ele segura um estandarte com umas das mãos, uma lança em outra, e está
 usando uma armadura completa.  O cavalo está com duas patas levantadas,
 simbolizando morte em combate.  Você vê uma pequena inscrição também.
+~
+E
+inscricao~
+Aqui está nossa lembrança e homenagem a Miles O'the Lands, honrado e
+graduado cavaleiro da Távola Redonda.  Ele lutou valentemente defendendo a
+rainha no Campo de Batalha de Arden.
 ~
 S
 #17362
@@ -1576,14 +1576,10 @@ Quarto Nobre.
 porta~
 1 17338 17380
 E
-garota estatua~
-A estátua representa uma garota vestindo um traje semelhante a uma túnica.
-Ela é gorducha, Com cabelos cortados até a altura dos ombros.
-~
-E
-moedas~
-Você realmente não deseja perder tempo recolhendo as moedas.  Seria de muito
-mau gosto.
+fonte~
+A água da fonte escorre da estátua de uma garota segurando um cântaro, e cai
+em uma piscina de azulejo, onde um peixe nada.  Algumas moedas foram jogadas
+aqui.
 ~
 E
 peixe~
@@ -1591,10 +1587,14 @@ O peixe é de um tipo pequeno, geralmente daqueles que procuram seu alimento
 no fundo das águas.
 ~
 E
-fonte~
-A água da fonte escorre da estátua de uma garota segurando um cântaro, e cai
-em uma piscina de azulejo, onde um peixe nada.  Algumas moedas foram jogadas
-aqui.
+moedas~
+Você realmente não deseja perder tempo recolhendo as moedas.  Seria de muito
+mau gosto.
+~
+E
+garota estatua~
+A estátua representa uma garota vestindo um traje semelhante a uma túnica.
+Ela é gorducha, Com cabelos cortados até a altura dos ombros.
 ~
 S
 #17367
@@ -1689,11 +1689,6 @@ O Pátio de Torneios de Camelot.
 porta~
 1 -1 17359
 E
-espectadora~
-A dama em espera está chorando, pois seu cavaleiro era o cavaleiro laranja.
-Ela se recompõe rapidamente e atira seu lenço ao cavaleiro negro.
-~
-E
 patio torneios~
 Você assiste dois cavaleiros em lados opostos do Pátio de Torneios.  À
 esquerda está um cavaleiro com uma armadura de grandes placas, com plumas de
@@ -1709,6 +1704,11 @@ cavaleiro de capa atinge com muita força o centro do escudo do adversário.
 Assim, você assiste o cavaleiro laranja ser jogado de cima da sela e cair
 estrondosamente no chão do pátio.  O cavaleiro negro ergue sua lança e a
 agita, em saudação a Arthur.
+~
+E
+espectadora~
+A dama em espera está chorando, pois seu cavaleiro era o cavaleiro laranja.
+Ela se recompõe rapidamente e atira seu lenço ao cavaleiro negro.
 ~
 S
 #17371
@@ -1755,17 +1755,17 @@ Uma escadaria levando para cima.
 ~
 0 -1 17373
 E
+jovem moca~
+Você conversa com a jovem.  Ela está triste pois Lancelot não presta atenção
+nela.
+~
+E
 grupo senhoras~
 Você aguça seus ouvidos e presta atenção no que as senhoras as senhoras
 dizem.  Você ouve: "...é terrível.  A pobre garota foi capturada no caminho
 para seu casamento por aquele crápula que é Mordred.  Seu pai ofereceu uma
 considerável fortuna para que ela voltasse em segurança.  Eu acho que meu
 Gawaine pode, certamente, resolver isso..."
-~
-E
-jovem moca~
-Você conversa com a jovem.  Ela está triste pois Lancelot não presta atenção
-nela.
 ~
 S
 #17373
@@ -1834,14 +1834,14 @@ Uma escadaria que conduz para baixo.
 ~
 0 -1 17374
 E
-pentagrama pulsante~
-Sua voz interior, que sempre lhe serviu tão bem, grita para você: DEIXE ISSO
-SOSSEGADO!!
+livros pergaminhos varinhas manuais~
+Você xereta nos livros, pergaminhos, varinhas e manuais de Merlin.  Todos
+estão escritos em um estranho idioma rúnico que, mesmo após perscrutar
+muito, lhe parece completamente estranho.
 ~
 E
-recipientes estantes~
-Ao remexer nos recipientes de Merlin, tudo que você faz ou apalpa começa a
-produzir uma resina negra, que causa coceira em todo seu corpo.
+animais~
+Merlin possui um corvo, um gato e um sapo. Todos observam seus movimentos.
 ~
 E
 sinal~
@@ -1854,14 +1854,14 @@ AQUI, ALÉM DA MORTE, e nada menos que a DIRETA INTERVENÇÃO DIVINA pode sair
 daqui.  - Merlin
 ~
 E
-animais~
-Merlin possui um corvo, um gato e um sapo. Todos observam seus movimentos.
+recipientes estantes~
+Ao remexer nos recipientes de Merlin, tudo que você faz ou apalpa começa a
+produzir uma resina negra, que causa coceira em todo seu corpo.
 ~
 E
-livros pergaminhos varinhas manuais~
-Você xereta nos livros, pergaminhos, varinhas e manuais de Merlin.  Todos
-estão escritos em um estranho idioma rúnico que, mesmo após perscrutar
-muito, lhe parece completamente estranho.
+pentagrama pulsante~
+Sua voz interior, que sempre lhe serviu tão bem, grita para você: DEIXE ISSO
+SOSSEGADO!!
 ~
 S
 #17376
@@ -2032,10 +2032,12 @@ As colinas.
 ~
 0 -1 17382
 E
-inscricao~
-A inscrição diz:
-
- LACNOGIRANDUTOS ROYU AYLGPIN LILSK SI BLAMMENEDOC
+rochosa estranha formacao~
+Você examina a formação rochosa.  As rochas tem aproximadamente 15' de
+altura e estão dispostas em círculos, com duas pedras (na vertical) lado a
+lado e uma em cima, sobre as outras duas, horizontalmente.  Há outra pedra
+no centro, semelhante a uma mesa, onde as primeiras luzes do dia estão
+incidindo.
 ~
 E
 mesa altar pedra~
@@ -2045,12 +2047,10 @@ Evidentemente isso é um altar.  Você consegue entender apenas um pouco da
 inscrição da pedra.
 ~
 E
-rochosa estranha formacao~
-Você examina a formação rochosa.  As rochas tem aproximadamente 15' de
-altura e estão dispostas em círculos, com duas pedras (na vertical) lado a
-lado e uma em cima, sobre as outras duas, horizontalmente.  Há outra pedra
-no centro, semelhante a uma mesa, onde as primeiras luzes do dia estão
-incidindo.
+inscricao~
+A inscrição diz:
+
+ LACNOGIRANDUTOS ROYU AYLGPIN LILSK SI BLAMMENEDOC
 ~
 S
 #17385
@@ -2082,12 +2082,12 @@ D4
 ~
 0 -1 2160
 E
-escrito~
-Está escrito: ADRIANO
-~
-E
 muralha~
 Você examina a muralha e percebe algo escrito.
+~
+E
+escrito~
+Está escrito: ADRIANO
 ~
 S
 #17386
@@ -2162,13 +2162,13 @@ Uma árdua subida que você preferia não fazer.
 ~
 0 -1 17386
 E
-caverna cavernas~
-Você olha nas cavernas- fumaça!  O lugar é habitado!
-~
-E
 grutas gruta~
 As ondas estão duramente se arrebentando nas grutas.  Você pode provar as
 gotículas de água salgada.
+~
+E
+caverna cavernas~
+Você olha nas cavernas- fumaça!  O lugar é habitado!
 ~
 S
 #17390

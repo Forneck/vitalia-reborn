@@ -11,10 +11,15 @@ no colo e abraça-lo.
 12 15 7 3d6+145 3d4+0
 150 40000
 9 9 1
-GenWimpy: 66
-GenLoot: 21
+GenWimpy: 96
+GenLoot: 73
+GenEquip: 2
 GenRoam: 88
-GenFollow: 8
+GenBrave: 39
+GenUse: 100
+GenTrade: 50
+GenFollow: 4
+EmotionProfile: 3
 E
 #1601
 mulher gnomo~
@@ -28,12 +33,16 @@ vezes mais bonita. Ela começa a parecer atraente para você...
 26 9 4 7d10+670 3d8+2
 3000 60000
 9 9 2
-GenWimpy: 73
-GenLoot: 51
-GenEquip: 2
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 53
 GenRoam: 89
-GenTrade: 6
-GenFollow: 16
+GenUse: 100
+GenTrade: 50
+GenQuest: 73
+GenAdventurer: 5
+GenFollow: 13
+EmotionProfile: 4
 E
 #1602
 homem gnomo~
@@ -48,12 +57,11 @@ você.
 36 2 -3 6d12+1200 5d10+3
 7500 105000
 9 9 1
-GenWimpy: 46
-GenLoot: 55
-GenEquip: 3
+GenWimpy: 97
+GenLoot: 99
+GenEquip: 9
 GenRoam: 89
-GenGroup: 10
-GenFollow: 15
+GenFollow: 9
 E
 #1603
 gnomo cientista~
@@ -64,13 +72,17 @@ Você vê um gnomo que está completamente distraído com alguma invenção que 
 está prestes a criar. Seu cabelo é branco, mas ele aparenta ser razoavelmente
 forte.
 ~
-2097222 0 0 0 0 0 0 0 500 E
+2097220 0 0 0 0 0 0 0 500 E
 34 2 -2 2d5+1150 5d9+1
 8000 90000
 9 9 1
-GenWimpy: 16
-GenLoot: 3
-GenFollow: 16
+GenWimpy: 100
+GenLoot: 100
+GenEquip: 55
+GenRoam: 89
+GenUse: 100
+GenTrade: 51
+GenFollow: 12
 E
 T 3009
 #1604
@@ -85,10 +97,15 @@ ele compensa esta falha através de suas habilidades com armas.
 36 2 -3 6d12+1200 5d10+3
 7500 100000
 9 9 1
-GenWimpy: 47
-GenLoot: 4
-GenEquip: 1
-GenFollow: 11
+GenWimpy: 95
+GenLoot: 24
+GenEquip: 54
+GenBrave: 75
+GenUse: 50
+GenTrade: 50
+GenQuest: 14
+GenFollow: 10
+EmotionProfile: 1
 E
 #1605
 chefe gnomo~
@@ -99,12 +116,21 @@ O Chefe parece poder atingir você muito forte. Ele não só parece ser poderoso
 como também aparenta ser sábio e diligente. É melhor você não se meter com
 ele.
 ~
-2097218 0 0 0 0 0 0 0 550 E
+2097216 0 0 0 0 0 0 0 550 E
 40 0 -5 6d12+1650 6d8+3
 8000 120000
 9 9 1
-GenWimpy: 13
-GenFollow: 13
+GenWimpy: 18
+GenLoot: 100
+GenEquip: 54
+GenRoam: 89
+GenBrave: 69
+GenUse: 100
+GenTrade: 100
+GenQuest: 73
+GenAdventurer: 50
+GenFollow: 4
+GenHealing: 100
 E
 T 3009
 #1607
@@ -119,6 +145,8 @@ seus olhos e seus dentes caninos parecem os de uma besta selvagem.
 10 15 7 2d4+105 2d5+3
 800 20000
 9 9 1
+GenWimpy: 21
+GenFollow: 11
 E
 #1608
 rato campo~
@@ -131,6 +159,7 @@ O Rato é uma criatura bonitinha.
 1 18 9 2d4+10 1d4+0
 1 100
 9 9 1
+GenFollow: 6
 E
 #1609
 rato~
@@ -143,11 +172,11 @@ O rato é uma criaturinha diabólica que merece a morte.
 2 17 9 2d4+24 1d5+1
 5 200
 9 9 1
-GenWimpy: 46
-GenLoot: 17
-GenEquip: 3
-GenRoam: 87
-GenGroup: 40
+GenWimpy: 100
+GenLoot: 24
+GenEquip: 4
+GenRoam: 88
+GenGroup: 87
 GenFollow: 4
 E
 T 3008
@@ -162,11 +191,12 @@ Você tem o desejo de matar esta vil criatura.
 4 15 8 3d4+48 1d8+0
 10 550
 9 9 1
-GenWimpy: 60
-GenLoot: 23
+GenWimpy: 100
+GenLoot: 37
 GenEquip: 1
 GenRoam: 88
-GenFollow: 4
+GenGroup: 10
+GenFollow: 2
 E
 T 3008
 #1611
@@ -180,12 +210,12 @@ Este rato tem o tamanho de um cachorro de tamanho médio.
 6 13 6 1d12+72 1d8+3
 20 800
 9 9 1
-GenWimpy: 54
-GenLoot: 34
+GenWimpy: 100
+GenLoot: 42
 GenEquip: 2
 GenRoam: 88
-GenGroup: 55
-GenFollow: 9
+GenGroup: 38
+GenFollow: 8
 E
 T 3008
 #1612
@@ -265,11 +295,11 @@ guarda de elite. Ele parece bravo.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 1
-GenWimpy: 90
+GenWimpy: 46
 GenLoot: 99
-GenEquip: 75
-GenRoam: 89
-GenFollow: 9
+GenEquip: 99
+GenRoam: 85
+GenFollow: 15
 E
 #1618
 guarda-costas hobgoblin~
@@ -284,9 +314,10 @@ pontudos enquanto se prepara para atacar.
 35 2 -5 5d12+1050 5d8+2
 5000 60000
 9 9 1
-GenWimpy: 24
-GenLoot: 1
-GenFollow: 11
+GenWimpy: 90
+GenLoot: 99
+GenEquip: 27
+GenFollow: 4
 E
 #1619
 rei hobgoblin~
@@ -301,10 +332,10 @@ estava tentando criar.
 45 0 -7 6d12+1700 6d9+4
 30000 150000
 9 9 1
-GenWimpy: 13
-GenLoot: 2
-GenEquip: 5
-GenFollow: 13
+GenWimpy: 56
+GenLoot: 99
+GenEquip: 87
+GenFollow: 9
 E
 T 3009
 #1620
@@ -319,10 +350,10 @@ O mineiro está totalmente coberto por poeira.
 700 40000
 9 9 1
 GenWimpy: 100
-GenLoot: 20
-GenEquip: 2
-GenRoam: 89
-GenFollow: 12
+GenLoot: 99
+GenEquip: 5
+GenRoam: 61
+GenFollow: 1
 E
 #1621
 tesoureiro hobgoblin~
@@ -336,9 +367,10 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 65
-GenLoot: 85
-GenEquip: 3
+GenWimpy: 89
+GenLoot: 99
+GenEquip: 7
+GenBrave: 2
 GenFollow: 13
 E
 #1622
@@ -352,6 +384,7 @@ O prisioneiro está quase morto.
 3 12 10 3d5+10 2d3+1
 1 300
 9 9 1
+GenFollow: 9
 E
 #1623
 prisoneiro humano~
@@ -364,6 +397,7 @@ O prisioneiro está quase morto.
 3 12 10 3d5+10 2d3+1
 1 300
 9 9 1
+GenWimpy: 1
 GenFollow: 3
 E
 #1624
@@ -378,8 +412,8 @@ você por sua ousadia em acorda-lo.
 5 12 6 1d11+61 1d8+0
 200 600
 9 9 1
-GenWimpy: 55
-GenLoot: 33
+GenWimpy: 100
+GenLoot: 41
 GenFollow: 6
 E
 #1626
@@ -394,7 +428,9 @@ coisa na panela.
 29 3 -4 5d10+822 4d8+0
 1100 3500
 9 9 1
-GenWimpy: 3
-GenFollow: 13
+GenWimpy: 52
+GenLoot: 4
+GenEquip: 1
+GenFollow: 8
 E
 $

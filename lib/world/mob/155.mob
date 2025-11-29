@@ -11,7 +11,7 @@ sido feito de metal.
 150 1567
 9 9 1
 BareHandAttack: 10
-GenWimpy: 10
+GenWimpy: 14
 GenLoot: 11
 GenFollow: 9
 E
@@ -27,6 +27,9 @@ posição semi-oficial e a leva com muito carinho.
 5 8 5 4d6+83 2d3+2
 200 1767
 9 9 1
+GenWimpy: 2
+GenLoot: 3
+GenFollow: 6
 E
 #15502
 soldado~
@@ -40,9 +43,13 @@ redor e diz, "Um, hei, era para você estar aqui?."
 6 8 5 3d5+103 3d3+2
 200 1987
 9 9 1
-GenWimpy: 7
-GenRoam: 88
-GenFollow: 18
+GenWimpy: 43
+GenLoot: 6
+GenEquip: 1
+GenRoam: 89
+GenGroup: 3
+GenBrave: 1
+GenFollow: 16
 E
 #15503
 mestre armas~
@@ -55,6 +62,8 @@ Este homem aparenta ser forte o suficiente para esmaga-lo.
 15 3 3 3d4+500 3d4+12
 230 15342
 9 9 1
+GenWimpy: 1
+GenFollow: 5
 E
 #15504
 capitao~
@@ -119,5 +128,7 @@ local...
 17 2 0 3d10+650 4d5+6
 600 22333
 9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 $

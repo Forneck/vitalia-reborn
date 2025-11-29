@@ -11,6 +11,7 @@ para explodir qualquer coisa que tente passar por aqui.
 2000 79000
 9 9 1
 GenWimpy: 5
+GenLoot: 1
 GenFollow: 15
 E
 #4801
@@ -91,9 +92,9 @@ procurando por restos perdidos em batalhas.
 26 9 0 9d11+950 4d4+11
 0 56000
 9 9 1
-GenWimpy: 97
+GenWimpy: 99
 GenRoam: 89
-GenFollow: 9
+GenFollow: 3
 E
 #4807
 beijo morte~
@@ -202,6 +203,8 @@ qualquer forma, parece que um dos olhos está encarando você.
 3711 84000
 9 9 1
 BareHandAttack: 8
+GenWimpy: 3
+GenFollow: 14
 E
 #4815
 corcunda~
@@ -312,5 +315,7 @@ no esconderijo de um Dragão.
 10000 200000
 5 5 1
 BareHandAttack: 8
+GenWimpy: 4
+GenFollow: 16
 E
 $

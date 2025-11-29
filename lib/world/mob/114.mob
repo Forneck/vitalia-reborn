@@ -13,6 +13,9 @@ sua expressão assustada.
 31 3 -8 6d7+600 4d4+17
 0 33000
 9 9 1
+GenWimpy: 4
+GenRoam: 52
+GenFollow: 11
 E
 #11401
 pisacha pedra demonio grande~
@@ -46,6 +49,9 @@ horas, dificilmente perceberá seus movimentos.
 33 0 -8 5d6+741 5d3+16
 0 39000
 9 9 1
+GenWimpy: 2
+GenRoam: 52
+GenFollow: 11
 E
 #11403
 morcego enorme~
@@ -91,6 +97,8 @@ chicote, o ameaça estalando no ar.
 0 90000
 9 9 1
 BareHandAttack: 4
+GenWimpy: 4
+GenFollow: 16
 E
 T 3008
 #11406
@@ -117,6 +125,8 @@ Int: 16
 Wis: 16
 Con: 16
 Cha: 16
+GenWimpy: 3
+GenFollow: 15
 E
 T 3009
 #11407
@@ -145,6 +155,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenFollow: 14
 E
 T 3009
 #11408

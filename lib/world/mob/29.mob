@@ -5,10 +5,10 @@ Um eunuco está aqui, guardando o harém.
 ~
    Ele não tem nenhuma expressão, nem nada de especial sobre ele.
 ~
-2107434 0 0 0 0 0 0 0 0 E
+2107402 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
 140 19600
-9 9 1
+9 9 0
 BareHandAttack: 13
 Str: 17
 Dex: 15
@@ -17,7 +17,9 @@ Wis: 13
 GenWimpy: 5
 GenLoot: 99
 GenEquip: 99
-GenFollow: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2913
 turista~
@@ -37,12 +39,14 @@ Str: 14
 Dex: 13
 Int: 14
 Wis: 14
-GenWimpy: 7
-GenLoot: 4
+GenWimpy: 56
+GenLoot: 6
 GenEquip: 1
-GenRoam: 88
-GenGroup: 23
-GenFollow: 6
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 10
+GenFollow: 5
 E
 #2914
 homem vagando~
@@ -61,10 +65,13 @@ Str: 15
 Dex: 13
 Int: 12
 Wis: 12
-GenWimpy: 19
-GenLoot: 2
-GenRoam: 88
-GenFollow: 11
+GenWimpy: 47
+GenLoot: 6
+GenEquip: 2
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #2915
 mulher vagando~
@@ -83,11 +90,12 @@ Str: 14
 Dex: 12
 Int: 14
 Wis: 14
-GenWimpy: 34
-GenLoot: 28
+GenWimpy: 44
+GenLoot: 29
 GenEquip: 9
 GenRoam: 89
-GenGroup: 19
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2916
@@ -110,6 +118,8 @@ Int: 16
 Wis: 16
 GenWimpy: 4
 GenLoot: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2917
@@ -125,6 +135,8 @@ transeuntes comprarem seus maravilhosos utensílios de cozinha!
 100 10000
 9 9 2
 BareHandAttack: 10
+GenTrade: 100
+GenQuest: 50
 E
 #2918
 homem vendendo mobília vendendor~
@@ -141,6 +153,8 @@ Str: 14
 Int: 13
 Wis: 13
 GenWimpy: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 4
 E
 #2919
@@ -159,12 +173,13 @@ BareHandAttack: 1
 Dex: 13
 Int: 14
 Wis: 13
-GenWimpy: 5
+GenWimpy: 8
 GenLoot: 99
-GenEquip: 28
+GenEquip: 35
 GenRoam: 89
-GenGroup: 6
-GenFollow: 5
+GenTrade: 100
+GenQuest: 33
+GenFollow: 3
 E
 #2920
 conselheiro Degruziel~
@@ -180,7 +195,10 @@ O conselheiro de Degruziel está aqui, parecendo importante.
 Str: 10
 Int: 16
 Wis: 12
-GenWimpy: 1
+GenWimpy: 3
+GenLoot: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2921
@@ -200,12 +218,14 @@ Str: 13
 Dex: 13
 Int: 13
 Wis: 13
-GenWimpy: 21
-GenLoot: 23
-GenEquip: 8
+GenWimpy: 96
+GenLoot: 46
+GenEquip: 16
 GenRoam: 89
-GenGroup: 34
-GenFollow: 10
+GenGroup: 6
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #2922
 patrulheiro elite~
@@ -223,11 +243,13 @@ Str: 15
 Dex: 15
 Int: 15
 Wis: 15
-GenWimpy: 17
-GenLoot: 47
-GenEquip: 17
+GenWimpy: 51
+GenLoot: 56
+GenEquip: 22
 GenRoam: 89
-GenGroup: 96
+GenGroup: 91
+GenTrade: 100
+GenQuest: 50
 GenFollow: 11
 E
 #2923
@@ -249,6 +271,8 @@ Int: 15
 Wis: 15
 GenWimpy: 2
 GenLoot: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 #2924
@@ -265,8 +289,10 @@ simplesmente senta aqui, aproveitando toda a vida que acontece ao seu redor.
 5 5 1
 BareHandAttack: 7
 GenWimpy: 5
-GenLoot: 7
-GenFollow: 10
+GenLoot: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #2925
 bardo talentoso~
@@ -283,6 +309,10 @@ moedas... Ou comprar-lhe o jantar.
 Str: 12
 Int: 15
 Wis: 14
+GenWimpy: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2926
 acrobata~
@@ -299,6 +329,8 @@ dias, e parece ganhar a vida com sua habilidade.
 BareHandAttack: 1
 Str: 13
 Dex: 16
+GenTrade: 100
+GenQuest: 50
 E
 #2927
 garconete taverna peituda~
@@ -315,8 +347,10 @@ olhares temerosos se ela faz o menor movimento ameaçador.
 9 9 2
 BareHandAttack: 1
 GenWimpy: 4
-GenLoot: 30
+GenLoot: 55
 GenEquip: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2928
@@ -330,11 +364,13 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 100
-GenLoot: 69
-GenEquip: 7
-GenRoam: 87
-GenFollow: 11
+GenWimpy: 96
+GenLoot: 89
+GenEquip: 12
+GenRoam: 86
+GenTrade: 100
+GenQuest: 27
+GenFollow: 8
 E
 #2929
 monstro lama bolhas~
@@ -348,6 +384,8 @@ Pequenas bolhas emergem através da água aqui.
 100 10000
 9 9 0
 BareHandAttack: 10
+GenTrade: 100
+GenQuest: 50
 E
 #2930
 cao latindo~
@@ -362,11 +400,13 @@ movem. Este cão late para sua própria sombra.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 41
-GenLoot: 14
-GenEquip: 7
+GenWimpy: 62
+GenLoot: 33
+GenEquip: 12
 GenRoam: 89
-GenFollow: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2931
 gato agil~
@@ -382,12 +422,13 @@ um raio.
 9 9 0
 BareHandAttack: 8
 Dex: 15
-GenWimpy: 16
+GenWimpy: 46
 GenLoot: 2
 GenEquip: 1
-GenRoam: 86
-GenGroup: 3
-GenFollow: 7
+GenRoam: 88
+GenTrade: 100
+GenQuest: 38
+GenFollow: 6
 E
 #2932
 cao raivoso~
@@ -401,12 +442,14 @@ Ele está obviamente raivoso. Ele também é obviamente um cão MUITO GRANDE.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 11
+GenWimpy: 43
 GenLoot: 13
 GenEquip: 2
-GenRoam: 82
-GenGroup: 39
-GenFollow: 8
+GenRoam: 89
+GenGroup: 21
+GenTrade: 100
+GenQuest: 50
+GenFollow: 7
 E
 #2933
 rato~
@@ -420,12 +463,14 @@ através de você. Parece completamente destemido.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 0
-GenWimpy: 28
-GenLoot: 33
-GenEquip: 27
-GenRoam: 89
-GenGroup: 62
-GenFollow: 14
+GenWimpy: 10
+GenLoot: 65
+GenEquip: 69
+GenRoam: 88
+GenGroup: 49
+GenTrade: 100
+GenQuest: 23
+GenFollow: 11
 E
 #2934
 garoto servente~
@@ -440,12 +485,13 @@ uma reposição.
 70 4900
 9 9 1
 BareHandAttack: 1
-GenWimpy: 20
-GenLoot: 31
-GenEquip: 9
+GenWimpy: 50
+GenLoot: 36
+GenEquip: 10
 GenRoam: 89
-GenGroup: 15
-GenFollow: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 3
 E
 #2935
 cavalheiro gentil~
@@ -464,11 +510,13 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 7
-GenLoot: 49
-GenEquip: 17
-GenRoam: 87
-GenGroup: 41
+GenWimpy: 53
+GenLoot: 57
+GenEquip: 24
+GenRoam: 89
+GenBrave: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2936
@@ -489,12 +537,13 @@ Str: 9
 Dex: 13
 Int: 15
 Wis: 15
-GenWimpy: 13
-GenLoot: 69
-GenEquip: 23
+GenWimpy: 55
+GenLoot: 78
+GenEquip: 24
 GenRoam: 89
-GenGroup: 36
-GenFollow: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #2937
 convidado honrado~
@@ -510,11 +559,13 @@ perder uma refeição.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 16
-GenLoot: 69
-GenEquip: 13
-GenRoam: 87
-GenGroup: 14
+GenWimpy: 38
+GenLoot: 74
+GenEquip: 14
+GenRoam: 89
+GenGroup: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #2938
@@ -532,8 +583,10 @@ passam.
 9 9 1
 Str: 14
 Dex: 14
-GenWimpy: 5
+GenWimpy: 7
 GenLoot: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2939
@@ -552,8 +605,10 @@ Str: 15
 Dex: 15
 Int: 12
 Wis: 12
-GenWimpy: 3
+GenWimpy: 5
 GenLoot: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2940
@@ -574,12 +629,13 @@ Str: 13
 Dex: 13
 Int: 10
 Wis: 10
-GenWimpy: 27
+GenWimpy: 66
 GenLoot: 4
 GenEquip: 3
 GenRoam: 89
-GenGroup: 34
-GenFollow: 12
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #2941
 ladrao sombras escondido~
@@ -600,11 +656,13 @@ Str: 13
 Dex: 14
 Int: 15
 Wis: 15
-GenWimpy: 15
+GenWimpy: 45
 GenLoot: 31
 GenEquip: 7
 GenRoam: 89
-GenGroup: 64
+GenGroup: 30
+GenTrade: 100
+GenQuest: 29
 GenFollow: 12
 E
 #2942
@@ -620,10 +678,12 @@ nas sombras.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 36
-GenLoot: 1
+GenWimpy: 75
+GenLoot: 6
 GenRoam: 89
-GenFollow: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2943
 crianca pequena~
@@ -639,10 +699,12 @@ e se prepara para sair numa rodada de mendicância.
 70 4900
 9 9 2
 Dex: 10
-GenWimpy: 31
-GenLoot: 9
-GenEquip: 4
+GenWimpy: 16
+GenLoot: 11
+GenEquip: 5
 GenRoam: 89
+GenTrade: 100
+GenQuest: 25
 GenFollow: 5
 E
 #2944
@@ -663,8 +725,10 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 4
+GenWimpy: 6
 GenLoot: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 4
 E
 #2945
@@ -683,12 +747,13 @@ Str: 14
 Dex: 15
 Int: 15
 Wis: 15
-GenWimpy: 45
-GenLoot: 97
-GenEquip: 23
+GenWimpy: 54
+GenLoot: 99
+GenEquip: 34
 GenRoam: 89
-GenGroup: 22
-GenFollow: 8
+GenTrade: 100
+GenQuest: 50
+GenFollow: 1
 E
 #2946
 homem dormindo~
@@ -701,11 +766,13 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 5
-GenLoot: 98
-GenEquip: 13
-GenRoam: 23
-GenFollow: 5
+GenWimpy: 6
+GenLoot: 99
+GenEquip: 18
+GenRoam: 84
+GenTrade: 100
+GenQuest: 37
+GenFollow: 3
 E
 #2947
 valentao preto~
@@ -726,11 +793,14 @@ Str: 16
 Dex: 15
 Int: 13
 Wis: 14
-GenWimpy: 24
+GenWimpy: 71
 GenLoot: 99
-GenEquip: 19
-GenRoam: 83
-GenFollow: 9
+GenEquip: 22
+GenRoam: 89
+GenGroup: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #2948
 rei beco luna~
@@ -749,6 +819,11 @@ BareHandAttack: 1
 Str: 14
 Dex: 12
 Int: 16
+GenWimpy: 4
+GenLoot: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #2949
 mendigo gargalhando~
@@ -763,10 +838,12 @@ silenciosamente para si mesmo.
 70 4900
 9 9 1
 BareHandAttack: 13
-GenWimpy: 32
-GenLoot: 50
-GenEquip: 4
-GenRoam: 6
+GenWimpy: 86
+GenLoot: 93
+GenEquip: 5
+GenRoam: 81
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 #2950
@@ -782,11 +859,13 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 95
-GenLoot: 24
-GenEquip: 2
-GenRoam: 80
-GenFollow: 10
+GenWimpy: 81
+GenLoot: 34
+GenEquip: 4
+GenRoam: 66
+GenTrade: 100
+GenQuest: 22
+GenFollow: 8
 E
 #2951
 idiota~
@@ -801,7 +880,9 @@ o chão o dia todo, vendo sua baba se acumular em uma pequena poça.
 100 10000
 6 6 1
 BareHandAttack: 6
-GenWimpy: 1
+GenWimpy: 10
+GenTrade: 100
+GenQuest: 50
 GenFollow: 4
 E
 #2952
@@ -822,10 +903,12 @@ Dex: 13
 Int: 14
 Wis: 14
 GenWimpy: 18
-GenLoot: 14
-GenEquip: 8
+GenLoot: 25
+GenEquip: 14
 GenRoam: 89
-GenGroup: 35
+GenGroup: 33
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 #2953
@@ -842,6 +925,10 @@ sido causadas por unhas. Talvez as suas próprias.
 100 10000
 9 9 1
 BareHandAttack: 3
+GenWimpy: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #2954
 cozinheiro navio~
@@ -859,6 +946,8 @@ Str: 16
 Dex: 16
 Wis: 13
 GenWimpy: 1
+GenTrade: 100
+GenQuest: 50
 E
 #2955
 Mithroq minotauro imenso~
@@ -876,6 +965,8 @@ de se meter.
 140 19600
 9 9 1
 BareHandAttack: 6
+GenTrade: 100
+GenQuest: 50
 E
 T 2906
 #2956
@@ -891,6 +982,8 @@ ajudando as pessoas a encontrar coisas em sua loja.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 2
+GenTrade: 100
+GenQuest: 50
 E
 T 2905
 #2957
@@ -910,6 +1003,8 @@ Str: 13
 Dex: 13
 Int: 16
 Wis: 15
+GenTrade: 100
+GenQuest: 50
 E
 T 2909
 #2958
@@ -927,12 +1022,14 @@ arduamente ganho.
 BareHandAttack: 6
 Str: 15
 Dex: 12
-GenWimpy: 30
-GenLoot: 23
-GenEquip: 11
-GenRoam: 88
-GenGroup: 52
-GenFollow: 10
+GenWimpy: 60
+GenLoot: 26
+GenEquip: 12
+GenRoam: 89
+GenGroup: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #2959
 esposa pescador~
@@ -952,7 +1049,9 @@ Dex: 13
 Int: 10
 Wis: 10
 GenWimpy: 15
-GenLoot: 3
+GenLoot: 4
+GenTrade: 100
+GenQuest: 50
 GenFollow: 9
 E
 #2960
@@ -972,6 +1071,8 @@ Str: 14
 Dex: 13
 Int: 13
 Wis: 14
+GenTrade: 100
+GenQuest: 50
 E
 #2961
 cidadao passeando~
@@ -989,9 +1090,14 @@ Str: 15
 Dex: 15
 Int: 14
 Wis: 14
-GenWimpy: 11
+GenWimpy: 62
+GenLoot: 1
+GenEquip: 1
 GenRoam: 89
-GenFollow: 10
+GenGroup: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #2962
 cidada passeando~
@@ -1009,10 +1115,14 @@ Str: 14
 Dex: 14
 Int: 15
 Wis: 15
-GenWimpy: 10
-GenLoot: 2
+GenWimpy: 38
+GenLoot: 6
+GenEquip: 1
 GenRoam: 89
-GenFollow: 9
+GenBrave: 1
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #2963
 caranguejo rei~
@@ -1026,8 +1136,10 @@ Um caranguejo rei está aqui, parecendo mal-humorado.
 100 10000
 9 9 0
 BareHandAttack: 11
-GenWimpy: 31
-GenRoam: 38
+GenWimpy: 49
+GenRoam: 25
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2964
@@ -1048,9 +1160,11 @@ Dex: 16
 Int: 13
 Wis: 14
 GenWimpy: 2
-GenLoot: 14
+GenLoot: 19
 GenEquip: 1
-GenFollow: 7
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2965
 capitao~
@@ -1070,9 +1184,11 @@ Str: 16
 Dex: 15
 Int: 14
 Wis: 14
-GenWimpy: 3
-GenLoot: 15
-GenEquip: 2
+GenWimpy: 4
+GenLoot: 16
+GenEquip: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 12
 E
 #2966
@@ -1092,6 +1208,8 @@ BareHandAttack: 5
 GenWimpy: 4
 GenLoot: 5
 GenEquip: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 8
 E
 #2967
@@ -1113,6 +1231,8 @@ Dex: 15
 GenWimpy: 7
 GenLoot: 6
 GenEquip: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 6
 E
 #2968
@@ -1131,6 +1251,8 @@ comprar o peixe.
 BareHandAttack: 10
 GenWimpy: 5
 GenLoot: 9
+GenTrade: 100
+GenQuest: 50
 GenFollow: 8
 E
 #2969
@@ -1150,9 +1272,12 @@ Str: 14
 Dex: 12
 Int: 15
 Wis: 12
-GenWimpy: 14
-GenLoot: 1
+GenWimpy: 29
+GenLoot: 2
 GenRoam: 88
+GenGroup: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 6
 E
 #2970
@@ -1171,10 +1296,12 @@ Str: 13
 Dex: 14
 Int: 10
 Wis: 10
-GenWimpy: 3
-GenLoot: 24
+GenWimpy: 7
+GenLoot: 35
 GenEquip: 2
-GenFollow: 7
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2971
 Gilles barman~
@@ -1194,6 +1321,8 @@ se quiser ficar por algum tempo.
 BareHandAttack: 12
 Str: 16
 Dex: 13
+GenTrade: 100
+GenQuest: 50
 E
 T 2908
 #2972
@@ -1217,9 +1346,11 @@ Str: 8
 Dex: 7
 Int: 7
 Wis: 6
-GenWimpy: 8
-GenLoot: 13
-GenFollow: 4
+GenWimpy: 5
+GenLoot: 19
+GenTrade: 100
+GenQuest: 50
+GenFollow: 2
 E
 #2973
 Aramut velho~
@@ -1240,6 +1371,8 @@ Str: 16
 Dex: 15
 Int: 15
 Wis: 16
+GenTrade: 100
+GenQuest: 50
 E
 T 2903
 T 2904
@@ -1264,12 +1397,13 @@ Str: 17
 Dex: 12
 Int: 10
 Wis: 10
-GenWimpy: 26
-GenLoot: 34
+GenWimpy: 32
+GenLoot: 38
 GenEquip: 3
-GenRoam: 89
-GenGroup: 11
-GenFollow: 3
+GenRoam: 88
+GenTrade: 100
+GenQuest: 50
+GenFollow: 2
 E
 #2975
 garota especial do harem~
@@ -1290,9 +1424,12 @@ Str: 9
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 6
 GenLoot: 99
 GenEquip: 99
+GenBrave: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 T 2902
@@ -1319,6 +1456,8 @@ Wis: 12
 GenWimpy: 5
 GenLoot: 99
 GenEquip: 99
+GenTrade: 100
+GenQuest: 24
 GenFollow: 10
 E
 #2977
@@ -1335,8 +1474,12 @@ tenha medo da chefe de cozinha, como muitos de seus pares inteligentes.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 2
-GenFollow: 10
+GenWimpy: 5
+GenLoot: 7
+GenEquip: 2
+GenTrade: 100
+GenQuest: 50
+GenFollow: 9
 E
 #2978
 prisioneiro meio louco~
@@ -1352,12 +1495,13 @@ devesse ouvi-lo.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 19
-GenLoot: 22
-GenEquip: 6
+GenWimpy: 34
+GenLoot: 32
+GenEquip: 12
 GenRoam: 89
-GenGroup: 18
-GenFollow: 9
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 T 2901
 #2979
@@ -1372,10 +1516,11 @@ você.
 14 16 1 2d2+140 2d2+2
 140 19600
 9 9 1
-GenWimpy: 19
-GenLoot: 31
-GenEquip: 7
-GenRoam: 2
+GenWimpy: 14
+GenLoot: 34
+GenEquip: 8
+GenTrade: 100
+GenQuest: 50
 GenFollow: 11
 E
 #2980
@@ -1392,9 +1537,11 @@ meninas da cozinha.
 100 10000
 9 9 2
 BareHandAttack: 5
-GenWimpy: 6
+GenWimpy: 9
 GenLoot: 1
-GenFollow: 4
+GenTrade: 100
+GenQuest: 38
+GenFollow: 3
 E
 #2981
 Degruziel Senhor Porto~
@@ -1411,10 +1558,12 @@ se as coisas saíssem de controle.
 140 19600
 6 6 1
 BareHandAttack: 10
-GenWimpy: 4
+GenWimpy: 8
 GenLoot: 10
 GenEquip: 3
-GenFollow: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 10
 E
 #2982
 convidado rico~
@@ -1431,12 +1580,13 @@ alimentar uma família de pescadores por semanas.
 100 10000
 9 9 1
 BareHandAttack: 1
-GenWimpy: 21
-GenLoot: 12
-GenEquip: 5
-GenRoam: 88
-GenGroup: 6
-GenFollow: 3
+GenWimpy: 14
+GenLoot: 22
+GenEquip: 9
+GenRoam: 89
+GenTrade: 100
+GenQuest: 35
+GenFollow: 2
 E
 #2983
 criado~
@@ -1450,11 +1600,13 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 22
+GenWimpy: 73
 GenLoot: 99
-GenEquip: 26
-GenRoam: 88
-GenFollow: 9
+GenEquip: 29
+GenRoam: 89
+GenTrade: 100
+GenQuest: 25
+GenFollow: 5
 E
 #2984
 mestre estabulo~
@@ -1469,9 +1621,11 @@ os cavalos como se falasse a língua deles.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 2
-GenWimpy: 6
-GenLoot: 7
-GenFollow: 4
+GenWimpy: 5
+GenLoot: 9
+GenTrade: 100
+GenQuest: 37
+GenFollow: 3
 E
 #2985
 rapaz estabulo~
@@ -1486,10 +1640,12 @@ torção especializada toda vez que joga algo no carrinho de mão próximo.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 7
-GenLoot: 15
-GenEquip: 1
-GenFollow: 8
+GenWimpy: 5
+GenLoot: 41
+GenEquip: 5
+GenTrade: 100
+GenQuest: 24
+GenFollow: 7
 E
 #2986
 burro pesado~
@@ -1505,9 +1661,13 @@ de carregar coisas para lá e para cá o dia todo lhe deram músculos salientes.
 100 10000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 8
-GenLoot: 1
-GenRoam: 87
+GenWimpy: 13
+GenLoot: 6
+GenEquip: 1
+GenRoam: 88
+GenGroup: 3
+GenTrade: 100
+GenQuest: 50
 GenFollow: 5
 E
 #2987
@@ -1524,12 +1684,13 @@ tamparem os ouvidos de seus filhos.
 100 10000
 9 9 1
 BareHandAttack: 7
-GenWimpy: 14
-GenLoot: 4
-GenEquip: 1
-GenRoam: 88
-GenGroup: 6
-GenFollow: 5
+GenWimpy: 32
+GenLoot: 10
+GenEquip: 2
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 4
 E
 #2988
 cavalo empinando~
@@ -1544,11 +1705,12 @@ espírito.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 0
-GenWimpy: 12
-GenLoot: 5
-GenEquip: 2
-GenRoam: 88
-GenGroup: 1
+GenWimpy: 26
+GenLoot: 7
+GenEquip: 5
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 7
 E
 #2989
@@ -1565,11 +1727,12 @@ para afastar ladrões.
 140 19600
 9 9 1
 BareHandAttack: 7
-GenWimpy: 6
+GenWimpy: 27
 GenLoot: 1
-GenEquip: 1
-GenRoam: 82
-GenGroup: 3
+GenEquip: 3
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
 GenFollow: 11
 E
 #2990
@@ -1588,10 +1751,12 @@ BareHandAttack: 7
 Str: 16
 Dex: 15
 Wis: 13
-GenWimpy: 12
-GenLoot: 1
-GenRoam: 87
-GenFollow: 6
+GenWimpy: 29
+GenLoot: 2
+GenRoam: 88
+GenTrade: 100
+GenQuest: 50
+GenFollow: 5
 E
 #2991
 forasteiro~
@@ -1606,11 +1771,13 @@ tentando descobrir o que as pessoas ao seu redor estão dizendo.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 23
+GenWimpy: 53
 GenLoot: 2
 GenEquip: 2
 GenRoam: 89
-GenFollow: 5
+GenTrade: 100
+GenQuest: 50
+GenFollow: 3
 E
 #2992
 admiradora~
@@ -1624,11 +1791,13 @@ ligeiramente aberta enquanto olha ao redor com olhos arregalados para as paisage
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 25
-GenLoot: 12
-GenEquip: 24
+GenWimpy: 38
+GenLoot: 15
+GenEquip: 39
 GenRoam: 89
-GenFollow: 11
+GenTrade: 100
+GenQuest: 23
+GenFollow: 10
 E
 #2993
 crianca feliz menino~
@@ -1643,12 +1812,13 @@ cidade.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 49
-GenLoot: 24
-GenEquip: 9
+GenWimpy: 91
+GenLoot: 34
+GenEquip: 11
 GenRoam: 89
-GenGroup: 2
-GenFollow: 4
+GenTrade: 100
+GenQuest: 50
+GenFollow: 2
 E
 #2994
 mulher cidada~
@@ -1663,11 +1833,13 @@ esposa de um comerciante.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 44
-GenLoot: 51
-GenEquip: 12
+GenWimpy: 85
+GenLoot: 65
+GenEquip: 15
 GenRoam: 89
-GenGroup: 53
+GenGroup: 20
+GenTrade: 100
+GenQuest: 50
 GenFollow: 8
 E
 #2995
@@ -1683,12 +1855,13 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 40
-GenLoot: 35
+GenWimpy: 76
+GenLoot: 46
 GenEquip: 7
 GenRoam: 89
-GenGroup: 17
-GenFollow: 11
+GenTrade: 100
+GenQuest: 50
+GenFollow: 8
 E
 #2996
 cidadao homem~
@@ -1703,10 +1876,13 @@ parece estar falando consigo mesmo sobre os preços do mercado.
 100 10000
 9 9 1
 BareHandAttack: 13
-GenWimpy: 17
-GenRoam: 88
-GenGroup: 1
-GenFollow: 7
+GenWimpy: 22
+GenLoot: 2
+GenEquip: 3
+GenRoam: 89
+GenTrade: 100
+GenQuest: 50
+GenFollow: 6
 E
 #2997
 porteiro elite~
@@ -1724,6 +1900,8 @@ deseja emoção.
 9 9 1
 GenWimpy: 6
 GenLoot: 2
+GenTrade: 100
+GenQuest: 50
 GenFollow: 16
 E
 T 2900
@@ -1740,8 +1918,10 @@ sua mão habilidosa e sua faca afiada.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 8
+GenWimpy: 23
 GenLoot: 1
+GenTrade: 100
+GenQuest: 50
 GenFollow: 10
 E
 $

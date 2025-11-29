@@ -28,11 +28,11 @@ quatro grandes tentáculos com pontas muito afiadas.
 8 13 2 1d10+100 2d4+3
 400 4500
 9 9 0
-GenWimpy: 22
-GenLoot: 2
-GenEquip: 3
+GenWimpy: 64
+GenLoot: 20
+GenEquip: 12
 GenRoam: 89
-GenGroup: 9
+GenGroup: 4
 GenFollow: 9
 E
 T 3009
@@ -50,11 +50,11 @@ tem quatro pequenos tentáculos no centro de sua cabeça.
 6 15 4 1d10+75 1d4+2
 200 1500
 9 9 0
-GenWimpy: 29
-GenLoot: 20
-GenEquip: 2
+GenWimpy: 54
+GenLoot: 28
+GenEquip: 6
 GenRoam: 89
-GenGroup: 7
+GenGroup: 1
 GenFollow: 6
 E
 T 3009
@@ -72,10 +72,10 @@ exceto por estar em pé.
 50 1500
 9 9 0
 GenWimpy: 100
-GenLoot: 24
-GenEquip: 1
+GenLoot: 44
+GenEquip: 6
 GenRoam: 89
-GenFollow: 4
+GenFollow: 3
 E
 #7204
 rato gigantesco~

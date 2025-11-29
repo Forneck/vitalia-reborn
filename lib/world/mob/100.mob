@@ -13,10 +13,13 @@ rua de Vitália.
 9 9 1
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 3
-GenRoam: 88
-GenGroup: 1
-GenFollow: 2
+GenEquip: 7
+GenRoam: 79
+GenUse: 15
+GenTrade: 15
+GenQuest: 7
+GenAdventurer: 7
+GenFollow: 7
 E
 #10001
 magra mulher aldeã~
@@ -32,10 +35,13 @@ aparecendo pelo mal fabricado e raquítico vestido.
 175 1876
 9 9 2
 GenWimpy: 100
-GenLoot: 92
+GenLoot: 99
 GenEquip: 1
-GenRoam: 84
-GenGroup: 7
+GenRoam: 75
+GenUse: 42
+GenTrade: 42
+GenQuest: 21
+GenAdventurer: 21
 GenFollow: 2
 E
 #10002
@@ -50,6 +56,10 @@ rasgar você de membro a membro.
 29 0 -1 10d10+800 13d1+18
 500 34533
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 E
 #10003
 penelope~
@@ -63,6 +73,12 @@ alguns truques com cartas.
 27 2 0 9d11+600 12d1+16
 200 28765
 9 9 2
+GenWimpy: 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 6
 E
 #10004
 soldado mordecai~
@@ -76,11 +92,15 @@ angustiante conjunto.
 18 3 0 4d7+550 15d1+19
 300 32456
 9 9 1
-GenWimpy: 100
+GenWimpy: 97
 GenLoot: 99
-GenEquip: 39
-GenRoam: 58
-GenFollow: 13
+GenEquip: 99
+GenRoam: 85
+GenUse: 64
+GenTrade: 64
+GenQuest: 34
+GenAdventurer: 32
+GenFollow: 2
 E
 #10005
 pequena aldeia ladra menina~
@@ -97,10 +117,13 @@ pena dela?
 9 9 2
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 2
-GenRoam: 83
-GenGroup: 1
-GenFollow: 3
+GenEquip: 7
+GenRoam: 78
+GenUse: 54
+GenTrade: 54
+GenQuest: 27
+GenAdventurer: 27
+GenFollow: 4
 E
 #10006
 pálida criança trapos~
@@ -114,12 +137,15 @@ inocentes, e sorri um sorriso sem dentes.
 8 16 6 2d9+150 1d3+16
 0 3000
 9 9 1
-GenWimpy: 99
+GenWimpy: 96
 GenLoot: 99
-GenEquip: 3
+GenEquip: 7
 GenRoam: 88
-GenGroup: 1
-GenFollow: 3
+GenUse: 59
+GenTrade: 59
+GenQuest: 29
+GenAdventurer: 29
+GenFollow: 4
 E
 #10007
 grávida mulher~
@@ -133,6 +159,12 @@ A mulher olha para você com esperança e pergunta,
 12 14 3 3d9+300 1d4+8
 4 12754
 6 6 2
+GenWimpy: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 4
 E
 #10008
 três patas cachorro~
@@ -148,9 +180,13 @@ tristemente para você e continua mancando em frente.
 9 9 0
 BareHandAttack: 4
 GenWimpy: 100
-GenLoot: 9
-GenRoam: 86
-GenFollow: 3
+GenLoot: 27
+GenRoam: 81
+GenUse: 72
+GenTrade: 72
+GenQuest: 36
+GenAdventurer: 36
+GenFollow: 5
 E
 #10009
 bruxa dente~
@@ -165,9 +201,14 @@ Ela lentamente levanta, estica suas pernas e pisca sugestivamente.
 10 15 6 3d7+200 1d4+7
 10 4200
 6 6 2
-GenWimpy: 73
-GenLoot: 27
-GenFollow: 12
+GenWimpy: 99
+GenLoot: 64
+GenEquip: 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 3
 E
 #10010
 mordecai~
@@ -180,6 +221,13 @@ Mordecai é uma figura ameaçadora. O verdadeiro Senhor dos Mendigos.
 40 -2 -6 13d8+2525 3d6+20
 2000 93657
 9 9 1
+GenWimpy: 4
+GenLoot: 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
+GenFollow: 14
 E
 #10011
 andarilha galinha~
@@ -193,8 +241,13 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 2 30
 9 9 2
 GenWimpy: 100
+GenLoot: 6
 GenRoam: 87
-GenFollow: 3
+GenUse: 24
+GenTrade: 24
+GenQuest: 11
+GenAdventurer: 11
+GenFollow: 5
 E
 #10012
 mulher piolhente~
@@ -208,7 +261,11 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 37 1800
 9 9 2
 GenWimpy: 100
-GenLoot: 22
+GenLoot: 53
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 GenFollow: 5
 E
 #10013
@@ -224,6 +281,10 @@ que roubou. Talvez algo seja seu.
 10 13 4 1d1+200 1d1+12
 75 4000
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 E
 #10014
 homem velho~
@@ -236,5 +297,9 @@ Ele é um homem velho e mal-humorado. E só.
 15 10 4 2d20+480 5d3+12
 69 15000
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 50
+GenAdventurer: 50
 E
 $

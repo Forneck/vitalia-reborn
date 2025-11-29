@@ -396,18 +396,20 @@ CircleMUD v3.0 Shop File~
 5473
 5474
 1204
+5503
+5504
 -1
 1.20
 0.80
 10
 -1
-%s Não temos nenhum desses, querida.~
-%s Are you sure you have one, handsome?~
+%s Nao temos nenhum desses, docinho.~
+%s Voce tem certeza que tem isso? Em qual mao?~
 %s Não compro esses, querida.~
-%s I'm a little strapped -- how about a gift?~
-%s Perhaps later, when you've more cash, honey.~
-%s That's %d coins, love.~
-%s Here's %d coins, friend.~
+%s Eu sou uma simples empregada -- que tal um presente, lindinho?~
+%s Talvez depois, quando voce tiver mais dinheiro, docinho.~
+%s Isso custara %d moedas, amorzinho.~
+%s Aqui estao %d moedas, fofura.~
 0
 6
 5479

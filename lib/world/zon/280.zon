@@ -2,6 +2,9 @@
 Vitalia~
 As Planícies de Callyus~
 28000 28099 75 2 j 0 0 0 15 50 0
+M 0 28014 1 28004 	(o Guardião das Florestas)
+E 1 28056 20 6 	(um colar de fibra de madeira)
+G 1 3829 -5 -1 	(o Card Guardião da Floresta)
 M 0 28009 1 28078 	(a estátua de metal)
 E 1 28002 1 16 	(uma lança de titânio azulado)
 M 0 28012 2 28078 	(a jovem vendedora)
@@ -48,8 +51,6 @@ M 0 28011 3 28055 	(o cavalo)
 G 1 28082 6 -1 	(um grande pedaço de carne)
 M 0 28013 1 28030 	(o Guardião das Águas)
 E 1 28054 5 10 	(uma braçadeira feita de água-marinha)
-M 0 28014 1 28004 	(o Guardião das Florestas)
-E 1 28056 1 3 	(um colar de fibra de madeira)
 M 0 28015 1 28009 	(o Guardião da Escuridão)
 E 1 28055 1 1 	(um anel-duplo negro)
 M 0 28002 10 28042 	(o trabalhador)

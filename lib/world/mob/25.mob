@@ -10,10 +10,14 @@ Isto parece ser feito de nada mais que escuridão...
 100 4000
 9 9 0
 GenWimpy: 98
-GenLoot: 6
+GenLoot: 50
 GenEquip: 1
 GenRoam: 89
-GenFollow: 10
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 4
 E
 #2501
 aventureiro~
@@ -26,6 +30,13 @@ Ele parece pálido e adoentado; sem dúviada esteve perdido por um bom tempo.
 8 12 6 10d10+10 2d4+4
 286 1500
 6 9 1
+GenWimpy: 3
+GenRoam: 92
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 7
 E
 T 3009
 #2502
@@ -42,9 +53,14 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 32
-GenRoam: 87
-GenFollow: 3
+GenWimpy: 74
+GenLoot: 6
+GenRoam: 88
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 2
 E
 #2503
 diamante golem~
@@ -57,9 +73,13 @@ Isto parece bastante forte.
 23 5 -10 23d23+230 3d6+15
 985 15000
 9 9 0
-GenWimpy: 15
-GenLoot: 11
-GenFollow: 13
+GenWimpy: 45
+GenLoot: 26
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 12
 E
 #2504
 mago jovem~
@@ -73,10 +93,14 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 47
-GenLoot: 19
+GenWimpy: 79
+GenLoot: 75
 GenRoam: 89
-GenFollow: 12
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 3
 E
 T 3009
 #2505
@@ -90,6 +114,10 @@ Ele parece bastante inofensivo, tanto quanto um dragão adormecido parece.
 108 1 -6 1d1+30000 3d7+20
 2000 20000
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 E
 #2506
 tatorious mago~
@@ -102,6 +130,11 @@ Tatorious pisca maliciosamente o olho para você.
 108 0 -8 1d1+30000 3d7+21
 5000 24000
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+EmotionProfile: 6
 E
 #2507
 ezmerelda cozinheira~
@@ -115,9 +148,13 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 20 6 -1 20d20+200 3d4+8
 1092 31300
 9 9 2
-GenWimpy: 23
-GenLoot: 9
-GenFollow: 13
+GenWimpy: 29
+GenLoot: 71
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 12
 E
 T 3009
 #2508
@@ -132,9 +169,13 @@ panela.
 11 8 1 11d11+110 3d4+4
 116 4600
 9 9 1
-GenWimpy: 12
-GenLoot: 39
-GenFollow: 10
+GenWimpy: 18
+GenLoot: 99
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 7
 E
 T 3009
 #2509
@@ -153,6 +194,10 @@ Ele parece estar bastante louco, sem dúvida foi horrivelmente maltratado.
 16 6 2 3d30+30 2d4+9
 0 1800
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 E
 #2510
 carcereiro mago~
@@ -165,7 +210,12 @@ Ele está um tanto sujo.
 17 5 -3 17d17+170 3d5+10
 1326 12000
 4 4 1
-GenWimpy: 6
+GenWimpy: 14
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 12
 E
 T 3009
 #2511
@@ -179,7 +229,11 @@ A vassoura grita 'Tome isto, seu boçal!'
 7 10 2 7d7+70 2d4+4
 0 1600
 9 9 0
-GenWimpy: 5
+GenWimpy: 14
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 9
 E
 T 3007
@@ -194,10 +248,16 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 93
-GenLoot: 17
+GenWimpy: 69
+GenLoot: 99
+GenEquip: 1
 GenRoam: 89
-GenFollow: 5
+GenGroup: 18
+GenUse: 74
+GenTrade: 74
+GenQuest: 74
+GenAdventurer: 74
+GenFollow: 2
 E
 #2513
 guardioes maiores olhos~
@@ -210,12 +270,16 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 12
+GenWimpy: 11
 GenLoot: 99
-GenEquip: 11
+GenEquip: 12
 GenRoam: 89
-GenGroup: 96
-GenFollow: 17
+GenGroup: 94
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 13
 E
 #2514
 mago visitante~
@@ -228,9 +292,14 @@ Ele parece estar bastante sonolento.
 12 8 -2 12d12+120 2d4+5
 726 6200
 4 4 1
-GenWimpy: 34
-GenLoot: 9
-GenFollow: 9
+GenWimpy: 11
+GenLoot: 30
+GenBrave: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 T 3009
 #2515
@@ -245,8 +314,12 @@ Ela parece estar bastante concentrada em seus estudos.
 369 2950
 6 6 2
 GenWimpy: 100
-GenLoot: 6
-GenFollow: 9
+GenLoot: 99
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 5
 E
 T 3009
 #2516
@@ -260,9 +333,13 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 100
-GenLoot: 16
-GenFollow: 5
+GenWimpy: 98
+GenLoot: 99
+GenUse: 20
+GenTrade: 20
+GenQuest: 25
+GenAdventurer: 20
+GenFollow: 2
 E
 T 3009
 #2517
@@ -278,8 +355,12 @@ Ele parece estar sonhando.
 211 2650
 4 4 1
 GenWimpy: 100
-GenLoot: 10
-GenFollow: 12
+GenLoot: 99
+GenUse: 19
+GenTrade: 19
+GenQuest: 19
+GenAdventurer: 19
+GenFollow: 8
 E
 T 3009
 #2518
@@ -294,8 +375,13 @@ Ele parece ser um jovem travesso.
 382 2300
 9 9 1
 GenWimpy: 100
-GenLoot: 7
-GenFollow: 7
+GenLoot: 99
+GenRoam: 86
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 1
 E
 T 3009
 #2519
@@ -310,7 +396,12 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 99
+GenWimpy: 100
+GenLoot: 12
+GenUse: 82
+GenTrade: 82
+GenQuest: 82
+GenAdventurer: 82
 GenFollow: 3
 E
 #2520
@@ -324,9 +415,13 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
-GenWimpy: 37
-GenLoot: 7
-GenFollow: 14
+GenWimpy: 39
+GenLoot: 42
+GenUse: 4
+GenTrade: 4
+GenQuest: 4
+GenAdventurer: 4
+GenFollow: 7
 E
 T 3009
 #2521
@@ -340,9 +435,13 @@ Ele parece estar bastante nervoso por ser interrompido por você.
 14 6 -2 14d14+140 3d4+8
 880 18500
 9 9 1
-GenWimpy: 4
-GenLoot: 5
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 57
+GenUse: 28
+GenTrade: 28
+GenQuest: 33
+GenAdventurer: 28
+GenFollow: 12
 E
 T 3009
 #2522
@@ -356,9 +455,14 @@ Ele pisca, surgindo e voltando a desaparecer, tentando dominar o feitiço.
 8 8 -2 8d8+80 2d4+6
 198 2200
 9 9 1
-GenWimpy: 27
-GenLoot: 3
-GenFollow: 6
+GenWimpy: 21
+GenLoot: 23
+GenEquip: 1
+GenUse: 26
+GenTrade: 26
+GenQuest: 26
+GenAdventurer: 26
+GenFollow: 2
 E
 T 3009
 #2523
@@ -372,9 +476,13 @@ An undefined string.
 15 5 -4 15d15+150 3d4+9
 1256 20500
 9 9 1
-GenWimpy: 8
-GenLoot: 2
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 13
+GenUse: 28
+GenTrade: 28
+GenQuest: 29
+GenAdventurer: 28
+GenFollow: 13
 E
 T 3009
 #2524
@@ -388,9 +496,13 @@ Ela parece não ter resistido ao tédio absoluto.
 9 11 -2 9d9+90 2d4+7
 567 3800
 4 4 2
-GenWimpy: 9
-GenLoot: 4
-GenFollow: 10
+GenWimpy: 11
+GenLoot: 8
+GenUse: 34
+GenTrade: 34
+GenQuest: 34
+GenAdventurer: 34
+GenFollow: 7
 E
 T 3009
 #2525
@@ -404,6 +516,13 @@ An undefined string.
 18 4 -5 18d18+180 3d4+8
 2468 31000
 9 9 1
+GenWimpy: 5
+GenLoot: 56
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 T 3009
 #2526
@@ -417,9 +536,13 @@ An undefined string.
 9 11 -1 9d9+90 2d4+8
 695 3800
 9 9 1
-GenWimpy: 20
-GenLoot: 1
-GenFollow: 17
+GenWimpy: 19
+GenLoot: 48
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 T 3009
 #2527
@@ -434,10 +557,14 @@ do que com uma maga.
 17 2 -2 17d17+170 3d5+8
 3211 23050
 9 9 2
-GenWimpy: 9
-GenLoot: 2
+GenWimpy: 5
+GenLoot: 43
 GenEquip: 1
-GenFollow: 14
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 12
 E
 T 3009
 #2528
@@ -451,9 +578,13 @@ An undefined string.
 15 5 1 15d15+150 3d4+4
 1002 15800
 5 5 1
-GenWimpy: 30
-GenLoot: 6
-GenFollow: 11
+GenWimpy: 34
+GenLoot: 15
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 T 3009
 #2529
@@ -468,8 +599,15 @@ exato momento, é melhor não acordá-lo.
 20 5 -5 20d20+200 3d4+9
 1567 37500
 4 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 19
+GenLoot: 20
+GenRoam: 88
+GenGroup: 38
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 15
 E
 T 3009
 #2530
@@ -483,7 +621,12 @@ An undefined string.
 14 6 -1 14d14+140 3d4+4
 312 14850
 9 9 1
-GenWimpy: 3
+GenWimpy: 7
+GenLoot: 7
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 10
 E
 T 3009
@@ -500,7 +643,12 @@ de conhecimento que ela está traduzindo.
 684 16550
 9 9 2
 GenWimpy: 7
-GenFollow: 14
+GenLoot: 32
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 T 3009
 #2532
@@ -516,8 +664,13 @@ importância???'
 22 4 -5 22d22+220 3d5+8
 5634 29500
 9 9 1
-GenWimpy: 7
-GenFollow: 12
+GenWimpy: 5
+GenLoot: 22
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 T 3009
 #2533
@@ -532,9 +685,13 @@ An undefined string.
 1050 21300
 9 9 1
 GenWimpy: 5
-GenLoot: 3
+GenLoot: 28
 GenEquip: 1
-GenFollow: 12
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 10
 E
 T 3009
 #2534
@@ -549,6 +706,13 @@ An undefined string.
 23 4 -5 23d23+230 3d5+6
 6812 30500
 9 9 1
+GenWimpy: 7
+GenLoot: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 13
 E
 T 3009
 #2535
@@ -562,9 +726,13 @@ Isto parece bastante afiado.
 10 1 -10 10d10+100 3d5+5
 0 4000
 9 9 0
-GenWimpy: 3
-GenLoot: 3
-GenFollow: 11
+GenWimpy: 10
+GenLoot: 15
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 #2536
 alquimista~
@@ -581,6 +749,12 @@ repleta de insanidade!
 24 4 -4 24d24+240 3d5+10
 2346 31500
 9 9 1
+GenWimpy: 8
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 14
 E
 T 3009
 #2537
@@ -594,6 +768,10 @@ An undefined string.
 22 5 -2 22d22+220 3d5+6
 1019 27050
 9 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 E
 T 3009
 #2538
@@ -608,9 +786,13 @@ novo bichinho de estimação.
 23 4 -4 23d23+230 3d5+10
 4672 31050
 9 9 1
-GenWimpy: 11
-GenLoot: 2
-GenFollow: 14
+GenWimpy: 22
+GenLoot: 15
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 11
 E
 T 3009
 #2539
@@ -624,9 +806,14 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 39
-GenLoot: 2
-GenFollow: 17
+GenWimpy: 100
+GenLoot: 6
+GenRoam: 89
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 14
 E
 #2540
 mestre vinculador~
@@ -639,8 +826,14 @@ O Mestre Vinculador rosna para você e ataca.
 23 5 -4 23d23+230 3d5+8
 2315 30500
 9 9 1
-GenWimpy: 16
-GenFollow: 14
+GenWimpy: 5
+GenLoot: 9
+GenEquip: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 T 3009
 #2541
@@ -654,7 +847,12 @@ An undefined string.
 21 6 -2 21d21+210 3d5+5
 2678 26850
 9 9 1
-GenWimpy: 5
+GenWimpy: 23
+GenRoam: 10
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 14
 E
 T 3009
@@ -670,8 +868,13 @@ desajeitado, em sua direção.
 20 7 -6 20d20+200 4d5+10
 0 25600
 9 9 0
-GenWimpy: 7
-GenFollow: 11
+GenWimpy: 52
+GenRoam: 53
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 #2543
 golem bronze~
@@ -684,9 +887,13 @@ Ele parece ser pouco inteligente.
 18 8 -3 18d18+180 4d5+5
 0 22350
 9 9 0
-GenWimpy: 8
-GenLoot: 1
-GenFollow: 11
+GenWimpy: 30
+GenLoot: 5
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 10
 E
 #2544
 golem carne~
@@ -700,9 +907,14 @@ algumas nem chegam a lembrar qualquer coisa humana.
 12 9 -1 12d12+120 4d4+4
 0 8520
 9 9 0
-GenWimpy: 28
-GenLoot: 1
-GenFollow: 11
+GenWimpy: 65
+GenLoot: 6
+GenEquip: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 #2545
 golem pano~
@@ -715,7 +927,12 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
-GenWimpy: 35
+GenWimpy: 100
+GenRoam: 22
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 6
 E
 #2546
@@ -730,6 +947,13 @@ um tanto não-inteligente.
 25 0 -10 25d25+250 3d7+3
 10000 35650
 9 9 0
+GenWimpy: 6
+GenLoot: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 14
 E
 #2547
 golem barro~
@@ -742,9 +966,13 @@ An undefined string.
 15 5 -1 15d15+150 4d5+3
 0 18320
 9 9 0
-GenWimpy: 9
-GenLoot: 1
-GenFollow: 11
+GenWimpy: 39
+GenLoot: 7
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 #2548
 mestre ilusionista mago dragao~
@@ -758,6 +986,15 @@ dragão, agora está um homem velho e aparentemente inofensivo.
 21 6 -4 21d21+210 3d5+5
 2345 26450
 9 9 1
+GenWimpy: 28
+GenLoot: 7
+GenEquip: 1
+GenRoam: 84
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 12
 E
 T 3009
 #2549
@@ -776,6 +1013,10 @@ ataquem.
 11684 35250
 9 9 1
 GenWimpy: 4
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 14
 E
 T 3009
@@ -790,6 +1031,10 @@ Isto não sente dor e o ataca impiedosamente.
 15 5 -2 15d15+150 3d4+10
 0 16500
 9 9 0
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 E
 #2551
 morto-vivo gigante~
@@ -803,11 +1048,16 @@ zumbi.
 18 5 -4 18d18+180 3d5+10
 0 22000
 9 9 0
-GenWimpy: 92
-GenLoot: 3
-GenEquip: 1
+GenWimpy: 77
+GenLoot: 56
+GenEquip: 2
 GenRoam: 89
-GenFollow: 10
+GenGroup: 16
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 7
 E
 #2552
 bruxa velha feia~
@@ -822,11 +1072,15 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 100
-GenLoot: 17
-GenEquip: 2
+GenWimpy: 92
+GenLoot: 32
+GenEquip: 3
 GenRoam: 89
-GenFollow: 13
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 3
 E
 T 3009
 #2553
@@ -840,6 +1094,11 @@ Ele parece um velho homem, bastante pacífico.
 23 3 -6 23d23+230 3d6+5
 1287 29500
 4 9 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+EmotionProfile: 4
 E
 T 3009
 #2554
@@ -856,7 +1115,11 @@ sozinho.
 24 -3 -12 24d24+240 3d6+6
 6723 30750
 9 9 1
-GenWimpy: 3
+GenWimpy: 8
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 14
 E
 T 3009
@@ -873,8 +1136,13 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 39
-GenLoot: 1
+GenWimpy: 100
+GenLoot: 5
+GenRoam: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 8
 E
 #2556
@@ -888,10 +1156,14 @@ Ele parece estar em paz.
 30 -10 -20 30d30+300 2d5+20
 15350 150000
 9 9 1
-GenWimpy: 21
-GenLoot: 7
-GenEquip: 1
-GenFollow: 12
+GenWimpy: 86
+GenLoot: 38
+GenEquip: 11
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 11
 E
 T 3009
 #2557
@@ -907,8 +1179,13 @@ carranca, faz dela uma imagem a se temer.
 20 2 -6 20d20+200 3d6+6
 13876 27800
 9 9 2
-GenWimpy: 5
-GenFollow: 14
+GenWimpy: 23
+GenLoot: 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 13
 E
 T 3009
 #2558
@@ -923,6 +1200,12 @@ fora de questão.
 16 5 -4 16d16+160 3d7+3
 0 19950
 9 9 0
+GenWimpy: 2
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 #2559
 mestre negro~
@@ -935,9 +1218,13 @@ O Mestre encara você.
 30 -10 -20 30d30+300 2d5+20
 22100 150000
 9 9 1
-GenWimpy: 24
-GenLoot: 1
-GenFollow: 10
+GenWimpy: 64
+GenLoot: 3
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 T 3009
 #2560
@@ -952,6 +1239,14 @@ O aprendiz vestido de branco berra 'Tu és indigno desta honra!'
 20 2 -6 20d20+200 3d6+6
 7400 27850
 9 9 1
+GenWimpy: 10
+GenLoot: 2
+GenEquip: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 14
 E
 T 3009
 #2561
@@ -965,8 +1260,14 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 57
-GenFollow: 10
+GenWimpy: 100
+GenLoot: 6
+GenEquip: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 9
 E
 #2562
 mestre branco~
@@ -979,10 +1280,13 @@ Ele parece um bastardo auto-proclamado símbolo do Bem.
 30 -10 -20 30d30+300 2d5+20
 21900 150000
 9 9 1
-GenWimpy: 24
-GenLoot: 6
-GenEquip: 1
-GenBrave: 1
+GenWimpy: 91
+GenLoot: 18
+GenEquip: 6
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 14
 E
 T 3009
@@ -999,8 +1303,15 @@ adorno.
 25 1 -9 25d25+250 5d5+10
 0 30000
 9 9 0
-GenWimpy: 9
-GenFollow: 9
+GenWimpy: 49
+GenLoot: 2
+GenEquip: 2
+GenBrave: 1
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
+GenFollow: 8
 E
 #2564
 mestra grande soberana~
@@ -1016,7 +1327,13 @@ Soberana afaga seu familiar e sorri para você em confidência.
 50 -20 -30 50d50+500 3d4+20
 50000 200000
 9 9 2
-GenWimpy: 3
+GenWimpy: 37
+GenLoot: 100
+GenEquip: 100
+GenUse: 100
+GenTrade: 100
+GenQuest: 100
+GenAdventurer: 100
 GenFollow: 14
 E
 T 3009

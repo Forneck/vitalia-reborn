@@ -10,8 +10,11 @@ seu.  Ele olha para sua bolsa como quem olha para uma presa fácil.
 43 -3 -10 15d6+900 5d6+12
 1000 46000
 9 9 1
-GenWimpy: 2
-GenRoam: 6
+GenWimpy: 16
+GenLoot: 13
+GenEquip: 4
+GenRoam: 87
+GenGroup: 12
 GenFollow: 11
 E
 #19701
@@ -44,7 +47,7 @@ Você vê um orc de tamanho considerável..
 50 -15 -20 15d6+1500 8d6+35
 8000 100000
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 GenFollow: 14
 E
 #19703
@@ -60,11 +63,11 @@ VOCÊ!!
 11 14 0 15d6+100 2d6+4
 0 6000
 9 9 2
-GenWimpy: 93
-GenLoot: 41
+GenWimpy: 100
+GenLoot: 65
+GenEquip: 2
 GenRoam: 89
-GenGroup: 11
-GenFollow: 11
+GenFollow: 8
 E
 #19704
 cobra negra~
@@ -81,10 +84,9 @@ que você está esperando?  AO ATAQUE!
 9 9 2
 GenWimpy: 100
 GenLoot: 99
-GenEquip: 5
-GenRoam: 84
-GenGroup: 58
-GenFollow: 11
+GenEquip: 13
+GenRoam: 86
+GenFollow: 5
 E
 #19705
 cobra verde~
@@ -98,7 +100,8 @@ sabe?
 15 12 -1 15d6+300 2d4+10
 0 10000
 9 9 2
-GenWimpy: 53
+GenWimpy: 96
+GenLoot: 1
 GenRoam: 89
 GenFollow: 11
 E
@@ -115,10 +118,10 @@ quase brilha.  Ele olha para você e procura sua faca..
 3000 90000
 9 9 1
 GenWimpy: 8
-GenLoot: 19
-GenEquip: 4
+GenLoot: 26
+GenEquip: 9
 GenRoam: 89
-GenFollow: 13
+GenFollow: 11
 E
 #19707
 orc negro grande~
@@ -133,11 +136,11 @@ desejá-la.
 48 -8 -20 15d6+800 10d6+28
 2000 150000
 9 9 1
-GenWimpy: 6
-GenLoot: 83
-GenEquip: 34
+GenWimpy: 5
+GenLoot: 99
+GenEquip: 99
 GenRoam: 89
-GenFollow: 9
+GenFollow: 5
 E
 #19708
 orc lider negro~
@@ -216,9 +219,9 @@ este...
 12 10 -2 15d6+350 6d6+12
 100 10000
 5 4 2
-GenWimpy: 24
-GenLoot: 1
-GenFollow: 9
+GenWimpy: 55
+GenLoot: 3
+GenFollow: 8
 E
 #19712
 sacerdote orc~
@@ -233,7 +236,7 @@ falta de habilidade para batalhas do que por filosofia...
 40 3 -13 15d6+500 3d6+17
 3000 77000
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 GenLoot: 2
 GenFollow: 14
 E
@@ -295,10 +298,10 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 59
-GenLoot: 37
-GenEquip: 10
-GenFollow: 13
+GenWimpy: 98
+GenLoot: 99
+GenEquip: 36
+GenFollow: 7
 E
 #19717
 general orc~
@@ -312,9 +315,8 @@ cada um dos presentes nesta sala.  INCLUSIVE VOCÊ!!!
 90 -24 -35 15d6+3500 8d6+39
 3000 192000
 9 9 1
-GenWimpy: 12
+GenWimpy: 6
 GenLoot: 12
-GenRoam: 5
 GenFollow: 19
 E
 #19718

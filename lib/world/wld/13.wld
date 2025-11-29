@@ -157,6 +157,10 @@ bem vindo ao lar das nobres famílias de Vitália.
 construções.
 ~
 13 20 0 0 0 1
+D0
+~
+~
+0 0 3082
 D1
 Família Guireli.
 ~
@@ -264,14 +268,17 @@ D3
 ~
 0 -1 1300
 E
-pintura panteao~
-Você vê uma exuberante pintura, onde estão representados todos os deuses
-deste mundo.  Você se sente mais completo e protegido diante de tanta beleza.
+riacho~
+A água parece estar limpa e refrescante.
 ~
 E
-estatua~
-Você vê a Deusa Diana, com suas vestes amazonas.  Sua suave expressão
-élfica faz com que você se sinta em paz e sintonia com os seres da floresta.
+jardim~
+Você sente-se bem rodeado de tanta beleza.
+~
+E
+casa~
+Você vê a casa da Família Lindyhurst.  Prestando atenção, você percebe que
+de lá vem uma suave melodia élfica.
 ~
 E
 capela~
@@ -284,17 +291,14 @@ Panteão.  Em uma das laterais você pode ver escrito em élfico a história da
 Deusa Diana em uma bela tabuleta dourada.
 ~
 E
-casa~
-Você vê a casa da Família Lindyhurst.  Prestando atenção, você percebe que
-de lá vem uma suave melodia élfica.
+estatua~
+Você vê a Deusa Diana, com suas vestes amazonas.  Sua suave expressão
+élfica faz com que você se sinta em paz e sintonia com os seres da floresta.
 ~
 E
-jardim~
-Você sente-se bem rodeado de tanta beleza.
-~
-E
-riacho~
-A água parece estar limpa e refrescante.
+pintura panteao~
+Você vê uma exuberante pintura, onde estão representados todos os deuses
+deste mundo.  Você se sente mais completo e protegido diante de tanta beleza.
 ~
 S
 #1311
@@ -319,6 +323,24 @@ D2
 porta~
 1 -1 1310
 E
+brasao~
+Um Símbolo do arco e flecha de prata, abençoando esta família de elfos e
+protegendo-os em sua morada.
+~
+E
+lareira~
+Uma temperatura agradável vem das brandas chamas da lareira.
+~
+E
+mesa~
+Há uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
+jarra de hidromel e alguns copos de um fino cristal.
+~
+E
+janela~
+Você observa calmamente a serenidade dos jardins da Família Lindyhurst.
+~
+E
 aviso~
 Há em um belo aviso escrito em élfico e adornado com pedras preciosas os
 seguintes dizeres:
@@ -337,24 +359,6 @@ que todos se amem também, como irmãos, pais, filhos, tios, primos, sobrinhos,
 dentre outros ... como uma feliz família.
 Um abraço paternal,
 Endelion Lindyhurst, o patriarca da família Lindyhurst.
-~
-E
-janela~
-Você observa calmamente a serenidade dos jardins da Família Lindyhurst.
-~
-E
-mesa~
-Há uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
-jarra de hidromel e alguns copos de um fino cristal.
-~
-E
-lareira~
-Uma temperatura agradável vem das brandas chamas da lareira.
-~
-E
-brasao~
-Um Símbolo do arco e flecha de prata, abençoando esta família de elfos e
-protegendo-os em sua morada.
 ~
 S
 #1312
@@ -663,11 +667,17 @@ D4
 ~
 0 -1 1327
 E
-mordomo~
-Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
-oferece vinho, ou champanhe.  Mas antes que você pudesse falar ele responde,
-perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
-licença.
+busto~
+Você lê em escritas de brilhantes como diamantes.  Rhapsody Guireli líder e
+fundador desta família.
+Imortalizado pelos seus grandes feitos.  Ao tocar neste busto você percebe
+que ele é frio como o gelo e talvez você não perceba que em sua base está
+escrito: The Warrior of Ice.
+~
+E
+quadros~
+Quadros dos membros da família Guireli:
+Rhapsody, Rheinda, Frake e Artemisia.
 ~
 E
 sofa~
@@ -678,17 +688,11 @@ Você ainda percebe que existe cinzas de charuto no belo cinzeiro de Rubi,
 parece que um dos Guireli recebeu uma visita.
 ~
 E
-quadros~
-Quadros dos membros da família Guireli:
-Rhapsody, Rheinda, Frake e Artemisia.
-~
-E
-busto~
-Você lê em escritas de brilhantes como diamantes.  Rhapsody Guireli líder e
-fundador desta família.
-Imortalizado pelos seus grandes feitos.  Ao tocar neste busto você percebe
-que ele é frio como o gelo e talvez você não perceba que em sua base está
-escrito: The Warrior of Ice.
+mordomo~
+Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
+oferece vinho, ou champanhe.  Mas antes que você pudesse falar ele responde,
+perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
+licença.
 ~
 S
 #1327
@@ -728,12 +732,6 @@ D4
 ~
 0 -1 1329
 E
-inscricao~
-Você vê uma frase escrita na língua Élfica, cuja tradução em língua geral é:
-Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
-a busca alcançam o conhecimento e a sabedoria.
-~
-E
 desenho~
 Celebithil
 
@@ -743,6 +741,12 @@ Celebithil
     :  ::::::::
     `. '::::::'
       `-.::''
+~
+E
+inscricao~
+Você vê uma frase escrita na língua Élfica, cuja tradução em língua geral é:
+Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
+a busca alcançam o conhecimento e a sabedoria.
 ~
 S
 #1329
@@ -764,6 +768,30 @@ D5
 ~
 ~
 0 -1 1328
+E
+brasao~
+Quando você olha para ele, seus sentidos se confundem.  Você não consegue
+distinguir se essa é realmente a Lua verdadeira ou se é apenas um brasão,
+feito da mais pura prata.
+O símbolo da família é, com certeza, impressionante.
+~
+E
+mesa~
+É uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
+Prata incrustada no seu centro.
+~
+E
+estante~
+Esta estante está repleta de preciosos livros e pergaminhos sagrados,
+trazidos durante as viagens dos integrantes desta família. Parece que
+a cultura e o conhecimento são muito importantes para  eles!
+~
+E
+retratos~
+Existem diversos retratos, onde você pode reconhecer algumas pessoas da
+família: A Matriarca Farfalla e seus irmãos Thorgrim e Sirlouis.
+Num outro retrato, Torvante, Hera, Sethik e Ghede.
+~
 E
 livro~
    Você abre esse bonito livro, onde você lê a história dos Celebithil:
@@ -790,30 +818,6 @@ filhos.  Hoje, o único herdeiro deles que ainda transita por estas terras
 branco, indicando que muitos herdeiros estão por vir assim como muitas
 histórias desta família ainda estão para serem escritas....."
 ~
-E
-retratos~
-Existem diversos retratos, onde você pode reconhecer algumas pessoas da
-família: A Matriarca Farfalla e seus irmãos Thorgrim e Sirlouis.
-Num outro retrato, Torvante, Hera, Sethik e Ghede.
-~
-E
-estante~
-Esta estante está repleta de preciosos livros e pergaminhos sagrados,
-trazidos durante as viagens dos integrantes desta família. Parece que
-a cultura e o conhecimento são muito importantes para  eles!
-~
-E
-mesa~
-É uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
-Prata incrustada no seu centro.
-~
-E
-brasao~
-Quando você olha para ele, seus sentidos se confundem.  Você não consegue
-distinguir se essa é realmente a Lua verdadeira ou se é apenas um brasão,
-feito da mais pura prata.
-O símbolo da família é, com certeza, impressionante.
-~
 S
 #1330
 A Grande Fortaleza Galad~
@@ -835,16 +839,6 @@ D4
 ~
 ~
 0 -1 1331
-E
-estatua~
-   Quando você focaliza seu olhar na estátua, você vê que é um grande muro de uma
-fortaleza, nesse muro há vários arqueiros e homens entusiasmados.  Ao meio você vê
-Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abençoando,
-está a imagem do Deus Porter.
-   Embaixo, no canto você lê uma escrita em alto relevo:
-
-   A fortaleza da Vitória, Galad.
-~
 E
 pergaminho dourado~
 	YHistória da Família Galad	n
@@ -904,6 +898,16 @@ enquanto Porter cegava o mago com sua luz divina, Hajime num impulso desesperado
 pegou sua espada e destruiu o colar do mago.  Porter para garantir a Vitória, destruiu
 o mago.  Nesta grande batalha muitos morreram, mas os que sobraram prometeram sempre
 combater o mal, em nome dos mortos da Família Galad.
+~
+E
+estatua~
+   Quando você focaliza seu olhar na estátua, você vê que é um grande muro de uma
+fortaleza, nesse muro há vários arqueiros e homens entusiasmados.  Ao meio você vê
+Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abençoando,
+está a imagem do Deus Porter.
+   Embaixo, no canto você lê uma escrita em alto relevo:
+
+   A fortaleza da Vitória, Galad.
 ~
 S
 #1331

@@ -2,6 +2,10 @@
 Vitalia~
 O Tabuleiro de Xadrez~
 3600 3699 10 1 j 0 0 0 4 18 0
+M 0 3609 1 3660 	(a Rainha Branca)
+G 1 3839 20 -1 	(o Card Peças de Xadrez)
+E 1 3611 1 1 	(a coroa da Rainha Branca)
+D 0 3660 5 2 	(Uma Casa Branca)
 M 0 3611 1 3661 	(o Rei Branco)
 E 1 3613 1 21 	(o cetro do Rei Branco)
 G 1 3615 1 -1 	(a chave do Tesouro da Corte Branca)
@@ -71,9 +75,6 @@ E 1 3603 8 20 	(uma espada do Peão Branco)
 M 0 3601 8 3649 	(o Peão da Corte Branca)
 E 1 3601 8 8 	(uma armadura de Peão Branco)
 E 1 3603 8 20 	(uma espada do Peão Branco)
-M 0 3609 1 3660 	(a Rainha Branca)
-E 1 3611 1 1 	(a coroa da Rainha Branca)
-D 0 3660 5 2 	(Uma Casa Branca)
 M 0 3607 2 3662 	(o bispo branco)
 E 1 3609 2 21 	(o cajado do Bispo Branco)
 M 0 3607 2 3659 	(o bispo branco)

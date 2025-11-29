@@ -8,7 +8,7 @@ O garanhão se exibe e fica correndo ao seu redor.
 2449410 0 0 0 0 0 0 0 0 E
 15 11 0 12d12+300 4d5+7
 0 13427
-8 8 1
+9 9 1
 E
 #7501
 gata peluda~
@@ -21,7 +21,13 @@ da barriga.  Na caça ela parece ser muito boa.
 2097216 0 0 0 0 0 0 0 0 E
 4 15 3 6d8+100 4d4+4
 0 37
-8 8 2
+9 9 2
+GenWimpy: 6
+GenLoot: 6
+GenEquip: 1
+GenRoam: 68
+GenGroup: 1
+GenFollow: 9
 E
 #7502
 darwin barao~
@@ -35,7 +41,7 @@ prendê-los.  Os olhos dele lançam um olhar atormentador.
 2353170 0 0 0 256 0 0 0 -1000 E
 90 -26 -40 12d12+5000 12d7+47
 8900 290000
-8 8 1
+9 9 1
 BareHandAttack: 10
 Str: 18
 Dex: 17
@@ -55,7 +61,7 @@ enfrentou a morte.
 2351106 0 0 0 0 0 0 0 -500 E
 75 -20 -36 11d11+4500 10d7+40
 6000 200000
-8 8 1
+9 9 1
 E
 #7504
 mullins tenente guarda~
@@ -69,7 +75,7 @@ cabelo louro.
 2351106 0 0 0 0 0 0 0 -500 E
 68 -18 -30 10d10+4000 9d7+37
 5000 160000
-8 8 1
+9 9 1
 E
 #7505
 stanchfield sargento guarda~
@@ -84,7 +90,7 @@ no peito.
 2351106 0 0 0 0 0 0 0 -500 E
 65 -16 -28 10d10+3800 9d7+35
 5000 140000
-8 8 1
+9 9 1
 E
 #7506
 morris sargento guarda~
@@ -113,7 +119,7 @@ um cabelo preto e bastante oleoso.
 2107394 0 0 0 0 0 0 0 0 E
 45 -4 -18 8d8+2000 7d6+23
 3200 90000
-8 8 1
+9 9 1
 E
 #7508
 ajudante cozinha~
@@ -128,7 +134,7 @@ uma porta.
 2105474 0 0 0 0 0 0 0 0 E
 40 -3 -16 8d8+1700 6d6+19
 3000 75000
-8 8 2
+9 9 2
 E
 #7509
 empregada alegre mulher~
@@ -141,7 +147,7 @@ soubesse de alguma piada e não quisesse lhe contar.
 2105540 0 0 0 0 0 0 0 0 E
 26 0 -7 7d7+1000 5d6+18
 3000 45909
-8 8 2
+9 9 2
 E
 #7510
 mordomo quieto casmurro homem~
@@ -155,7 +161,7 @@ para você com um olhar elegante.
 2105350 0 0 0 0 0 0 0 0 E
 50 -9 -18 10d10+2000 8d6+28
 3200 63584
-8 8 1
+9 9 1
 E
 #7511
 chefe criados~
@@ -169,7 +175,7 @@ roupa está passada e bem engomada.
 2107394 0 0 0 0 0 0 0 -350 E
 55 -11 -20 10d10+2180 8d6+32
 3200 76858
-8 8 2
+9 9 2
 E
 #7512
 guarda portao~
@@ -183,7 +189,11 @@ chateado, como a maioria dos outros soldados.
 2291730 0 0 0 0 0 0 0 -500 E
 60 -19 -28 11d11+3400 12d7+36
 3200 107448
-8 8 1
+9 9 1
+GenWimpy: 16
+GenLoot: 73
+GenEquip: 2
+GenFollow: 16
 E
 #7513
 guarda perambulando~
@@ -197,7 +207,9 @@ chateado, como a maioria dos outros soldados.
 2285570 0 0 0 0 0 0 0 -500 E
 68 -20 -28 11d11+3600 12d7+39
 4200 107448
-8 8 1
+9 9 1
+GenWimpy: 4
+GenFollow: 18
 E
 #7514
 pajem ajudante~
@@ -211,7 +223,7 @@ da sua idade.
 2105474 0 0 0 0 0 0 0 0 E
 20 9 0 6d6+900 4d4+12
 800 23646
-8 8 1
+9 9 1
 E
 #7515
 vigia homem~
@@ -225,7 +237,7 @@ chateado, como a maioria dos outros soldados.
 2351122 0 0 0 0 0 0 0 -500 E
 67 -14 -30 10d10+2900 8d7+35
 3400 153411
-8 8 1
+9 9 1
 E
 #7516
 jardineiro homem~
@@ -238,7 +250,7 @@ de se machucar, é o risco que ele corre fazendo este serviço.
 2105346 0 0 0 0 0 0 0 100 E
 47 -3 -18 10d10+1210 5d6+23
 3200 56858
-8 8 1
+9 9 1
 E
 #7517
 aprendiz homem jovem~
@@ -252,7 +264,7 @@ habilidades.
 2105346 0 0 0 0 0 0 0 -300 E
 65 -9 -12 10d10+980 5d7+29
 3200 71156
-8 8 1
+9 9 1
 E
 #7518
 soldado folga~
@@ -279,7 +291,7 @@ chateado, como a maioria dos outros soldados.
 2285570 0 0 0 0 0 0 0 -500 E
 63 -19 -21 10d10+2100 9d7+33
 3400 131844
-8 8 1
+9 9 1
 E
 #7520
 ferreiro homem grande~
@@ -307,7 +319,7 @@ cobertos com adubo e o cabelo está fedendo muito.
 2105474 0 0 0 0 0 0 0 0 E
 15 11 0 10d10+650 4d4+12
 800 23646
-8 8 1
+9 9 1
 E
 #7522
 mestre estabulo~
@@ -321,7 +333,7 @@ cavalo.
 2103306 0 0 0 0 0 0 0 -800 E
 54 -10 -17 10d10+1290 5d6+23
 3200 55206
-8 8 1
+9 9 1
 E
 #7523
 homem joalheiro~
@@ -349,7 +361,7 @@ brilho suave e tranqüilo.
 2105346 0 0 0 0 0 0 0 -500 E
 63 -16 -19 10d10+1800 5d7+31
 8000 79047
-8 8 2
+9 9 2
 E
 #7525
 guarda terra~
@@ -363,7 +375,7 @@ chateado, como a maioria dos outros soldados.
 2285570 0 0 0 0 0 0 0 -500 E
 65 -17 -30 10d10+2810 8d7+35
 4000 107448
-8 8 1
+9 9 1
 E
 #7526
 contadora mulher~
@@ -376,7 +388,7 @@ são muito fortes de tanto digitar as cartas e calcular as contas do Barão.
 2285570 0 0 0 0 0 0 0 -600 E
 64 -16 -28 10d10+2710 7d7+33
 7000 106318
-8 8 2
+9 9 2
 E
 #7527
 estudande artes secretas~
@@ -390,7 +402,7 @@ das habilidades na qual utilizará constantemente no futuro.
 2109570 0 0 0 0 0 0 0 -380 E
 48 -10 -17 10d10+1000 5d6+24
 3200 58539
-8 8 1
+9 9 1
 E
 #7528
 armeiro homem~
@@ -404,7 +416,7 @@ período.  Ele cheira a óleo e carbono.
 2351122 0 0 0 0 0 0 0 -600 E
 70 -20 -30 10d10+3600 8d7+38
 3333 196371
-8 8 1
+9 9 1
 E
 #7529
 mulher costureira~
@@ -417,7 +429,7 @@ peluda, ela tenta cumprir todas as ordens do Barão e do seu pessoal.
 2105474 0 0 0 0 0 0 0 0 E
 54 -5 -13 10d10+1210 5d6+22
 3200 51991
-8 8 2
+9 9 2
 E
 #7530
 ladrao homem seminu~
@@ -430,7 +442,7 @@ suas roupas íntimas.
 2351250 0 0 0 0 0 0 0 -600 E
 62 -15 -15 10d10+2120 5d7+31
 3200 85300
-8 8 1
+9 9 1
 E
 #7531
 homem interrogador~
@@ -444,7 +456,7 @@ com suas ferramentas de trabalho.
 2287106 0 0 0 0 0 0 0 -900 E
 71 -21 -31 10d10+3110 8d7+39
 4111 190314
-8 8 1
+9 9 1
 E
 #7532
 prisioneiro homem~

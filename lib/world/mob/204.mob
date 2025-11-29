@@ -11,9 +11,12 @@ e ele volta a caminhar.
 35 11 -4 4d10+2400 5d8+19
 500 97654
 9 9 1
-GenWimpy: 7
+GenWimpy: 42
+GenLoot: 48
+GenEquip: 2
 GenRoam: 89
-GenFollow: 12
+GenTrade: 26
+GenFollow: 9
 E
 #20401
 clerigo desapontado~
@@ -27,9 +30,9 @@ quase pudesse matar a sangue frio! Atípico para um religioso...
 35 12 -3 5d60+2400 5d8+18
 500 92756
 9 9 1
-GenWimpy: 13
-GenRoam: 84
-GenFollow: 13
+GenWimpy: 49
+GenRoam: 89
+GenFollow: 9
 E
 #20402
 guerreiro furioso~
@@ -44,9 +47,9 @@ aspecto.
 35 10 -3 5d76+2400 5d10+19
 500 106452
 9 9 1
-GenWimpy: 9
+GenWimpy: 54
 GenRoam: 89
-GenFollow: 11
+GenFollow: 8
 E
 #20403
 ladrao furioso~
@@ -60,9 +63,10 @@ Ele simplesmente o olha e resmunga, nada mais.
 35 10 -5 3d56+2400 5d9+19
 500 113241
 9 9 1
-GenWimpy: 12
-GenRoam: 85
-GenFollow: 15
+GenWimpy: 46
+GenRoam: 89
+GenBrave: 1
+GenFollow: 12
 E
 #20404
 druidesa desatenta~
@@ -76,9 +80,9 @@ Ela continua sem ao menos olhar em sua direção.
 35 11 -5 30d5+2400 5d7+19
 500 94023
 9 9 2
-GenWimpy: 15
+GenWimpy: 58
 GenRoam: 89
-GenFollow: 19
+GenFollow: 13
 E
 #20405
 garcom de bar ladrao~
@@ -107,9 +111,10 @@ forma de andar graciosa, sinuosa, não deixa dúvida que ele é um ladrão.
 15 0 -5 3d5+3000 10d5+15
 27 112000
 9 9 1
-GenWimpy: 13
+GenWimpy: 44
+GenLoot: 1
 GenRoam: 89
-GenFollow: 14
+GenFollow: 13
 E
 #20407
 menino cerveja~
@@ -122,6 +127,8 @@ Provavelmente é filho de um grande ladrão, pois todos o respeitam.
 10 15 -1 10d1+700 4d4+15
 45 40000
 9 9 1
+GenWimpy: 4
+GenFollow: 9
 E
 #20408
 clerigo altar~
@@ -136,6 +143,8 @@ virtude.
 30 0 -5 10d1+1230 5d8+10
 90 80000
 9 9 1
+GenWimpy: 11
+GenFollow: 10
 E
 #20409
 clerigo~
@@ -149,6 +158,8 @@ tempo passar.
 30 5 1 10d1+1100 5d9+5
 81 80000
 6 6 1
+GenWimpy: 9
+GenFollow: 10
 E
 #20410
 vendedor armas~
@@ -188,8 +199,8 @@ Homem, este cara parece ter bebido muito.
 10 0 -7 1d1+3000 6d6+18
 100 120000
 9 9 1
-GenWimpy: 3
-GenRoam: 59
+GenWimpy: 6
+GenRoam: 88
 GenFollow: 11
 E
 #20413
@@ -211,10 +222,12 @@ A enviada de Dimas está aqui, pronta para espalhar os ensinamentos do herói.
 ~
 Uma mulher esbelta se levanta antes de você entrar, sorrindo.
 ~
-2156546 0 0 0 0 0 0 0 900 E
+3205122 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
 9 9 2
+GenWimpy: 4
+GenFollow: 16
 E
 #20415
 arrumadeira~
@@ -227,9 +240,9 @@ Escolhida pelo próprio Grande Clérigo, esta pequena ladra veio de Midgaard.
 35 0 0 1d1+1000 5d5+5
 100 80000
 9 9 2
-GenWimpy: 13
-GenRoam: 82
-GenFollow: 11
+GenWimpy: 36
+GenRoam: 89
+GenFollow: 10
 E
 #20416
 ladrao jardineiro~
@@ -242,9 +255,9 @@ Ele faz muito bem o seu trabalho, pois o jardim floresce exuberante.
 35 0 -3 1d1+1200 6d5+5
 100 82000
 9 9 1
-GenWimpy: 2
-GenRoam: 48
-GenFollow: 11
+GenWimpy: 33
+GenRoam: 89
+GenFollow: 9
 E
 #20417
 balconista da hospedaria ladrao~
@@ -253,7 +266,7 @@ O balconista do Descanso para Ladrões espera mostrar um quarto para você.
 ~
 Este homem tem um olhar notável, notavelmente notável.
 ~
-2156546 0 0 0 0 0 0 0 900 E
+3205122 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
 9 9 1

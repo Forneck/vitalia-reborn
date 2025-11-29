@@ -4,7 +4,7 @@ Blocker Movement Check~
 ~
 * Old SpecProc: blocker - Blocks movement for non-immortals
 * Check the direction the player must go to enter restricted area
-if %actor.level% >= 31
+if %actor.level% >= 101
   * Let immortals pass
   return 0
 end

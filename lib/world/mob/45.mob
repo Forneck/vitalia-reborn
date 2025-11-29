@@ -32,8 +32,8 @@ Str: 20
 Dex: 20
 Int: 20
 Wis: 18
-GenWimpy: 23
-GenFollow: 15
+GenWimpy: 5
+GenFollow: 13
 E
 #4502
 tuor~
@@ -55,6 +55,9 @@ BareHandAttack: 3
 Str: 18
 Dex: 18
 Wis: 18
+GenWimpy: 4
+GenRoam: 81
+GenFollow: 12
 E
 #4503
 elemmakil~
@@ -68,6 +71,8 @@ espada.  Na outra mão, segura uma lanterna élfica.
 60 -8 -25 8d8+2000 8d10+20
 6500 300000
 9 9 1
+GenWimpy: 8
+GenFollow: 15
 E
 #4504
 sentinela madeira~
@@ -81,8 +86,8 @@ espada.
 40 0 -15 6d8+800 6d8+10
 3000 150000
 9 9 1
-GenWimpy: 8
-GenFollow: 18
+GenWimpy: 13
+GenFollow: 17
 E
 #4505
 sentinela pedra~
@@ -119,6 +124,8 @@ O sentinela veste manto e malha negras e segura um grande escudo negro.
 43 -3 -20 9d8+950 9d8+14
 3000 105000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #4508
 sentinela prata~
@@ -155,6 +162,9 @@ O sentinela segura uma grande lança e usa armadura de aço negro.
 46 -6 -20 12d8+1000 12d8+18
 5000 120000
 9 9 1
+GenWimpy: 6
+GenLoot: 1
+GenFollow: 14
 E
 #4511
 guarnicaoo soldados pedra~
@@ -194,6 +204,8 @@ e seus rostos mascarados por viseiras que ostentam cada uma um bico de águia.
 85 -25 -30 9d10+6500 11d9+25
 10000 2200000
 9 9 2
+GenWimpy: 3
+GenFollow: 15
 E
 #4514
 guarnicaoo soldados prata~
@@ -207,6 +219,8 @@ de cristas brancas.
 90 -28 -30 9d11+6900 11d10+28
 12000 2400000
 9 9 2
+GenWimpy: 3
+GenFollow: 15
 E
 #4515
 guarnicao soldados ouro~
@@ -221,6 +235,8 @@ como chamas.
 95 -31 -35 9d11+7200 11d11+30
 15000 2650000
 9 9 2
+GenWimpy: 4
+GenFollow: 15
 E
 #4516
 ecthelion~
@@ -246,6 +262,8 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
+GenWimpy: 4
+GenFollow: 15
 E
 #4517
 vigilante arqueiro~
@@ -273,6 +291,9 @@ Ossë e desde então aguarda o momento de voltar ao mar.
 50 0 -20 5d9+2500 8d8+12
 6000 250000
 9 9 1
+GenWimpy: 4
+GenRoam: 63
+GenFollow: 14
 E
 #4519
 sentinela elfo~
@@ -299,6 +320,8 @@ claros como o ouro.  Filha de Turgon, esposa de Tuor e mãe de Eärendil.
 50 -5 -15 7d8+2000 4d10+15
 10000 100000
 5 5 2
+GenWimpy: 3
+GenFollow: 13
 E
 #4521
 earendil~
@@ -314,6 +337,10 @@ o destino reserva a ele um futuro grandioso.
 10 10 5 8d5+400 4d4+2
 600 50000
 9 9 1
+GenWimpy: 8
+GenLoot: 2
+GenRoam: 83
+GenFollow: 11
 E
 #4522
 turgon rei~
@@ -327,6 +354,8 @@ Gondolin secretamente para ser a última fortaleza contra o Inimigo, Morgoth.
 70 -20 -25 8d8+7000 8d8+20
 50000 500000
 6 6 1
+GenWimpy: 3
+GenFollow: 15
 E
 #4523
 maeglin~
@@ -367,6 +396,8 @@ fogo que servem a Morgoth.
 70 -25 -24 6d9+6000 5d9+30
 2000 900000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #4526
 elfo~
@@ -379,6 +410,9 @@ An undefined string.
 20 10 -10 5d5+300 3d8+5
 8000 30000
 9 9 1
+GenWimpy: 3
+GenRoam: 66
+GenFollow: 14
 E
 #4527
 elfa~
@@ -391,6 +425,10 @@ An undefined string.
 20 11 -11 5d5+250 3d7+4
 6000 27000
 9 9 2
+GenWimpy: 4
+GenLoot: 2
+GenRoam: 63
+GenFollow: 14
 E
 #4528
 crianca elfica~

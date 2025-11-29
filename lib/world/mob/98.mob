@@ -87,9 +87,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
-GenWimpy: 7
-GenBrave: 1
-GenFollow: 14
+GenWimpy: 5
+GenFollow: 13
 E
 #9805
 dragao invisivel~
@@ -108,7 +107,7 @@ e hábil.
 BareHandAttack: 12
 Dex: 25
 Wis: 25
-GenWimpy: 9
+GenWimpy: 18
 GenFollow: 8
 E
 #9806
