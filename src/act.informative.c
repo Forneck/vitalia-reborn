@@ -1061,17 +1061,6 @@ void look_at_room(struct char_data *ch, int ignore_brief)
             }
     }
 
-    /* autoexits */
-    if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
-        do_auto_exits(ch);
-    /* now list characters & objects */
-    obj_list_mode = SHOW_OBJ_LONG;
-    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
-        obj_list_mode = SHOW_OBJ_SHORT;
-
-    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
-    list_char_to_char(world[IN_ROOM(ch)].people, ch);
-
     /* Show mana density if character has detect magic active */
     if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
         float mana_density = calculate_mana_density(ch);
@@ -1102,9 +1091,20 @@ void look_at_room(struct char_data *ch, int ignore_brief)
                 break;
         }
 
-        send_to_char(ch, "\r\n%sA densidade mágica aqui está %s%s%s.%s\r\n", CCMAG(ch, C_NRM), density_color,
-                     density_desc, CCNRM(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "%sA densidade mágica aqui está %s%s%s.\r\n", CCMAG(ch, C_CMP), density_color, density_desc, CCNRM(ch, C_CMP));
     }
+
+
+    /* autoexits */
+    if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
+        do_auto_exits(ch);
+    /* now list characters & objects */
+    obj_list_mode = SHOW_OBJ_LONG;
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
+        obj_list_mode = SHOW_OBJ_SHORT;
+
+    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
+    list_char_to_char(world[IN_ROOM(ch)].people, ch);
 }
 
 static void look_in_direction(struct char_data *ch, int dir)
