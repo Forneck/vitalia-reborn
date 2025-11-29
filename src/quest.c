@@ -2261,6 +2261,62 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
     mob->ai_data->current_quest = QST_NUM(rnum);
     mob->ai_data->quest_timer = QST_TIME(rnum);
     mob->ai_data->quest_counter = QST_QUANTITY(rnum) > 0 ? QST_QUANTITY(rnum) : 1;
+
+    /* Automatically set the goal to GOAL_COMPLETE_QUEST so the mob actively pursues the quest.
+     * This ensures that when a mob accepts a quest, it will immediately start working on it
+     * rather than waiting for a random chance to trigger quest processing. */
+    mob->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+    mob->ai_data->goal_timer = 0;
+
+    /* Initialize goal fields based on quest type */
+    switch (QST_TYPE(rnum)) {
+        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
+        case AQ_DELIVERY:
+        case AQ_RESOURCE_GATHER:
+            /* For object quests, set the target item vnum */
+            mob->ai_data->goal_item_vnum = QST_TARGET(rnum);
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+        case AQ_ROOM_FIND:
+        case AQ_ROOM_CLEAR:
+        case AQ_MAGIC_GATHER: {
+            /* For room quests, set the destination room with validation */
+            room_rnum dest = real_room(QST_TARGET(rnum));
+            mob->ai_data->goal_destination = (dest != NOWHERE) ? dest : NOWHERE;
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+        }
+        case AQ_MOB_FIND:
+        case AQ_MOB_KILL:
+        case AQ_MOB_KILL_BOUNTY:
+        case AQ_MOB_SAVE:
+        case AQ_MOB_ESCORT:
+        case AQ_EMOTION_IMPROVE: {
+            /* For mob quests, set the target mob with validation */
+            mob_rnum target = real_mobile(QST_TARGET(rnum));
+            mob->ai_data->goal_target_mob_rnum = (target != NOBODY) ? target : NOBODY;
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_destination = NOWHERE;
+            break;
+        }
+        case AQ_SHOP_BUY:
+        case AQ_SHOP_SELL:
+            /* For shop quests, set the target item vnum - mob will find shop via AI */
+            mob->ai_data->goal_item_vnum = QST_TARGET(rnum);
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+        default:
+            /* For other quest types (AQ_PLAYER_KILL, AQ_REPUTATION_BUILD, etc.)
+             * initialize to safe defaults - these may not be suitable for mobs */
+            mob->ai_data->goal_destination = NOWHERE;
+            mob->ai_data->goal_item_vnum = NOTHING;
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            break;
+    }
 }
 
 /* Clear a quest from a mob */
@@ -2430,6 +2486,10 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
     if (!IS_NPC(ch) || !ch->ai_data)
         return;
 
+    /* Validate ch's room before any world array access */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     vnum = GET_MOB_QUEST(ch);
     if (vnum == NOTHING)
         return;
@@ -2441,14 +2501,14 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-            if (IS_NPC(vict) && (ch != vict))
+            if (vict && IS_NPC(vict) && (ch != vict))
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
                     if (--ch->ai_data->quest_counter <= 0)
                         mob_complete_quest(ch);
                 }
             break;
         case AQ_PLAYER_KILL:
-            if (!IS_NPC(vict) && (ch != vict)) {
+            if (vict && !IS_NPC(vict) && (ch != vict)) {
                 if (--ch->ai_data->quest_counter <= 0)
                     mob_complete_quest(ch);
             }
@@ -2494,6 +2554,64 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
                     if (--ch->ai_data->quest_counter <= 0)
                         mob_complete_quest(ch);
                 }
+            }
+            break;
+        case AQ_SHOP_BUY:
+            /* Check if mob has purchased the required item */
+            if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_SHOP_SELL:
+            /* Selling quests complete when item is no longer in inventory */
+            {
+                struct obj_data *obj;
+                bool has_item = FALSE;
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_VNUM(obj) == QST_TARGET(rnum)) {
+                        has_item = TRUE;
+                        break;
+                    }
+                }
+                if (!has_item) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_DELIVERY:
+            /* Similar to OBJ_RETURN but tracks delivery */
+            if (vict && IS_NPC(vict) && QST_RETURNMOB(rnum) == GET_MOB_VNUM(vict)) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Check if gathered enough of the resource */
+            if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_MOB_ESCORT:
+            /* Check if escort target has reached destination */
+            if (vict && IS_NPC(vict) && QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                room_rnum dest = real_room(QST_RETURNMOB(rnum));
+                /* Validate vict's room before comparing */
+                if (dest != NOWHERE && IN_ROOM(vict) != NOWHERE && IN_ROOM(vict) >= 0 &&
+                    IN_ROOM(vict) <= top_of_world && IN_ROOM(vict) == dest) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Room-based: check if mob is at magical location */
+            /* IN_ROOM(ch) already validated at function start */
+            if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
             }
             break;
     }

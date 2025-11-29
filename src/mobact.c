@@ -1021,12 +1021,8 @@ void mobile_activity(void)
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                     continue;
 
-                                /* Automatically transition to quest completion goal */
-                                ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
-                                ch->ai_data->goal_destination = NOWHERE;
-                                ch->ai_data->goal_target_mob_rnum = NOBODY;
-                                ch->ai_data->goal_item_vnum = NOTHING;
-                                ch->ai_data->goal_timer = 0;
+                                /* Removed manual goal setting - set_mob_quest() now handles this automatically,
+                                 * setting GOAL_COMPLETE_QUEST and initializing goal fields based on quest type */
                                 continue; /* Process quest completion immediately */
                             }
                         } else {
@@ -1256,46 +1252,27 @@ void mobile_activity(void)
                 continue;
         }
 
-        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
-        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <=
-                0) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
+        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs)
+         * Performance optimization: Use mob's rnum to stagger quest checks across ticks
+         * This prevents all mobs from checking on the same tick */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) == NOTHING &&
+            ch->ai_data->current_goal == GOAL_NONE &&
+            ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) && /* Stagger: each mob checks every 20 ticks */
+            rand_number(1, 100) <= 3) {               /* 3% chance when it's their turn */
             mob_try_to_accept_quest(ch);
         }
 
-        /* Mob quest processing - not for charmed mobs */
-        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <=
-                0) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
-            /* Check if mob has a quest and handle quest-related goals */
-            if (GET_MOB_QUEST(ch) != NOTHING) {
-                /* Decrement quest timer if applicable */
-                if (ch->ai_data->quest_timer > 0) {
-                    ch->ai_data->quest_timer--;
-                    if (ch->ai_data->quest_timer <= 0) {
-                        /* Quest timeout */
-                        act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
-                        fail_mob_quest(ch, "timeout");
-                        /* Safety check: act() can trigger DG scripts which may cause extraction */
-                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                            continue;
-                    }
-                }
-            } else {
-                /* Mob doesn't have a quest, check if it should try to find one */
-                if (ch->ai_data) {
-                    /* Look for available mob-posted quests */
-                    qst_rnum rnum;
-                    for (rnum = 0; rnum < total_quests; rnum++) {
-                        if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && mob_should_accept_quest(ch, rnum)) {
-                            set_mob_quest(ch, rnum);
-                            act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);
-                            /* Safety check: act() can trigger DG scripts which may cause extraction */
-                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                break; /* Exit the for loop, then continue to next mob in main loop */
-                        }
-                    }
-                    /* Safety check after the loop in case ch was extracted */
+        /* Mob quest processing - not for charmed mobs
+         * Only check timer for mobs that actually have quests */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) != NOTHING) {
+            /* Decrement quest timer deterministically (every tick) */
+            if (ch->ai_data->quest_timer > 0) {
+                ch->ai_data->quest_timer--;
+                if (ch->ai_data->quest_timer <= 0) {
+                    /* Quest timeout */
+                    act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
+                    fail_mob_quest(ch, "timeout");
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                         continue;
                 }
@@ -4168,6 +4145,10 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 /**
  * Makes a mob occasionally decide to seek out and accept quests.
  * Called when a mob has no current goal and not already on a quest.
+ * Performance optimizations:
+ * - Early exits for common rejection cases
+ * - Frustration timer check before expensive calculations
+ * - Room validation before zone lookups
  * @param ch The mob that might accept a quest
  * @return TRUE if the mob decides to pursue quest acceptance, FALSE otherwise
  */
@@ -4175,20 +4156,26 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 {
     struct char_data *questmaster;
     zone_rnum mob_zone;
+    int acceptance_threshold;
 
-    if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
-        return FALSE; /* Already has a goal or not an AI mob */
-    }
-
-    /* Don't accept quests if already on one */
-    if (GET_QUEST(ch)) {
+    /* Quick early exits - cheapest checks first */
+    if (!IS_NPC(ch) || !ch->ai_data)
         return FALSE;
-    }
 
-    /* Higher chance to accept quests based on quest_tendency gene and curiosity emotion */
-    int acceptance_threshold = 20; /* Base 20% chance */
+    /* Already has a goal or quest */
+    if (ch->ai_data->current_goal != GOAL_NONE || GET_QUEST(ch))
+        return FALSE;
 
-    /* Increase chance based on quest genetics */
+    /* Check if frustrated from recent quest activities (cheap check) */
+    if (ch->ai_data->quest_posting_frustration_timer > 0)
+        return FALSE;
+
+    /* Safety check: Validate room before any world array access */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Calculate acceptance threshold based on mob's genetics and emotions */
+    acceptance_threshold = 20;                    /* Base 20% chance */
     acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
 
     /* Further increase if mob has high curiosity (emotion system) */
@@ -4199,20 +4186,11 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     /* Cap at reasonable maximum to avoid too aggressive quest-taking */
     acceptance_threshold = MIN(acceptance_threshold, 60);
 
-    if (rand() % 100 > acceptance_threshold) {
-        return FALSE;
-    }
-
-    /* Check if frustrated from recent quest activities */
-    if (ch->ai_data->quest_posting_frustration_timer > 0) {
-        return FALSE;
-    }
-
-    /* Safety check: Validate room before accessing world array */
-    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+    /* Random check - do this BEFORE expensive zone/questmaster lookups */
+    if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
-    /* Look for accessible questmasters in the current zone */
+    /* Now do the expensive operations - look for accessible questmasters */
     mob_zone = world[IN_ROOM(ch)].zone;
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
 
@@ -4419,6 +4397,190 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     mob_goal_oriented_roam(ch, target_room);
                     return TRUE;
                 }
+            }
+            break;
+
+        case AQ_SHOP_BUY:
+            /* Mob needs to buy specific item from a shop */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Already has the item, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Need to buy - add to wishlist and let wishlist system handle shopping */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
+                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
+                return TRUE;
+            }
+            break;
+
+        case AQ_SHOP_SELL:
+            /* Mob needs to sell specific item to a shop */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (!target_obj) {
+                /* Item not in inventory - might have already sold it, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Has the item, set goal to sell it */
+                ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
+                ch->ai_data->goal_obj = target_obj;
+                ch->ai_data->goal_item_vnum = GET_OBJ_VNUM(target_obj);
+                return TRUE;
+            }
+            break;
+
+        case AQ_DELIVERY:
+            /* Similar to OBJ_RETURN - deliver item to specific mob */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Has item, find delivery target mob */
+                /* Validate room before accessing */
+                if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                    return FALSE;
+                target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_RETURNMOB(quest_rnum));
+                if (target_mob) {
+                    /* Deliver item */
+                    act("$n entrega $p para $N.", FALSE, ch, target_obj, target_mob, TO_ROOM);
+                    obj_from_char(target_obj);
+                    obj_to_char(target_obj, target_mob);
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                } else {
+                    /* Seek the delivery target */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    return TRUE;
+                }
+            } else {
+                /* Don't have item, add to wishlist */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            }
+            break;
+
+        case AQ_RESOURCE_GATHER:
+            /* Mob must gather X quantity of specific item - check if enough collected */
+            {
+                int count = 0;
+                struct obj_data *obj;
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_VNUM(obj) == QST_TARGET(quest_rnum))
+                        count++;
+                }
+                if (count >= ch->ai_data->quest_counter) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                } else {
+                    /* Need more - add to wishlist */
+                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+            }
+            break;
+
+        case AQ_MOB_ESCORT:
+            /* Escort mob to destination - simplified: follow target mob */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found escort target, check if at destination */
+                target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
+                /* Validate target_mob's room before accessing */
+                if (target_room != NOWHERE && IN_ROOM(target_mob) != NOWHERE && IN_ROOM(target_mob) == target_room) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+                /* Stay near escort target - don't move away */
+                return TRUE;
+            } else {
+                /* Lost escort target, search for them */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
+            }
+            break;
+
+        case AQ_MAGIC_GATHER:
+            /* Mob needs to visit locations with high magical density */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+            target_room = real_room(QST_TARGET(quest_rnum));
+            if (target_room != NOWHERE && IN_ROOM(ch) == target_room) {
+                /* At magical location, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else if (target_room != NOWHERE) {
+                /* Move toward magical location */
+                ch->ai_data->goal_destination = target_room;
+                mob_goal_oriented_roam(ch, target_room);
+                return TRUE;
+            }
+            break;
+
+        case AQ_EMOTION_IMPROVE:
+            /* Mob needs to improve emotion with target mob - interact with target */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found target, perform positive social interaction
+                 * We only decrement quest_counter if target is visible and interaction is possible */
+                if (CAN_SEE(ch, target_mob) && GET_POS(ch) >= POS_RESTING) {
+                    do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
+                    /* Decrement counter only after successful interaction attempt */
+                    if (--ch->ai_data->quest_counter <= 0) {
+                        mob_complete_quest(ch);
+                        ch->ai_data->current_goal = GOAL_NONE;
+                    }
+                }
+                return TRUE;
+            } else {
+                /* Seek the target mob */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
+            }
+            break;
+
+        case AQ_MOB_SAVE:
+            /* Mob needs to save/protect target mob - stay near them */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found target, check if they're safe (healthy and not fighting)
+                 * Using 80% health as the threshold for "safe" condition */
+                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100) && !FIGHTING(target_mob)) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+                /* If target is fighting, help them by attacking their opponent */
+                if (FIGHTING(target_mob) && !FIGHTING(ch)) {
+                    struct char_data *opponent = FIGHTING(target_mob);
+                    /* Validate opponent before attacking */
+                    if (opponent && !MOB_FLAGGED(opponent, MOB_NOTDEADYET) && !PLR_FLAGGED(opponent, PLR_NOTDEADYET) &&
+                        IN_ROOM(opponent) != NOWHERE && IN_ROOM(opponent) == IN_ROOM(ch)) {
+                        hit(ch, opponent, TYPE_UNDEFINED);
+                    }
+                }
+                return TRUE;
+            } else {
+                /* Seek target mob */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
             }
             break;
 
