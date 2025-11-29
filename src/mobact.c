@@ -1252,44 +1252,27 @@ void mobile_activity(void)
                 continue;
         }
 
-        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
-        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <= 5) { /* 5% chance per tick to seek quests */
+        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs)
+         * Performance optimization: Use mob's rnum to stagger quest checks across ticks
+         * This prevents all mobs from checking on the same tick */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) == NOTHING &&
+            ch->ai_data->current_goal == GOAL_NONE &&
+            ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) && /* Stagger: each mob checks every 20 ticks */
+            rand_number(1, 100) <= 3) {               /* 3% chance when it's their turn */
             mob_try_to_accept_quest(ch);
         }
 
-        /* Mob quest processing - not for charmed mobs */
-        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <= 10) { /* 10% chance per tick to check quest timer */
-            /* Check if mob has a quest and handle quest-related goals */
-            if (GET_MOB_QUEST(ch) != NOTHING) {
-                /* Decrement quest timer if applicable */
-                if (ch->ai_data->quest_timer > 0) {
-                    ch->ai_data->quest_timer--;
-                    if (ch->ai_data->quest_timer <= 0) {
-                        /* Quest timeout */
-                        act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
-                        fail_mob_quest(ch, "timeout");
-                        /* Safety check: act() can trigger DG scripts which may cause extraction */
-                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                            continue;
-                    }
-                }
-            } else {
-                /* Mob doesn't have a quest, check if it should try to find one */
-                if (ch->ai_data) {
-                    /* Look for available mob-posted quests */
-                    qst_rnum rnum;
-                    for (rnum = 0; rnum < total_quests; rnum++) {
-                        if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && mob_should_accept_quest(ch, rnum)) {
-                            set_mob_quest(ch, rnum);
-                            act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);
-                            /* Safety check: act() can trigger DG scripts which may cause extraction */
-                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                break; /* Exit the for loop, then continue to next mob in main loop */
-                        }
-                    }
-                    /* Safety check after the loop in case ch was extracted */
+        /* Mob quest processing - not for charmed mobs
+         * Only check timer for mobs that actually have quests */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) != NOTHING) {
+            /* Decrement quest timer deterministically (every tick) */
+            if (ch->ai_data->quest_timer > 0) {
+                ch->ai_data->quest_timer--;
+                if (ch->ai_data->quest_timer <= 0) {
+                    /* Quest timeout */
+                    act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
+                    fail_mob_quest(ch, "timeout");
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                         continue;
                 }
@@ -4162,6 +4145,10 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 /**
  * Makes a mob occasionally decide to seek out and accept quests.
  * Called when a mob has no current goal and not already on a quest.
+ * Performance optimizations:
+ * - Early exits for common rejection cases
+ * - Frustration timer check before expensive calculations
+ * - Room validation before zone lookups
  * @param ch The mob that might accept a quest
  * @return TRUE if the mob decides to pursue quest acceptance, FALSE otherwise
  */
@@ -4169,20 +4156,26 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 {
     struct char_data *questmaster;
     zone_rnum mob_zone;
+    int acceptance_threshold;
 
-    if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
-        return FALSE; /* Already has a goal or not an AI mob */
-    }
-
-    /* Don't accept quests if already on one */
-    if (GET_QUEST(ch)) {
+    /* Quick early exits - cheapest checks first */
+    if (!IS_NPC(ch) || !ch->ai_data)
         return FALSE;
-    }
 
-    /* Higher chance to accept quests based on quest_tendency gene and curiosity emotion */
-    int acceptance_threshold = 20; /* Base 20% chance */
+    /* Already has a goal or quest */
+    if (ch->ai_data->current_goal != GOAL_NONE || GET_QUEST(ch))
+        return FALSE;
 
-    /* Increase chance based on quest genetics */
+    /* Check if frustrated from recent quest activities (cheap check) */
+    if (ch->ai_data->quest_posting_frustration_timer > 0)
+        return FALSE;
+
+    /* Safety check: Validate room before any world array access */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Calculate acceptance threshold based on mob's genetics and emotions */
+    acceptance_threshold = 20;                    /* Base 20% chance */
     acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
 
     /* Further increase if mob has high curiosity (emotion system) */
@@ -4193,20 +4186,11 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     /* Cap at reasonable maximum to avoid too aggressive quest-taking */
     acceptance_threshold = MIN(acceptance_threshold, 60);
 
-    if (rand() % 100 > acceptance_threshold) {
-        return FALSE;
-    }
-
-    /* Check if frustrated from recent quest activities */
-    if (ch->ai_data->quest_posting_frustration_timer > 0) {
-        return FALSE;
-    }
-
-    /* Safety check: Validate room before accessing world array */
-    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+    /* Random check - do this BEFORE expensive zone/questmaster lookups */
+    if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
-    /* Look for accessible questmasters in the current zone */
+    /* Now do the expensive operations - look for accessible questmasters */
     mob_zone = world[IN_ROOM(ch)].zone;
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
 
