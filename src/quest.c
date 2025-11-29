@@ -2552,6 +2552,61 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
                 }
             }
             break;
+        case AQ_SHOP_BUY:
+            /* Check if mob has purchased the required item */
+            if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_SHOP_SELL:
+            /* Selling quests complete when item is no longer in inventory */
+            {
+                struct obj_data *obj;
+                bool has_item = FALSE;
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_VNUM(obj) == QST_TARGET(rnum)) {
+                        has_item = TRUE;
+                        break;
+                    }
+                }
+                if (!has_item) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_DELIVERY:
+            /* Similar to OBJ_RETURN but tracks delivery */
+            if (vict && IS_NPC(vict) && QST_RETURNMOB(rnum) == GET_MOB_VNUM(vict)) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Check if gathered enough of the resource */
+            if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
+        case AQ_MOB_ESCORT:
+            /* Check if escort target has reached destination */
+            if (vict && IS_NPC(vict) && QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                room_rnum dest = real_room(QST_RETURNMOB(rnum));
+                if (dest != NOWHERE && IN_ROOM(vict) == dest) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Room-based: check if mob is at magical location */
+            if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
+                if (--ch->ai_data->quest_counter <= 0)
+                    mob_complete_quest(ch);
+            }
+            break;
     }
 }
 

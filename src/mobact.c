@@ -4502,6 +4502,63 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             }
             break;
 
+        case AQ_MAGIC_GATHER:
+            /* Mob needs to visit locations with high magical density */
+            target_room = real_room(QST_TARGET(quest_rnum));
+            if (target_room != NOWHERE && IN_ROOM(ch) == target_room) {
+                /* At magical location, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else if (target_room != NOWHERE) {
+                /* Move toward magical location */
+                ch->ai_data->goal_destination = target_room;
+                mob_goal_oriented_roam(ch, target_room);
+                return TRUE;
+            }
+            break;
+
+        case AQ_EMOTION_IMPROVE:
+            /* Mob needs to improve emotion with target mob - interact with target */
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found target, perform positive social interaction */
+                do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
+                /* Check if emotion improved enough (simplified - just complete after interaction) */
+                if (--ch->ai_data->quest_counter <= 0) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                }
+                return TRUE;
+            } else {
+                /* Seek the target mob */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
+            }
+            break;
+
+        case AQ_MOB_SAVE:
+            /* Mob needs to save/protect target mob - stay near them */
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Found target, check if they're safe (healthy and not fighting) */
+                if (GET_HIT(target_mob) > GET_MAX_HIT(target_mob) * 0.8 && !FIGHTING(target_mob)) {
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                }
+                /* If target is fighting, help them */
+                if (FIGHTING(target_mob) && !FIGHTING(ch)) {
+                    hit(ch, FIGHTING(target_mob), TYPE_UNDEFINED);
+                }
+                return TRUE;
+            } else {
+                /* Seek target mob */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                return TRUE;
+            }
+            break;
+
         default:
             /* Unknown quest type, abandon quest */
             fail_mob_quest(ch, "unknown quest type");
