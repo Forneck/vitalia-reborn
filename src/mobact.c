@@ -4438,6 +4438,9 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
             if (target_obj) {
                 /* Has item, find delivery target mob */
+                /* Validate room before accessing */
+                if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                    return FALSE;
                 target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_RETURNMOB(quest_rnum));
                 if (target_mob) {
                     /* Deliver item */
@@ -4484,11 +4487,15 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
         case AQ_MOB_ESCORT:
             /* Escort mob to destination - simplified: follow target mob */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
             target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
             if (target_mob) {
                 /* Found escort target, check if at destination */
                 target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
-                if (target_room != NOWHERE && IN_ROOM(target_mob) == target_room) {
+                /* Validate target_mob's room before accessing */
+                if (target_room != NOWHERE && IN_ROOM(target_mob) != NOWHERE && IN_ROOM(target_mob) == target_room) {
                     mob_complete_quest(ch);
                     ch->ai_data->current_goal = GOAL_NONE;
                     return TRUE;
@@ -4504,6 +4511,9 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
         case AQ_MAGIC_GATHER:
             /* Mob needs to visit locations with high magical density */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
             target_room = real_room(QST_TARGET(quest_rnum));
             if (target_room != NOWHERE && IN_ROOM(ch) == target_room) {
                 /* At magical location, complete quest */
@@ -4520,14 +4530,20 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
         case AQ_EMOTION_IMPROVE:
             /* Mob needs to improve emotion with target mob - interact with target */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
             target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
             if (target_mob) {
-                /* Found target, perform positive social interaction */
-                do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
-                /* Check if emotion improved enough (simplified - just complete after interaction) */
-                if (--ch->ai_data->quest_counter <= 0) {
-                    mob_complete_quest(ch);
-                    ch->ai_data->current_goal = GOAL_NONE;
+                /* Found target, perform positive social interaction
+                 * We only decrement quest_counter if target is visible and interaction is possible */
+                if (CAN_SEE(ch, target_mob) && GET_POS(ch) >= POS_RESTING) {
+                    do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
+                    /* Decrement counter only after successful interaction attempt */
+                    if (--ch->ai_data->quest_counter <= 0) {
+                        mob_complete_quest(ch);
+                        ch->ai_data->current_goal = GOAL_NONE;
+                    }
                 }
                 return TRUE;
             } else {
@@ -4539,17 +4555,26 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
         case AQ_MOB_SAVE:
             /* Mob needs to save/protect target mob - stay near them */
+            /* Validate room before accessing */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
             target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
             if (target_mob) {
-                /* Found target, check if they're safe (healthy and not fighting) */
-                if (GET_HIT(target_mob) > GET_MAX_HIT(target_mob) * 0.8 && !FIGHTING(target_mob)) {
+                /* Found target, check if they're safe (healthy and not fighting)
+                 * Using 80% health as the threshold for "safe" condition */
+                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100) && !FIGHTING(target_mob)) {
                     mob_complete_quest(ch);
                     ch->ai_data->current_goal = GOAL_NONE;
                     return TRUE;
                 }
-                /* If target is fighting, help them */
+                /* If target is fighting, help them by attacking their opponent */
                 if (FIGHTING(target_mob) && !FIGHTING(ch)) {
-                    hit(ch, FIGHTING(target_mob), TYPE_UNDEFINED);
+                    struct char_data *opponent = FIGHTING(target_mob);
+                    /* Validate opponent before attacking */
+                    if (opponent && !MOB_FLAGGED(opponent, MOB_NOTDEADYET) && !PLR_FLAGGED(opponent, PLR_NOTDEADYET) &&
+                        IN_ROOM(opponent) != NOWHERE && IN_ROOM(opponent) == IN_ROOM(ch)) {
+                        hit(ch, opponent, TYPE_UNDEFINED);
+                    }
                 }
                 return TRUE;
             } else {

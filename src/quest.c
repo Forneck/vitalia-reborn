@@ -2486,6 +2486,10 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
     if (!IS_NPC(ch) || !ch->ai_data)
         return;
 
+    /* Validate ch's room before any world array access */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     vnum = GET_MOB_QUEST(ch);
     if (vnum == NOTHING)
         return;
@@ -2497,14 +2501,14 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-            if (IS_NPC(vict) && (ch != vict))
+            if (vict && IS_NPC(vict) && (ch != vict))
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
                     if (--ch->ai_data->quest_counter <= 0)
                         mob_complete_quest(ch);
                 }
             break;
         case AQ_PLAYER_KILL:
-            if (!IS_NPC(vict) && (ch != vict)) {
+            if (vict && !IS_NPC(vict) && (ch != vict)) {
                 if (--ch->ai_data->quest_counter <= 0)
                     mob_complete_quest(ch);
             }
@@ -2594,7 +2598,9 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
             /* Check if escort target has reached destination */
             if (vict && IS_NPC(vict) && QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
                 room_rnum dest = real_room(QST_RETURNMOB(rnum));
-                if (dest != NOWHERE && IN_ROOM(vict) == dest) {
+                /* Validate vict's room before comparing */
+                if (dest != NOWHERE && IN_ROOM(vict) != NOWHERE && IN_ROOM(vict) >= 0 &&
+                    IN_ROOM(vict) <= top_of_world && IN_ROOM(vict) == dest) {
                     if (--ch->ai_data->quest_counter <= 0)
                         mob_complete_quest(ch);
                 }
@@ -2602,6 +2608,7 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
             break;
         case AQ_MAGIC_GATHER:
             /* Room-based: check if mob is at magical location */
+            /* IN_ROOM(ch) already validated at function start */
             if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
                 if (--ch->ai_data->quest_counter <= 0)
                     mob_complete_quest(ch);
