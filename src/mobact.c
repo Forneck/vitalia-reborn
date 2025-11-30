@@ -1009,12 +1009,14 @@ void mobile_activity(void)
                     /* Chegou ao questmaster para aceitar uma quest */
                     struct char_data *questmaster =
                         get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
-                    if (questmaster && !GET_QUEST(ch)) {
+                    if (questmaster && GET_MOB_QUEST(ch) == NOTHING) {
                         /* Procura por quests disponíveis neste questmaster */
                         qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
-                            if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
+                            /* Use mob_can_accept_quest_forced for goal-driven quest acceptance
+                             * This is deterministic (no random chance) since the goal was explicitly set */
+                            if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
                                 set_mob_quest(ch, quest_rnum);
                                 act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
                                 /* Safety check: act() can trigger DG scripts which may cause extraction */
@@ -1041,8 +1043,8 @@ void mobile_activity(void)
                     ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     /* Process quest completion based on quest type */
-                    if (GET_QUEST(ch) != NOTHING) {
-                        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+                    if (GET_MOB_QUEST(ch) != NOTHING) {
+                        qst_rnum quest_rnum = real_quest(GET_MOB_QUEST(ch));
                         if (quest_rnum != NOTHING) {
                             if (mob_process_quest_completion(ch, quest_rnum)) {
                                 /* Quest completed, goal will be cleared in mob_complete_quest */
@@ -4163,7 +4165,7 @@ bool mob_try_to_accept_quest(struct char_data *ch)
         return FALSE;
 
     /* Already has a goal or quest */
-    if (ch->ai_data->current_goal != GOAL_NONE || GET_QUEST(ch))
+    if (ch->ai_data->current_goal != GOAL_NONE || GET_MOB_QUEST(ch) != NOTHING)
         return FALSE;
 
     /* Check if frustrated from recent quest activities (cheap check) */
@@ -4618,8 +4620,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
     }
 
     /* Priority 1: If mob has an active quest, prioritize quest completion */
-    if (GET_QUEST(ch) != NOTHING) {
-        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+    if (GET_MOB_QUEST(ch) != NOTHING) {
+        qst_rnum quest_rnum = real_quest(GET_MOB_QUEST(ch));
         if (quest_rnum != NOTHING) {
             int quest_type = QST_TYPE(quest_rnum);
 

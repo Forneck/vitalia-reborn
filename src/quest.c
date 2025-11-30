@@ -2252,6 +2252,29 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
     return (chance < capability);
 }
 
+/* Check if a mob can accept a quest when forced by builder/goal setting
+ * This is less restrictive than mob_should_accept_quest - allows any quest
+ * from questmasters, not just mob-posted quests */
+bool mob_can_accept_quest_forced(struct char_data *mob, qst_rnum rnum)
+{
+    if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
+        return FALSE;
+
+    /* Don't accept if already on a quest */
+    if (GET_MOB_QUEST(mob) != NOTHING)
+        return FALSE;
+
+    /* Check if mob's level is appropriate for the quest */
+    if (GET_LEVEL(mob) < QST_MINLEVEL(rnum) || GET_LEVEL(mob) > QST_MAXLEVEL(rnum))
+        return FALSE;
+
+    /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
+        return FALSE;
+
+    return TRUE;
+}
+
 /* Set a quest for a mob */
 void set_mob_quest(struct char_data *mob, qst_rnum rnum)
 {
