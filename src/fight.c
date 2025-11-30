@@ -1987,6 +1987,12 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             if (reflect_dam > 0) {
                 /* Send reflection messages before damage is applied */
+                /* Display damage value if PRF_VIEWDAMAGE is set for attacker (ch) */
+                if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
+                    send_to_char(ch, "\tR(%d)\tn ", reflect_dam);
+                /* Display damage value if PRF_VIEWDAMAGE is set for victim (aura owner) */
+                if (GET_LEVEL(victim) >= LVL_IMMORT || PRF_FLAGGED(victim, PRF_VIEWDAMAGE))
+                    send_to_char(victim, "(%d) ", reflect_dam);
                 if (saved) {
                     act("A aura de $N reflete parte do dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
                     act("Sua aura reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
