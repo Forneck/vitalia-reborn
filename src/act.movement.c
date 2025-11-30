@@ -312,7 +312,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
         if (need_specials_check && ch->master)
             send_to_char(ch, "Você está muito cansad%s para seguir.\r\n", OA(ch));
         else
-            send_to_char(ch, "Você está muito cansad%s\r\n", OA(ch));
+            send_to_char(ch, "Você está muito cansad%s.\r\n", OA(ch));
 
         return (0);
     }

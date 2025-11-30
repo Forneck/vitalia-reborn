@@ -149,9 +149,10 @@ cpp_extern const struct command_info cmd_info[] = {
     {"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_ONEARG},
     {"eavesdrop", "eaves", POS_RESTING, do_cast, 1, SKILL_EAVESDROP, CMD_NOARG},
     {"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_NOARG},
-    {"emotionconfig", "emotionconfig", POS_DEAD, do_emotionconfig, LVL_GRGOD, 0, CMD_NOARG},
-    {"emotionexport", "emotionexport", POS_DEAD, do_emotionexport, LVL_GRGOD, 0, CMD_ONEARG},
-    {"emotionimport", "emotionimport", POS_DEAD, do_emotionimport, LVL_GRGOD, 0, CMD_ONEARG},
+   /* {"elevate", "elevate", POS_STANDING, do_elevate, 0, 0, CMD_NOARG},*/
+   /* {"emotionconfig", "emotionconfig", POS_DEAD, do_emotionconfig, LVL_GRGOD, 0, CMD_NOARG},*/
+   /* {"emotionexport", "emotionexport", POS_DEAD, do_emotionexport, LVL_GRGOD, 0, CMD_ONEARG},*/
+    /*{"emotionimport", "emotionimport", POS_DEAD, do_emotionimport, LVL_GRGOD, 0, CMD_ONEARG},*/
     {"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
     {":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
     {"enable", "enable", POS_DEAD, do_enable, LVL_GRGOD, 0, CMD_ONEARG},
@@ -256,7 +257,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"oset", "oset", POS_DEAD, do_oset, LVL_BUILDER, 0, CMD_TWOARG},
     {"ocopy", "ocopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_OEDIT, CMD_TWOARG},
     {"put", "p", POS_RESTING, do_put, 0, 0, CMD_TWOARG},
-    {"pathfind", "pathf", POS_STANDING, do_pathfind, 0, 0, CMD_TWOARG},
+    /*{"pathfind", "pathf", POS_STANDING, do_pathfind, 0, 0, CMD_TWOARG},*/
     {"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0, CMD_NOARG},
     {"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK, CMD_TWOARG},
     {"practice", "pr", POS_RESTING, do_practice, 1, 0, CMD_ONEARG},
@@ -284,8 +285,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"reply", "r", POS_SLEEPING, do_reply, 0, 0, CMD_NOARG},
     {"rest", "res", POS_RESTING, do_rest, 0, 0, CMD_NOARG},
     {"read", "rea", POS_RESTING, do_look, 0, SCMD_READ, CMD_ONEARG},
-    {"rebegin", "rebegin", POS_STANDING, do_rebegin, 0, 0, CMD_NOARG},
-    {"elevate", "elevate", POS_STANDING, do_elevate, 0, 0, CMD_NOARG},
+   /* {"rebegin", "rebegin", POS_STANDING, do_rebegin, 0, 0, CMD_NOARG},*/
     {"reload", "reload", POS_DEAD, do_reboot, LVL_IMPL, 0, CMD_NOARG},
     {"recall", "reca", POS_RESTING, do_recall, 0, 0, CMD_NOARG},
     {"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
