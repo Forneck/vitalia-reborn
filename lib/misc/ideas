@@ -1,23 +1,3 @@
-Text      autoexaminar~
-Body      Verificar possibilidade de incluir no preferencias o comando auto examinar, pra mob ao morrer examinar automaticamente o corpo
-~
-Name      Motharo~
-IdNum     25
-Dated     1604608344
-Level     15
-Room      1663
-Flags     0 0 0 0
-End
-Text      Afetamento~
-Body      Poderia inserir o comando AFFECT/Afetamento, monstrando as magias afetadas e a duracao das mesmas em horas mud.
-~
-Name      Motharo~
-IdNum     25
-Dated     1604668323
-Level     34
-Room      3001
-Flags     0 0 0 0
-End
 Text      skill aware of danger/sentir perigo~
 Body      O treinamento intensivo e a vivncia no campo de batalha desenvolveram uma espcie de sexto sentido contra o perigo em voc. Enquanto dorme,  voc tambm no recebe a penalidade de armadura.
 Ou seja, ao andar ele mostra que lado fica a dt leste/norte etc e se tem trap
@@ -27,16 +7,6 @@ IdNum     25
 Dated     1604934779
 Level     36
 Room      12051
-Flags     0 0 0 0
-End
-Text      Mostrar dano!~
-Body      Seria legal mostrar o dano que tomamos e batemos nos ataques efetuados.
-~
-Name      Motharo~
-IdNum     25
-Dated     1605382952
-Level     37
-Room      3605
 Flags     0 0 0 0
 End
 Text      skill cooking~
@@ -87,49 +57,6 @@ IdNum     37
 Dated     1761337211
 Level     96
 Room      12043
-Flags     0 0 0 0
-End
-Text      mascara de anubis~
-Body      Alterar a mascara de anubis para usar no rosto ao invs de na cabea.
-~
-Name      Henzo~
-IdNum     562
-Dated     1761439474
-Level     100
-Room      3013
-Flags     0 0 0 0
-End
-Text      mascara-de-anubis~
-Body      Voltou a ser item de cabeca.
-~
-Name      Henzo~
-IdNum     562
-Dated     1761510912
-Level     80
-Room      1059
-Flags     0 0 0 0
-End
-Text      Mostrar o Dano causado ao lado de cada ataque~
-Body      Mostrar o Dano causado ao lado de cada ataque
-
-exemplo
-Voce OBLITERA o mestre espadachim de Ghenna com a sua furada mortal!! (100)
-~
-Name      Lupulis~
-IdNum     175
-Dated     1761528970
-Level     62
-Room      9949
-Flags     0 0 0 0
-End
-Text      mascara de prata do egito~
-Body      Mudar a Mascara de Prata do Egito para usar no rosto. Se tornaria um timo item utilizavel
-~
-Name      Henzo~
-IdNum     562
-Dated     1761565928
-Level     92
-Room      3063
 Flags     0 0 0 0
 End
 Text      affects~
@@ -232,7 +159,7 @@ Level     100
 Room      9839
 Flags     0 0 0 0
 End
-Text       rskills - listar skills/spells de remort~
+Text      rskills - listar skills/spells de remort~
 Body      Ter um comando chamado 'rskills' onde ele listaria as habilidades e magias levadas por remort, por exemplo:
 
 [ swords ] -------- [ guerreiro ] ---- [ 1a enc. ]
@@ -243,5 +170,156 @@ IdNum     50
 Dated     1762347941
 Level     100
 Room      1000
+Flags     0 0 0 0
+End
+Text      skill de ranger~
+Body      Ranger poderia ter uma habilidade de montar acampamento, que, enquanto ele estiver na sala, dormindo ou meditando, aquela sala fosse de recuperacao rapida
+~
+Name      Henzo~
+IdNum     562
+Dated     1762698450
+Level     87
+Room      20485
+Flags     0 0 0 0
+End
+Text      Estante/Album de Cards~
+Body      Acredito que limitar o cap de mochila com Cards colecionaveis eh algo que desestimula os jogadores a colecionarem ativamente. Especialmente em um sistema de jogo que favorece o acumulo de flechas e pocoes em algumas vocacoes.
+Dito isso: sugiro que com a configuracao adequada do sistema de Houses, seja possivel o jogador ter uma estante ou um album especifico para armazenar e sistematizar de acordo com as Series os seus cards.
+Atualmente mantenho comigo apenas cards desconhecidos, pois todos os comuns tenho a impressao que soh pegarei se valer a pena. Nesse sentido, para ter o sentido de colecao seria interessante uma estrategia de armazenamento em stash, nao no inventario/mochila.
+Grato
+pela
+consideracao
+:)
+~
+Name      Durandal~
+IdNum     734
+Dated     1763167831
+Level     100
+Room      3012
+Flags     0 0 0 0
+End
+Text      aumento de Mv por nivel baseado em DEX~
+Body      Acho que seria interessante ter um aumento da quantidade de MV baseado em DEX, ou DEX e CONS. pois com o consumo maior de Mv pelo Bow ficar limitado ao MV tradicional tem sido inviavel... 
+~
+Name      Panoramix~
+IdNum     46
+Dated     1763340084
+Level     91
+Room      3001
+Flags     0 0 0 0
+End
+Text      Configurar prompt para mostrar Densidade-magica~
+Body      Ola, conversando com Cansian sugeri a opcao de mostrar o status da Densidade Magica no prompt , apos os dados de Hp Mn e Mv, junto com status (invis) por exemplo
+Ai poderia se mostrar o stats da Sala ali, em siglas: (MB = muito baixo, M, A, MA = muito alto) etc. Ou entao passar a uma escala percentual 
+Fica como sugestao, mas o estado atual em que aparece uma frase colorida apos a descricao da sala me parece uma poluicao visual que colide com outras informacoes importantes pros players.
+~
+Name      Durandal~
+IdNum     734
+Dated     1763523133
+Level     20
+Room      3005
+Flags     0 0 0 0
+End
+Text      Metamorfose - Habilidade de Druida~
+Body      Permitir que a classe Druida assuma formas animais ou elementais.  Cada forma
+concede bonus de atributos (Forca, Con, Dex), altera o tipo de ataque (mordida
+etc) e pode conceder imunidades/vulnerabilidades temporarias.  Sugestao de
+Implementacao Tecnica: Em vez de "hardcodar" os atributos de cada animal no
+codigo C, sugiro usar o sistema de Mobs ja existente.  O codigo carregaria o
+prototipo de um Mob especfico (definido via VNUM para cada nivel da habilidade)
+e aplicaria os stats desse Mob (Dice de dano, STR, DEX, Attacks) sobre o jogador
+temporariamente.  Impedir o cast de magias complexas enquanto transformado
+(exceto se tiver um talento/feat especfico) Ao se transformar em urso o druida
+perderia a capacidade de castar magias, por exemplo, mas teria um AC maior e
+mais golpes por turno.
+~
+Name      Kasper~
+IdNum     507
+Dated     1763556935
+Level     70
+Room      3001
+Flags     0 0 0 0
+End
+Text      Sistema de Conjuntos~
+Body      Conceito: Incentivar os jogadores a coletarem equipamentos que fazem parte de
+uma mesma "lore" ou conjunto, reviver alguns itens considerados "lixos" com lore
+muito interessante.  Ao equipar 2, 3, ou o conjunto completo de itens, o jogador
+recebe bonus cumulativos passivos (ex: +Hit, +Mana, +Regen).  Sugestao de
+Implementacao Tecnica: Se o lancamento for na surdina ao se lancar um ident no
+item indicar que "Este item faz parte do Conjunto do Gladiador" por exemplo para
+evitar de NUNCA ser descoberto o sistema.
+~
+Name      Kasper~
+IdNum     507
+Dated     1763557233
+Level     70
+Room      3001
+Flags     0 0 0 0
+End
+Text      Nova Classe Monge~
+Body      O Conceito Central: "Dualidade Espiritual" YANG (Alinhamento > 350): O Monge
+Sagrado.  Foca em protecao, dano de fogo/radiante e cura.  Seus punhos queimam o
+mal.  YIN (Alinhamento < -350): O Monge Corrompido.  Foca em dreno de vida, dano
+de gelo/necrotico e debuffs.  Seus punhos sugam a alma.  Neutro (-350 a 350): O
+Monge perde poder.  A classe exige que o jogador assuma um lado extremo para
+desbloquear o potencial maximo (incentiva o RP).  A mecanica base e a luta
+desarmada, mas os efeitos magicos ("Chi") mudam radicalmente conforme a indole
+do personagem Lvl 1: Punhos de Ferro (Passiva) - Dano desarmado escala com o
+nivel (ex: 1d8 no incio, chegando a 6d10 no final).  Lvl 5: Meditacao Lvl 12:
+Pele Calejada (Passiva) - AC (Armor Class) baseada em Constituicao e Level.  
+Lvl 18: Palma de Energia (Ataque - Consome mn e mv) Good: Dispara um raio de luz
+(Dano Radiante).  Cega o inimigo (Blind) por 1 tick.  Evil: Dispara uma esfera
+de vacuo (Dano Necrotico).  Avaliar se Causa medo (Inimigo tenta fugir).  Lvl
+25: Manto de Chi (Buff Defensivo - Monges nao podem usar armor, so worn) Good
+(Proteo Divina): Cria um escudo de luz (Sanctuary effect).  Evil (Manto das
+Sombras): Gloomshield.  Lvl 32: Toque Espiritual (Toque) - Good: Cura um aliado
+alvo tocando nele (Heal).  Evil: Toca um inimigo e drena HP dele para curar o
+Monge (Vampiric Touch).  Lvl 40: Passos de Vento (casta com mana) - Aumenta
+Movimento maximo temporariamente (similar ao AID) Lvl 45: Infusao de Punhos
+(Buff de Dano) - Good: Seus ataques causam dano adicional de FOGO.  Talvez
+adicionar um DoT.  Evil: Seus ataques causam dano adicional de GELO.  Diminui a
+Dex do inimigo (congelamento) talvez aplicar um Paralyze?.  Lvl 52: Purificacao
+/ Corrupcao (Utility) - Good: Remove veneno, cegueira e maldicoes de si mesmo ou
+alvo (efeito em massa?  ) Evil: Transfere todos os debuffs do Monge para o
+inimigo alvo (joga o veneno que estava em voce no inimigo).  Evil: Stuna o alvo
+"Good" na sala.
+,l
+~
+Name      Kasper~
+IdNum     507
+Dated     1763561264
+Level     70
+Room      3001
+Flags     0 0 0 0
+End
+Text      Pontos de Stoneskin no Affects~
+Body      Alem de mostrar a qtd de horas de efeito, se for possivel, no Affects podia mostrar tambem quantos pontos de Stoneskin existem, do mesmo jeito que fica no score.
+
+Por exemplo:
+
+Efeitos ativos:
+  stoneskin [84 hs / 118pts ]
+  armor [58 hs]
+  strength [61 hs]
+~
+Name      Laguna~
+IdNum     50
+Dated     1763577715
+Level     68
+Room      9548
+Flags     0 0 0 0
+End
+Text       Sugestao para poder usar o item a Flecha de Sagitario na aljava~
+Body      Sugestao para poder usar o item a Flecha de Sagitario na aljava
+
+possibilidade de usar essa flecha como se fosse um item na aljava e nao como uma flecha para ser atirada, dando mais uma opcao pro jogador equipar
+
+e se a sugestao for aceita, definir atrubutos para essa flecha
+~
+Name      Lupulis~
+IdNum     175
+Dated     1764019398
+Level     100
+Room      1104
 Flags     0 0 0 0
 End

@@ -227,16 +227,6 @@ Level     100
 Room      9386
 Flags     0 0 0 0
 End
-Text      Prox_nivel~
-Body      a barra de prox nivel nao esta atualizando  Prox Nivel.:     4,501,443xp [>>>>>>>>>>] (deveria estar proxima do meio uma vez que o total para meu level atual  de 9.999.999
-~
-Name      Roscoe~
-IdNum     293
-Dated     1761129282
-Level     94
-Room      3001
-Flags     0 0 0 0
-End
 Text      Paralyze + Wimp~
 Body      Mobs com paralyze nao deveriam ser capazes de fugir (wimpy) nem pelo wimpy_tendency.
 ~
@@ -315,17 +305,6 @@ IdNum     37
 Dated     1761246003
 Level     96
 Room      3019
-Flags     0 0 0 0
-End
-Text      armazem do chaoyan - china~
-Body      A lista de itens vendidos ta incompleta, por exemplo, a pequena mochila chinesa.
-O mob Chaoyang tem ela equipada, mas no list da loja dele, so contem o frasco.
-~
-Name      Laguna~
-IdNum     50
-Dated     1761249290
-Level     53
-Room      17680
 Flags     0 0 0 0
 End
 Text      habilidades de remorts~
@@ -475,38 +454,6 @@ Level     110
 Room      2
 Flags     0 0 0 0
 End
-Text      Quest encerrada sem atingir objetivo~
-Body      Ola, eu assumi a quest "proteger o lobo de gelo" ou algo assim... Imagino que seja chegar na sala do mob. Contudo, antes de ir la eu matei um bispo negro do xadrez e ao mata-lo encerrou a quest do logo de gelo, me dando as recompensas. acredito ser um bug.
-~
-Name      Durandal~
-IdNum     720
-Dated     1761932837
-Level     43
-Room      3603
-Flags     0 0 0 0
-End
-Text      A Pocao de Cura de Cailveh esta recuperando Mov~
-Body      Prezados, reportando que o item Pocao de Cura na loja do farmaceutico em Cailveh esta recuperando Mov em vez de Hp.
-~
-Name      Durandal~
-IdNum     720
-Dated     1761957452
-Level     47
-Room      29042
-Flags     0 0 0 0
-End
-Text      Folego~
-Body      Por acidente, fiquei preso em uma das salas adjacentes ao Poseidon.
-Essas salas precisam de breath pra andar pois sao submerdas, porem tambem sao !magic e !sound.
-Como fiquei sem o efeito do breath e nao consegui repor, nao consegui andar para nenhuma delas nem retornar, nisso reparei que mesmo com a mensagem de que eu preciso de ar, o meu folego no score continua em 100%.
-~
-Name      Laguna~
-IdNum     50
-Dated     1762011469
-Level     100
-Room      10936
-Flags     0 0 0 0
-End
 Text      taxa de praticas por nivel x Wisdom~
 Body      Aparentemente a quantidade de praticas por nivel nao esta usando o atributo WIS (Wisdom) para calculo, pois estou com 18 de WIS recebendo apenas 2 praticas por level
 ~
@@ -514,47 +461,6 @@ Name      Roscoe~
 IdNum     293
 Dated     1762027500
 Level     9
-Room      3001
-Flags     0 0 0 0
-End
-Text      Mira~
-Body      Mira de Boghavati, vendedora, equipou todos os itens e nao vende nada
-~
-Name      Henzo~
-IdNum     562
-Dated     1762038169
-Level     96
-Room      11327
-Flags     0 0 0 0
-End
-Text      Balraj~
-Body      Vendedor de Boghavati equipou a aljavva e nao vende.
-Na aljava:          um tir de aco (aura brilhante)
-~
-Name      Henzo~
-IdNum     562
-Dated     1762038265
-Level     96
-Room      11325
-Flags     0 0 0 0
-End
-Text      PEDRA fechada~
-Body      A PEDRA para entrar no Loctus na aldeia Maldita esta bugada
-~
-Name      Henzo~
-IdNum     562
-Dated     1762058790
-Level     100
-Room      8310
-Flags     0 0 0 0
-End
-Text      skills remort~
-Body      as skills / spells de remorts passados (fui Guerreiro, Mago, Clerigo e Ranger), ao remortar pela ultima vez de Ranger para Druida, as skills/spells das 3 primeiras enc no foram transmitidas, seriam elas, Swords, Fireshield e Heal, apenas Bow da ultima encarnacao de Ranger que esta disponivel
-~
-Name      Roscoe~
-IdNum     293
-Dated     1762086791
-Level     11
 Room      3001
 Flags     0 0 0 0
 End
@@ -601,13 +507,234 @@ Level     100
 Room      13879
 Flags     1 0 0 0
 End
-Text      TREMOR~
-Body      A cancao tremor nao esta causando dano. Ela inicia a luta, mas nao danifica os oponentes.
+Text      erro lvl 60 comando level~
+Body      quando digito level entre o lvl 59 e 60 o a experiencia exigida eh igual de 58 para 59, [60] 30000000-29999999 : o guia
+~
+Name      Thorgal~
+IdNum     726
+Dated     1762732058
+Level     59
+Room      3001
+Flags     1 0 0 0
+End
+Text      Porta da fenda entre mundos~
+Body      Na porta da fenda entre mundos (escuridao), costumava ser uma palavra que abria "avarohana", mas nao esta acontecendo mais a abertura da porta.
+~
+Name      Astus~
+IdNum     517
+Dated     1763047565
+Level     88
+Room      3001
+Flags     0 0 0 0
+End
+Text      porta aqui nao abre~
+Body      porta aqui nao abre W
+~
+Name      Lupulis~
+IdNum     175
+Dated     1763257638
+Level     100
+Room      4574
+Flags     1 0 0 0
+End
+Text      Ventriloquate~
+Body      c 'ventril' mendiga "Eu sou linda"      A mendiga diz: 'mendiga'
+~
+Name      Durandal~
+IdNum     734
+Dated     1763340527
+Level     10
+Room      3044
+Flags     0 0 0 0
+End
+Text      esta aparecendo a mensagem Este lugar e muito calmo, sem violencias... durante a meditacao no templo~
+Body      esta aparecendo a mensagem Este lugar e muito calmo, sem violencias... durante a meditacao no templo
+~
+Name      Kasper~
+IdNum     507
+Dated     1763488103
+Level     66
+Room      3001
+Flags     0 0 0 0
+End
+Text      Visible/loja~
+Body      Cada venda precisa usar o comando visible novamente pro lojista poder ver... Poderia durar 1 ou 2 ticks antes de usar novo "visible". 
+~
+Name      Durandal~
+IdNum     734
+Dated     1763504112
+Level     19
+Room      3020
+Flags     0 0 0 0
+End
+Text      porta aqui nao abre~
+Body      porta aqui nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1763525546
+Level     100
+Room      13888
+Flags     1 0 0 0
+End
+Text      A balada do Andarilho ignora a mana zerada~
+Body      Usando a Balada do Andarilho depois do remort, ela consome mana... mas quando a mana zera ela ainda funciona.. (nem precisa arrumar ta bom assim hehehe)
+~
+Name      Panoramix~
+IdNum     46
+Dated     1763546616
+Level     11
+Room      12058
+Flags     0 0 0 0
+End
+Text      Cajado de pedra do Rizzo~
+Body      O cajado de pedra que vende no Rizzo constumava ser wand de Stoneskin, porem agora esta com outra magia, nao sei se mudou mesmo ou se foi bug na transposicao de itens/afetamentos.
+~
+Name      Astus~
+IdNum     517
+Dated     1763567879
+Level     99
+Room      3001
+Flags     0 0 0 0
+End
+Text      incremento de dano sentado~
+Body      Usar bash ou fury of air nao esta aumentando o dano recebido pelo inimigo que fica sentado.
 ~
 Name      Henzo~
 IdNum     562
-Dated     1762355324
+Dated     1763568491
+Level     97
+Room      3001
+Flags     0 0 0 0
+End
+Text      who~
+Body      Os comandos de who nao estao funcionando e o who -s  indica 3x mais jogadores online do que de fato tem
+~
+Name      Henzo~
+IdNum     562
+Dated     1763595392
 Level     100
-Room      1000
+Room      1061
+Flags     0 0 0 0
+End
+Text      porta aqui N nao abre~
+Body      porta aqui N nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1763706311
+Level     100
+Room      757
+Flags     1 0 0 0
+End
+Text      old thalos~
+Body      Asa Sul da Prefeitura em old thalos tem objeto "undefined" no chao
+~
+Name      Henzo~
+IdNum     562
+Dated     1763775050
+Level     91
+Room      5231
+Flags     1 0 0 0
+End
+Text      toggle wimp~
+Body      Toggle wimpy esta alterando o tamanho da pagina ao inves de mudar a fuga
+~
+Name      Henzo~
+IdNum     562
+Dated     1763785650
+Level     3
+Room      1609
+Flags     1 0 0 0
+End
+Text      harm~
+Body      A magia esta causando em media 20 de dano nas versoes comum e minus, diferente do que diz no help. Na verso plus causa 45+-
+~
+Name      Henzo~
+IdNum     562
+Dated     1763822944
+Level     86
+Room      15074
+Flags     0 0 0 0
+End
+Text      aid~
+Body      A magia AID, ativada por silabas, nao funciona na versao normal. Versoes PLUS e MINUS funcionam
+~
+Name      Henzo~
+IdNum     562
+Dated     1763823280
+Level     86
+Room      1626
+Flags     0 0 0 0
+End
+Text      caminho sw aqui esta bugado~
+Body      caminho sw aqui esta bugado
+~
+Name      Lupulis~
+IdNum     175
+Dated     1763967585
+Level     100
+Room      14480
+Flags     0 0 0 0
+End
+Text      grito~
+Body      A cancao O GRITO DA MORTE nao esta funcionando
+~
+Name      Henzo~
+IdNum     562
+Dated     1764015607
+Level     45
+Room      1603
+Flags     0 0 0 0
+End
+Text      voice explosion~
+Body      Magia voice explosion nao esta exibindo dano ou mensagem dos efeitos nos inimigos.
+~
+Name      Henzo~
+IdNum     562
+Dated     1764015735
+Level     45
+Room      1627
+Flags     0 0 0 0
+End
+Text      porta aqui N nao abre~
+Body      porta aqui N nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1764017085
+Level     100
+Room      14046
+Flags     1 0 0 0
+End
+Text      Magia Transport via plants~
+Body      TICK
+Ola, tanto no help magias quanto no help da magia especifica transport via plants consta que esta magia esta disponivel para mago. Porem no practice nao aparece, entao nao consigo praticar.
+~
+Name      Astus~
+IdNum     517
+Dated     1764107126
+Level     98
+Room      13798
+Flags     0 0 0 0
+End
+Text      Windwall nao esta dando dano~
+Body      Ola, nao sei se isso faz parte das recentes mudancas das auras, mas a magia windwall nao esta devolvendo dano nos mobs.
+~
+Name      Astus~
+IdNum     517
+Dated     1764336117
+Level     70
+Room      12670
+Flags     0 0 0 0
+End
+Text       disintegrate~
+Body      Disintegrate nao desintegra os corpos
+~
+Name      Henzo~
+IdNum     562
+Dated     1764439684
+Level     98
+Room      12769
 Flags     0 0 0 0
 End

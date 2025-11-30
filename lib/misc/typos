@@ -50,3 +50,23 @@ Level     80
 Room      13128
 Flags     0 0 0 0
 End
+Text      Shogun da Verdade~
+Body      "(67) Voc fura o Shogum da Verade." Corrigir o nome do mob
+~
+Name      Durandal~
+IdNum     734
+Dated     1762891791
+Level     96
+Room      15129
+Flags     0 0 0 0
+End
+Text       mercador nomade~
+Body      O mercador nomade falou telepaticamente com voce, 'Saia daqui antes quw eu chame OS GUARDAS!'
+~
+Name      Henzo~
+IdNum     562
+Dated     1763310510
+Level     79
+Room      5462
+Flags     0 0 0 0
+End
