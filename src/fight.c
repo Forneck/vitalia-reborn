@@ -381,9 +381,9 @@ static const char *get_element_name(int element)
         case ELEMENT_POISON:
             return "veneno";
         case ELEMENT_HOLY:
-            return "luz sagrada";
+            return "energia sagrada";
         case ELEMENT_UNHOLY:
-            return "trevas";
+            return "energia profana";
         case ELEMENT_MENTAL:
             return "energia mental";
         case ELEMENT_PHYSICAL:
@@ -464,11 +464,11 @@ static void send_aura_interaction_message(struct char_data *ch, struct char_data
                                  vic_elem);
                     } else {
                         snprintf(buf_char, sizeof(buf_char),
-                                 "Seus %s \tYdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                                 "Seus %s \tYdestroem\tn a barreira de $N com força amplificada!", att_elem);
                         snprintf(buf_vict, sizeof(buf_vict),
-                                 "Os %s de $n \tYdestrói\tn sua barreira com força amplificada!", att_elem);
+                                 "Os %s de $n \tYdestroem\tn sua barreira com força amplificada!", att_elem);
                         snprintf(buf_room, sizeof(buf_room),
-                                 "Os %s de $n \tYdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                                 "Os %s de $n \tYdestroem\tn a barreira de $N com força amplificada!", att_elem);
                     }
                     break;
                 case ELEMENT_POISON:
