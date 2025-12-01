@@ -331,6 +331,78 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
         }
     }
 
+    /* For AQ_OBJ_FIND and AQ_OBJ_RETURN quests, add zone name to quest description */
+    if ((QST_TYPE(rnum) == AQ_OBJ_FIND || QST_TYPE(rnum) == AQ_OBJ_RETURN) && QST_TARGET(rnum) != NOTHING) {
+        obj_rnum obj_rnum_val = real_object(QST_TARGET(rnum));
+
+        if (obj_rnum_val != NOTHING) {
+            zone_rnum found_zone = NOWHERE;
+            struct obj_data *obj_instance;
+
+            /* First, try to find an actual instance of this object in the world */
+            for (obj_instance = object_list; obj_instance; obj_instance = obj_instance->next) {
+                if (GET_OBJ_RNUM(obj_instance) == obj_rnum_val) {
+                    /* Check if object is in a room */
+                    if (obj_instance->in_room != NOWHERE) {
+                        found_zone = world[obj_instance->in_room].zone;
+                        break;
+                    }
+                    /* Check if carried by a mob in a valid room */
+                    if (obj_instance->carried_by && IS_NPC(obj_instance->carried_by) &&
+                        IN_ROOM(obj_instance->carried_by) != NOWHERE) {
+                        found_zone = world[IN_ROOM(obj_instance->carried_by)].zone;
+                        break;
+                    }
+                }
+            }
+
+            /* Fallback to questmaster's zone if no instance found */
+            if (found_zone == NOWHERE) {
+                mob_rnum qm_rnum = real_mobile(QST_MASTER(rnum));
+                if (qm_rnum != NOBODY) {
+                    struct char_data *qm_mob;
+                    for (qm_mob = character_list; qm_mob; qm_mob = qm_mob->next) {
+                        if (IS_NPC(qm_mob) && GET_MOB_RNUM(qm_mob) == qm_rnum && IN_ROOM(qm_mob) != NOWHERE) {
+                            found_zone = world[IN_ROOM(qm_mob)].zone;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (found_zone != NOWHERE && found_zone >= 0 && found_zone <= top_of_zone_table && zone_table) {
+                const char *zone_name = zone_table[found_zone].name;
+                const char *obj_name = obj_proto[obj_rnum_val].short_description;
+                snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\ty(%s em %s)\tn", info, obj_name, zone_name);
+                snprintf(buf, bufsize, "%s", temp_buf);
+                return buf;
+            }
+        }
+    }
+
+    /* For AQ_MOB_FIND quests, add zone name to quest description */
+    if (QST_TYPE(rnum) == AQ_MOB_FIND && QST_TARGET(rnum) != NOTHING) {
+        mob_rnum target_mob_rnum = real_mobile(QST_TARGET(rnum));
+
+        if (target_mob_rnum != NOBODY) {
+            /* Find the zone where this mob type can be found */
+            struct char_data *target_mob;
+            for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+                if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_mob_rnum &&
+                    IN_ROOM(target_mob) != NOWHERE) {
+                    zone_rnum zone = world[IN_ROOM(target_mob)].zone;
+                    if (zone != NOWHERE && zone >= 0 && zone <= top_of_zone_table && zone_table) {
+                        const char *zone_name = zone_table[zone].name;
+                        const char *mob_name = GET_NAME(&mob_proto[target_mob_rnum]);
+                        snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\ty(%s em %s)\tn", info, mob_name, zone_name);
+                        snprintf(buf, bufsize, "%s", temp_buf);
+                        return buf;
+                    }
+                }
+            }
+        }
+    }
+
     /* For bounty quests, add explicit information about the specific target */
     if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && ch && !IS_NPC(ch)) {
         if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {

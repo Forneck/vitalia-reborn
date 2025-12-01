@@ -1492,11 +1492,11 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs that is not GODROOM or HOUSE */
+                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, or PEACEFUL */
                     for (int r = zone_table[mob_zone].bot; r <= zone_table[mob_zone].top; r++) {
                         room_rnum real_r = real_room(r);
                         if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
-                            !ROOM_FLAGGED(real_r, ROOM_HOUSE)) {
+                            !ROOM_FLAGGED(real_r, ROOM_HOUSE) && !ROOM_FLAGGED(real_r, ROOM_PEACEFUL)) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
                                     dangerous_room = r;
