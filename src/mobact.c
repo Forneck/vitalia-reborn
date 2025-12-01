@@ -1010,12 +1010,12 @@ void mobile_activity(void)
                     struct char_data *questmaster =
                         get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (questmaster && GET_MOB_QUEST(ch) == NOTHING) {
-                        /* Procura por quests disponíveis neste questmaster */
-                        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+                        /* Find first quest available for mob's level range */
+                        qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
-                            /* Use mob_can_accept_quest_forced for goal-driven quest acceptance
-                             * This is deterministic (no random chance) since the goal was explicitly set */
+                            /* mob_can_accept_quest_forced provides additional validation (existing quest, escort quest
+                             * restrictions) */
                             if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
                                 set_mob_quest(ch, quest_rnum);
                                 act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
@@ -4197,8 +4197,8 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
 
     if (questmaster && questmaster != ch) {
-        /* Check if this questmaster has available quests for this mob */
-        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+        /* Find first quest available for mob's level range */
+        qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
         if (available_quest != NOTHING) {
             qst_rnum quest_rnum = real_quest(available_quest);
             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
