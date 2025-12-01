@@ -3293,6 +3293,11 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->goal_item_vnum = NOTHING;
     mob->ai_data->goal_target_mob_rnum = NOBODY;
 
+    /* Initialize quest field to NOTHING to indicate no active quest.
+     * This is critical for GOAL_ACCEPT_QUEST to work correctly, as the check
+     * GET_MOB_QUEST(ch) == NOTHING at mobact.c must pass for quest acceptance. */
+    mob->ai_data->current_quest = NOTHING;
+
     /* Initialize reputation to 40 to allow mobs to participate in trading and quests.
      * This value is at the threshold where quest reward penalties no longer apply (< 40 gets penalty),
      * placing mobs in the "average" reputation tier (40-59) with no modifiers. */
