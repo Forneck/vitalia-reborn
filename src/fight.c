@@ -123,6 +123,8 @@ static int get_aura_shield_aff(int spellnum)
             return AFF_MINDSHIELD;
         case SPELL_FORCESHIELD:
             return AFF_FORCESHIELD;
+        case SPELL_SOUNDBARRIER:
+            return AFF_SOUNDBARRIER;
         default:
             return -1;
     }
@@ -1432,8 +1434,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
        descriptive. If we are _not_ attacking with a weapon (i.e. a spell),
        always use skill_message. If we are attacking with a weapon: If this is
        a miss or a death blow, send a skill_message if one exists; if not,
-       default to a dam_message. Otherwise, always send a dam_message. */
-    if (!IS_WEAPON(attacktype))
+       default to a dam_message. Otherwise, always send a dam_message.
+       Note: Aura spells (MAG_AURA) skip skill_message since the new aura
+       reflection system in this file already sends custom messages. */
+    if (!IS_WEAPON(attacktype) && !is_aura_spell(attacktype))
         skill_message(dam, ch, victim, attacktype);
     else {
         if (GET_POS(victim) == POS_DEAD || dam == 0) {
