@@ -201,6 +201,159 @@ static float get_aura_reflect_ratio(int spellnum, int saved)
     }
 }
 
+/* Send element-specific aura reflection messages based on the aura spell type.
+ * Messages are styled after the old messages from lib/misc/messages file.
+ * ch = attacker (who receives reflected damage), victim = aura owner */
+static void send_aura_reflect_message(struct char_data *ch, struct char_data *victim, int aura_spell, int saved)
+{
+    switch (aura_spell) {
+        case SPELL_FIRESHIELD:
+            if (saved) {
+                act("A barreira de fogo de $N queima você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de fogo queima $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é queimad$r pela barreira de fogo de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de fogo de $N cozinha você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de fogo cozinha $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é cozinhad$r pela barreira de fogo de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_THISTLECOAT:
+            if (saved) {
+                act("A barreira de espinhos de $N arranha você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de espinhos arranha $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é arranhad$r pela barreira de espinhos de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de espinhos de $N rasga você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de espinhos rasga $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é rasgad$r pela barreira de espinhos de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_WINDWALL:
+            if (saved) {
+                act("A parede de vento de $N corta você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua parede de vento corta $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é cortad$r pela parede de vento de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A parede de vento de $N despedaça você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua parede de vento despedaça $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é despedaçad$r pela parede de vento de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_SOUNDBARRIER:
+            if (saved) {
+                act("A barreira sonora de $N atordoa você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira sonora atordoa $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é atordoad$r pela barreira sonora de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira sonora de $N ensurdece você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira sonora ensurdece $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é ensurdecid$r pela barreira sonora de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_WATERSHIELD:
+            if (saved) {
+                act("A barreira de água de $N encharca você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de água encharca $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é encharcad$r pela barreira de água de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de água de $N afoga você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de água afoga $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é afogad$r pela barreira de água de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_ROCKSHIELD:
+            if (saved) {
+                act("A barreira de pedra de $N esmaga você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de pedra esmaga $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é esmagad$r pela barreira de pedra de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de pedra de $N tritura você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de pedra tritura $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é triturad$r pela barreira de pedra de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_POISONSHIELD:
+            if (saved) {
+                act("A barreira venenosa de $N intoxica você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira venenosa intoxica $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é intoxicad$r pela barreira venenosa de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira venenosa de $N envenena você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira venenosa envenena $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é envenenad$r pela barreira venenosa de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_LIGHTNINGSHIELD:
+            if (saved) {
+                act("A barreira elétrica de $N choca você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira elétrica choca $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é chocad$r pela barreira elétrica de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira elétrica de $N eletrocuta você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira elétrica eletrocuta $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é eletrocutad$r pela barreira elétrica de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_ICESHIELD:
+            if (saved) {
+                act("A barreira de gelo de $N congela você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de gelo congela $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é congelad$r pela barreira de gelo de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de gelo de $N petrifica você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de gelo petrifica $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é petrificad$r pela barreira de gelo de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_ACIDSHIELD:
+            if (saved) {
+                act("A barreira ácida de $N corrói você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira ácida corrói $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é corroíd$r pela barreira ácida de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira ácida de $N derrete você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira ácida derrete $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é derretid$r pela barreira ácida de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_MINDSHIELD:
+            if (saved) {
+                act("A barreira mental de $N confunde você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira mental confunde $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é confundid$r pela barreira mental de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira mental de $N enlouquece você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira mental enlouquece $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é enlouquecid$r pela barreira mental de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        case SPELL_FORCESHIELD:
+            if (saved) {
+                act("A barreira de força de $N empurra você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de força empurra $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é empurrad$r pela barreira de força de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A barreira de força de $N arremessa você!! ARRGH!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua barreira de força arremessa $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("$n é arremessad$r pela barreira de força de $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+        default:
+            /* Fallback for any other aura spells */
+            if (saved) {
+                act("A aura de $N reflete parte do dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura de $N reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            } else {
+                act("A aura de $N reflete o dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
+                act("Sua aura reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
+                act("A aura de $N reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+            }
+            break;
+    }
+}
+
 /* Element interaction types */
 #define ELEM_NEUTRAL 0 /* No special interaction */
 #define ELEM_BEATS 1   /* Attacker element destroys defender */
@@ -1997,15 +2150,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 /* Display damage value if PRF_VIEWDAMAGE is set for victim (aura owner) */
                 if (GET_LEVEL(victim) >= LVL_IMMORT || PRF_FLAGGED(victim, PRF_VIEWDAMAGE))
                     send_to_char(victim, "(%d) ", reflect_dam);
-                if (saved) {
-                    act("A aura de $N reflete parte do dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
-                    act("Sua aura reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
-                    act("A aura de $N reflete parte do dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
-                } else {
-                    act("A aura de $N reflete o dano de volta para você!", FALSE, ch, 0, victim, TO_CHAR);
-                    act("Sua aura reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_VICT);
-                    act("A aura de $N reflete o dano de volta para $n!", FALSE, ch, 0, victim, TO_NOTVICT);
-                }
+                send_aura_reflect_message(ch, victim, victim_aura, saved);
                 damage(victim, ch, reflect_dam, victim_aura);
             }
 
