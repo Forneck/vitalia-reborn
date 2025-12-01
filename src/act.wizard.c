@@ -5798,6 +5798,21 @@ ACMD(do_ressucite)
     return;
 }
 
+/* Helper function to display mob quest information */
+static void display_mob_quest_info(struct char_data *ch, struct char_data *mob)
+{
+    if (GET_MOB_QUEST(mob) != NOTHING) {
+        qst_rnum quest_rnum = real_quest(GET_MOB_QUEST(mob));
+        if (quest_rnum != NOTHING) {
+            send_to_char(ch, "Current quest: %d (%s)\r\n", GET_MOB_QUEST(mob), QST_NAME(quest_rnum));
+            send_to_char(ch, "Quest timer: %d, Quest counter: %d\r\n", GET_MOB_QUEST_TIME(mob),
+                         GET_MOB_QUEST_COUNTER(mob));
+        } else {
+            send_to_char(ch, "Current quest: %d (INVALID - quest not found)\r\n", GET_MOB_QUEST(mob));
+        }
+    }
+}
+
 /*
  * Debug command to inspect mob wishlists
  */
@@ -5850,6 +5865,7 @@ ACMD(do_mwishlist)
                 if (mob->ai_data->goal_timer > 0) {
                     send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
                 }
+                display_mob_quest_info(ch, mob);
             }
         }
     } else {
@@ -5902,6 +5918,7 @@ ACMD(do_mwishlist)
         if (mob->ai_data->goal_timer > 0) {
             send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
         }
+        display_mob_quest_info(ch, mob);
     }
 }
 
