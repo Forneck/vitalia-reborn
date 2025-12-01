@@ -577,7 +577,7 @@ static const char *get_element_color_code(struct char_data *ch, int element)
     }
 }
 
-/* Get color code for school display (following weather command convention) */
+/* Get color code for school display (using same color mappings as weather command) */
 static const char *get_school_color_code(struct char_data *ch, int school)
 {
     switch (school) {
@@ -671,6 +671,7 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
                        pc_class_types[class_num]);
     }
 
+    /* Reserve space for each entry (name: 30 + level/element/school info: ~90 chars with colors) */
     for (i = 0; i < count && len < sizeof(buf) - 120; i++) {
         const char *element_color = get_element_color_code(ch, entries[i].element);
         const char *color_normal = CCNRM(ch, C_CMP);
