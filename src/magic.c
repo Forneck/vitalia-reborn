@@ -525,14 +525,27 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
                 is_harmful = 1;
             }
 
+            /* MAG_AURA spells are always protective/beneficial buffs */
+            if (spell->mag_flags & MAG_AURA) {
+                is_beneficial = 1;
+            }
+
             /* Check if spell has negative modifiers (debuffs) */
             for (i = 0; i < MAX_SPELL_AFFECTS; i++) {
-                if (af[i].modifier < 0 && af[i].location != APPLY_NONE) {
-                    is_harmful = 1;
-                }
-                /* Positive modifiers indicate beneficial spells */
-                else if (af[i].modifier > 0 && af[i].location != APPLY_NONE) {
-                    is_beneficial = 1;
+                if (af[i].location != APPLY_NONE) {
+                    /* Note: For AC, negative modifier is BENEFICIAL (lower AC = better defense)
+                     * For other stats, negative modifier is harmful */
+                    if (af[i].location == APPLY_AC) {
+                        if (af[i].modifier < 0)
+                            is_beneficial = 1;
+                        else if (af[i].modifier > 0)
+                            is_harmful = 1;
+                    } else {
+                        if (af[i].modifier < 0)
+                            is_harmful = 1;
+                        else if (af[i].modifier > 0)
+                            is_beneficial = 1;
+                    }
                 }
             }
 
