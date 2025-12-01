@@ -126,6 +126,34 @@ qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int nu
     return NOTHING;
 }
 
+/* Find the first available quest for a mob that matches level requirements.
+ * Unlike find_available_quest_by_qmnum, this checks level range compatibility.
+ * Returns quest vnum if found, NOTHING otherwise. */
+qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
+{
+    qst_rnum rnum;
+    int quest_completed, quest_repeatable;
+
+    if (!IS_NPC(mob))
+        return NOTHING;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (qm == QST_MASTER(rnum)) {
+            quest_completed = is_complete(mob, QST_NUM(rnum));
+            quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+
+            /* Only consider quest if it's available (not completed or repeatable) */
+            if (!quest_completed || quest_repeatable) {
+                /* Check if mob's level is within the quest's level range */
+                if (GET_LEVEL(mob) >= QST_MINLEVEL(rnum) && GET_LEVEL(mob) <= QST_MAXLEVEL(rnum)) {
+                    return QST_NUM(rnum);
+                }
+            }
+        }
+    }
+    return NOTHING;
+}
+
 /* Find quest by list position number in the global quest list - for immortals */
 qst_vnum find_quest_by_listnum(int num)
 {

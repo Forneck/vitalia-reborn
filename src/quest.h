@@ -108,6 +108,7 @@ qst_rnum real_quest(qst_vnum vnum);
 int is_complete(struct char_data *ch, qst_vnum vnum);
 qst_vnum find_quest_by_qmnum(struct char_data *ch, mob_rnum qm, int num);
 qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num);
+qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm);
 qst_vnum find_quest_by_listnum(int num);
 void add_completed_quest(struct char_data *ch, qst_vnum vnum);
 void remove_completed_quest(struct char_data *ch, qst_vnum vnum);
