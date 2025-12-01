@@ -2033,16 +2033,16 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
        default to a dam_message. Otherwise, always send a dam_message.
        Note: Aura spells (MAG_AURA) skip all messages here since the aura
        reflection system in this file already sends custom messages. */
-    if (is_aura_spell(attacktype)) {
-        /* Aura spells have custom messages - skip generic damage messages */
-    } else if (!IS_WEAPON(attacktype)) {
-        skill_message(dam, ch, victim, attacktype);
-    } else {
-        if (GET_POS(victim) == POS_DEAD || dam == 0) {
-            if (!skill_message(dam, ch, victim, attacktype))
-                dam_message(dam, ch, victim, attacktype);
+    if (!is_aura_spell(attacktype)) {
+        if (!IS_WEAPON(attacktype)) {
+            skill_message(dam, ch, victim, attacktype);
         } else {
-            dam_message(dam, ch, victim, attacktype);
+            if (GET_POS(victim) == POS_DEAD || dam == 0) {
+                if (!skill_message(dam, ch, victim, attacktype))
+                    dam_message(dam, ch, victim, attacktype);
+            } else {
+                dam_message(dam, ch, victim, attacktype);
+            }
         }
     }
 
