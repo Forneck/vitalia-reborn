@@ -372,7 +372,8 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
 
             if (found_zone != NOWHERE && found_zone >= 0 && found_zone <= top_of_zone_table && zone_table) {
                 const char *zone_name = zone_table[found_zone].name;
-                snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyZona: %s\tn", info, zone_name);
+                const char *obj_name = obj_proto[obj_rnum_val].short_description;
+                snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\ty(%s em %s)\tn", info, obj_name, zone_name);
                 snprintf(buf, bufsize, "%s", temp_buf);
                 return buf;
             }
@@ -392,7 +393,8 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                     zone_rnum zone = world[IN_ROOM(target_mob)].zone;
                     if (zone != NOWHERE && zone >= 0 && zone <= top_of_zone_table && zone_table) {
                         const char *zone_name = zone_table[zone].name;
-                        snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\tyZona: %s\tn", info, zone_name);
+                        const char *mob_name = GET_NAME(&mob_proto[target_mob_rnum]);
+                        snprintf(temp_buf, sizeof(temp_buf), "%s\r\n\ty(%s em %s)\tn", info, mob_name, zone_name);
                         snprintf(buf, bufsize, "%s", temp_buf);
                         return buf;
                     }
