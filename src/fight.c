@@ -360,6 +360,443 @@ static void send_aura_reflect_message(struct char_data *ch, struct char_data *vi
 #define ELEM_NULLIFY 2 /* Both elements cancel each other */
 #define ELEM_AMPLIFY 3 /* Attacker element is amplified against defender */
 
+/* Get element name in Portuguese for messages */
+static const char *get_element_name(int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return "fogo";
+        case ELEMENT_WATER:
+            return "água";
+        case ELEMENT_AIR:
+            return "vento";
+        case ELEMENT_EARTH:
+            return "pedra";
+        case ELEMENT_LIGHTNING:
+            return "raios";
+        case ELEMENT_ICE:
+            return "gelo";
+        case ELEMENT_ACID:
+            return "ácido";
+        case ELEMENT_POISON:
+            return "veneno";
+        case ELEMENT_HOLY:
+            return "luz sagrada";
+        case ELEMENT_UNHOLY:
+            return "trevas";
+        case ELEMENT_MENTAL:
+            return "energia mental";
+        case ELEMENT_PHYSICAL:
+            return "força";
+        default:
+            return "energia";
+    }
+}
+
+/* Send element-specific interaction messages when two aura shields clash.
+ * ch = attacker, victim = defender, interaction = type of interaction
+ * attacker_element/victim_element = the elements of the shields */
+static void send_aura_interaction_message(struct char_data *ch, struct char_data *victim, int interaction,
+                                          int attacker_element, int victim_element)
+{
+    char buf_char[256], buf_vict[256], buf_room[256];
+    const char *att_elem = get_element_name(attacker_element);
+    const char *vic_elem = get_element_name(victim_element);
+
+    switch (interaction) {
+        case ELEM_AMPLIFY:
+            /* Attacker's element is amplified against defender */
+            switch (attacker_element) {
+                case ELEMENT_FIRE:
+                    if (victim_element == ELEMENT_ICE) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua barreira de %s \tRderrete\tn o %s de $N com intensidade amplificada!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "A barreira de %s de $n \tRderrete\tn seu %s com intensidade amplificada!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A barreira de %s de $n \tRderrete\tn o %s de $N com intensidade amplificada!",
+                                 att_elem, vic_elem);
+                    } else if (victim_element == ELEMENT_AIR) {
+                        snprintf(buf_char, sizeof(buf_char), "O %s de $N alimenta sua barreira de %s, amplificando-a!",
+                                 vic_elem, att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "Seu %s alimenta a barreira de %s de $n, amplificando-a!",
+                                 vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "O %s de $N alimenta a barreira de %s de $n, amplificando-a!", vic_elem, att_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua barreira de %s \tRqueima\tn a barreira de $N com força amplificada!", att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "A barreira de %s de $n \tRqueima\tn sua barreira com força amplificada!", att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A barreira de %s de $n \tRqueima\tn a barreira de $N com força amplificada!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_WATER:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Sua barreira de %s \tBinunda\tn a barreira de $N com força amplificada!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "A barreira de %s de $n \tBinunda\tn sua barreira com força amplificada!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "A barreira de %s de $n \tBinunda\tn a barreira de $N com força amplificada!", att_elem);
+                    break;
+                case ELEMENT_ICE:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Sua barreira de %s \tCcongela\tn a barreira de $N com força amplificada!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "A barreira de %s de $n \tCcongela\tn sua barreira com força amplificada!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "A barreira de %s de $n \tCcongela\tn a barreira de $N com força amplificada!", att_elem);
+                    break;
+                case ELEMENT_LIGHTNING:
+                    if (victim_element == ELEMENT_WATER) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Seus %s \tYeletrocutam\tn a %s de $N com condutividade amplificada!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Os %s de $n \tYeletrocutam\tn sua %s com condutividade amplificada!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "Os %s de $n \tYeletrocutam\tn a %s de $N com condutividade amplificada!", att_elem,
+                                 vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Seus %s \tYdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Os %s de $n \tYdestrói\tn sua barreira com força amplificada!", att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "Os %s de $n \tYdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                    }
+                    break;
+                case ELEMENT_POISON:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Seu %s se \tGespalha\tn pela barreira de $N com força amplificada!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "O %s de $n se \tGespalha\tn pela sua barreira com força amplificada!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "O %s de $n se \tGespalha\tn pela barreira de $N com força amplificada!", att_elem);
+                    break;
+                case ELEMENT_ACID:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Seu %s \tgdissolve\tn a barreira de $N com força amplificada!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "O %s de $n \tgdissolve\tn sua barreira com força amplificada!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "O %s de $n \tgdissolve\tn a barreira de $N com força amplificada!", att_elem);
+                    break;
+                case ELEMENT_HOLY:
+                    snprintf(buf_char, sizeof(buf_char), "Sua %s \tWpurifica\tn as %s de $N com força amplificada!",
+                             att_elem, vic_elem);
+                    snprintf(buf_vict, sizeof(buf_vict), "A %s de $n \tWpurifica\tn suas %s com força amplificada!",
+                             att_elem, vic_elem);
+                    snprintf(buf_room, sizeof(buf_room), "A %s de $n \tWpurifica\tn as %s de $N com força amplificada!",
+                             att_elem, vic_elem);
+                    break;
+                case ELEMENT_UNHOLY:
+                    snprintf(buf_char, sizeof(buf_char), "Suas %s \tDcorrompem\tn a %s de $N com força amplificada!",
+                             att_elem, vic_elem);
+                    snprintf(buf_vict, sizeof(buf_vict), "As %s de $n \tDcorrompem\tn sua %s com força amplificada!",
+                             att_elem, vic_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "As %s de $n \tDcorrompem\tn a %s de $N com força amplificada!", att_elem, vic_elem);
+                    break;
+                default:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Sua barreira de %s \tRdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "A barreira de %s de $n \tRdestrói\tn sua barreira com força amplificada!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "A barreira de %s de $n \tRdestrói\tn a barreira de $N com força amplificada!", att_elem);
+                    break;
+            }
+            break;
+
+        case ELEM_BEATS:
+            /* Attacker's element beats defender's */
+            switch (attacker_element) {
+                case ELEMENT_FIRE:
+                    if (victim_element == ELEMENT_EARTH) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tRqueima\tn os espinhos de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tRqueima\tn seus espinhos!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tRqueima\tn os espinhos de $N!",
+                                 att_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tRqueima\tn a barreira de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tRqueima\tn sua barreira!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tRqueima\tn a barreira de $N!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_WATER:
+                    if (victim_element == ELEMENT_FIRE) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tBapaga\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tBapaga\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tBapaga\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                    } else if (victim_element == ELEMENT_ACID) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tBdilui\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tBdilui\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tBdilui\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tBinunda\tn a barreira de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tBinunda\tn sua barreira!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tBinunda\tn a barreira de $N!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_ICE:
+                    if (victim_element == ELEMENT_LIGHTNING) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tCdesacelera\tn os %s de $N!",
+                                 att_elem, vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tCdesacelera\tn seus %s!",
+                                 att_elem, vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tCdesacelera\tn os %s de $N!",
+                                 att_elem, vic_elem);
+                    } else if (victim_element == ELEMENT_AIR) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tCcongela\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tCcongela\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tCcongela\tn o %s de $N!",
+                                 att_elem, vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tCcongela\tn a barreira de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tCcongela\tn sua barreira!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tCcongela\tn a barreira de $N!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_AIR:
+                    if (victim_element == ELEMENT_POISON) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tCdispersa\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tCdispersa\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tCdispersa\tn o %s de $N!",
+                                 att_elem, vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tCdispersa\tn a barreira de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tCdispersa\tn sua barreira!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tCdispersa\tn a barreira de $N!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_EARTH:
+                    if (victim_element == ELEMENT_AIR) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tybloqueia\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tybloqueia\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tybloqueia\tn o %s de $N!",
+                                 att_elem, vic_elem);
+                    } else if (victim_element == ELEMENT_LIGHTNING) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tyaterra\tn os %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tyaterra\tn seus %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tyaterra\tn os %s de $N!",
+                                 att_elem, vic_elem);
+                    } else if (victim_element == ELEMENT_POISON) {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tyabsorve\tn o %s de $N!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tyabsorve\tn seu %s!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tyabsorve\tn o %s de $N!",
+                                 att_elem, vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \tyesmaga\tn a barreira de $N!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \tyesmaga\tn sua barreira!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \tyesmaga\tn a barreira de $N!",
+                                 att_elem);
+                    }
+                    break;
+                case ELEMENT_MENTAL:
+                    snprintf(buf_char, sizeof(buf_char), "Sua %s \tMdomina\tn a barreira de $N!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict), "A %s de $n \tMdomina\tn sua barreira!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room), "A %s de $n \tMdomina\tn a barreira de $N!", att_elem);
+                    break;
+                case ELEMENT_PHYSICAL:
+                    snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s \twdestrói\tn a barreira de $N!",
+                             att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n \twdestrói\tn sua barreira!",
+                             att_elem);
+                    snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n \twdestrói\tn a barreira de $N!",
+                             att_elem);
+                    break;
+                default:
+                    snprintf(buf_char, sizeof(buf_char), "Sua barreira de %s destrói a barreira de $N!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict), "A barreira de %s de $n destrói sua barreira!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room), "A barreira de %s de $n destrói a barreira de $N!", att_elem);
+                    break;
+            }
+            break;
+
+        case ELEM_NULLIFY:
+            /* Both elements cancel each other */
+            switch (attacker_element) {
+                case ELEMENT_FIRE:
+                    if (victim_element == ELEMENT_WATER) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Seu %s e a %s de $N se \tYanulam\tn em uma nuvem de vapor!", att_elem, vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua %s e o %s de $n se \tYanulam\tn em uma nuvem de vapor!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "O %s de $n e a %s de $N se \tYanulam\tn em uma nuvem de vapor!", att_elem, vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua barreira de %s e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua barreira e a barreira de %s de $n se \tYanulam\tn mutuamente!", att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A barreira de %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                case ELEMENT_WATER:
+                    if (victim_element == ELEMENT_FIRE) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua %s e o %s de $N se \tYanulam\tn em uma nuvem de vapor!", att_elem, vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Seu %s e a %s de $n se \tYanulam\tn em uma nuvem de vapor!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $n e o %s de $N se \tYanulam\tn em uma nuvem de vapor!", att_elem, vic_elem);
+                    } else if (victim_element == ELEMENT_LIGHTNING) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua %s conduz mas dispersa os %s de $N, \tYanulando\tn ambas as barreiras!", att_elem,
+                                 vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Seus %s são conduzidos mas dispersos pela %s de $n, \tYanulando\tn ambas!", vic_elem,
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $n conduz mas dispersa os %s de $N, \tYanulando\tn ambas as barreiras!",
+                                 att_elem, vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Sua barreira de %s e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua barreira e a barreira de %s de $n se \tYanulam\tn mutuamente!", att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A barreira de %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                case ELEMENT_LIGHTNING:
+                    if (victim_element == ELEMENT_EARTH) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "A %s de $N aterra seus %s, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua %s aterra os %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $N aterra os %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem,
+                                 att_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Seus %s e a barreira de $N se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "Sua barreira e os %s de $n se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "Os %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                case ELEMENT_AIR:
+                    if (victim_element == ELEMENT_EARTH) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "A %s de $N bloqueia seu %s, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua %s bloqueia o %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $N bloqueia o %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem,
+                                 att_elem);
+                    } else if (victim_element == ELEMENT_POISON) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "Seu %s dispersa o %s de $N, \tYanulando\tn ambas as barreiras!", att_elem, vic_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "O %s de $n dispersa seu %s, \tYanulando\tn ambas as barreiras!", att_elem, vic_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "O %s de $n dispersa o %s de $N, \tYanulando\tn ambas as barreiras!", att_elem,
+                                 vic_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Seu %s e a barreira de $N se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "Sua barreira e o %s de $n se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "O %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                case ELEMENT_EARTH:
+                    if (victim_element == ELEMENT_WATER) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "A %s de $N erode sua %s, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua %s erode a %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $N erode a %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Sua %s e a barreira de $N se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "Sua barreira e a %s de $n se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                case ELEMENT_ACID:
+                    if (victim_element == ELEMENT_WATER) {
+                        snprintf(buf_char, sizeof(buf_char),
+                                 "A %s de $N dilui seu %s, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict),
+                                 "Sua %s dilui o %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "A %s de $N dilui o %s de $n, \tYanulando\tn ambas as barreiras!", vic_elem, att_elem);
+                    } else {
+                        snprintf(buf_char, sizeof(buf_char), "Seu %s e a barreira de $N se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_vict, sizeof(buf_vict), "Sua barreira e o %s de $n se \tYanulam\tn mutuamente!",
+                                 att_elem);
+                        snprintf(buf_room, sizeof(buf_room),
+                                 "O %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    }
+                    break;
+                default:
+                    snprintf(buf_char, sizeof(buf_char),
+                             "Sua barreira de %s e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    snprintf(buf_vict, sizeof(buf_vict),
+                             "Sua barreira e a barreira de %s de $n se \tYanulam\tn mutuamente!", att_elem);
+                    snprintf(buf_room, sizeof(buf_room),
+                             "A barreira de %s de $n e a barreira de $N se \tYanulam\tn mutuamente!", att_elem);
+                    break;
+            }
+            break;
+
+        default:
+            /* Neutral or unknown - no special message (avoid spam) */
+            return;
+    }
+
+    act(buf_char, FALSE, ch, 0, victim, TO_CHAR);
+    act(buf_vict, FALSE, ch, 0, victim, TO_VICT);
+    act(buf_room, FALSE, ch, 0, victim, TO_NOTVICT);
+}
+
 /* Check elemental interaction between two elements
  * Returns: ELEM_NEUTRAL (0), ELEM_BEATS (1), ELEM_NULLIFY (2), or ELEM_AMPLIFY (3) */
 static int get_element_interaction(int attacker_element, int defender_element)
@@ -2318,42 +2755,26 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
         /* Handle different element interactions */
         if (interaction == ELEM_AMPLIFY) {
             /* Attacker's element is amplified - destroys victim's shield with extra effect */
-            act("Sua aura elemental \tRdestrói\tn a barreira de $N com força amplificada!", FALSE, ch, 0, victim,
-                TO_CHAR);
-            act("A aura elemental de $n \tRdestrói\tn sua barreira com força amplificada!", FALSE, ch, 0, victim,
-                TO_VICT);
-            act("A aura elemental de $n \tRdestrói\tn a barreira de $N com força amplificada!", FALSE, ch, 0, victim,
-                TO_NOTVICT);
+            send_aura_interaction_message(ch, victim, interaction, attacker_element, victim_element);
             affect_from_char(victim, victim_spell);
         } else if (interaction == ELEM_BEATS) {
             /* Attacker's element beats victim's - destroys victim's shield */
-            act("Sua aura elemental destrói a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
-            act("A aura elemental de $n destrói sua barreira!", FALSE, ch, 0, victim, TO_VICT);
-            act("A aura elemental de $n destrói a barreira de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            send_aura_interaction_message(ch, victim, interaction, attacker_element, victim_element);
             affect_from_char(victim, victim_spell);
         } else if (interaction == ELEM_NULLIFY) {
             /* Elements nullify each other - both shields are removed */
-            act("Sua aura e a barreira de $N se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_CHAR);
-            act("Sua barreira e a aura de $n se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_VICT);
-            act("As auras de $n e $N se \tYanulam\tn mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+            send_aura_interaction_message(ch, victim, interaction, attacker_element, victim_element);
             affect_from_char(ch, attacker_spell);
             affect_from_char(victim, victim_spell);
         } else {
             /* Check reverse interaction (victim vs attacker) */
             int reverse_interaction = get_element_interaction(victim_element, attacker_element);
             if (reverse_interaction == ELEM_AMPLIFY || reverse_interaction == ELEM_BEATS) {
-                act("A barreira de $N destrói sua aura elemental!", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua barreira destrói a aura elemental de $n!", FALSE, ch, 0, victim, TO_VICT);
-                act("A barreira de $N destrói a aura elemental de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Victim's element beats/amplifies against attacker's - send reversed message */
+                send_aura_interaction_message(victim, ch, reverse_interaction, victim_element, attacker_element);
                 affect_from_char(ch, attacker_spell);
             }
-            /* True neutral interaction: shields do not interact */
-            else {
-                act("Sua aura elemental e a barreira de $N não interagem.", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua barreira e a aura elemental de $n não interagem.", FALSE, ch, 0, victim, TO_VICT);
-                act("A aura elemental de $n e a barreira de $N não interagem.", FALSE, ch, 0, victim, TO_NOTVICT);
-                /* Nenhuma barreira é removida */
-            }
+            /* True neutral interaction: shields do not interact (no message to avoid spam) */
         }
     }
     /* check if the victim has a hitprcnt trigger */
