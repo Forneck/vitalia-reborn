@@ -263,6 +263,9 @@ void gedit_parse(struct descriptor_data *d, char *arg)
                         write_to_output(d, "Do you wish to save your changes? : ");
                         OLC_MODE(d) = GEDIT_CONFIRM_SAVE;
                     } else {
+                        /* Clear OLC_MOB before cleanup - GEDIT uses a pointer to a live mob,
+                         * not a copy like medit. We must not free the live mob. */
+                        OLC_MOB(d) = NULL;
                         cleanup_olc(d, CLEANUP_ALL);
                     }
                     return;
@@ -471,6 +474,9 @@ void gedit_parse(struct descriptor_data *d, char *arg)
                     write_to_output(d, "Invalid choice! Please enter 'Y' or 'N': ");
                     return;
             }
+            /* Clear OLC_MOB before cleanup - GEDIT uses a pointer to a live mob,
+             * not a copy like medit. We must not free the live mob. */
+            OLC_MOB(d) = NULL;
             cleanup_olc(d, CLEANUP_ALL);
             return;
 

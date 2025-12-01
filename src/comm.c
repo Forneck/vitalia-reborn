@@ -2371,6 +2371,13 @@ void close_socket(struct descriptor_data *d)
         case CON_SPEDIT:
             cleanup_olc(d, CLEANUP_ALL);
             break;
+        case CON_GEDIT:
+            /* GEDIT uses a pointer to a live mob, not a copy like medit.
+             * We must clear OLC_MOB to prevent freeing the live mob. */
+            if (d->olc)
+                OLC_MOB(d) = NULL;
+            cleanup_olc(d, CLEANUP_ALL);
+            break;
         default:
             break;
     }
