@@ -1754,6 +1754,12 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 
     w_type -= TYPE_HIT; /* Change to base of table with text */
 
+    /* Bounds check to prevent segfault from invalid attack types */
+    if (w_type < 0 || w_type >= NUM_ATTACK_TYPES) {
+        log1("SYSERR: dam_message called with invalid w_type %d (original: %d)", w_type, w_type + TYPE_HIT);
+        return;
+    }
+
     int vh = GET_MAX_HIT(victim);
 
     if (dam == 0)
@@ -2025,16 +2031,18 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
        always use skill_message. If we are attacking with a weapon: If this is
        a miss or a death blow, send a skill_message if one exists; if not,
        default to a dam_message. Otherwise, always send a dam_message.
-       Note: Aura spells (MAG_AURA) skip skill_message since the new aura
+       Note: Aura spells (MAG_AURA) skip all messages here since the aura
        reflection system in this file already sends custom messages. */
-    if (!IS_WEAPON(attacktype) && !is_aura_spell(attacktype))
-        skill_message(dam, ch, victim, attacktype);
-    else {
-        if (GET_POS(victim) == POS_DEAD || dam == 0) {
-            if (!skill_message(dam, ch, victim, attacktype))
-                dam_message(dam, ch, victim, attacktype);
+    if (!is_aura_spell(attacktype)) {
+        if (!IS_WEAPON(attacktype)) {
+            skill_message(dam, ch, victim, attacktype);
         } else {
-            dam_message(dam, ch, victim, attacktype);
+            if (GET_POS(victim) == POS_DEAD || dam == 0) {
+                if (!skill_message(dam, ch, victim, attacktype))
+                    dam_message(dam, ch, victim, attacktype);
+            } else {
+                dam_message(dam, ch, victim, attacktype);
+            }
         }
     }
 
