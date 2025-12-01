@@ -533,6 +533,7 @@ struct spell_level_entry {
     char *name;
     int level;
     int element;
+    int school;
 };
 
 /* Comparison function for qsort */
@@ -571,6 +572,31 @@ static const char *get_element_color_code(struct char_data *ch, int element)
             return CCMAG(ch, C_CMP); /* Magenta for Mental */
         case ELEMENT_PHYSICAL:
             return CCWHT(ch, C_CMP); /* White for Physical */
+        default:
+            return CCNRM(ch, C_CMP); /* Normal for Undefined */
+    }
+}
+
+/* Get color code for school display (following weather command convention) */
+static const char *get_school_color_code(struct char_data *ch, int school)
+{
+    switch (school) {
+        case SCHOOL_EVOCATION:
+            return CBRED(ch, C_CMP); /* Bright Red for Evocation */
+        case SCHOOL_CONJURATION:
+            return CBGRN(ch, C_CMP); /* Bright Green for Conjuration */
+        case SCHOOL_ILLUSION:
+            return CBMAG(ch, C_CMP); /* Bright Magenta for Illusion */
+        case SCHOOL_DIVINATION:
+            return CBCYN(ch, C_CMP); /* Bright Cyan for Divination */
+        case SCHOOL_NECROMANCY:
+            return CBBLK(ch, C_CMP); /* Bright Black for Necromancy */
+        case SCHOOL_ENCHANTMENT:
+            return CBYEL(ch, C_CMP); /* Bright Yellow for Enchantment */
+        case SCHOOL_ABJURATION:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Abjuration */
+        case SCHOOL_ALTERATION:
+            return CBWHT(ch, C_CMP); /* Bright White for Alteration */
         default:
             return CCNRM(ch, C_CMP); /* Normal for Undefined */
     }
@@ -622,6 +648,7 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
                 entries[i].name = ptr->name;
                 entries[i].level = level;
                 entries[i].element = ptr->element;
+                entries[i].school = ptr->school;
                 i++;
             }
         }
@@ -644,13 +671,23 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
                        pc_class_types[class_num]);
     }
 
-    for (i = 0; i < count && len < sizeof(buf) - 80; i++) {
+    for (i = 0; i < count && len < sizeof(buf) - 120; i++) {
         const char *element_color = get_element_color_code(ch, entries[i].element);
         const char *color_normal = CCNRM(ch, C_CMP);
         const char *element_name = get_spell_element_name(entries[i].element);
 
-        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s]\r\n", entries[i].name,
-                        entries[i].level, element_color, element_name, color_normal);
+        /* For SPELL and CHANSON types, also display the school */
+        if (type == SPELL || type == CHANSON) {
+            const char *school_color = get_school_color_code(ch, entries[i].school);
+            const char *school_name = get_spell_school_name(entries[i].school);
+
+            len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s] [%s%s%s]\r\n",
+                            entries[i].name, entries[i].level, element_color, element_name, color_normal, school_color,
+                            school_name, color_normal);
+        } else {
+            len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s]\r\n", entries[i].name,
+                            entries[i].level, element_color, element_name, color_normal);
+        }
     }
 
     page_string(ch->desc, buf, TRUE);
