@@ -2970,6 +2970,14 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
                 act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
+
+            /* Não posta quest para itens do tipo KEY (chaves) */
+            if (GET_OBJ_TYPE(&obj_proto[target_obj_rnum]) == ITEM_KEY) {
+                log1("EXPLORATION QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), target_vnum,
+                     target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
         }
     } else if (quest_type == AQ_MOB_FIND && target_vnum != NOTHING) {
         target_mob_rnum = real_mobile(target_vnum);
@@ -3230,14 +3238,25 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
                     continue;
 
                 if (IS_NPC(mob_instance) && GET_MOB_VNUM(mob_instance) == target_vnum) {
-                    /* Found an instance - check if it's in a shop room */
+                    /* Found an instance - check if it's in a shop room or peaceful room */
                     /* Safety check: validate room index before accessing world array */
                     if (IN_ROOM(mob_instance) != NOWHERE && IN_ROOM(mob_instance) >= 0 &&
-                        IN_ROOM(mob_instance) <= top_of_world && is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
-                        log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
-                             GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
-                        act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
-                        return;
+                        IN_ROOM(mob_instance) <= top_of_world) {
+                        if (is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
+                            log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
+                                 GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                            act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0,
+                                TO_ROOM);
+                            return;
+                        }
+                        /* Don't post MOB_SAVE quest for mobs in peaceful rooms - violence not allowed */
+                        if (ROOM_FLAGGED(IN_ROOM(mob_instance), ROOM_PEACEFUL)) {
+                            log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in peaceful room %d",
+                                 GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                            act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0,
+                                TO_ROOM);
+                            return;
+                        }
                     }
                 }
             }
@@ -3245,9 +3264,9 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     } else if (quest_type == AQ_ROOM_CLEAR) {
         target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
-            /* Não posta quest para salas GODROOM, player houses ou shop rooms */
+            /* Não posta quest para salas GODROOM, player houses, shop rooms ou peaceful rooms */
             if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE) ||
-                is_shop_room(target_vnum)) {
+                ROOM_FLAGGED(target_room_rnum, ROOM_PEACEFUL) || is_shop_room(target_vnum)) {
                 log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
@@ -4096,6 +4115,12 @@ void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, ob
         item_rnum = real_object(item_vnum);
         if (item_rnum != NOTHING) {
             item_name = obj_proto[item_rnum].short_description;
+
+            /* Don't post quest for key items */
+            if (GET_OBJ_TYPE(&obj_proto[item_rnum]) == ITEM_KEY) {
+                log1("DELIVERY QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), item_vnum, item_name);
+                return;
+            }
         }
     }
 
@@ -4232,6 +4257,12 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
             if (!CAN_WEAR(&obj_proto[item_rnum], ITEM_WEAR_TAKE)) {
                 log1("RESOURCE QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), item_vnum,
                      item_name);
+                return;
+            }
+
+            /* Don't post quest for key items */
+            if (GET_OBJ_TYPE(&obj_proto[item_rnum]) == ITEM_KEY) {
+                log1("RESOURCE QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), item_vnum, item_name);
                 return;
             }
         }
@@ -4507,6 +4538,12 @@ void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quan
     }
     item_name = obj_proto[item_rnum].short_description;
 
+    /* Don't post quest for key items */
+    if (GET_OBJ_TYPE(&obj_proto[item_rnum]) == ITEM_KEY) {
+        log1("SHOP BUY QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), item_vnum, item_name);
+        return;
+    }
+
     /* Check if we can add another quest */
     if (!can_add_mob_posted_quest()) {
         log1("SHOP BUY QUEST: %s cannot post quest - quest limit reached", GET_NAME(ch));
@@ -4647,6 +4684,12 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
         return;
     }
     item_name = obj_proto[item_rnum].short_description;
+
+    /* Don't post quest for key items */
+    if (GET_OBJ_TYPE(&obj_proto[item_rnum]) == ITEM_KEY) {
+        log1("SHOP SELL QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), item_vnum, item_name);
+        return;
+    }
 
     /* Check if we can add another quest */
     if (!can_add_mob_posted_quest()) {
