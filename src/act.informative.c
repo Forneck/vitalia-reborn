@@ -1091,9 +1091,9 @@ void look_at_room(struct char_data *ch, int ignore_brief)
                 break;
         }
 
-        send_to_char(ch, "%sA densidade mágica aqui está %s%s%s.\r\n", CCMAG(ch, C_CMP), density_color, density_desc, CCNRM(ch, C_CMP));
+        send_to_char(ch, "%sA densidade mágica aqui está %s%s%s.\r\n", CCMAG(ch, C_CMP), density_color, density_desc,
+                     CCNRM(ch, C_CMP));
     }
-
 
     /* autoexits */
     if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
@@ -1795,30 +1795,30 @@ static const char *get_weather_element_color(struct char_data *ch, int element)
 {
     switch (element) {
         case ELEMENT_FIRE:
-            return CBRED(ch, C_NRM);
+            return CBRED(ch, C_CMP);
         case ELEMENT_WATER:
         case ELEMENT_ICE:
-            return CBBLU(ch, C_NRM);
+            return CBBLU(ch, C_CMP);
         case ELEMENT_AIR:
-            return CBWHT(ch, C_NRM);
+            return CBWHT(ch, C_CMP);
         case ELEMENT_EARTH:
-            return CCYEL(ch, C_NRM);
+            return CCYEL(ch, C_CMP);
         case ELEMENT_LIGHTNING:
-            return CBCYN(ch, C_NRM);
+            return CBCYN(ch, C_CMP);
         case ELEMENT_ACID:
-            return CBGRN(ch, C_NRM);
+            return CBGRN(ch, C_CMP);
         case ELEMENT_POISON:
-            return CCGRN(ch, C_NRM);
+            return CCGRN(ch, C_CMP);
         case ELEMENT_HOLY:
-            return CBYEL(ch, C_NRM);
+            return CBYEL(ch, C_CMP);
         case ELEMENT_UNHOLY:
-            return CBMAG(ch, C_NRM);
+            return CBMAG(ch, C_CMP);
         case ELEMENT_MENTAL:
-            return CCMAG(ch, C_NRM);
+            return CCMAG(ch, C_CMP);
         case ELEMENT_PHYSICAL:
-            return CCWHT(ch, C_NRM);
+            return CCWHT(ch, C_CMP);
         default:
-            return CCNRM(ch, C_NRM);
+            return CCNRM(ch, C_CMP);
     }
 }
 
@@ -1827,23 +1827,23 @@ static const char *get_weather_school_color(struct char_data *ch, int school)
 {
     switch (school) {
         case SCHOOL_EVOCATION:
-            return CBRED(ch, C_NRM);
+            return CBRED(ch, C_CMP);
         case SCHOOL_CONJURATION:
-            return CBGRN(ch, C_NRM);
+            return CBGRN(ch, C_CMP);
         case SCHOOL_ILLUSION:
-            return CBMAG(ch, C_NRM);
+            return CBMAG(ch, C_CMP);
         case SCHOOL_DIVINATION:
-            return CBCYN(ch, C_NRM);
+            return CBCYN(ch, C_CMP);
         case SCHOOL_NECROMANCY:
-            return CBBLK(ch, C_NRM);
+            return CBBLK(ch, C_CMP);
         case SCHOOL_ENCHANTMENT:
-            return CBYEL(ch, C_NRM);
+            return CBYEL(ch, C_CMP);
         case SCHOOL_ABJURATION:
-            return CBBLU(ch, C_NRM);
+            return CBBLU(ch, C_CMP);
         case SCHOOL_ALTERATION:
-            return CBWHT(ch, C_NRM);
+            return CBWHT(ch, C_CMP);
         default:
-            return CCNRM(ch, C_NRM);
+            return CCNRM(ch, C_CMP);
     }
 }
 
