@@ -243,6 +243,7 @@ static void qedit_disp_menu(struct descriptor_data *d)
     char quest_flags[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
     char targetname[MAX_STRING_LENGTH];
     mob_vnum return_mob;
+    qst_rnum next_rnum, prev_rnum;
 
     quest = OLC_QUEST(d);
 
@@ -277,6 +278,9 @@ static void qedit_disp_menu(struct descriptor_data *d)
             snprintf(targetname, sizeof(targetname), "Unknown");
             break;
     }
+    /* Pre-compute quest rnums to avoid double lookup and potential invalid access */
+    next_rnum = (quest->next_quest != NOTHING) ? real_quest(quest->next_quest) : NOTHING;
+    prev_rnum = (quest->prev_quest != NOTHING) ? real_quest(quest->prev_quest) : NOTHING;
     write_to_output(
         d,
         "-- Quest Number    : \tn[\tc%6d\tn]\r\n"
@@ -316,9 +320,8 @@ static void qedit_disp_menu(struct descriptor_data *d)
         : real_object(quest->prereq) == NOTHING ? "an unknown object"
                                                 : obj_proto[real_object(quest->prereq)].short_description,
         quest->value[4], quest->next_quest == NOTHING ? -1 : quest->next_quest,
-        real_quest(quest->next_quest) == NOTHING ? "" : QST_DESC(real_quest(quest->next_quest)),
-        quest->prev_quest == NOTHING ? -1 : quest->prev_quest,
-        real_quest(quest->prev_quest) == NOTHING ? "" : QST_DESC(real_quest(quest->prev_quest)));
+        next_rnum == NOTHING ? "" : QST_DESC(next_rnum), quest->prev_quest == NOTHING ? -1 : quest->prev_quest,
+        prev_rnum == NOTHING ? "" : QST_DESC(prev_rnum));
     OLC_MODE(d) = QEDIT_MAIN_MENU;
 }
 /* For quest type.  */

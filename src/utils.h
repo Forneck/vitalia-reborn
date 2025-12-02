@@ -829,7 +829,10 @@ void char_from_furniture(struct char_data *ch);
 #define GET_NUM_QUESTS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_completed_quests))
 /** The type of quest ch is currently participating in. */
 #define GET_QUEST_TYPE(ch)                                                                                             \
-    (real_quest(GET_QUEST((ch))) != NOTHING ? aquest_table[real_quest(GET_QUEST((ch)))].type : AQ_UNDEFINED)
+    ({                                                                                                                 \
+        qst_rnum _rnum = real_quest(GET_QUEST((ch)));                                                                  \
+        (_rnum != NOTHING) ? aquest_table[_rnum].type : AQ_UNDEFINED;                                                  \
+    })
 
 /** The current skill level of ch for skill i. */
 #define GET_SKILL(ch, i)                                                                                               \
