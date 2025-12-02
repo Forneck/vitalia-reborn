@@ -4653,6 +4653,11 @@ void mob_process_wishlist_goals(struct char_data *ch)
                 ch->ai_data->goal_timer = 0;
                 return;
             }
+        } else {
+            /* Quest no longer exists in quest table - was deleted.
+             * Clear the mob's quest reference to prevent freeze/lag. */
+            clear_mob_quest(ch);
+            log1("QUEST FIX: Cleared invalid quest vnum %d from mob %s", GET_MOB_QUEST(ch), GET_NAME(ch));
         }
     }
 

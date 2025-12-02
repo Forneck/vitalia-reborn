@@ -136,11 +136,20 @@ int delete_quest(qst_rnum rnum)
     qst_rnum i;
     zone_rnum rznum;
     mob_vnum qm = QST_MASTER(rnum);
+    qst_vnum vnum;
     SPECIAL(*tempfunc);
     int quests_remaining = 0;
 
     if (rnum >= total_quests)
         return FALSE;
+
+    /* Save the vnum before modifying the table - we need it to clear entities */
+    vnum = QST_NUM(rnum);
+
+    /* Clear this quest from all mobs and players before deleting it.
+     * This prevents freezes when entities try to complete quests that no longer exist. */
+    clear_quest_from_all_entities(vnum);
+
     /* Try to determine zone based on questmaster mob first */
     if (QST_MASTER(rnum) != NOBODY) {
         rznum = real_zone_by_thing(QST_MASTER(rnum));
