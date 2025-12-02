@@ -2518,7 +2518,7 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    act("$n parece desapontado.", TRUE, mob, 0, 0, TO_ROOM);
+    act("$n parece desapontado.", TRUE, mob, NULL, NULL, TO_ROOM);
 
     /* Note: Failed quests remain in the queue so another player or mob can try them */
 }
@@ -2788,11 +2788,11 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
             if (vict && IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
                 /* Check if the object is now in the target mob's inventory */
                 struct obj_data *obj_check;
-                bool has_object = false;
+                bool has_object = FALSE;
 
                 for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
                     if (obj_check == object) {
-                        has_object = true;
+                        has_object = TRUE;
                         break;
                     }
                 }
