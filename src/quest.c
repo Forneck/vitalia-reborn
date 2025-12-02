@@ -70,7 +70,7 @@ qst_rnum real_quest(qst_vnum vnum)
 
     /* Perform binary search on quest table (sorted by vnum) */
     while (bot <= top) {
-        mid = (bot + top) / 2;
+        mid = bot + (top - bot) / 2;
 
         if (QST_NUM(mid) == vnum)
             return (mid);
