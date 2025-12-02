@@ -2664,8 +2664,11 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
         return;
 
     rnum = real_quest(vnum);
-    if (rnum == NOTHING)
+    if (rnum == NOTHING) {
+        /* Quest no longer exists - was deleted. Clear the mob's quest reference. */
+        clear_mob_quest(ch);
         return;
+    }
 
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
@@ -3846,5 +3849,55 @@ void check_and_fail_quest_with_magic_stone(struct char_data *ch)
         /* Clear the quest */
         clear_quest(ch);
         save_char(ch);
+    }
+}
+
+/* Clear a quest from all mobs and players when it is deleted from the system.
+ * This prevents freezes/infinite loops when entities try to complete quests
+ * that no longer exist in the quest table. Called from delete_quest() in genqst.c. */
+void clear_quest_from_all_entities(qst_vnum vnum)
+{
+    struct char_data *ch, *next_ch;
+    int mobs_cleared = 0;
+    int players_cleared = 0;
+
+    if (vnum == NOTHING)
+        return;
+
+    /* Iterate through all characters in the game */
+    for (ch = character_list; ch; ch = next_ch) {
+        next_ch = ch->next;
+
+        /* Skip characters marked for extraction */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        if (IS_NPC(ch)) {
+            /* Clear quest from mob's AI data */
+            if (ch->ai_data && GET_MOB_QUEST(ch) == vnum) {
+                clear_mob_quest(ch);
+                mobs_cleared++;
+            }
+
+            /* Also remove from temporary quest list if this mob is a temp questmaster */
+            if (ch->ai_data && IS_TEMP_QUESTMASTER(ch)) {
+                remove_temp_quest_from_mob(ch, vnum);
+            }
+        } else {
+            /* Clear quest from player if they have it active */
+            if (GET_QUEST(ch) == vnum) {
+                send_to_char(ch,
+                             "\r\n\tyAVISO: A busca que você estava fazendo foi removida do sistema.\tn\r\n"
+                             "\tyEla foi completada por outra pessoa ou expirou.\tn\r\n");
+                clear_quest(ch);
+                save_char(ch);
+                players_cleared++;
+            }
+        }
+    }
+
+    if (mobs_cleared > 0 || players_cleared > 0) {
+        log1("QUEST CLEANUP: Quest %d deleted - cleared from %d mobs and %d players", vnum, mobs_cleared,
+             players_cleared);
     }
 }
