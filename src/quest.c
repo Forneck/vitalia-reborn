@@ -2605,7 +2605,7 @@ void mob_complete_quest(struct char_data *mob)
 
     /* Notify the room that the mob completed a quest (similar to player flow) */
     act("$n completou uma busca.", TRUE, mob, NULL, NULL, TO_ROOM);
-    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
+    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, NULL, NULL, TO_ROOM);
 
     /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
@@ -2631,10 +2631,13 @@ void mob_complete_quest(struct char_data *mob)
     /* Cleanup: If this is a mob-posted quest and not repeatable, delete it from the system
      * to free the queue slot for another quest. This is similar to wishlist quest cleanup
      * for players (cleanup_completed_wishlist_quest). */
-    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && !IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
-        log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
-        if (!delete_quest(rnum)) {
-            log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);
+    {
+        long quest_flags = QST_FLAGS(rnum);
+        if (IS_SET(quest_flags, AQ_MOB_POSTED) && !IS_SET(quest_flags, AQ_REPEATABLE)) {
+            log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
+            if (!delete_quest(rnum)) {
+                log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);
+            }
         }
     }
 
@@ -2778,6 +2781,56 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
             if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
                 if (--ch->ai_data->quest_counter <= 0)
                     mob_complete_quest(ch);
+            }
+            break;
+        case AQ_OBJ_RETURN:
+            /* Mob gives object to target mob - check if mob gave target item to the return mob */
+            if (vict && IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                /* Check if the object is now in the target mob's inventory */
+                struct obj_data *obj_check;
+                bool has_object = false;
+
+                for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                    if (obj_check == object) {
+                        has_object = true;
+                        break;
+                    }
+                }
+
+                if (has_object &&
+                    (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum) || GET_MOB_VNUM(vict) == QST_MASTER(rnum))) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_EMOTION_IMPROVE:
+            /* Mob must improve specific emotion with target mob
+             * Check if the target mob's emotion toward the questing mob has reached the required level */
+            if (vict && IS_NPC(vict) && vict->ai_data && QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                int emotion_type = QST_RETURNMOB(rnum); /* Emotion type stored in RETURNMOB */
+                int target_level = QST_QUANTITY(rnum);  /* Target emotion level */
+                int current_emotion = 0;
+
+                /* Get the current emotion level from the target mob toward the questing mob */
+                current_emotion = get_effective_emotion_toward(vict, ch, emotion_type);
+
+                if (current_emotion >= target_level) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Mob must improve reputation to target level
+             * For mobs, this checks their own reputation stat */
+            {
+                int target_reputation = QST_QUANTITY(rnum);
+
+                if (ch->ai_data->reputation >= target_reputation) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
             }
             break;
     }
