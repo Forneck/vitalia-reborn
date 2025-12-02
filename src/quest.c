@@ -56,11 +56,29 @@ static const char *quest_god_usage =
 
 qst_rnum real_quest(qst_vnum vnum)
 {
-    int rnum;
+    qst_rnum bot, top, mid;
 
-    for (rnum = 0; rnum < total_quests; rnum++)
-        if (QST_NUM(rnum) == vnum)
-            return (rnum);
+    if (total_quests == 0)
+        return (NOTHING);
+
+    bot = 0;
+    top = total_quests - 1;
+
+    /* Quickly reject out-of-range vnums */
+    if (QST_NUM(bot) > vnum || QST_NUM(top) < vnum)
+        return (NOTHING);
+
+    /* Perform binary search on quest table (sorted by vnum) */
+    while (bot <= top) {
+        mid = (bot + top) / 2;
+
+        if (QST_NUM(mid) == vnum)
+            return (mid);
+        if (QST_NUM(mid) > vnum)
+            top = mid - 1;
+        else
+            bot = mid + 1;
+    }
     return (NOTHING);
 }
 
