@@ -2515,10 +2515,17 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
     /* Log the failure */
     log1("QUEST FAILURE: %s failed quest %d (%s)", GET_NAME(mob), vnum, reason);
 
-    /* Clear the quest */
+    /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
     act("$n parece desapontado.", TRUE, mob, 0, 0, TO_ROOM);
+
+    /* If this is a mob-posted quest and not repeatable, delete it from the system
+     * to free the queue slot for another quest. Failed quests should also be cleared. */
+    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && !IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
+        log1("MOB QUEST: Mob %s failed quest %d, removing from queue", GET_NAME(mob), vnum);
+        delete_quest(rnum);
+    }
 }
 
 /* Mob completes a quest and gets rewards */
@@ -2592,10 +2599,17 @@ void mob_complete_quest(struct char_data *mob)
             break;
     }
 
-    /* Clear the quest */
+    /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
     act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
+
+    /* If this is a mob-posted quest and not repeatable, delete it from the system
+     * to free the queue slot for another quest. This is similar to wishlist quest cleanup. */
+    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && !IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
+        log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
+        delete_quest(rnum);
+    }
 }
 
 /* Check mob quest completion triggers */
