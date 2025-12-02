@@ -2498,6 +2498,8 @@ static RETSIGTYPE checkpointing(int sig)
     } else
         tics_passed = 0;
 #        endif
+
+    my_signal(SIGVTALRM, checkpointing);
 }
 
 /* Dying anyway... */
