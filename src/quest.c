@@ -2515,10 +2515,12 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
     /* Log the failure */
     log1("QUEST FAILURE: %s failed quest %d (%s)", GET_NAME(mob), vnum, reason);
 
-    /* Clear the quest */
+    /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    act("$n parece desapontado.", TRUE, mob, 0, 0, TO_ROOM);
+    act("$n parece desapontado.", TRUE, mob, NULL, NULL, TO_ROOM);
+
+    /* Note: Failed quests remain in the queue so another player or mob can try them */
 }
 
 /* Mob completes a quest and gets rewards */
@@ -2536,12 +2538,21 @@ void mob_complete_quest(struct char_data *mob)
         return;
 
     rnum = real_quest(vnum);
-    if (rnum == NOTHING)
+    if (rnum == NOTHING) {
+        /* Quest no longer exists, just clear mob's quest state */
+        log1("SYSERR: mob_complete_quest: Mob %s tried to complete non-existent quest vnum %d", GET_NAME(mob), vnum);
+        clear_mob_quest(mob);
         return;
+    }
 
     /* Give gold reward */
     if (QST_GOLD(rnum)) {
         increase_gold(mob, QST_GOLD(rnum));
+    }
+
+    /* Give experience reward (mobs can gain exp too) */
+    if (QST_EXP(rnum)) {
+        gain_exp(mob, QST_EXP(rnum));
     }
 
     /* Give object reward */
@@ -2592,10 +2603,45 @@ void mob_complete_quest(struct char_data *mob)
             break;
     }
 
-    /* Clear the quest */
+    /* Notify the room that the mob completed a quest (similar to player flow) */
+    act("$n completou uma busca.", TRUE, mob, NULL, NULL, TO_ROOM);
+    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, NULL, NULL, TO_ROOM);
+
+    /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
+        mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+        if (questmaster_rnum != NOBODY) {
+            struct char_data *questmaster = NULL;
+            struct char_data *temp_char;
+            for (temp_char = world[IN_ROOM(mob)].people; temp_char; temp_char = temp_char->next_in_room) {
+                if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                    questmaster = temp_char;
+                    break;
+                }
+            }
+            if (questmaster && questmaster->ai_data) {
+                update_mob_emotion_quest_completed(questmaster, mob);
+            }
+        }
+    }
+
+    /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
+    /* Cleanup: If this is a mob-posted quest and not repeatable, delete it from the system
+     * to free the queue slot for another quest. This is similar to wishlist quest cleanup
+     * for players (cleanup_completed_wishlist_quest). */
+    {
+        long quest_flags = QST_FLAGS(rnum);
+        if (IS_SET(quest_flags, AQ_MOB_POSTED) && !IS_SET(quest_flags, AQ_REPEATABLE)) {
+            log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
+            if (!delete_quest(rnum)) {
+                log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);
+            }
+        }
+    }
+
+    /* Note: Unlike players, mobs don't have quest history (add_completed_quest) or chain quests (next_quest) */
 }
 
 /* Check mob quest completion triggers */
@@ -2735,6 +2781,56 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
             if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
                 if (--ch->ai_data->quest_counter <= 0)
                     mob_complete_quest(ch);
+            }
+            break;
+        case AQ_OBJ_RETURN:
+            /* Mob gives object to target mob - check if mob gave target item to the return mob */
+            if (vict && IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                /* Check if the object is now in the target mob's inventory */
+                struct obj_data *obj_check;
+                bool has_object = FALSE;
+
+                for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                    if (obj_check == object) {
+                        has_object = TRUE;
+                        break;
+                    }
+                }
+
+                if (has_object &&
+                    (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum) || GET_MOB_VNUM(vict) == QST_MASTER(rnum))) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_EMOTION_IMPROVE:
+            /* Mob must improve specific emotion with target mob
+             * Check if the target mob's emotion toward the questing mob has reached the required level */
+            if (vict && IS_NPC(vict) && vict->ai_data && QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                int emotion_type = QST_RETURNMOB(rnum); /* Emotion type stored in RETURNMOB */
+                int target_level = QST_QUANTITY(rnum);  /* Target emotion level */
+                int current_emotion = 0;
+
+                /* Get the current emotion level from the target mob toward the questing mob */
+                current_emotion = get_effective_emotion_toward(vict, ch, emotion_type);
+
+                if (current_emotion >= target_level) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
+            }
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Mob must improve reputation to target level
+             * For mobs, this checks their own reputation stat */
+            {
+                int target_reputation = QST_QUANTITY(rnum);
+
+                if (ch->ai_data->reputation >= target_reputation) {
+                    if (--ch->ai_data->quest_counter <= 0)
+                        mob_complete_quest(ch);
+                }
             }
             break;
     }
