@@ -4621,7 +4621,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
 
     /* Priority 1: If mob has an active quest, prioritize quest completion */
     if (GET_MOB_QUEST(ch) != NOTHING) {
-        qst_rnum quest_rnum = real_quest(GET_MOB_QUEST(ch));
+        qst_vnum mob_quest_vnum = GET_MOB_QUEST(ch);
+        qst_rnum quest_rnum = real_quest(mob_quest_vnum);
         if (quest_rnum != NOTHING) {
             int quest_type = QST_TYPE(quest_rnum);
 
@@ -4656,8 +4657,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
         } else {
             /* Quest no longer exists in quest table - was deleted.
              * Clear the mob's quest reference to prevent freeze/lag. */
+            log1("QUEST FIX: Cleared invalid quest vnum %d from mob %s", mob_quest_vnum, GET_NAME(ch));
             clear_mob_quest(ch);
-            log1("QUEST FIX: Cleared invalid quest vnum %d from mob %s", GET_MOB_QUEST(ch), GET_NAME(ch));
         }
     }
 
