@@ -315,9 +315,10 @@
 #define PRF_DISPEMOTE 42    /**< Display mob emotion indicators in room descriptions */
 #define PRF_AUTOEXAM 43     /**< Automatically examine corpses after killing */
 #define PRF_HOUSE_ALTINV 44 /**< Alternate house inventory display */
+#define PRF_AUTOARROW 45    /**< Auto-equip arrows from inventory when quiver is empty */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 45
+#define NUM_PRF_FLAGS 46
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */

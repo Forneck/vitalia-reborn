@@ -344,7 +344,7 @@ static void prefedit_disp_auto_menu(struct descriptor_data *d)
                  "%s3%s) Autogold     %s[%s%3s%s]      %s8%s) Chave Auto   %s[%s%3s%s]\r\n"
                  "%s4%s) Autosac      %s[%s%3s%s]      %s9%s) Porta Auto   %s[%s%3s%s]\r\n"
                  "%s5%s) Autoassist   %s[%s%3s%s]      %s=%s) Auto Titulo  %s[%s%3s%s]\r\n"
-                 "%s-%s) Auto Examinar%s[%s%3s%s]\r\n",
+                 "%s-%s) Auto Examinar%s[%s%3s%s]      %s0%s) Auto Flecha  %s[%s%3s%s]\r\n",
                  CBWHT(d->character, C_NRM),
                  /* Line 1 - autoexits and autosplit */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
@@ -381,10 +381,13 @@ static void prefedit_disp_auto_menu(struct descriptor_data *d)
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOTITLE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM),
-                 /* Line 6 - autoexam */
+                 /* Line 6 - autoexam and autoarrow */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOEXAM) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOEXAM)), CCCYN(d->character, C_NRM));
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOEXAM)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
+                 CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_AUTOARROW) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOARROW)), CCCYN(d->character, C_NRM));
 
     /* Finishing Off */
     send_to_char(d->character, "\r\n%sQ%s) Voltar ao menu de toggles...\r\n", CBYEL(d->character, C_NRM),
@@ -909,6 +912,10 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                     TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOEXAM);
                     break;
 
+                case '0':
+                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOARROW);
+                    break;
+
                 default:
                     send_to_char(d->character, "Invalid Choice, try again (Q to Quit to auto menu): ");
                     return;
@@ -1113,6 +1120,10 @@ void prefedit_Restore_Defaults(struct descriptor_data *d)
     /* PRF_AUTOEXAM    - Off */
     if (PREFEDIT_FLAGGED(PRF_AUTOEXAM))
         REMOVE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOEXAM);
+
+    /* PRF_AUTOARROW   - Off */
+    if (PREFEDIT_FLAGGED(PRF_AUTOARROW))
+        REMOVE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOARROW);
 
     /* Other (non-toggle) options */
     PREFEDIT_GET_WIMP_LEV = 0;     /* Wimpy off by default */
