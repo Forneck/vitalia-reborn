@@ -1595,8 +1595,11 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
     else if (QST_INFO(rnum)) {
         send_to_char(ch, "Detalhes Completos da Busca \tc%s\tn:\r\n%s", QST_DESC(rnum),
                      format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
-        if (QST_PREV(rnum) != NOTHING)
-            send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n", QST_NAME(real_quest(QST_PREV(rnum))));
+        if (QST_PREV(rnum) != NOTHING) {
+            qst_rnum prev_rnum = real_quest(QST_PREV(rnum));
+            if (prev_rnum != NOTHING)
+                send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n", QST_NAME(prev_rnum));
+        }
         if (QST_TIME(rnum) != -1)
             send_to_char(ch, "A busca tem um tempo limite de %d tick%s para ser completada.\r\n", QST_TIME(rnum),
                          QST_TIME(rnum) == 1 ? "" : "s");
@@ -1952,13 +1955,23 @@ static void quest_stat(struct char_data *ch, char *argument)
     send_to_char(ch, "Prior :");
     if (QST_PREV(rnum) == NOTHING)
         send_to_char(ch, " \tyNone.\tn\r\n");
-    else
-        send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_PREV(rnum), QST_DESC(real_quest(QST_PREV(rnum))));
+    else {
+        qst_rnum prev_rnum = real_quest(QST_PREV(rnum));
+        if (prev_rnum != NOTHING)
+            send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_PREV(rnum), QST_DESC(prev_rnum));
+        else
+            send_to_char(ch, " [\ty%5d\tn] \tc(unknown quest)\tn\r\n", QST_PREV(rnum));
+    }
     send_to_char(ch, "Next  :");
     if (QST_NEXT(rnum) == NOTHING)
         send_to_char(ch, " \tyNone.\tn\r\n");
-    else
-        send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
+    else {
+        qst_rnum next_rnum = real_quest(QST_NEXT(rnum));
+        if (next_rnum != NOTHING)
+            send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(next_rnum));
+        else
+            send_to_char(ch, " [\ty%5d\tn] \tc(unknown quest)\tn\r\n", QST_NEXT(rnum));
+    }
 }
 
 /* Clear a player's current quest (GOD+ command) */
