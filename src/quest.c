@@ -2520,12 +2520,7 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
 
     act("$n parece desapontado.", TRUE, mob, 0, 0, TO_ROOM);
 
-    /* If this is a mob-posted quest and not repeatable, delete it from the system
-     * to free the queue slot for another quest. Failed quests should also be cleared. */
-    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && !IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
-        log1("MOB QUEST: Mob %s failed quest %d, removing from queue", GET_NAME(mob), vnum);
-        delete_quest(rnum);
-    }
+    /* Note: Failed quests remain in the queue so another player or mob can try them */
 }
 
 /* Mob completes a quest and gets rewards */
@@ -2543,12 +2538,21 @@ void mob_complete_quest(struct char_data *mob)
         return;
 
     rnum = real_quest(vnum);
-    if (rnum == NOTHING)
+    if (rnum == NOTHING) {
+        /* Quest no longer exists, just clear mob's quest state */
+        log1("SYSERR: mob_complete_quest: Mob %s tried to complete non-existent quest vnum %d", GET_NAME(mob), vnum);
+        clear_mob_quest(mob);
         return;
+    }
 
     /* Give gold reward */
     if (QST_GOLD(rnum)) {
         increase_gold(mob, QST_GOLD(rnum));
+    }
+
+    /* Give experience reward (mobs can gain exp too) */
+    if (QST_EXP(rnum)) {
+        gain_exp(mob, QST_EXP(rnum));
     }
 
     /* Give object reward */
@@ -2599,17 +2603,42 @@ void mob_complete_quest(struct char_data *mob)
             break;
     }
 
+    /* Notify the room that the mob completed a quest (similar to player flow) */
+    act("$n completou uma busca.", TRUE, mob, NULL, NULL, TO_ROOM);
+    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
+
+    /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
+        mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+        if (questmaster_rnum != NOBODY) {
+            struct char_data *questmaster = NULL;
+            struct char_data *temp_char;
+            for (temp_char = world[IN_ROOM(mob)].people; temp_char; temp_char = temp_char->next_in_room) {
+                if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                    questmaster = temp_char;
+                    break;
+                }
+            }
+            if (questmaster && questmaster->ai_data) {
+                update_mob_emotion_quest_completed(questmaster, mob);
+            }
+        }
+    }
+
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
-
-    /* If this is a mob-posted quest and not repeatable, delete it from the system
-     * to free the queue slot for another quest. This is similar to wishlist quest cleanup. */
+    /* Cleanup: If this is a mob-posted quest and not repeatable, delete it from the system
+     * to free the queue slot for another quest. This is similar to wishlist quest cleanup
+     * for players (cleanup_completed_wishlist_quest). */
     if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && !IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
         log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
-        delete_quest(rnum);
+        if (!delete_quest(rnum)) {
+            log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);
+        }
     }
+
+    /* Note: Unlike players, mobs don't have quest history (add_completed_quest) or chain quests (next_quest) */
 }
 
 /* Check mob quest completion triggers */
