@@ -562,11 +562,13 @@
  4 100
 55 1
 56 4
- 1 P 54 1 2 73730 9 0
+ 1 P 54 1 2 73734 9 0
  2 fireshield
 10 A aura de fogo ao redor de seu corpo desaparece.
 12 Uma ardente aura vermelha envolve você.
 13 Uma ardente aura vermelha envolve $N.
+25 99
+26 103
 80 17 -5
 99 self.level
 81 43 
@@ -587,6 +589,7 @@
 91 1 80 
 99 (80 - (5 * self.level)) > 30 ? (80 - (5 * self.level)) : 30
  4 100
+55 1
  1 P 56 1 18 4097 8 600
  2 disintegrate
  3 dice(3, self.class == 0 ? 8 : 6) + (self.class == 0 ? 195 : 180)
@@ -810,11 +813,14 @@
  4 100
 55 3
 56 4
- 1 P 78 1 2 65538 9 0
+ 1 P 78 1 2 65542 9 0
  2 thistlecoat
 10 Você percebe que seu casaco de espinhos se desfez.
 12 Você é recobert$r por um casaco de espinhos!
 13 Um casaco de espinhos recobre $N.
+25 100
+26 101
+27 104
 80 17 -3
 99 13
 81 54 
@@ -914,11 +920,12 @@
 99 (70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20
  4 100
 55 6
- 1 P 90 1 2 2 9 0
+ 1 P 90 1 2 65542 9 0
  2 soundbarrier
 10 Voce percebe a barreira de som se dissipar.
 12 Voce e envolvid$r por uma protetora barreira de som.
 13 $N e envolvid$r por uma protetora barreira de som.
+25 105
 80 24 -(1 + (param / 40))
 99 24
 81 23 -(2 + (param / 40))
@@ -933,6 +940,7 @@
 99 (100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20
  4 100
 55 1
+56 12
  1 P 91 1 2 8198 9 0
  2 gloomshield
 10 O escudo de trevas que $r resguardava se desvanece lentamente.
@@ -987,11 +995,12 @@
  4 100
 55 3
 56 4
- 1 P 96 1 2 73730 9 0
+ 1 P 96 1 2 73734 9 0
  2 windwall
 10 A parede de vento ao redor de seu corpo desaparece.
 12 Uma parede de vento envolve você.
 13 Uma parede de vento envolve $N.
+25 102
 80 17 -4
 99 self.level
 81 60 
@@ -1011,11 +1020,13 @@
  1 P 98 1 1 0 7 0
  2 script-inflicted
  4 100
- 1 P 99 1 2 73730 1 0
+ 1 P 99 1 2 73734 1 0
  2 watershield
 10 A aura de água ao redor de seu corpo desaparece.
 12 Uma fluida aura azul envolve você.
 13 Uma fluida aura azul envolve $N.
+25 54
+26 103
 80 17 -4
 99 self.level
 81 61 
@@ -1025,11 +1036,14 @@
 56 2
 57 54
 58 1
- 1 P 100 1 2 73730 1 0
+ 1 P 100 1 2 73734 1 0
  2 rockshield
 10 A aura de pedra ao redor de seu corpo desaparece.
 12 Uma sólida aura marrom envolve você.
 13 Uma sólida aura marrom envolve $N.
+25 78
+26 101
+27 104
 80 17 -6
 99 self.level
 81 62 
@@ -1039,11 +1053,14 @@
 56 4
 57 78
 58 1
- 1 P 101 1 2 73730 1 0
+ 1 P 101 1 2 73734 1 0
  2 poisonshield
 10 A aura venenosa ao redor de seu corpo desaparece.
 12 Uma tóxica aura verde envolve você.
 13 Uma tóxica aura verde envolve $N.
+25 78
+26 100
+27 104
 80 17 -3
 99 self.level
 81 63 
@@ -1053,11 +1070,12 @@
 56 8
 57 78
 58 1
- 1 P 102 1 2 73730 1 0
+ 1 P 102 1 2 73734 1 0
  2 lightningshield
 10 A aura de raios ao redor de seu corpo desaparece.
 12 Uma elétrica aura amarela envolve você.
 13 Uma elétrica aura amarela envolve $N.
+25 96
 80 17 -4
 99 self.level
 81 64 
@@ -1067,11 +1085,13 @@
 56 5
 57 96
 58 1
- 1 P 103 1 2 73730 1 0
+ 1 P 103 1 2 73734 1 0
  2 iceshield
 10 A aura de gelo ao redor de seu corpo desaparece.
 12 Uma gélida aura branca envolve você.
 13 Uma gélida aura branca envolve $N.
+25 54
+26 99
 80 17 -4
 99 self.level
 81 65 
@@ -1081,11 +1101,14 @@
 56 6
 57 99
 58 1
- 1 P 104 1 2 73730 1 0
+ 1 P 104 1 2 73734 1 0
  2 acidshield
 10 A aura ácida ao redor de seu corpo desaparece.
 12 Uma corrosiva aura esverdeada envolve você.
 13 Uma corrosiva aura esverdeada envolve $N.
+25 78
+26 100
+27 101
 80 17 -4
 99 self.level
 81 66 
@@ -1095,11 +1118,12 @@
 56 7
 57 101
 58 1
- 1 P 105 1 2 73730 1 0
+ 1 P 105 1 2 73734 1 0
  2 mindshield
 10 A aura mental ao redor de seu corpo desaparece.
 12 Uma etérea aura violeta envolve você.
 13 Uma etérea aura violeta envolve $N.
+25 90
 80 17 -3
 99 self.level
 81 67 
@@ -1109,11 +1133,12 @@
 56 11
 57 90
 58 1
- 1 P 106 1 2 73730 1 0
+ 1 P 106 1 2 73734 1 0
  2 forceshield
 10 A aura de força ao redor de seu corpo desaparece.
 12 Uma translúcida aura de força envolve você.
 13 Uma translúcida aura de força envolve $N.
+25 308
 80 17 -5
 99 self.level
 81 68 
@@ -1569,12 +1594,13 @@
  2 youth
  4 100
 55 2
- 1 P 308 1 26 8194 8 0
+ 1 P 308 1 26 8198 8 0
  2 shield
 10 Um enorme escudo se desfaz.
 11 Voce consegue fazer aparecer um enorme escudo.
 12 Um enorme escudo aparece para te proteger.
 13 Um enorme escudo aparece do nada.
+25 106
 80 17 -10
 99 12
  4 100
