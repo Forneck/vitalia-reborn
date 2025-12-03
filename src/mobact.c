@@ -604,12 +604,20 @@ void mobile_activity(void)
             /* Increment goal timer and check for timeout */
             ch->ai_data->goal_timer++;
 
-            /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
-            if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
-                 ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
-                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER || ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
-                 ch->ai_data->current_goal == GOAL_COMPLETE_QUEST || ch->ai_data->current_goal == GOAL_COLLECT_KEY) &&
-                ch->ai_data->goal_timer > 50) {
+            /* Categorize goals for frustration timeout handling:
+             * - Quest-related goals get higher threshold (150 ticks = ~15 minutes) to allow
+             *   reaching distant rooms for room-finding quests
+             * - Shopping/key collection goals use lower threshold (50 ticks = ~5 minutes)
+             */
+            bool is_quest_goal =
+                (ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER || ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
+                 ch->ai_data->current_goal == GOAL_COMPLETE_QUEST);
+            bool is_shopping_goal =
+                (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
+                 ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY || ch->ai_data->current_goal == GOAL_COLLECT_KEY);
+
+            /* If stuck on goal for too long, abandon it */
+            if ((is_quest_goal || is_shopping_goal) && ch->ai_data->goal_timer > (is_quest_goal ? 150 : 50)) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
                 /* Safety check: act() can trigger DG scripts which may cause extraction */
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -4876,7 +4884,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
                     /* This quest requires gathering X quantity of a specific object.
                      * Check if mob already has enough. */
                     obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
-		    int required_count = ch->ai_data->quest_counter;
+                    int required_count = ch->ai_data->quest_counter;
                     int current_count = 0;
                     struct obj_data *obj;
 
