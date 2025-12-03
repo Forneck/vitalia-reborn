@@ -4838,35 +4838,74 @@ void mob_process_wishlist_goals(struct char_data *ch)
         if (quest_rnum != NOTHING) {
             int quest_type = QST_TYPE(quest_rnum);
 
-            /* For object-based quests, add quest objects to wishlist with high priority */
-            if (quest_type == AQ_OBJ_FIND || quest_type == AQ_OBJ_RETURN) {
-                obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
+            /* Handle object-based quest types - check if mob already has the required object(s) */
+            switch (quest_type) {
+                case AQ_OBJ_FIND:
+                case AQ_OBJ_RETURN:
+                case AQ_DELIVERY:
+                case AQ_SHOP_BUY: {
+                    /* These quests require the mob to obtain a specific object */
+                    obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
+                    struct obj_data *quest_obj = get_obj_in_list_num(quest_obj_vnum, ch->carrying);
 
-                /* Check if mob already has the quest object */
-                struct obj_data *quest_obj = get_obj_in_list_num(quest_obj_vnum, ch->carrying);
-                if (!quest_obj) {
-                    /* Add quest object to wishlist with maximum priority */
-                    add_item_to_wishlist(ch, quest_obj_vnum, 200); /* Higher than normal max priority */
-
-                    /* Process this quest object as highest priority item */
-                    desired_item = get_top_wishlist_item(ch);
-                    if (desired_item && desired_item->vnum == quest_obj_vnum) {
+                    if (!quest_obj) {
+                        /* Mob doesn't have the object - add to wishlist with high priority */
+                        add_item_to_wishlist(ch, quest_obj_vnum, 200);
+                        desired_item = get_top_wishlist_item(ch);
                         /* Continue with normal wishlist processing for quest object */
-                        /* This will make the mob seek the quest object through normal means */
+                    } else {
+                        /* Mob already has the quest object - transition to quest completion goal.
+                         * mob_process_quest_completion will handle the specific completion logic. */
+                        ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                        ch->ai_data->goal_timer = 0;
+                        return;
                     }
-                } else {
-                    /* Mob already has the quest object - transition to quest completion goal.
-                     * This handles both AQ_OBJ_FIND (complete immediately when mob_process_quest_completion
-                     * is called) and AQ_OBJ_RETURN (go to questmaster to deliver the object). */
+                    break;
+                }
+
+                case AQ_SHOP_SELL: {
+                    /* This quest requires the mob to sell a specific object.
+                     * Transition to completion - mob_process_quest_completion will check if item
+                     * is still in inventory (needs to sell) or not (already sold, complete). */
                     ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
                     ch->ai_data->goal_timer = 0;
                     return;
                 }
-            } else {
-                /* For non-object quests (mob kill, room find, etc.), transition to quest completion */
-                ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
-                ch->ai_data->goal_timer = 0;
-                return;
+
+                case AQ_RESOURCE_GATHER: {
+                    /* This quest requires gathering X quantity of a specific object.
+                     * Check if mob already has enough. */
+                    obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
+                    int required_count = QST_QUANTITY(quest_rnum);
+                    int current_count = 0;
+                    struct obj_data *obj;
+
+                    for (obj = ch->carrying; obj; obj = obj->next_content) {
+                        if (GET_OBJ_VNUM(obj) == quest_obj_vnum)
+                            current_count++;
+                    }
+
+                    if (current_count < required_count) {
+                        /* Mob doesn't have enough - add to wishlist with high priority */
+                        add_item_to_wishlist(ch, quest_obj_vnum, 200);
+                        desired_item = get_top_wishlist_item(ch);
+                        /* Continue with normal wishlist processing */
+                    } else {
+                        /* Mob already has enough - transition to quest completion */
+                        ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                        ch->ai_data->goal_timer = 0;
+                        return;
+                    }
+                    break;
+                }
+
+                default:
+                    /* For non-object quests (mob kill, room find, mob find, room clear, escort,
+                     * magic gather, emotion improve, mob save, reputation build, player kill, bounty),
+                     * transition directly to quest completion goal. */
+                    ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                    ch->ai_data->goal_timer = 0;
+                    return;
             }
         } else {
             /* Quest no longer exists in quest table - was deleted.
