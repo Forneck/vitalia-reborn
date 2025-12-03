@@ -58,6 +58,8 @@ bool mob_use_bank(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum);
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum);
+struct char_data *find_mob_by_vnum(mob_vnum vnum);
+room_rnum find_object_location(obj_vnum obj_vnum);
 void mob_process_wishlist_goals(struct char_data *ch);
 bool mob_try_to_accept_quest(struct char_data *ch);
 bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum);
@@ -4036,6 +4038,82 @@ struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 }
 
 /**
+ * Find any mob in the world by vnum (not just questmasters).
+ * @param vnum The mob vnum to find.
+ * @return Pointer to the mob if found, NULL otherwise.
+ */
+struct char_data *find_mob_by_vnum(mob_vnum vnum)
+{
+    struct char_data *i, *next_i;
+
+    /* Search through all characters in the world */
+    for (i = character_list; i; i = next_i) {
+        next_i = i->next;
+
+        /* Safety check: Skip characters marked for extraction */
+        if (MOB_FLAGGED(i, MOB_NOTDEADYET) || PLR_FLAGGED(i, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Validate room before using the character */
+        if (!IS_NPC(i) || IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+            continue;
+
+        if (GET_MOB_VNUM(i) == vnum) {
+            return i;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * Find the location of an object in the world (on ground, in container, or carried by a mob).
+ * @param obj_vnum The object vnum to find.
+ * @return Room number where the object can be found, or NOWHERE if not found.
+ */
+room_rnum find_object_location(obj_vnum obj_vnum)
+{
+    struct obj_data *obj;
+    struct char_data *mob;
+    room_rnum room;
+
+    /* First, check if object is on the ground in any room */
+    for (room = 0; room <= top_of_world; room++) {
+        for (obj = world[room].contents; obj; obj = obj->next_content) {
+            if (GET_OBJ_VNUM(obj) == obj_vnum) {
+                return room;
+            }
+            /* Check inside containers on the ground */
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && !OBJVAL_FLAGGED(obj, CONT_CLOSED)) {
+                struct obj_data *contained;
+                for (contained = obj->contains; contained; contained = contained->next_content) {
+                    if (GET_OBJ_VNUM(contained) == obj_vnum) {
+                        return room;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Then, check if any mob is carrying the object */
+    for (mob = character_list; mob; mob = mob->next) {
+        if (!IS_NPC(mob))
+            continue;
+        if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+            continue;
+        if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
+            continue;
+
+        for (obj = mob->carrying; obj; obj = obj->next_content) {
+            if (GET_OBJ_VNUM(obj) == obj_vnum) {
+                return IN_ROOM(mob);
+            }
+        }
+    }
+
+    return NOWHERE; /* Object not found */
+}
+
+/**
  * A IA de economia. O mob tenta vender os seus itens de menor valor.
  * VERSÃO FINAL COM CORREÇÃO DE BUGS.
  * Retorna TRUE se o mob definiu um objetivo ou executou uma venda.
@@ -4259,9 +4337,23 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Object not found, add to wishlist and seek it */
-                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
-                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
+                /* Object not found, try to find where it is and go there */
+                target_room = find_object_location(QST_TARGET(quest_rnum));
+                if (target_room != NOWHERE && target_room != IN_ROOM(ch)) {
+                    /* Found object, move towards it */
+                    ch->ai_data->goal_destination = target_room;
+                    mob_goal_oriented_roam(ch, target_room);
+                    /* Safety check: mob_goal_oriented_roam can trigger death traps */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Object not found in world, add to wishlist and let wishlist system handle it */
+                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
+                    /* Continue with GOAL_COMPLETE_QUEST but roam to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
@@ -4291,13 +4383,21 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Target mob not found, seek it by using the normal mob AI movement */
-                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
-                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
-                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
-                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                    return TRUE;
+                /* Target mob not found in current room, try to find it in the world */
+                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
+                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                    /* Found target mob, move towards its location */
+                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                    /* Safety check: mob_goal_oriented_roam can trigger death traps */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Target mob not found in world, roam randomly to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
             }
             return TRUE;
             break;
@@ -4320,13 +4420,21 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     return TRUE;
                 return TRUE;
             } else if (!target_mob) {
-                /* Target mob not found, seek it by using the normal mob AI movement */
-                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
-                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
-                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
-                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                    return TRUE;
+                /* Target mob not found in current room, try to find it in the world */
+                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
+                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                    /* Found target mob, move towards its location */
+                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                    /* Safety check: mob_goal_oriented_roam can trigger death traps */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Target mob not found in world, roam randomly to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
             }
             return TRUE;
             break;
@@ -4363,9 +4471,21 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     }
                 }
             } else {
-                /* Don't have object, add to wishlist and seek it */
-                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
-                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
+                /* Don't have object, try to find where it is and go there */
+                target_room = find_object_location(QST_TARGET(quest_rnum));
+                if (target_room != NOWHERE && target_room != IN_ROOM(ch)) {
+                    /* Found object, move towards it */
+                    ch->ai_data->goal_destination = target_room;
+                    mob_goal_oriented_roam(ch, target_room);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Object not found in world, add to wishlist and roam to search */
+                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
@@ -4425,9 +4545,14 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Need to buy - add to wishlist and let wishlist system handle shopping */
+                /* Need to buy - add to wishlist and set goal to find shop */
                 add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
-                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
+                ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_BUY;
+                ch->ai_data->goal_item_vnum = QST_TARGET(quest_rnum);
+                /* Roam to find a shop - the goal system will handle proper navigation */
+                mob_goal_oriented_roam(ch, NOWHERE);
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             }
             break;
@@ -4467,14 +4592,36 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     ch->ai_data->current_goal = GOAL_NONE;
                     return TRUE;
                 } else {
-                    /* Seek the delivery target */
-                    mob_goal_oriented_roam(ch, NOWHERE);
+                    /* Delivery target not found in room, seek them in the world */
+                    target_mob = find_mob_by_vnum(QST_RETURNMOB(quest_rnum));
+                    if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                        ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                        mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                    } else {
+                        /* Target not found in world, roam to search */
+                        mob_goal_oriented_roam(ch, NOWHERE);
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                    }
                     return TRUE;
                 }
             } else {
-                /* Don't have item, add to wishlist */
-                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
-                ch->ai_data->current_goal = GOAL_NONE;
+                /* Don't have item, try to find where it is and go there */
+                target_room = find_object_location(QST_TARGET(quest_rnum));
+                if (target_room != NOWHERE && target_room != IN_ROOM(ch)) {
+                    ch->ai_data->goal_destination = target_room;
+                    mob_goal_oriented_roam(ch, target_room);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Object not found, add to wishlist and roam to search */
+                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
@@ -4493,9 +4640,20 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     ch->ai_data->current_goal = GOAL_NONE;
                     return TRUE;
                 } else {
-                    /* Need more - add to wishlist */
-                    add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
-                    ch->ai_data->current_goal = GOAL_NONE;
+                    /* Need more - try to find where the resource is and go there */
+                    target_room = find_object_location(QST_TARGET(quest_rnum));
+                    if (target_room != NOWHERE && target_room != IN_ROOM(ch)) {
+                        ch->ai_data->goal_destination = target_room;
+                        mob_goal_oriented_roam(ch, target_room);
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                    } else {
+                        /* Resource not found, add to wishlist and roam to search */
+                        add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100);
+                        mob_goal_oriented_roam(ch, NOWHERE);
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                    }
                     return TRUE;
                 }
             }
@@ -4519,8 +4677,19 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Stay near escort target - don't move away */
                 return TRUE;
             } else {
-                /* Lost escort target, search for them */
-                mob_goal_oriented_roam(ch, NOWHERE);
+                /* Lost escort target, search for them in the world */
+                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
+                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Escort target not found, roam to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
@@ -4563,8 +4732,19 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 }
                 return TRUE;
             } else {
-                /* Seek the target mob */
-                mob_goal_oriented_roam(ch, NOWHERE);
+                /* Target not in room, seek them in the world */
+                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
+                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Target not found, roam to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
@@ -4594,8 +4774,19 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 }
                 return TRUE;
             } else {
-                /* Seek target mob */
-                mob_goal_oriented_roam(ch, NOWHERE);
+                /* Target not in room, seek them in the world */
+                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
+                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
+                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
+                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                } else {
+                    /* Target not found, roam to search */
+                    mob_goal_oriented_roam(ch, NOWHERE);
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return TRUE;
+                }
                 return TRUE;
             }
             break;
