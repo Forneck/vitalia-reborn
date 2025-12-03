@@ -2878,6 +2878,7 @@ void beware_lightning()
     struct char_data *victim = NULL, *temp = NULL;
     char buf[256];
     zone_rnum zona_vitima;
+    struct affected_type af;
 
     // Itera por todas as zonas
     for (int zone = 0; zone <= top_of_zone_table; zone++) {
@@ -2917,6 +2918,8 @@ void beware_lightning()
                             dam = MIN(dam, 18);
                         if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
                             dam = MIN(dam, 33);
+                        if (IS_AFFECTED(victim, AFF_LIGHTNINGSHIELD))
+			    dam = 0;
                     }
 
                     dam = MIN(dam, 100);
@@ -2925,6 +2928,18 @@ void beware_lightning()
                         dam = 0;   // Imortais não são afetados
 
                     GET_HIT(victim) -= dam;
+   
+		    /*Não afetado por lightningshield tem 1% de ganhar o shield*/
+		    if (!IS_AFFECTED(victim, AFF_LIGHTNINGSHIELD) && rand_number(1,100) <= 1){	
+		     
+		       new_affect(&af);
+		       af.spell = SPELL_LIGHTNINGSHIELD;
+		       af.duration = GET_LEVEL(victim);
+                       if (GET_CON(victim))
+                           af.duration *= (GET_CON(victim)/12);
+                       SET_BIT_AR(af.bitvector,AFF_LIGHTNINGSHIELD);
+        	       affect_to_char(victim, &af);
+		    }
 
                     if (dam > 0) {
                         act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
