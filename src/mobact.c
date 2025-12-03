@@ -4876,7 +4876,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
                     /* This quest requires gathering X quantity of a specific object.
                      * Check if mob already has enough. */
                     obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
-                    int required_count = QST_QUANTITY(quest_rnum);
+		    int required_count = ch->ai_data->quest_counter;
                     int current_count = 0;
                     struct obj_data *obj;
 
