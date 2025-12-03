@@ -4854,8 +4854,10 @@ void mob_process_wishlist_goals(struct char_data *ch)
                         /* Continue with normal wishlist processing for quest object */
                         /* This will make the mob seek the quest object through normal means */
                     }
-                } else if (quest_type == AQ_OBJ_RETURN) {
-                    /* Has object for return quest, transition to quest completion goal */
+                } else {
+                    /* Mob already has the quest object - transition to quest completion goal.
+                     * This handles both AQ_OBJ_FIND (complete immediately when mob_process_quest_completion
+                     * is called) and AQ_OBJ_RETURN (go to questmaster to deliver the object). */
                     ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
                     ch->ai_data->goal_timer = 0;
                     return;
