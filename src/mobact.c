@@ -2487,19 +2487,29 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
         has_goal = TRUE;
     } else {
         /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
-        /* Check if sentinel has an active quest goal - quest goals take precedence over guard duty */
-        bool sentinel_has_quest_goal = (ch->ai_data && ch->ai_data->current_goal == GOAL_COMPLETE_QUEST);
-        if (MOB_FLAGGED(ch, MOB_SENTINEL) && !sentinel_has_quest_goal &&
-            IN_ROOM(ch) != real_room(ch->ai_data->guard_post)) {
-            /* Use specialized duty pathfinding for sentinels returning to post */
-            direction = mob_duty_pathfind(ch, real_room(ch->ai_data->guard_post));
-            if (direction == -1) {
-                direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
+        if (MOB_FLAGGED(ch, MOB_SENTINEL) && ch->ai_data) {
+            /* Check if sentinel has an active quest goal - quest goals take precedence over guard duty */
+            bool sentinel_has_quest_goal = (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST);
+            if (!sentinel_has_quest_goal && IN_ROOM(ch) != real_room(ch->ai_data->guard_post)) {
+                /* Use specialized duty pathfinding for sentinels returning to post */
+                direction = mob_duty_pathfind(ch, real_room(ch->ai_data->guard_post));
+                if (direction == -1) {
+                    direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
+                }
+                has_goal = TRUE;
+            } else {
+                /* Sentinels with quest goals should roam normally to seek quest objectives */
+                int base_roam = sentinel_has_quest_goal ? 25 : 1;
+                int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
+                int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
+
+                if (rand_number(1, 100) <= final_chance) {
+                    direction = rand_number(0, DIR_COUNT - 1);
+                    has_goal = TRUE;
+                }
             }
-            has_goal = TRUE;
         } else {
-            /* Sentinels with quest goals should roam normally to seek quest objectives */
-            int base_roam = (MOB_FLAGGED(ch, MOB_SENTINEL) && !sentinel_has_quest_goal) ? 1 : 25;
+            int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
             int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
             int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
 
