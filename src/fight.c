@@ -2908,7 +2908,7 @@ void beware_lightning()
             if (zona_vitima != zone)
                 continue;
             if (OUTSIDE(victim) == TRUE) {      // Apenas personagens ao ar livre
-                if (rand_number(0, 9) == 0) {   // 1% de chance de acertar alguém
+                if (rand_number(0, 9) == 0) {   // 10% de chance de acertar alguém
                     dam = dice(1, (GET_MAX_HIT(victim) * 2));
 
                     /* Check for stoneskin protection first */
