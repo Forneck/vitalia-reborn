@@ -1237,8 +1237,25 @@ ACMD(do_shoot)
         send_to_char(ch, "Você não pode ver nada! Você está ceg%s!\r\n", OA(ch));
         return;
     } else if ((ammo = GET_EQ(ch, WEAR_QUIVER)) == NULL) {
-        send_to_char(ch, "Você está com a bolsa de munições vazia.\r\n");
-        return;
+        /* Auto-arrow: try to equip ammo from inventory if preference is set */
+        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOARROW)) {
+            struct obj_data *inv_ammo;
+            for (inv_ammo = ch->carrying; inv_ammo; inv_ammo = inv_ammo->next_content) {
+                if (GET_OBJ_TYPE(inv_ammo) == ITEM_AMMO && CAN_WEAR(inv_ammo, ITEM_WEAR_QUIVER)) {
+                    /* Found ammo in inventory, equip it */
+                    act("Você prepara $p automaticamente.", FALSE, ch, inv_ammo, 0, TO_CHAR);
+                    act("$n prepara $p.", TRUE, ch, inv_ammo, 0, TO_ROOM);
+                    obj_from_char(inv_ammo);
+                    equip_char(ch, inv_ammo, WEAR_QUIVER);
+                    ammo = inv_ammo;
+                    break;
+                }
+            }
+        }
+        if (ammo == NULL) {
+            send_to_char(ch, "Você está com a bolsa de munições vazia.\r\n");
+            return;
+        }
     }
 
     fireweapon = GET_EQ(ch, WEAR_WIELD);
