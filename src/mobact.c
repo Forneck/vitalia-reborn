@@ -2500,7 +2500,8 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 }
                 has_goal = TRUE;
             } else {
-                /* Sentinels with quest goals should roam normally to seek quest objectives */
+                /* Sentinels with quest goals should roam normally to seek quest objectives
+                 * base_roam: 25% = normal mob roam chance, 1% = sentinel standing guard */
                 int base_roam = sentinel_has_quest_goal ? 25 : 1;
                 int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
                 int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
@@ -2511,6 +2512,7 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 }
             }
         } else {
+            /* base_roam: 25% = normal mob roam chance, 1% = sentinel standing guard */
             int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
             int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
             int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
@@ -4039,6 +4041,8 @@ struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 
 /**
  * Find any mob in the world by vnum (not just questmasters).
+ * Note: This performs O(n) search through character_list. Called during quest
+ * processing which is throttled, so performance impact is acceptable.
  * @param vnum The mob vnum to find.
  * @return Pointer to the mob if found, NULL otherwise.
  */
@@ -4066,7 +4070,10 @@ struct char_data *find_mob_by_vnum(mob_vnum vnum)
 }
 
 /**
- * Find the location of an object in the world (on ground, in container, or carried by a mob).
+ * Find the location of an object in the world (on ground, in open container, or carried by a mob).
+ * Note: This performs O(rooms + mobs) search through the world. Called during quest
+ * processing which is throttled, so performance impact is acceptable.
+ * Only searches open containers - mobs cannot see into closed containers.
  * @param obj_vnum The object vnum to find.
  * @return Room number where the object can be found, or NOWHERE if not found.
  */
@@ -4082,7 +4089,7 @@ room_rnum find_object_location(obj_vnum obj_vnum)
             if (GET_OBJ_VNUM(obj) == obj_vnum) {
                 return room;
             }
-            /* Check inside containers on the ground */
+            /* Check inside open containers on the ground (mobs can't see inside closed ones) */
             if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && !OBJVAL_FLAGGED(obj, CONT_CLOSED)) {
                 struct obj_data *contained;
                 for (contained = obj->contains; contained; contained = contained->next_content) {
