@@ -818,7 +818,11 @@ static int qp_exchange_rate_month = -1; /* Last month when rate was calculated *
 /* Calculate the base QP exchange rate from total gold and QP in the economy.
  * This iterates through all registered mortal players (level <= 100) and
  * calculates: rate = total_money / total_qp.
- * Should be called at the start of each MUD month. */
+ * Should be called at the start of each MUD month.
+ *
+ * Note: This operation loads all player files which can be slow on servers
+ * with many players. However, it only runs once per MUD month (35 MUD days)
+ * which is infrequent enough to not cause noticeable performance impact. */
 void calculate_qp_exchange_base_rate(void)
 {
     int i;
@@ -826,10 +830,12 @@ void calculate_qp_exchange_base_rate(void)
     long long total_money = 0;
     long long total_qp = 0;
     int player_count = 0;
-    int calculated_rate;
+    long long calculated_rate;
 
     for (i = 0; i <= top_of_p_table; i++) {
-        /* Skip players above level 100 (immortals) */
+        /* Skip immortals (level > 100) based on cached player_table index.
+         * Note: Using 100 directly since LVL_IMMORT (101) - 1 = 100 represents
+         * the maximum mortal level. */
         if (player_table[i].level > 100)
             continue;
 
@@ -840,27 +846,25 @@ void calculate_qp_exchange_base_rate(void)
         new_mobile_data(temp_ch);
 
         if (load_char(player_table[i].name, temp_ch) >= 0) {
-            /* Only count players with level <= 100 */
-            if (GET_LEVEL(temp_ch) <= 100) {
-                total_money += GET_GOLD(temp_ch) + GET_BANK_GOLD(temp_ch);
-                total_qp += GET_QUESTPOINTS(temp_ch);
-                player_count++;
-            }
+            total_money += GET_GOLD(temp_ch) + GET_BANK_GOLD(temp_ch);
+            total_qp += GET_QUESTPOINTS(temp_ch);
+            player_count++;
         }
 
         free_char(temp_ch);
         temp_ch = NULL;
     }
 
-    /* Calculate the new base rate */
+    /* Calculate the new base rate using long long to avoid overflow,
+     * then clamp to int-safe bounds */
     if (total_qp > 0) {
-        calculated_rate = (int)(total_money / total_qp);
-        /* Clamp the rate to reasonable bounds */
+        calculated_rate = total_money / total_qp;
+        /* Clamp the rate to reasonable bounds (also ensures int-safe values) */
         if (calculated_rate < QP_EXCHANGE_MIN_BASE_RATE)
             calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
         else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
             calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
-        qp_exchange_base_rate = calculated_rate;
+        qp_exchange_base_rate = (int)calculated_rate;
     } else {
         /* No QP in economy, use default rate */
         qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
@@ -1005,16 +1009,26 @@ SPECIAL(qp_exchange)
             return (TRUE);
         }
 
-        /* Check for QP overflow before adding */
-        int new_qp = GET_QUESTPOINTS(ch) + amount;
-        if (new_qp < GET_QUESTPOINTS(ch)) {
-            send_to_char(ch, "Você já possui muitos pontos de busca!\r\n");
+        /* Check for QP overflow and limit before adding (follows increase_gold pattern) */
+        int curr_qp = GET_QUESTPOINTS(ch);
+        int new_qp = MIN(MAX_QP, curr_qp + amount);
+
+        /* Validate to prevent overflow: if new_qp < curr_qp, overflow occurred */
+        if (new_qp < curr_qp)
+            new_qp = MAX_QP;
+
+        if (new_qp == MAX_QP && curr_qp == MAX_QP) {
+            send_to_char(ch, "Você já possui o máximo de pontos de busca!\r\n");
             return (TRUE);
         }
 
         /* Perform the exchange */
         decrease_gold(ch, cost);
         GET_QUESTPOINTS(ch) = new_qp;
+
+        if (new_qp == MAX_QP) {
+            send_to_char(ch, "Você atingiu o limite máximo de pontos de busca!\r\n");
+        }
 
         send_to_char(ch, "Você troca %s moedas por %d pontos de busca.\r\n", format_number_br(cost), amount);
         act("$n realiza uma transação de pontos de busca.", TRUE, ch, 0, FALSE, TO_ROOM);

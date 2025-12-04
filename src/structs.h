@@ -789,6 +789,7 @@
 
 #define MAX_GOLD 2140000000 /**< Maximum possible on hand gold (2.14 Billion) */
 #define MAX_BANK 2140000000 /**< Maximum possible in bank gold (2.14 Billion) */
+#define MAX_QP 2140000000   /**< Maximum possible quest points (2.14 Billion) */
 
 /** Define the largest set of commands for a trigger.
  * 16k should be plenty and then some. */
