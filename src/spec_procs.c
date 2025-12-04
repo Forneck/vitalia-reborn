@@ -775,7 +775,8 @@ SPECIAL(bank)
  * Aminen, Autúmis, V'tah, Aqrien, Tellus */
 
 /* Monthly exchange rate multipliers (percentage of base rate)
- * These create seasonal variation in the exchange rate */
+ * These create seasonal variation in the exchange rate
+ * Must have exactly 17 elements to match the 17 MUD months */
 static const int qp_exchange_month_rates[] = {
     100, /* 0: Brumis - Base rate */
     105, /* 1: Kames'Hi - Slightly higher */
@@ -796,6 +797,9 @@ static const int qp_exchange_month_rates[] = {
     100  /* 16: Tellus - Base rate */
 };
 
+/* Number of MUD months (must match array size above) */
+#define NUM_MUD_MONTHS 17
+
 /* Base exchange rate: how many gold coins for 1 QP
  * This is modified by the monthly rate above */
 #define QP_EXCHANGE_BASE_RATE 10000
@@ -806,7 +810,7 @@ static int get_qp_exchange_rate(void)
     int month = time_info.month;
 
     /* Ensure month is in valid range (0-16) */
-    if (month < 0 || month > 16)
+    if (month < 0 || month >= NUM_MUD_MONTHS)
         month = 0;
 
     return (QP_EXCHANGE_BASE_RATE * qp_exchange_month_rates[month]) / 100;
@@ -858,8 +862,8 @@ SPECIAL(qp_exchange)
         /* Calculate total cost */
         cost = amount * current_rate;
 
-        /* Check for overflow */
-        if (cost < 0 || cost / current_rate != amount) {
+        /* Check for overflow (also protect against division by zero) */
+        if (cost < 0 || (current_rate > 0 && cost / current_rate != amount)) {
             send_to_char(ch, "Essa quantidade é muito alta para calcular!\r\n");
             return (TRUE);
         }
@@ -904,8 +908,8 @@ SPECIAL(qp_exchange)
         /* Calculate gold received */
         cost = amount * current_rate;
 
-        /* Check for overflow */
-        if (cost < 0 || cost / current_rate != amount) {
+        /* Check for overflow (also protect against division by zero) */
+        if (cost < 0 || (current_rate > 0 && cost / current_rate != amount)) {
             send_to_char(ch, "Essa quantidade é muito alta para calcular!\r\n");
             return (TRUE);
         }
