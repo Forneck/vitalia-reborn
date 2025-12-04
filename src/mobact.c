@@ -4800,7 +4800,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
                 /* Target is not fighting (handled above). Check if target is healthy and decrement protection counter.
                  * Using 80% health as the threshold for "healthy" condition */
-                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100) && !FIGHTING(target_mob)) {
+                if (GET_HIT(target_mob) > GET_MAX_HIT(target_mob) * 0.8 && !FIGHTING(target_mob)) {
                     /* Target is healthy - count this as a successful protection tick */
                     if (--ch->ai_data->quest_counter <= 0) {
                         /* Protected long enough - quest complete! */
