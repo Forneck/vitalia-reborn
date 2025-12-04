@@ -4765,28 +4765,47 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             break;
 
         case AQ_MOB_SAVE:
-            /* Mob needs to save/protect target mob - stay near them */
+            /* Mob needs to save/protect target mob - stay near them and guard for a duration.
+             * The quest_counter tracks how many ticks of successful protection are needed.
+             * The mob must stay near the target and keep them safe until counter reaches 0. */
             /* Validate room before accessing */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
                 return FALSE;
             target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
             if (target_mob) {
-                /* Found target, check if they're safe (healthy and not fighting)
-                 * Using 80% health as the threshold for "safe" condition */
-                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100) && !FIGHTING(target_mob)) {
-                    mob_complete_quest(ch);
-                    ch->ai_data->current_goal = GOAL_NONE;
-                    return TRUE;
-                }
-                /* If target is fighting, help them by attacking their opponent */
+                /* If target is fighting, help them by attacking their opponent first */
                 if (FIGHTING(target_mob) && !FIGHTING(ch)) {
                     struct char_data *opponent = FIGHTING(target_mob);
                     /* Validate opponent before attacking */
                     if (opponent && !MOB_FLAGGED(opponent, MOB_NOTDEADYET) && !PLR_FLAGGED(opponent, PLR_NOTDEADYET) &&
                         IN_ROOM(opponent) != NOWHERE && IN_ROOM(opponent) == IN_ROOM(ch)) {
+                        act("$n se move para proteger $N!", FALSE, ch, 0, target_mob, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                        if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                            return TRUE;
+                        if (MOB_FLAGGED(opponent, MOB_NOTDEADYET) || PLR_FLAGGED(opponent, PLR_NOTDEADYET))
+                            return TRUE;
                         hit(ch, opponent, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            return TRUE;
+                    }
+                    return TRUE;
+                }
+
+                /* Target is safe (not fighting). Check health and decrement protection counter.
+                 * Using 80% health as the threshold for "safe" condition */
+                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100)) {
+                    /* Target is healthy - count this as a successful protection tick */
+                    if (--ch->ai_data->quest_counter <= 0) {
+                        /* Protected long enough - quest complete! */
+                        mob_complete_quest(ch);
+                        ch->ai_data->current_goal = GOAL_NONE;
                     }
                 }
+                /* If target is injured but not fighting, stay and guard (don't decrement counter) */
                 return TRUE;
             } else {
                 /* Target not in room, seek them in the world */
