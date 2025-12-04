@@ -1270,7 +1270,7 @@ void mobile_activity(void)
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) == NOTHING &&
             ch->ai_data->current_goal == GOAL_NONE &&
             ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) && /* Stagger: each mob checks every 20 ticks */
-            rand_number(1, 100) <= 3) {               /* 3% chance when it's their turn */
+            rand_number(1, 100) <= 10) {               /* 10% chance when it's their turn */
             mob_try_to_accept_quest(ch);
         }
 
