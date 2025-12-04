@@ -769,35 +769,13 @@ SPECIAL(bank)
 
 /* QP Exchange special procedure for mob 2999
  * Allows players to exchange gold for QP and QP for gold using
- * a dynamic exchange rate that varies by MUD month.
+ * a dynamic exchange rate calculated as total_money / total_qp.
+ * The rate is recalculated at the start of each MUD month.
  * The 17 MUD months are: Brumis, Kames'Hi, Teriany, Hiro, Prúdis,
  * Maqizie, Kadrictes, Mizu, Mysoluh, Karestis, Neruno, Latízie,
  * Aminen, Autúmis, V'tah, Aqrien, Tellus */
 
-/* Monthly exchange rate multipliers (percentage of base rate)
- * These create seasonal variation in the exchange rate
- * Must have exactly 17 elements to match the 17 MUD months */
-static const int qp_exchange_month_rates[] = {
-    100, /* 0: Brumis - Base rate */
-    105, /* 1: Kames'Hi - Slightly higher */
-    110, /* 2: Teriany - Higher */
-    115, /* 3: Hiro - Peak rate */
-    110, /* 4: Prúdis - Decreasing */
-    105, /* 5: Maqizie - Decreasing */
-    100, /* 6: Kadrictes - Base rate */
-    95,  /* 7: Mizu - Lower */
-    90,  /* 8: Mysoluh - Lowest */
-    85,  /* 9: Karestis - Very low */
-    90,  /* 10: Neruno - Recovering */
-    95,  /* 11: Latízie - Recovering */
-    100, /* 12: Aminen - Base rate */
-    105, /* 13: Autúmis - Slightly higher */
-    110, /* 14: V'tah - Higher */
-    105, /* 15: Aqrien - Decreasing */
-    100  /* 16: Tellus - Base rate */
-};
-
-/* Number of MUD months (must match array size above) */
+/* Number of MUD months */
 #define NUM_MUD_MONTHS 17
 
 /* Default base exchange rate: how many gold coins for 1 QP
@@ -936,17 +914,10 @@ void update_qp_exchange_rate_on_month_change(void)
     }
 }
 
-/* Calculate current exchange rate based on MUD month */
-static int get_qp_exchange_rate(void)
-{
-    int month = time_info.month;
-
-    /* Ensure month is in valid range (0-16) */
-    if (month < 0 || month >= NUM_MUD_MONTHS)
-        month = 0;
-
-    return (int)(((long long)qp_exchange_base_rate * qp_exchange_month_rates[month]) / 100);
-}
+/* Get current exchange rate - returns the stored base rate which is
+ * calculated as total_money / total_qp at the start of each MUD month.
+ * This matches the rate displayed by "show stats". */
+static int get_qp_exchange_rate(void) { return qp_exchange_base_rate; }
 
 SPECIAL(qp_exchange)
 {
