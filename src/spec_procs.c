@@ -800,9 +800,141 @@ static const int qp_exchange_month_rates[] = {
 /* Number of MUD months (must match array size above) */
 #define NUM_MUD_MONTHS 17
 
-/* Base exchange rate: how many gold coins for 1 QP
- * This is modified by the monthly rate above */
-#define QP_EXCHANGE_BASE_RATE 10000
+/* Default base exchange rate: how many gold coins for 1 QP
+ * This is used as a fallback if no calculated rate is available */
+#define QP_EXCHANGE_DEFAULT_BASE_RATE 10000
+
+/* Minimum and maximum allowed base rates to prevent extreme values */
+#define QP_EXCHANGE_MIN_BASE_RATE 1000
+#define QP_EXCHANGE_MAX_BASE_RATE 100000000
+
+/* File to store the monthly QP exchange base rate */
+#define QP_EXCHANGE_RATE_FILE "lib/etc/qp_exchange_rate"
+
+/* Global variables for dynamic QP exchange rate */
+static int qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+static int qp_exchange_rate_month = -1; /* Last month when rate was calculated */
+
+/* Calculate the base QP exchange rate from total gold and QP in the economy.
+ * This iterates through all registered mortal players (level <= 100) and
+ * calculates: rate = total_money / total_qp.
+ * Should be called at the start of each MUD month.
+ *
+ * Note: This operation loads all player files which can be slow on servers
+ * with many players. However, it only runs once per MUD month (35 MUD days)
+ * which is infrequent enough to not cause noticeable performance impact. */
+void calculate_qp_exchange_base_rate(void)
+{
+    int i;
+    struct char_data *temp_ch = NULL;
+    long long total_money = 0;
+    long long total_qp = 0;
+    int player_count = 0;
+    long long calculated_rate;
+
+    for (i = 0; i <= top_of_p_table; i++) {
+        /* Skip immortals (level >= LVL_IMMORT) based on cached player_table index */
+        if (player_table[i].level >= LVL_IMMORT)
+            continue;
+
+        /* Create temporary character to load player data */
+        CREATE(temp_ch, struct char_data, 1);
+        clear_char(temp_ch);
+        CREATE(temp_ch->player_specials, struct player_special_data, 1);
+        new_mobile_data(temp_ch);
+
+        if (load_char(player_table[i].name, temp_ch) >= 0) {
+            total_money += GET_GOLD(temp_ch) + GET_BANK_GOLD(temp_ch);
+            total_qp += GET_QUESTPOINTS(temp_ch);
+            player_count++;
+        }
+
+        free_char(temp_ch);
+        temp_ch = NULL;
+    }
+
+    /* Calculate the new base rate using long long to avoid overflow,
+     * then clamp to int-safe bounds */
+    if (total_qp > 0) {
+        calculated_rate = total_money / total_qp;
+        /* Clamp the rate to reasonable bounds (also ensures int-safe values) */
+        if (calculated_rate < QP_EXCHANGE_MIN_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
+        else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
+        qp_exchange_base_rate = (int)calculated_rate;
+    } else {
+        /* No QP in economy, use default rate */
+        qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+    }
+
+    qp_exchange_rate_month = time_info.month;
+
+    log1(
+        "QP Exchange: Calculated new base rate %d gold/QP from %d players "
+        "(total money: %lld, total QP: %lld)",
+        qp_exchange_base_rate, player_count, total_money, total_qp);
+
+    /* Save the rate to file for persistence */
+    save_qp_exchange_rate();
+}
+
+/* Save the QP exchange base rate to a file for persistence across reboots */
+void save_qp_exchange_rate(void)
+{
+    FILE *fp;
+
+    if ((fp = fopen(QP_EXCHANGE_RATE_FILE, "w")) == NULL) {
+        log1("SYSERR: Cannot save QP exchange rate to %s", QP_EXCHANGE_RATE_FILE);
+        return;
+    }
+
+    fprintf(fp, "%d %d\n", qp_exchange_base_rate, qp_exchange_rate_month);
+    fclose(fp);
+}
+
+/* Load the QP exchange base rate from file (called at boot) */
+void load_qp_exchange_rate(void)
+{
+    FILE *fp;
+    int rate, month;
+
+    if ((fp = fopen(QP_EXCHANGE_RATE_FILE, "r")) == NULL) {
+        log1("QP Exchange: No saved rate file, using default rate %d", QP_EXCHANGE_DEFAULT_BASE_RATE);
+        qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+        qp_exchange_rate_month = -1;
+        return;
+    }
+
+    if (fscanf(fp, "%d %d", &rate, &month) == 2) {
+        /* Validate loaded values including month range */
+        if (rate >= QP_EXCHANGE_MIN_BASE_RATE && rate <= QP_EXCHANGE_MAX_BASE_RATE && month >= 0 &&
+            month < NUM_MUD_MONTHS) {
+            qp_exchange_base_rate = rate;
+            qp_exchange_rate_month = month;
+            log1("QP Exchange: Loaded base rate %d gold/QP (calculated in month %d)", rate, month);
+        } else {
+            log1("QP Exchange: Invalid rate or month in file, using default");
+            qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+            qp_exchange_rate_month = -1;
+        }
+    } else {
+        log1("QP Exchange: Error reading rate file, using default");
+        qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+        qp_exchange_rate_month = -1;
+    }
+
+    fclose(fp);
+}
+
+/* Called when a new MUD month begins to update the exchange rate */
+void update_qp_exchange_rate_on_month_change(void)
+{
+    /* Only recalculate if the month has actually changed */
+    if (qp_exchange_rate_month != time_info.month) {
+        calculate_qp_exchange_base_rate();
+    }
+}
 
 /* Calculate current exchange rate based on MUD month */
 static int get_qp_exchange_rate(void)
@@ -813,7 +945,7 @@ static int get_qp_exchange_rate(void)
     if (month < 0 || month >= NUM_MUD_MONTHS)
         month = 0;
 
-    return (QP_EXCHANGE_BASE_RATE * qp_exchange_month_rates[month]) / 100;
+    return (int)(((long long)qp_exchange_base_rate * qp_exchange_month_rates[month]) / 100);
 }
 
 SPECIAL(qp_exchange)
@@ -853,6 +985,8 @@ SPECIAL(qp_exchange)
 
     /* Buy QP with gold */
     if (CMD_IS("comprar") || CMD_IS("buy")) {
+        int curr_qp, new_qp;
+
         if (!*arg || (amount = atoi(arg)) <= 0) {
             send_to_char(ch, "Quantos pontos de busca você deseja comprar?\r\n");
             send_to_char(ch, "Taxa atual: %s moedas por 1 QP\r\n", format_number_br(current_rate));
@@ -876,9 +1010,26 @@ SPECIAL(qp_exchange)
             return (TRUE);
         }
 
+        /* Check for QP overflow and limit before adding (follows increase_gold pattern) */
+        curr_qp = GET_QUESTPOINTS(ch);
+        new_qp = MIN(MAX_QP, curr_qp + amount);
+
+        /* Validate to prevent overflow: if new_qp < curr_qp, overflow occurred */
+        if (new_qp < curr_qp)
+            new_qp = MAX_QP;
+
+        if (new_qp == MAX_QP && curr_qp == MAX_QP) {
+            send_to_char(ch, "Você já possui o máximo de pontos de busca!\r\n");
+            return (TRUE);
+        }
+
         /* Perform the exchange */
         decrease_gold(ch, cost);
-        GET_QUESTPOINTS(ch) += amount;
+        GET_QUESTPOINTS(ch) = new_qp;
+
+        if (new_qp == MAX_QP) {
+            send_to_char(ch, "Você atingiu o limite máximo de pontos de busca!\r\n");
+        }
 
         send_to_char(ch, "Você troca %s moedas por %d pontos de busca.\r\n", format_number_br(cost), amount);
         act("$n realiza uma transação de pontos de busca.", TRUE, ch, 0, FALSE, TO_ROOM);
