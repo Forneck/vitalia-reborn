@@ -50,6 +50,7 @@ SPECIAL(janitor);
 SPECIAL(cityguard);
 SPECIAL(pet_shops);
 SPECIAL(bank);
+SPECIAL(qp_exchange);
 
 /* Old VitaliaMUD SpecProcs */
 SPECIAL(autodestruct);

@@ -151,6 +151,8 @@ void assign_mobiles(void)
     ASSIGNMOB(11312, questmaster);
     ASSIGNMOB(13424, questmaster);
 
+    ASSIGNMOB(2999, qp_exchange); /* QP Exchange NPC - gold/QP exchange */
+
     ASSIGNMOB(1270, armorer);
     ASSIGNMOB(1271, blacksmith);
     ASSIGNMOB(3095, belchior_auctioneer); /* Belchior - auction house keeper */

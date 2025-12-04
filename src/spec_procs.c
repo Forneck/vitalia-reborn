@@ -767,6 +767,170 @@ SPECIAL(bank)
         return (FALSE);
 }
 
+/* QP Exchange special procedure for mob 2999
+ * Allows players to exchange gold for QP and QP for gold using
+ * a dynamic exchange rate that varies by MUD month.
+ * The 17 MUD months are: Brumis, Kames'Hi, Teriany, Hiro, Prúdis,
+ * Maqizie, Kadrictes, Mizu, Mysoluh, Karestis, Neruno, Latízie,
+ * Aminen, Autúmis, V'tah, Aqrien, Tellus */
+
+/* Monthly exchange rate multipliers (percentage of base rate)
+ * These create seasonal variation in the exchange rate
+ * Must have exactly 17 elements to match the 17 MUD months */
+static const int qp_exchange_month_rates[] = {
+    100, /* 0: Brumis - Base rate */
+    105, /* 1: Kames'Hi - Slightly higher */
+    110, /* 2: Teriany - Higher */
+    115, /* 3: Hiro - Peak rate */
+    110, /* 4: Prúdis - Decreasing */
+    105, /* 5: Maqizie - Decreasing */
+    100, /* 6: Kadrictes - Base rate */
+    95,  /* 7: Mizu - Lower */
+    90,  /* 8: Mysoluh - Lowest */
+    85,  /* 9: Karestis - Very low */
+    90,  /* 10: Neruno - Recovering */
+    95,  /* 11: Latízie - Recovering */
+    100, /* 12: Aminen - Base rate */
+    105, /* 13: Autúmis - Slightly higher */
+    110, /* 14: V'tah - Higher */
+    105, /* 15: Aqrien - Decreasing */
+    100  /* 16: Tellus - Base rate */
+};
+
+/* Number of MUD months (must match array size above) */
+#define NUM_MUD_MONTHS 17
+
+/* Base exchange rate: how many gold coins for 1 QP
+ * This is modified by the monthly rate above */
+#define QP_EXCHANGE_BASE_RATE 10000
+
+/* Calculate current exchange rate based on MUD month */
+static int get_qp_exchange_rate(void)
+{
+    int month = time_info.month;
+
+    /* Ensure month is in valid range (0-16) */
+    if (month < 0 || month >= NUM_MUD_MONTHS)
+        month = 0;
+
+    return (QP_EXCHANGE_BASE_RATE * qp_exchange_month_rates[month]) / 100;
+}
+
+SPECIAL(qp_exchange)
+{
+    int amount, cost, current_rate;
+    char arg[MAX_INPUT_LENGTH];
+
+    /* Only handle specific commands */
+    if (!CMD_IS("cotacao") && !CMD_IS("comprar") && !CMD_IS("vender") && !CMD_IS("rate") && !CMD_IS("buy") &&
+        !CMD_IS("sell"))
+        return (FALSE);
+
+    /* Get current exchange rate */
+    current_rate = get_qp_exchange_rate();
+
+    /* Show exchange rate */
+    if (CMD_IS("cotacao") || CMD_IS("rate")) {
+        send_to_char(ch,
+                     "\tCCotação de Pontos de Busca\tn\r\n"
+                     "Mês atual: \tY%s\tn\r\n"
+                     "Taxa de câmbio: \tG%s\tn moedas por 1 QP\r\n"
+                     "\r\n"
+                     "Comandos disponíveis:\r\n"
+                     "  \tWcomprar <quantidade>\tn - Compra QPs com ouro\r\n"
+                     "  \tWvender <quantidade>\tn  - Vende QPs por ouro\r\n",
+                     month_name[time_info.month], format_number_br(current_rate));
+        return (TRUE);
+    }
+
+    /* Check if player is dead or transcended */
+    if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_TRNS)) {
+        send_to_char(ch, "Você não pode realizar transações neste estado.\r\n");
+        return (TRUE);
+    }
+
+    one_argument(argument, arg);
+
+    /* Buy QP with gold */
+    if (CMD_IS("comprar") || CMD_IS("buy")) {
+        if (!*arg || (amount = atoi(arg)) <= 0) {
+            send_to_char(ch, "Quantos pontos de busca você deseja comprar?\r\n");
+            send_to_char(ch, "Taxa atual: %s moedas por 1 QP\r\n", format_number_br(current_rate));
+            return (TRUE);
+        }
+
+        /* Calculate total cost */
+        cost = amount * current_rate;
+
+        /* Check for overflow (also protect against division by zero) */
+        if (cost < 0 || (current_rate > 0 && cost / current_rate != amount)) {
+            send_to_char(ch, "Essa quantidade é muito alta para calcular!\r\n");
+            return (TRUE);
+        }
+
+        /* Check if player has enough gold */
+        if (GET_GOLD(ch) < cost) {
+            send_to_char(ch, "Você não tem ouro suficiente!\r\n");
+            send_to_char(ch, "Você precisa de %s moedas para comprar %d QP.\r\n", format_number_br(cost), amount);
+            send_to_char(ch, "Você possui: %s moedas.\r\n", format_number_br(GET_GOLD(ch)));
+            return (TRUE);
+        }
+
+        /* Perform the exchange */
+        decrease_gold(ch, cost);
+        GET_QUESTPOINTS(ch) += amount;
+
+        send_to_char(ch, "Você troca %s moedas por %d pontos de busca.\r\n", format_number_br(cost), amount);
+        act("$n realiza uma transação de pontos de busca.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        /* Log the transaction */
+        mudlog(NRM, LVL_IMMORT, TRUE, "QP EXCHANGE: %s bought %d QP for %d gold (rate: %d)", GET_NAME(ch), amount, cost,
+               current_rate);
+
+        return (TRUE);
+    }
+
+    /* Sell QP for gold */
+    if (CMD_IS("vender") || CMD_IS("sell")) {
+        if (!*arg || (amount = atoi(arg)) <= 0) {
+            send_to_char(ch, "Quantos pontos de busca você deseja vender?\r\n");
+            send_to_char(ch, "Taxa atual: %s moedas por 1 QP\r\n", format_number_br(current_rate));
+            return (TRUE);
+        }
+
+        /* Check if player has enough QP */
+        if (GET_QUESTPOINTS(ch) < amount) {
+            send_to_char(ch, "Você não tem pontos de busca suficientes!\r\n");
+            send_to_char(ch, "Você possui: %d QP.\r\n", GET_QUESTPOINTS(ch));
+            return (TRUE);
+        }
+
+        /* Calculate gold received */
+        cost = amount * current_rate;
+
+        /* Check for overflow (also protect against division by zero) */
+        if (cost < 0 || (current_rate > 0 && cost / current_rate != amount)) {
+            send_to_char(ch, "Essa quantidade é muito alta para calcular!\r\n");
+            return (TRUE);
+        }
+
+        /* Perform the exchange */
+        GET_QUESTPOINTS(ch) -= amount;
+        increase_gold(ch, cost);
+
+        send_to_char(ch, "Você troca %d pontos de busca por %s moedas.\r\n", amount, format_number_br(cost));
+        act("$n realiza uma transação de pontos de busca.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        /* Log the transaction */
+        mudlog(NRM, LVL_IMMORT, TRUE, "QP EXCHANGE: %s sold %d QP for %d gold (rate: %d)", GET_NAME(ch), amount, cost,
+               current_rate);
+
+        return (TRUE);
+    }
+
+    return (FALSE);
+}
+
 /* Old VitaliaMUD SpecProcs - Complex ones that need to remain as SpecProcs */
 
 SPECIAL(autodestruct)
