@@ -833,10 +833,8 @@ void calculate_qp_exchange_base_rate(void)
     long long calculated_rate;
 
     for (i = 0; i <= top_of_p_table; i++) {
-        /* Skip immortals (level > 100) based on cached player_table index.
-         * Note: Using 100 directly since LVL_IMMORT (101) - 1 = 100 represents
-         * the maximum mortal level. */
-        if (player_table[i].level > 100)
+        /* Skip immortals (level >= LVL_IMMORT) based on cached player_table index */
+        if (player_table[i].level >= LVL_IMMORT)
             continue;
 
         /* Create temporary character to load player data */
