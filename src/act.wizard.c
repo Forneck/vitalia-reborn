@@ -3228,56 +3228,20 @@ ACMD(do_show)
                          buf_switches, buf_overflows, global_lists->iSize, group_list ? group_list->iSize : 0,
                          get_pending_group_cleanup_count());
 
-            /* Calculate and display economy stats for mortal players (level <= 100) */
+            /* Calculate and display economy stats for mortal players (level <= 100)
+             * Note: This iterates through all player files, which may be slow on
+             * servers with many registered players. Consider caching if performance
+             * becomes an issue. */
             calculate_economy_stats(&total_money, &total_qp, &mortal_count);
 
             /* Format numbers with Brazilian-style separators - copy to separate buffers
-             * since format_long_br uses a static buffer */
-            snprintf(money_str, sizeof(money_str), "%lld", total_money);
-            snprintf(qp_str, sizeof(qp_str), "%lld", total_qp);
-
-            /* Format with thousand separators */
-            {
-                char temp[64];
-                int ti, mi, len;
-
-                /* Format total_money */
-                len = strlen(money_str);
-                mi = 0;
-                for (ti = 0; ti < len; ti++) {
-                    if (ti > 0 && (len - ti) % 3 == 0)
-                        temp[mi++] = '.';
-                    temp[mi++] = money_str[ti];
-                }
-                temp[mi] = '\0';
-                strlcpy(money_str, temp, sizeof(money_str));
-
-                /* Format total_qp */
-                snprintf(temp, sizeof(temp), "%lld", total_qp);
-                len = strlen(temp);
-                mi = 0;
-                for (ti = 0; ti < len; ti++) {
-                    if (ti > 0 && (len - ti) % 3 == 0)
-                        qp_str[mi++] = '.';
-                    qp_str[mi++] = temp[ti];
-                }
-                qp_str[mi] = '\0';
-
-                /* Calculate and format QP exchange rate */
-                if (total_qp > 0) {
-                    long long rate = total_money / total_qp;
-                    snprintf(temp, sizeof(temp), "%lld", rate);
-                    len = strlen(temp);
-                    mi = 0;
-                    for (ti = 0; ti < len; ti++) {
-                        if (ti > 0 && (len - ti) % 3 == 0)
-                            rate_str[mi++] = '.';
-                        rate_str[mi++] = temp[ti];
-                    }
-                    rate_str[mi] = '\0';
-                } else {
-                    strlcpy(rate_str, "N/A", sizeof(rate_str));
-                }
+             * immediately since format_long_br uses a static buffer */
+            strlcpy(money_str, format_long_br((long)total_money), sizeof(money_str));
+            strlcpy(qp_str, format_long_br((long)total_qp), sizeof(qp_str));
+            if (total_qp > 0) {
+                strlcpy(rate_str, format_long_br((long)(total_money / total_qp)), sizeof(rate_str));
+            } else {
+                strlcpy(rate_str, "N/A", sizeof(rate_str));
             }
 
             send_to_char(ch,
