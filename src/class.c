@@ -304,9 +304,9 @@ static byte calc_save(int level, int start_value)
         return 90;
     if (level >= 100)
         return 1;
-    /* Linear interpolation: decrease from start_value to 1 over 100 levels */
+    /* Linear interpolation: decrease from start_value at level 1 to 1 at level 100 */
     int save = start_value - ((level * (start_value - 1)) / 100);
-    return (byte)MAX(1, save);
+    return (byte)MAX(1, save); /* MAX for defensive programming */
 }
 
 /* Starting saving throw values at level 1 for each class.
