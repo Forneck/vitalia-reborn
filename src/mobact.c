@@ -1270,7 +1270,7 @@ void mobile_activity(void)
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) == NOTHING &&
             ch->ai_data->current_goal == GOAL_NONE &&
             ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) && /* Stagger: each mob checks every 20 ticks */
-            rand_number(1, 100) <= 10) {               /* 10% chance when it's their turn */
+            rand_number(1, 100) <= 10) {              /* 10% chance when it's their turn */
             mob_try_to_accept_quest(ch);
         }
 
@@ -4791,13 +4791,16 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                         /* Safety check: hit() can indirectly cause extract_char */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             return TRUE;
+                        /* Additional safety check: target_mob may have been extracted by combat or scripts */
+                        if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                            return TRUE;
                     }
                     return TRUE;
                 }
 
-                /* Target is safe (not fighting). Check health and decrement protection counter.
-                 * Using 80% health as the threshold for "safe" condition */
-                if (GET_HIT(target_mob) > (GET_MAX_HIT(target_mob) * 80 / 100)) {
+                /* Target is not fighting (handled above). Check if target is healthy and decrement protection counter.
+                 * Using 80% health as the threshold for "healthy" condition */
+                if (GET_HIT(target_mob) > GET_MAX_HIT(target_mob) * 0.8 && !FIGHTING(target_mob)) {
                     /* Target is healthy - count this as a successful protection tick */
                     if (--ch->ai_data->quest_counter <= 0) {
                         /* Protected long enough - quest complete! */
@@ -4805,7 +4808,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                         ch->ai_data->current_goal = GOAL_NONE;
                     }
                 }
-                /* If target is injured but not fighting, stay and guard (don't decrement counter) */
+                /* If target is injured or fighting, stay and guard (don't decrement counter) */
                 return TRUE;
             } else {
                 /* Target not in room, seek them in the world */
