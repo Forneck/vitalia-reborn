@@ -193,3 +193,4 @@ src/test/testfile
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.o
