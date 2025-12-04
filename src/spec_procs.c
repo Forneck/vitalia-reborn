@@ -907,13 +907,14 @@ void load_qp_exchange_rate(void)
     }
 
     if (fscanf(fp, "%d %d", &rate, &month) == 2) {
-        /* Validate loaded values */
-        if (rate >= QP_EXCHANGE_MIN_BASE_RATE && rate <= QP_EXCHANGE_MAX_BASE_RATE) {
+        /* Validate loaded values including month range */
+        if (rate >= QP_EXCHANGE_MIN_BASE_RATE && rate <= QP_EXCHANGE_MAX_BASE_RATE && month >= 0 &&
+            month < NUM_MUD_MONTHS) {
             qp_exchange_base_rate = rate;
             qp_exchange_rate_month = month;
             log1("QP Exchange: Loaded base rate %d gold/QP (calculated in month %d)", rate, month);
         } else {
-            log1("QP Exchange: Invalid rate in file, using default");
+            log1("QP Exchange: Invalid rate or month in file, using default");
             qp_exchange_base_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
             qp_exchange_rate_month = -1;
         }
@@ -944,7 +945,7 @@ static int get_qp_exchange_rate(void)
     if (month < 0 || month >= NUM_MUD_MONTHS)
         month = 0;
 
-    return (qp_exchange_base_rate * qp_exchange_month_rates[month]) / 100;
+    return (int)(((long long)qp_exchange_base_rate * qp_exchange_month_rates[month]) / 100);
 }
 
 SPECIAL(qp_exchange)
@@ -984,6 +985,8 @@ SPECIAL(qp_exchange)
 
     /* Buy QP with gold */
     if (CMD_IS("comprar") || CMD_IS("buy")) {
+        int curr_qp, new_qp;
+
         if (!*arg || (amount = atoi(arg)) <= 0) {
             send_to_char(ch, "Quantos pontos de busca você deseja comprar?\r\n");
             send_to_char(ch, "Taxa atual: %s moedas por 1 QP\r\n", format_number_br(current_rate));
@@ -1008,8 +1011,8 @@ SPECIAL(qp_exchange)
         }
 
         /* Check for QP overflow and limit before adding (follows increase_gold pattern) */
-        int curr_qp = GET_QUESTPOINTS(ch);
-        int new_qp = MIN(MAX_QP, curr_qp + amount);
+        curr_qp = GET_QUESTPOINTS(ch);
+        new_qp = MIN(MAX_QP, curr_qp + amount);
 
         /* Validate to prevent overflow: if new_qp < curr_qp, overflow occurred */
         if (new_qp < curr_qp)
