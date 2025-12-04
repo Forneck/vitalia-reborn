@@ -18,6 +18,7 @@
 #include "comm.h"
 #include "db.h"
 #include "fight.h"
+#include "spec_procs.h"
 
 static void another_hour(int mode);
 void weather_change(int zone);
@@ -158,6 +159,9 @@ static void another_hour(int mode)
                 time_info.month = 0;
                 time_info.year++;
             }
+
+            /* Update QP exchange rate at the start of each new month */
+            update_qp_exchange_rate_on_month_change();
         }
     }
 }

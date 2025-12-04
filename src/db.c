@@ -800,6 +800,9 @@ void boot_db(void)
     log1("Generating player index.");
     build_player_index();
 
+    log1("Loading QP exchange rate.");
+    load_qp_exchange_rate();
+
     if (auto_pwipe) {
         log1("Cleaning out inactive pfiles.");
         clean_pfiles();

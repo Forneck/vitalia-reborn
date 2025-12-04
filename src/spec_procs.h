@@ -36,6 +36,12 @@ const char *get_spec_func_name(SPECIAL(*func));
 void sort_spells(void);
 void list_skills(struct char_data *ch);
 
+/* QP Exchange rate functions */
+void calculate_qp_exchange_base_rate(void);
+void save_qp_exchange_rate(void);
+void load_qp_exchange_rate(void);
+void update_qp_exchange_rate_on_month_change(void);
+
 /* Special functions */
 SPECIAL(guild);
 SPECIAL(dump);
