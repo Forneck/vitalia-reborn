@@ -917,7 +917,10 @@ void update_qp_exchange_rate_on_month_change(void)
 /* Get current exchange rate - returns the stored base rate which is
  * calculated as total_money / total_qp at the start of each MUD month.
  * This matches the rate displayed by "show stats". */
-static int get_qp_exchange_rate(void) { return qp_exchange_base_rate; }
+static int get_qp_exchange_rate(void)
+{
+    return qp_exchange_base_rate;
+}
 
 SPECIAL(qp_exchange)
 {
