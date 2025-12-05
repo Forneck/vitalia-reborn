@@ -597,31 +597,22 @@ ssize_t ProtocolInput(descriptor_t *apDescriptor, char *apData, int aSize, char 
     return (CmdIndex);
 }
 
-/* ProtocolOutput: Process and format output data for transmission to client
- * 
+/* ProtocolOutputToBuffer: Process and format output data for transmission to client
+ *
  * This function processes output text, applying color codes, protocol-specific
- * formatting, and UTF-8 filtering as needed for the client.
- * 
- * IMPORTANT: This function uses a static buffer and returns a pointer to it.
- * The returned pointer is ONLY VALID until the next call to ProtocolOutput().
- * Callers MUST immediately copy the returned data - do not store the pointer.
- * 
- * Safe usage:   strcpy(buffer, ProtocolOutput(...));
- * UNSAFE usage: const char *ptr = ProtocolOutput(...); [later] use ptr;
- * 
- * The function includes a reentrancy guard to detect and prevent nested calls
- * that would corrupt the static buffer. If reentrancy is detected, the function
- * returns the input data unprocessed.
- * 
+ * formatting, and UTF-8 filtering as needed for the client. The result is written
+ * directly to the caller-provided buffer, avoiding shared static state that could
+ * cause crosstalk between different output operations.
+ *
  * @param apDescriptor  Client descriptor for protocol negotiation info
  * @param apData        Input text to process
+ * @param apOutput      Output buffer to write the processed text to
+ * @param outputSize    Size of the output buffer
  * @param apLength      Pointer to length (updated with processed length)
- * @return              Pointer to processed text (valid until next call)
  */
-const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *apLength)
+void ProtocolOutputToBuffer(descriptor_t *apDescriptor, const char *apData, char *apOutput, size_t outputSize,
+                            int *apLength)
 {
-    static char Result[MAX_OUTPUT_BUFFER + 1];
-    static int in_use = 0; /* Reentrancy guard */
     const char Tab[] = "\t";
     const char MSP[] = "!!";
     const char MXPStart[] = "\033[1z<";
@@ -629,24 +620,28 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
     const char LinkStart[] = "\033[1z<send>\033[7z";
     const char LinkStop[] = "\033[1z</send>\033[7z";
     bool_t bTerminate = false, bUseMXP = false, bUseMSP = false;
-    int i = 0, j = 0; /* Index values */
+    int i = 0, j = 0;                    /* Index values */
+    int maxOutput = (int)outputSize - 1; /* Leave room for null terminator */
 
     protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
-    if (pProtocol == NULL || apData == NULL)
-        return apData;
-    
-    /* Reentrancy guard: If buffer is already in use, return input unchanged to prevent corruption */
-    if (in_use) {
-        ReportBug("ProtocolOutput: Reentrancy detected! Returning unprocessed data to prevent corruption.\n");
-        return apData;
+    if (pProtocol == NULL || apData == NULL || apOutput == NULL || outputSize == 0) {
+        /* Copy input to output unchanged if we can't process */
+        if (apOutput && outputSize > 0 && apData) {
+            strncpy(apOutput, apData, outputSize - 1);
+            apOutput[outputSize - 1] = '\0';
+            if (apLength)
+                *apLength = strlen(apOutput);
+        } else if (apLength) {
+            *apLength = 0;
+        }
+        return;
     }
-    in_use = 1;
 
     /* Strip !!SOUND() triggers if they support MSP or are using sound */
     if (pProtocol->bMSP || pProtocol->pVariables[eMSDP_SOUND]->ValueInt)
         bUseMSP = true;
 
-    for (; i < MAX_OUTPUT_BUFFER && apData[j] != '\0' && !bTerminate && (*apLength <= 0 || j < *apLength); ++j) {
+    for (; i < maxOutput && apData[j] != '\0' && !bTerminate && (*apLength <= 0 || j < *apLength); ++j) {
         if (apData[j] == '\t') {
             const char *pCopyFrom = NULL;
 
@@ -893,8 +888,8 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
 
             /* Copy the colour code, if any. */
             if (pCopyFrom != NULL) {
-                while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
-                    Result[i++] = *pCopyFrom++;
+                while (*pCopyFrom != '\0' && i < maxOutput)
+                    apOutput[i++] = *pCopyFrom++;
             }
         } else if (apData[j] == '@') {
             const char *pCopyFrom = NULL;
@@ -1029,51 +1024,94 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
 
             /* Copy the colour code, if any. */
             if (pCopyFrom != NULL) {
-                while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
-                    Result[i++] = *pCopyFrom++;
+                while (*pCopyFrom != '\0' && i < maxOutput)
+                    apOutput[i++] = *pCopyFrom++;
             }
         } else if (bUseMXP && apData[j] == '>') {
             const char *pCopyFrom = MXPStop;
-            while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
-                Result[i++] = *pCopyFrom++;
+            while (*pCopyFrom != '\0' && i < maxOutput)
+                apOutput[i++] = *pCopyFrom++;
             bUseMXP = false;
         } else if (bUseMSP && j > 0 && apData[j - 1] == '!' && apData[j] == '!' &&
                    PrefixString("SOUND(", &apData[j + 1])) {
             /* Avoid accidental triggering of old-style MSP triggers */
-            Result[i++] = '?';
+            apOutput[i++] = '?';
         } else /* Just copy the character normally */
         {
-            Result[i++] = apData[j];
+            apOutput[i++] = apData[j];
         }
     }
 
     /* If we'd overflow the buffer, we don't send any output */
-    if (i >= MAX_OUTPUT_BUFFER) {
+    if (i >= maxOutput) {
         i = 0;
-        ReportBug("ProtocolOutput: Too much outgoing data to store in the buffer.\n");
+        ReportBug("ProtocolOutputToBuffer: Too much outgoing data to store in the buffer.\n");
     }
 
     /* Terminate the string */
-    Result[i] = '\0';
+    apOutput[i] = '\0';
 
     /* Apply UTF-8 filtering if UTF-8 is disabled, but not during protocol negotiation
      * or for protocol control sequences that could interfere with client identification */
     if (pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt && apDescriptor &&
         STATE(apDescriptor) != CON_GET_PROTOCOL) {
         char FilteredResult[MAX_OUTPUT_BUFFER + 1];
-        FilterUTF8ToASCII(Result, FilteredResult, MAX_OUTPUT_BUFFER + 1);
-        strcpy(Result, FilteredResult);
-        i = strlen(Result);
+        FilterUTF8ToASCII(apOutput, FilteredResult, outputSize);
+        strncpy(apOutput, FilteredResult, outputSize - 1);
+        apOutput[outputSize - 1] = '\0';
+        i = strlen(apOutput);
     }
 
     /* Store the length */
     if (apLength)
         *apLength = i;
+}
+
+/* ProtocolOutput: Process and format output data for transmission to client
+ *
+ * This function processes output text, applying color codes, protocol-specific
+ * formatting, and UTF-8 filtering as needed for the client.
+ *
+ * IMPORTANT: This function uses a static buffer and returns a pointer to it.
+ * The returned pointer is ONLY VALID until the next call to ProtocolOutput().
+ * Callers MUST immediately copy the returned data - do not store the pointer.
+ *
+ * Safe usage:   strcpy(buffer, ProtocolOutput(...));
+ * UNSAFE usage: const char *ptr = ProtocolOutput(...); [later] use ptr;
+ *
+ * The function includes a reentrancy guard to detect and prevent nested calls
+ * that would corrupt the static buffer. If reentrancy is detected, the function
+ * returns the input data unprocessed.
+ *
+ * DEPRECATION NOTICE: New code should use ProtocolOutputToBuffer() instead,
+ * which avoids the shared static buffer and prevents crosstalk between
+ * different output operations.
+ *
+ * @param apDescriptor  Client descriptor for protocol negotiation info
+ * @param apData        Input text to process
+ * @param apLength      Pointer to length (updated with processed length)
+ * @return              Pointer to processed text (valid until next call)
+ */
+const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *apLength)
+{
+    static char Result[MAX_OUTPUT_BUFFER + 1];
+    static int in_use = 0; /* Reentrancy guard */
+
+    if (apData == NULL)
+        return apData;
+
+    /* Reentrancy guard: If buffer is already in use, return input unchanged to prevent corruption */
+    if (in_use) {
+        ReportBug("ProtocolOutput: Reentrancy detected! Returning unprocessed data to prevent corruption.\n");
+        return apData;
+    }
+    in_use = 1;
+
+    ProtocolOutputToBuffer(apDescriptor, apData, Result, sizeof(Result), apLength);
 
     /* Clear reentrancy guard before returning */
     in_use = 0;
 
-    /* Return the string */
     return Result;
 }
 
