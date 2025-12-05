@@ -1902,11 +1902,11 @@ int write_to_descriptor(socket_t desc, const char *txt)
 {
     ssize_t bytes_written;
     size_t total, write_total = 0;
-    char buffer[MAX_STRING_LENGTH];   // Buffer para o texto formatado
+    char buffer[MAX_STRING_LENGTH]; /* Buffer for formatted text */
     int wantsize = 0;
     descriptor_t *d;
 
-    // Localize o descritor do cliente com base no socket
+    /* Find the descriptor for this socket */
     d = get_descriptor_by_socket(desc);
 
     if (!d) {
@@ -1914,20 +1914,20 @@ int write_to_descriptor(socket_t desc, const char *txt)
         return -1;
     }
 
-    // Passe o texto por ProtocolOutput para aplicar as cores
-    // Using ProtocolOutputToBuffer to avoid static buffer crosstalk
+    /* Process text through protocol handler to apply colors */
+    /* Using ProtocolOutputToBuffer to avoid static buffer crosstalk */
     ProtocolOutputToBuffer(d, txt, buffer, sizeof(buffer), &wantsize);
-    total = strlen(buffer);   // Calcula o tamanho do texto processado
+    total = strlen(buffer);
 
-    // Envie o texto processado ao cliente
+    /* Send the processed text to the client */
     while (total > 0) {
         bytes_written = perform_socket_write(desc, buffer + write_total, total);
 
         if (bytes_written < 0) {
             perror("SYSERR: Write to socket");
-            return -1;   // Erro fatal, desconecta o cliente
+            return -1; /* Fatal error, disconnect client */
         } else if (bytes_written == 0) {
-            // Falha temporária (buffer cheio), tenta novamente depois
+            /* Temporary failure (buffer full), try again later */
             return write_total;
         } else {
             total -= bytes_written;

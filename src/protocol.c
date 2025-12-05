@@ -1055,8 +1055,10 @@ void ProtocolOutputToBuffer(descriptor_t *apDescriptor, const char *apData, char
      * or for protocol control sequences that could interfere with client identification */
     if (pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt && apDescriptor &&
         STATE(apDescriptor) != CON_GET_PROTOCOL) {
+        /* Use the minimum of outputSize and MAX_OUTPUT_BUFFER to ensure safe filtering */
+        size_t filterSize = (outputSize < MAX_OUTPUT_BUFFER + 1) ? outputSize : (MAX_OUTPUT_BUFFER + 1);
         char FilteredResult[MAX_OUTPUT_BUFFER + 1];
-        FilterUTF8ToASCII(apOutput, FilteredResult, outputSize);
+        FilterUTF8ToASCII(apOutput, FilteredResult, (int)filterSize);
         strncpy(apOutput, FilteredResult, outputSize - 1);
         apOutput[outputSize - 1] = '\0';
         i = strlen(apOutput);
