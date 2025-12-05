@@ -791,6 +791,12 @@
 #define MAX_BANK 2140000000   /**< Maximum possible in bank gold (2.14 Billion) */
 #define MAX_QP (MAX_BANK / 2) /**< Maximum possible quest points (half of MAX_BANK) */
 
+/* Character stat limits to prevent overflow of sbyte type (-128 to 127) */
+#define MAX_HITROLL 100  /**< Maximum hitroll value for characters */
+#define MIN_HITROLL -100 /**< Minimum hitroll value for characters */
+#define MAX_DAMROLL 100  /**< Maximum damroll value for characters */
+#define MIN_DAMROLL -100 /**< Minimum damroll value for characters */
+
 /** Define the largest set of commands for a trigger.
  * 16k should be plenty and then some. */
 #define MAX_CMD_LENGTH 16384
