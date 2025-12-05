@@ -305,6 +305,11 @@ void affect_total(struct char_data *ch)
      * AC ranges from -200 (best possible) to +100 (worst) */
     GET_AC(ch) = MAX(-200, MIN(GET_AC(ch), 100));
 
+    /* Clamp hitroll and damroll to prevent overflow of sbyte type (-128 to 127)
+     * Limit to -100 to 100 to provide safety margin */
+    GET_HITROLL(ch) = MAX(MIN_HITROLL, MIN(GET_HITROLL(ch), MAX_HITROLL));
+    GET_DAMROLL(ch) = MAX(MIN_DAMROLL, MIN(GET_DAMROLL(ch), MAX_DAMROLL));
+
     if (IS_NPC(ch) || GET_LEVEL(ch) >= LVL_GRGOD) {
         GET_STR(ch) = MIN(GET_STR(ch), i);
     } else {
