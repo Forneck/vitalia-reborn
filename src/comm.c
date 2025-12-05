@@ -1438,12 +1438,16 @@ size_t vwrite_to_output(struct descriptor_data *t, const char *format, va_list a
 
     wantsize = size = vsnprintf(txt, sizeof(txt), format, args);
 
-    strcpy(txt,
-           ProtocolOutput(t, txt, (int *)&wantsize)); /* <--- Add this
-                                                                                                                 line */
-    size = wantsize;                                  /* <--- Add this line */
-    if (t->pProtocol->WriteOOB > 0)                   /* <--- Add this line */
-        --t->pProtocol->WriteOOB;                     /* <--- Add this line */
+    /* Use a temporary buffer for protocol processing to avoid self-modifying strcpy */
+    {
+        char protocol_buf[MAX_STRING_LENGTH];
+        ProtocolOutputToBuffer(t, txt, protocol_buf, sizeof(protocol_buf), (int *)&wantsize);
+        strncpy(txt, protocol_buf, sizeof(txt) - 1);
+        txt[sizeof(txt) - 1] = '\0';
+    }
+    size = wantsize;
+    if (t->pProtocol->WriteOOB > 0)
+        --t->pProtocol->WriteOOB;
 
     /* If exceeding the size of the buffer, truncate it for the overflow
        message */
@@ -1621,7 +1625,6 @@ static int new_descriptor(socket_t s)
 {
     socket_t desc;
     int sockets_connected = 0;
-    int greetsize;
     socklen_t i;
     struct descriptor_data *newd;
     struct sockaddr_in peer;
@@ -1698,8 +1701,8 @@ static int new_descriptor(socket_t s)
         write_to_output(newd, "Tentando identificar o cliente. Aguarde...\r\n");
         ProtocolNegotiate(newd);
     } else {
-        greetsize = strlen(GREETINGS);
-        write_to_output(newd, "%s", ProtocolOutput(newd, GREETINGS, &greetsize));
+        /* Send greeting - vwrite_to_output will handle protocol processing */
+        write_to_output(newd, "%s", GREETINGS);
     }
     return (0);
 }
@@ -1899,31 +1902,32 @@ int write_to_descriptor(socket_t desc, const char *txt)
 {
     ssize_t bytes_written;
     size_t total, write_total = 0;
-    char buffer[MAX_STRING_LENGTH];   // Buffer para o texto formatado
+    char buffer[MAX_STRING_LENGTH]; /* Buffer for formatted text */
     int wantsize = 0;
     descriptor_t *d;
 
-    // ✅ Localize o descritor do cliente com base no socket
-    d = get_descriptor_by_socket(desc);   // Crie essa função se ela não existir
+    /* Find the descriptor for this socket */
+    d = get_descriptor_by_socket(desc);
 
     if (!d) {
         fprintf(stderr, "SYSERR: Descriptor not found for socket %d\n", desc);
         return -1;
     }
 
-    // ✅ Passe o texto por ProtocolOutput para aplicar as cores
-    strcpy(buffer, ProtocolOutput(d, txt, &wantsize));
-    total = strlen(buffer);   // Calcula o tamanho do texto processado
+    /* Process text through protocol handler to apply colors */
+    /* Using ProtocolOutputToBuffer to avoid static buffer crosstalk */
+    ProtocolOutputToBuffer(d, txt, buffer, sizeof(buffer), &wantsize);
+    total = strlen(buffer);
 
-    // ✅ Envie o texto processado ao cliente
+    /* Send the processed text to the client */
     while (total > 0) {
         bytes_written = perform_socket_write(desc, buffer + write_total, total);
 
         if (bytes_written < 0) {
             perror("SYSERR: Write to socket");
-            return -1;   // Erro fatal, desconecta o cliente
+            return -1; /* Fatal error, disconnect client */
         } else if (bytes_written == 0) {
-            // Falha temporária (buffer cheio), tenta novamente depois
+            /* Temporary failure (buffer full), try again later */
             return write_total;
         } else {
             total -= bytes_written;

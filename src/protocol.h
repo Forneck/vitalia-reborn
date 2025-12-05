@@ -343,6 +343,21 @@ ssize_t ProtocolInput(descriptor_t *apDescriptor, char *apData, int aSize, char 
  */
 const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *apLength);
 
+/* Function: ProtocolOutputToBuffer
+ *
+ * Same as ProtocolOutput but writes the result directly to a caller-provided buffer.
+ * This avoids the use of a shared static buffer and prevents crosstalk between
+ * different output operations.
+ *
+ * @param apDescriptor  Client descriptor for protocol negotiation info
+ * @param apData        Input text to process
+ * @param apOutput      Output buffer to write the processed text to
+ * @param outputSize    Size of the output buffer
+ * @param apLength      Pointer to length (updated with processed length)
+ */
+void ProtocolOutputToBuffer(descriptor_t *apDescriptor, const char *apData, char *apOutput, size_t outputSize,
+                            int *apLength);
+
 /******************************************************************************
  Copyover save/load functions.
  ******************************************************************************/
