@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/org/repo/discussions
+    about: Please ask questions or discuss vague ideas here before opening an issue.
+  - name: Security Reporting
+    url: https://github.com/org/repo/security
+    about: Report security vulnerabilities confidentially.
+

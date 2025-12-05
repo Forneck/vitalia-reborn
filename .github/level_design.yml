@@ -1,0 +1,80 @@
+name: "Level Design Specification"
+description: "Propose or define a new Game Level, Zone, or MUD Area."
+title: "[Level]: <Name of Level>"
+labels: ["level-design", "status: triage"]
+assignees: ["lead-level-designer"]
+projects: ["org/game-roadmap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Level Design Document
+        This form converts a level concept into an actionable engineering task. 
+        Please adhere to the(https://wiki.example.com/style) and [Asset Pipeline](https://wiki.example.com/assets).
+  - type: input
+    id: level_name
+    attributes:
+      label: Level/Zone Name
+      description: The unique identifier for this area.
+      placeholder: e.g., "Crystal Caverns" or "Zone_04"
+    validations:
+      required: true
+  - type: dropdown
+    id: engine_type
+    attributes:
+      label: Engine Context
+      options:
+        - Unity 3D (Scene)
+        - Godot 4 (Node Tree)
+        - Evennia/MUD (Room Graph)
+        - RanvierMUD (Bundle)
+    validations:
+      required: true
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story & Narrative
+      description: "Format: As a <role>, I want <feature>, so that <benefit>."
+      placeholder: "As a Player, I want to explore the sunken ruins so that I can discover the history of the precursor civilization..."
+    validations:
+      required: true
+  - type: textarea
+    id: mechanics
+    attributes:
+      label: Key Mechanics & Interactions
+      description: List specific gameplay elements required (e.g., Puzzles, Combat Encounters).
+      value: |
+        - [ ] Mechanism A: 
+        - [ ] Mechanism B: 
+  - type: textarea
+    id: assets
+    attributes:
+      label: Asset Requirements
+      description: List models, audio, textures, or scripts needed.
+      placeholder: "- Model: Ancient_Pillar_01.fbx\n- Script: WaterPhysics.cs"
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (Functional)
+      description: Specific, testable conditions for this level.
+      value: |
+        - [ ] Player spawns at coordinates (0,0,0) or designated entry room.
+        - [ ] All exits link correctly to adjacent zones.
+        - [ ] Ambient audio plays on entry.
+        - [ ] NavMesh/Pathfinding is valid for AI.
+    validations:
+      required: true
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done (Quality Gate)
+      description: Confirm adherence to global engineering standards.
+      options:
+        - label: Performance Budget met (FPS/Polys/Latency)
+        - label: Accessibility checks passed (Contrast/Nav)
+        - label: Documentation/Wiki updated
+        - label: Peer Review conducted
+        - label: No Console Errors / Linter Warnings
+    validations:
+      required: true
+
