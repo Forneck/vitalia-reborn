@@ -32,12 +32,15 @@ This is a C-based MUD (Multi-User Dungeon) game engine called Vitalia Reborn - a
 3. **Use existing memory management** patterns (prefer zmalloc family functions for debugging)
 4. **Preserve game balance** - be cautious with changes affecting gameplay mechanics
 5. **Test with sample data** - use existing world files in `lib/world/` to validate changes
-6. **Document gameplay changes** in changelog.txt when modifying game mechanics
+6. **Document gameplay changes** in `lib/text/news` when modifying game mechanics
 7. **Respect legacy code structure** - this is a revival project maintaining classic MUD architecture
 8. **Handle Portuguese content appropriately** - many strings and comments are in Portuguese reflecting the Brazilian origin
+9. **References** - Always consult `tbadoc/` and `doc` folder reference for documentation, along the help files.
+10. **Self-regulating system** - The systems and mechanics must try to be self-regulating to maintaing the minimum intervencionism while using as few resources as possible
 
 ## Platform Considerations
 - Primary target is Linux/Unix systems
+- Primary environment may use sudo for permissions and access, possible interacting with fewer restrictions
 - Windows support via CMake (see `tbadoc/README.CMAKE.md`)
 - Multiple legacy platform support documented in `tbadoc/README.*` files
 - Both 32-bit and 64-bit architecture support
@@ -48,3 +51,5 @@ This is a C-based MUD (Multi-User Dungeon) game engine called Vitalia Reborn - a
 - **Networking**: MUD uses traditional telnet-based protocols
 - **Real-time Constraints**: Server must handle multiple concurrent players efficiently
 - **Game Balance**: Combat, magic, and economic systems require careful consideration of game balance
+- **Safety**: New features and modifying existingbones must be throughfull tested to aboid crashhes, and unintended behaviors
+- **Immersion**: Try to keep the maximum possible of immersion while maintaining realism and fund.
