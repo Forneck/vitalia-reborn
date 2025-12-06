@@ -2384,7 +2384,8 @@ ACMD(do_disguise)
 
     /* Store original descriptions before replacing them */
     /* We need to save them somewhere - we'll use a temporary global or file system approach */
-    /* For now, PCs don't have short_descr or long_descr normally, so we can just free and set to NULL on removal */
+    /* For now, PCs don't have short_descr, long_descr, or description normally, so we can just free and set to NULL on
+     * removal */
 
     /* Replace player's descriptions with mob's descriptions */
     if (ch->player.short_descr)
@@ -2394,6 +2395,14 @@ ACMD(do_disguise)
     if (ch->player.long_descr)
         free(ch->player.long_descr);
     ch->player.long_descr = strdup(proto_mob->player.long_descr);
+
+    /* Also copy the main description so 'look <player>' shows the mob's description */
+    if (ch->player.description)
+        free(ch->player.description);
+    if (proto_mob->player.description)
+        ch->player.description = strdup(proto_mob->player.description);
+    else
+        ch->player.description = NULL;
 
     /* Apply the disguise affect with duration based on corpse timer */
     new_affect(&af);
@@ -2441,6 +2450,10 @@ void remove_disguise(struct char_data *ch, bool expired)
         if (ch->player.long_descr) {
             free(ch->player.long_descr);
             ch->player.long_descr = NULL;
+        }
+        if (ch->player.description) {
+            free(ch->player.description);
+            ch->player.description = NULL;
         }
     }
 
