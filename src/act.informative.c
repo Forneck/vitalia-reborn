@@ -1292,13 +1292,9 @@ ACMD(do_look)
                 look_at_target(ch, strcpy(tempsave, arg));
             return;
         }
-        if (!*arg) { /* "look" alone, without an argument at all */
+        if (!*arg) /* "look" alone, without an argument at all */
             look_at_room(ch, 1);
-            /* Check for danger sense after looking at the room */
-            if (!IS_NPC(ch) && GET_SKILL(ch, SKILL_DANGER_SENSE)) {
-                check_danger_sense(ch);
-            }
-        } else if (is_abbrev(arg, "ceu") || is_abbrev(arg, "sky"))
+        else if (is_abbrev(arg, "ceu") || is_abbrev(arg, "sky"))
             look_at_sky(ch);
         else if (is_abbrev(arg, "em") || is_abbrev(arg, "in"))
             look_in_obj(ch, arg2);

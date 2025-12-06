@@ -4611,7 +4611,6 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    BOWS          - Armas de arco e municoes                 [Ran            ]
 
    @WOutras Habilidades@n
-   DANGER SENSE  - Sentir perigo (armadilhas mortais)       [Lad            ]
    ENVENOM       - Envenenar armas                          [Lad            ]
    HIDE          - Esconder                                 [Lad            ]
    JAM LOCK      - Travar fechaduras                        [Lad            ]
@@ -11760,32 +11759,6 @@ SPY
    Permite espiar em uma sala adjacente a sala atual, sem a necessidade de
 se locomover ate ela.  E' util para verificar se a sala em que voce deseja
 chegar e realmente segura.
-#1
-DANGER-SENSE "SENTIR PERIGO" "DANGER SENSE"
-
-   Somente Ladroes (Nivel 51+).
-   Prerequisito: SPY (Espiar)
-
-   Uso: Habilidade passiva (automatica)
-
-   Uma habilidade avancada que permite ao ladrao sentir perigos mortais nas
-salas adjacentes. Quando voce entra em uma sala ou usa o comando 'look',
-a habilidade verifica automaticamente todas as direcoes proximas em busca
-de armadilhas mortais (death traps).
-
-   Se houver perigo mortal em alguma direcao, voce recebera um alerta:
-   "Voce sente um arrepio na espinha... ha PERIGO mortal vindo do [direcao]!"
-
-   Esta e uma habilidade essencial para exploradores de alto nivel, permitindo
-evitar mortes instantaneas sem a necessidade de usar 'spy' em cada direcao
-manualmente.
-
-   A habilidade funciona:
-   - Automaticamente ao entrar em uma nova sala
-   - Ao usar o comando 'look' para reexaminar o ambiente
-   - Detecta TODAS as direcoes perigosas simultaneamente
-
-Veja tambem: SPY, LOOK
 #1
 STAFF-ZONES
  
