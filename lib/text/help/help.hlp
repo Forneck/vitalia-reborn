@@ -1348,17 +1348,17 @@ BASHDOOR DERRUBAR-PORTA
    Uso: bashdoor [nome da porta] [direcao]
 
    Esta habilidade permite forcar a abertura de uma porta fechada usando forca
-bruta. Ao derrubar uma porta com sucesso, você:
+bruta. Ao derrubar uma porta com sucesso, voce:
 
    - Remove qualquer cunha/travamento (destranca fechaduras travadas com JAM)
    - Destranca a fechadura (se estiver trancada)
    - Abre a porta
 
-   O sucesso depende da sua habilidade de Bash. Se você falhar, ficará impedido
+   O sucesso depende da sua habilidade de Bash. Se voce falhar, ficara impedido
 de agir por 2 turnos (mesmo tempo de espera de um Bash em combate).
 
-   Esta e uma forma eficaz de passar por portas travadas por Ladrões ou portas
-trancadas quando você nao tem a chave.
+   Esta e uma forma eficaz de passar por portas travadas por Ladroes ou portas
+trancadas quando voce nao tem a chave.
 
 Exemplos:
   > bashdoor door north
