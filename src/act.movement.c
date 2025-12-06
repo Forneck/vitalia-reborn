@@ -365,6 +365,11 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     if (ch->desc != NULL)
         look_at_room(ch, 0);
 
+    /* Check for danger sense after entering the room */
+    if (!IS_NPC(ch) && GET_SKILL(ch, SKILL_DANGER_SENSE)) {
+        check_danger_sense(ch);
+    }
+
     /* Autoquest trigger checks: Must be after look_at_room so quest messages appear after room description */
     if (!IS_NPC(ch)) {
         autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
@@ -1522,4 +1527,42 @@ ACMD(do_spy)
     char_from_room(ch);
     char_to_room(ch, was_in);
     act("$n dá uma espiada na sala ao lado.", TRUE, ch, NULL, NULL, TO_ROOM);
+}
+
+/* Danger Sense: Check for death traps in adjacent rooms */
+void check_danger_sense(struct char_data *ch)
+{
+    int dir;
+    room_rnum dest;
+    bool danger_found = FALSE;
+    char directions[MAX_STRING_LENGTH] = "";
+    char buf[MAX_STRING_LENGTH];
+
+    /* Only works for thieves with the danger sense skill */
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
+        return;
+
+    /* Check all directions for death traps */
+    for (dir = 0; dir < NUM_OF_DIRS; dir++) {
+        if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->to_room))
+            continue;
+
+        /* Check if the destination room is a death trap */
+        if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
+            if (!danger_found) {
+                danger_found = TRUE;
+                strcpy(directions, dirs_pt[dir]);
+            } else {
+                strcat(directions, ", ");
+                strcat(directions, dirs_pt[dir]);
+            }
+        }
+    }
+
+    /* Alert the character if danger was sensed */
+    if (danger_found) {
+        snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!&n\r\n",
+                 directions);
+        send_to_char(ch, "%s", buf);
+    }
 }

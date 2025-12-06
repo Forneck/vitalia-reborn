@@ -2848,6 +2848,20 @@ void create_spells_db()
 
     spedit_save_internally(new_spell);
 
+    // SKILL_DANGER_SENSE # 260
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_DANGER_SENSE;
+    new_spell->status = available;
+    new_spell->name = strdup("danger sense");
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 50;
+
+    spedit_save_internally(new_spell);
+
     // SKILL_TRACK # 140
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
