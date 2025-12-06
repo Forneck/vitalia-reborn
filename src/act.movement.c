@@ -1537,7 +1537,7 @@ void check_danger_sense(struct char_data *ch)
     int danger_count = 0;
     char directions[256] = "";
     char buf[MAX_STRING_LENGTH];
-    int len = 0;
+    size_t len = 0;
     int ret;
 
     /* Only works for thieves with the danger sense skill */
@@ -1557,13 +1557,13 @@ void check_danger_sense(struct char_data *ch)
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
             if (danger_count > 0) {
                 ret = snprintf(directions + len, sizeof(directions) - len, ", ");
-                if (ret < 0 || ret >= (int)(sizeof(directions) - len))
+                if (ret < 0 || (size_t)ret >= sizeof(directions) - len)
                     break;
                 len += ret;
             }
 
             ret = snprintf(directions + len, sizeof(directions) - len, "%s", dirs_pt[dir]);
-            if (ret < 0 || ret >= (int)(sizeof(directions) - len))
+            if (ret < 0 || (size_t)ret >= sizeof(directions) - len)
                 break;
             len += ret;
 
