@@ -64,6 +64,10 @@ void affect_update(void)
         for (af = i->affected; af; af = next) {
             next = af->next;
             if (af->duration >= 1) {
+                /* Special handling for disguise - send warning at duration == 1 */
+                if (af->spell == SKILL_DISGUISE && af->duration == 1) {
+                    send_to_char(i, "\r\n\tyO cheiro de podridão do seu disfarce está ficando insuportável...\tn\r\n");
+                }
                 af->duration--;
                 /* For stoneskin, keep modifier (points) in sync with duration
                  * since the spell is designed as 1 hour per point */
@@ -73,14 +77,19 @@ void affect_update(void)
             } else if (af->duration == -1) /* No action */
                 ;
             else {
-                if ((af->spell > 0) && (af->spell <= MAX_SKILLS)) {
-                    if (!af->next || (af->next->spell != af->spell) || (af->next->duration > 0)) {
-                        spell = get_spell_by_vnum(af->spell);
-                        if (spell && spell->messages.wear_off)
-                            send_to_char(i, "%s\r\n", spell->messages.wear_off);
+                /* Special handling for disguise expiration */
+                if (af->spell == SKILL_DISGUISE) {
+                    remove_disguise(i, TRUE); /* TRUE = expired */
+                } else {
+                    if ((af->spell > 0) && (af->spell <= MAX_SKILLS)) {
+                        if (!af->next || (af->next->spell != af->spell) || (af->next->duration > 0)) {
+                            spell = get_spell_by_vnum(af->spell);
+                            if (spell && spell->messages.wear_off)
+                                send_to_char(i, "%s\r\n", spell->messages.wear_off);
+                        }
                     }
+                    affect_remove(i, af);
                 }
-                affect_remove(i, af);
             }
         }
 }

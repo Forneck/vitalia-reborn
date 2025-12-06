@@ -11787,6 +11787,46 @@ manualmente.
 
 Veja tambem: SPY, LOOK
 #1
+DISGUISE DISFARCE "MACABRE DISGUISE" "DISFARCE MACABRO"
+
+   Somente Ladroes (Nivel 60+).
+
+   Uso: disguise <corpo>
+
+   Uma habilidade macabra que permite ao ladrao vestir o corpo de uma
+criatura morta como um disfarce perfeito. O ladrao assume completamente
+a aparencia da criatura, incluindo descricoes, emocoes e caracteristicas
+visuais.
+
+   EFEITOS:
+   - Você adota a aparencia, descricao e nome da criatura
+   - Desaparece da lista 'who' (modo fantasma)
+   - Exibe emocoes aleatorias quando observado (se o observador tiver
+     emocoes ativadas)
+   - Outros jogadores veem voce como a criatura, nao como jogador
+
+   DURACAO:
+   O disfarce dura pelo tempo restante do corpo (timer do corpo).
+   Corpos frescos = disfarce mais longo
+   Corpos apodrecendo = disfarce mais curto
+   
+   AVISO:
+   Com 1 hora restante: "O cheiro de podridao do seu disfarce esta ficando
+   insuportavel..."
+
+   EXPIRACAO:
+   "Vermes devoram o resto da carne do seu disfarce e ele cai aos pedacos!"
+
+   REQUISITOS:
+   - O corpo deve ser de um NPC (nao jogador)
+   - O corpo deve ter pelo menos 2 horas de timer restante
+   - O corpo e destruido ao ser usado
+
+   NOTA: O disfarce e visual e auditivo. Comportamentos suspeitos ainda
+   podem revelar sua verdadeira identidade. Use com cuidado!
+
+Veja tambem: HIDE, SNEAK, SPY, LADRAO
+#1
 STAFF-ZONES
  
    Ensure their trial vnum is complete and they have submitted a zone proposal. 

@@ -144,6 +144,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"diagnose", "diag", POS_RESTING, do_diagnose, 0, 0, CMD_ONEARG},
     {"dig", "dig", POS_DEAD, do_dig, LVL_BUILDER, 0, CMD_ONEARG},
     {"disable", "disable", POS_DEAD, do_disable, LVL_GRGOD, 0, CMD_ONEARG},
+    {"disguise", "disgu", POS_STANDING, do_cast, 1, SKILL_DISGUISE, CMD_ONEARG},
     {"display", "disp", POS_DEAD, do_display, 0, 0, CMD_NOARG},
     {"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE, CMD_ONEARG},
     {"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_ONEARG},

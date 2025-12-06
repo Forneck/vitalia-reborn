@@ -40,6 +40,7 @@ ACMD(do_fishing);
 ACMD(do_forage);
 ACMD(do_eavesdrop);
 ACMD(do_taint);
+ACMD(do_disguise);
 
 void set_spells_function()
 {
@@ -2861,6 +2862,21 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 51;
     new_spell->prerequisite_spell = SKILL_SPY;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_DISGUISE # 261
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_DISGUISE;
+    new_spell->status = available;
+    new_spell->name = strdup("disguise");
+    new_spell->function = do_disguise;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 60;
 
     spedit_save_internally(new_spell);
 
