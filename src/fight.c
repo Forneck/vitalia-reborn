@@ -27,6 +27,7 @@
 #include "spedit.h"
 #include "genolc.h"
 #include "genzon.h"
+#include "mud_event.h"
 
 /* locally defined global variables, used externally */
 /* head of l-list of fighting chars */
@@ -2583,7 +2584,13 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
         /* Victim has an aura shield and attacker does not - reflect damage */
         int victim_aura = get_aura_shield_spell(victim);
         if (victim_aura > 0) {
-            int saved = mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch));
+            int saved;
+            /* Characters in whirlwind are spinning uncontrollably and more vulnerable to auras.
+             * Apply a significant penalty to saving throw (-10), making them much more likely to
+             * take full aura damage and suffer additional effects. */
+            int is_whirlwind = char_has_mud_event(ch, eWHIRLWIND) ? 1 : 0;
+            int save_penalty = is_whirlwind ? -10 : 0;
+            saved = mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch) + save_penalty);
             float ratio = get_aura_reflect_ratio(victim_aura, saved);
             int reflect_dam = (int)(dam * ratio);
 
@@ -2599,8 +2606,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 damage(victim, ch, reflect_dam, victim_aura);
             }
 
-            /* Special effect: Fire Shield - chance to apply burning */
-            if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_BURNING)) {
+            /* Special effect: Fire Shield - chance to apply burning
+             * Whirlwind increases chance from 1/3 to 1/2 */
+            int fire_chance = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, fire_chance) == 0 &&
+                !AFF_FLAGGED(ch, AFF_BURNING)) {
                 struct affected_type fire_af;
                 new_affect(&fire_af);
                 fire_af.spell = SPELL_FIRESHIELD;
@@ -2614,8 +2624,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("As chamas de $N queimam $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Water Shield - chance to soak (dexterity penalty) */
-            if (victim_aura == SPELL_WATERSHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_SOAKED)) {
+            /* Special effect: Water Shield - chance to soak (dexterity penalty)
+             * Whirlwind increases chance from 1/3 to 1/2 */
+            int water_chance = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_WATERSHIELD && !saved && rand_number(0, water_chance) == 0 &&
+                !AFF_FLAGGED(ch, AFF_SOAKED)) {
                 struct affected_type water_af;
                 new_affect(&water_af);
                 water_af.spell = SPELL_WATERSHIELD;
@@ -2629,8 +2642,10 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura de água de $N encharca $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Rock Shield - chance to reduce attacker's AC (stagger) */
-            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, 3) == 0 &&
+            /* Special effect: Rock Shield - chance to reduce attacker's AC (stagger)
+             * Whirlwind increases chance from 1/4 to 1/2 */
+            int rock_chance = is_whirlwind ? 1 : 3;
+            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, rock_chance) == 0 &&
                 !AFF_FLAGGED(ch, AFF_STAGGERED)) {
                 struct affected_type rock_af;
                 new_affect(&rock_af);
@@ -2660,8 +2675,10 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura venenosa de $N contamina $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Lightning Shield - chance to briefly stun (paralysis) */
-            if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, 4) == 0 &&
+            /* Special effect: Lightning Shield - chance to briefly stun (paralysis)
+             * Whirlwind increases chance from 1/5 to 1/3 */
+            int lightning_chance = is_whirlwind ? 2 : 4;
+            if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, lightning_chance) == 0 &&
                 !AFF_FLAGGED(ch, AFF_PARALIZE)) {
                 struct affected_type light_af;
                 new_affect(&light_af);
@@ -2674,8 +2691,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty) */
-            if (victim_aura == SPELL_ICESHIELD && !saved && rand_number(0, 2) == 0 && !AFF_FLAGGED(ch, AFF_CHILLED)) {
+            /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty)
+             * Whirlwind increases chance from 1/3 to 1/2 */
+            int ice_chance = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_ICESHIELD && !saved && rand_number(0, ice_chance) == 0 &&
+                !AFF_FLAGGED(ch, AFF_CHILLED)) {
                 struct affected_type ice_af;
                 new_affect(&ice_af);
                 ice_af.spell = SPELL_ICESHIELD;
@@ -2704,8 +2724,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 act("A aura ácida de $N corrói a armadura de $n!", FALSE, ch, 0, victim, TO_NOTVICT);
             }
 
-            /* Special effect: Mind Shield - chance to confuse (intelligence and mana penalty) */
-            if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, 3) == 0 && !AFF_FLAGGED(ch, AFF_CONFUSED)) {
+            /* Special effect: Mind Shield - chance to confuse (intelligence and mana penalty)
+             * Whirlwind increases chance from 1/4 to 1/2 */
+            int mind_chance = is_whirlwind ? 1 : 3;
+            if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, mind_chance) == 0 &&
+                !AFF_FLAGGED(ch, AFF_CONFUSED)) {
                 struct affected_type mind_af;
                 struct affected_type mana_af;
                 new_affect(&mind_af);
@@ -2919,7 +2942,7 @@ void beware_lightning()
                         if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
                             dam = MIN(dam, 33);
                         if (IS_AFFECTED(victim, AFF_LIGHTNINGSHIELD))
-			    dam = 0;
+                            dam = 0;
                     }
 
                     dam = MIN(dam, 100);
@@ -2928,18 +2951,18 @@ void beware_lightning()
                         dam = 0;   // Imortais não são afetados
 
                     GET_HIT(victim) -= dam;
-   
-		    /*Não afetado por lightningshield tem 1% de ganhar o shield*/
-		    if (!IS_AFFECTED(victim, AFF_LIGHTNINGSHIELD) && rand_number(1,100) <= 1){	
-		     
-		       new_affect(&af);
-		       af.spell = SPELL_LIGHTNINGSHIELD;
-		       af.duration = GET_LEVEL(victim);
-                       if (GET_CON(victim))
-                           af.duration *= (GET_CON(victim)/12);
-                       SET_BIT_AR(af.bitvector,AFF_LIGHTNINGSHIELD);
-        	       affect_to_char(victim, &af);
-		    }
+
+                    /*Não afetado por lightningshield tem 1% de ganhar o shield*/
+                    if (!IS_AFFECTED(victim, AFF_LIGHTNINGSHIELD) && rand_number(1, 100) <= 1) {
+
+                        new_affect(&af);
+                        af.spell = SPELL_LIGHTNINGSHIELD;
+                        af.duration = GET_LEVEL(victim);
+                        if (GET_CON(victim))
+                            af.duration *= (GET_CON(victim) / 12);
+                        SET_BIT_AR(af.bitvector, AFF_LIGHTNINGSHIELD);
+                        affect_to_char(victim, &af);
+                    }
 
                     if (dam > 0) {
                         act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
