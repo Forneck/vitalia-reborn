@@ -1534,9 +1534,10 @@ void check_danger_sense(struct char_data *ch)
 {
     int dir;
     room_rnum dest;
-    bool danger_found = FALSE;
+    int danger_count = 0;
     char directions[MAX_STRING_LENGTH] = "";
     char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
 
     /* Only works for thieves with the danger sense skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
@@ -1549,20 +1550,22 @@ void check_danger_sense(struct char_data *ch)
 
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
-            if (!danger_found) {
-                danger_found = TRUE;
-                strcpy(directions, dirs_pt[dir]);
+            if (danger_count == 0) {
+                len = strlcpy(directions, dirs_pt[dir], sizeof(directions));
             } else {
-                strcat(directions, ", ");
-                strcat(directions, dirs_pt[dir]);
+                len += strlcpy(directions + len, ", ", sizeof(directions) - len);
+                len += strlcpy(directions + len, dirs_pt[dir], sizeof(directions) - len);
             }
+            danger_count++;
         }
     }
 
     /* Alert the character if danger was sensed */
-    if (danger_found) {
-        snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!&n\r\n",
-                 directions);
+    if (danger_count > 0) {
+        /* Use correct Portuguese preposition for singular/plural */
+        const char *preposition = (danger_count == 1) ? "do" : "das direções";
+        snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo %s %s!&n\r\n",
+                 preposition, directions);
         send_to_char(ch, "%s", buf);
     }
 }
