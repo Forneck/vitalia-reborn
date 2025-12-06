@@ -842,8 +842,10 @@ ACMD(do_gen_door)
 
     if ((obj) || (door >= 0)) {
         keynum = DOOR_KEY(ch, obj, door);
-        int is_pickproof = DOOR_IS_PICKPROOF(ch, obj, door);
-        int is_jammed = DOOR_IS_JAMMED(ch, obj, door);
+        int is_pickproof;
+        int is_jammed;
+        is_pickproof = DOOR_IS_PICKPROOF(ch, obj, door);
+        is_jammed = DOOR_IS_JAMMED(ch, obj, door);
 
         if (!(DOOR_IS_OPENABLE(ch, obj, door)))
             send_to_char(ch, "Você não pode %s  isso!!\r\n", doors_pt[subcmd]);
