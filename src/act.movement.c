@@ -1535,14 +1535,16 @@ void check_danger_sense(struct char_data *ch)
     int dir;
     room_rnum dest;
     int danger_count = 0;
-    char directions[MAX_STRING_LENGTH] = "";
+    char directions[256] = "";
     char buf[MAX_STRING_LENGTH];
-    size_t len = 0;
-    size_t ret;
-    size_t dir_len;
+    int len = 0;
 
     /* Only works for thieves with the danger sense skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
+        return;
+
+    /* Check proficiency - higher skill level = better detection chance */
+    if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DANGER_SENSE))
         return;
 
     /* Check all directions for death traps */
@@ -1552,36 +1554,11 @@ void check_danger_sense(struct char_data *ch)
 
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
-            dir_len = strlen(dirs_pt[dir]);
-
-            /* Add direction to list, checking for buffer overflow */
-            if (danger_count == 0) {
-                ret = strlcpy(directions, dirs_pt[dir], sizeof(directions));
-                if (ret >= sizeof(directions)) {
-                    /* Truncation occurred, buffer full */
-                    len = sizeof(directions) - 1;
-                    break;
-                }
-                len = ret;
-            } else {
-                /* Check if we have room for ", " and the direction */
-                if (len + 2 + dir_len >= sizeof(directions))
-                    break; /* Would overflow, stop adding */
-
-                ret = strlcpy(directions + len, ", ", sizeof(directions) - len);
-                if (ret >= sizeof(directions) - len) {
-                    /* Truncation, stop here */
-                    break;
-                }
-                len += ret;
-
-                ret = strlcpy(directions + len, dirs_pt[dir], sizeof(directions) - len);
-                if (ret >= sizeof(directions) - len) {
-                    /* Truncation, stop here */
-                    break;
-                }
-                len += ret;
-            }
+            if (danger_count > 0)
+                len += snprintf(directions + len, sizeof(directions) - len, ", ");
+            len += snprintf(directions + len, sizeof(directions) - len, "%s", dirs_pt[dir]);
+            if (len >= sizeof(directions))
+                break;
             danger_count++;
         }
     }
