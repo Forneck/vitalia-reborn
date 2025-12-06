@@ -177,6 +177,7 @@ ACMD(do_gen_door);
 #define SCMD_UNLOCK 2
 #define SCMD_LOCK 3
 #define SCMD_PICK 4
+#define SCMD_JAM 5
 ACMD(do_fly);
 #define SCMD_FLY 0
 #define SCMD_LAND 1

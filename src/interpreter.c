@@ -210,6 +210,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"immlist", "imm", POS_DEAD, do_gen_ps, 0, SCMD_IMMLIST, CMD_NOARG},
     {"info", "info", POS_SLEEPING, do_gen_ps, 0, SCMD_INFO, CMD_NOARG},
     {"invis", "invi", POS_DEAD, do_invis, LVL_IMMORT, 0, CMD_ONEARG},
+    {"jam", "jam", POS_STANDING, do_gen_door, 1, SCMD_JAM, CMD_TWOARG},
     {"junk", "j", POS_RESTING, do_drop, 0, SCMD_JUNK, CMD_ONEARG},
     {"kill", "k", POS_FIGHTING, do_kill, 0, 0, CMD_ONEARG},
     {"kick", "ki", POS_FIGHTING, do_cast, 1, SKILL_KICK, CMD_ONEARG},

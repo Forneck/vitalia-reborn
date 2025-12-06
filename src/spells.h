@@ -229,6 +229,7 @@
 #define SKILL_EAVESDROP 256
 #define SKILL_TAINT_FLUID 257 /* Thief skill to poison liquids    */
 #define SKILL_PEEK 258        /* Thief skill to peek at inventory */
+#define SKILL_JAM_LOCK 259    /* Thief skill to jam door locks     */
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 

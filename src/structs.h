@@ -123,6 +123,7 @@
 #define EX_KNOCK (1 << 6)   /**< Lock can be knocked */
 #define EX_DNOPEN (1 << 7)  /**< Exit can't be opened*/
 #define EX_DNCLOSE (1 << 8) /**< Exit can't be opened*/
+#define EX_JAMMED (1 << 9)  /**< Lock is jammed (temporary) */
 #define EX_CLOSED (1 << 14) /**< The door is closed */
 #define EX_LOCKED (1 << 15) /**< The door is locked */
 
