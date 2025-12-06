@@ -2586,9 +2586,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
         if (victim_aura > 0) {
             int saved;
             /* Characters in whirlwind are spinning uncontrollably and more vulnerable to auras.
-             * Apply a significant penalty to saving throw (+10), making them much more likely to
-             * fail their save and take full aura damage and suffer additional effects.
-             * Note: In the save system, positive modifiers are worse (less resistance). */
+             * Apply +10 penalty to saving throws (higher values = worse resistance in this system),
+             * making whirlwind users much more likely to fail saves and take full aura damage. */
             struct mud_event_data *whirlwind_event = char_has_mud_event(ch, eWHIRLWIND);
             int save_penalty = whirlwind_event ? 10 : 0;
             saved = mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch) + save_penalty);
