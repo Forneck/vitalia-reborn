@@ -854,7 +854,7 @@ ACMD(do_gen_door)
         else if (is_jammed && IS_SET(flags_door[subcmd], NEED_UNLOCKED)) {
             send_to_char(ch, "A fechadura está travada e não pode ser aberta!\r\n");
             /* Chance to dislodge the jam with repeated attempts */
-            if (!obj && door >= 0 && rand_number(1, JAM_DISLODGE_CHANCE) == 1) {
+            if (!obj && door >= 0 && rand_number(1, 100) <= JAM_DISLODGE_CHANCE) {
                 unjam_door_both_sides(ch, door);
                 send_to_char(ch, "A cunha se solta e cai no chão com um *clique*!\r\n");
                 act("A cunha da fechadura $F se solta e cai no chão!", FALSE, ch, 0,
