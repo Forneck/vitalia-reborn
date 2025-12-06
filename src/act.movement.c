@@ -1554,8 +1554,11 @@ void check_danger_sense(struct char_data *ch)
 
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
-            if (danger_count > 0)
+            if (danger_count > 0) {
                 len += snprintf(directions + len, sizeof(directions) - len, ", ");
+                if (len >= sizeof(directions))
+                    break;
+            }
             len += snprintf(directions + len, sizeof(directions) - len, "%s", dirs_pt[dir]);
             if (len >= sizeof(directions))
                 break;
