@@ -2315,8 +2315,8 @@ ACMD(do_disguise)
     struct char_data *proto_mob = NULL;
     struct affected_type af;
     char arg[MAX_INPUT_LENGTH];
-    mob_vnum mob_vnum;
-    mob_rnum mob_rnum;
+    mob_vnum corpse_mob_vnum;
+    mob_rnum mob_rnum_value;
 
     /* Check if character has the skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DISGUISE)) {
@@ -2350,10 +2350,11 @@ ACMD(do_disguise)
         return;
     }
 
-    /* Check if it's an NPC corpse (has mob VNUM) */
-    mob_vnum = GET_OBJ_VAL(corpse, 2);
-    if (mob_vnum == NOBODY || mob_vnum == 0) {
-        send_to_char(ch, "Esse corpo está muito decomposto para ser usado como disfarce.\r\n");
+    /* Check if it's an NPC corpse (has valid mob VNUM) */
+    /* Player corpses have value 0, NPC corpses have mob VNUM > 0 */
+    corpse_mob_vnum = GET_OBJ_VAL(corpse, 2);
+    if (corpse_mob_vnum <= 0) {
+        send_to_char(ch, "Esse corpo de jogador não pode ser usado como disfarce.\r\n");
         return;
     }
 
@@ -2364,13 +2365,13 @@ ACMD(do_disguise)
     }
 
     /* Get the mob prototype */
-    mob_rnum = real_mobile(mob_vnum);
-    if (mob_rnum == NOBODY) {
-        send_to_char(ch, "Esse corpo está muito decomposto para ser reconhecido.\r\n");
+    mob_rnum_value = real_mobile(corpse_mob_vnum);
+    if (mob_rnum_value == NOBODY) {
+        send_to_char(ch, "Esse corpo não pode ser identificado - o mob não existe mais.\r\n");
         return;
     }
 
-    proto_mob = &mob_proto[mob_rnum];
+    proto_mob = &mob_proto[mob_rnum_value];
 
     /* Skill check */
     if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DISGUISE)) {
@@ -2381,9 +2382,9 @@ ACMD(do_disguise)
 
     /* Success! Apply the disguise */
 
-    /* Store original descriptions (we'll use the affect modifier fields creatively) */
-    /* Since we can't easily store strings in affects, we'll need to modify the player
-     * structure directly and rely on the AFF_DISGUISE flag to know when to restore */
+    /* Store original descriptions before replacing them */
+    /* We need to save them somewhere - we'll use a temporary global or file system approach */
+    /* For now, PCs don't have short_descr or long_descr normally, so we can just free and set to NULL on removal */
 
     /* Replace player's descriptions with mob's descriptions */
     if (ch->player.short_descr)
@@ -2399,8 +2400,8 @@ ACMD(do_disguise)
     af.spell = SKILL_DISGUISE;
     af.duration = GET_OBJ_TIMER(corpse); /* Duration matches corpse timer */
     SET_BIT_AR(af.bitvector, AFF_DISGUISE);
-    /* Store mob_vnum in modifier for later reference (limited to short int range) */
-    af.modifier = (sbyte)(mob_vnum % 128); /* Best effort storage */
+    /* Note: We don't store mob_vnum in modifier anymore since we have the description */
+    af.modifier = 0;
     af.location = APPLY_NONE;
     affect_to_char(ch, &af);
 

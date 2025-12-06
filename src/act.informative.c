@@ -763,7 +763,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             const char *emotion_colors[] = {CCYEL(ch, C_NRM), CCRED(ch, C_NRM), CCYEL(ch, C_NRM), CCBLU(ch, C_NRM),
                                             CCMAG(ch, C_NRM), CCCYN(ch, C_NRM), CCYEL(ch, C_NRM), CCGRN(ch, C_NRM)};
             /* Use a pseudo-random selection based on the character's ID for consistency */
-            int emotion_index = (GET_IDNUM(i) + world[IN_ROOM(i)].number) % 8;
+            /* Ensure the result is always positive by using abs and modulo */
+            int emotion_index = abs((int)(GET_IDNUM(i) + world[IN_ROOM(i)].number)) % 8;
             send_to_char(ch, "%s%s%s ", emotion_colors[emotion_index], emotion_texts[emotion_index], CCYEL(ch, C_NRM));
         }
 
@@ -1617,6 +1618,21 @@ ACMD(do_score)
     if (AFF_FLAGGED(ch, AFF_STONESKIN)) {
         int points = get_stoneskin_points(ch);
         send_to_char(ch, "Sua pele está muito dura (%d pontos de proteção).\r\n", points);
+    }
+
+    if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+        struct affected_type *af;
+        for (af = ch->affected; af; af = af->next) {
+            if (af->spell == SKILL_DISGUISE) {
+                if (ch->player.short_descr) {
+                    send_to_char(ch, "Você está disfarçad%s como: %s\r\n", OA(ch), ch->player.short_descr);
+                    send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", af->duration);
+                } else {
+                    send_to_char(ch, "Você está disfarçad%s.\r\n", OA(ch));
+                }
+                break;
+            }
+        }
     }
 
     if (AFF_FLAGGED(ch, AFF_THISTLECOAT))
