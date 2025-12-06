@@ -2588,7 +2588,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             /* Characters in whirlwind are spinning uncontrollably and more vulnerable to auras.
              * Apply a significant penalty to saving throw (-10), making them much more likely to
              * take full aura damage and suffer additional effects. */
-            int is_whirlwind = char_has_mud_event(ch, eWHIRLWIND) ? 1 : 0;
+            int is_whirlwind = char_has_mud_event(ch, eWHIRLWIND);
             int save_penalty = is_whirlwind ? -10 : 0;
             saved = mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch) + save_penalty);
             float ratio = get_aura_reflect_ratio(victim_aura, saved);
@@ -2608,8 +2608,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Fire Shield - chance to apply burning
              * Whirlwind increases chance from 1/3 to 1/2 */
-            int fire_chance = is_whirlwind ? 1 : 2;
-            if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, fire_chance) == 0 &&
+            int fire_max = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_FIRESHIELD && !saved && rand_number(0, fire_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_BURNING)) {
                 struct affected_type fire_af;
                 new_affect(&fire_af);
@@ -2626,8 +2626,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Water Shield - chance to soak (dexterity penalty)
              * Whirlwind increases chance from 1/3 to 1/2 */
-            int water_chance = is_whirlwind ? 1 : 2;
-            if (victim_aura == SPELL_WATERSHIELD && !saved && rand_number(0, water_chance) == 0 &&
+            int water_max = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_WATERSHIELD && !saved && rand_number(0, water_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_SOAKED)) {
                 struct affected_type water_af;
                 new_affect(&water_af);
@@ -2644,8 +2644,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Rock Shield - chance to reduce attacker's AC (stagger)
              * Whirlwind increases chance from 1/4 to 1/2 */
-            int rock_chance = is_whirlwind ? 1 : 3;
-            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, rock_chance) == 0 &&
+            int rock_max = is_whirlwind ? 1 : 3;
+            if (victim_aura == SPELL_ROCKSHIELD && !saved && rand_number(0, rock_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_STAGGERED)) {
                 struct affected_type rock_af;
                 new_affect(&rock_af);
@@ -2677,8 +2677,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Lightning Shield - chance to briefly stun (paralysis)
              * Whirlwind increases chance from 1/5 to 1/3 */
-            int lightning_chance = is_whirlwind ? 2 : 4;
-            if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, lightning_chance) == 0 &&
+            int lightning_max = is_whirlwind ? 2 : 4;
+            if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, lightning_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_PARALIZE)) {
                 struct affected_type light_af;
                 new_affect(&light_af);
@@ -2693,8 +2693,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty)
              * Whirlwind increases chance from 1/3 to 1/2 */
-            int ice_chance = is_whirlwind ? 1 : 2;
-            if (victim_aura == SPELL_ICESHIELD && !saved && rand_number(0, ice_chance) == 0 &&
+            int ice_max = is_whirlwind ? 1 : 2;
+            if (victim_aura == SPELL_ICESHIELD && !saved && rand_number(0, ice_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_CHILLED)) {
                 struct affected_type ice_af;
                 new_affect(&ice_af);
@@ -2726,8 +2726,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
             /* Special effect: Mind Shield - chance to confuse (intelligence and mana penalty)
              * Whirlwind increases chance from 1/4 to 1/2 */
-            int mind_chance = is_whirlwind ? 1 : 3;
-            if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, mind_chance) == 0 &&
+            int mind_max = is_whirlwind ? 1 : 3;
+            if (victim_aura == SPELL_MINDSHIELD && !saved && rand_number(0, mind_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_CONFUSED)) {
                 struct affected_type mind_af;
                 struct affected_type mana_af;
