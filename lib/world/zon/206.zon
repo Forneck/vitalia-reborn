@@ -1,0 +1,24 @@
+#206
+Forneck~
+As Ilhas de No~
+20600 20799 180 1 j 0 0 0 100 110 4
+*
+* As Ilhas de No - Zone 206
+* Theme: "La Bamba" - Vertical Denial, "Ay Arriba y Arriba"
+* Target Level: 100-110
+* Climate: COLD/DRY (4)
+* Reset Mode: 1 (Reset when no players in zone)
+*
+* This zone features a vertical climbing challenge inspired by
+* the song "La Bamba" by Ritchie Valens. Players must climb
+* from sea level to the summit of the jagged black stone islands.
+*
+* Zone Structure:
+* 20600-20619: Sea Level (Water/Hills) - Entry from south
+* 20620-20669: Lower Cliffs (Climbing/Mountain)
+* 20670-20719: Mid Ascent (Climbing/Air Flow)
+* 20720-20759: Upper Cliffs (Climbing/Ice)
+* 20760-20799: Summit (Mountain/Air Flow) - Exit to Marinero
+*
+S
+$
