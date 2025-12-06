@@ -643,6 +643,7 @@ static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN,
     ((obj) ? (REMOVE_BIT(GET_OBJ_VAL(obj, 1), CONT_LOCKED)) : (REMOVE_BIT(EXITN(room, door)->exit_info, EX_LOCKED)))
 #define TOGGLE_LOCK(room, obj, door)                                                                                   \
     ((obj) ? (TOGGLE_BIT(GET_OBJ_VAL(obj, 1), CONT_LOCKED)) : (TOGGLE_BIT(EXITN(room, door)->exit_info, EX_LOCKED)))
+/* Jamming only applies to room exits (doors), not containers - containers lack the structure for jamming */
 #define JAM_DOOR(room, obj, door) ((obj) ? (0) : (SET_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
 #define UNJAM_DOOR(room, obj, door) ((obj) ? (0) : (REMOVE_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
 
@@ -816,17 +817,26 @@ ACMD(do_gen_door)
         door = find_door(ch, type, dir, doors_pt[subcmd]);
     }
 
+    /* Jamming only works on doors, not containers */
+    if ((obj) && (subcmd == SCMD_JAM)) {
+        send_to_char(ch, "Você não pode travar isso!\r\n");
+        return;
+    }
+
     if ((obj) || (door >= 0)) {
         keynum = DOOR_KEY(ch, obj, door);
+        int is_pickproof = DOOR_IS_PICKPROOF(ch, obj, door);
+        int is_jammed = DOOR_IS_JAMMED(ch, obj, door);
+
         if (!(DOOR_IS_OPENABLE(ch, obj, door)))
             send_to_char(ch, "Você não pode %s  isso!!\r\n", doors_pt[subcmd]);
         else if (!DOOR_IS_OPEN(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_OPEN))
             send_to_char(ch, "Mas já está fechado!\r\n");
         else if (!DOOR_IS_CLOSED(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_CLOSED))
             send_to_char(ch, "Mas já está aberto!\r\n");
-        else if (DOOR_IS_JAMMED(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_UNLOCKED))
+        else if (is_jammed && IS_SET(flags_door[subcmd], NEED_UNLOCKED))
             send_to_char(ch, "A fechadura está travada e não pode ser aberta!\r\n");
-        else if (DOOR_IS_JAMMED(ch, obj, door) && (subcmd == SCMD_JAM))
+        else if (is_jammed && (subcmd == SCMD_JAM))
             send_to_char(ch, "A fechadura já está travada!\r\n");
         else if (!(DOOR_IS_LOCKED(ch, obj, door)) && IS_SET(flags_door[subcmd], NEED_LOCKED))
             send_to_char(ch, "Oh.. não estava trancada, depois de tudo..\r\n");
@@ -844,8 +854,7 @@ ACMD(do_gen_door)
         else if (!has_key(ch, keynum) && (GET_LEVEL(ch) < LVL_GOD) &&
                  ((subcmd == SCMD_LOCK) || (subcmd == SCMD_UNLOCK)))
             send_to_char(ch, "Você não parece ter a chave apropriada.\r\n");
-        else if (ok_pick(ch, keynum, DOOR_IS_PICKPROOF(ch, obj, door), subcmd) &&
-                 ok_jam(ch, keynum, DOOR_IS_PICKPROOF(ch, obj, door), subcmd))
+        else if (ok_pick(ch, keynum, is_pickproof, subcmd) && ok_jam(ch, keynum, is_pickproof, subcmd))
             do_doorcmd(ch, obj, door, subcmd);
     }
     return;
