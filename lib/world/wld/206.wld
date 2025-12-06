@@ -1,0 +1,3439 @@
+#20600
+O Mar Agitado~
+   As ondas escuras batem com fúria contra as rochas negras que emergem 
+das profundezas. O céu cinzento se funde com o horizonte aquático, criando
+uma atmosfera de isolamento. Ao norte, agulhas de pedra negra perfuram as 
+nuvens baixas - As Ilhas de No, um arquipélago que parece rejeitar qualquer
+visitante. O vento uiva entre os penhascos, cantando uma canção antiga de
+recusa e desafio.
+~
+206 0 0 0 0 7
+D0
+Você vê as rochas escorregadias da costa rochosa.
+~
+~
+0 -1 20601
+E
+ondas mar agua~
+   As ondas são violentas e imprevisíveis, batendo contra qualquer coisa
+que ouse permanecer na superfície. A água é escura e fria.
+~
+S
+#20601
+Costa Rochosa~
+   Rochas escuras e escorregadias formam uma estreita faixa entre o mar 
+bravio e os penhascos verticais. Algas marinhas cobrem as pedras mais baixas,
+tornando cada passo traiçoeiro. O som das ondas quebrando é ensurdecedor aqui.
+Para o norte, uma trilha precária serpenteia entre as rochas em direção aos
+penhascos. O mar agitado se estende ao sul.
+~
+206 0 0 0 0 4
+D0
+Uma trilha rochosa sobe em direção às colinas.
+~
+~
+0 -1 20602
+D1
+Mais rochas escuras se estendem ao longo da costa.
+~
+~
+0 -1 20603
+D2
+O mar escuro e agitado.
+~
+~
+0 -1 20600
+E
+rochas algas~
+   As rochas são de um basalto negro, polido pelas ondas ao longo de eras.
+Algas verdes e marrons se agarram às superfícies mais baixas.
+~
+S
+#20602
+Base das Colinas Negras~
+   O terreno começa a subir aqui, afastando-se do alcance das ondas mais
+violentas. Rochas vulcânicas negras formam uma paisagem desolada, pontuada
+apenas por alguns arbustos resistentes que se agarram às fendas. O vento 
+frio sopra constantemente do mar, carregando o cheiro de sal e solidão.
+Para cima, os penhascos se erguem imponentes.
+~
+206 0 0 0 0 4
+D0
+Os penhascos se elevam vertiginosamente.
+~
+~
+0 -1 20620
+D1
+As colinas continuam para o leste.
+~
+~
+0 -1 20604
+D2
+A costa rochosa se estende abaixo.
+~
+~
+0 -1 20601
+D3
+Mais colinas rochosas.
+~
+~
+0 -1 20605
+E
+arbustos plantas~
+   Arbustos retorcidos pelo vento constante, com folhas pequenas e duras
+adaptadas ao ambiente hostil.
+~
+S
+#20603
+Costa Leste~
+   A costa rochosa continua aqui, com as ondas batendo incessantemente
+contra as pedras negras. Uma pequena piscina natural se formou entre as
+rochas, oferecendo um breve respiro das ondas mais violentas. Para o oeste,
+a costa continua em direção ao ponto de desembarque principal.
+~
+206 0 0 0 0 4
+D0
+Colinas rochosas sobem para o norte.
+~
+~
+0 -1 20606
+D3
+A costa rochosa se estende para oeste.
+~
+~
+0 -1 20601
+E
+piscina agua~
+   Uma pequena piscina de água salgada, surpreendentemente calma comparada
+ao mar agitado ao redor. Pequenos crustáceos se movem entre as pedras.
+~
+S
+#20604
+Colinas Orientais~
+   As colinas negras sobem gradualmente aqui, oferecendo uma vista ampla
+do mar ao sul. O terreno é íngreme mas ainda transitável. Pedras soltas
+tornam a caminhada difícil, mas não impossível. Os penhascos mais altos
+dominam a vista ao norte.
+~
+206 0 0 0 0 4
+D0
+Os penhascos se erguem majestosos.
+~
+~
+0 -1 20621
+D2
+A costa rochosa lá embaixo.
+~
+~
+0 -1 20603
+D3
+A base das colinas.
+~
+~
+0 -1 20602
+S
+#20605
+Colinas Ocidentais~
+   Uma encosta rochosa se estende aqui, com o vento soprando ainda mais
+forte nesta exposição oeste. Algumas cavidades nas rochas oferecem abrigo
+temporário do vento cortante. O terreno é traiçoeiro, com muitas pedras
+soltas que podem deslocar sob os pés.
+~
+206 0 0 0 0 4
+D0
+Os penhascos escuros se elevam.
+~
+~
+0 -1 20622
+D1
+A base das colinas.
+~
+~
+0 -1 20602
+D3
+Uma pequena baía aparece ao oeste.
+~
+~
+0 -1 20607
+E
+cavidades abrigo~
+   Pequenas reentrâncias na rocha, gastas pela erosão, oferecem alguma
+proteção contra o vento implacável.
+~
+S
+#20606
+Colinas do Nordeste~
+   As colinas aqui são mais íngremes, marcando a transição para os
+verdadeiros penhascos. Algumas plantas marinhas secas se acumularam
+entre as rochas, trazidas pelo vento. O rugido do mar é mais distante
+aqui, substituído pelo uivo constante do vento nos penhascos.
+~
+206 0 0 0 0 4
+D0
+Penhascos verticais se erguem acima.
+~
+~
+0 -1 20623
+D2
+A costa rochosa lá embaixo.
+~
+~
+0 -1 20603
+D3
+As colinas continuam para oeste.
+~
+~
+0 -1 20604
+S
+#20607
+Pequena Baía Ocidental~
+   Uma pequena enseada se forma aqui, onde as rochas criaram um porto
+natural protegido das ondas mais violentas. A água ainda é escura e
+fria, mas relativamente calma. Esta parece ser um dos poucos locais
+onde seria possível ancorar um barco com alguma segurança.
+~
+206 0 0 0 0 6
+D0
+Colinas rochosas sobem ao norte.
+~
+~
+0 -1 20608
+D1
+Colinas ocidentais se estendem para leste.
+~
+~
+0 -1 20605
+E
+agua baia~
+   A água da baía é surpreendentemente mais calma que o mar aberto,
+protegida pelas formações rochosas ao redor.
+~
+S
+#20608
+Encosta Noroeste~
+   A encosta aqui sobe de forma mais íngreme, afastando-se da pequena
+baía abaixo. As rochas são mais estáveis aqui, com menos pedras soltas.
+Uma trilha natural parece ter sido formada, possivelmente por cabras
+montesas ou outros animais que habitam estas ilhas inóspitas.
+~
+206 0 0 0 0 4
+D0
+Os penhascos dominam a paisagem ao norte.
+~
+~
+0 -1 20624
+D1
+A encosta continua para leste.
+~
+~
+0 -1 20605
+D2
+A pequena baía lá embaixo.
+~
+~
+0 -1 20607
+E
+trilha caminho~
+   Uma trilha estreita e sinuosa, marcada pelo passar de animais ao
+longo de incontáveis gerações.
+~
+S
+#20609
+Mar Revolto Oeste~
+   As ondas aqui são particularmente violentas, batendo contra formações
+rochosas pontiagudas que emergem da água como dentes negros. Qualquer
+embarcação que tentasse passar por aqui enfrentaria grande perigo. O
+som é ensurdecedor, uma sinfonia de destruição aquática.
+~
+206 0 0 0 0 7
+D1
+Águas um pouco mais calmas para leste.
+~
+~
+0 -1 20607
+D0
+Uma pequena baía oferece abrigo.
+~
+~
+0 -1 20607
+E
+rochas formacoes~
+   Pilares de rocha negra emergem da água como sentinelas silenciosos,
+alguns com marcas de navios que não tiveram a mesma sorte de evitá-los.
+~
+S
+#20610
+Recife Perigoso~
+   Um recife de rochas negras se estende aqui logo abaixo da superfície
+da água, criando um labirinto mortal para navegadores desavisados.
+Destroços de madeira se acumulam entre as rochas, testemunhos silenciosos
+de tragédias passadas.
+~
+206 0 0 0 0 7
+D0
+Águas mais profundas ao norte.
+~
+~
+0 -1 20600
+D1
+O mar aberto se estende para leste.
+~
+~
+0 -1 20611
+E
+destrocos madeira~
+   Pedaços de madeira apodrecida, cordas desgastadas e fragmentos de
+velame se acumulam aqui, restos de embarcações que encontraram seu fim
+nestes recifes traiçoeiros.
+~
+S
+#20611
+Mar Aberto Sudeste~
+   O mar aberto se estende aqui, com as ondas rolando em ritmo constante.
+As Ilhas de No se erguem ao norte, seus penhascos negros contrastando
+com o cinza do céu. O vento é forte e constante, vindo do oeste.
+~
+206 0 0 0 0 7
+D0
+A costa rochosa se aproxima.
+~
+~
+0 -1 20603
+D3
+Recifes perigosos ao oeste.
+~
+~
+0 -1 20610
+S
+#20612
+Praia de Pedras Negras~
+   Uma pequena praia formada inteiramente de pedras negras e areia vulcânica
+escura. As ondas depositam detritos marinhos aqui, incluindo conchas, algas
+e ocasionalmente objetos mais intrigantes trazidos de longe. Este é um dos
+poucos locais planos na base das ilhas.
+~
+206 0 0 0 0 4
+D0
+Colinas negras se erguem ao norte.
+~
+~
+0 -1 20602
+D1
+A costa rochosa continua.
+~
+~
+0 -1 20601
+D2
+O mar escuro ao sul.
+~
+~
+0 -1 20600
+E
+areia pedras~
+   A areia é de um negro profundo, formada pela erosão da rocha vulcânica.
+As pedras são lisas, polidas pelo mar ao longo de eras.
+~
+E
+conchas detritos~
+   Conchas de moluscos, fragmentos de coral negro e outros detritos marinhos
+se acumulam na linha da maré.
+~
+S
+#20613
+Enseada Escondida~
+   Uma pequena enseada escondida entre formações rochosas altas. A água
+aqui é mais calma, protegida do vento e das ondas maiores. O local parece
+quase acolhedor em comparação com o resto da costa hostil. Uma pequena
+caverna se abre na rocha ao norte.
+~
+206 0 0 0 0 6
+D0
+Uma caverna escura se abre na rocha.
+~
+~
+0 -1 20614
+D1
+A costa rochosa continua para leste.
+~
+~
+0 -1 20612
+E
+agua enseada~
+   A água é surpreendentemente clara aqui, permitindo ver o fundo rochoso
+a alguns metros de profundidade.
+~
+S
+#20614
+Caverna do Nível do Mar~
+   Uma caverna natural escavada pela ação das ondas ao longo de milênios.
+O teto é baixo e úmido, com estalactites formadas pelo sal marinho. O som
+do mar ecoa estranhamente aqui, amplificado pelas paredes de rocha. Para
+cima, uma fenda na rocha parece levar a níveis superiores.
+~
+206 1 0 0 0 0
+D2
+A enseada escondida lá fora.
+~
+~
+0 -1 20613
+D4
+Uma fenda estreita sobe na rocha.
+~
+~
+0 -1 20625
+E
+estalactites teto~
+   Formações de sal cristalizado pendem do teto, brilhando fracamente
+quando há luz suficiente para iluminá-las.
+~
+E
+fenda abertura~
+   Uma fenda natural na rocha, larga o suficiente para uma pessoa passar
+com cuidado, subindo em direção a níveis mais altos da ilha.
+~
+S
+#20615
+Plataforma Rochosa~
+   Uma plataforma natural de rocha se projeta sobre o mar aqui. O vento
+sopra com força, mas a vista é impressionante - o mar se estende até o
+horizonte ao sul, enquanto os penhascos negros se erguem ao norte. Este
+seria um excelente ponto de observação, se não fosse pelo frio cortante.
+~
+206 0 0 0 0 5
+D2
+Colinas rochosas descem para o sul.
+~
+~
+0 -1 20602
+D4
+Os penhascos sobem acima.
+~
+~
+0 -1 20626
+E
+vista horizonte~
+   Do alto desta plataforma, pode-se ver o mar se estendendo em todas as
+direções ao sul, enquanto as ilhas se erguem como torres negras ao norte.
+~
+S
+#20616
+Base do Penhasco Principal~
+   Você está na base de um penhasco imenso, uma parede quase vertical de
+rocha negra que se ergue centenas de metros acima. A escala é intimidante,
+fazendo você se sentir insignificante diante da grandiosidade da natureza.
+Marcas de escaladores anteriores são visíveis nas rochas mais baixas.
+~
+206 0 0 0 0 5
+D1
+A base do penhasco continua para leste.
+~
+~
+0 -1 20617
+D2
+Colinas mais baixas ao sul.
+~
+~
+0 -1 20604
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20618
+D4
+O penhasco sobe vertiginosamente acima.
+~
+~
+0 -1 20627
+E
+marcas escaladores~
+   Marcas deixadas por escaladores anteriores - alguns talvez tenham
+alcançado o topo, outros certamente não tiveram a mesma sorte.
+~
+S
+#20617
+Base do Penhasco Leste~
+   A base do penhasco continua aqui, com a parede de rocha tão vertical
+quanto no oeste. Algumas fendas horizontais na rocha oferecem pontos de
+apoio para uma possível escalada. O som do mar é distante aqui, substituído
+pelo silvo constante do vento nos penhascos.
+~
+206 0 0 0 0 5
+D3
+A base do penhasco continua para oeste.
+~
+~
+0 -1 20616
+D4
+Os penhascos sobem acima.
+~
+~
+0 -1 20628
+E
+fendas apoio~
+   Fendas horizontais na rocha, gastas pelo vento e pela chuva, oferecem
+pontos de apoio precários para quem ousar escalar.
+~
+S
+#20618
+Base do Penhasco Oeste~
+   A parede de rocha aqui tem uma ligeira inclinação, tornando-a um pouco
+menos vertical que outras seções. Ainda assim, a escalada seria desafiadora.
+Algumas plantas resistentes crescem nas fendas mais baixas, suas raízes
+agarradas à rocha com determinação.
+~
+206 0 0 0 0 5
+D1
+A base do penhasco continua para leste.
+~
+~
+0 -1 20616
+D2
+Encostas mais baixas ao sul.
+~
+~
+0 -1 20608
+D4
+Os penhascos sobem acima.
+~
+~
+0 -1 20629
+E
+plantas raizes~
+   Plantas resistentes com folhas grossas e pequenas, adaptadas para
+sobreviver neste ambiente hostil, suas raízes firmemente ancoradas na rocha.
+~
+S
+#20619
+Ponto de Vigia Natural~
+   Uma saliência natural na rocha forma um ponto de vigia natural sobre o
+mar. Daqui, pode-se ver claramente qualquer embarcação se aproximando das
+ilhas. O vento é particularmente forte aqui, uivando ao passar pelas rochas
+com uma voz que parece dizer "Não".
+~
+206 0 0 0 0 5
+D2
+A base das colinas lá embaixo.
+~
+~
+0 -1 20606
+D4
+Os penhascos sobem acima.
+~
+~
+0 -1 20630
+E
+vigia mar~
+   Deste ponto elevado, o mar se estende como um tapete cinza-azulado,
+pontilhado ocasionalmente por ondas brancas. Nenhuma embarcação à vista.
+~
+S
+#20620
+Início da Escalada~
+   Aqui começa a verdadeira escalada. A parede de rocha se ergue quase 
+verticalmente, com apenas pequenas saliências e fendas oferecendo apoio
+para mãos e pés. O vento sopra com força, tentando arrancar qualquer 
+escalador desavisado da parede. Abaixo, as colinas parecem distantes.
+A escalada será árdua, mas o caminho para cima continua.
+~
+206 0 0 0 0 10
+D2
+As colinas lá embaixo.
+~
+~
+0 -1 20602
+D4
+A parede de rocha continua acima.
+~
+~
+0 -1 20631
+E
+parede rocha~
+   A rocha é dura e fria, com textura áspera que oferece algum atrito
+para as mãos. Pequenas fendas servem como apoios improvisados.
+~
+S
+#20621
+Penhasco Leste Baixo~
+   Uma seção do penhasco onde a rocha forma degraus naturais, tornando
+a escalada um pouco mais fácil. Ainda assim, o vento forte e a altura
+crescente tornam cada movimento arriscado. Pequenas plantas se agarram
+às fendas, testemunhas silenciosas de que a vida encontra um caminho.
+~
+206 0 0 0 0 10
+D2
+As colinas orientais lá embaixo.
+~
+~
+0 -1 20604
+D4
+A escalada continua acima.
+~
+~
+0 -1 20632
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20620
+E
+degraus naturais~
+   Formações rochosas que lembram degraus, gastos pelo tempo e pelos
+elementos, oferecendo algum apoio para os pés.
+~
+S
+#20622
+Penhasco Oeste Baixo~
+   A face oeste do penhasco recebe o impacto total do vento marinho.
+A rocha aqui está mais erodida, com algumas seções parecendo prestes
+a desmoronar. Cautela é essencial. Para cima, a escalada se torna
+ainda mais desafiadora.
+~
+206 0 0 0 0 10
+D1
+O penhasco continua para leste.
+~
+~
+0 -1 20620
+D2
+As colinas ocidentais lá embaixo.
+~
+~
+0 -1 20605
+D4
+A escalada continua acima.
+~
+~
+0 -1 20633
+E
+rocha erodida~
+   Seções da rocha estão claramente fragilizadas pela erosão constante
+do vento e da chuva salgada. Devem ser evitadas.
+~
+S
+#20623
+Penhasco Nordeste Baixo~
+   Esta seção do penhasco oferece uma vista parcial do mar ao sul e leste.
+A rocha aqui é mais sólida, com boas saliências para apoio. Uma pequena
+cavidade na parede oferece um local para descanso temporário antes de
+continuar a subida.
+~
+206 0 0 0 0 10
+D2
+As colinas do nordeste lá embaixo.
+~
+~
+0 -1 20606
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20621
+D4
+A escalada continua acima.
+~
+~
+0 -1 20634
+E
+cavidade descanso~
+   Uma pequena reentrância na rocha, grande o suficiente para uma pessoa
+se abrigar temporariamente do vento.
+~
+S
+#20624
+Penhasco Noroeste Baixo~
+   O penhasco aqui forma um ângulo ligeiramente mais favorável, permitindo
+uma escalada menos vertical. Ainda assim, o vento é implacável, e a queda
+seria fatal. Marcas antigas na rocha sugerem que outros passaram por aqui
+antes.
+~
+206 0 0 0 0 10
+D1
+O penhasco continua para leste.
+~
+~
+0 -1 20622
+D2
+A encosta noroeste lá embaixo.
+~
+~
+0 -1 20608
+D4
+A escalada continua acima.
+~
+~
+0 -1 20635
+E
+marcas antigas~
+   Arranhões e marcas na rocha, possivelmente deixados por equipamentos
+de escalada de visitantes anteriores. Algumas parecem muito antigas.
+~
+S
+#20625
+Chaminé Rochosa~
+   Uma fenda vertical na rocha, larga o suficiente para escalar usando
+a técnica de chaminé - pressionando as costas contra um lado e os pés
+contra o outro. A subida é cansativa, mas oferece mais segurança que
+a face exposta do penhasco. A caverna do nível do mar está abaixo.
+~
+206 1 0 0 0 10
+D4
+A chaminé continua acima.
+~
+~
+0 -1 20636
+D5
+A caverna do nível do mar lá embaixo.
+~
+~
+0 -1 20614
+E
+fenda chamine~
+   Uma fissura natural na rocha, criada por algum evento geológico antigo,
+agora oferece uma rota de escalada relativamente protegida.
+~
+S
+#20626
+Face do Penhasco Central~
+   Você está na face central do penhasco, com o vazio se estendendo abaixo.
+A rocha aqui é particularmente lisa, exigindo grande habilidade para manter
+a aderência. O vento parece mais forte aqui, como se a própria ilha tentasse
+expulsar os invasores. Para cima, a jornada continua.
+~
+206 0 0 0 0 10
+D4
+A face do penhasco continua acima.
+~
+~
+0 -1 20637
+D5
+A plataforma rochosa lá embaixo.
+~
+~
+0 -1 20615
+D1
+O penhasco continua para leste.
+~
+~
+0 -1 20627
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20629
+E
+rocha lisa~
+   A superfície da rocha aqui foi polida pelo vento ao longo de eras,
+tornando-a traiçoeiramente lisa.
+~
+S
+#20627
+Penhasco Central Leste~
+   A face leste do penhasco principal se ergue aqui. Fendas horizontais
+na rocha oferecem bons pontos de apoio, mas também abrigam ninhos de aves
+marinhas que protestam ruidosamente contra a intrusão. Seus gritos ecoam
+pelo penhasco.
+~
+206 0 0 0 0 10
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20626
+D4
+A escalada continua acima.
+~
+~
+0 -1 20638
+D5
+A base do penhasco lá embaixo.
+~
+~
+0 -1 20616
+E
+ninhos aves~
+   Ninhos de aves marinhas ocupam as fendas mais profundas. As aves
+olham com desconfiança para qualquer intruso.
+~
+S
+#20628
+Penhasco Leste Superior~
+   Mais alto na face leste, a vista se expande dramaticamente. O mar
+se estende como um espelho escuro ao sul e leste. O vento é cortante
+aqui, sibilando entre as rochas. A escalada exige concentração total.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20639
+D5
+O penhasco leste lá embaixo.
+~
+~
+0 -1 20617
+E
+vista mar~
+   De aqui, o mar parece infinito, uma extensão cinza-azulada que se
+funde com o céu no horizonte distante.
+~
+S
+#20629
+Penhasco Central Oeste~
+   A face oeste recebe o sol da tarde, quando ele consegue penetrar as
+nuvens frequentes. A rocha aqui tem tons avermelhados onde o sol a aquece.
+O vento é particularmente forte, vindo diretamente do mar aberto.
+~
+206 0 0 0 0 10
+D1
+O penhasco continua para leste.
+~
+~
+0 -1 20626
+D4
+A escalada continua acima.
+~
+~
+0 -1 20640
+D5
+A base do penhasco oeste lá embaixo.
+~
+~
+0 -1 20618
+E
+rocha avermelhada~
+   Veios de minerais diferentes dão à rocha tons avermelhados e dourados
+onde o sol consegue alcançá-la.
+~
+S
+#20630
+Penhasco do Ponto de Vigia~
+   Acima do ponto de vigia natural, a escalada continua. A rocha aqui
+tem muitas saliências, facilitando a subida. Ninho de uma ave de rapina
+ocupa uma fenda próxima - a ave observa cautelosamente, mas não ataca
+a menos que provocada.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20641
+D5
+O ponto de vigia lá embaixo.
+~
+~
+0 -1 20619
+E
+ninho ave~
+   Um grande ninho feito de galhos e algas secas. Uma ave de rapina
+impressionante o guarda com olhar atento.
+~
+S
+#20631
+Parede Média~
+   A meio caminho da primeira grande seção de escalada. O solo está
+suficientemente distante para ser letal em caso de queda, mas o topo
+ainda parece distante. Apenas o vento faz companhia aqui, sussurrando
+palavras de desânimo.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20642
+D5
+O início da escalada lá embaixo.
+~
+~
+0 -1 20620
+E
+vento sussurro~
+   O vento parece quase falar aqui, seus uivos formando sílabas que
+soam como "não... não... não..."
+~
+S
+#20632
+Degraus Naturais Médios~
+   Os degraus naturais continuam aqui, embora se tornem mais estreitos
+e menos definidos. Algumas pedras soltas ameaçam ceder sob o peso de
+um escalador. Cuidado é essencial.
+~
+206 0 0 0 0 10
+D4
+Os degraus continuam acima.
+~
+~
+0 -1 20643
+D5
+O penhasco leste lá embaixo.
+~
+~
+0 -1 20621
+E
+pedras soltas~
+   Algumas pedras parecem instáveis, movendo-se ligeiramente quando
+tocadas. Melhor evitá-las como apoio.
+~
+S
+#20633
+Face Erodida Média~
+   A erosão é ainda mais pronunciada nesta altura. Grandes seções da
+rocha simplesmente não existem mais, deixando buracos e fendas. Paradoxalmente,
+isso torna a escalada mais fácil em alguns pontos, oferecendo bons apoios
+para as mãos.
+~
+206 0 0 0 0 10
+D1
+O penhasco continua para leste.
+~
+~
+0 -1 20631
+D4
+A escalada continua acima.
+~
+~
+0 -1 20644
+D5
+O penhasco oeste lá embaixo.
+~
+~
+0 -1 20622
+E
+buracos fendas~
+   Cavidades na rocha causadas pela erosão, agora úteis como apoios
+para escaladores determinados.
+~
+S
+#20634
+Cornija Nordeste~
+   Uma cornija estreita se projeta da parede do penhasco aqui, oferecendo
+um local para descanso. A largura é suficiente para sentar com as pernas
+penduradas sobre o vazio. A vista é espetacular, se você conseguir ignorar
+a altura.
+~
+206 0 0 0 0 5
+D4
+A escalada continua acima.
+~
+~
+0 -1 20645
+D5
+O penhasco nordeste lá embaixo.
+~
+~
+0 -1 20623
+D3
+A parede do penhasco para oeste.
+~
+~
+0 -1 20632
+E
+cornija vista~
+   A cornija oferece uma vista panorâmica do mar e das colinas abaixo.
+É um local de descanso precário, mas bem-vindo.
+~
+S
+#20635
+Ângulo Favorável~
+   O penhasco aqui mantém seu ângulo mais favorável, permitindo uma
+escalada menos exaustiva. Ainda assim, o vento tenta constantemente
+desequilibrar qualquer escalador. Marcas de garras na rocha sugerem
+que algum animal grande também usa esta rota.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20646
+D5
+O penhasco noroeste lá embaixo.
+~
+~
+0 -1 20624
+E
+marcas garras~
+   Arranhões profundos na rocha, claramente feitos por garras grandes
+e poderosas. Seja lá o que for, é grande.
+~
+S
+#20636
+Chaminé Média~
+   A chaminé rochosa continua aqui, estreitando-se ligeiramente. A técnica
+de escalada deve ser ajustada, usando mais os joelhos e cotovelos. Uma
+corrente de ar frio sobe por aqui, vindo das profundezas.
+~
+206 1 0 0 0 10
+D4
+A chaminé continua acima.
+~
+~
+0 -1 20647
+D5
+A chaminé continua abaixo.
+~
+~
+0 -1 20625
+E
+corrente ar~
+   Uma corrente de ar frio e úmido sobe pela chaminé, trazendo o cheiro
+do mar das cavernas abaixo.
+~
+S
+#20637
+Face Central Superior~
+   A face central se torna ainda mais desafiadora aqui. A rocha lisa
+oferece poucos apoios, e o vento parece determinado a arrancar qualquer
+intruso da parede. Apenas os mais hábeis ou os mais teimosos continuam.
+~
+206 0 0 0 0 10
+D4
+A face continua acima.
+~
+~
+0 -1 20648
+D5
+A face central abaixo.
+~
+~
+0 -1 20626
+E
+rocha desafiadora~
+   Quase não há onde segurar. A rocha é lisa como vidro em alguns pontos,
+exigindo técnica impecável para progredir.
+~
+S
+#20638
+Nível dos Ninhos~
+   Esta seção do penhasco está densamente povoada por ninhos de aves
+marinhas. Os pássaros protestam ruidosamente, e cuidado é necessário
+para não perturbar demais as aves - algumas são bastante agressivas
+quando seus ninhos são ameaçados.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20649
+D5
+O penhasco central leste abaixo.
+~
+~
+0 -1 20627
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20637
+E
+aves ninhos~
+   Dezenas de aves marinhas fizeram seus ninhos aqui. Seus gritos formam
+um coro constante de protestos contra a presença de intrusos.
+~
+S
+#20639
+Penhasco Alto Leste~
+   A altura aqui é vertiginosa. As colinas na base parecem minúsculas,
+e o mar é apenas uma mancha escura no horizonte. O ar é mais frio e
+mais fino. A escalada exige pausas frequentes para recuperar o fôlego.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20650
+D5
+O penhasco leste abaixo.
+~
+~
+0 -1 20628
+E
+altura vertiginosa~
+   A altura é suficiente para causar tontura em quem olhar diretamente
+para baixo. O solo parece irreal de tão distante.
+~
+S
+#20640
+Penhasco Alto Oeste~
+   O sol poente (quando visível) ilumina esta face do penhasco com luz
+dourada. A rocha avermelhada brilha intensamente nesses momentos. Mas
+o vento do oeste é implacável, especialmente nesta altura.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20651
+D5
+O penhasco central oeste abaixo.
+~
+~
+0 -1 20629
+E
+luz dourada~
+   Quando o sol consegue aparecer, a rocha brilha com tons de ouro e
+cobre, uma visão surpreendentemente bela neste ambiente hostil.
+~
+S
+#20641
+Penhasco do Ninho da Águia~
+   O ninho da ave de rapina fica diretamente abaixo. Aqui, a escalada
+passa perto o suficiente para ver os filhotes (se houver). A ave adulta
+circula no ar, observando atentamente. Melhor não fazer movimentos bruscos.
+~
+206 0 0 0 0 10
+D4
+A escalada continua acima.
+~
+~
+0 -1 20652
+D5
+O penhasco do ponto de vigia abaixo.
+~
+~
+0 -1 20630
+E
+aguia ninho~
+   A grande ave de rapina mantém vigilância constante sobre seu ninho
+e território. Seus olhos dourados seguem cada movimento.
+~
+S
+#20642
+Parede Superior~
+   A parede de rocha se torna ainda mais vertical aqui. Os braços
+começam a queimar de esforço, e cada movimento exige planejamento
+cuidadoso. O topo da primeira grande seção está próximo, oferecendo
+esperança de um breve descanso.
+~
+206 0 0 0 0 10
+D4
+O topo da seção está próximo.
+~
+~
+0 -1 20653
+D5
+A parede média abaixo.
+~
+~
+0 -1 20631
+S
+#20643
+Degraus Superiores~
+   Os degraus naturais terminam aqui, dando lugar a uma rocha mais
+uniforme. Uma pequena plataforma oferece espaço para descanso antes
+de enfrentar a próxima seção da escalada.
+~
+206 0 0 0 0 5
+D1
+Uma cornija se estende para leste.
+~
+~
+0 -1 20654
+D4
+A escalada continua acima.
+~
+~
+0 -1 20655
+D5
+Os degraus médios abaixo.
+~
+~
+0 -1 20632
+S
+#20644
+Plataforma Erodida~
+   Uma área onde a erosão criou uma pequena plataforma natural.
+O espaço é limitado, mas suficiente para dois ou três escaladores
+descansarem. Ossos de pequenos animais se acumulam nos cantos.
+~
+206 0 0 0 0 5
+D4
+A escalada continua acima.
+~
+~
+0 -1 20656
+D5
+A face erodida abaixo.
+~
+~
+0 -1 20633
+E
+ossos animais~
+   Restos de pequenos roedores e aves, provavelmente presas de algum
+predador que usa esta plataforma como poleiro de caça.
+~
+S
+#20645
+Cornija Ampla~
+   Uma cornija mais ampla oferece espaço generoso para descanso.
+Evidências de fogueiras antigas sugerem que outros acamparam aqui
+no passado. A vista abrange toda a costa sul das ilhas.
+~
+206 0 0 0 0 5
+D3
+O penhasco continua para oeste.
+~
+~
+0 -1 20643
+D4
+A escalada continua acima.
+~
+~
+0 -1 20657
+D5
+A cornija nordeste abaixo.
+~
+~
+0 -1 20634
+E
+fogueiras antigas~
+   Círculos de pedras enegrecidas e restos de carvão marcam onde
+fogueiras foram acesas em tempos passados.
+~
+S
+#20646
+Passagem Protegida~
+   Uma formação rochosa cria um corredor natural aqui, protegendo
+os escaladores do vento. O alívio é bem-vindo, permitindo que os
+músculos descansem brevemente do esforço constante de resistir
+às rajadas.
+~
+206 0 0 0 0 10
+D4
+A passagem continua acima.
+~
+~
+0 -1 20658
+D5
+O ângulo favorável abaixo.
+~
+~
+0 -1 20635
+E
+corredor natural~
+   Paredes de rocha em ambos os lados bloqueiam o vento, criando
+um microclima surpreendentemente calmo.
+~
+S
+#20647
+Chaminé Superior~
+   A chaminé se alarga aqui, tornando a técnica de escalada mais
+difícil. As paredes estão mais distantes, exigindo movimentos
+mais ousados. Uma luz tênue vem de cima, sugerindo que a saída
+está próxima.
+~
+206 1 0 0 0 10
+D4
+A luz vem de cima.
+~
+~
+0 -1 20659
+D5
+A chaminé média abaixo.
+~
+~
+0 -1 20636
+E
+luz saida~
+   Uma abertura no topo da chaminé permite que luz natural entre,
+iluminando parcialmente o interior.
+~
+S
+#20648
+Crista Intermediária~
+   Você alcançou uma crista intermediária no penhasco. Um platô
+estreito mas transitável se estende aqui, marcando o fim da primeira
+grande seção de escalada. Para cima, os penhascos continuam ainda
+mais íngremes.
+~
+206 0 0 0 0 5
+D0
+O platô se estende para norte.
+~
+~
+0 -1 20660
+D1
+A crista continua para leste.
+~
+~
+0 -1 20649
+D3
+A crista continua para oeste.
+~
+~
+0 -1 20651
+D5
+A face central superior abaixo.
+~
+~
+0 -1 20637
+S
+#20649
+Crista Leste~
+   A crista continua aqui, com uma vista espetacular do mar ao sul
+e leste. Nuvens passam ao nível dos olhos, criando uma sensação
+surreal de estar flutuando entre céu e terra.
+~
+206 0 0 0 0 5
+D0
+O platô continua para norte.
+~
+~
+0 -1 20661
+D3
+A crista continua para oeste.
+~
+~
+0 -1 20648
+D5
+O nível dos ninhos abaixo.
+~
+~
+0 -1 20638
+E
+nuvens~
+   As nuvens passam tão perto que quase podem ser tocadas. A umidade
+do ar é palpável.
+~
+S
+#20650
+Crista Alta Leste~
+   O ponto mais alto da crista leste. Daqui, a escalada para os
+níveis superiores começa. O ar é notavelmente mais frio, e o vento
+carrega flocos de neve ocasionais mesmo em dias relativamente amenos.
+~
+206 0 0 0 0 5
+D2
+A crista leste abaixo.
+~
+~
+0 -1 20649
+D4
+Os penhascos superiores aguardam.
+~
+~
+0 -1 20670
+D5
+O penhasco alto leste abaixo.
+~
+~
+0 -1 20639
+E
+neve flocos~
+   Pequenos flocos de neve ou gelo são carregados pelo vento das
+alturas ainda maiores acima.
+~
+S
+#20651
+Crista Oeste~
+   A crista oeste é mais exposta ao vento do que a leste. Aqui,
+apenas vegetação rasteira consegue sobreviver, agarrada às rochas
+com determinação. O sol poente cria sombras dramáticas nas rochas.
+~
+206 0 0 0 0 5
+D0
+O platô continua para norte.
+~
+~
+0 -1 20662
+D1
+A crista continua para leste.
+~
+~
+0 -1 20648
+D5
+O penhasco alto oeste abaixo.
+~
+~
+0 -1 20640
+E
+vegetacao rasteira~
+   Musgos e liquens se agarram às rochas, formando manchas coloridas
+de verde, amarelo e cinza.
+~
+S
+#20652
+Mirante Natural~
+   Um mirante natural oferece vistas panorâmicas em todas as direções.
+Este parece ser um local favorito de aves de rapina, que podem ser
+vistas planando nas correntes térmicas. Penas grandes estão espalhadas
+pela rocha.
+~
+206 0 0 0 0 5
+D0
+O platô continua para norte.
+~
+~
+0 -1 20663
+D5
+O penhasco do ninho da águia abaixo.
+~
+~
+0 -1 20641
+E
+penas~
+   Penas grandes e macias de aves de rapina. Algumas são impressionantes
+em tamanho e beleza.
+~
+S
+#20653
+Topo da Primeira Seção~
+   Você alcançou o topo da primeira grande seção de escalada. Uma
+área relativamente plana permite descanso e recuperação. Os penhascos
+ainda se erguem acima, mas o progresso feito é significativo. O mar
+parece distante e irreal lá embaixo.
+~
+206 0 0 0 0 5
+D0
+O platô central se estende.
+~
+~
+0 -1 20660
+D5
+A parede superior abaixo.
+~
+~
+0 -1 20642
+S
+#20654
+Cornija Oriental~
+   Uma cornija se estende para leste a partir dos degraus superiores.
+O chão é irregular mas estável. Pequenas poças de água da chuva se
+acumulam em depressões na rocha.
+~
+206 0 0 0 0 5
+D0
+O platô continua para norte.
+~
+~
+0 -1 20661
+D3
+Os degraus superiores.
+~
+~
+0 -1 20643
+E
+pocas agua~
+   Pequenas poças de água da chuva, surpreendentemente doce e limpa.
+~
+S
+#20655
+Acima dos Degraus~
+   Acima dos degraus naturais, a rocha se torna mais uniforme. A
+escalada aqui requer mais habilidade, sem os apoios naturais que
+os degraus ofereciam.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20664
+D5
+Os degraus superiores abaixo.
+~
+~
+0 -1 20643
+S
+#20656
+Parede Erodida Superior~
+   A erosão continua evidente aqui, com a rocha formando padrões
+curiosos. Algumas formações parecem quase artísticas, esculpidas
+pelo vento ao longo de milênios.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20665
+D5
+A plataforma erodida abaixo.
+~
+~
+0 -1 20644
+E
+formacoes padroes~
+   O vento esculpiu a rocha em formas onduladas e fluidas, quase
+orgânicas em sua aparência.
+~
+S
+#20657
+Terraço Ventoso~
+   Um terraço natural oferece espaço para descanso, mas o vento
+aqui é particularmente forte. Permanecer muito tempo pode ser
+exaustivo apenas pelo esforço de resistir às rajadas.
+~
+206 0 0 0 0 11
+D4
+A escalada continua acima.
+~
+~
+0 -1 20666
+D5
+A cornija ampla abaixo.
+~
+~
+0 -1 20645
+E
+vento rajadas~
+   O vento sopra com força quase constante, ocasionalmente em
+rajadas que podem derrubar uma pessoa desprevenida.
+~
+S
+#20658
+Corredor Protegido Superior~
+   O corredor protegido continua aqui, oferecendo abrigo do vento.
+A rocha das paredes está coberta de inscrições antigas, símbolos
+cujo significado se perdeu no tempo.
+~
+206 0 0 0 0 10
+D4
+A passagem continua.
+~
+~
+0 -1 20667
+D5
+A passagem protegida abaixo.
+~
+~
+0 -1 20646
+E
+inscricoes simbolos~
+   Símbolos antigos gravados na rocha. Alguns parecem representar
+o sol e a lua, outros são abstratos e incompreensíveis.
+~
+S
+#20659
+Saída da Chaminé~
+   A chaminé rochosa termina aqui, abrindo-se para uma pequena
+caverna. A luz do dia entra por uma abertura ao norte. O ar é
+fresco e limpo após a subida confinada.
+~
+206 1 0 0 0 0
+D0
+A luz do dia vem desta direção.
+~
+~
+0 -1 20668
+D5
+A chaminé superior abaixo.
+~
+~
+0 -1 20647
+E
+caverna abertura~
+   Uma caverna natural que serve como transição entre a chaminé
+e o exterior. Paredes de rocha úmida brilham na luz.
+~
+S
+#20660
+Platô Central~
+   O platô central oferece o maior espaço plano encontrado até
+agora na escalada. Aqui, seria possível montar um pequeno acampamento.
+Vestígios de ocupação anterior são visíveis - círculos de pedra,
+restos de fogueiras, e até alguns ossos.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores se erguem.
+~
+~
+0 -1 20669
+D1
+A crista leste.
+~
+~
+0 -1 20661
+D2
+O topo da primeira seção.
+~
+~
+0 -1 20653
+D3
+A crista oeste.
+~
+~
+0 -1 20662
+E
+acampamento vestigios~
+   Evidências de que outros passaram por aqui e acamparam. Alguns
+vestígios parecem recentes, outros muito antigos.
+~
+S
+#20661
+Platô Leste~
+   A seção leste do platô oferece a melhor vista do nascer do sol.
+O horizonte oriental se estende infinitamente, uma linha onde o
+mar encontra o céu.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores leste.
+~
+~
+0 -1 20671
+D2
+A crista leste.
+~
+~
+0 -1 20649
+D3
+O platô central.
+~
+~
+0 -1 20660
+E
+nascer sol~
+   Este seria o local perfeito para observar o nascer do sol,
+se o clima permitisse.
+~
+S
+#20662
+Platô Oeste~
+   A seção oeste do platô é mais exposta ao vento. Algumas formações
+rochosas oferecem abrigo parcial. Uma trilha parece subir em direção
+aos penhascos superiores ao norte.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores oeste.
+~
+~
+0 -1 20672
+D1
+O platô central.
+~
+~
+0 -1 20660
+D2
+A crista oeste.
+~
+~
+0 -1 20651
+E
+trilha norte~
+   Uma trilha estreita, possivelmente usada por animais, serpenteia
+em direção aos penhascos superiores.
+~
+S
+#20663
+Pico do Mirante~
+   O ponto mais alto do mirante natural. Daqui, a vista é incomparável.
+Em dias claros, é possível ver outras ilhas no horizonte distante.
+As aves de rapina frequentemente circulam ao nível dos olhos.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores centrais.
+~
+~
+0 -1 20673
+D2
+O mirante natural.
+~
+~
+0 -1 20652
+E
+outras ilhas~
+   Formas escuras no horizonte distante - outras ilhas do arquipélago,
+igualmente inóspitas.
+~
+S
+#20664
+Parede Vertical~
+   A parede aqui é quase perfeitamente vertical, exigindo técnica
+impecável. Cada centímetro de progresso é conquistado com esforço.
+O vento é constante, tornando tudo mais difícil.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20674
+D5
+Acima dos degraus.
+~
+~
+0 -1 20655
+S
+#20665
+Parede Ondulada~
+   As formações erodidas criam uma superfície ondulada na rocha.
+A escalada requer adaptação constante às mudanças de ângulo.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20675
+D5
+A parede erodida superior.
+~
+~
+0 -1 20656
+S
+#20666
+Zona de Ventos~
+   O vento aqui é particularmente intenso, criando uma zona onde
+até respirar é difícil. Os olhos lacrimejam, e cada movimento
+deve ser calculado para evitar ser levado.
+~
+206 0 0 0 0 11
+D4
+A escalada continua.
+~
+~
+0 -1 20676
+D5
+O terraço ventoso.
+~
+~
+0 -1 20657
+E
+vento intenso~
+   O ar parece sólido de tão forte que o vento sopra. Respirar
+é um desafio constante.
+~
+S
+#20667
+Corredor das Inscrições~
+   As inscrições na rocha são mais numerosas aqui. Algumas parecem
+contar histórias, outras são simplesmente nomes ou datas. Viajantes
+de muitas eras deixaram suas marcas.
+~
+206 0 0 0 0 10
+D4
+O corredor continua.
+~
+~
+0 -1 20677
+D5
+O corredor protegido superior.
+~
+~
+0 -1 20658
+E
+inscricoes nomes~
+   Nomes e datas gravados na rocha - alguns em alfabetos desconhecidos,
+outros claramente recentes.
+~
+S
+#20668
+Caverna Intermediária~
+   Uma caverna de tamanho médio oferece abrigo completo do vento
+e dos elementos. Marcas de fogueira no chão e fuligem no teto
+indicam uso frequente por viajantes.
+~
+206 1 0 0 0 0
+D0
+Uma passagem leva para fora.
+~
+~
+0 -1 20678
+D2
+A saída da chaminé.
+~
+~
+0 -1 20659
+E
+fogueira marcas~
+   O chão está enegrecido onde fogueiras foram acesas repetidamente.
+A fuligem no teto forma padrões interessantes.
+~
+S
+#20669
+Base dos Penhascos Superiores~
+   Aqui começa a seção superior dos penhascos, ainda mais íngreme
+e desafiadora que a anterior. O ar é notavelmente mais frio, e
+neve ocasional cobre as rochas.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores se erguem.
+~
+~
+0 -1 20679
+D2
+O platô central.
+~
+~
+0 -1 20660
+E
+neve frio~
+   Uma fina camada de neve cobre partes das rochas, tornando-as
+escorregadias e ainda mais perigosas.
+~
+S
+#20670
+Penhasco Superior Leste~
+   Os penhascos superiores começam aqui. A rocha é mais escura,
+quase negra, e coberta em partes por gelo. A escalada exige
+equipamento adequado e determinação férrea.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20680
+D5
+A crista alta leste.
+~
+~
+0 -1 20650
+D3
+Os penhascos centrais.
+~
+~
+0 -1 20679
+E
+gelo rocha~
+   Placas de gelo cobrem partes da rocha, criando superfícies
+extremamente escorregadias.
+~
+S
+#20671
+Encosta Superior Leste~
+   A encosta leste dos penhascos superiores. O vento aqui carrega
+cristais de gelo que picam a pele exposta. A visibilidade é
+reduzida em dias de nevasca.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20681
+D2
+O platô leste.
+~
+~
+0 -1 20661
+E
+cristais gelo~
+   Pequenos cristais de gelo são carregados pelo vento, brilhando
+na luz quando o sol aparece.
+~
+S
+#20672
+Encosta Superior Oeste~
+   A encosta oeste recebe menos neve, mas o vento é ainda mais
+forte. A combinação de frio e vento torna esta seção particularmente
+brutal.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20682
+D2
+O platô oeste.
+~
+~
+0 -1 20662
+E
+frio brutal~
+   O frio aqui é penetrante, atravessando qualquer proteção e
+chegando aos ossos.
+~
+S
+#20673
+Penhasco Superior Central~
+   O centro dos penhascos superiores. Daqui, é possível ver tanto
+o leste quanto o oeste da ilha. O topo está próximo, mas ainda
+exige esforço considerável.
+~
+206 0 0 0 0 10
+D4
+O topo se aproxima.
+~
+~
+0 -1 20683
+D2
+O pico do mirante.
+~
+~
+0 -1 20663
+E
+topo proximo~
+   O topo dos penhascos é visível daqui, uma promessa de chegada
+que ainda exige muito esforço para ser alcançada.
+~
+S
+#20674
+Parede de Gelo~
+   A rocha aqui está coberta por uma camada de gelo, tornando
+a escalada extremamente perigosa. Cada apoio deve ser testado
+antes de confiar nele.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20684
+D5
+A parede vertical.
+~
+~
+0 -1 20664
+E
+gelo perigo~
+   O gelo cobre a rocha como uma segunda pele, traindo qualquer
+escalador desatento com sua superfície escorregadia.
+~
+S
+#20675
+Formações de Gelo~
+   O gelo aqui formou estruturas curiosas - estalactites horizontais
+apontando na direção do vento predominante, cascatas congeladas,
+e formações que desafiam a lógica.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20685
+D5
+A parede ondulada.
+~
+~
+0 -1 20665
+E
+estalactites cascatas~
+   Formações de gelo em ângulos estranhos, criadas pelo vento
+congelante que molda a água antes que ela caia.
+~
+S
+#20676
+Corredor de Vento~
+   Um corredor natural onde o vento é canalizado e acelerado.
+Passar por aqui requer timing - esperar por uma pausa nas rajadas
+mais fortes ou arriscar ser levado.
+~
+206 0 0 0 0 11
+D4
+A passagem continua.
+~
+~
+0 -1 20686
+D5
+A zona de ventos.
+~
+~
+0 -1 20666
+E
+rajadas pausa~
+   O vento vem em ondas. Entre as rajadas mais fortes, há breves
+momentos de relativa calma.
+~
+S
+#20677
+Galeria de Símbolos~
+   Esta seção do corredor está coberta de símbolos antigos, mais
+elaborados que os anteriores. Parecem representar uma narrativa,
+possivelmente religiosa ou mitológica.
+~
+206 0 0 0 0 10
+D4
+A galeria continua.
+~
+~
+0 -1 20687
+D5
+O corredor das inscrições.
+~
+~
+0 -1 20667
+E
+simbolos narrativa~
+   Os símbolos parecem contar uma história de ascensão e queda,
+de deuses e mortais, gravada na rocha há eras.
+~
+S
+#20678
+Terraço da Caverna~
+   Um terraço natural na frente da caverna intermediária. A vista
+daqui abrange grande parte da escalada já completada. O senso de
+realização é temperado pelo conhecimento de quanto ainda falta.
+~
+206 0 0 0 0 5
+D0
+Os penhascos superiores aguardam.
+~
+~
+0 -1 20688
+D2
+A caverna intermediária.
+~
+~
+0 -1 20668
+E
+vista escalada~
+   Olhando para baixo, é possível traçar o caminho percorrido,
+uma linha vertical de desafios superados.
+~
+S
+#20679
+Início dos Penhascos Superiores~
+   A transição para os penhascos superiores é marcada por uma
+mudança na rocha - mais escura, mais fria, mais hostil. A neve
+é mais frequente aqui, e o gelo é um companheiro constante.
+~
+206 0 0 0 0 10
+D0
+Os penhascos superiores continuam.
+~
+~
+0 -1 20689
+D1
+O penhasco superior leste.
+~
+~
+0 -1 20670
+D2
+A base dos penhascos superiores.
+~
+~
+0 -1 20669
+E
+transicao rocha~
+   A rocha muda visivelmente aqui, tornando-se mais escura e
+parecendo absorver a luz ao invés de refleti-la.
+~
+S
+#20680
+Parede Negra Leste~
+   A rocha aqui é de um negro absoluto, quase sem reflexos.
+A escalada é dificultada pela dificuldade de ver os apoios
+contra o fundo escuro.
+~
+206 1 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20690
+D5
+O penhasco superior leste.
+~
+~
+0 -1 20670
+E
+rocha negra~
+   Basalto negro absorve a luz, tornando difícil distinguir
+detalhes e encontrar apoios seguros.
+~
+S
+#20681
+Face Congelada Leste~
+   Gelo cobre quase toda a superfície aqui. A escalada só é
+possível em condições específicas, quando o gelo está firme
+o suficiente para suportar peso, mas não tão liso que impeça
+qualquer aderência.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20691
+D5
+A encosta superior leste.
+~
+~
+0 -1 20671
+E
+gelo superficie~
+   O gelo forma uma camada espessa sobre a rocha, em alguns
+lugares transparente, em outros opaco e branco.
+~
+S
+#20682
+Face Ventosa Oeste~
+   O vento oeste é implacável aqui, soprando diretamente do
+mar aberto. Ondas de ar gelado atingem como punhos, tentando
+desalojar qualquer intruso.
+~
+206 0 0 0 0 11
+D4
+A escalada continua.
+~
+~
+0 -1 20692
+D5
+A encosta superior oeste.
+~
+~
+0 -1 20672
+E
+vento gelado~
+   O vento carrega o frio do oceano, multiplicando a sensação
+térmica para níveis perigosos.
+~
+S
+#20683
+Aproximação do Topo~
+   O topo está próximo agora, visível como uma linha recortada
+contra o céu. A escalada é extremamente difícil nesta seção
+final, com a rocha oferecendo poucos apoios.
+~
+206 0 0 0 0 10
+D4
+O topo se aproxima.
+~
+~
+0 -1 20693
+D5
+O penhasco superior central.
+~
+~
+0 -1 20673
+E
+topo linha~
+   A silhueta do topo contra o céu, uma promessa de chegada
+que parece próxima mas ainda exige esforço.
+~
+S
+#20684
+Seção Gelada~
+   Gelo cobre tudo aqui. A escalada requer equipamento especial
+ou habilidades mágicas para progredir com segurança.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20694
+D5
+A parede de gelo.
+~
+~
+0 -1 20674
+S
+#20685
+Cachoeira Congelada~
+   Uma antiga cachoeira está permanentemente congelada aqui,
+formando uma cascata de gelo azulado. A escalada pela cascata
+congelada é possível, mas arriscada.
+~
+206 0 0 0 0 14
+D4
+A escalada pela cascata.
+~
+~
+0 -1 20695
+D5
+As formações de gelo.
+~
+~
+0 -1 20675
+E
+cascata gelo~
+   O gelo é azulado e translúcido em partes, permitindo ver
+a rocha por trás. Bolhas de ar estão presas no gelo.
+~
+S
+#20686
+Túnel de Vento~
+   O vento aqui é tão forte que forma quase um túnel de ar.
+Passar requer agarrar-se firmemente às rochas e esperar por
+momentos de menor intensidade.
+~
+206 0 0 0 0 11
+D4
+O túnel continua.
+~
+~
+0 -1 20696
+D5
+O corredor de vento.
+~
+~
+0 -1 20676
+E
+tunel ar~
+   O ar se move em uma corrente quase sólida, rugindo ao passar
+pelas formações rochosas.
+~
+S
+#20687
+Santuário Antigo~
+   Uma câmara natural onde os símbolos se concentram em torno
+de um altar de pedra. Este parece ter sido um local sagrado
+para alguma civilização antiga.
+~
+206 1 0 0 0 0
+D0
+Uma passagem leva para fora.
+~
+~
+0 -1 20697
+D5
+A galeria de símbolos.
+~
+~
+0 -1 20677
+E
+altar pedra~
+   Um altar de pedra natural, gasto pelo tempo mas ainda
+reconhecível. Oferendas antigas podem estar enterradas por perto.
+~
+S
+#20688
+Terraço Superior~
+   Um dos últimos terraços antes do topo. Daqui, a vista é
+verdadeiramente espetacular - o mundo inteiro parece estar
+abaixo, e o céu parece ao alcance da mão.
+~
+206 0 0 0 0 5
+D0
+Os penhascos finais se erguem.
+~
+~
+0 -1 20698
+D2
+O terraço da caverna.
+~
+~
+0 -1 20678
+E
+vista mundo~
+   Uma vista panorâmica de 360 graus. O mar, as outras ilhas,
+as nuvens abaixo - tudo visível deste ponto elevado.
+~
+S
+#20689
+Penhascos Superiores Centrais~
+   O centro dos penhascos superiores oferece alguma proteção
+do vento, criada pelas formações rochosas ao redor. Ainda assim,
+o frio é intenso e o ar rarefeito.
+~
+206 0 0 0 0 10
+D0
+A escalada final.
+~
+~
+0 -1 20699
+D1
+Os penhascos superiores leste.
+~
+~
+0 -1 20690
+D2
+O início dos penhascos superiores.
+~
+~
+0 -1 20679
+D3
+Os penhascos superiores oeste.
+~
+~
+0 -1 20700
+S
+#20690
+Penhascos Superiores Leste~
+   A face leste dos penhascos superiores. O sol nascente aquece
+brevemente esta face pela manhã, derretendo parte do gelo e
+criando condições traiçoeiras de rocha molhada.
+~
+206 0 0 0 0 10
+D4
+A escalada continua.
+~
+~
+0 -1 20701
+D3
+Os penhascos superiores centrais.
+~
+~
+0 -1 20689
+D5
+A parede negra leste.
+~
+~
+0 -1 20680
+S
+#20691
+Crista de Gelo Leste~
+   Uma crista formada predominantemente por gelo acumulado ao
+longo de séculos. A estrutura parece frágil, mas é surpreendentemente
+estável.
+~
+206 0 0 0 0 14
+D4
+A crista continua.
+~
+~
+0 -1 20702
+D5
+A face congelada leste.
+~
+~
+0 -1 20681
+S
+#20692
+Penhascos Ventosos Oeste~
+   Os ventos oeste são quase insuportáveis aqui. Qualquer
+tentativa de escalada deve ser feita com extrema cautela
+e, idealmente, durante raras calmarias.
+~
+206 0 0 0 0 11
+D4
+A escalada continua.
+~
+~
+0 -1 20703
+D5
+A face ventosa oeste.
+~
+~
+0 -1 20682
+S
+#20693
+Penúltima Escalada~
+   Uma das últimas seções de escalada. O topo está tão perto
+que parece possível tocá-lo, mas a rocha aqui é particularmente
+difícil.
+~
+206 0 0 0 0 10
+D4
+O topo está próximo.
+~
+~
+0 -1 20704
+D5
+A aproximação do topo.
+~
+~
+0 -1 20683
+S
+#20694
+Pilar de Gelo~
+   Um pilar de gelo formado por água congelada que escorria
+da rocha acima. A estrutura é impressionante, quase artística
+em sua beleza gelada.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20705
+D5
+A seção gelada.
+~
+~
+0 -1 20684
+E
+pilar formacao~
+   O pilar de gelo brilha com tons azulados e brancos, uma
+obra de arte natural criada pelo frio extremo.
+~
+S
+#20695
+Topo da Cachoeira Congelada~
+   O topo da cachoeira congelada, onde a água originalmente
+caía. A fonte ainda existe em algum lugar acima, alimentando
+a formação de gelo durante todo o ano.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20706
+D5
+A cachoeira congelada.
+~
+~
+0 -1 20685
+E
+fonte agua~
+   Água ainda escorre de algum lugar acima, congelando quase
+imediatamente ao entrar em contato com o ar gelado.
+~
+S
+#20696
+Saída do Túnel de Vento~
+   O túnel de vento termina aqui, abrindo-se para uma área
+mais calma. O contraste com a violência do vento dentro do
+túnel é quase desconcertante.
+~
+206 0 0 0 0 5
+D0
+Uma área aberta.
+~
+~
+0 -1 20707
+D5
+O túnel de vento.
+~
+~
+0 -1 20686
+S
+#20697
+Terraço do Santuário~
+   Um terraço natural em frente ao santuário antigo. A vista
+é espiritual em sua grandeza, explicando talvez por que este
+local foi escolhido para adoração.
+~
+206 0 0 0 0 5
+D0
+Os penhascos finais.
+~
+~
+0 -1 20708
+D2
+O santuário antigo.
+~
+~
+0 -1 20687
+S
+#20698
+Penhascos Finais Sul~
+   A seção final dos penhascos começa aqui. O topo está visível
+acima, uma promessa de conclusão após a longa escalada.
+~
+206 0 0 0 0 10
+D0
+O topo se aproxima.
+~
+~
+0 -1 20709
+D2
+O terraço superior.
+~
+~
+0 -1 20688
+S
+#20699
+Penhascos Finais Centrais~
+   O centro da seção final. Daqui, todas as direções levam
+para cima ou para trás. O ar é tão rarefeito que cada respiração
+requer esforço consciente.
+~
+206 0 0 0 0 10
+D4
+O topo.
+~
+~
+0 -1 20760
+D2
+Os penhascos superiores centrais.
+~
+~
+0 -1 20689
+S
+#20700
+Penhascos Superiores Oeste~
+   A face oeste dos penhascos superiores. Mesmo com o sol
+poente, esta face permanece fria, o vento roubando qualquer
+calor antes que possa ser sentido.
+~
+206 0 0 0 0 10
+D1
+Os penhascos superiores centrais.
+~
+~
+0 -1 20689
+D4
+A escalada continua.
+~
+~
+0 -1 20710
+S
+#20701
+Alto Leste~
+   Uma das posições mais altas na face leste. Daqui, o nascer
+do sol seria uma visão inesquecível, iluminando o mundo abaixo
+em tons de dourado e rosa.
+~
+206 0 0 0 0 10
+D4
+A escalada final.
+~
+~
+0 -1 20761
+D5
+Os penhascos superiores leste.
+~
+~
+0 -1 20690
+S
+#20702
+Crista de Gelo Superior~
+   O topo da crista de gelo, oferecendo uma vista panorâmica
+do gelo abaixo e da rocha acima. A transição entre os dois
+é abrupta e dramática.
+~
+206 0 0 0 0 14
+D4
+A escalada continua.
+~
+~
+0 -1 20762
+D5
+A crista de gelo leste.
+~
+~
+0 -1 20691
+S
+#20703
+Alto Ventoso Oeste~
+   O vento aqui atinge velocidades que tornam impossível
+permanecer de pé sem apoio. Apenas rastejando ou agarrado
+às rochas é possível progredir.
+~
+206 0 0 0 0 11
+D4
+A escalada final.
+~
+~
+0 -1 20763
+D5
+Os penhascos ventosos oeste.
+~
+~
+0 -1 20692
+S
+#20704
+Beirada do Topo~
+   Quase no topo. A borda é visível, apenas alguns metros
+acima. A exaustão é enorme, mas a conclusão está ao alcance.
+~
+206 0 0 0 0 10
+D4
+O topo.
+~
+~
+0 -1 20764
+D5
+A penúltima escalada.
+~
+~
+0 -1 20693
+S
+#20705
+Alto do Pilar~
+   O topo do pilar de gelo. De aqui, é possível ver toda a
+estrutura abaixo, uma coluna impressionante de gelo azulado.
+~
+206 0 0 0 0 14
+D4
+O cume de gelo.
+~
+~
+0 -1 20765
+D5
+O pilar de gelo.
+~
+~
+0 -1 20694
+S
+#20706
+Nascente Congelada~
+   A fonte da água que forma a cachoeira congelada. Um pequeno
+fluxo de água emerge da rocha, congelando quase instantaneamente.
+~
+206 0 0 0 0 14
+D4
+A crista de neve.
+~
+~
+0 -1 20766
+D5
+O topo da cachoeira congelada.
+~
+~
+0 -1 20695
+E
+nascente fonte~
+   Água cristalina brota da rocha, congelando em segundos ao
+encontrar o ar gelado.
+~
+S
+#20707
+Área Calma~
+   Uma área surpreendentemente calma após o túnel de vento.
+O silêncio é quase ensurdecedor após o rugido constante do
+vento.
+~
+206 0 0 0 0 5
+D0
+O platô do cume.
+~
+~
+0 -1 20767
+D2
+A saída do túnel de vento.
+~
+~
+0 -1 20696
+S
+#20708
+Passagem do Santuário~
+   Uma passagem que leva do terraço do santuário em direção
+ao cume. A rocha aqui tem símbolos gravados, guiando peregrinos
+antigos.
+~
+206 0 0 0 0 5
+D0
+O caminho do cume.
+~
+~
+0 -1 20768
+D2
+O terraço do santuário.
+~
+~
+0 -1 20697
+E
+simbolos guia~
+   Símbolos antigos parecem indicar direções e distâncias,
+um sistema de navegação para os peregrinos de outrora.
+~
+S
+#20709
+Penhascos Finais Norte~
+   A última seção de escalada antes do cume. O ar é tão fino
+que cada movimento exige determinação extraordinária.
+~
+206 0 0 0 0 10
+D4
+O cume.
+~
+~
+0 -1 20769
+D2
+Os penhascos finais sul.
+~
+~
+0 -1 20698
+S
+#20710
+Alto Oeste~
+   Uma das posições mais altas na face oeste. O pôr do sol
+daqui seria espetacular, o sol mergulhando no mar infinito.
+~
+206 0 0 0 0 10
+D4
+O cume oeste.
+~
+~
+0 -1 20770
+D5
+Os penhascos superiores oeste.
+~
+~
+0 -1 20700
+S
+#20760
+O Cume Central~
+   Você alcançou o cume central das Ilhas de No. A vista é
+incomparável - o mundo inteiro parece estar aos seus pés.
+Nuvens passam abaixo, e o horizonte se curva visivelmente.
+Após tanta escalada, a sensação de realização é imensa.
+O vento aqui é constante mas suportável.
+~
+206 0 0 0 0 5
+D0
+O cume norte.
+~
+~
+0 -1 20771
+D1
+O cume leste.
+~
+~
+0 -1 20772
+D2
+A escalada de volta.
+~
+~
+0 -1 20699
+D3
+O cume oeste.
+~
+~
+0 -1 20773
+E
+vista horizonte~
+   Do ponto mais alto, o horizonte se estende em todas as
+direções, uma linha curva onde céu e mar se encontram.
+~
+S
+#20761
+Cume Leste~
+   A seção leste do cume. Daqui, o nascer do sol ilumina
+primeiro esta parte das ilhas, banhando tudo em luz dourada.
+~
+206 0 0 0 0 5
+D3
+O cume central.
+~
+~
+0 -1 20760
+D5
+O alto leste.
+~
+~
+0 -1 20701
+E
+nascer sol dourado~
+   Esta é a primeira parte do cume a receber a luz do sol
+nascente, um espetáculo de cores no horizonte.
+~
+S
+#20762
+Cume de Gelo~
+   Uma seção do cume coberta por gelo permanente. A superfície
+brilha com reflexos prismáticos quando a luz atinge em certos
+ângulos.
+~
+206 0 0 0 0 14
+D2
+O cume central.
+~
+~
+0 -1 20760
+D5
+A crista de gelo superior.
+~
+~
+0 -1 20702
+E
+gelo prismatico~
+   O gelo reflete a luz em arco-íris de cores, criando um
+espetáculo visual surpreendente.
+~
+S
+#20763
+Cume Ventoso~
+   A seção mais ventosa do cume. Mesmo após toda a escalada,
+o vento ainda tenta expulsar os visitantes, uivando sua
+eterna negação.
+~
+206 0 0 0 0 11
+D1
+O cume central.
+~
+~
+0 -1 20760
+D5
+O alto ventoso oeste.
+~
+~
+0 -1 20703
+E
+vento uivo~
+   O vento aqui parece formar palavras - "Não, não, não" -
+uma recusa constante a qualquer presença.
+~
+S
+#20764
+Pico Principal~
+   O ponto mais alto de toda As Ilhas de No. Uma pedra
+vertical marca o cume absoluto. Gerações de escaladores
+deixaram suas marcas na pedra.
+~
+206 0 0 0 0 5
+D2
+O cume central.
+~
+~
+0 -1 20760
+D5
+A beirada do topo.
+~
+~
+0 -1 20704
+E
+pedra marcas~
+   A pedra do cume está coberta de nomes, datas e símbolos
+deixados por aqueles que conquistaram esta ascensão.
+~
+S
+#20765
+Pico de Gelo Leste~
+   Um pico secundário formado principalmente por gelo acumulado.
+A estrutura é impressionante, uma torre de cristal contra o
+céu.
+~
+206 0 0 0 0 14
+D3
+O cume de gelo.
+~
+~
+0 -1 20762
+D5
+O alto do pilar.
+~
+~
+0 -1 20705
+S
+#20766
+Crista de Neve~
+   Uma crista onde neve acumulada forma uma superfície
+surpreendentemente transitável. O branco da neve contrasta
+com o negro da rocha exposta.
+~
+206 0 0 0 0 14
+D2
+O cume central.
+~
+~
+0 -1 20760
+D5
+A nascente congelada.
+~
+~
+0 -1 20706
+S
+#20767
+Platô do Cume Norte~
+   Um platô no lado norte do cume. Daqui, é possível ver
+outras ilhas do arquipélago ao norte, incluindo o destino
+da próxima etapa da jornada.
+~
+206 0 0 0 0 5
+D0
+O ponto de salto.
+~
+~
+0 -1 20774
+D2
+A área calma.
+~
+~
+0 -1 20707
+E
+ilhas norte~
+   Outras ilhas são visíveis ao norte, silhuetas escuras
+contra o horizonte. O Canal de Marinero deve estar ali.
+~
+S
+#20768
+Caminho do Cume~
+   Um caminho natural leva do santuário ao cume. Símbolos
+antigos continuam marcando o trajeto, agora apontando para
+algo a leste.
+~
+206 0 0 0 0 5
+D0
+O cume norte.
+~
+~
+0 -1 20771
+D1
+O mirante sagrado.
+~
+~
+0 -1 20775
+D2
+A passagem do santuário.
+~
+~
+0 -1 20708
+S
+#20769
+Borda Norte do Cume~
+   A borda norte do cume oferece uma vista das ilhas ao
+norte. Uma corrente de ar quente sobe do vale abaixo,
+criando um fenômeno térmico interessante.
+~
+206 0 0 0 0 5
+D2
+Os penhascos finais.
+~
+~
+0 -1 20709
+D0
+O ponto de salto.
+~
+~
+0 -1 20774
+E
+corrente termica~
+   Ar quente sobe do vale, criando uma corrente ascendente
+que as aves usam para planar sem esforço.
+~
+S
+#20770
+Cume Oeste~
+   A seção oeste do cume. O sol poente colore o céu em tons
+de laranja e vermelho, criando um espetáculo visual que
+compensa todo o esforço da subida.
+~
+206 0 0 0 0 5
+D1
+O cume central.
+~
+~
+0 -1 20760
+D5
+O alto oeste.
+~
+~
+0 -1 20710
+E
+por sol cores~
+   O pôr do sol pinta o céu e o mar em cores vibrantes,
+um espetáculo de beleza natural incomparável.
+~
+S
+#20771
+Cume Norte~
+   O cume norte oferece a melhor vista do próximo destino.
+As ilhas ao norte parecem mais acessíveis daqui, embora o
+caminho ainda seja desafiador.
+~
+206 0 0 0 0 5
+D0
+O platô de lançamento.
+~
+~
+0 -1 20776
+D1
+O mirante sagrado.
+~
+~
+0 -1 20775
+D2
+O cume central.
+~
+~
+0 -1 20760
+D3
+O cume ventoso.
+~
+~
+0 -1 20763
+S
+#20772
+Mirante Leste do Cume~
+   Um mirante natural no lado leste do cume. A vista do
+mar aberto é espetacular, com ondas visíveis mesmo desta
+altura extrema.
+~
+206 0 0 0 0 5
+D3
+O cume central.
+~
+~
+0 -1 20760
+D0
+O pico de observação.
+~
+~
+0 -1 20777
+S
+#20773
+Terraço Oeste do Cume~
+   Um terraço no lado oeste do cume. Este seria o local
+ideal para contemplar o pôr do sol, se a escalada tivesse
+sido cronometrada para isso.
+~
+206 0 0 0 0 5
+D1
+O cume central.
+~
+~
+0 -1 20760
+D0
+O refúgio do vento.
+~
+~
+0 -1 20778
+S
+#20774
+Ponto de Salto~
+   O ponto de salto - uma plataforma natural de onde uma
+corrente de ar quente ascendente pode carregar viajantes
+em direção ao Canal de Marinero. Este é o ponto de saída
+das Ilhas de No. A jornada "ay arriba" está completa.
+~
+206 0 0 0 0 11
+D2
+O platô do cume norte.
+~
+~
+0 -1 20767
+E
+corrente salto~
+   Uma poderosa corrente de ar ascendente sobe deste ponto.
+Aqueles com coragem suficiente podem usá-la para viajar.
+~
+S
+#20775
+Mirante Sagrado~
+   Um mirante que fazia parte do complexo do antigo santuário.
+Oferendas antigas ainda decoram as rochas, deixadas por
+peregrinos de eras passadas.
+~
+206 0 0 0 0 5
+D3
+O caminho do cume.
+~
+~
+0 -1 20768
+D0
+O pico de meditação.
+~
+~
+0 -1 20779
+E
+oferendas antigas~
+   Pequenos objetos deixados como oferendas - contas, moedas
+antigas, amuletos e outros itens de significado pessoal.
+~
+S
+#20776
+Platô de Lançamento~
+   Uma área plana de onde viajantes podem se lançar nas
+correntes de ar que levam às ilhas ao norte. A vista é
+vertiginosa, mas a corrente ascendente é claramente visível
+pelo movimento das nuvens.
+~
+206 0 0 0 0 11
+D2
+O cume norte.
+~
+~
+0 -1 20771
+D1
+O pico de observação.
+~
+~
+0 -1 20777
+E
+correntes nuvens~
+   O movimento das nuvens traça claramente o caminho das
+correntes de ar que poderiam levar um viajante adiante.
+~
+S
+#20777
+Pico de Observação~
+   O pico de observação oferece uma vista de 360 graus.
+Daqui, é possível ver todo o arquipélago, incluindo ilhas
+que de outro modo seriam invisíveis.
+~
+206 0 0 0 0 5
+D2
+O mirante leste do cume.
+~
+~
+0 -1 20772
+D3
+O platô de lançamento.
+~
+~
+0 -1 20776
+E
+arquipelago ilhas~
+   Outras ilhas do arquipélago são visíveis daqui, cada uma
+parecendo tão inóspita quanto esta.
+~
+S
+#20778
+Refúgio do Vento~
+   Uma formação rochosa cria um abrigo natural contra o
+vento nesta seção do cume. É um local de descanso bem-vindo
+após a exposição constante aos elementos.
+~
+206 0 0 0 0 0
+D2
+O terraço oeste do cume.
+~
+~
+0 -1 20773
+D1
+O cume norte.
+~
+~
+0 -1 20771
+E
+abrigo formacao~
+   Paredes de rocha bloqueiam o vento, criando um oásis
+de calma no meio da tempestade constante.
+~
+S
+#20779
+Pico de Meditação~
+   Um pico isolado onde antigos peregrinos meditavam após
+completar a ascensão. A serenidade do local contrasta com
+a violência da jornada até aqui.
+~
+206 0 0 0 0 5
+D2
+O mirante sagrado.
+~
+~
+0 -1 20775
+E
+meditacao serenidade~
+   O silêncio e a paz deste local parecem convidar à
+reflexão e meditação profunda.
+~
+S
+#20780
+Caverna do Cume~
+   Uma pequena caverna no cume oferece abrigo completo.
+O interior está surpreendentemente seco e temperado,
+protegido dos elementos extremos lá fora.
+~
+206 1 0 0 0 0
+D2
+O cume central.
+~
+~
+0 -1 20760
+E
+interior caverna~
+   A caverna é pequena mas confortável, com paredes de
+rocha suave e um chão relativamente nivelado.
+~
+S
+#20781
+Cornija do Cume Leste~
+   Uma cornija estreita no lado leste do cume. A vista
+do nascer do sol daqui seria espetacular.
+~
+206 0 0 0 0 5
+D3
+O cume leste.
+~
+~
+0 -1 20761
+D0
+O mirante do amanhecer.
+~
+~
+0 -1 20782
+S
+#20782
+Mirante do Amanhecer~
+   Este mirante foi claramente usado para observar o
+nascer do sol. Símbolos solares decoram as rochas ao
+redor.
+~
+206 0 0 0 0 5
+D2
+A cornija do cume leste.
+~
+~
+0 -1 20781
+E
+simbolos solares~
+   Círculos com raios irradiando, representações claras
+do sol, gravados na rocha há séculos.
+~
+S
+#20783
+Vale Suspenso~
+   Um pequeno vale no topo das ilhas, protegido do vento
+por paredes de rocha. Algumas plantas resistentes conseguem
+crescer aqui, um oásis de vida no ambiente hostil.
+~
+206 0 0 0 0 2
+D2
+O cume norte.
+~
+~
+0 -1 20771
+D0
+O jardim suspenso.
+~
+~
+0 -1 20784
+E
+plantas oasis~
+   Plantas resistentes crescem aqui, protegidas do vento
+mais violento pelas formações rochosas ao redor.
+~
+S
+#20784
+Jardim Suspenso~
+   Um jardim natural no topo do mundo. Flores resistentes
+florescem aqui durante a breve estação de crescimento,
+criando uma explosão de cor inesperada.
+~
+206 0 0 0 0 2
+D2
+O vale suspenso.
+~
+~
+0 -1 20783
+E
+flores cores~
+   Flores de cores vibrantes - azul, amarelo, vermelho -
+desafiam o ambiente hostil com sua beleza delicada.
+~
+S
+#20785
+Piscina do Cume~
+   Uma pequena piscina de água da chuva se acumulou em
+uma depressão na rocha. A água é cristalina e surpreendentemente
+doce, uma raridade nestas ilhas.
+~
+206 0 0 0 0 4
+D2
+O jardim suspenso.
+~
+~
+0 -1 20784
+E
+agua cristalina~
+   A água é pura e fresca, um tesouro neste ambiente
+onde tudo é sal e vento.
+~
+S
+#20786
+Altar do Cume~
+   Um altar antigo marca o ponto mais sagrado das ilhas.
+Peregrinos vinham de longe para prestar homenagem aqui,
+após completar a árdua escalada.
+~
+206 0 0 0 0 5
+D2
+O pico de meditação.
+~
+~
+0 -1 20779
+E
+altar sagrado~
+   O altar é simples mas imponente, uma plataforma de
+pedra natural que parece ter sido usada para rituais.
+~
+S
+#20787
+Ponte Natural~
+   Uma ponte natural de rocha conecta duas seções do
+cume. A travessia é vertiginosa, com o vazio se estendendo
+em ambos os lados.
+~
+206 0 0 0 0 5
+D1
+O cume leste.
+~
+~
+0 -1 20761
+D3
+O cume oeste.
+~
+~
+0 -1 20770
+E
+ponte vazio~
+   A ponte é estreita mas sólida. O vazio abaixo é
+suficiente para causar vertigem em qualquer um.
+~
+S
+#20788
+Gruta de Cristal~
+   Uma pequena gruta onde cristais de gelo e minerais
+cobrem as paredes. A luz que entra cria reflexos
+prismáticos deslumbrantes.
+~
+206 1 0 0 0 0
+D2
+O cume de gelo.
+~
+~
+0 -1 20762
+E
+cristais luz~
+   Cristais de todas as cores cobrem as paredes,
+refletindo e refratando a luz em arco-íris.
+~
+S
+#20789
+Ninho das Águias~
+   O ninho de uma grande ave de rapina ocupa este
+ponto do cume. A ave observa qualquer intruso com
+olhos penetrantes.
+~
+206 0 0 0 0 5
+D2
+O pico principal.
+~
+~
+0 -1 20764
+E
+aguia ninho~
+   Um ninho impressionante, construído com galhos e
+vegetação. A ave que o habita é igualmente impressionante.
+~
+S
+#20790
+Plataforma de Observação Norte~
+   Uma plataforma natural que oferece a melhor vista
+das ilhas ao norte. O Canal de Marinero é claramente
+visível daqui em dias claros.
+~
+206 0 0 0 0 5
+D2
+O platô de lançamento.
+~
+~
+0 -1 20776
+E
+canal marinero~
+   O canal que leva à próxima etapa da jornada é visível
+como uma faixa de água mais escura entre as ilhas.
+~
+S
+#20791
+Recanto Abrigado~
+   Um recanto protegido onde é possível descansar
+em relativa paz. O vento aqui é apenas uma brisa
+suave.
+~
+206 0 0 0 0 0
+D2
+O refúgio do vento.
+~
+~
+0 -1 20778
+S
+#20792
+Mirante Sul~
+   Um mirante voltado para o sul, de onde toda a
+escalada pode ser vista. O caminho percorrido é
+impressionante visto de cima.
+~
+206 0 0 0 0 5
+D0
+O cume central.
+~
+~
+0 -1 20760
+E
+escalada caminho~
+   De cima, o caminho percorrido parece impossível.
+A realização de tê-lo completado é profunda.
+~
+S
+#20793
+Câmara dos Ecos~
+   Uma formação rochosa que cria ecos estranhos.
+Qualquer som é repetido e amplificado de formas
+inesperadas.
+~
+206 0 0 0 0 0
+D2
+A caverna do cume.
+~
+~
+0 -1 20780
+E
+ecos sons~
+   Os ecos criam uma cacofonia de sons repetidos,
+quase como se a montanha estivesse respondendo.
+~
+S
+#20794
+Pináculo Secundário~
+   Um pináculo secundário próximo ao cume principal.
+A escalada até aqui é opcional, mas a vista compensa
+o esforço extra.
+~
+206 0 0 0 0 5
+D2
+O pico principal.
+~
+~
+0 -1 20764
+S
+#20795
+Cornija de Neve~
+   Uma cornija coberta de neve permanente. A
+superfície é escorregadia, mas transitável com
+cuidado.
+~
+206 0 0 0 0 14
+D2
+A crista de neve.
+~
+~
+0 -1 20766
+S
+#20796
+Fenda do Vento~
+   Uma fenda na rocha onde o vento cria sons
+musicais estranhos. Os antigos acreditavam que
+eram vozes de espíritos.
+~
+206 0 0 0 0 11
+D2
+O cume ventoso.
+~
+~
+0 -1 20763
+E
+sons musicais~
+   O vento passando pela fenda cria notas musicais
+que mudam de tom com a intensidade.
+~
+S
+#20797
+Terraço Final~
+   O último terraço acessível nas Ilhas de No.
+Daqui, só resta descer ou usar as correntes de
+ar para viajar.
+~
+206 0 0 0 0 5
+D2
+O ponto de salto.
+~
+~
+0 -1 20774
+S
+#20798
+Marco da Conquista~
+   Um marco de pedra onde conquistadores das ilhas
+deixam suas assinaturas. Nomes e datas cobrem a
+superfície.
+~
+206 0 0 0 0 5
+D2
+O cume central.
+~
+~
+0 -1 20760
+E
+marco nomes~
+   Nomes de aventureiros de muitas eras estão gravados
+aqui, um registro de todos que conquistaram estas ilhas.
+~
+S
+#20799
+O Último Passo~
+   O ponto final das Ilhas de No. Daqui, a única
+direção é adiante - para o Canal de Marinero e
+as aventuras que aguardam além.
+~
+206 0 0 0 0 11
+D2
+O ponto de salto.
+~
+~
+0 -1 20774
+E
+adiante futuro~
+   O futuro aguarda além destas ilhas. A jornada
+"ay arriba" está completa, mas a aventura continua.
+~
+S
+$~
