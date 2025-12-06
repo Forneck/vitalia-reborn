@@ -2859,6 +2859,7 @@ void create_spells_db()
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 50;
+    new_spell->prerequisite_spell = SKILL_SPY;
 
     spedit_save_internally(new_spell);
 
