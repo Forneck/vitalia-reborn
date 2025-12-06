@@ -1341,6 +1341,31 @@ inflingir 1.5 vezes o dano.
 
 Veja tambem: KICK, RESCUE, WHIRLWIND
 #1
+BASHDOOR DERRUBAR-PORTA
+
+   Qualquer personagem com a habilidade Bash pode derrubar portas.
+
+   Uso: bashdoor [nome da porta] [direcao]
+
+   Esta habilidade permite forcar a abertura de uma porta fechada usando forca
+bruta. Ao derrubar uma porta com sucesso, voce:
+
+   - Remove qualquer cunha/travamento (destranca fechaduras travadas com JAM)
+   - Destranca a fechadura (se estiver trancada)
+   - Abre a porta
+
+   O sucesso depende da sua habilidade de Bash. Se voce falhar, ficara impedido
+de agir por 2 turnos (mesmo tempo de espera de um Bash em combate).
+
+   Esta e uma forma eficaz de passar por portas travadas por Ladroes ou portas
+trancadas quando voce nao tem a chave.
+
+Exemplos:
+  > bashdoor door north
+  > bashdoor portao east
+
+Veja tambem: BASH, JAM-LOCK, OPEN, KICK
+#1
 BITVECTORS NOBITS BITS
 
    Bitvectors are used within the code to represent certain values or flags. 
@@ -4588,6 +4613,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    @WOutras Habilidades@n
    ENVENOM       - Envenenar armas                          [Lad            ]
    HIDE          - Esconder                                 [Lad            ]
+   JAM LOCK      - Travar fechaduras                        [Lad            ]
    MEDITATE      - Meditar                                  [Mag Cle Dru Brd]
    MOUNT         - Montar                                   [Cle Gue        ]
    PICK LOCK     - Destrancar fechaduras                    [Lad            ]
@@ -9043,6 +9069,35 @@ Exemplos:
   > pick safe
 
 Veja tambem : OPEN, CLOSE, LOCK, UNLOCK
+#1
+JAM-LOCK JAM TRAVAR-FECHADURA
+
+   Somente Ladroes (Nivel 18+).
+
+   Uso: jam [nome da fechadura] [direcao]
+
+   Serve para travar fechaduras usando uma cunha ou ferramenta improvisada,
+impedindo que a porta seja aberta mesmo com a chave. A fechadura travada
+ficara inutilizavel temporariamente, dificultando a perseguicao ou o acesso
+de inimigos. Nem todas as fechaduras podem ser travadas.
+
+   Esta habilidade e util para criar barreiras temporarias durante fugas ou
+para proteger areas estrategicas. A fechadura travada pode ser destravada de
+tres formas:
+
+   1) TENTATIVAS REPETIDAS: Ha uma chance (10%) de a cunha se deslocar a cada
+      tentativa de abrir a porta travada.
+   2) DERRUBAR A PORTA: Use 'bashdoor [porta] [direcao]' com a habilidade Bash
+      para forcar a porta, destravando e abrindo-a.
+   3) RESET DE ZONA: Quando a zona e reiniciada, todas as fechaduras travadas
+      sao limpas automaticamente.
+
+Exemplos:
+  > jam door south
+  > jam portao north
+  > bashdoor door north    (para destravar com forca)
+
+Veja tambem : PICK-LOCKS, OPEN, CLOSE, LOCK, UNLOCK, BASH, BASHDOOR
 #1
 PINGENTE
 

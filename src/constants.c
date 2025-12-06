@@ -40,7 +40,7 @@ const char *dirs_pt[] = {"norte",    "leste",   "sul",      "oeste",
                          "cima",     "baixo",   "noroeste", /* Diagonals only used if CONFIG_DIAGONAL_DIRS is set */
                          "nordeste", "sudeste", "sudoeste", "\n"};
 
-const char *doors_pt[] = {"abre", "fecha", "destranca", "tranca", "arromba", "\n"};
+const char *doors_pt[] = {"abre", "fecha", "destranca", "tranca", "arromba", "trava", "\n"};
 
 const char *autoexits[] = {"n", "e", "s", "w", "u", "d", "nw", "ne", "se", "sw", "\n"};
 const char *autoexits_pt[] = {"n", "l", "s", "o", "c", "b", "no", "ne", "se", "so", "\n"};
@@ -63,11 +63,11 @@ const char *zone_bits[] = {"CLOSED",    "NO_ASTRAL", "NO_RECALL", "NO_SUMMON", "
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
 const char *exit_bits[] = {"DOOR",      "PICKPROOF", "GHOSTPROOF", "HIDDEN",   "CLIMBUP",
-                           "CLIMBDOWN", "KNOCK",     "DN_OPEN",    "DN_CLOSE", "(unused)", /* bit '9' */
-                           "(unused)",                                                     /* bit '10' */
-                           "(unused)",                                                     /* bit '11' */
-                           "(unused)",                                                     /* bit '12' */
-                           "(unused)",                                                     /* bit '13' */
+                           "CLIMBDOWN", "KNOCK",     "DN_OPEN",    "DN_CLOSE", "JAMMED", /* bit '9' */
+                           "(unused)",                                                   /* bit '10' */
+                           "(unused)",                                                   /* bit '11' */
+                           "(unused)",                                                   /* bit '12' */
+                           "(unused)",                                                   /* bit '13' */
                            "CLOSED",    "LOCKED",    "\n"};
 
 /** Description of the room sector type.

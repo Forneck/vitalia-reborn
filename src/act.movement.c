@@ -31,6 +31,7 @@
 /* do_gen_door utility functions */
 static int find_door(struct char_data *ch, const char *type, char *dir, const char *cmdname);
 static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd);
+static int ok_jam(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd);
 
 /* simple function to determine if char can walk on water */
 int has_boat(struct char_data *ch)
@@ -623,12 +624,14 @@ int has_key(struct char_data *ch, obj_vnum key)
 #define NEED_CLOSED (1 << 1)
 #define NEED_UNLOCKED (1 << 2)
 #define NEED_LOCKED (1 << 3)
+#define JAM_DISLODGE_CHANCE 10 /* 10% chance per attempt to dislodge jam */
 
 /* cmd_door is required external from act.movement.c */
-const char *cmd_door[] = {"open", "close", "unlock", "lock", "pick"};
+const char *cmd_door[] = {"open", "close", "unlock", "lock", "pick", "jam"};
 
-static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN, NEED_CLOSED | NEED_LOCKED,
-                                 NEED_CLOSED | NEED_UNLOCKED, NEED_CLOSED | NEED_LOCKED};
+static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN,
+                                 NEED_CLOSED | NEED_LOCKED,   NEED_CLOSED | NEED_UNLOCKED,
+                                 NEED_CLOSED | NEED_LOCKED,   NEED_CLOSED | NEED_LOCKED};
 
 #define EXITN(room, door) (world[room].dir_option[door])
 #define OPEN_DOOR(room, obj, door)                                                                                     \
@@ -641,6 +644,25 @@ static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN, NEED_CL
     ((obj) ? (REMOVE_BIT(GET_OBJ_VAL(obj, 1), CONT_LOCKED)) : (REMOVE_BIT(EXITN(room, door)->exit_info, EX_LOCKED)))
 #define TOGGLE_LOCK(room, obj, door)                                                                                   \
     ((obj) ? (TOGGLE_BIT(GET_OBJ_VAL(obj, 1), CONT_LOCKED)) : (TOGGLE_BIT(EXITN(room, door)->exit_info, EX_LOCKED)))
+/* Jamming only applies to room exits (doors), not containers - containers lack the structure for jamming */
+#define JAM_DOOR(room, obj, door) ((obj) ? (0) : (SET_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
+#define UNJAM_DOOR(room, obj, door) ((obj) ? (0) : (REMOVE_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
+
+/* Helper function to unjam a door and its opposite side */
+static void unjam_door_both_sides(struct char_data *ch, int door)
+{
+    room_rnum other_room;
+    struct room_direction_data *back;
+
+    REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_JAMMED);
+
+    other_room = EXIT(ch, door)->to_room;
+    if (other_room != NOWHERE) {
+        back = world[other_room].dir_option[rev_dir[door]];
+        if (back && back->to_room == IN_ROOM(ch))
+            REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_JAMMED);
+    }
+}
 
 void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
 {
@@ -697,6 +719,14 @@ void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
             send_to_char(ch, "A fechadura facilmente rende-se às suas habilidades.\r\n");
             len = strlcpy(buf, "$n habilmente arromba a fechadura ", sizeof(buf));
             break;
+
+        case SCMD_JAM:
+            JAM_DOOR(IN_ROOM(ch), obj, door);
+            if (back)
+                JAM_DOOR(other_room, obj, rev_dir[door]);
+            send_to_char(ch, "Você habilmente trava a fechadura com uma cunha.\r\n");
+            len = strlcpy(buf, "$n habilmente trava a fechadura ", sizeof(buf));
+            break;
     }
 
     /* Notify the room. */
@@ -740,6 +770,28 @@ static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scm
     return (0);
 }
 
+static int ok_jam(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd)
+{
+    int percent, skill_lvl;
+
+    if (scmd != SCMD_JAM)
+        return (1);
+
+    percent = rand_number(1, 101);
+    skill_lvl = GET_SKILL(ch, SKILL_JAM_LOCK) + dex_app_skill[GET_DEX(ch)].p_locks;
+
+    if (keynum == NOTHING)
+        send_to_char(ch, "Não há fechadura para travar.\r\n");
+    else if (pickproof)
+        send_to_char(ch, "A fechadura é muito complexa para ser travada.\r\n");
+    else if ((percent > skill_lvl) || PLR_FLAGGED(ch, PLR_TRNS))
+        send_to_char(ch, "Você falhou em travar a fechadura.\r\n");
+    else
+        return (1);
+
+    return (0);
+}
+
 #define DOOR_IS_OPENABLE(ch, obj, door)                                                                                \
     ((obj) ? ((GET_OBJ_TYPE(obj) == ITEM_CONTAINER) && OBJVAL_FLAGGED(obj, CONT_CLOSEABLE))                            \
            : (EXIT_FLAGGED(EXIT(ch, door), EX_ISDOOR)))
@@ -749,6 +801,7 @@ static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scm
     ((obj) ? (!OBJVAL_FLAGGED(obj, CONT_LOCKED)) : (!EXIT_FLAGGED(EXIT(ch, door), EX_LOCKED)))
 #define DOOR_IS_PICKPROOF(ch, obj, door)                                                                               \
     ((obj) ? (OBJVAL_FLAGGED(obj, CONT_PICKPROOF)) : (EXIT_FLAGGED(EXIT(ch, door), EX_PICKPROOF)))
+#define DOOR_IS_JAMMED(ch, obj, door) ((obj) ? (0) : (EXIT_FLAGGED(EXIT(ch, door), EX_JAMMED)))
 #define DOOR_IS_CLOSED(ch, obj, door) (!(DOOR_IS_OPEN(ch, obj, door)))
 #define DOOR_IS_LOCKED(ch, obj, door) (!(DOOR_IS_UNLOCKED(ch, obj, door)))
 #define DOOR_KEY(ch, obj, door) ((obj) ? (GET_OBJ_VAL(obj, 2)) : (EXIT(ch, door)->key))
@@ -781,14 +834,36 @@ ACMD(do_gen_door)
         door = find_door(ch, type, dir, doors_pt[subcmd]);
     }
 
+    /* Jamming only works on doors, not containers */
+    if ((obj) && (subcmd == SCMD_JAM)) {
+        send_to_char(ch, "Você não pode travar isso!\r\n");
+        return;
+    }
+
     if ((obj) || (door >= 0)) {
         keynum = DOOR_KEY(ch, obj, door);
+        int is_pickproof;
+        int is_jammed;
+        is_pickproof = DOOR_IS_PICKPROOF(ch, obj, door);
+        is_jammed = DOOR_IS_JAMMED(ch, obj, door);
+
         if (!(DOOR_IS_OPENABLE(ch, obj, door)))
             send_to_char(ch, "Você não pode %s  isso!!\r\n", doors_pt[subcmd]);
         else if (!DOOR_IS_OPEN(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_OPEN))
             send_to_char(ch, "Mas já está fechado!\r\n");
         else if (!DOOR_IS_CLOSED(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_CLOSED))
             send_to_char(ch, "Mas já está aberto!\r\n");
+        else if (is_jammed && IS_SET(flags_door[subcmd], NEED_UNLOCKED)) {
+            send_to_char(ch, "A fechadura está travada e não pode ser aberta!\r\n");
+            /* Chance to dislodge the jam with repeated attempts */
+            if (!obj && door >= 0 && rand_number(1, 100) <= JAM_DISLODGE_CHANCE) {
+                unjam_door_both_sides(ch, door);
+                send_to_char(ch, "A cunha se solta e cai no chão com um *clique*!\r\n");
+                act("A cunha da fechadura $F se solta e cai no chão!", FALSE, ch, 0,
+                    EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "da porta", TO_ROOM);
+            }
+        } else if (is_jammed && (subcmd == SCMD_JAM))
+            send_to_char(ch, "A fechadura já está travada!\r\n");
         else if (!(DOOR_IS_LOCKED(ch, obj, door)) && IS_SET(flags_door[subcmd], NEED_LOCKED))
             send_to_char(ch, "Oh.. não estava trancada, depois de tudo..\r\n");
         else if (!(DOOR_IS_UNLOCKED(ch, obj, door)) && IS_SET(flags_door[subcmd], NEED_UNLOCKED) &&
@@ -805,10 +880,117 @@ ACMD(do_gen_door)
         else if (!has_key(ch, keynum) && (GET_LEVEL(ch) < LVL_GOD) &&
                  ((subcmd == SCMD_LOCK) || (subcmd == SCMD_UNLOCK)))
             send_to_char(ch, "Você não parece ter a chave apropriada.\r\n");
-        else if (ok_pick(ch, keynum, DOOR_IS_PICKPROOF(ch, obj, door), subcmd))
+        else if (ok_pick(ch, keynum, is_pickproof, subcmd) && ok_jam(ch, keynum, is_pickproof, subcmd))
             do_doorcmd(ch, obj, door, subcmd);
     }
     return;
+}
+
+ACMD(do_bash_door)
+{
+    int door = -1;
+    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH];
+    struct obj_data *obj = NULL;
+    struct char_data *victim = NULL;
+    int percent, skill_lvl;
+    room_rnum other_room = NOWHERE;
+    struct room_direction_data *back = NULL;
+
+    skip_spaces(&argument);
+
+    if (!ALIVE(ch)) {
+        act("Como??? Você está mort$r!!", FALSE, ch, 0, 0, TO_CHAR);
+        return;
+    }
+
+    if (!*argument) {
+        send_to_char(ch, "Derrubar o que?\r\n");
+        return;
+    }
+
+    two_arguments(argument, type, dir);
+    if (!generic_find(type, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &victim, &obj))
+        door = find_door(ch, type, dir, "derrubar");
+
+    if ((obj) && (GET_OBJ_TYPE(obj) != ITEM_CONTAINER)) {
+        obj = NULL;
+        door = find_door(ch, type, dir, "derrubar");
+    }
+
+    /* Bash only works on doors, not containers */
+    if (obj) {
+        send_to_char(ch, "Você não pode derrubar isso!\r\n");
+        return;
+    }
+
+    if (door < 0) {
+        send_to_char(ch, "Derrubar o que?\r\n");
+        return;
+    }
+
+    if (!EXIT_FLAGGED(EXIT(ch, door), EX_ISDOOR)) {
+        send_to_char(ch, "Não há porta para derrubar!\r\n");
+        return;
+    }
+
+    if (!EXIT_FLAGGED(EXIT(ch, door), EX_CLOSED)) {
+        send_to_char(ch, "A porta já está aberta!\r\n");
+        return;
+    }
+
+    /* Get references to the other side */
+    if ((other_room = EXIT(ch, door)->to_room) != NOWHERE)
+        if ((back = world[other_room].dir_option[rev_dir[door]]) != NULL)
+            if (back->to_room != IN_ROOM(ch))
+                back = NULL;
+
+    /* Skill check for bash */
+    percent = rand_number(1, 101);
+    skill_lvl = GET_SKILL(ch, SKILL_BASH);
+
+    if (skill_lvl <= 0) {
+        send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+        return;
+    }
+
+    if (percent > skill_lvl) {
+        send_to_char(ch, "Você falha ao tentar derrubar a porta!\r\n");
+        act("$n tenta derrubar $F mas falha!", FALSE, ch, 0,
+            EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "a porta", TO_ROOM);
+        WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+        return;
+    }
+
+    /* Success! */
+    /* First, unjam if jammed */
+    if (EXIT_FLAGGED(EXIT(ch, door), EX_JAMMED)) {
+        unjam_door_both_sides(ch, door);
+        send_to_char(ch, "A cunha voa para longe com o impacto!\r\n");
+        act("$n derruba $F com força, fazendo a cunha voar!", FALSE, ch, 0,
+            EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "a porta", TO_ROOM);
+    }
+
+    /* Then, unlock if locked */
+    if (EXIT_FLAGGED(EXIT(ch, door), EX_LOCKED)) {
+        REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_LOCKED);
+        if (back)
+            REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_LOCKED);
+    }
+
+    /* Finally, open the door */
+    REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_CLOSED);
+    if (back)
+        REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_CLOSED);
+
+    send_to_char(ch, "Você derruba a porta com um golpe poderoso!\r\n");
+    act("$n derruba $F!", FALSE, ch, 0, EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "a porta", TO_ROOM);
+
+    /* Notify the other room */
+    if (back)
+        send_to_room(other_room, "A %s é derrubada com força pelo outro lado!\r\n",
+                     back->keyword ? fname(back->keyword) : "porta");
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
 ACMD(do_enter)
