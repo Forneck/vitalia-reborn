@@ -182,6 +182,7 @@ ACMD(do_fly);
 #define SCMD_FLY 0
 #define SCMD_LAND 1
 /* Functions without subcommands */
+ACMD(do_bash_door);
 ACMD(do_enter);
 ACMD(do_follow);
 ACMD(do_leave);
