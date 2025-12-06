@@ -1538,6 +1538,7 @@ void check_danger_sense(struct char_data *ch)
     char directions[MAX_STRING_LENGTH] = "";
     char buf[MAX_STRING_LENGTH];
     size_t len = 0;
+    size_t ret;
 
     /* Only works for thieves with the danger sense skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
@@ -1550,11 +1551,20 @@ void check_danger_sense(struct char_data *ch)
 
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
+            /* Add direction to list, checking for buffer overflow */
             if (danger_count == 0) {
-                len = strlcpy(directions, dirs_pt[dir], sizeof(directions));
+                ret = strlcpy(directions, dirs_pt[dir], sizeof(directions));
+                if (ret >= sizeof(directions))
+                    break; /* Buffer full, stop adding */
+                len = ret;
             } else {
-                len += strlcpy(directions + len, ", ", sizeof(directions) - len);
-                len += strlcpy(directions + len, dirs_pt[dir], sizeof(directions) - len);
+                /* Check if we have room for ", " and the direction */
+                if (len + 2 + strlen(dirs_pt[dir]) >= sizeof(directions))
+                    break; /* Would overflow, stop adding */
+                ret = strlcpy(directions + len, ", ", sizeof(directions) - len);
+                len += ret;
+                ret = strlcpy(directions + len, dirs_pt[dir], sizeof(directions) - len);
+                len += ret;
             }
             danger_count++;
         }
@@ -1563,9 +1573,13 @@ void check_danger_sense(struct char_data *ch)
     /* Alert the character if danger was sensed */
     if (danger_count > 0) {
         /* Use correct Portuguese preposition for singular/plural */
-        const char *preposition = (danger_count == 1) ? "do" : "das direções";
-        snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo %s %s!&n\r\n",
-                 preposition, directions);
+        if (danger_count == 1) {
+            snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!&n\r\n",
+                     directions);
+        } else {
+            snprintf(buf, sizeof(buf),
+                     "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo das direções %s!&n\r\n", directions);
+        }
         send_to_char(ch, "%s", buf);
     }
 }
