@@ -742,6 +742,43 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         return;
     }
 
+    /* Check if this is a disguised player - treat them like an NPC */
+    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.short_descr) {
+        /* Display as if they were an NPC in default position */
+        if (AFF_FLAGGED(i, AFF_INVISIBLE))
+            send_to_char(ch, "*");
+
+        if (AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
+            if (IS_EVIL(i))
+                send_to_char(ch, "%s(Aura Vermelha) ", CBRED(ch, C_NRM));
+            else if (IS_GOOD(i))
+                send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
+        }
+
+        /* Display a random emotion for the disguise if PRF_DISPEMOTE is on */
+        /* Since the disguised player is not a real mob with ai_data, we pick a random emotion */
+        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            const char *emotion_texts[] = {"(corajoso)", "(furioso)", "(feliz)",   "(triste)", "(amedrontado)",
+                                           "(curioso)",  "(animado)", "(enojado)", NULL};
+            const char *emotion_colors[] = {CCYEL(ch, C_NRM), CCRED(ch, C_NRM), CCYEL(ch, C_NRM), CCBLU(ch, C_NRM),
+                                            CCMAG(ch, C_NRM), CCCYN(ch, C_NRM), CCYEL(ch, C_NRM), CCGRN(ch, C_NRM)};
+            /* Use a pseudo-random selection based on the character's ID for consistency */
+            int emotion_index = (GET_IDNUM(i) + world[IN_ROOM(i)].number) % 8;
+            send_to_char(ch, "%s%s%s ", emotion_colors[emotion_index], emotion_texts[emotion_index], CCYEL(ch, C_NRM));
+        }
+
+        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.short_descr);
+
+        if (AFF_FLAGGED(i, AFF_SANCTUARY))
+            act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
+        else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
+            act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_FIRESHIELD))
+            act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
+        /* Add other shield effects as needed */
+        return;
+    }
+
     if (IS_NPC(i)) {
         /* Check if this mob is a bounty target for the viewer */
         if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&

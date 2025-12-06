@@ -375,9 +375,10 @@
 #define AFF_CORRODED 47  /**< Corroded by acid - reduced AC */
 #define AFF_CONFUSED 48  /**< Mentally confused - reduced wisdom */
 #define AFF_STAGGERED 49 /**< Knocked off balance - reduced movement */
+#define AFF_DISGUISE 50  /**< Thief disguise - mimicking a mob */
 
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS 50
+#define NUM_AFF_FLAGS 51
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING 0       /**< Playing - Nominal state 		*/

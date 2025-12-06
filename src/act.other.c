@@ -2307,3 +2307,148 @@ ACMD(do_eavesdrop)
         send_to_char(ch, "Não há uma sala nessa direção...\r\n");
     }
 }
+
+/* Macabre Disguise - Thief skill to disguise as a mob using its corpse */
+ACMD(do_disguise)
+{
+    struct obj_data *corpse = NULL;
+    struct char_data *proto_mob = NULL;
+    struct affected_type af;
+    char arg[MAX_INPUT_LENGTH];
+    mob_vnum mob_vnum;
+    mob_rnum mob_rnum;
+
+    /* Check if character has the skill */
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DISGUISE)) {
+        send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+        return;
+    }
+
+    /* Check if already disguised */
+    if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+        send_to_char(ch, "Você já está disfarçado! Remova o disfarce atual primeiro.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    /* Check for corpse in argument or in room */
+    if (!*arg) {
+        send_to_char(ch, "Usar disfarce em qual corpo?\r\n");
+        return;
+    }
+
+    /* Find the corpse */
+    if (!(corpse = get_obj_in_list_vis(ch, arg, NULL, world[IN_ROOM(ch)].contents))) {
+        send_to_char(ch, "Você não vê esse corpo aqui.\r\n");
+        return;
+    }
+
+    /* Check if it's a corpse */
+    if (GET_OBJ_TYPE(corpse) != ITEM_CORPSE) {
+        send_to_char(ch, "Isso não é um corpo!\r\n");
+        return;
+    }
+
+    /* Check if it's an NPC corpse (has mob VNUM) */
+    mob_vnum = GET_OBJ_VAL(corpse, 2);
+    if (mob_vnum == NOBODY || mob_vnum == 0) {
+        send_to_char(ch, "Esse corpo está muito decomposto para ser usado como disfarce.\r\n");
+        return;
+    }
+
+    /* Check corpse timer - need at least some time left */
+    if (GET_OBJ_TIMER(corpse) < 2) {
+        send_to_char(ch, "Esse corpo está muito podre para ser usado como disfarce.\r\n");
+        return;
+    }
+
+    /* Get the mob prototype */
+    mob_rnum = real_mobile(mob_vnum);
+    if (mob_rnum == NOBODY) {
+        send_to_char(ch, "Esse corpo está muito decomposto para ser reconhecido.\r\n");
+        return;
+    }
+
+    proto_mob = &mob_proto[mob_rnum];
+
+    /* Skill check */
+    if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DISGUISE)) {
+        send_to_char(ch, "Você tenta se disfarçar com o corpo, mas falha miseravelmente.\r\n");
+        act("$n tenta fazer algo estranho com um corpo, mas desiste.", TRUE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+
+    /* Success! Apply the disguise */
+
+    /* Store original descriptions (we'll use the affect modifier fields creatively) */
+    /* Since we can't easily store strings in affects, we'll need to modify the player
+     * structure directly and rely on the AFF_DISGUISE flag to know when to restore */
+
+    /* Replace player's descriptions with mob's descriptions */
+    if (ch->player.short_descr)
+        free(ch->player.short_descr);
+    ch->player.short_descr = strdup(proto_mob->player.short_descr);
+
+    if (ch->player.long_descr)
+        free(ch->player.long_descr);
+    ch->player.long_descr = strdup(proto_mob->player.long_descr);
+
+    /* Apply the disguise affect with duration based on corpse timer */
+    new_affect(&af);
+    af.spell = SKILL_DISGUISE;
+    af.duration = GET_OBJ_TIMER(corpse); /* Duration matches corpse timer */
+    SET_BIT_AR(af.bitvector, AFF_DISGUISE);
+    /* Store mob_vnum in modifier for later reference (limited to short int range) */
+    af.modifier = (sbyte)(mob_vnum % 128); /* Best effort storage */
+    af.location = APPLY_NONE;
+    affect_to_char(ch, &af);
+
+    /* Set ghost mode to hide from WHO list */
+    SET_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+
+    /* Destroy the corpse - it's been used up */
+    extract_obj(corpse);
+
+    /* Messages */
+    send_to_char(ch, "Você veste o corpo como um disfarce macabro, assumindo a aparência de %s!\r\n",
+                 proto_mob->player.short_descr);
+    send_to_char(ch, "Você desaparece da lista de quem está online e agora se parece com a criatura.\r\n");
+    act("$n veste um corpo como um disfarce macabro e se transforma!", TRUE, ch, 0, 0, TO_ROOM);
+}
+
+/* Remove disguise - used by player command and automatic expiration */
+void remove_disguise(struct char_data *ch, bool expired)
+{
+    if (!AFF_FLAGGED(ch, AFF_DISGUISE)) {
+        return;
+    }
+
+    /* Remove the affect */
+    affect_from_char(ch, SKILL_DISGUISE);
+
+    /* Remove ghost mode */
+    REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+
+    /* Restore original descriptions - for PCs, we need to reset to their name */
+    if (!IS_NPC(ch)) {
+        /* Free the mob descriptions */
+        if (ch->player.short_descr) {
+            free(ch->player.short_descr);
+            ch->player.short_descr = NULL;
+        }
+        if (ch->player.long_descr) {
+            free(ch->player.long_descr);
+            ch->player.long_descr = NULL;
+        }
+    }
+
+    /* Messages */
+    if (expired) {
+        send_to_char(ch, "\r\n\tRVermes devoram o resto da carne do seu disfarce e ele cai aos pedaços!\tn\r\n");
+        act("O disfarce de $n cai aos pedaços, revelando sua verdadeira forma!", TRUE, ch, 0, 0, TO_ROOM);
+    } else {
+        send_to_char(ch, "Você remove seu disfarce, revelando sua verdadeira forma.\r\n");
+        act("$n remove o disfarce, revelando sua verdadeira forma!", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}

@@ -431,8 +431,10 @@ ACMD(do_enable);
 ACMD(do_emotionconfig);
 ACMD(do_emotionexport);
 ACMD(do_emotionimport);
+ACMD(do_disguise);
 
 void init_disabled_commands(void);
 bool is_command_disabled(int cmd_num);
 bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group);
+void remove_disguise(struct char_data *ch, bool expired);
 #endif /* _ACT_H_ */
