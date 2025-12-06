@@ -4588,6 +4588,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    @WOutras Habilidades@n
    ENVENOM       - Envenenar armas                          [Lad            ]
    HIDE          - Esconder                                 [Lad            ]
+   JAM LOCK      - Travar fechaduras                        [Lad            ]
    MEDITATE      - Meditar                                  [Mag Cle Dru Brd]
    MOUNT         - Montar                                   [Cle Gue        ]
    PICK LOCK     - Destrancar fechaduras                    [Lad            ]
@@ -9043,6 +9044,27 @@ Exemplos:
   > pick safe
 
 Veja tambem : OPEN, CLOSE, LOCK, UNLOCK
+#1
+JAM-LOCK JAM TRAVAR-FECHADURA
+
+   Somente Ladroes (Nivel 18+).
+
+   Uso: jam [nome da fechadura] [direcao]
+
+   Serve para travar fechaduras usando uma cunha ou ferramenta improvisada,
+impedindo que a porta seja aberta mesmo com a chave. A fechadura travada
+ficara inutilizavel temporariamente, dificultando a perseguicao ou o acesso
+de inimigos. Nem todas as fechaduras podem ser travadas.
+
+   Esta habilidade e util para criar barreiras temporarias durante fugas ou
+para proteger areas estrategicas. A fechadura travada eventualmente pode ser
+destravada por Ladroes habilidosos ou com esforco adicional.
+
+Exemplos:
+  > jam door south
+  > jam portao north
+
+Veja tambem : PICK-LOCKS, OPEN, CLOSE, LOCK, UNLOCK
 #1
 PINGENTE
 
