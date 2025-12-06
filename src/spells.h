@@ -227,9 +227,10 @@
 #define SKILL_FISHING 254
 #define SKILL_FORAGE 255
 #define SKILL_EAVESDROP 256
-#define SKILL_TAINT_FLUID 257 /* Thief skill to poison liquids    */
-#define SKILL_PEEK 258        /* Thief skill to peek at inventory */
-#define SKILL_JAM_LOCK 259    /* Thief skill to jam door locks     */
+#define SKILL_TAINT_FLUID 257  /* Thief skill to poison liquids    */
+#define SKILL_PEEK 258         /* Thief skill to peek at inventory */
+#define SKILL_JAM_LOCK 259     /* Thief skill to jam door locks     */
+#define SKILL_DANGER_SENSE 260 /* Thief skill to sense death traps  */
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 
