@@ -1538,6 +1538,7 @@ void check_danger_sense(struct char_data *ch)
     char directions[256] = "";
     char buf[MAX_STRING_LENGTH];
     int len = 0;
+    int ret;
 
     /* Only works for thieves with the danger sense skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
@@ -1554,17 +1555,15 @@ void check_danger_sense(struct char_data *ch)
 
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
-            int ret;
-
             if (danger_count > 0) {
                 ret = snprintf(directions + len, sizeof(directions) - len, ", ");
-                if (ret < 0 || ret >= sizeof(directions) - len)
+                if (ret < 0 || ret >= (int)(sizeof(directions) - len))
                     break;
                 len += ret;
             }
 
             ret = snprintf(directions + len, sizeof(directions) - len, "%s", dirs_pt[dir]);
-            if (ret < 0 || ret >= sizeof(directions) - len)
+            if (ret < 0 || ret >= (int)(sizeof(directions) - len))
                 break;
             len += ret;
 
