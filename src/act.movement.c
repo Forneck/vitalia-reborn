@@ -624,6 +624,7 @@ int has_key(struct char_data *ch, obj_vnum key)
 #define NEED_CLOSED (1 << 1)
 #define NEED_UNLOCKED (1 << 2)
 #define NEED_LOCKED (1 << 3)
+#define JAM_DISLODGE_CHANCE 10 /* 10% chance per attempt to dislodge jam */
 
 /* cmd_door is required external from act.movement.c */
 const char *cmd_door[] = {"open", "close", "unlock", "lock", "pick", "jam"};
@@ -646,6 +647,22 @@ static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN,
 /* Jamming only applies to room exits (doors), not containers - containers lack the structure for jamming */
 #define JAM_DOOR(room, obj, door) ((obj) ? (0) : (SET_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
 #define UNJAM_DOOR(room, obj, door) ((obj) ? (0) : (REMOVE_BIT(EXITN(room, door)->exit_info, EX_JAMMED)))
+
+/* Helper function to unjam a door and its opposite side */
+static void unjam_door_both_sides(struct char_data *ch, int door)
+{
+    room_rnum other_room;
+    struct room_direction_data *back;
+
+    REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_JAMMED);
+
+    other_room = EXIT(ch, door)->to_room;
+    if (other_room != NOWHERE) {
+        back = world[other_room].dir_option[rev_dir[door]];
+        if (back && back->to_room == IN_ROOM(ch))
+            REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_JAMMED);
+    }
+}
 
 void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
 {
@@ -836,15 +853,9 @@ ACMD(do_gen_door)
             send_to_char(ch, "Mas já está aberto!\r\n");
         else if (is_jammed && IS_SET(flags_door[subcmd], NEED_UNLOCKED)) {
             send_to_char(ch, "A fechadura está travada e não pode ser aberta!\r\n");
-            /* Chance to dislodge the jam with repeated attempts (10% chance) */
-            if (!obj && door >= 0 && rand_number(1, 10) == 1) {
-                REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_JAMMED);
-                room_rnum other_room = EXIT(ch, door)->to_room;
-                if (other_room != NOWHERE) {
-                    struct room_direction_data *back = world[other_room].dir_option[rev_dir[door]];
-                    if (back && back->to_room == IN_ROOM(ch))
-                        REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_JAMMED);
-                }
+            /* Chance to dislodge the jam with repeated attempts */
+            if (!obj && door >= 0 && rand_number(1, JAM_DISLODGE_CHANCE) == 1) {
+                unjam_door_both_sides(ch, door);
                 send_to_char(ch, "A cunha se solta e cai no chão com um *clique*!\r\n");
                 act("A cunha da fechadura $F se solta e cai no chão!", FALSE, ch, 0,
                     EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "da porta", TO_ROOM);
@@ -951,9 +962,7 @@ ACMD(do_bash_door)
     /* Success! */
     /* First, unjam if jammed */
     if (EXIT_FLAGGED(EXIT(ch, door), EX_JAMMED)) {
-        REMOVE_BIT(EXITN(IN_ROOM(ch), door)->exit_info, EX_JAMMED);
-        if (back)
-            REMOVE_BIT(EXITN(other_room, rev_dir[door])->exit_info, EX_JAMMED);
+        unjam_door_both_sides(ch, door);
         send_to_char(ch, "A cunha voa para longe com o impacto!\r\n");
         act("$n derruba $F com força, fazendo a cunha voar!", FALSE, ch, 0,
             EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "a porta", TO_ROOM);
