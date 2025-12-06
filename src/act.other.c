@@ -31,6 +31,18 @@
 #include "spedit.h" /* for get_spell_level() */
 #include "modify.h"
 
+/* Structure to store original descriptions for disguised players */
+struct disguise_data {
+    long idnum;                 /* Player ID */
+    char *orig_short_descr;     /* Original short description */
+    char *orig_long_descr;      /* Original long description */
+    char *orig_description;     /* Original main description */
+    struct disguise_data *next; /* Next in linked list */
+};
+
+/* Global list of disguise data */
+static struct disguise_data *disguise_list = NULL;
+
 /* Local defined utility functions */
 /* do_group utility functions */
 static void print_group(struct char_data *ch);
@@ -2308,6 +2320,78 @@ ACMD(do_eavesdrop)
     }
 }
 
+/* Helper function to save original descriptions before disguise */
+static void save_original_descriptions(struct char_data *ch)
+{
+    struct disguise_data *data;
+
+    /* Check if data already exists (shouldn't happen, but be safe) */
+    for (data = disguise_list; data; data = data->next) {
+        if (data->idnum == GET_IDNUM(ch)) {
+            return; /* Already saved */
+        }
+    }
+
+    /* Create new disguise data entry */
+    CREATE(data, struct disguise_data, 1);
+    data->idnum = GET_IDNUM(ch);
+    data->orig_short_descr = ch->player.short_descr ? strdup(ch->player.short_descr) : NULL;
+    data->orig_long_descr = ch->player.long_descr ? strdup(ch->player.long_descr) : NULL;
+    data->orig_description = ch->player.description ? strdup(ch->player.description) : NULL;
+
+    /* Add to list */
+    data->next = disguise_list;
+    disguise_list = data;
+}
+
+/* Helper function to restore original descriptions after disguise */
+static void restore_original_descriptions(struct char_data *ch)
+{
+    struct disguise_data *data, *prev = NULL;
+
+    /* Find the data for this character */
+    for (data = disguise_list; data; prev = data, data = data->next) {
+        if (data->idnum == GET_IDNUM(ch)) {
+            /* Restore the descriptions */
+            if (ch->player.short_descr)
+                free(ch->player.short_descr);
+            ch->player.short_descr = data->orig_short_descr;
+
+            if (ch->player.long_descr)
+                free(ch->player.long_descr);
+            ch->player.long_descr = data->orig_long_descr;
+
+            if (ch->player.description)
+                free(ch->player.description);
+            ch->player.description = data->orig_description;
+
+            /* Remove from list */
+            if (prev)
+                prev->next = data->next;
+            else
+                disguise_list = data->next;
+
+            /* Free the data structure itself (but not the strings - they were transferred) */
+            free(data);
+            return;
+        }
+    }
+
+    /* If we get here, no saved data found - just set to NULL */
+    if (ch->player.short_descr) {
+        free(ch->player.short_descr);
+        ch->player.short_descr = NULL;
+    }
+    if (ch->player.long_descr) {
+        free(ch->player.long_descr);
+        ch->player.long_descr = NULL;
+    }
+    if (ch->player.description) {
+        free(ch->player.description);
+        ch->player.description = NULL;
+    }
+}
+
 /* Macabre Disguise - Thief skill to disguise as a mob using its corpse */
 ACMD(do_disguise)
 {
@@ -2382,10 +2466,8 @@ ACMD(do_disguise)
 
     /* Success! Apply the disguise */
 
-    /* Store original descriptions before replacing them */
-    /* We need to save them somewhere - we'll use a temporary global or file system approach */
-    /* For now, PCs don't have short_descr, long_descr, or description normally, so we can just free and set to NULL on
-     * removal */
+    /* Save original descriptions before replacing them */
+    save_original_descriptions(ch);
 
     /* Replace player's descriptions with mob's descriptions */
     if (ch->player.short_descr)
@@ -2440,21 +2522,9 @@ void remove_disguise(struct char_data *ch, bool expired)
     /* Remove ghost mode */
     REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
 
-    /* Restore original descriptions - for PCs, we need to reset to their name */
+    /* Restore original descriptions */
     if (!IS_NPC(ch)) {
-        /* Free the mob descriptions */
-        if (ch->player.short_descr) {
-            free(ch->player.short_descr);
-            ch->player.short_descr = NULL;
-        }
-        if (ch->player.long_descr) {
-            free(ch->player.long_descr);
-            ch->player.long_descr = NULL;
-        }
-        if (ch->player.description) {
-            free(ch->player.description);
-            ch->player.description = NULL;
-        }
+        restore_original_descriptions(ch);
     }
 
     /* Messages */
