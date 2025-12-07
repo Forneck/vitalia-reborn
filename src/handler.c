@@ -1303,11 +1303,17 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name, int *numbe
     if (*number == 0)
         return (get_player_vis(ch, name, NULL, FIND_CHAR_ROOM));
 
-    for (i = world[IN_ROOM(ch)].people; i && *number; i = i->next_in_room)
-        if (isname(name, i->player.name))
+    for (i = world[IN_ROOM(ch)].people; i && *number; i = i->next_in_room) {
+        /* Check both the character's name and their disguise name (short_descr) if disguised */
+        int name_match = isname(name, i->player.name);
+        int disguise_match = (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.short_descr &&
+                              isname(name, i->player.short_descr));
+
+        if (name_match || disguise_match)
             if (CAN_SEE(ch, i))
                 if (--(*number) == 0)
                     return (i);
+    }
 
     return (NULL);
 }
