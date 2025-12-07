@@ -2276,7 +2276,7 @@ ACMD(do_eavesdrop)
     // If already listening, stop listening
     if (ch->listening_to != NOWHERE) {
         /* Validate listening_to room is valid before accessing world array */
-        if (!(ch->listening_to == NOWHERE || ch->listening_to < 0 || ch->listening_to > top_of_world)) {
+        if (VALID_ROOM_RNUM(ch->listening_to)) {
             REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
         }
         ch->listening_to = NOWHERE;

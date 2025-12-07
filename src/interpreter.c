@@ -534,7 +534,7 @@ void command_interpreter(struct char_data *ch, char *argument)
     if (ch->listening_to != NOWHERE) {
         struct char_data *temp;
         /* Validate listening_to room is valid before accessing world array */
-        if (!(ch->listening_to == NOWHERE || ch->listening_to < 0 || ch->listening_to > top_of_world)) {
+        if (VALID_ROOM_RNUM(ch->listening_to)) {
             REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
         }
         ch->listening_to = NOWHERE;
