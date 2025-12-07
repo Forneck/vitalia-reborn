@@ -531,27 +531,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
-    /* just drop to next line for hitting CR */
-    skip_spaces(&argument);
-    if (!*argument)
-        return;
-
-    /* Extract command name for whirlwind check below */
-    {
-        char cmd_name[MAX_INPUT_LENGTH];
-        half_chop(argument, cmd_name, arg);
-
-        /* Cancel whirlwind on any command execution EXCEPT whirlwind itself
-         * This prevents spam-casting whirlwind to keep it going forever */
-        if (ch && ch->events && strncmp(cmd_name, "whirl", 5) != 0) {
-            struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
-            if (pMudEvent && pMudEvent->pEvent) {
-                event_cancel(pMudEvent->pEvent);
-                send_to_char(ch, "Você para de girar.\r\n");
-            }
-        }
-    }
-
     /* Remove character from any listener list when taking action */
     if (ch->listening_to != NOWHERE) {
         struct char_data *temp;
@@ -560,6 +539,36 @@ void command_interpreter(struct char_data *ch, char *argument)
             REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
         }
         ch->listening_to = NOWHERE;
+    }
+
+    /* just drop to next line for hitting CR */
+    skip_spaces(&argument);
+    if (!*argument)
+        return;
+
+    /* Extract command name to check if it's whirlwind command
+     * We need to cancel whirlwind on any command EXCEPT whirlwind itself
+     * to prevent spam-casting to keep whirlwind going forever */
+    {
+        char cmd_name[MAX_INPUT_LENGTH];
+        char *temp_arg = argument;
+
+        /* Extract first word (command name) */
+        while (*temp_arg && !isspace(*temp_arg) && (temp_arg - argument) < MAX_INPUT_LENGTH - 1) {
+            cmd_name[temp_arg - argument] = *temp_arg;
+            temp_arg++;
+        }
+        cmd_name[temp_arg - argument] = '\0';
+
+        /* Cancel whirlwind unless command is "whirlwind" or its abbreviation "whirl"
+         * We check both full command and minimum abbreviation for safety */
+        if (ch && ch->events && str_cmp(cmd_name, "whirlwind") && str_cmp(cmd_name, "whirl")) {
+            struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
+            if (pMudEvent && pMudEvent->pEvent) {
+                event_cancel(pMudEvent->pEvent);
+                send_to_char(ch, "Você para de girar.\r\n");
+            }
+        }
     }
 
     /* special case to handle one-character, non-alphanumeric commands;
