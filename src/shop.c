@@ -557,7 +557,7 @@ static void check_shop_buy_quest(struct char_data *ch, struct obj_data *obj)
         }
     }
     /* Mob quest check */
-    else if (IS_NPC(ch) && ch->ai_data && GET_MOB_QUEST(ch) != NOTHING) {
+    else if (IS_NPC(ch) && ch->ai_data) {
         mob_autoquest_trigger_check(ch, NULL, obj, AQ_SHOP_BUY);
     }
 }
@@ -938,7 +938,7 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
             }
         }
         /* Mob quest check for selling */
-        else if (IS_NPC(ch) && ch->ai_data && GET_MOB_QUEST(ch) != NOTHING) {
+        else if (IS_NPC(ch) && ch->ai_data) {
             mob_autoquest_trigger_check(ch, NULL, obj, AQ_SHOP_SELL);
         }
 
