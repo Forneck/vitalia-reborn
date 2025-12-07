@@ -2687,10 +2687,6 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     log1("WISHLIST QUEST: %s (room %d) created quest %d for item %d (%s) with QM %d, reward %d gold", GET_NAME(ch),
          GET_ROOM_VNUM(IN_ROOM(ch)), new_quest_vnum, item_vnum, item_name, questmaster_vnum, calculated_reward);
 
-    /* Enhancement 3: Quest Persistence - Mark as persistent quest */
-    /* Add a special flag to identify this as a wishlist quest that should persist */
-    SET_BIT(new_quest->flags, AQ_REPEATABLE); /* Most wishlist quests should be repeatable */
-
     /* Enhancement 3: Quest Persistence - Save quest to disk for server restarts */
     if (save_quests(mob_zone)) {
         log1("WISHLIST QUEST: Saved quest %d to disk for persistence across restarts", new_quest_vnum);
