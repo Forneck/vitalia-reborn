@@ -1575,6 +1575,10 @@ void check_danger_sense(struct char_data *ch)
         if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->to_room))
             continue;
 
+        /* Validate the destination room number before accessing world array */
+        if (!VALID_ROOM_RNUM(dest))
+            continue;
+
         /* Check if the destination room is a death trap */
         if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
             if (danger_count > 0) {
