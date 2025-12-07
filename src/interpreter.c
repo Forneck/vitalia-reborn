@@ -37,6 +37,7 @@
 #include "prefedit.h"
 #include "ibt.h"
 #include "mud_event.h"
+#include "dg_event.h"
 #include "spedit.h"
 #include "fight.h"
 
@@ -529,6 +530,15 @@ void command_interpreter(struct char_data *ch, char *argument)
     }
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
+
+    /* Cancel whirlwind on any command execution (like hide/eavesdrop) */
+    if (ch && ch->events && char_has_mud_event(ch, eWHIRLWIND)) {
+        struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
+        if (pMudEvent && pMudEvent->pEvent) {
+            event_cancel(pMudEvent->pEvent);
+            send_to_char(ch, "Você para de girar.\r\n");
+        }
+    }
 
     /* Remove character from any listener list when taking action */
     if (ch->listening_to != NOWHERE) {

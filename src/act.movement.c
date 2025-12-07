@@ -25,6 +25,8 @@
 #include "oasis.h" /* for buildwalk */
 #include "ann.h"
 #include "quest.h"
+#include "mud_event.h"
+#include "dg_event.h"
 
 /* local only functions */
 /* do_simple_move utility functions */
@@ -206,6 +208,16 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
         send_to_char(ch, "A idéia de deixar seu mestre faz você chorar.\r\n");
         act("$n desata a chorar.", FALSE, ch, 0, 0, TO_ROOM);
         return (0);
+    }
+
+    /* Whirlwind: Cancel whirlwind on movement attempt */
+    if (ch && ch->events && char_has_mud_event(ch, eWHIRLWIND)) {
+        struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
+        if (pMudEvent && pMudEvent->pEvent) {
+            event_cancel(pMudEvent->pEvent);
+            send_to_char(ch, "Você para de girar ao tentar se mover.\r\n");
+            return (0);
+        }
     }
 
     if (SECT(was_in) == SECT_ICE && !FLYING(ch) && !rand_number(0, 2)) {
