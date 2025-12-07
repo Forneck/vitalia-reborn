@@ -2874,6 +2874,7 @@ void create_spells_db()
     new_spell->name = strdup("disguise");
     new_spell->function = do_disguise;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_OBJ_ROOM; /* Need to target corpses in room */
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 60;

@@ -636,7 +636,7 @@ const char *cmd_door[] = {"open", "close", "unlock", "lock", "pick", "jam"};
 
 static const int flags_door[] = {NEED_CLOSED | NEED_UNLOCKED, NEED_OPEN,
                                  NEED_CLOSED | NEED_LOCKED,   NEED_CLOSED | NEED_UNLOCKED,
-                                 NEED_CLOSED | NEED_LOCKED,   NEED_CLOSED | NEED_LOCKED};
+                                 NEED_CLOSED | NEED_LOCKED,   NEED_CLOSED};
 
 #define EXITN(room, door) (world[room].dir_option[door])
 #define OPEN_DOOR(room, obj, door)                                                                                     \
@@ -1575,11 +1575,11 @@ void check_danger_sense(struct char_data *ch)
     if (danger_count > 0) {
         /* Use correct Portuguese preposition for singular/plural */
         if (danger_count == 1) {
-            snprintf(buf, sizeof(buf), "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!&n\r\n",
+            snprintf(buf, sizeof(buf), "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!@n\r\n",
                      directions);
         } else {
             snprintf(buf, sizeof(buf),
-                     "&RVocê sente um arrepio na espinha... há PERIGO mortal vindo das direções %s!&n\r\n", directions);
+                     "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo das direções %s!@n\r\n", directions);
         }
         send_to_char(ch, "%s", buf);
     }
