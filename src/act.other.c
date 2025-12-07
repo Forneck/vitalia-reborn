@@ -37,6 +37,7 @@ struct disguise_data {
     char *orig_short_descr;     /* Original short description */
     char *orig_long_descr;      /* Original long description */
     char *orig_description;     /* Original main description */
+    byte orig_sex;              /* Original sex/gender */
     struct disguise_data *next; /* Next in linked list */
 };
 
@@ -2338,6 +2339,7 @@ static void save_original_descriptions(struct char_data *ch)
     data->orig_short_descr = ch->player.short_descr ? strdup(ch->player.short_descr) : NULL;
     data->orig_long_descr = ch->player.long_descr ? strdup(ch->player.long_descr) : NULL;
     data->orig_description = ch->player.description ? strdup(ch->player.description) : NULL;
+    data->orig_sex = GET_SEX(ch);
 
     /* Add to list */
     data->next = disguise_list;
@@ -2364,6 +2366,9 @@ static void restore_original_descriptions(struct char_data *ch)
             if (ch->player.description)
                 free(ch->player.description);
             ch->player.description = data->orig_description;
+
+            /* Restore the original sex/gender */
+            GET_SEX(ch) = data->orig_sex;
 
             /* Remove from list */
             if (prev)
@@ -2542,6 +2547,9 @@ ACMD(do_disguise)
     } else {
         ch->player.description = NULL;
     }
+
+    /* Copy the mob's sex/gender to match the disguise */
+    GET_SEX(ch) = GET_SEX(proto_mob);
 
     /* Apply the disguise affect with duration based on corpse timer */
     new_affect(&af);
