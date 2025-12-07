@@ -366,8 +366,10 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
         if (obj_still_valid) {
             get_check_money(ch, obj);
             /* Check quest completion for mobs picking up objects */
-            if (IS_NPC(ch))
+            if (IS_NPC(ch)) {
                 mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+                mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+            }
         }
         return (1);
     }
