@@ -1562,6 +1562,10 @@ void check_danger_sense(struct char_data *ch)
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
         return;
 
+    /* Ensure character is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE)
+        return;
+
     /* Check proficiency - higher skill level = better detection chance */
     if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DANGER_SENSE))
         return;
