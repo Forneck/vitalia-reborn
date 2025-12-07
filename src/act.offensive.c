@@ -868,7 +868,7 @@ EVENTFUNC(event_whirlwind)
     }
 
     /* Consume movement points for spinning */
-    GET_MOVE(ch) = MAX(0, GET_MOVE(ch) - WHIRLWIND_MOVE_COST);
+    GET_MOVE(ch) -= WHIRLWIND_MOVE_COST;
 
     /* When using a list, we have to make sure to allocate the list as it uses
        dynamic memory */
