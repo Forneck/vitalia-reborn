@@ -37,6 +37,7 @@
 #include "prefedit.h"
 #include "ibt.h"
 #include "mud_event.h"
+#include "dg_event.h"
 #include "spedit.h"
 #include "fight.h"
 
@@ -544,6 +545,31 @@ void command_interpreter(struct char_data *ch, char *argument)
     skip_spaces(&argument);
     if (!*argument)
         return;
+
+    /* Extract command name to check if it's whirlwind command
+     * We need to cancel whirlwind on any command EXCEPT whirlwind itself
+     * to prevent spam-casting to keep whirlwind going forever */
+    {
+        char cmd_name[MAX_INPUT_LENGTH];
+        char *temp_arg = argument;
+
+        /* Extract first word (command name) */
+        while (*temp_arg && !isspace(*temp_arg) && (temp_arg - argument) < MAX_INPUT_LENGTH - 1) {
+            cmd_name[temp_arg - argument] = *temp_arg;
+            temp_arg++;
+        }
+        cmd_name[temp_arg - argument] = '\0';
+
+        /* Cancel whirlwind unless command is "whirlwind" or its abbreviation "whirl"
+         * We check both full command and minimum abbreviation for safety */
+        if (ch && ch->events && str_cmp(cmd_name, "whirlwind") && str_cmp(cmd_name, "whirl")) {
+            struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
+            if (pMudEvent && pMudEvent->pEvent) {
+                event_cancel(pMudEvent->pEvent);
+                send_to_char(ch, "Você para de girar.\r\n");
+            }
+        }
+    }
 
     /* special case to handle one-character, non-alphanumeric commands;
        requested by many people so "'hi" or ";godnet test" is possible. Patch

@@ -28,6 +28,7 @@
 #include "formula.h"
 
 #define LEARNED(ch) (prac_params[LEARNED_LEVEL][(int)GET_CLASS(ch)])
+#define WHIRLWIND_MOVE_COST 5 /* Movement cost per whirlwind spin cycle */
 
 ACMD(do_assist)
 {
@@ -847,11 +848,37 @@ EVENTFUNC(event_whirlwind)
     /* For the sake of simplicity, we will place the event data in easily
        referenced pointers */
     pMudEvent = (struct mud_event_data *)event_obj;
+
+    /* Safety check: ensure pMudEvent and pStruct are valid */
+    if (pMudEvent == NULL || pMudEvent->pStruct == NULL)
+        return 0;
+
     ch = (struct char_data *)pMudEvent->pStruct;
+
+    /* Safety check: validate character is still valid and in a valid room */
+    if (!ch || PLR_FLAGGED(ch, PLR_DELETED) || IN_ROOM(ch) == NOWHERE || !VALID_ROOM_RNUM(IN_ROOM(ch))) {
+        /* Character is invalid or not in a valid room, silently stop whirlwind */
+        return 0;
+    }
+
+    /* Check if character has enough movement points to continue spinning */
+    if (GET_MOVE(ch) < WHIRLWIND_MOVE_COST) {
+        send_to_char(ch, "Você está muito cansado para continuar girando.\r\n");
+        return 0;
+    }
+
+    /* Consume movement points for spinning */
+    GET_MOVE(ch) -= WHIRLWIND_MOVE_COST;
 
     /* When using a list, we have to make sure to allocate the list as it uses
        dynamic memory */
     room_list = create_list();
+
+    /* Safety check: ensure list was created */
+    if (room_list == NULL) {
+        send_to_char(ch, "Você para de girar.\r\n");
+        return 0;
+    }
 
     /* We search through the "next_in_room", and grab all NPCs and add them to
        our list */
