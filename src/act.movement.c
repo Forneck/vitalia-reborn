@@ -739,14 +739,14 @@ void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
         snprintf(buf + len, sizeof(buf) - len, "%s%s.", obj ? "" : " ",
                  obj                       ? "$p"
                  : EXIT(ch, door)->keyword ? "$F"
-                                           : "a porta");
+                                           : dirs_pt[door]);
     if (!obj || IN_ROOM(obj) != NOWHERE)
         act(buf, FALSE, ch, obj, obj ? 0 : EXIT(ch, door)->keyword, TO_ROOM);
 
     /* Notify the other room */
     if (back && (scmd == SCMD_OPEN || scmd == SCMD_CLOSE))
         send_to_room(EXIT(ch, door)->to_room, "Você assiste %s ser %s pelo outro lado.\r\n",
-                     back->keyword ? fname(back->keyword) : "a porta",
+                     back->keyword ? fname(back->keyword) : dirs_pt[rev_dir[door]],
                      scmd == SCMD_OPEN    ? "aberta"
                      : scmd == SCMD_CLOSE ? "fechada"
                      : scmd == SCMD_LOCK  ? "trancada"
@@ -759,6 +759,12 @@ static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scm
 
     if (scmd != SCMD_PICK)
         return (1);
+
+    /* Check if the player has the pick lock skill */
+    if (GET_SKILL(ch, SKILL_PICK_LOCK) == 0) {
+        send_to_char(ch, "Você não sabe como arrombar fechaduras.\r\n");
+        return (0);
+    }
 
     percent = rand_number(1, 101);
     skill_lvl = GET_SKILL(ch, SKILL_PICK_LOCK) + dex_app_skill[GET_DEX(ch)].p_locks;
@@ -781,6 +787,12 @@ static int ok_jam(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd
 
     if (scmd != SCMD_JAM)
         return (1);
+
+    /* Check if the player has the jam lock skill */
+    if (GET_SKILL(ch, SKILL_JAM_LOCK) == 0) {
+        send_to_char(ch, "Você não sabe como travar fechaduras.\r\n");
+        return (0);
+    }
 
     percent = rand_number(1, 101);
     skill_lvl = GET_SKILL(ch, SKILL_JAM_LOCK) + dex_app_skill[GET_DEX(ch)].p_locks;
@@ -865,7 +877,7 @@ ACMD(do_gen_door)
                 unjam_door_both_sides(ch, door);
                 send_to_char(ch, "A cunha se solta e cai no chão com um *clique*!\r\n");
                 act("A cunha da fechadura $F se solta e cai no chão!", FALSE, ch, 0,
-                    EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : "da porta", TO_ROOM);
+                    EXIT(ch, door)->keyword ? EXIT(ch, door)->keyword : dirs_pt[door], TO_ROOM);
             }
         } else if (is_jammed && (subcmd == SCMD_JAM))
             send_to_char(ch, "A fechadura já está travada!\r\n");
