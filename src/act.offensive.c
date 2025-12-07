@@ -855,9 +855,9 @@ EVENTFUNC(event_whirlwind)
 
     ch = (struct char_data *)pMudEvent->pStruct;
 
-    /* Safety check: validate character is in a valid room */
-    if (IN_ROOM(ch) == NOWHERE || !VALID_ROOM_RNUM(IN_ROOM(ch))) {
-        send_to_char(ch, "Você para de girar.\r\n");
+    /* Safety check: validate character is still valid and in a valid room */
+    if (!ch || PLR_FLAGGED(ch, PLR_DELETED) || IN_ROOM(ch) == NOWHERE || !VALID_ROOM_RNUM(IN_ROOM(ch))) {
+        /* Character is invalid or not in a valid room, silently stop whirlwind */
         return 0;
     }
 

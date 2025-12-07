@@ -210,7 +210,8 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
         return (0);
     }
 
-    /* Whirlwind: Cancel whirlwind on movement attempt */
+    /* Whirlwind: Cancel whirlwind on movement attempt
+     * Only check if character has events to avoid expensive lookup for most characters */
     if (ch && ch->events) {
         struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
         if (pMudEvent && pMudEvent->pEvent) {

@@ -531,12 +531,24 @@ void command_interpreter(struct char_data *ch, char *argument)
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
-    /* Cancel whirlwind on any command execution (like hide/eavesdrop) */
-    if (ch && ch->events) {
-        struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
-        if (pMudEvent && pMudEvent->pEvent) {
-            event_cancel(pMudEvent->pEvent);
-            send_to_char(ch, "Você para de girar.\r\n");
+    /* just drop to next line for hitting CR */
+    skip_spaces(&argument);
+    if (!*argument)
+        return;
+
+    /* Extract command name for whirlwind check below */
+    {
+        char cmd_name[MAX_INPUT_LENGTH];
+        half_chop(argument, cmd_name, arg);
+
+        /* Cancel whirlwind on any command execution EXCEPT whirlwind itself
+         * This prevents spam-casting whirlwind to keep it going forever */
+        if (ch && ch->events && strncmp(cmd_name, "whirl", 5) != 0) {
+            struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
+            if (pMudEvent && pMudEvent->pEvent) {
+                event_cancel(pMudEvent->pEvent);
+                send_to_char(ch, "Você para de girar.\r\n");
+            }
         }
     }
 
@@ -549,11 +561,6 @@ void command_interpreter(struct char_data *ch, char *argument)
         }
         ch->listening_to = NOWHERE;
     }
-
-    /* just drop to next line for hitting CR */
-    skip_spaces(&argument);
-    if (!*argument)
-        return;
 
     /* special case to handle one-character, non-alphanumeric commands;
        requested by many people so "'hi" or ";godnet test" is possible. Patch
