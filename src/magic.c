@@ -19,6 +19,7 @@
 #include "interpreter.h"
 #include "constants.h"
 #include "dg_scripts.h"
+#include "act.h"
 #include "class.h"
 #include "fight.h"
 #include "mud_event.h"
