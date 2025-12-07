@@ -536,26 +536,29 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 /* Helper function to check and process shop buy quest progress */
 static void check_shop_buy_quest(struct char_data *ch, struct obj_data *obj)
 {
-    if (IS_NPC(ch) || GET_QUEST(ch) == NOTHING)
-        return;
+    /* Player quest check */
+    if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING) {
+        qst_rnum rnum = real_quest(GET_QUEST(ch));
+        if (rnum != NOTHING && QST_TYPE(rnum) == AQ_SHOP_BUY) {
+            obj_vnum quest_item_vnum = QST_RETURNMOB(rnum);
+            if (GET_OBJ_VNUM(obj) == quest_item_vnum && GET_QUEST_COUNTER(ch) > 0) {
+                /* Mark item with NOLOCATE and timer to prevent sell-buyback exploit */
+                SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NOLOCATE);
+                GET_OBJ_TIMER(obj) = -28; /* Negative timer = don't extract, just remove flag after 1 MUD day */
 
-    qst_rnum rnum = real_quest(GET_QUEST(ch));
-    if (rnum == NOTHING || QST_TYPE(rnum) != AQ_SHOP_BUY)
-        return;
+                GET_QUEST_COUNTER(ch)--;
+                send_to_char(ch, "\tyProgresso da busca: %d item(ns) restante(s) para comprar.\tn\r\n",
+                             GET_QUEST_COUNTER(ch));
 
-    obj_vnum quest_item_vnum = QST_RETURNMOB(rnum);
-    if (GET_OBJ_VNUM(obj) != quest_item_vnum || GET_QUEST_COUNTER(ch) <= 0)
-        return;
-
-    /* Mark item with NOLOCATE and timer to prevent sell-buyback exploit */
-    SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NOLOCATE);
-    GET_OBJ_TIMER(obj) = -28; /* Negative timer = don't extract, just remove flag after 1 MUD day */
-
-    GET_QUEST_COUNTER(ch)--;
-    send_to_char(ch, "\tyProgresso da busca: %d item(ns) restante(s) para comprar.\tn\r\n", GET_QUEST_COUNTER(ch));
-
-    if (GET_QUEST_COUNTER(ch) <= 0) {
-        generic_complete_quest(ch);
+                if (GET_QUEST_COUNTER(ch) <= 0) {
+                    generic_complete_quest(ch);
+                }
+            }
+        }
+    }
+    /* Mob quest check */
+    else if (IS_NPC(ch) && ch->ai_data && GET_MOB_QUEST(ch) != NOTHING) {
+        mob_autoquest_trigger_check(ch, NULL, obj, AQ_SHOP_BUY);
     }
 }
 
@@ -933,6 +936,10 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
                     }
                 }
             }
+        }
+        /* Mob quest check for selling */
+        else if (IS_NPC(ch) && ch->ai_data && GET_MOB_QUEST(ch) != NOTHING) {
+            mob_autoquest_trigger_check(ch, NULL, obj, AQ_SHOP_SELL);
         }
 
         slide_obj(obj, keeper, shop_nr); /* Seems we don't use return
