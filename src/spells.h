@@ -231,6 +231,7 @@
 #define SKILL_PEEK 258         /* Thief skill to peek at inventory */
 #define SKILL_JAM_LOCK 259     /* Thief skill to jam door locks     */
 #define SKILL_DANGER_SENSE 260 /* Thief skill to sense death traps  */
+#define SKILL_DISGUISE 261     /* Thief skill - macabre disguise    */
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 

@@ -455,6 +455,7 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
     if (IS_DEAD(i))
         act("$l está mort$r!", FALSE, i, 0, ch, TO_VICT);
 
+    /* For disguised players, show the mob's description (stored in player.description during disguise) */
     if (i->player.description)
         send_to_char(ch, "%s", i->player.description);
     else
@@ -739,6 +740,46 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             act("\ty...$l está protegid$r por uma barreira de espinhos!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_SOUNDBARRIER))
             act("\tc...$l está envolt$r por uma protetora barreira de som!\tn", FALSE, i, 0, ch, TO_VICT);
+        return;
+    }
+
+    /* Check if this is a disguised player - treat them like an NPC */
+    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.short_descr) {
+        /* Display as if they were an NPC in default position */
+        if (AFF_FLAGGED(i, AFF_INVISIBLE))
+            send_to_char(ch, "*");
+
+        if (AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
+            if (IS_EVIL(i))
+                send_to_char(ch, "%s(Aura Vermelha) ", CBRED(ch, C_NRM));
+            else if (IS_GOOD(i))
+                send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
+        }
+
+        /* Display a random emotion for the disguise if PRF_DISPEMOTE is on */
+        /* Since the disguised player is not a real mob with ai_data, we pick a random emotion */
+        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            const char *emotion_texts[] = {"(corajoso)", "(furioso)", "(feliz)",   "(triste)", "(amedrontado)",
+                                           "(curioso)",  "(animado)", "(enojado)", NULL};
+            const char *emotion_colors[] = {CCYEL(ch, C_NRM), CCRED(ch, C_NRM), CCYEL(ch, C_NRM), CCBLU(ch, C_NRM),
+                                            CCMAG(ch, C_NRM), CCCYN(ch, C_NRM), CCYEL(ch, C_NRM), CCGRN(ch, C_NRM)};
+            /* Use a pseudo-random selection based on the character's ID for consistency */
+            /* Calculate array size and use safer modulo to avoid integer overflow */
+            const int num_emotions = (sizeof(emotion_texts) / sizeof(emotion_texts[0])) - 1; /* -1 for NULL */
+            int emotion_index =
+                (int)(((GET_IDNUM(i) % num_emotions) + (world[IN_ROOM(i)].number % num_emotions)) % num_emotions);
+            send_to_char(ch, "%s%s%s ", emotion_colors[emotion_index], emotion_texts[emotion_index], CCYEL(ch, C_NRM));
+        }
+
+        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.short_descr ? i->player.short_descr : "");
+
+        if (AFF_FLAGGED(i, AFF_SANCTUARY))
+            act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
+        else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
+            act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_FIRESHIELD))
+            act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
+        /* Add other shield effects as needed */
         return;
     }
 
@@ -1580,6 +1621,21 @@ ACMD(do_score)
     if (AFF_FLAGGED(ch, AFF_STONESKIN)) {
         int points = get_stoneskin_points(ch);
         send_to_char(ch, "Sua pele está muito dura (%d pontos de proteção).\r\n", points);
+    }
+
+    if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+        struct affected_type *af;
+        for (af = ch->affected; af; af = af->next) {
+            if (af->spell == SKILL_DISGUISE) {
+                if (ch->player.short_descr) {
+                    send_to_char(ch, "Você está disfarçad%s como: %s\r\n", OA(ch), ch->player.short_descr);
+                    send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", af->duration);
+                } else {
+                    send_to_char(ch, "Você está disfarçad%s.\r\n", OA(ch));
+                }
+                break;
+            }
+        }
     }
 
     if (AFF_FLAGGED(ch, AFF_THISTLECOAT))

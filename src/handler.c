@@ -1183,6 +1183,8 @@ void extract_char_final(struct char_data *ch)
     } else {
         save_char(ch);
         Crash_delete_crashfile(ch);
+        /* Clean up any disguise data when player is extracted */
+        cleanup_disguise_data(ch);
     }
 
     /* If there's a descriptor, they're in the menu now. */
