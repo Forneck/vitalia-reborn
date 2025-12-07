@@ -2553,8 +2553,8 @@ ACMD(do_disguise)
     af.location = APPLY_NONE;
     affect_to_char(ch, &af);
 
-    /* Set ghost mode to hide from WHO list */
-    SET_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+    /* Note: We no longer use PLR_GHOST for disguise, as it causes the "está morta" message.
+     * Instead, the WHO command will check for AFF_DISGUISE flag to hide disguised players. */
 
     /* Destroy the corpse - it's been used up */
     extract_obj(corpse);
@@ -2576,8 +2576,7 @@ void remove_disguise(struct char_data *ch, bool expired)
     /* Remove the affect */
     affect_from_char(ch, SKILL_DISGUISE);
 
-    /* Remove ghost mode */
-    REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+    /* Note: We no longer use PLR_GHOST for disguise */
 
     /* Restore original descriptions */
     if (!IS_NPC(ch)) {

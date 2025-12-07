@@ -2456,6 +2456,9 @@ ACMD(do_who)
             continue;
         if (!CAN_SEE(ch, tch))
             continue;
+        /* Hide disguised players from WHO list (unless viewer is immortal) */
+        if (AFF_FLAGGED(tch, AFF_DISGUISE) && GET_LEVEL(ch) < LVL_IMMORT)
+            continue;
         if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
             continue;
         if (GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
@@ -2498,6 +2501,9 @@ ACMD(do_who)
             if ((GET_LEVEL(tch) < rank[i].min_level || GET_LEVEL(tch) > rank[i].max_level) && !short_list)
                 continue;
             if (!CAN_SEE(ch, tch))
+                continue;
+            /* Hide disguised players from WHO list (unless viewer is immortal) */
+            if (AFF_FLAGGED(tch, AFF_DISGUISE) && GET_LEVEL(ch) < LVL_IMMORT)
                 continue;
 
             num_can_see++;
