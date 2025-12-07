@@ -37,7 +37,7 @@ struct disguise_data {
     char *orig_short_descr;     /* Original short description */
     char *orig_long_descr;      /* Original long description */
     char *orig_description;     /* Original main description */
-    byte orig_sex;              /* Original sex/gender */
+    byte orig_sex;              /* Original sex/gender (SEX_NEUTRAL=0, SEX_MALE=1, SEX_FEMALE=2) */
     struct disguise_data *next; /* Next in linked list */
 };
 
