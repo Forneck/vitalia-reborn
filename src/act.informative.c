@@ -744,7 +744,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     }
 
     /* Check if this is a disguised player - treat them like an NPC */
-    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.long_descr) {
+    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.short_descr && i->player.long_descr) {
         /* Display as if they were an NPC in default position */
         if (AFF_FLAGGED(i, AFF_INVISIBLE))
             send_to_char(ch, "*");
