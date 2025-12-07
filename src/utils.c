@@ -2406,6 +2406,10 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
         if (obj->worn_by == ch) {
             continue;
         }
+        /* Skip items on the mob's wishlist - don't offer as reward what you're requesting */
+        if (ch->ai_data && find_item_in_wishlist(ch, GET_OBJ_VNUM(obj))) {
+            continue;
+        }
 
         /* Calculate item value considering type and stats */
         int item_value = GET_OBJ_COST(obj);
