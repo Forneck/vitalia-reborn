@@ -28,6 +28,7 @@
 #include "formula.h"
 
 #define LEARNED(ch) (prac_params[LEARNED_LEVEL][(int)GET_CLASS(ch)])
+#define WHIRLWIND_MOVE_COST 5 /* Movement cost per whirlwind spin cycle */
 
 ACMD(do_assist)
 {
@@ -839,7 +840,6 @@ EVENTFUNC(event_whirlwind)
     struct mud_event_data *pMudEvent;
     struct list_data *room_list;
     int count;
-    int move_cost = 5; /* Movement cost per spin */
 
     /* This is just a dummy check, but we'll do it anyway */
     if (event_obj == NULL)
@@ -862,13 +862,13 @@ EVENTFUNC(event_whirlwind)
     }
 
     /* Check if character has enough movement points to continue spinning */
-    if (GET_MOVE(ch) < move_cost) {
+    if (GET_MOVE(ch) < WHIRLWIND_MOVE_COST) {
         send_to_char(ch, "Você está muito cansado para continuar girando.\r\n");
         return 0;
     }
 
     /* Consume movement points for spinning */
-    GET_MOVE(ch) = MAX(0, GET_MOVE(ch) - move_cost);
+    GET_MOVE(ch) = MAX(0, GET_MOVE(ch) - WHIRLWIND_MOVE_COST);
 
     /* When using a list, we have to make sure to allocate the list as it uses
        dynamic memory */

@@ -211,7 +211,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     }
 
     /* Whirlwind: Cancel whirlwind on movement attempt */
-    if (ch && ch->events && char_has_mud_event(ch, eWHIRLWIND)) {
+    if (ch && ch->events) {
         struct mud_event_data *pMudEvent = char_has_mud_event(ch, eWHIRLWIND);
         if (pMudEvent && pMudEvent->pEvent) {
             event_cancel(pMudEvent->pEvent);
