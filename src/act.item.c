@@ -286,7 +286,8 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
             if (obj_still_valid) {
                 get_check_money(ch, obj);
                 /* Check quest completion for mobs picking up objects */
-                mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+                if (IS_NPC(ch))
+                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
             }
         }
     }
@@ -363,7 +364,8 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
         if (obj_still_valid) {
             get_check_money(ch, obj);
             /* Check quest completion for mobs picking up objects */
-            mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+            if (IS_NPC(ch))
+                mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
         }
         return (1);
     }
@@ -773,7 +775,8 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
 
     /* Check quest completion for both players and mobs */
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
-    mob_autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+    if (IS_NPC(ch))
+        mob_autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
 
     /* Safety check: Quest completion may have extracted obj, ch, or vict through scripts/triggers */
     if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
