@@ -764,12 +764,14 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             const char *emotion_colors[] = {CCYEL(ch, C_NRM), CCRED(ch, C_NRM), CCYEL(ch, C_NRM), CCBLU(ch, C_NRM),
                                             CCMAG(ch, C_NRM), CCCYN(ch, C_NRM), CCYEL(ch, C_NRM), CCGRN(ch, C_NRM)};
             /* Use a pseudo-random selection based on the character's ID for consistency */
-            /* Ensure the result is always positive by using abs and modulo */
-            int emotion_index = abs((int)(GET_IDNUM(i) + world[IN_ROOM(i)].number)) % 8;
+            /* Calculate array size and use safer modulo to avoid integer overflow */
+            const int num_emotions = (sizeof(emotion_texts) / sizeof(emotion_texts[0])) - 1; /* -1 for NULL */
+            int emotion_index =
+                (int)(((GET_IDNUM(i) % num_emotions) + (world[IN_ROOM(i)].number % num_emotions)) % num_emotions);
             send_to_char(ch, "%s%s%s ", emotion_colors[emotion_index], emotion_texts[emotion_index], CCYEL(ch, C_NRM));
         }
 
-        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.short_descr);
+        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.short_descr ? i->player.short_descr : "");
 
         if (AFF_FLAGGED(i, AFF_SANCTUARY))
             act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);

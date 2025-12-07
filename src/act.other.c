@@ -2392,6 +2392,38 @@ static void restore_original_descriptions(struct char_data *ch)
     }
 }
 
+/* Helper function to clean up disguise data when player disconnects */
+void cleanup_disguise_data(struct char_data *ch)
+{
+    struct disguise_data *data, *prev = NULL;
+
+    if (IS_NPC(ch))
+        return;
+
+    /* Find and remove the data for this character */
+    for (data = disguise_list; data; prev = data, data = data->next) {
+        if (data->idnum == GET_IDNUM(ch)) {
+            /* Free the stored strings */
+            if (data->orig_short_descr)
+                free(data->orig_short_descr);
+            if (data->orig_long_descr)
+                free(data->orig_long_descr);
+            if (data->orig_description)
+                free(data->orig_description);
+
+            /* Remove from list */
+            if (prev)
+                prev->next = data->next;
+            else
+                disguise_list = data->next;
+
+            /* Free the data structure */
+            free(data);
+            return;
+        }
+    }
+}
+
 /* Macabre Disguise - Thief skill to disguise as a mob using its corpse */
 ACMD(do_disguise)
 {
@@ -2457,6 +2489,12 @@ ACMD(do_disguise)
 
     proto_mob = &mob_proto[mob_rnum_value];
 
+    /* Validate mob has required descriptions */
+    if (!proto_mob->player.short_descr) {
+        send_to_char(ch, "Esse corpo não tem uma aparência definida.\r\n");
+        return;
+    }
+
     /* Skill check */
     if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DISGUISE)) {
         send_to_char(ch, "Você tenta se disfarçar com o corpo, mas falha miseravelmente.\r\n");
@@ -2473,26 +2511,45 @@ ACMD(do_disguise)
     if (ch->player.short_descr)
         free(ch->player.short_descr);
     ch->player.short_descr = strdup(proto_mob->player.short_descr);
+    if (!ch->player.short_descr) {
+        log1("SYSERR: strdup failed for short_descr in do_disguise (player: %s)", GET_NAME(ch));
+        restore_original_descriptions(ch);
+        send_to_char(ch, "Falha ao aplicar o disfarce devido a erro de memória.\r\n");
+        return;
+    }
 
     if (ch->player.long_descr)
         free(ch->player.long_descr);
     ch->player.long_descr = strdup(proto_mob->player.long_descr);
+    if (!ch->player.long_descr) {
+        log1("SYSERR: strdup failed for long_descr in do_disguise (player: %s)", GET_NAME(ch));
+        restore_original_descriptions(ch);
+        send_to_char(ch, "Falha ao aplicar o disfarce devido a erro de memória.\r\n");
+        return;
+    }
 
     /* Also copy the main description so 'look <player>' shows the mob's description */
     if (ch->player.description)
         free(ch->player.description);
-    if (proto_mob->player.description)
+    if (proto_mob->player.description) {
         ch->player.description = strdup(proto_mob->player.description);
-    else
+        if (!ch->player.description) {
+            log1("SYSERR: strdup failed for description in do_disguise (player: %s)", GET_NAME(ch));
+            restore_original_descriptions(ch);
+            send_to_char(ch, "Falha ao aplicar o disfarce devido a erro de memória.\r\n");
+            return;
+        }
+    } else {
         ch->player.description = NULL;
+    }
 
     /* Apply the disguise affect with duration based on corpse timer */
     new_affect(&af);
     af.spell = SKILL_DISGUISE;
     af.duration = GET_OBJ_TIMER(corpse); /* Duration matches corpse timer */
     SET_BIT_AR(af.bitvector, AFF_DISGUISE);
-    /* Note: We don't store mob_vnum in modifier anymore since we have the description */
-    af.modifier = 0;
+    /* Store mob_vnum in modifier for debugging/future use */
+    af.modifier = corpse_mob_vnum;
     af.location = APPLY_NONE;
     affect_to_char(ch, &af);
 
