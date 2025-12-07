@@ -374,6 +374,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"unlock", "unlock", POS_SITTING, do_gen_door, 0, SCMD_UNLOCK, CMD_TWOARG},
     {"unban", "unban", POS_DEAD, do_unban, LVL_GRGOD, 0, CMD_ONEARG},
     {"unaffect", "unaffect", POS_DEAD, do_wizutil, LVL_GOD, SCMD_UNAFFECT, CMD_ONEARG},
+    {"undisguise", "undisgu", POS_RESTING, do_undisguise, 0, 0, CMD_NOARG},
     {"unfollow", "unf", POS_RESTING, do_unfollow, 0, 0, CMD_NOARG},
     {"uptime", "uptime", POS_DEAD, do_date, LVL_GOD, SCMD_UPTIME, CMD_NOARG},
     {"use", "use", POS_SITTING, do_use, 1, SCMD_USE, CMD_ONEARG},

@@ -1625,16 +1625,31 @@ ACMD(do_score)
 
     if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
         struct affected_type *af;
+        int max_duration = 0;
+        int found_first = 0;
+
+        /* Find the maximum duration among all SKILL_DISGUISE affects and display the first one */
         for (af = ch->affected; af; af = af->next) {
             if (af->spell == SKILL_DISGUISE) {
-                if (ch->player.short_descr) {
-                    send_to_char(ch, "Você está disfarçad%s como: %s\r\n", OA(ch), ch->player.short_descr);
-                    send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", af->duration);
-                } else {
-                    send_to_char(ch, "Você está disfarçad%s.\r\n", OA(ch));
+                if (af->duration > max_duration)
+                    max_duration = af->duration;
+
+                /* Display on first occurrence */
+                if (!found_first) {
+                    if (ch->player.short_descr) {
+                        send_to_char(ch, "Você está disfarçad%s como: %s\r\n", OA(ch), ch->player.short_descr);
+                        /* Will show max_duration after loop completes */
+                    } else {
+                        send_to_char(ch, "Você está disfarçad%s.\r\n", OA(ch));
+                    }
+                    found_first = 1;
                 }
-                break;
             }
+        }
+
+        /* Display duration after finding max */
+        if (found_first && ch->player.short_descr) {
+            send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", max_duration);
         }
     }
 
@@ -1719,7 +1734,7 @@ ACMD(do_affects)
         if (max_duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, (aff->duration == 1) ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", max_duration, (max_duration == 1) ? "" : "s");
         }
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
