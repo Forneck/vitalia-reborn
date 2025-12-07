@@ -2267,9 +2267,18 @@ ACMD(do_eavesdrop)
         return;
     }
 
+    /* Ensure character is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        send_to_char(ch, "Você não está em um lugar válido para espionar.\r\n");
+        return;
+    }
+
     // If already listening, stop listening
     if (ch->listening_to != NOWHERE) {
-        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        /* Validate listening_to room is valid before accessing world array */
+        if (ch->listening_to >= 0 && ch->listening_to <= top_of_world) {
+            REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        }
         ch->listening_to = NOWHERE;
         send_to_char(ch, "Você para de espionar conversas.\r\n");
         return;
