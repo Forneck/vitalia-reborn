@@ -374,6 +374,12 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     if (!IS_NPC(ch)) {
         autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
         autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+    } else {
+        /* Mob quest trigger checks */
+        mob_autoquest_trigger_check(ch, NULL, NULL, AQ_ROOM_FIND);
+        mob_autoquest_trigger_check(ch, NULL, NULL, AQ_MOB_FIND);
+        mob_autoquest_trigger_check(ch, NULL, NULL, AQ_ROOM_CLEAR);
+        mob_autoquest_trigger_check(ch, NULL, NULL, AQ_MAGIC_GATHER);
     }
 
     /* Emotion trigger: Entering dangerous or safe areas (Environmental 2.2) */
