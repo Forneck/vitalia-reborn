@@ -999,11 +999,11 @@ void generic_complete_quest(struct char_data *ch)
                 }
             }
         }
-        /* Only add to completed quests history if:
-         * 1. The quest is not repeatable, AND
-         * 2. The quest is not mob-posted (autoquests reuse vnums, so storing them
-         *    in history would prevent players from doing new quests with same vnum) */
-        if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE) && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        /* Only add to completed quests history if the quest is not repeatable.
+         * For non-repeatable quests (both regular and mob-posted), add them to history.
+         * Note: Non-repeatable mob-posted quests will be deleted from the system, so
+         * storing them in history won't cause vnum conflicts for future quests. */
+        if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE))
             add_completed_quest(ch, vnum);
 
         /* Notify the room that the character completed a quest */
