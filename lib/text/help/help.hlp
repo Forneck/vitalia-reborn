@@ -10078,7 +10078,39 @@ QUESTPOINTS
    A reward for completing autoquests or given out by immortals for completing
 a task. These special points can be redeemed for special equipment.
 
-See Also: AUTOQUESTS
+See Also: AUTOQUESTS, RATE, COTACAO
+#0
+RATE COTACAO QP-EXCHANGE
+
+Usage: rate
+       cotacao
+
+   The rate (cotacao) command displays the current Quest Points (QP) exchange
+rate, showing how many gold coins equal 1 QP. This exchange rate is calculated
+in real-time based on the total gold and QP in the economy across all mortal
+players (level <= 100).
+
+   The rate reflects the actual market value: rate = total_gold / total_qp
+
+   You can use this exchange to convert between gold and quest points:
+
+   buy <amount>     - Purchase quest points with gold (comprar)
+   sell <amount>    - Sell quest points for gold (vender)
+
+   The displayed rate is the same as shown in "show stats" command and provides
+an accurate view of the current economy balance between gold and quest points.
+
+Example:
+   > rate
+   Cotação de Pontos de Busca
+   Mês atual: Brumis
+   Taxa de câmbio: 15.234 moedas por 1 QP
+   
+   Comandos disponíveis:
+     buy <quantidade> / comprar <quantidade> - Compra QPs com ouro
+     sell <quantidade> / vender <quantidade>  - Vende QPs por ouro
+
+See Also: QUESTPOINTS, AUTOQUESTS, BUY, SELL, SHOW STATS
 #0
 QUESTS QUEST-LIST QUEST-HISTORY QUEST-PROGRESS QUEST-JOIN QUEST-LEAVE QUEST-STATUS QUEST-FLAG QUESTFLAG
 

@@ -8387,3 +8387,49 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
             break;
     }
 }
+
+/**
+ * Calculate economy statistics by iterating through all registered mortal players.
+ * This function loads all player files to calculate total money (gold + bank) and
+ * total quest points for players at level 100 or below.
+ *
+ * @param total_money Pointer to store the total money (gold + bank) across all mortals
+ * @param total_qp Pointer to store the total quest points across all mortals
+ * @param player_count Pointer to store the count of mortal players
+ *
+ * Note: This operation loads all player files which can be slow on servers
+ * with many players. Use sparingly or cache the results if needed.
+ */
+void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count)
+{
+    int i;
+    struct char_data *temp_ch = NULL;
+
+    *total_money = 0;
+    *total_qp = 0;
+    *player_count = 0;
+
+    for (i = 0; i <= top_of_p_table; i++) {
+        /* Skip players above level 100 (immortals) based on player_table cache */
+        if (player_table[i].level > 100)
+            continue;
+
+        /* Create temporary character to load player data */
+        CREATE(temp_ch, struct char_data, 1);
+        clear_char(temp_ch);
+        CREATE(temp_ch->player_specials, struct player_special_data, 1);
+        new_mobile_data(temp_ch);
+
+        if (load_char(player_table[i].name, temp_ch) >= 0) {
+            /* Only count players with level <= 100 (double-check after loading) */
+            if (GET_LEVEL(temp_ch) <= 100) {
+                *total_money += GET_GOLD(temp_ch) + GET_BANK_GOLD(temp_ch);
+                *total_qp += GET_QUESTPOINTS(temp_ch);
+                (*player_count)++;
+            }
+        }
+
+        free_char(temp_ch);
+        temp_ch = NULL;
+    }
+}
