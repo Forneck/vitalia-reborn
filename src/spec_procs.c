@@ -914,12 +914,31 @@ void update_qp_exchange_rate_on_month_change(void)
     }
 }
 
-/* Get current exchange rate - returns the stored base rate which is
- * calculated as total_money / total_qp at the start of each MUD month.
- * This matches the rate displayed by "show stats". */
+/* Get current exchange rate - calculates the real-time rate as total_money / total_qp.
+ * This matches the rate displayed by "show stats" and provides accurate market value. */
 static int get_qp_exchange_rate(void)
 {
-    return qp_exchange_base_rate;
+    long long total_money = 0;
+    long long total_qp = 0;
+    int player_count = 0;
+    long long calculated_rate;
+
+    /* Calculate real-time economy statistics */
+    calculate_economy_stats(&total_money, &total_qp, &player_count);
+
+    /* Calculate the rate using long long to avoid overflow */
+    if (total_qp > 0) {
+        calculated_rate = total_money / total_qp;
+        /* Clamp the rate to reasonable bounds (also ensures int-safe values) */
+        if (calculated_rate < QP_EXCHANGE_MIN_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
+        else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
+        return (int)calculated_rate;
+    } else {
+        /* No QP in economy, use default rate */
+        return QP_EXCHANGE_DEFAULT_BASE_RATE;
+    }
 }
 
 SPECIAL(qp_exchange)
@@ -943,8 +962,8 @@ SPECIAL(qp_exchange)
                      "Taxa de câmbio: \tG%s\tn moedas por 1 QP\r\n"
                      "\r\n"
                      "Comandos disponíveis:\r\n"
-                     "  \tWcomprar <quantidade>\tn - Compra QPs com ouro\r\n"
-                     "  \tWvender <quantidade>\tn  - Vende QPs por ouro\r\n",
+                     "  \tWbuy <quantidade>\tn / \tWcomprar <quantidade>\tn - Compra QPs com ouro\r\n"
+                     "  \tWsell <quantidade>\tn / \tWvender <quantidade>\tn  - Vende QPs por ouro\r\n",
                      month_name[time_info.month], format_number_br(current_rate));
         return (TRUE);
     }

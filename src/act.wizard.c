@@ -66,46 +66,6 @@ bool zedit_get_levels(struct descriptor_data *d, char *buf);
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */
 
-/** Calculate total money and quest points for all registered mortal players.
- * This iterates through all registered players, loads their data, and
- * accumulates gold + bank_gold and questpoints for players with level <= 100.
- * @param[out] total_money Sum of gold + bank_gold for all mortal players
- * @param[out] total_qp Sum of questpoints for all mortal players
- * @param[out] player_count Number of mortal players counted */
-static void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count)
-{
-    int i;
-    struct char_data *temp_ch = NULL;
-
-    *total_money = 0;
-    *total_qp = 0;
-    *player_count = 0;
-
-    for (i = 0; i <= top_of_p_table; i++) {
-        /* Skip players above level 100 (immortals) based on player_table cache */
-        if (player_table[i].level > 100)
-            continue;
-
-        /* Create temporary character to load player data */
-        CREATE(temp_ch, struct char_data, 1);
-        clear_char(temp_ch);
-        CREATE(temp_ch->player_specials, struct player_special_data, 1);
-        new_mobile_data(temp_ch);
-
-        if (load_char(player_table[i].name, temp_ch) >= 0) {
-            /* Only count players with level <= 100 (double-check after loading) */
-            if (GET_LEVEL(temp_ch) <= 100) {
-                *total_money += GET_GOLD(temp_ch) + GET_BANK_GOLD(temp_ch);
-                *total_qp += GET_QUESTPOINTS(temp_ch);
-                (*player_count)++;
-            }
-        }
-
-        free_char(temp_ch);
-        temp_ch = NULL;
-    }
-}
-
 static int purge_room(room_rnum room)
 {
     int j;
