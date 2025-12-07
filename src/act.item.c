@@ -775,8 +775,10 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
 
     /* Check quest completion for both players and mobs */
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
-    if (IS_NPC(ch))
+    if (IS_NPC(ch)) {
         mob_autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+        mob_autoquest_trigger_check(ch, vict, obj, AQ_DELIVERY);
+    }
 
     /* Safety check: Quest completion may have extracted obj, ch, or vict through scripts/triggers */
     if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
