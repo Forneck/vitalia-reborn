@@ -8430,6 +8430,5 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         }
 
         free_char(temp_ch);
-        temp_ch = NULL;
     }
 }
