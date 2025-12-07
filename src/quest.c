@@ -2596,6 +2596,10 @@ void mob_complete_quest(struct char_data *mob)
             new_obj = read_object(QST_OBJ(rnum), VIRTUAL);
             if (new_obj) {
                 obj_to_char(new_obj, mob);
+                /* Remove reward item from mob's wishlist - mob got what it wanted */
+                if (mob->ai_data) {
+                    remove_item_from_wishlist(mob, GET_OBJ_VNUM(new_obj));
+                }
             }
         }
     }

@@ -289,6 +289,10 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
                 if (IS_NPC(ch)) {
                     mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
                     mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                    /* Remove item from mob's wishlist once obtained */
+                    if (ch->ai_data) {
+                        remove_item_from_wishlist(ch, GET_OBJ_VNUM(obj));
+                    }
                 }
             }
         }
@@ -369,6 +373,10 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
             if (IS_NPC(ch)) {
                 mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
                 mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                /* Remove item from mob's wishlist once obtained */
+                if (ch->ai_data) {
+                    remove_item_from_wishlist(ch, GET_OBJ_VNUM(obj));
+                }
             }
         }
         return (1);
@@ -776,6 +784,11 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("Você entrega $p para $N.", FALSE, ch, obj, vict, TO_CHAR);
     act("$n entrega $p para você.", FALSE, ch, obj, vict, TO_VICT);
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
+
+    /* Remove item from recipient mob's wishlist if they received it */
+    if (IS_NPC(vict) && vict->ai_data) {
+        remove_item_from_wishlist(vict, GET_OBJ_VNUM(obj));
+    }
 
     /* Check quest completion for both players and mobs */
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);

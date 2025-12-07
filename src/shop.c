@@ -559,6 +559,8 @@ static void check_shop_buy_quest(struct char_data *ch, struct obj_data *obj)
     /* Mob quest check */
     else if (IS_NPC(ch) && ch->ai_data) {
         mob_autoquest_trigger_check(ch, NULL, obj, AQ_SHOP_BUY);
+        /* Remove item from mob's wishlist once purchased */
+        remove_item_from_wishlist(ch, GET_OBJ_VNUM(obj));
     }
 }
 
