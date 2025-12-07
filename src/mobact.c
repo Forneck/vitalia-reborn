@@ -2132,7 +2132,7 @@ bool mob_handle_grouping(struct char_data *ch)
     /* Check adjacent rooms for death traps - avoid grouping near danger */
     int i;
     for (i = 0; i < NUM_OF_DIRS; i++) {
-        if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+        if (EXIT(ch, i) && VALID_ROOM_RNUM(EXIT(ch, i)->to_room) && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
             /* Only skip grouping 50% of the time near death traps to avoid completely killing group formation */
             if (rand_number(1, 100) <= 50)
                 return FALSE;

@@ -1028,7 +1028,7 @@ ACMD(do_exits)
 
     send_to_char(ch, "Saídas:\r\n");
     for (door = 0; door < DIR_COUNT; door++) {
-        if (!EXIT(ch, door) || EXIT(ch, door)->to_room == NOWHERE)
+        if (!EXIT(ch, door) || !VALID_ROOM_RNUM(EXIT(ch, door)->to_room))
             continue;
         if (EXIT_FLAGGED(EXIT(ch, door), EX_CLOSED) && !CONFIG_DISP_CLOSED_DOORS)
             continue;
@@ -1096,7 +1096,8 @@ void look_at_room(struct char_data *ch, int ignore_brief)
 
     if (!PLR_FLAGGED(ch, PLR_GHOST)) {
         for (i = 0; i < NUM_OF_DIRS; i++)
-            if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+            if (EXIT(ch, i) && VALID_ROOM_RNUM(EXIT(ch, i)->to_room) &&
+                ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
                 send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
                 break;
             }

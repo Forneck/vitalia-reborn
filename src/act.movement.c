@@ -234,7 +234,8 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
         for (i = 0; i < 6; i++) {
             attempt = rand_number(0, DIR_COUNT - 1); /* Select a random
                                                                                                 direction */
-            if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH)) {
+            if (CAN_GO(ch, attempt) && VALID_ROOM_RNUM(EXIT(ch, attempt)->to_room) &&
+                !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH)) {
                 going_to = EXIT(ch, attempt)->to_room;
                 send_to_char(ch, "Você foi carregad%s pela corrente de ar.", OA(ch));
                 act("$n foi carregad$r pela corrente de ar.", FALSE, ch, 0, 0, TO_ROOM);
@@ -1069,7 +1070,7 @@ ACMD(do_enter)
         /* try to locate an entrance */
         for (door = 0; door < DIR_COUNT; door++)
             if (EXIT(ch, door))
-                if (EXIT(ch, door)->to_room != NOWHERE)
+                if (VALID_ROOM_RNUM(EXIT(ch, door)->to_room))
                     if (!EXIT_FLAGGED(EXIT(ch, door), EX_CLOSED) &&
                         ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_INDOORS)) {
                         perform_move(ch, door, 1);
@@ -1088,7 +1089,7 @@ ACMD(do_leave)
     else {
         for (door = 0; door < DIR_COUNT; door++)
             if (EXIT(ch, door))
-                if (EXIT(ch, door)->to_room != NOWHERE)
+                if (VALID_ROOM_RNUM(EXIT(ch, door)->to_room))
                     if (!EXIT_FLAGGED(EXIT(ch, door), EX_CLOSED) &&
                         !ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_INDOORS)) {
                         perform_move(ch, door, 1);
@@ -1573,6 +1574,10 @@ void check_danger_sense(struct char_data *ch)
     /* Check all directions for death traps */
     for (dir = 0; dir < NUM_OF_DIRS; dir++) {
         if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->to_room))
+            continue;
+
+        /* Validate the destination room number before accessing world array */
+        if (!VALID_ROOM_RNUM(dest))
             continue;
 
         /* Check if the destination room is a death trap */
