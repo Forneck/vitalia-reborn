@@ -432,6 +432,7 @@ ACMD(do_emotionconfig);
 ACMD(do_emotionexport);
 ACMD(do_emotionimport);
 ACMD(do_disguise);
+ACMD(do_undisguise);
 
 void init_disabled_commands(void);
 bool is_command_disabled(int cmd_num);

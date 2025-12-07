@@ -2600,3 +2600,19 @@ void remove_disguise(struct char_data *ch, bool expired)
         act("$n remove o disfarce, revelando sua verdadeira forma!", TRUE, ch, 0, 0, TO_ROOM);
     }
 }
+
+/* Undisguise command - manually remove disguise */
+ACMD(do_undisguise)
+{
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    if (!AFF_FLAGGED(ch, AFF_DISGUISE)) {
+        send_to_char(ch, "Você não está disfarçado.\r\n");
+        return;
+    }
+
+    remove_disguise(ch, FALSE);
+}

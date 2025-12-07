@@ -1709,6 +1709,18 @@ ACMD(do_remove)
         send_to_char(ch, "Remover o quê?\r\n");
         return;
     }
+
+    /* Check for special case: "remove disguise" or "remove disfarce" */
+    if (!str_cmp(arg, "disguise") || !str_cmp(arg, "disfarce")) {
+        if (!IS_NPC(ch) && AFF_FLAGGED(ch, AFF_DISGUISE)) {
+            remove_disguise(ch, FALSE);
+            return;
+        } else {
+            send_to_char(ch, "Você não está disfarçado.\r\n");
+            return;
+        }
+    }
+
     dotmode = find_all_dots(arg);
 
     if (dotmode == FIND_ALL) {

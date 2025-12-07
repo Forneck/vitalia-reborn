@@ -1625,11 +1625,22 @@ ACMD(do_score)
 
     if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
         struct affected_type *af;
+        int max_duration = 0;
+
+        /* Find the maximum duration among all SKILL_DISGUISE affects */
+        for (af = ch->affected; af; af = af->next) {
+            if (af->spell == SKILL_DISGUISE) {
+                if (af->duration > max_duration)
+                    max_duration = af->duration;
+            }
+        }
+
+        /* Find first SKILL_DISGUISE affect for display */
         for (af = ch->affected; af; af = af->next) {
             if (af->spell == SKILL_DISGUISE) {
                 if (ch->player.short_descr) {
                     send_to_char(ch, "Você está disfarçad%s como: %s\r\n", OA(ch), ch->player.short_descr);
-                    send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", af->duration);
+                    send_to_char(ch, "Tempo restante de disfarce: %d horas.\r\n", max_duration);
                 } else {
                     send_to_char(ch, "Você está disfarçad%s.\r\n", OA(ch));
                 }
@@ -1719,7 +1730,7 @@ ACMD(do_affects)
         if (max_duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, (aff->duration == 1) ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", max_duration, (max_duration == 1) ? "" : "s");
         }
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
