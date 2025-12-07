@@ -744,7 +744,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     }
 
     /* Check if this is a disguised player - treat them like an NPC */
-    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.short_descr) {
+    if (!IS_NPC(i) && AFF_FLAGGED(i, AFF_DISGUISE) && i->player.long_descr) {
         /* Display as if they were an NPC in default position */
         if (AFF_FLAGGED(i, AFF_INVISIBLE))
             send_to_char(ch, "*");
@@ -771,7 +771,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             send_to_char(ch, "%s%s%s ", emotion_colors[emotion_index], emotion_texts[emotion_index], CCYEL(ch, C_NRM));
         }
 
-        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.short_descr ? i->player.short_descr : "");
+        send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.long_descr);
 
         if (AFF_FLAGGED(i, AFF_SANCTUARY))
             act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
@@ -779,7 +779,32 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);
         if (AFF_FLAGGED(i, AFF_FIRESHIELD))
             act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
-        /* Add other shield effects as needed */
+        if (AFF_FLAGGED(i, AFF_WATERSHIELD))
+            act("\tB...$l está envolvid$r por uma aura de água!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_ROCKSHIELD))
+            act("\ty...$l está envolvid$r por uma aura de pedra!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_POISONSHIELD))
+            act("\tg...$l está envolvid$r por uma aura venenosa!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_LIGHTNINGSHIELD))
+            act("\tC...$l está envolvid$r por uma aura elétrica!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_ICESHIELD))
+            act("\tB...$l está envolvid$r por uma aura gélida!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_ACIDSHIELD))
+            act("\tG...$l está envolvid$r por uma aura ácida!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_MINDSHIELD))
+            act("\tm...$l está envolvid$r por uma aura mental!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_FORCESHIELD))
+            act("\tw...$l está envolvid$r por uma aura de força!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_WINDWALL))
+            act("\tw...$l está envolvid$r por uma parede de vento!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_BLIND))
+            act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_FIREFLIES))
+            act("\tG...$l está rodead$r por vaga-lumes!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_THISTLECOAT))
+            act("\ty...$l está protegid$r por uma barreira de espinhos!\tn", FALSE, i, 0, ch, TO_VICT);
+        if (AFF_FLAGGED(i, AFF_SOUNDBARRIER))
+            act("\tc...$l está envolt$r por uma protetora barreira de som!\tn", FALSE, i, 0, ch, TO_VICT);
         return;
     }
 

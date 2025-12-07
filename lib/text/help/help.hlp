@@ -11857,7 +11857,29 @@ visuais.
    NOTA: O disfarce e visual e auditivo. Comportamentos suspeitos ainda
    podem revelar sua verdadeira identidade. Use com cuidado!
 
-Veja tambem: HIDE, SNEAK, SPY, LADRAO
+Veja tambem: HIDE, SNEAK, SPY, LADRAO, UNDISGUISE
+#1
+UNDISGUISE
+
+   Somente Ladroes (Nivel 60+).
+
+   Uso: undisguise
+
+   Remove o disfarce macabro antes que ele expire naturalmente.
+
+   Este comando permite que voce remova manualmente seu disfarce
+quando quiser, em vez de esperar que o corpo apodrecido se desintegre
+completamente.
+
+   EFEITOS:
+   - Remove o disfarce imediatamente
+   - Restaura sua aparencia, descricao e genero originais
+   - Voce reaparece na lista 'who'
+
+   AVISO: Uma vez removido, voce precisa encontrar outro corpo de NPC
+para se disfarcar novamente.
+
+Veja tambem: DISGUISE, DISFARCE, REMOVE
 #1
 STAFF-ZONES
  
