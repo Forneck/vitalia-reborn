@@ -37,6 +37,7 @@ struct disguise_data {
     char *orig_short_descr;     /* Original short description */
     char *orig_long_descr;      /* Original long description */
     char *orig_description;     /* Original main description */
+    byte orig_sex;              /* Original sex/gender (SEX_NEUTRAL=0, SEX_MALE=1, SEX_FEMALE=2) */
     struct disguise_data *next; /* Next in linked list */
 };
 
@@ -2338,6 +2339,7 @@ static void save_original_descriptions(struct char_data *ch)
     data->orig_short_descr = ch->player.short_descr ? strdup(ch->player.short_descr) : NULL;
     data->orig_long_descr = ch->player.long_descr ? strdup(ch->player.long_descr) : NULL;
     data->orig_description = ch->player.description ? strdup(ch->player.description) : NULL;
+    data->orig_sex = GET_SEX(ch);
 
     /* Add to list */
     data->next = disguise_list;
@@ -2364,6 +2366,9 @@ static void restore_original_descriptions(struct char_data *ch)
             if (ch->player.description)
                 free(ch->player.description);
             ch->player.description = data->orig_description;
+
+            /* Restore the original sex/gender */
+            GET_SEX(ch) = data->orig_sex;
 
             /* Remove from list */
             if (prev)
@@ -2543,6 +2548,9 @@ ACMD(do_disguise)
         ch->player.description = NULL;
     }
 
+    /* Copy the mob's sex/gender to match the disguise */
+    GET_SEX(ch) = GET_SEX(proto_mob);
+
     /* Apply the disguise affect with duration based on corpse timer */
     new_affect(&af);
     af.spell = SKILL_DISGUISE;
@@ -2553,8 +2561,8 @@ ACMD(do_disguise)
     af.location = APPLY_NONE;
     affect_to_char(ch, &af);
 
-    /* Set ghost mode to hide from WHO list */
-    SET_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+    /* Note: We no longer use PLR_GHOST for disguise, as it causes the "está morta" message.
+     * Instead, the WHO command will check for AFF_DISGUISE flag to hide disguised players. */
 
     /* Destroy the corpse - it's been used up */
     extract_obj(corpse);
@@ -2576,8 +2584,7 @@ void remove_disguise(struct char_data *ch, bool expired)
     /* Remove the affect */
     affect_from_char(ch, SKILL_DISGUISE);
 
-    /* Remove ghost mode */
-    REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
+    /* Note: We no longer use PLR_GHOST for disguise */
 
     /* Restore original descriptions */
     if (!IS_NPC(ch)) {

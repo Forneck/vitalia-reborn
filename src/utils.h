@@ -613,8 +613,11 @@ void char_from_furniture(struct char_data *ch);
 
 /** Name of PC. */
 #define GET_PC_NAME(ch) ((ch)->player.name)
-/** Name of PC or short_descr of NPC. */
-#define GET_NAME(ch) (IS_NPC(ch) ? (ch)->player.short_descr : GET_PC_NAME(ch))
+/** Name of PC or short_descr of NPC. For disguised PCs, returns short_descr (the disguise). */
+#define GET_NAME(ch)                                                                                                   \
+    (IS_NPC(ch)                                                                                                        \
+         ? (ch)->player.short_descr                                                                                    \
+         : (AFF_FLAGGED(ch, AFF_DISGUISE) && (ch)->player.short_descr ? (ch)->player.short_descr : GET_PC_NAME(ch)))
 /** Title of PC */
 #define GET_TITLE(ch) ((ch)->player.title)
 /** Level of PC or NPC. */
