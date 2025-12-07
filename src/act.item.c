@@ -286,8 +286,10 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
             if (obj_still_valid) {
                 get_check_money(ch, obj);
                 /* Check quest completion for mobs picking up objects */
-                if (IS_NPC(ch))
+                if (IS_NPC(ch)) {
                     mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                }
             }
         }
     }
