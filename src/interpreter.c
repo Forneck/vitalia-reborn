@@ -533,7 +533,10 @@ void command_interpreter(struct char_data *ch, char *argument)
     /* Remove character from any listener list when taking action */
     if (ch->listening_to != NOWHERE) {
         struct char_data *temp;
-        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        /* Validate listening_to room is valid before accessing world array */
+        if (VALID_ROOM_RNUM(ch->listening_to)) {
+            REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        }
         ch->listening_to = NOWHERE;
     }
 
