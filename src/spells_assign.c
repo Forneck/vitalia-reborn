@@ -197,6 +197,9 @@ void set_spells_function()
 
     if ((spell = get_spell_by_vnum(SKILL_TAINT_FLUID)))
         spell->function = do_taint;
+
+    if ((spell = get_spell_by_vnum(SKILL_DISGUISE)))
+        spell->function = do_disguise;
 }
 
 // This function create the database of all the spells and skills,
