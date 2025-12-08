@@ -8433,3 +8433,35 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         temp_ch = NULL;
     }
 }
+
+/* QP Exchange rate constants */
+#define QP_EXCHANGE_DEFAULT_BASE_RATE 10000
+#define QP_EXCHANGE_MIN_BASE_RATE 1000
+#define QP_EXCHANGE_MAX_BASE_RATE 100000000
+
+/* Get the current QP exchange rate based on economy statistics
+   Returns the number of gold coins per 1 Quest Point */
+int get_qp_exchange_rate(void)
+{
+    long long total_money = 0;
+    long long total_qp = 0;
+    int player_count = 0;
+    long long calculated_rate;
+
+    /* Calculate real-time economy statistics */
+    calculate_economy_stats(&total_money, &total_qp, &player_count);
+
+    /* Calculate the rate using long long to avoid overflow */
+    if (total_qp > 0) {
+        calculated_rate = total_money / total_qp;
+        /* Clamp the rate to reasonable bounds (also ensures int-safe values) */
+        if (calculated_rate < QP_EXCHANGE_MIN_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
+        else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
+            calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
+        return (int)calculated_rate;
+    } else {
+        /* No QP in economy, use default rate */
+        return QP_EXCHANGE_DEFAULT_BASE_RATE;
+    }
+}

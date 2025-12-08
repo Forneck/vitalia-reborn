@@ -602,6 +602,7 @@ long int armory_cost_qp(struct armory_olcs *q, int mode)
     long int cost_gold;
     long int min_cost_gold;
     long int cost_qp;
+    int exchange_rate;
     int i, ac_cost, aff_cost, aff_id, aff_mod;
 
     /* add the base price: wear slot price */
@@ -638,8 +639,9 @@ long int armory_cost_qp(struct armory_olcs *q, int mode)
     if (cost_gold < min_cost_gold)
         cost_gold = min_cost_gold;
 
-    /* Convert gold cost to QP cost (10,000 gold = 1 QP) */
-    cost_qp = cost_gold / 10000;
+    /* Convert gold cost to QP cost using dynamic exchange rate from economy */
+    exchange_rate = get_qp_exchange_rate();
+    cost_qp = cost_gold / exchange_rate;
     if (cost_qp < 1)
         cost_qp = 1; /* Minimum of 1 QP */
 

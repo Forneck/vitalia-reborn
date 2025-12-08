@@ -914,33 +914,6 @@ void update_qp_exchange_rate_on_month_change(void)
     }
 }
 
-/* Get current exchange rate - calculates the real-time rate as total_money / total_qp.
- * This matches the rate displayed by "show stats" and provides accurate market value. */
-static int get_qp_exchange_rate(void)
-{
-    long long total_money = 0;
-    long long total_qp = 0;
-    int player_count = 0;
-    long long calculated_rate;
-
-    /* Calculate real-time economy statistics */
-    calculate_economy_stats(&total_money, &total_qp, &player_count);
-
-    /* Calculate the rate using long long to avoid overflow */
-    if (total_qp > 0) {
-        calculated_rate = total_money / total_qp;
-        /* Clamp the rate to reasonable bounds (also ensures int-safe values) */
-        if (calculated_rate < QP_EXCHANGE_MIN_BASE_RATE)
-            calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
-        else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
-            calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
-        return (int)calculated_rate;
-    } else {
-        /* No QP in economy, use default rate */
-        return QP_EXCHANGE_DEFAULT_BASE_RATE;
-    }
-}
-
 SPECIAL(qp_exchange)
 {
     int amount, cost, current_rate;

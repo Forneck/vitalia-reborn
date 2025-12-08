@@ -72,6 +72,7 @@ int get_class_by_name(char *classname);
 char *convert_from_tabs(char *string);
 int count_non_protocol_chars(char *str);
 void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count);
+int get_qp_exchange_rate(void);
 
 char *stristr3(const char *haystack, const char *needle);
 
