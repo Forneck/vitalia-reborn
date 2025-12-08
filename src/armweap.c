@@ -261,6 +261,58 @@ const int attack_price[NUM_ATTACK_TYPES] = {
 };
 /* ----------------------------------------------------------------------- */
 
+/**
+ * Calculate remort-based limits for a given stat parameter.
+ * Each remort unlocks 1% of the parameter range, capped at 100 remorts (100%).
+ *
+ * Design decision: Players with 0 remorts have 0% access (adjusted_min = adjusted_max = 0),
+ * meaning they cannot use the weaponsmith/blacksmith system at all. This is intentional
+ * to encourage the remort/reincarnation gameplay loop and prevent abuse by new characters.
+ * Players must complete at least one remort to begin customizing equipment.
+ *
+ * For ranges with negative minimums (e.g., -4 to 4 for stats, -99 to 99 for weight):
+ *   - Both min and max scale proportionally with remort percentage
+ *   - Example: 25 remorts on [-4, 4] → [-1, 1] (25% of ±4)
+ *
+ * For positive-only ranges (e.g., 0 to 100 for HP/mana/move):
+ *   - Only the maximum scales, minimum stays at base value
+ *   - Example: 25 remorts on [0, 100] → [0, 25] (25% of max)
+ *
+ * @param ch           Character whose remort count determines the allowed limits
+ * @param min_limit    Base minimum value for the parameter (from stat_limits array)
+ * @param max_limit    Base maximum value for the parameter (from stat_limits array)
+ * @param adjusted_min Output pointer: remort-adjusted minimum value (0% at 0 remorts)
+ * @param adjusted_max Output pointer: remort-adjusted maximum value (0% at 0 remorts)
+ *
+ * Examples:
+ *   0 remorts,  [-4, 4]    → [0, 0]     (no customization possible)
+ *   1 remort,   [-4, 4]    → [0, 0]     (1% rounds down to 0)
+ *   25 remorts, [-4, 4]    → [-1, 1]    (25% of ±4)
+ *   50 remorts, [-99, 99]  → [-49, 49]  (50% of ±99)
+ *   10 remorts, [0, 100]   → [0, 10]    (10% of max only)
+ *   100 remorts, any range → full range (100% unlocked)
+ */
+void get_remort_limits(struct char_data *ch, int min_limit, int max_limit, int *adjusted_min, int *adjusted_max)
+{
+    int remort_count = GET_REMORT(ch);
+    int percentage = MIN(100, remort_count); /* Cap at 100% */
+
+    /* Calculate the allowed range based on percentage.
+     * Logic: Check if min_limit < 0 to distinguish between:
+     * 1) Ranges spanning negative to positive (e.g., -4 to 4, -99 to 99) - scale both
+     * 2) Positive-only ranges (e.g., 0 to 100) - scale max only, keep min at base
+     * Note: All valid ranges in stat_limits have min <= max, so if min < 0, we're in case 1 */
+    if (min_limit < 0) {
+        /* For negative ranges (e.g., -4 to 4, -99 to 99) */
+        *adjusted_min = (min_limit * percentage) / 100;
+        *adjusted_max = (max_limit * percentage) / 100;
+    } else {
+        /* For positive-only ranges (e.g., 0 to 100) */
+        *adjusted_min = min_limit;
+        *adjusted_max = (max_limit * percentage) / 100;
+    }
+}
+
 /* ----------------------------------------------------------------------- */
 const char weapon_affname[3][20] = {"MODIFICADOR_BONUS", "QUANTIDADE_DADOS", "TAMANHO_DADOS"};
 const char name_mob_mode[2][20] = {"Arsenal", "Forja"};
@@ -410,6 +462,7 @@ void list_help(struct char_data *ch, int mode)
 void do_want(struct char_data *ch, char *argument, struct armory_olcs *d, int mode)
 {
     int i, i2, found = -1, number;
+    int adjusted_min, adjusted_max;
     char buf[2048] = "";
 
     argument = one_argument(argument, buf);
@@ -418,11 +471,14 @@ void do_want(struct char_data *ch, char *argument, struct armory_olcs *d, int mo
     number = atoi(argument);
     for (i = 0; i < NUM_APPLIES; i++) {
         if (allow_stat[i] && isname(buf, apply_types[i])) {
-            if ((number < stat_limits[i][0]) || (number > stat_limits[i][1])) {
+            /* Calculate remort-based limits */
+            get_remort_limits(ch, stat_limits[i][0], stat_limits[i][1], &adjusted_min, &adjusted_max);
+
+            if ((number < adjusted_min) || (number > adjusted_max)) {
                 sprintf(buf,
                         "@gO seu valor está fora dos limites para @m%s"
-                        " @gque são @c[@R%d@g, @R%d@c].@n\r\n",
-                        apply_types[i], stat_limits[i][0], stat_limits[i][1]);
+                        " @gque são @c[@R%d@g, @R%d@c]@m (baseado em @R%d @mremorts).@n\r\n",
+                        apply_types[i], adjusted_min, adjusted_max, GET_REMORT(ch));
                 parse_at(buf);
                 send_to_char(ch, "%s", buf);
                 return;
@@ -481,11 +537,14 @@ void do_want(struct char_data *ch, char *argument, struct armory_olcs *d, int mo
     }
     if (mode == ARMORER_MODE) {
         if (isname(buf, "ac")) {
-            if ((number < stat_limits[APPLY_AC][0]) || (number > stat_limits[APPLY_AC][1])) {
+            /* Calculate remort-based limits for AC */
+            get_remort_limits(ch, stat_limits[APPLY_AC][0], stat_limits[APPLY_AC][1], &adjusted_min, &adjusted_max);
+
+            if ((number < adjusted_min) || (number > adjusted_max)) {
                 sprintf(buf,
                         "@gO seu valor está fora dos limites para @m%s"
-                        " @gque são @c[@R%d@g, @R%d@c].@n\r\n",
-                        apply_types[APPLY_AC], stat_limits[APPLY_AC][0], stat_limits[APPLY_AC][1]);
+                        " @gque são @c[@R%d@g, @R%d@c]@m (baseado em @R%d @mremorts).@n\r\n",
+                        apply_types[APPLY_AC], adjusted_min, adjusted_max, GET_REMORT(ch));
                 parse_at(buf);
                 send_to_char(ch, "%s", buf);
                 return;
@@ -518,11 +577,14 @@ void do_want(struct char_data *ch, char *argument, struct armory_olcs *d, int mo
                 }
         for (i = 0; i < 3; i++)
             if (isname(buf, weapon_affname[i])) {
-                if ((number < weapon_limits[i][0]) || (number > weapon_limits[i][1])) {
+                /* Calculate remort-based limits for weapon parameters */
+                get_remort_limits(ch, weapon_limits[i][0], weapon_limits[i][1], &adjusted_min, &adjusted_max);
+
+                if ((number < adjusted_min) || (number > adjusted_max)) {
                     sprintf(buf,
                             "@gO seu valor está fora dos limites para "
-                            "@m%s @gque são @c[@R%d@g, @R%d@c].@n\r\n",
-                            weapon_affname[i], weapon_limits[i][0], weapon_limits[i][1]);
+                            "@m%s @gque são @c[@R%d@g, @R%d@c]@m (baseado em @R%d @mremorts).@n\r\n",
+                            weapon_affname[i], adjusted_min, adjusted_max, GET_REMORT(ch));
                     parse_at(buf);
                     send_to_char(ch, "%s", buf);
                     return;
@@ -567,27 +629,29 @@ void reset_armweap(struct char_data *ch, struct armory_olcs *q, int aff, int mod
     }
 }
 
-long int armory_cost(struct armory_olcs *q, int mode)
+long int armory_cost_qp(struct armory_olcs *q, int mode)
 {
-    long int cost;
-    long int min_cost;
+    long int cost_gold;
+    long int min_cost_gold;
+    long int cost_qp;
+    int exchange_rate;
     int i, ac_cost, aff_cost, aff_id, aff_mod;
 
     /* add the base price: wear slot price */
     if (mode == ARMORER_MODE) {
-        cost = min_cost = wear_price[GET_OBJ_WEAR(OLC_OBJ(q))[0]];
+        cost_gold = min_cost_gold = wear_price[GET_OBJ_WEAR(OLC_OBJ(q))[0]];
 
         /* add the AC cost */
         ac_cost = stat_price[APPLY_AC];
         if (GET_OBJ_VAL(OLC_OBJ(q), 0) < 0)
             ac_cost = ac_cost / 2;
 
-        cost += ac_cost * GET_OBJ_VAL(OLC_OBJ(q), 0);
+        cost_gold += ac_cost * GET_OBJ_VAL(OLC_OBJ(q), 0);
     } else {
-        cost = min_cost = attack_price[GET_OBJ_VAL(OLC_OBJ(q), 3)];
+        cost_gold = min_cost_gold = attack_price[GET_OBJ_VAL(OLC_OBJ(q), 3)];
 
-        cost += GET_OBJ_VAL(OLC_OBJ(q), 0) * stat_price[APPLY_HITROLL];
-        cost += GET_OBJ_VAL(OLC_OBJ(q), 1) * GET_OBJ_VAL(OLC_OBJ(q), 2) * damage_price;
+        cost_gold += GET_OBJ_VAL(OLC_OBJ(q), 0) * stat_price[APPLY_HITROLL];
+        cost_gold += GET_OBJ_VAL(OLC_OBJ(q), 1) * GET_OBJ_VAL(OLC_OBJ(q), 2) * damage_price;
     }
 
     /* add the price of each stats (modifier) */
@@ -598,28 +662,42 @@ long int armory_cost(struct armory_olcs *q, int mode)
         aff_cost = stat_price[aff_id] * abs(aff_mod);
 
         if (neg_stat[aff_id] ^ (aff_mod > 0))
-            cost += aff_cost;
+            cost_gold += aff_cost;
         else
-            cost -= aff_cost / 2;
+            cost_gold -= aff_cost / 2;
     }
 
     /* let's make sure the eq cost somethings */
-    if (cost < min_cost)
-        cost = min_cost;
+    if (cost_gold < min_cost_gold)
+        cost_gold = min_cost_gold;
 
-    return (cost);
+    /* Convert gold cost to QP cost using dynamic exchange rate from economy.
+     * Use ceiling division (rounding up) to ensure items always cost their
+     * proportional value. This prevents very different items from costing the same
+     * due to integer truncation. For example, items costing 5000 and 9999 gold
+     * would both round down to 0 QP with a 10000 gold/QP rate, but with rounding
+     * up they correctly cost 1 QP. */
+    exchange_rate = get_qp_exchange_rate();
+    cost_qp = (cost_gold + exchange_rate - 1) / exchange_rate; /* Ceiling division */
+    if (cost_qp < 1)
+        cost_qp = 1; /* Minimum of 1 QP (though ceiling division should handle this) */
+
+    return (cost_qp);
 }
 
 void armweap_buy(struct char_data *ch, struct armory_olcs *q, int mode)
 {
-    long int cost;
+    long int cost_qp;
     struct obj_data *obj;
     int i, x = -1;
     char buf[2048] = "";
 
-    cost = armory_cost(q, mode);
-    if (GET_GOLD(ch) < cost) {
-        sprintf(buf, "@gDesculpe, mas você não pode pagar!@n\r\n");
+    cost_qp = armory_cost_qp(q, mode);
+    if (GET_QUESTPOINTS(ch) < cost_qp) {
+        sprintf(buf,
+                "@gDesculpe, mas você não tem Quest Points suficientes!@n\r\n"
+                "@gVocê precisa de @R%ld @gQP, mas só tem @R%d @gQP.@n\r\n",
+                cost_qp, GET_QUESTPOINTS(ch));
         parse_at(buf);
         send_to_char(ch, "%s", buf);
         return;
@@ -649,6 +727,13 @@ void armweap_buy(struct char_data *ch, struct armory_olcs *q, int mode)
     else
         GET_OBJ_WEAR(OLC_OBJ(q))[0] = (1 << GET_OBJ_WEAR(OLC_OBJ(q))[0]) + 1;
 
+    /* Set object level to player's level */
+    GET_OBJ_LEVEL(OLC_OBJ(q)) = GET_LEVEL(ch);
+
+    /* Set MAGIC and BLESS flags */
+    SET_BIT_AR(GET_OBJ_EXTRA(OLC_OBJ(q)), ITEM_MAGIC);
+    SET_BIT_AR(GET_OBJ_EXTRA(OLC_OBJ(q)), ITEM_BLESS);
+
     oedit_save_internally(ch->desc);
 
     (ch->desc)->olc = NULL;
@@ -663,12 +748,13 @@ void armweap_buy(struct char_data *ch, struct armory_olcs *q, int mode)
     }
 
     obj_to_char(obj, ch);
-    GET_GOLD(ch) -= cost;
+    GET_QUESTPOINTS(ch) -= cost_qp;
 
-    sprintf(buf, "@gVocê comprou @m%s @gpor @R%lu @mmoedas!@n\r\n", obj->short_description, cost);
+    sprintf(buf, "@gVocê comprou @m%s @gpor @R%ld @mQuest Points!@n\r\n", obj->short_description, cost_qp);
     parse_at(buf);
     send_to_char(ch, "%s", buf);
-    sprintf(buf, "NOTIFY: %s created %s at the armorer.\n\r", GET_NAME(ch), obj->short_description);
+    sprintf(buf, "NOTIFY: %s created %s at the %s for %ld QP.\n\r", GET_NAME(ch), obj->short_description,
+            name_mob_mode[mode], cost_qp);
     log1("%s", buf);
 
     reset_armweap(ch, q, FALSE, mode);
@@ -782,9 +868,9 @@ int main_armweap(struct char_data *ch, int cmd, char *argument, int mode)
                 send_to_char(ch, "%s", buf);
             }
         sprintf(buf,
-                "\r\n@gEsta linda %s pode ser sua por apenas @m: @R%lu"
-                " @gmoedas.@n\r\n",
-                name_obj_mode[mode], armory_cost(q, mode));
+                "\r\n@gEsta linda %s pode ser sua por apenas @m: @R%ld"
+                " @gQuest Points.@n\r\n",
+                name_obj_mode[mode], armory_cost_qp(q, mode));
         parse_at(buf);
         send_to_char(ch, "%s", buf);
         return 1;
