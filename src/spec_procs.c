@@ -778,13 +778,7 @@ SPECIAL(bank)
 /* Number of MUD months */
 #define NUM_MUD_MONTHS 17
 
-/* Default base exchange rate: how many gold coins for 1 QP
- * This is used as a fallback if no calculated rate is available */
-#define QP_EXCHANGE_DEFAULT_BASE_RATE 10000
-
-/* Minimum and maximum allowed base rates to prevent extreme values */
-#define QP_EXCHANGE_MIN_BASE_RATE 1000
-#define QP_EXCHANGE_MAX_BASE_RATE 100000000
+/* Default base exchange rate constants are now in utils.h to avoid duplication */
 
 /* File to store the monthly QP exchange base rate */
 #define QP_EXCHANGE_RATE_FILE "lib/etc/qp_exchange_rate"

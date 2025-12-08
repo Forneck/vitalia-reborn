@@ -72,6 +72,12 @@ int get_class_by_name(char *classname);
 char *convert_from_tabs(char *string);
 int count_non_protocol_chars(char *str);
 void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count);
+
+/* QP Exchange rate constants - shared between utils.c and spec_procs.c */
+#define QP_EXCHANGE_DEFAULT_BASE_RATE 10000
+#define QP_EXCHANGE_MIN_BASE_RATE 1000
+#define QP_EXCHANGE_MAX_BASE_RATE 100000000
+
 int get_qp_exchange_rate(void);
 
 char *stristr3(const char *haystack, const char *needle);

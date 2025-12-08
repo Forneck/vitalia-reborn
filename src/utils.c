@@ -8434,15 +8434,35 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
     }
 }
 
-/* QP Exchange rate constants */
-#define QP_EXCHANGE_DEFAULT_BASE_RATE 10000
-#define QP_EXCHANGE_MIN_BASE_RATE 1000
-#define QP_EXCHANGE_MAX_BASE_RATE 100000000
-
-/* Get the current QP exchange rate based on economy statistics
-   Returns the number of gold coins per 1 Quest Point */
+/**
+ * Get the current QP exchange rate based on economy statistics.
+ * Returns the number of gold coins per 1 Quest Point.
+ *
+ * Performance: The rate is cached for 30 minutes (1 MUD day = 24 real minutes)
+ * to avoid expensive recalculation on every call. This provides a good balance
+ * between accuracy and performance, as the economy doesn't change drastically
+ * in short periods.
+ *
+ * Implementation note: This intentionally uses real-time calculation with caching
+ * rather than the monthly cached rate from spec_procs.c to ensure armweap pricing
+ * reflects current economy state while still maintaining acceptable performance.
+ *
+ * @return Exchange rate in gold per QP (minimum: 1000, maximum: 100000000)
+ */
 int get_qp_exchange_rate(void)
 {
+    /* Cache variables - rate cached for 30 minutes to balance accuracy vs performance */
+    static int cached_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
+    static time_t last_calc_time = 0;
+    const int QP_EXCHANGE_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
+    time_t now = time(0);
+
+    /* If cache is valid, return cached rate */
+    if (last_calc_time != 0 && (now - last_calc_time) < QP_EXCHANGE_CACHE_TTL) {
+        return cached_rate;
+    }
+
+    /* Otherwise, recalculate */
     long long total_money = 0;
     long long total_qp = 0;
     int player_count = 0;
@@ -8459,9 +8479,11 @@ int get_qp_exchange_rate(void)
             calculated_rate = QP_EXCHANGE_MIN_BASE_RATE;
         else if (calculated_rate > QP_EXCHANGE_MAX_BASE_RATE)
             calculated_rate = QP_EXCHANGE_MAX_BASE_RATE;
-        return (int)calculated_rate;
+        cached_rate = (int)calculated_rate;
     } else {
         /* No QP in economy, use default rate */
-        return QP_EXCHANGE_DEFAULT_BASE_RATE;
+        cached_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
     }
+    last_calc_time = now;
+    return cached_rate;
 }

@@ -261,9 +261,37 @@ const int attack_price[NUM_ATTACK_TYPES] = {
 };
 /* ----------------------------------------------------------------------- */
 
-/* Calculate remort-based limits for a given stat.
-   Each remort unlocks 1% of the parameter range.
-   Returns adjusted min and max values based on player's remort count. */
+/**
+ * Calculate remort-based limits for a given stat parameter.
+ * Each remort unlocks 1% of the parameter range, capped at 100 remorts (100%).
+ *
+ * Design decision: Players with 0 remorts have 0% access (adjusted_min = adjusted_max = 0),
+ * meaning they cannot use the weaponsmith/blacksmith system at all. This is intentional
+ * to encourage the remort/reincarnation gameplay loop and prevent abuse by new characters.
+ * Players must complete at least one remort to begin customizing equipment.
+ *
+ * For ranges with negative minimums (e.g., -4 to 4 for stats, -99 to 99 for weight):
+ *   - Both min and max scale proportionally with remort percentage
+ *   - Example: 25 remorts on [-4, 4] → [-1, 1] (25% of ±4)
+ *
+ * For positive-only ranges (e.g., 0 to 100 for HP/mana/move):
+ *   - Only the maximum scales, minimum stays at base value
+ *   - Example: 25 remorts on [0, 100] → [0, 25] (25% of max)
+ *
+ * @param ch           Character whose remort count determines the allowed limits
+ * @param min_limit    Base minimum value for the parameter (from stat_limits array)
+ * @param max_limit    Base maximum value for the parameter (from stat_limits array)
+ * @param adjusted_min Output pointer: remort-adjusted minimum value (0% at 0 remorts)
+ * @param adjusted_max Output pointer: remort-adjusted maximum value (0% at 0 remorts)
+ *
+ * Examples:
+ *   0 remorts,  [-4, 4]    → [0, 0]     (no customization possible)
+ *   1 remort,   [-4, 4]    → [0, 0]     (1% rounds down to 0)
+ *   25 remorts, [-4, 4]    → [-1, 1]    (25% of ±4)
+ *   50 remorts, [-99, 99]  → [-49, 49]  (50% of ±99)
+ *   10 remorts, [0, 100]   → [0, 10]    (10% of max only)
+ *   100 remorts, any range → full range (100% unlocked)
+ */
 void get_remort_limits(struct char_data *ch, int min_limit, int max_limit, int *adjusted_min, int *adjusted_max)
 {
     int remort_count = GET_REMORT(ch);
@@ -639,11 +667,16 @@ long int armory_cost_qp(struct armory_olcs *q, int mode)
     if (cost_gold < min_cost_gold)
         cost_gold = min_cost_gold;
 
-    /* Convert gold cost to QP cost using dynamic exchange rate from economy */
+    /* Convert gold cost to QP cost using dynamic exchange rate from economy.
+     * Use ceiling division (rounding up) to ensure items always cost their
+     * proportional value. This prevents very different items from costing the same
+     * due to integer truncation. For example, items costing 5000 and 9999 gold
+     * would both round down to 0 QP with a 10000 gold/QP rate, but with rounding
+     * up they correctly cost 1 QP. */
     exchange_rate = get_qp_exchange_rate();
-    cost_qp = cost_gold / exchange_rate;
+    cost_qp = (cost_gold + exchange_rate - 1) / exchange_rate; /* Ceiling division */
     if (cost_qp < 1)
-        cost_qp = 1; /* Minimum of 1 QP */
+        cost_qp = 1; /* Minimum of 1 QP (though ceiling division should handle this) */
 
     return (cost_qp);
 }
