@@ -297,7 +297,11 @@ void get_remort_limits(struct char_data *ch, int min_limit, int max_limit, int *
     int remort_count = GET_REMORT(ch);
     int percentage = MIN(100, remort_count); /* Cap at 100% */
 
-    /* Calculate the allowed range based on percentage */
+    /* Calculate the allowed range based on percentage.
+     * Logic: Check if min_limit < 0 to distinguish between:
+     * 1) Ranges spanning negative to positive (e.g., -4 to 4, -99 to 99) - scale both
+     * 2) Positive-only ranges (e.g., 0 to 100) - scale max only, keep min at base
+     * Note: All valid ranges in stat_limits have min <= max, so if min < 0, we're in case 1 */
     if (min_limit < 0) {
         /* For negative ranges (e.g., -4 to 4, -99 to 99) */
         *adjusted_min = (min_limit * percentage) / 100;

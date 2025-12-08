@@ -8447,11 +8447,15 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
  * rather than the monthly cached rate from spec_procs.c to ensure armweap pricing
  * reflects current economy state while still maintaining acceptable performance.
  *
+ * Thread safety: Static cache variables are safe in this single-threaded MUD server.
+ * CircleMUD/tbaMUD uses an event-driven, single-process architecture.
+ *
  * @return Exchange rate in gold per QP (minimum: 1000, maximum: 100000000)
  */
 int get_qp_exchange_rate(void)
 {
-    /* Cache variables - rate cached for 30 minutes to balance accuracy vs performance */
+    /* Cache variables - rate cached for 30 minutes to balance accuracy vs performance
+     * Safe to use static variables as the MUD server is single-threaded */
     static int cached_rate = QP_EXCHANGE_DEFAULT_BASE_RATE;
     static time_t last_calc_time = 0;
     const int QP_EXCHANGE_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
