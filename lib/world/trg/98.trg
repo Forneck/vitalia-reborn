@@ -34,7 +34,7 @@ Angel 9807 Greet~
 * Greets players who enter the room (not NPCs or invisible immortals)
 if %actor.is_pc% && %self.vnum% == 9807
   if %self.canbeseen% && !%actor.invis%
-    tell %actor.name% Sabia foi sua escolha, assim como sabio voce deve ser. Para poder derrotar o inimigo maior, deve adquirir aliados tambem poderosos. Lembre-se com a magia do amor seus inimigos serão os mais fiés soldados.
+    tell %actor.name% Sabia foi sua escolha, assim como sábio você deve ser. Para poder derrotar o inimigo maior, deve adquirir aliados também poderosos. Lembre-se com a magia do amor seus inimigos serão os mais fiéis soldados.
   end
 end
 ~
@@ -157,27 +157,29 @@ if %self.vnum% == 9808
       %send% %actor% Como? Usar os poderes deste pergaminho em quem?
       halt
     end
-    * Find the target in the room - check each character
+    * Find the target in the room by vnums 9801-9803
     set target %actor.room.people%
-    set found_target 0
     while %target%
       set next_target %target.next_in_room%
-      * Check if target alias contains the argument (simple name matching)
-      if %target.alias.contains(%arg%)%
-        set found_target 1
-        set victim %target%
+      if %target.vnum% == 9801 || %target.vnum% == 9802 || %target.vnum% == 9803
+        * Check if target name matches what player typed
+        eval target_name %target.name%
+        if %target_name.contains(%arg%)%
+          set victim %target%
+          break
+        end
       end
       set target %next_target%
     done
-    * If target not found
-    if !%found_target%
+    * If target not found (victim variable not set)
+    if !%victim%
       %send% %actor% Não há ninguém aqui com esse nome.
-      halt
+      return 1
     end
     * Check if target is the actor or a player
     if %victim% == %actor% || %victim.is_pc%
       %send% %actor% Acho que não seria uma boa idéia...
-      halt
+      return 1
     end
     * Perform the scroll activation
     %send% %actor% Você enrola o pergaminho e aponta-o para %victim.name%.
@@ -200,6 +202,7 @@ if %self.vnum% == 9808
     else
       %send% %actor% O pergaminho não tem efeito.
     end
+    return 1
   else
     return 0
   end

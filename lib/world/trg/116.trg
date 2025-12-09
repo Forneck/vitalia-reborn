@@ -37,17 +37,14 @@ Kanakajja Blocks South Movement~
 * Only fires in room 11642, when mob is awake, and for non-NPCs
 if %self.room.vnum% != 11642 || %actor.is_npc%
   return 0
-  halt
 end
 if %self.pos% < 8
   return 0
-  halt
 end
 * Check if player is trying to go south
 if %direction% == south
   %echo% %self.name% disse, 'Ir além é possível. Mas não posso permitir. Perigos demais.'
   return 1
-  halt
 end
 * Allow movement in other directions
 return 0

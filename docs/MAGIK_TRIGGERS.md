@@ -44,10 +44,10 @@ A porta se abre.
 A porta se fecha.
 
 > diz tranca
-Você escuta um ruido vindo da porta.
+Você escuta um ruído vindo da porta.
 
 > diz destranca
-Você escuta um ruido vindo da porta.
+Você escuta um ruído vindo da porta.
 ```
 
 ### Zone 45 (Gondolin)
@@ -93,7 +93,7 @@ Note: Triggers 6900-6901 already exist for other purposes. Magik triggers start 
 **Example Usage** (in room with BUFONIDAE door):
 ```
 > diz BUFONIDAE
-Você escuta um ruido vindo do alçapão.
+Você escuta um ruído vindo do alçapão.
 O alçapão se abre.
 ```
 
@@ -142,7 +142,7 @@ This ensures consistent door state across both rooms.
 ### Messages
 - **Open**: "A porta se abre." / "O alçapão se abre."
 - **Close**: "A porta se fecha."
-- **Lock/Unlock**: "Você escuta um ruido vindo da porta." / "...do alçapão."
+- **Lock/Unlock**: "Você escuta um ruído vindo da porta." / "...do alçapão."
 
 ## Attachment Instructions
 

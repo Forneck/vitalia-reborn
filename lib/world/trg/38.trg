@@ -4,7 +4,7 @@ Card Garoto Random Speech~
 ~
 * Old SpecProc: card_garoto - Random speech about cards
 * Trigger fires on random pulse (10% chance)
-if %self.fighting% || !%self.pos% >= 8
+if %self.fighting% || %self.pos% < 8
   halt
 end
 * 20% chance to say something (number 0-4, only 0 triggers)
@@ -26,12 +26,10 @@ Card Golem Blocks Without Ticket~
 * Check if mob can see the actor and actor is awake
 if !%self.canbeseen% || !%actor.is_pc%
   return 0
-  halt
 end
 * Only block movement to the north
 if %direction% != north
   return 0
-  halt
 end
 * Check if player has ticket 3803 in inventory or equipped (WEAR_HOLD)
 set has_ticket 0
@@ -60,11 +58,10 @@ if !%has_ticket%
   %echoaround% %actor% %self.name% barra a passagem de %actor.name%.
   %at% %self.room.vnum% %echo% %self.name% diz, 'Para entrar aqui, você terá que comprar o bilhete.'
   return 1
-  halt
 end
 * Has ticket - take it and allow passage
 %send% %actor% %self.name% toma %ticket.shortdesc% da sua mão e lhe concede passagem.
-%echoaround% %actor% %self.name% toma %ticket.shortdesc% da mão de %actor.name% e, concedendo-lhe passagem.
+%echoaround% %actor% %self.name% toma %ticket.shortdesc% da mão de %actor.name% concedendo-lhe passagem.
 %purge% %ticket%
 return 0
 ~

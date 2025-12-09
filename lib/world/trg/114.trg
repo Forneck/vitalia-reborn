@@ -9,7 +9,7 @@ if %speech.contains(avarohana)%
   if %self.east(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% east flags ab
-    %echo% Você escuta um ruido vindo da porta.
+    %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.east(vnum)%
     %door% %otherroom% west flags ab

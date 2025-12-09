@@ -19,7 +19,7 @@ These triggers implement the angel greeting system where four angels guide playe
 - **Type**: Mob Greet Trigger
 - **Attached to**: Mob 9807 (o Anjo do Amor)
 - **Description**: Greets visible players with wisdom about love magic
-- **Message**: "Sabia foi sua escolha, assim como sabio voce deve ser. Para poder derrotar o inimigo maior, deve adquirir aliados tambem poderosos. Lembre-se com a magia do amor seus inimigos serão os mais fiés soldados."
+- **Message**: "Sabia foi sua escolha, assim como sábio você deve ser. Para poder derrotar o inimigo maior, deve adquirir aliados também poderosos. Lembre-se com a magia do amor seus inimigos serão os mais fiéis soldados."
 
 #### Trigger 9805: Angel 9808 Greet (Anjo da Honestidade)
 - **Type**: Mob Greet Trigger

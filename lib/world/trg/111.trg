@@ -4,7 +4,7 @@ Urso Random Hunger Messages~
 ~
 * Old SpecProc: mob_11103 - Random pulse behavior
 * Displays hunger messages randomly
-if %self.fighting% || !%self.pos% >= 8
+if %self.fighting% || %self.pos% < 8
   halt
 end
 * 20% chance (number 0-4, only fires on 0)

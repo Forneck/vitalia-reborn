@@ -53,7 +53,7 @@ if %speech.contains(tranca)%
   if %self.north(room)%
     * Set closed and locked flags
     %door% %self.vnum% north flags abc
-    %echo% Você escuta um ruido vindo da porta.
+    %echo% Você escuta um ruído vindo da porta.
     * Lock the other side if it exists
     eval otherroom %self.north(vnum)%
     %door% %otherroom% south flags abc
@@ -71,7 +71,7 @@ if %speech.contains(destranca)%
   if %self.north(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% north flags ab
-    %echo% Você escuta um ruido vindo da porta.
+    %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.north(vnum)%
     %door% %otherroom% south flags ab

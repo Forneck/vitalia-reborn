@@ -37,7 +37,7 @@ if %speech.contains(BUFONIDAE)% || %speech.contains(bufonidae)%
   if %self.down(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% down flags ab
-    %echo% Você escuta um ruido vindo do alçapão.
+    %echo% Você escuta um ruído vindo do alçapão.
     * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
     %door% %otherroom% up flags ab
@@ -74,7 +74,7 @@ if %speech.contains(OPISTHOCOELA)% || %speech.contains(opisthocoela)%
   if %self.down(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% down flags ab
-    %echo% Você escuta um ruido vindo do alçapão.
+    %echo% Você escuta um ruído vindo do alçapão.
     * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
     %door% %otherroom% up flags ab
@@ -111,7 +111,7 @@ if %speech.contains(PIPIDAE)% || %speech.contains(pipidae)%
   if %self.down(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% down flags ab
-    %echo% Você escuta um ruido vindo do alçapão.
+    %echo% Você escuta um ruído vindo do alçapão.
     * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
     %door% %otherroom% up flags ab
@@ -148,7 +148,7 @@ if %speech.contains(BREVICIPITIDAE)% || %speech.contains(brevicipitidae)%
   if %self.down(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% down flags ab
-    %echo% Você escuta um ruido vindo do alçapão.
+    %echo% Você escuta um ruído vindo do alçapão.
     * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
     %door% %otherroom% up flags ab
@@ -185,7 +185,7 @@ if %speech.contains(SALIENTIA)% || %speech.contains(salientia)%
   if %self.down(room)%
     * Remove locked flag (keep closed flag)
     %door% %self.vnum% down flags ab
-    %echo% Você escuta um ruido vindo do alçapão.
+    %echo% Você escuta um ruído vindo do alçapão.
     * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
     %door% %otherroom% up flags ab
