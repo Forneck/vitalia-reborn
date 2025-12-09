@@ -86,7 +86,7 @@ if %self.vnum% == 9804
         * Check if mob is not already fighting
         if !%room_people.fighting%
           * Make the charmed mob attack the boss
-          %force% %room_people.name% diz Lutarei ao lado de %room_people.master.hisher%(meu mestre,minha mestra)!
+          %at% %room_people.room.vnum% %echo% %room_people.name% diz, 'Lutarei ao lado de %room_people.master.sex(meu mestre,minha mestra,meu mestre)%!'
           %force% %room_people.name% kill %self.name%
         end
       end
@@ -157,13 +157,13 @@ if %self.vnum% == 9808
       %send% %actor% Como? Usar os poderes deste pergaminho em quem?
       halt
     end
-    * Find the target in the room
+    * Find the target in the room - check each character
     set target %actor.room.people%
     set found_target 0
     while %target%
       set next_target %target.next_in_room%
-      * Check if target name matches the argument
-      if %target.name.contains(%arg%)%
+      * Check if target alias contains the argument (simple name matching)
+      if %target.alias.contains(%arg%)%
         set found_target 1
         set victim %target%
       end
@@ -184,7 +184,7 @@ if %self.vnum% == 9808
     %echoaround% %actor% %actor.name% enrola o pergaminho dourado, e aponta-o para %victim.name%.
     * Check if target is one of the three special mobs
     if %victim.vnum% == 9801 || %victim.vnum% == 9802 || %victim.vnum% == 9803
-      * Wake up the mob if sleeping
+      * Wake up the mob if sleeping  
       if %victim.pos% < 8
         %force% %victim.name% stand
         %at% %victim.room.vnum% %echo% %victim.name% se levanta.
@@ -193,7 +193,7 @@ if %self.vnum% == 9808
       %force% %victim.name% follow %actor.name%
       dg_affect %victim% charm on 999
       * Make mob non-aggressive
-      %at% %victim.room.vnum% %echo% %victim.name% diz a %actor.name%, 'Reconheço você como %actor.hisher%(meu senhor,minha senhora), e irei ajudar-lhe em sua batalha.'
+      %at% %victim.room.vnum% %echo% %victim.name% diz a %actor.name%, 'Reconheço você como %actor.sex(meu senhor,minha senhora,meu senhor)%, e irei ajudar-lhe em sua batalha.'
       * Destroy the scroll
       %send% %actor% O pergaminho se desfaz.
       %purge% %self%
