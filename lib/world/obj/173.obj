@@ -692,3 +692,28 @@ A
 A
 2 1
 $~
+#17317
+tigela bacia ouro garimpo~
+uma bacia de garimpo de ouro~
+Uma tigela de madeira com uma tela de malha em seu fundo foi deixada aqui.~
+~
+12 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 10 0 0 0
+E
+tigela bacia ouro garimpo~
+   A tigela está gasta pelo uso. Parece que foi feita para garimpar ouro.
+~
+#17318
+pepita ouro~
+uma pequena pepita de ouro~
+Uma pequena pepita de ouro está brilhando aqui.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 0 0 0
+E
+pepita ouro~
+   A pequena pepita provavelmente não vale muito, mas é ouro.
+~
+$~
