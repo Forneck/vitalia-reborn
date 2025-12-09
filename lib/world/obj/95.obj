@@ -386,7 +386,20 @@ E
 correntes andromeda~
 Essas correntes parecem ter sido usadas para algo importante!
 ~
-$~
+#9529
+pedestal placa~
+um pedestal~
+Um pedestal, com uma placa gravada, está sobre uma mesa.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+pedestal placa~
+   Uma base de madeira sustenta uma bola de cristal brilhante. Uma placa
+ de bronze gravada está presa ao pedestal. A placa diz:
+   A galáxia dentro desta bola de cristal foi criada por Doctor do EnvyMUD.
+~
 #9530
 bola cristal~
 a bola de cristal~
@@ -394,6 +407,10 @@ Uma bola de cristal repousa sobre o pedestal.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0 0
+1 0 0 0 0
 T 9530
+E
+bola cristal~
+A bola de cristal parece conter um universo inteiro dentro dela.
+~
 $~
