@@ -54,7 +54,7 @@ switch %actor.level%
     else
       dg_cast 'dispel evil' %actor%
     end
- break
+  break
   case 17
   case 18
     dg_cast 'call lightning' %actor%

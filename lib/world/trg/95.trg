@@ -107,10 +107,12 @@ switch %rand%
   case 3
     eval dmg (%random.7% * %random.8%) + 7
     set spellname raio elétrico
-    case 4
+  break
+  case 4
     eval dmg (%random.9% * %random.8%) + 9
     set spellname borrifada colorida
-    case 5
+  break
+  case 5
     eval dmg (%random.11% * %random.8%) + 11
     set spellname bola de fogo
   break
@@ -293,7 +295,7 @@ set stunned %actor.hitp% - 2
 Entrar na Bola de Cristal~
 1 c 100
 l~
-if %cmd.mudcommand% == look && %arg% /= cristal || %arg% /= bola
+if %cmd.mudcommand% == look && (%arg% /= cristal || %arg% /= bola)
   %send% %actor% Você se sente atraído pela bola de cristal. Sua mão se estende...
   %echoaround% %actor% %actor.name% é sugado para dentro da bola de cristal!
   %teleport% %actor% 9502
