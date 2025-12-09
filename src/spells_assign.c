@@ -2765,6 +2765,7 @@ void create_spells_db()
     new_spell->name = strdup("whirlwind");
     new_spell->function = do_whirlwind;
     new_spell->type = SKILL;
+    new_spell->mag_flags = MAG_VIOLENT;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(20 - (1 * self.level)) > 10 ? (20 - (1 * self.level)) : 10");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
