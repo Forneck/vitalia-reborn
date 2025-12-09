@@ -13,6 +13,7 @@ GenWimpy: 100
 GenLoot: 6
 GenRoam: 87
 GenFollow: 2
+T 9502
 E
 #9502
 estrela prateada~
@@ -30,6 +31,7 @@ GenWimpy: 78
 GenLoot: 2
 GenRoam: 1
 GenFollow: 8
+T 9503
 E
 #9503
 nebulosa jovem~
@@ -221,6 +223,7 @@ que você está caminhando...
 9 6 3 3d3+400 3d5+14
 4000 20000
 9 9 1
+T 9503
 E
 #9515
 aries~
@@ -239,6 +242,7 @@ GenWimpy: 30
 GenLoot: 1
 GenEquip: 1
 GenFollow: 14
+T 9500
 E
 #9516
 touro~
@@ -256,6 +260,7 @@ sobreviveu...
 GenWimpy: 4
 GenLoot: 3
 GenFollow: 16
+T 9500
 E
 #9517
 gemeo~
@@ -271,6 +276,7 @@ Assim que você o vê, você percebe que ele é o homem mais perfeito já visto.
 9 9 1
 GenWimpy: 4
 GenFollow: 15
+T 9500
 E
 #9518
 gemeo~
@@ -286,6 +292,7 @@ visto.  Como pode haver tamanho contraste?  Bem que você queria saber...
 9 9 1
 GenWimpy: 5
 GenFollow: 14
+T 9500
 E
 #9519
 cancer~
@@ -306,6 +313,7 @@ servidor colocando-o aqui.
 GenWimpy: 9
 GenLoot: 1
 GenFollow: 14
+T 9500
 E
 #9520
 leao~
@@ -324,6 +332,7 @@ partí-lo em dois a partir de sua boca!
 GenWimpy: 9
 GenLoot: 3
 GenFollow: 14
+T 9500
 E
 #9521
 virgem~
@@ -340,6 +349,7 @@ movimento seu, seja ele qual for...
 6 9 2
 GenWimpy: 7
 GenFollow: 14
+T 9500
 E
 #9522
 libra~
@@ -357,6 +367,7 @@ GenWimpy: 18
 GenLoot: 9
 GenEquip: 16
 GenFollow: 15
+T 9500
 E
 #9523
 escorpiao~
@@ -373,6 +384,7 @@ Sagitário eternamente apontada para seu coração.  Vai entender...
 GenWimpy: 11
 GenLoot: 11
 GenFollow: 13
+T 9500
 E
 #9524
 sagitario centauro~
@@ -388,6 +400,7 @@ arqueiro.  Ninguém escapa de suas flechas.
 9 9 1
 GenWimpy: 5
 GenFollow: 14
+T 9500
 E
 #9525
 bode capricornio~
@@ -406,6 +419,7 @@ GenWimpy: 8
 GenLoot: 4
 GenEquip: 1
 GenFollow: 13
+T 9500
 E
 #9526
 aquario~
@@ -421,6 +435,7 @@ seria melhor dar-lhe uma mãozinha em sua tarefa de segurar o vaso...
 9 9 2
 GenWimpy: 4
 GenFollow: 15
+T 9500
 E
 #9527
 pisces sereia~
@@ -439,6 +454,7 @@ GenLoot: 20
 GenEquip: 2
 GenRoam: 88
 GenFollow: 15
+T 9500
 E
 #9528
 peixe~
@@ -458,6 +474,7 @@ GenLoot: 23
 GenEquip: 3
 GenRoam: 83
 GenFollow: 14
+T 9500
 E
 #9529
 ursa maior~
@@ -476,6 +493,7 @@ GenLoot: 2
 GenEquip: 1
 GenBrave: 2
 GenFollow: 8
+T 9500
 E
 #9530
 cassiopeia rainha~
@@ -491,6 +509,7 @@ desaparecer...
 6 9 2
 GenWimpy: 5
 GenFollow: 12
+T 9501
 E
 #9531
 cefeu rei~
@@ -506,6 +525,7 @@ e inútil diante dele.
 6 9 1
 GenWimpy: 5
 GenFollow: 13
+T 9501
 E
 #9532
 polaris polar estrela~
@@ -525,6 +545,7 @@ GenWimpy: 4
 GenLoot: 11
 GenEquip: 3
 GenFollow: 10
+T 9504
 E
 #9533
 pleiade elektra~

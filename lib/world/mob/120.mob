@@ -15,6 +15,7 @@ GenWimpy: 18
 GenTrade: 100
 GenQuest: 50
 GenFollow: 8
+T 12001
 E
 #12001
 marcador~
@@ -187,6 +188,7 @@ GenEquip: 26
 GenTrade: 100
 GenQuest: 50
 GenFollow: 7
+T 12002
 E
 #12011
 lojista~
@@ -351,6 +353,7 @@ GenRoam: 89
 GenTrade: 100
 GenQuest: 50
 GenFollow: 9
+T 12001
 E
 #12020
 imperador julius caesar~
@@ -396,6 +399,7 @@ GenEquip: 99
 GenTrade: 100
 GenQuest: 50
 GenFollow: 17
+T 12002
 E
 T 3013
 #12022
@@ -415,6 +419,7 @@ GenLoot: 22
 GenTrade: 100
 GenQuest: 50
 GenFollow: 9
+T 12001
 E
 #12023
 mestre programador~
@@ -493,6 +498,7 @@ GenWimpy: 19
 GenTrade: 100
 GenQuest: 50
 GenFollow: 13
+T 12001
 E
 #12027
 senador~
@@ -613,6 +619,7 @@ GenQuest: 50
 GenFollow: 13
 GenHealing: 100
 EmotionProfile: 4
+T 12001
 E
 T 3009
 #12032
@@ -643,6 +650,7 @@ GenTrade: 100
 GenQuest: 60
 GenFollow: 41
 EmotionProfile: 1
+T 12001
 E
 T 3009
 #12033
