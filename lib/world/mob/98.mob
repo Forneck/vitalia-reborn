@@ -89,6 +89,8 @@ Con: 25
 Cha: 25
 GenWimpy: 5
 GenFollow: 13
+T 9807
+T 9808
 E
 #9805
 dragao invisivel~
@@ -128,6 +130,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+T 9803
 E
 #9807
 anjo amor~
@@ -147,6 +150,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+T 9804
 E
 #9808
 anjo honestidade~
@@ -166,6 +170,7 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+T 9805
 E
 #9809
 anjo vitoria~
@@ -185,5 +190,6 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+T 9806
 E
 $
