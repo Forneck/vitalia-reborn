@@ -2,6 +2,20 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Dec 10 2024] - Vitalia Reborn Development
+  feature: Parnassus Zone Integration (Zone 211)
+    - Translated Parnassus Tarot zone from English to Portuguese
+    - Added high-level content for players level 26-100
+    - 18 rooms of mystical tarot reading experience
+    - 4 NPCs: Sibyl, Esmerelda, Jaelle (tarot readers) and Ana (receptionist)
+    - 82 objects: 78 tarot cards + food/drink items
+    - 11 DG script triggers for interactive tarot readings
+    - Connected to Thewster (Avenida Baía das Folhas, room 13404)
+    - Mobs scaled from original level 30 to level 100 for current system
+    - Interactive fortune-telling system with Rider-Waite tarot deck
+    - Automated appointment system and multiple concurrent readings
+    - Self-replicating food/drink for player convenience
+@
 [Nov 15 2024] - Vitalia Reborn Development
   feature: Percentual Load System for Zone Resets
     - Added percentage-based loading for mobs and objects in zone files
