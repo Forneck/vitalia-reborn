@@ -39,7 +39,8 @@ Do lado de fora de um pequeno edifício~
 convidativamente por clientes. O jardim é um espaço quadrado pacífico com uma
 cerca branca protegendo o gramado verde da rua, sem bloquear a vista da casa.
 Canteiros de flores brilhantes aconchegam-se ao pé da cerca. Uma placa de latão
-brilhante está colocada perto da porta.
+brilhante está colocada perto da porta. A leste você vê a Avenida Baía das
+Folhas de Thewster.
 ~
 211 20 0 0 0 0
 D0
@@ -47,6 +48,11 @@ A porta é arredondada no topo em vez do retângulo usual.
 ~
 porta~
 1 0 21102
+D1
+Você vê a Avenida Baía das Folhas.
+~
+~
+0 -1 13404
 E
 cerca branca~
    É uma cerca comum de ripas pontiagudas coberta com tinta branca fresca.

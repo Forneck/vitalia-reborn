@@ -101,6 +101,8 @@ S
 Avenida Baía das Folhas~
   Essa  avenida  foi  cravada  em uma grande baía de folhas. A leste fica a
 praça central de Thewster, próximo daqui o caminho se torna uma interseção.
+A oeste, você vê um prédio arrumado de tijolos vermelhos com uma placa de
+latão brilhante.
 ~
 134 0 0 0 0 0
 D1
@@ -108,6 +110,11 @@ leste
 ~
 ~
 0 -1 13400
+D3
+Uma pequena casa com uma placa de latão brilhante.
+~
+~
+0 -1 21101
 D4
 ~
 ~
