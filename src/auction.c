@@ -678,6 +678,11 @@ void update_auctions(void)
     struct auction_data *auction, *next_auction;
     time_t now = time(0);
 
+    /* Early exit if no auctions exist - avoids unnecessary processing every 30 seconds */
+    if (!auction_list) {
+        return;
+    }
+
     for (auction = auction_list; auction; auction = next_auction) {
         next_auction = auction->next;
 
