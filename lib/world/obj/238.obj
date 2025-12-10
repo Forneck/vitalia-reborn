@@ -1,7 +1,7 @@
 #23800
-map~
-a map of the crystal castle~
-A map of the crystal castle.~
+mapa map~
+um mapa do castelo de cristal~
+Um mapa do castelo de cristal.~
 
                         O
                         |
@@ -27,9 +27,9 @@ O-O-O-O-O-O                 ^   O   O-O-O   O O     ^
 0 0 0 0
 1 1 0 0 0
 #23801
-ring~
-a ruby colored ring~
-A small ruby covered ring is lying here.~
+anel ring~
+um anel cor de rubi~
+Um pequeno anel coberto de rubi está aqui.~
 ~
 9 gp 0 0 0 ab 0 0 0 0 0 0 0
 8 0 0 0
@@ -41,9 +41,9 @@ A
 A
 2 -1
 #23802
-wand~
-a wisdom wand~
-A very colorfull wand is lying here.~
+cajado varinha wand~
+um cajado da sabedoria~
+Um cajado muito colorido está aqui.~
 ~
 3 gklop 0 0 0 ao 0 0 0 0 0 0 0
 12 4 4 24
@@ -55,9 +55,9 @@ A
 A
 2 -1
 #23803
-bow~
-a short bow~
-A emerald covered bow lies here.~
+arco bow~
+um arco curto~
+Um arco coberto de esmeralda está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 5 5 12
@@ -69,9 +69,9 @@ A
 A
 5 -1
 #23804
-cloak~
-portal cloak~
-A large portal looking cloak is lying here.~
+manto capa cloak~
+manto portal~
+Um grande manto com aparência de portal está aqui.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 2 0 0 0
@@ -83,17 +83,17 @@ A
 A
 2 -2
 #23805
-darkness~
-a bottle~
-A bag shimmering with dark power is lying here.~
+escuridão darkness~
+uma garrafa~
+Uma bolsa cintilando com poder obscuro está aqui.~
 ~
 15 j 0 0 0 a 0 0 0 0 0 0 0
 1000 1 -1 0
 1 1000 0 0 0
 #23806
-ring~
-a wedding ring~
-A small diamond wedding ring lies here.~
+anel ring~
+um anel de casamento~
+Um pequeno anel de casamento de diamante está aqui.~
 ~
 9 0 0 0 0 ab 0 0 0 0 0 0 0
 5 0 0 0
@@ -105,9 +105,9 @@ A
 A
 18 -2
 #23807
-boots~
-some boots of stealth~
-A set of boots with a wing emblem attached to the heel is lying here.~
+botas boots~
+botas de furtividade~
+Um par de botas com um emblema de asa preso ao calcanhar está aqui.~
 ~
 9 0 0 0 0 ag 0 0 0 0 0 0 0
 1 0 0 0
@@ -119,9 +119,9 @@ A
 A
 13 -10
 #23833
-swordfish nose~
-a swordfish's nose~
-A large sword made from the nose of a swordfish lies here.~
+nariz peixe-espada swordfish nose~
+o nariz do peixe-espada~
+Uma grande espada feita do nariz de um peixe-espada está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 5 10 11
@@ -131,50 +131,49 @@ A
 A
 17 5
 #23837
-skull~
-a small skull~
-A small skull which seems to be of a very small human.~
+crânio skull~
+um pequeno crânio~
+Um pequeno crânio que parece ser de um humano muito pequeno.~
 ~
 15 deh 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 #23838
-light potion~
-a light potion~
-A small light potion lies here.~
+poção luz light potion~
+uma poção de luz~
+Uma pequena poção de luz está aqui.~
 ~
 10 a 0 0 0 a 0 0 0 0 0 0 0
 20 28 -1 -1
 2 500 0 0 0
 #23840
-torch~
-a light torch~
-A small torch sputters on the wall casting a flickering light.~
+tocha torch~
+uma tocha de luz~
+Uma pequena tocha crepita na parede lançando uma luz tremeluzente.~
 ~
 1 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 E
-stone~
-   Upon further inspection you notice that the torch is pullable.
+pedra stone~
+   Após uma inspeção mais detalhada, você percebe que a tocha pode ser puxada.
 ~
 E
-torch~
-   A small light torch is here sticking out of the wall surrounded by loose
-stones.
+tocha torch~
+   Uma pequena tocha de luz está aqui saindo da parede cercada por pedras soltas.
 ~
 #23841
-bone necklace~
-a bone necklace~
-A necklace made of bones lies here.~
+colar ossos bone necklace~
+um colar de ossos~
+Um colar feito de ossos está aqui.~
 ~
 9 djn 0 0 0 ac 0 0 0 0 0 0 0
 10 0 0 0
 10 100 0 0 0
 E
-necklace~
-   As you look at this necklace you see that it is made of small pieces of bone
-connected by titanium.
+colar necklace~
+   Ao olhar para este colar, você vê que é feito de pequenos pedaços de osso
+conectados por titânio.
 ~
 A
 1 2
@@ -183,30 +182,30 @@ A
 A
 12 -30
 #23843
-box~
-a large box~
-A large box stands upright here.~
+caixa box~
+uma grande caixa~
+Uma grande caixa está em pé aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 T 23843
 E
-box~
-   You notice that this box is in excellent condition.
+caixa box~
+   Você percebe que esta caixa está em excelente condição.
 ~
 #23844
-coin~
-a massive heap of coins~
-A massive pile of coins lie here.~
+moedas coin~
+uma enorme pilha de moedas~
+Uma pilha massiva de moedas está aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 1000 500 500 30
 1 1 0 0 0
 #23845
-boots~
-some crystal boots~
-A set of crystal boots are lying here.~
+botas boots~
+botas de cristal~
+Um par de botas de cristal está aqui.~
 ~
 9 0 0 0 0 ag 0 0 0 0 0 0 0
 10 0 0 0
@@ -218,9 +217,9 @@ A
 A
 12 -10
 #23846
-gloves~
-some crystal gloves~
-A set of crystal gloves is lying here.~
+luvas gloves~
+luvas de cristal~
+Um par de luvas de cristal está aqui.~
 ~
 9 0 0 0 0 ah 0 0 0 0 0 0 0
 10 0 0 0
@@ -232,9 +231,9 @@ A
 A
 12 -10
 #23847
-wristband~
-a small crystal wristband~
-A small crystal wristband lies here shimmering on the ground.~
+bracelete wristband~
+um pequeno bracelete de cristal~
+Um pequeno bracelete de cristal está aqui cintilando no chão.~
 ~
 9 g 0 0 0 am 0 0 0 0 0 0 0
 6 0 0 0
@@ -246,9 +245,9 @@ A
 A
 14 -20
 #23848
-leggings~
-some crystal leggings~
-A set of flawless leggings sit upright here.~
+perneiras leggings~
+perneiras de cristal~
+Um par de perneiras impecáveis está em pé aqui.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 5 0 0 0
@@ -260,9 +259,9 @@ A
 A
 19 4
 #23849
-girth~
-a crystal girth~
-A large crystal girth is lying here.~
+cinto girth~
+um cinto de cristal~
+Um grande cinto de cristal está aqui.~
 ~
 9 0 0 0 0 al 0 0 0 0 0 0 0
 10 0 0 0
@@ -274,27 +273,27 @@ A
 A
 20 2
 #23855
-fountain~
-a large fountain~
-A large emerald covered fountain sits here, looking refreshing.~
+fonte fountain~
+uma grande fonte~
+Uma grande fonte coberta de esmeralda está aqui, parecendo refrescante.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 500 500 0 0
 0 0 0 0 0
 T 23855
 E
-fountain~
-   Looking closer at the fountain you notice that the bottom is very deep and
-there is something sparkling in the water.
+fonte fountain~
+   Olhando mais de perto para a fonte, você percebe que o fundo é muito profundo e
+há algo cintilando na água.
 ~
 E
-water~
-   You notice that there is a small portal on the bottom of the fountain.
+água water~
+   Você percebe que há um pequeno portal no fundo da fonte.
 ~
 #23860
-key~
-a titanium key~
-A small titanuim key is lying here.~
+chave key~
+uma chave de titânio~
+Uma pequena chave de titânio está aqui.~
 ~
 18 d 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -307,8 +306,8 @@ A
 4 -3
 #23861
 portal~
-a blue portal~
-A large blue portal shimmers here.~
+um portal azul~
+Um grande portal azul cintila aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -316,8 +315,8 @@ A large blue portal shimmers here.~
 T 23862
 #23862
 portal~
-a red portal~
-A large red portal shimmers here.~
+um portal vermelho~
+Um grande portal vermelho cintila aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -325,17 +324,17 @@ A large red portal shimmers here.~
 T 23863
 #23863
 portal~
-a green portal~
-A large green portal shimmers here.~
+um portal verde~
+Um grande portal verde cintila aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 T 23861
 #23870
-plate~
-a pile of dark plate~
-A pile of black plate is lying here.~
+placa plate~
+uma pilha de placas escuras~
+Uma pilha de placas pretas está aqui.~
 ~
 9 ag 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
@@ -347,9 +346,9 @@ A
 A
 5 -2
 #23874
-scepter~
-queens scepter~
-The queens scepter is lying here.~
+cetro scepter~
+cetro da rainha~
+O cetro da rainha está aqui.~
 ~
 1 g 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
@@ -361,17 +360,17 @@ A
 A
 5 -1
 #23875
-claw~
-a large crystal claw~
-A dragon claw is lying here.~
+garra claw~
+uma grande garra de cristal~
+Uma garra de dragão está aqui.~
 ~
 5 n 0 0 0 an 0 0 0 0 0 0 0
 8 10 5 8
 20 1000 0 0 0
 #23899
-head~
-a crystal dragon's head~
-A large crystal dragon's head is lying here.~
+cabeça head~
+a cabeça de um dragão de cristal~
+Uma grande cabeça de dragão de cristal está aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 10 0 0 0
