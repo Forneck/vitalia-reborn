@@ -1,9 +1,9 @@
 #23802
-fish~
-the large fish~
-A large fish swims here.
+peixe fish~
+o grande peixe~
+Um grande peixe nada aqui.
 ~
-   This fish looks very mean and hungry.
+   Este peixe parece muito feroz e faminto.
 ~
 76 0 0 0 0 0 0 0 -20 E
 22 13 -3 4d4+220 3d3+3
@@ -12,12 +12,11 @@ A large fish swims here.
 BareHandAttack: 4
 E
 #23833
-swordfish fish~
-a large swordfish~
-A large swordfish swims here.
+peixe-espada peixe swordfish fish~
+um grande peixe-espada~
+Um grande peixe-espada nada aqui.
 ~
-   This fish has a very long and sharp looking nose and appears to not notice
-you.
+   Este peixe tem um nariz muito longo e afiado e parece não perceber você.
 ~
 72 0 0 0 0 0 0 0 -20 E
 22 13 -3 4d4+220 3d3+3
@@ -26,13 +25,13 @@ you.
 BareHandAttack: 14
 E
 #23841
-Monster~
-the ugly monster~
-A large ugly monster stands here.
+Monstro Monster~
+o monstro feio~
+Um grande monstro feio está aqui.
 ~
-   This monster looks hungry for blood.  There are many blood stains around his
-mouth and about his body.  Many different bones line his neck connected by some
-kind of metal.
+   Este monstro parece faminto por sangue. Há muitas manchas de sangue ao redor
+de sua boca e sobre seu corpo. Muitos ossos diferentes revestem seu pescoço
+conectados por algum tipo de metal.
 ~
 30 0 0 0 0 0 0 0 -100 E
 23 13 -3 4d4+230 3d3+3
@@ -47,13 +46,13 @@ E
 T 23841
 T 23842
 #23842
-rat~
-the small rat~
-A small rat is here running in circles.
+rato rat~
+o pequeno rato~
+Um pequeno rato está aqui correndo em círculos.
 ~
-   The rat looks as if it has many wounds on his back as if something has
-attacked it or something.  The rat itself looks all but sick, it has a lot of
-energy and appears to have been running in circles for hours.
+   O rato parece ter muitas feridas nas costas como se algo o tivesse atacado ou
+algo assim. O rato em si não parece nada doente, tem muita energia e parece estar
+correndo em círculos há horas.
 ~
 26 0 0 0 1024 0 0 0 0 E
 22 13 -3 4d4+220 3d3+3
@@ -66,13 +65,13 @@ Int: 4
 Wis: 4
 E
 #23849
-Crystal wyvern~
-the crystal wyvern~
-A large statue stands firm here.
+serpe alada cristal Crystal wyvern~
+a serpe alada de cristal~
+Uma grande estátua está firme aqui.
 ~
-   This statue appears to be solid yet alive.  It looks very strong but not to
-fast but it seems to not be moving at all.  The statue stands firm looking east
-towards where you came from.
+   Esta estátua parece ser sólida mas viva. Parece muito forte mas não muito
+rápida, mas não parece estar se movendo. A estátua está firme olhando para o leste,
+de onde você veio.
 ~
 10 0 0 0 4 0 0 0 0 E
 26 12 -5 5d5+260 4d4+4
@@ -85,12 +84,12 @@ Int: 15
 Wis: 15
 E
 #23851
-spider~
-a large spider~
-A large spider with a look for blood is stuck to the wall here.
+aranha spider~
+uma grande aranha~
+Uma grande aranha com sede de sangue está presa na parede aqui.
 ~
-   This spider has many corpses strewn about his web and it seems to want to
-add you.
+   Esta aranha tem muitos cadáveres espalhados em sua teia e parece querer
+adicioná-lo.
 ~
 26 0 0 0 0 0 0 0 -100 E
 24 12 -4 4d4+240 4d4+4
@@ -99,14 +98,14 @@ add you.
 BareHandAttack: 4
 E
 #23855
-man~
-the old man~
-A very old looking man stands tall here.
+homem velho man~
+o velho~
+Um homem de aparência muito velha está aqui.
 ~
-   This man appears to be very old and has many war wounds.  He also seems to
-be experienced in the art of war.  The old man looks not to be a warrior or
-fighter but rather a spell caster.  Wearing many valuable looking pieces of eq
-makes you wonder can this guy be serious.
+   Este homem parece ser muito velho e tem muitas feridas de guerra. Ele também
+parece ser experiente na arte da guerra. O velho não parece ser um guerreiro ou
+lutador, mas sim um conjurador de feitiços. Usando muitas peças valiosas de
+equipamento faz você se perguntar se este cara pode estar falando sério.
 ~
 8202 0 0 0 0 0 0 0 0 E
 26 12 -5 5d5+260 4d4+4
@@ -120,10 +119,10 @@ Wis: 20
 E
 #23860
 troll~
-the large troll~
-A large troll with markings of some king of clan stands here.
+o grande troll~
+Um grande troll com marcas de algum tipo de clã está aqui.
 ~
-   The troll looks to be tired and stressed.
+   O troll parece estar cansado e estressado.
 ~
 10 0 0 0 0 0 0 0 -100 E
 26 12 -5 5d5+260 4d4+4
@@ -143,13 +142,13 @@ T 23858
 T 23859
 T 23860
 #23874
-Queen Plegia~
-the queen plegia~
-Queen Plegia sits atop her throne here.
+Rainha Plegia Queen Plegia~
+a rainha plegia~
+A Rainha Plegia está sentada em seu trono aqui.
 ~
-   The queen looks as if she has a lot of power and experience.  She has
-beautiful white hair and baby blue eyes.  She appears to not question your
-intrusion rather seems glad you came.
+   A rainha parece ter muito poder e experiência. Ela tem lindos cabelos brancos
+e olhos azul bebê. Ela não parece questionar sua intrusão, mas parece feliz por
+você ter vindo.
 ~
 10 0 0 0 0 0 0 0 100 E
 26 12 -5 5d5+260 4d4+4
@@ -158,13 +157,13 @@ intrusion rather seems glad you came.
 BareHandAttack: 12
 E
 #23875
-dragon~
-a crystal dragon~
-A large crystal covered dragon rests here.
+dragão dragon~
+um dragão de cristal~
+Um grande dragão coberto de cristal descansa aqui.
 ~
-   This dragon seems to be very old and very experienced due to the massive war
-wounds on it's back and wings.  The dragon looks very tough and seems to be
-made of crystal.
+   Este dragão parece ser muito velho e muito experiente devido às enormes feridas
+de guerra em suas costas e asas. O dragão parece muito resistente e parece ser
+feito de cristal.
 ~
 10 0 0 0 1048576 0 0 0 0 E
 26 12 -5 5d5+260 4d4+4
@@ -177,12 +176,12 @@ Int: 13
 Wis: 18
 E
 #23876
-trout~
-the trout~
-A large trout swims here.
+truta trout~
+a truta~
+Uma grande truta nada aqui.
 ~
-   This trout looks a little bit mean.  His eyes are glowing red and his scales
-are slightly glowing.  The fish swims here unaware of your entrance.
+   Esta truta parece um pouco feroz. Seus olhos estão brilhando em vermelho e suas
+escamas estão ligeiramente brilhando. O peixe nada aqui inconsciente de sua entrada.
 ~
 72 0 0 0 0 0 0 0 0 E
 25 12 -5 5d5+250 4d4+4
@@ -190,12 +189,12 @@ are slightly glowing.  The fish swims here unaware of your entrance.
 8 8 0
 E
 #23877
-bird~
-the blue bird~
-A swift blue bird is flying here.
+pássaro ave bird~
+o pássaro azul~
+Um veloz pássaro azul está voando aqui.
 ~
-   This bird seems very fast not very strong but very fast.  This bird is
-flying around very fast making it hard for you to keep up with.
+   Este pássaro parece muito rápido, não muito forte mas muito rápido. Este pássaro
+está voando muito rápido tornando difícil para você acompanhar.
 ~
 72 0 0 0 0 0 0 0 0 E
 22 13 -3 4d4+220 3d3+3
@@ -207,13 +206,13 @@ Int: 3
 Wis: 3
 E
 #23878
-crab~
-the little crab~
-A small crab sits here.
+caranguejo crab~
+o pequeno caranguejo~
+Um pequeno caranguejo está aqui.
 ~
-   This crab looks very tough.  The crab has only one claw but that has been
-enough to keep it alive so far.  The crab also is missing a leg which appears
-to have been eaten.
+   Este caranguejo parece muito resistente. O caranguejo tem apenas uma garra mas
+isso tem sido suficiente para mantê-lo vivo até agora. O caranguejo também está
+perdendo uma perna que parece ter sido comida.
 ~
 72 0 0 0 0 0 0 0 0 E
 22 13 -3 4d4+220 3d3+3
@@ -222,13 +221,13 @@ to have been eaten.
 BareHandAttack: 1
 E
 #23879
-duck~
-the swimming duck~
-A swimming duck is here in the water.
+pato duck~
+o pato nadador~
+Um pato nadador está aqui na água.
 ~
-   The duck has many colorful feathers and seems flawless in pattern and color
-of it's feathers.  The duck itself seems very calm and easy.  The water around
-the duck seems to be cleaner than the rest.
+   O pato tem muitas penas coloridas e parece impecável em padrão e cor de suas
+penas. O pato em si parece muito calmo e tranquilo. A água ao redor do pato parece
+estar mais limpa que o resto.
 ~
 72 0 0 0 0 0 0 0 0 E
 24 12 -4 4d4+240 4d4+4
@@ -236,13 +235,13 @@ the duck seems to be cleaner than the rest.
 8 8 0
 E
 #23880
-swallow~
-the swallow~
-A large swallow is here hunting fish.
+andorinha swallow~
+a andorinha~
+Uma grande andorinha está aqui caçando peixes.
 ~
-   This swallow looks very hungry and has determination in his eye but has had
-no luck as of yet.  The bird is very persistent and seems almost dead from
-hunger but he keeps searching.
+   Esta andorinha parece muito faminta e tem determinação em seus olhos mas não
+teve sorte ainda. O pássaro é muito persistente e parece quase morto de fome mas
+continua procurando.
 ~
 72 0 0 0 0 0 0 0 0 E
 25 12 -5 5d5+250 4d4+4
