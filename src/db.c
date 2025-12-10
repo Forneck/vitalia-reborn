@@ -1491,6 +1491,38 @@ void parse_room(FILE *fl, int virtual_nr)
                 new_descr->next = world[room_nr].ex_description;
                 world[room_nr].ex_description = new_descr;
                 break;
+            case 'T': /* trigger attachment */
+            {
+                char junk[8];
+                int vnum, rnum;
+                int count = sscanf(line, "%7s %d", junk, &vnum);
+                
+                if (count != 2) {
+                    log1("SYSERR: Error assigning trigger in room #%d! - Line was: %s", virtual_nr, line);
+                    break;
+                }
+                
+                rnum = real_trigger(vnum);
+                if (rnum == NOTHING) {
+                    log1("SYSERR: Trigger vnum #%d asked for but non-existent! (room: %d)", vnum, virtual_nr);
+                    break;
+                }
+                
+                struct trig_proto_list *new_trg, *trg_proto;
+                CREATE(new_trg, struct trig_proto_list, 1);
+                new_trg->vnum = vnum;
+                new_trg->next = NULL;
+                
+                trg_proto = world[room_nr].proto_script;
+                if (!trg_proto) {
+                    world[room_nr].proto_script = new_trg;
+                } else {
+                    while (trg_proto->next)
+                        trg_proto = trg_proto->next;
+                    trg_proto->next = new_trg;
+                }
+                break;
+            }
             case 'S': /* end of room */
                 /* DG triggers -- script is defined after the end of the room */
                 letter = fread_letter(fl);
