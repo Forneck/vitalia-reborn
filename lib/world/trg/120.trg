@@ -4,7 +4,7 @@ Armadilha Mortal Leões - 12017~
 ~
 * Armadilha de quase morte que atordoa o ator
 wait 1 sec
-set stunned %actor.hitp%
+eval stunned %actor.hitp% - 1
 %damage% %actor% %stunned%
 wait 5 sec
 %send% %actor% Os leões ficam entediados quando você para de se debater e te deixam para morrer.
