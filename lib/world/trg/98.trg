@@ -14,6 +14,30 @@ if %actor.is_pc%
   end
 end
 ~
+#9801
+Scroll Activate 9808~
+1 c 2
+usar use ativar activate~
+* Old SpecProc: scroll_9808 - Special scroll behavior
+if %cmd.mudcommand% == use || %cmd.mudcommand% == ativar
+  %send% %actor% O pergaminho antigo se desfaz em suas mãos.
+  %echoaround% %actor% %actor.name% ativa um pergaminho antigo.
+  * Object should be extracted after use
+end
+~
+#9802
+Evil Boss Aggressive~
+0 e 0
+entra entrou entrar enter entered~
+* Old SpecProc: evil_boss - Aggressive behavior for boss mobs
+if %actor.is_pc%
+  wait 2
+  emote rosna ameaçadoramente para %actor.name%.
+  say Você ousa entrar em meu domínio?
+  wait 3
+  kill %actor.name%
+end
+~
 #9803
 Angel 9806 Greet~
 0 g 100
@@ -206,30 +230,6 @@ if %self.vnum% == 9808
   else
     return 0
   end
-end
-~
-#9801
-Scroll Activate 9808~
-1 c 2
-usar use ativar activate~
-* Old SpecProc: scroll_9808 - Special scroll behavior
-if %cmd.mudcommand% == use || %cmd.mudcommand% == ativar
-  %send% %actor% O pergaminho antigo se desfaz em suas mãos.
-  %echoaround% %actor% %actor.name% ativa um pergaminho antigo.
-  * Object should be extracted after use
-end
-~
-#9802
-Evil Boss Aggressive~
-0 e 0
-entra entrou entrar enter entered~
-* Old SpecProc: evil_boss - Aggressive behavior for boss mobs
-if %actor.is_pc%
-  wait 2
-  emote rosna ameaçadoramente para %actor.name%.
-  say Você ousa entrar em meu domínio?
-  wait 3
-  kill %actor.name%
 end
 ~
 $~

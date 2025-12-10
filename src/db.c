@@ -1496,23 +1496,23 @@ void parse_room(FILE *fl, int virtual_nr)
                 char junk[8];
                 int vnum, rnum;
                 int count = sscanf(line, "%7s %d", junk, &vnum);
-                
+
                 if (count != 2) {
                     log1("SYSERR: Error assigning trigger in room #%d! - Line was: %s", virtual_nr, line);
                     break;
                 }
-                
+
                 rnum = real_trigger(vnum);
                 if (rnum == NOTHING) {
                     log1("SYSERR: Trigger vnum #%d asked for but non-existent! (room: %d)", vnum, virtual_nr);
                     break;
                 }
-                
+
                 struct trig_proto_list *new_trg, *trg_proto;
                 CREATE(new_trg, struct trig_proto_list, 1);
                 new_trg->vnum = vnum;
                 new_trg->next = NULL;
-                
+
                 trg_proto = world[room_nr].proto_script;
                 if (!trg_proto) {
                     world[room_nr].proto_script = new_trg;
