@@ -1,0 +1,1787 @@
+#23800
+Sala de Descrição da Zona do Castelo de Cristal de Polar/Higgins~
+   Esta área é um mundo muito diferente. Há portais e coisas escondidas
+por toda parte.
+Construtores : Polar Higgins
+Zona         : 238 Castelo de Cristal
+Início       : 1998
+Nível        : 22-26
+Salas        : 80
+Mobs         : 15
+Objetos      : 29
+Lojas        : 0
+Gatilhos     : 16
+Tema         :
+Enredo       :
+Links        : 75
+Mapa         : 00
+~
+238 520 0 0 0 0
+S
+#23801
+Diante do Lago~
+   Este pequeno pedaço de terra fica diante de um grande lago. Um grande castelo
+de cristal pode ser visto ao longe no meio do lago. Muitas pequenas pegadas podem
+ser vistas espalhadas pela trilha que o trouxe até esta maravilha de castelos.
+~
+238 4 0 0 0 0
+D0
+   Ao olhar para o norte você percebe que não há nada além de água.
+~
+~
+0 0 23802
+D2
+Olhando para o sul você vê uma área que leva à névoa.
+~
+~
+0 0 23880
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23802
+No Lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 64 0 0 0 6
+D0
+   Olhando para o norte não há nada além de água.
+~
+~
+0 0 23817
+D1
+   Ao olhar para o leste você vê água.
+~
+~
+0 0 23803
+D2
+   Ao olhar para o sul você percebe um grande pedaço de terra. Espalhadas por
+aí estão muitas pequenas pegadas e marcas de garras.
+~
+~
+0 0 23801
+S
+#23803
+No Lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 6
+D0
+Olhando para o norte nada além de névoa pode ser visto
+~
+~
+0 0 23816
+D1
+Ao olhar para o leste você vê água.
+~
+~
+0 0 23804
+D3
+Ao olhar para o oeste você vê mais água.
+~
+~
+0 0 23802
+S
+#23804
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+Nada além de névoa pode ser visto ao norte.
+~
+~
+0 0 23815
+D1
+Ao olhar para o leste você não vê nada além de água.
+~
+~
+0 0 23805
+D3
+Ao olhar para o oeste você não vê nada além de água.
+~
+~
+0 0 23803
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23805
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+Nada além de névoa e neblina pode ser visto à distância.
+~
+~
+0 0 23814
+D1
+Ao olhar para o leste você vê mais água.
+~
+~
+0 0 23806
+D3
+Ao olhar para o oeste você vê mais água.
+~
+~
+0 0 23804
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23806
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 64 0 0 0 6
+D0
+Ao olhar para o norte você não vê nada além de toneladas de água.
+~
+~
+0 0 23813
+D1
+Ao olhar para o leste você não vê nada além de água nauseante.
+~
+~
+0 0 23807
+D3
+ Ao olhar para o oeste você vê mais água.
+~
+~
+0 0 23805
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23807
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 6
+D0
+Névoa e neblina podem ser vistas à distância.
+~
+~
+0 0 23812
+D1
+Ao olhar para o oeste você vê ainda mais água.
+~
+~
+0 0 23808
+D3
+Ao olhar para o oeste você vê mais água.
+~
+~
+0 0 23806
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23808
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+Névoa e neblina são as únicas coisas a serem vistas à distância.
+~
+~
+0 0 23811
+D1
+Ao olhar para o leste você vê um pequeno pedaço de terra.
+~
+~
+0 0 23809
+D3
+Ao olhar para o oeste você vê mais água.
+~
+~
+0 0 23807
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23809
+Pedaço de terra~
+   Aqui está um pequeno pedaço de terra no meio do lago. Há uma pequena névoa que
+cobre a parte externa do lago tornando-o inalcançável. Você nem pode ver de onde
+veio na margem do lago. Pode ser tarde demais para voltar atrás. Areia cobre o
+chão aqui com um pequeno pedaço de grama de formato quadrado no centro da pequena
+ilha.
+~
+238 32772 0 0 0 0
+D0
+Ao olhar para o norte você não vê nada além de água nojenta.
+~
+~
+0 0 23810
+D3
+Ao olhar para o oeste você vê mais água nauseante.
+~
+~
+0 0 23808
+D5
+Isto parece levar você para debaixo da ilha.
+~
+remendo patch~
+1 0 23834
+S
+#23810
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23825
+D2
+Ao olhar para o sul você percebe um pequeno pedaço de terra seca.
+~
+~
+0 0 23809
+D3
+Ao olhar para o oeste você não vê nada além de água.
+~
+~
+0 0 23811
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23811
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23824
+D1
+~
+~
+0 0 23810
+D2
+~
+~
+0 0 23808
+D3
+~
+~
+0 0 23812
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23812
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23823
+D1
+~
+~
+0 0 23811
+D2
+~
+~
+0 0 23807
+D3
+~
+~
+0 0 23813
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23813
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23822
+D1
+~
+~
+0 0 23812
+D2
+~
+~
+0 0 23806
+D3
+~
+~
+0 0 23814
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23814
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23821
+D1
+~
+~
+0 0 23813
+D2
+~
+~
+0 0 23805
+D3
+~
+~
+0 0 23815
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23815
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23820
+D1
+~
+~
+0 0 23814
+D2
+~
+~
+0 0 23804
+D3
+~
+~
+0 0 23816
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23816
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima. Uma névoa espessa cobre esta
+área tornando difícil ver qualquer coisa à distância.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23819
+D1
+~
+~
+0 0 23815
+D2
+~
+~
+0 0 23803
+D3
+~
+~
+0 0 23817
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23817
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23818
+D1
+~
+~
+0 0 23816
+D2
+   Olhando para o sul há água espalhada por toda a área.
+~
+~
+0 0 23802
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23818
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23833
+D1
+~
+~
+0 0 23819
+D2
+~
+~
+0 0 23817
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23819
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23832
+D1
+~
+~
+0 0 23820
+D2
+~
+~
+0 0 23816
+D3
+~
+~
+0 0 23818
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23820
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23831
+D1
+~
+~
+0 0 23821
+D2
+~
+~
+0 0 23815
+D3
+~
+~
+0 0 23819
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23821
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23830
+D1
+~
+~
+0 0 23822
+D2
+~
+~
+0 0 23814
+D3
+~
+~
+0 0 23820
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23822
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23829
+D1
+~
+~
+0 0 23823
+D2
+~
+~
+0 0 23813
+D3
+~
+~
+0 0 23821
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23823
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23828
+D1
+~
+~
+0 0 23824
+D2
+~
+~
+0 0 23812
+D3
+~
+~
+0 0 23822
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23824
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23827
+D1
+~
+~
+0 0 23825
+D2
+~
+~
+0 0 23811
+D3
+~
+~
+0 0 23823
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23825
+No lago~
+   Há uma fina camada de película que repousa sobre o topo do lago. Sob o lago
+podem ser vistos pequenos peixes e alguns pedaços de lixo, mas nada importante.
+Além disso, a areia no fundo do lago não é exatamente areia, mas cristal quebrado,
+tornando impossível caminhar no fundo do lago. Algas também flutuam em direção ao
+topo do lago, dificultando ver do fundo para cima.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23826
+D2
+~
+~
+0 0 23810
+D3
+~
+~
+0 0 23824
+E
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
+~
+S
+#23826
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D2
+~
+~
+0 0 23825
+D3
+~
+~
+0 0 23827
+S
+#23827
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23826
+D2
+~
+~
+0 0 23824
+D3
+~
+~
+0 0 23828
+S
+#23828
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23827
+D2
+~
+~
+0 0 23823
+D3
+~
+~
+0 0 23829
+S
+#23829
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23828
+D2
+~
+~
+0 0 23822
+D3
+~
+~
+0 0 23830
+S
+#23830
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23829
+D2
+~
+~
+0 0 23821
+D3
+~
+~
+0 0 23831
+S
+#23831
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23830
+D2
+~
+~
+0 0 23820
+D3
+~
+~
+0 0 23832
+S
+#23832
+Na névoa~
+   Aqui é difícil ver qualquer coisa além do que está na área com você. Há uma
+espessa névoa cinza em torno de tudo, deixando você vagando sem saber onde está e
+para onde ir. Isto deve ser algum tipo de magia porque a névoa parece não estar se
+movendo e tem um brilho estranho.
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23831
+D2
+~
+~
+0 0 23819
+D3
+~
+~
+0 0 23833
+S
+#23833
+Diante do castelo~
+   Você se encontra diante de um castelo de cristal massivo. Parece ser impecável
+e muito delicado, mas muito forte no design. Há muitos pequenos cristais salientes
+nas laterais do castelo, tornando impossível escalar a parede. Há um grande portão
+levando para dentro do castelo diretamente ao norte.
+
+~
+238 32768 0 0 0 0
+D1
+~
+~
+0 0 23832
+D2
+~
+~
+0 0 23818
+S
+#23834
+Sob a areia~
+   Há grandes teias de aranha e insetos mortos espalhados por aí. Há também um
+fedor repugnante que o cercou completamente. Muitos insetos nojentos rastejam
+procurando um pedaço de comida aqui. Há um pequeno túnel levando ao norte,
+conduzindo você para a escuridão.
+~
+238 32768 0 0 0 0
+D0
+Olhando para o norte há um pequeno túnel levando ao norte
+~
+~
+0 0 23835
+D4
+Levando para cima há um pequeno pedaço de terra.
+~
+remendo patch~
+1 0 23809
+E
+olhar teia aranha~
+   Há muitas pequenas aranhas ao redor da sala procurando algo para comer.
+~
+S
+#23835
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23836
+D2
+Olhando para o sul você vê uma pequena área sob um pedaço de grama.
+~
+~
+0 0 23834
+S
+#23836
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23837
+D2
+~
+~
+0 0 23835
+S
+#23837
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes. Parece haver os restos do crânio de alguém aqui no chão.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23838
+D2
+~
+~
+0 0 23836
+S
+#23838
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23839
+D2
+~
+~
+0 0 23837
+S
+#23839
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes.
+~
+238 32768 0 0 0 0
+D0
+~
+~
+0 0 23840
+D2
+~
+~
+0 0 23838
+S
+#23840
+Através do túnel~
+   Este é um túnel muito pequeno, mal grande o suficiente para uma pessoa. Parece
+não ter sido usado por muito tempo. Parece que foi usado como rota de fuga ou
+talvez para alguém entrar ou sair furtivamente. Há muitas gravações na parede,
+nada especial, apenas entalhes. Também ainda há teias de aranha revestindo as
+paredes.
+~
+238 32768 0 0 0 0
+D2
+~
+~
+0 0 23839
+S
+T 23840
+#23841
+Entrada do castelo~
+   Há muitas cabeças sangrentas e mal-cheirosas penduradas nas paredes como se
+houvesse algum tipo de monstro louco vivendo aqui, mutilando tudo que entra em
+seu caminho. As cabeças parecem ter sido cortadas com algum tipo de lâmina
+cega. Sangue cobre os pisos e partes de corpos mutiladas estão espalhadas.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte revela uma sala cheia de cadáveres.
+~
+~
+0 0 23842
+D3
+Olhando para o oeste parece ser uma sala de armazenamento.
+~
+~
+0 0 23843
+D4
+Olhando para cima parece ser o andar principal do castelo.
+~
+alçapão trapdoor~
+1 0 23845
+D5
+Alçapão
+~
+alçapão trap door~
+1 0 23840
+E
+cabeça head~
+   Há muitas cabeças espalhadas pela sala com muitos cheiros nojentos. Essas
+cabeças parecem ter sido roídas do pescoço do dono muito violentamente, como se
+arrancadas por animais.
+~
+S
+#23842
+Cadáveres~
+   Você está em uma sala cheia de cadáveres em decomposição. Há muitos decapitados
+deitados em uma grande pilha na parede leste e alguns sem membros extras empilhados
+no lado norte. Também há uma pilha de cabeças empilhadas na parede oeste desta sala.
+Há muitos cheiros nojentos que vêm desta sala fazendo qualquer um que entre querer
+vomitar.
+~
+238 4 0 0 0 0
+D2
+Olhando para o sul você vê a entrada do castelo.
+~
+~
+0 0 23841
+E
+cadáveres corpses~
+   Há muitos cadáveres decapitados espalhados pela sala, empilhados em todos os
+cantos da sala.
+~
+S
+T 23839
+#23843
+Sala de armazenamento~
+   Esta sala foi preenchida com muitas caixas pequenas e grandes. Há muitas coisas
+guardadas aqui, muitas das quais não são mais boas devido à população de ratos
+atual. Parece que ninguém estava planejando voltar para pegar nenhum dos itens
+armazenados.
+~
+238 8 0 0 0 0
+D1
+Olhando para o leste parece ser a entrada para algo.
+~
+~
+0 0 23841
+S
+#23844
+Sala do tesouro~
+   Você entrou na sala do tesouro do castelo. Há muitas pilhas diferentes de
+moedas em uma grande massa empilhada no chão. Parece que foi armazenado aqui há
+muito tempo e esquecido. A sala tem muitas bandeiras de cores diferentes afixadas
+por toda parte
+~
+238 0 0 0 0 0
+S
+#23845
+Corredor do andar principal~
+   Esta sala é o início do andar principal do castelo. Há pilares espalhados em
+um design decorativo. Muitas peças de cerâmica alinham as paredes em cima de muitas
+mesas elegantes. Há muitas peças finas de arte e algumas esculturas espalhadas,
+fazendo a sala parecer muito elegante para aqueles que entram no castelo.
+~
+238 8 0 0 0 0
+D0
+Olhando para o norte parece levar a uma interseção do castelo.
+~
+~
+0 0 23847
+D2
+Olhando para o sul você vê uma vista do lago do 2º andar do castelo.
+~
+porta door~
+1 0 23846
+D5
+A entrada do castelo parece ser por aqui.
+~
+alçapão trapdoor~
+1 0 23841
+E
+cerâmica pottery~
+   Estes potes são muito antigos e frágeis, mas muito valiosos.
+~
+E
+pilar pillar~
+   Estes pilares parecem ser feitos de cristal puro e têm cerca de 3 metros de altura.
+~
+S
+#23846
+Fora do castelo~
+   Esta sala parece suportá-lo mesmo que você não pensasse que iria. Há pequenas
+árvores espalhadas abaixo e um lago massivo logo ao sul. Você pode ver pequenos
+peixes nadando no lago abaixo. Ao olhar para trás, você percebe que pode subir
+para um compartimento que é muito grande.
+~
+238 4 0 0 0 4
+D0
+Olhando para o norte revela a entrada do andar principal.
+~
+~
+0 0 23845
+D4
+Olhando para cima você vê uma grande sala com um teto de cristal e um piso de cristal.
+~
+~
+0 0 23881
+S
+#23847
+Interseção~
+   O piso coberto de tapete atrai atenção para o centro do piso aqui. Há uma
+grande imagem de um dragão tecida no centro do belo tapete. Não há muitas
+decorações aqui, exceto pelo dragão no centro do tapete. O dragão parece puxá-lo
+para algum tipo de transe.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte você vê o corredor norte.
+~
+~
+0 0 23851
+D1
+Olhando para o leste parece levar ao corredor leste.
+~
+~
+0 0 23850
+D2
+Olhando para o sul parece levar ao corredor principal do castelo.
+~
+~
+0 0 23845
+D3
+olhando para o oeste parece levá-lo através do corredor oeste.
+~
+~
+0 0 23848
+E
+dragão dragon~
+   Olhar para esta imagem tecida no tapete parece colocá-lo em transe, tornando
+difícil acreditar que esta imagem é apenas uma imagem.
+~
+S
+#23848
+Corredor oeste~
+   Esta sala parece estar em excelente condição, assim como as salas anteriores.
+Não há decorações aqui ou qualquer tipo de arte. Há paredes nuas e piso de azulejo.
+Este corredor parece não ser muito popular ou apenas não está terminado.
+~
+238 0 0 0 0 0
+D1
+~
+~
+0 0 23847
+D3
+Olhando para o oeste parece revelar um beco sem saída.
+~
+~
+0 0 23849
+S
+#23849
+Beco sem saída~
+   Esta sala parece ser o fim do corredor oeste que o trouxe até aqui. Não há
+decorações nesta sala e nenhum tipo de evidência de habitantes. Há muitos azulejos
+que revestem o piso por todo o chão, parecendo formar um círculo. Há pequenas
+marcações colocadas no círculo, mas você não pode dizer para que servem ou de onde
+vêm.
+~
+238 0 0 0 0 0
+D1
+Olhando para o leste parece levá-lo ao corredor oeste.
+~
+~
+0 0 23848
+E
+estátua statue~
+   Olhando para a estátua, você percebe que é uma grande estátua de um serpe alada.
+~
+E
+arranhões scratch~
+   Há muitos arranhões formando um pequeno círculo no meio dos azulejos.
+~
+S
+#23850
+Corredor leste~
+   Há muitas cores diferentes nesta sala, como se tivesse sido pintada com tinta.
+Há redemoinhos e padrões diferentes como se fosse algum tipo de arte. Também há
+alguns pontos fora de lugar no chão que parecem ter pingado do teto. No entanto,
+não há manchas no teto.
+~
+238 0 0 0 0 0
+D1
+Olhando para o leste você percebe que isto o levará mais adiante no corredor leste.
+~
+~
+0 0 23851
+D3
+Olhando para o oeste mostra a você a interseção.
+~
+~
+0 0 23847
+E
+manchas spots~
+   Olhando mais cuidadosamente, você percebe que essas manchas parecem ser algum tipo
+de rastros levando do teto ao chão.
+~
+S
+#23851
+Mais adiante no corredor leste~
+   Esta sala parece ser a mesma que a última, exceto que as manchas no chão não
+estão aqui. Também há alguns pequenos itens espalhados pelo chão, consistindo de
+fezes de rato, penas de pássaro, teias de aranha e cascas de barata. Não há
+vestígios de alguém ter vindo aqui para limpar esta sala ou mesmo ter passado por
+ela porque há uma camada de poeira no chão revelando suas pegadas ao cruzá-lo.
+~
+238 0 0 0 0 0
+D0
+~
+~
+0 0 23854
+D3
+O corredor leste é a única coisa a oeste.
+~
+~
+0 0 23850
+S
+#23854
+Corredor norte~
+   Esta sala é praticamente igual à primeira sala deste corredor, muito limpa e
+bem cuidada. Não há manchas ou qualquer tipo de sujeira. Quase parece que a sala
+é magicamente mantida e deixada impecável. Há também muitas tapeçarias nesta sala.
+~
+238 0 0 0 0 0
+D0
+ Olhando para o norte parece levá-lo a um beco sem saída.
+~
+~
+0 0 23855
+D2
+Olhando para o sul parece levar ao corredor norte.
+~
+NENHUM NONE~
+0 0 23851
+E
+tapeçarias tapestries~
+   As tapeçarias são muito elegantes e bem conservadas, são imagens de diferentes
+paisagens.
+~
+S
+#23855
+Beco sem saída~
+   Este parece ser o fim da linha para este corredor. Ainda há imagens muito
+elegantes e outras peças de arte colocadas pela sala aqui. Assim como antes, a
+sala está impecavelmente limpa. Não há vestígios de nada nesta sala.
+~
+238 0 0 0 0 0
+D2
+Olhando para o sul parece levá-lo ao corredor norte.
+~
+~
+0 0 23854
+E
+imagens pictures~
+   Estas imagens parecem ser pessoas, mas estão ligeiramente borradas quando você
+tenta focar nelas.
+~
+S
+#23856
+Corredor oculto~
+   Esta área parece ter sido também limpa, embora estivesse muito bem escondida.
+Não há vestígios de vida e nenhuma maneira de voltar. Há muitas pedras cobrindo o
+chão para fazer parecer que o chão aqui era o fundo da fonte.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte leva você mais adiante no corredor oculto.
+~
+~
+0 0 23857
+S
+#23857
+Mais adiante no corredor oculto~
+   Esta sala está tão limpa quanto as demais, mas daqui você pode ver o topo das
+nuvens quando olha para baixo. O chão parece ser o grande céu acima. O teto, no
+entanto, parece ser o topo de uma montanha apontando de cabeça para baixo em sua
+direção.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte você vê o céu e nuvens flutuando pela sala à frente.
+~
+~
+0 0 23858
+D2
+Olhando para o sul parece levá-lo de volta ao início do corredor oculto.
+~
+~
+0 0 23856
+E
+olhar montanha mountain~
+   A montanha parece que pode cair a qualquer segundo, provavelmente porque esta
+não é a maneira como você costuma vê-las.
+~
+E
+olhar céu sky~
+   Isto realmente parece o céu real, exceto que é resistente e pode sustentá-lo.
+~
+S
+#23858
+Caminhando pelo céu~
+   Você entrou em uma sala notável colocada acima das nuvens, exceto pelo fato de
+que você não pode andar, você tem que voar. Há pássaros e nuvens flutuando à
+distância. A única coisa que você pode ver são nuvens e o céu azul acima.
+~
+238 0 0 0 0 8
+D0
+Olhando para o norte você vê o que parece estar se aproximando do fim do corredor.
+~
+~
+0 0 23859
+D2
+Olhando para o sul você vê chão sólido levando de volta ao início deste corredor.
+~
+~
+0 0 23857
+S
+#23859
+Perto do fim~
+   Você pisou em chão sólido novamente. A sala aqui parece exatamente igual à
+primeira e você pode ver o que parece ser a primeira sala à frente ao norte. Há
+muitas belas imagens nas paredes aqui. Também o chão parece ser feito de algum tipo
+de madeira marrom escura.
+~
+238 0 0 0 0 0
+D0
+ Olhando para o norte você vê o fim do corredor.
+~
+~
+0 0 23860
+D2
+Olhando para o sul você vê o céu aberto.
+~
+~
+0 0 23858
+S
+#23860
+O fim~
+   Você finalmente chegou ao fim deste corredor abandonado. Não há mais pôsteres
+ou qualquer tipo de decoração aqui, apenas paredes, um chão e um teto, pelo qual
+você muito agradece. As paredes, chão e teto parecem ser feitos de madeira.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte você vê uma sala com 3 grandes itens cintilantes.
+~
+Portão Gate~
+2 23860 23861
+D2
+Olhando para o sul você pode ver mais corredor.
+~
+~
+0 0 23859
+E
+troll~
+   As marcações do troll parecem ser aquelas dos Lordes da Dor, significando poder
+e coragem.
+~
+S
+#23861
+Sala do portal~
+   Ao entrar nesta sala você percebe um grande portal verde em pé na parede norte
+desta sala cintilando na escuridão. Não há decorações nesta sala, mas a sala parece
+ter uma tonalidade verde.
+~
+238 0 0 0 0 0
+D2
+Olhando para o sul você vê um longo corredor.
+~
+Portão Gate~
+2 23860 23860
+S
+#23862
+Através do portal azul~
+   Você entrou no portal e ainda não encontrou nada além de azul brilhando
+fortemente ao seu redor. Você caminha ao longo do que parece ser um chão, mas não é
+nada além de luz do portal. Há muitos pequenos pontos flutuando ao redor do portal
+ao seu redor.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte parece levá-lo mais adiante no portal.
+~
+~
+0 0 23867
+E
+pontos spots~
+   Há muitos pequenos pontos que parecem ser algum tipo de portais menores dentro
+do grande portal.
+~
+S
+#23863
+Através do portal vermelho~
+   Este parece ser algum tipo de vórtice giratório pelo qual você pode viajar
+livremente. Há pequenos pontos que revestem as paredes aqui. Muitas partículas
+flutuam, esbarrando em você às vezes, fazendo uma faísca. Não há chão, teto ou
+paredes aqui para guiá-lo
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte revela outra parte do portal.
+~
+~
+0 0 23871
+E
+ponto spot~
+   Olhando mais de perto você vê que são bolas de energia, quando você se vira uma
+explode em seu rosto AI!!!!!
+~
+S
+#23864
+Através do portal verde~
+   Esta sala parece ter uma tonalidade verde em cada parte de toda a sala. Há
+pôsteres verdes cobrindo as paredes e pequenos pontos verdes espalhados por aí.
+~
+238 0 0 0 0 0
+D1
+Olhando para o leste parece levá-lo a outra sala do portal com uma aurora azul.
+~
+~
+0 0 23865
+D3
+~
+~
+0 0 23866
+S
+#23865
+Sala do portal~
+   Esta sala tem um grande portal azul contra a parede norte distante. Esta sala
+tem uma tonalidade azul na sala e não tem decorações ou desenhos em nenhum lugar da
+sala. O portal parece ter colocado uma aurora azul pela sala.
+~
+238 0 0 0 0 0
+D3
+~
+~
+0 0 23864
+S
+#23866
+Sala do portal~
+   Esta sala tem um grande portal vermelho colocado na parede norte e também tem
+uma tonalidade de vermelho por toda a sala. Não há itens decorativos ou qualquer
+outro tipo de decoração. A sala é muito simples, exceto pelo próprio portal.
+~
+238 0 0 0 0 0
+D1
+~
+~
+0 0 23864
+S
+#23867
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme.
+~
+238 0 0 0 0 0
+D0
+   Olhando para o norte mostra você mais adiante no portal.
+~
+~
+0 0 23868
+D2
+Olhando para o sul mostra a você a área onde você entra no portal.
+~
+~
+0 0 23862
+S
+#23868
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte mostra você mais portal.
+~
+~
+0 0 23869
+D2
+Ao sul é em direção ao início do portal.
+~
+~
+0 0 23867
+S
+#23869
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme. O chão aparece como um chão sólido agora.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte revela o trono do rei.
+~
+~
+0 0 23870
+D2
+Olhando para o sul mostra a você a área que leva ao início do portal.
+~
+~
+0 0 23868
+S
+#23870
+Câmara do rei~
+   Você entrou na câmara do rei. Você está cercado de ouro e prata por toda parte.
+As tapeçarias que revestem a parede são aparadas em ouro. O chão em que você caminha
+é feito de prata. E o teto que você olha é feito de titânio. Não há nada faltando
+~
+238 0 0 0 0 0
+D2
+Olhando para o sul revela o túnel de onde você veio.
+~
+~
+0 0 23869
+S
+#23871
+Mais através do portal vermelho.~
+   Esta área parece a mesma que a última, exceto pelos pequenos objetos flutuantes
+que causam as faíscas quando você esbarra neles são muito escassos aqui. O chão está
+começando a endurecer e as paredes estão começando a aparecer.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte revela uma saída levando mais adiante no portal.
+~
+~
+0 0 23872
+D2
+Olhando para o sul parece levá-lo para a sala de onde você entrou.
+~
+~
+0 0 23863
+S
+#23872
+Longe no portal vermelho.~
+   As paredes aqui estão cintilando e girando, fazendo uma bela massa de cores e
+padrões. As paredes parecem estar inalcançáveis, mas também bem ao seu lado. O chão
+é duro e sólido agora, apenas as paredes parecem instáveis.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte mostra você o fim deste portal.
+~
+~
+0 0 23873
+D2
+Olhando para o sul mostra você uma continuação da sala do portal.
+~
+~
+0 0 23871
+S
+#23873
+Em direção ao fim~
+   Esta área parece ser muito rica em cor e carregada com as pequenas partículas.
+Há muitas cores diferentes fluindo através das paredes, tornando-a uma visão
+espetacular. Os pontos parecem estar evitando você agora, poupando-lhe uma dor de
+cabeça.
+~
+238 0 0 0 0 0
+D0
+ Olhando para o norte você vê a sala da rainha.
+~
+~
+0 0 23874
+D2
+Olhando para o sul revela o portal de onde você veio.
+~
+~
+0 0 23872
+S
+#23874
+Sala da rainha Plegia~
+   Esta sala é muito elegante de cima a baixo. Há muitas peças de arte decorativas
+nesta sala revelando os gostos elegantes da realeza. O trono da rainha está
+empoleirado no topo de um grande quadrado dourado. O próprio trono parece ser feito
+de ouro e seda.
+~
+238 0 0 0 0 0
+D2
+Olhando para o sul você vê o portal de onde você veio.
+~
+~
+0 0 23873
+E
+trono throne~
+   Feito de ouro sólido revestido com seda, este trono parece ser um assento muito
+elegante.
+~
+S
+#23875
+Estrada sul~
+   Você está caminhando por uma pequena trilha que parece não levar a lugar nenhum.
+A estrada mudou aqui e parece ser menos brilhante e mais assustadora. A área ainda
+é boa e a terra é fértil, mas o ar ao redor parece muito estranho.
+~
+238 0 0 0 0 0
+D1
+Olhando para o leste a estrada começa a ficar embaçada e você não pode ver muito longe.
+~
+~
+0 0 23876
+S
+#23876
+Em direção ao lago~
+   Esta área parece ser muito estranha. Há muitos sons estranhos e cheiros
+diferentes. Não há animais aqui, mas você pode ouvir os sons de animais à distância.
+Há uma pequena névoa chegando que se estende mais para o leste.
+~
+238 0 0 0 0 0
+D1
+Olhando para o leste você não pode ver nada exceto névoa.
+~
+~
+0 0 23877
+D3
+Olhando para o oeste você vê a estrada sul.
+~
+~
+0 0 23875
+S
+#23877
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
+~
+238 0 0 0 0 0
+D1
+~
+~
+0 0 23878
+D3
+~
+~
+0 0 23876
+S
+#23878
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
+~
+238 0 0 0 0 0
+D1
+~
+~
+0 0 23879
+D3
+~
+~
+0 0 23877
+S
+#23879
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
+~
+238 0 0 0 0 0
+D1
+ Olhando para o leste você vê uma grande área diante de um grande lago.
+~
+~
+0 0 23880
+D3
+~
+~
+0 0 23878
+S
+#23880
+Uma Clareira Diante do Lago~
+   Você está aqui em frente a um lago massivo. Há muitos pequenos animais
+espalhados, parecendo querer sair, mas não conseguem. Há muitos cheiros diferentes
+cercando a área.
+~
+238 0 0 0 0 0
+D0
+Olhando para o norte você vê a área diante do lago.
+~
+~
+0 0 23801
+D3
+Olhando para o oeste você vê os picos nevados de montanhas distantes através da névoa.
+~
+~
+0 -1 12660
+S
+#23881
+Covil do Dragão~
+   Você entrou em uma grande sala com muito poucas decorações e nenhum tipo de arte.
+Há marcas de garras e buracos muito grandes nas paredes e teto ao redor. O chão é
+muito duro e parece ser composto de cristal. O teto também é feito dos mesmos
+materiais.
+~
+238 0 0 0 0 0
+D5
+Olhando para baixo você vê as rochas em frente ao castelo.
+~
+~
+0 0 23846
+E
+arranhões scratches~
+   Olhando mais de perto você vê que esses arranhões são de algum tipo de animal.
+~
+S
+$~

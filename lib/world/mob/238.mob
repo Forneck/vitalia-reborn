@@ -1,0 +1,251 @@
+#23802
+peixe fish~
+o grande peixe~
+Um grande peixe nada aqui.
+~
+   Este peixe parece muito feroz e faminto.
+~
+76 0 0 0 0 0 0 0 -20 E
+22 13 -3 4d4+220 3d3+3
+220 48400
+8 8 0
+BareHandAttack: 4
+E
+#23833
+peixe-espada peixe swordfish fish~
+um grande peixe-espada~
+Um grande peixe-espada nada aqui.
+~
+   Este peixe tem um nariz muito longo e afiado e parece não perceber você.
+~
+72 0 0 0 0 0 0 0 -20 E
+22 13 -3 4d4+220 3d3+3
+220 48400
+8 8 0
+BareHandAttack: 14
+E
+#23841
+Monstro Monster~
+o monstro feio~
+Um grande monstro feio está aqui.
+~
+   Este monstro parece faminto por sangue. Há muitas manchas de sangue ao redor
+de sua boca e sobre seu corpo. Muitos ossos diferentes revestem seu pescoço
+conectados por algum tipo de metal.
+~
+30 0 0 0 0 0 0 0 -100 E
+23 13 -3 4d4+230 3d3+3
+230 52900
+8 8 1
+BareHandAttack: 4
+Str: 25
+Dex: 9
+Int: 4
+Wis: 5
+E
+T 23841
+T 23842
+#23842
+rato rat~
+o pequeno rato~
+Um pequeno rato está aqui correndo em círculos.
+~
+   O rato parece ter muitas feridas nas costas como se algo o tivesse atacado ou
+algo assim. O rato em si não parece nada doente, tem muita energia e parece estar
+correndo em círculos há horas.
+~
+26 0 0 0 1024 0 0 0 0 E
+22 13 -3 4d4+220 3d3+3
+220 48400
+8 8 0
+BareHandAttack: 8
+Str: 3
+Dex: 4
+Int: 4
+Wis: 4
+E
+#23849
+serpe alada cristal Crystal wyvern~
+a serpe alada de cristal~
+Uma grande estátua está firme aqui.
+~
+   Esta estátua parece ser sólida mas viva. Parece muito forte mas não muito
+rápida, mas não parece estar se movendo. A estátua está firme olhando para o leste,
+de onde você veio.
+~
+10 0 0 0 4 0 0 0 0 E
+26 12 -5 5d5+260 4d4+4
+260 67600
+8 8 1
+BareHandAttack: 6
+Str: 25
+Dex: 3
+Int: 15
+Wis: 15
+E
+#23851
+aranha spider~
+uma grande aranha~
+Uma grande aranha com sede de sangue está presa na parede aqui.
+~
+   Esta aranha tem muitos cadáveres espalhados em sua teia e parece querer
+adicioná-lo.
+~
+26 0 0 0 0 0 0 0 -100 E
+24 12 -4 4d4+240 4d4+4
+240 57600
+8 8 0
+BareHandAttack: 4
+E
+#23855
+homem velho man~
+o velho~
+Um homem de aparência muito velha está aqui.
+~
+   Este homem parece ser muito velho e tem muitas feridas de guerra. Ele também
+parece ser experiente na arte da guerra. O velho não parece ser um guerreiro ou
+lutador, mas sim um conjurador de feitiços. Usando muitas peças valiosas de
+equipamento faz você se perguntar se este cara pode estar falando sério.
+~
+8202 0 0 0 0 0 0 0 0 E
+26 12 -5 5d5+260 4d4+4
+260 67600
+8 8 1
+BareHandAttack: 11
+Str: 5
+Dex: 14
+Int: 20
+Wis: 20
+E
+#23860
+troll~
+o grande troll~
+Um grande troll com marcas de algum tipo de clã está aqui.
+~
+   O troll parece estar cansado e estressado.
+~
+10 0 0 0 0 0 0 0 -100 E
+26 12 -5 5d5+260 4d4+4
+260 67600
+8 8 1
+BareHandAttack: 13
+Str: 20
+Dex: 10
+Int: 20
+Wis: 25
+E
+T 23853
+T 23854
+T 23856
+T 23857
+T 23858
+T 23859
+T 23860
+#23874
+Rainha Plegia Queen Plegia~
+a rainha plegia~
+A Rainha Plegia está sentada em seu trono aqui.
+~
+   A rainha parece ter muito poder e experiência. Ela tem lindos cabelos brancos
+e olhos azul bebê. Ela não parece questionar sua intrusão, mas parece feliz por
+você ter vindo.
+~
+10 0 0 0 0 0 0 0 100 E
+26 12 -5 5d5+260 4d4+4
+260 67600
+8 8 2
+BareHandAttack: 12
+E
+#23875
+dragão dragon~
+um dragão de cristal~
+Um grande dragão coberto de cristal descansa aqui.
+~
+   Este dragão parece ser muito velho e muito experiente devido às enormes feridas
+de guerra em suas costas e asas. O dragão parece muito resistente e parece ser
+feito de cristal.
+~
+10 0 0 0 1048576 0 0 0 0 E
+26 12 -5 5d5+260 4d4+4
+260 67600
+5 5 1
+BareHandAttack: 8
+Str: 18
+Dex: 3
+Int: 13
+Wis: 18
+E
+#23876
+truta trout~
+a truta~
+Uma grande truta nada aqui.
+~
+   Esta truta parece um pouco feroz. Seus olhos estão brilhando em vermelho e suas
+escamas estão ligeiramente brilhando. O peixe nada aqui inconsciente de sua entrada.
+~
+72 0 0 0 0 0 0 0 0 E
+25 12 -5 5d5+250 4d4+4
+250 62500
+8 8 0
+E
+#23877
+pássaro ave bird~
+o pássaro azul~
+Um veloz pássaro azul está voando aqui.
+~
+   Este pássaro parece muito rápido, não muito forte mas muito rápido. Este pássaro
+está voando muito rápido tornando difícil para você acompanhar.
+~
+72 0 0 0 0 0 0 0 0 E
+22 13 -3 4d4+220 3d3+3
+220 48400
+8 8 2
+Str: 3
+Dex: 20
+Int: 3
+Wis: 3
+E
+#23878
+caranguejo crab~
+o pequeno caranguejo~
+Um pequeno caranguejo está aqui.
+~
+   Este caranguejo parece muito resistente. O caranguejo tem apenas uma garra mas
+isso tem sido suficiente para mantê-lo vivo até agora. O caranguejo também está
+perdendo uma perna que parece ter sido comida.
+~
+72 0 0 0 0 0 0 0 0 E
+22 13 -3 4d4+220 3d3+3
+220 48400
+8 8 0
+BareHandAttack: 1
+E
+#23879
+pato duck~
+o pato nadador~
+Um pato nadador está aqui na água.
+~
+   O pato tem muitas penas coloridas e parece impecável em padrão e cor de suas
+penas. O pato em si parece muito calmo e tranquilo. A água ao redor do pato parece
+estar mais limpa que o resto.
+~
+72 0 0 0 0 0 0 0 0 E
+24 12 -4 4d4+240 4d4+4
+240 57600
+8 8 0
+E
+#23880
+andorinha swallow~
+a andorinha~
+Uma grande andorinha está aqui caçando peixes.
+~
+   Esta andorinha parece muito faminta e tem determinação em seus olhos mas não
+teve sorte ainda. O pássaro é muito persistente e parece quase morto de fome mas
+continua procurando.
+~
+72 0 0 0 0 0 0 0 0 E
+25 12 -5 5d5+250 4d4+4
+250 62500
+8 8 0
+E
+$

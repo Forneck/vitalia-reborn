@@ -1,0 +1,384 @@
+#23800
+mapa map~
+um mapa do castelo de cristal~
+Um mapa do castelo de cristal.~
+
+                        O
+                        |
+                    O O-v
+
+
+
+                            ^
+                            |
+          O-O-O-O-O-O-O-O   O                 O     O
+          | | | | | | | |   |                 |     |
+          O-O-O-O-O-O-O-O   O   O           O O     O
+          | | | | | | | |   |   |           | |     |
+          O-O-O-O-O-O-O-O   O   O           O O   O-O
+          | | | | | | | |   |   |           | |     |
+          O-O-O-O-O-O-O-v   O   O           O O O-O-O
+          |                 |   |           | |     |
+          O                 O   O           O O     v
+          |                 |   |           | |     |
+O-O-O-O-O-O                 ^   O   O-O-O   O O     ^
+~
+16 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 0 0 0
+#23801
+anel ring~
+um anel cor de rubi~
+Um pequeno anel coberto de rubi está aqui.~
+~
+9 gp 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+2 1000 0 0 0
+A
+4 2
+A
+1 -2
+A
+2 -1
+#23802
+cajado varinha wand~
+um cajado da sabedoria~
+Um cajado muito colorido está aqui.~
+~
+3 gklop 0 0 0 ao 0 0 0 0 0 0 0
+12 4 4 24
+2 500 0 0 0
+A
+12 30
+A
+1 -2
+A
+2 -1
+#23803
+arco bow~
+um arco curto~
+Um arco coberto de esmeralda está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 12
+14 1000 0 0 0
+A
+2 -1
+A
+12 30
+A
+5 -1
+#23804
+manto capa cloak~
+manto portal~
+Um grande manto com aparência de portal está aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+10 10 0 0 0
+A
+4 2
+A
+3 2
+A
+2 -2
+#23805
+escuridão darkness~
+uma garrafa~
+Uma bolsa cintilando com poder obscuro está aqui.~
+~
+15 j 0 0 0 a 0 0 0 0 0 0 0
+1000 1 -1 0
+1 1000 0 0 0
+#23806
+anel ring~
+um anel de casamento~
+Um pequeno anel de casamento de diamante está aqui.~
+~
+9 0 0 0 0 ab 0 0 0 0 0 0 0
+5 0 0 0
+1 1000 0 0 0
+A
+6 2
+A
+2 -1
+A
+18 -2
+#23807
+botas boots~
+botas de furtividade~
+Um par de botas com um emblema de asa preso ao calcanhar está aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+1 0 0 0
+9 600 0 0 0
+A
+2 2
+A
+14 30
+A
+13 -10
+#23833
+nariz peixe-espada swordfish nose~
+o nariz do peixe-espada~
+Uma grande espada feita do nariz de um peixe-espada está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+5 5 10 11
+20 1000 0 0 0
+A
+14 -20
+A
+17 5
+#23837
+crânio skull~
+um pequeno crânio~
+Um pequeno crânio que parece ser de um humano muito pequeno.~
+~
+15 deh 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#23838
+poção luz light potion~
+uma poção de luz~
+Uma pequena poção de luz está aqui.~
+~
+10 a 0 0 0 a 0 0 0 0 0 0 0
+20 28 -1 -1
+2 500 0 0 0
+#23840
+tocha torch~
+uma tocha de luz~
+Uma pequena tocha crepita na parede lançando uma luz tremeluzente.~
+~
+1 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+pedra stone~
+   Após uma inspeção mais detalhada, você percebe que a tocha pode ser puxada.
+~
+E
+tocha torch~
+   Uma pequena tocha de luz está aqui saindo da parede cercada por pedras soltas.
+~
+#23841
+colar ossos bone necklace~
+um colar de ossos~
+Um colar feito de ossos está aqui.~
+~
+9 djn 0 0 0 ac 0 0 0 0 0 0 0
+10 0 0 0
+10 100 0 0 0
+E
+colar necklace~
+   Ao olhar para este colar, você vê que é feito de pequenos pedaços de osso
+conectados por titânio.
+~
+A
+1 2
+A
+4 -2
+A
+12 -30
+#23843
+caixa box~
+uma grande caixa~
+Uma grande caixa está em pé aqui.~
+~
+12 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+T 23843
+E
+caixa box~
+   Você percebe que esta caixa está em excelente condição.
+~
+#23844
+moedas coin~
+uma enorme pilha de moedas~
+Uma pilha massiva de moedas está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+1000 500 500 30
+1 1 0 0 0
+#23845
+botas boots~
+botas de cristal~
+Um par de botas de cristal está aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+10 0 0 0
+10 1000 0 0 0
+A
+18 3
+A
+19 -2
+A
+12 -10
+#23846
+luvas gloves~
+luvas de cristal~
+Um par de luvas de cristal está aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+10 0 0 0
+10 1000 0 0 0
+A
+19 -3
+A
+18 4
+A
+12 -10
+#23847
+bracelete wristband~
+um pequeno bracelete de cristal~
+Um pequeno bracelete de cristal está aqui cintilando no chão.~
+~
+9 g 0 0 0 am 0 0 0 0 0 0 0
+6 0 0 0
+10 1000 0 0 0
+A
+19 5
+A
+12 -10
+A
+14 -20
+#23848
+perneiras leggings~
+perneiras de cristal~
+Um par de perneiras impecáveis está em pé aqui.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+5 0 0 0
+10 1000 0 0 0
+A
+14 -10
+A
+18 -2
+A
+19 4
+#23849
+cinto girth~
+um cinto de cristal~
+Um grande cinto de cristal está aqui.~
+~
+9 0 0 0 0 al 0 0 0 0 0 0 0
+10 0 0 0
+10 1000 0 0 0
+A
+1 1
+A
+2 -2
+A
+20 2
+#23855
+fonte fountain~
+uma grande fonte~
+Uma grande fonte coberta de esmeralda está aqui, parecendo refrescante.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+500 500 0 0
+0 0 0 0 0
+T 23855
+E
+fonte fountain~
+   Olhando mais de perto para a fonte, você percebe que o fundo é muito profundo e
+há algo cintilando na água.
+~
+E
+água water~
+   Você percebe que há um pequeno portal no fundo da fonte.
+~
+#23860
+chave key~
+uma chave de titânio~
+Uma pequena chave de titânio está aqui.~
+~
+18 d 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+50 1 0 0 0
+A
+3 -4
+A
+23 -2
+A
+4 -3
+#23861
+portal~
+um portal azul~
+Um grande portal azul cintila aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+T 23862
+#23862
+portal~
+um portal vermelho~
+Um grande portal vermelho cintila aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+T 23863
+#23863
+portal~
+um portal verde~
+Um grande portal verde cintila aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+T 23861
+#23870
+placa plate~
+uma pilha de placas escuras~
+Uma pilha de placas pretas está aqui.~
+~
+9 ag 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+20 200 0 0 0
+A
+17 -2
+A
+12 -50
+A
+5 -2
+#23874
+cetro scepter~
+cetro da rainha~
+O cetro da rainha está aqui.~
+~
+1 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+3 200 0 0 0
+A
+12 30
+A
+13 -15
+A
+5 -1
+#23875
+garra claw~
+uma grande garra de cristal~
+Uma garra de dragão está aqui.~
+~
+5 n 0 0 0 an 0 0 0 0 0 0 0
+8 10 5 8
+20 1000 0 0 0
+#23899
+cabeça head~
+a cabeça de um dragão de cristal~
+Uma grande cabeça de dragão de cristal está aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+10 0 0 0
+20 1000 0 0 0
+A
+5 -1
+A
+1 2
+A
+4 -2
+$~
