@@ -118,7 +118,7 @@ yrl~
 say muito bom
 wait 2 s
 emote pondera sobre qual pergunta usar a seguir.
-wai 3 s
+wait 3 s
 say ahh entendi
 wait 1 s
 say ok o que tem 4 pernas para cima, 4 pernas para baixo e é macio no meio?

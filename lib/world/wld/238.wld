@@ -1247,8 +1247,8 @@ estátua statue~
    Olhando para a estátua, você percebe que é uma grande estátua de um serpe alada.
 ~
 E
-scratch~
-   There are many scratches forming a small circle in the middle of the tiles.
+arranhões scratch~
+   Há muitos arranhões formando um pequeno círculo no meio dos azulejos.
 ~
 S
 #23850
@@ -1288,11 +1288,6 @@ D0
 ~
 ~
 0 0 23854
-D1
-Olhando para o leste parece levar a um beco sem saída.
-~
-~
-0 0 -1
 D3
 O corredor leste é a única coisa a oeste.
 ~
@@ -1313,7 +1308,6 @@ D0
 0 0 23855
 D2
 Olhando para o sul parece levar ao corredor norte.
-Olhando para o sul você percebe que leva ao corredor Norte.
 ~
 NENHUM NONE~
 0 0 23851
@@ -1767,12 +1761,7 @@ Olhando para o norte você vê a área diante do lago.
 ~
 0 0 23801
 D3
- Olhando para o oeste você vê dentro da névoa.
-~
-~
-0 0 23879
-D4
-Olhando para cima você vê os picos nevados de montanhas distantes através da névoa.
+Olhando para o oeste você vê os picos nevados de montanhas distantes através da névoa.
 ~
 ~
 0 -1 12660
