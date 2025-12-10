@@ -1,0 +1,24 @@
+#211
+Parnassus~
+Tarô~
+21100 21199 30 1 f 0 0 0 1 30
+D 0 21130 4 2 	(Escritório da Esmerelda)
+M 0 21102 1 21130 	(Esmerelda)
+D 0 21150 4 2 	(Escritório da Jaelle)
+M 0 21103 1 21150 	(Jaelle)
+D 0 21102 0 2 	(Sala de Espera)
+D 0 21102 1 2 	(Sala de Espera)
+D 0 21102 2 1 	(Sala de Espera)
+D 0 21102 3 2 	(Sala de Espera)
+R 0 21102 21181 -1 	(uma urna cheia de leite)
+O 1 21181 1 21102 	(uma urna cheia de leite)
+R 0 21102 21182 -1 	(um pedaço de bokolyi)
+O 1 21182 100 21102 	(um pedaço de bokolyi)
+R 0 21102 21180 -1 	(um copo grande)
+O 1 21180 100 21102 	(um copo grande)
+M 0 21104 1 21102 	(Ana)
+M 0 21101 1 21110 	(Sibyl)
+D 0 21110 4 2 	(Escritório da Sibyl)
+D 0 21101 0 1 	(Do lado de fora de um pequeno edifício)
+S
+$
