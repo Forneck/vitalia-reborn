@@ -1495,7 +1495,10 @@ void parse_room(FILE *fl, int virtual_nr)
             {
                 char junk[8];
                 int vnum, rnum;
-                int count = sscanf(line, "%7s %d", junk, &vnum);
+                int count;
+                struct trig_proto_list *new_trg, *trg_proto;
+
+                count = sscanf(line, "%7s %d", junk, &vnum);
 
                 if (count != 2) {
                     log1("SYSERR: Error assigning trigger in room #%d! - Line was: %s", virtual_nr, line);
@@ -1508,7 +1511,6 @@ void parse_room(FILE *fl, int virtual_nr)
                     break;
                 }
 
-                struct trig_proto_list *new_trg, *trg_proto;
                 CREATE(new_trg, struct trig_proto_list, 1);
                 new_trg->vnum = vnum;
                 new_trg->next = NULL;
@@ -1520,6 +1522,13 @@ void parse_room(FILE *fl, int virtual_nr)
                     while (trg_proto->next)
                         trg_proto = trg_proto->next;
                     trg_proto->next = new_trg;
+                }
+
+                /* Instantiate the script and attach the trigger, as in dg_read_trigger() */
+                if (rnum != NOTHING) {
+                    if (!(world[room_nr].script))
+                        CREATE(world[room_nr].script, struct script_data, 1);
+                    add_trigger(SCRIPT(&world[room_nr]), read_trigger(rnum), -1);
                 }
                 break;
             }
