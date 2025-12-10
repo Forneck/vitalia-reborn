@@ -32,14 +32,14 @@ In DG Scripts, there are two different syntaxes for damage and send commands:
 From `src/dg_wldcmd.c`:
 
 ```c
-// Line 532-536: wdamage implementation
+// wdamage implementation
 ch = get_char_by_room(room, name);
 if (!ch) {
     wld_log(room, "wdamage: target not found");
     return;
 }
 
-// Line 149-157: wsend implementation
+// wsend implementation
 if ((ch = get_char_by_room(room, buf))) {
     if (subcmd == SCMD_WSEND)
         sub_write(msg, ch, TRUE, TO_CHAR);
