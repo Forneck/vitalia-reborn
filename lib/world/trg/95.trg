@@ -285,7 +285,7 @@ Armadilha Mortal Supernova~
 wait 1 sec
 %send% %actor% Deve haver um preço a pagar para testemunhar esta visão deslumbrante!
 wait 2 sec
-set stunned %actor.hitp% - 2
+eval stunned %actor.hitp% - 2
 %send% %actor% Isso realmente DOI! E de fato...
 %damage% %actor% %stunned%
 %echo% @n
