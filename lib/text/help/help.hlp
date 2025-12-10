@@ -606,6 +606,17 @@ alias:
   > tr Ola, como voce esta?
   Voce falou por telepatia com Tasmussen, 'Ola, como voce esta?'
 
+LIMITES:
+   O tamanho maximo de um alias e 8191 caracteres. Porem, devido ao limite
+de entrada por linha (512 caracteres), aliases muito longos devem ser
+divididos em multiplos alias menores que podem chamar uns aos outros.
+Quando um alias se aproxima do limite de entrada, o jogo ira avisar.
+
+Exemplos de alias encadeados:
+  > alias ataque1 cast 'fireball' $1; cast 'lightning' $1
+  > alias ataque2 cast 'harm' $1; cast 'earthquake'
+  > alias combo ataque1 $1; ataque2 $1
+
 Veja tambem: ! ^
 #1
 ALIGNMENT GOOD NEUTRAL EVIL %ACTOR.ALIGN% %ALIGN% %ALIGNMENT% 

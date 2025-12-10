@@ -747,12 +747,13 @@ int get_long_line(FILE *fl, char *buf, size_t bufsize)
     char temp[MAX_ALIAS_LENGTH];
     int lines = 0;
     size_t sl;
+    size_t read_size;
 
-    if (bufsize > sizeof(temp))
-        bufsize = sizeof(temp);
+    /* Ensure we don't exceed the temp buffer size */
+    read_size = (bufsize > sizeof(temp)) ? sizeof(temp) : bufsize;
 
     do {
-        if (!fgets(temp, bufsize, fl))
+        if (!fgets(temp, read_size, fl))
             return (0);
         lines++;
     } while (*temp == '*' || *temp == '\n' || *temp == '\r');
