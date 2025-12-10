@@ -9,11 +9,11 @@
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n
 
    @GAtalhos (Alias) Melhorados@n
-   Sistema de @Yalias@n agora suporta comandos de até 8191 caracteres.
-   Mensagens claras de erro quando atalhos excedem o tamanho máximo.
+   Sistema de @Yalias@n agora suporta comandos de ate 8191 caracteres.
+   Mensagens claras de erro quando atalhos excedem o tamanho maximo.
    Avisos quando atalhos se aproximam do limite de entrada (512 caracteres).
-   Documentação atualizada com exemplos de atalhos encadeados.
-   Use @Yhelp alias@n para ver exemplos e informações sobre limites.
+   Documentacao atualizada com exemplos de atalhos encadeados.
+   Use @Yhelp alias@n para ver exemplos e informacoes sobre limites.
 
 @n
 @C-@G=@Y>@W Outubro/Novembro de 2025 @C@Y<@G=@C-@n
