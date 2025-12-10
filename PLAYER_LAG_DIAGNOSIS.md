@@ -3,7 +3,7 @@
 This guide helps diagnose periodic lag issues affecting individual players.
 
 ## Issue Description
-Player reports constant lag every ~30 seconds (median), persisting across:
+Player reports constant lag approximately every 30 seconds, persisting across:
 - Different characters
 - Different clients
 - Different network connections (including mobile data)

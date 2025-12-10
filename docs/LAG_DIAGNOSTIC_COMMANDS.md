@@ -178,7 +178,7 @@ Once cause is identified:
 ### If it's a trigger:
 1. Edit the trigger file (lib/world/trg/*.trg)
 2. Fix the timing or logic issue
-3. Reload triggers: `tedit save world`
+3. Reload triggers: `tedit save world` or reboot MUD to reload all triggers
 4. Test with player
 
 ### If it's a special procedure:
