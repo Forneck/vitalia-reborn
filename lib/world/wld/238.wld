@@ -1,45 +1,44 @@
 #23800
-Polar/Higgin's Zone Description Room~
-   This area is a very different world.  There are portals and hidden things
-everywhere.
-Builders     : Polar Higgins
-Zone         : 238 Crystal Castle
-Began        : 1998
-Player Level : 22-26
-Rooms        : 80
+Sala de Descrição da Zona do Castelo de Cristal de Polar/Higgins~
+   Esta área é um mundo muito diferente. Há portais e coisas escondidas
+por toda parte.
+Construtores : Polar Higgins
+Zona         : 238 Castelo de Cristal
+Início       : 1998
+Nível        : 22-26
+Salas        : 80
 Mobs         : 15
-Objects      : 29
-Shops        : 0
-Triggers     : 16
-Theme        :
-Plot         :
+Objetos      : 29
+Lojas        : 0
+Gatilhos     : 16
+Tema         :
+Enredo       :
 Links        : 75
-Map          : 00
+Mapa         : 00
 ~
 238 520 0 0 0 0
 S
 #23801
-Before the lake~
-   This small patch of land lies before a grand lake.  A large crystal castle
-can be seen far in the distance towards the middle of the lake.  Many small
-footprints can be seen laying about the trail that has lead you to this marvel
-of castles.
+Diante do Lago~
+   Este pequeno pedaço de terra fica diante de um grande lago. Um grande castelo
+de cristal pode ser visto ao longe no meio do lago. Muitas pequenas pegadas podem
+ser vistas espalhadas pela trilha que o trouxe até esta maravilha de castelos.
 ~
 238 4 0 0 0 0
 D0
-   As you look north you notice that there is nothing but water.
+   Ao olhar para o norte você percebe que não há nada além de água.
 ~
 ~
 0 0 23802
 D2
-Looking south you see an area leading into the fog.
+Olhando para o sul você vê uma área que leva à névoa.
 ~
 ~
 0 0 23880
 E
-look footprints~
-   You notice that these prints are different creatures.  It appears that they
-were drug or have drug themselves into this room and and then walked out.
+olhar pegadas~
+   Você percebe que essas pegadas são de criaturas diferentes. Parece que elas
+foram arrastadas ou se arrastaram para esta sala e depois saíram.
 ~
 S
 #23802
