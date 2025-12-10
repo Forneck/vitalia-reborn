@@ -136,11 +136,11 @@ if %cmd.mudcommand% == look || %cmd.mudcommand% == examine
         halt
       end
     end
-    if ~card /= %arg%
+    if ~carta /= %arg%
       if %rev% < 1
-        %force% %actor% look card
+        %force% %actor% look carta
       else
-        %force% %actor% look reverse
+        %force% %actor% look reverso
       end
     else
       return 0
@@ -161,7 +161,7 @@ elseif %cmd.mudcommand% == quit || %cmd.mudcommand% == afk
   wait 1 sec
   halt
 elseif %cmd% == return || %cmd% == recall || %cmd% == teleport || %cmd.mudcommand% == goto
-  %send% %actor% Because you have decided to %cmd%, you cannot finish the reading.
+  %send% %actor% Porque você decidiu %cmd%, você não pode terminar a leitura.
   %echoaround% %actor% %actor.name% tem que deixar a leitura agora.
   wait 1 sec
   %send% %actor% Você é magicamente enviado ao final da leitura.
@@ -261,7 +261,7 @@ wait 3 sec
 %echo% @c   proibido a mim neste espaço e tempo.  Tudo que me é permitido é@n
 %echo% @c   mostrar-lhe as cartas e você deve decidir seus significados em sua@n
 %echo% @c   própria mente. Mova-se de carta em carta.  Cada espaço e cada carta@n
-%echo% @c   explicará a si mesma para você. 'LOOK CARD' in each room to see@n
+%echo% @c   explicará a si mesma para você. 'LOOK CARTA' em cada sala para ver@n
 %echo% @c   a explicação. Estes são significados muito simplificados, então eles@n
 %echo% @c   são muito gerais.@n
 wait 3 sec
@@ -359,22 +359,22 @@ while %word%
         halt
       end
       if %available% == 1
-        say %unreader1% e .* estão com clientes, mas .* está disponível.
-        say Diga .* se você quiser vê-la.
+        say %unreader1% e %unreader2% estão com clientes, mas %reader1% está disponível.
+        say Diga %reader1% se você quiser vê-la.
         set Choosing_Tarot_Reader_%zone% 1
         remote Choosing_Tarot_Reader_%zone% %actor.id%
         halt
       end
       if %available% == 2
-        say %unreader1% está com um cliente, mas .* e .* estão disponíveis.
-        say Diga .* ou .* para vê-la.
+        say %unreader1% está com um cliente, mas %reader1% e %reader2% estão disponíveis.
+        say Diga %reader1% ou %reader2% para vê-la.
         set Choosing_Tarot_Reader_%zone% 1
         remote Choosing_Tarot_Reader_%zone% %actor.id%
         halt
       end
       if %available% == 3
-.*, .* e .* estão todos disponíveis agora.
-        say Diga .* ou .* para vê-la.
+        say %reader1%, %reader2% e %reader3% estão todos disponíveis agora.
+        say Diga %reader1%, %reader2% ou %reader3% para vê-la.
         set Choosing_Tarot_Reader_%zone% 1
         remote Choosing_Tarot_Reader_%zone% %actor.id%
         halt
@@ -398,7 +398,7 @@ while %word%
         %load% obj %zone%49
         mgoto %zone%02
       else
-        say Desculpe. .* está com outro cliente agora.
+        say Desculpe. Sibyl está com outro cliente agora.
         say Por favor, escolha um dos leitores disponíveis.
       end
     end
@@ -420,7 +420,7 @@ while %word%
         %load% obj %zone%52
         mgoto %zone%02
       else
-        say Desculpe. .* está com outro cliente agora.
+        say Desculpe. Esmerelda está com outro cliente agora.
         say Por favor, escolha um dos leitores disponíveis.
       end
     end
@@ -442,7 +442,7 @@ while %word%
         %load% obj %zone%50
         mgoto %zone%02
       else
-        say Desculpe. .* está com outro cliente agora.
+        say Desculpe. Jaelle está com outro cliente agora.
         say Por favor, escolha um dos leitores disponíveis.
       end
     end
@@ -474,9 +474,9 @@ if %direction% == south
   welcome %actor.name%
   %send% %actor% Ana says, 'Você gostaria de fazer um agendamento com um de nossos leitores?'
   %send% %actor% Ana says, 'Antes de começarmos, certifique-se de ter tempo suficiente para terminar sua leitura.'
-  %send% %actor% Ana says, 'Por favor, não fique afk ou saia do jogo antes de terminar a leitura.'
+  %send% %actor% Ana says, 'Por favor, não fique away ou saia do jogo antes de terminar a leitura.'
   %send% %actor% Ana says, 'Se você tiver certeza, apenas diga appointment.'
-else if %direction% == up
+elseif %direction% == up
   smile %actor.name%
   %send% %actor% Ana says, 'Espero que tenha gostado da sua leitura. Por favor, volte em breve.'
   %send% %actor% Ana says, 'Claro, se você quiser outro agendamento agora, diga appointment.'
