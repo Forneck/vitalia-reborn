@@ -1048,176 +1048,174 @@ D2
 S
 T 23840
 #23841
-Entrance to the castle~
-   There are many bloody and smelly heads hanging from the walls as if there
-were some king of crazed monster living here mutilating anything that steps in
-his way.  The heads appear to have been cut off with some kind of dull blade.
-Blood lines the floors and mutilated body parts are scattered about.
+Entrada do castelo~
+   Há muitas cabeças sangrentas e mal-cheirosas penduradas nas paredes como se
+houvesse algum tipo de monstro louco vivendo aqui, mutilando tudo que entra em
+seu caminho. As cabeças parecem ter sido cortadas com algum tipo de lâmina
+cega. Sangue cobre os pisos e partes de corpos mutiladas estão espalhadas.
 ~
 238 0 0 0 0 0
 D0
-Looking north reveals a room full of corpses.
+Olhando para o norte revela uma sala cheia de cadáveres.
 ~
 ~
 0 0 23842
 D3
-Looking to the west appears to be a storage room.
+Olhando para o oeste parece ser uma sala de armazenamento.
 ~
 ~
 0 0 23843
 D4
-Looking up appears to be the main floor to the castle.
+Olhando para cima parece ser o andar principal do castelo.
 ~
-trapdoor~
+alçapão trapdoor~
 1 0 23845
 D5
-Trap Door
+Alçapão
 ~
-trap door~
+alçapão trap door~
 1 0 23840
 E
-head~
-   There are many heads strown across the room with many nasty smells to follow.
-These heads appear to have been gnawed off of the owners neck very visiously as
-if torn off by animals.
+cabeça head~
+   Há muitas cabeças espalhadas pela sala com muitos cheiros nojentos. Essas
+cabeças parecem ter sido roídas do pescoço do dono muito violentamente, como se
+arrancadas por animais.
 ~
 S
 #23842
-Corpses~
-   You are in a room full of decaying corpses.  There are many decapitated ones
-lying in a big pile on the eastern wall and some without any extra limbs piled
-on the northern side.  Also there are a pile of heads stacked up on the western
-wall of this room.  There are many nasty smells that come from this room making
-anyone who enters want to puke.
+Cadáveres~
+   Você está em uma sala cheia de cadáveres em decomposição. Há muitos decapitados
+deitados em uma grande pilha na parede leste e alguns sem membros extras empilhados
+no lado norte. Também há uma pilha de cabeças empilhadas na parede oeste desta sala.
+Há muitos cheiros nojentos que vêm desta sala fazendo qualquer um que entre querer
+vomitar.
 ~
 238 4 0 0 0 0
 D2
-Looking south you see the entrance to the castle.
+Olhando para o sul você vê a entrada do castelo.
 ~
 ~
 0 0 23841
 E
-corpses~
-   There are many decapitated corpse strown about the room piled in all corners
-of the room.
+cadáveres corpses~
+   Há muitos cadáveres decapitados espalhados pela sala, empilhados em todos os
+cantos da sala.
 ~
 S
 T 23839
 #23843
-Storage room~
-   This room has been filled with many small and large boxes.  There are many
-things stowed away here, many of which are no good anymore due to the current
-rat population.  It appears that noone was ever planning on coming back to get
-any of the stored items.
+Sala de armazenamento~
+   Esta sala foi preenchida com muitas caixas pequenas e grandes. Há muitas coisas
+guardadas aqui, muitas das quais não são mais boas devido à população de ratos
+atual. Parece que ninguém estava planejando voltar para pegar nenhum dos itens
+armazenados.
 ~
 238 8 0 0 0 0
 D1
-Looking east appears to be the entrance to something.
+Olhando para o leste parece ser a entrada para algo.
 ~
 ~
 0 0 23841
 S
 #23844
-Treasure room~
-   You have entered the treasure room of the castle.  There are many different
-piles of coins in one large mass piled up on the floor.  It appears that it was
-stored here long ago and forgotten.  The room has many different color banners
-posted all around
+Sala do tesouro~
+   Você entrou na sala do tesouro do castelo. Há muitas pilhas diferentes de
+moedas em uma grande massa empilhada no chão. Parece que foi armazenado aqui há
+muito tempo e esquecido. A sala tem muitas bandeiras de cores diferentes afixadas
+por toda parte
 ~
 238 0 0 0 0 0
 S
 #23845
-Main floor hallway~
-   This room is the beginning of the castle's main floor.  There are pillars
-scattered about in a decorative design.  Many pieces of pottery line the walls
-atop of many eligant tables.  There are many fine pieses of art and a few
-sculptures scattered about making the room appear very eligant to those who
-enter the castle.
+Corredor do andar principal~
+   Esta sala é o início do andar principal do castelo. Há pilares espalhados em
+um design decorativo. Muitas peças de cerâmica alinham as paredes em cima de muitas
+mesas elegantes. Há muitas peças finas de arte e algumas esculturas espalhadas,
+fazendo a sala parecer muito elegante para aqueles que entram no castelo.
 ~
 238 8 0 0 0 0
 D0
-Looking north appears to lead to an intersection of the castle.
+Olhando para o norte parece levar a uma interseção do castelo.
 ~
 ~
 0 0 23847
 D2
-Looking south you see an overview of the lake from the 2nd floor of the castle.
+Olhando para o sul você vê uma vista do lago do 2º andar do castelo.
 ~
-door~
+porta door~
 1 0 23846
 D5
-The entrance to the castle appears to be this way.
+A entrada do castelo parece ser por aqui.
 ~
-trapdoor~
+alçapão trapdoor~
 1 0 23841
 E
-pottery~
-   These pots are very old and fragile but very valuable.
+cerâmica pottery~
+   Estes potes são muito antigos e frágeis, mas muito valiosos.
 ~
 E
-pillar~
-   These pillars appear to be made of pure crystal and are about 10 feet tall.
+pilar pillar~
+   Estes pilares parecem ser feitos de cristal puro e têm cerca de 3 metros de altura.
 ~
 S
 #23846
-Outside the castle~
-   This room appears to support you even though you did not think it would.
-There are small trees scattered about below and a massive lake just south.
-You can see small fish swimming in the lake below.  As you look back you notice
-that you can go up into a cubby hole which is very large.
+Fora do castelo~
+   Esta sala parece suportá-lo mesmo que você não pensasse que iria. Há pequenas
+árvores espalhadas abaixo e um lago massivo logo ao sul. Você pode ver pequenos
+peixes nadando no lago abaixo. Ao olhar para trás, você percebe que pode subir
+para um compartimento que é muito grande.
 ~
 238 4 0 0 0 4
 D0
-Looking north reveals the main floor entrance.
+Olhando para o norte revela a entrada do andar principal.
 ~
 ~
 0 0 23845
 D4
-Looking up you see a large room with a crystal roof and a crystal floor.
+Olhando para cima você vê uma grande sala com um teto de cristal e um piso de cristal.
 ~
 ~
 0 0 23881
 S
 #23847
-Intersection~
-   The rug covered floor attracts attention to the center of the floor here.
-There is a large picture of a dragon woven into the center of the beautiful
-rug.  There are not many decorations here except for the dragon in the center
-of the rug. The dragon seems to pull you into some kind of trance.
+Interseção~
+   O piso coberto de tapete atrai atenção para o centro do piso aqui. Há uma
+grande imagem de um dragão tecida no centro do belo tapete. Não há muitas
+decorações aqui, exceto pelo dragão no centro do tapete. O dragão parece puxá-lo
+para algum tipo de transe.
 ~
 238 0 0 0 0 0
 D0
-Looking north you see the northern hallway.
+Olhando para o norte você vê o corredor norte.
 ~
 ~
 0 0 23851
 D1
-Looking east appears to lead to the eastern hallway.
+Olhando para o leste parece levar ao corredor leste.
 ~
 ~
 0 0 23850
 D2
-Looking south appears to lead to the main hallway to the castle.
+Olhando para o sul parece levar ao corredor principal do castelo.
 ~
 ~
 0 0 23845
 D3
-looking west seems to lead you through the western hallway.
+olhando para o oeste parece levá-lo através do corredor oeste.
 ~
 ~
 0 0 23848
 E
-dragon~
-   Looking at this picture woven into carpet seems to put you into a trance
-making it hard to believe that this picture is just a picture.
+dragão dragon~
+   Olhar para esta imagem tecida no tapete parece colocá-lo em transe, tornando
+difícil acreditar que esta imagem é apenas uma imagem.
 ~
 S
 #23848
-Western hallway~
-   This room appears to be in excelent condition as well as the rooms before
-it.  There are no decorations here or any kind of art work.  There are bare
-walls and tiled floor.  This hallway seems to not be very popular or just not
-finished.
+Corredor oeste~
+   Esta sala parece estar em excelente condição, assim como as salas anteriores.
+Não há decorações aqui ou qualquer tipo de arte. Há paredes nuas e piso de azulejo.
+Este corredor parece não ser muito popular ou apenas não está terminado.
 ~
 238 0 0 0 0 0
 D1
@@ -1225,28 +1223,28 @@ D1
 ~
 0 0 23847
 D3
-Looking west seems to reveal a dead end.
+Olhando para o oeste parece revelar um beco sem saída.
 ~
 ~
 0 0 23849
 S
 #23849
-Dead end~
-      This room seems to be the end of the western
-hallway that has lead you thus far.  There are no decorations in this room and
-no kind of evidance of inhabitants.  There are many tiles that line the floor
-throughout the floor seeming to form a circle.  There are small markings placed
-in the circle but you cannot tell what they are for or where thet come from.
+Beco sem saída~
+   Esta sala parece ser o fim do corredor oeste que o trouxe até aqui. Não há
+decorações nesta sala e nenhum tipo de evidência de habitantes. Há muitos azulejos
+que revestem o piso por todo o chão, parecendo formar um círculo. Há pequenas
+marcações colocadas no círculo, mas você não pode dizer para que servem ou de onde
+vêm.
 ~
 238 0 0 0 0 0
 D1
-Looking east appears to take you to the western hallway.
+Olhando para o leste parece levá-lo ao corredor oeste.
 ~
 ~
 0 0 23848
 E
-statue~
-   Looking at the statue you notice that it is a large statue of a wyvern.
+estátua statue~
+   Olhando para a estátua, você percebe que é uma grande estátua de um serpe alada.
 ~
 E
 scratch~
@@ -1254,37 +1252,36 @@ scratch~
 ~
 S
 #23850
-Eastern hallway~
-   There are many different colors about this room as if it was sprayed with
-paint.  There are swirls and different patterns as if some kind of art.  There
-are also some misplaced spots on the floor that appear to have dripped from the
-roof.  There are no spots on the roof however.
+Corredor leste~
+   Há muitas cores diferentes nesta sala, como se tivesse sido pintada com tinta.
+Há redemoinhos e padrões diferentes como se fosse algum tipo de arte. Também há
+alguns pontos fora de lugar no chão que parecem ter pingado do teto. No entanto,
+não há manchas no teto.
 ~
 238 0 0 0 0 0
 D1
-Looking east you notice that this will lead you further down the eastern hallway.
+Olhando para o leste você percebe que isto o levará mais adiante no corredor leste.
 ~
 ~
 0 0 23851
 D3
-Looking west shows you to the intersection.
+Olhando para o oeste mostra a você a interseção.
 ~
 ~
 0 0 23847
 E
-spots~
-   Looking more carefully you notice that these spots appear to be some kind of
-tracks leading fomr the roof to the floor.
+manchas spots~
+   Olhando mais cuidadosamente, você percebe que essas manchas parecem ser algum tipo
+de rastros levando do teto ao chão.
 ~
 S
 #23851
-Further on the eastern hallway~
-   This room appears to be the same as the last except the spots on the floor
-are not here.  There are also some small items strewn about the floor
-consisting of rat guano, bird feathers, spider webs, and cockroach shells.
-There are no traces of anyone ever being here to clean this room or to have
-even walked through it because there is a coating of dust on the floor revealing
-your tracks as you cross it.
+Mais adiante no corredor leste~
+   Esta sala parece ser a mesma que a última, exceto que as manchas no chão não
+estão aqui. Também há alguns pequenos itens espalhados pelo chão, consistindo de
+fezes de rato, penas de pássaro, teias de aranha e cascas de barata. Não há
+vestígios de alguém ter vindo aqui para limpar esta sala ou mesmo ter passado por
+ela porque há uma camada de poeira no chão revelando suas pegadas ao cruzá-lo.
 ~
 238 0 0 0 0 0
 D0
@@ -1292,12 +1289,12 @@ D0
 ~
 0 0 23854
 D1
-Looking east seems to lead to a dead end.
+Olhando para o leste parece levar a um beco sem saída.
 ~
 ~
 0 0 -1
 D3
-The eastern hallway is the only thing to the west.
+O corredor leste é a única coisa a oeste.
 ~
 ~
 0 0 23850
