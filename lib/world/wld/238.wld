@@ -1300,212 +1300,207 @@ O corredor leste é a única coisa a oeste.
 0 0 23850
 S
 #23854
-Northern hallway~
-   This room is about the same as the first room of this hallway very clean and
-well kept.  There are not any smudges or any dirt stains of any kind.  It
-almost seems that the room is magically maintained and left spotless.  There
-are also many tapestries in this room.
+Corredor norte~
+   Esta sala é praticamente igual à primeira sala deste corredor, muito limpa e
+bem cuidada. Não há manchas ou qualquer tipo de sujeira. Quase parece que a sala
+é magicamente mantida e deixada impecável. Há também muitas tapeçarias nesta sala.
 ~
 238 0 0 0 0 0
 D0
- Looking north appears to lead you into a dead end.
+ Olhando para o norte parece levá-lo a um beco sem saída.
 ~
 ~
 0 0 23855
 D2
-Looking south leads to lead to the northern hallway.
-Looking south you notice that it leads to the Northern hallway.
+Olhando para o sul parece levar ao corredor norte.
+Olhando para o sul você percebe que leva ao corredor Norte.
 ~
-NONE~
+NENHUM NONE~
 0 0 23851
 E
-tapestries~
-   The tapestries are very elegant and well kept they are pictures of different
-land scapes.
+tapeçarias tapestries~
+   As tapeçarias são muito elegantes e bem conservadas, são imagens de diferentes
+paisagens.
 ~
 S
 #23855
-Dead end~
-   This appears to be the end of the line for this hallway.  There are still
-very eligant pictures and other pieces of art placed about the room here.
-Just as before the room is spotlessly clean.  There are no traces of anything
-in this room.
+Beco sem saída~
+   Este parece ser o fim da linha para este corredor. Ainda há imagens muito
+elegantes e outras peças de arte colocadas pela sala aqui. Assim como antes, a
+sala está impecavelmente limpa. Não há vestígios de nada nesta sala.
 ~
 238 0 0 0 0 0
 D2
-Looking south seems to lead you into the northern hallway.
+Olhando para o sul parece levá-lo ao corredor norte.
 ~
 ~
 0 0 23854
 E
-pictures~
-   These pictures seem to be people but they are slightly blurred when you try
-to focus on them.
+imagens pictures~
+   Estas imagens parecem ser pessoas, mas estão ligeiramente borradas quando você
+tenta focar nelas.
 ~
 S
 #23856
-Hidden hallway~
-   This area seems to have been also cleaned even though it was very well
-hidden.  There are no traces of life and no way to get back up.  There are many
-cobblestones linning the floor to make it appear as if the floor here was the
-bottom of the fountain.
+Corredor oculto~
+   Esta área parece ter sido também limpa, embora estivesse muito bem escondida.
+Não há vestígios de vida e nenhuma maneira de voltar. Há muitas pedras cobrindo o
+chão para fazer parecer que o chão aqui era o fundo da fonte.
 ~
 238 0 0 0 0 0
 D0
-Looking north leads you further down the hidden hallway.
+Olhando para o norte leva você mais adiante no corredor oculto.
 ~
 ~
 0 0 23857
 S
 #23857
-Further on the hidden hallway~
-   This room is as clean as the rest but from here you can see the top of the
-clouds when you look down.  The floor appears to be the great sky above.  The
-roof however appears to be the top of a mountain pointing top down towards you.
+Mais adiante no corredor oculto~
+   Esta sala está tão limpa quanto as demais, mas daqui você pode ver o topo das
+nuvens quando olha para baixo. O chão parece ser o grande céu acima. O teto, no
+entanto, parece ser o topo de uma montanha apontando de cabeça para baixo em sua
+direção.
 ~
 238 0 0 0 0 0
 D0
-Looking north you see the sky and clouds floating through the room ahead.
+Olhando para o norte você vê o céu e nuvens flutuando pela sala à frente.
 ~
 ~
 0 0 23858
 D2
-Looking south seems to lead you toward the beginning of the hidden hallway.
+Olhando para o sul parece levá-lo de volta ao início do corredor oculto.
 ~
 ~
 0 0 23856
 E
-look mountain~
-   The mountain looks as if it may fall any second probably because this is not
-the way you usually see them.
+olhar montanha mountain~
+   A montanha parece que pode cair a qualquer segundo, provavelmente porque esta
+não é a maneira como você costuma vê-las.
 ~
 E
-look sky~
-   This really looks like the real sky except it is sturdy and can hold you up.
+olhar céu sky~
+   Isto realmente parece o céu real, exceto que é resistente e pode sustentá-lo.
 ~
 S
 #23858
-Walking through the sky~
-   You have entered a remarkable room placed above the clouds except for the
-fact that you cannot walk you you have to fly.  There are birds and clouds
-drifting about in the distance.  The only thing you can see is clouds and the
-blue sky above.
+Caminhando pelo céu~
+   Você entrou em uma sala notável colocada acima das nuvens, exceto pelo fato de
+que você não pode andar, você tem que voar. Há pássaros e nuvens flutuando à
+distância. A única coisa que você pode ver são nuvens e o céu azul acima.
 ~
 238 0 0 0 0 8
 D0
-Looking north you see what looks like what could be nearing the end of the hallway.
+Olhando para o norte você vê o que parece estar se aproximando do fim do corredor.
 ~
 ~
 0 0 23859
 D2
-Looking south you see solid ground leading back to the beginning of this hallway.
+Olhando para o sul você vê chão sólido levando de volta ao início deste corredor.
 ~
 ~
 0 0 23857
 S
 #23859
-Near the end~
-   You have set foot on solid ground again.  The room here looks exactly the
-same as the first and you can see what looks like the first room ahead to the
-north.  There are many fine pictures on the walls here.  Also the floor seems
-to be made of some kind of deep brown wood.
+Perto do fim~
+   Você pisou em chão sólido novamente. A sala aqui parece exatamente igual à
+primeira e você pode ver o que parece ser a primeira sala à frente ao norte. Há
+muitas belas imagens nas paredes aqui. Também o chão parece ser feito de algum tipo
+de madeira marrom escura.
 ~
 238 0 0 0 0 0
 D0
- Looking north you see the end of the hallway.
+ Olhando para o norte você vê o fim do corredor.
 ~
 ~
 0 0 23860
 D2
-Looking south you see the open sky.
+Olhando para o sul você vê o céu aberto.
 ~
 ~
 0 0 23858
 S
 #23860
-The end~
-   You have finally made it to the end of this god forsaken hallway.  There are
-no more posters or and kind of decoration here just walls a floor and a
-ceiling, which you much appreciate.  The walls, floor, and ceiling appear to be
-made of wood.
+O fim~
+   Você finalmente chegou ao fim deste corredor abandonado. Não há mais pôsteres
+ou qualquer tipo de decoração aqui, apenas paredes, um chão e um teto, pelo qual
+você muito agradece. As paredes, chão e teto parecem ser feitos de madeira.
 ~
 238 0 0 0 0 0
 D0
-Looking north you see a room with 3 large sparkling items.
+Olhando para o norte você vê uma sala com 3 grandes itens cintilantes.
 ~
-Gate~
+Portão Gate~
 2 23860 23861
 D2
-Looking south you can see more hallway.
+Olhando para o sul você pode ver mais corredor.
 ~
 ~
 0 0 23859
 E
 troll~
-   The troll's marking appear to be those of Lords Of Pain signifying power and
-courage.
+   As marcações do troll parecem ser aquelas dos Lordes da Dor, significando poder
+e coragem.
 ~
 S
 #23861
-Portal room~
-   Upon entering this room you notice a large green portal standing on the
-northern wall in this room shimmering in the darkness.  There are no
-decorations in this room but the room seems to have a green tint to it.
+Sala do portal~
+   Ao entrar nesta sala você percebe um grande portal verde em pé na parede norte
+desta sala cintilando na escuridão. Não há decorações nesta sala, mas a sala parece
+ter uma tonalidade verde.
 ~
 238 0 0 0 0 0
 D2
-Looking south you see a long hallway.
+Olhando para o sul você vê um longo corredor.
 ~
-Gate~
+Portão Gate~
 2 23860 23860
 S
 #23862
-Through the blue portal~
-   You have entered the portal and have yet to find anything but blue glowing
-strongly around you.  You walk along whap seems to be a floor but is nothing
-but light from the portal.  There are many small spots floating around the
-portal around you.
+Através do portal azul~
+   Você entrou no portal e ainda não encontrou nada além de azul brilhando
+fortemente ao seu redor. Você caminha ao longo do que parece ser um chão, mas não é
+nada além de luz do portal. Há muitos pequenos pontos flutuando ao redor do portal
+ao seu redor.
 ~
 238 0 0 0 0 0
 D0
-Looking north appears to lead you further into the portal.
+Olhando para o norte parece levá-lo mais adiante no portal.
 ~
 ~
 0 0 23867
 E
-spots~
-   There are many small spots that appear to be some kind of smaller portals
-inside of the big portal.
+pontos spots~
+   Há muitos pequenos pontos que parecem ser algum tipo de portais menores dentro
+do grande portal.
 ~
 S
 #23863
-Through the red portal~
-   This appears to be some kind of swirling vortex that you can freely travel
-through.  There are small spots that line the walls here.  Many particles float
-about bumping into you at times making a spark.  There is no floor, roof, or
-walls here to guide y
+Através do portal vermelho~
+   Este parece ser algum tipo de vórtice giratório pelo qual você pode viajar
+livremente. Há pequenos pontos que revestem as paredes aqui. Muitas partículas
+flutuam, esbarrando em você às vezes, fazendo uma faísca. Não há chão, teto ou
+paredes aqui para guiá-lo
 ~
 238 0 0 0 0 0
 D0
-Looking north reveals another part of the portal.
+Olhando para o norte revela outra parte do portal.
 ~
 ~
 0 0 23871
 E
-spot~
-   Looking in for further examination you see that they are balls of energy, as
-you turn back one pops you in the face OUCH!!!!!
+ponto spot~
+   Olhando mais de perto você vê que são bolas de energia, quando você se vira uma
+explode em seu rosto AI!!!!!
 ~
 S
 #23864
-Through the green portal~
-   This room appears to have a green tint to every part of the entire room.
-There are green posters covering the walls and very small green spots strown
-about.
+Através do portal verde~
+   Esta sala parece ter uma tonalidade verde em cada parte de toda a sala. Há
+pôsteres verdes cobrindo as paredes e pequenos pontos verdes espalhados por aí.
 ~
 238 0 0 0 0 0
 D1
-Looking east seems to lead you to another portal room witha blue aurora.
+Olhando para o leste parece levá-lo a outra sala do portal com uma aurora azul.
 ~
 ~
 0 0 23865
@@ -1515,10 +1510,10 @@ D3
 0 0 23866
 S
 #23865
-Portal room~
-   This room has a large blue portal against the far northern wall.  This room
-has a blue tint to the room and has no decorations or designs anywhere on the
-room.  The portal seems to have placed a blue aurora about the room.
+Sala do portal~
+   Esta sala tem um grande portal azul contra a parede norte distante. Esta sala
+tem uma tonalidade azul na sala e não tem decorações ou desenhos em nenhum lugar da
+sala. O portal parece ter colocado uma aurora azul pela sala.
 ~
 238 0 0 0 0 0
 D3
@@ -1527,11 +1522,10 @@ D3
 0 0 23864
 S
 #23866
-Portal room~
-   This room has a large red portal placed on the northern wall and also has a
-tint of red thruought the entire room.  There are no decorative items or any
-kind of other decorations.  The room is very plain except for the portal
-itself.
+Sala do portal~
+   Esta sala tem um grande portal vermelho colocado na parede norte e também tem
+uma tonalidade de vermelho por toda a sala. Não há itens decorativos ou qualquer
+outro tipo de decoração. A sala é muito simples, exceto pelo próprio portal.
 ~
 238 0 0 0 0 0
 D1
@@ -1540,186 +1534,182 @@ D1
 0 0 23864
 S
 #23867
-Further in the blue portal~
-   There are still all the small spots floating around but the floor seems to
-be taking shape more now.  There are no walls or a roof but the floor is
-beginning to get harder and more sturdy.
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme.
 ~
 238 0 0 0 0 0
 D0
-   Looking north shows you further into the portal .
+   Olhando para o norte mostra você mais adiante no portal.
 ~
 ~
 0 0 23868
 D2
-Looking south shows you to the area where you come into the portal.
+Olhando para o sul mostra a você a área onde você entra no portal.
 ~
 ~
 0 0 23862
 S
 #23868
-Further in the blue portal~
-   There are still all the small spots floating around but the floor seems to
-be taking shape more now.  There are no walls or a roof but the floor is
-beginning to get harder and more sturdy.
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme.
 ~
 238 0 0 0 0 0
 D0
-Looking north shows you more portal.
+Olhando para o norte mostra você mais portal.
 ~
 ~
 0 0 23869
 D2
-To the south is toward the beginning of the portal.
+Ao sul é em direção ao início do portal.
 ~
 ~
 0 0 23867
 S
 #23869
-Further in the blue portal~
-   There are still all the small spots floating around but the floor seems to
-be taking shape more now.  There are no walls or a roof but the floor is
-beginning to get harder and more sturdy.  The floor appears as a solid floor
-now.
+Mais adiante no portal azul~
+   Ainda há todos os pequenos pontos flutuando, mas o chão parece estar tomando
+forma agora. Não há paredes ou teto, mas o chão está começando a ficar mais duro e
+mais firme. O chão aparece como um chão sólido agora.
 ~
 238 0 0 0 0 0
 D0
-Looking north reveals the kings throne.
+Olhando para o norte revela o trono do rei.
 ~
 ~
 0 0 23870
 D2
-Looking south shows you the area that leads to the beginning of the portal.
+Olhando para o sul mostra a você a área que leva ao início do portal.
 ~
 ~
 0 0 23868
 S
 #23870
-Kings chamber~
-   You have entered the kings chamber.  You are surrounded by gold and silver
-everywhere.  The tapestries that line the wall are trimmed in gold.  The floor
-you walk on is made of silver.  And the roof you look at is made of titanium.
-There is nothing mis
+Câmara do rei~
+   Você entrou na câmara do rei. Você está cercado de ouro e prata por toda parte.
+As tapeçarias que revestem a parede são aparadas em ouro. O chão em que você caminha
+é feito de prata. E o teto que você olha é feito de titânio. Não há nada faltando
 ~
 238 0 0 0 0 0
 D2
-Looking south reveals the tunnel you came from.
+Olhando para o sul revela o túnel de onde você veio.
 ~
 ~
 0 0 23869
 S
 #23871
-Further through the red portal.~
-   This area appears the same as the last except for the little floating
-objects that cause the sparks when you bump them are very scarce here.  The
-floor is beginning to harden and the walls are beginning to show.
+Mais através do portal vermelho.~
+   Esta área parece a mesma que a última, exceto pelos pequenos objetos flutuantes
+que causam as faíscas quando você esbarra neles são muito escassos aqui. O chão está
+começando a endurecer e as paredes estão começando a aparecer.
 ~
 238 0 0 0 0 0
 D0
-Looking north reveals an exit leading further into the portal.
+Olhando para o norte revela uma saída levando mais adiante no portal.
 ~
 ~
 0 0 23872
 D2
-Looking south appears to lead you into the room that you entered from.
+Olhando para o sul parece levá-lo para a sala de onde você entrou.
 ~
 ~
 0 0 23863
 S
 #23872
-Far into the red portal.~
-   The wals here are shimmering and swirling making a beautiful mass of colors
-and patterns.  The walls appear to be unreachable but also right beside you.
-The floor is hard and solid now just the walls appear unstable.
+Longe no portal vermelho.~
+   As paredes aqui estão cintilando e girando, fazendo uma bela massa de cores e
+padrões. As paredes parecem estar inalcançáveis, mas também bem ao seu lado. O chão
+é duro e sólido agora, apenas as paredes parecem instáveis.
 ~
 238 0 0 0 0 0
 D0
-Looking north shows you the end of this portal.
+Olhando para o norte mostra você o fim deste portal.
 ~
 ~
 0 0 23873
 D2
-Looking south shows you a continuation of the portal room.
+Olhando para o sul mostra você uma continuação da sala do portal.
 ~
 ~
 0 0 23871
 S
 #23873
-Towards the end~
-   This area seems to be very rich in color and loaded with the small
-particals.  There are many different colors flowing throught the the walls
-making it a sight to see.  The spots appear to be avoiding you now saving you a
-heart ache.
+Em direção ao fim~
+   Esta área parece ser muito rica em cor e carregada com as pequenas partículas.
+Há muitas cores diferentes fluindo através das paredes, tornando-a uma visão
+espetacular. Os pontos parecem estar evitando você agora, poupando-lhe uma dor de
+cabeça.
 ~
 238 0 0 0 0 0
 D0
- Looking north you see the queens room.
+ Olhando para o norte você vê a sala da rainha.
 ~
 ~
 0 0 23874
 D2
-Looking south reveals the portal you came from.
+Olhando para o sul revela o portal de onde você veio.
 ~
 ~
 0 0 23872
 S
 #23874
-Queen plegia's room~
-   This room is very eligant from top to bottom.  There are many decorative
-pieces of art in this room revealing the elegant tastes of royalty.  The queens
-throne is perched atop a large golden square.  The throne itself seems to be
-made of gold and silk.
+Sala da rainha Plegia~
+   Esta sala é muito elegante de cima a baixo. Há muitas peças de arte decorativas
+nesta sala revelando os gostos elegantes da realeza. O trono da rainha está
+empoleirado no topo de um grande quadrado dourado. O próprio trono parece ser feito
+de ouro e seda.
 ~
 238 0 0 0 0 0
 D2
-Looking south you see the portal that you came from.
+Olhando para o sul você vê o portal de onde você veio.
 ~
 ~
 0 0 23873
 E
-throne~
-   Made of solid gold linned with silk this throne appears to be a very eligant
-sitting.
+trono throne~
+   Feito de ouro sólido revestido com seda, este trono parece ser um assento muito
+elegante.
 ~
 S
 #23875
-South road~
-   You are walking through a a small trail which seems to lead to nothing.
-The road has changed here and seems to be less bright and more spooky.  The
-area is still good and the land is fertile but the air around seems very weird.
+Estrada sul~
+   Você está caminhando por uma pequena trilha que parece não levar a lugar nenhum.
+A estrada mudou aqui e parece ser menos brilhante e mais assustadora. A área ainda
+é boa e a terra é fértil, mas o ar ao redor parece muito estranho.
 ~
 238 0 0 0 0 0
 D1
-Looking east the road begins to blur and you can not see far into the distance.
+Olhando para o leste a estrada começa a ficar embaçada e você não pode ver muito longe.
 ~
 ~
 0 0 23876
 S
 #23876
-Towards the lake~
-   This area seems to be very odd.  There are many odd sounds and different
-smells.  There are no animals here but you can hear the sounds of animals in
-the distance.  There is a small fog rolling in which stretches farther to the
-east.
+Em direção ao lago~
+   Esta área parece ser muito estranha. Há muitos sons estranhos e cheiros
+diferentes. Não há animais aqui, mas você pode ouvir os sons de animais à distância.
+Há uma pequena névoa chegando que se estende mais para o leste.
 ~
 238 0 0 0 0 0
 D1
-Looking east you can see nothing except fog.
+Olhando para o leste você não pode ver nada exceto névoa.
 ~
 ~
 0 0 23877
 D3
-Looking west you see the southern road.
+Olhando para o oeste você vê a estrada sul.
 ~
 ~
 0 0 23875
 S
 #23877
-In the fog~
-   There is a heavy fog here which disallows you to see anything except the
-exits to the rooms ahead.  The fog appears to be implied by some kind of
-magical force.  The sounds of animals are no longer heard and no evidence of
-life are present.
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
 ~
 238 0 0 0 0 0
 D1
@@ -1732,11 +1722,10 @@ D3
 0 0 23876
 S
 #23878
-In the fog~
-   There is a heavy fog here which disallows you to see anything except the
-exits to the rooms ahead.  The fog appears to be implied by some kind of
-magical force.  The sounds of animals are no longer heard and no evidence of
-life are present.
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
 ~
 238 0 0 0 0 0
 D1
@@ -1749,15 +1738,14 @@ D3
 0 0 23877
 S
 #23879
-In the fog~
-   There is a heavy fog here which disallows you to see anything except the
-exits to the rooms ahead.  The fog appears to be implied by some kind of
-magical force.  The sounds of animals are no longer heard and no evidence of
-life are present.
+Na névoa~
+   Há uma névoa pesada aqui que não permite que você veja nada exceto as saídas
+para as salas à frente. A névoa parece ser causada por algum tipo de força mágica.
+Os sons de animais não são mais ouvidos e nenhuma evidência de vida está presente.
 ~
 238 0 0 0 0 0
 D1
- Looking east you see a large area before a great lake.
+ Olhando para o leste você vê uma grande área diante de um grande lago.
 ~
 ~
 0 0 23880
@@ -1767,45 +1755,44 @@ D3
 0 0 23878
 S
 #23880
-A Clearing Before the Lake~
-   You stand here in front of a massive lake.  There are many small animals
-scattered about looking as if they want to get out but cannot.  There are many
-different smells surrounding the area.
+Uma Clareira Diante do Lago~
+   Você está aqui em frente a um lago massivo. Há muitos pequenos animais
+espalhados, parecendo querer sair, mas não conseguem. Há muitos cheiros diferentes
+cercando a área.
 ~
 238 0 0 0 0 0
 D0
-Looking north you see the area before the lake.
+Olhando para o norte você vê a área diante do lago.
 ~
 ~
 0 0 23801
 D3
- Looking west you see into the fog.
+ Olhando para o oeste você vê dentro da névoa.
 ~
 ~
 0 0 23879
 D4
-Looking up you see the snowy peaks of distant mountains through the fog.
+Olhando para cima você vê os picos nevados de montanhas distantes através da névoa.
 ~
 ~
 0 -1 12660
 S
 #23881
-Dragons Lair~
-   You have entered a large room with very little decorations and no kind of
-art.  There are claw marks and very large holes in the walls and ceiling
-around.  The floor is very hard and seems to be composed of crystal.  The roof
-is also made of the same materials.
+Covil do Dragão~
+   Você entrou em uma grande sala com muito poucas decorações e nenhum tipo de arte.
+Há marcas de garras e buracos muito grandes nas paredes e teto ao redor. O chão é
+muito duro e parece ser composto de cristal. O teto também é feito dos mesmos
+materiais.
 ~
 238 0 0 0 0 0
 D5
-Looking down you see the rocks in front of the castle.
+Olhando para baixo você vê as rochas em frente ao castelo.
 ~
 ~
 0 0 23846
 E
-scratches~
-   Looking in for a closer look you see that these scratches are from some kind
-of animal.
+arranhões scratches~
+   Olhando mais de perto você vê que esses arranhões são de algum tipo de animal.
 ~
 S
 $~
