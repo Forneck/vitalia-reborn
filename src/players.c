@@ -1222,15 +1222,16 @@ static void read_aliases_ascii(FILE *file, struct char_data *ch, int count)
      * first character on the line) and the new (where they are prepended by a space in order
      * to avoid the possibility of a * at the start of the line */
     for (i = 0; i < count; i++) {
-        char abuf[MAX_INPUT_LENGTH + 1], rbuf[MAX_INPUT_LENGTH + 1], tbuf[MAX_INPUT_LENGTH];
+        char abuf[MAX_INPUT_LENGTH + 1], rbuf[MAX_ALIAS_LENGTH + 1], tbuf[MAX_INPUT_LENGTH];
 
         /* Read the aliased command. */
         get_line(file, abuf);
 
         /* Read the replacement. This needs to have a space prepended before placing in
-         * the in-memory struct. The space may be there already, but we can't be certain! */
+         * the in-memory struct. The space may be there already, but we can't be certain!
+         * Use get_long_line for potentially long alias replacements. */
         rbuf[0] = ' ';
-        get_line(file, rbuf + 1);
+        get_long_line(file, rbuf + 1, sizeof(rbuf) - 1);
 
         /* read the type */
         get_line(file, tbuf);

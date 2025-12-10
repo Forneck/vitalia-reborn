@@ -750,10 +750,32 @@ ACMD(do_alias)
             else
                 send_to_char(ch, "Atalho apagado.\r\n");
         } else { /* otherwise, either add or redefine an alias */
+            size_t repl_len;
+
             if (!str_cmp(arg, "alias")) {
                 send_to_char(ch, "Você não pode criar atalho com o nome 'alias'.\r\n");
                 return;
             }
+
+            /* Skip leading spaces in replacement */
+            skip_spaces(&repl);
+            repl_len = strlen(repl);
+
+            /* Check if alias replacement is too long */
+            if (repl_len > MAX_ALIAS_LENGTH - 1) {
+                send_to_char(ch, "Atalho muito longo! Tamanho máximo: %d caracteres.\r\n", MAX_ALIAS_LENGTH - 1);
+                return;
+            }
+
+            /* Warn if alias is getting close to input limit */
+            if (repl_len > MAX_INPUT_LENGTH - 50) {
+                send_to_char(ch,
+                             "\tyAVISO:\tn O atalho está próximo do limite de entrada (%d caracteres).\r\n"
+                             "Limite atual de entrada por linha: %d caracteres.\r\n"
+                             "Considere dividir em múltiplos atalhos menores.\r\n",
+                             (int)repl_len, MAX_INPUT_LENGTH);
+            }
+
             CREATE(a, struct alias_data, 1);
             a->alias = strdup(arg);
             delete_doubledollar(repl);
