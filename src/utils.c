@@ -731,6 +731,41 @@ int get_line(FILE *fl, char *buf)
     return (lines);
 }
 
+/** Read a line from a file, skipping over lines beginning with '*' or lines
+ * that contain only whitespace. This version supports reading longer lines
+ * up to the size of the provided buffer.
+ * @pre Caller must allocate memory for buf with size specified by bufsize.
+ * @post If there is a line to be read, the newline character is removed and
+ * the string is returned. Else a null string is returned in buf.
+ * @param[in] fl The file to be read from.
+ * @param[out] buf Buffer to store the line.
+ * @param[in] bufsize Size of the buffer.
+ * @retval Number of lines read (including skipped ones), or 0 on EOF/error.
+ */
+int get_long_line(FILE *fl, char *buf, size_t bufsize)
+{
+    char temp[MAX_ALIAS_LENGTH];
+    int lines = 0;
+    size_t sl;
+
+    if (bufsize > sizeof(temp))
+        bufsize = sizeof(temp);
+
+    do {
+        if (!fgets(temp, bufsize, fl))
+            return (0);
+        lines++;
+    } while (*temp == '*' || *temp == '\n' || *temp == '\r');
+
+    /* Last line of file doesn't always have a \n, but it should. */
+    sl = strlen(temp);
+    while (sl > 0 && (temp[sl - 1] == '\n' || temp[sl - 1] == '\r'))
+        temp[--sl] = '\0';
+
+    strlcpy(buf, temp, bufsize);
+    return (lines);
+}
+
 /** Create the full path, relative to the library path, of the player type
  * file to open.
  * @todo Make the return type bool.
