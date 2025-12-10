@@ -1,203 +1,203 @@
 #23839
-Puke up your guts - 23842~
+Vomitar suas entranhas - 23842~
 2 c 100
 exa~
 if %cmd.mudcommand% == examine && corpse /= %arg%
-  %send% %actor% As you near the pile of decaying corpses the smell of death and rotting corpses hit you.
-  %echoaround% %actor% %actor.name% begins to near the corpses and is stopped by the horrid smell.
+  %send% %actor% Ao se aproximar da pilha de cadáveres em decomposição, o cheiro de morte e cadáveres podres o atinge.
+  %echoaround% %actor% %actor.name% começa a se aproximar dos cadáveres e é parado pelo cheiro horrível.
   %force% %actor% puke
 else
-  %send% %actor% You cannot %cmd% that!
+  %send% %actor% Você não pode %cmd% isso!
 end
 ~
 #23840
-Pull torch - 23840~
+Puxar tocha - 23840~
 2 c 100
 pu~
 if pull /= %cmd% && torch /= %arg%
-  %send% %actor% The torch turns easily in your hand revealing a trap door.
-  %echoaround% %actor% As %actor.name% pulls the torch a trap door swings open leading upwards.
+  %send% %actor% A tocha gira facilmente em sua mão revelando um alçapão.
+  %echoaround% %actor% Quando %actor.name% puxa a tocha, um alçapão se abre levando para cima.
   %door% 23840 up room 23841
-  %door% 23840 up name trap door
+  %door% 23840 up name alçapão trap door
   wait 60s
-  %echo% The trap door slams itself closed as if by magic.
+  %echo% O alçapão se fecha sozinho como se por mágica.
   %door% 23840 up purge
 else
   %send% %actor% OK!
-  %echoaround% %actor% You start to question the sanity of %actor.name% as they fumble about the room.
+  %echoaround% %actor% Você começa a questionar a sanidade de %actor.name% enquanto eles tropeçam pela sala.
 end
 ~
 #23841
-Monster Greets - 23841~
+Monstro cumprimenta - 23841~
 0 hi 100
 ~
 if %actor.is_pc%
   wait 2s
-  emote looks up and beams a smile towards %actor.name%
+  emote olha para cima e sorri para %actor.name%
   wait 6s
-  say Bah!! your head is way to small to add to my collection!!
+  say Bah!! sua cabeça é muito pequena para adicionar à minha coleção!!
   wait 2s
-  emote turns his attention back to the heads that line the wall.
+  emote volta sua atenção para as cabeças que revestem a parede.
 end
 ~
 #23842
-Still too small - 23841~
+Ainda muito pequeno - 23841~
 0 f 100
 ~
-say Your head is still too small!!
-emote cackles with insane glee.
+say Sua cabeça ainda é muito pequena!!
+emote ri com alegria insana.
 ~
 #23843
 Portal - 23843~
 1 c 7
 en~
 if %cmd.mudcommand% == enter && box /= %arg%
-  %send% %actor% You enter a mysterious box.
-  %echoaround% %actor% %actor.name% steps into a mysterious box.
+  %send% %actor% Você entra em uma caixa misteriosa.
+  %echoaround% %actor% %actor.name% entra em uma caixa misteriosa.
   %teleport% %actor% 23844
   %force% %actor% look
-  %echoaround% %actor% %actor.name% steps out of a mysterious box.
+  %echoaround% %actor% %actor.name% sai de uma caixa misteriosa.
 else
-  %send% %actor% %cmd.mudcommand% what?!
+  %send% %actor% %cmd.mudcommand% o quê?!
 end
 ~
 #23853
-Riddle 1 - 23860~
+Enigma 1 - 23860~
 0 g 100
 ~
 if %actor.is_pc%
   wait 1s
-  say hello stranger. I know why you are here, you wanna enter the gate don't you.
+  say olá estranho. Eu sei por que você está aqui, você quer entrar no portão, não é.
 end
 ~
 #23854
-Yes command - 23860~
+Comando yes - 23860~
 0 d 1
 y~
 if yes /= %speech%
-  say Well then you gotta answer a few riddles first.  I hope you are smart and not wasting my time.
+  say Bem, então você tem que responder alguns enigmas primeiro. Espero que você seja esperto e não esteja desperdiçando meu tempo.
   wait 3s
-  say hhhhmmmmmm which should i use first.
+  say hhhhmmmmmm qual devo usar primeiro.
   wait 1s
-  say ahhh i got it.
+  say ahhh entendi.
   wait 1s
-  say ok here goes, how far can you run into the woods?
+  say ok lá vai, até onde você pode correr para dentro da floresta?
 end
 ~
 #23855
-Fountain portal - 23855~
+Portal da fonte - 23855~
 1 c 7
 en~
 if %cmd.mudcommand% == enter && fountain /= %arg%
-  %send% %actor% You dive into a large fountain.
-  %echoaround% %actor% %actor.name% dives into a large fountain.
+  %send% %actor% Você mergulha em uma grande fonte.
+  %echoaround% %actor% %actor.name% mergulha em uma grande fonte.
   %teleport% %actor% 23856
   %force% %actor% look
-  %echoaround% %actor% %actor.name% emerges from a large fountain.
+  %echoaround% %actor% %actor.name% emerge de uma grande fonte.
 else
-  %send% %actor% enter what?!
+  %send% %actor% entrar onde?!
 end
 ~
 #23856
-Riddle 2 - 23860~
+Enigma 2 - 23860~
 0 d 0
 halfway~
-  emote gives %actor.name% a round of applause
-say well done.
+  emote aplaude %actor.name%
+say bem feito.
 wait 2 sec
-say hhhhhmmmmm what should I use next?
+say hhhhhmmmmm o que devo usar a seguir?
 wait 1 s
-say ahh I got it.
+say ahh entendi.
 wait 2 s
-say ok here goes in magical language what word means fly?
+say ok lá vai, em linguagem mágica qual palavra significa voar?
 ~
 #23857
-Riddle 3 - 23860~
+Enigma 3 - 23860~
 0 d 100
 yrl~
-say very good
+say muito bom
 wait 2 s
-emote ponders over which question to use next.
+emote pondera sobre qual pergunta usar a seguir.
 wai 3 s
-say ahh i got it
+say ahh entendi
 wait 1 s
-say ok what has 4 legs up 4 legs down and is soft in the middle?
+say ok o que tem 4 pernas para cima, 4 pernas para baixo e é macio no meio?
 ~
 #23858
-Riddle 4 - 23860~
+Enigma 4 - 23860~
 0 d 100
 bed~
-say well done!!
+say bem feito!!
 wait 2 s
-say I got one more for you then you may pass.
+say Tenho mais uma para você e então você pode passar.
 wait 1 s
-say ok at night they come without being fetched, and by day they are lost without being stolen what is it?
+say ok à noite eles vêm sem serem buscados, e de dia são perdidos sem serem roubados, o que é?
 ~
 #23859
-Riddle 5 - 23860~
+Enigma 5 - 23860~
 0 d 100
 stars~
-say very good but I changed my mind you got those to quickly you need to answer a few more to pass.
+say muito bom, mas mudei de ideia, você acertou muito rápido, precisa responder mais alguns para passar.
 wait 2 s
-say ok here goes
+say ok lá vai
 wait 1 s
-say I never was but will always be, noone ever saw me, noone ever will yet I am the confidence of all that live and breath on this terrestrial ball what am I?
+say Eu nunca fui mas sempre serei, ninguém nunca me viu, ninguém nunca verá, mas sou a confiança de todos que vivem e respiram nesta bola terrestre, o que sou eu?
 ~
 #23860
-Riddle 6 - 23860~
+Enigma 6 - 23860~
 0 d 100
 tomorrow~
-say well done!!
+say bem feito!!
 wait 1 s
-emote applauses %actor.name% for a job well done.
+emote aplaude %actor.name% por um trabalho bem feito.
 wait 1 s
-say you can now enter the gate to the north you posess the knowledge that is required.
+say você pode agora entrar no portão ao norte, você possui o conhecimento necessário.
 wait 1 s
 %load% obj 23860
 drop all
 wait 2 s
-say use it well my son.
+say use-a bem, meu filho.
 ~
 #23861
-Green portal entrance - 23863~
+Entrada portal verde - 23863~
 1 c 100
 en~
 if %cmd.mudcommand% == enter && green /= %arg%
-  %send% %actor% You enter a large green portal.
-  %echoaround% %actor% %actor.name% steps into a large green portal.
+  %send% %actor% Você entra em um grande portal verde.
+  %echoaround% %actor% %actor.name% entra em um grande portal verde.
   %teleport% %actor% 23864
   %force% %actor% look
-  %echoaround% %actor% steps into a large green portal.
+  %echoaround% %actor% entra em um grande portal verde.
 else
-  %send% %actor% enter what?!
+  %send% %actor% entrar onde?!
 end
 ~
 #23862
-Blue portal entrance - 23861~
+Entrada portal azul - 23861~
 1 c 100
 en~
 if %cmd.mudcommand% == enter && blue /= %arg%
-  %send% %actor% You enter a large blue portal.
-  %echoaround% %actor% %actor.name% steps into a large blue portal.
+  %send% %actor% Você entra em um grande portal azul.
+  %echoaround% %actor% %actor.name% entra em um grande portal azul.
   %teleport% %actor% 23862
   %force% %actor% look
-  %echoaround% %actor% steps through a large blue portal.
+  %echoaround% %actor% atravessa um grande portal azul.
 else
-  %send% %actor% enter what?!
+  %send% %actor% entrar onde?!
 end
 ~
 #23863
-Red portal entrance - 23862~
+Entrada portal vermelho - 23862~
 1 c 100
 en~
 if %cmd.mudcommand% == enter && red /= %arg%
-  %send% %actor% You enter a large blue portal.
-  %echoaround% %actor% %actor.name% steps into a large blue portal.
+  %send% %actor% Você entra em um grande portal vermelho.
+  %echoaround% %actor% %actor.name% entra em um grande portal vermelho.
   %teleport% %actor% 23863
   %force% %actor% look
-  %echoaround% %actor% steps through a large blue portal.
+  %echoaround% %actor% atravessa um grande portal vermelho.
 else
-  %send% %actor% enter what?!
+  %send% %actor% entrar onde?!
 end
 ~
 $~
