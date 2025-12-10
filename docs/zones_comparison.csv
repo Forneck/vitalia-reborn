@@ -1,0 +1,320 @@
+Source,Vnum,Zone Name,Builder,Min Level,Max Level
+Current,0,"Limbo - Interno",Vitalia,,
+Current,1,"Entre DimensÃµes",Vitalia,,
+Current,2,"O Castelo da Rainha Gelada",Cansian,10,45
+Current,3,"Bandar, A Cidade Maldita",Vitalia,12,35
+Current,4,"A Embaixada dos ClÃ£s de VitÃ¡lia",Vitalia,,
+Current,5,"Templos Imortais",Vitalia,100,
+Current,6,"A PrisÃ£o",Vitalia,,
+Current,7,"A Floresta Sombria",4,10,90
+Current,8,"O Castelo dos Vampiros",Vitalia,10,50
+Current,9,"Ilha do Rio de Minos",Vitalia,2,26
+Current,10,"Vila de Midgaard",Vitalia,,
+Current,11,"Os Campos Secretos",Vitalia,,
+Current,12,"O Reino dos Imortais",Vitalia,100,
+Current,13,"Residencial Midgaard",Vitalia,,
+Current,14,"Quest",Vitalia,,
+Current,15,"O Caminho da Virtude",Vitalia,70,
+Current,16,"A Vila dos Gnomos",Vitalia,3,45
+Current,17,"Ancalador e A Guilda de Necromantes",Vitalia,6,25
+Current,18,"Os Campos de Midgaard",Vitalia,,
+Current,19,"Zona de Experiencias",Cansian,,
+Current,20,"ClÃ£s",Vitalia,10,100
+Current,22,"O SafÃ¡ri no Covil dos Lagartos",Vitalia,6,20
+Current,23,"O Grande Festival",Vitalia,6,50
+Current,24,"O Navio Fantasma",Vitalia,5,50
+Current,25,"A Grande Torre de Magia",Vitalia,7,50
+Current,27,"Os MistÃ©rios de Midantra",Vitalia,6,60
+Current,28,"A Grande Catedral de Cristal",Vitalia,,
+Current,29,"Porto",Nivan,,
+Current,30,"Norte da Cidade de Midgaard",Vitalia,,
+Current,31,"Sul da Cidade de Midgaard",Vitalia,,54
+Current,33,"O TrÃªs de Espadas",Vitalia,5,
+Current,34,"A Vila de Villspah",Vitalia,15,
+Current,35,"Miden'Nir",Vitalia,4,10
+Current,36,"O Tabuleiro de Xadrez",Vitalia,4,18
+Current,37,"O Reino dos Mortos-Vivos",Vitalia,39,50
+Current,38,"O Museu do Colecionador",Vitalia,,
+Current,39,"O Abismo Profundo",Vitalia,20,50
+Current,40,"Moria",Vitalia,,13
+Current,42,"O Escaldante Deserto de Kubalai",Vitalia,20,30
+Current,43,"Uma Noite em Notre Dame",Vitalia,,50
+Current,44,"Qui'Lur",Vitalia,40,50
+Current,45,"Gondolin, o Reino Oculto",Vitalia,10,
+Current,48,"As Cavernas dos Homens Brancos",Vitalia,26,60
+Current,49,"A Grande Ãrvore dos Inciantes",Vitalia,,5
+Current,50,"O Grande Deserto Oriental",Vitalia,3,24
+Current,51,"Cidade Drow",Vitalia,8,25
+Current,52,"A Cidade de Thalos",Vitalia,9,25
+Current,53,"A Grande PirÃ¢mide",Vitalia,5,50
+Current,54,"Nova Thalos",Vitalia,,
+Current,57,"Graye",Vitalia,8,45
+Current,58,"Nova Thalos - Distrito Mercantil",Vitalia,,
+Current,59,"O Altar de SacrifÃ­cios de Raantra",Vitalia,8,41
+Current,60,"Haon-Dor, Floresta Clara",Vitalia,,8
+Current,61,"Haon-Dor, Floresta Escura",Vitalia,3,30
+Current,62,"A PlanÃ­cie dos Orcs",Vitalia,,15
+Current,63,"Arachnos",Vitalia,3,26
+Current,64,"A Torre de Rand",Vitalia,8,27
+Current,65,"O Reino dos Anoes",Vitalia,4,33
+Current,66,"Vila Norte de Nova Thalos",Vitalia,,
+Current,69,"Os Templos de Anura",Vitalia,12,40
+Current,70,"O Esgoto, Primeiro NÃ­vel",Vitalia,,19
+Current,71,"O Segundo Esgoto",Vitalia,,19
+Current,72,"O Esgoto Labirinto",Vitalia,6,14
+Current,73,"Os TÃºneis nos Esgotos",Vitalia,,
+Current,75,"Nos DomÃ­nios do BarÃ£o Darwin",Vitalua,15,90
+Current,79,"A ResidÃªncia de Redferne",Vitalia,12,26
+Current,81,"Egito",Vitalia,5,
+Current,83,"A Aldeia Maldita",Vitalia,20,
+Current,84,"Valfenda",Vitalia,50,
+Current,91,"O Labirinto do Milharal",Vitalia,70,75
+Current,92,"Os Cinco Reinos",Vitalia,4,20
+Current,93,"ParaÃ­so dos DragÃµes",Vitalia,10,
+Current,94,"Trilha do Destino",Vitalia,,
+Current,95,"GalÃ¡xia",Vitalia,10,
+Current,97,"O SubterrÃ¢neo",Vitalia,15,40
+Current,98,"O Abismo",Vitalia,40,
+Current,99,"Ghenna",Vitalia,,
+Current,100,"A Vila de Mordecai",Vitalia,3,40
+Current,102,"O Castelo de Jareth",Vitalia,16,52
+Current,103,"A Selva de Makira",Vitalia,5,20
+Current,107,"OtÃ¡via",Vitalia,18,85
+Current,108,"A Cidade de TrÃ³ia",Vitalia,5,
+Current,110,"As Mesnadas de VitÃ¡lia",Vitalia,,
+Current,111,"O Reino das Pedras",Vitalia,100,
+Current,113,"Bhogavati, A Cidade das JÃ³ias",Vitalia,,
+Current,114,"A Fenda Entre Mundos",Vitalia,20,
+Current,115,"O SÃ©timo Mundo Oculto, Patala",Vitalia,10,
+Current,116,"Svarga, O Reino Celestial",Vitalia,8,70
+Current,120,"Roma",Vitalia,3,
+Current,121,"O Labirinto do Minotauro",Vitalia,9,70
+Current,124,"Vila de Nova Thalos",Vitalia,,
+Current,126,"Escandinavia, a Terra do Gelo",Vitalia,10,
+Current,131,"Torin",Vitalia,7,50
+Current,132,"O Farol da Praia",Vitalia,,50
+Current,133,"O Templo do Grande BÃºfalo",Vitalia,10,60
+Current,134,"A Cidade de Thewster e A Caverna Escura",Vitalia,,
+Current,135,"A Floresta Tropical de Thewster",Vitalia,8,50
+Current,136,"A Floresta Leste de Thewster",Vitalia,13,25
+Current,137,"LothlÃ³rien",Vitalia,,
+Current,138,"O ArquipÃ©lago de Yo",Vitalia,100,
+Current,140,"Lindrel",Vitalia,7,45
+Current,144,"A Aldeia de Bri",Vitalia,2,50
+Current,145,"O Condado",Vitalia,2,50
+Current,150,"O Castelo do Rei Welmar",Vitalia,,52
+Current,151,"O Templo Samurai",Vitalia,50,
+Current,152,"Floresta de Aokigahara",Kasper,55,
+Current,153,"Takamagahara - O Plano Celestial",Kasper,70,
+Current,155,"O Moinho de Vento",Vitalia,5,17
+Current,157,"O Castelo de Flyre",Vitalia,25,
+Current,160,"Os Estrategistas de VitÃ¡lia",Vitalia,,
+Current,170,"O Canyon dos Elementais",Vitalia,3,30
+Current,173,"Camelot",Vitalia,10,
+Current,176,"O ImpÃ©rio ChinÃªs",Vitalia,10,
+Current,181,"Os Caminhos Iniciais",Vitalia,0,2
+Current,186,"Zona dos Iniciantes",Vitalia,1,7
+Current,190,"Os Bosques dos Elfos",Vitalia,,50
+Current,197,"O Vale dos Orcs Negros",Vitalia,11,90
+Current,198,"O Labirinto das Almas Perdidas",Vitalia,25,80
+Current,201,"O Asilo dos Novatos",Vitalia,1,7
+Current,204,"O Labirinto do Templo dos LadrÃµes",Vitalia,10,40
+Current,206,"As Ilhas de No",Forneck,100,110
+Current,220,"Anexo",Vitalia,,
+Current,221,"A Biblioteca de VitÃ¡lia",Vitalia,,
+Current,222,"O SantuÃ¡rio das GlÃ³rias",Vitalia,100,
+Current,244,"O Grande Desafio",Vitalia,,
+Current,280,"As PlanÃ­cies de Callyus",Vitalia,15,50
+Current,290,"A Torre do BarÃ£o de Cailveh",Vitalia,41,
+Current,652,"New Zone",None,,
+Current,653,"New Zone",None,,
+Current,654,"New Zone",None,,
+tbadoc,0,"The Builder Academy Zone",Rumble,,
+tbadoc,1,"Sanctus",Rumble,,
+tbadoc,2,"Sanctus II",Rumble,,
+tbadoc,3,"Sanctus III",Rumble,,
+tbadoc,4,"Rename",trunks shaoden,,
+tbadoc,5,"Newbie Farm",Unknown,,
+tbadoc,6,"Sea of Souls",q,,
+tbadoc,7,"Camelot",Lok,,
+tbadoc,9,"River Island of Minos",Mahatma,,
+tbadoc,11,"Frozen Castle",Detta,,
+tbadoc,12,"God Complex Merged with 343",CircleMUD,,
+tbadoc,13,"TBA Examples",Rumble,,
+tbadoc,14,"TBA Examples II",Rumble,,
+tbadoc,15,"Straight Path",Steppin,,
+tbadoc,16,"Camelot II",Lok,,
+tbadoc,17,"Camelot III",Lok,,
+tbadoc,18,"Nuclear Wasteland",Rumble,,
+tbadoc,19,"Spider Swamp",Detta,,
+tbadoc,20,"Arena",Rumble,,
+tbadoc,22,"Tower of the Undead",Rumble,,
+tbadoc,25,"High Tower of Magic",Skylar,,
+tbadoc,26,"High Tower of Magic II",Skylar,,
+tbadoc,27,"Memlin Caverns",Detta,,
+tbadoc,28,"Mudschool",Welcor,,
+tbadoc,30,"Northern Midgaard",DikuMUD,,
+tbadoc,31,"Southern Midgaard",DikuMUD,,
+tbadoc,32,"Midgaard",DikuMUD,,
+tbadoc,33,"Three of Swords",C.A.W.,,
+tbadoc,35,"Miden'Nir",Copper II,,
+tbadoc,36,"Chessboard of Midgaard",Exxon,,
+tbadoc,37,"Capital Sewer System",Welcor,,
+tbadoc,38,"Capital Sewer System II",Welcor,,
+tbadoc,39,"Haven",Nivan,,
+tbadoc,40,"Mines of Moria",Redferne,,
+tbadoc,41,"Mines of Moria",Redferne,,
+tbadoc,42,"Dragon Chasm",Guldane,,
+tbadoc,43,"Arctic Zone",Walrus Polar,,
+tbadoc,44,"Orc Camp",Welcor,,
+tbadoc,45,"Woodland Monastery",Gnoff,,
+tbadoc,46,"Ant Hill",Garrison,,
+tbadoc,50,"Great Eastern Desert",Rorschach,,
+tbadoc,51,"Drow City",Rorschach,,
+tbadoc,52,"City of Thalos",Rorschach,,
+tbadoc,53,"Great Pyramid",Andersen,,
+tbadoc,54,"New Thalos",Duke,,
+tbadoc,55,"New Thalos II",Duke,,
+tbadoc,56,"New Thalos Wilderness",Duke,,
+tbadoc,57,"Zodiac",Gatia,,
+tbadoc,60,"Haon-Dor, Light Forest",Quifael,,
+tbadoc,61,"Haon-Dor, Light Forest II",Quifael,,
+tbadoc,62,"Orc Enclave",C.A.W.,,
+tbadoc,63,"Arachnos",Mahatma,,
+tbadoc,64,"Rand's Tower",C.A.W.,,
+tbadoc,65,"Dwarven Kingdom",Depeche,,
+tbadoc,70,"Sewer, First Level",Redferne,,
+tbadoc,71,"Second Sewer",Redferne,,
+tbadoc,72,"Sewer Maze",Redferne,,
+tbadoc,73,"Tunnels in the Sewer",Redferne,,
+tbadoc,74,"Newbie Graveyard",Jojen,,
+tbadoc,75,"Zamba",Shimmer,,
+tbadoc,78,"Gideon",Arina,,
+tbadoc,79,"Redferne's Residence",DikuMUD,,
+tbadoc,83,"Glumgold's Sea",Meyekul Benighted,,
+tbadoc,86,"Duke Kalithorn's Keep",Destiny,,
+tbadoc,90,"Oasis",Rumble,,
+tbadoc,96,"Domiae",Kas,,
+tbadoc,100,"Northern Highway",Rumble,,
+tbadoc,101,"South Road",Unknown,,
+tbadoc,103,"DBZ World",Taylor,,
+tbadoc,104,"Land of Orchan",Taylor,,
+tbadoc,106,"Elcardo",Daiko,,
+tbadoc,107,"Realms of Iuel",Rumble Santa,,
+tbadoc,115,"Monestary Omega",Polar,,
+tbadoc,117,"Los Torres",Dysprosic,,
+tbadoc,118,"The Dollhouse",Detta,,
+tbadoc,120,"Rome",Onivel,,
+tbadoc,125,"Hannah",Rhunter,,
+tbadoc,130,"Mist Maze",random,,
+tbadoc,140,"Wyvern City",Balme,,
+tbadoc,150,"King Welmar's Castle",CircleMUD,,
+tbadoc,169,"Gibberling Caves",Tanto,,
+tbadoc,175,"Cardinal Wizards",Unknown,,
+tbadoc,186,"Newbie Zone",Maynard,,
+tbadoc,187,"Circus",Wolfgaar Arina,,
+tbadoc,200,"Western Highway",Rumble,,
+tbadoc,201,"Sapphire Islands",Elixias,,
+tbadoc,211,"Tarot",Parnassus,,
+tbadoc,220,"The Enchanted Kitchen",Exa,,
+tbadoc,232,"Terringham",Ferret,,
+tbadoc,233,"Dragon Plains",Unknown,,
+tbadoc,234,"Newbie School",Ferret,,
+tbadoc,235,"Dwarven Mines",Unknown,,
+tbadoc,236,"Aldin",Welcor,,
+tbadoc,237,"Dwarven Trade Route",Welcor,,
+tbadoc,238,"Crystal Castle",Polar Higgins,,
+tbadoc,239,"South Pass",Crysanthia,,
+tbadoc,240,"Dun Maura",Rumble,,
+tbadoc,241,"Starship Enterprise",Crazyman Heiach,,
+tbadoc,242,"New Southern Midgaard",Crazyman,,
+tbadoc,243,"Snowy Valley",Crazyman,,
+tbadoc,244,"Cooland Prison",Crazyman,,
+tbadoc,245,"The Nether",Kaan,,
+tbadoc,246,"The Nether II",Kaan,,
+tbadoc,247,"Graveyard",Rasta,,
+tbadoc,248,"Elven Woods",Gbetz,,
+tbadoc,249,"Jedi Clan House",G.Threepwood,,
+tbadoc,250,"DragonSpyre",Unknown,,
+tbadoc,251,"Ape Village",Crazyman,,
+tbadoc,252,"Castle of the Vampyre",Kaan,,
+tbadoc,253,"Windmill",Kaan,,
+tbadoc,254,"Mordecai's Village",Kaan,,
+tbadoc,255,"Shipwreck",Kaan,,
+tbadoc,256,"Lord's Keep",Kaan,,
+tbadoc,257,"Jareth Main City",Kaan,,
+tbadoc,258,"Light Forest",Kaan,,
+tbadoc,259,"Haunted Mansion",Kaan,,
+tbadoc,260,"Grasslands",Kaan,,
+tbadoc,261,"Inna & Igor's Castle",Kaan,,
+tbadoc,262,"Forest Trails",Kaan,,
+tbadoc,263,"Farmlands",Kaan,,
+tbadoc,264,"Banshide",Kaan,,
+tbadoc,265,"Beach & Lighthouse",Kaan,,
+tbadoc,266,"Realm of Lord Ankou",Kaan,,
+tbadoc,267,"Vice Island",Questor,,
+tbadoc,268,"Vice Island II",Questor,,
+tbadoc,269,"Southern Desert",Freak,,
+tbadoc,270,"Wasteland",AsA,,
+tbadoc,271,"Sundhaven",Mercy,,
+tbadoc,272,"Sundhaven II",Mercy,,
+tbadoc,273,"Space Station Alpha",Magnus,,
+tbadoc,274,"Adria: Saint Brigid",Whiteknight,,
+tbadoc,275,"New Sparta",Naved,,
+tbadoc,276,"New Sparta II",Naved,,
+tbadoc,277,"Shire",Unknown/Detta,,
+tbadoc,278,"Oceania",Questor,,
+tbadoc,279,"Notre Dame",Apollo/Detta,,
+tbadoc,280,"Living Motherboard",Kinesthesia,,
+tbadoc,281,"Forest of Khanjar",Methem,,
+tbadoc,282,"Infernal Pit of Kerjim",Raf Blizzard,,
+tbadoc,283,"Haunted House",Matt,,
+tbadoc,284,"Ghenna",Nosferatu,,
+tbadoc,285,"Descent to Hell II",Strahd,,
+tbadoc,286,"Descent to Hell",Strahd,,
+tbadoc,287,"Ofingia and the Goblin Town",Pippin,,
+tbadoc,288,"Galaxy",Doctor,,
+tbadoc,289,"Werith's Wayhouse",Builder_5 of C.A.W.,,
+tbadoc,290,"Lizard Lair Safari",Matrix of C.A.W.,,
+tbadoc,291,"Black Forest",Silverangel,,
+tbadoc,292,"Kerofk",Amanda Eterniale & Builder_5 of C.A.W. ,,
+tbadoc,293,"Kerofk II",Amanda Eterniale & Builder_5 of C.A.W. ,,
+tbadoc,294,"Trade Road",Builder_5,,
+tbadoc,295,"Jungle",Makira,,
+tbadoc,296,"Froboz Fun Factory",Amanda,,
+tbadoc,298,"Castle of Desire",Honeybear,,
+tbadoc,299,"Abandoned Cathedral",Matrix of C.A.W.,,
+tbadoc,300,"Ancalador",Mercutio of C.A.W.,,
+tbadoc,301,"Campus",Matrix of C.A.W.,,
+tbadoc,302,"Campus II",Matrix of C.A.W.,,
+tbadoc,303,"Campus III",Matrix of C.A.W.,,
+tbadoc,304,"Temple of the Bull",Aten,,
+tbadoc,305,"Chessboard",Aten,,
+tbadoc,306,"Newbie Tree",Kaan,,
+tbadoc,307,"Castle",Kaan,,
+tbadoc,308,"Baron Cailveh",Kaan,,
+tbadoc,309,"Keep of Baron Westlawn",Kaan,,
+tbadoc,310,"Graye Area",Aten,,
+tbadoc,311,"The Dragon's Teeth",Kaan,,
+tbadoc,312,"Leper Island",Kaan,,
+tbadoc,313,"Farmlands of Ofingia",Kaan,,
+tbadoc,314,"X'Raantra's Altar of Sacrifice",Kaan,,
+tbadoc,315,"McGintey Business District",Kaan,,
+tbadoc,316,"McGintey Guild Area",Kaan,,
+tbadoc,317,"Wharf",Kaan,,
+tbadoc,318,"Dock Area",Kaan,,
+tbadoc,319,"Yllythad Sea",Kaan,,
+tbadoc,320,"Yllythad Sea II",Kaan,,
+tbadoc,321,"Yllythad Sea III",Kaan,,
+tbadoc,322,"McGintey Bay",Kaan,,
+tbadoc,323,"Caverns of the Pale Man",Kaan,,
+tbadoc,324,"Army Encampment",Kaan,,
+tbadoc,325,"Revelry",Kaan,,
+tbadoc,326,"Army Perimeter",Kaan,,
+tbadoc,343,"God Complex ",None.,,
+tbadoc,345,"Asylum for the Insane",Duluth,,
+tbadoc,346,"God Hall Ext 346 for God Hall Cmplx",Whiteknight,,
+tbadoc,555,"Ultima",Casret,,
+tbadoc,556,"Ultima II",Casret,,
+tbadoc,653,"Apartment",Parnassus,,
+tbadoc,654,"Subdivision",Parnassus,,
