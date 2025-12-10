@@ -14,7 +14,7 @@ eval room %self.room.vnum% + 1
 switch %speech.car%
   case shuffle
     if %self.varexists(Cards_Dealt)%
-      %echo% @n  The voice is in your mind again.
+      %echo% @n  A voz está em sua mente novamente.
       %echo% @c    'Desculpe, as cartas parecem já estar dispostas.'@n
       halt
     else
@@ -23,8 +23,8 @@ switch %speech.car%
       global deck
       global layout
       set var %zone%01
-      emote shuffles the cards.
-      %echo% @n  %self.name% seems to speak directly to your mind.
+      emote embaralha as cartas.
+      %echo% @n  %self.name% parece falar diretamente com sua mente.
       %echo% @c    'Continue embaralhando até sentir que o baralho entende sua pergunta.@n
       %echo% @c   Quando estiver pronto, diga DEAL.'@n
       set Deck_Shuffled 1
@@ -39,20 +39,20 @@ switch %speech.car%
   end
   case deal
   if !%self.varexists(Deck_Shuffled)%
-    %echo% @n  The voice is in your mind again.
+    %echo% @n  A voz está em sua mente novamente.
     %echo% @c    'As cartas não parecem entender sua pergunta ainda. Você @n
     %echo% @c   EMBARALHOU?'@n
     halt
   elseif %self.varexists(Cards_Dealt)%
-    %echo% @n  The voice is in your mind again.@n
+    %echo% @n  A voz está em sua mente novamente.@n
     %echo% @c    'Desculpe, as cartas parecem já estar dispostas.'@n
     halt
   else
-    emote starts to lay out the cards.
-    %echo% @n  The voice seems to surround you now.
-    %echo% @c    'Quando estiver pronto, por favor vá para cima para começar sua leitura.  Once you@n
-    %echo% @c   start, you won't be able to come back.  Of course, you can always@n
-    %echo% @c   come back for another reading.@n
+    emote começa a distribuir as cartas.
+    %echo% @n  A voz parece envolvê-lo agora.
+    %echo% @c    'Quando estiver pronto, por favor vá para cima para começar sua leitura.  Uma vez que você@n
+    %echo% @c   comece, você não poderá voltar.  Claro, você sempre pode@n
+    %echo% @c   voltar para outra leitura.@n
     wait 2 sec
     %echo% @c    Em cada sala, LOOK CARD para ver o significado.  Reverso significa@n
     %echo% @c   que a carta foi disposta de cabeça para baixo, o que muda o significado.@n
@@ -60,7 +60,7 @@ switch %speech.car%
     %echo% @c   O nome da sala explicará o que a colocação da carta significa.'@n
     wait 1 sec
     %door% %self.room.vnum% up flags a
-    emote opens the door to the stairway.
+    emote abre a porta para a escadaria.
     while %layout%
       set zonebase %zone%00
       eval card %random.78% + %zonebase%
@@ -250,7 +250,7 @@ Vendedor Saúda~
 0 h 100
 ~
 wait 2 sec
-%echo% @n  The voice of %self.name% seems to fill your head.
+%echo% @n  A voz de %self.name% parece preencher sua cabeça.
 %echo% @c     'Ahh, você tem algo em mente? Vamos ver o que as@n
 %echo% @c   cartas têm a dizer.  Infelizmente, você não pode segurar ou embaralhar@n
 %echo% @c   minhas cartas, mas concentre-se em sua pergunta e diga shuffle.@n
@@ -262,7 +262,7 @@ wait 3 sec
 %echo% @c   mostrar-lhe as cartas e você deve decidir seus significados em sua@n
 %echo% @c   própria mente. Mova-se de carta em carta.  Cada espaço e cada carta@n
 %echo% @c   explicará a si mesma para você. 'LOOK CARD' in each room to see@n
-%echo% @c   the explanation. Estes são significados muito simplificados, então eles@n
+%echo% @c   a explicação. Estes são significados muito simplificados, então eles@n
 %echo% @c   são muito gerais.@n
 wait 3 sec
 %echo% @c     Lembre-se, isto é apenas um jogo e não deve ser levado@n
@@ -281,7 +281,7 @@ set zone 211
 * Kicks out people that are afk, etc
 if %self.room.vnum% != %zone%02
   emote looks around in confusion.
-  say I'm sorry.  I have to get to my office.
+  say Desculpe. Preciso ir ao meu escritório.
   emote leaves.
   eval findmob %%findmob.%zone%02(%self.vnum%)%%
   if %findmob% > 0
@@ -454,7 +454,7 @@ while %word%
       mgoto %zone%99
       %purge% quill
       mgoto %zone%02
-      emote puts down the appointment book.
+      emote coloca o livro de agendamentos de lado.
     end
   break
   default
@@ -498,14 +498,14 @@ set zone 211
 if %cmd.mudcommand% == quit || %cmd.mudcommand% == afk
   if %self.vnum% == %zone%04 && %actor.varexists(Making_Tarot_Appointment_%zone%)%
     say Desculpe, mas não poderei dar-lhe um agendamento agora.
-    say Please come back when you have more time available.
+    say Por favor, volte quando tiver mais tempo disponível.
     rdelete Making_Tarot_Appointment_%zone% %actor.id%
     rdelete Choosing_Tarot_Reader_%zone% %actor.id%
     mgoto %zone%99
     %purge% quill
     mgoto %zone%02
     wait 1 sec
-    emote puts down the appointment book.
+    emote coloca o livro de agendamentos de lado.
     wait 1 sec
     %force% %actor% %cmd.mudcommand%
     wait 1 sec
@@ -513,11 +513,11 @@ if %cmd.mudcommand% == quit || %cmd.mudcommand% == afk
   elseif %self.vnum% == %zone%01 || %self.vnum% == %zone%02 || %self.vnum% == %zone%03
     set office %self.room.vnum%
     eval endroom %office% + 10
-    %echo% @n    %self.name%'s voice sounds reproachfully in your head.
-    %echo% @c       'You don't seem to have time for this right now.@n
-    %echo% @c     Please come back when you have more time.'@n
+    %echo% @n    %self.name%', sua voz soa reprovadora em sua cabeça.
+    %echo% @c       'Você não parece ter tempo para isso agora.@n
+    %echo% @c     Por favor, volte quando tiver mais tempo.'@n
     wait 1 sec
-    %echo%    %self.name% waves her hand and you find yourself outside.
+    %echo%    %self.name% acena com a mão e você se encontra do lado de fora.
     wait 1 sec
     %teleport% %actor% %zone%01
     mgoto %endroom%
@@ -537,23 +537,23 @@ if %cmd.mudcommand% == quit || %cmd.mudcommand% == afk
 elseif %cmd% == return || %cmd% == recall || %cmd% == teleport || %cmd.mudcommand% == goto
   if %self.vnum% == %zone%04 && %actor.varexists(Making_Tarot_Appointment_%zone%)%
     say Desculpe, mas não poderei dar-lhe um agendamento agora.
-    say Please come back when you have more time available.
+    say Por favor, volte quando tiver mais tempo disponível.
     rdelete Making_Tarot_Appointment_%zone% %actor.id%
     rdelete Choosing_Tarot_Reader_%zone% %actor.id%
     mgoto %zone%99
     %purge% quill
     mgoto %zone%02
     %send% %actor%  @n
-    emote puts down the appointment book.
+    emote coloca o livro de agendamentos de lado.
     %send% %actor%  @n
     return 0
     halt
   elseif %self.vnum% == %zone%01 || %self.vnum% == %zone%02 || %self.vnum% == %zone%03
     set office %self.room.vnum%
     eval endroom %office% + 10
-    %echo% @n    %self.name%'s voice sounds reproachfully in your head.
-    %echo% @c       'You don't seem to have time for this right now.@n
-    %echo% @c     Please come back when you have more time.'@n
+    %echo% @n    %self.name%', sua voz soa reprovadora em sua cabeça.
+    %echo% @c       'Você não parece ter tempo para isso agora.@n
+    %echo% @c     Por favor, volte quando tiver mais tempo.'@n
     %send% %actor%  @n
     %teleport% %actor% %zone%01
     return 0
@@ -572,14 +572,14 @@ elseif %cmd% == return || %cmd% == recall || %cmd% == teleport || %cmd.mudcomman
 elseif %cmd.mudcommand% == south
   if %self.vnum% == %zone%04 && %actor.varexists(Making_Tarot_Appointment_%zone%)%
     say Desculpe, mas não poderei dar-lhe um agendamento agora.
-    say Please come back when you have more time available.
+    say Por favor, volte quando tiver mais tempo disponível.
     rdelete Making_Tarot_Appointment_%zone% %actor.id%
     rdelete Choosing_Tarot_Reader_%zone% %actor.id%
     mgoto %zone%99
     %purge% quill
     mgoto %zone%02
     wait 1 sec
-    emote puts down the appointment book.
+    emote coloca o livro de agendamentos de lado.
     wait 1 sec
     %force% %actor% %cmd%
     halt
@@ -602,7 +602,7 @@ set zone 211
 set actor %self.carried_by%
 if %actor.vnum% == %zone%04
   %echo% %actor.name% says, 'I've been waiting too long for this appointment.'
-  %echo% %actor.name% puts down the appointment book.
+  %echo% %actor.name% coloca o livro de agendamentos de lado.
   %purge% %self%
 else
   set actor %self.carried_by.name%
