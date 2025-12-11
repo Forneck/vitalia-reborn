@@ -8434,12 +8434,35 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
  */
 void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count)
 {
+    /* Cache variables to prevent expensive recalculation - 30 minute TTL
+     * This prevents repeated file I/O when show stats is called frequently */
+    static long long cached_money = 0;
+    static long long cached_qp = 0;
+    static int cached_count = 0;
+    static time_t last_calc_time = 0;
+    const int ECONOMY_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
+    time_t now = time(0);
+    
+    /* If cache is valid, return cached values immediately */
+    if (last_calc_time != 0 && (now - last_calc_time) < ECONOMY_CACHE_TTL) {
+        *total_money = cached_money;
+        *total_qp = cached_qp;
+        *player_count = cached_count;
+        return;
+    }
+    
+    /* Cache expired - recalculate (this is expensive!) */
     int i;
     struct char_data *temp_ch = NULL;
+    struct timeval start_time, end_time;
+    long elapsed_ms;
 
     *total_money = 0;
     *total_qp = 0;
     *player_count = 0;
+    
+    /* Track performance of this expensive operation */
+    gettimeofday(&start_time, NULL);
 
     for (i = 0; i <= top_of_p_table; i++) {
         /* Skip players above level 100 (immortals) based on player_table cache */
@@ -8463,6 +8486,22 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
 
         free_char(temp_ch);
         temp_ch = NULL;
+    }
+    
+    /* Update cache */
+    cached_money = *total_money;
+    cached_qp = *total_qp;
+    cached_count = *player_count;
+    last_calc_time = now;
+    
+    /* Log performance - this expensive operation loads ALL player files! */
+    gettimeofday(&end_time, NULL);
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
+                 (end_time.tv_usec - start_time.tv_usec) / 1000;
+    
+    if (elapsed_ms > 100) { /* Log if it takes more than 100ms */
+        log("PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from disk)",
+            elapsed_ms, top_of_p_table + 1, *player_count);
     }
 }
 

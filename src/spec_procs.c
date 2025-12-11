@@ -803,6 +803,11 @@ void calculate_qp_exchange_base_rate(void)
     long long total_qp = 0;
     int player_count = 0;
     long long calculated_rate;
+    struct timeval start_time, end_time;
+    long elapsed_ms;
+    
+    /* Track performance - this operation loads ALL player files! */
+    gettimeofday(&start_time, NULL);
 
     for (i = 0; i <= top_of_p_table; i++) {
         /* Skip immortals (level >= LVL_IMMORT) based on cached player_table index */
@@ -841,11 +846,16 @@ void calculate_qp_exchange_base_rate(void)
     }
 
     qp_exchange_rate_month = time_info.month;
+    
+    /* Log performance */
+    gettimeofday(&end_time, NULL);
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
+                 (end_time.tv_usec - start_time.tv_usec) / 1000;
 
     log1(
-        "QP Exchange: Calculated new base rate %d gold/QP from %d players "
+        "QP Exchange: Calculated new base rate %d gold/QP from %d players in %ldms "
         "(total money: %lld, total QP: %lld)",
-        qp_exchange_base_rate, player_count, total_money, total_qp);
+        qp_exchange_base_rate, player_count, elapsed_ms, total_money, total_qp);
 
     /* Save the rate to file for persistence */
     save_qp_exchange_rate();
