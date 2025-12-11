@@ -479,6 +479,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_WEATHER_EFFECT_MULTIPLIER 120
 /* Death trap warehouse configuration */
 #define CEDIT_DT_WAREHOUSE_ROOM 121
+/* Max mob-posted quests configuration */
+#define CEDIT_MAX_MOB_POSTED_QUESTS 122
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

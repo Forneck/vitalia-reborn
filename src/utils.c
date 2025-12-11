@@ -2403,8 +2403,7 @@ int count_mob_posted_quests(void)
  */
 bool can_add_mob_posted_quest(void)
 {
-    const int MAX_MOB_POSTED_QUESTS = 450;
-    return (count_mob_posted_quests() < MAX_MOB_POSTED_QUESTS);
+    return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS);
 }
 
 /**
@@ -4836,23 +4835,44 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
     mob_rnum qm_mob_rnum;
     struct char_data *qm_char;
     room_rnum qm_room;
+    struct timeval start_time, end_time;
+    long elapsed_ms;
+    int quest_loop_count = 0;
+    int char_loop_count = 0;
+    int pathfinding_calls = 0;
 
     if (zone == NOWHERE || zone >= top_of_zone_table) {
         return NULL;
     }
 
+    /* Track performance of this expensive operation */
+    gettimeofday(&start_time, NULL);
+
     /* Procura por questmasters carregados na zona especificada */
     for (rnum = 0; rnum < total_quests; rnum++) {
+        quest_loop_count++;
         if (QST_MASTER(rnum) != NOBODY) {
             qm_mob_rnum = real_mobile(QST_MASTER(rnum));
             if (qm_mob_rnum != NOBODY) {
                 /* Procura este questmaster carregado no mundo */
                 for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+                    char_loop_count++;
                     if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == qm_mob_rnum) {
                         qm_room = IN_ROOM(qm_char);
                         if (qm_room != NOWHERE && world[qm_room].zone == zone) {
-                            /* Verifica se é acessível usando pathfinding */
+                            /* Verifica se é acessível usando pathfinding - VERY EXPENSIVE! */
+                            pathfinding_calls++;
                             if (find_first_step(IN_ROOM(ch), qm_room) != BFS_NO_PATH) {
+                                /* Log performance before returning */
+                                gettimeofday(&end_time, NULL);
+                                elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
+                                             (end_time.tv_usec - start_time.tv_usec) / 1000;
+                                if (elapsed_ms > 30) {
+                                    log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
+                                        "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
+                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
+                                        GET_NAME(ch), zone);
+                                }
                                 return qm_char;
                             }
                         }
@@ -4860,6 +4880,17 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
                 }
             }
         }
+    }
+
+    /* Log performance even when no questmaster found */
+    gettimeofday(&end_time, NULL);
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
+                 (end_time.tv_usec - start_time.tv_usec) / 1000;
+    if (elapsed_ms > 30) {
+        log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
+            "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
+            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
+            GET_NAME(ch), zone);
     }
 
     return NULL;
@@ -8434,12 +8465,35 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
  */
 void calculate_economy_stats(long long *total_money, long long *total_qp, int *player_count)
 {
+    /* Cache variables to prevent expensive recalculation - 30 minute TTL
+     * This prevents repeated file I/O when show stats is called frequently */
+    static long long cached_money = 0;
+    static long long cached_qp = 0;
+    static int cached_count = 0;
+    static time_t last_calc_time = 0;
+    const int ECONOMY_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
+    time_t now = time(0);
+    
+    /* If cache is valid, return cached values immediately */
+    if (last_calc_time != 0 && (now - last_calc_time) < ECONOMY_CACHE_TTL) {
+        *total_money = cached_money;
+        *total_qp = cached_qp;
+        *player_count = cached_count;
+        return;
+    }
+    
+    /* Cache expired - recalculate (this is expensive!) */
     int i;
     struct char_data *temp_ch = NULL;
+    struct timeval start_time, end_time;
+    long elapsed_ms;
 
     *total_money = 0;
     *total_qp = 0;
     *player_count = 0;
+    
+    /* Track performance of this expensive operation */
+    gettimeofday(&start_time, NULL);
 
     for (i = 0; i <= top_of_p_table; i++) {
         /* Skip players above level 100 (immortals) based on player_table cache */
@@ -8463,6 +8517,22 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
 
         free_char(temp_ch);
         temp_ch = NULL;
+    }
+    
+    /* Update cache */
+    cached_money = *total_money;
+    cached_qp = *total_qp;
+    cached_count = *player_count;
+    last_calc_time = now;
+    
+    /* Log performance - this expensive operation loads ALL player files! */
+    gettimeofday(&end_time, NULL);
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
+                 (end_time.tv_usec - start_time.tv_usec) / 1000;
+    
+    if (elapsed_ms > 100) { /* Log if it takes more than 100ms */
+        log1("PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from disk)",
+            elapsed_ms, top_of_p_table + 1, *player_count);
     }
 }
 

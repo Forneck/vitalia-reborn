@@ -1063,6 +1063,7 @@ void heartbeat(int heart_pulse)
     if (!(heart_pulse % PULSE_VIOLENCE))
         perform_violence();
 
+    /* Auction system updates - runs every 30 seconds when enabled */
     if (CONFIG_NEW_AUCTION_SYSTEM && !(heart_pulse % (30 * PASSES_PER_SEC))) { /* Every 30 seconds */
         update_auctions();
 

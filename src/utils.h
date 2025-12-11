@@ -1377,6 +1377,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_WEATHER_AFFECTS_EMOTIONS config_info.experimental.weather_affects_emotions
 /** Weather emotion effect multiplier (0-200%, stored as 0-200 integer) */
 #define CONFIG_WEATHER_EFFECT_MULTIPLIER config_info.experimental.weather_effect_multiplier
+/** Maximum number of mob-posted autoquests (prevents lag from excessive pathfinding) */
+#define CONFIG_MAX_MOB_POSTED_QUESTS config_info.experimental.max_mob_posted_quests
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */

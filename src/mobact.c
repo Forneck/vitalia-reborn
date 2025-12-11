@@ -4299,6 +4299,15 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
+    /* Early exit: Don't accept new quests when near limit to reduce server load
+     * When close to max quests, the expensive pathfinding in
+     * find_accessible_questmaster_in_zone() causes severe lag.
+     * Accepting quests at 90% capacity still allows new quests while preventing
+     * the catastrophic performance hit of too many concurrent searches. */
+    if (count_mob_posted_quests() >= (CONFIG_MAX_MOB_POSTED_QUESTS * 9 / 10)) { /* 90% of max */
+        return FALSE;
+    }
+
     /* Now do the expensive operations - look for accessible questmasters */
     mob_zone = world[IN_ROOM(ch)].zone;
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
@@ -5015,6 +5024,16 @@ void mob_process_wishlist_goals(struct char_data *ch)
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
     if (GET_GOLD(ch) >= desired_item->priority * 2) {
+        /* Early exit: Check quest limit BEFORE expensive pathfinding
+         * With 451 autoquests, pathfinding for questmasters is catastrophically expensive:
+         * - Loops through 451 quests × ALL characters × BFS pathfinding
+         * - Can cause multi-second lag spikes when many mobs attempt this
+         * - At quest limit, posting will fail anyway, so skip the expensive search */
+        if (!can_add_mob_posted_quest()) {
+            /* At quest limit - don't waste CPU searching for questmasters */
+            return;
+        }
+        
         /* Safety check: Validate room before accessing world array */
         if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
             return;
