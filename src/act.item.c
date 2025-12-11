@@ -285,7 +285,7 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
 
             if (obj_still_valid) {
                 /* Save object vnum before get_check_money, which extracts money objects */
-                obj_vnum obj_vnum = GET_OBJ_VNUM(obj);
+                obj_vnum saved_vnum = GET_OBJ_VNUM(obj);
 
                 get_check_money(ch, obj);
 
@@ -308,7 +308,7 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
                     }
                     /* Remove item from mob's wishlist once obtained */
                     if (ch->ai_data) {
-                        remove_item_from_wishlist(ch, obj_vnum);
+                        remove_item_from_wishlist(ch, saved_vnum);
                     }
                 }
             }
@@ -386,7 +386,7 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
 
         if (obj_still_valid) {
             /* Save object vnum before get_check_money, which extracts money objects */
-            obj_vnum obj_vnum = GET_OBJ_VNUM(obj);
+            obj_vnum saved_vnum = GET_OBJ_VNUM(obj);
 
             get_check_money(ch, obj);
 
@@ -409,7 +409,7 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
                 }
                 /* Remove item from mob's wishlist once obtained */
                 if (ch->ai_data) {
-                    remove_item_from_wishlist(ch, obj_vnum);
+                    remove_item_from_wishlist(ch, saved_vnum);
                 }
             }
         }
