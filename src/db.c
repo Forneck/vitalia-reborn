@@ -4467,6 +4467,7 @@ static void load_default_config(void)
     CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
     CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
     CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
+    CONFIG_MAX_MOB_POSTED_QUESTS = 450;     /* Default: 450 max mob-posted quests */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -4992,6 +4993,8 @@ void load_config(void)
                     CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
                 else if (!str_cmp(tag, "weather_effect_multiplier"))
                     CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
+                else if (!str_cmp(tag, "max_mob_posted_quests"))
+                    CONFIG_MAX_MOB_POSTED_QUESTS = num;
                 break;
 
             default:

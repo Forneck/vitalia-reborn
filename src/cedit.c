@@ -166,6 +166,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.mob_emotion_update_chance = CONFIG_MOB_EMOTION_UPDATE_CHANCE;
     OLC_CONFIG(d)->experimental.weather_affects_emotions = CONFIG_WEATHER_AFFECTS_EMOTIONS;
     OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
+    OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -348,6 +349,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_MOB_EMOTION_UPDATE_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_update_chance;
     CONFIG_WEATHER_AFFECTS_EMOTIONS = OLC_CONFIG(d)->experimental.weather_affects_emotions;
     CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
+    CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -914,6 +916,11 @@ int save_config(IDXTYPE nowhere)
             "weather_effect_multiplier = %d\n\n",
             CONFIG_WEATHER_EFFECT_MULTIPLIER);
 
+    fprintf(fl,
+            "* Maximum number of mob-posted autoquests (prevents lag, default 450)\n"
+            "max_mob_posted_quests = %d\n\n",
+            CONFIG_MAX_MOB_POSTED_QUESTS);
+
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
     fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
@@ -1262,8 +1269,10 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
     }
 
     write_to_output(d,
+                    "%s9%s) Max Mob-Posted Quests (Previne Lag) : %s%d\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests,
                     grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
@@ -2674,6 +2683,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     }
                     break;
 
+                case '9':
+                    write_to_output(d, "\r\nEnter max mob-posted quests (100-1000, default 450) : ");
+                    OLC_MODE(d) = CEDIT_MAX_MOB_POSTED_QUESTS;
+                    return;
+
                 case '0':
                 case 'q':
                 case 'Q':
@@ -2716,6 +2730,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter weather effect multiplier (0-200%%, default 100) : ");
             } else {
                 OLC_CONFIG(d)->experimental.weather_effect_multiplier = LIMIT(atoi(arg), 0, 200);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_MAX_MOB_POSTED_QUESTS:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter max mob-posted quests (100-1000, default 450) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.max_mob_posted_quests = LIMIT(atoi(arg), 100, 1000);
                 cedit_disp_experimental_options(d);
             }
             break;
