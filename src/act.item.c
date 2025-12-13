@@ -284,14 +284,31 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
             }
 
             if (obj_still_valid) {
+                /* Save object vnum before get_check_money, which extracts money objects */
+                obj_vnum saved_vnum = GET_OBJ_VNUM(obj);
+
                 get_check_money(ch, obj);
+
+                /* Re-check if object still exists after get_check_money
+                 * Money objects are extracted by get_check_money, so we must verify
+                 * before accessing the object again to prevent use-after-free */
+                obj_still_valid = FALSE;
+                for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+                    if (temp_obj == obj) {
+                        obj_still_valid = TRUE;
+                        break;
+                    }
+                }
+
                 /* Check quest completion for mobs picking up objects */
                 if (IS_NPC(ch)) {
-                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
-                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                    if (obj_still_valid) {
+                        mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+                        mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                    }
                     /* Remove item from mob's wishlist once obtained */
                     if (ch->ai_data) {
-                        remove_item_from_wishlist(ch, GET_OBJ_VNUM(obj));
+                        remove_item_from_wishlist(ch, saved_vnum);
                     }
                 }
             }
@@ -368,14 +385,31 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
         }
 
         if (obj_still_valid) {
+            /* Save object vnum before get_check_money, which extracts money objects */
+            obj_vnum saved_vnum = GET_OBJ_VNUM(obj);
+
             get_check_money(ch, obj);
+
+            /* Re-check if object still exists after get_check_money
+             * Money objects are extracted by get_check_money, so we must verify
+             * before accessing the object again to prevent use-after-free */
+            obj_still_valid = FALSE;
+            for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+                if (temp_obj == obj) {
+                    obj_still_valid = TRUE;
+                    break;
+                }
+            }
+
             /* Check quest completion for mobs picking up objects */
             if (IS_NPC(ch)) {
-                mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
-                mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                if (obj_still_valid) {
+                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_OBJ_FIND);
+                    mob_autoquest_trigger_check(ch, NULL, obj, AQ_RESOURCE_GATHER);
+                }
                 /* Remove item from mob's wishlist once obtained */
                 if (ch->ai_data) {
-                    remove_item_from_wishlist(ch, GET_OBJ_VNUM(obj));
+                    remove_item_from_wishlist(ch, saved_vnum);
                 }
             }
         }
