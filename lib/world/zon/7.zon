@@ -83,5 +83,16 @@ M 0 701 8 718 	(a Criatura)
 M 0 702 8 718 	(uma figueira em um vaso)
 O 0 701 2 710 	(uma lanterna enferrujada)
 O 0 701 2 710 	(uma lanterna enferrujada)
+* New folklore mobs and objects
+M 0 782 1 713 	(o Leprechaun que bebe demais)
+E 1 785 15 1 	(um chapéu verde irlandês - stolen by Mula)
+M 0 783 1 715 	(o Saci Pererê de Itu)
+G 1 783 15 -1 	(um cachimbo de madeira)
+M 0 784 1 717 	(o Curupira dos pés virados)
+G 1 784 15 -1 	(um par de sapatos de couro)
+M 0 785 1 737 	(a Mula sem Cabeça)
+M 0 786 1 747 	(o Boitatá ladrão)
+G 1 786 15 -1 	(uma moeda de prata)
+O 0 782 1 745 	(uma pepita de ouro - hidden in the ruins)
 S
 $

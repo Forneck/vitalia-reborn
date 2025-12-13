@@ -527,6 +527,149 @@ GenLoot: 39
 GenRoam: 88
 GenFollow: 4
 E
+#782
+leprechaun irlandes bebado embriagado~
+o Leprechaun que bebe demais~
+Um Leprechaun cambaleante está aqui, tentando se manter em pé.
+~
+Este pequeno irlandês de roupas verdes está completamente embriagado.
+Ele balança de um lado para o outro, segurando uma garrafa vazia.
+Suas roupas estão desarrumadas e ele murmura algo sobre seu ouro roubado.
+~
+2097152 0 0 0 0 0 0 0 -100 E
+18 16 5 12d8+120 4d6+4
+350 2500
+9 9 1
+BareHandAttack: 4
+Str: 12
+Dex: 18
+Int: 14
+Wis: 8
+Con: 15
+Cha: 12
+GenWimpy: 75
+GenLoot: 45
+GenRoam: 90
+GenFollow: 5
+T 700
+T 707
+T 710
+E
+#783
+saci perere pererê cachimbeiro itu travesso gorro vermelho~
+um travesso de gorro vermelho~
+Um pequeno ser travesso está aqui, pulando em uma perna só e fumando seu cachimbo.
+~
+Este ser travesso de baixa estatura usa um gorro vermelho e tem apenas 
+uma perna. Ele fuma um cachimbo constantemente e seus olhos brilham com 
+malícia enquanto observa você com um sorriso maroto. Suas roupas são 
+simples mas bem cuidadas, e ele parece estar sempre pronto para pregar 
+alguma peça.
+~
+2097152 0 0 0 0 0 0 0 -150 E
+20 15 4 14d10+150 5d7+5
+450 3500
+9 9 1
+BareHandAttack: 3
+Str: 14
+Dex: 20
+Int: 16
+Wis: 15
+Con: 14
+Cha: 15
+GenWimpy: 80
+GenLoot: 60
+GenRoam: 95
+GenFollow: 6
+T 701
+T 708
+E
+#784
+curupira pes pés virados floresta protetor cabelos vermelhos~
+o protetor de cabelos flamejantes~
+Um protetor da floresta está aqui, com seus pés estranhamente virados para trás.
+~
+Este misterioso protetor da floresta tem longos cabelos vermelhos como fogo
+e seus pés são virados para trás, confundindo aqueles que tentam
+segui-lo. Ele carrega um arco e flechas, e seus olhos verdes brilham
+com sabedoria ancestral. Suas pegadas deixam rastros enganosos que
+levam os incautos para longe de seu destino.
+~
+2097152 0 0 0 0 0 0 0 -120 E
+22 14 3 16d12+180 6d8+6
+550 4500
+9 9 1
+BareHandAttack: 6
+Str: 16
+Dex: 22
+Int: 18
+Wis: 18
+Con: 16
+Cha: 14
+GenWimpy: 70
+GenLoot: 55
+GenRoam: 92
+GenFollow: 7
+T 702
+E
+#785
+mula cabeca cabeça atriz fogo egua equina~
+a égua amaldiçoada~
+Uma égua sem cabeça está aqui, soltando fogo de onde deveria estar seu pescoço.
+~
+Esta criatura aterrorizante é uma égua negra sem cabeça que solta fogo
+de onde deveria estar seu pescoço. Dizem que ela já foi uma atriz talentosa,
+mas foi amaldiçoada por algum crime esquecido. Suas patas deixam marcas 
+chamuscadas no chão e o ar ao seu redor treme com o calor intenso que 
+emana de seu corpo. Um chapéu verde parece estar preso em sua crina.
+~
+2097154 0 0 0 16 0 0 0 -200 E
+25 12 1 18d15+220 7d10+8
+750 6000
+9 9 2
+BareHandAttack: 7
+Str: 20
+Dex: 18
+Int: 10
+Wis: 12
+Con: 20
+Cha: 8
+GenWimpy: 60
+GenLoot: 65
+GenRoam: 85
+GenFollow: 8
+T 703
+T 704
+E
+#786
+boitata serpente fogo ladrao ladrão cobra gigante~
+a serpente de fogo~
+Uma gigantesca serpente de fogo serpenteia aqui, seus olhos brilhando como brasas.
+~
+Esta enorme serpente flamejante tem olhos que brilham como carvão em brasa,
+capazes de hipnotizar suas vítimas. É conhecida por ser ladra e 
+guardar tesouros roubados em sua toca secreta pela mata. Seu corpo 
+irradia calor intenso e luz alaranjada, iluminando a escuridão da floresta 
+com um brilho sobrenatural. Lendas dizem que ela guarda segredos antigos.
+~
+2097154 0 0 0 16 0 0 0 -180 E
+24 13 2 17d12+200 6d9+7
+650 5500
+9 9 0
+BareHandAttack: 1
+Str: 18
+Dex: 20
+Int: 16
+Wis: 14
+Con: 18
+Cha: 10
+GenWimpy: 65
+GenLoot: 70
+GenRoam: 88
+GenFollow: 7
+T 705
+T 706
+E
 #799
 banda~
 a Banda Infernal~

@@ -357,4 +357,73 @@ Um velho livro, com a imagem de um humanóide foi deixado aqui.~
 15 10000 0 0 0
 A
 3 2
+#782
+ouro pepita tesouro~
+uma pepita de ouro~
+Uma reluzente pepita de ouro foi deixada aqui.~
+~
+20 ad 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 500 0 0 0
+E
+ouro pepita~
+Esta pepita de ouro puro brilha intensamente. Era o tesouro do Leprechaun,
+enterrado no quintal por alguém.
+~
+#783
+cachimbo madeira~
+um cachimbo de madeira~
+Um cachimbo de madeira está jogado aqui.~
+~
+12 a 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 50 0 0 0
+E
+cachimbo madeira~
+Este cachimbo de madeira entalhada ainda solta fumaça. Pertence ao Saci
+Pererê de Itu, que fuma constantemente enquanto apronta suas travessuras.
+~
+#784
+sapatos couro marrom~
+um par de sapatos de couro~
+Um par de sapatos de couro marrom foi deixado aqui.~
+~
+9 a 0 0 0 af 0 0 0 0 0 0 0
+2 0 0 0
+1 200 0 0 0
+E
+sapatos couro~
+Estes sapatos de couro marrom eram do Leprechaun. Foram roubados e
+jogados na marginal pelo Curupira.
+~
+A
+5 1
+#785
+chapeu verde irlandes~
+um chapéu verde irlandês~
+Um pequeno chapéu verde irlandês está no chão.~
+~
+9 a 0 0 0 ae 0 0 0 0 0 0 0
+1 0 0 0
+1 100 0 0 0
+E
+chapeu verde~
+Este chapéu verde típico dos leprechauns estava na cabeça do Leprechaun.
+Foi roubado e colocado na Mula sem Cabeça como uma brincadeira cruel.
+~
+A
+4 1
+#786
+moeda prata prateada~
+uma moeda de prata~
+Uma moeda de prata antiga brilha no chão.~
+~
+20 ad 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 300 0 0 0
+E
+moeda prata~
+Esta moeda de prata reluzente era do Leprechaun. Foi roubada pelo Boitatá
+e escondida em algum lugar pela mata.
+~
 $~
