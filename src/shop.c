@@ -479,7 +479,7 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
         }
     }
 
-    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
+    return (int)(GET_OBJ_COST(obj) * SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
                  emotion_modifier);
 }
 
@@ -487,8 +487,8 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
    don't buy for more than we sell for, to prevent infinite money-making. */
 static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *seller)
 {
-    float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
-    float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float sell_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float buy_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float emotion_modifier = 1.0; /* Start with no emotion modifier */
     int price;
 
