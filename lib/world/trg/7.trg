@@ -78,9 +78,9 @@ if %actor.is_pc% && %self.vnum% == 785
   emote para de galopar e se aproxima.
   %send% %actor% A Mula sem Cabeça emite sons estranhos, como se tentasse falar!
   wait 2 sec
-  %echo% Uma voz fantasmagórica ecoa: "Eu era uma atriz... antes da maldicao..."
+  %echo% Uma voz fantasmagórica ecoa: "Eu era uma atriz... antes da maldição..."
   wait 2 sec
-  %echo% A voz continua: "Puseram um chapeu no meu lombo... um chapeu verde irlandes!"
+  %echo% A voz continua: "Puseram um chapéu no meu lombo... um chapéu verde irlandês!"
   wait 1 sec
   %echo% A voz termina: "O Leprechaun me acusa, mas ele bebe demais para lembrar!"
 end
@@ -116,7 +116,7 @@ if %actor.is_pc% && %self.vnum% == 786
   say Olhe para meusss olhosss... relaxe...
   wait 2 sec
   emote ri sibilantemente.
-  say O Leprechaun me acusa de ladrao... ele está certo! Hissss!
+  say O Leprechaun me acusa de ladrão... ele está certo! Hissss!
   wait 1 sec
   say Mas ele bebe demaisss para fazer algo a respeito!
 end
@@ -127,9 +127,9 @@ Leprechaun Receive Gold Quest~
 ~
 * Leprechaun receives his gold back
 if %object.vnum% == 782
-  say Meu ouro! *hic* Voce encontrou meu ouro! *hic*
+  say Meu ouro! *hic* Você encontrou meu ouro! *hic*
   wait 1 sec
-  emote abraca a pepita de ouro com lagrimas nos olhos.
+  emote abraça a pepita de ouro com lágrimas nos olhos.
   say Obrigado %actor.name%! *hic* Tome, uma recompensa!
   wait 1 sec
   * Give a reward (we'll spawn something simple)
@@ -142,11 +142,11 @@ Saci Receive Pipe~
 ~
 * Saci receives his pipe (if taken)
 if %object.vnum% == 783
-  emote pula de alegria em sua unica perna!
+  emote pula de alegria em sua única perna!
   say Meu cachimbo! Valeu, %actor.name%!
   wait 1 sec
   emote da uma longa baforada satisfeita.
-  say Agora sim! Saci sem cachimbo nao e Saci!
+  say Agora sim! Saci sem cachimbo nao é Saci!
   wait 1 sec
   say Se precisar de ajuda, pode contar comigo!
 end
@@ -158,9 +158,9 @@ Room Folklore Gathering~
 * Room trigger when player enters an area with folklore creatures
 if %actor.is_pc%
   wait 2 sec
-  %echo% Voce sente uma estranha energia folclorica no ar...
+  %echo% Você sente uma estranha energia folclórica no ar...
   wait 2 sec
-  %echo% Ecos de uma cancao antiga chegam aos seus ouvidos:
+  %echo% Ecos de uma canção antiga chegam aos seus ouvidos:
   wait 1 sec
   %echo% "Leprechaun, Leprechaun, quem foi que te fez mal?"
 end
@@ -173,7 +173,7 @@ falar say dizer~
 if %actor.is_pc%
   wait 1 sec
   emote interrompe cambaleante.
-  say *hic* Voce viu o Saci por ai? *hic*
+  say *hic* Você viu o Saci por ai? *hic*
   wait 1 sec
   say Aquele maldito nascido em Itu me enganou! *hic*
   wait 1 sec

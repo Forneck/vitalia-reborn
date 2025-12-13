@@ -21,7 +21,7 @@ ela saiba algo sobre os sapatos.~
 Meus sapatos! *hic* Mas quem realmente os roubou? *hic* Ah, meu chapeu... *hic*~
 Sem sapatos... *hic* Como vou andar?~
 5 782 a 717 -1 -1 -1
-12 18 15 30 -1 784 1
+12 18 15 30 -1 782 1
 300 600 702
 S
 #702
@@ -41,13 +41,12 @@ S
 A Moeda Brilhante~
 Recuperar a moeda de prata~
 A moeda de prata do irlandes foi sua ultima possessao de valor. Uma serpente 
-gigante de fogo com olhos hipnoticos foi vista guardando tesouros roubados 
 em sua toca pela mata. Recuperar a moeda exigira enfrentar esta perigosa 
 criatura.~
 Minha moeda! *hic* A serpente era a ladra! *hic* Mas quem armou tudo isso? *hic*~
 Minha moeda... *hic* Perdida para sempre...~
 5 782 a 747 -1 -1 -1
-12 20 15 35 -1 786 1
+12 20 15 35 -1 782 1
 400 800 704
 S
 #704
@@ -84,8 +83,8 @@ ela foi uma atriz talentosa antes de ser amaldicoada. Uma voz fantasmagorica
 as vezes ecoa contando fragmentos de seu passado. Ouvir sua historia completa 
 pode trazer paz a esta alma atormentada.~
 Uma voz sussurra: "Obrigada... agora posso descansar..."~
-A egua continua seu galope eterno pelas ruinas.~
-1 782 a 737 -1 -1 -1
+A mula continua seu galope eterno pelas ruinas.~
+2 782 a 737 -1 -1 -1
 10 15 10 25 -1 785 1
 250 500 707
 S
