@@ -487,8 +487,8 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
    don't buy for more than we sell for, to prevent infinite money-making. */
 static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *seller)
 {
-    float sell_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
-    float buy_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float keeper_buys_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float keeper_sells_modifier = SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float emotion_modifier = 1.0; /* Start with no emotion modifier */
     int price;
 
@@ -515,16 +515,16 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
         }
     }
 
-    sell_cost_modifier *= emotion_modifier;
+    keeper_buys_modifier *= emotion_modifier;
 
-    /* Ensure sell_cost_modifier doesn't go to 0 or negative */
-    if (sell_cost_modifier < 0.01)
-        sell_cost_modifier = 0.01;
+    /* Ensure keeper_buys_modifier doesn't go to 0 or negative */
+    if (keeper_buys_modifier < 0.01)
+        keeper_buys_modifier = 0.01;
 
-    if (sell_cost_modifier > buy_cost_modifier)
-        sell_cost_modifier = buy_cost_modifier;
+    if (keeper_buys_modifier > keeper_sells_modifier)
+        keeper_buys_modifier = keeper_sells_modifier;
 
-    price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    price = (int)(GET_OBJ_COST(obj) * keeper_buys_modifier);
 
     /* Ensure we return at least 1 gold for items with non-zero cost to prevent truncation to 0 */
     if (price < 1 && GET_OBJ_COST(obj) > 0)
