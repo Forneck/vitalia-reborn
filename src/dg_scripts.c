@@ -2719,7 +2719,7 @@ static struct cmdlist_element *find_case(struct trig_data *trig, struct cmdlist_
         return cl;
 
     /* Allocate buffer once before the loop to avoid repeated malloc/free cycles */
-    buf = (char *)malloc(MAX_STRING_LENGTH);
+    buf = malloc(MAX_STRING_LENGTH);
     if (!buf) {
         script_log("Memory allocation failed in find_case");
         return cl;
