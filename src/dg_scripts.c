@@ -2718,6 +2718,13 @@ static struct cmdlist_element *find_case(struct trig_data *trig, struct cmdlist_
     if (!(cl->next))
         return cl;
 
+    /* Allocate buffer once before the loop to avoid repeated malloc/free cycles */
+    buf = (char *)malloc(MAX_STRING_LENGTH);
+    if (!buf) {
+        script_log("Memory allocation failed in find_case");
+        return cl;
+    }
+
     for (c = cl->next; c->next; c = c->next) {
         for (p = c->cmd; *p && isspace(*p); p++)
             ;
@@ -2725,18 +2732,20 @@ static struct cmdlist_element *find_case(struct trig_data *trig, struct cmdlist_
         if (!strn_cmp("while ", p, 6) || !strn_cmp("switch", p, 6))
             c = find_done(c);
         else if (!strn_cmp("case ", p, 5)) {
-            buf = (char *)malloc(MAX_STRING_LENGTH);
             eval_op("==", result, p + 5, buf, go, sc, trig);
             if (*buf && *buf != '0') {
                 free(buf);
                 return c;
             }
+        } else if (!strn_cmp("default", p, 7)) {
             free(buf);
-        } else if (!strn_cmp("default", p, 7))
             return c;
-        else if (!strn_cmp("done", p, 3))
+        } else if (!strn_cmp("done", p, 3)) {
+            free(buf);
             return c;
+        }
     }
+    free(buf);
     return c;
 }
 
