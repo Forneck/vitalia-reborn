@@ -1771,6 +1771,7 @@ void nanny(struct descriptor_data *d, char *arg)
                     write_to_output(d, "Adeus.\r\n");
                     // write_to_output(d, "Tenha um%s! :-)\r\n\r\n",);
                     add_llog_entry(d->character, LAST_QUIT);
+                    save_char(d->character); /* Save character before closing */
                     STATE(d) = CON_CLOSE;
                     break;
                 case '1':
@@ -2070,9 +2071,6 @@ void nanny(struct descriptor_data *d, char *arg)
             GET_EXP(d->character) = 1;
             GET_GOLD(d->character) = 0;
             GET_BANK_GOLD(d->character) = 0;
-            GET_HIT(d->character) = GET_MAX_HIT(d->character);
-            GET_MANA(d->character) = GET_MAX_MANA(d->character);
-            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
 
             /* Remove transcendence flag - player must transcend again */
             REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
@@ -2083,7 +2081,7 @@ void nanny(struct descriptor_data *d, char *arg)
             GET_MAX_HIT(d->character) = 10;
             GET_MAX_MANA(d->character) = 100;
             GET_MAX_MOVE(d->character) = 82;
-            GET_MAX_BREATH(d->character) = 15;
+            GET_MAX_BREATH(d->character) = 100;
             advance_level(d->character);
 
             GET_HIT(d->character) = GET_MAX_HIT(d->character);
