@@ -86,6 +86,12 @@ ACMD(do_quit)
 
         send_to_char(ch, "%s", buf);
 
+        /* Remove disguise before quitting to prevent stale state */
+        if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+            send_to_char(ch, "\r\n\tYSeu disfarce se desfaz enquanto você se prepara para partir...\tn\r\n");
+            remove_disguise(ch, FALSE);
+        }
+
         /* We used to check here for duping attempts, but we may as well do it
            right in extract_char(), since there is no check if a player rents
            out and it can leave them in an equally screwy situation. */

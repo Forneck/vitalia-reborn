@@ -1181,6 +1181,20 @@ void extract_char_final(struct char_data *ch)
         if (SCRIPT_MEM(ch))
             extract_script_mem(SCRIPT_MEM(ch));
     } else {
+        /* Remove disguise before saving to prevent stale state on next login */
+        if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+            /* Silently remove disguise - player has already disconnected */
+            affect_from_char(ch, SKILL_DISGUISE);
+            /* Restore or clear descriptions */
+            if (ch->player.short_descr) {
+                free(ch->player.short_descr);
+                ch->player.short_descr = NULL;
+            }
+            if (ch->player.long_descr) {
+                free(ch->player.long_descr);
+                ch->player.long_descr = NULL;
+            }
+        }
         save_char(ch);
         Crash_delete_crashfile(ch);
         /* Clean up any disguise data when player is extracted */

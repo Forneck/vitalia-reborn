@@ -1315,7 +1315,42 @@ int enter_player_game(struct descriptor_data *d)
 {
     int load_result;
     room_vnum load_room;
+    struct disguise_data *data;
+    bool has_disguise_data = FALSE;
+
     reset_char(d->character);
+
+    /* Clean up stale disguise state from previous session
+     * If player has AFF_DISGUISE but no entry in disguise_list, 
+     * remove the flag to prevent issues */
+    if (!IS_NPC(d->character) && AFF_FLAGGED(d->character, AFF_DISGUISE)) {
+        /* Check if there's a corresponding entry in disguise_list */
+        for (data = disguise_list; data; data = data->next) {
+            if (data->idnum == GET_IDNUM(d->character)) {
+                has_disguise_data = TRUE;
+                break;
+            }
+        }
+
+        /* No disguise_data entry found - this is stale state from a previous session
+         * Remove the disguise affect to prevent crashes */
+        if (!has_disguise_data) {
+            mudlog(BRF, LVL_IMMORT, TRUE, 
+                "Cleaning up stale disguise state for %s (no disguise_data entry)",
+                GET_NAME(d->character));
+            affect_from_char(d->character, SKILL_DISGUISE);
+            /* Also clean up disguise descriptions if present */
+            if (d->character->player.short_descr) {
+                free(d->character->player.short_descr);
+                d->character->player.short_descr = NULL;
+            }
+            if (d->character->player.long_descr) {
+                free(d->character->player.long_descr);
+                d->character->player.long_descr = NULL;
+            }
+        }
+    }
+
     if (PLR_FLAGGED(d->character, PLR_INVSTART))
         GET_INVIS_LEV(d->character) = GET_LEVEL(d->character);
     /* We have to place the character in a room before equipping them or
