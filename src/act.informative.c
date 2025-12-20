@@ -2707,7 +2707,7 @@ ACMD(do_users)
     one_argument(argument, arg);
     for (d = descriptor_list; d; d = d->next) {
         /* Safety check: skip descriptors with invalid desc_num (corrupted memory) */
-        if (d->desc_num < 0 || d->desc_num > 1000) {
+        if (d->desc_num < 0 || d->desc_num > MAX_DESC_NUM) {
             mudlog(BRF, LVL_IMMORT, TRUE, "WARNING: Skipping descriptor with invalid desc_num: %d", d->desc_num);
             continue;
         }

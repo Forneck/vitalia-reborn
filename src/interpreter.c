@@ -1325,12 +1325,14 @@ int enter_player_game(struct descriptor_data *d)
         /* Check if there's a corresponding entry in disguise_list */
         if (!has_disguise_data(d->character)) {
             /* No disguise_data entry found - this is stale state from a previous session
-             * Remove the disguise affect to prevent crashes */
+             * Remove the disguise affect and clean up descriptions
+             * Note: We can't use restore_original_descriptions() here because there's
+             * no entry in disguise_list, so we manually free and NULL the descriptions */
             mudlog(BRF, LVL_IMMORT, TRUE, 
                 "Cleaning up stale disguise state for %s (no disguise_data entry)",
                 GET_NAME(d->character));
             affect_from_char(d->character, SKILL_DISGUISE);
-            /* Also clean up disguise descriptions if present */
+            /* Clean up disguise descriptions */
             if (d->character->player.short_descr) {
                 free(d->character->player.short_descr);
                 d->character->player.short_descr = NULL;

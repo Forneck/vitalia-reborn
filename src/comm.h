@@ -15,6 +15,7 @@
 
 #define NUM_RESERVED_DESCS 8
 #define COPYOVER_FILE "copyover.dat"
+#define MAX_DESC_NUM 999 /* Maximum descriptor number before cycling back to 1 */
 
 /* comm.c */
 void close_socket(struct descriptor_data *d);
