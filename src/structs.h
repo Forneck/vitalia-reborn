@@ -800,6 +800,10 @@
 #define MAX_DAMROLL 100  /**< Maximum damroll value for characters */
 #define MIN_DAMROLL -100 /**< Minimum damroll value for characters */
 
+/* Armor Class limits (lower AC is better) */
+#define MIN_AC -1000 /**< Minimum (best) armor class value for characters and mobs */
+#define MAX_AC 100   /**< Maximum (worst) armor class value for characters and mobs */
+
 /** Define the largest set of commands for a trigger.
  * 16k should be plenty and then some. */
 #define MAX_CMD_LENGTH 16384
