@@ -2444,6 +2444,24 @@ void cleanup_disguise_data(struct char_data *ch)
     }
 }
 
+/* Helper function to check if player has disguise data entry */
+bool has_disguise_data(struct char_data *ch)
+{
+    struct disguise_data *data;
+
+    if (IS_NPC(ch))
+        return FALSE;
+
+    /* Search for entry in disguise_list */
+    for (data = disguise_list; data; data = data->next) {
+        if (data->idnum == GET_IDNUM(ch)) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
 /* Macabre Disguise - Thief skill to disguise as a mob using its corpse */
 ACMD(do_disguise)
 {

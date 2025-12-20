@@ -1315,8 +1315,6 @@ int enter_player_game(struct descriptor_data *d)
 {
     int load_result;
     room_vnum load_room;
-    struct disguise_data *data;
-    bool has_disguise_data = FALSE;
 
     reset_char(d->character);
 
@@ -1325,16 +1323,9 @@ int enter_player_game(struct descriptor_data *d)
      * remove the flag to prevent issues */
     if (!IS_NPC(d->character) && AFF_FLAGGED(d->character, AFF_DISGUISE)) {
         /* Check if there's a corresponding entry in disguise_list */
-        for (data = disguise_list; data; data = data->next) {
-            if (data->idnum == GET_IDNUM(d->character)) {
-                has_disguise_data = TRUE;
-                break;
-            }
-        }
-
-        /* No disguise_data entry found - this is stale state from a previous session
-         * Remove the disguise affect to prevent crashes */
-        if (!has_disguise_data) {
+        if (!has_disguise_data(d->character)) {
+            /* No disguise_data entry found - this is stale state from a previous session
+             * Remove the disguise affect to prevent crashes */
             mudlog(BRF, LVL_IMMORT, TRUE, 
                 "Cleaning up stale disguise state for %s (no disguise_data entry)",
                 GET_NAME(d->character));
