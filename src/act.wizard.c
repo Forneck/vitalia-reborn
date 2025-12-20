@@ -2857,6 +2857,7 @@ ACMD(do_wizutil)
                 }
                 REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_THIEF);
                 REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_KILLER);
+                REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_HTHIEF);
                 send_to_char(ch, "Pardoned.\r\n");
                 send_to_char(vict, "You have been pardoned by the Gods!\r\n");
                 mudlog(BRF, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "(GC) %s pardoned by %s", GET_NAME(vict),
@@ -3473,6 +3474,7 @@ static struct set_struct {
                   {"goaltimer", LVL_BUILDER, NPC, NUMBER},
                   {"karma", LVL_GOD, PC, NUMBER},        /* 70 */
                   {"reputation", LVL_GOD, BOTH, NUMBER}, /* 71 */
+                  {"hthief", LVL_GOD, PC, BINARY},       /* 72 */
                   {"\n", 0, BOTH, MISC}};
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3912,6 +3914,10 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             break;
         case 61:
             SET_OR_REMOVE(PLR_FLAGS(vict), PLR_TRNS);
+            /* Clear PLR_HTHIEF flag when PLR_TRNS is set to on */
+            if (on) {
+                REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_HTHIEF);
+            }
             break;
         case 62:
             SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
@@ -4006,6 +4012,9 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             } else {
                 vict->player_specials->saved.reputation = RANGE(0, 100);
             }
+            break;
+        case 72: /* hthief */
+            SET_OR_REMOVE(PLR_FLAGS(vict), PLR_HTHIEF);
             break;
         default:
             send_to_char(ch, "Can't set that!\r\n");
