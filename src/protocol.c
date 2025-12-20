@@ -434,6 +434,10 @@ void ProtocolDestroy(protocol_t *apProtocol)
 {
     int i; /* Loop counter */
 
+    /* Safety check: handle NULL protocol pointer */
+    if (apProtocol == NULL)
+        return;
+
     for (i = eMSDP_NONE + 1; i < eMSDP_MAX; ++i) {
         if (apProtocol->pVariables[i]->pValueString)
             free(apProtocol->pVariables[i]->pValueString);

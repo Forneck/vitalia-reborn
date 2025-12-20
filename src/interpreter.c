@@ -1315,7 +1315,39 @@ int enter_player_game(struct descriptor_data *d)
 {
     int load_result;
     room_vnum load_room;
+
     reset_char(d->character);
+
+    /* Clean up stale disguise state from previous session
+     * If player has AFF_DISGUISE but no entry in disguise_list, 
+     * remove the flag to prevent issues */
+    if (!IS_NPC(d->character) && AFF_FLAGGED(d->character, AFF_DISGUISE)) {
+        /* Check if there's a corresponding entry in disguise_list */
+        if (!has_disguise_data(d->character)) {
+            /* No disguise_data entry found - this is stale state from a previous session
+             * Remove the disguise affect and clean up descriptions
+             * Note: Cannot restore original sex field (no disguise_data to retrieve it from).
+             * The character's sex will remain set to the mob's sex until manually corrected. */
+            mudlog(BRF, LVL_IMMORT, TRUE, 
+                "Cleaning up stale disguise state for %s (no disguise_data entry, sex may be incorrect)",
+                GET_NAME(d->character));
+            affect_from_char(d->character, SKILL_DISGUISE);
+            /* Clean up disguise descriptions */
+            if (d->character->player.short_descr) {
+                free(d->character->player.short_descr);
+                d->character->player.short_descr = NULL;
+            }
+            if (d->character->player.long_descr) {
+                free(d->character->player.long_descr);
+                d->character->player.long_descr = NULL;
+            }
+            if (d->character->player.description) {
+                free(d->character->player.description);
+                d->character->player.description = NULL;
+            }
+        }
+    }
+
     if (PLR_FLAGGED(d->character, PLR_INVSTART))
         GET_INVIS_LEV(d->character) = GET_LEVEL(d->character);
     /* We have to place the character in a room before equipping them or

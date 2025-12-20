@@ -86,6 +86,12 @@ ACMD(do_quit)
 
         send_to_char(ch, "%s", buf);
 
+        /* Remove disguise before quitting to prevent stale state */
+        if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
+            send_to_char(ch, "\r\n\tYSeu disfarce se desfaz enquanto você se prepara para partir...\tn\r\n");
+            remove_disguise(ch, FALSE);
+        }
+
         /* We used to check here for duping attempts, but we may as well do it
            right in extract_char(), since there is no check if a player rents
            out and it can leave them in an equally screwy situation. */
@@ -2355,8 +2361,10 @@ static void save_original_descriptions(struct char_data *ch)
     disguise_list = data;
 }
 
-/* Helper function to restore original descriptions after disguise */
-static void restore_original_descriptions(struct char_data *ch)
+/* Helper function to restore original descriptions after disguise
+ * This function is also used by extract_char_final to properly restore
+ * disguise state when a character is saved. */
+void restore_original_descriptions(struct char_data *ch)
 {
     struct disguise_data *data, *prev = NULL;
 
@@ -2436,6 +2444,24 @@ void cleanup_disguise_data(struct char_data *ch)
             return;
         }
     }
+}
+
+/* Helper function to check if player has disguise data entry */
+bool has_disguise_data(struct char_data *ch)
+{
+    struct disguise_data *data;
+
+    if (IS_NPC(ch))
+        return FALSE;
+
+    /* Search for entry in disguise_list */
+    for (data = disguise_list; data; data = data->next) {
+        if (data->idnum == GET_IDNUM(ch)) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
 }
 
 /* Macabre Disguise - Thief skill to disguise as a mob using its corpse */
