@@ -440,4 +440,5 @@ bool is_level_compatible_with_group(struct char_data *prospect, struct group_dat
 void remove_disguise(struct char_data *ch, bool expired);
 void cleanup_disguise_data(struct char_data *ch);
 bool has_disguise_data(struct char_data *ch);
+void restore_original_descriptions(struct char_data *ch);
 #endif /* _ACT_H_ */

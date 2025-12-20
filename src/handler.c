@@ -1183,18 +1183,27 @@ void extract_char_final(struct char_data *ch)
     } else {
         /* Remove disguise before saving to prevent stale state on next login */
         if (AFF_FLAGGED(ch, AFF_DISGUISE)) {
-            /* Silently remove disguise - player has already disconnected
-             * Note: We manually clean up here instead of using restore_original_descriptions()
-             * because the disguise_list entry may or may not exist at this point */
+            /* Silently remove disguise - player has already disconnected.
+             * If we still have disguise data, use the standard restore logic
+             * so that original sex and descriptions are correctly restored.
+             * Otherwise, fall back to manual cleanup. */
             affect_from_char(ch, SKILL_DISGUISE);
-            /* Clean up disguise descriptions */
-            if (ch->player.short_descr) {
-                free(ch->player.short_descr);
-                ch->player.short_descr = NULL;
-            }
-            if (ch->player.long_descr) {
-                free(ch->player.long_descr);
-                ch->player.long_descr = NULL;
+            if (has_disguise_data(ch)) {
+                restore_original_descriptions(ch);
+            } else {
+                /* No disguise data - manually clean up what we can */
+                if (ch->player.short_descr) {
+                    free(ch->player.short_descr);
+                    ch->player.short_descr = NULL;
+                }
+                if (ch->player.long_descr) {
+                    free(ch->player.long_descr);
+                    ch->player.long_descr = NULL;
+                }
+                if (ch->player.description) {
+                    free(ch->player.description);
+                    ch->player.description = NULL;
+                }
             }
         }
         save_char(ch);

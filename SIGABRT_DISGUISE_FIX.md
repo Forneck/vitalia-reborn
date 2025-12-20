@@ -71,15 +71,17 @@ When a player logs in:
 4. **src/act.other.c**
    - Modified `do_quit` to remove disguise before quitting
    - Added `has_disguise_data()` helper function
+   - Made `restore_original_descriptions()` non-static for use in cleanup paths
 
 5. **src/handler.c**
-   - Modified `extract_char` to remove disguise before saving
+   - Modified `extract_char_final` (character cleanup/saving) to remove disguise before saving
 
 6. **src/interpreter.c**
    - Modified `enter_player_game` to clean up stale disguise state
 
 7. **src/act.h**
    - Added `has_disguise_data()` function declaration
+   - Added `restore_original_descriptions()` function declaration
 
 ## Testing
 

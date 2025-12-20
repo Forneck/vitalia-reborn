@@ -2361,8 +2361,10 @@ static void save_original_descriptions(struct char_data *ch)
     disguise_list = data;
 }
 
-/* Helper function to restore original descriptions after disguise */
-static void restore_original_descriptions(struct char_data *ch)
+/* Helper function to restore original descriptions after disguise
+ * This function is also used by extract_char_final to properly restore
+ * disguise state when a character is saved. */
+void restore_original_descriptions(struct char_data *ch)
 {
     struct disguise_data *data, *prev = NULL;
 

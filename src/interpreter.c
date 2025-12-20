@@ -1326,10 +1326,10 @@ int enter_player_game(struct descriptor_data *d)
         if (!has_disguise_data(d->character)) {
             /* No disguise_data entry found - this is stale state from a previous session
              * Remove the disguise affect and clean up descriptions
-             * Note: We can't use restore_original_descriptions() here because there's
-             * no entry in disguise_list, so we manually free and NULL the descriptions */
+             * Note: Cannot restore original sex field (no disguise_data to retrieve it from).
+             * The character's sex will remain set to the mob's sex until manually corrected. */
             mudlog(BRF, LVL_IMMORT, TRUE, 
-                "Cleaning up stale disguise state for %s (no disguise_data entry)",
+                "Cleaning up stale disguise state for %s (no disguise_data entry, sex may be incorrect)",
                 GET_NAME(d->character));
             affect_from_char(d->character, SKILL_DISGUISE);
             /* Clean up disguise descriptions */
@@ -1340,6 +1340,10 @@ int enter_player_game(struct descriptor_data *d)
             if (d->character->player.long_descr) {
                 free(d->character->player.long_descr);
                 d->character->player.long_descr = NULL;
+            }
+            if (d->character->player.description) {
+                free(d->character->player.description);
+                d->character->player.description = NULL;
             }
         }
     }
