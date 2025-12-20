@@ -2857,6 +2857,7 @@ ACMD(do_wizutil)
                 }
                 REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_THIEF);
                 REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_KILLER);
+                REMOVE_BIT_AR(PLR_FLAGS(vict), PLR_HTHIEF);
                 send_to_char(ch, "Pardoned.\r\n");
                 send_to_char(vict, "You have been pardoned by the Gods!\r\n");
                 mudlog(BRF, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "(GC) %s pardoned by %s", GET_NAME(vict),

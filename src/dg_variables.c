@@ -847,6 +847,17 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig, int typ
                             strcpy(str, "1");
                         else
                             strcpy(str, "0");
+                    } else if (!str_cmp(field, "is_hthief")) {
+                        if (subfield && *subfield) {
+                            if (!str_cmp("on", subfield))
+                                SET_BIT_AR(PLR_FLAGS(c), PLR_HTHIEF);
+                            else if (!str_cmp("off", subfield))
+                                REMOVE_BIT_AR(PLR_FLAGS(c), PLR_HTHIEF);
+                        }
+                        if (PLR_FLAGGED(c, PLR_HTHIEF))
+                            strcpy(str, "1");
+                        else
+                            strcpy(str, "0");
                     }
                     break;
                 case 'l':

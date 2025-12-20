@@ -1588,6 +1588,7 @@ void die(struct char_data *ch, struct char_data *killer)
     if (!IS_NPC(ch)) {
         REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_KILLER);
         REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_THIEF);
+        REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_HTHIEF);
         GET_DEATH(ch)++;
     }
     raw_kill(ch, killer);
@@ -3208,6 +3209,8 @@ void transcend(struct char_data *ch)
 
     /* Set the transcendent flag */
     SET_BIT_AR(PLR_FLAGS(ch), PLR_TRNS);
+    /* Clear hidden thief flag when transcending */
+    REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_HTHIEF);
 
     /* Restore character points */
     GET_HIT(ch) = GET_MAX_HIT(ch);
