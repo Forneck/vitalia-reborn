@@ -220,6 +220,8 @@ void parse_quest(FILE *quest_f, int nr)
     static char line[256];
     static int i = 0, j;
     int retval = 0, t[7];
+    int safety_counter;
+    const int MAX_EXTRA_LINES = 100;
     char f1[128], buf2[MAX_STRING_LENGTH];
     aquest_table[i].vnum = nr;
     aquest_table[i].qm = NOBODY;
@@ -279,8 +281,7 @@ void parse_quest(FILE *quest_f, int nr)
 
     /* Read remaining lines until we find the 'S' terminator.
      * Add safeguard to prevent infinite loops from malformed quest files. */
-    int safety_counter = 0;
-    const int MAX_EXTRA_LINES = 100; /* Maximum lines to read before 'S' terminator */
+    safety_counter = 0;
 
     for (;;) {
         if (!get_line(quest_f, line)) {
@@ -289,7 +290,8 @@ void parse_quest(FILE *quest_f, int nr)
         }
 
         /* Safeguard: prevent infinite loops from malformed quest files */
-        if (++safety_counter > MAX_EXTRA_LINES) {
+        safety_counter++;
+        if (safety_counter > MAX_EXTRA_LINES) {
             log1("SYSERR: Quest #%d has too many lines without 'S' terminator (possible infinite loop)\n", nr);
             log1("SYSERR: Last line read: '%s'\n", line);
             exit(1);
@@ -301,7 +303,7 @@ void parse_quest(FILE *quest_f, int nr)
                 return;
             default:
                 /* Ignore comment lines and empty lines, but log unexpected content */
-                if (*line != '\0' && *line != '*' && *line != '\n' && *line != '\r') {
+                if (*line != '\0' && *line != '*') {
                     log1("Warning: Quest #%d has unexpected line before 'S' terminator: '%s'\n", nr, line);
                 }
                 break;
