@@ -541,6 +541,12 @@ void mob_emotion_activity(void)
             if (rand_number(1, 100) <= 25) {
                 update_mob_mood(ch);
             }
+
+            /* Extreme emotional states - check for maxed/minimized emotions and breakdowns */
+            /* Run less frequently (20% chance when passive runs) */
+            if (rand_number(1, 100) <= 20) {
+                check_extreme_emotional_states(ch);
+            }
         }
 
     } /* end for() */

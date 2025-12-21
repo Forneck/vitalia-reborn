@@ -6537,6 +6537,255 @@ int apply_mood_modifier(struct char_data *mob, int base_value)
 }
 
 /**
+ * Check for and handle extreme emotional states (maxed or minimized emotions)
+ * Defines special behaviors when emotions reach 0 or 100
+ * @param mob The mob to check
+ */
+void check_extreme_emotional_states(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* MAXED OUT EMOTIONS (100) - Extreme states */
+
+    /* Maximum Fear (100): Paralyzed by terror, cannot act effectively */
+    if (mob->ai_data->emotion_fear >= 100) {
+        /* High chance to flee or cower */
+        if (FIGHTING(mob) && rand_number(1, 100) <= 50) {
+            do_flee(mob, NULL, 0, 0);
+        }
+        /* Reduce all positive emotions significantly */
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 8));
+    }
+
+    /* Maximum Anger (100): Berserk rage, reduced accuracy but increased damage */
+    if (mob->ai_data->emotion_anger >= 100 && rand_number(1, 100) <= 20) {
+        /* Perform aggressive social */
+        const char *rage_socials[] = {"rage", "scream", "roar", "snarl"};
+        int social_idx = rand_number(0, 3);
+        do_action(mob, "", find_command(rage_socials[social_idx]), 0);
+
+        /* Reduce trust and increase violence */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 10));
+    }
+
+    /* Maximum Horror (100): Mental breakdown, random fleeing/cowering */
+    if (mob->ai_data->emotion_horror >= 100) {
+        /* High chance of breakdown behavior */
+        if (rand_number(1, 100) <= 30) {
+            do_action(mob, "", find_command("cower"), 0);
+        }
+        /* Spread horror to nearby (contagious panic) */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    }
+
+    /* Maximum Pain (100): Incapacitated by suffering */
+    if (mob->ai_data->emotion_pain >= 100 && rand_number(1, 100) <= 15) {
+        do_action(mob, "", find_command("writhe"), 0);
+        /* Pain overrides other emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 15));
+    }
+
+    /* Maximum Love (100): Completely devoted, protective */
+    if (mob->ai_data->emotion_love >= 100) {
+        /* Extremely loyal and trusting */
+        adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(3, 8));
+    }
+
+    /* Maximum Happiness (100): Euphoric, carefree */
+    if (mob->ai_data->emotion_happiness >= 100 && rand_number(1, 100) <= 15) {
+        const char *joy_socials[] = {"laugh", "cheer", "dance", "celebrate"};
+        int social_idx = rand_number(0, 3);
+        do_action(mob, "", find_command(joy_socials[social_idx]), 0);
+    }
+
+    /* MINIMIZED EMOTIONS (0) - Absence states */
+
+    /* Zero Fear: Fearless, reckless behavior */
+    if (mob->ai_data->emotion_fear == 0) {
+        /* Boost courage significantly */
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(2, 5));
+    }
+
+    /* Zero Trust: Complete paranoia */
+    if (mob->ai_data->emotion_trust == 0) {
+        /* Increase fear and reduce friendship */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(1, 3));
+    }
+
+    /* Zero Compassion: Completely callous */
+    if (mob->ai_data->emotion_compassion == 0) {
+        /* More likely to be cruel or aggressive */
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
+    }
+
+    /* Zero Happiness: Deep depression */
+    if (mob->ai_data->emotion_happiness == 0) {
+        /* Increase sadness, reduce all positive emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(2, 5));
+    }
+
+    /* Check for conflicting extreme emotions */
+    check_conflicting_emotions(mob);
+
+    /* Check for emotional breakdown */
+    check_emotional_breakdown(mob);
+}
+
+/**
+ * Handle conflicting extreme emotions (e.g., high anger + high fear)
+ * Resolves emotional conflicts and triggers appropriate behaviors
+ * @param mob The mob to check
+ */
+void check_conflicting_emotions(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* ANGER vs FEAR conflict: Fight-or-flight response */
+    if (mob->ai_data->emotion_anger > 80 && mob->ai_data->emotion_fear > 80) {
+        /* Unpredictable behavior - coin flip between aggression and flight */
+        if (rand_number(1, 100) <= 50) {
+            /* Fear wins - reduce anger, increase fleeing tendency */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(10, 20));
+            if (FIGHTING(mob) && rand_number(1, 100) <= 30) {
+                do_flee(mob, NULL, 0, 0);
+            }
+        } else {
+            /* Anger wins - reduce fear, aggressive stance */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
+            /* Berserk behavior */
+            do_action(mob, "", find_command("snarl"), 0);
+        }
+    }
+
+    /* LOVE vs ANGER conflict: Emotional turmoil */
+    if (mob->ai_data->emotion_love > 80 && mob->ai_data->emotion_anger > 80) {
+        /* Creates sadness and confusion */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_love, -rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+    }
+
+    /* PRIDE vs SHAME conflict: Identity crisis */
+    if (mob->ai_data->emotion_pride > 80 && mob->ai_data->emotion_shame > 80) {
+        /* Results in humiliation or defensive anger */
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 15));
+        /* Reduce both conflicting emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_pride, -rand_number(10, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, -rand_number(10, 15));
+    }
+
+    /* TRUST vs DISGUST conflict: Cognitive dissonance */
+    if (mob->ai_data->emotion_trust > 80 && mob->ai_data->emotion_disgust > 80) {
+        /* Creates confusion, reduces both */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -rand_number(10, 20));
+    }
+
+    /* COURAGE vs HORROR conflict: Steeling resolve or breaking */
+    if (mob->ai_data->emotion_courage > 80 && mob->ai_data->emotion_horror > 80) {
+        /* High EI mobs can resolve this better */
+        int ei = GET_GENEMOTIONAL_IQ(mob);
+        if (ei > 70) {
+            /* Courage wins for high EI */
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+        } else {
+            /* Horror wins for low EI */
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+        }
+    }
+}
+
+/**
+ * Check for emotional breakdown state (too many extreme emotions)
+ * When overwhelmed by multiple intense emotions, mob enters breakdown state
+ * @param mob The mob to check
+ */
+void check_emotional_breakdown(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* Count how many emotions are at extreme levels (>85) */
+    int extreme_count = 0;
+    int total_emotion_intensity = 0;
+
+    if (mob->ai_data->emotion_fear > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_anger > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_sadness > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_horror > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_pain > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_shame > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_humiliation > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_disgust > 85)
+        extreme_count++;
+
+    /* Calculate total emotional intensity */
+    total_emotion_intensity += mob->ai_data->emotion_fear;
+    total_emotion_intensity += mob->ai_data->emotion_anger;
+    total_emotion_intensity += mob->ai_data->emotion_sadness;
+    total_emotion_intensity += mob->ai_data->emotion_pain;
+    total_emotion_intensity += mob->ai_data->emotion_horror;
+
+    /* EMOTIONAL BREAKDOWN: 4+ extreme emotions OR total intensity > 450 */
+    if (extreme_count >= 4 || total_emotion_intensity > 450) {
+        /* Breakdown effects - mob becomes overwhelmed */
+
+        /* Visual indicator */
+        if (rand_number(1, 100) <= 20) {
+            act("$n parece emocionalmente sobrecarregado e incapaz de agir normalmente!", TRUE, mob, 0, 0, TO_ROOM);
+        }
+
+        /* Perform breakdown social */
+        if (rand_number(1, 100) <= 30) {
+            const char *breakdown_socials[] = {"collapse", "tremble", "whimper", "cower"};
+            int social_idx = rand_number(0, 3);
+            int cmd_num = find_command(breakdown_socials[social_idx]);
+            if (cmd_num >= 0) {
+                do_action(mob, "", cmd_num, 0);
+            }
+        }
+
+        /* Reduce EI temporarily due to overwhelm */
+        adjust_emotional_intelligence(mob, -rand_number(1, 2));
+
+        /* Drain all extreme emotions significantly (emotional exhaustion) */
+        if (mob->ai_data->emotion_fear > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(15, 30));
+        if (mob->ai_data->emotion_anger > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(15, 30));
+        if (mob->ai_data->emotion_sadness > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(15, 30));
+        if (mob->ai_data->emotion_horror > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(15, 30));
+        if (mob->ai_data->emotion_pain > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(10, 20));
+
+        /* Increase exhaustion/sadness */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(10, 20));
+
+        /* Attempt to flee if in combat */
+        if (FIGHTING(mob) && rand_number(1, 100) <= 40) {
+            do_flee(mob, NULL, 0, 0);
+        }
+    }
+}
+
+/**
  * Make a mob mourn the death of another character
  * Performs mourning socials and adjusts emotions based on relationship
  * @param mob The mob doing the mourning

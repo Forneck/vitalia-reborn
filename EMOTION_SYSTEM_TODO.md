@@ -216,10 +216,10 @@ Actions that should trigger emotion updates but currently don't:
 ### 9. Special Cases & Edge Cases (LOW PRIORITY)
 
 #### 9.1 Extreme Emotional States
-- **TODO**: Define behaviors for maxed-out emotions (100)
-- **TODO**: Define behaviors for minimized emotions (0)
-- **TODO**: Handle conflicting extreme emotions (high anger + high fear)
-- **TODO**: Add "emotional breakdown" state for too many high emotions
+- **DONE**: Define behaviors for maxed-out emotions (100) - special actions for fear, anger, horror, pain, love, happiness
+- **DONE**: Define behaviors for minimized emotions (0) - fearless, paranoid, callous, depressed states
+- **DONE**: Handle conflicting extreme emotions (high anger + high fear) - fight-or-flight resolution, 5 conflict types
+- **DONE**: Add "emotional breakdown" state for too many high emotions - triggers at 4+ extremes or 450+ intensity
 
 #### 9.2 Emotional Immunity
 - **TODO**: Some mob types should be immune to certain emotions (undead, constructs)
