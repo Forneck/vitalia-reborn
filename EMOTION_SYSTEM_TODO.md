@@ -69,10 +69,10 @@ The emotion system now implements a **hybrid model** with two layers:
 - **DONE**: Mobs with high love (>80) follow players they love (uses hybrid system - per player)
 
 #### 1.5 Group Behavior
-- **TODO**: High loyalty should make mobs stay in group even when hurt
-- **TODO**: Low loyalty should make mobs abandon group when scared
-- **TODO**: High friendship should make mobs more likely to join groups
-- **TODO**: High envy should make mobs refuse to group with better-equipped players
+- **DONE**: High loyalty should make mobs stay in group even when hurt (fight.c - configurable via CEDIT)
+- **DONE**: Low loyalty should make mobs abandon group when scared (fight.c - configurable via CEDIT)
+- **DONE**: High friendship should make mobs more likely to join groups (mobact.c - configurable via CEDIT)
+- **DONE**: High envy should make mobs refuse to group with better-equipped players (mobact.c - configurable via CEDIT)
 
 ### 2. Additional Emotion Triggers (MEDIUM PRIORITY)
 
@@ -244,11 +244,11 @@ Actions that should trigger emotion updates but currently don't:
 6. ✅ Love-based following (1.4) - uses hybrid system to target specific players
 7. ✅ High anger affecting attack behavior (1.1) - extra attacks and damage bonus
 8. ✅ Pain affecting combat effectiveness (1.1) - accuracy and damage penalties
+9. ✅ Group behavior emotional integration (1.5) - loyalty, friendship, and envy affecting group dynamics
 
 ### Phase 2 (Short-term - Next Updates)
-1. Group behavior emotional integration (1.5)
-2. Additional emotion triggers for communication (2.1)
-3. Balance and tuning (6.1, 6.2)
+1. Additional emotion triggers for communication (2.1)
+2. Balance and tuning (6.1, 6.2)
 
 ### Phase 3 (Medium-term)
 1. Emotion contagion basics (5.1)
