@@ -216,7 +216,9 @@ Actions that should trigger emotion updates but currently don't:
 ### 9. Special Cases & Edge Cases (LOW PRIORITY)
 
 #### 9.1 Extreme Emotional States
-- **DONE**: Define behaviors for maxed-out emotions (100) - special actions for fear, anger, horror, pain, love, happiness
+- **DONE**: Define behaviors for maxed-out emotions (100) - special actions + temporary affects
+  - Fear 100: AFF_PARALIZE for 1 tick
+  - Anger 100: Berserk state (extra attack, +25% damage, -3 accuracy) for 2-4 ticks
 - **DONE**: Define behaviors for minimized emotions (0) - fearless, paranoid, callous, depressed states
 - **DONE**: Handle conflicting extreme emotions (high anger + high fear) - fight-or-flight resolution, 5 conflict types
 - **DONE**: Add "emotional breakdown" state for too many high emotions - triggers at 4+ extremes or 450+ intensity

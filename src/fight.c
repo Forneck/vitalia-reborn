@@ -2413,6 +2413,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             /* Low pain: minor accuracy penalty (default +1 to THAC0) */
             calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
         }
+
+        /* BERSERK RAGE: Reduced accuracy (wild swings) but more damage later */
+        if (ch->ai_data->berserk_timer > 0) {
+            calc_thaco += 3; /* +3 to THAC0 = worse accuracy (similar to high pain) */
+        }
     }
 
     // check to see if the victim has prot from evil on, and if the
@@ -2549,6 +2554,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD) {
                 /* Low pain: minor damage reduction (default 5%) */
                 dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW) / 100;
+            }
+
+            /* BERSERK RAGE: Increased damage (wild powerful swings) */
+            if (ch->ai_data->berserk_timer > 0) {
+                dam += (dam * 25) / 100; /* +25% damage bonus while berserk */
             }
         }
 
@@ -2871,6 +2881,11 @@ void perform_violence(void)
         }
 
         num_of_attacks = attacks_per_round(ch);
+
+        /* BERSERK RAGE: Add extra attack if mob is in berserk state */
+        if (IS_NPC(ch) && ch->ai_data && ch->ai_data->berserk_timer > 0) {
+            num_of_attacks++; /* One extra attack while berserk */
+        }
 
         for (loop_attacks = 0;
              loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET);

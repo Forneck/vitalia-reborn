@@ -3568,6 +3568,10 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->overall_mood = calculate_mob_mood(mob);
     mob->ai_data->mood_timer = 0;
 
+    /* Initialize extreme emotional state timers */
+    mob->ai_data->berserk_timer = 0;
+    mob->ai_data->paralyzed_timer = 0;
+
     /* Initialize emotion memory system - zero out all memory slots */
     {
         int i;

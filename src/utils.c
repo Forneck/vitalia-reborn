@@ -6550,24 +6550,55 @@ void check_extreme_emotional_states(struct char_data *mob)
 
     /* Maximum Fear (100): Paralyzed by terror, cannot act effectively */
     if (mob->ai_data->emotion_fear >= 100) {
-        /* High chance to flee or cower */
-        if (FIGHTING(mob) && rand_number(1, 100) <= 50) {
+        /* Apply paralysis affect for 1 tick if not already paralyzed */
+        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && !mob->ai_data->paralyzed_timer) {
+            struct affected_type para_af;
+            new_affect(&para_af);
+            para_af.duration = 1; /* 1 tick duration */
+            SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
+            affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
+            mob->ai_data->paralyzed_timer = 1;
+            act("$n está paralisad$r de terror!", TRUE, mob, 0, 0, TO_ROOM);
+        }
+
+        /* High chance to flee or cower when not paralyzed */
+        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && FIGHTING(mob) && rand_number(1, 100) <= 50) {
             do_flee(mob, NULL, 0, 0);
         }
         /* Reduce all positive emotions significantly */
         adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(5, 10));
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 8));
+    } else {
+        /* Clear paralysis timer when fear drops below 100 */
+        if (mob->ai_data->paralyzed_timer > 0)
+            mob->ai_data->paralyzed_timer--;
     }
 
     /* Maximum Anger (100): Berserk rage, reduced accuracy but increased damage */
-    if (mob->ai_data->emotion_anger >= 100 && rand_number(1, 100) <= 20) {
-        /* Perform aggressive social */
-        const char *rage_socials[] = {"rage", "scream", "roar", "snarl"};
-        int social_idx = rand_number(0, 3);
-        do_action(mob, "", find_command(rage_socials[social_idx]), 0);
+    if (mob->ai_data->emotion_anger >= 100) {
+        /* Apply berserk state (gives extra attack, +damage, -accuracy) */
+        if (mob->ai_data->berserk_timer == 0) {
+            mob->ai_data->berserk_timer = rand_number(2, 4); /* 2-4 ticks of berserk */
+            act("$n entra em fúria berserker!", TRUE, mob, 0, 0, TO_ROOM);
+        }
+
+        /* Perform aggressive social occasionally */
+        if (rand_number(1, 100) <= 20) {
+            const char *rage_socials[] = {"rage", "scream", "roar", "snarl"};
+            int social_idx = rand_number(0, 3);
+            do_action(mob, "", find_command(rage_socials[social_idx]), 0);
+        }
 
         /* Reduce trust and increase violence */
         adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 10));
+    } else {
+        /* Berserk timer decreases when not at max anger */
+        if (mob->ai_data->berserk_timer > 0) {
+            mob->ai_data->berserk_timer--;
+            if (mob->ai_data->berserk_timer == 0) {
+                act("$n se acalma da fúria berserker.", TRUE, mob, 0, 0, TO_ROOM);
+            }
+        }
     }
 
     /* Maximum Horror (100): Mental breakdown, random fleeing/cowering */
