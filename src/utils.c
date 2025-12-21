@@ -6567,14 +6567,21 @@ void check_extreme_emotional_states(struct char_data *mob)
     /* Maximum Fear (100): Paralyzed by terror, cannot act effectively */
     if (mob->ai_data->emotion_fear >= 100) {
         /* Apply paralysis affect for 1 tick if not already paralyzed */
+        /* Victim gets a saving throw vs paralysis to resist being paralyzed by fear */
         if (!AFF_FLAGGED(mob, AFF_PARALIZE) && !mob->ai_data->paralyzed_timer) {
-            struct affected_type para_af;
-            new_affect(&para_af);
-            para_af.duration = 1; /* 1 tick duration */
-            SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
-            affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
-            mob->ai_data->paralyzed_timer = 1;
-            act("$n está paralisad$x de terror!", TRUE, mob, 0, 0, TO_ROOM);
+            /* Check saving throw - if successful, mob resists paralysis */
+            if (!mag_savingthrow(mob, SAVING_PARA, 0)) {
+                struct affected_type para_af;
+                new_affect(&para_af);
+                para_af.duration = 1; /* 1 tick duration */
+                SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
+                affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
+                mob->ai_data->paralyzed_timer = 1;
+                act("$n está paralisad$x de terror!", TRUE, mob, 0, 0, TO_ROOM);
+            } else {
+                /* Mob resisted paralysis, but still very afraid */
+                act("$n treme de medo mas resiste à paralisia!", TRUE, mob, 0, 0, TO_ROOM);
+            }
         }
 
         /* High chance to flee or cower when not paralyzed */

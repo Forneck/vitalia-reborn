@@ -2694,19 +2694,29 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             }
 
             /* Special effect: Lightning Shield - chance to briefly stun (paralysis)
-             * Whirlwind increases chance from 1/5 to 1/3 */
+             * Whirlwind increases chance from 1/5 to 1/3
+             * Paralysis requires a separate saving throw vs paralysis */
             int lightning_max = whirlwind_event ? 2 : 4;
             if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, lightning_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_PARALIZE)) {
-                struct affected_type light_af;
-                new_affect(&light_af);
-                light_af.spell = SPELL_LIGHTNINGSHIELD;
-                light_af.duration = 1;
-                SET_BIT_AR(light_af.bitvector, AFF_PARALIZE);
-                affect_join(ch, &light_af, FALSE, FALSE, FALSE, FALSE);
-                act("O choque elétrico da aura de $N paralisa você momentaneamente!", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua aura elétrica paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_VICT);
-                act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Check saving throw vs paralysis - attacker gets a chance to resist */
+                if (!mag_savingthrow(ch, SAVING_PARA, 0)) {
+                    struct affected_type light_af;
+                    new_affect(&light_af);
+                    light_af.spell = SPELL_LIGHTNINGSHIELD;
+                    light_af.duration = 1;
+                    SET_BIT_AR(light_af.bitvector, AFF_PARALIZE);
+                    affect_join(ch, &light_af, FALSE, FALSE, FALSE, FALSE);
+                    act("O choque elétrico da aura de $N paralisa você momentaneamente!", FALSE, ch, 0, victim,
+                        TO_CHAR);
+                    act("Sua aura elétrica paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+                } else {
+                    /* Resisted paralysis but still stunned briefly */
+                    act("O choque da aura de $N atordoa você, mas você resiste à paralisia!", FALSE, ch, 0, victim,
+                        TO_CHAR);
+                    act("$n resiste à paralisia da sua aura elétrica!", FALSE, ch, 0, victim, TO_VICT);
+                }
             }
 
             /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty)
