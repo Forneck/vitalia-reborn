@@ -4483,6 +4483,20 @@ static void load_default_config(void)
     CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = 70;
     CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = 80;
     CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD = 70;
 
     /* Combat flee behavior thresholds */
     CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = 50;
@@ -4550,6 +4564,20 @@ static void load_default_config(void)
     CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = 30;
     CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = 70;
     CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = 70;
+
+    /* Combat behavior thresholds and modifiers */
+    CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS = 15;
+    CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS = 25;
+    CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD = 30;
+    CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD = 50;
+    CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW = 1;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD = 2;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH = 4;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW = 5;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = 10;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = 20;
 }
 
 void load_config(void)
@@ -4669,6 +4697,34 @@ void load_config(void)
                     CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_display_pain_threshold"))
                     CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_compassion_threshold"))
+                    CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_courage_threshold"))
+                    CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_curiosity_threshold"))
+                    CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_disgust_threshold"))
+                    CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_envy_threshold"))
+                    CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_excitement_threshold"))
+                    CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_friendship_threshold"))
+                    CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_greed_threshold"))
+                    CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_humiliation_threshold"))
+                    CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_love_threshold"))
+                    CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_loyalty_threshold"))
+                    CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_pride_threshold"))
+                    CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_shame_threshold"))
+                    CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_trust_threshold"))
+                    CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_flee_fear_low_threshold"))
                     CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_flee_fear_high_threshold"))
@@ -4769,6 +4825,31 @@ void load_config(void)
                     CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_group_envy_high_threshold"))
                     CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = num;
+                /* Combat Behavior Thresholds and Modifiers */
+                else if (!str_cmp(tag, "emotion_combat_anger_high_threshold"))
+                    CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_combat_anger_damage_bonus"))
+                    CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS = num;
+                else if (!str_cmp(tag, "emotion_combat_anger_attack_bonus"))
+                    CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_low_threshold"))
+                    CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_moderate_threshold"))
+                    CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_high_threshold"))
+                    CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_accuracy_penalty_low"))
+                    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_accuracy_penalty_mod"))
+                    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_accuracy_penalty_high"))
+                    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_damage_penalty_low"))
+                    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_damage_penalty_mod"))
+                    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = num;
+                else if (!str_cmp(tag, "emotion_combat_pain_damage_penalty_high"))
+                    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = num;
                 break;
 
             case 'f':
