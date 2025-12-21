@@ -393,11 +393,15 @@ void weather_change(int zone)
     }
     zone_table[zone].weather = weather;
 
-    /* Apply weather effects to mob emotions in this zone */
+    /* Apply weather effects to mob emotions in this zone
+     * Performance: Only iterate character_list once per zone update
+     * Only affect NPCs that are in this zone (both indoor and outdoor)
+     * Indoor mobs get reduced effects (50%) handled in apply_weather_to_mood()
+     */
     struct char_data *ch;
     for (ch = character_list; ch; ch = ch->next) {
-        /* Only affect NPCs that are in this zone and outdoors */
-        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone && OUTSIDE(ch)) {
+        /* Only affect NPCs that are in this zone */
+        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone) {
             apply_weather_to_mood(ch, weather, weather_info.sunlight);
         }
     }

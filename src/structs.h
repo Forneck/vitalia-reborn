@@ -1228,6 +1228,14 @@ struct mob_ai_data {
     int berserk_timer;   /* Berserk rage state timer (extra attack, +damage, -accuracy) */
     int paralyzed_timer; /* Paralyzed by fear timer */
 
+    /* Weather adaptation system - for advanced weather effects */
+    int weather_exposure_hours;      /* Hours exposed to current weather type (for adaptation) */
+    int last_weather_sky;            /* Last sky condition experienced */
+    int seasonal_affective_trait;    /* SAD susceptibility: 0=none, 1-100=severity */
+    int preferred_weather_sky;       /* Favorite sky condition (or -1 if none) */
+    int preferred_temperature_range; /* Favorite temp range: 0=very cold, 1=cold, 2=comfortable, 3=hot, 4=very hot,
+                                        -1=none */
+
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */

@@ -9082,10 +9082,16 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
 
 /**
  * Apply weather effects to a mob's mood (global emotional state)
- * Based on WEATHER_EMOTION_INTEGRATION.md specification
+ * Based on WEATHER_EMOTION_INTEGRATION.md specification with advanced features
  *
  * Called hourly by weather_change() for each zone - iterates through character_list
  * in weather.c to find affected NPCs. Only affects outdoor NPCs in the specified zone.
+ *
+ * Advanced Features:
+ * - Seasonal Affective Disorder (SAD): Mobs with high SAD trait are more affected in winter
+ * - Weather Preferences: Mobs get positive emotions in their preferred weather
+ * - Adaptation: Prolonged exposure to same conditions reduces emotional impact
+ * - Indoor Shelter: Indoor mobs get reduced weather effects (handled by caller)
  *
  * @param mob The mob whose emotions to update
  * @param weather Zone-specific weather data (temperature, humidity, wind, sky state)
@@ -9095,7 +9101,8 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
  */
 void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight)
 {
-    int multiplier;
+    int multiplier, adaptation_reduction, sad_multiplier;
+    bool is_winter, is_indoors;
 
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !weather || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
@@ -9104,8 +9111,68 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     if (!CONFIG_WEATHER_AFFECTS_EMOTIONS)
         return;
 
-    /* Get the multiplier (stored as 0-200, representing 0-200%) */
+    /* Get the base multiplier (stored as 0-200, representing 0-200%) */
     multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
+
+    /* Check if indoors (reduced effects) */
+    is_indoors = !OUTSIDE(mob);
+    if (is_indoors)
+        multiplier = multiplier / 2; /* 50% reduction for indoor mobs */
+
+    /* Check if winter season (months 1-4) for Seasonal Affective Disorder */
+    is_winter = (time_info.month >= 1 && time_info.month <= 4);
+
+    /* Apply SAD effects in winter if mob has the trait */
+    sad_multiplier = 100;
+    if (is_winter && mob->ai_data->seasonal_affective_trait > 0) {
+        /* SAD increases negative emotion effects by trait % (0-100%) */
+        sad_multiplier = 100 + mob->ai_data->seasonal_affective_trait;
+    }
+
+    /* Track weather adaptation - same weather reduces impact over time */
+    adaptation_reduction = 0;
+    if (mob->ai_data->last_weather_sky == weather->sky) {
+        mob->ai_data->weather_exposure_hours++;
+        /* After 24 hours, start reducing impact (max 50% reduction at 168 hours / 1 week) */
+        if (mob->ai_data->weather_exposure_hours > 24) {
+            adaptation_reduction = MIN(50, (mob->ai_data->weather_exposure_hours - 24) / 3);
+            multiplier = (multiplier * (100 - adaptation_reduction)) / 100;
+        }
+    } else {
+        /* Weather changed, reset adaptation */
+        mob->ai_data->weather_exposure_hours = 0;
+        mob->ai_data->last_weather_sky = weather->sky;
+    }
+
+    /* Check if this is preferred weather (positive boost) */
+    if (mob->ai_data->preferred_weather_sky >= 0 && mob->ai_data->preferred_weather_sky == weather->sky) {
+        /* Preferred weather: boost happiness, reduce negative emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 6) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * multiplier) / 100);
+    }
+
+    /* Temperature preference check */
+    int temp_range = -1;
+    if (weather->temperature < 0)
+        temp_range = 0;
+    else if (weather->temperature < 10)
+        temp_range = 1;
+    else if (weather->temperature <= 25)
+        temp_range = 2;
+    else if (weather->temperature <= 35)
+        temp_range = 3;
+    else
+        temp_range = 4;
+
+    if (mob->ai_data->preferred_temperature_range >= 0 && mob->ai_data->preferred_temperature_range == temp_range) {
+        /* Preferred temperature: small happiness boost */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(2, 4) * multiplier) / 100);
+    }
+
+    /* Apply SAD multiplier to negative emotions (fear, sadness, horror) */
+    int fear_mult = (multiplier * sad_multiplier) / 100;
+    int sadness_mult = (multiplier * sad_multiplier) / 100;
+    int horror_mult = (multiplier * sad_multiplier) / 100;
 
     /* Sky condition effects */
     switch (weather->sky) {
@@ -9113,47 +9180,47 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
             /* Clear skies: happiness +5-10, energy/excitement +3-5, sadness -3-5, fear -2-3 */
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(5, 10) * multiplier) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(3, 5) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -(rand_number(3, 5) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -(rand_number(3, 5) * sadness_mult) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * fear_mult) / 100);
             break;
 
         case SKY_CLOUDY:
             /* Cloudy: sadness +2-4, anxiety +1-3 (as fear), happiness -2-3, energy -2-3 (as excitement) */
-            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(2, 4) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(1, 3) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(2, 4) * sadness_mult) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(1, 3) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 3) * multiplier) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(2, 3) * multiplier) / 100);
             break;
 
         case SKY_RAINING:
-            /* Raining: sadness +3-6, calm +2-4 (as reduced fear & increased happiness), happiness -3-5 */
-            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(3, 6) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * multiplier) / 100);
+            /* Raining: sadness +3-6, calm +2-4 (as reduced fear), happiness -3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(3, 6) * sadness_mult) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(3, 5) * multiplier) / 100);
             break;
 
         case SKY_LIGHTNING:
             /* Lightning storm: Combined fear/anxiety +11-18 (fear +5-8 + anxiety +6-10 from docs), excitement +3-5,
              * horror +3-5, calm -8-10 (as reduced happiness) */
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(11, 18) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(11, 18) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(3, 5) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(3, 5) * horror_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(8, 10) * multiplier) / 100);
             break;
 
         case SKY_SNOWING:
             /* Snowing: wonder/curiosity +3-5, calm +2-4 (as reduced fear), discomfort +4-6 (as reduced happiness) */
             adjust_emotion(mob, &mob->ai_data->emotion_curiosity, (rand_number(3, 5) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(4, 6) * multiplier) / 100);
             break;
     }
 
     /* Temperature effects */
     if (weather->temperature < 0) {
-        /* Very cold (< 0°C): discomfort +5-8, fear +3-5, anger +2-4, energy -3-5 */
+        /* Very cold (< 0°C): discomfort +5-8, fear +3-5 (SAD affected), anger +2-4, energy -3-5 */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(5, 8) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(3, 5) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(3, 5) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_anger, (rand_number(2, 4) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(3, 5) * multiplier) / 100);
     } else if (weather->temperature >= 0 && weather->temperature < 10) {
@@ -9164,17 +9231,17 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     } else if (weather->temperature >= 10 && weather->temperature <= 25) {
         /* Comfortable (10-25°C): happiness +8-13 (includes reduced discomfort), calm +2-4 (as reduced fear) */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(8, 13) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 4) * fear_mult) / 100);
     } else if (weather->temperature > 25 && weather->temperature <= 35) {
         /* Hot (25-35°C): discomfort +3-6, anger +3-5, energy -4-6 */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(3, 6) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_anger, (rand_number(3, 5) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(4, 6) * multiplier) / 100);
     } else if (weather->temperature > 35) {
-        /* Very hot (> 35°C): discomfort +7-10, anger +5-8, fear +2-4, energy -7-10, pain +2-3 */
+        /* Very hot (> 35°C): discomfort +7-10, anger +5-8, fear +2-4 (SAD affected), energy -7-10, pain +2-3 */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(7, 10) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_anger, (rand_number(5, 8) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 4) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 4) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(7, 10) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_pain, (rand_number(2, 3) * multiplier) / 100);
     }
@@ -9187,7 +9254,7 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     } else if (weather->humidity >= 0.30 && weather->humidity < 0.60) {
         /* Comfortable humidity (30-60%): calm +2-3 (as reduced fear), reduced discomfort +3-5 (as increased happiness)
          */
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 5) * multiplier) / 100);
     } else if (weather->humidity >= 0.60 && weather->humidity < 0.80) {
         /* High humidity (60-80%): discomfort +3-5, energy -3-5, anger +2-3 */
@@ -9195,39 +9262,39 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(3, 5) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_anger, (rand_number(2, 3) * multiplier) / 100);
     } else if (weather->humidity >= 0.80) {
-        /* Very high humidity (> 80%): discomfort +6-8, energy -5-7, anxiety +2-4 (as fear) */
+        /* Very high humidity (> 80%): discomfort +6-8, energy -5-7, anxiety +2-4 (as fear, SAD affected) */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(6, 8) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(5, 7) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 4) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 4) * fear_mult) / 100);
     }
 
     /* Wind effects */
     if (weather->winds < 2.0) {
-        /* Calm (< 2 m/s): calm +3-5, boredom +1-2 (as reduced excitement) */
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * multiplier) / 100);
+        /* Calm (< 2 m/s): calm +3-5 (as reduced fear), boredom +1-2 (as reduced excitement) */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 5) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(1, 2) * multiplier) / 100);
     } else if (weather->winds >= 2.0 && weather->winds < 5.0) {
-        /* Gentle breeze (2-5 m/s): happiness +2-4, calm +2-3, energy +1-2 */
+        /* Gentle breeze (2-5 m/s): happiness +2-4, calm +2-3 (as reduced fear), energy +1-2 */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(2, 4) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(1, 2) * multiplier) / 100);
     } else if (weather->winds >= 5.0 && weather->winds < 10.0) {
-        /* Moderate wind (5-10 m/s): energy +2-3, discomfort +2-3, anxiety +1-2 */
+        /* Moderate wind (5-10 m/s): energy +2-3, discomfort +2-3, anxiety +1-2 (as fear, SAD affected) */
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(2, 3) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 3) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(1, 2) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(1, 2) * fear_mult) / 100);
     } else if (weather->winds >= 10.0 && weather->winds < 15.0) {
-        /* Strong wind (10-15 m/s): Combined fear/anxiety +7-11 (fear +3-5 + anxiety +4-6 from docs), discomfort +5-7,
-         * anger +2-4 */
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(7, 11) * multiplier) / 100);
+        /* Strong wind (10-15 m/s): Combined fear/anxiety +7-11 (fear +3-5 + anxiety +4-6 from docs, SAD affected),
+         * discomfort +5-7, anger +2-4 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(7, 11) * fear_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(5, 7) * multiplier) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_anger, (rand_number(2, 4) * multiplier) / 100);
     } else if (weather->winds >= 15.0) {
-        /* Very strong wind (> 15 m/s): fear +6-10, combined horror/panic +8-13 (horror +3-5 + panic +5-8 from docs),
-         * discomfort +8-10 */
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(6, 10) * multiplier) / 100);
-        adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(8, 13) * multiplier) / 100);
+        /* Very strong wind (> 15 m/s): fear +6-10 (SAD affected), combined horror/panic +8-13 (horror +3-5 + panic
+         * +5-8 from docs, SAD affected), discomfort +8-10 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(6, 10) * fear_mult) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(8, 13) * horror_mult) / 100);
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(8, 10) * multiplier) / 100);
     }
 
@@ -9240,23 +9307,24 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
             break;
 
         case SUN_LIGHT:
-            /* Daylight: energy/alertness +9-13 (as excitement), confidence +2-4 (as courage), fear -3-5 */
+            /* Daylight: energy/alertness +9-13 (as excitement), confidence +2-4 (as courage), fear -3-5 (SAD affected)
+             */
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(9, 13) * multiplier) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_courage, (rand_number(2, 4) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * fear_mult) / 100);
             break;
 
         case SUN_SET:
-            /* Dusk: calm +3-5 (as reduced fear and increased happiness), melancholy +2-3 (as sadness) */
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * multiplier) / 100);
+            /* Dusk: calm +3-5 (as reduced fear and increased happiness), melancholy +2-3 (as sadness, SAD affected) */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 5) * multiplier) / 100);
-            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(2, 3) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(2, 3) * sadness_mult) / 100);
             break;
 
         case SUN_DARK:
-            /* Nighttime: Combined fear/anxiety +5-10 (fear +3-6 + anxiety +2-4 from docs), combined
+            /* Nighttime: Combined fear/anxiety +5-10 (fear +3-6 + anxiety +2-4 from docs, SAD affected), combined
              * fatigue/energy/alertness -11-17 (as reduced excitement), mystery/intrigue +2-4 (as curiosity) */
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(5, 10) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(5, 10) * fear_mult) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, -(rand_number(11, 17) * multiplier) / 100);
             adjust_emotion(mob, &mob->ai_data->emotion_curiosity, (rand_number(2, 4) * multiplier) / 100);
             break;
