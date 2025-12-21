@@ -428,6 +428,13 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
                     return MAGIC_FAILED;
                 }
                 break;
+            case SPELL_PARALYSE:
+                /* Paralysis uses SAVING_PARA instead of general savetype */
+                if (mag_savingthrow(victim, SAVING_PARA, 0)) {
+                    send_to_char(ch, "%s resiste à paralisia!\r\n", GET_NAME(victim));
+                    return MAGIC_FAILED;
+                }
+                break;
             case SPELL_INVISIBLE:
                 if (!victim)
                     victim = ch;

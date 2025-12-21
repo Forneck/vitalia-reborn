@@ -2413,6 +2413,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             /* Low pain: minor accuracy penalty (default +1 to THAC0) */
             calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
         }
+
+        /* BERSERK RAGE: Reduced accuracy (wild swings) but more damage later */
+        if (ch->ai_data->berserk_timer > 0) {
+            calc_thaco += 3; /* +3 to THAC0 = worse accuracy (similar to high pain) */
+        }
     }
 
     // check to see if the victim has prot from evil on, and if the
@@ -2550,6 +2555,11 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 /* Low pain: minor damage reduction (default 5%) */
                 dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW) / 100;
             }
+
+            /* BERSERK RAGE: Increased damage (wild powerful swings) */
+            if (ch->ai_data->berserk_timer > 0) {
+                dam += (dam * 25) / 100; /* +25% damage bonus while berserk */
+            }
         }
 
         /* at least 1 hp damage min per hit */
@@ -2684,19 +2694,29 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             }
 
             /* Special effect: Lightning Shield - chance to briefly stun (paralysis)
-             * Whirlwind increases chance from 1/5 to 1/3 */
+             * Whirlwind increases chance from 1/5 to 1/3
+             * Paralysis requires a separate saving throw vs paralysis */
             int lightning_max = whirlwind_event ? 2 : 4;
             if (victim_aura == SPELL_LIGHTNINGSHIELD && !saved && rand_number(0, lightning_max) == 0 &&
                 !AFF_FLAGGED(ch, AFF_PARALIZE)) {
-                struct affected_type light_af;
-                new_affect(&light_af);
-                light_af.spell = SPELL_LIGHTNINGSHIELD;
-                light_af.duration = 1;
-                SET_BIT_AR(light_af.bitvector, AFF_PARALIZE);
-                affect_join(ch, &light_af, FALSE, FALSE, FALSE, FALSE);
-                act("O choque elétrico da aura de $N paralisa você momentaneamente!", FALSE, ch, 0, victim, TO_CHAR);
-                act("Sua aura elétrica paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_VICT);
-                act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+                /* Check saving throw vs paralysis - attacker gets a chance to resist */
+                if (!mag_savingthrow(ch, SAVING_PARA, 0)) {
+                    struct affected_type light_af;
+                    new_affect(&light_af);
+                    light_af.spell = SPELL_LIGHTNINGSHIELD;
+                    light_af.duration = 1;
+                    SET_BIT_AR(light_af.bitvector, AFF_PARALIZE);
+                    affect_join(ch, &light_af, FALSE, FALSE, FALSE, FALSE);
+                    act("O choque elétrico da aura de $N paralisa você momentaneamente!", FALSE, ch, 0, victim,
+                        TO_CHAR);
+                    act("Sua aura elétrica paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_VICT);
+                    act("A aura elétrica de $N paralisa $n momentaneamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+                } else {
+                    /* Resisted paralysis but still stunned briefly */
+                    act("O choque da aura de $N atordoa você, mas você resiste à paralisia!", FALSE, ch, 0, victim,
+                        TO_CHAR);
+                    act("$n resiste à paralisia da sua aura elétrica!", FALSE, ch, 0, victim, TO_VICT);
+                }
             }
 
             /* Special effect: Ice Shield - chance to chill (hitroll and dex penalty)
@@ -2871,6 +2891,11 @@ void perform_violence(void)
         }
 
         num_of_attacks = attacks_per_round(ch);
+
+        /* BERSERK RAGE: Add extra attack if mob is in berserk state */
+        if (IS_NPC(ch) && ch->ai_data && ch->ai_data->berserk_timer > 0) {
+            num_of_attacks++; /* One extra attack while berserk */
+        }
 
         for (loop_attacks = 0;
              loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET);

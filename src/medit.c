@@ -458,19 +458,20 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
 
     write_to_output(d,
                     "-- Genetics Menu for Mob [%s%d%s] --\r\n"
-                    "%s1%s) Wimpy Tendency      : %s%d%s\r\n"
-                    "%s2%s) Loot Tendency       : %s%d%s\r\n"
-                    "%s3%s) Equip Tendency      : %s%d%s\r\n"
-                    "%s4%s) Roam Tendency       : %s%d%s\r\n"
-                    "%s5%s) Brave Prevalence    : %s%d%s\r\n"
-                    "%s6%s) Group Tendency      : %s%d%s\r\n"
-                    "%s7%s) Use Tendency        : %s%d%s\r\n"
-                    "%s8%s) Trade Tendency      : %s%d%s\r\n"
-                    "%s9%s) Quest Tendency      : %s%d%s\r\n"
-                    "%sA%s) Adventurer Tendency : %s%d%s\r\n"
-                    "%sB%s) Follow Tendency     : %s%d%s\r\n"
-                    "%sC%s) Healing Tendency    : %s%d%s\r\n"
-                    "%sE%s) Emotion Profile     : %s%s%s\r\n"
+                    "%s1%s) Wimpy Tendency         : %s%d%s\r\n"
+                    "%s2%s) Loot Tendency          : %s%d%s\r\n"
+                    "%s3%s) Equip Tendency         : %s%d%s\r\n"
+                    "%s4%s) Roam Tendency          : %s%d%s\r\n"
+                    "%s5%s) Brave Prevalence       : %s%d%s\r\n"
+                    "%s6%s) Group Tendency         : %s%d%s\r\n"
+                    "%s7%s) Use Tendency           : %s%d%s\r\n"
+                    "%s8%s) Trade Tendency         : %s%d%s\r\n"
+                    "%s9%s) Quest Tendency         : %s%d%s\r\n"
+                    "%sA%s) Adventurer Tendency    : %s%d%s\r\n"
+                    "%sB%s) Follow Tendency        : %s%d%s\r\n"
+                    "%sC%s) Healing Tendency       : %s%d%s\r\n"
+                    "%sD%s) Emotional Intelligence : %s%d%s\r\n"
+                    "%sE%s) Emotion Profile        : %s%s%s\r\n"
                     "%sQ%s) Return to main menu\r\n"
                     "Enter choice : ",
 
@@ -482,7 +483,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.quest_tendency,
                     nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn, nrm, yel,
                     mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
-                    nrm, grn, nrm, yel,
+                    nrm, grn, nrm, yel, mob->ai_data->genetics.emotional_intelligence, nrm, grn, nrm, yel,
                     (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
                          ? emotion_profile_types[mob->ai_data->emotional_profile]
                          : "Unknown"),
@@ -941,6 +942,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = MEDIT_GEN_HEALING;
                     i++;
                     break;
+                case 'd':
+                case 'D':
+                    OLC_MODE(d) = MEDIT_GEN_EMOTIONAL_IQ;
+                    i++;
+                    break;
                 case 'e':
                 case 'E':
                     OLC_MODE(d) = MEDIT_EMOTION_PROFILE;
@@ -1329,6 +1335,16 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_EMOTIONAL_IQ:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
+            }
+            OLC_MOB(d)->ai_data->genetics.emotional_intelligence = LIMIT(i, 10, 95);
             medit_disp_genetics_menu(d);
             return;
 

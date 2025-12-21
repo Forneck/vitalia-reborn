@@ -220,6 +220,12 @@ static void cedit_setup(struct descriptor_data *d)
 
     OLC_CONFIG(d)->emotion_config.memory_baseline_offset = CONFIG_EMOTION_MEMORY_BASELINE_OFFSET;
 
+    /* Group behavior thresholds */
+    OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -1272,8 +1278,7 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%s9%s) Max Mob-Posted Quests (Previne Lag) : %s%d\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
-                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests,
-                    grn, nrm);
+                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1290,10 +1295,11 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sB%s) Combat Flee Behavior\r\n"
                     "%sC%s) Pain System Configuration\r\n"
                     "%sD%s) Memory System Configuration\r\n"
+                    "%sE%s) Group Behavior Thresholds\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -2842,6 +2848,23 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_EMOTION_MEMORY_SUBMENU;
                     return;
 
+                case 'e':
+                case 'E':
+                    write_to_output(d,
+                                    "\r\nGroup Behavior Thresholds (0-100):\r\n"
+                                    "1) Loyalty High Threshold (stay when hurt) : %d\r\n"
+                                    "2) Loyalty Low Threshold (abandon when scared) : %d\r\n"
+                                    "3) Friendship High Threshold (join groups) : %d\r\n"
+                                    "4) Envy High Threshold (refuse better-equipped) : %d\r\n"
+                                    "Q) Return to Emotion Menu\r\n"
+                                    "Enter your choice : ",
+                                    OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold,
+                                    OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold,
+                                    OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold,
+                                    OLC_CONFIG(d)->emotion_config.group_envy_high_threshold);
+                    OLC_MODE(d) = CEDIT_EMOTION_GROUP_SUBMENU;
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3084,6 +3107,33 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'A':
                     write_to_output(d, "\r\nEnter Memory Baseline Offset (0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_MEMORY_BASELINE_OFFSET;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_GROUP_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Loyalty High Threshold (stay when hurt, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Loyalty Low Threshold (abandon when scared, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Friendship High Threshold (join groups, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Envy High Threshold (refuse better-equipped, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_GROUP_ENVY_HIGH_THRESHOLD;
                     return;
                 case 'q':
                 case 'Q':
@@ -3884,6 +3934,26 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         /* Memory Baseline Offset */
         case CEDIT_EMOTION_MEMORY_BASELINE_OFFSET:
             OLC_CONFIG(d)->emotion_config.memory_baseline_offset = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_GROUP_ENVY_HIGH_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = LIMIT(atoi(arg), 0, 100);
             cedit_disp_emotion_menu(d);
             break;
 

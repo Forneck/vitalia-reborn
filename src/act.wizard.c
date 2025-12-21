@@ -1011,6 +1011,39 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Healing (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENHEALING(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Inteligência Emocional (Genética): [%s%d%s]\r\n", CCYEL(ch, C_NRM), GET_GENEMOTIONAL_IQ(k),
+                     CCNRM(ch, C_NRM));
+        /* Display Overall Mood */
+        if (k->ai_data) {
+            int mood = GET_MOB_MOOD(k);
+            const char *mood_desc;
+            const char *mood_color;
+
+            if (mood > 70) {
+                mood_desc = "Muito Feliz";
+                mood_color = CCGRN(ch, C_NRM);
+            } else if (mood > 40) {
+                mood_desc = "Feliz";
+                mood_color = CCGRN(ch, C_NRM);
+            } else if (mood > 10) {
+                mood_desc = "Contente";
+                mood_color = CCYEL(ch, C_NRM);
+            } else if (mood > -10) {
+                mood_desc = "Neutro";
+                mood_color = CCNRM(ch, C_NRM);
+            } else if (mood > -40) {
+                mood_desc = "Descontente";
+                mood_color = CCYEL(ch, C_NRM);
+            } else if (mood > -70) {
+                mood_desc = "Irritado";
+                mood_color = CCRED(ch, C_NRM);
+            } else {
+                mood_desc = "Muito Irritado";
+                mood_color = CCRED(ch, C_NRM);
+            }
+
+            send_to_char(ch, "Humor Geral: [%s%s (%d)%s]\r\n", mood_color, mood_desc, mood, CCNRM(ch, C_NRM));
+        }
         /* Display Emotional Profile if set */
         if (k->ai_data && k->ai_data->emotional_profile >= 0 && k->ai_data->emotional_profile <= 7) {
             send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),

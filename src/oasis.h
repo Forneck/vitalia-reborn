@@ -308,7 +308,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define MEDIT_GEN_ADVENTURER 50
 #define MEDIT_GEN_FOLLOW 51
 #define MEDIT_GEN_HEALING 52
-#define MEDIT_EMOTION_PROFILE 53
+#define MEDIT_GEN_EMOTIONAL_IQ 53
+#define MEDIT_EMOTION_PROFILE 54
 
 /* Submodes of SEDIT connectedness. */
 #define SEDIT_MAIN_MENU 0
@@ -481,6 +482,12 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_DT_WAREHOUSE_ROOM 121
 /* Max mob-posted quests configuration */
 #define CEDIT_MAX_MOB_POSTED_QUESTS 122
+/* Group behavior emotion configuration */
+#define CEDIT_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD 123
+#define CEDIT_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD 124
+#define CEDIT_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD 125
+#define CEDIT_EMOTION_GROUP_ENVY_HIGH_THRESHOLD 126
+#define CEDIT_EMOTION_GROUP_SUBMENU 127
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

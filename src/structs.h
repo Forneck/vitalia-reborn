@@ -1022,10 +1022,11 @@ struct mob_genetics {
     int group_tendency;
     int use_tendency;
     int trade_tendency;
-    int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
-    int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
-    int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
-    int healing_tendency;    /* Tendência de curar aliados. Varia de 0 a 100. */
+    int quest_tendency;         /* Tendência de aceitar quests. Varia de 0 a 100. */
+    int adventurer_tendency;    /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int follow_tendency;        /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
+    int healing_tendency;       /* Tendência de curar aliados. Varia de 0 a 100. */
+    int emotional_intelligence; /* Inteligência emocional. 0-100. Afeta volatilidade e estabilização emocional. */
 };
 
 /**
@@ -1218,6 +1219,14 @@ struct mob_ai_data {
 
     /* Emotional profile type for personality consistency */
     int emotional_profile; /* Emotional profile type (EMOTION_PROFILE_*) - affects baseline emotions */
+
+    /* Overall mood system - derived from emotion averages, affects all interactions */
+    int overall_mood; /* Current overall mood (-100 to +100): negative=bad mood, positive=good mood */
+    int mood_timer;   /* Timer for periodic mood updates (updated every few ticks) */
+
+    /* Extreme emotional state timers - for temporary affects */
+    int berserk_timer;   /* Berserk rage state timer (extra attack, +damage, -accuracy) */
+    int paralyzed_timer; /* Paralyzed by fear timer */
 
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */

@@ -2401,10 +2401,7 @@ int count_mob_posted_quests(void)
  * Check if we can add another mob-posted quest without exceeding the limit.
  * @return TRUE if we can add another quest, FALSE if at limit
  */
-bool can_add_mob_posted_quest(void)
-{
-    return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS);
-}
+bool can_add_mob_posted_quest(void) { return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS); }
 
 /**
  * Faz um mob postar uma quest para obter um item.
@@ -4868,10 +4865,11 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
                                 elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
                                              (end_time.tv_usec - start_time.tv_usec) / 1000;
                                 if (elapsed_ms > 30) {
-                                    log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
+                                    log1(
+                                        "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
                                         "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
-                                        GET_NAME(ch), zone);
+                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch),
+                                        zone);
                                 }
                                 return qm_char;
                             }
@@ -4884,13 +4882,12 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
 
     /* Log performance even when no questmaster found */
     gettimeofday(&end_time, NULL);
-    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
-                 (end_time.tv_usec - start_time.tv_usec) / 1000;
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 + (end_time.tv_usec - start_time.tv_usec) / 1000;
     if (elapsed_ms > 30) {
-        log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
+        log1(
+            "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
             "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
-            GET_NAME(ch), zone);
+            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch), zone);
     }
 
     return NULL;
@@ -5748,6 +5745,7 @@ int get_mob_skill(struct char_data *ch, int skill_num)
 
 /**
  * Adjust a mob's emotion by a specified amount, keeping it within 0-100 bounds
+ * Also applies EI (Emotional Intelligence) effects on volatility
  * @param mob The mob whose emotion to adjust
  * @param emotion_ptr Pointer to the emotion value
  * @param amount Amount to adjust (positive or negative)
@@ -5757,7 +5755,43 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
         return;
 
+    int ei = GET_GENEMOTIONAL_IQ(mob);
+
+    /* Emotional Intelligence affects volatility of emotion changes:
+     * - Low EI (0-35): More extreme reactions (120-150% of amount)
+     * - Average EI (36-65): Normal reactions (100% of amount)
+     * - High EI (66-100): More measured reactions (70-90% of amount)
+     */
+    if (ei < 35) {
+        /* Low EI: Volatile, extreme emotional reactions */
+        amount = (amount * (120 + rand_number(0, 30))) / 100;
+    } else if (ei > 65) {
+        /* High EI: Measured, controlled emotional responses */
+        amount = (amount * (70 + rand_number(0, 20))) / 100;
+    }
+    /* Average EI (36-65): No modification to amount */
+
     *emotion_ptr = URANGE(0, *emotion_ptr + amount, 100);
+}
+
+/**
+ * Adjust mob's emotional intelligence based on emotional experiences
+ * EI can increase through successful emotion regulation or decrease through emotional failures
+ * @param mob The mob whose EI to adjust
+ * @param change Amount to change (+1 to +3 for learning, -1 to -2 for regression)
+ */
+void adjust_emotional_intelligence(struct char_data *mob, int change)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    int current_ei = mob->ai_data->genetics.emotional_intelligence;
+
+    /* EI changes slowly - cap at ±3 per event */
+    change = URANGE(-2, change, 3);
+
+    /* Apply the change with bounds checking (10-95) */
+    mob->ai_data->genetics.emotional_intelligence = URANGE(10, current_ei + change, 95);
 }
 
 /**
@@ -5945,6 +5979,42 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
 }
 
 /**
+ * Update mob emotions when feeling robbed by unfair shop prices
+ * @param buyer The character feeling robbed (player or mob)
+ * @param keeper The shopkeeper charging unfair prices
+ * @param price_ratio The ratio of actual price to base price (>1.3 = robbery)
+ */
+void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_data *keeper, float price_ratio)
+{
+    if (!buyer || !IS_NPC(buyer) || !buyer->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Only trigger if price is significantly unfair (30%+ markup or 30%+ underpay) */
+    if (price_ratio < 1.30 && price_ratio > 0.70)
+        return;
+
+    /* Being robbed increases anger and distrust */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_anger, rand_number(15, 25));
+
+    /* Significantly decreases trust - feeling cheated */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_trust, -rand_number(25, 40));
+
+    /* Decreases friendship */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_friendship, -rand_number(15, 25));
+
+    /* Increases greed (wanting to get even) */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_greed, rand_number(5, 10));
+
+    /* Decreases happiness */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_happiness, -rand_number(10, 20));
+
+    /* Add to emotion memory - unfair trade is a negative event */
+    if (keeper) {
+        add_emotion_memory(buyer, keeper, INTERACT_RECEIVED_ITEM, 0, NULL);
+    }
+}
+
+/**
  * Update mob emotions based on being rescued
  * @param mob The mob being rescued
  * @param rescuer The character performing the rescue
@@ -6079,6 +6149,708 @@ void update_mob_emotion_passive(struct char_data *mob)
     }
     if (mob->ai_data->emotion_humiliation > 0) {
         adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, 2));
+    }
+
+    /* Emotional Intelligence learning through emotion stabilization
+     * Mobs learn EI by successfully returning emotions to baseline (emotional regulation)
+     * Small chance (5%) to gain +1 EI when emotions are well-regulated */
+    int ei = GET_GENEMOTIONAL_IQ(mob);
+    bool emotions_stable =
+        (mob->ai_data->emotion_fear <= fear_baseline + 10 && mob->ai_data->emotion_anger <= anger_baseline + 10 &&
+         mob->ai_data->emotion_happiness >= happiness_baseline - 10 && mob->ai_data->emotion_sadness <= 15);
+
+    if (emotions_stable && ei < 90 && rand_number(1, 100) <= 5) {
+        /* Learning through successful emotional regulation */
+        adjust_emotional_intelligence(mob, 1);
+    }
+
+    /* Conversely, extreme uncontrolled emotions can reduce EI (2% chance)
+     * This represents emotional overwhelm affecting long-term emotional control */
+    bool emotions_extreme = (mob->ai_data->emotion_fear > 80 || mob->ai_data->emotion_anger > 80 ||
+                             mob->ai_data->emotion_horror > 70 || mob->ai_data->emotion_pain > 80);
+
+    if (emotions_extreme && ei > 15 && rand_number(1, 100) <= 2) {
+        /* Regression through emotional overwhelm */
+        adjust_emotional_intelligence(mob, -1);
+    }
+}
+
+/**
+ * Update mob emotions through contagion from nearby mobs
+ * Emotions spread between mobs in the same room, stronger in groups
+ * @param mob The mob being influenced by others' emotions
+ */
+void update_mob_emotion_contagion(struct char_data *mob)
+{
+    struct char_data *other;
+    int mob_count = 0;
+    int total_fear = 0, total_happiness = 0, total_anger = 0, total_excitement = 0;
+    int group_fear = 0, group_happiness = 0;
+    int group_member_count = 0;
+    bool has_leader = FALSE;
+    int leader_fear = 0, leader_happiness = 0, leader_anger = 0;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Skip if mob is not in a valid room */
+    if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
+        return;
+
+    /* Performance optimization: Skip contagion in very crowded rooms (>20 NPCs)
+     * to avoid performance bottlenecks. Emotions still update passively. */
+    int room_npc_count = 0;
+    for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
+        if (IS_NPC(other))
+            room_npc_count++;
+        if (room_npc_count > 20)
+            return; /* Too crowded for emotion contagion processing */
+    }
+
+    /* Scan all characters in the same room */
+    for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
+        /* Skip self */
+        if (other == mob)
+            continue;
+
+        /* Only count NPCs with AI data */
+        if (!IS_NPC(other) || !other->ai_data)
+            continue;
+
+        mob_count++;
+
+        /* Accumulate emotions from all nearby mobs */
+        total_fear += other->ai_data->emotion_fear;
+        total_happiness += other->ai_data->emotion_happiness;
+        total_anger += other->ai_data->emotion_anger;
+        total_excitement += other->ai_data->emotion_excitement;
+
+        /* Check if in same group */
+        if (GROUP(mob) && GROUP(other) && GROUP(mob) == GROUP(other)) {
+            group_member_count++;
+            group_fear += other->ai_data->emotion_fear;
+            group_happiness += other->ai_data->emotion_happiness;
+
+            /* Check if other is the group leader */
+            if (GROUP_LEADER(GROUP(mob)) == other) {
+                has_leader = TRUE;
+                leader_fear = other->ai_data->emotion_fear;
+                leader_happiness = other->ai_data->emotion_happiness;
+                leader_anger = other->ai_data->emotion_anger;
+            }
+        }
+    }
+
+    /* No nearby mobs to influence emotions */
+    if (mob_count == 0)
+        return;
+
+    /* === CROWD CONTAGION (all nearby mobs) === */
+
+    /* Fear is contagious - average fear of nearby mobs influences this mob */
+    if (mob_count > 0 && total_fear > 0) {
+        int avg_fear = total_fear / mob_count;
+        /* Transfer 5-10% of average fear (stronger in larger crowds) */
+        int fear_transfer = (avg_fear * rand_number(5, 10)) / 100;
+        /* Bonus contagion in crowds (3+ mobs) */
+        if (mob_count >= 3)
+            fear_transfer += rand_number(1, 3);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, fear_transfer);
+    }
+
+    /* Happiness is contagious in crowds */
+    if (mob_count >= 2 && total_happiness > 0) {
+        int avg_happiness = total_happiness / mob_count;
+        /* Transfer 8-15% of average happiness (very contagious) */
+        int happiness_transfer = (avg_happiness * rand_number(8, 15)) / 100;
+        /* Stronger in larger crowds */
+        if (mob_count >= 4)
+            happiness_transfer += rand_number(2, 4);
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, happiness_transfer);
+    }
+
+    /* Anger can spread in tense situations */
+    if (mob_count > 0 && total_anger > 0) {
+        int avg_anger = total_anger / mob_count;
+        /* Transfer 3-7% of average anger (moderate contagion) */
+        int anger_transfer = (avg_anger * rand_number(3, 7)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, anger_transfer);
+    }
+
+    /* Excitement spreads in active environments */
+    if (mob_count >= 2 && total_excitement > 0) {
+        int avg_excitement = total_excitement / mob_count;
+        /* Transfer 7-12% of average excitement */
+        int excitement_transfer = (avg_excitement * rand_number(7, 12)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_excitement, excitement_transfer);
+    }
+
+    /* === GROUP CONTAGION (stronger within groups) === */
+
+    if (group_member_count > 0) {
+        /* Fear spreads VERY strongly among group members */
+        int avg_group_fear = group_fear / group_member_count;
+        /* Transfer 12-20% of group fear (much stronger than crowd) */
+        int group_fear_transfer = (avg_group_fear * rand_number(12, 20)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, group_fear_transfer);
+
+        /* Happiness spreads well in groups (bonding) */
+        int avg_group_happiness = group_happiness / group_member_count;
+        /* Transfer 10-15% of group happiness */
+        int group_happiness_transfer = (avg_group_happiness * rand_number(10, 15)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, group_happiness_transfer);
+    }
+
+    /* === LEADER INFLUENCE (2x stronger than normal group members) === */
+
+    if (has_leader) {
+        /* Leader's fear has double influence */
+        if (leader_fear > 50) {
+            int leader_fear_transfer = (leader_fear * rand_number(15, 25)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, leader_fear_transfer);
+        }
+
+        /* Leader's courage (low fear) also influences */
+        if (leader_fear < 30) {
+            int courage_transfer = rand_number(3, 8);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -courage_transfer);
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, courage_transfer / 2);
+        }
+
+        /* Leader's happiness/morale influences followers */
+        if (leader_happiness > 50) {
+            int leader_happiness_transfer = (leader_happiness * rand_number(12, 20)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, leader_happiness_transfer);
+        }
+
+        /* Leader's anger can rile up followers */
+        if (leader_anger > 60) {
+            int leader_anger_transfer = (leader_anger * rand_number(10, 18)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, leader_anger_transfer);
+        }
+    }
+}
+
+/**
+ * Calculate overall mood from current emotions
+ * Mood is derived from positive vs negative emotion balance
+ * @param mob The mob whose mood to calculate
+ * @return Mood value (-100 to +100): negative=bad mood, positive=good mood
+ */
+int calculate_mob_mood(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return 0;
+
+    /* Positive emotions that improve mood */
+    int positive_sum = 0;
+    positive_sum += mob->ai_data->emotion_happiness;
+    positive_sum += mob->ai_data->emotion_love;
+    positive_sum += mob->ai_data->emotion_excitement;
+    positive_sum += mob->ai_data->emotion_pride;
+    positive_sum += mob->ai_data->emotion_courage;
+    positive_sum += mob->ai_data->emotion_trust;
+    positive_sum += mob->ai_data->emotion_friendship;
+    positive_sum += mob->ai_data->emotion_curiosity;
+    positive_sum += mob->ai_data->emotion_compassion;
+
+    /* Negative emotions that worsen mood */
+    int negative_sum = 0;
+    negative_sum += mob->ai_data->emotion_fear;
+    negative_sum += mob->ai_data->emotion_anger;
+    negative_sum += mob->ai_data->emotion_sadness;
+    negative_sum += mob->ai_data->emotion_pain;
+    negative_sum += mob->ai_data->emotion_horror;
+    negative_sum += mob->ai_data->emotion_disgust;
+    negative_sum += mob->ai_data->emotion_shame;
+    negative_sum += mob->ai_data->emotion_humiliation;
+    negative_sum += mob->ai_data->emotion_envy;
+
+    /* Calculate average positive and negative */
+    int avg_positive = positive_sum / 9; /* 9 positive emotions */
+    int avg_negative = negative_sum / 9; /* 9 negative emotions */
+
+    /* Mood is the difference: positive - negative, scaled to -100 to +100 */
+    int mood = avg_positive - avg_negative;
+
+    /* Apply bounds */
+    return URANGE(-100, mood, 100);
+}
+
+/**
+ * Update mob's overall mood based on emotions, weather, and time
+ * Should be called periodically (less frequently than emotion updates)
+ * @param mob The mob whose mood to update
+ */
+void update_mob_mood(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Calculate base mood from emotions */
+    int calculated_mood = calculate_mob_mood(mob);
+
+    /* Weather effects on mood (if weather affects emotions is enabled) */
+    if (CONFIG_WEATHER_AFFECTS_EMOTIONS && IN_ROOM(mob) != NOWHERE && IN_ROOM(mob) >= 0 &&
+        IN_ROOM(mob) <= top_of_world) {
+        int weather_modifier = 0;
+
+        /* Check current weather conditions */
+        switch (weather_info.sky) {
+            case SKY_CLOUDLESS:
+                weather_modifier = 5; /* Sunny weather improves mood */
+                break;
+            case SKY_CLOUDY:
+                weather_modifier = 0; /* Neutral */
+                break;
+            case SKY_RAINING:
+                weather_modifier = -5; /* Rain worsens mood slightly */
+                break;
+            case SKY_LIGHTNING:
+                weather_modifier = -10; /* Storm significantly worsens mood */
+                break;
+        }
+
+        /* Temperature extremes also affect mood */
+        if (weather_info.temperature < 0) {
+            weather_modifier -= 5; /* Very cold worsens mood */
+        } else if (weather_info.temperature > 40) {
+            weather_modifier -= 3; /* Very hot worsens mood */
+        } else if (weather_info.temperature >= 15 && weather_info.temperature <= 25) {
+            weather_modifier += 2; /* Pleasant temperature improves mood */
+        }
+
+        calculated_mood += weather_modifier;
+    }
+
+    /* Time of day effects on mood */
+    if (IN_ROOM(mob) != NOWHERE && IN_ROOM(mob) >= 0 && IN_ROOM(mob) <= top_of_world) {
+        int time_modifier = 0;
+
+        switch (weather_info.sunlight) {
+            case SUN_DARK:
+                /* Night - slightly negative for most mobs unless nocturnal */
+                if (IS_EVIL(mob)) {
+                    time_modifier = 3; /* Evil mobs prefer darkness */
+                } else {
+                    time_modifier = -3; /* Good mobs dislike darkness */
+                }
+                break;
+            case SUN_RISE:
+            case SUN_SET:
+                time_modifier = 2; /* Dawn/dusk are pleasant times */
+                break;
+            case SUN_LIGHT:
+                /* Daytime - slightly positive for most mobs */
+                if (IS_GOOD(mob)) {
+                    time_modifier = 3; /* Good mobs prefer daylight */
+                } else {
+                    time_modifier = -2; /* Evil mobs dislike bright light */
+                }
+                break;
+        }
+
+        calculated_mood += time_modifier;
+    }
+
+    /* Smooth mood changes - don't jump instantly */
+    int mood_difference = calculated_mood - mob->ai_data->overall_mood;
+    int mood_change = mood_difference / 3; /* Move 1/3 of the way toward target */
+
+    /* Ensure at least some change if there's a significant difference */
+    if (mood_change == 0 && abs(mood_difference) > 5) {
+        mood_change = (mood_difference > 0) ? 1 : -1;
+    }
+
+    mob->ai_data->overall_mood = URANGE(-100, mob->ai_data->overall_mood + mood_change, 100);
+
+    /* Check for extreme mood effects */
+    check_extreme_mood_effects(mob);
+}
+
+/**
+ * Check for and trigger special behaviors based on extreme moods
+ * @param mob The mob to check
+ */
+void check_extreme_mood_effects(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    int mood = mob->ai_data->overall_mood;
+
+    /* VERY BAD MOOD (< -70): Aggressive, antisocial behavior */
+    if (mood < -70 && rand_number(1, 100) <= 10) {
+        /* 10% chance per update to perform negative social */
+        const char *negative_socials[] = {"growl", "snarl", "grumble", "scowl", "glare", NULL};
+        int social_idx = rand_number(0, 4);
+        int cmd = find_command(negative_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
+
+        /* Reduce trust and friendship slightly */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(1, 3));
+    }
+
+    /* BAD MOOD (-70 to -40): Withdrawn, less helpful */
+    else if (mood < -40 && mood >= -70) {
+        /* Reduce helpfulness emotions */
+        if (rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, -rand_number(1, 2));
+        }
+    }
+
+    /* VERY GOOD MOOD (> 70): Friendly, helpful behavior */
+    else if (mood > 70 && rand_number(1, 100) <= 10) {
+        /* 10% chance per update to perform positive social */
+        const char *positive_socials[] = {"smile", "laugh", "cheer", "dance", "grin", NULL};
+        int social_idx = rand_number(0, 4);
+        int cmd = find_command(positive_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
+
+        /* Increase trust and friendship slightly */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(1, 3));
+    }
+
+    /* GOOD MOOD (40 to 70): More generous, forgiving */
+    else if (mood > 40 && mood <= 70) {
+        /* Increase helpfulness */
+        if (rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, rand_number(1, 2));
+        }
+    }
+}
+
+/**
+ * Apply global mood modifier to an interaction value
+ * Mood affects all interactions: positive mood = bonuses, negative mood = penalties
+ * @param mob The mob whose mood to apply
+ * @param base_value The base value to modify
+ * @return Modified value based on mood
+ */
+int apply_mood_modifier(struct char_data *mob, int base_value)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return base_value;
+
+    int mood = mob->ai_data->overall_mood;
+
+    /* Mood affects values by up to ±20%
+     * Very bad mood (-100): -20%
+     * Neutral mood (0): 0%
+     * Very good mood (+100): +20%
+     */
+    int modifier_percent = (mood * 20) / 100; /* -20 to +20 */
+
+    int modified_value = base_value + ((base_value * modifier_percent) / 100);
+
+    return modified_value;
+}
+
+/**
+ * Check for and handle extreme emotional states (maxed or minimized emotions)
+ * Defines special behaviors when emotions reach 0 or 100
+ * @param mob The mob to check
+ */
+void check_extreme_emotional_states(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* MAXED OUT EMOTIONS (100) - Extreme states */
+
+    /* Maximum Fear (100): Paralyzed by terror, cannot act effectively */
+    if (mob->ai_data->emotion_fear >= 100) {
+        /* Apply paralysis affect for 1 tick if not already paralyzed */
+        /* Victim gets a saving throw vs paralysis to resist being paralyzed by fear */
+        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && !mob->ai_data->paralyzed_timer) {
+            /* Check saving throw - if successful, mob resists paralysis */
+            if (!mag_savingthrow(mob, SAVING_PARA, 0)) {
+                struct affected_type para_af;
+                new_affect(&para_af);
+                para_af.duration = 1; /* 1 tick duration */
+                SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
+                affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
+                mob->ai_data->paralyzed_timer = 1;
+                act("$n está paralisad$x de terror!", TRUE, mob, 0, 0, TO_ROOM);
+            } else {
+                /* Mob resisted paralysis, but still very afraid */
+                act("$n treme de medo mas resiste à paralisia!", TRUE, mob, 0, 0, TO_ROOM);
+            }
+        }
+
+        /* High chance to flee or cower when not paralyzed */
+        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && FIGHTING(mob) && rand_number(1, 100) <= 50) {
+            do_flee(mob, NULL, 0, 0);
+        }
+        /* Reduce all positive emotions significantly */
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 8));
+    } else {
+        /* Clear paralysis timer when fear drops below 100 */
+        if (mob->ai_data->paralyzed_timer > 0)
+            mob->ai_data->paralyzed_timer--;
+    }
+
+    /* Maximum Anger (100): Berserk rage, reduced accuracy but increased damage */
+    if (mob->ai_data->emotion_anger >= 100) {
+        /* Apply berserk state (gives extra attack, +damage, -accuracy) */
+        if (mob->ai_data->berserk_timer == 0) {
+            mob->ai_data->berserk_timer = rand_number(2, 4); /* 2-4 ticks of berserk */
+            act("$n entra em fúria berserker!", TRUE, mob, 0, 0, TO_ROOM);
+        }
+
+        /* Perform aggressive social occasionally */
+        if (rand_number(1, 100) <= 20) {
+            const char *rage_socials[] = {"rage", "scream", "roar", "snarl"};
+            int social_idx = rand_number(0, 3);
+            int cmd = find_command(rage_socials[social_idx]);
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
+        }
+
+        /* Reduce trust and increase violence */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 10));
+    } else {
+        /* Berserk timer decreases when not at max anger */
+        if (mob->ai_data->berserk_timer > 0) {
+            mob->ai_data->berserk_timer--;
+            if (mob->ai_data->berserk_timer == 0) {
+                act("$n se acalma da fúria berserker.", TRUE, mob, 0, 0, TO_ROOM);
+            }
+        }
+    }
+
+    /* Maximum Horror (100): Mental breakdown, random fleeing/cowering */
+    if (mob->ai_data->emotion_horror >= 100) {
+        /* High chance of breakdown behavior */
+        if (rand_number(1, 100) <= 30) {
+            int cmd = find_command("cower");
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
+        }
+        /* Spread horror to nearby (contagious panic) */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    }
+
+    /* Maximum Pain (100): Incapacitated by suffering */
+    if (mob->ai_data->emotion_pain >= 100 && rand_number(1, 100) <= 15) {
+        int cmd = find_command("writhe");
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
+        /* Pain overrides other emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 15));
+    }
+
+    /* Maximum Love (100): Completely devoted, protective */
+    if (mob->ai_data->emotion_love >= 100) {
+        /* Extremely loyal and trusting */
+        adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(3, 8));
+    }
+
+    /* Maximum Happiness (100): Euphoric, carefree */
+    if (mob->ai_data->emotion_happiness >= 100 && rand_number(1, 100) <= 15) {
+        const char *joy_socials[] = {"laugh", "cheer", "dance", "celebrate"};
+        int social_idx = rand_number(0, 3);
+        int cmd = find_command(joy_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
+    }
+
+    /* MINIMIZED EMOTIONS (0) - Absence states */
+
+    /* Zero Fear: Fearless, reckless behavior */
+    if (mob->ai_data->emotion_fear == 0) {
+        /* Boost courage significantly */
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(2, 5));
+    }
+
+    /* Zero Trust: Complete paranoia */
+    if (mob->ai_data->emotion_trust == 0) {
+        /* Increase fear and reduce friendship */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(1, 3));
+    }
+
+    /* Zero Compassion: Completely callous */
+    if (mob->ai_data->emotion_compassion == 0) {
+        /* More likely to be cruel or aggressive */
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
+    }
+
+    /* Zero Happiness: Deep depression */
+    if (mob->ai_data->emotion_happiness == 0) {
+        /* Increase sadness, reduce all positive emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(2, 5));
+    }
+
+    /* Check for conflicting extreme emotions */
+    check_conflicting_emotions(mob);
+
+    /* Check for emotional breakdown */
+    check_emotional_breakdown(mob);
+}
+
+/**
+ * Handle conflicting extreme emotions (e.g., high anger + high fear)
+ * Resolves emotional conflicts and triggers appropriate behaviors
+ * @param mob The mob to check
+ */
+void check_conflicting_emotions(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* ANGER vs FEAR conflict: Fight-or-flight response */
+    if (mob->ai_data->emotion_anger > 80 && mob->ai_data->emotion_fear > 80) {
+        /* Unpredictable behavior - coin flip between aggression and flight */
+        if (rand_number(1, 100) <= 50) {
+            /* Fear wins - reduce anger, increase fleeing tendency */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(10, 20));
+            if (FIGHTING(mob) && rand_number(1, 100) <= 30) {
+                do_flee(mob, NULL, 0, 0);
+            }
+        } else {
+            /* Anger wins - reduce fear, aggressive stance */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
+            /* Berserk behavior */
+            int cmd = find_command("snarl");
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
+        }
+    }
+
+    /* LOVE vs ANGER conflict: Emotional turmoil */
+    if (mob->ai_data->emotion_love > 80 && mob->ai_data->emotion_anger > 80) {
+        /* Creates sadness and confusion */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_love, -rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+    }
+
+    /* PRIDE vs SHAME conflict: Identity crisis */
+    if (mob->ai_data->emotion_pride > 80 && mob->ai_data->emotion_shame > 80) {
+        /* Results in humiliation or defensive anger */
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 15));
+        /* Reduce both conflicting emotions */
+        adjust_emotion(mob, &mob->ai_data->emotion_pride, -rand_number(10, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, -rand_number(10, 15));
+    }
+
+    /* TRUST vs DISGUST conflict: Cognitive dissonance */
+    if (mob->ai_data->emotion_trust > 80 && mob->ai_data->emotion_disgust > 80) {
+        /* Creates confusion, reduces both */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -rand_number(10, 20));
+    }
+
+    /* COURAGE vs HORROR conflict: Steeling resolve or breaking */
+    if (mob->ai_data->emotion_courage > 80 && mob->ai_data->emotion_horror > 80) {
+        /* High EI mobs can resolve this better */
+        int ei = GET_GENEMOTIONAL_IQ(mob);
+        if (ei > 70) {
+            /* Courage wins for high EI */
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+        } else {
+            /* Horror wins for low EI */
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+        }
+    }
+}
+
+/**
+ * Check for emotional breakdown state (too many extreme emotions)
+ * When overwhelmed by multiple intense emotions, mob enters breakdown state
+ * @param mob The mob to check
+ */
+void check_emotional_breakdown(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* Count how many emotions are at extreme levels (>85) */
+    int extreme_count = 0;
+    int total_emotion_intensity = 0;
+
+    if (mob->ai_data->emotion_fear > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_anger > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_sadness > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_horror > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_pain > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_shame > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_humiliation > 85)
+        extreme_count++;
+    if (mob->ai_data->emotion_disgust > 85)
+        extreme_count++;
+
+    /* Calculate total emotional intensity */
+    total_emotion_intensity += mob->ai_data->emotion_fear;
+    total_emotion_intensity += mob->ai_data->emotion_anger;
+    total_emotion_intensity += mob->ai_data->emotion_sadness;
+    total_emotion_intensity += mob->ai_data->emotion_pain;
+    total_emotion_intensity += mob->ai_data->emotion_horror;
+
+    /* EMOTIONAL BREAKDOWN: 4+ extreme emotions OR total intensity > 450 */
+    if (extreme_count >= 4 || total_emotion_intensity > 450) {
+        /* Breakdown effects - mob becomes overwhelmed */
+
+        /* Visual indicator */
+        if (rand_number(1, 100) <= 20) {
+            act("$n parece emocionalmente sobrecarregado e incapaz de agir normalmente!", TRUE, mob, 0, 0, TO_ROOM);
+        }
+
+        /* Perform breakdown social */
+        if (rand_number(1, 100) <= 30) {
+            const char *breakdown_socials[] = {"collapse", "tremble", "whimper", "cower"};
+            int social_idx = rand_number(0, 3);
+            int cmd_num = find_command(breakdown_socials[social_idx]);
+            if (cmd_num >= 0) {
+                do_action(mob, "", cmd_num, 0);
+            }
+        }
+
+        /* Reduce EI temporarily due to overwhelm */
+        adjust_emotional_intelligence(mob, -rand_number(1, 2));
+
+        /* Drain all extreme emotions significantly (emotional exhaustion) */
+        if (mob->ai_data->emotion_fear > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(15, 30));
+        if (mob->ai_data->emotion_anger > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(15, 30));
+        if (mob->ai_data->emotion_sadness > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(15, 30));
+        if (mob->ai_data->emotion_horror > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(15, 30));
+        if (mob->ai_data->emotion_pain > 70)
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(10, 20));
+
+        /* Increase exhaustion/sadness */
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(10, 20));
+
+        /* Attempt to flee if in combat */
+        if (FIGHTING(mob) && rand_number(1, 100) <= 40) {
+            do_flee(mob, NULL, 0, 0);
+        }
     }
 }
 
@@ -8473,7 +9245,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
     static time_t last_calc_time = 0;
     const int ECONOMY_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
     time_t now = time(0);
-    
+
     /* If cache is valid, return cached values immediately */
     if (last_calc_time != 0 && (now - last_calc_time) < ECONOMY_CACHE_TTL) {
         *total_money = cached_money;
@@ -8481,7 +9253,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         *player_count = cached_count;
         return;
     }
-    
+
     /* Cache expired - recalculate (this is expensive!) */
     int i;
     struct char_data *temp_ch = NULL;
@@ -8491,7 +9263,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
     *total_money = 0;
     *total_qp = 0;
     *player_count = 0;
-    
+
     /* Track performance of this expensive operation */
     gettimeofday(&start_time, NULL);
 
@@ -8518,20 +9290,21 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         free_char(temp_ch);
         temp_ch = NULL;
     }
-    
+
     /* Update cache */
     cached_money = *total_money;
     cached_qp = *total_qp;
     cached_count = *player_count;
     last_calc_time = now;
-    
+
     /* Log performance - this expensive operation loads ALL player files! */
     gettimeofday(&end_time, NULL);
-    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
-                 (end_time.tv_usec - start_time.tv_usec) / 1000;
-    
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 + (end_time.tv_usec - start_time.tv_usec) / 1000;
+
     if (elapsed_ms > 100) { /* Log if it takes more than 100ms */
-        log1("PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from disk)",
+        log1(
+            "PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from "
+            "disk)",
             elapsed_ms, top_of_p_table + 1, *player_count);
     }
 }

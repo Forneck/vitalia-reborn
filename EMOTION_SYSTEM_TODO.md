@@ -69,10 +69,10 @@ The emotion system now implements a **hybrid model** with two layers:
 - **DONE**: Mobs with high love (>80) follow players they love (uses hybrid system - per player)
 
 #### 1.5 Group Behavior
-- **TODO**: High loyalty should make mobs stay in group even when hurt
-- **TODO**: Low loyalty should make mobs abandon group when scared
-- **TODO**: High friendship should make mobs more likely to join groups
-- **TODO**: High envy should make mobs refuse to group with better-equipped players
+- **DONE**: High loyalty should make mobs stay in group even when hurt (fight.c - configurable via CEDIT)
+- **DONE**: Low loyalty should make mobs abandon group when scared (fight.c - configurable via CEDIT)
+- **DONE**: High friendship should make mobs more likely to join groups (mobact.c - configurable via CEDIT)
+- **DONE**: High envy should make mobs refuse to group with better-equipped players (mobact.c - configurable via CEDIT)
 
 ### 2. Additional Emotion Triggers (MEDIUM PRIORITY)
 
@@ -101,7 +101,7 @@ Actions that should trigger emotion updates but currently don't:
 - **DONE**: Quest betrayal (killing quest giver) → horror, anger (uses existing system)
 
 #### 2.5 Economic Actions
-- **TODO**: Being robbed (shopping) → anger, distrust
+- **DONE**: Being robbed (shopping) → anger, distrust (steal skill triggers emotions)
 - **DONE**: Receiving fair trade → trust, happiness (uses existing system)
 - **DONE**: Selling valuable items to mob → greed response (uses existing system)
 
@@ -136,22 +136,22 @@ Actions that should trigger emotion updates but currently don't:
 ### 5. Advanced Emotion Mechanics (LOW PRIORITY)
 
 #### 5.1 Emotion Contagion
-- **TODO**: Nearby mobs should be influenced by each other's emotions
-- **TODO**: Fear should spread among grouped mobs
-- **TODO**: Excitement/happiness should be contagious in crowds
-- **TODO**: Leader's emotions should influence followers more
+- **DONE**: Nearby mobs should be influenced by each other's emotions (5-15% transfer)
+- **DONE**: Fear should spread among grouped mobs (12-20% transfer in groups)
+- **DONE**: Excitement/happiness should be contagious in crowds (8-15% transfer)
+- **DONE**: Leader's emotions should influence followers more (2x influence, 15-25% transfer)
 
 #### 5.2 Emotional Intelligence Variation
-- **TODO**: Add emotional_intelligence stat to mob genetics
-- **TODO**: High EI mobs should have more nuanced emotional responses
-- **TODO**: Low EI mobs should have more extreme, volatile emotions
-- **TODO**: EI should affect how quickly emotions stabilize
+- **DONE**: Add emotional_intelligence stat to mob genetics (10-95 range)
+- **DONE**: High EI mobs should have more nuanced emotional responses (70-90% reaction intensity)
+- **DONE**: Low EI mobs should have more extreme, volatile emotions (120-150% reaction intensity)
+- **DONE**: EI should affect how quickly emotions stabilize (learning through regulation, regression through overwhelm)
 
 #### 5.3 Mood System
-- **TODO**: Add overall mood derived from emotion averages
-- **TODO**: Mood should affect all interactions globally
-- **TODO**: Extreme moods should trigger special behaviors
-- **TODO**: Weather/time of day should influence mood
+- **DONE**: Add overall mood derived from emotion averages (-100 to +100 scale)
+- **DONE**: Mood should affect all interactions globally (apply_mood_modifier function, ±20% effect)
+- **DONE**: Extreme moods should trigger special behaviors (socials, emotion adjustments)
+- **DONE**: Weather/time of day should influence mood (weather ±15, time ±5)
 
 #### 5.4 Emotion-Based Skills
 - **TODO**: Intimidation skill that increases target's fear
@@ -216,10 +216,12 @@ Actions that should trigger emotion updates but currently don't:
 ### 9. Special Cases & Edge Cases (LOW PRIORITY)
 
 #### 9.1 Extreme Emotional States
-- **TODO**: Define behaviors for maxed-out emotions (100)
-- **TODO**: Define behaviors for minimized emotions (0)
-- **TODO**: Handle conflicting extreme emotions (high anger + high fear)
-- **TODO**: Add "emotional breakdown" state for too many high emotions
+- **DONE**: Define behaviors for maxed-out emotions (100) - special actions + temporary affects
+  - Fear 100: AFF_PARALIZE for 1 tick
+  - Anger 100: Berserk state (extra attack, +25% damage, -3 accuracy) for 2-4 ticks
+- **DONE**: Define behaviors for minimized emotions (0) - fearless, paranoid, callous, depressed states
+- **DONE**: Handle conflicting extreme emotions (high anger + high fear) - fight-or-flight resolution, 5 conflict types
+- **DONE**: Add "emotional breakdown" state for too many high emotions - triggers at 4+ extremes or 450+ intensity
 
 #### 9.2 Emotional Immunity
 - **TODO**: Some mob types should be immune to certain emotions (undead, constructs)
@@ -244,11 +246,11 @@ Actions that should trigger emotion updates but currently don't:
 6. ✅ Love-based following (1.4) - uses hybrid system to target specific players
 7. ✅ High anger affecting attack behavior (1.1) - extra attacks and damage bonus
 8. ✅ Pain affecting combat effectiveness (1.1) - accuracy and damage penalties
+9. ✅ Group behavior emotional integration (1.5) - loyalty, friendship, and envy affecting group dynamics
 
 ### Phase 2 (Short-term - Next Updates)
-1. Group behavior emotional integration (1.5)
-2. Additional emotion triggers for communication (2.1)
-3. Balance and tuning (6.1, 6.2)
+1. Additional emotion triggers for communication (2.1)
+2. Balance and tuning (6.1, 6.2)
 
 ### Phase 3 (Medium-term)
 1. Emotion contagion basics (5.1)

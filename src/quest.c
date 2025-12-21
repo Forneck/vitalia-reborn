@@ -3456,6 +3456,18 @@ void init_mob_ai_data(struct char_data *mob)
         mob->ai_data->emotional_profile = EMOTION_PROFILE_NEUTRAL;
     }
 
+    /* Initialize emotional_intelligence if not set from file (default 0)
+     * Base it on mob level with some randomness:
+     * - Low level (1-10): 20-50 (developing)
+     * - Mid level (11-20): 40-70 (average)
+     * - High level (21+): 50-80 (experienced)
+     * This can be overridden by GenEmotionalIQ in mob files */
+    if (mob->ai_data->genetics.emotional_intelligence == 0) {
+        int base_ei = 30 + (GET_LEVEL(mob) * 2); /* Base grows with level */
+        int variation = rand_number(-10, 10);    /* Random variation */
+        mob->ai_data->genetics.emotional_intelligence = URANGE(10, base_ei + variation, 90);
+    }
+
     /* If a specific emotional profile is set, apply it first
      * This provides consistent personality archetypes aligned with behavior thresholds */
     if (mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL) {
@@ -3551,6 +3563,14 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_love = URANGE(0, mob->ai_data->emotion_love, 100);
     mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
     mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
+
+    /* Initialize overall mood from initial emotions */
+    mob->ai_data->overall_mood = calculate_mob_mood(mob);
+    mob->ai_data->mood_timer = 0;
+
+    /* Initialize extreme emotional state timers */
+    mob->ai_data->berserk_timer = 0;
+    mob->ai_data->paralyzed_timer = 0;
 
     /* Initialize emotion memory system - zero out all memory slots */
     {

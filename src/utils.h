@@ -157,15 +157,25 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
 /* Mob emotion system functions */
 void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
+void adjust_emotional_intelligence(struct char_data *mob, int change);
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
 void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
 void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
 void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
 void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
 void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thief);
+void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_data *keeper, float price_ratio);
 void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer);
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
+void update_mob_emotion_contagion(struct char_data *mob);
+int calculate_mob_mood(struct char_data *mob);
+void update_mob_mood(struct char_data *mob);
+void check_extreme_mood_effects(struct char_data *mob);
+int apply_mood_modifier(struct char_data *mob, int base_value);
+void check_extreme_emotional_states(struct char_data *mob);
+void check_conflicting_emotions(struct char_data *mob);
+void check_emotional_breakdown(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
@@ -666,6 +676,9 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
 #define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
 #define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
+#define GET_GENEMOTIONAL_IQ(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.emotional_intelligence : 0)
+
+#define GET_MOB_MOOD(ch) ((ch)->ai_data ? (ch)->ai_data->overall_mood : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
