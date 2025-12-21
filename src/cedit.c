@@ -655,6 +655,10 @@ int save_config(IDXTYPE nowhere)
             "script_players = %d\n\n",
             CONFIG_SCRIPT_PLAYERS);
     fprintf(fl,
+            "* Enable fit evolve system?\n"
+            "fit_evolve = %d\n\n",
+            CONFIG_FIT_EVOLVE);
+    fprintf(fl,
             "* Does weather affect spell effectiveness?\n"
             "weather_affects_spells = %d\n\n",
             CONFIG_WEATHER_AFFECTS_SPELLS);
@@ -2847,12 +2851,16 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'A':
                     write_to_output(d,
                                     "\r\nVisual Indicator Thresholds (0-100):\r\n"
-                                    "1) Fear Display Threshold : %d\r\n"
-                                    "2) Anger Display Threshold : %d\r\n"
-                                    "3) Happiness Display Threshold : %d\r\n"
-                                    "4) Sadness Display Threshold : %d\r\n"
-                                    "5) Horror Display Threshold : %d\r\n"
-                                    "6) Pain Display Threshold : %d\r\n"
+                                    "Basic Emotions:\r\n"
+                                    "  1) Fear      : %d   2) Anger     : %d   3) Happiness : %d\r\n"
+                                    "  4) Sadness   : %d   5) Horror    : %d   6) Pain      : %d\r\n"
+                                    "Social/Moral Emotions:\r\n"
+                                    "  7) Compassion: %d   8) Courage   : %d   9) Curiosity : %d\r\n"
+                                    "  A) Disgust   : %d   B) Envy      : %d   C) Excitement: %d\r\n"
+                                    "Relationship Emotions:\r\n"
+                                    "  D) Friendship: %d   E) Greed     : %d   F) Humiliation:%d\r\n"
+                                    "  G) Love      : %d   H) Loyalty   : %d   I) Pride     : %d\r\n"
+                                    "  J) Shame     : %d   K) Trust     : %d\r\n"
                                     "Q) Return to Emotion Menu\r\n"
                                     "Enter your choice : ",
                                     OLC_CONFIG(d)->emotion_config.display_fear_threshold,
@@ -2860,7 +2868,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                     OLC_CONFIG(d)->emotion_config.display_happiness_threshold,
                                     OLC_CONFIG(d)->emotion_config.display_sadness_threshold,
                                     OLC_CONFIG(d)->emotion_config.display_horror_threshold,
-                                    OLC_CONFIG(d)->emotion_config.display_pain_threshold);
+                                    OLC_CONFIG(d)->emotion_config.display_pain_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_compassion_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_courage_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_curiosity_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_disgust_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_envy_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_excitement_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_friendship_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_greed_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_humiliation_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_love_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_loyalty_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_pride_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_shame_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_trust_threshold);
                     OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_SUBMENU;
                     return;
 
@@ -3031,6 +3053,73 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '6':
                     write_to_output(d, "\r\nEnter Pain Display Threshold (0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_PAIN_THRESHOLD;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Compassion Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_COMPASSION_THRESHOLD;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Courage Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_COURAGE_THRESHOLD;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Curiosity Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_CURIOSITY_THRESHOLD;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Disgust Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_DISGUST_THRESHOLD;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Envy Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_ENVY_THRESHOLD;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter Excitement Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD;
+                    return;
+                case 'd':
+                case 'D':
+                    write_to_output(d, "\r\nEnter Friendship Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD;
+                    return;
+                case 'e':
+                case 'E':
+                    write_to_output(d, "\r\nEnter Greed Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_GREED_THRESHOLD;
+                    return;
+                case 'f':
+                case 'F':
+                    write_to_output(d, "\r\nEnter Humiliation Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_HUMILIATION_THRESHOLD;
+                    return;
+                case 'g':
+                case 'G':
+                    write_to_output(d, "\r\nEnter Love Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_LOVE_THRESHOLD;
+                    return;
+                case 'h':
+                case 'H':
+                    write_to_output(d, "\r\nEnter Loyalty Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_LOYALTY_THRESHOLD;
+                    return;
+                case 'i':
+                case 'I':
+                    write_to_output(d, "\r\nEnter Pride Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_PRIDE_THRESHOLD;
+                    return;
+                case 'j':
+                case 'J':
+                    write_to_output(d, "\r\nEnter Shame Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_SHAME_THRESHOLD;
+                    return;
+                case 'k':
+                case 'K':
+                    write_to_output(d, "\r\nEnter Trust Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_TRUST_THRESHOLD;
                     return;
                 case 'q':
                 case 'Q':
