@@ -220,6 +220,12 @@ static void cedit_setup(struct descriptor_data *d)
 
     OLC_CONFIG(d)->emotion_config.memory_baseline_offset = CONFIG_EMOTION_MEMORY_BASELINE_OFFSET;
 
+    /* Group behavior thresholds */
+    OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
