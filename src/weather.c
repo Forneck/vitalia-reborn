@@ -56,8 +56,8 @@ static void another_hour(int mode)
     time_info.hours++;
 
     if (mode) {
-        if (time_info.month >= 1 && time_info.month <= 4) {
-            // Inverno - dias curtos
+        if (time_info.month >= 2 && time_info.month <= 5) {
+            // Inverno (Kames'Hi, Teriany, Hiro, Prudis - months 2-5) - dias curtos
             switch (time_info.hours) {
                 case 8:
                     weather_info.sunlight = SUN_RISE;
@@ -78,8 +78,8 @@ static void another_hour(int mode)
                 default:
                     break;
             }
-        } else if (time_info.month >= 5 && time_info.month <= 8) {
-            // Primavera - dias aumentando
+        } else if (time_info.month >= 6 && time_info.month <= 9) {
+            // Primavera (Maqizie, Kadrictes, Mizu, Mysoluh - months 6-9) - dias aumentando
             switch (time_info.hours) {
                 case 6:
                     weather_info.sunlight = SUN_RISE;
@@ -100,8 +100,8 @@ static void another_hour(int mode)
                 default:
                     break;
             }
-        } else if (time_info.month >= 9 && time_info.month <= 12) {
-            // Verão - dias longos
+        } else if (time_info.month >= 10 && time_info.month <= 13) {
+            // Verão (Karestis, Neruno, Latizie, Aminen - months 10-13) - dias longos
             switch (time_info.hours) {
                 case 5:
                     weather_info.sunlight = SUN_RISE;
@@ -123,7 +123,7 @@ static void another_hour(int mode)
                     break;
             }
         } else {
-            // Outono - dias encurtando
+            // Outono (Autumis, V'tah, Aqrien, Tellus, Brumis - months 14-17, 1) - dias encurtando
             switch (time_info.hours) {
                 case 7:
                     weather_info.sunlight = SUN_RISE;
@@ -203,22 +203,24 @@ void weather_change(int zone)
         return;
     }
 
-    /* 1. Determina as médias sazonais */
+    /* 1. Determina as médias sazonais (per 'help seasons', month order from 'help time') */
     meant = climate->temperature;
     meanp = climate->pressure;
 
-    if (time_info.month >= 1 && time_info.month <= 4) {           // Inverno
-        meant -= climate->temp_diff * 1.5;                        // Redução mais intensa
-        meanp += climate->press_diff * 1.2;                       // Aumento da pressão
-    } else if (time_info.month >= 5 && time_info.month <= 8) {    // Primavera
-        meant -= climate->temp_diff * 0.5;                        // Aumento leve
-        meanp += climate->press_diff * 0.5;                       // Aumento moderado
-    } else if (time_info.month >= 9 && time_info.month <= 12) {   // Verão
-        meant += climate->temp_diff * 1.5;                        // Aumento intenso
-        meanp -= climate->press_diff * 1.2;                       // Queda na pressão
-    } else {                                                      // Outono
-        meant += climate->temp_diff * 0.5;                        // Resfriamento moderado
-        meanp -= climate->press_diff * 0.5;                       // Queda moderada
+    if (time_info.month >= 2 && time_info.month <= 5) {   // Inverno (Kames'Hi, Teriany, Hiro, Prudis - months 2-5)
+        meant -= climate->temp_diff * 1.5;                // Redução mais intensa
+        meanp += climate->press_diff * 1.2;               // Aumento da pressão
+    } else if (time_info.month >= 6 &&
+               time_info.month <= 9) {        // Primavera (Maqizie, Kadrictes, Mizu, Mysoluh - months 6-9)
+        meant -= climate->temp_diff * 0.5;    // Aumento leve
+        meanp += climate->press_diff * 0.5;   // Aumento moderado
+    } else if (time_info.month >= 10 &&
+               time_info.month <= 13) {       // Verão (Karestis, Neruno, Latizie, Aminen - months 10-13)
+        meant += climate->temp_diff * 1.5;    // Aumento intenso
+        meanp -= climate->press_diff * 1.2;   // Queda na pressão
+    } else {                                  // Outono (Autumis, V'tah, Aqrien, Tellus, Brumis - months 14-17, 1)
+        meant += climate->temp_diff * 0.5;    // Resfriamento moderado
+        meanp -= climate->press_diff * 0.5;   // Queda moderada
     }
 
     /* 2. Atualiza a pressão atmosférica */
@@ -393,11 +395,15 @@ void weather_change(int zone)
     }
     zone_table[zone].weather = weather;
 
-    /* Apply weather effects to mob emotions in this zone */
+    /* Apply weather effects to mob emotions in this zone
+     * Performance: Only iterate character_list once per zone update
+     * Only affect NPCs that are in this zone (both indoor and outdoor)
+     * Indoor mobs get reduced effects (50%) handled in apply_weather_to_mood()
+     */
     struct char_data *ch;
     for (ch = character_list; ch; ch = ch->next) {
-        /* Only affect NPCs that are in this zone and outdoors */
-        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone && OUTSIDE(ch)) {
+        /* Only affect NPCs that are in this zone */
+        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone) {
             apply_weather_to_mood(ch, weather, weather_info.sunlight);
         }
     }
