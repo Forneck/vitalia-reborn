@@ -5745,6 +5745,7 @@ int get_mob_skill(struct char_data *ch, int skill_num)
 
 /**
  * Adjust a mob's emotion by a specified amount, keeping it within 0-100 bounds
+ * Also applies EI (Emotional Intelligence) effects on volatility
  * @param mob The mob whose emotion to adjust
  * @param emotion_ptr Pointer to the emotion value
  * @param amount Amount to adjust (positive or negative)
@@ -5754,7 +5755,43 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
         return;
 
+    int ei = GET_GENEMOTIONAL_IQ(mob);
+
+    /* Emotional Intelligence affects volatility of emotion changes:
+     * - Low EI (0-35): More extreme reactions (120-150% of amount)
+     * - Average EI (36-65): Normal reactions (100% of amount)
+     * - High EI (66-100): More measured reactions (70-90% of amount)
+     */
+    if (ei < 35) {
+        /* Low EI: Volatile, extreme emotional reactions */
+        amount = (amount * (120 + rand_number(0, 30))) / 100;
+    } else if (ei > 65) {
+        /* High EI: Measured, controlled emotional responses */
+        amount = (amount * (70 + rand_number(0, 20))) / 100;
+    }
+    /* Average EI (36-65): No modification to amount */
+
     *emotion_ptr = URANGE(0, *emotion_ptr + amount, 100);
+}
+
+/**
+ * Adjust mob's emotional intelligence based on emotional experiences
+ * EI can increase through successful emotion regulation or decrease through emotional failures
+ * @param mob The mob whose EI to adjust
+ * @param change Amount to change (+1 to +3 for learning, -1 to -2 for regression)
+ */
+void adjust_emotional_intelligence(struct char_data *mob, int change)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    int current_ei = mob->ai_data->genetics.emotional_intelligence;
+
+    /* EI changes slowly - cap at ±3 per event */
+    change = URANGE(-2, change, 3);
+
+    /* Apply the change with bounds checking (10-95) */
+    mob->ai_data->genetics.emotional_intelligence = URANGE(10, current_ei + change, 95);
 }
 
 /**
@@ -6112,6 +6149,29 @@ void update_mob_emotion_passive(struct char_data *mob)
     }
     if (mob->ai_data->emotion_humiliation > 0) {
         adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, 2));
+    }
+
+    /* Emotional Intelligence learning through emotion stabilization
+     * Mobs learn EI by successfully returning emotions to baseline (emotional regulation)
+     * Small chance (5%) to gain +1 EI when emotions are well-regulated */
+    int ei = GET_GENEMOTIONAL_IQ(mob);
+    bool emotions_stable =
+        (mob->ai_data->emotion_fear <= fear_baseline + 10 && mob->ai_data->emotion_anger <= anger_baseline + 10 &&
+         mob->ai_data->emotion_happiness >= happiness_baseline - 10 && mob->ai_data->emotion_sadness <= 15);
+
+    if (emotions_stable && ei < 90 && rand_number(1, 100) <= 5) {
+        /* Learning through successful emotional regulation */
+        adjust_emotional_intelligence(mob, 1);
+    }
+
+    /* Conversely, extreme uncontrolled emotions can reduce EI (2% chance)
+     * This represents emotional overwhelm affecting long-term emotional control */
+    bool emotions_extreme = (mob->ai_data->emotion_fear > 80 || mob->ai_data->emotion_anger > 80 ||
+                             mob->ai_data->emotion_horror > 70 || mob->ai_data->emotion_pain > 80);
+
+    if (emotions_extreme && ei > 15 && rand_number(1, 100) <= 2) {
+        /* Regression through emotional overwhelm */
+        adjust_emotional_intelligence(mob, -1);
     }
 }
 

@@ -1969,6 +1969,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->genetics.healing_tendency = num_arg;
         }
     }
+    CASE("GenEmotionalIQ")
+    {
+        if (mob_proto[i].ai_data) {
+            mob_proto[i].ai_data->genetics.emotional_intelligence = num_arg;
+        }
+    }
     CASE("EmotionProfile")
     {
         if (mob_proto[i].ai_data) {

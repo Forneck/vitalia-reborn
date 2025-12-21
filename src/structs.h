@@ -1022,10 +1022,11 @@ struct mob_genetics {
     int group_tendency;
     int use_tendency;
     int trade_tendency;
-    int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
-    int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
-    int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
-    int healing_tendency;    /* Tendência de curar aliados. Varia de 0 a 100. */
+    int quest_tendency;         /* Tendência de aceitar quests. Varia de 0 a 100. */
+    int adventurer_tendency;    /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int follow_tendency;        /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
+    int healing_tendency;       /* Tendência de curar aliados. Varia de 0 a 100. */
+    int emotional_intelligence; /* Inteligência emocional. 0-100. Afeta volatilidade e estabilização emocional. */
 };
 
 /**

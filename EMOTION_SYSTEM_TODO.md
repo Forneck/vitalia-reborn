@@ -142,10 +142,10 @@ Actions that should trigger emotion updates but currently don't:
 - **DONE**: Leader's emotions should influence followers more (2x influence, 15-25% transfer)
 
 #### 5.2 Emotional Intelligence Variation
-- **TODO**: Add emotional_intelligence stat to mob genetics
-- **TODO**: High EI mobs should have more nuanced emotional responses
-- **TODO**: Low EI mobs should have more extreme, volatile emotions
-- **TODO**: EI should affect how quickly emotions stabilize
+- **DONE**: Add emotional_intelligence stat to mob genetics (10-95 range)
+- **DONE**: High EI mobs should have more nuanced emotional responses (70-90% reaction intensity)
+- **DONE**: Low EI mobs should have more extreme, volatile emotions (120-150% reaction intensity)
+- **DONE**: EI should affect how quickly emotions stabilize (learning through regulation, regression through overwhelm)
 
 #### 5.3 Mood System
 - **TODO**: Add overall mood derived from emotion averages

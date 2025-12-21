@@ -1011,6 +1011,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Healing (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENHEALING(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Inteligência Emocional (Genética): [%s%d%s]\r\n", CCYEL(ch, C_NRM), GET_GENEMOTIONAL_IQ(k),
+                     CCNRM(ch, C_NRM));
         /* Display Emotional Profile if set */
         if (k->ai_data && k->ai_data->emotional_profile >= 0 && k->ai_data->emotional_profile <= 7) {
             send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),
