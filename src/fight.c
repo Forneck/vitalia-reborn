@@ -974,10 +974,13 @@ int compute_armor_class(struct char_data *ch)
     if (!IS_NPC(ch)) {
         armorclass += wpn_prof[get_weapon_prof(ch, wielded)].to_ac * 10;
         armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
-        return (MAX(-200, armorclass)); /* -200 is lowest */
-    } else {
-        return (armorclass);
     }
+
+    /* Ensure computed AC stays within valid limits
+     * Players: -200 (best) to +100 (worst)
+     * Mobs: -1000 (best) to +100 (worst) */
+    int min_ac = IS_NPC(ch) ? MIN_NPC_AC : MIN_PC_AC;
+    return MIN(MAX_AC, MAX(min_ac, armorclass));
 }
 
 void update_pos(struct char_data *victim)

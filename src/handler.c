@@ -172,13 +172,16 @@ static void aff_apply_modify(struct char_data *ch, byte loc, sbyte mod, char *ms
 
         case APPLY_AC:
             /* Prevent AC overflow by clamping to reasonable limits
-             * AC ranges from -200 (best possible) to +100 (worst) */
+             * Players: -200 (best) to +100 (worst)
+             * Mobs: -1000 (best) to +100 (worst) */
             {
                 long new_ac = (long)GET_AC(ch) + (long)mod;
-                if (new_ac > 100)
-                    GET_AC(ch) = 100;
-                else if (new_ac < -200)
-                    GET_AC(ch) = -200;
+                int min_ac = IS_NPC(ch) ? MIN_NPC_AC : MIN_PC_AC;
+
+                if (new_ac > MAX_AC)
+                    GET_AC(ch) = MAX_AC;
+                else if (new_ac < min_ac)
+                    GET_AC(ch) = min_ac;
                 else
                     GET_AC(ch) = (sh_int)new_ac;
             }
@@ -302,8 +305,12 @@ void affect_total(struct char_data *ch)
     GET_STR(ch) = MAX(0, GET_STR(ch));
 
     /* Clamp AC to reasonable limits to prevent overflow
-     * AC ranges from -200 (best possible) to +100 (worst) */
-    GET_AC(ch) = MAX(-200, MIN(GET_AC(ch), 100));
+     * Players: -200 (best) to +100 (worst)
+     * Mobs: -1000 (best) to +100 (worst) */
+    {
+        int min_ac = IS_NPC(ch) ? MIN_NPC_AC : MIN_PC_AC;
+        GET_AC(ch) = MAX(min_ac, MIN(GET_AC(ch), MAX_AC));
+    }
 
     /* Clamp hitroll and damroll to prevent overflow of sbyte type (-128 to 127)
      * Limit to -100 to 100 to provide safety margin */
