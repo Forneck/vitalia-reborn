@@ -277,15 +277,34 @@ void parse_quest(FILE *quest_f, int nr)
     aquest_table[i].exp_reward = t[1];
     aquest_table[i].obj_reward = (t[2] == -1) ? NOTHING : t[2];
 
+    /* Read remaining lines until we find the 'S' terminator.
+     * Add safeguard to prevent infinite loops from malformed quest files. */
+    int safety_counter = 0;
+    const int MAX_EXTRA_LINES = 100; /* Maximum lines to read before 'S' terminator */
+
     for (;;) {
         if (!get_line(quest_f, line)) {
-            log1("Format error in %s\n", line);
+            log1("Format error in quest #%d: unexpected end of file, expected 'S' terminator\n", nr);
             exit(1);
         }
+
+        /* Safeguard: prevent infinite loops from malformed quest files */
+        if (++safety_counter > MAX_EXTRA_LINES) {
+            log1("SYSERR: Quest #%d has too many lines without 'S' terminator (possible infinite loop)\n", nr);
+            log1("SYSERR: Last line read: '%s'\n", line);
+            exit(1);
+        }
+
         switch (*line) {
             case 'S':
                 total_quests = ++i;
                 return;
+            default:
+                /* Ignore comment lines and empty lines, but log unexpected content */
+                if (*line != '\0' && *line != '*' && *line != '\n' && *line != '\r') {
+                    log1("Warning: Quest #%d has unexpected line before 'S' terminator: '%s'\n", nr, line);
+                }
+                break;
         }
     }
 } /* parse_quest */
