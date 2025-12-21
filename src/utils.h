@@ -676,7 +676,7 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
 #define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
 #define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
-#define GET_GENEMOTIONAL_IQ(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.emotional_intelligence : 50)
+#define GET_GENEMOTIONAL_IQ(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.emotional_intelligence : 0)
 
 #define GET_MOB_MOOD(ch) ((ch)->ai_data ? (ch)->ai_data->overall_mood : 0)
 

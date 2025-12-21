@@ -696,10 +696,14 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
                 /* Calculate base price without emotion modifiers */
                 int base_price = (int)(GET_OBJ_COST(obj) * SHOP_SELLPROFIT(shop_nr) *
                                        (1 + (GET_CHA(keeper) - GET_CHA(ch)) / (float)70));
-                float price_ratio = (float)charged / (float)base_price;
 
-                /* Trigger robbery emotions if price is significantly unfair */
-                update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+                /* Avoid division by zero */
+                if (base_price > 0) {
+                    float price_ratio = (float)charged / (float)base_price;
+
+                    /* Trigger robbery emotions if price is significantly unfair */
+                    update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+                }
             }
 
             last_obj = obj;
@@ -937,10 +941,14 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
             /* Calculate base price without emotion modifiers */
             float keeper_buys_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(ch)) / 70.0);
             int base_price = (int)(GET_OBJ_COST(obj) * keeper_buys_modifier);
-            float price_ratio = (float)charged / (float)base_price;
 
-            /* Trigger robbery emotions if seller gets paid significantly less (inverse ratio) */
-            update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+            /* Avoid division by zero */
+            if (base_price > 0) {
+                float price_ratio = (float)charged / (float)base_price;
+
+                /* Trigger robbery emotions if seller gets paid significantly less (inverse ratio) */
+                update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+            }
         }
 
         sold++;

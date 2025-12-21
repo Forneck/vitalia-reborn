@@ -6197,6 +6197,16 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
         return;
 
+    /* Performance optimization: Skip contagion in very crowded rooms (>20 NPCs)
+     * to avoid performance bottlenecks. Emotions still update passively. */
+    int room_npc_count = 0;
+    for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
+        if (IS_NPC(other))
+            room_npc_count++;
+        if (room_npc_count > 20)
+            return; /* Too crowded for emotion contagion processing */
+    }
+
     /* Scan all characters in the same room */
     for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
         /* Skip self */
@@ -6474,7 +6484,10 @@ void check_extreme_mood_effects(struct char_data *mob)
         /* 10% chance per update to perform negative social */
         const char *negative_socials[] = {"growl", "snarl", "grumble", "scowl", "glare", NULL};
         int social_idx = rand_number(0, 4);
-        do_action(mob, "", find_command(negative_socials[social_idx]), 0);
+        int cmd = find_command(negative_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
 
         /* Reduce trust and friendship slightly */
         adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(1, 3));
@@ -6494,7 +6507,10 @@ void check_extreme_mood_effects(struct char_data *mob)
         /* 10% chance per update to perform positive social */
         const char *positive_socials[] = {"smile", "laugh", "cheer", "dance", "grin", NULL};
         int social_idx = rand_number(0, 4);
-        do_action(mob, "", find_command(positive_socials[social_idx]), 0);
+        int cmd = find_command(positive_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
 
         /* Increase trust and friendship slightly */
         adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(1, 3));
@@ -6558,7 +6574,7 @@ void check_extreme_emotional_states(struct char_data *mob)
             SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
             affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
             mob->ai_data->paralyzed_timer = 1;
-            act("$n está paralisad$r de terror!", TRUE, mob, 0, 0, TO_ROOM);
+            act("$n está paralisad$x de terror!", TRUE, mob, 0, 0, TO_ROOM);
         }
 
         /* High chance to flee or cower when not paralyzed */
@@ -6586,7 +6602,10 @@ void check_extreme_emotional_states(struct char_data *mob)
         if (rand_number(1, 100) <= 20) {
             const char *rage_socials[] = {"rage", "scream", "roar", "snarl"};
             int social_idx = rand_number(0, 3);
-            do_action(mob, "", find_command(rage_socials[social_idx]), 0);
+            int cmd = find_command(rage_socials[social_idx]);
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
         }
 
         /* Reduce trust and increase violence */
@@ -6605,7 +6624,10 @@ void check_extreme_emotional_states(struct char_data *mob)
     if (mob->ai_data->emotion_horror >= 100) {
         /* High chance of breakdown behavior */
         if (rand_number(1, 100) <= 30) {
-            do_action(mob, "", find_command("cower"), 0);
+            int cmd = find_command("cower");
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
         }
         /* Spread horror to nearby (contagious panic) */
         adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
@@ -6613,7 +6635,10 @@ void check_extreme_emotional_states(struct char_data *mob)
 
     /* Maximum Pain (100): Incapacitated by suffering */
     if (mob->ai_data->emotion_pain >= 100 && rand_number(1, 100) <= 15) {
-        do_action(mob, "", find_command("writhe"), 0);
+        int cmd = find_command("writhe");
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
         /* Pain overrides other emotions */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 15));
     }
@@ -6629,7 +6654,10 @@ void check_extreme_emotional_states(struct char_data *mob)
     if (mob->ai_data->emotion_happiness >= 100 && rand_number(1, 100) <= 15) {
         const char *joy_socials[] = {"laugh", "cheer", "dance", "celebrate"};
         int social_idx = rand_number(0, 3);
-        do_action(mob, "", find_command(joy_socials[social_idx]), 0);
+        int cmd = find_command(joy_socials[social_idx]);
+        if (cmd >= 0) {
+            do_action(mob, "", cmd, 0);
+        }
     }
 
     /* MINIMIZED EMOTIONS (0) - Absence states */
@@ -6689,7 +6717,10 @@ void check_conflicting_emotions(struct char_data *mob)
             /* Anger wins - reduce fear, aggressive stance */
             adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
             /* Berserk behavior */
-            do_action(mob, "", find_command("snarl"), 0);
+            int cmd = find_command("snarl");
+            if (cmd >= 0) {
+                do_action(mob, "", cmd, 0);
+            }
         }
     }
 

@@ -282,6 +282,7 @@ ACMD(do_steal)
 
                         /* Emotion update: Successful steal from awake victim */
                         /* Awake victims have a chance to notice the theft later */
+                        /* 30% for items, 40% for gold (gold theft easier to notice) */
                         if (AWAKE(vict) && IS_NPC(vict) && rand_number(1, 100) <= 30) {
                             /* 30% chance victim notices something is missing */
                             update_mob_emotion_stolen_from(vict, ch);
