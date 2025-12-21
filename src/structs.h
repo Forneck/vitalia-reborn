@@ -1235,7 +1235,8 @@ struct mob_ai_data {
     int preferred_weather_sky;       /* Favorite sky condition (or -1 if none) */
     int preferred_temperature_range; /* Favorite temp range: 0=very cold, 1=cold, 2=comfortable, 3=hot, 4=very hot,
                                         -1=none */
-    int native_climate; /* Native climate: 0=temperate, 1=rainy, 2=tropical, 3=arctic, 4=desert, -1=neutral */
+    int native_climate;              /* Native climate: 0=temperate, 1=rainy, 2=tropical, 3=arctic, 4=desert,
+                                        -1=neutral */
 
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
