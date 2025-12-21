@@ -101,7 +101,7 @@ Actions that should trigger emotion updates but currently don't:
 - **DONE**: Quest betrayal (killing quest giver) → horror, anger (uses existing system)
 
 #### 2.5 Economic Actions
-- **TODO**: Being robbed (shopping) → anger, distrust
+- **DONE**: Being robbed (shopping) → anger, distrust (steal skill triggers emotions)
 - **DONE**: Receiving fair trade → trust, happiness (uses existing system)
 - **DONE**: Selling valuable items to mob → greed response (uses existing system)
 

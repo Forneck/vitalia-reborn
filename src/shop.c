@@ -691,6 +691,17 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
             if (!IS_GOD(ch))
                 decrease_gold(ch, charged);
 
+            /* Check if buyer feels robbed by unfair pricing */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+                /* Calculate base price without emotion modifiers */
+                int base_price = (int)(GET_OBJ_COST(obj) * SHOP_SELLPROFIT(shop_nr) *
+                                       (1 + (GET_CHA(keeper) - GET_CHA(ch)) / (float)70));
+                float price_ratio = (float)charged / (float)base_price;
+
+                /* Trigger robbery emotions if price is significantly unfair */
+                update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+            }
+
             last_obj = obj;
             obj = get_purchase_obj(ch, arg, keeper, shop_nr, FALSE);
             if (!same_obj(obj, last_obj))
@@ -920,6 +931,17 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
         goldamt += charged;
         if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH))
             decrease_gold(keeper, charged);
+
+        /* Check if seller (mob) feels robbed by unfair pricing */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            /* Calculate base price without emotion modifiers */
+            float keeper_buys_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(ch)) / 70.0);
+            int base_price = (int)(GET_OBJ_COST(obj) * keeper_buys_modifier);
+            float price_ratio = (float)charged / (float)base_price;
+
+            /* Trigger robbery emotions if seller gets paid significantly less (inverse ratio) */
+            update_mob_emotion_robbed_shopping(ch, keeper, price_ratio);
+        }
 
         sold++;
         obj_from_char(obj);

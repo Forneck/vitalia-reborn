@@ -163,6 +163,7 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
 void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
 void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
 void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thief);
+void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_data *keeper, float price_ratio);
 void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer);
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);

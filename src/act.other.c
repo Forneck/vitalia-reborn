@@ -279,6 +279,13 @@ ACMD(do_steal)
                         obj_from_char(obj);
                         obj_to_char(obj, ch);
                         send_to_char(ch, "Você pegou!\r\n");
+
+                        /* Emotion update: Successful steal from awake victim */
+                        /* Awake victims have a chance to notice the theft later */
+                        if (AWAKE(vict) && IS_NPC(vict) && rand_number(1, 100) <= 30) {
+                            /* 30% chance victim notices something is missing */
+                            update_mob_emotion_stolen_from(vict, ch);
+                        }
                     }
                 } else
                     send_to_char(ch, "Você não pode carregar tanto peso.\r\n");
@@ -303,6 +310,13 @@ ACMD(do_steal)
                     send_to_char(ch, "Feito!  Você conseguiu %d moedas.\r\n", gold);
                 else
                     send_to_char(ch, "Você conseguiu apenas uma única moeda.\r\n");
+
+                /* Emotion update: Successful gold steal from awake victim */
+                /* Awake victims have a chance to notice money is missing */
+                if (AWAKE(vict) && IS_NPC(vict) && rand_number(1, 100) <= 40) {
+                    /* 40% chance victim notices money missing (easier to notice than items) */
+                    update_mob_emotion_stolen_from(vict, ch);
+                }
             } else {
                 send_to_char(ch, "Você não conseguiu roubar nada...\r\n");
             }

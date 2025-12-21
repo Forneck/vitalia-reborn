@@ -2401,10 +2401,7 @@ int count_mob_posted_quests(void)
  * Check if we can add another mob-posted quest without exceeding the limit.
  * @return TRUE if we can add another quest, FALSE if at limit
  */
-bool can_add_mob_posted_quest(void)
-{
-    return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS);
-}
+bool can_add_mob_posted_quest(void) { return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS); }
 
 /**
  * Faz um mob postar uma quest para obter um item.
@@ -4868,10 +4865,11 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
                                 elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
                                              (end_time.tv_usec - start_time.tv_usec) / 1000;
                                 if (elapsed_ms > 30) {
-                                    log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
+                                    log1(
+                                        "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
                                         "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
-                                        GET_NAME(ch), zone);
+                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch),
+                                        zone);
                                 }
                                 return qm_char;
                             }
@@ -4884,13 +4882,12 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
 
     /* Log performance even when no questmaster found */
     gettimeofday(&end_time, NULL);
-    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
-                 (end_time.tv_usec - start_time.tv_usec) / 1000;
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 + (end_time.tv_usec - start_time.tv_usec) / 1000;
     if (elapsed_ms > 30) {
-        log1("PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
+        log1(
+            "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
             "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls,
-            GET_NAME(ch), zone);
+            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch), zone);
     }
 
     return NULL;
@@ -5941,6 +5938,42 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
     /* Add to emotion memory - theft is a MAJOR negative event */
     if (thief) {
         add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1, NULL);
+    }
+}
+
+/**
+ * Update mob emotions when feeling robbed by unfair shop prices
+ * @param buyer The character feeling robbed (player or mob)
+ * @param keeper The shopkeeper charging unfair prices
+ * @param price_ratio The ratio of actual price to base price (>1.3 = robbery)
+ */
+void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_data *keeper, float price_ratio)
+{
+    if (!buyer || !IS_NPC(buyer) || !buyer->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Only trigger if price is significantly unfair (30%+ markup or 30%+ underpay) */
+    if (price_ratio < 1.30 && price_ratio > 0.70)
+        return;
+
+    /* Being robbed increases anger and distrust */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_anger, rand_number(15, 25));
+
+    /* Significantly decreases trust - feeling cheated */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_trust, -rand_number(25, 40));
+
+    /* Decreases friendship */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_friendship, -rand_number(15, 25));
+
+    /* Increases greed (wanting to get even) */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_greed, rand_number(5, 10));
+
+    /* Decreases happiness */
+    adjust_emotion(buyer, &buyer->ai_data->emotion_happiness, -rand_number(10, 20));
+
+    /* Add to emotion memory - unfair trade is a negative event */
+    if (keeper) {
+        add_emotion_memory(buyer, keeper, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
 }
 
@@ -8473,7 +8506,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
     static time_t last_calc_time = 0;
     const int ECONOMY_CACHE_TTL = 30 * 60; /* 30 minutes in seconds */
     time_t now = time(0);
-    
+
     /* If cache is valid, return cached values immediately */
     if (last_calc_time != 0 && (now - last_calc_time) < ECONOMY_CACHE_TTL) {
         *total_money = cached_money;
@@ -8481,7 +8514,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         *player_count = cached_count;
         return;
     }
-    
+
     /* Cache expired - recalculate (this is expensive!) */
     int i;
     struct char_data *temp_ch = NULL;
@@ -8491,7 +8524,7 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
     *total_money = 0;
     *total_qp = 0;
     *player_count = 0;
-    
+
     /* Track performance of this expensive operation */
     gettimeofday(&start_time, NULL);
 
@@ -8518,20 +8551,21 @@ void calculate_economy_stats(long long *total_money, long long *total_qp, int *p
         free_char(temp_ch);
         temp_ch = NULL;
     }
-    
+
     /* Update cache */
     cached_money = *total_money;
     cached_qp = *total_qp;
     cached_count = *player_count;
     last_calc_time = now;
-    
+
     /* Log performance - this expensive operation loads ALL player files! */
     gettimeofday(&end_time, NULL);
-    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
-                 (end_time.tv_usec - start_time.tv_usec) / 1000;
-    
+    elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 + (end_time.tv_usec - start_time.tv_usec) / 1000;
+
     if (elapsed_ms > 100) { /* Log if it takes more than 100ms */
-        log1("PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from disk)",
+        log1(
+            "PERFORMANCE: calculate_economy_stats() took %ldms to process %d players (loaded %d player files from "
+            "disk)",
             elapsed_ms, top_of_p_table + 1, *player_count);
     }
 }
