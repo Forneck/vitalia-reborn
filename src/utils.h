@@ -167,6 +167,7 @@ void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_dat
 void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer);
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
+void update_mob_emotion_contagion(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);

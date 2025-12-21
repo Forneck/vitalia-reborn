@@ -6116,6 +6116,152 @@ void update_mob_emotion_passive(struct char_data *mob)
 }
 
 /**
+ * Update mob emotions through contagion from nearby mobs
+ * Emotions spread between mobs in the same room, stronger in groups
+ * @param mob The mob being influenced by others' emotions
+ */
+void update_mob_emotion_contagion(struct char_data *mob)
+{
+    struct char_data *other;
+    int mob_count = 0;
+    int total_fear = 0, total_happiness = 0, total_anger = 0, total_excitement = 0;
+    int group_fear = 0, group_happiness = 0;
+    int group_member_count = 0;
+    bool has_leader = FALSE;
+    int leader_fear = 0, leader_happiness = 0, leader_anger = 0;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Skip if mob is not in a valid room */
+    if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
+        return;
+
+    /* Scan all characters in the same room */
+    for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
+        /* Skip self */
+        if (other == mob)
+            continue;
+
+        /* Only count NPCs with AI data */
+        if (!IS_NPC(other) || !other->ai_data)
+            continue;
+
+        mob_count++;
+
+        /* Accumulate emotions from all nearby mobs */
+        total_fear += other->ai_data->emotion_fear;
+        total_happiness += other->ai_data->emotion_happiness;
+        total_anger += other->ai_data->emotion_anger;
+        total_excitement += other->ai_data->emotion_excitement;
+
+        /* Check if in same group */
+        if (GROUP(mob) && GROUP(other) && GROUP(mob) == GROUP(other)) {
+            group_member_count++;
+            group_fear += other->ai_data->emotion_fear;
+            group_happiness += other->ai_data->emotion_happiness;
+
+            /* Check if other is the group leader */
+            if (GROUP_LEADER(GROUP(mob)) == other) {
+                has_leader = TRUE;
+                leader_fear = other->ai_data->emotion_fear;
+                leader_happiness = other->ai_data->emotion_happiness;
+                leader_anger = other->ai_data->emotion_anger;
+            }
+        }
+    }
+
+    /* No nearby mobs to influence emotions */
+    if (mob_count == 0)
+        return;
+
+    /* === CROWD CONTAGION (all nearby mobs) === */
+
+    /* Fear is contagious - average fear of nearby mobs influences this mob */
+    if (mob_count > 0 && total_fear > 0) {
+        int avg_fear = total_fear / mob_count;
+        /* Transfer 5-10% of average fear (stronger in larger crowds) */
+        int fear_transfer = (avg_fear * rand_number(5, 10)) / 100;
+        /* Bonus contagion in crowds (3+ mobs) */
+        if (mob_count >= 3)
+            fear_transfer += rand_number(1, 3);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, fear_transfer);
+    }
+
+    /* Happiness is contagious in crowds */
+    if (mob_count >= 2 && total_happiness > 0) {
+        int avg_happiness = total_happiness / mob_count;
+        /* Transfer 8-15% of average happiness (very contagious) */
+        int happiness_transfer = (avg_happiness * rand_number(8, 15)) / 100;
+        /* Stronger in larger crowds */
+        if (mob_count >= 4)
+            happiness_transfer += rand_number(2, 4);
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, happiness_transfer);
+    }
+
+    /* Anger can spread in tense situations */
+    if (mob_count > 0 && total_anger > 0) {
+        int avg_anger = total_anger / mob_count;
+        /* Transfer 3-7% of average anger (moderate contagion) */
+        int anger_transfer = (avg_anger * rand_number(3, 7)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, anger_transfer);
+    }
+
+    /* Excitement spreads in active environments */
+    if (mob_count >= 2 && total_excitement > 0) {
+        int avg_excitement = total_excitement / mob_count;
+        /* Transfer 7-12% of average excitement */
+        int excitement_transfer = (avg_excitement * rand_number(7, 12)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_excitement, excitement_transfer);
+    }
+
+    /* === GROUP CONTAGION (stronger within groups) === */
+
+    if (group_member_count > 0) {
+        /* Fear spreads VERY strongly among group members */
+        int avg_group_fear = group_fear / group_member_count;
+        /* Transfer 12-20% of group fear (much stronger than crowd) */
+        int group_fear_transfer = (avg_group_fear * rand_number(12, 20)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, group_fear_transfer);
+
+        /* Happiness spreads well in groups (bonding) */
+        int avg_group_happiness = group_happiness / group_member_count;
+        /* Transfer 10-15% of group happiness */
+        int group_happiness_transfer = (avg_group_happiness * rand_number(10, 15)) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, group_happiness_transfer);
+    }
+
+    /* === LEADER INFLUENCE (2x stronger than normal group members) === */
+
+    if (has_leader) {
+        /* Leader's fear has double influence */
+        if (leader_fear > 50) {
+            int leader_fear_transfer = (leader_fear * rand_number(15, 25)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, leader_fear_transfer);
+        }
+
+        /* Leader's courage (low fear) also influences */
+        if (leader_fear < 30) {
+            int courage_transfer = rand_number(3, 8);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -courage_transfer);
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, courage_transfer / 2);
+        }
+
+        /* Leader's happiness/morale influences followers */
+        if (leader_happiness > 50) {
+            int leader_happiness_transfer = (leader_happiness * rand_number(12, 20)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, leader_happiness_transfer);
+        }
+
+        /* Leader's anger can rile up followers */
+        if (leader_anger > 60) {
+            int leader_anger_transfer = (leader_anger * rand_number(10, 18)) / 100;
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, leader_anger_transfer);
+        }
+    }
+}
+
+/**
  * Make a mob mourn the death of another character
  * Performs mourning socials and adjusts emotions based on relationship
  * @param mob The mob doing the mourning

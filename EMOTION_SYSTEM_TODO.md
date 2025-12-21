@@ -136,10 +136,10 @@ Actions that should trigger emotion updates but currently don't:
 ### 5. Advanced Emotion Mechanics (LOW PRIORITY)
 
 #### 5.1 Emotion Contagion
-- **TODO**: Nearby mobs should be influenced by each other's emotions
-- **TODO**: Fear should spread among grouped mobs
-- **TODO**: Excitement/happiness should be contagious in crowds
-- **TODO**: Leader's emotions should influence followers more
+- **DONE**: Nearby mobs should be influenced by each other's emotions (5-15% transfer)
+- **DONE**: Fear should spread among grouped mobs (12-20% transfer in groups)
+- **DONE**: Excitement/happiness should be contagious in crowds (8-15% transfer)
+- **DONE**: Leader's emotions should influence followers more (2x influence, 15-25% transfer)
 
 #### 5.2 Emotional Intelligence Variation
 - **TODO**: Add emotional_intelligence stat to mob genetics

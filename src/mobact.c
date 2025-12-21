@@ -529,6 +529,12 @@ void mob_emotion_activity(void)
         /* Probability controlled by CONFIG_MOB_EMOTION_UPDATE_CHANCE (configurable in cedit) */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= CONFIG_MOB_EMOTION_UPDATE_CHANCE) {
             update_mob_emotion_passive(ch);
+
+            /* Emotion contagion - mobs influence each other's emotions */
+            /* Run less frequently than passive updates (50% chance when passive runs) */
+            if (rand_number(1, 100) <= 50) {
+                update_mob_emotion_contagion(ch);
+            }
         }
 
     } /* end for() */
@@ -5033,7 +5039,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
             /* At quest limit - don't waste CPU searching for questmasters */
             return;
         }
-        
+
         /* Safety check: Validate room before accessing world array */
         if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
             return;
