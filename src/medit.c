@@ -1081,7 +1081,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             return;
 
         case MEDIT_AC:
-            GET_AC(OLC_MOB(d)) = LIMIT(i, MIN_AC, MAX_AC);
+            GET_AC(OLC_MOB(d)) = LIMIT(i, MIN_NPC_AC, MAX_AC);
             OLC_VAL(d) = TRUE;
             medit_disp_stats_menu(d);
             return;

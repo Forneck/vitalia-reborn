@@ -976,8 +976,11 @@ int compute_armor_class(struct char_data *ch)
         armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
     }
 
-    /* Ensure AC stays within valid limits */
-    return (MAX(MIN_AC, armorclass));
+    /* Ensure computed AC stays within valid limits
+     * Players: -200 (best) to +100 (worst)
+     * Mobs: -1000 (best) to +100 (worst) */
+    int min_ac = IS_NPC(ch) ? MIN_NPC_AC : MIN_PC_AC;
+    return MIN(MAX_AC, MAX(min_ac, armorclass));
 }
 
 void update_pos(struct char_data *victim)
