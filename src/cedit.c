@@ -2859,7 +2859,7 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                     "  7) Compassion: %d   8) Courage   : %d   9) Curiosity : %d\r\n"
                                     "  A) Disgust   : %d   B) Envy      : %d   C) Excitement: %d\r\n"
                                     "Relationship Emotions:\r\n"
-                                    "  D) Friendship: %d   E) Greed     : %d   F) Humiliation:%d\r\n"
+                                    "  D) Friendship: %d   E) Greed     : %d   F) Humiliation: %d\r\n"
                                     "  G) Love      : %d   H) Loyalty   : %d   I) Pride     : %d\r\n"
                                     "  J) Shame     : %d   K) Trust     : %d\r\n"
                                     "Q) Return to Emotion Menu\r\n"
