@@ -9119,7 +9119,8 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     if (is_indoors)
         multiplier = multiplier / 2; /* 50% reduction for indoor mobs */
 
-    /* Check if winter season (months 1-4) for Seasonal Affective Disorder */
+    /* Check if winter season for Seasonal Affective Disorder
+     * Winter months per 'help seasons': Kames'Hi, Teriany, Hiro, Prudis (months 1-4) */
     is_winter = (time_info.month >= 1 && time_info.month <= 4);
 
     /* Apply SAD effects in winter if mob has the trait */

@@ -57,7 +57,7 @@ static void another_hour(int mode)
 
     if (mode) {
         if (time_info.month >= 1 && time_info.month <= 4) {
-            // Inverno - dias curtos
+            // Inverno (Kames'Hi, Teriany, Hiro, Prudis) - dias curtos
             switch (time_info.hours) {
                 case 8:
                     weather_info.sunlight = SUN_RISE;
@@ -79,7 +79,7 @@ static void another_hour(int mode)
                     break;
             }
         } else if (time_info.month >= 5 && time_info.month <= 8) {
-            // Primavera - dias aumentando
+            // Primavera (Maqizie, Kadrictes, Mizu, Mysoluh) - dias aumentando
             switch (time_info.hours) {
                 case 6:
                     weather_info.sunlight = SUN_RISE;
@@ -101,7 +101,7 @@ static void another_hour(int mode)
                     break;
             }
         } else if (time_info.month >= 9 && time_info.month <= 12) {
-            // Verão - dias longos
+            // Verão (Karestis, Neruno, Latizie, Aminen) - dias longos
             switch (time_info.hours) {
                 case 5:
                     weather_info.sunlight = SUN_RISE;
@@ -123,7 +123,7 @@ static void another_hour(int mode)
                     break;
             }
         } else {
-            // Outono - dias encurtando
+            // Outono (Autumis, V'tah, Aqrien, Tellus, Brumis) - dias encurtando
             switch (time_info.hours) {
                 case 7:
                     weather_info.sunlight = SUN_RISE;
@@ -203,20 +203,20 @@ void weather_change(int zone)
         return;
     }
 
-    /* 1. Determina as médias sazonais */
+    /* 1. Determina as médias sazonais (per 'help seasons') */
     meant = climate->temperature;
     meanp = climate->pressure;
 
-    if (time_info.month >= 1 && time_info.month <= 4) {           // Inverno
+    if (time_info.month >= 1 && time_info.month <= 4) {           // Inverno (Kames'Hi, Teriany, Hiro, Prudis)
         meant -= climate->temp_diff * 1.5;                        // Redução mais intensa
         meanp += climate->press_diff * 1.2;                       // Aumento da pressão
-    } else if (time_info.month >= 5 && time_info.month <= 8) {    // Primavera
+    } else if (time_info.month >= 5 && time_info.month <= 8) {    // Primavera (Maqizie, Kadrictes, Mizu, Mysoluh)
         meant -= climate->temp_diff * 0.5;                        // Aumento leve
         meanp += climate->press_diff * 0.5;                       // Aumento moderado
-    } else if (time_info.month >= 9 && time_info.month <= 12) {   // Verão
+    } else if (time_info.month >= 9 && time_info.month <= 12) {   // Verão (Karestis, Neruno, Latizie, Aminen)
         meant += climate->temp_diff * 1.5;                        // Aumento intenso
         meanp -= climate->press_diff * 1.2;                       // Queda na pressão
-    } else {                                                      // Outono
+    } else {                                                      // Outono (Autumis, V'tah, Aqrien, Tellus, Brumis)
         meant += climate->temp_diff * 0.5;                        // Resfriamento moderado
         meanp -= climate->press_diff * 0.5;                       // Queda moderada
     }
