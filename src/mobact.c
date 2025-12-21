@@ -535,6 +535,12 @@ void mob_emotion_activity(void)
             if (rand_number(1, 100) <= 50) {
                 update_mob_emotion_contagion(ch);
             }
+
+            /* Mood system - update overall mood less frequently (25% chance when passive runs) */
+            /* This calculates mood from emotions and applies weather/time effects */
+            if (rand_number(1, 100) <= 25) {
+                update_mob_mood(ch);
+            }
         }
 
     } /* end for() */

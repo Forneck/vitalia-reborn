@@ -169,6 +169,10 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_contagion(struct char_data *mob);
+int calculate_mob_mood(struct char_data *mob);
+void update_mob_mood(struct char_data *mob);
+void check_extreme_mood_effects(struct char_data *mob);
+int apply_mood_modifier(struct char_data *mob, int base_value);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
@@ -670,6 +674,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
 #define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
 #define GET_GENEMOTIONAL_IQ(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.emotional_intelligence : 50)
+
+#define GET_MOB_MOOD(ch) ((ch)->ai_data ? (ch)->ai_data->overall_mood : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))

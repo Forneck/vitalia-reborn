@@ -1220,6 +1220,10 @@ struct mob_ai_data {
     /* Emotional profile type for personality consistency */
     int emotional_profile; /* Emotional profile type (EMOTION_PROFILE_*) - affects baseline emotions */
 
+    /* Overall mood system - derived from emotion averages, affects all interactions */
+    int overall_mood; /* Current overall mood (-100 to +100): negative=bad mood, positive=good mood */
+    int mood_timer;   /* Timer for periodic mood updates (updated every few ticks) */
+
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */

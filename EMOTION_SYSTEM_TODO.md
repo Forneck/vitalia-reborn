@@ -148,10 +148,10 @@ Actions that should trigger emotion updates but currently don't:
 - **DONE**: EI should affect how quickly emotions stabilize (learning through regulation, regression through overwhelm)
 
 #### 5.3 Mood System
-- **TODO**: Add overall mood derived from emotion averages
-- **TODO**: Mood should affect all interactions globally
-- **TODO**: Extreme moods should trigger special behaviors
-- **TODO**: Weather/time of day should influence mood
+- **DONE**: Add overall mood derived from emotion averages (-100 to +100 scale)
+- **DONE**: Mood should affect all interactions globally (apply_mood_modifier function, ±20% effect)
+- **DONE**: Extreme moods should trigger special behaviors (socials, emotion adjustments)
+- **DONE**: Weather/time of day should influence mood (weather ±15, time ±5)
 
 #### 5.4 Emotion-Based Skills
 - **TODO**: Intimidation skill that increases target's fear

@@ -3564,6 +3564,10 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
     mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
 
+    /* Initialize overall mood from initial emotions */
+    mob->ai_data->overall_mood = calculate_mob_mood(mob);
+    mob->ai_data->mood_timer = 0;
+
     /* Initialize emotion memory system - zero out all memory slots */
     {
         int i;

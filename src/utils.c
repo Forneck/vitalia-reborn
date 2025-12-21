@@ -6322,6 +6322,221 @@ void update_mob_emotion_contagion(struct char_data *mob)
 }
 
 /**
+ * Calculate overall mood from current emotions
+ * Mood is derived from positive vs negative emotion balance
+ * @param mob The mob whose mood to calculate
+ * @return Mood value (-100 to +100): negative=bad mood, positive=good mood
+ */
+int calculate_mob_mood(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return 0;
+
+    /* Positive emotions that improve mood */
+    int positive_sum = 0;
+    positive_sum += mob->ai_data->emotion_happiness;
+    positive_sum += mob->ai_data->emotion_love;
+    positive_sum += mob->ai_data->emotion_excitement;
+    positive_sum += mob->ai_data->emotion_pride;
+    positive_sum += mob->ai_data->emotion_courage;
+    positive_sum += mob->ai_data->emotion_trust;
+    positive_sum += mob->ai_data->emotion_friendship;
+    positive_sum += mob->ai_data->emotion_curiosity;
+    positive_sum += mob->ai_data->emotion_compassion;
+
+    /* Negative emotions that worsen mood */
+    int negative_sum = 0;
+    negative_sum += mob->ai_data->emotion_fear;
+    negative_sum += mob->ai_data->emotion_anger;
+    negative_sum += mob->ai_data->emotion_sadness;
+    negative_sum += mob->ai_data->emotion_pain;
+    negative_sum += mob->ai_data->emotion_horror;
+    negative_sum += mob->ai_data->emotion_disgust;
+    negative_sum += mob->ai_data->emotion_shame;
+    negative_sum += mob->ai_data->emotion_humiliation;
+    negative_sum += mob->ai_data->emotion_envy;
+
+    /* Calculate average positive and negative */
+    int avg_positive = positive_sum / 9; /* 9 positive emotions */
+    int avg_negative = negative_sum / 9; /* 9 negative emotions */
+
+    /* Mood is the difference: positive - negative, scaled to -100 to +100 */
+    int mood = avg_positive - avg_negative;
+
+    /* Apply bounds */
+    return URANGE(-100, mood, 100);
+}
+
+/**
+ * Update mob's overall mood based on emotions, weather, and time
+ * Should be called periodically (less frequently than emotion updates)
+ * @param mob The mob whose mood to update
+ */
+void update_mob_mood(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Calculate base mood from emotions */
+    int calculated_mood = calculate_mob_mood(mob);
+
+    /* Weather effects on mood (if weather affects emotions is enabled) */
+    if (CONFIG_WEATHER_AFFECTS_EMOTIONS && IN_ROOM(mob) != NOWHERE && IN_ROOM(mob) >= 0 &&
+        IN_ROOM(mob) <= top_of_world) {
+        int weather_modifier = 0;
+
+        /* Check current weather conditions */
+        switch (weather_info.sky) {
+            case SKY_CLOUDLESS:
+                weather_modifier = 5; /* Sunny weather improves mood */
+                break;
+            case SKY_CLOUDY:
+                weather_modifier = 0; /* Neutral */
+                break;
+            case SKY_RAINING:
+                weather_modifier = -5; /* Rain worsens mood slightly */
+                break;
+            case SKY_LIGHTNING:
+                weather_modifier = -10; /* Storm significantly worsens mood */
+                break;
+        }
+
+        /* Temperature extremes also affect mood */
+        if (weather_info.temperature < 0) {
+            weather_modifier -= 5; /* Very cold worsens mood */
+        } else if (weather_info.temperature > 40) {
+            weather_modifier -= 3; /* Very hot worsens mood */
+        } else if (weather_info.temperature >= 15 && weather_info.temperature <= 25) {
+            weather_modifier += 2; /* Pleasant temperature improves mood */
+        }
+
+        calculated_mood += weather_modifier;
+    }
+
+    /* Time of day effects on mood */
+    if (IN_ROOM(mob) != NOWHERE && IN_ROOM(mob) >= 0 && IN_ROOM(mob) <= top_of_world) {
+        int time_modifier = 0;
+
+        switch (weather_info.sunlight) {
+            case SUN_DARK:
+                /* Night - slightly negative for most mobs unless nocturnal */
+                if (IS_EVIL(mob)) {
+                    time_modifier = 3; /* Evil mobs prefer darkness */
+                } else {
+                    time_modifier = -3; /* Good mobs dislike darkness */
+                }
+                break;
+            case SUN_RISE:
+            case SUN_SET:
+                time_modifier = 2; /* Dawn/dusk are pleasant times */
+                break;
+            case SUN_LIGHT:
+                /* Daytime - slightly positive for most mobs */
+                if (IS_GOOD(mob)) {
+                    time_modifier = 3; /* Good mobs prefer daylight */
+                } else {
+                    time_modifier = -2; /* Evil mobs dislike bright light */
+                }
+                break;
+        }
+
+        calculated_mood += time_modifier;
+    }
+
+    /* Smooth mood changes - don't jump instantly */
+    int mood_difference = calculated_mood - mob->ai_data->overall_mood;
+    int mood_change = mood_difference / 3; /* Move 1/3 of the way toward target */
+
+    /* Ensure at least some change if there's a significant difference */
+    if (mood_change == 0 && abs(mood_difference) > 5) {
+        mood_change = (mood_difference > 0) ? 1 : -1;
+    }
+
+    mob->ai_data->overall_mood = URANGE(-100, mob->ai_data->overall_mood + mood_change, 100);
+
+    /* Check for extreme mood effects */
+    check_extreme_mood_effects(mob);
+}
+
+/**
+ * Check for and trigger special behaviors based on extreme moods
+ * @param mob The mob to check
+ */
+void check_extreme_mood_effects(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    int mood = mob->ai_data->overall_mood;
+
+    /* VERY BAD MOOD (< -70): Aggressive, antisocial behavior */
+    if (mood < -70 && rand_number(1, 100) <= 10) {
+        /* 10% chance per update to perform negative social */
+        const char *negative_socials[] = {"growl", "snarl", "grumble", "scowl", "glare", NULL};
+        int social_idx = rand_number(0, 4);
+        do_action(mob, "", find_command(negative_socials[social_idx]), 0);
+
+        /* Reduce trust and friendship slightly */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(1, 3));
+    }
+
+    /* BAD MOOD (-70 to -40): Withdrawn, less helpful */
+    else if (mood < -40 && mood >= -70) {
+        /* Reduce helpfulness emotions */
+        if (rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, -rand_number(1, 2));
+        }
+    }
+
+    /* VERY GOOD MOOD (> 70): Friendly, helpful behavior */
+    else if (mood > 70 && rand_number(1, 100) <= 10) {
+        /* 10% chance per update to perform positive social */
+        const char *positive_socials[] = {"smile", "laugh", "cheer", "dance", "grin", NULL};
+        int social_idx = rand_number(0, 4);
+        do_action(mob, "", find_command(positive_socials[social_idx]), 0);
+
+        /* Increase trust and friendship slightly */
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(1, 3));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(1, 3));
+    }
+
+    /* GOOD MOOD (40 to 70): More generous, forgiving */
+    else if (mood > 40 && mood <= 70) {
+        /* Increase helpfulness */
+        if (rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, rand_number(1, 2));
+        }
+    }
+}
+
+/**
+ * Apply global mood modifier to an interaction value
+ * Mood affects all interactions: positive mood = bonuses, negative mood = penalties
+ * @param mob The mob whose mood to apply
+ * @param base_value The base value to modify
+ * @return Modified value based on mood
+ */
+int apply_mood_modifier(struct char_data *mob, int base_value)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return base_value;
+
+    int mood = mob->ai_data->overall_mood;
+
+    /* Mood affects values by up to ±20%
+     * Very bad mood (-100): -20%
+     * Neutral mood (0): 0%
+     * Very good mood (+100): +20%
+     */
+    int modifier_percent = (mood * 20) / 100; /* -20 to +20 */
+
+    int modified_value = base_value + ((base_value * modifier_percent) / 100);
+
+    return modified_value;
+}
+
+/**
  * Make a mob mourn the death of another character
  * Performs mourning socials and adjusts emotions based on relationship
  * @param mob The mob doing the mourning
