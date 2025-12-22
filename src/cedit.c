@@ -167,6 +167,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.weather_affects_emotions = CONFIG_WEATHER_AFFECTS_EMOTIONS;
     OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
     OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
+    OLC_CONFIG(d)->experimental.emotion_alignment_shifts = CONFIG_EMOTION_ALIGNMENT_SHIFTS;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -384,6 +385,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_WEATHER_AFFECTS_EMOTIONS = OLC_CONFIG(d)->experimental.weather_affects_emotions;
     CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
     CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
+    CONFIG_EMOTION_ALIGNMENT_SHIFTS = OLC_CONFIG(d)->experimental.emotion_alignment_shifts;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -993,6 +995,11 @@ int save_config(IDXTYPE nowhere)
             "max_mob_posted_quests = %d\n\n",
             CONFIG_MAX_MOB_POSTED_QUESTS);
 
+    fprintf(fl,
+            "* Emotions influence alignment over time? (experimental, default NO)\n"
+            "emotion_alignment_shifts = %d\n\n",
+            CONFIG_EMOTION_ALIGNMENT_SHIFTS);
+
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
     fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
@@ -1385,9 +1392,11 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
 
     write_to_output(d,
                     "%s9%s) Max Mob-Posted Quests (Previne Lag) : %s%d\r\n"
+                    "%sA%s) Emoções Influenciam Alinhamento (Experimental) : %s%s\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
-                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm);
+                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts), grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -2847,6 +2856,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     write_to_output(d, "\r\nEnter max mob-posted quests (100-1000, default 450) : ");
                     OLC_MODE(d) = CEDIT_MAX_MOB_POSTED_QUESTS;
                     return;
+
+                case 'a':
+                case 'A':
+                    /* Only allow toggling if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        TOGGLE_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts);
+                    } else {
+                        write_to_output(
+                            d, "\r\nEmotion-alignment shifts require mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
 
                 case '0':
                 case 'q':

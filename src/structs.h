@@ -1985,6 +1985,7 @@ struct experimental_data {
     int weather_affects_emotions;  /**< Weather affects mob emotions? (default: YES) */
     int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
     int max_mob_posted_quests;     /**< Maximum number of mob-posted autoquests (default: 450) */
+    int emotion_alignment_shifts;  /**< Emotions influence alignment over time? (default: NO) */
 };
 
 /**

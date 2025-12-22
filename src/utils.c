@@ -6231,6 +6231,69 @@ void update_mob_emotion_passive(struct char_data *mob)
         /* Regression through emotional overwhelm */
         adjust_emotional_intelligence(mob, -1);
     }
+
+    /* Emotion-Alignment interaction system (experimental feature)
+     * Emotions gradually influence alignment over time, and alignment influences emotional baselines
+     * This creates a bidirectional relationship between emotions and moral character
+     */
+    if (CONFIG_EMOTION_ALIGNMENT_SHIFTS) {
+        /* Calculate emotional pull toward good or evil based on current emotions
+         * Positive emotions (compassion, love, happiness) pull toward good
+         * Negative emotions (anger, hatred, disgust) pull toward evil
+         */
+
+        /* Calculate net emotional influence on alignment
+         * Compassion and love strongly pull toward good */
+        int good_pull = 0;
+        if (mob->ai_data->emotion_compassion > 60)
+            good_pull += (mob->ai_data->emotion_compassion - 60) / 10; /* 0-4 points */
+        if (mob->ai_data->emotion_love > 60)
+            good_pull += (mob->ai_data->emotion_love - 60) / 10; /* 0-4 points */
+        if (mob->ai_data->emotion_happiness > 70)
+            good_pull += (mob->ai_data->emotion_happiness - 70) / 15; /* 0-2 points */
+
+        /* Anger and disgust pull toward evil */
+        int evil_pull = 0;
+        if (mob->ai_data->emotion_anger > 60)
+            evil_pull += (mob->ai_data->emotion_anger - 60) / 10; /* 0-4 points */
+        if (mob->ai_data->emotion_disgust > 60)
+            evil_pull += (mob->ai_data->emotion_disgust - 60) / 10; /* 0-4 points */
+        /* Horror and pain contribute to evil tendencies (suffering breeds darkness) */
+        if (mob->ai_data->emotion_horror > 70)
+            evil_pull += (mob->ai_data->emotion_horror - 70) / 15; /* 0-2 points */
+
+        /* Apply alignment shift (very gradual - 1-2% chance per emotion tick)
+         * This prevents rapid alignment swings while allowing long-term character development */
+        int alignment_change = 0;
+        if (good_pull > evil_pull && rand_number(1, 100) <= 2) {
+            /* Shift toward good (positive alignment) */
+            alignment_change = rand_number(1, good_pull - evil_pull);
+        } else if (evil_pull > good_pull && rand_number(1, 100) <= 2) {
+            /* Shift toward evil (negative alignment) */
+            alignment_change = -rand_number(1, evil_pull - good_pull);
+        }
+
+        if (alignment_change != 0) {
+            int new_alignment = LIMIT(GET_ALIGNMENT(mob) + alignment_change, -1000, 1000);
+            GET_ALIGNMENT(mob) = new_alignment;
+        }
+
+        /* Alignment influences emotional baselines (feedback loop)
+         * Good-aligned mobs have higher baseline compassion/happiness, lower baseline anger
+         * Evil-aligned mobs have higher baseline anger/disgust, lower baseline compassion
+         * This adjustment happens in the baseline calculations above, but we can add
+         * small periodic adjustments here too for stronger feedback */
+
+        /* For very good mobs, boost compassion slightly */
+        if (IS_GOOD(mob) && GET_ALIGNMENT(mob) > 700 && rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, rand_number(1, 2));
+        }
+
+        /* For very evil mobs, boost anger slightly */
+        if (IS_EVIL(mob) && GET_ALIGNMENT(mob) < -700 && rand_number(1, 100) <= 5) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
+        }
+    }
 }
 
 /**
