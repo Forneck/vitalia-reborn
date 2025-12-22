@@ -6584,8 +6584,9 @@ void check_extreme_emotional_states(struct char_data *mob)
             }
         }
 
-        /* High chance to flee or cower when not paralyzed */
-        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && FIGHTING(mob) && rand_number(1, 100) <= 50) {
+        /* High chance to flee or cower when not paralyzed and not in berserk fury */
+        if (!AFF_FLAGGED(mob, AFF_PARALIZE) && !mob->ai_data->berserk_timer && FIGHTING(mob) &&
+            rand_number(1, 100) <= 50) {
             do_flee(mob, NULL, 0, 0);
         }
         /* Reduce all positive emotions significantly */
@@ -6782,7 +6783,7 @@ void check_emotional_breakdown(struct char_data *mob)
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
 
-    /* Count how many emotions are at extreme levels (>85) */
+    /* Count how many emotions are at extreme levels (>85) - negative emotions */
     int extreme_count = 0;
     int total_emotion_intensity = 0;
 
@@ -6803,6 +6804,49 @@ void check_emotional_breakdown(struct char_data *mob)
     if (mob->ai_data->emotion_disgust > 85)
         extreme_count++;
 
+    /* Count emotions maxed at 100 (emotional dysregulation) - ALL emotions */
+    int maxed_count = 0;
+    if (mob->ai_data->emotion_fear >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_anger >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_happiness >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_sadness >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_friendship >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_love >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_trust >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_loyalty >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_curiosity >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_greed >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_pride >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_compassion >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_envy >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_courage >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_excitement >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_disgust >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_shame >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_pain >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_horror >= 100)
+        maxed_count++;
+    if (mob->ai_data->emotion_humiliation >= 100)
+        maxed_count++;
+
     /* Calculate total emotional intensity */
     total_emotion_intensity += mob->ai_data->emotion_fear;
     total_emotion_intensity += mob->ai_data->emotion_anger;
@@ -6810,13 +6854,21 @@ void check_emotional_breakdown(struct char_data *mob)
     total_emotion_intensity += mob->ai_data->emotion_pain;
     total_emotion_intensity += mob->ai_data->emotion_horror;
 
-    /* EMOTIONAL BREAKDOWN: 4+ extreme emotions OR total intensity > 450 */
-    if (extreme_count >= 4 || total_emotion_intensity > 450) {
+    /* EMOTIONAL BREAKDOWN: 4+ extreme negative emotions OR total intensity > 450 */
+    /* OR 5+ emotions maxed at 100 (emotional dysregulation/obsession) */
+    if (extreme_count >= 4 || total_emotion_intensity > 450 || maxed_count >= 5) {
         /* Breakdown effects - mob becomes overwhelmed */
 
         /* Visual indicator */
         if (rand_number(1, 100) <= 20) {
-            act("$n parece emocionalmente sobrecarregado e incapaz de agir normalmente!", TRUE, mob, 0, 0, TO_ROOM);
+            if (maxed_count >= 5 && extreme_count < 4) {
+                /* Dysregulation from too many maxed emotions (including positive) */
+                act("$n parece emocionalmente desregulado, incapaz de controlar sentimentos intensos!", TRUE, mob, 0, 0,
+                    TO_ROOM);
+            } else {
+                /* Traditional breakdown from negative emotions */
+                act("$n parece emocionalmente sobrecarregado e incapaz de agir normalmente!", TRUE, mob, 0, 0, TO_ROOM);
+            }
         }
 
         /* Perform breakdown social */
@@ -6832,7 +6884,34 @@ void check_emotional_breakdown(struct char_data *mob)
         /* Reduce EI temporarily due to overwhelm */
         adjust_emotional_intelligence(mob, -rand_number(1, 2));
 
-        /* Drain all extreme emotions significantly (emotional exhaustion) */
+        /* For dysregulation (many maxed emotions), reduce ALL maxed emotions */
+        if (maxed_count >= 5) {
+            /* Emotional exhaustion - bring down all maxed emotions */
+            if (mob->ai_data->emotion_fear >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
+            if (mob->ai_data->emotion_anger >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(10, 20));
+            if (mob->ai_data->emotion_happiness >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 20));
+            if (mob->ai_data->emotion_sadness >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(10, 20));
+            if (mob->ai_data->emotion_friendship >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(5, 15));
+            if (mob->ai_data->emotion_love >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_love, -rand_number(5, 15));
+            if (mob->ai_data->emotion_trust >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 15));
+            if (mob->ai_data->emotion_loyalty >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_loyalty, -rand_number(5, 15));
+            if (mob->ai_data->emotion_curiosity >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_curiosity, -rand_number(10, 20));
+            if (mob->ai_data->emotion_pride >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_pride, -rand_number(10, 20));
+            if (mob->ai_data->emotion_excitement >= 100)
+                adjust_emotion(mob, &mob->ai_data->emotion_excitement, -rand_number(10, 20));
+        }
+
+        /* Drain all extreme negative emotions significantly (emotional exhaustion) */
         if (mob->ai_data->emotion_fear > 70)
             adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(15, 30));
         if (mob->ai_data->emotion_anger > 70)
