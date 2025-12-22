@@ -1101,6 +1101,21 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_combat_pain_damage_penalty_mod = %d\n", CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD);
     fprintf(fl, "emotion_combat_pain_damage_penalty_high = %d\n\n", CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH);
 
+    /* Emotion Decay Rate Configuration */
+    fprintf(fl, "* Emotion Decay Rate Configuration\n");
+    fprintf(fl, "emotion_decay_rate_multiplier = %d\n", CONFIG_EMOTION_DECAY_RATE_MULTIPLIER);
+    fprintf(fl, "emotion_extreme_emotion_threshold = %d\n", CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD);
+    fprintf(fl, "emotion_extreme_decay_multiplier = %d\n", CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER);
+    fprintf(fl, "emotion_decay_rate_fear = %d\n", CONFIG_EMOTION_DECAY_RATE_FEAR);
+    fprintf(fl, "emotion_decay_rate_anger = %d\n", CONFIG_EMOTION_DECAY_RATE_ANGER);
+    fprintf(fl, "emotion_decay_rate_happiness = %d\n", CONFIG_EMOTION_DECAY_RATE_HAPPINESS);
+    fprintf(fl, "emotion_decay_rate_sadness = %d\n", CONFIG_EMOTION_DECAY_RATE_SADNESS);
+    fprintf(fl, "emotion_decay_rate_pain = %d\n", CONFIG_EMOTION_DECAY_RATE_PAIN);
+    fprintf(fl, "emotion_decay_rate_horror = %d\n", CONFIG_EMOTION_DECAY_RATE_HORROR);
+    fprintf(fl, "emotion_decay_rate_disgust = %d\n", CONFIG_EMOTION_DECAY_RATE_DISGUST);
+    fprintf(fl, "emotion_decay_rate_shame = %d\n", CONFIG_EMOTION_DECAY_RATE_SHAME);
+    fprintf(fl, "emotion_decay_rate_humiliation = %d\n\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1391,12 +1406,56 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sD%s) Memory System Configuration\r\n"
                     "%sE%s) Group Behavior Thresholds\r\n"
                     "%sF%s) Combat Behavior (Anger/Pain Effects)\r\n"
+                    "%sG%s) Emotion Decay Rates\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
+}
+
+/* Display emotion decay rates submenu */
+static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Emotion Decay Rate Configuration\r\n"
+                    "---\r\n"
+                    "Global Settings:\r\n"
+                    "%s1%s) Global Decay Rate Multiplier: %s%d%%%s (50-200%%)\r\n"
+                    "%s2%s) Extreme Emotion Threshold: %s%d%s (emotions above this decay faster)\r\n"
+                    "%s3%s) Extreme Decay Multiplier: %s%d%%%s (100-300%%)\r\n"
+                    "\r\n"
+                    "Individual Emotion Base Decay Rates (0-10):\r\n"
+                    "%s4%s) Fear Decay Rate: %s%d%s\r\n"
+                    "%s5%s) Anger Decay Rate: %s%d%s\r\n"
+                    "%s6%s) Happiness Decay Rate: %s%d%s\r\n"
+                    "%s7%s) Sadness Decay Rate: %s%d%s\r\n"
+                    "%s8%s) Pain Decay Rate: %s%d%s (should be faster)\r\n"
+                    "%s9%s) Horror Decay Rate: %s%d%s (medium fast)\r\n"
+                    "%sA%s) Disgust Decay Rate: %s%d%s\r\n"
+                    "%sB%s) Shame Decay Rate: %s%d%s (slower)\r\n"
+                    "%sC%s) Humiliation Decay Rate: %s%d%s (slower)\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.decay_rate_multiplier, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_fear, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_anger, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_happiness, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_sadness, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_pain, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_horror, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_disgust, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_shame, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_humiliation, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_EMOTION_DECAY_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3015,6 +3074,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_EMOTION_COMBAT_SUBMENU;
                     return;
 
+                case 'g':
+                case 'G':
+                    cedit_disp_emotion_decay_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3413,6 +3477,68 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'C':
                     write_to_output(d, "\r\nEnter High Pain Damage Penalty (%%, 0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_DECAY_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Global Decay Rate Multiplier (50-200%%) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_MULTIPLIER;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Extreme Emotion Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_EXTREME_EMOTION_THRESHOLD;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Extreme Decay Multiplier (100-300%%) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_EXTREME_DECAY_MULTIPLIER;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Fear Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_FEAR;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Anger Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_ANGER;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Happiness Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HAPPINESS;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Sadness Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_SADNESS;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Pain Decay Rate (0-10, should be faster) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_PAIN;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Horror Decay Rate (0-10, medium fast) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HORROR;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Disgust Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_DISGUST;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Shame Decay Rate (0-10, should be slower) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_SHAME;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter Humiliation Decay Rate (0-10, should be slower) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HUMILIATION;
                     return;
                 case 'q':
                 case 'Q':
@@ -4365,6 +4491,67 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH:
             OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = LIMIT(atoi(arg), 0, 100);
             cedit_disp_emotion_menu(d);
+            break;
+
+        /* Emotion Decay Rate Configuration */
+        case CEDIT_EMOTION_DECAY_RATE_MULTIPLIER:
+            OLC_CONFIG(d)->emotion_config.decay_rate_multiplier = LIMIT(atoi(arg), 50, 200);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_EXTREME_EMOTION_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_EXTREME_DECAY_MULTIPLIER:
+            OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier = LIMIT(atoi(arg), 100, 300);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_FEAR:
+            OLC_CONFIG(d)->emotion_config.decay_rate_fear = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_ANGER:
+            OLC_CONFIG(d)->emotion_config.decay_rate_anger = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HAPPINESS:
+            OLC_CONFIG(d)->emotion_config.decay_rate_happiness = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_SADNESS:
+            OLC_CONFIG(d)->emotion_config.decay_rate_sadness = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_PAIN:
+            OLC_CONFIG(d)->emotion_config.decay_rate_pain = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HORROR:
+            OLC_CONFIG(d)->emotion_config.decay_rate_horror = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_DISGUST:
+            OLC_CONFIG(d)->emotion_config.decay_rate_disgust = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_SHAME:
+            OLC_CONFIG(d)->emotion_config.decay_rate_shame = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HUMILIATION:
+            OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
             break;
 
         default: /* We should never get here, but just in

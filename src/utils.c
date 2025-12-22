@@ -6083,6 +6083,7 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
 /**
  * Update mob emotions over time (passive decay/stabilization)
  * Call this periodically for emotional regulation
+ * Uses configurable decay rates that vary by emotion type and intensity
  * @param mob The mob whose emotions to regulate
  */
 void update_mob_emotion_passive(struct char_data *mob)
@@ -6093,62 +6094,119 @@ void update_mob_emotion_passive(struct char_data *mob)
     /* Emotions gradually return toward neutral baseline (50) or trait-based values */
     /* Extreme emotions (very high or very low) decay faster */
 
+    /* Get global decay multiplier (50-200%, default 100) */
+    int global_multiplier = CONFIG_EMOTION_DECAY_RATE_MULTIPLIER;
+    int extreme_threshold = CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD; /* Default: 80 */
+    int extreme_multiplier = CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER; /* Default: 150% */
+
     /* Fear decays toward wimpy_tendency baseline */
     int fear_baseline = mob->ai_data->genetics.wimpy_tendency / 2;
     if (mob->ai_data->emotion_fear > fear_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(1, 3));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_FEAR; /* Default: 2 */
+        /* Apply extreme emotion multiplier if above threshold */
+        if (mob->ai_data->emotion_fear > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_fear < fear_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, 2));
+        int base_increase = CONFIG_EMOTION_DECAY_RATE_FEAR / 2;
+        base_increase = (base_increase * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, MAX(1, base_increase)));
     }
 
     /* Anger decays toward alignment-based baseline */
     int anger_baseline = IS_EVIL(mob) ? 35 : (IS_GOOD(mob) ? 15 : 25);
     if (mob->ai_data->emotion_anger > anger_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, 3));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_ANGER; /* Default: 2 */
+        if (mob->ai_data->emotion_anger > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_anger < anger_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
+        int base_increase = CONFIG_EMOTION_DECAY_RATE_ANGER / 2;
+        base_increase = (base_increase * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, MAX(1, base_increase)));
     }
 
     /* Happiness returns toward alignment-based baseline */
     int happiness_baseline = IS_GOOD(mob) ? 40 : (IS_EVIL(mob) ? 15 : 30);
     if (mob->ai_data->emotion_happiness > happiness_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, 2));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_HAPPINESS; /* Default: 2 */
+        if (mob->ai_data->emotion_happiness > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_happiness < happiness_baseline) {
-        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(1, 3));
+        int base_increase = CONFIG_EMOTION_DECAY_RATE_HAPPINESS + 1; /* Happiness grows faster */
+        base_increase = (base_increase * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(1, MAX(1, base_increase)));
     }
 
     /* Sadness gradually decreases (unless reinforced by events) */
     if (mob->ai_data->emotion_sadness > 10) {
-        adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(1, 3));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_SADNESS; /* Default: 2 */
+        if (mob->ai_data->emotion_sadness > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(1, MAX(1, base_decay)));
     }
 
     /* Pain gradually decreases over time (healing naturally) */
     /* Pain should decay faster than other emotions - wounds heal */
     if (mob->ai_data->emotion_pain > 0) {
-        int pain_decay = rand_number(2, 5);
-        /* Resting/sleeping accelerates pain reduction */
-        if (GET_POS(mob) == POS_RESTING || GET_POS(mob) == POS_SLEEPING) {
-            pain_decay += rand_number(2, 4);
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_PAIN; /* Default: 4 - faster */
+        if (mob->ai_data->emotion_pain > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
         }
-        adjust_emotion(mob, &mob->ai_data->emotion_pain, -pain_decay);
+        base_decay = (base_decay * global_multiplier) / 100;
+
+        /* Resting/sleeping accelerates pain reduction by 50% */
+        if (GET_POS(mob) == POS_RESTING || GET_POS(mob) == POS_SLEEPING) {
+            base_decay = (base_decay * 150) / 100;
+        }
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(1, MAX(1, base_decay)));
     }
 
     /* Horror gradually decreases (traumatic memory fades) */
     if (mob->ai_data->emotion_horror > 0) {
-        adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(2, 4));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_HORROR; /* Default: 3 - medium fast */
+        if (mob->ai_data->emotion_horror > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(1, MAX(1, base_decay)));
     }
 
     /* Disgust decreases over time */
     if (mob->ai_data->emotion_disgust > 0) {
-        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -rand_number(1, 3));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_DISGUST; /* Default: 2 */
+        if (mob->ai_data->emotion_disgust > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -rand_number(1, MAX(1, base_decay)));
     }
 
     /* Shame and humiliation decrease slowly */
     if (mob->ai_data->emotion_shame > 0) {
-        adjust_emotion(mob, &mob->ai_data->emotion_shame, -rand_number(1, 2));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_SHAME; /* Default: 1 - slower */
+        if (mob->ai_data->emotion_shame > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, -rand_number(1, MAX(1, base_decay)));
     }
     if (mob->ai_data->emotion_humiliation > 0) {
-        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, 2));
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_HUMILIATION; /* Default: 1 - slower */
+        if (mob->ai_data->emotion_humiliation > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, MAX(1, base_decay)));
     }
 
     /* Emotional Intelligence learning through emotion stabilization

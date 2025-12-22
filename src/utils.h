@@ -1500,4 +1500,19 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD config_info.emotion_config.combat_pain_damage_penalty_mod
 #define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH config_info.emotion_config.combat_pain_damage_penalty_high
 
+/* Emotion decay rate configuration */
+#define CONFIG_EMOTION_DECAY_RATE_MULTIPLIER config_info.emotion_config.decay_rate_multiplier
+#define CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD config_info.emotion_config.extreme_emotion_threshold
+#define CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER config_info.emotion_config.extreme_decay_multiplier
+
+#define CONFIG_EMOTION_DECAY_RATE_FEAR config_info.emotion_config.decay_rate_fear
+#define CONFIG_EMOTION_DECAY_RATE_ANGER config_info.emotion_config.decay_rate_anger
+#define CONFIG_EMOTION_DECAY_RATE_HAPPINESS config_info.emotion_config.decay_rate_happiness
+#define CONFIG_EMOTION_DECAY_RATE_SADNESS config_info.emotion_config.decay_rate_sadness
+#define CONFIG_EMOTION_DECAY_RATE_PAIN config_info.emotion_config.decay_rate_pain
+#define CONFIG_EMOTION_DECAY_RATE_HORROR config_info.emotion_config.decay_rate_horror
+#define CONFIG_EMOTION_DECAY_RATE_DISGUST config_info.emotion_config.decay_rate_disgust
+#define CONFIG_EMOTION_DECAY_RATE_SHAME config_info.emotion_config.decay_rate_shame
+#define CONFIG_EMOTION_DECAY_RATE_HUMILIATION config_info.emotion_config.decay_rate_humiliation
+
 #endif /* _UTILS_H_ */

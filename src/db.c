@@ -4578,6 +4578,22 @@ static void load_default_config(void)
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW = 5;
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = 10;
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = 20;
+
+    /* Emotion decay rate configuration */
+    CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = 100;    /* 100% = normal speed */
+    CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = 80; /* Above this, emotions decay faster */
+    CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = 150; /* 150% = 1.5x faster for extreme emotions */
+
+    /* Individual emotion base decay rates (0-10 scale) */
+    CONFIG_EMOTION_DECAY_RATE_FEAR = 2;        /* Standard decay */
+    CONFIG_EMOTION_DECAY_RATE_ANGER = 2;       /* Standard decay */
+    CONFIG_EMOTION_DECAY_RATE_HAPPINESS = 2;   /* Standard decay */
+    CONFIG_EMOTION_DECAY_RATE_SADNESS = 2;     /* Standard decay */
+    CONFIG_EMOTION_DECAY_RATE_PAIN = 4;        /* Faster - wounds heal */
+    CONFIG_EMOTION_DECAY_RATE_HORROR = 3;      /* Medium fast - traumatic memories fade */
+    CONFIG_EMOTION_DECAY_RATE_DISGUST = 2;     /* Standard decay */
+    CONFIG_EMOTION_DECAY_RATE_SHAME = 1;       /* Slower - shame lingers */
+    CONFIG_EMOTION_DECAY_RATE_HUMILIATION = 1; /* Slower - humiliation lingers */
 }
 
 void load_config(void)
@@ -4850,6 +4866,31 @@ void load_config(void)
                     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = num;
                 else if (!str_cmp(tag, "emotion_combat_pain_damage_penalty_high"))
                     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = num;
+                /* Emotion Decay Rate Configuration */
+                else if (!str_cmp(tag, "emotion_decay_rate_multiplier"))
+                    CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = num;
+                else if (!str_cmp(tag, "emotion_extreme_emotion_threshold"))
+                    CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_extreme_decay_multiplier"))
+                    CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_fear"))
+                    CONFIG_EMOTION_DECAY_RATE_FEAR = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_anger"))
+                    CONFIG_EMOTION_DECAY_RATE_ANGER = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_happiness"))
+                    CONFIG_EMOTION_DECAY_RATE_HAPPINESS = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_sadness"))
+                    CONFIG_EMOTION_DECAY_RATE_SADNESS = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_pain"))
+                    CONFIG_EMOTION_DECAY_RATE_PAIN = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_horror"))
+                    CONFIG_EMOTION_DECAY_RATE_HORROR = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_disgust"))
+                    CONFIG_EMOTION_DECAY_RATE_DISGUST = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_shame"))
+                    CONFIG_EMOTION_DECAY_RATE_SHAME = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_humiliation"))
+                    CONFIG_EMOTION_DECAY_RATE_HUMILIATION = num;
                 break;
 
             case 'f':

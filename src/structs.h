@@ -1956,6 +1956,22 @@ struct emotion_config_data {
     int combat_pain_damage_penalty_low;    /**< Damage reduction % from low pain (default: 5) */
     int combat_pain_damage_penalty_mod;    /**< Damage reduction % from moderate pain (default: 10) */
     int combat_pain_damage_penalty_high;   /**< Damage reduction % from high pain (default: 20) */
+
+    /* Emotion decay rate configuration */
+    int decay_rate_multiplier;     /**< Global decay rate multiplier 50-200% (default: 100) */
+    int extreme_emotion_threshold; /**< Threshold for extreme emotions that decay faster (default: 80) */
+    int extreme_decay_multiplier;  /**< Multiplier for extreme emotion decay 100-300% (default: 150) */
+
+    /* Individual emotion decay rates (base values, 0-10 scale) */
+    int decay_rate_fear;        /**< Fear decay rate (default: 2) */
+    int decay_rate_anger;       /**< Anger decay rate (default: 2) */
+    int decay_rate_happiness;   /**< Happiness decay rate (default: 2) */
+    int decay_rate_sadness;     /**< Sadness decay rate (default: 2) */
+    int decay_rate_pain;        /**< Pain decay rate - faster (default: 4) */
+    int decay_rate_horror;      /**< Horror decay rate - medium (default: 3) */
+    int decay_rate_disgust;     /**< Disgust decay rate (default: 2) */
+    int decay_rate_shame;       /**< Shame decay rate - slower (default: 1) */
+    int decay_rate_humiliation; /**< Humiliation decay rate - slower (default: 1) */
 };
 
 /** Experimental Features configuration. */
