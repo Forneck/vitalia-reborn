@@ -310,15 +310,16 @@ static byte calc_save(int level, int start_value)
 }
 
 /* Starting saving throw values at level 1 for each class.
- * Order: PARA, ROD, PETRI, BREATH, SPELL */
+ * Order: PARA, ROD, PETRI, BREATH, SPELL 
+ * PARA changed to oldvalue + 10: MAG was 70, now 80*/
 static const int save_starts[NUM_CLASSES][5] = {
-    /* CLASS_MAGIC_USER */ {70, 55, 65, 75, 60},
-    /* CLASS_CLERIC */ {60, 70, 65, 80, 75},
-    /* CLASS_THIEF */ {65, 70, 60, 80, 75},
-    /* CLASS_WARRIOR */ {70, 80, 75, 85, 85},
-    /* CLASS_DRUID */ {60, 70, 65, 80, 75},
-    /* CLASS_BARD */ {75, 75, 75, 80, 77},
-    /* CLASS_RANGER */ {65, 70, 60, 80, 75}};
+    /* CLASS_MAGIC_USER */ {80, 55, 65, 75, 60},
+    /* CLASS_CLERIC */ {70, 70, 65, 80, 75},
+    /* CLASS_THIEF */ {75, 70, 60, 80, 75},
+    /* CLASS_WARRIOR */ {80, 80, 75, 85, 85},
+    /* CLASS_DRUID */ {70, 70, 65, 80, 75},
+    /* CLASS_BARD */ {85, 75, 75, 80, 77},
+    /* CLASS_RANGER */ {75, 70, 60, 80, 75}};
 
 byte saving_throws(int class_num, int type, int level)
 {
