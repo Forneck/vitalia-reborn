@@ -6698,7 +6698,7 @@ void check_extreme_emotional_states(struct char_data *mob)
                 SET_BIT_AR(para_af.bitvector, AFF_PARALIZE);
                 affect_join(mob, &para_af, FALSE, FALSE, FALSE, FALSE);
                 mob->ai_data->paralyzed_timer = 1;
-                act("$n está paralisad$x de terror!", TRUE, mob, 0, 0, TO_ROOM);
+                act("$n está paralisad$r de terror!", TRUE, mob, 0, 0, TO_ROOM);
             } else {
                 /* Mob resisted paralysis, but still very afraid */
                 act("$n treme de medo mas resiste à paralisia!", TRUE, mob, 0, 0, TO_ROOM);
