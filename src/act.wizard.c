@@ -920,6 +920,10 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
     send_to_char(ch,
                  "\r\n%sNote:%s Effective emotions are used in combat, shopping, quests, and other interactions.\r\n",
                  CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "%sExtreme States:%s Fear at 100 causes paralysis, Anger at 100 triggers berserk fury.\r\n",
+                 CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "%sRelationships:%s Increase/decrease based on interaction memories with this target.\r\n",
+                 CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
 }
 
 static void do_stat_character(struct char_data *ch, struct char_data *k)
@@ -1048,6 +1052,49 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         if (k->ai_data && k->ai_data->emotional_profile >= 0 && k->ai_data->emotional_profile <= 7) {
             send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),
                          emotion_profile_types[k->ai_data->emotional_profile], CCNRM(ch, C_NRM));
+        }
+
+        /* Display extreme emotional state timers */
+        if (k->ai_data) {
+            if (k->ai_data->berserk_timer > 0) {
+                send_to_char(ch, "Estado de Fúria Berserker: [%s%d ticks%s]\r\n", CCRED(ch, C_NRM),
+                             k->ai_data->berserk_timer, CCNRM(ch, C_NRM));
+            }
+            if (k->ai_data->paralyzed_timer > 0) {
+                send_to_char(ch, "Paralisado por Medo: [%s%d ticks%s]\r\n", CCYEL(ch, C_NRM),
+                             k->ai_data->paralyzed_timer, CCNRM(ch, C_NRM));
+            }
+
+            /* Display weather preferences */
+            if (k->ai_data->preferred_weather_sky >= 0) {
+                const char *weather_names[] = {"Cloudless", "Cloudy", "Raining", "Lightning", "Snowing"};
+                if (k->ai_data->preferred_weather_sky <= 4) {
+                    send_to_char(ch, "Clima Favorito: [%s%s%s]\r\n", CCCYN(ch, C_NRM),
+                                 weather_names[k->ai_data->preferred_weather_sky], CCNRM(ch, C_NRM));
+                }
+            }
+            if (k->ai_data->preferred_temperature_range >= 0) {
+                const char *temp_names[] = {"Very Cold", "Cold", "Comfortable", "Hot", "Very Hot"};
+                if (k->ai_data->preferred_temperature_range <= 4) {
+                    send_to_char(ch, "Temperatura Favorita: [%s%s%s]\r\n", CCCYN(ch, C_NRM),
+                                 temp_names[k->ai_data->preferred_temperature_range], CCNRM(ch, C_NRM));
+                }
+            }
+            if (k->ai_data->native_climate >= 0) {
+                const char *climate_names[] = {"Temperate", "Rainy", "Tropical", "Arctic", "Desert"};
+                if (k->ai_data->native_climate <= 4) {
+                    send_to_char(ch, "Clima Nativo: [%s%s%s]\r\n", CCCYN(ch, C_NRM),
+                                 climate_names[k->ai_data->native_climate], CCNRM(ch, C_NRM));
+                }
+            }
+            if (k->ai_data->seasonal_affective_trait > 0) {
+                send_to_char(ch, "Transtorno Afetivo Sazonal: [%s%d%%%s]\r\n", CCYEL(ch, C_NRM),
+                             k->ai_data->seasonal_affective_trait, CCNRM(ch, C_NRM));
+            }
+            if (k->ai_data->weather_exposure_hours > 0) {
+                send_to_char(ch, "Horas de Exposição ao Clima: [%s%d horas%s]\r\n", CCNRM(ch, C_NRM),
+                             k->ai_data->weather_exposure_hours, CCNRM(ch, C_NRM));
+            }
         }
         /* Futuramente, podemos adicionar outros genes aqui. */
     }

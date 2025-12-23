@@ -41,6 +41,10 @@ const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
  *--------------------------------------------------------------------------*/
 static int cmd_tell;
 
+/* Quest parsing constants */
+#define MAX_QUEST_PARSE_LINES 100 /* Max lines to read before 'S' terminator */
+#define QUEST_COMMENT_CHAR '*'    /* Character used for comments in quest files */
+
 static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "clear", "\n"};
 
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
@@ -219,8 +223,10 @@ void parse_quest(FILE *quest_f, int nr)
 {
     static char line[256];
     static int i = 0, j;
-    int retval = 0, t[7];
+    int retval, t[7], safety_counter, line_len;
     char f1[128], buf2[MAX_STRING_LENGTH];
+
+    retval = 0;
     aquest_table[i].vnum = nr;
     aquest_table[i].qm = NOBODY;
     aquest_table[i].name = NULL;
@@ -277,15 +283,37 @@ void parse_quest(FILE *quest_f, int nr)
     aquest_table[i].exp_reward = t[1];
     aquest_table[i].obj_reward = (t[2] == -1) ? NOTHING : t[2];
 
+    /* Read remaining lines until we find the 'S' terminator.
+     * Add safeguard to prevent infinite loops from malformed quest files. */
+    safety_counter = 0;
+
     for (;;) {
         if (!get_line(quest_f, line)) {
-            log1("Format error in %s\n", line);
+            log1("Format error in quest #%d: unexpected end of file, expected 'S' terminator\n", nr);
             exit(1);
         }
+
+        /* Safeguard: prevent infinite loops from malformed quest files */
+        safety_counter++;
+        if (safety_counter > MAX_QUEST_PARSE_LINES) {
+            line_len = strlen(line);
+            log1("SYSERR: Quest #%d has too many lines without 'S' terminator (possible infinite loop)\n", nr);
+            log1("SYSERR: Last line read: '%.80s%s'\n", line, (line_len > 80) ? "..." : "");
+            exit(1);
+        }
+
         switch (*line) {
             case 'S':
                 total_quests = ++i;
                 return;
+            default:
+                /* Ignore comment lines and empty lines, but log unexpected content */
+                if (*line != '\0' && *line != QUEST_COMMENT_CHAR) {
+                    line_len = strlen(line);
+                    log1("Warning: Quest #%d has unexpected line before 'S' terminator: '%.80s%s'\n", nr, line,
+                         (line_len > 80) ? "..." : "");
+                }
+                break;
         }
     }
 } /* parse_quest */

@@ -485,6 +485,13 @@ ACMD(do_flee)
         return;
     }
 
+    /* Check if mob is in berserk fury - cannot flee while enraged */
+    if (IS_NPC(ch) && ch->ai_data && ch->ai_data->berserk_timer > 0) {
+        send_to_char(ch, "Você está em fúria berserker! Não pode fugir!\r\n");
+        act("$n está em fúria berserker e recusa-se a fugir!", TRUE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+
     for (i = 0; i < 6; i++) {
         attempt = rand_number(0, DIR_COUNT - 1); /* Seleciona uma direção aleatória */
         if (CAN_GO(ch, attempt) && VALID_ROOM_RNUM(EXIT(ch, attempt)->to_room) &&

@@ -167,6 +167,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.weather_affects_emotions = CONFIG_WEATHER_AFFECTS_EMOTIONS;
     OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
     OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
+    OLC_CONFIG(d)->experimental.emotion_alignment_shifts = CONFIG_EMOTION_ALIGNMENT_SHIFTS;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -176,6 +177,20 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.display_sadness_threshold = CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD;
     OLC_CONFIG(d)->emotion_config.display_horror_threshold = CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD;
     OLC_CONFIG(d)->emotion_config.display_pain_threshold = CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_compassion_threshold = CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_courage_threshold = CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_disgust_threshold = CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_envy_threshold = CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_excitement_threshold = CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_friendship_threshold = CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_greed_threshold = CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_love_threshold = CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_pride_threshold = CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_shame_threshold = CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.display_trust_threshold = CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD;
 
     /* Combat flee behavior thresholds */
     OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD;
@@ -225,6 +240,20 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD;
     OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD;
     OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD;
+
+    /* Combat behavior thresholds and modifiers */
+    OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS;
+    OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS;
+    OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
+    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD;
+    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH;
+    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW;
+    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD;
+    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH;
 
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
@@ -356,6 +385,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_WEATHER_AFFECTS_EMOTIONS = OLC_CONFIG(d)->experimental.weather_affects_emotions;
     CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
     CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
+    CONFIG_EMOTION_ALIGNMENT_SHIFTS = OLC_CONFIG(d)->experimental.emotion_alignment_shifts;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -365,6 +395,20 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_sadness_threshold;
     CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_horror_threshold;
     CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_pain_threshold;
+    CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_compassion_threshold;
+    CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_courage_threshold;
+    CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_curiosity_threshold;
+    CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_disgust_threshold;
+    CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_envy_threshold;
+    CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_excitement_threshold;
+    CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_friendship_threshold;
+    CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_greed_threshold;
+    CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_humiliation_threshold;
+    CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_love_threshold;
+    CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_loyalty_threshold;
+    CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_pride_threshold;
+    CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_shame_threshold;
+    CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD = OLC_CONFIG(d)->emotion_config.display_trust_threshold;
 
     /* Combat flee behavior thresholds */
     CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold;
@@ -408,6 +452,26 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_MEMORY_AGE_OLD = OLC_CONFIG(d)->emotion_config.memory_age_old;
 
     CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = OLC_CONFIG(d)->emotion_config.memory_baseline_offset;
+
+    /* Group behavior thresholds */
+    CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD = OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold;
+    CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold;
+    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold;
+    CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = OLC_CONFIG(d)->emotion_config.group_envy_high_threshold;
+
+    /* Combat behavior thresholds and modifiers */
+    CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD = OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold;
+    CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS = OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus;
+    CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS = OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus;
+    CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD = OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold;
+    CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD = OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold;
+    CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD = OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW = OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD = OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod;
+    CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH = OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod;
+    CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -592,6 +656,10 @@ int save_config(IDXTYPE nowhere)
             "* Do you want scripts to be attachable to players?\n"
             "script_players = %d\n\n",
             CONFIG_SCRIPT_PLAYERS);
+    fprintf(fl,
+            "* Enable fit evolve system?\n"
+            "fit_evolve = %d\n\n",
+            CONFIG_FIT_EVOLVE);
     fprintf(fl,
             "* Does weather affect spell effectiveness?\n"
             "weather_affects_spells = %d\n\n",
@@ -927,6 +995,11 @@ int save_config(IDXTYPE nowhere)
             "max_mob_posted_quests = %d\n\n",
             CONFIG_MAX_MOB_POSTED_QUESTS);
 
+    fprintf(fl,
+            "* Emotions influence alignment over time? (experimental, default NO)\n"
+            "emotion_alignment_shifts = %d\n\n",
+            CONFIG_EMOTION_ALIGNMENT_SHIFTS);
+
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
     fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
@@ -935,7 +1008,21 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_display_happiness_threshold = %d\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
     fprintf(fl, "emotion_display_sadness_threshold = %d\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
     fprintf(fl, "emotion_display_horror_threshold = %d\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
-    fprintf(fl, "emotion_display_pain_threshold = %d\n\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+    fprintf(fl, "emotion_display_pain_threshold = %d\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+    fprintf(fl, "emotion_display_compassion_threshold = %d\n", CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD);
+    fprintf(fl, "emotion_display_courage_threshold = %d\n", CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD);
+    fprintf(fl, "emotion_display_curiosity_threshold = %d\n", CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD);
+    fprintf(fl, "emotion_display_disgust_threshold = %d\n", CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD);
+    fprintf(fl, "emotion_display_envy_threshold = %d\n", CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD);
+    fprintf(fl, "emotion_display_excitement_threshold = %d\n", CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD);
+    fprintf(fl, "emotion_display_friendship_threshold = %d\n", CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD);
+    fprintf(fl, "emotion_display_greed_threshold = %d\n", CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD);
+    fprintf(fl, "emotion_display_humiliation_threshold = %d\n", CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD);
+    fprintf(fl, "emotion_display_love_threshold = %d\n", CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD);
+    fprintf(fl, "emotion_display_loyalty_threshold = %d\n", CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD);
+    fprintf(fl, "emotion_display_pride_threshold = %d\n", CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD);
+    fprintf(fl, "emotion_display_shame_threshold = %d\n", CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD);
+    fprintf(fl, "emotion_display_trust_threshold = %d\n\n", CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD);
 
     fprintf(fl, "* Combat Flee Behavior Thresholds (0-100)\n");
     fprintf(fl, "emotion_flee_fear_low_threshold = %d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD);
@@ -1006,6 +1093,35 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_group_loyalty_low_threshold = %d\n", CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD);
     fprintf(fl, "emotion_group_friendship_high_threshold = %d\n", CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD);
     fprintf(fl, "emotion_group_envy_high_threshold = %d\n\n", CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD);
+
+    fprintf(fl, "* Combat Behavior Thresholds and Modifiers\n");
+    fprintf(fl, "emotion_combat_anger_high_threshold = %d\n", CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_combat_anger_damage_bonus = %d\n", CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS);
+    fprintf(fl, "emotion_combat_anger_attack_bonus = %d\n", CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS);
+    fprintf(fl, "emotion_combat_pain_low_threshold = %d\n", CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD);
+    fprintf(fl, "emotion_combat_pain_moderate_threshold = %d\n", CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD);
+    fprintf(fl, "emotion_combat_pain_high_threshold = %d\n", CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_combat_pain_accuracy_penalty_low = %d\n", CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW);
+    fprintf(fl, "emotion_combat_pain_accuracy_penalty_mod = %d\n", CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD);
+    fprintf(fl, "emotion_combat_pain_accuracy_penalty_high = %d\n", CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH);
+    fprintf(fl, "emotion_combat_pain_damage_penalty_low = %d\n", CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW);
+    fprintf(fl, "emotion_combat_pain_damage_penalty_mod = %d\n", CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD);
+    fprintf(fl, "emotion_combat_pain_damage_penalty_high = %d\n\n", CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH);
+
+    /* Emotion Decay Rate Configuration */
+    fprintf(fl, "* Emotion Decay Rate Configuration\n");
+    fprintf(fl, "emotion_decay_rate_multiplier = %d\n", CONFIG_EMOTION_DECAY_RATE_MULTIPLIER);
+    fprintf(fl, "emotion_extreme_emotion_threshold = %d\n", CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD);
+    fprintf(fl, "emotion_extreme_decay_multiplier = %d\n", CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER);
+    fprintf(fl, "emotion_decay_rate_fear = %d\n", CONFIG_EMOTION_DECAY_RATE_FEAR);
+    fprintf(fl, "emotion_decay_rate_anger = %d\n", CONFIG_EMOTION_DECAY_RATE_ANGER);
+    fprintf(fl, "emotion_decay_rate_happiness = %d\n", CONFIG_EMOTION_DECAY_RATE_HAPPINESS);
+    fprintf(fl, "emotion_decay_rate_sadness = %d\n", CONFIG_EMOTION_DECAY_RATE_SADNESS);
+    fprintf(fl, "emotion_decay_rate_pain = %d\n", CONFIG_EMOTION_DECAY_RATE_PAIN);
+    fprintf(fl, "emotion_decay_rate_horror = %d\n", CONFIG_EMOTION_DECAY_RATE_HORROR);
+    fprintf(fl, "emotion_decay_rate_disgust = %d\n", CONFIG_EMOTION_DECAY_RATE_DISGUST);
+    fprintf(fl, "emotion_decay_rate_shame = %d\n", CONFIG_EMOTION_DECAY_RATE_SHAME);
+    fprintf(fl, "emotion_decay_rate_humiliation = %d\n\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
 
     fclose(fl);
 
@@ -1276,9 +1392,11 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
 
     write_to_output(d,
                     "%s9%s) Max Mob-Posted Quests (Previne Lag) : %s%d\r\n"
+                    "%sA%s) Emoções Influenciam Alinhamento (Experimental) : %s%s\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
-                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm);
+                    grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts), grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1296,12 +1414,57 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sC%s) Pain System Configuration\r\n"
                     "%sD%s) Memory System Configuration\r\n"
                     "%sE%s) Group Behavior Thresholds\r\n"
+                    "%sF%s) Combat Behavior (Anger/Pain Effects)\r\n"
+                    "%sG%s) Emotion Decay Rates\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
+}
+
+/* Display emotion decay rates submenu */
+static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Emotion Decay Rate Configuration\r\n"
+                    "---\r\n"
+                    "Global Settings:\r\n"
+                    "%s1%s) Global Decay Rate Multiplier: %s%d%%%s (50-200%%)\r\n"
+                    "%s2%s) Extreme Emotion Threshold: %s%d%s (emotions above this decay faster)\r\n"
+                    "%s3%s) Extreme Decay Multiplier: %s%d%%%s (100-300%%)\r\n"
+                    "\r\n"
+                    "Individual Emotion Base Decay Rates (0-10):\r\n"
+                    "%s4%s) Fear Decay Rate: %s%d%s\r\n"
+                    "%s5%s) Anger Decay Rate: %s%d%s\r\n"
+                    "%s6%s) Happiness Decay Rate: %s%d%s\r\n"
+                    "%s7%s) Sadness Decay Rate: %s%d%s\r\n"
+                    "%s8%s) Pain Decay Rate: %s%d%s (should be faster)\r\n"
+                    "%s9%s) Horror Decay Rate: %s%d%s (medium fast)\r\n"
+                    "%sA%s) Disgust Decay Rate: %s%d%s\r\n"
+                    "%sB%s) Shame Decay Rate: %s%d%s (slower)\r\n"
+                    "%sC%s) Humiliation Decay Rate: %s%d%s (slower)\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.decay_rate_multiplier, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_fear, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_anger, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_happiness, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_sadness, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_pain, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_horror, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_disgust, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_shame, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_humiliation, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_EMOTION_DECAY_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -2694,6 +2857,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_MAX_MOB_POSTED_QUESTS;
                     return;
 
+                case 'a':
+                case 'A':
+                    /* Only allow toggling if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        TOGGLE_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts);
+                    } else {
+                        write_to_output(
+                            d, "\r\nEmotion-alignment shifts require mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
+
                 case '0':
                 case 'q':
                 case 'Q':
@@ -2757,12 +2931,16 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'A':
                     write_to_output(d,
                                     "\r\nVisual Indicator Thresholds (0-100):\r\n"
-                                    "1) Fear Display Threshold : %d\r\n"
-                                    "2) Anger Display Threshold : %d\r\n"
-                                    "3) Happiness Display Threshold : %d\r\n"
-                                    "4) Sadness Display Threshold : %d\r\n"
-                                    "5) Horror Display Threshold : %d\r\n"
-                                    "6) Pain Display Threshold : %d\r\n"
+                                    "Basic Emotions:\r\n"
+                                    "  1) Fear      : %d   2) Anger     : %d   3) Happiness : %d\r\n"
+                                    "  4) Sadness   : %d   5) Horror    : %d   6) Pain      : %d\r\n"
+                                    "Social/Moral Emotions:\r\n"
+                                    "  7) Compassion: %d   8) Courage   : %d   9) Curiosity : %d\r\n"
+                                    "  A) Disgust   : %d   B) Envy      : %d   C) Excitement: %d\r\n"
+                                    "Relationship Emotions:\r\n"
+                                    "  D) Friendship: %d   E) Greed     : %d   F) Humiliation: %d\r\n"
+                                    "  G) Love      : %d   H) Loyalty   : %d   I) Pride     : %d\r\n"
+                                    "  J) Shame     : %d   K) Trust     : %d\r\n"
                                     "Q) Return to Emotion Menu\r\n"
                                     "Enter your choice : ",
                                     OLC_CONFIG(d)->emotion_config.display_fear_threshold,
@@ -2770,7 +2948,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                     OLC_CONFIG(d)->emotion_config.display_happiness_threshold,
                                     OLC_CONFIG(d)->emotion_config.display_sadness_threshold,
                                     OLC_CONFIG(d)->emotion_config.display_horror_threshold,
-                                    OLC_CONFIG(d)->emotion_config.display_pain_threshold);
+                                    OLC_CONFIG(d)->emotion_config.display_pain_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_compassion_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_courage_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_curiosity_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_disgust_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_envy_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_excitement_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_friendship_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_greed_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_humiliation_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_love_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_loyalty_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_pride_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_shame_threshold,
+                                    OLC_CONFIG(d)->emotion_config.display_trust_threshold);
                     OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_SUBMENU;
                     return;
 
@@ -2865,6 +3057,48 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_EMOTION_GROUP_SUBMENU;
                     return;
 
+                case 'f':
+                case 'F':
+                    write_to_output(d,
+                                    "\r\nCombat Behavior Configuration:\r\n"
+                                    "Anger Effects:\r\n"
+                                    "  1) Anger High Threshold (0-100) : %d\r\n"
+                                    "  2) Anger Damage Bonus (%%) : %d\r\n"
+                                    "  3) Anger Attack Bonus (%%) : %d\r\n"
+                                    "Pain Effects:\r\n"
+                                    "  4) Pain Low Threshold (0-100) : %d\r\n"
+                                    "  5) Pain Moderate Threshold (0-100) : %d\r\n"
+                                    "  6) Pain High Threshold (0-100) : %d\r\n"
+                                    "Pain Accuracy Penalties (THAC0):\r\n"
+                                    "  7) Low Pain Penalty : %d\r\n"
+                                    "  8) Moderate Pain Penalty : %d\r\n"
+                                    "  9) High Pain Penalty : %d\r\n"
+                                    "Pain Damage Penalties (%%):\r\n"
+                                    "  A) Low Pain Damage Penalty : %d\r\n"
+                                    "  B) Moderate Pain Damage Penalty : %d\r\n"
+                                    "  C) High Pain Damage Penalty : %d\r\n"
+                                    "Q) Return to Emotion Menu\r\n"
+                                    "Enter your choice : ",
+                                    OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold,
+                                    OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus,
+                                    OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod,
+                                    OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high);
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_SUBMENU;
+                    return;
+
+                case 'g':
+                case 'G':
+                    cedit_disp_emotion_decay_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -2941,6 +3175,73 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '6':
                     write_to_output(d, "\r\nEnter Pain Display Threshold (0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_PAIN_THRESHOLD;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Compassion Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_COMPASSION_THRESHOLD;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Courage Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_COURAGE_THRESHOLD;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Curiosity Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_CURIOSITY_THRESHOLD;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Disgust Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_DISGUST_THRESHOLD;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Envy Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_ENVY_THRESHOLD;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter Excitement Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD;
+                    return;
+                case 'd':
+                case 'D':
+                    write_to_output(d, "\r\nEnter Friendship Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD;
+                    return;
+                case 'e':
+                case 'E':
+                    write_to_output(d, "\r\nEnter Greed Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_GREED_THRESHOLD;
+                    return;
+                case 'f':
+                case 'F':
+                    write_to_output(d, "\r\nEnter Humiliation Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_HUMILIATION_THRESHOLD;
+                    return;
+                case 'g':
+                case 'G':
+                    write_to_output(d, "\r\nEnter Love Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_LOVE_THRESHOLD;
+                    return;
+                case 'h':
+                case 'H':
+                    write_to_output(d, "\r\nEnter Loyalty Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_LOYALTY_THRESHOLD;
+                    return;
+                case 'i':
+                case 'I':
+                    write_to_output(d, "\r\nEnter Pride Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_PRIDE_THRESHOLD;
+                    return;
+                case 'j':
+                case 'J':
+                    write_to_output(d, "\r\nEnter Shame Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_SHAME_THRESHOLD;
+                    return;
+                case 'k':
+                case 'K':
+                    write_to_output(d, "\r\nEnter Trust Display Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_TRUST_THRESHOLD;
                     return;
                 case 'q':
                 case 'Q':
@@ -3134,6 +3435,130 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '4':
                     write_to_output(d, "\r\nEnter Envy High Threshold (refuse better-equipped, 0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_GROUP_ENVY_HIGH_THRESHOLD;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_COMBAT_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Anger High Threshold (increased damage/attacks, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Anger Damage Bonus (%%, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_ANGER_DAMAGE_BONUS;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Anger Attack Bonus (extra attack chance %%, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_ANGER_ATTACK_BONUS;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Pain Low Threshold (minor penalties, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_LOW_THRESHOLD;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Pain Moderate Threshold (significant penalties, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Pain High Threshold (severe penalties, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Low Pain Accuracy Penalty (THAC0, 0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Moderate Pain Accuracy Penalty (THAC0, 0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter High Pain Accuracy Penalty (THAC0, 0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Low Pain Damage Penalty (%%, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Moderate Pain Damage Penalty (%%, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter High Pain Damage Penalty (%%, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_DECAY_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Global Decay Rate Multiplier (50-200%%) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_MULTIPLIER;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Extreme Emotion Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_EXTREME_EMOTION_THRESHOLD;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Extreme Decay Multiplier (100-300%%) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_EXTREME_DECAY_MULTIPLIER;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Fear Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_FEAR;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Anger Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_ANGER;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Happiness Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HAPPINESS;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Sadness Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_SADNESS;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Pain Decay Rate (0-10, should be faster) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_PAIN;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Horror Decay Rate (0-10, medium fast) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HORROR;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Disgust Decay Rate (0-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_DISGUST;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Shame Decay Rate (0-10, should be slower) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_SHAME;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter Humiliation Decay Rate (0-10, should be slower) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HUMILIATION;
                     return;
                 case 'q':
                 case 'Q':
@@ -3770,6 +4195,76 @@ void cedit_parse(struct descriptor_data *d, char *arg)
             cedit_disp_emotion_menu(d);
             break;
 
+        case CEDIT_EMOTION_DISPLAY_COMPASSION_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_COURAGE_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_CURIOSITY_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_DISGUST_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_ENVY_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_GREED_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_HUMILIATION_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_LOVE_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_LOYALTY_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_PRIDE_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_SHAME_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_DISPLAY_TRUST_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
         /* Emotion Flee Thresholds */
         case CEDIT_EMOTION_FLEE_FEAR_LOW_THRESHOLD:
             OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = LIMIT(atoi(arg), 0, 100);
@@ -3955,6 +4450,128 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_EMOTION_GROUP_ENVY_HIGH_THRESHOLD:
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = LIMIT(atoi(arg), 0, 100);
             cedit_disp_emotion_menu(d);
+            break;
+
+        /* Combat Behavior Configuration */
+        case CEDIT_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_ANGER_DAMAGE_BONUS:
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_ANGER_ATTACK_BONUS:
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_LOW_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW:
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD:
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH:
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW:
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD:
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        case CEDIT_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH:
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_menu(d);
+            break;
+
+        /* Emotion Decay Rate Configuration */
+        case CEDIT_EMOTION_DECAY_RATE_MULTIPLIER:
+            OLC_CONFIG(d)->emotion_config.decay_rate_multiplier = LIMIT(atoi(arg), 50, 200);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_EXTREME_EMOTION_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_EXTREME_DECAY_MULTIPLIER:
+            OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier = LIMIT(atoi(arg), 100, 300);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_FEAR:
+            OLC_CONFIG(d)->emotion_config.decay_rate_fear = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_ANGER:
+            OLC_CONFIG(d)->emotion_config.decay_rate_anger = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HAPPINESS:
+            OLC_CONFIG(d)->emotion_config.decay_rate_happiness = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_SADNESS:
+            OLC_CONFIG(d)->emotion_config.decay_rate_sadness = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_PAIN:
+            OLC_CONFIG(d)->emotion_config.decay_rate_pain = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HORROR:
+            OLC_CONFIG(d)->emotion_config.decay_rate_horror = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_DISGUST:
+            OLC_CONFIG(d)->emotion_config.decay_rate_disgust = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_SHAME:
+            OLC_CONFIG(d)->emotion_config.decay_rate_shame = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_HUMILIATION:
+            OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
             break;
 
         default: /* We should never get here, but just in
