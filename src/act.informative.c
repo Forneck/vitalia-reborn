@@ -1757,11 +1757,16 @@ ACMD(do_affects)
                 max_duration = aff2->duration;
         }
 
-        if (max_duration == -1) {
+        if (aff->spell == SPELL_STONESKIN) {
+            int points = get_stoneskin_points(ch);
+            snprintf(duration_buf, sizeof(duration_buf), "%d pt%s", points, points == 1 ? "" : "s");
+        } else if (max_duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
             snprintf(duration_buf, sizeof(duration_buf), "%d h%s", max_duration, (max_duration == 1) ? "" : "s");
         }
+
+
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
         send_to_char(ch, "  \tW%s\tn \tW[\tc%s\tW]\tn\r\n", skill_name(aff->spell), duration_buf);
