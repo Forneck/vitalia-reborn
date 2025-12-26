@@ -1,45 +1,44 @@
 #27800
-Ocean Pier~
-   You are on what once was a very busy ocean pier.  With the advent of tele-
-portation, however, it is seldom used.  Stacks of lobster crates and fishnets
-lie along the walk, and the cutting, salty smell of the ocean stings your nose.
-You feel a sense of rejuvenation as you stare out into the sea.  You know many
-adventures lie ahead.
+Píer do Oceano~
+   Você está no que antes era um píer oceânico muito movimentado. Com o advento
+do teletransporte, no entanto, ele é raramente usado. Pilhas de caixas de
+lagosta e redes de pesca jazem ao longo da caminhada, e o cheiro cortante e
+salgado do oceano pica seu nariz. Você sente uma sensação de rejuvenescimento
+ao contemplar o mar. Você sabe que muitas aventuras estão por vir.
 ~
 278 0 0 0 0 1
 D0
-To your north you can see the deep, wide ocean.
+Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 ~
 0 0 27802
 D3
-To your west you can see a dark alley with a fishery.
+Ao seu oeste você pode ver um beco escuro com uma peixaria.
 ~
 ~
 0 0 -1
 E
-fishnets nets~
-   The fishnets are old and are turning into dust; large holes open to the
-sides.  They don't look sturdy enough to use.
+redes pesca~
+   As redes de pesca são velhas e estão virando pó; grandes buracos se abrem
+nas laterais. Elas não parecem resistentes o suficiente para usar.
 ~
 E
-lobster crates~
-   The lobster crates are old and rotting; they look as if they couldn't hold a
-sardine.
+caixas lagosta~
+   As caixas de lagosta são velhas e apodrecidas; elas parecem que não
+conseguiriam segurar uma sardinha.
 ~
 E
-credits info~
-   This is Oceania Proper, part one of a 5-part area called Oceania General. I
-have completed 2 pars of this area, and am giving itto the general public. All
-I ask is that you give me proper credit
-you may make any changes you feel are
-necessary, but try to keep it in the general theme I gave it. :) I'm giving it
-to you to use, not to copy.
-Questor, Lord of Water, StrangeMUD, sleepy.cc.utexas.edu 9332
+creditos info~
+   Esta é Oceânia Própria, parte um de uma área de 5 partes chamada Oceânia
+Geral. Completei 2 partes desta área, e estou dando ao público geral. Tudo
+que peço é que me dê o devido crédito. Você pode fazer quaisquer mudanças que
+julgar necessárias, mas tente mantê-la no tema geral que dei. :) Estou dando
+para você usar, não copiar.
+Questor, Senhor das Águas, StrangeMUD, sleepy.cc.utexas.edu 9332
 Kenneth Cavness.
-Oceania Proper, part 1 of a 5 part area. By Questor of StrangeMUD.
-Links: 00w alley/fishery
-01n island/ship, 13e white beach, 18s pier on stilts
+Oceânia Própria, parte 1 de uma área de 5 partes. Por Questor do StrangeMUD.
+Ligações: 00w beco/peixaria
+01n ilha/navio, 13e praia branca, 18s píer sobre palafitas
 ~
 S
 #27801

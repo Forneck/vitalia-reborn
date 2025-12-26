@@ -1,28 +1,28 @@
 #27800
-Sea Serpent Fireball - 27801~
+Bola de Fogo da Serpente Marinha - 27801~
 0 k 5
 ~
 if %actor.is_pc%
-  emote utters the words, 'hisssssss'.
+  emote pronuncia as palavras, 'hisssssss'.
   dg_cast 'fireball' %actor%
 end
 ~
 #27802
-Leviathan - 27803~
+Leviatã - 27803~
 0 k 5
 ~
 if %actor.is_pc%
   switch %random.3%
     case 1
-      emote utters the words, 'transvecta aqua'.
-      %echo% a tidal wave smashes into %actor.name%.
+      emote pronuncia as palavras, 'transvecta aqua'.
+      %echo% uma onda gigante esmaga %actor.name%.
       %damage% %actor% 50
     break
     case 2
-      emote looks at you with the deepest sorrow.
+      emote olha para você com a mais profunda tristeza.
     break
     case 3
-      emote utters the words, 'transvecta talon'.
+      emote pronuncia as palavras, 'transvecta talon'.
       dg_cast 'cure critic' %self%
     break
     default

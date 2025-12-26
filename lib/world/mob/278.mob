@@ -1,12 +1,12 @@
 #27800
-yachtman boatman sailor man captain~
-the crusty old Captain~
-The crusty old Captain is here, fishing in the ocean.
+marinheiro velejador capitao velho~
+o velho Capitão encrostado~
+O velho Capitão encrostado está aqui, pescando no oceano.
 ~
-   The old captain has skin like leather, and a mottled complexion.  He looks
-positively ancient; yet his muscles and his countenance show that he is a
-capable warrior.  He glares at you menacingly, suggesting you go away unless
-you want to <Buy ship>
+   O velho capitão tem pele como couro, e uma compleição manchada. Ele parece
+positivamente antigo; mas seus músculos e seu semblante mostram que ele é um
+guerreiro capaz. Ele olha para você ameaçadoramente, sugerindo que você vá
+embora a menos que você queira <Comprar navio>
 ~
 222 0 0 0 16 0 0 0 125 E
 56 -3 -150 8d8+1800 6d6+20
@@ -14,13 +14,13 @@ you want to <Buy ship>
 8 8 1
 E
 #27801
-sea serpent seaserpent~
-the huge, green Sea Serpent~
-The huge, green Sea Serpent is swimming in the ocean, hunting for food.
+serpente marinha verde mar~
+a enorme Serpente Marinha verde~
+A enorme Serpente Marinha verde está nadando no oceano, caçando por comida.
 ~
-   You see a huge monster before you.  Its glowing green eyes and sharp teeth
-terrify you.  Green scales provide a spectacular defense armor.  They would
-probably make great armor on you too.
+   Você vê um monstro enorme diante de você. Seus olhos verdes brilhantes e
+dentes afiados te apavoram. Escamas verdes fornecem uma armadura de defesa
+espetacular. Elas provavelmente fariam uma ótima armadura em você também.
 ~
 72 0 0 0 16 0 0 0 -875 E
 54 -5 -140 8d8+1700 6d6+18
@@ -29,12 +29,13 @@ probably make great armor on you too.
 E
 T 27800
 #27802
-barracuda fish~
-a vicious barracuda~
-A mean barracuda is flopping around in the sea.
+barracuda peixe~
+uma barracuda feroz~
+Uma barracuda má está se debatendo no mar.
 ~
-   This horrid-looking fish looks very unhappy that you've infested his sea.
-His sharp, huge teeth show just how unhappy he is as they clamp into you.
+   Este peixe de aparência horrível parece muito infeliz porque você infestou
+seu mar. Seus dentes afiados e enormes mostram o quão infeliz ele está quando
+se cravam em você.
 ~
 72 0 0 0 0 0 0 0 -150 E
 52 -6 -130 7d7+1600 5d6+16
@@ -42,13 +43,14 @@ His sharp, huge teeth show just how unhappy he is as they clamp into you.
 8 8 0
 E
 #27803
-leviathan~
-the demigod, Leviathan~
-Leviathan is here, looking at you with a quizzical expression.
+leviata semideus~
+o semideus Leviatã~
+Leviatã está aqui, olhando para você com uma expressão curiosa.
 ~
-   Leviathan, the guardian of the seas--an eternal power guaranteed by the gods
-to keep an eye on all those travelers that enter Oceania.  He is totally green
-and has seaweed as his garb.  His ancient eyes belie his youthful countenance.
+   Leviatã, o guardião dos mares--um poder eterno garantido pelos deuses
+para ficar de olho em todos aqueles viajantes que entram em Oceânia. Ele é
+totalmente verde e tem algas marinhas como sua vestimenta. Seus olhos antigos
+desmentem seu semblante jovem.
 ~
 26 0 0 0 16 0 0 0 1000 E
 60 -8 -180 9d9+2100 7d7+25

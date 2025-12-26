@@ -1,119 +1,120 @@
 #27800
-scale armor~
-a beautiful green-metallic scale armor~
-A green scale armor has been tossed onto the ground.~
+armadura escamas escama~
+uma bela armadura de escamas verde-metálica~
+Uma armadura de escamas verdes foi jogada no chão.~
 ~
 9 agkn 0 0 0 ad 0 0 0 0 0 0 0
 7 0 0 0
 10 250 0 0
 E
-scale armor~
-   The scale armor is bright green; it looks like painted platinum, though why
-anyone would paint platinum is beyond you.  It looks very sturdy and as if it
-could be very helpful in battle.
+armadura escamas escama~
+   A armadura de escamas é verde brilhante; parece platina pintada, embora
+por que alguém pintaria platina esteja além de você. Ela parece muito
+resistente e como se pudesse ser muito útil em batalha.
 ~
 A
 17 -3
 A
 19 2
 #27801
-dragon's claws~
-a pair of dragon's claws~
-A pair of dragon's claws have been thrown to the ground.~
+garras dragao~
+um par de garras de dragão~
+Um par de garras de dragão foram jogadas no chão.~
 ~
 5 gjn 0 0 0 an 0 0 0 0 0 0 0
 0 2 7 11
 14 700 0 0
 E
-claws~
-   These claws are huge, and fit over your hands just as if they were gloves.
-Amazing that they are so large, and yet feel so light.
+garras~
+   Estas garras são enormes, e se encaixam sobre suas mãos como se fossem
+luvas. Incrível que sejam tão grandes, e ainda assim pareçam tão leves.
 ~
 A
 24 -2
 #27802
-staff illumination light~
-the Staff of Illumination~
-A staff lies here on the ground, collecting dust.~
+cajado iluminacao luz~
+o Cajado da Iluminação~
+Um cajado está aqui no chão, juntando poeira.~
 ~
 1 agkn 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 15 200 0 0
 E
-staff light~
-   This staff glows softly, yet casts a clear illumination all over the room.
-It is made of a strange purple metal, with two green sea serpants twining around
-the staff until they meet with extended teeth at the top.
+cajado luz~
+   Este cajado brilha suavemente, mas projeta uma iluminação clara por toda
+a sala. Ele é feito de um estranho metal roxo, com duas serpentes marinhas
+verdes entrelaçadas ao redor do cajado até se encontrarem com dentes
+estendidos no topo.
 ~
 A
 12 10
 A
 19 2
 #27803
-green gauntlets~
-some green gauntlets~
-A pair of green gauntlets has been left on the ground to tarnish.~
+manoplas verdes verde~
+umas manoplas verdes~
+Um par de manoplas verdes foi deixado no chão para enferrujar.~
 ~
 9 kn 0 0 0 ah 0 0 0 0 0 0 0
 7 0 0 0
 8 300 0 0
 E
-gauntlets~
-   These gauntlets are strong and amazingly light.  They would probably be very
-valuable in battle.  They are made of a strange, green metal that glints in the
-light.
+manoplas~
+   Estas manoplas são fortes e incrivelmente leves. Elas provavelmente seriam
+muito valiosas em batalha. Elas são feitas de um estranho metal verde que
+brilha à luz.
 ~
 #27804
-green leggings~
-some green leggings~
-A pair of greenish metal leggings have been plunked onto the ground.~
+perneiras verdes verde~
+umas perneiras verdes~
+Um par de perneiras de metal esverdeado foram largadas no chão.~
 ~
 9 gkn 0 0 0 af 0 0 0 0 0 0 0
 5 0 0 0
 12 150 0 0
 E
-runes inscriptions~
-   The runes have faded away to the point where they are unreadable.  The only
-phrase you can work out is "Forward to Orlana.  "
+runas inscricoes~
+   As runas desapareceram a ponto de serem ilegíveis. A única frase que
+você consegue decifrar é "Avante para Orlana. "
 ~
 E
-leggings green~
-   These leggings are made of a strange green-tinted metal.  Strange
-inscriptions and runes run up the sides.
+perneiras verdes verde~
+   Estas perneiras são feitas de um estranho metal com tonalidade verde.
+Estranhas inscrições e runas correm pelos lados.
 ~
 A
 2 1
 A
 4 -1
 #27805
-crown coral~
-the Coral Crown~
-A crown made of red and blue coral has been unwisely thrown to the ground.~
+coroa coral~
+a Coroa de Coral~
+Uma coroa feita de coral vermelho e azul foi imprudentemente jogada no chão.~
 ~
 9 gikn 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 10 250 0 0
 E
-crown pearls~
-   This crown is made of beautiful red and blue coral; pearls line the sharply-
-pointed top.  It positively prickles with majick.
+coroa perolas~
+   Esta coroa é feita de belo coral vermelho e azul; pérolas alinham o topo
+pontiagudo. Ela positivamente formiga de magia.
 ~
 A
 4 1
 A
 12 15
 #27806
-crystal trident~
-the Crystal Trident~
-A trident, made of crystal, lies on the ground.~
+tridente cristal~
+o Tridente de Cristal~
+Um tridente, feito de cristal, está no chão.~
 ~
 5 aghkn 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 11
 24 950 0 0
 E
-trident hoe crystal~
-   This trident is of exquisite craftsmanship; though it is made of crystal, it
-is rock-hard.  It looks quite unbreakable.
+tridente enxada cristal~
+   Este tridente é de artesanato requintado; embora seja feito de cristal, é
+duro como pedra. Parece bastante inquebrável.
 ~
 A
 18 2
