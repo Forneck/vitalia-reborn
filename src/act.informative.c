@@ -830,7 +830,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             }
         }
 
-        send_to_char(ch, "%c%s", UPPER(*i->player.short_descr), i->player.short_descr + 1);
+        send_to_char(ch, "%s%c%s", CCYEL(ch, C_NRM), UPPER(*i->player.short_descr), i->player.short_descr + 1);
     } else {
         if (IS_DEAD(i))
             send_to_char(ch, "O espírito de ");
