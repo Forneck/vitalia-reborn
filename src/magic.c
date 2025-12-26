@@ -86,7 +86,7 @@ void affect_update(void)
                         if (!af->next || (af->next->spell != af->spell) || (af->next->duration > 0)) {
                             spell = get_spell_by_vnum(af->spell);
                             if (spell && spell->messages.wear_off)
-                                send_to_char(i, "%s\r\n", spell->messages.wear_off);
+                                act(spell->messages.wear_off, FALSE, i, 0, 0, TO_CHAR);
                         }
                     }
                     affect_remove(i, af);
