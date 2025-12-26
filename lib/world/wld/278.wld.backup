@@ -227,24 +227,24 @@ sudeste você pode ver uma ilha enorme.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27809
 D1
-Ao seu leste está o oceano profundo e vasto.
+To your east is the deep, wide ocean.
 ~
 ~
 0 0 27818
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27811
 E
 southeast island~
-   Ao seu southeast you see a dark island with a blindingly brightly white sand
-beach.  A ilha parece muito interessante; talvez você deva visitá-la?
+   To your southeast you see a dark island with a blindingly brightly white sand
+beach.  The island looks very interesting; perhaps you should visit it?
 ~
 S
 #27811
@@ -326,7 +326,7 @@ Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 0 0 27813
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27815
@@ -442,525 +442,525 @@ S
 #27821
 Em uma corrente norte-sul no oceano~
    Você está no oceano. Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27822
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27816
 S
 #27822
-Em correntes cruzadas no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+At cross-currents in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27823
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27827
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27821
 S
 #27823
-Em uma curva acentuada na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+At a sharp turn in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
 D1
-Ao seu leste está o oceano profundo e vasto.
+To your east is the deep, wide ocean.
 ~
 ~
 0 0 27828
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27822
 S
 #27824
-Em uma curva na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  Você pode ir para o norte ou leste.
+At a bend in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  You can go to your north or your east.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27830
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27829
 S
 #27825
-Em correntes cruzadas~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente parece transitável para oeste e norte.  A huge,
-turbilhão agitado fica diretamente ao seu leste.
+At a cross-currents~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current looks passable to the west and north.  A huge,
+churning whirlpool lies directly to your east.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27826
 D1
-Ao seu leste is a huge, churning whirlpool. Not even the biggest ship in the
+To your east is a huge, churning whirlpool. Not even the biggest ship in the
 world could survive this one.~
 ~
 0 0 27850
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27816
 S
 #27826
-Em correntes cruzadas no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+At cross-currents in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27827
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27836
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27825
 S
 #27827
-No oceano~
-   Você está no oceano. Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso. Você percebe que isso será trabalho árduo. Gaivotas
-cantam acima, e baleias jorram água longe no horizonte. O vento sopra
-constantemente aqui. A corrente curva para o seu sul. A única outra direção
-disponível é oeste.
+In the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current bends to your south.  The only other way
+available is west.
 ~
 278 0 0 0 0 7
 D2
-Ao seu sul está o oceano profundo e vasto.
+To your south is the deep, wide ocean.
 ~
 ~
 0 0 27826
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27822
 S
 #27828
-Em correntes cruzadas~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente continua para leste e oeste, e parece transitável para
-o norte.
+At a cross-currents~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current continues east and west, and looks passable to
+the north.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27829
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27832
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27823
 S
 #27829
-No oceano~
-   Você está no oceano. Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso. Você percebe que isso será trabalho árduo. Gaivotas
-cantam acima, e baleias jorram água longe no horizonte. O vento sopra
-constantemente aqui. A corrente curva para o seu sul. A única outra direção
-disponível é oeste.
+In the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current bends to your south.  The only other way
+available is west.
 ~
 278 0 0 0 0 7
 D2
-Ao seu sul está o oceano profundo e vasto.
+To your south is the deep, wide ocean.
 ~
 ~
 0 0 27828
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27824
 S
 #27830
-Em correntes cruzadas no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para leste.
+At cross-currents in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current keeps you from going east.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27837
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27824
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27835
 S
 #27831
-Em uma corrente norte-sul no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
+At a north-south current in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27832
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27836
 S
 #27832
-Em correntes cruzadas no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para leste.
+At cross-currents in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current keeps you from going east.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27833
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27831
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27828
 S
 #27833
-Em uma corrente norte-sul no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
+At a north-south current in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27834
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27832
 S
 #27834
-No oceano~
-   Você está no oceano. Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso. Você percebe que isso será trabalho árduo. Gaivotas
-cantam acima, e baleias jorram água longe no horizonte. O vento sopra
-constantemente aqui. A corrente curva para o seu sul. A única outra direção
-disponível é oeste.
+In the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current bends to your south.  The only other way
+available is west.
 ~
 278 0 0 0 0 7
 D2
-Ao seu sul está o oceano profundo e vasto.
+To your south is the deep, wide ocean.
 ~
 ~
 0 0 27833
 D3
-Ao seu oeste você pode ver uma bela ilha com uma enorme roseira ao redor dela.
-Infelizmente, está em construção agora, então você não chegará a lugar algum
-tentando ir até lá. :)
+To your west you can see a beautiful island with a huge rose bush around it.
+Unfortunately, it's under construction right now, so you won't get anywhere
+trying to go to it. :)
 ~
 ~
 0 0 27834
 S
 #27835
-Em correntes cruzadas no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+At cross-currents in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27843
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27830
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27820
 S
 #27836
-Em uma curva na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente curva para oeste e norte.
+At a bend in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current bends to your west and north.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27831
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27826
 S
 #27837
-Em uma curva acentuada na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+At a sharp turn in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
 D1
-Ao seu leste está o oceano profundo e vasto.
+To your east is the deep, wide ocean.
 ~
 ~
 0 0 27838
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27830
 S
 #27838
-Em uma curva na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente curva para oeste e norte.
+At a bend in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current bends to your west and north.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27841
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27837
 S
 #27839
-No porto para a Ilha Atemporal~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here, e você pode ver uma bela ilha ao seu sul.
+At the harbor to Timeless Island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here, and you can see a beautiful island to your south.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27840
 D2
-Ao seu sul você pode ver the beautiful Timeless Island com suas roseiras.
-Talvez você deva voltar quando estiver concluído.
+To your south you can see the beautiful Timeless Island with its rose bushes.
+Perhaps you should come back when it's completed.
 ~
 ~
 0 0 27839
 S
 #27840
-Em uma corrente norte-sul no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
+At a north-south current in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27842
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27839
 S
 #27841
-Em uma curva acentuada na corrente~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+At a sharp turn in the current~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
+constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
 D1
-Ao seu leste está o oceano profundo e vasto.
+To your east is the deep, wide ocean.
 ~
 ~
 0 0 27842
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27838
 S
 #27842
-Na entrada de um porto~
-   Você está em águas mais calmas aqui, pois vê terra até onde consegue olhar.  A
-enorme montanha se eleva ao seu norte, e o porto parece terminar em uma enorme caverna
-na montanha. Parece que você encontrou um novo continente.
+At the entrance to a harbor~
+   You are in calmer waters here, as you see land as far as you can look.  A
+huge mountain rises to your north, and the harbor seems to end at a huge cave
+in the mountain.  It appears as if you have found a new continent.
 ~
 278 0 0 0 0 7
 D0
-Seria difícil entrar em uma área não construída. Você pode querer tentar novamente
-quando estiver. Montanha do Enigma e o Novo Continente serão entregues em cerca de um
-mês.
+It would be hard to enter an unconstructed area. You might want to try again
+when it is. Riddle Mountain and the New Continent to be delivered in about a
+month.
 ~
 ~
 0 0 27842
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27840
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27841
 S
 #27843
-Em uma corrente norte-sul no oceano~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
-cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
+At a north-south current in the ocean~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from off-course.  You realize this will be hard work.  Seagulls
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27844
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27835
 S
 #27844
-Contornando uma ilha~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-ilha ao seu norte.
+Going around an island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
+island to your north.
 ~
 278 0 0 0 0 7
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27843
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27845
 S
 #27845
-Contornando uma ilha~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-ilha ao seu nordeste.
+Going around an island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
+island to your northeast.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27846
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27844
@@ -971,21 +971,21 @@ of it.
 ~
 S
 #27846
-Contornando uma ilha~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
+Going around an island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
 island to your southeast.
 ~
 278 0 0 0 0 7
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27847
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27845
@@ -996,21 +996,21 @@ of it.
 ~
 S
 #27847
-Contornando uma ilha~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
+Going around an island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
 island to your south.
 ~
 278 0 0 0 0 7
 D1
-Ao seu leste você pode ver o oceano profundo e vasto.
+To your east you can see the deep, wide ocean.
 ~
 ~
 0 0 27848
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27846
@@ -1021,21 +1021,21 @@ of it.
 ~
 S
 #27848
-Contornando uma ilha~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
+Going around an island~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
 island to your southwest.
 ~
 278 0 0 0 0 7
 D2
-Ao seu sul você pode ver o oceano profundo e vasto.
+To your south you can see the deep, wide ocean.
 ~
 ~
 0 0 27849
 D3
-Ao seu oeste você pode ver o oceano profundo e vasto.
+To your west you can see the deep, wide ocean.
 ~
 ~
 0 0 27847
@@ -1046,16 +1046,16 @@ of it.
 ~
 S
 #27849
-Em frente a um píer insular~
-   Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
-vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
+In front of an island pier~
+   You are on the ocean.  Large waves rock the boat, and you have a hard time
+keeping it from going off-course.  You realize this will be hard work.
+Seagulls chirp above, and whales spurt water far off into the horizon.  The
+wind blows constantly here.  The current appears to be winding around a large
 island to your west.  An island pier lies to your west.
 ~
 278 0 0 0 0 7
 D0
-Ao seu norte você pode ver o oceano profundo e vasto.
+To your north you can see the deep, wide ocean.
 ~
 ~
 0 0 27848
@@ -1071,9 +1071,9 @@ of it.
 ~
 S
 #27850
-A Armadilha de Scila~
-   A água aqui gira em um turbilhão agitado. Por mais que você tente, você
-não consegue escapar da massa fervente de água--Scila te pegou.
+Schylla's Trap~
+   The water here swirls into a churning whirlpool.  Try as you might, you
+cannot escape the boiling mass of water--Schylla has got you.
 ~
 278 516 0 0 0 1
 S
