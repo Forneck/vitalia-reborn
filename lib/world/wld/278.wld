@@ -46,7 +46,7 @@ In the Ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from going off-course.  You realize that this will be hard work.
 Seagulls chirp above, and whales spurt water far off into the horizon.  The
-wind blows constantly here.  You can go your south.  To your north, you notice
+wind blows constantly here.  You can go south.  To your north, you notice
 a small island with a ship that appears to have been moored.  It looks board-
 able.
 ~
@@ -66,7 +66,7 @@ S
 In the ocean by the Ocean Pier~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 const- antly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
@@ -90,7 +90,7 @@ S
 In the Ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constantly here.  You can only go south and west.
 ~
 278 0 0 0 0 7
@@ -109,7 +109,7 @@ S
 In the Ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 const- antly here.  The current allows passage only to the north and the south.
 
 ~
@@ -129,7 +129,7 @@ S
 At a bend in the current on the ocean.~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allows you to go north or east.
 ~
 278 0 0 0 0 7
@@ -148,7 +148,7 @@ S
 At another bend in the current on the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allows passage to the west and south.
 ~
 278 0 0 0 0 7
@@ -167,7 +167,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  To your west, a frothy system of cross-currents makes the
 passage look too dangerous to cross; the current is impassable to your south.
 ~
@@ -200,7 +200,7 @@ S
 In the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current bends to your south.  The only other way
 available is west.
 ~
@@ -220,7 +220,7 @@ S
 At cross-currents in the deep, wide ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  You can go every direction but south.  To your southeast
 you can see a huge island.
 ~
@@ -250,7 +250,7 @@ S
 At a sharp turn in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
@@ -269,7 +269,7 @@ S
 At a sharp turn in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current is too strong to go to the north, and a huge
 island lies to your east.
 ~
@@ -289,7 +289,7 @@ S
 In front of a pier at an island~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  A huge island lies to your east, and the current continues
 to your south and west.
 ~
@@ -314,7 +314,7 @@ S
 At the beginning of a strong east-west current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  You see a huge island to your northeast; the current allows
 passage to the north and east.
 ~
@@ -334,7 +334,7 @@ S
 On a strong east-west current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current goes east and west.
 ~
 278 0 0 0 0 7
@@ -353,7 +353,7 @@ S
 At a cross-currents~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current continues east and west, and looks passable to
 the north.
 ~
@@ -378,7 +378,7 @@ S
 In front of an island port~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize that this will be hard work.
-Seagulls chirp above, and wales spurt water far off into the horizon.  The wind
+Seagulls chirp above, and whales spurt water far off into the horizon.  The wind
 blows constantly here.  To your north you can make out a pier high in the
 trees; the current continues to your north and west.
 ~
@@ -404,7 +404,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -423,7 +423,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -442,7 +442,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -461,7 +461,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
@@ -485,7 +485,7 @@ S
 At a sharp turn in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
@@ -504,7 +504,7 @@ S
 At a bend in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  You can go to your north or your east.
 ~
 278 0 0 0 0 7
@@ -523,7 +523,7 @@ S
 At a cross-currents~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current looks passable to the west and north.  A huge,
 churning whirlpool lies directly to your east.
 ~
@@ -548,7 +548,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
@@ -572,7 +572,7 @@ S
 In the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current bends to your south.  The only other way
 available is west.
 ~
@@ -592,7 +592,7 @@ S
 At a cross-currents~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current continues east and west, and looks passable to
 the north.
 ~
@@ -617,7 +617,7 @@ S
 In the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current bends to your south.  The only other way
 available is west.
 ~
@@ -637,7 +637,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current keeps you from going east.
 ~
 278 0 0 0 0 7
@@ -661,7 +661,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -680,7 +680,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current keeps you from going east.
 ~
 278 0 0 0 0 7
@@ -704,7 +704,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -723,7 +723,7 @@ S
 In the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current bends to your south.  The only other way
 available is west.
 ~
@@ -745,7 +745,7 @@ S
 At cross-currents in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current keeps you from going west.
 ~
 278 0 0 0 0 7
@@ -788,7 +788,7 @@ S
 At a sharp turn in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
@@ -826,7 +826,7 @@ S
 At the harbor to Timeless Island~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here, and you can see a beautiful island to your south.
 ~
 278 0 0 0 0 7
@@ -846,7 +846,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
@@ -865,7 +865,7 @@ S
 At a sharp turn in the current~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.  The current allowes passage only to the east and south.
 ~
 278 0 0 0 0 7
@@ -909,7 +909,7 @@ S
 At a north-south current in the ocean~
    You are on the ocean.  Large waves rock the boat, and you have a hard time
 keeping it from off-course.  You realize this will be hard work.  Seagulls
-chirp above, and wales spurt water far off into the horizon.  The wind blows
+chirp above, and whales spurt water far off into the horizon.  The wind blows
 constant- ly here.
 ~
 278 0 0 0 0 7
