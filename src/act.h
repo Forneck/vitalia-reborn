@@ -195,7 +195,7 @@ ACMD(do_unfollow);
 ACMD(do_wake);
 ACMD(do_meditate);
 ACMD(do_spy);
-void check_danger_sense(struct char_data *ch);
+int check_danger_sense(struct char_data *ch);
 
 int start_flying(struct char_data *ch);
 int stop_flying(struct char_data *ch);

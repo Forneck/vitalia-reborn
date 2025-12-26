@@ -1120,12 +1120,22 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     }
 
     if (!PLR_FLAGGED(ch, PLR_GHOST)) {
-        for (i = 0; i < NUM_OF_DIRS; i++)
-            if (EXIT(ch, i) && VALID_ROOM_RNUM(EXIT(ch, i)->to_room) &&
-                ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
-                send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
-                break;
-            }
+        int danger_shown = 0;
+
+        /* Try to use danger sense skill if available */
+        if (!IS_NPC(ch) && GET_SKILL(ch, SKILL_DANGER_SENSE)) {
+            danger_shown = check_danger_sense(ch);
+        }
+
+        /* If danger sense didn't trigger, check for simple danger message */
+        if (!danger_shown) {
+            for (i = 0; i < NUM_OF_DIRS; i++)
+                if (EXIT(ch, i) && VALID_ROOM_RNUM(EXIT(ch, i)->to_room) &&
+                    ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+                    send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
+                    break;
+                }
+        }
     }
 
     /* Show mana density if character has detect magic active */
@@ -1361,10 +1371,6 @@ ACMD(do_look)
         }
         if (!*arg) { /* "look" alone, without an argument at all */
             look_at_room(ch, 1);
-            /* Check for danger sense after looking at the room */
-            if (!IS_NPC(ch) && GET_SKILL(ch, SKILL_DANGER_SENSE)) {
-                check_danger_sense(ch);
-            }
         } else if (is_abbrev(arg, "ceu") || is_abbrev(arg, "sky"))
             look_at_sky(ch);
         else if (is_abbrev(arg, "em") || is_abbrev(arg, "in"))
@@ -1765,8 +1771,6 @@ ACMD(do_affects)
         } else {
             snprintf(duration_buf, sizeof(duration_buf), "%d h%s", max_duration, (max_duration == 1) ? "" : "s");
         }
-
-
 
         /* Nome da magia em branco, duração em ciano escuro entre colchetes brancos */
         send_to_char(ch, "  \tW%s\tn \tW[\tc%s\tW]\tn\r\n", skill_name(aff->spell), duration_buf);
