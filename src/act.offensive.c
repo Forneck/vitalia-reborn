@@ -495,14 +495,14 @@ ACMD(do_flee)
     for (i = 0; i < 6; i++) {
         attempt = rand_number(0, DIR_COUNT - 1); /* Seleciona uma direção aleatória */
         if (CAN_GO(ch, attempt) && VALID_ROOM_RNUM(EXIT(ch, attempt)->to_room) &&
-            (!ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH) ||
-             !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_NOMOB))) {
-            
+            !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH) &&
+            !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_NOMOB)) {
+
             /* Check if danger sense prevents fleeing to this direction (death trap) */
             if (check_danger_sense_prevents_flee(ch, attempt)) {
                 continue; /* Danger sense prevented flee to death trap, try another direction */
             }
-            
+
             act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
             was_fighting = FIGHTING(ch);
 

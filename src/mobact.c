@@ -2587,6 +2587,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 return FALSE;
             }
 
+            /* Prevent mobs from entering death traps during normal wandering */
+            if (IS_NPC(ch) && ROOM_FLAGGED(to_room, ROOM_DEATH)) {
+                return FALSE;
+            }
+
             /* Safety check: Validate ch's room before zone comparison */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
                 return FALSE;
