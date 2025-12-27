@@ -3646,7 +3646,7 @@ void initialize_mob_climate_preferences(struct char_data *mob, room_rnum room)
     zone_rnum zone;
     struct weather_data *weather;
 
-    if (!IS_NPC(mob) || !mob->ai_data || room == NOWHERE || room >= top_of_world)
+    if (!IS_NPC(mob) || !mob->ai_data || room == NOWHERE || room > top_of_world)
         return;
 
     /* Only initialize if not already set (check for -1 default value) */
