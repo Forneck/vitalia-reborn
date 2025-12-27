@@ -8,8 +8,8 @@ sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
 220 0 0 0 0 0 0 0 0 E
-20 14 -2 4d4+200 3d3+3
-200 40000
+18 16 -1 3d6+100 2d4+2
+120 28800
 8 8 0
 E
 T 26701
