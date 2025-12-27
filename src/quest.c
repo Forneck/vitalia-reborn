@@ -3618,18 +3618,20 @@ void init_mob_ai_data(struct char_data *mob)
     }
 
     /* Initialize climate preferences - these will be set to appropriate values
-     * when the mob is placed in a room during zone reset. Initialize to -1 (none)
+     * when the mob is placed in a room during zone reset. Initialize to -1 (none/unset)
      * to indicate they have not yet been set. */
     mob->ai_data->preferred_weather_sky = -1;
     mob->ai_data->preferred_temperature_range = -1;
     mob->ai_data->native_climate = -1;
     mob->ai_data->last_weather_sky = -1;
     mob->ai_data->weather_exposure_hours = 0;
+    mob->ai_data->seasonal_affective_trait = -1; /* Mark as uninitialized */
 
     /* Initialize Seasonal Affective Disorder (SAD) tendency
-     * If not specified in mob file, use level-based randomization: random(110 - level)
-     * This gives higher-level mobs lower SAD susceptibility (more experienced/resilient) */
-    if (mob->ai_data->seasonal_affective_trait == 0) {
+     * If not specified in mob file (defaults to -1), use level-based randomization: random(110 - level)
+     * This gives higher-level mobs lower SAD susceptibility (more experienced/resilient)
+     * Note: 0 is a valid value (no SAD), so we check for -1 to detect uninitialized state */
+    if (mob->ai_data->seasonal_affective_trait < 0) {
         int max_sad = MAX(0, 110 - GET_LEVEL(mob));
         mob->ai_data->seasonal_affective_trait = rand_number(0, max_sad);
     }
@@ -3644,7 +3646,7 @@ void initialize_mob_climate_preferences(struct char_data *mob, room_rnum room)
     zone_rnum zone;
     struct weather_data *weather;
 
-    if (!IS_NPC(mob) || !mob->ai_data || room == NOWHERE || room > top_of_world)
+    if (!IS_NPC(mob) || !mob->ai_data || room == NOWHERE || room >= top_of_world)
         return;
 
     /* Only initialize if not already set (check for -1 default value) */
