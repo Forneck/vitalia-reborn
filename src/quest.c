@@ -3619,13 +3619,18 @@ void init_mob_ai_data(struct char_data *mob)
 
     /* Initialize climate preferences - these will be set to appropriate values
      * when the mob is placed in a room during zone reset. Initialize to -1 (none/unset)
-     * to indicate they have not yet been set. */
-    mob->ai_data->preferred_weather_sky = -1;
-    mob->ai_data->preferred_temperature_range = -1;
-    mob->ai_data->native_climate = -1;
+     * to indicate they have not yet been set, but preserve any non-zero prototype/espec
+     * values that may already be present. */
+    if (mob->ai_data->preferred_weather_sky == 0)
+        mob->ai_data->preferred_weather_sky = -1;
+    if (mob->ai_data->preferred_temperature_range == 0)
+        mob->ai_data->preferred_temperature_range = -1;
+    if (mob->ai_data->native_climate == 0)
+        mob->ai_data->native_climate = -1;
     mob->ai_data->last_weather_sky = -1;
     mob->ai_data->weather_exposure_hours = 0;
-    mob->ai_data->seasonal_affective_trait = -1; /* Mark as uninitialized */
+    if (mob->ai_data->seasonal_affective_trait == 0)
+        mob->ai_data->seasonal_affective_trait = -1; /* Mark as uninitialized if unset */
 
     /* Initialize Seasonal Affective Disorder (SAD) tendency
      * If not specified in mob file (defaults to -1), use level-based randomization: random(110 - level)
@@ -3655,7 +3660,12 @@ void initialize_mob_climate_preferences(struct char_data *mob, room_rnum room)
         return;
 
     zone = world[room].zone;
+    if (zone < 0 || zone > top_of_zone_table)
+        return;
+
     weather = zone_table[zone].weather;
+    if (!weather)
+        return;
 
     /* Set preferred weather based on current sky condition */
     if (mob->ai_data->preferred_weather_sky == -1) {

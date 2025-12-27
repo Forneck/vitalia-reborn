@@ -92,7 +92,7 @@ E
 
 ## Impact on Gameplay
 - Mobs now have diverse emotional responses to weather based on their preferences
-- Climate preferences affect mood through `affect_mob_by_weather()` in utils.c
+- Climate preferences affect mood through `apply_weather_to_mood()` in utils.c
 - Preferred conditions boost happiness and reduce negative emotions
 - Non-preferred conditions can increase discomfort, fear, or anger
 - SAD affects winter emotional responses (increased sadness/fear in winter)
