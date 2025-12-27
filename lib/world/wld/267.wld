@@ -853,200 +853,198 @@ O caminho alto continua adiante.
 ~
 0 0 26735
 D2
-A building of exquisite craftsmanship is to your south.
+Um edifício de trabalho artesanal requintado fica ao sul.
 ~
 ~
 1 26727 26791
 S
 #26738
-Trail of Terror~
-   This trail is covered by the skeletal ribs of a huge creature in some sort
-of diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the
-distance.  A soft chanting can be heard in the far distance, but you can see no
-sign of life.  Lonliness sends you into a panicky state.
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
 ~
 267 4 0 0 0 1
 D0
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26736
 D2
-A building made of a strange, purely black substance is to your south.
+Um edifício feito de uma substância estranha, puramente negra, fica ao sul.
 ~
-Temple of terror~
+Templo do terror~
 1 26728 26797
 E
-ribs skeleton~
-   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just
-not have to find out.  Each rib seems to be razer-sharp at the edges, and the
-bones have been cleaned to a perfect white.
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26739
-Vice Hill~
-   You stand at the zenith of a tall hill overlooking the entire island.  The
-view here would be breathtaking, were it not so sinister.  You can see a gooey,
-tarry brine to your north, and to all other directions a sinister, black forest
-is eerily silent.  If you look very carefully, you can see the harbours to your
-north and east.  The exits descend in all directions.
+Colina do Vício~
+   Você está no zênite de uma alta colina com vista para toda a ilha. A vista
+aqui seria de tirar o fôlego, não fosse tão sinistra. Você pode ver uma salmoura
+gosmenta de alcatrão ao norte, e em todas as outras direções uma floresta negra
+e sinistra está estranhamente silenciosa. Se você olhar com muito cuidado, pode
+ver os portos ao norte e leste. As saídas descem em todas as direções.
 ~
 267 0 0 0 0 4
 D0
-The hill descends down into a tarry road, filled with the gooey stuff.
+A colina desce até uma estrada de alcatrão, cheia da substância gosmenta.
 ~
 ~
 0 0 26709
 D1
-You can see the creepy road.
+Você pode ver a estrada assustadora.
 ~
 ~
 0 0 26706
 D2
-The road is much more rocky in this direction.
+A estrada é muito mais rochosa nesta direção.
 ~
 ~
 0 0 26710
 D3
-You see the strange beach road.
+Você vê a estranha estrada da praia.
 ~
 ~
 0 0 26705
 E
-brine tar goo sinister black forest harbour see view~
-   Nothing describes this island with more clarity than "horror".  All around
-you, you can sense evil, but you can't pinpoint why.  The entire island is quite
-silent--not a chirp can be heard.
+salmoura alcatrao alcatrão gosma sinistra negra floresta porto portos vista~
+   Nada descreve esta ilha com mais clareza do que "horror". Ao seu redor, você
+pode sentir o mal, mas não consegue identificar o porquê. A ilha inteira está
+muito silenciosa--nem um pio pode ser ouvido.
 ~
 S
 #26740
-Cliff Road~
-   The road is quite slippery here, and you can see to your far south what
-looks like a dropoff into absolute nothingness.  Rocks skitter as you slide
-around the road.  It really looks quite dangerous--the hill would be a much
-safer way to look at the view.
+Estrada do Penhasco~
+   A estrada é bastante escorregadia aqui, e você pode ver ao longe ao sul o que
+parece ser um precipício para o nada absoluto. Rochas deslizam enquanto você
+escorrega pela estrada. Realmente parece muito perigoso--a colina seria um
+caminho muito mais seguro para olhar a vista.
 ~
 267 0 0 0 0 5
 D0
-You can see the bottom of Vice Hill to your north. It looks comparatively safe.
+Você pode ver a base da Colina do Vício ao norte. Parece comparativamente seguro.
 ~
 ~
 0 0 26728
 D2
-The cliff road continues on, though I suggest you don't take it.
+A estrada do penhasco continua, embora eu sugira que você não a tome.
 ~
 ~
 0 0 26741
 E
-cliff~
-   You can't quite see it yet--all you can see is a line that extends across the
-horizon.
+penhasco~
+   Você ainda não consegue vê-lo completamente--tudo que pode ver é uma linha que
+se estende pelo horizonte.
 ~
 S
 #26741
-Cliff Road~
-   The road is even more slippery here, and you can see to your south what
-looks like a dropoff into absolute nothingness.  Rocks skitter as you slide
-around the road.  It really looks quite dangerous--you'd be much better going
-back--now.
+Estrada do Penhasco~
+   A estrada está ainda mais escorregadia aqui, e você pode ver ao sul o que
+parece ser um precipício para o nada absoluto. Rochas deslizam enquanto você
+escorrega pela estrada. Realmente parece muito perigoso--seria muito melhor
+voltar--agora.
 ~
 267 0 0 0 0 5
 D0
-You can still go back--it's a better idea to anyways.
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
 ~
 ~
 0 0 26740
 D2
-You ARE one for taking risks, aren't you?
+Você É de correr riscos, não é?
 ~
 ~
 0 0 26742
 E
-cliff~
-   You can now see a little of it.  It looks quite unstable.
+penhasco~
+   Você agora pode ver um pouco dele. Parece bastante instável.
 ~
 S
 #26742
-Cliff Road~
-   The road is quite slippery here, and you can see to your south what looks
-like a dropoff into absolute nothingness.  Rocks skitter as you slide around
-the road.  It really looks quite dangerous--you'd be much better going
-back--now.
+Estrada do Penhasco~
+   A estrada é bastante escorregadia aqui, e você pode ver ao sul o que parece
+ser um precipício para o nada absoluto. Rochas deslizam enquanto você escorrega
+pela estrada. Realmente parece muito perigoso--seria muito melhor voltar--agora.
 ~
 267 0 0 0 0 5
 D0
-You can still go back--it's a better idea to anyways.
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
 ~
 ~
 0 0 26741
 D2
-Don't say we didn't warn you. It's a cliff allright. A big and unsteady one.
+Não diga que não te avisamos. É um penhasco mesmo. Um grande e instável.
 ~
 ~
 0 0 26743
 E
-cliff~
-   You can see it.  It looks quite close.  It looks very dangerous.
+penhasco~
+   Você pode vê-lo. Parece bastante próximo. Parece muito perigoso.
 ~
 S
 #26743
-Cliff Road~
-   What a view!  If you weren't having such trouble staying up, you could see
-it much better.  Each step brings you closer to the edge--it looks very danger-
-ous, and the cliff's edge is quite close now.  The ground is beginning to shake
-under your weight.
+Estrada do Penhasco~
+   Que vista! Se você não estivesse tendo tanta dificuldade para se manter em
+pé, poderia vê-la muito melhor. Cada passo te traz mais perto da borda--parece
+muito perigoso, e a borda do penhasco está bem próxima agora. O chão está
+começando a tremer sob seu peso.
 ~
 267 0 0 0 0 5
 D0
-You can still go back--it's a better idea to anyways.
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
 ~
 ~
 0 0 26742
 D2
-It's the cliff's edge. The ground looks quite unsteady there.
+É a borda do penhasco. O chão parece bastante instável ali.
 ~
 ~
 0 0 26744
 E
-cliff~
-   Umm...  We've warned you quite enough.  Either go back, or face the
-consequences.
+penhasco~
+   Hmm... Nós te avisamos o suficiente. Ou volte, ou enfrente as consequências.
 ~
 S
 #26744
-Cliff's Edge~
-   The view is never better when you're seeing it from mid-air.  But you've
-only got a few seconds to see it, as you're squashed down below.  Too bad
-shrieks don't make you fly.
+Beira do Penhasco~
+   A vista nunca é melhor quando você está vendo-a do ar. Mas você tem apenas
+alguns segundos para vê-la, pois você é esmagado lá embaixo. Que pena que gritos
+não fazem você voar.
 ~
 267 516 0 0 0 5
 S
 T 26710
 #26745
-Entrance to the Building of Fear~
-   Low moans seem to come from the walls as you stand before the fallen
-entrance to a huge building.  The walls appear to be made of some kind of gray
-stone-- that, or they have turned gray with age.  A passageway opens to your
-east, but you can't see anything in the room, because of the darkness.
-Shadows cast weird angles everywhere.  A faded plaque has hangs from a nail in
-a far corner of the room.
+Entrada para o Edifício do Medo~
+   Gemidos baixos parecem vir das paredes enquanto você fica diante da entrada
+caída de um enorme edifício. As paredes parecem ser feitas de algum tipo de
+pedra cinza--isso, ou elas ficaram cinzas com a idade. Uma passagem se abre a
+leste, mas você não consegue ver nada na sala por causa da escuridão. Sombras
+lançam ângulos estranhos por toda parte. Uma placa desbotada pende de um prego
+em um canto distante da sala.
 ~
 267 0 0 0 0 0
 D1
-You can vaguly see some kind of picture or something on one of the walls...
+Você pode ver vagamente algum tipo de imagem ou algo em uma das paredes...
 ~
 ~
 0 0 26746
 D3
-The creepy road continues in that direction.
+A estrada assustadora continua naquela direção.
 ~
 ~
 0 0 26708
 E
-sign note plaque~
-                           Building of Fear
-             HIGH PRIESTS OF TERROR ALLOWED SAFE PASSAGE ONLY
-                      You have been forewarned.
+placa aviso~
+                         Edifício do Medo
+           PASSAGEM SEGURA APENAS PARA ALTOS SACERDOTES DO TERROR
+                    Você foi avisado.
 ~
 S
 #26746
