@@ -9,7 +9,7 @@ Escravas se Curvam - 26701-26704~
 0 e 0
 Um gordo mestre do harém olha para seus subordinados e rosna, 'voltem ao trabalho, vadias!'~
 wait 1 sec
-bow master
+bow mestre
 ~
 #26702
 Mestre Precisa de Ajuda - 26706~
@@ -22,7 +22,7 @@ Escravas Ajudam Mestre - 26701-26704~
 0 e 0
 Um gordo mestre do harém grita alto, 'ME AJUDEM, MINHAS ESCRAVAS!'~
 wait %random.6% sec
-assist master
+assist mestre
 ~
 #26705
 Magia do Medo - 26710~
@@ -35,7 +35,7 @@ emote pronuncia as palavras, 'pabrow'.
 Açougueiro - 26713~
 0 b 10
 ~
-emote começa a afiar %self.hisher% faca.
+emote começa a afiar sua faca.
 ~
 #26707
 Bebê de Piche Segue - 26708~
