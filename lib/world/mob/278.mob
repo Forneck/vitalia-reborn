@@ -1,0 +1,61 @@
+#27800
+marinheiro velejador capitao velho~
+o velho Capitão encrostado~
+O velho Capitão encrostado está aqui, pescando no oceano.
+~
+   O velho capitão tem pele como couro, e uma compleição manchada. Ele parece
+positivamente antigo; mas seus músculos e seu semblante mostram que ele é um
+guerreiro capaz. Ele olha para você ameaçadoramente, sugerindo que você vá
+embora a menos que você queira <Comprar navio>
+~
+222 0 0 0 16 0 0 0 125 E
+56 -3 -150 8d8+1800 6d6+20
+1800 200000
+8 8 1
+E
+#27801
+serpente marinha verde mar~
+a enorme Serpente Marinha verde~
+A enorme Serpente Marinha verde está nadando no oceano, caçando por comida.
+~
+   Você vê um monstro enorme diante de você. Seus olhos verdes brilhantes e
+dentes afiados te apavoram. Escamas verdes fornecem uma armadura de defesa
+espetacular. Elas provavelmente fariam uma ótima armadura em você também.
+~
+72 0 0 0 16 0 0 0 -875 E
+54 -5 -140 8d8+1700 6d6+18
+1700 180000
+8 8 0
+E
+T 27800
+#27802
+barracuda peixe~
+uma barracuda feroz~
+Uma barracuda má está se debatendo no mar.
+~
+   Este peixe de aparência horrível parece muito infeliz porque você infestou
+seu mar. Seus dentes afiados e enormes mostram o quão infeliz ele está quando
+se cravam em você.
+~
+72 0 0 0 0 0 0 0 -150 E
+52 -6 -130 7d7+1600 5d6+16
+1600 170000
+8 8 0
+E
+#27803
+leviata semideus~
+o semideus Leviatã~
+Leviatã está aqui, olhando para você com uma expressão curiosa.
+~
+   Leviatã, o guardião dos mares--um poder eterno garantido pelos deuses
+para ficar de olho em todos aqueles viajantes que entram em Oceânia. Ele é
+totalmente verde e tem algas marinhas como sua vestimenta. Seus olhos antigos
+desmentem seu semblante jovem.
+~
+26 0 0 0 16 0 0 0 1000 E
+60 -8 -180 9d9+2100 7d7+25
+2100 250000
+8 8 1
+E
+T 27802
+$
