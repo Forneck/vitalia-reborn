@@ -1745,109 +1745,118 @@ Você pode ver a entrada para o Salão da Desesperança.
 0 0 26779
 S
 #26781
-Deserted Corridor~
-   A damp, musty hall leads north and south.  You detect no sounds--in fact,
-all sounds seem to me muted in this strange place.  The air seem thicker and
-heavier than usual.
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao norte e sul. Você não detecta sons - na
+verdade, todos os sons parecem estar abafados neste lugar estranho. O ar parece
+mais espesso e pesado do que o usual.
 ~
 267 8 0 0 0 0
 D0
-You see a deserted corridor.
+Você vê um corredor deserto.
 ~
 ~
 0 0 26782
 D1
-You see nothing.
+Você não vê nada.
 ~
-door secret~
+door porta secret secreta~
 1 0 26783
 D2
-You see a deserted corridor.
+Você vê um corredor deserto.
 ~
 ~
 0 0 26780
 D3
-You can see the entrance to the Hall of Hopelessness.
+Você pode ver a entrada para o Salão da Desesperança.
 ~
 ~
 0 0 26779
 S
 #26782
-Deserted Corridor~
-   A damp, musty hall leads south.  You detect no sounds--in fact, all sounds
-seem to be muted in this strange place.  The air seem thicker and heavier than
-usual.
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao sul. Você não detecta sons - na verdade,
+todos os sons parecem estar abafados neste lugar estranho. O ar parece mais
+espesso e pesado do que o usual.
 ~
 267 8 0 0 0 0
 D1
-You see nothing.
+Você não vê nada.
 ~
-door secret~
+door porta secret secreta~
 1 0 26783
 D2
-You see a deserted corridor.
+Você vê um corredor deserto.
 ~
 ~
 1 0 26781
 D3
-You can see the entrance to the Hall of Hopelessness.
+Você pode ver a entrada para o Salão da Desesperança.
 ~
 ~
 0 0 26779
 S
 #26783
-Dark Room~
-   The walls are totally painted black in this strange room.  You can detect
-nothing short of your hand in front of your face.  The air seem thicker and
-heavier than usual.
+Sala Escura~
+   As paredes estão totalmente pintadas de preto nesta sala estranha. Você não
+pode detectar nada além da sua mão na frente do seu rosto. O ar parece mais
+espesso e pesado do que o usual.
 ~
 267 9 0 0 0 0
 D3
-You can see the deserted corridor.
+Você pode ver o corredor deserto.
 ~
-door secret~
+door porta secret secreta~
 1 0 26781
 S
 #26784
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north or down.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou para baixo.
 ~
 267 0 0 0 0 3
 D0
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26785
 D5
-You can see the bottom of Vice Hill from here.
+Você pode ver a base da Colina do Vício daqui.
 ~
 ~
 0 0 26723
 E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
 ~
 S
 #26785
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north or south on through the trees.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
 ~
 267 0 0 0 0 3
 D0
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26786
 D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26784
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
 The netting continues through the trees here.
 ~
 ~
@@ -1859,316 +1868,317 @@ quite strong, and supportable.  You don't need to fear being on it at all.
 ~
 S
 #26786
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north or south on through the trees.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
 ~
 267 0 0 0 0 3
 D0
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26787
 D2
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26785
 E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
 ~
 S
 #26787
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north or south on through the trees.  You can see a very dangerous tar pit
-right below you.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores. Você pode ver um poço de
+alcatrão muito perigoso bem abaixo de você.
 ~
 267 0 0 0 0 3
 D0
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26788
 D2
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26786
 E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
 ~
 S
 #26788
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north or south on through the trees.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
 ~
 267 0 0 0 0 3
 D0
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26789
 D2
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26787
 E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
 ~
 S
 #26789
-Through the Trees~
-   Someone has most convieniently placed netting through the trees here, so you
-may walk along it without fear of falling.  This is probably best, as you are
-extremely high up from the ground.  You hear birds chirping right by you, and
-feel very peaceful here--that is, as long as you are in the trees.  You may go
-north to a dock, or south on through the trees.
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte para um cais, ou sul através das árvores.
 ~
 267 0 0 0 0 3
 D0
-The netting ends at a dock.
+A rede termina em um cais.
 ~
 ~
 0 0 26790
 D2
-The netting continues through the trees here.
+A rede continua através das árvores aqui.
 ~
 ~
 0 0 26788
 E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
 ~
 S
 #26790
-Port by the Forest~
-   You are at an extremely weird dock.  It's raised high on stilts on one
-side-- apparently keeping you from falling off of a cliff.  Netting starts out
-to your south, keeping you from falling through the trees.  You can see a large
-tar pit to your south--good thing there's that netting to keep you from falling
-into it.
+Porto junto à Floresta~
+   Você está em um cais extremamente estranho. Está erguido em palafitas de um
+lado - aparentemente impedindo você de cair de um penhasco. A rede começa ao seu
+sul, impedindo você de cair através das árvores. Você pode ver um grande poço de
+alcatrão ao sul - ainda bem que há essa rede para impedir você de cair nele.
 ~
 267 0 0 0 0 1
 D2
-The netting begins to your south.
+A rede começa ao seu sul.
 ~
 ~
 0 0 26789
 S
 #26791
-Hall of Wax~
-   Gory statues line this hall--statues of all kinds of torture, from the most
-mundane iron-maiden experience to the more imaginative things one can do with a
-cat-of-nine tails and razors.  The thing that makes these statues most
-uncomfortable to look at is the fact that they are made from wax--and look so
-lifelike you can almost see them screaming in terror.  Do you see one move?
-No, it must be your mind playing tricks on you.
+Salão de Cera~
+   Estátuas sangrentas alinham este salão - estátuas de todos os tipos de
+tortura, desde a mais mundana experiência de dama de ferro até as coisas mais
+imaginativas que se pode fazer com um chicote de nove caudas e lâminas. A coisa
+que torna estas estátuas mais desconfortáveis de olhar é o fato de serem feitas
+de cera - e parecerem tão realistas que você quase pode vê-las gritando de
+terror. Você vê uma se mover? Não, deve ser sua mente pregando peças em você.
 ~
 267 9 0 0 0 0
 D0
-You can see a horrid hall to your north.
+Você pode ver um salão horrível ao norte.
 ~
 ~
 0 0 26793
 S
 #26792
-Entrance to the Office of the High Priest of Terror~
-   This is certainly not your average office--certain telltale signs lead you
-to this fact.  Perhaps it's the skulls lined up on spikes around the room.
-Or, perhaps the fact that it looks to be several rooms.  You really don't want
-to be here.  You can go south or north...  Neither way looks too comforting.
+Entrada para o Escritório da Alta Sacerdotisa do Terror~
+   Este certamente não é seu escritório médio - certos sinais reveladores levam
+você a este fato. Talvez sejam os crânios alinhados em espinhos ao redor da
+sala. Ou, talvez o fato de parecer ser várias salas. Você realmente não quer
+estar aqui. Você pode ir ao sul ou norte... Nenhum caminho parece muito
+confortável.
 ~
 267 8 0 0 0 0
 D0
-You see the strange trail.
+Você vê a trilha estranha.
 ~
-Trail of terror~
+Trail of terror Trilha do Terror~
 1 26727 26738
 D2
-You can see a hall of wax statues.
+Você pode ver um salão de estátuas de cera.
 ~
 ~
 0 -1 26791
 S
 #26793
-Hall of Torture~
-   This certainly isn't the entrance to the office...  How does one get back?
-You feel somewhat turned around.  As you look around you, you are overcome with
-nausea as you realize immediately that you shouldn't have.  Many items of
-torture lie around here, some that you'd never imagined could have been invent-
-ed.  Certainly not by a sane person.  You can go to your east(oh, so that's how
-you get back to the entrance), or to the south, into another chambre.
+Salão de Tortura~
+   Este certamente não é a entrada para o escritório... Como se volta? Você se
+sente um pouco desorientado. Ao olhar ao seu redor, você é dominado pela náusea
+ao perceber imediatamente que não deveria ter olhado. Muitos itens de tortura
+estão por aqui, alguns que você nunca imaginou que poderiam ter sido inventados.
+Certamente não por uma pessoa sã. Você pode ir a leste (ah, então é assim que se
+volta à entrada), ou ao sul, para outra câmara.
 ~
 267 8 0 0 0 0
 D1
-You see the entrance to the Office of the High Priest of Terror, of course.
+Você vê a entrada para o Escritório da Alta Sacerdotisa do Terror, é claro.
 ~
 ~
 0 -1 26792
 D2
-You see a hall with lots of dead bodies around.
+Você vê um salão com muitos corpos mortos ao redor.
 ~
 ~
 0 -1 26794
 S
 #26794
-Hall of Death~
-   Dead bodies lie strewn about here.  They appear to have been killed from the
-devices in the Hall of Torture.  You certainly don't want to think too long
-about it, as they are so mangled you can't tell what they were--whether they
-were human or other.  You can get out of here by going back to the Hall of
-Torture, to the Temple of Terror to your east, or to the Office of the High
-Priest to your south.
+Salão da Morte~
+   Corpos mortos estão espalhados por aqui. Eles parecem ter sido mortos pelos
+dispositivos do Salão de Tortura. Você certamente não quer pensar muito sobre
+isso, pois estão tão mutilados que você não consegue dizer o que eram - se eram
+humanos ou outros. Você pode sair daqui voltando ao Salão de Tortura, ao Templo
+do Terror a leste, ou ao Escritório da Alta Sacerdotisa ao sul.
 ~
 267 8 0 0 0 0
 D0
-You can see the hall of torture.
+Você pode ver o salão de tortura.
 ~
 ~
 0 -1 26793
 D1
-You can see the entrance to the Temple of Terror.
+Você pode ver a entrada para o Templo do Terror.
 ~
 ~
 0 -1 26797
 D2
-You can see the entrance to the office of the High Priest of Terror.
+Você pode ver a entrada para o escritório da Alta Sacerdotisa do Terror.
 ~
-door~
+door porta~
 1 26734 26795
 S
 #26795
-Office of the High Priest of Terror~
-   This is probably the most beautiful part of the entire island you have seen.
-Amazingly enough, there are no signs of the carnage and disgusting methods of
-torture that can be seen throughout the rest of the buildings you've viewed.
-In fact, this place looks downright natural.  A nice desk made of redwood is
-the frontpiece of the room, and a high-backed chair is behind it.  A plush sofa
-is in front of it, and plaques and other credentials line the walls.  An
-insignia--the cat o' nine tails--is frosted into the only window in the room.
+Escritório da Alta Sacerdotisa do Terror~
+   Esta é provavelmente a parte mais bonita de toda a ilha que você viu.
+Surpreendentemente, não há sinais da carnificina e dos métodos repugnantes de
+tortura que podem ser vistos no resto dos edifícios que você viu. Na verdade,
+este lugar parece absolutamente natural. Uma bela mesa feita de madeira vermelha
+é a peça frontal da sala, e uma cadeira de encosto alto está atrás dela. Um sofá
+de pelúcia fica na frente, e placas e outras credenciais revestem as paredes. Um
+emblema - o chicote de nove caudas - está fosco na única janela da sala.
 ~
 267 8 0 0 0 0
 D0
-You, amazingly enough, end right back up at the entrance.
+Você, surpreendentemente, acaba de volta na entrada.
 ~
 ~
 0 0 26792
 E
-insignia window~
-   The cat o' nine tails, a whip with multiple straps, apparently is the
-ultimate symbol for the Reign of Terror.  It's the most painful--sometimes even
-fatal--whip known.
+insignia window emblema janela~
+   O chicote de nove caudas, um chicote com múltiplas tiras, aparentemente é o
+símbolo máximo do Reinado do Terror. É o chicote mais doloroso - às vezes até
+fatal - conhecido.
 ~
 E
-plaques~
-   These aren't awards--they're decrees and petitions outlining the law of Vice
-Island.  Each one is more severe than the last.  What you basically glean from
-the rules of the land is that while this once was a prosperous island, several
-people began to experiment with dark magic, and began to mu268le in affairs they
-had no business in.  Eventually, the island became nothing more than a place for
-several delvers to take up shop--and build a religion based mostly on the most
-horrible feelings in life--Despair, Hopelessness, Fear, and the crowning
-emotion, in which all these culminate--Terror.  Not a pretty picture.
+plaques placas~
+   Estes não são prêmios - são decretos e petições delineando a lei da Ilha do
+Vício. Cada um é mais severo que o anterior. O que você basicamente coleta das
+regras da terra é que embora esta já tenha sido uma ilha próspera, várias
+pessoas começaram a experimentar com magia negra, e começaram a se intrometer em
+assuntos que não eram da sua conta. Eventualmente, a ilha não se tornou nada
+mais que um lugar para vários exploradores se instalarem - e construir uma
+religião baseada principalmente nos sentimentos mais horríveis da vida -
+Desespero, Desesperança, Medo, e a emoção coroadora, na qual todas essas
+culminam - Terror. Não é um quadro bonito.
 ~
 E
-sofa~
-   This sofa looks so comfortable, you want to just sink right into it.
+sofa sofá~
+   Este sofá parece tão confortável que você quer simplesmente afundar nele.
 ~
 E
-chair~
-   The chair is made of redwood, and looks very comfortable.  It also looks VERY
-heavy.
+chair cadeira~
+   A cadeira é feita de madeira vermelha e parece muito confortável. Também
+parece MUITO pesada.
 ~
 S
 #26797
-Entrance to the Temple of Terror~
-   The entrance to this temple is blinding--that's probably the most noteworthy
-point of note.  Flashes of light emenate from a globe in the center of the
-room, causing strange effects in the room.  The room is made from a metal that
-reflects the light like a mirror--but brighter.  You can go to the strange
-trail to your north, or on into the temple to your east.
+Entrada para o Templo do Terror~
+   A entrada para este templo é ofuscante - esse é provavelmente o ponto mais
+notável. Flashes de luz emanam de um globo no centro da sala, causando efeitos
+estranhos na sala. A sala é feita de um metal que reflete a luz como um espelho
+- mas mais brilhante. Você pode ir para a trilha estranha ao norte, ou seguir
+para dentro do templo a leste.
 ~
 267 8 0 0 0 0
 D0
-You can see the strange trail.
+Você pode ver a trilha estranha.
 ~
-trail~
+trail trilha~
 1 26728 26738
 D1
-You see a blindingly lit hallway.
+Você vê um corredor cegantemente iluminado.
 ~
 ~
 0 0 26798
 D3
+Você pode ver o Salão da Morte.
 ~
 ~
-0 0 26804
+0 -1 26794
 E
-globe ball light~
-   All the light seems to emenate from this globe.  It's made from material that
-looks to come from the sun itself--yet it's cold--very cold.
+globe ball light globo bola luz~
+   Toda a luz parece emanar deste globo. É feito de material que parece vir do
+próprio sol - mas é frio - muito frio.
 ~
 S
 #26798
-Blindingly lit hallway~
-   This east-west hallway is so brightly lit that you can barely see anything.
-You have to shield your eyes just to see in front of you.  It appears to be
-made from the same metal as the entrance to the building does.  A small room
-opens to your north.
+Corredor cegantemente iluminado~
+   Este corredor leste-oeste está tão brilhantemente iluminado que você mal pode
+ver qualquer coisa. Você tem que proteger seus olhos apenas para ver à sua
+frente. Parece ser feito do mesmo metal que a entrada do edifício. Uma pequena
+sala se abre ao seu norte.
 ~
 267 8 0 0 0 0
 D0
-You see a small shrine to your north.
+Você vê um pequeno santuário ao norte.
 ~
 ~
 0 0 26799
 D1
-The hallway continues on.
+O corredor continua.
 ~
 ~
 0 0 26800
 D3
-The entrance to the temple is to your direct west.
+A entrada do templo está diretamente a oeste.
 ~
 ~
 0 0 26797
 S
 #26799
-Shrine to Vice~
-   This small shrine contains nothing other than an alter and a small book with
-the inscription, "You cannot take that which is not yours--but you can have as
-much of it as you want.  "...  You think you hear maniacal cackling somewhere
-around you, but when you turn, you see nothing.
+Santuário do Vício~
+   Este pequeno santuário não contém nada além de um altar e um pequeno livro com
+a inscrição: "Você não pode pegar o que não é seu - mas você pode ter tanto dele
+quanto quiser."... Você acha que ouve gargalhadas maníacas em algum lugar ao seu
+redor, mas quando você se vira, não vê nada.
 ~
 267 8 0 0 0 0
 D2
-You see the blindingly lit hallway.
+Você vê o corredor cegantemente iluminado.
 ~
 ~
 0 0 26798
 E
 alter altar~
-   This small alter looks as if you could bow and pray with relative comfort.
-But you somehow get the feeling you shouldn't bend over.
+   Este pequeno altar parece que você poderia se ajoelhar e orar com relativo
+conforto. Mas de alguma forma você tem a sensação de que não deveria se curvar.
 ~
 S
 $~
