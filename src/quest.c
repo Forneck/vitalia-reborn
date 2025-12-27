@@ -3620,7 +3620,9 @@ void init_mob_ai_data(struct char_data *mob)
     /* Initialize climate preferences - these will be set to appropriate values
      * when the mob is placed in a room during zone reset. Initialize to -1 (none/unset)
      * to indicate they have not yet been set, but preserve any non-zero prototype/espec
-     * values that may already be present. */
+     * values that may already be present. Also preserve -1 if explicitly set by builder.
+     * Note: Value 0 is considered "uninitialized" here since the struct is zeroed on creation.
+     * Builders should use -1 in espec fields to explicitly indicate "no preference". */
     if (mob->ai_data->preferred_weather_sky == 0)
         mob->ai_data->preferred_weather_sky = -1;
     if (mob->ai_data->preferred_temperature_range == 0)

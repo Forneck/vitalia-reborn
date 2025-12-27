@@ -34,10 +34,12 @@ Implemented dynamic climate preference initialization based on spawn conditions 
 
 ### 4. Added Builder Customization (src/db.c)
 New espec fields in mob files for builder customization:
-- **PreferredWeather**: -1 to 4 (0=cloudless, 1=cloudy, 2=raining, 3=lightning, 4=snowing, -1=none)
-- **PreferredTemperature**: -1 to 4 (0=very cold, 1=cold, 2=comfortable, 3=hot, 4=very hot, -1=none)
-- **NativeClimate**: -1 to 4 (0=temperate, 1=rainy, 2=tropical, 3=arctic, 4=desert, -1=neutral)
-- **SeasonalAffective**: 0 to 100 (SAD severity, where 0=no SAD)
+- **PreferredWeather**: -1 to 4 (1=cloudy, 2=raining, 3=lightning, 4=snowing, -1=no preference, 0=auto-init)
+- **PreferredTemperature**: -1 to 4 (1=cold, 2=comfortable, 3=hot, 4=very hot, -1=no preference, 0=auto-init)
+- **NativeClimate**: -1 to 4 (1=rainy, 2=tropical, 3=arctic, 4=desert, -1=neutral, 0=auto-init)
+- **SeasonalAffective**: 0 to 100 (SAD severity; 0=auto-calculate based on level)
+
+**Note**: Value 0 (or omitting the field) means "auto-initialize from spawn conditions". Use -1 to explicitly indicate "no preference".
 
 ### 5. Added Function Declaration (src/quest.h)
 - Declared `initialize_mob_climate_preferences()` for use in db.c
