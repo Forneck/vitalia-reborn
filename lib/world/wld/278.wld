@@ -12,11 +12,11 @@ Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 ~
 0 0 27802
-D3
-Ao seu oeste você pode ver um beco escuro com uma peixaria.
+D2
+Ao sul você pode retornar à bela praia de Porto.
 ~
 ~
-0 0 -1
+0 -1 2976
 E
 redes pesca~
    As redes de pesca são velhas e estão virando pó; grandes buracos se abrem
@@ -299,7 +299,7 @@ D1
 Ao seu leste você vê um píer próximo a uma praia branca cegantemente brilhante.
 ~
 ~
-0 0 -1
+0 -1 13207
 D2
 Ao seu sul você pode ver o oceano profundo e vasto.
 ~
