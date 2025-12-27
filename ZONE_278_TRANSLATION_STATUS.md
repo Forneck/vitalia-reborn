@@ -35,11 +35,11 @@ A Zona 278 (Oceania/Oceânia) foi integrada ao jogo com tradução **100% COMPLE
   - Todas mensagens de emote e ecos traduzidos
 
 - **278.wld** - Arquivo de salas (50 salas) - ✅ 100% COMPLETO
-  - ✅ Todas as 50 salas totalmente traduzidas
-  - ✅ Todos os títulos das salas em PT-BR
-  - ✅ Todas as descrições das salas em PT-BR
+  - ✅ Todas as 50 salas totalmente traduzidas (títulos e descrições)
   - ✅ Todas as descrições de saídas em PT-BR
-  - ✅ Todas as descrições extras em PT-BR
+  - ✅ Todas as descrições extras (examináveis) em PT-BR
+  - ✅ Todos os textos de direção traduzidos
+  - ✅ Revisado e corrigido conteúdo misto EN/PT-BR (Code Review, Dez 2025)
 
 ### ✅ Documentação
 
@@ -68,10 +68,32 @@ A Zona 278 (Oceania/Oceânia) foi integrada ao jogo com tradução **100% COMPLE
 - Tradução de todas as descrições examináveis
 
 ### Verificação de Qualidade
-- ✅ Zero frases em inglês detectadas
+
+#### Tradução Inicial (Dezembro 2025)
+- ✅ Tradução completa de todos os elementos de jogo
 - ✅ Terminologia náutica consistente
 - ✅ Zona carrega sem erros
 - ✅ Todas as funcionalidades testadas
+
+#### Revisão de Código (Dezembro 2025)
+Correções aplicadas após code review:
+- ✅ Corrigido conteúdo misto EN/PT-BR em descrições de salas
+- ✅ Traduzidas todas as descrições extras (northeast island, southeast island, southern island, southwest island, western island pier)
+- ✅ Corrigido "southeast you see" → "sudeste você vê"
+- ✅ Corrigido "keeping it from going off-course" → "em mantê-lo no curso"
+- ✅ Corrigido "The vento" → "O vento"
+- ✅ Corrigido "constant- ly here" → "constantemente aqui"
+- ✅ Corrigido "A huge, turbilhão" → "Um enorme turbilhão"
+- ✅ Corrigido "the beautiful Timeless Island" → "a bela Ilha Atemporal"
+- ✅ Corrigido "island to your [direction]" → "ilha ao seu [direção]"
+- ✅ Traduzido "Sorry, but the Island of Chaos is still under construction" → "Desculpe, mas a Ilha do Caos ainda está em construção"
+- ✅ Traduzido "Ao seu leste is a huge, churning whirlpool..." → "Ao seu leste há um enorme turbilhão agitado..."
+- ✅ Removido arquivo de backup (278.wld.backup) do repositório
+
+#### Status Final
+- ✅ Zero frases em inglês detectadas após revisão
+- ✅ Todas as descrições extras traduzidas
+- ✅ Documentação atualizada para refletir o estado real
 
 ## Termos Náuticos Traduzidos
 

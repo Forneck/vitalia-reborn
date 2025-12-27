@@ -243,8 +243,7 @@ Ao seu oeste você pode ver o oceano profundo e vasto.
 0 0 27811
 E
 southeast island~
-   Ao seu southeast you see a dark island with a blindingly brightly white sand
-beach.  A ilha parece muito interessante; talvez você deva visitá-la?
+   Ao seu sudeste você vê uma ilha escura com uma praia de areia branca cegantemente brilhante.  A ilha parece muito interessante; talvez você deva visitá-la?
 ~
 S
 #27811
@@ -444,7 +443,7 @@ Em uma corrente norte-sul no oceano~
    Você está no oceano. Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.
+constantemente aqui.
 ~
 278 0 0 0 0 7
 D0
@@ -463,7 +462,7 @@ Em correntes cruzadas no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+constantemente aqui.  A corrente impede você de ir para oeste.
 ~
 278 0 0 0 0 7
 D0
@@ -487,7 +486,7 @@ Em uma curva acentuada na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+constantemente aqui.  A corrente permite passagem apenas para o leste e sul.
 ~
 278 0 0 0 0 7
 D1
@@ -506,7 +505,7 @@ Em uma curva na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  Você pode ir para o norte ou leste.
+constantemente aqui.  Você pode ir para o norte ou leste.
 ~
 278 0 0 0 0 7
 D0
@@ -525,7 +524,7 @@ Em correntes cruzadas~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente parece transitável para oeste e norte.  A huge,
+constantemente aqui.  A corrente parece transitável para oeste e norte.  Um enorme
 turbilhão agitado fica diretamente ao seu leste.
 ~
 278 0 0 0 0 7
@@ -535,8 +534,8 @@ Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 0 0 27826
 D1
-Ao seu leste is a huge, churning whirlpool. Not even the biggest ship in the
-world could survive this one.~
+Ao seu leste há um enorme turbilhão agitado. Nem mesmo o maior navio do
+mundo poderia sobreviver a este.~
 ~
 0 0 27850
 D3
@@ -550,7 +549,7 @@ Em correntes cruzadas no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+constantemente aqui.  A corrente impede você de ir para oeste.
 ~
 278 0 0 0 0 7
 D0
@@ -594,7 +593,7 @@ Em correntes cruzadas~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente continua para leste e oeste, e parece transitável para
+constantemente aqui.  A corrente continua para leste e oeste, e parece transitável para
 o norte.
 ~
 278 0 0 0 0 7
@@ -639,7 +638,7 @@ Em correntes cruzadas no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para leste.
+constantemente aqui.  A corrente impede você de ir para leste.
 ~
 278 0 0 0 0 7
 D0
@@ -663,7 +662,7 @@ Em uma corrente norte-sul no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.
+constantemente aqui.
 ~
 278 0 0 0 0 7
 D0
@@ -682,7 +681,7 @@ Em correntes cruzadas no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para leste.
+constantemente aqui.  A corrente impede você de ir para leste.
 ~
 278 0 0 0 0 7
 D0
@@ -706,7 +705,7 @@ Em uma corrente norte-sul no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.
+constantemente aqui.
 ~
 278 0 0 0 0 7
 D0
@@ -747,7 +746,7 @@ Em correntes cruzadas no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente impede você de ir para oeste.
+constantemente aqui.  A corrente impede você de ir para oeste.
 ~
 278 0 0 0 0 7
 D0
@@ -769,8 +768,8 @@ S
 #27836
 Em uma curva na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente curva para oeste e norte.
 ~
 278 0 0 0 0 7
@@ -790,7 +789,7 @@ Em uma curva acentuada na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+constantemente aqui.  A corrente permite passagem apenas para o leste e sul.
 ~
 278 0 0 0 0 7
 D1
@@ -807,8 +806,8 @@ S
 #27838
 Em uma curva na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente curva para oeste e norte.
 ~
 278 0 0 0 0 7
@@ -828,7 +827,7 @@ No porto para a Ilha Atemporal~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here, e você pode ver uma bela ilha ao seu sul.
+constantemente aqui, e você pode ver uma bela ilha ao seu sul.
 ~
 278 0 0 0 0 7
 D0
@@ -837,7 +836,7 @@ Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 0 0 27840
 D2
-Ao seu sul você pode ver the beautiful Timeless Island com suas roseiras.
+Ao seu sul você pode ver a bela Ilha Atemporal com suas roseiras.
 Talvez você deva voltar quando estiver concluído.
 ~
 ~
@@ -848,7 +847,7 @@ Em uma corrente norte-sul no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.
+constantemente aqui.
 ~
 278 0 0 0 0 7
 D0
@@ -867,7 +866,7 @@ Em uma curva acentuada na corrente~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.  A corrente permite passagem apenas para o leste e sul.
+constantemente aqui.  A corrente permite passagem apenas para o leste e sul.
 ~
 278 0 0 0 0 7
 D1
@@ -911,7 +910,7 @@ Em uma corrente norte-sul no oceano~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
 em mantê-lo no curso.  Você percebe que isso será trabalho árduo.  Gaivotas
 cantam acima, e baleias jorram água longe no horizonte.  O vento sopra
-constant- ly here.
+constantemente aqui.
 ~
 278 0 0 0 0 7
 D0
@@ -928,8 +927,8 @@ S
 #27844
 Contornando uma ilha~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
 ilha ao seu norte.
 ~
@@ -948,8 +947,8 @@ S
 #27845
 Contornando uma ilha~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
 ilha ao seu nordeste.
 ~
@@ -965,18 +964,18 @@ Ao seu leste você pode ver o oceano profundo e vasto.
 ~
 0 0 27844
 E
-northeast island~
-   This is a very plain-looking island; a large mountain forms the northern half
-of it.
+ilha nordeste~
+   Esta é uma ilha de aparência muito simples; uma grande montanha forma a metade norte
+dela.
 ~
 S
 #27846
 Contornando uma ilha~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-island to your southeast.
+ilha ao seu sudeste.
 ~
 278 0 0 0 0 7
 D1
@@ -990,18 +989,18 @@ Ao seu sul você pode ver o oceano profundo e vasto.
 ~
 0 0 27845
 E
-southeast island~
-   This is a very plain-looking island; a large mountain forms the northern half
-of it.
+ilha sudeste~
+   Esta é uma ilha de aparência muito simples; uma grande montanha forma a metade norte
+dela.
 ~
 S
 #27847
 Contornando uma ilha~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-island to your south.
+ilha ao seu sul.
 ~
 278 0 0 0 0 7
 D1
@@ -1015,18 +1014,18 @@ Ao seu oeste você pode ver o oceano profundo e vasto.
 ~
 0 0 27846
 E
-southern island~
-   This is a very plain-looking island; a large mountain forms the northern half
-of it.
+ilha sul~
+   Esta é uma ilha de aparência muito simples; uma grande montanha forma a metade norte
+dela.
 ~
 S
 #27848
 Contornando uma ilha~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-island to your southwest.
+ilha ao seu sulwest.
 ~
 278 0 0 0 0 7
 D2
@@ -1040,18 +1039,18 @@ Ao seu oeste você pode ver o oceano profundo e vasto.
 ~
 0 0 27847
 E
-southwest island~
-   This is a very plain-looking island; a large mountain forms the northern half
-of it.
+ilha sudoeste~
+   Esta é uma ilha de aparência muito simples; uma grande montanha forma a metade norte
+dela.
 ~
 S
 #27849
 Em frente a um píer insular~
    Você está no oceano.  Grandes ondas balançam o barco, e você tem dificuldade
-keeping it from going off-course.  Você percebe que isso será trabalho árduo.
-Gaivotas cantam acima, e baleias jorram água longe no horizonte.  The
+em mantê-lo no curso.  Você percebe que isso será trabalho árduo.
+Gaivotas cantam acima, e baleias jorram água longe no horizonte.  O
 vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
-island to your west.  An island pier lies to your west.
+ilha ao seu oeste.  Um píer insular fica ao seu oeste.
 ~
 278 0 0 0 0 7
 D0
@@ -1060,14 +1059,14 @@ Ao seu norte você pode ver o oceano profundo e vasto.
 ~
 0 0 27848
 D3
-Sorry, but the Island of Chaos is still under construction.
+Desculpe, mas a Ilha do Caos ainda está em construção.
 ~
 ~
 0 0 27849
 E
-western island pier~
-   This is a very plain-looking island; a large mountain forms the northern half
-of it.
+píer da ilha oeste~
+   Esta é uma ilha de aparência muito simples; uma grande montanha forma a metade norte
+dela. Um píer de madeira se projeta sobre o oceano.
 ~
 S
 #27850
