@@ -166,12 +166,12 @@ muito malvado!
 E
 T 26705
 #26711
-ghost banshee siren~
-a wailing ghost~
-A wailing ghost floats about the halls.
+ghost banshee siren fantasma banshee sereia~
+um fantasma lamentoso~
+Um fantasma lamentoso flutua pelos corredores.
 ~
-   You look and look but all you can really see is the wall behind it, and a
-faint outline of something making the wall shimmer.
+   Você olha e olha mas tudo que pode realmente ver é a parede atrás dele, e um
+contorno fraco de algo fazendo a parede tremer.
 ~
 248 0 0 0 1122376 0 0 0 -750 E
 70 6 -16 18d10+1400 9d10+9
@@ -179,14 +179,14 @@ faint outline of something making the wall shimmer.
 8 8 0
 E
 #26712
-prisoner cellmate~
-the prisoner~
-A prisoner, locked up for crimes against Fear, is raving here.
+prisoner cellmate prisioneiro companheiro cela~
+o prisioneiro~
+Um prisioneiro, preso por crimes contra o Medo, delira aqui.
 ~
-   The prisoner looks at you bravely and shouts, "JUST KILL ME!  I DARE YOU!
-" He looks totally emaciated, as if he hasn't been fed for weeks.  He is dirty
-and almost naked--his rags barely cover him.  He is covered in his own filth.
-Just looking at him makes you want to retch.
+   O prisioneiro olha para você corajosamente e grita, "APENAS ME MATE! EU TE
+DESAFIO!" Ele parece totalmente emaciado, como se não tivesse sido alimentado
+por semanas. Ele está sujo e quase nu--seus trapos mal o cobrem. Ele está
+coberto em sua própria sujeira. Apenas olhar para ele faz você querer vomitar.
 ~
 14 0 0 0 16 0 0 0 -500 E
 60 7 -14 15d10+1200 8d8+8
@@ -194,11 +194,11 @@ Just looking at him makes you want to retch.
 8 8 1
 E
 #26713
-butcher~
-the butcher~
-The butcher stands here, waiting for his next kill.
+butcher açougueiro carniceiro~
+o açougueiro~
+O açougueiro está aqui, esperando por sua próxima vítima.
 ~
-   He's rather ordinary, except for the humongous knife he holds in his hand.
+   Ele é bastante comum, exceto pela enorme faca que segura em sua mão.
 
 ~
 10 0 0 0 0 0 0 0 -800 E
@@ -208,15 +208,15 @@ The butcher stands here, waiting for his next kill.
 E
 T 26706
 #26714
-terror high priest~
-the High Priest of Terror~
-The High Priest of Terror stands before you in all her majesty.
+terror high priest sacerdotisa alto terror~
+a Alta Sacerdotisa do Terror~
+A Alta Sacerdotisa do Terror está diante de você em toda sua majestade.
 ~
-   How shocking!  Out of all the types of people you would expect to see in
-this kind of position, you didn't expect to see someone this beautiful and
-kind- looking.  She stands about 2 meters tall, and while she is obviously very
-strong, she is also quite voluptuous.  She looks at you with the most
-sympathetic eyes--you just want to give yourself over to her.
+   Que chocante! De todos os tipos de pessoas que você esperaria ver neste tipo
+de posição, você não esperava ver alguém tão bonita e de aparência gentil. Ela
+tem cerca de 2 metros de altura, e embora seja obviamente muito forte, ela
+também é bastante voluptuosa. Ela olha para você com os olhos mais
+simpáticos--você só quer se entregar a ela.
 ~
 88 0 0 0 16 0 0 0 -1000 E
 86 3 -20 25d10+2150 12d12+12
@@ -225,12 +225,12 @@ sympathetic eyes--you just want to give yourself over to her.
 E
 T 26709
 #26715
-keeper vice~
-the Keeper of the Shrine of Vice~
-The Keeper of the Shrine of Vice guards the alter from desecration.
+keeper vice guardião santuário vício~
+o Guardião do Santuário do Vício~
+O Guardião do Santuário do Vício guarda o altar contra profanação.
 ~
-   This man is covered in the blood of his former kills. He looks as if
-he would like to make you his next. Keep clear of this guy.
+   Este homem está coberto no sangue de suas vítimas anteriores. Ele parece
+como se gostaria de fazer de você sua próxima vítima. Fique longe deste sujeito.
 ~
 14 0 0 0 16 0 0 0 -800 E
 80 4 -18 22d10+1800 11d11+11
@@ -247,8 +247,18 @@ Beautifully-colored wings protrude from the sides.  Unlike most dragons, this
 actually resembles a snake--except that it's about one-hundred times larger,
 and certainly is more dangerous.  Sharp teeth extend from the mouth, and wisps
 of smoke curl from its nose.  It looks at you with infinite intelligence and a
-little bit of resignation, as though it knows you will eventually get around to
-attacking it.
+#26716
+dragon terror dragão grande terror~
+o Grande Dragão do Terror~
+O Grande Dragão do Terror descansa, enrolado em torno de um pilar gigante no templo.
+~
+   Este dragão é simplesmente lindo. Suas escamas têm um polimento de espelho.
+Asas lindamente coloridas se projetam dos lados. Ao contrário da maioria dos
+dragões, este realmente se assemelha a uma cobra--exceto que é cerca de cem
+vezes maior, e certamente é mais perigoso. Dentes afiados se estendem da boca,
+e fios de fumaça se enrolam de seu nariz. Ele olha para você com inteligência
+infinita e um pouco de resignação, como se soubesse que você eventualmente
+chegaria a atacá-lo.
 ~
 90 0 0 0 16 0 0 0 -750 E
 86 3 -20 25d10+2150 12d12+12
@@ -256,13 +266,13 @@ attacking it.
 5 5 0
 E
 #26717
-torturer man~
-a torturer~
-The torturer stands here, brandishing a cat o' nine tails.
+torturer man torturador homem~
+um torturador~
+O torturador está aqui, brandindo um chicote de nove caudas.
 ~
-   The torturer looks stark raving mad, to be frank.  He waves his weapon in
-the air with a mad cackle, and looks at you.  With an evil grin, he says, "ah,
-my next victim!  Yessssss" and launches himself at you.
+   O torturador parece completamente louco, para ser franco. Ele balança sua
+arma no ar com uma gargalhada louca, e olha para você. Com um sorriso maligno,
+ele diz, "ah, minha próxima vítima! Simmmm" e se lança em você.
 ~
 26 0 0 0 16 0 0 0 -850 E
 55 8 -13 14d10+1100 8d8+8
@@ -270,13 +280,13 @@ my next victim!  Yessssss" and launches himself at you.
 8 8 1
 E
 #26718
-interrogator secretary~
-an interrogator~
-An interrogator sits here, ready to grill you for information.
+interrogator secretary interrogador secretário~
+um interrogador~
+Um interrogador está sentado aqui, pronto para interrogá-lo para obter informações.
 ~
-   This man is small and frail-looking, but you can tell that he's quite
-dangerous to attack.  He looks at you with steel-rimmed glasses and says,
-"shall ve beegeen?  "
+   Este homem é pequeno e de aparência frágil, mas você pode dizer que ele é
+bastante perigoso para atacar. Ele olha para você com óculos de armação de aço
+e diz, "vamos começar?"
 ~
 216 0 0 0 0 0 0 0 -750 E
 50 9 -12 12d10+1000 7d7+7
@@ -284,13 +294,13 @@ dangerous to attack.  He looks at you with steel-rimmed glasses and says,
 6 6 1
 E
 #26719
-interrogator inquisitor grand~
-the Grand Inquisitor~
-The Grand Inquisitor of Despair looks you up and down appraisingly.
+interrogator inquisitor grand grande inquisidor~
+o Grande Inquisidor~
+O Grande Inquisidor do Desespero olha você de cima a baixo avaliativamente.
 ~
-   This man looks just like the others, except for an uncharacteristic gleam in
-his eye.  He looks quite sinister, as though he expects to get information out
-of you--whether you know it or not.
+   Este homem parece exatamente como os outros, exceto por um brilho não
+característico em seu olho. Ele parece bastante sinistro, como se esperasse
+obter informações de você--quer você saiba ou não.
 ~
 216 0 0 0 0 0 0 0 -1000 E
 75 5 -17 20d10+1500 10d10+10
@@ -299,12 +309,12 @@ of you--whether you know it or not.
 E
 T 26708
 #26720
-priest hopelessness~
-the Priest of Hopelessness~
-The Priest of Hopelessness stands here, waiting to remove all hope of leaving.
+priest hopelessness sacerdote desesperança~
+o Sacerdote da Desesperança~
+O Sacerdote da Desesperança está aqui, esperando para remover toda esperança de sair.
 ~
-   The priest looks back at you indignantly and says, "how dare you attempt to
-look at me!?  " and promptly attacks you.
+   O sacerdote olha para você indignado e diz, "como ousa tentar me olhar!?" e
+prontamente ataca você.
 ~
 10 0 0 0 1048576 0 0 0 -1000 E
 70 6 -16 18d10+1400 9d10+9
