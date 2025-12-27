@@ -7,7 +7,7 @@ A woman wearing a pretty pink taffeta dress trudges along the beach.
 sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
-220 0 0 0 0 0 0 0 0 E
+220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
 120 28800
 8 8 0
@@ -23,7 +23,7 @@ A woman wearing a pretty blue silk dress trudges along the beach.
 sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
-220 0 0 0 0 0 0 0 0 E
+220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
 120 28800
 8 8 2
@@ -39,7 +39,7 @@ A woman wearing a pretty pristine white cotton dress trudges along the beach.
 sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
-220 0 0 0 0 0 0 0 0 E
+220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
 120 28800
 8 8 2
@@ -71,7 +71,7 @@ A woman wearing a drab beige burlap dress trudges along the beach.
 sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
-220 0 0 0 0 0 0 0 0 E
+220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
 120 28800
 8 8 2
@@ -87,7 +87,7 @@ A slave for the master works endlessly at his will.
 sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
-220 0 0 0 0 0 0 0 0 E
+220 0 0 0 0 0 0 0 -400 E
 18 16 -1 3d6+100 2d4+2
 120 28800
 8 8 2
@@ -101,8 +101,8 @@ A very fat harem master orders his concubines around.
 women, because he certainly doesn't have the face for it.  He looks somewhat
 like a cross between a pear and a potato, but without the good looks.
 ~
-10 0 0 0 16 0 0 0 -1000 E
-45 10 -8 10d10+450 6d6+6
+10 0 0 0 16 0 0 0 -850 E
+45 10 -10 10d10+450 6d6+6
 1800 180000
 8 8 1
 E
@@ -116,7 +116,7 @@ A small, red crab scuttles along the beach.
    This small creature has rather large pincers for its negligible size.  It
 looks benign, but probably wouldn't appreciate being attacked.
 ~
-88 0 0 0 0 0 0 0 0 E
+88 0 0 0 0 0 0 0 -100 E
 20 15 -2 4d6+120 3d4+3
 150 36000
 8 8 0
@@ -130,7 +130,7 @@ A cute, cuddly little tar baby is here, ready to follow the first person it sees
 first sign of human life.  And it's just so cute you can't want to kill it!
 
 ~
-220 0 0 0 16 0 0 0 500 E
+220 0 0 0 16 0 0 0 -200 E
 22 14 -3 5d6+130 3d4+3
 180 43200
 8 8 1
@@ -160,7 +160,7 @@ You'd most likely *NOT* want to attempt to kill this man!  He's one mean
 fellow!
 ~
 88 0 0 0 16 0 0 0 -1000 E
-75 5 -12 20d10+1500 10d10+10
+75 5 -17 20d10+1500 10d10+10
 4500 562500
 8 8 1
 E
@@ -174,7 +174,7 @@ A wailing ghost floats about the halls.
 faint outline of something making the wall shimmer.
 ~
 248 0 0 0 1122376 0 0 0 -750 E
-70 6 -11 18d10+1400 9d10+9
+70 6 -16 18d10+1400 9d10+9
 4000 490000
 8 8 0
 E
@@ -188,8 +188,8 @@ A prisoner, locked up for crimes against Fear, is raving here.
 and almost naked--his rags barely cover him.  He is covered in his own filth.
 Just looking at him makes you want to retch.
 ~
-14 0 0 0 16 0 0 0 -900 E
-60 7 -10 15d10+1200 8d8+8
+14 0 0 0 16 0 0 0 -500 E
+60 7 -14 15d10+1200 8d8+8
 3000 360000
 8 8 1
 E
@@ -201,8 +201,8 @@ The butcher stands here, waiting for his next kill.
    He's rather ordinary, except for the humongous knife he holds in his hand.
 
 ~
-10 0 0 0 0 0 0 0 -1000 E
-50 9 -9 12d10+1000 7d7+7
+10 0 0 0 0 0 0 0 -800 E
+50 9 -12 12d10+1000 7d7+7
 2500 250000
 8 8 1
 E
@@ -219,7 +219,7 @@ strong, she is also quite voluptuous.  She looks at you with the most
 sympathetic eyes--you just want to give yourself over to her.
 ~
 88 0 0 0 16 0 0 0 -1000 E
-86 3 -14 25d10+2150 12d12+12
+86 3 -20 25d10+2150 12d12+12
 6000 740000
 8 8 2
 E
@@ -233,7 +233,7 @@ The Keeper of the Shrine of Vice guards the alter from desecration.
 he would like to make you his next. Keep clear of this guy.
 ~
 14 0 0 0 16 0 0 0 -800 E
-80 4 -13 22d10+1800 11d11+11
+80 4 -18 22d10+1800 11d11+11
 5200 640000
 8 8 1
 E
@@ -251,7 +251,7 @@ little bit of resignation, as though it knows you will eventually get around to
 attacking it.
 ~
 90 0 0 0 16 0 0 0 -750 E
-86 3 -14 25d10+2150 12d12+12
+86 3 -20 25d10+2150 12d12+12
 6000 740000
 5 5 0
 E
@@ -264,8 +264,8 @@ The torturer stands here, brandishing a cat o' nine tails.
 the air with a mad cackle, and looks at you.  With an evil grin, he says, "ah,
 my next victim!  Yessssss" and launches himself at you.
 ~
-26 0 0 0 16 0 0 0 -1000 E
-55 8 -10 14d10+1100 8d8+8
+26 0 0 0 16 0 0 0 -850 E
+55 8 -13 14d10+1100 8d8+8
 3200 302500
 8 8 1
 E
@@ -278,8 +278,8 @@ An interrogator sits here, ready to grill you for information.
 dangerous to attack.  He looks at you with steel-rimmed glasses and says,
 "shall ve beegeen?  "
 ~
-216 0 0 0 0 0 0 0 -1000 E
-50 9 -9 12d10+1000 7d7+7
+216 0 0 0 0 0 0 0 -750 E
+50 9 -12 12d10+1000 7d7+7
 2500 250000
 6 6 1
 E
@@ -293,7 +293,7 @@ his eye.  He looks quite sinister, as though he expects to get information out
 of you--whether you know it or not.
 ~
 216 0 0 0 0 0 0 0 -1000 E
-75 5 -12 20d10+1500 10d10+10
+75 5 -17 20d10+1500 10d10+10
 4500 562500
 8 8 1
 E
@@ -307,7 +307,7 @@ The Priest of Hopelessness stands here, waiting to remove all hope of leaving.
 look at me!?  " and promptly attacks you.
 ~
 10 0 0 0 1048576 0 0 0 -1000 E
-70 6 -11 18d10+1400 9d10+9
+70 6 -16 18d10+1400 9d10+9
 4000 490000
 8 8 1
 E
