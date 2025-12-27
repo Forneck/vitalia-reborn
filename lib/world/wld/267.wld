@@ -1048,306 +1048,307 @@ placa aviso~
 ~
 S
 #26746
-The Tapestry Room~
-   Strange tapestries fill all the walls here.  Each one seems to depict a
-horrendous torture at the hands of some foul monster.  If you look closely
-enough, the pictures are so realistic, so clear, so true-to-life, that they
-look real.  Even closer examaniation reveals that they`re moving!  You probably
-don't want to stay here long.
+Sala de Tapeçarias~
+   Tapeçarias estranhas preenchem todas as paredes aqui. Cada uma parece retratar
+uma tortura horrenda nas mãos de algum monstro vil. Se você olhar de perto o
+suficiente, as imagens são tão realistas, tão claras, tão verdadeiras, que
+parecem reais. Uma examinação ainda mais próxima revela que elas estão se
+movendo! Você provavelmente não quer ficar aqui por muito tempo.
 ~
 267 9 0 0 0 0
 D1
-You see a room filled with trophies.
+Você vê uma sala cheia de troféus.
 ~
 ~
 0 0 26748
 D3
-You can see the entrance to the Building of Fear.
+Você pode ver a entrada para o Edifício do Medo.
 ~
 ~
 0 0 26745
 S
 #26747
-Gargoyle Room~
-   The gargoyle looks quite stony--that is, until you reach out to touch it.
-Suddenly, it seems to come to life and move slightly or was that just a shadow.
+Sala da Gárgula~
+   A gárgula parece bastante de pedra--isto é, até você estender a mão para
+tocá-la. De repente, ela parece ganhar vida e se mover levemente, ou foi apenas
+uma sombra?
 
 ~
 267 516 0 0 0 0
 E
-gargoyle statue~
-   It's a gargoyle, with a large gaping mouth.  Since you shouldn't be able to
-wee it, we're not going to tell you anything else.
+gargula gárgula estatua estátua~
+   É uma gárgula, com uma grande boca escancarada. Já que você não deveria ser
+capaz de vê-la, não vamos te contar mais nada.
 ~
 S
 #26748
-Trophy Room~
-   There are literally hundereds of pedestals here, each with the skulls of a
-different animal.  Some are large, some quite small--some look like nothing you
-have ever seen before.  You can see a large ritual altar on one side of the
-room, and a strange room encased in seamless glass on the other half.  Behind
-the altar, a little uneavenness in the wall can be seen, as if someone cut
-perforations through the wall.
+Sala de Troféus~
+   Há literalmente centenas de pedestais aqui, cada um com os crânios de um
+animal diferente. Alguns são grandes, alguns bem pequenos--alguns parecem nada
+que você já viu antes. Você pode ver um grande altar ritual em um lado da sala,
+e uma sala estranha envolta em vidro sem emendas do outro lado. Atrás do altar,
+uma pequena irregularidade na parede pode ser vista, como se alguém cortasse
+perfurações através da parede.
 ~
 267 520 0 0 0 0
 D0
-There's something very strange up ahead. It looks like a huge statue--but you
-can clearly see a gaping maw...no human would ever make something so grotesque.
-It's quite frightening...it's probably not good that you go in there.
+Há algo muito estranho à frente. Parece uma estátua enorme--mas você pode ver
+claramente uma boca escancarada...nenhum humano jamais faria algo tão grotesco.
+É bastante assustador...provavelmente não é bom você entrar lá.
 ~
-glass glassdoor door~
+vidro portavidro porta~
 2 26729 26747
 D1
-You see what looks to be a comfortable(?) waiting room.
+Você vê o que parece ser uma sala de espera confortável(?).
 ~
 ~
 0 0 26750
 D2
-You see nothing but a slight unevenness in the wall.
+Você não vê nada além de uma leve irregularidade na parede.
 ~
-door secret~
+porta secreta~
 1 26730 26749
 D3
-You can see a room filled with strange and horrifying tapestries.
+Você pode ver uma sala cheia de tapeçarias estranhas e horríveis.
 ~
 ~
 0 0 26746
 E
-pedestal skull~
-   Each pedestal is about the size of your waist; each skull--well, it just
-depends.  None look benevolent...  Whoever caught them must have been a very
-skilled hunter.
+pedestal cranio crânio~
+   Cada pedestal tem cerca do tamanho da sua cintura; cada crânio--bem, depende.
+Nenhum parece benevolente... Quem quer que os tenha capturado deve ter sido um
+caçador muito habilidoso.
 ~
 S
 #26749
-Dressing Room~
-   This room looks to be more the kind of room where a person dresses than a
-butcher shop--meat racks, knives of all various and sundry sizes, and other
-assorted meat-preparing items lie strewn around the room.  There is, of course,
-the paltry coatrack, with what look to be strange robes in it.
+Sala de Vestir~
+   Esta sala parece ser mais o tipo de sala onde uma pessoa se veste do que um
+açougue--prateleiras de carne, facas de todos os vários e diversos tamanhos, e
+outros itens variados de preparação de carne estão espalhados pela sala. Há, é
+claro, o mísero cabideiro, com o que parecem ser vestes estranhas nele.
 ~
 267 9 0 0 0 0
 D0
-You see the strange trophy room(which now begins to seem more a sacrificial
-chamber, as you look at it from this point of view...).
+Você vê a estranha sala de troféus (que agora começa a parecer mais uma câmara
+sacrificial, quando você olha dela deste ponto de vista...).
 ~
-door secret~
+porta secreta~
 1 26730 26748
 S
 #26750
-Wailing Tower~
-   The howls you heard at the entrance are much louder here.  It appears to be
-coming from above you--indeed, you can see a spiral staircase ascending into
-the building.  Should you go up?  You decide.
+Torre dos Lamentos~
+   Os uivos que você ouviu na entrada estão muito mais altos aqui. Parece estar
+vindo de cima de você--de fato, você pode ver uma escada em espiral subindo pelo
+edifício. Você deveria subir? Você decide.
 ~
 267 525 0 0 0 0
 D3
-You can see the trophy room.
+Você pode ver a sala de troféus.
 ~
 ~
 0 -1 26748
 D4
-The spiral staircase ascends up farther than the eye can see.
+A escada em espiral sobe mais longe do que os olhos podem ver.
 ~
 ~
 0 -1 26751
 E
-stair spiral staircase~
-   This staircase appears to go up to infinity.  You can't see where it ends.
+escada espiral~
+   Esta escada parece ir até o infinito. Você não consegue ver onde ela termina.
 ~
 S
 #26751
-On the staircase~
-   The wailing surrounds you entirely here.  You feel you might go mad if you
-don't leave this stairwell.  Over and over and over the sounds shriek over you.
-Perhaps you should go up--and quickly.
+Na Escada~
+   Os lamentos te cercam inteiramente aqui. Você sente que pode enlouquecer se
+não sair desta escadaria. Repetidamente os sons gritam sobre você. Talvez você
+devesse subir--e rapidamente.
 ~
 267 525 0 0 0 0
 D4
-You see a very weirdly shaped hallway.
+Você vê um corredor de forma muito estranha.
 ~
 ~
 0 -1 26753
 D5
-You see the bottom of the staircase.
+Você vê a base da escada.
 ~
 ~
 0 -1 26750
 S
 #26752
-Cell~
-   The stench of refuse is particularly strong here.  The cell can't be more
-than 3-by-2 meters.  A small cot is bolted to the floor, and a small drainage
-hole with no covering is in the mi268le of the room.  The floors slant down to
-the hole, and you can see streaks of rust where the iron bolts have oxidized.
-Manacles hang from the wall in the back of the cell, and you can see two
-skeletal hands, all that is left of what once must have been a human being.
+Cela~
+   O fedor de dejetos é particularmente forte aqui. A cela não pode ter mais que
+3 por 2 metros. Um pequeno catre está parafusado ao chão, e um pequeno buraco
+de drenagem sem cobertura está no meio da sala. Os pisos inclinam-se para o
+buraco, e você pode ver listras de ferrugem onde os parafusos de ferro se
+oxidaram. Algemas pendem da parede no fundo da cela, e você pode ver duas mãos
+esqueléticas, tudo que resta do que uma vez deve ter sido um ser humano.
 ~
 267 525 0 0 0 0
 D0
-You can see the strangely shaped hallway.
+Você pode ver o corredor de forma estranha.
 ~
-bars cell door~
+barras cela porta~
 1 26713 26753
 E
-manacles legirons irons hands skeletal~
-   Two small hands are all that remain of what must have once been a small
-child, or a very small human.  You can see teeth marks where it looks like
-someone was trying to bite their way out.
+algemas grilhoes grilhões ferros maos mãos esqueleticas esqueléticas~
+   Duas pequenas mãos são tudo que resta do que deve ter sido uma pequena
+criança, ou um humano muito pequeno. Você pode ver marcas de dentes onde parece
+que alguém estava tentando morder para sair.
 ~
 E
-hole drainage~
-   The hole is about the size of your fist, and from the smell, it doesn't take
-a whole lot of imagination to figure out what is supposed to go down in that
-one.
+buraco drenagem~
+   O buraco tem cerca do tamanho do seu punho, e pelo cheiro, não precisa de
+muita imaginação para descobrir o que deveria descer por aquele.
 ~
 E
-cot bed~
-   The cot is made of black.  A mattress made of straw lies on top of it--very
-thin, and certainly not comfortable.  Rats scuttle underneath the bed as you
-walk near it.
+catre cama~
+   O catre é feito de preto. Um colchão feito de palha está em cima dele--muito
+fino, e certamente não confortável. Ratos correm por baixo da cama quando você
+se aproxima dela.
 ~
 S
 #26753
-Strangely shaped hallway.~
-   This hallway appears to be nothing more than an extension around the stairs.
-Made from the same gray material as the rest of the building, this room seems
-to have something strange about it.  Perhaps it's the strange black tiling at
-certain points around the room.  There are doors leading in almost all
-directions, and the stairs continue on upward.
+Corredor de Forma Estranha~
+   Este corredor parece ser nada mais que uma extensão ao redor das escadas.
+Feito do mesmo material cinza do resto do edifício, esta sala parece ter algo
+estranho sobre ela. Talvez sejam os estranhos ladrilhos pretos em certos pontos
+ao redor da sala. Há portas levando em quase todas as direções, e as escadas
+continuam subindo.
 ~
 267 8 0 0 0 0
 D0
-You see what looks to be the smoldered remains of a bonfire.
+Você vê o que parecem ser os restos queimados de uma fogueira.
 ~
-door~
+porta~
 1 -1 26754
 D1
-You see what look to be crates and crates of supplies.
+Você vê o que parecem ser caixotes e caixotes de suprimentos.
 ~
-door~
+porta~
 2 26731 26755
 D2
-You see the bars of what is obviously a prison cell.
+Você vê as barras do que obviamente é uma cela de prisão.
 ~
-door~
+porta~
 1 26713 26752
 D4
-The stairs ascend upwards.
+As escadas sobem para cima.
 ~
 ~
 0 -1 26757
 D5
-The stairs ascend downwards.
+As escadas descem para baixo.
 ~
 ~
 0 -1 26751
 S
 #26754
-Open Hearth~
-   The damp remains of what was probably once a huge bonfire are strewn about
-the room.  The coals are mushy here, and they're everywhere.  They creep
-through the soles of your boots and get caught between your toes.  What a
-disgusting place.  You can exit this gross room to your south.
+Lareira Aberta~
+   Os restos úmidos do que provavelmente foi uma enorme fogueira estão espalhados
+pela sala. As brasas estão moles aqui, e elas estão por toda parte. Elas se espalham
+pela sola das suas botas e ficam presas entre seus dedos. Que lugar nojento.
+Você pode sair desta sala nojenta ao sul.
 ~
 267 9 0 0 0 0
 D2
-You can see the strangely-shaped hallway.
+Você pode ver o corredor de forma estranha.
 ~
-door~
+porta~
 1 -1 26753
 E
-coals fire coal~
-   They're wet, and mushy.  As you pick one up, it crumbles into a disgusting
-mass of mud in your hand.
+brasas fogo brasa carvao carvão~
+   Elas estão molhadas e moles. Quando você pega uma, ela desmorona em uma massa
+nojenta de lama em sua mão.
 ~
 S
 #26755
-Supply Room~
-   Old, rotten crates are piled up everywhere here.  They appear to have been
-looted a long time ago.  Some have been shattered to pieces.  You have an exit
-to your west.
+Sala de Suprimentos~
+   Caixotes velhos e podres estão empilhados por toda parte aqui. Eles parecem
+ter sido saqueados há muito tempo. Alguns foram despedaçados. Você tem uma saída
+a oeste.
 ~
 267 525 0 0 0 0
 D3
-You can see the strangely-shaped hallway.
+Você pode ver o corredor de forma estranha.
 ~
-door~
+porta~
 2 26731 26753
 E
-crates~
-   The crates are old, rotting, and totally empty--except for one, snuck in the
-corner.  It looks to have an o268 device of some kind in it.
+caixotes~
+   Os caixotes são velhos, apodrecendo e totalmente vazios--exceto por um,
+escondido no canto. Parece ter algum dispositivo estranho dentro dele.
 ~
 S
 #26756
-Deserted Bedroom~
-   This lush chamber looks as if it hasn't been used for centuries.  A bed,
-once beautiful, has cobwebs hanging from its huge canopy.  The room is so dark
-that you can only view certain things even WITH a light.  A dresser is at the
-very back of the room.  You can exit to your north.
+Quarto Deserto~
+   Esta câmara luxuosa parece não ter sido usada por séculos. Uma cama, outrora
+bela, tem teias de aranha penduradas em seu enorme dossel. A sala está tão
+escura que você só consegue ver certas coisas mesmo COM uma luz. Uma cômoda está
+no fundo da sala. Você pode sair ao norte.
 ~
 267 9 0 0 0 0
 D0
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
-door~
+porta~
 1 -1 26757
 E
-bed~
-   The bed has a pink/tapia canopy hanging over it, with cobwebs covering its
-entire surface.  The spiders seemed to have a heyday over this one.
+cama~
+   A cama tem um dossel rosa/taupe pendurado sobre ela, com teias de aranha
+cobrindo toda sua superfície. As aranhas parecem ter se divertido com esta.
 ~
 S
 #26757
-Creepy Hallway~
-   You can hear strange music floating throughout the corridor.  The hallway is
-lit by some unknown source in an eerie green light.  The walls are painted a
-bright scarlet red.  Whoever painted this hallway didn't have kindness or
-bunnies and light in mind.  Exits lead in every direction but up.
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde sinistra. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Saídas levam em todas as
+direções exceto para cima.
 ~
 267 8 0 0 0 0
 D0
-You can see the creepy hallway.
+Você pode ver o corredor assustador.
 ~
 ~
 0 0 26759
 D1
-You can see a door.
+Você pode ver uma porta.
 ~
-door~
+porta~
 1 26732 26758
 D2
-You can see a door.
+Você pode ver uma porta.
 ~
-door~
+porta~
 1 -1 26756
 D3
-You can see the creepy hallway.
+Você pode ver o corredor assustador.
 ~
 ~
 0 0 26761
 D5
-The stairs descend downwards into nothingness.
+As escadas descem para o nada.
 ~
 ~
 0 0 26753
 S
 #26758
-Office of the High Priest of Fear~
-   This office is hardly the regular office.  The High Priest of Fear is
-obviously into the torture thing, as manacles, iron maidens, and racks line the
-walls.  A boiling cauldron of oil is in the very center of the room.  A door is
-to your west.
+Escritório do Alto Sacerdote do Medo~
+   Este escritório dificilmente é um escritório comum. O Alto Sacerdote do Medo
+obviamente gosta de tortura, pois algemas, donzelas de ferro e potros alinham as
+paredes. Um caldeirão fervente de óleo está bem no centro da sala. Uma porta
+fica a oeste.
 ~
 267 8 0 0 0 0
 D3
-You can see the creepy hallway.
+Você pode ver o corredor assustador.
 ~
-door~
+porta~
 1 26732 26757
 E
-cauldron boiling oil~
+caldeirao caldeirão fervente oleo óleo~
    The thing bubbles.  It curdles the brain and sends chills down your spine.
 ~
 E
