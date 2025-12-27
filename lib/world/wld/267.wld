@@ -647,202 +647,208 @@ Uma trilha belamente feita e bem cuidada fica a oeste.
 ~
 0 0 26729
 D4
-Of course, you should ascend a hill, right?
+Claro, você deveria subir uma colina, certo?
 ~
 ~
 0 0 26730
 S
 #26729
-High Path~
-   This road is amazingly built--some sort of black onyxlike substance, shined
-to a mirror-like gleam forms the main of the path.  Bricks of the same
-substance line the path--it doesn't look as if a piece of paper could be
-inserted between them.  The trees have been trimmed back to allow easy passage.
-Even among all this beauty, you sense a sinister presence.
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
 ~
 267 5 0 0 0 1
 D1
-To your east you can see the bottom of Vice Hill.
+A leste você pode ver a base da Colina do Vício.
 ~
 ~
 0 0 26728
 D2
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26731
 S
 #26730
-Trail of Terror~
-   This trail is covered by the skeletal ribs of a huge creature in some sort
-of diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the
-distance.  A soft chanting can be heard in the far distance, but you can see no
-sign of life.  Lonliness sends you into a panicky state.
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
 ~
 267 0 0 0 0 1
 D2
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26732
 D3
-The bottom of Vice Hill starts to your west.
+A base da Colina do Vício começa a oeste.
 ~
 ~
 0 0 26728
 E
-ribs skeleton~
-   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just
-not have to find out.  Each rib seems to be razer-sharp at the edges, and the
-bones have been cleaned to a perfect white.
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26731
-High Path~
-   This road is amazingly built--some sort of blax onyxlike substance, shined
-to a mirror-like gleam forms the main of the path.  Bricks of the same
-substance line the path--it doesn't look as if a piece of paper could be
-inserted between them.  The trees have been trimmed back to allow easy passage.
-Even among all this beauty, you sense a sinister presence.
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
 ~
 267 5 0 0 0 1
 D0
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26729
 D2
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26733
 S
 #26732
-Trail of Terror~
-   This trail is covered by the skeletal ribs of a huge creature in some sort
-of diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the
-distance.  A soft chanting can be heard in the far distance, but you can see no
-sign of life.  Lonliness sends you into a panicky state.
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
 ~
 267 0 0 0 0 1
 D0
-The strange trail continues on..
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26730
 D2
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26734
 E
-ribs skeleton~
-   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just
-not have to find out.  Each rib seems to be razer-sharp at the edges, and the
-bones have been cleaned to a perfect white.
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26733
 High Path~
    This road is amazingly built--some sort of blax onyxlike substance, shined
-to a mirror-like gleam forms the main of the path.  Bricks of the same
-substance line the path--it doesn't look as if a piece of paper could be
-inserted between them.  The trees have been trimmed back to allow easy passage.
-Even among all this beauty, you sense a sinister presence.
+Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
 ~
 267 5 0 0 0 1
 D0
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26731
 D2
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26735
 S
 #26734
-Trail of Terror~
-   This trail is covered by the skeletal ribs of a huge creature in some sort
-of diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the
-distance.  A soft chanting can be heard in the far distance, but you can see no
-sign of life.  Lonliness sends you into a panicky state.
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
 ~
 267 0 0 0 0 1
 D0
-The strange trail continues on..
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26732
 D2
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26736
 E
-ribs skeleton~
-   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just
-not have to find out.  Each rib seems to be razer-sharp at the edges, and the
-bones have been cleaned to a perfect white.
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26735
-High Path~
-   This road is amazingly built--some sort of blax onyxlike substance, shined
-to a mirror-like gleam forms the main of the path.  Bricks of the same
-substance line the path--it doesn't look as if a piece of paper could be
-inserted between them.  The trees have been trimmed back to allow easy passage.
-Even among all this beauty, you sense a sinister presence.
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
 ~
 267 5 0 0 0 1
 D0
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26733
 D2
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26737
 S
 #26736
-Trail of Terror~
-   This trail is covered by the skeletal ribs of a huge creature in some sort
-of diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the
-distance.  A soft chanting can be heard in the far distance, but you can see no
-sign of life.  Lonliness sends you into a panicky state.
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
 ~
 267 0 0 0 0 1
 D0
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26734
 D2
-The strange trail continues on.
+A estranha trilha continua adiante.
 ~
 ~
 0 0 26738
 E
-ribs skeleton~
-   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just
-not have to find out.  Each rib seems to be razer-sharp at the edges, and the
-bones have been cleaned to a perfect white.
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26737
-High Path~
-   This road is amazingly built--some sort of blax onyxlike substance, shined
-to a mirror-like gleam forms the main of the path.  Bricks of the same
-substance line the path--it doesn't look as if a piece of paper could be
-inserted between them.  The trees have been trimmed back to allow easy passage.
-Even among all this beauty, you sense a sinister presence.
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
 ~
 267 5 0 0 0 1
 D0
-The high path continues on.
+O caminho alto continua adiante.
 ~
 ~
 0 0 26735
