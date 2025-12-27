@@ -95,7 +95,14 @@
    Sistema de armazem de armadilhas mortais (DT) implementado.
    Sala de armazem DT configuravel via @YCEDIT@n.
 
-   @WSistema de Emocoes para Mobs@n
+   @WHabilidade Senso de Perigo (Danger Sense)@n
+   Habilidade @Ydanger sense@n agora protege Ladroes de armadilhas mortais ao fugir.
+   Quando a habilidade detecta perigo com sucesso, impede fuga para salas fatais.
+   Se a verificacao da habilidade falhar, a fuga normal ocorre (incluindo DTs).
+   Mensagem especifica alerta quando o senso de perigo bloqueia uma direcao.
+   Sistema funciona tanto com comando @Yflee@n quanto com fuga automatica (wimpy).
+
+   @YSistema de Emocoes para Mobs@n
    Comando @Ystat mob@n agora exibe informacoes detalhadas de emocoes.
    Documentacao e exemplos adicionados para sistema de emocoes de mobs.
 
