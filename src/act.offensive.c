@@ -495,10 +495,14 @@ ACMD(do_flee)
     for (i = 0; i < 6; i++) {
         attempt = rand_number(0, DIR_COUNT - 1); /* Seleciona uma direção aleatória */
         if (CAN_GO(ch, attempt) && VALID_ROOM_RNUM(EXIT(ch, attempt)->to_room) &&
-            !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH) &&
             !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_NOMOB)) {
 
-            /* Check if danger sense prevents fleeing to this direction (death trap) */
+            /* Prevent mobs from fleeing into death traps */
+            if (IS_NPC(ch) && ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH)) {
+                continue; /* Try another direction */
+            }
+
+            /* Check if danger sense prevents player from fleeing to this direction (death trap) */
             if (check_danger_sense_prevents_flee(ch, attempt)) {
                 continue; /* Danger sense prevented flee to death trap, try another direction */
             }
