@@ -1473,189 +1473,189 @@ Você vê o corredor assustador.
 0 0 26763
 S
 #26765
-Torture Chambre~
-   This room is stacked high with torture instruments of all kinds, ranging
-from the mild shackle to spiked manacles, to several different whips, to some
-rather sinister-looking magical instruments, to a yoke that is obviously fitted
-to the human body.  This isn't a pleasant place.  An interrogation room lies to
-your east, and a teleporting zone is to your north.
+Câmara de Tortura~
+   Esta sala está repleta de instrumentos de tortura de todos os tipos, variando
+desde grilhões simples até algemas com espinhos, vários chicotes diferentes,
+alguns instrumentos mágicos de aparência sinistra, até um jugo que obviamente é
+ajustado ao corpo humano. Este não é um lugar agradável. Uma sala de
+interrogatório fica a leste, e uma zona de teletransporte fica ao norte.
 ~
 267 521 0 0 0 0
 D0
-You can see a teleportation square.
+Você pode ver um quadrado de teletransporte.
 ~
 ~
 0 0 26778
 D2
-You see the screening room.
+Você vê a sala de triagem.
 ~
-door~
+door porta~
 1 -1 26766
 S
 #26766
-Screening Room~
-   This is the room where all prisoners are interrogated.  Should they be found
-lacking in the information the interrogators need, they are taken to the
-torture chamber to your west.
+Sala de Triagem~
+   Esta é a sala onde todos os prisioneiros são interrogados. Caso sejam
+considerados carentes nas informações que os interrogadores precisam, eles são
+levados à câmara de tortura a oeste.
 ~
 267 8 0 0 0 0
 D2
-You see the outlay.
+Você vê a periferia.
 ~
-door~
+door porta~
 1 26733 26767
 D3
-You see the torture chambre.
+Você vê a câmara de tortura.
 ~
 ~
 1 -1 26765
 S
 #26767
-Outlay~
-   This room is an outlying area of the square hallway in the House of Despair.
-Strange pictures line the walls, and shrieks can be heard all around you.  You
-see no visible exits.
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
 ~
 267 8 0 0 0 0
 D0
 ~
-door secret~
+door porta secret secreta~
 1 26733 26766
 S
 #26768
-Outlay~
-   This room is an outlying area of the square hallway in the House of Despair.
-Strange pictures line the walls, and shrieks can be heard all around you.  You
-see no visible exits.
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
 ~
 267 8 0 0 0 0
 D2
 ~
-door secret~
+door porta secret secreta~
 1 26733 26769
 S
 #26769
-Waiting Room~
-   This room has nothing but two chair in it, lined with straps.  The walls are
-painted a sterile white, and the air has a hint of fog in it.  There is an
-interrogation center to your west.
+Sala de Espera~
+   Esta sala não tem nada além de duas cadeiras, forradas com correias. As
+paredes são pintadas de branco estéril, e o ar tem um leve toque de névoa. Há um
+centro de interrogatório a oeste.
 ~
 267 8 0 0 0 0
 D3
-You can see the interrogation room.
+Você pode ver a sala de interrogatório.
 ~
 ~
 0 0 26770
 S
 #26770
-Interrogation Center~
-   A long, circular desk forms the central piece of furniture in this room.  A
-huge, stark chair is at the head, while smaller chairs line the rest.  An
-opening in the desk allows a person to be placed in the iron chair with straps
-in the center.  For what purpose, you shu268er to guess.  You can go back into
-the waiting room, or can go south through a teleportation device to the square
-room.
+Centro de Interrogatório~
+   Uma longa mesa circular forma a peça central de mobília nesta sala. Uma
+enorme cadeira dura está na cabeceira, enquanto cadeiras menores alinham o
+resto. Uma abertura na mesa permite que uma pessoa seja colocada na cadeira de
+ferro com correias no centro. Para que propósito, você estremece ao adivinhar.
+Você pode voltar à sala de espera, ou pode ir ao sul através de um dispositivo
+de teletransporte para a sala quadrada.
 ~
 267 8 0 0 0 0
 D1
-You see the waiting room.
+Você vê a sala de espera.
 ~
 ~
 0 0 26769
 D2
-You see a teleportation square.
+Você vê um quadrado de teletransporte.
 ~
 ~
 0 0 26778
 S
 #26771
-Office of the Priest of Despair~
-   This plush office is full of every item that could ever please any child.
-From cute little cu268ly kittens to darling, stuffed dolls, they line the
-walls--just out of your reach.  A beautiful chair sits in the mi268le of the
-room, but it's bolted to the ground, and there's a huge spike in the center.
-What sicko would make a room up like this?  You can leave this place through a
-transporter to your east or go back to the waiting room to your west.
+Escritório do Sacerdote do Desespero~
+   Este escritório luxuoso está cheio de todo item que poderia agradar qualquer
+criança. Desde gatinhos fofinhos até bonecas adoráveis de pelúcia, elas
+revestem as paredes - fora do seu alcance. Uma linda cadeira fica no meio da
+sala, mas está parafusada no chão, e há um enorme espinho no centro. Que doente
+faria uma sala assim? Você pode deixar este lugar através de um transportador a
+leste ou voltar à sala de espera a oeste.
 ~
 267 8 0 0 0 0
 D1
-You see a transportation platform.
+Você vê uma plataforma de transporte.
 ~
 ~
 0 0 26778
 D3
-You see a waiting room.
+Você vê uma sala de espera.
 ~
 ~
 0 0 26772
 S
 #26772
-Waiting Room~
-   This room has nothing but two chair in it, lined with straps.  The walls are
-painted a sterile white, and the air has a hint of fog in it.  There is an
-office to your east.
+Sala de Espera~
+   Esta sala não tem nada além de duas cadeiras, forradas com correias. As
+paredes são pintadas de branco estéril, e o ar tem um leve toque de névoa. Há um
+escritório a leste.
 ~
 267 8 0 0 0 0
 D3
-You can see the office of the Priest of Despair.
+Você pode ver o escritório do Sacerdote do Desespero.
 ~
 ~
 0 0 26770
 S
 #26773
-Outlay~
-   This room is an outlying area of the square hallway in the House of Despair.
-Strange pictures line the walls, and shrieks can be heard all around you.  You
-see no visible exits.
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
 ~
 267 8 0 0 0 0
 D0
 ~
-door secret~
+door porta secret secreta~
 1 26733 26772
 S
 #26775
-Alcove~
-   This small alcove has no real interesting quality, save the fact that it has
-a large opening to a tar pit of boggling dimensions.  You can(and should) go
-back to your west.
+Alcova~
+   Esta pequena alcova não tem qualidade realmente interessante, exceto pelo
+fato de ter uma grande abertura para um poço de alcatrão de dimensões
+desconcertantes. Você pode (e deveria) voltar a oeste.
 ~
 267 8 0 0 0 0
 D2
-DON'T GO THAT WAY! It's a tar pit, STUPID! DORK!
+NÃO VÁ NESSA DIREÇÃO! É um poço de alcatrão, ESTÚPIDO! IDIOTA!
 ~
 ~
 0 0 26727
 D3
-You can see the sitting room.
+Você pode ver a sala de estar.
 ~
 ~
 0 0 26776
 S
 #26776
-Sitting Room~
-   Here the Priest of Despair could sit and watch as his prisoners (and hapless
-adventurers were thrown(or stupidly walked into) the tar pit.  Looks as though
-they were thrown in not far from here, as you can see telltale signs of
-scuffling around you.
+Sala de Estar~
+   Aqui o Sacerdote do Desespero podia sentar e assistir enquanto seus
+prisioneiros (e aventureiros infelizes eram jogados (ou estupidamente andavam
+para dentro) do poço de alcatrão. Parece que eles foram jogados não muito longe
+daqui, já que você pode ver sinais reveladores de luta ao seu redor.
 ~
 267 8 0 0 0 0
 D1
-That's probably as close as you'd want to get to the tar pit.
+Isso é provavelmente o mais perto que você gostaria de chegar do poço de alcatrão.
 ~
 ~
 0 0 26775
 S
 #26777
-Outlay~
-   This room is an outlying area of the square hallway in the House of Despair.
-Strange pictures line the walls, and shrieks can be heard all around you.  You
-see no visible exits.
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
 ~
 267 8 0 0 0 0
 D2
 ~
-door secret~
+door porta secret secreta~
 1 26733 26776
 S
 #26778
@@ -1698,48 +1698,48 @@ sign note plaque~
 ~
 S
 #26779
-Entrance to the Hall of Hopelessness~
-   You stand on a dusty floor in a fallen-down hut.  Just to the east, you can
-see the remains of a deserted corridor.  The entire chamber is empty and devoid
-of anything of any real interest.  You can see an transporter platform to your
-north.  All around you are depictions of people in inescapable situations.
+Entrada para o Salão da Desesperança~
+   Você está em um chão empoeirado em uma cabana caída. Logo a leste, você pode
+ver os restos de um corredor deserto. A câmara inteira está vazia e desprovida
+de qualquer coisa de interesse real. Você pode ver uma plataforma transportadora
+ao norte. Ao seu redor estão representações de pessoas em situações sem saída.
 ~
 267 8 0 0 0 0
 D0
-You can see a transporter platform.
+Você pode ver uma plataforma transportadora.
 ~
 ~
 0 0 26778
 D1
-You can see the deserted corridor.
+Você pode ver o corredor deserto.
 ~
 ~
 0 0 26781
 D2
-You can see a tarry tunnel.
+Você pode ver um túnel de alcatrão.
 ~
 ~
 0 0 26722
 S
 #26780
-Deserted Corridor~
-   A damp, musty hall leads north.  You detect no sounds--in fact, all sounds
-seem to be muted in this strange place.  The air seem thicker and heavier than
-usual.
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao norte. Você não detecta sons - na verdade,
+todos os sons parecem estar abafados neste lugar estranho. O ar parece mais
+espesso e pesado do que o usual.
 ~
 267 8 0 0 0 0
 D0
-You see a deserted corridor.
+Você vê um corredor deserto.
 ~
 ~
 0 0 26781
 D1
-You see nothing.
+Você não vê nada.
 ~
-door secret~
+door porta secret secreta~
 1 0 26783
 D3
-You can see the entrance to the Hall of Hopelessness.
+Você pode ver a entrada para o Salão da Desesperança.
 ~
 ~
 0 0 26779
