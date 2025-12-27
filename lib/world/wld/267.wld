@@ -1363,106 +1363,111 @@ very painful.
 ~
 S
 #26759
-Creepy Hallway~
-   You can hear strange music floating throughout the corridor.  The hallway is
-lit by some unknown source in an eerie green light.  The walls are painted a
-bright scarlet red.  Whoever painted this hallway didn't have kindness or
-bunnies and light in mind.  You can go to your north or south.
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou sul.
 ~
 267 8 0 0 0 0
 D0
-You can't see much in that direction.
+Você não consegue ver muito naquela direção.
 ~
-closet~
+closet armario armário~
 1 -1 26760
 D2
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 -1 26757
 S
 #26760
-Closet~
-   This closet has strange clothes strewn everywhere.  It probably wouldn't be
-a good idea to try them on.  A stale musty smell has infested everything in
-this small space.
+Armário~
+   Este armário tem roupas estranhas espalhadas por toda parte. Provavelmente
+não seria uma boa ideia experimentá-las. Um cheiro mofado infestou tudo neste
+pequeno espaço.
 ~
 267 9 0 0 0 0
 D2
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
-Creepy Hallway~
+Corredor Assustador~
 1 -1 26759
 S
 #26761
-Creepy Hallway~
-   You can hear strange music floating throughout the corridor.  The hallway is
-lit by some unknown source in an eerie green light.  The walls are painted a
-bright scarlet red.  Whoever painted this hallway didn't have kindness or
-bunnies and light in mind.  You can go to your north or east.
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou leste.
 ~
 267 8 0 0 0 0
 D0
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26762
 D1
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26757
 S
 #26762
-Creepy Hallway~
-   You can hear strange music floating throughout the corridor.  The hallway is
-lit by some unknown source in an eerie green light.  The walls are painted a
-bright scarlet red.  Whoever painted this hallway didn't have kindness or
-bunnies and light in mind.  You can go to your north or south.
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou sul.
 ~
 267 8 0 0 0 0
 D0
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26763
 D2
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26761
 S
 #26763
-Creepy Hallway~
-   You can hear strange music floating throughout the corridor.  The hallway is
-lit by some unknown source in an eerie green light.  The walls are painted a
-bright scarlet red.  Whoever painted this hallway didn't have kindness or
-bunnies and light in mind.  You can go to your south or west.
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o sul
+ou oeste.
 ~
 267 8 0 0 0 0
 D2
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26762
 D3
-The end of the hallways opens up into the outside. It looks to be a balcony.
+O fim dos corredores se abre para o exterior. Parece ser uma varanda.
 ~
 ~
 0 0 26764
 S
 #26764
-Balcony~
-   From here, you can see the entire island.  The vantange is breathtaking, and
-still looks to be sinister.  To your far south, you can see what looks like the
-ribs of a huge animal.  To your far east, you can see a pristine white beach.
-Most of the island is covered in forest, and extends around a huge hill.  The
-far, far north shows some absolutely huge trees, and a rather large, black pool
-of what can only be tar.  You can go back into the building by going east.
+Varanda~
+   Daqui, você pode ver toda a ilha. A vista é de tirar o fôlego, e ainda
+parece ser sinistra. Ao sul distante, você pode ver o que parecem ser as
+costelas de um animal enorme. Ao leste distante, você pode ver uma praia branca
+pristina. A maior parte da ilha é coberta por floresta e se estende ao redor de
+uma enorme colina. O extremo norte mostra algumas árvores absolutamente enormes
+e uma grande piscina negra do que só pode ser alcatrão. Você pode voltar ao
+edifício indo para leste.
 ~
 267 0 0 0 0 1
 D1
-You see the creepy hallway.
+Você vê o corredor assustador.
 ~
 ~
 0 0 26763
