@@ -1,0 +1,2178 @@
+#26700
+Sala de Descrição da Zona Ilha do Vício~
+   A Ilha do Vício é uma área voltada para o mal. É bastante grande para um MUD
+de médio porte e foi planejada para ser usada em conjunto com Oceania.
+Esta área é destinada a ser a parte 1 de 4 subáreas planejadas para Oceania.
+Possui principalmente criaturas malignas, e quase todos os equipamentos nela são
+exclusivos para personagens malignos.
+---------------------------------------------------------------------------
+Crédito original do design: Questor
+Zona adaptada e traduzida para Vitália Reborn
+---------------------------------------------------------------------------
+Construtor   : Questor
+Zona         : 267 Ilha do Vício
+Nível        : 16-86
+Salas        : 98
+Criaturas    : 20
+Objetos      : 41
+Gatilhos     : 10
+Conexões     :
+Zona 267 conectada às seguintes zonas:
+132 O Farol da Praia              em 26701 (oeste) ---> 13235
+~
+267 0 0 0 0 2
+S
+#26701
+Porto do Harém~
+   Você está em uma praia de areia cegantemente branca; ela se estende ao norte
+e ao sul até onde sua visão alcança. Centenas de mulheres belamente vestidas de
+todas as tonalidades languidecem na costa; elas têm olhos apedrejados e opacos
+que olham direto através de você. Algo parece não estar muito certo neste lugar
+pristino.
+~
+267 0 0 0 0 2
+D1
+Para leste você pode ver um grande monte de terra.
+~
+~
+0 0 26702
+D3
+Para oeste você pode ver o caminho rochoso da praia.
+~
+~
+0 0 13235
+E
+mulheres mulher~
+   Cada mulher é espetacularmente bela--exceto por seus olhos vidrados e
+expressões de completa estupidez. O que diabos pode estar errado com elas?
+~
+E
+areia praia~
+   O exame minucioso da praia mostra que a areia não é apenas branca--cada
+grão é um único cristal; ele reflete a luz do sol em uma exibição cegante
+de branco puro. Embora cada um exiba uma cor diferente, todos eles se
+misturam nesta cor pristina.
+~
+S
+#26702
+Harém à Beira da Praia~
+   Agora ISSO é estranho. Mulheres assustadas correm de um buraco em um grande
+monte e você pode ouvir gritos das profundezas. Uma grande floresta fica a leste,
+e uma trilha pode ser vagamente vista.
+~
+267 1 0 0 0 4
+D1
+Para leste você pode ver uma estrada da praia que leva para a floresta.
+~
+~
+0 0 26703
+D3
+Você pode ver a praia branca cegante a oeste.
+~
+~
+0 0 26701
+D5
+Para baixo você pode ver o que parece ser um harém luxuoso.
+~
+~
+0 0 26704
+S
+#26703
+Estrada da Praia~
+   Este caminho é extremamente bem cuidado. Pequenas pedras alinham o caminho
+externo, e a areia da praia foi colocada para fazer um caminho--embora o cristal
+pareça ter sido derretido para tornar o chão mais duro. As palmeiras aqui
+preenchem completamente todas as áreas fora do caminho. Ruídos estranhos e gritos
+absolutamente arrepiantes enchem o ar. Está muito escuro aqui. O caminho continua
+a oeste, e um monte estranho fica a leste.
+~
+267 1 0 0 0 2
+D1
+A estrada da praia continua.
+~
+~
+0 0 26705
+D3
+A oeste você pode ver um monte enorme.
+~
+~
+0 0 26702
+S
+#26704
+Harém~
+   Este lugar está cheio de beleza importada--luxuosos tapetes persas, vasos
+inestimáveis sortidos, e pilhas de dinheiro e joias por toda parte. Belas
+mulheres silenciosas dançam diante de você, girando em vestidos de seda que mal
+escondem sua beleza. Um som pode ser ouvido acima de toda a barulheira, gritando,
+"Continue trabalhando!"
+~
+267 521 0 0 0 1
+D4
+Você pode ver pelo buraco no chão que está bem ao lado de um caminho que leva
+para o bosque.
+~
+~
+0 0 26702
+S
+#26705
+Estrada da Praia~
+   Este caminho é extremamente bem cuidado. Pequenas pedras alinham o caminho
+externo, e a areia da praia foi colocada para fazer um caminho--embora o cristal
+pareça ter sido derretido para tornar o chão mais duro. As palmeiras aqui
+preenchem completamente todas as áreas fora do caminho. Ruídos estranhos e gritos
+absolutamente arrepiantes enchem o ar. Está muito escuro aqui. Uma grande colina
+se ergue a leste, e a estrada da praia fica a oeste.
+~
+267 5 0 0 0 2
+D1
+Uma grande colina se ergue a leste.
+~
+~
+0 0 26739
+D3
+Você vê uma trilha bem cuidada.
+~
+~
+0 0 26703
+S
+#26706
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe.
+~
+267 4 0 0 0 2
+D1
+A estrada assustadora continua a leste.
+~
+~
+0 0 26707
+D3
+A enorme Colina do Vício fica a oeste.
+~
+~
+0 0 26739
+E
+esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
+~
+S
+#26707
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe.
+~
+267 0 0 0 0 2
+D1
+A estrada assustadora continua a leste.
+~
+~
+0 0 26708
+D3
+A estrada assustadora continua a oeste.
+~
+~
+0 0 26706
+E
+esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
+~
+S
+#26708
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe. Um grande
+edifício se ergue acima de você a leste.
+~
+267 4 0 0 0 2
+D1
+Você sabe, como dissemos, um grande edifício ao leste e tudo mais.
+~
+~
+0 0 26745
+D3
+A estrada assustadora continua a oeste.
+~
+~
+0 0 26739
+E
+predio prédio edificio edifício~
+   O edifício é de um tom cinza escuro, mas parece ter sido sujado por alcatrão
+sujo.
+~
+E
+esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
+~
+S
+#26709
+Colina do Vício~
+   Você está em uma colina alta com vista para toda a ilha. Você pode ver o
+zênite ao longe no norte; a colina bloqueia toda a visão para o norte e além.
+Ao sul, você pode ver o começo de um caminho coberto de pedras... Continuando
+mais abaixo, você pode ver o fim da colina. A floresta cobre a maior parte da
+vista daqui.
+~
+267 0 0 0 0 4
+D4
+Olhando para cima, você pode ver o zênite da Colina do Vício.
+~
+~
+0 0 26739
+D5
+Olhando para baixo, você pode ver o fim da colina.
+~
+~
+0 0 26723
+S
+#26710
+Colina do Vício~
+   Você está em uma colina alta com vista para toda a ilha. Você pode ver o
+zênite ao longe no sul; a colina bloqueia toda a visão para o sul e além.
+Ao sul, você pode ver o começo de um caminho coberto de pedras... Continuando
+mais abaixo, você pode ver o fim da colina. A floresta cobre a maior parte da
+vista daqui.
+~
+267 0 0 0 0 4
+D4
+Olhando para cima, você pode ver o zênite da Colina do Vício.
+~
+~
+0 0 26739
+D5
+Olhando para baixo, você pode ver o fim da colina.
+~
+~
+0 0 26728
+S
+#26711
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26713
+D1
+O túnel de alcatrão sobe para uma colina a leste.
+~
+~
+0 0 26723
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26712
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26714
+D3
+O túnel de alcatrão sobe para uma colina a oeste.
+~
+~
+0 0 26723
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26713
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26715
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26711
+E
+goo tar gosma alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26714
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26716
+D2
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26712
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26715
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26717
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26713
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26716
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26718
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26714
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26717
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26719
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26715
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26718
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26720
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26716
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26719
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26721
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26717
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26720
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 9 0 0 0 0
+D0
+O túnel de alcatrão continua ao norte.
+~
+~
+0 0 26722
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26718
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26721
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 133 0 0 0 0
+D1
+O túnel de alcatrão se abre em um edifício estranho a leste.
+~
+~
+0 0 26778
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26719
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26722
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
+~
+267 133 0 0 0 0
+D2
+O túnel de alcatrão continua ao sul.
+~
+~
+0 0 26720
+D3
+O túnel de alcatrão se abre em um edifício estranho a oeste.
+~
+~
+0 0 26779
+E
+gosma alcatrao alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
+~
+S
+#26723
+Colina do Vício~
+   Você está na base de uma colina alta. A floresta ao seu redor impede que você
+veja muito, mas você pode distinguir uma estrada de alcatrão ao norte, e as
+aberturas escuras de dois túneis a leste e oeste. Claro, você sempre pode ir ao
+sul subindo para a relativa segurança da colina. Uma árvore enorme aqui parece
+escalável, e você pode ver vagamente uma rede no topo.
+~
+267 4 0 0 0 4
+D0
+Você pode ver uma estrada de alcatrão perigosa ao norte.
+~
+~
+0 0 26724
+D1
+Você pode ver uma abertura escura de túnel de alcatrão a leste.
+~
+~
+0 0 26712
+D2
+Você vê a relativa segurança da Colina do Vício.
+~
+~
+0 0 26710
+D3
+Você pode ver uma abertura escura de túnel de alcatrão a oeste.
+~
+~
+0 0 26711
+D4
+Você pode ver um caminho através das árvores enormes da floresta.
+~
+~
+0 0 26784
+S
+#26724
+Estrada de Alcatrão~
+   A gosma de alcatrão da estrada gruda firmemente em seus pés aqui, e fica cada
+vez mais espessa à medida que você avança ao norte. Se você for ao sul,
+provavelmente poderá voltar antes que seja tarde demais.
+~
+267 517 0 0 0 2
+D0
+Parece muito perigoso e gosmento por ali, mas você provavelmente sobreviveria.
+~
+~
+0 0 26725
+D2
+É muito mais seguro ao sul. Talvez você devesse voltar.
+~
+~
+0 0 26723
+S
+#26725
+Estrada de Alcatrão~
+   A gosma de alcatrão da estrada gruda firmemente em seus pés aqui, e fica cada
+vez mais espessa à medida que você avança ao sul. Se você for ao norte,
+provavelmente poderá voltar antes que seja tarde demais. Há uma placa na
+lateral da estrada aqui.
+~
+267 517 0 0 0 2
+D0
+O alcatrão parece ainda mais perigoso por ali, mas sobrevivível.
+~
+~
+0 0 26726
+D2
+O alcatrão fica mais fino naquela direção--melhor ir por ali.
+~
+~
+0 0 26724
+E
+placa aviso escritos escrito inscricao inscricão inscricoes inscricões runa runas~
+                         POÇO DE ALCATRÃO
+                       NÃO ENTRE ! ! !
+                ESTE É O PONTO SEM RETORNO!
+~
+S
+#26726
+Estrada de Alcatrão~
+   O alcatrão aqui está tão ruim que você não consegue se virar. Não há maneira
+natural de escapar--ou siga em frente, ou não se mova. Logo à sua frente há um
+poço de alcatrão borbulhante e fervente--parece bastante nojento. PÂNICO!
+~
+267 517 0 0 0 2
+D0
+Parece que seria uma ideia MUITO ruim. Não acho que você poderia escapar
+daquela.
+~
+~
+0 0 26727
+E
+poco poço alcatrao alcatrão~
+   É grande, preto, fervente, pegajoso e gosmento. Que mais incentivo você
+precisa para ficar longe dele?
+~
+S
+#26727
+Poço de Alcatrão Fervente~
+   Conforme você afunda um pé na gosma, ele gruda. Você tenta puxá-lo para fora,
+mas perde o equilíbrio, e o outro pé fica preso no poço. Tente como quiser, você
+não consegue tirá-los! Cada um afunda cada vez mais até que suas pernas inteiras
+estejam envoltas no poço. Você grita por ajuda, mas ninguém pode ouvi-lo.
+~
+267 548 0 0 0 2
+S
+#26728
+Colina do Vício~
+   Você está na base de uma grande colina. É estranhamente belo aqui, mas ainda
+parece bastante sinistro. Você nota uma estrada rochosa ao sul, e pode subir a
+colina para dar uma olhada ao seu redor. Uma estrada paira um pouco acima de
+você à esquerda sem nenhum suporte! Hmm... Uma estrada belamente feita fica a
+oeste.
+~
+267 0 0 0 0 4
+D0
+Você pode ver a bela Colina do Vício.
+~
+~
+0 0 26709
+D1
+Você pode ver uma estrada muito estranha a leste. Vale a pena explorar? Provavelmente.
+~
+~
+0 0 26730
+D2
+Você vê uma estrada rochosa de aparência escorregadia ao sul.
+~
+~
+0 0 26740
+D3
+Uma trilha belamente feita e bem cuidada fica a oeste.
+~
+~
+0 0 26729
+D4
+Claro, você deveria subir uma colina, certo?
+~
+~
+0 0 26730
+S
+#26729
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
+~
+267 5 0 0 0 1
+D1
+A leste você pode ver a base da Colina do Vício.
+~
+~
+0 0 26728
+D2
+O caminho alto continua adiante.
+~
+~
+0 0 26731
+S
+#26730
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
+~
+267 0 0 0 0 1
+D2
+A estranha trilha continua adiante.
+~
+~
+0 0 26732
+D3
+A base da Colina do Vício começa a oeste.
+~
+~
+0 0 26728
+E
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
+~
+S
+#26731
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
+~
+267 5 0 0 0 1
+D0
+O caminho alto continua adiante.
+~
+~
+0 0 26729
+D2
+O caminho alto continua adiante.
+~
+~
+0 0 26733
+S
+#26732
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
+~
+267 0 0 0 0 1
+D0
+A estranha trilha continua adiante.
+~
+~
+0 0 26730
+D2
+A estranha trilha continua adiante.
+~
+~
+0 0 26734
+E
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
+~
+S
+#26733
+Caminho Alto~
+   This road is amazingly built--some sort of blax onyxlike substance, shined
+Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
+~
+267 5 0 0 0 1
+D0
+O caminho alto continua adiante.
+~
+~
+0 0 26731
+D2
+O caminho alto continua adiante.
+~
+~
+0 0 26735
+S
+#26734
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
+~
+267 0 0 0 0 1
+D0
+A estranha trilha continua adiante.
+~
+~
+0 0 26732
+D2
+A estranha trilha continua adiante.
+~
+~
+0 0 26736
+E
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
+~
+S
+#26735
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
+~
+267 5 0 0 0 1
+D0
+O caminho alto continua adiante.
+~
+~
+0 0 26733
+D2
+O caminho alto continua adiante.
+~
+~
+0 0 26737
+S
+#26736
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
+~
+267 0 0 0 0 1
+D0
+A estranha trilha continua adiante.
+~
+~
+0 0 26734
+D2
+A estranha trilha continua adiante.
+~
+~
+0 0 26738
+E
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
+~
+S
+#26737
+Caminho Alto~
+   Esta estrada é incrivelmente construída--algum tipo de substância preta
+semelhante a ônix, polida até um brilho de espelho forma a maior parte do
+caminho. Tijolos da mesma substância alinham o caminho--não parece que um pedaço
+de papel poderia ser inserido entre eles. As árvores foram aparadas para
+permitir passagem fácil. Mesmo entre toda esta beleza, você sente uma presença
+sinistra.
+~
+267 5 0 0 0 1
+D0
+O caminho alto continua adiante.
+~
+~
+0 0 26735
+D2
+Um edifício de trabalho artesanal requintado fica ao sul.
+~
+~
+1 26727 26791
+S
+#26738
+Trilha do Terror~
+   Esta trilha é coberta pelas costelas esqueléticas de uma criatura enorme em
+algum tipo de dossel diabólico. Você pode ouvir--tambores?--algum tipo de
+batida pulsante à distância. Um canto suave pode ser ouvido ao longe, mas você
+não vê sinais de vida. A solidão te envia a um estado de pânico.
+~
+267 4 0 0 0 1
+D0
+A estranha trilha continua adiante.
+~
+~
+0 0 26736
+D2
+Um edifício feito de uma substância estranha, puramente negra, fica ao sul.
+~
+Templo do terror~
+1 26728 26797
+E
+costelas esqueleto ossos~
+   Isto deve ter sido um monstro ENORME! Quem quer que o tenha matado--não, você
+preferiria não ter que descobrir. Cada costela parece estar afiada como navalha
+nas bordas, e os ossos foram limpos até um branco perfeito.
+~
+S
+#26739
+Colina do Vício~
+   Você está no zênite de uma alta colina com vista para toda a ilha. A vista
+aqui seria de tirar o fôlego, não fosse tão sinistra. Você pode ver uma salmoura
+gosmenta de alcatrão ao norte, e em todas as outras direções uma floresta negra
+e sinistra está estranhamente silenciosa. Se você olhar com muito cuidado, pode
+ver os portos ao norte e leste. As saídas descem em todas as direções.
+~
+267 0 0 0 0 4
+D0
+A colina desce até uma estrada de alcatrão, cheia da substância gosmenta.
+~
+~
+0 0 26709
+D1
+Você pode ver a estrada assustadora.
+~
+~
+0 0 26706
+D2
+A estrada é muito mais rochosa nesta direção.
+~
+~
+0 0 26710
+D3
+Você vê a estranha estrada da praia.
+~
+~
+0 0 26705
+E
+salmoura alcatrao alcatrão gosma sinistra negra floresta porto portos vista~
+   Nada descreve esta ilha com mais clareza do que "horror". Ao seu redor, você
+pode sentir o mal, mas não consegue identificar o porquê. A ilha inteira está
+muito silenciosa--nem um pio pode ser ouvido.
+~
+S
+#26740
+Estrada do Penhasco~
+   A estrada é bastante escorregadia aqui, e você pode ver ao longe ao sul o que
+parece ser um precipício para o nada absoluto. Rochas deslizam enquanto você
+escorrega pela estrada. Realmente parece muito perigoso--a colina seria um
+caminho muito mais seguro para olhar a vista.
+~
+267 0 0 0 0 5
+D0
+Você pode ver a base da Colina do Vício ao norte. Parece comparativamente seguro.
+~
+~
+0 0 26728
+D2
+A estrada do penhasco continua, embora eu sugira que você não a tome.
+~
+~
+0 0 26741
+E
+penhasco~
+   Você ainda não consegue vê-lo completamente--tudo que pode ver é uma linha que
+se estende pelo horizonte.
+~
+S
+#26741
+Estrada do Penhasco~
+   A estrada está ainda mais escorregadia aqui, e você pode ver ao sul o que
+parece ser um precipício para o nada absoluto. Rochas deslizam enquanto você
+escorrega pela estrada. Realmente parece muito perigoso--seria muito melhor
+voltar--agora.
+~
+267 0 0 0 0 5
+D0
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
+~
+~
+0 0 26740
+D2
+Você É de correr riscos, não é?
+~
+~
+0 0 26742
+E
+penhasco~
+   Você agora pode ver um pouco dele. Parece bastante instável.
+~
+S
+#26742
+Estrada do Penhasco~
+   A estrada é bastante escorregadia aqui, e você pode ver ao sul o que parece
+ser um precipício para o nada absoluto. Rochas deslizam enquanto você escorrega
+pela estrada. Realmente parece muito perigoso--seria muito melhor voltar--agora.
+~
+267 0 0 0 0 5
+D0
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
+~
+~
+0 0 26741
+D2
+Não diga que não te avisamos. É um penhasco mesmo. Um grande e instável.
+~
+~
+0 0 26743
+E
+penhasco~
+   Você pode vê-lo. Parece bastante próximo. Parece muito perigoso.
+~
+S
+#26743
+Estrada do Penhasco~
+   Que vista! Se você não estivesse tendo tanta dificuldade para se manter em
+pé, poderia vê-la muito melhor. Cada passo te traz mais perto da borda--parece
+muito perigoso, e a borda do penhasco está bem próxima agora. O chão está
+começando a tremer sob seu peso.
+~
+267 0 0 0 0 5
+D0
+Você ainda pode voltar--é uma ideia melhor de qualquer forma.
+~
+~
+0 0 26742
+D2
+É a borda do penhasco. O chão parece bastante instável ali.
+~
+~
+0 0 26744
+E
+penhasco~
+   Hmm... Nós te avisamos o suficiente. Ou volte, ou enfrente as consequências.
+~
+S
+#26744
+Beira do Penhasco~
+   A vista nunca é melhor quando você está vendo-a do ar. Mas você tem apenas
+alguns segundos para vê-la, pois você é esmagado lá embaixo. Que pena que gritos
+não fazem você voar.
+~
+267 516 0 0 0 5
+S
+T 26710
+#26745
+Entrada para o Edifício do Medo~
+   Gemidos baixos parecem vir das paredes enquanto você fica diante da entrada
+caída de um enorme edifício. As paredes parecem ser feitas de algum tipo de
+pedra cinza--isso, ou elas ficaram cinzas com a idade. Uma passagem se abre a
+leste, mas você não consegue ver nada na sala por causa da escuridão. Sombras
+lançam ângulos estranhos por toda parte. Uma placa desbotada pende de um prego
+em um canto distante da sala.
+~
+267 0 0 0 0 0
+D1
+Você pode ver vagamente algum tipo de imagem ou algo em uma das paredes...
+~
+~
+0 0 26746
+D3
+A estrada assustadora continua naquela direção.
+~
+~
+0 0 26708
+E
+placa aviso~
+                         Edifício do Medo
+           PASSAGEM SEGURA APENAS PARA ALTOS SACERDOTES DO TERROR
+                    Você foi avisado.
+~
+S
+#26746
+Sala de Tapeçarias~
+   Tapeçarias estranhas preenchem todas as paredes aqui. Cada uma parece retratar
+uma tortura horrenda nas mãos de algum monstro vil. Se você olhar de perto o
+suficiente, as imagens são tão realistas, tão claras, tão verdadeiras, que
+parecem reais. Uma examinação ainda mais próxima revela que elas estão se
+movendo! Você provavelmente não quer ficar aqui por muito tempo.
+~
+267 9 0 0 0 0
+D1
+Você vê uma sala cheia de troféus.
+~
+~
+0 0 26748
+D3
+Você pode ver a entrada para o Edifício do Medo.
+~
+~
+0 0 26745
+S
+#26747
+Sala da Gárgula~
+   A gárgula parece bastante de pedra--isto é, até você estender a mão para
+tocá-la. De repente, ela parece ganhar vida e se mover levemente, ou foi apenas
+uma sombra?
+
+~
+267 516 0 0 0 0
+E
+gargula gárgula estatua estátua~
+   É uma gárgula, com uma grande boca escancarada. Já que você não deveria ser
+capaz de vê-la, não vamos te contar mais nada.
+~
+S
+#26748
+Sala de Troféus~
+   Há literalmente centenas de pedestais aqui, cada um com os crânios de um
+animal diferente. Alguns são grandes, alguns bem pequenos--alguns parecem nada
+que você já viu antes. Você pode ver um grande altar ritual em um lado da sala,
+e uma sala estranha envolta em vidro sem emendas do outro lado. Atrás do altar,
+uma pequena irregularidade na parede pode ser vista, como se alguém cortasse
+perfurações através da parede.
+~
+267 520 0 0 0 0
+D0
+Há algo muito estranho à frente. Parece uma estátua enorme--mas você pode ver
+claramente uma boca escancarada...nenhum humano jamais faria algo tão grotesco.
+É bastante assustador...provavelmente não é bom você entrar lá.
+~
+vidro portavidro porta~
+2 26729 26747
+D1
+Você vê o que parece ser uma sala de espera confortável(?).
+~
+~
+0 0 26750
+D2
+Você não vê nada além de uma leve irregularidade na parede.
+~
+porta secreta~
+1 26730 26749
+D3
+Você pode ver uma sala cheia de tapeçarias estranhas e horríveis.
+~
+~
+0 0 26746
+E
+pedestal cranio crânio~
+   Cada pedestal tem cerca do tamanho da sua cintura; cada crânio--bem, depende.
+Nenhum parece benevolente... Quem quer que os tenha capturado deve ter sido um
+caçador muito habilidoso.
+~
+S
+#26749
+Sala de Vestir~
+   Esta sala parece ser mais o tipo de sala onde uma pessoa se veste do que um
+açougue--prateleiras de carne, facas de todos os vários e diversos tamanhos, e
+outros itens variados de preparação de carne estão espalhados pela sala. Há, é
+claro, o mísero cabideiro, com o que parecem ser vestes estranhas nele.
+~
+267 9 0 0 0 0
+D0
+Você vê a estranha sala de troféus (que agora começa a parecer mais uma câmara
+sacrificial, quando você olha dela deste ponto de vista...).
+~
+porta secreta~
+1 26730 26748
+S
+#26750
+Torre dos Lamentos~
+   Os uivos que você ouviu na entrada estão muito mais altos aqui. Parece estar
+vindo de cima de você--de fato, você pode ver uma escada em espiral subindo pelo
+edifício. Você deveria subir? Você decide.
+~
+267 525 0 0 0 0
+D3
+Você pode ver a sala de troféus.
+~
+~
+0 -1 26748
+D4
+A escada em espiral sobe mais longe do que os olhos podem ver.
+~
+~
+0 -1 26751
+E
+escada espiral~
+   Esta escada parece ir até o infinito. Você não consegue ver onde ela termina.
+~
+S
+#26751
+Na Escada~
+   Os lamentos te cercam inteiramente aqui. Você sente que pode enlouquecer se
+não sair desta escadaria. Repetidamente os sons gritam sobre você. Talvez você
+devesse subir--e rapidamente.
+~
+267 525 0 0 0 0
+D4
+Você vê um corredor de forma muito estranha.
+~
+~
+0 -1 26753
+D5
+Você vê a base da escada.
+~
+~
+0 -1 26750
+S
+#26752
+Cela~
+   O fedor de dejetos é particularmente forte aqui. A cela não pode ter mais que
+3 por 2 metros. Um pequeno catre está parafusado ao chão, e um pequeno buraco
+de drenagem sem cobertura está no meio da sala. Os pisos inclinam-se para o
+buraco, e você pode ver listras de ferrugem onde os parafusos de ferro se
+oxidaram. Algemas pendem da parede no fundo da cela, e você pode ver duas mãos
+esqueléticas, tudo que resta do que uma vez deve ter sido um ser humano.
+~
+267 525 0 0 0 0
+D0
+Você pode ver o corredor de forma estranha.
+~
+barras cela porta~
+1 26713 26753
+E
+algemas grilhoes grilhões ferros maos mãos esqueleticas esqueléticas~
+   Duas pequenas mãos são tudo que resta do que deve ter sido uma pequena
+criança, ou um humano muito pequeno. Você pode ver marcas de dentes onde parece
+que alguém estava tentando morder para sair.
+~
+E
+buraco drenagem~
+   O buraco tem cerca do tamanho do seu punho, e pelo cheiro, não precisa de
+muita imaginação para descobrir o que deveria descer por aquele.
+~
+E
+catre cama~
+   O catre é feito de preto. Um colchão feito de palha está em cima dele--muito
+fino, e certamente não confortável. Ratos correm por baixo da cama quando você
+se aproxima dela.
+~
+S
+#26753
+Corredor de Forma Estranha~
+   Este corredor parece ser nada mais que uma extensão ao redor das escadas.
+Feito do mesmo material cinza do resto do edifício, esta sala parece ter algo
+estranho sobre ela. Talvez sejam os estranhos ladrilhos pretos em certos pontos
+ao redor da sala. Há portas levando em quase todas as direções, e as escadas
+continuam subindo.
+~
+267 8 0 0 0 0
+D0
+Você vê o que parecem ser os restos queimados de uma fogueira.
+~
+porta~
+1 -1 26754
+D1
+Você vê o que parecem ser caixotes e caixotes de suprimentos.
+~
+porta~
+2 26731 26755
+D2
+Você vê as barras do que obviamente é uma cela de prisão.
+~
+porta~
+1 26713 26752
+D4
+As escadas sobem para cima.
+~
+~
+0 -1 26757
+D5
+As escadas descem para baixo.
+~
+~
+0 -1 26751
+S
+#26754
+Lareira Aberta~
+   Os restos úmidos do que provavelmente foi uma enorme fogueira estão espalhados
+pela sala. As brasas estão moles aqui, e elas estão por toda parte. Elas se espalham
+pela sola das suas botas e ficam presas entre seus dedos. Que lugar nojento.
+Você pode sair desta sala nojenta ao sul.
+~
+267 9 0 0 0 0
+D2
+Você pode ver o corredor de forma estranha.
+~
+porta~
+1 -1 26753
+E
+brasas fogo brasa carvao carvão~
+   Elas estão molhadas e moles. Quando você pega uma, ela desmorona em uma massa
+nojenta de lama em sua mão.
+~
+S
+#26755
+Sala de Suprimentos~
+   Caixotes velhos e podres estão empilhados por toda parte aqui. Eles parecem
+ter sido saqueados há muito tempo. Alguns foram despedaçados. Você tem uma saída
+a oeste.
+~
+267 525 0 0 0 0
+D3
+Você pode ver o corredor de forma estranha.
+~
+porta~
+2 26731 26753
+E
+caixotes~
+   Os caixotes são velhos, apodrecendo e totalmente vazios--exceto por um,
+escondido no canto. Parece ter algum dispositivo estranho dentro dele.
+~
+S
+#26756
+Quarto Deserto~
+   Esta câmara luxuosa parece não ter sido usada por séculos. Uma cama, outrora
+bela, tem teias de aranha penduradas em seu enorme dossel. A sala está tão
+escura que você só consegue ver certas coisas mesmo COM uma luz. Uma cômoda está
+no fundo da sala. Você pode sair ao norte.
+~
+267 9 0 0 0 0
+D0
+Você vê o corredor assustador.
+~
+porta~
+1 -1 26757
+E
+cama~
+   A cama tem um dossel rosa/taupe pendurado sobre ela, com teias de aranha
+cobrindo toda sua superfície. As aranhas parecem ter se divertido com esta.
+~
+S
+#26757
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde sinistra. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Saídas levam em todas as
+direções exceto para cima.
+~
+267 8 0 0 0 0
+D0
+Você pode ver o corredor assustador.
+~
+~
+0 0 26759
+D1
+Você pode ver uma porta.
+~
+porta~
+1 26732 26758
+D2
+Você pode ver uma porta.
+~
+porta~
+1 -1 26756
+D3
+Você pode ver o corredor assustador.
+~
+~
+0 0 26761
+D5
+As escadas descem para o nada.
+~
+~
+0 0 26753
+S
+#26758
+Escritório do Alto Sacerdote do Medo~
+   Este escritório dificilmente é um escritório comum. O Alto Sacerdote do Medo
+obviamente gosta de tortura, pois algemas, donzelas de ferro e potros alinham as
+paredes. Um caldeirão fervente de óleo está bem no centro da sala. Uma porta
+fica a oeste.
+~
+267 8 0 0 0 0
+D3
+Você pode ver o corredor assustador.
+~
+porta~
+1 26732 26757
+E
+caldeirao caldeirão fervente oleo óleo~
+   O líquido dentro do caldeirão borbulha sem parar, espirrando gotas
+de óleo fervente. O cheiro enjoativo embrulha o cérebro e arrepios frios
+percorrem sua espinha.
+~
+E
+iron maidens maiden~
+   Este objeto em forma de caixão é revestido por enormes espinhos em seu
+interior. Se fosse fechado com alguém lá dentro, certamente seria uma
+experiência extremamente desagradável.
+~
+E
+manacles manacle chain~
+   As algemas são pequenas e possuem espinhos em seu interior. Elas parecem
+incrivelmente dolorosas.
+~
+S
+#26759
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou sul.
+~
+267 8 0 0 0 0
+D0
+Você não consegue ver muito naquela direção.
+~
+closet armario armário~
+1 -1 26760
+D2
+Você vê o corredor assustador.
+~
+~
+0 -1 26757
+S
+#26760
+Armário~
+   Este armário tem roupas estranhas espalhadas por toda parte. Provavelmente
+não seria uma boa ideia experimentá-las. Um cheiro mofado infestou tudo neste
+pequeno espaço.
+~
+267 9 0 0 0 0
+D2
+Você vê o corredor assustador.
+~
+Corredor Assustador~
+1 -1 26759
+S
+#26761
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou leste.
+~
+267 8 0 0 0 0
+D0
+Você vê o corredor assustador.
+~
+~
+0 0 26762
+D1
+Você vê o corredor assustador.
+~
+~
+0 0 26757
+S
+#26762
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o
+norte ou sul.
+~
+267 8 0 0 0 0
+D0
+Você vê o corredor assustador.
+~
+~
+0 0 26763
+D2
+Você vê o corredor assustador.
+~
+~
+0 0 26761
+S
+#26763
+Corredor Assustador~
+   Você pode ouvir música estranha flutuando pelo corredor. O corredor é
+iluminado por alguma fonte desconhecida com uma luz verde arrepiante. As paredes
+são pintadas de vermelho escarlate brilhante. Quem quer que tenha pintado este
+corredor não tinha bondade, coelhinhos ou luz em mente. Você pode ir para o sul
+ou oeste.
+~
+267 8 0 0 0 0
+D2
+Você vê o corredor assustador.
+~
+~
+0 0 26762
+D3
+O fim dos corredores se abre para o exterior. Parece ser uma varanda.
+~
+~
+0 0 26764
+S
+#26764
+Varanda~
+   Daqui, você pode ver toda a ilha. A vista é de tirar o fôlego, e ainda
+parece ser sinistra. Ao sul distante, você pode ver o que parecem ser as
+costelas de um animal enorme. Ao leste distante, você pode ver uma praia branca
+pristina. A maior parte da ilha é coberta por floresta e se estende ao redor de
+uma enorme colina. O extremo norte mostra algumas árvores absolutamente enormes
+e uma grande piscina negra do que só pode ser alcatrão. Você pode voltar ao
+edifício indo para leste.
+~
+267 0 0 0 0 1
+D1
+Você vê o corredor assustador.
+~
+~
+0 0 26763
+S
+#26765
+Câmara de Tortura~
+   Esta sala está repleta de instrumentos de tortura de todos os tipos, variando
+desde grilhões simples até algemas com espinhos, vários chicotes diferentes,
+alguns instrumentos mágicos de aparência sinistra, até um jugo que obviamente é
+ajustado ao corpo humano. Este não é um lugar agradável. Uma sala de
+interrogatório fica a leste, e uma zona de teletransporte fica ao norte.
+~
+267 521 0 0 0 0
+D0
+Você pode ver um quadrado de teletransporte.
+~
+~
+0 0 26778
+D2
+Você vê a sala de triagem.
+~
+door porta~
+1 -1 26766
+S
+#26766
+Sala de Triagem~
+   Esta é a sala onde todos os prisioneiros são interrogados. Caso sejam
+considerados carentes nas informações que os interrogadores precisam, eles são
+levados à câmara de tortura a oeste.
+~
+267 8 0 0 0 0
+D2
+Você vê a periferia.
+~
+door porta~
+1 26733 26767
+D3
+Você vê a câmara de tortura.
+~
+~
+1 -1 26765
+S
+#26767
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
+~
+267 8 0 0 0 0
+D0
+~
+door porta secret secreta~
+1 26733 26766
+S
+#26768
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
+~
+267 8 0 0 0 0
+D2
+~
+door porta secret secreta~
+1 26733 26769
+S
+#26769
+Sala de Espera~
+   Esta sala não tem nada além de duas cadeiras, forradas com correias. As
+paredes são pintadas de branco estéril, e o ar tem um leve toque de névoa. Há um
+centro de interrogatório a oeste.
+~
+267 8 0 0 0 0
+D3
+Você pode ver a sala de interrogatório.
+~
+~
+0 0 26770
+S
+#26770
+Centro de Interrogatório~
+   Uma longa mesa circular forma a peça central de mobília nesta sala. Uma
+enorme cadeira dura está na cabeceira, enquanto cadeiras menores alinham o
+resto. Uma abertura na mesa permite que uma pessoa seja colocada na cadeira de
+ferro com correias no centro. Para que propósito, você estremece ao adivinhar.
+Você pode voltar à sala de espera, ou pode ir ao sul através de um dispositivo
+de teletransporte para a sala quadrada.
+~
+267 8 0 0 0 0
+D1
+Você vê a sala de espera.
+~
+~
+0 0 26769
+D2
+Você vê um quadrado de teletransporte.
+~
+~
+0 0 26778
+S
+#26771
+Escritório do Sacerdote do Desespero~
+   Este escritório luxuoso está cheio de todo item que poderia agradar qualquer
+criança. Desde gatinhos fofinhos até bonecas adoráveis de pelúcia, elas
+revestem as paredes - fora do seu alcance. Uma linda cadeira fica no meio da
+sala, mas está parafusada no chão, e há um enorme espinho no centro. Que doente
+faria uma sala assim? Você pode deixar este lugar através de um transportador a
+leste ou voltar à sala de espera a oeste.
+~
+267 8 0 0 0 0
+D1
+Você vê uma plataforma de transporte.
+~
+~
+0 0 26778
+D3
+Você vê uma sala de espera.
+~
+~
+0 0 26772
+S
+#26772
+Sala de Espera~
+   Esta sala não tem nada além de duas cadeiras, forradas com correias. As
+paredes são pintadas de branco estéril, e o ar tem um leve toque de névoa. Há um
+escritório a leste.
+~
+267 8 0 0 0 0
+D3
+Você pode ver o escritório do Sacerdote do Desespero.
+~
+~
+0 0 26770
+S
+#26773
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
+~
+267 8 0 0 0 0
+D0
+~
+door porta secret secreta~
+1 26733 26772
+S
+#26775
+Alcova~
+   Esta pequena alcova não tem qualidade realmente interessante, exceto pelo
+fato de ter uma grande abertura para um poço de alcatrão de dimensões
+desconcertantes. Você pode (e deveria) voltar a oeste.
+~
+267 8 0 0 0 0
+D2
+NÃO VÁ NESSA DIREÇÃO! É um poço de alcatrão, ESTÚPIDO! IDIOTA!
+~
+~
+0 0 26727
+D3
+Você pode ver a sala de estar.
+~
+~
+0 0 26776
+S
+#26776
+Sala de Estar~
+   Aqui o Sacerdote do Desespero podia sentar e assistir enquanto seus
+prisioneiros (e aventureiros infelizes eram jogados (ou estupidamente andavam
+para dentro) do poço de alcatrão. Parece que eles foram jogados não muito longe
+daqui, já que você pode ver sinais reveladores de luta ao seu redor.
+~
+267 8 0 0 0 0
+D1
+Isso é provavelmente o mais perto que você gostaria de chegar do poço de alcatrão.
+~
+~
+0 0 26775
+S
+#26777
+Periferia~
+   Esta sala é uma área periférica do corredor quadrado na Casa do Desespero.
+Imagens estranhas revestem as paredes, e gritos podem ser ouvidos ao seu redor.
+Você não vê saídas visíveis.
+~
+267 8 0 0 0 0
+D2
+~
+door porta secret secreta~
+1 26733 26776
+S
+#26778
+Praça da Plataforma Transportadora~
+   Aqui há saídas em todas as direções. Essas, porém, não são saídas comuns.
+São plataformas de transporte, cada uma projetada como uma pequena sala para
+você entrar e ir às áreas designadas. Um pequeno aviso está preso a uma parede
+no canto da sala.
+~
+267 8 0 0 0 0
+D0
+Você vê uma plataforma transportadora.
+~
+~
+0 0 26767
+D1
+Você vê uma plataforma transportadora.
+~
+~
+0 0 26779
+D2
+Você vê uma plataforma transportadora.
+~
+~
+0 0 26768
+D4
+Você pode ver uma plataforma transportadora.
+~
+~
+0 0 26773
+D5
+Você vê uma plataforma transportadora.
+~
+~
+0 0 26777
+E
+sign note plaque placa aviso~
+                VOCÊ ENTROU NO SALÃO DA DESESPERANÇA
+            APENAS PESSOAL AUTORIZADO E PRISIONEIROS!!!
+~
+S
+#26779
+Entrada para o Salão da Desesperança~
+   Você está em um chão empoeirado em uma cabana caída. Logo a leste, você pode
+ver os restos de um corredor deserto. A câmara inteira está vazia e desprovida
+de qualquer coisa de interesse real. Você pode ver uma plataforma transportadora
+ao norte. Ao seu redor estão representações de pessoas em situações sem saída.
+~
+267 8 0 0 0 0
+D0
+Você pode ver uma plataforma transportadora.
+~
+~
+0 0 26778
+D1
+Você pode ver o corredor deserto.
+~
+~
+0 0 26781
+D2
+Você pode ver um túnel de alcatrão.
+~
+~
+0 0 26722
+S
+#26780
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao norte. Você não detecta sons - na verdade,
+todos os sons parecem estar abafados neste lugar estranho. O ar parece mais
+espesso e pesado do que o usual.
+~
+267 8 0 0 0 0
+D0
+Você vê um corredor deserto.
+~
+~
+0 0 26781
+D1
+Você não vê nada.
+~
+door porta secret secreta~
+1 0 26783
+D3
+Você pode ver a entrada para o Salão da Desesperança.
+~
+~
+0 0 26779
+S
+#26781
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao norte e sul. Você não detecta sons - na
+verdade, todos os sons parecem estar abafados neste lugar estranho. O ar parece
+mais espesso e pesado do que o usual.
+~
+267 8 0 0 0 0
+D0
+Você vê um corredor deserto.
+~
+~
+0 0 26782
+D1
+Você não vê nada.
+~
+door porta secret secreta~
+1 0 26783
+D2
+Você vê um corredor deserto.
+~
+~
+0 0 26780
+D3
+Você pode ver a entrada para o Salão da Desesperança.
+~
+~
+0 0 26779
+S
+#26782
+Corredor Deserto~
+   Um corredor úmido e mofado leva ao sul. Você não detecta sons - na verdade,
+todos os sons parecem estar abafados neste lugar estranho. O ar parece mais
+espesso e pesado do que o usual.
+~
+267 8 0 0 0 0
+D1
+Você não vê nada.
+~
+door porta secret secreta~
+1 0 26783
+D2
+Você vê um corredor deserto.
+~
+~
+1 0 26781
+D3
+Você pode ver a entrada para o Salão da Desesperança.
+~
+~
+0 0 26779
+S
+#26783
+Sala Escura~
+   As paredes estão totalmente pintadas de preto nesta sala estranha. Você não
+pode detectar nada além da sua mão na frente do seu rosto. O ar parece mais
+espesso e pesado do que o usual.
+~
+267 9 0 0 0 0
+D3
+Você pode ver o corredor deserto.
+~
+door porta secret secreta~
+1 0 26781
+S
+#26784
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou para baixo.
+~
+267 0 0 0 0 3
+D0
+A rede continua através das árvores aqui.
+~
+~
+0 0 26785
+D5
+Você pode ver a base da Colina do Vício daqui.
+~
+~
+0 0 26723
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26785
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
+~
+267 0 0 0 0 3
+D0
+A rede continua através das árvores aqui.
+~
+~
+0 0 26786
+D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26784
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26786
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
+~
+267 0 0 0 0 3
+D0
+A rede continua através das árvores aqui.
+~
+~
+0 0 26787
+D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26785
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26787
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores. Você pode ver um poço de
+alcatrão muito perigoso bem abaixo de você.
+~
+267 0 0 0 0 3
+D0
+A rede continua através das árvores aqui.
+~
+~
+0 0 26788
+D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26786
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26788
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte ou sul através das árvores.
+~
+267 0 0 0 0 3
+D0
+A rede continua através das árvores aqui.
+~
+~
+0 0 26789
+D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26787
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26789
+Através das Árvores~
+   Alguém muito convenientemente colocou redes através das árvores aqui, então
+você pode caminhar ao longo delas sem medo de cair. Isto é provavelmente melhor,
+já que você está extremamente alto do chão. Você ouve pássaros cantando bem ao
+seu lado, e se sente muito pacífico aqui - isto é, enquanto estiver nas árvores.
+Você pode ir ao norte para um cais, ou sul através das árvores.
+~
+267 0 0 0 0 3
+D0
+A rede termina em um cais.
+~
+~
+0 0 26790
+D2
+A rede continua através das árvores aqui.
+~
+~
+0 0 26788
+E
+netting rede~
+   A rede é firme e feita de alguma substância extremamente resistente - parece
+bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
+~
+S
+#26790
+Porto junto à Floresta~
+   Você está em um cais extremamente estranho. Está erguido em palafitas de um
+lado - aparentemente impedindo você de cair de um penhasco. A rede começa ao seu
+sul, impedindo você de cair através das árvores. Você pode ver um grande poço de
+alcatrão ao sul - ainda bem que há essa rede para impedir você de cair nele.
+~
+267 0 0 0 0 1
+D2
+A rede começa ao seu sul.
+~
+~
+0 0 26789
+S
+#26791
+Salão de Cera~
+   Estátuas sangrentas alinham este salão - estátuas de todos os tipos de
+tortura, desde a mais mundana experiência de dama de ferro até as coisas mais
+imaginativas que se pode fazer com um chicote de nove caudas e lâminas. A coisa
+que torna estas estátuas mais desconfortáveis de olhar é o fato de serem feitas
+de cera - e parecerem tão realistas que você quase pode vê-las gritando de
+terror. Você vê uma se mover? Não, deve ser sua mente pregando peças em você.
+~
+267 9 0 0 0 0
+D0
+Você pode ver um salão horrível ao norte.
+~
+~
+0 0 26793
+S
+#26792
+Entrada para o Escritório da Alta Sacerdotisa do Terror~
+   Este certamente não é seu escritório médio - certos sinais reveladores levam
+você a este fato. Talvez sejam os crânios alinhados em espinhos ao redor da
+sala. Ou, talvez o fato de parecer ser várias salas. Você realmente não quer
+estar aqui. Você pode ir ao sul ou norte... Nenhum caminho parece muito
+confortável.
+~
+267 8 0 0 0 0
+D0
+Você vê a trilha estranha.
+~
+Trail of terror Trilha do Terror~
+1 26727 26738
+D2
+Você pode ver um salão de estátuas de cera.
+~
+~
+0 -1 26791
+S
+#26793
+Salão de Tortura~
+   Este certamente não é a entrada para o escritório... Como se volta? Você se
+sente um pouco desorientado. Ao olhar ao seu redor, você é dominado pela náusea
+ao perceber imediatamente que não deveria ter olhado. Muitos itens de tortura
+estão por aqui, alguns que você nunca imaginou que poderiam ter sido inventados.
+Certamente não por uma pessoa sã. Você pode ir a leste (ah, então é assim que se
+volta à entrada), ou ao sul, para outra câmara.
+~
+267 8 0 0 0 0
+D1
+Você vê a entrada para o Escritório da Alta Sacerdotisa do Terror, é claro.
+~
+~
+0 -1 26792
+D2
+Você vê um salão com muitos corpos mortos ao redor.
+~
+~
+0 -1 26794
+S
+#26794
+Salão da Morte~
+   Corpos mortos estão espalhados por aqui. Eles parecem ter sido mortos pelos
+dispositivos do Salão de Tortura. Você certamente não quer pensar muito sobre
+isso, pois estão tão mutilados que você não consegue dizer o que eram - se eram
+humanos ou outros. Você pode sair daqui voltando ao Salão de Tortura, ao Templo
+do Terror a leste, ou ao Escritório da Alta Sacerdotisa ao sul.
+~
+267 8 0 0 0 0
+D0
+Você pode ver o salão de tortura.
+~
+~
+0 -1 26793
+D1
+Você pode ver a entrada para o Templo do Terror.
+~
+~
+0 -1 26797
+D2
+Você pode ver a entrada para o escritório da Alta Sacerdotisa do Terror.
+~
+door porta~
+1 26734 26795
+S
+#26795
+Escritório da Alta Sacerdotisa do Terror~
+   Esta é provavelmente a parte mais bonita de toda a ilha que você viu.
+Surpreendentemente, não há sinais da carnificina e dos métodos repugnantes de
+tortura que podem ser vistos no resto dos edifícios que você viu. Na verdade,
+este lugar parece absolutamente natural. Uma bela mesa feita de madeira vermelha
+é a peça frontal da sala, e uma cadeira de encosto alto está atrás dela. Um sofá
+de pelúcia fica na frente, e placas e outras credenciais revestem as paredes. Um
+emblema - o chicote de nove caudas - está fosco na única janela da sala.
+~
+267 8 0 0 0 0
+D0
+Você, surpreendentemente, acaba de volta na entrada.
+~
+~
+0 0 26792
+E
+insignia window emblema janela~
+   O chicote de nove caudas, um chicote com múltiplas tiras, aparentemente é o
+símbolo máximo do Reinado do Terror. É o chicote mais doloroso - às vezes até
+fatal - conhecido.
+~
+E
+plaques placas~
+   Estes não são prêmios - são decretos e petições delineando a lei da Ilha do
+Vício. Cada um é mais severo que o anterior. O que você basicamente coleta das
+regras da terra é que embora esta já tenha sido uma ilha próspera, várias
+pessoas começaram a experimentar com magia negra, e começaram a se intrometer em
+assuntos que não eram da sua conta. Eventualmente, a ilha não se tornou nada
+mais que um lugar para vários exploradores se instalarem - e construir uma
+religião baseada principalmente nos sentimentos mais horríveis da vida -
+Desespero, Desesperança, Medo, e a emoção coroadora, na qual todas essas
+culminam - Terror. Não é um quadro bonito.
+~
+E
+sofa sofá~
+   Este sofá parece tão confortável que você quer simplesmente afundar nele.
+~
+E
+chair cadeira~
+   A cadeira é feita de madeira vermelha e parece muito confortável. Também
+parece MUITO pesada.
+~
+S
+#26797
+Entrada para o Templo do Terror~
+   A entrada para este templo é ofuscante - esse é provavelmente o ponto mais
+notável. Flashes de luz emanam de um globo no centro da sala, causando efeitos
+estranhos na sala. A sala é feita de um metal que reflete a luz como um espelho
+- mas mais brilhante. Você pode ir para a trilha estranha ao norte, ou seguir
+para dentro do templo a leste.
+~
+267 8 0 0 0 0
+D0
+Você pode ver a trilha estranha.
+~
+trail trilha~
+1 26728 26738
+D1
+Você vê um corredor cegantemente iluminado.
+~
+~
+0 0 26798
+D3
+Você pode ver o Salão da Morte.
+~
+~
+0 -1 26794
+E
+globe ball light globo bola luz~
+   Toda a luz parece emanar deste globo. É feito de material que parece vir do
+próprio sol - mas é frio - muito frio.
+~
+S
+#26798
+Corredor cegantemente iluminado~
+   Este corredor leste-oeste está tão brilhantemente iluminado que você mal pode
+ver qualquer coisa. Você tem que proteger seus olhos apenas para ver à sua
+frente. Parece ser feito do mesmo metal que a entrada do edifício. Uma pequena
+sala se abre ao seu norte.
+~
+267 8 0 0 0 0
+D0
+Você vê um pequeno santuário ao norte.
+~
+~
+0 0 26799
+D1
+O corredor continua.
+~
+~
+0 0 26800
+D3
+A entrada do templo está diretamente a oeste.
+~
+~
+0 0 26797
+S
+#26799
+Santuário do Vício~
+   Este pequeno santuário não contém nada além de um altar e um pequeno livro com
+a inscrição: "Você não pode pegar o que não é seu - mas você pode ter tanto dele
+quanto quiser."... Você acha que ouve gargalhadas maníacas em algum lugar ao seu
+redor, mas quando você se vira, não vê nada.
+~
+267 8 0 0 0 0
+D2
+Você vê o corredor cegantemente iluminado.
+~
+~
+0 0 26798
+E
+alter altar~
+   Este pequeno altar parece que você poderia se ajoelhar e orar com relativo
+conforto. Mas de alguma forma você tem a sensação de que não deveria se curvar.
+~
+S
+$~
