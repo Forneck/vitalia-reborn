@@ -115,158 +115,158 @@ para o bosque.
 0 0 26702
 S
 #26705
-Beach Road~
-   This path is extremely well-kept.  Small stones line the outer path, and the
-sand from the beach has been lain to make a path--though the crystal seems to
-have been melted down to make the floor harder.  The palm trees here completely
-fill every part of the area outside the path.  Strange noises and utterly
-blood-chilling screams fill the air.  It is very dark here.  A large hill rises
-to your east, and the beach road lies to your west.
+Estrada da Praia~
+   Este caminho é extremamente bem cuidado. Pequenas pedras alinham o caminho
+externo, e a areia da praia foi colocada para fazer um caminho--embora o cristal
+pareça ter sido derretido para tornar o chão mais duro. As palmeiras aqui
+preenchem completamente todas as áreas fora do caminho. Ruídos estranhos e gritos
+absolutamente arrepiantes enchem o ar. Está muito escuro aqui. Uma grande colina
+se ergue a leste, e a estrada da praia fica a oeste.
 ~
 267 5 0 0 0 2
 D1
-A large hill rises to your east.
+Uma grande colina se ergue a leste.
 ~
 ~
 0 0 26739
 D3
-You see a well-kept trail.
+Você vê uma trilha bem cuidada.
 ~
 ~
 0 0 26703
 S
 #26706
-Creepy Road~
-   You're not quite sure why, but this road sends shivers down your very spine.
-Perhaps it's the total and complete silence.  Or perhaps it's the skeletons
-strown haphazardly about.  You just don't know.
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe.
 ~
 267 4 0 0 0 2
 D1
-The creepy road continues east.
+A estrada assustadora continua a leste.
 ~
 ~
 0 0 26707
 D3
-The huge Vice Hill lies to your west.
+A enorme Colina do Vício fica a oeste.
 ~
 ~
 0 0 26739
 E
-skeletons~
-   They're quite real, and quite frightening.  We weren't lying to you.
+skeletons esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
 ~
 S
 #26707
-Creepy Road~
-   You're not quite sure why, but this road sends shivers down your very spine.
-Perhaps it's the total and complete silence.  Or perhaps it's the skeletons
-strown haphazardly about.  You just don't know.
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe.
 ~
 267 0 0 0 0 2
 D1
-The creepy road continues east.
+A estrada assustadora continua a leste.
 ~
 ~
 0 0 26708
 D3
-The creepy road continues west.
+A estrada assustadora continua a oeste.
 ~
 ~
 0 0 26706
 E
-skeletons~
-   They're quite real, and quite frightening.  We weren't lying to you.
+skeletons esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
 ~
 S
 #26708
-Creepy Road~
-   You're not quite sure why, but this road sends shivers down your very spine.
-Perhaps it's the total and complete silence.  Or perhaps it's the skeletons
-strown haphazardly about.  You just don't know.  A large building towers above
-you to the east.
+Estrada Assustadora~
+   Você não tem muita certeza do porquê, mas esta estrada envia arrepios pela
+sua espinha. Talvez seja o silêncio total e completo. Ou talvez sejam os
+esqueletos espalhados descuidadamente. Você simplesmente não sabe. Um grande
+edifício se ergue acima de você a leste.
 ~
 267 4 0 0 0 2
 D1
-You know, like we said, a large building lieing to your east and all.
+Você sabe, como dissemos, um grande edifício ao leste e tudo mais.
 ~
 ~
 0 0 26745
 D3
-The creepy road continues west.
+A estrada assustadora continua a oeste.
 ~
 ~
 0 0 26739
 E
-building~
-   The building is a dark gray shade, but it seems to have been soiled by grimy
-tar.
+building prédio edifício~
+   O edifício é de um tom cinza escuro, mas parece ter sido sujado por alcatrão
+sujo.
 ~
 E
-skeletons~
-   They're quite real, and quite frightening.  We weren't lying to you.
+skeletons esqueletos~
+   Eles são bastante reais e assustadores. Não estávamos mentindo para você.
 ~
 S
 #26709
-Vice Hill~
-   You are on a tall hill overlooking the entire island.  You can see the
-zenith to your far north; the hill blocks all the view to the north and on.
-To your south, you can see the beginnings of a rock-strewn-path...  Continuing
-further down, you can see the end of the hill.  The forest covers up most of
-the view from here.
+Colina do Vício~
+   Você está em uma colina alta com vista para toda a ilha. Você pode ver o
+zênite ao longe no norte; a colina bloqueia toda a visão para o norte e além.
+Ao sul, você pode ver o começo de um caminho coberto de pedras... Continuando
+mais abaixo, você pode ver o fim da colina. A floresta cobre a maior parte da
+vista daqui.
 ~
 267 0 0 0 0 4
 D4
-Looking up, you can see the zenith of Vice Hill.
+Olhando para cima, você pode ver o zênite da Colina do Vício.
 ~
 ~
 0 0 26739
 D5
-Looking down, you can see the end of the hill.
+Olhando para baixo, você pode ver o fim da colina.
 ~
 ~
 0 0 26723
 S
 #26710
-Vice Hill~
-   You are on a tall hill overlooking the entire island.  You can see the
-zenith to your far south; the hill blocks all the view to south and on.  To
-your south, you can see the beginnings of a rock-strewn path...  Continuing
-further down, you can see the end of the hill.  The forest covers up most of
-the view from here.
+Colina do Vício~
+   Você está em uma colina alta com vista para toda a ilha. Você pode ver o
+zênite ao longe no sul; a colina bloqueia toda a visão para o sul e além.
+Ao sul, você pode ver o começo de um caminho coberto de pedras... Continuando
+mais abaixo, você pode ver o fim da colina. A floresta cobre a maior parte da
+vista daqui.
 ~
 267 0 0 0 0 4
 D4
-Looking up, you can see the zenith of Vice Hill.
+Olhando para cima, você pode ver o zênite da Colina do Vício.
 ~
 ~
 0 0 26739
 D5
-Looking down, you can see the end of the hill.
+Olhando para baixo, você pode ver o fim da colina.
 ~
 ~
 0 0 26728
 S
 #26711
-Tarry Tunnel~
-   The walls of this tunnel are covered and dripping with wet, gooey tar.
-Your shoes half-squish, half-sink, half-stick in the disgusting substance as
-you slowly slog your way through the gunk.
+Túnel de Alcatrão~
+   As paredes deste túnel estão cobertas e pingando com alcatrão úmido e
+pegajoso. Seus sapatos meio esmagam, meio afundam, meio grudam na substância
+nojenta enquanto você caminha lentamente através da gosma.
 ~
 267 9 0 0 0 0
 D0
-The tarry tunnel continues to your north.
+O túnel de alcatrão continua ao norte.
 ~
 ~
 0 0 26713
 D1
-The tarry tunnel ascends onto a hill to your east.
+O túnel de alcatrão sobe para uma colina a leste.
 ~
 ~
 0 0 26723
 E
-goo tar~
-   The tar looks disgusting, but not too dangerous.
+goo tar gosma alcatrão~
+   O alcatrão parece nojento, mas não muito perigoso.
 ~
 S
 #26712

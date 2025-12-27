@@ -1,11 +1,11 @@
 #26701
-woman harem slave pink~
-the woman in pink~
-A woman wearing a pretty pink taffeta dress trudges along the beach.
+woman harem slave pink mulher harém escrava rosa~
+a mulher de rosa~
+Uma mulher vestindo um lindo vestido de tafetá rosa caminha pesadamente pela praia.
 ~
-   My, what beauty.  But she just gives you a long, doleful stare and without a
-sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
-seem to work with her beautiful face.
+   Que beleza. Mas ela apenas te dá um olhar longo e triste e sem um
+som continua andando. Que estranho--seus olhos são de um cinza muito opaco. Não
+parece combinar com seu rosto bonito.
 ~
 220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
@@ -15,13 +15,13 @@ E
 T 26701
 T 26703
 #26702
-woman harem slave blue~
-the woman in blue~
-A woman wearing a pretty blue silk dress trudges along the beach.
+woman harem slave blue mulher harém escrava azul~
+a mulher de azul~
+Uma mulher vestindo um lindo vestido de seda azul caminha pesadamente pela praia.
 ~
-   My, what beauty.  But she just gives you a long, doleful stare and without a
-sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
-seem to work with her beautiful face.
+   Que beleza. Mas ela apenas te dá um olhar longo e triste e sem um
+som continua andando. Que estranho--seus olhos são de um cinza muito opaco. Não
+parece combinar com seu rosto bonito.
 ~
 220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
@@ -31,13 +31,13 @@ E
 T 26701
 T 26703
 #26703
-woman harem slave white~
-the woman in pristine white~
-A woman wearing a pretty pristine white cotton dress trudges along the beach.
+woman harem slave white mulher harém escrava branca~
+a mulher de branco pristino~
+Uma mulher vestindo um lindo vestido de algodão branco pristino caminha pesadamente pela praia.
 ~
-   My, what beauty.  But she just gives you a long, doleful stare and without a
-sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
-seem to work with her beautiful face.
+   Que beleza. Mas ela apenas te dá um olhar longo e triste e sem um
+som continua andando. Que estranho--seus olhos são de um cinza muito opaco. Não
+parece combinar com seu rosto bonito.
 ~
 220 0 0 0 0 0 0 0 -300 E
 18 16 -1 3d6+100 2d4+2
@@ -79,13 +79,13 @@ E
 T 26703
 T 26701
 #26705
-woman harem slave concubine~
-the special slave of the master~
-A slave for the master works endlessly at his will.
+woman harem slave concubine mulher harém escrava concubina~
+a escrava especial do mestre~
+Uma escrava do mestre trabalha sem parar a seu serviço.
 ~
-   My, what beauty.  But she just gives you a long, doleful stare and without a
-sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
-seem to work with her beautiful face.
+   Que beleza. Mas ela apenas te dá um olhar longo e triste e sem um
+som continua andando. Que estranho--seus olhos são de um cinza muito opaco. Não
+parece combinar com seu rosto bonito.
 ~
 220 0 0 0 0 0 0 0 -400 E
 18 16 -1 3d6+100 2d4+2
@@ -93,13 +93,13 @@ seem to work with her beautiful face.
 8 8 2
 E
 #26706
-leader harem master~
-a fat harem master~
-A very fat harem master orders his concubines around.
+leader harem master mestre harém líder gordo~
+o gordo mestre do harém~
+Um mestre de harém muito gordo ordena suas concubinas por aí.
 ~
-   Gads.  This man must have some kind of magic to be able to keep all of these
-women, because he certainly doesn't have the face for it.  He looks somewhat
-like a cross between a pear and a potato, but without the good looks.
+   Nossa. Este homem deve ter algum tipo de magia para conseguir manter todas
+essas mulheres, porque ele certamente não tem o rosto para isso. Ele parece um
+tanto com um cruzamento entre uma pera e uma batata, mas sem a boa aparência.
 ~
 10 0 0 0 16 0 0 0 -850 E
 45 10 -10 10d10+450 6d6+6
@@ -109,12 +109,12 @@ E
 T 26700
 T 26702
 #26707
-crab~
-a small, red crab~
-A small, red crab scuttles along the beach.
+crab caranguejo vermelho pequeno~
+um pequeno caranguejo vermelho~
+Um pequeno caranguejo vermelho corre pela praia.
 ~
-   This small creature has rather large pincers for its negligible size.  It
-looks benign, but probably wouldn't appreciate being attacked.
+   Esta pequena criatura tem pinças bastante grandes para seu tamanho
+negligível. Parece inofensivo, mas provavelmente não apreciaria ser atacado.
 ~
 88 0 0 0 0 0 0 0 -100 E
 20 15 -2 4d6+120 3d4+3
@@ -122,12 +122,12 @@ looks benign, but probably wouldn't appreciate being attacked.
 8 8 0
 E
 #26708
-baby tar~
-a cuddly little tar baby~
-A cute, cuddly little tar baby is here, ready to follow the first person it sees.
+baby tar bebê alcatrão piche~
+um pequeno bebê de piche fofo~
+Um bebê de piche fofo e pequeno está aqui, pronto para seguir a primeira pessoa que vir.
 ~
-   Aww, this cute little thing is just COVERED in tar.  It latches on to the
-first sign of human life.  And it's just so cute you can't want to kill it!
+   Ahh, esta coisinha fofa está COBERTA de piche. Ela se apega ao primeiro
+sinal de vida humana. E é tão fofa que você não consegue querer matá-la!
 
 ~
 220 0 0 0 16 0 0 0 -200 E
@@ -137,12 +137,12 @@ first sign of human life.  And it's just so cute you can't want to kill it!
 E
 T 26707
 #26709
-seagull bird~
-a seagull~
-A seagull flies about the cliff.
+seagull bird gaivota pássaro~
+uma gaivota~
+Uma gaivota voa pelo penhasco.
 ~
-   Hmm...  It's a bird, that much you can tell.  It doesn't appear to care
-whether you look closely at it or not.
+   Hmm... É um pássaro, isso você pode dizer. Ela não parece se importar se
+você olha de perto ou não.
 ~
 26 0 0 0 0 0 0 0 0 E
 20 15 -2 4d6+120 3d4+3
@@ -150,14 +150,14 @@ whether you look closely at it or not.
 8 8 0
 E
 #26710
-priest fear~
-the Priest of Fear~
-The Priest of Fear is walking around, looking rather pompous.
+priest fear sacerdote medo~
+o Sacerdote do Medo~
+O Sacerdote do Medo está andando por aí, parecendo bastante pomposo.
 ~
-   This incredibly strong person doesn't look like the kind of man you'd want
-to meet on the street every day.  He certainly inspires fear in your heart.
-You'd most likely *NOT* want to attempt to kill this man!  He's one mean
-fellow!
+   Esta pessoa incrivelmente forte não parece o tipo de homem que você gostaria
+de encontrar na rua todos os dias. Ele certamente inspira medo em seu coração.
+Você provavelmente *NÃO* gostaria de tentar matar este homem! Ele é um sujeito
+muito malvado!
 ~
 88 0 0 0 16 0 0 0 -1000 E
 75 5 -17 20d10+1500 10d10+10
