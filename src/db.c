@@ -1983,6 +1983,38 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
+    CASE("PreferredWeather")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid weather sky values: 0-4 (SKY_CLOUDLESS to SKY_SNOWING), -1=no preference */
+            RANGE(-1, 4);
+            mob_proto[i].ai_data->preferred_weather_sky = num_arg;
+        }
+    }
+    CASE("PreferredTemperature")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid temperature ranges: 0-4 (very cold to very hot), -1=no preference */
+            RANGE(-1, 4);
+            mob_proto[i].ai_data->preferred_temperature_range = num_arg;
+        }
+    }
+    CASE("NativeClimate")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid climate types: 0-4 (temperate, rainy, tropical, arctic, desert), -1=neutral */
+            RANGE(-1, 4);
+            mob_proto[i].ai_data->native_climate = num_arg;
+        }
+    }
+    CASE("SeasonalAffective")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Seasonal Affective Disorder (SAD) susceptibility: 0-100 */
+            RANGE(0, 100);
+            mob_proto[i].ai_data->seasonal_affective_trait = num_arg;
+        }
+    }
     CASE("BareHandAttack")
     {
         RANGE(0, NUM_ATTACK_TYPES - 1);
@@ -3060,6 +3092,9 @@ void reset_zone(zone_rnum zone)
                         room_rnum target_room_rnum = ZCMD.arg3;
 
                         char_to_room(mob, target_room_rnum);
+
+                        /* Initialize climate preferences based on spawn room conditions */
+                        initialize_mob_climate_preferences(mob, target_room_rnum);
 
                         /* Verify that the destination is a valid room before storing. */
                         if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
