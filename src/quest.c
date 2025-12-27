@@ -3616,6 +3616,71 @@ void init_mob_ai_data(struct char_data *mob)
         }
         mob->ai_data->memory_index = 0; /* Start at beginning of circular buffer */
     }
+
+    /* Initialize climate preferences - these will be set to appropriate values
+     * when the mob is placed in a room during zone reset. Initialize to -1 (none)
+     * to indicate they have not yet been set. */
+    mob->ai_data->preferred_weather_sky = -1;
+    mob->ai_data->preferred_temperature_range = -1;
+    mob->ai_data->native_climate = -1;
+    mob->ai_data->last_weather_sky = -1;
+    mob->ai_data->weather_exposure_hours = 0;
+
+    /* Initialize Seasonal Affective Disorder (SAD) tendency
+     * If not specified in mob file, use level-based randomization: random(110 - level)
+     * This gives higher-level mobs lower SAD susceptibility (more experienced/resilient) */
+    if (mob->ai_data->seasonal_affective_trait == 0) {
+        int max_sad = MAX(0, 110 - GET_LEVEL(mob));
+        mob->ai_data->seasonal_affective_trait = rand_number(0, max_sad);
+    }
+}
+
+/* Initialize mob climate preferences based on spawn room conditions.
+ * This should be called when a mob is placed into a room during zone reset.
+ * Sets the mob's preferred weather, temperature, and native climate based on
+ * the current conditions in the room where they spawn. */
+void initialize_mob_climate_preferences(struct char_data *mob, room_rnum room)
+{
+    zone_rnum zone;
+    struct weather_data *weather;
+
+    if (!IS_NPC(mob) || !mob->ai_data || room == NOWHERE || room > top_of_world)
+        return;
+
+    /* Only initialize if not already set (check for -1 default value) */
+    if (mob->ai_data->preferred_weather_sky != -1 && mob->ai_data->preferred_temperature_range != -1 &&
+        mob->ai_data->native_climate != -1)
+        return;
+
+    zone = world[room].zone;
+    weather = zone_table[zone].weather;
+
+    /* Set preferred weather based on current sky condition */
+    if (mob->ai_data->preferred_weather_sky == -1) {
+        mob->ai_data->preferred_weather_sky = weather->sky;
+    }
+
+    /* Set preferred temperature based on current temperature
+     * Temperature ranges: 0=very cold (<0°C), 1=cold (0-10°C), 2=comfortable (10-25°C),
+     *                    3=hot (25-35°C), 4=very hot (>35°C) */
+    if (mob->ai_data->preferred_temperature_range == -1) {
+        if (weather->temperature < 0)
+            mob->ai_data->preferred_temperature_range = 0;
+        else if (weather->temperature < 10)
+            mob->ai_data->preferred_temperature_range = 1;
+        else if (weather->temperature <= 25)
+            mob->ai_data->preferred_temperature_range = 2;
+        else if (weather->temperature <= 35)
+            mob->ai_data->preferred_temperature_range = 3;
+        else
+            mob->ai_data->preferred_temperature_range = 4;
+    }
+
+    /* Set native climate based on zone's climate type
+     * Climate types: 0=temperate, 1=rainy, 2=tropical, 3=arctic, 4=desert */
+    if (mob->ai_data->native_climate == -1) {
+        mob->ai_data->native_climate = zone_table[zone].climate;
+    }
 }
 
 /* Save temporary quest assignments to file */

@@ -155,6 +155,7 @@ SPECIAL(temp_questmaster);
 void save_temp_quest_assignments(void);
 void load_temp_quest_assignments(void);
 void init_mob_ai_data(struct char_data *mob);
+void initialize_mob_climate_preferences(struct char_data *mob, room_rnum room);
 
 /* Helper function to check for active kill quests */
 bool has_active_kill_quest_for_mob(mob_vnum target_vnum);
