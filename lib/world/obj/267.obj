@@ -332,8 +332,8 @@ Um anel de metal negro está meio enfiado no chão.~
 2 800 0 0 0
 E
 anel negro~
-   The ring is made from the same kind of stone the outer area of the
-Caminho Alto na Ilha do Vício. Provavelmente são importadas do mesmo lugar.
+   O anel é feito do mesmo tipo de pedra da área externa do
+Caminho Alto na Ilha do Vício. Provavelmente é importado do mesmo lugar.
 ~
 A
 5 2
@@ -435,7 +435,7 @@ Uma chave de ferro opaca está no chão. *bocejo*~
 #26733
 chave minuscula minúscula~
 uma chave minúscula~
-You almost miss uma chave minúscula on the ground.~
+Você quase não percebe uma chave minúscula no chão.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 1 0 0 0
@@ -487,14 +487,14 @@ pocao poção verde~
 ~
 #26738
 pocao poção roxa~
-a pocao poção roxa of giant strength~
-A pocao poção roxa of giant strength.~
+uma poção roxa de força gigante~
+Uma poção roxa de força gigante.~
 ~
 10 0 0 0 0 ao 0 0 0 0 0 0 0
 30 39 39 39
 3 1000 0 0 0
 E
-potion purple~
+pocao poção roxa~
    Um rótulo fino diz: "use isto para empunhar armas pesadas."
 ~
 #26739

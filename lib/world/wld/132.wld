@@ -600,19 +600,19 @@ S
 O Fim do Caminho Rochoso~
    Você chegou ao fim do caminho rochoso que segue ao longo do mar.  Ao sul 
 encontra-se o mar, e a oeste você tem a visão de uma rocha coberta de 
-musgos.  Ao norte o caminho está obstruido. A leste, através da névoa marítima,
+musgos.  Ao norte o caminho está obstruído. A leste, através da névoa marítima,
 você pode avistar o que parece ser outra ilha.
 ~
 132 0 0 0 0 2
 D1
-~
-~
-0 -1 13232
-D3
 Através da névoa você pode ver uma praia branca e distante.
 ~
 ~
 0 -1 26701
+D3
+~
+~
+0 -1 13232
 S
 #13236
 O Fim do Caminho~

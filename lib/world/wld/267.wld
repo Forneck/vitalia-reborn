@@ -745,7 +745,7 @@ nas bordas, e os ossos foram limpos até um branco perfeito.
 ~
 S
 #26733
-High Path~
+Caminho Alto~
    This road is amazingly built--some sort of blax onyxlike substance, shined
 Esta estrada é incrivelmente construída--algum tipo de substância preta
 semelhante a ônix, polida até um brilho de espelho forma a maior parte do
@@ -1349,17 +1349,20 @@ porta~
 1 26732 26757
 E
 caldeirao caldeirão fervente oleo óleo~
-   The thing bubbles.  It curdles the brain and sends chills down your spine.
+   O líquido dentro do caldeirão borbulha sem parar, espirrando gotas
+de óleo fervente. O cheiro enjoativo embrulha o cérebro e arrepios frios
+percorrem sua espinha.
 ~
 E
 iron maidens maiden~
-   This coffin-like object is lined with huge spikes.  If closed, it looks like
-it would be an unpleasant experience.
+   Este objeto em forma de caixão é revestido por enormes espinhos em seu
+interior. Se fosse fechado com alguém lá dentro, certamente seria uma
+experiência extremamente desagradável.
 ~
 E
 manacles manacle chain~
-   The manacles are small, and have spikes on the insides of them.  They look
-very painful.
+   As algemas são pequenas e possuem espinhos em seu interior. Elas parecem
+incrivelmente dolorosas.
 ~
 S
 #26759
@@ -1659,42 +1662,42 @@ door porta secret secreta~
 1 26733 26776
 S
 #26778
-Square~
-   Here, there are exits in all directions.  These, however, are no ordinary
-exits.  They're transporter platforms, each designed to be a room to step in to
-go to the designated areas.  A small sign is on a wall at the corner of the
-room.
+Praça da Plataforma Transportadora~
+   Aqui há saídas em todas as direções. Essas, porém, não são saídas comuns.
+São plataformas de transporte, cada uma projetada como uma pequena sala para
+você entrar e ir às áreas designadas. Um pequeno aviso está preso a uma parede
+no canto da sala.
 ~
 267 8 0 0 0 0
 D0
-You see a transporter platform.
+Você vê uma plataforma transportadora.
 ~
 ~
 0 0 26767
 D1
-You see a transporter platform.
+Você vê uma plataforma transportadora.
 ~
 ~
 0 0 26779
 D2
-You see a transporter platform.
+Você vê uma plataforma transportadora.
 ~
 ~
 0 0 26768
 D4
-You can see a transporter platform.
+Você pode ver uma plataforma transportadora.
 ~
 ~
 0 0 26773
 D5
-You see a transporter platform.
+Você vê uma plataforma transportadora.
 ~
 ~
 0 0 26777
 E
-sign note plaque~
-                  YOU HAVE ENTERED THE HALL OF DESPAIR
-               AUTHORIZED PERSONNEL AND PRISONERS ONLY!!!
+sign note plaque placa aviso~
+                VOCÊ ENTROU NO SALÃO DA DESESPERANÇA
+            APENAS PESSOAL AUTORIZADO E PRISIONEIROS!!!
 ~
 S
 #26779
@@ -1856,15 +1859,6 @@ E
 netting rede~
    A rede é firme e feita de alguma substância extremamente resistente - parece
 bastante forte e confiável. Você não precisa ter medo de estar sobre ela.
-~
-The netting continues through the trees here.
-~
-~
-0 0 26784
-E
-netting~
-   The netting is firm, and made from some extremely tough substance--it looks
-quite strong, and supportable.  You don't need to fear being on it at all.
 ~
 S
 #26786
