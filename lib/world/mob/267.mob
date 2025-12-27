@@ -24,8 +24,8 @@ sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
 220 0 0 0 0 0 0 0 0 E
-20 14 -2 4d4+200 3d3+3
-200 40000
+18 16 -1 3d6+100 2d4+2
+120 28800
 8 8 2
 E
 T 26701
@@ -40,8 +40,8 @@ sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
 220 0 0 0 0 0 0 0 0 E
-20 14 -2 4d4+200 3d3+3
-200 40000
+18 16 -1 3d6+100 2d4+2
+120 28800
 8 8 2
 E
 T 26703
@@ -63,6 +63,22 @@ E
 T 26703
 T 26701
 #26705
+woman harem slave beige~
+the woman in a drab beige dress~
+A woman wearing a drab beige burlap dress trudges along the beach.
+~
+   My, what beauty.  But she just gives you a long, doleful stare and without a
+sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
+seem to work with her beautiful face.
+~
+220 0 0 0 0 0 0 0 0 E
+18 16 -1 3d6+100 2d4+2
+120 28800
+8 8 2
+E
+T 26703
+T 26701
+#26705
 woman harem slave concubine~
 the special slave of the master~
 A slave for the master works endlessly at his will.
@@ -72,8 +88,8 @@ sound continues along.  How strange--her eyes are a very dull gray.  Doesn't
 seem to work with her beautiful face.
 ~
 220 0 0 0 0 0 0 0 0 E
-20 14 -2 4d4+200 3d3+3
-200 40000
+18 16 -1 3d6+100 2d4+2
+120 28800
 8 8 2
 E
 #26706
@@ -86,8 +102,8 @@ women, because he certainly doesn't have the face for it.  He looks somewhat
 like a cross between a pear and a potato, but without the good looks.
 ~
 10 0 0 0 16 0 0 0 -1000 E
-25 12 -5 5d5+250 4d4+4
-250 62500
+45 10 -8 10d10+450 6d6+6
+1800 180000
 8 8 1
 E
 T 26700
@@ -101,8 +117,8 @@ A small, red crab scuttles along the beach.
 looks benign, but probably wouldn't appreciate being attacked.
 ~
 88 0 0 0 0 0 0 0 0 E
-21 13 -2 4d4+210 3d3+3
-210 44100
+20 15 -2 4d6+120 3d4+3
+150 36000
 8 8 0
 E
 #26708
@@ -115,8 +131,8 @@ first sign of human life.  And it's just so cute you can't want to kill it!
 
 ~
 220 0 0 0 16 0 0 0 500 E
-22 13 -3 4d4+220 3d3+3
-220 48400
+22 14 -3 5d6+130 3d4+3
+180 43200
 8 8 1
 E
 T 26707
@@ -129,8 +145,8 @@ A seagull flies about the cliff.
 whether you look closely at it or not.
 ~
 26 0 0 0 0 0 0 0 0 E
-21 13 -2 4d4+210 3d3+3
-210 44100
+20 15 -2 4d6+120 3d4+3
+150 36000
 8 8 0
 E
 #26710
@@ -144,8 +160,8 @@ You'd most likely *NOT* want to attempt to kill this man!  He's one mean
 fellow!
 ~
 88 0 0 0 16 0 0 0 -1000 E
-25 12 -5 5d5+250 4d4+4
-250 62500
+75 5 -12 20d10+1500 10d10+10
+4500 562500
 8 8 1
 E
 T 26705
@@ -158,8 +174,8 @@ A wailing ghost floats about the halls.
 faint outline of something making the wall shimmer.
 ~
 248 0 0 0 1122376 0 0 0 -750 E
-24 12 -4 4d4+240 4d4+4
-240 57600
+70 6 -11 18d10+1400 9d10+9
+4000 490000
 8 8 0
 E
 #26712
@@ -173,8 +189,8 @@ and almost naked--his rags barely cover him.  He is covered in his own filth.
 Just looking at him makes you want to retch.
 ~
 14 0 0 0 16 0 0 0 -900 E
-24 12 -4 4d4+240 4d4+4
-240 57600
+60 7 -10 15d10+1200 8d8+8
+3000 360000
 8 8 1
 E
 #26713
@@ -186,8 +202,8 @@ The butcher stands here, waiting for his next kill.
 
 ~
 10 0 0 0 0 0 0 0 -1000 E
-23 13 -3 4d4+230 3d3+3
-230 52900
+50 9 -9 12d10+1000 7d7+7
+2500 250000
 8 8 1
 E
 T 26706
@@ -203,8 +219,8 @@ strong, she is also quite voluptuous.  She looks at you with the most
 sympathetic eyes--you just want to give yourself over to her.
 ~
 88 0 0 0 16 0 0 0 -1000 E
-24 12 -4 4d4+240 4d4+4
-240 57600
+86 3 -14 25d10+2150 12d12+12
+6000 740000
 8 8 2
 E
 T 26709
@@ -217,8 +233,8 @@ The Keeper of the Shrine of Vice guards the alter from desecration.
 he would like to make you his next. Keep clear of this guy.
 ~
 14 0 0 0 16 0 0 0 -800 E
-24 12 -4 4d4+240 4d4+4
-240 57600
+80 4 -13 22d10+1800 11d11+11
+5200 640000
 8 8 1
 E
 #26716
@@ -235,8 +251,8 @@ little bit of resignation, as though it knows you will eventually get around to
 attacking it.
 ~
 90 0 0 0 16 0 0 0 -750 E
-24 12 -4 4d4+240 4d4+4
-240 57600
+86 3 -14 25d10+2150 12d12+12
+6000 740000
 5 5 0
 E
 #26717
@@ -249,8 +265,8 @@ the air with a mad cackle, and looks at you.  With an evil grin, he says, "ah,
 my next victim!  Yessssss" and launches himself at you.
 ~
 26 0 0 0 16 0 0 0 -1000 E
-23 13 -3 4d4+230 3d3+3
-230 52900
+55 8 -10 14d10+1100 8d8+8
+3200 302500
 8 8 1
 E
 #26718
@@ -263,8 +279,8 @@ dangerous to attack.  He looks at you with steel-rimmed glasses and says,
 "shall ve beegeen?  "
 ~
 216 0 0 0 0 0 0 0 -1000 E
-22 13 -3 4d4+220 3d3+3
-220 48400
+50 9 -9 12d10+1000 7d7+7
+2500 250000
 6 6 1
 E
 #26719
@@ -277,8 +293,8 @@ his eye.  He looks quite sinister, as though he expects to get information out
 of you--whether you know it or not.
 ~
 216 0 0 0 0 0 0 0 -1000 E
-25 12 -5 5d5+250 4d4+4
-250 62500
+75 5 -12 20d10+1500 10d10+10
+4500 562500
 8 8 1
 E
 T 26708
@@ -291,8 +307,8 @@ The Priest of Hopelessness stands here, waiting to remove all hope of leaving.
 look at me!?  " and promptly attacks you.
 ~
 10 0 0 0 1048576 0 0 0 -1000 E
-23 13 -3 4d4+230 3d3+3
-230 52900
+70 6 -11 18d10+1400 9d10+9
+4000 490000
 8 8 1
 E
 $
