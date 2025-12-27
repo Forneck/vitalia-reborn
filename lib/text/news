@@ -59,7 +59,7 @@
    Comandos @Yrate@n e @Ycotacao@n mostram taxas de cambio atuais.
    Sistema de estatisticas do @Yshow stats@n exibe informacoes de troca QP/ouro.
    Taxa de cambio dinamica baseada em taxa mensal com protecao contra overflow.
-   Limite maximo de QP configurado para metade do limite bancario para equilibrio.
+   Limites de seguranca implementados para manter equilibrio do sistema.
 
    @BSistema de Magias e Combate@n
    Magias de aura agora exibem mensagens visiveis ao olhar para salas.
@@ -67,38 +67,38 @@
    Mensagens de reflexao de dano adicionadas para escudos de aura.
    Deteccao de escudo de aura corrigida para ignorar efeitos colaterais.
    Pre-requisitos de magias atualizados incluindo @Ymindshield@n.
-   Visualizacao de dano de magias adicionada com flag @YPRF_VIEWDAMAGE@n.
+   Visualizacao de dano de magias e ataques adicionada para melhor feedback.
    Sistema de resistencias corrigido no comando @Ystat@n.
 
    @RCorreções de Estabilidade@n
-   Multiplas correcoes de travamentos (SIGSEGV) em diversos sistemas.
-   Corrigido travamento no @Yspedit@n com terminadores de array.
-   Corrigido travamento em @Yshop keeper@n com inventario inconsistente.
-   Corrigido travamento em gatilhos de objetos com verificacoes de ponteiro nulo.
-   Corrigido travamento no comando @Yshoot@n movendo verificacao PK.
-   Corrigido uso-apos-liberacao validando objetos na lista de transporte.
-   Problema de empilhamento de buffer corrigido com funcao ProtocolOutputToBuffer.
+   Multiplas correcoes de travamentos em diversos sistemas.
+   Corrigido travamento no editor de procedimentos especiais.
+   Corrigido travamento em comerciantes com inventario inconsistente.
+   Corrigido travamento em gatilhos de objetos com verificacoes aprimoradas.
+   Corrigido travamento no comando @Yshoot@n.
+   Corrigido problema ao validar objetos na lista de transporte.
+   Problema de comunicacao de rede corrigido para maior estabilidade.
 
    @GSistema de Combate e Estatisticas@n
-   Resistencias de salvamento (saving throws) escaladas para niveis 1-100.
+   Resistencias de salvamento escaladas para niveis 1-100.
    Limites de @Yhitroll@n e @Ydamroll@n implementados para prevenir overflow.
    Formula de interpolacao linear aplicada para balanceamento progressivo.
 
    @MSistema de Quests para Mobs@n
    Otimizacao de performance com verificacoes escalonadas de quests.
-   Sistema @Yset_mob_quest@n automaticamente ativa processamento de quest.
-   Validacao de alvos de sala/mob adicionada para maior seguranca.
+   Sistema de quests para mobs automaticamente ativado quando necessario.
+   Validacao de alvos aprimorada para maior seguranca.
 
    @CSistema de Objetos@n
    Novo tipo de item @YITEM_CARDS@n adicionado ao jogo.
    Comando @Yolist type@n corrigido para funcionar com todos os tipos de item.
-   Sistema de armazem de armadilhas mortais (DT) implementado.
-   Sala de armazem DT configuravel via @YCEDIT@n.
+   Sistema de armazem de armadilhas mortais implementado.
+   Configuracao de armazem disponivel via @YCEDIT@n para imortais.
 
    @WHabilidade Senso de Perigo (Danger Sense)@n
    Habilidade @Ydanger sense@n agora protege Ladroes de armadilhas mortais ao fugir.
    Quando a habilidade detecta perigo com sucesso, impede fuga para salas fatais.
-   Se a verificacao da habilidade falhar, a fuga normal ocorre (incluindo DTs).
+   Se a verificacao da habilidade falhar, a fuga normal ocorre.
    Mensagem especifica alerta quando o senso de perigo bloqueia uma direcao.
    Sistema funciona tanto com comando @Yflee@n quanto com fuga automatica (wimpy).
 
