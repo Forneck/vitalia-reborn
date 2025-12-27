@@ -1622,3 +1622,39 @@ int check_danger_sense(struct char_data *ch)
     }
     return 0;
 }
+
+/* Danger Sense for Flee: Check if a specific direction leads to a death trap and if danger sense prevents it
+ * Returns 1 if danger sense successfully detected and blocks the death trap, 0 otherwise */
+int check_danger_sense_prevents_flee(struct char_data *ch, int dir)
+{
+    room_rnum dest;
+
+    /* Only works for non-NPC characters with the danger sense skill */
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
+        return 0;
+
+    /* Ensure character is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE)
+        return 0;
+
+    /* Check if the direction is valid */
+    if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->to_room))
+        return 0;
+
+    /* Validate the destination room number before accessing world array */
+    if (!VALID_ROOM_RNUM(dest))
+        return 0;
+
+    /* Check if the destination room is a death trap */
+    if (!ROOM_FLAGGED(dest, ROOM_DEATH))
+        return 0;
+
+    /* Check proficiency - higher skill level = better detection chance */
+    if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DANGER_SENSE))
+        return 0; /* Skill check failed, danger sense doesn't prevent flee */
+
+    /* Skill check succeeded - warn and prevent fleeing to death trap */
+    send_to_char(ch, "@RSeu senso de perigo te alerta! Você recusa-se a fugir para %s - há uma ARMADILHA MORTAL lá!@n\r\n", 
+                 dirs_pt[dir]);
+    return 1;
+}

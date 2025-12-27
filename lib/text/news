@@ -8,14 +8,14 @@
 @n
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n
 
-   @CNova Zona: Ilha do Vício (Zona 267)@n
+   @CNova Zona: Ilha do Vício@n
    Uma nova e perigosa ilha foi descoberta nas águas tropicais! @YIlha do Vício@n
    é uma vasta zona de exploração com @Y98 salas@n repleta de mistérios sombrios
    e desafios para aventureiros.
    
    @WDetalhes da Zona:@n
    - @YNível Recomendado:@n 16-86 (médio a alto)
-   - @YLocalização:@n Acessível a partir do @CO Farol da Praia@n (Zona 132, VNUM 13235)
+   - @YLocalização:@n Acessível a partir do @CO Farol da Praia@n
    - @YMonstros:@n 20 criaturas incluindo o temível @CAlto Sacerdote do Terror@n
    - @YTesouro:@n 41 itens únicos incluindo equipamentos do @CTemplo do Medo@n
    - @YGatilhos:@n 10 scripts interativos para puzzles e eventos
@@ -30,13 +30,13 @@
    
    Agradecimentos especiais a @YQuestor@n, criador original desta área épica.
 
-   @CNova Zona: Oceânia (Zona 278)@n
+   @CNova Zona: Oceânia@n
    Uma nova area oceânica foi aberta para exploracao! @YOceânia@n e uma zona
    maritima tematica com @Y50 salas@n de ambiente subaquatico e nautico.
    
    @WDetalhes da Zona:@n
    - @YNivel Recomendado:@n 52-60 (medio-alto)
-   - @YLocalizacao:@n Píer do Oceano (VNUM 27800)
+   - @YLocalizacao:@n Píer do Oceano
    - @YMonstros:@n 4 criaturas marinhas incluindo o lendario @Csemideus Leviatã@n
    - @YTesouro:@n 7 itens únicos incluindo o @GTridente de Cristal@n
    
@@ -53,6 +53,58 @@
    Avisos quando atalhos se aproximam do limite de entrada (512 caracteres).
    Documentacao atualizada com exemplos de atalhos encadeados.
    Use @Yhelp alias@n para ver exemplos e informacoes sobre limites.
+
+   @YSistema de Troca de Pontos de Quest (QP)@n
+   Novo sistema de troca de ouro por pontos de quest implementado.
+   Comandos @Yrate@n e @Ycotacao@n mostram taxas de cambio atuais.
+   Sistema de estatisticas do @Yshow stats@n exibe informacoes de troca QP/ouro.
+   Taxa de cambio dinamica baseada em taxa mensal com protecao contra overflow.
+   Limites de seguranca implementados para manter equilibrio do sistema.
+
+   @BSistema de Magias e Combate@n
+   Magias de aura agora exibem mensagens visiveis ao olhar para salas.
+   Cores das auras atualizadas para corresponder aos elementos oficiais.
+   Mensagens de reflexao de dano adicionadas para escudos de aura.
+   Deteccao de escudo de aura corrigida para ignorar efeitos colaterais.
+   Pre-requisitos de magias atualizados incluindo @Ymindshield@n.
+   Visualizacao de dano de magias e ataques adicionada para melhor feedback.
+   Sistema de resistencias corrigido no comando @Ystat@n.
+
+   @RCorreções de Estabilidade@n
+   Multiplas correcoes de travamentos em diversos sistemas.
+   Corrigido travamento no editor de procedimentos especiais.
+   Corrigido travamento em comerciantes com inventario inconsistente.
+   Corrigido travamento em gatilhos de objetos com verificacoes aprimoradas.
+   Corrigido travamento no comando @Yshoot@n.
+   Corrigido problema ao validar objetos na lista de transporte.
+   Problema de comunicacao de rede corrigido para maior estabilidade.
+
+   @GSistema de Combate e Estatisticas@n
+   Resistencias de salvamento escaladas para niveis 1-100.
+   Limites de @Yhitroll@n e @Ydamroll@n implementados para prevenir overflow.
+   Formula de interpolacao linear aplicada para balanceamento progressivo.
+
+   @MSistema de Quests para Mobs@n
+   Otimizacao de performance com verificacoes escalonadas de quests.
+   Sistema de quests para mobs automaticamente ativado quando necessario.
+   Validacao de alvos aprimorada para maior seguranca.
+
+   @CSistema de Objetos@n
+   Novo tipo de item @YITEM_CARDS@n adicionado ao jogo.
+   Comando @Yolist type@n corrigido para funcionar com todos os tipos de item.
+   Sistema de armazem de armadilhas mortais implementado.
+   Configuracao de armazem disponivel via @YCEDIT@n para imortais.
+
+   @WHabilidade Senso de Perigo (Danger Sense)@n
+   Habilidade @Ydanger sense@n agora protege Ladroes de armadilhas mortais ao fugir.
+   Quando a habilidade detecta perigo com sucesso, impede fuga para salas fatais.
+   Se a verificacao da habilidade falhar, a fuga normal ocorre.
+   Mensagem especifica alerta quando o senso de perigo bloqueia uma direcao.
+   Sistema funciona tanto com comando @Yflee@n quanto com fuga automatica (wimpy).
+
+   @YSistema de Emocoes para Mobs@n
+   Comando @Ystat mob@n agora exibe informacoes detalhadas de emocoes.
+   Documentacao e exemplos adicionados para sistema de emocoes de mobs.
 
 @n
 @C-@G=@Y>@W Outubro/Novembro de 2025 @C@Y<@G=@C-@n

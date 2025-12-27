@@ -196,6 +196,7 @@ ACMD(do_wake);
 ACMD(do_meditate);
 ACMD(do_spy);
 int check_danger_sense(struct char_data *ch);
+int check_danger_sense_prevents_flee(struct char_data *ch, int dir);
 
 int start_flying(struct char_data *ch);
 int stop_flying(struct char_data *ch);
