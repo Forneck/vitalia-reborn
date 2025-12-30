@@ -21,6 +21,7 @@
 #include "prefedit.h"
 #include "screen.h"
 #include "protocol.h"
+#include "telnet.h"
 
 /* Internal (static) functions */
 static void prefedit_setup(struct descriptor_data *d, struct char_data *vict);
@@ -813,10 +814,24 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                     }
                     break;
 
-                case 'u':
+                                case 'u':
                 case 'U':
                     if (d->pProtocol) {
+                        /* 1. Inverte o valor booleano interno */
                         TOGGLE_VAR(d->pProtocol->bGMCP);
+
+                        /* 2. AVISA O CLIENTE sobre a mudança via Telnet */
+                        if (d->pProtocol->bGMCP) {
+                            /* Ligou: Envia IAC DO GMCP */
+                            /* O cliente responderá IAC WILL GMCP e o handshake ocorrerá */
+                            const char msg_start[] = { (char)IAC, (char)DO, (char)TELOPT_GMCP, '\0' };
+                            write_to_output(d, msg_start, 0);
+                        } else {
+                            /* Desligou: Envia IAC DONT GMCP */
+                            /* O cliente deve desligar sua flag e limpar o HUD */
+                            const char msg_stop[] = { (char)IAC, (char)DONT, (char)TELOPT_GMCP, '\0' };
+                            write_to_output(d, msg_stop, 0);
+                        }
                     }
                     break;
 
