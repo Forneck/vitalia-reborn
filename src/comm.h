@@ -65,6 +65,7 @@ extern int buf_overflows;
 extern int buf_switches;
 extern int circle_shutdown;
 extern int circle_reboot;
+extern int shutdown_signal;
 extern int no_specials;
 extern int scheck;
 extern FILE *logfile;
