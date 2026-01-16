@@ -288,15 +288,29 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     }
     *buf = '\0';
     len = snprintf(buf, sizeof(buf), "filename: %s\r\n", filename);
+    if (len < 0 || (size_t)len >= sizeof(buf)) {
+        /* On error or truncation, stop to avoid inconsistent len / size relationship */
+        len = (int)(sizeof(buf) - 1);
+        buf[len] = '\0';
+    }
 
     loaded = objsave_parse_objects(fl);
 
     for (current = loaded; current != NULL; current = current->next) {
+        size_t remaining;
+
         if (current->obj == NULL)
             continue;
-        nlen = snprintf(buf + len, sizeof(buf) - len, " [%5d] (%5dau) %s\r\n", GET_OBJ_VNUM(current->obj),
-                        GET_OBJ_RENT(current->obj), current->obj->short_description);
-        if (len + nlen >= sizeof(buf))
+
+        if ((size_t)len >= sizeof(buf))
+            break;
+
+        remaining = sizeof(buf) - (size_t)len;
+        nlen = snprintf(buf + len, remaining, " [%5d] (%5dau) %s\r\n",
+                        GET_OBJ_VNUM(current->obj),
+                        GET_OBJ_RENT(current->obj),
+                        current->obj->short_description);
+        if (nlen < 0 || (size_t)nlen >= remaining)
             break;
         len += nlen;
     }
