@@ -451,15 +451,19 @@ void Crash_listrent(struct char_data *ch, char *name)
 
     loaded = objsave_parse_objects(fl);
 
-    for (current = loaded; current != NULL; current = current->next)
+    for (current = loaded; current != NULL; current = current->next) {
+        if (current->obj == NULL)
+            continue;
         len += snprintf(buf + len, sizeof(buf) - len, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
                         GET_OBJ_RENT(current->obj), current->obj->short_description);
+    }
 
     /* Now it's safe to free the obj_save_data list and the objects on it. */
     while (loaded != NULL) {
         current = loaded;
         loaded = loaded->next;
-        extract_obj(current->obj);
+        if (current->obj != NULL)
+            extract_obj(current->obj);
         free(current);
     }
 
