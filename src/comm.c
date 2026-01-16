@@ -2557,6 +2557,10 @@ static RETSIGTYPE hupsig(int sig)
         log1("SYSERR: Uptime at shutdown: %d day%s, %d:%02d", days, days == 1 ? "" : "s", hours, mins);
     } else {
         log1("SYSERR: Received signal %d (%s). Shutting down...", sig, sig_name);
+        if (boot_time == 0)
+            log1("SYSERR: Uptime unavailable (boot_time not initialized)");
+        else if (current_time < boot_time)
+            log1("SYSERR: Uptime unavailable (system clock may have changed)");
     }
 
     /* Set shutdown flag for graceful shutdown with proper cleanup.
