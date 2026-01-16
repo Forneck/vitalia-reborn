@@ -106,6 +106,7 @@ int buf_overflows = 0;                          /* # of overflows of output */
 int buf_switches = 0;                           /* # of switches from small to large buf */
 int circle_shutdown = 0;                        /* clean shutdown */
 int circle_reboot = 0;                          /* reboot the game after a shutdown */
+int shutdown_signal = 0;                        /* signal that caused shutdown (0 if normal) */
 int no_specials = 0;                            /* Suppress ass. of special routines */
 int scheck = 0;                                 /* for syntax checking mode */
 FILE *logfile = NULL;                           /* Where to send the log messages. */
@@ -432,6 +433,16 @@ int main(int argc, char **argv)
 #ifdef MEMORY_DEBUG
     zmalloc_check();
 #endif
+
+    /* Return appropriate exit code:
+     * 0 = Normal shutdown (via 'shutdown' command or completion)
+     * 1 = Shutdown caused by signal (SIGHUP, SIGINT, or SIGTERM)
+     * This helps distinguish between intentional shutdowns and unexpected terminations
+     * in logs and monitoring systems. */
+    if (shutdown_signal) {
+        log1("Exiting with code 1 due to signal %d.", shutdown_signal);
+        return (1);
+    }
 
     return (0);
 }
@@ -2507,12 +2518,51 @@ static RETSIGTYPE checkpointing(int sig)
     my_signal(SIGVTALRM, checkpointing);
 }
 
-/* Dying anyway... */
+/* Signal handler for graceful shutdown on SIGHUP, SIGINT, or SIGTERM.
+ * Instead of immediate exit, we set circle_shutdown to allow proper cleanup.
+ * This provides better diagnostics by logging which signal was received and
+ * the uptime when shutdown occurred. */
 static RETSIGTYPE hupsig(int sig)
 {
-    log1("SYSERR: Received SIGHUP, SIGINT, or SIGTERM.  Shutting down...");
-    exit(1); /* perhaps something more elegant should
-                        substituted */
+    const char *sig_name;
+    time_t uptime;
+    int days, hours, mins;
+
+    /* Identify which signal caused the shutdown */
+    switch (sig) {
+        case SIGHUP:
+            sig_name = "SIGHUP (Hangup)";
+            break;
+        case SIGINT:
+            sig_name = "SIGINT (Interrupt)";
+            break;
+        case SIGTERM:
+            sig_name = "SIGTERM (Termination)";
+            break;
+        default:
+            sig_name = "Unknown signal";
+            break;
+    }
+
+    /* Calculate uptime for diagnostics */
+    if (boot_time > 0) {
+        uptime = time(0) - boot_time;
+        days = uptime / 86400;
+        hours = (uptime / 3600) % 24;
+        mins = (uptime / 60) % 60;
+
+        log1("SYSERR: Received signal %d (%s). Shutting down gracefully...", sig, sig_name);
+        log1("SYSERR: Uptime at shutdown: %d day%s, %d:%02d", days, days == 1 ? "" : "s", hours, mins);
+    } else {
+        log1("SYSERR: Received signal %d (%s). Shutting down...", sig, sig_name);
+    }
+
+    /* Set shutdown flag for graceful shutdown with proper cleanup.
+     * This is safer than exit(1) as it allows the main game loop to
+     * complete current operations and perform cleanup routines.
+     * The shutdown_signal variable allows main() to return exit code 1. */
+    shutdown_signal = sig;
+    circle_shutdown = 1;
 }
 
 #    endif /* CIRCLE_UNIX */
