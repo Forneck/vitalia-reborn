@@ -437,6 +437,7 @@ int main(int argc, char **argv)
     /* Return appropriate exit code:
      * 0 = Normal shutdown (via 'shutdown' command or completion)
      * 1 = Shutdown caused by signal (SIGHUP, SIGINT, or SIGTERM)
+     * 52 = Reboot (via 'shutdown reboot' or 'shutdown now' commands)
      * This helps distinguish between intentional shutdowns and unexpected terminations
      * in logs and monitoring systems. */
     if (shutdown_signal) {
@@ -2525,7 +2526,7 @@ static RETSIGTYPE checkpointing(int sig)
 static RETSIGTYPE hupsig(int sig)
 {
     const char *sig_name;
-    time_t uptime;
+    time_t current_time, uptime;
     int days, hours, mins;
 
     /* Identify which signal caused the shutdown */
@@ -2544,9 +2545,10 @@ static RETSIGTYPE hupsig(int sig)
             break;
     }
 
-    /* Calculate uptime for diagnostics */
-    if (boot_time > 0) {
-        uptime = time(0) - boot_time;
+    /* Calculate uptime for diagnostics - use consistent timestamp for all log messages */
+    current_time = time(0);
+    if (boot_time > 0 && current_time >= boot_time) {
+        uptime = current_time - boot_time;
         days = uptime / 86400;
         hours = (uptime / 3600) % 24;
         mins = (uptime / 60) % 60;
