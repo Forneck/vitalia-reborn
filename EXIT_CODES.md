@@ -77,7 +77,7 @@ Prior to this improvement, the server would log only:
 SYSERR: Received SIGHUP, SIGINT, or SIGTERM. Shutting down...
 ```
 
-This made it difficult to diagnose the cause of unexpected shutdowns, especially when they occurred after long uptimes (e.g., 20 days as reported in issue #XX).
+This made it difficult to diagnose the cause of unexpected shutdowns, especially when they occurred after long uptimes (e.g., 20 days as reported in issue #818).
 
 ## Signal Handling Details
 
