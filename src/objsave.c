@@ -408,7 +408,7 @@ void Crash_listrent(struct char_data *ch, char *name)
     FILE *fl;
     char filename[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], line[READ_SIZE];
     obj_save_data *loaded, *current;
-    int rentcode = RENT_UNDEF, timed, netcost, gold, account, nitems, numread, len;
+    int rentcode = RENT_UNDEF, timed, netcost, gold, account, nitems, numread, len, nlen;
 
     if (!get_filename(filename, sizeof(filename), CRASH_FILE, name))
         return;
@@ -454,8 +454,11 @@ void Crash_listrent(struct char_data *ch, char *name)
     for (current = loaded; current != NULL; current = current->next) {
         if (current->obj == NULL)
             continue;
-        len += snprintf(buf + len, sizeof(buf) - len, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
+        nlen = snprintf(buf + len, sizeof(buf) - len, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
                         GET_OBJ_RENT(current->obj), current->obj->short_description);
+        if (len + nlen >= sizeof(buf))
+            break;
+        len += nlen;
     }
 
     /* Now it's safe to free the obj_save_data list and the objects on it. */

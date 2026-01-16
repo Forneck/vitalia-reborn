@@ -278,7 +278,7 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     char filename[MAX_STRING_LENGTH];
     char buf[MAX_STRING_LENGTH];
     obj_save_data *loaded, *current;
-    int len = 0;
+    int len = 0, nlen;
 
     if (!House_get_filename(vnum, filename, sizeof(filename)))
         return;
@@ -294,8 +294,11 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     for (current = loaded; current != NULL; current = current->next) {
         if (current->obj == NULL)
             continue;
-        len += snprintf(buf + len, sizeof(buf) - len, " [%5d] (%5dau) %s\r\n", GET_OBJ_VNUM(current->obj),
+        nlen = snprintf(buf + len, sizeof(buf) - len, " [%5d] (%5dau) %s\r\n", GET_OBJ_VNUM(current->obj),
                         GET_OBJ_RENT(current->obj), current->obj->short_description);
+        if (len + nlen >= sizeof(buf))
+            break;
+        len += nlen;
     }
 
     /* now it's safe to free the obj_save_data list - all members of it
