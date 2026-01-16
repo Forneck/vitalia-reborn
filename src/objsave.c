@@ -408,7 +408,7 @@ void Crash_listrent(struct char_data *ch, char *name)
     FILE *fl;
     char filename[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], line[READ_SIZE];
     obj_save_data *loaded, *current;
-    int rentcode = RENT_UNDEF, timed, netcost, gold, account, nitems, numread, len;
+    int rentcode = RENT_UNDEF, timed, netcost, gold, account, nitems, numread, len, nlen;
 
     if (!get_filename(filename, sizeof(filename), CRASH_FILE, name))
         return;
@@ -418,6 +418,11 @@ void Crash_listrent(struct char_data *ch, char *name)
         return;
     }
     len = snprintf(buf, sizeof(buf), "%s\r\n", filename);
+    if (len < 0 || (size_t)len >= sizeof(buf)) {
+        /* Truncated or encoding error; cap len and stop further appends. */
+        len = sizeof(buf) - 1;
+        buf[len] = '\0';
+    }
 
     numread = get_line(fl, line);
 
@@ -431,35 +436,100 @@ void Crash_listrent(struct char_data *ch, char *name)
     sscanf(line, "%d %d %d %d %d %d", &rentcode, &timed, &netcost, &gold, &account, &nitems);
 
     switch (rentcode) {
-        case RENT_RENTED:
-            len += snprintf(buf + len, sizeof(buf) - len, "Rent\r\n");
+        case RENT_RENTED: {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining > 1) {
+                int n = snprintf(buf + len, remaining, "Rent\r\n");
+                if (n >= 0 && (size_t)n < remaining)
+                    len += n;
+                else {
+                    len = sizeof(buf) - 1;
+                    buf[len] = '\0';
+                }
+            }
             break;
-        case RENT_CRASH:
-            len += snprintf(buf + len, sizeof(buf) - len, "Crash\r\n");
+        }
+        case RENT_CRASH: {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining > 1) {
+                int n = snprintf(buf + len, remaining, "Crash\r\n");
+                if (n >= 0 && (size_t)n < remaining)
+                    len += n;
+                else {
+                    len = sizeof(buf) - 1;
+                    buf[len] = '\0';
+                }
+            }
             break;
-        case RENT_CRYO:
-            len += snprintf(buf + len, sizeof(buf) - len, "Cryo\r\n");
+        }
+        case RENT_CRYO: {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining > 1) {
+                int n = snprintf(buf + len, remaining, "Cryo\r\n");
+                if (n >= 0 && (size_t)n < remaining)
+                    len += n;
+                else {
+                    len = sizeof(buf) - 1;
+                    buf[len] = '\0';
+                }
+            }
             break;
+        }
         case RENT_TIMEDOUT:
-        case RENT_FORCED:
-            len += snprintf(buf + len, sizeof(buf) - len, "TimedOut\r\n");
+        case RENT_FORCED: {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining > 1) {
+                int n = snprintf(buf + len, remaining, "TimedOut\r\n");
+                if (n >= 0 && (size_t)n < remaining)
+                    len += n;
+                else {
+                    len = sizeof(buf) - 1;
+                    buf[len] = '\0';
+                }
+            }
             break;
-        default:
-            len += snprintf(buf + len, sizeof(buf) - len, "Undef\r\n");
+        }
+        default: {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining > 1) {
+                int n = snprintf(buf + len, remaining, "Undef\r\n");
+                if (n >= 0 && (size_t)n < remaining)
+                    len += n;
+                else {
+                    len = sizeof(buf) - 1;
+                    buf[len] = '\0';
+                }
+            }
             break;
+        }
     }
 
     loaded = objsave_parse_objects(fl);
 
-    for (current = loaded; current != NULL; current = current->next)
-        len += snprintf(buf + len, sizeof(buf) - len, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
-                        GET_OBJ_RENT(current->obj), current->obj->short_description);
+    for (current = loaded; current != NULL; current = current->next) {
+        if (current->obj == NULL)
+            continue;
+        {
+            size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
+            if (remaining <= 1)
+                break;
+            nlen = snprintf(buf + len, remaining,
+                            "[%5d] (%5dau) %-20s\r\n",
+                            GET_OBJ_VNUM(current->obj),
+                            GET_OBJ_RENT(current->obj),
+                            current->obj->short_description);
+            if (nlen < 0 || (size_t)nlen >= remaining)
+                break;
+            len += nlen;
+        }
+    }
 
     /* Now it's safe to free the obj_save_data list and the objects on it. */
     while (loaded != NULL) {
         current = loaded;
         loaded = loaded->next;
-        extract_obj(current->obj);
+        if (current->obj != NULL)
+            extract_obj(current->obj);
         free(current);
     }
 

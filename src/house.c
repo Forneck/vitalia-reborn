@@ -278,7 +278,7 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     char filename[MAX_STRING_LENGTH];
     char buf[MAX_STRING_LENGTH];
     obj_save_data *loaded, *current;
-    int len = 0;
+    int len = 0, nlen;
 
     if (!House_get_filename(vnum, filename, sizeof(filename)))
         return;
@@ -288,12 +288,32 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     }
     *buf = '\0';
     len = snprintf(buf, sizeof(buf), "filename: %s\r\n", filename);
+    if (len < 0 || (size_t)len >= sizeof(buf)) {
+        /* On error or truncation, stop to avoid inconsistent len / size relationship */
+        len = (int)(sizeof(buf) - 1);
+        buf[len] = '\0';
+    }
 
     loaded = objsave_parse_objects(fl);
 
-    for (current = loaded; current != NULL; current = current->next)
-        len += snprintf(buf + len, sizeof(buf) - len, " [%5d] (%5dau) %s\r\n", GET_OBJ_VNUM(current->obj),
-                        GET_OBJ_RENT(current->obj), current->obj->short_description);
+    for (current = loaded; current != NULL; current = current->next) {
+        size_t remaining;
+
+        if (current->obj == NULL)
+            continue;
+
+        if ((size_t)len >= sizeof(buf))
+            break;
+
+        remaining = sizeof(buf) - (size_t)len;
+        nlen = snprintf(buf + len, remaining, " [%5d] (%5dau) %s\r\n",
+                        GET_OBJ_VNUM(current->obj),
+                        GET_OBJ_RENT(current->obj),
+                        current->obj->short_description);
+        if (nlen < 0 || (size_t)nlen >= remaining)
+            break;
+        len += nlen;
+    }
 
     /* now it's safe to free the obj_save_data list - all members of it
      * have been put in the correct lists by obj_to_room()
@@ -301,7 +321,8 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
     while (loaded != NULL) {
         current = loaded;
         loaded = loaded->next;
-        extract_obj(current->obj);
+        if (current->obj != NULL)
+            extract_obj(current->obj);
         free(current);
     }
 
