@@ -419,7 +419,7 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
             if (!action->target) {
                 return ACTION_INVALID_TARGET;
             }
-            if (!check_invariant_existence(action->target, -1)) {
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_ANY)) {
                 return ACTION_INVALID_TARGET;
             }
             break;

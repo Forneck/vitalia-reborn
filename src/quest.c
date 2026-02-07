@@ -22,10 +22,11 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
-#include "spells.h"     /* for calculate_mana_density */
-#include "act.h"        /* for do_tell */
-#include "dg_scripts.h" /* for char_script_id */
-#include "modify.h"     /* for page_string */
+#include "spells.h"          /* for calculate_mana_density */
+#include "act.h"             /* for do_tell */
+#include "dg_scripts.h"      /* for char_script_id */
+#include "modify.h"          /* for page_string */
+#include "shadow_timeline.h" /* for cognitive capacity constants */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -3646,8 +3647,10 @@ void init_mob_ai_data(struct char_data *mob)
     /* Initialize Shadow Timeline cognitive capacity (RFC-0001)
      * Base capacity on emotional intelligence and level
      * Higher EI = more efficient cognitive processing
-     * Formula: 700 + (EI * 3) to give range of ~700-1000 */
-    mob->ai_data->cognitive_capacity = 700 + (mob->ai_data->genetics.emotional_intelligence * 3);
+     * Formula: COGNITIVE_CAPACITY_BASE + (EI * COGNITIVE_CAPACITY_EI_MULT)
+     * Range: ~700-1000 */
+    mob->ai_data->cognitive_capacity =
+        COGNITIVE_CAPACITY_BASE + (mob->ai_data->genetics.emotional_intelligence * COGNITIVE_CAPACITY_EI_MULT);
     mob->ai_data->cognitive_capacity = URANGE(500, mob->ai_data->cognitive_capacity, 1000);
 }
 

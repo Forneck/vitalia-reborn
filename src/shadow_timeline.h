@@ -29,9 +29,15 @@
 #define SHADOW_BASE_COST 10       /**< Base cognitive cost per projection */
 
 /* Cognitive capacity constants */
-#define COGNITIVE_CAPACITY_MAX 1000 /**< Maximum cognitive capacity */
-#define COGNITIVE_CAPACITY_REGEN 50 /**< Capacity regeneration per tick */
-#define COGNITIVE_CAPACITY_MIN 100  /**< Minimum to attempt projection */
+#define COGNITIVE_CAPACITY_MAX 1000  /**< Maximum cognitive capacity */
+#define COGNITIVE_CAPACITY_REGEN 50  /**< Capacity regeneration per tick */
+#define COGNITIVE_CAPACITY_MIN 100   /**< Minimum to attempt projection */
+#define COGNITIVE_CAPACITY_BASE 700  /**< Base capacity for formula */
+#define COGNITIVE_CAPACITY_EI_MULT 3 /**< Emotional intelligence multiplier */
+
+/* Entity types for invariant checking */
+#define ENTITY_TYPE_ANY -1 /**< Any entity type (for generic checks) */
+/* Note: ENTITY_TYPE_PLAYER and ENTITY_TYPE_MOB are defined in structs.h */
 
 /* Action feasibility results */
 #define ACTION_FEASIBLE 0           /**< Action is valid and can be simulated */
