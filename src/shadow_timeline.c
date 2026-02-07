@@ -884,3 +884,45 @@ void shadow_dump_context(struct shadow_context *ctx)
 
     (void)ctx; /* Suppress unused warning */
 }
+
+/**
+ * Mob uses Shadow Timeline to select next action
+ * High-level convenience function for mob AI
+ */
+struct shadow_action *mob_shadow_choose_action(struct char_data *ch)
+{
+    struct shadow_context *ctx;
+    struct shadow_projection *best;
+    static struct shadow_action selected_action; /* Static to persist after return */
+
+    if (!IS_COGNITIVE_ENTITY(ch)) {
+        return NULL;
+    }
+
+    /* Initialize shadow context */
+    ctx = shadow_init_context(ch);
+    if (!ctx) {
+        return NULL;
+    }
+
+    /* Generate projections for available actions */
+    if (shadow_generate_projections(ctx) == 0) {
+        shadow_free_context(ctx);
+        return NULL;
+    }
+
+    /* Select best action */
+    best = shadow_select_best_action(ctx);
+    if (!best) {
+        shadow_free_context(ctx);
+        return NULL;
+    }
+
+    /* Copy action to static storage */
+    selected_action = best->action;
+
+    /* Free context */
+    shadow_free_context(ctx);
+
+    return &selected_action;
+}

@@ -193,6 +193,53 @@ void mobile_activity(void) {
 }
 ```
 
+### Simple Integration Example
+
+Here's how a mob could use Shadow Timeline to make intelligent decisions:
+
+```c
+// In mob AI decision-making code
+if (ch->ai_data && ch->ai_data->cognitive_capacity > COGNITIVE_CAPACITY_MIN) {
+    // Use convenience function to get best action
+    struct shadow_action *action = mob_shadow_choose_action(ch);
+    
+    if (action) {
+        // Execute the chosen action
+        switch (action->type) {
+            case SHADOW_ACTION_MOVE:
+                perform_move(ch, action->direction, 1);
+                break;
+                
+            case SHADOW_ACTION_ATTACK:
+                if (action->target && !FIGHTING(ch)) {
+                    hit(ch, (struct char_data *)action->target, TYPE_UNDEFINED);
+                }
+                break;
+                
+            case SHADOW_ACTION_FLEE:
+                do_flee(ch, "", 0, 0);
+                break;
+                
+            case SHADOW_ACTION_USE_ITEM:
+                // Use item logic
+                break;
+                
+            case SHADOW_ACTION_SOCIAL:
+                // Perform social action
+                break;
+                
+            case SHADOW_ACTION_WAIT:
+                // Intentionally wait
+                break;
+                
+            default:
+                // Unknown action type
+                break;
+        }
+    }
+}
+```
+
 ---
 
 ## Action Types

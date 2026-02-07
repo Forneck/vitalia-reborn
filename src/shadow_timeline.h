@@ -255,4 +255,14 @@ void shadow_log(struct shadow_context *ctx, const char *message);
  */
 void shadow_dump_context(struct shadow_context *ctx);
 
+/* High-level convenience functions for mob AI integration */
+
+/**
+ * Mob uses Shadow Timeline to select next action
+ * This is a convenience wrapper for common mob AI usage
+ * @param ch The mob entity
+ * @return Pointer to selected action, or NULL if no good action found
+ */
+struct shadow_action *mob_shadow_choose_action(struct char_data *ch);
+
 #endif /* _SHADOW_TIMELINE_H_ */
