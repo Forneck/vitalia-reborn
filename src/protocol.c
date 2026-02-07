@@ -2432,10 +2432,9 @@ static void ExecuteMSDPPair(descriptor_t *apDescriptor, const char *apVariable, 
 
                                 if (j >= VariableNameTable[i].Min) {
                                     free(apDescriptor->pProtocol->pVariables[i]->pValueString);
-
-                                free(pBuffer);
                                     apDescriptor->pProtocol->pVariables[i]->pValueString = AllocString(pBuffer);
                                 }
+                                free(pBuffer);
                             }
                         } else /* This variable only accepts numeric values */
                         {
