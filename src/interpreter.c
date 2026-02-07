@@ -1458,7 +1458,7 @@ EVENTFUNC(get_protocols)
     snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toATCP\tO] \tw%s\tn\r\n\r\n",
              d->pProtocol->bATCP ? "Sim" : "Não");
     write_to_output(d, buf, 0);
-    write_to_output(d, GREETINGS, 0);
+    write_to_output(d, "%s", GREETINGS);
     STATE(d) = CON_GET_NAME;
     return 0;
 }
