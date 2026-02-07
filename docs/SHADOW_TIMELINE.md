@@ -128,8 +128,9 @@ Each cognitive entity has:
 
 ### Capacity Formula
 ```
-cognitive_capacity = 700 + (emotional_intelligence * 3)
-Range: 500-1000
+Initial capacity = 700 + (emotional_intelligence × 3)
+Initial range: 500-1000 (clamped after calculation)
+Runtime range: 0-1000 (capacity is spent and regenerated)
 ```
 
 ---
@@ -201,18 +202,18 @@ Here's how a mob could use Shadow Timeline to make intelligent decisions:
 // In mob AI decision-making code
 if (ch->ai_data && ch->ai_data->cognitive_capacity > COGNITIVE_CAPACITY_MIN) {
     // Use convenience function to get best action
-    struct shadow_action *action = mob_shadow_choose_action(ch);
+    struct shadow_action action;
     
-    if (action) {
+    if (mob_shadow_choose_action(ch, &action)) {
         // Execute the chosen action
-        switch (action->type) {
+        switch (action.type) {
             case SHADOW_ACTION_MOVE:
-                perform_move(ch, action->direction, 1);
+                perform_move(ch, action.direction, 1);
                 break;
                 
             case SHADOW_ACTION_ATTACK:
-                if (action->target && !FIGHTING(ch)) {
-                    hit(ch, (struct char_data *)action->target, TYPE_UNDEFINED);
+                if (action.target && !FIGHTING(ch)) {
+                    hit(ch, (struct char_data *)action.target, TYPE_UNDEFINED);
                 }
                 break;
                 

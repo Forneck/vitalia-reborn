@@ -471,7 +471,25 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
     switch (action->type) {
         case SHADOW_ACTION_MOVE: {
             /* Predict movement outcome */
-            room_rnum dest = world[ch->in_room].dir_option[action->direction]->to_room;
+            room_rnum dest = NOWHERE;
+
+            /* Defensive checks: ensure valid room, direction, and exit before dereferencing */
+            if (ch->in_room != NOWHERE && action->direction >= 0 && action->direction < NUM_OF_DIRS && world &&
+                world[ch->in_room].dir_option[action->direction] != NULL) {
+                dest = world[ch->in_room].dir_option[action->direction]->to_room;
+            }
+
+            /* If destination is invalid or unknown, treat as low-value/unsafe to attempt */
+            if (dest == NOWHERE) {
+                outcome->danger_level = 0;
+                outcome->hp_delta = 0;
+                outcome->leads_to_death = FALSE;
+                outcome->fear_change = 0;
+                outcome->achieves_goal = FALSE;
+                outcome->score = OUTCOME_SCORE_MIN;
+                outcome->obvious = FALSE;
+                break;
+            }
 
             /* Check for danger in destination */
             if (ROOM_FLAGGED(dest, ROOM_DEATH)) {
@@ -701,15 +719,38 @@ int shadow_calculate_cost(struct char_data *ch, struct shadow_action *action, in
  */
 bool shadow_consume_capacity(struct shadow_context *ctx, int cost)
 {
+    struct char_data *ch;
+    int available;
+
     if (!ctx || cost < 0) {
         return FALSE;
     }
 
-    if (ctx->cognitive_budget < cost) {
+    ch = ctx->entity;
+    available = ctx->cognitive_budget;
+
+    /* If we have a backing NPC with ai_data, also respect its stored capacity */
+    if (ch && IS_NPC(ch) && ch->ai_data) {
+        if (ch->ai_data->cognitive_capacity < available) {
+            available = ch->ai_data->cognitive_capacity;
+        }
+    }
+
+    if (available < cost) {
         return FALSE;
     }
 
     ctx->cognitive_budget -= cost;
+
+    /* Persist consumption back onto the mob so capacity is tracked across ticks */
+    if (ch && IS_NPC(ch) && ch->ai_data) {
+        if (ch->ai_data->cognitive_capacity >= cost) {
+            ch->ai_data->cognitive_capacity -= cost;
+        } else {
+            ch->ai_data->cognitive_capacity = 0;
+        }
+    }
+
     return TRUE;
 }
 
@@ -888,41 +929,51 @@ void shadow_dump_context(struct shadow_context *ctx)
 /**
  * Mob uses Shadow Timeline to select next action
  * High-level convenience function for mob AI
+ *
+ * @param ch         The mob/character making a decision.
+ * @param out_action Caller-provided storage where the chosen action will be
+ *                   written on success.
+ *
+ * @return TRUE on success (out_action filled), FALSE on failure (out_action
+ *         is not modified).
  */
-struct shadow_action *mob_shadow_choose_action(struct char_data *ch)
+bool mob_shadow_choose_action(struct char_data *ch, struct shadow_action *out_action)
 {
     struct shadow_context *ctx;
     struct shadow_projection *best;
-    static struct shadow_action selected_action; /* Static to persist after return */
+
+    if (!ch || !out_action) {
+        return FALSE;
+    }
 
     if (!IS_COGNITIVE_ENTITY(ch)) {
-        return NULL;
+        return FALSE;
     }
 
     /* Initialize shadow context */
     ctx = shadow_init_context(ch);
     if (!ctx) {
-        return NULL;
+        return FALSE;
     }
 
     /* Generate projections for available actions */
     if (shadow_generate_projections(ctx) == 0) {
         shadow_free_context(ctx);
-        return NULL;
+        return FALSE;
     }
 
     /* Select best action */
     best = shadow_select_best_action(ctx);
     if (!best) {
         shadow_free_context(ctx);
-        return NULL;
+        return FALSE;
     }
 
-    /* Copy action to static storage */
-    selected_action = best->action;
+    /* Copy selected action to caller-provided storage */
+    *out_action = best->action;
 
     /* Free context */
     shadow_free_context(ctx);
 
-    return &selected_action;
+    return TRUE;
 }

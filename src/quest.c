@@ -3651,7 +3651,8 @@ void init_mob_ai_data(struct char_data *mob)
      * Range: ~700-1000 */
     mob->ai_data->cognitive_capacity =
         COGNITIVE_CAPACITY_BASE + (mob->ai_data->genetics.emotional_intelligence * COGNITIVE_CAPACITY_EI_MULT);
-    mob->ai_data->cognitive_capacity = URANGE(500, mob->ai_data->cognitive_capacity, 1000);
+    mob->ai_data->cognitive_capacity =
+        URANGE(COGNITIVE_CAPACITY_LOWER_BOUND, mob->ai_data->cognitive_capacity, COGNITIVE_CAPACITY_MAX);
 }
 
 /* Initialize mob climate preferences based on spawn room conditions.

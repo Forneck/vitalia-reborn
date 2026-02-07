@@ -29,11 +29,12 @@
 #define SHADOW_BASE_COST 10       /**< Base cognitive cost per projection */
 
 /* Cognitive capacity constants */
-#define COGNITIVE_CAPACITY_MAX 1000  /**< Maximum cognitive capacity */
-#define COGNITIVE_CAPACITY_REGEN 50  /**< Capacity regeneration per tick */
-#define COGNITIVE_CAPACITY_MIN 100   /**< Minimum to attempt projection */
-#define COGNITIVE_CAPACITY_BASE 700  /**< Base capacity for formula */
-#define COGNITIVE_CAPACITY_EI_MULT 3 /**< Emotional intelligence multiplier */
+#define COGNITIVE_CAPACITY_MAX 1000        /**< Maximum cognitive capacity */
+#define COGNITIVE_CAPACITY_REGEN 50        /**< Capacity regeneration per tick */
+#define COGNITIVE_CAPACITY_MIN 100         /**< Minimum to attempt projection */
+#define COGNITIVE_CAPACITY_BASE 700        /**< Base capacity for formula */
+#define COGNITIVE_CAPACITY_EI_MULT 3       /**< Emotional intelligence multiplier */
+#define COGNITIVE_CAPACITY_LOWER_BOUND 500 /**< Lower bound for initial capacity clamp */
 
 /* Entity types for invariant checking */
 #define ENTITY_TYPE_ANY -1 /**< Any entity type (for generic checks) */
@@ -136,7 +137,7 @@ struct shadow_context {
  * Check if entity can use Shadow Timeline (player or autonomous mob)
  * Only decision-making entities require foresight
  */
-#define IS_COGNITIVE_ENTITY(ch) ((ch) && !IS_NPC(ch) || (IS_NPC(ch) && (ch)->ai_data))
+#define IS_COGNITIVE_ENTITY(ch) ((ch) && (!IS_NPC(ch) || (IS_NPC(ch) && (ch)->ai_data)))
 
 /**
  * Get cognitive capacity for entity
@@ -267,8 +268,9 @@ void shadow_dump_context(struct shadow_context *ctx);
  * Mob uses Shadow Timeline to select next action
  * This is a convenience wrapper for common mob AI usage
  * @param ch The mob entity
- * @return Pointer to selected action, or NULL if no good action found
+ * @param out_action Caller-provided storage where the chosen action will be written on success
+ * @return TRUE on success (out_action filled), FALSE on failure (out_action is not modified)
  */
-struct shadow_action *mob_shadow_choose_action(struct char_data *ch);
+bool mob_shadow_choose_action(struct char_data *ch, struct shadow_action *out_action);
 
 #endif /* _SHADOW_TIMELINE_H_ */
