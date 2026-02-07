@@ -2416,8 +2416,13 @@ static void ExecuteMSDPPair(descriptor_t *apDescriptor, const char *apVariable, 
                             if (!VariableNameTable[i].bWriteOnce ||
                                 !strcmp(apDescriptor->pProtocol->pVariables[i]->pValueString, "Unknown")) {
                                 /* Store the new value if it's valid */
-                                char *pBuffer = alloca(VariableNameTable[i].Max + 1);
+                                char *pBuffer = (char *)malloc(VariableNameTable[i].Max + 1);
                                 int j; /* Loop counter */
+
+                                if (pBuffer == NULL) {
+                                    /* Allocation failed; skip updating this variable */
+                                    continue;
+                                }
 
                                 for (j = 0; j < VariableNameTable[i].Max && *apValue != '\0'; ++apValue) {
                                     if (isprint(*apValue))
@@ -2427,6 +2432,8 @@ static void ExecuteMSDPPair(descriptor_t *apDescriptor, const char *apVariable, 
 
                                 if (j >= VariableNameTable[i].Min) {
                                     free(apDescriptor->pProtocol->pVariables[i]->pValueString);
+
+                                free(pBuffer);
                                     apDescriptor->pProtocol->pVariables[i]->pValueString = AllocString(pBuffer);
                                 }
                             }
