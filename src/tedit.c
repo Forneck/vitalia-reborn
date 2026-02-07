@@ -134,6 +134,7 @@ ACMD(do_tedit)
     if (ch->desc->olc) {
         mudlog(BRF, LVL_IMMORT, TRUE, "SYSERR: do_tedit: Jogador já está editando.");
         free(ch->desc->olc);
+        ch->desc->olc = NULL;
     }
     CREATE(ch->desc->olc, struct oasis_olc_data, 1);
 
