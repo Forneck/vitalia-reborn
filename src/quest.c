@@ -3642,6 +3642,13 @@ void init_mob_ai_data(struct char_data *mob)
         int max_sad = MAX(0, 110 - GET_LEVEL(mob));
         mob->ai_data->seasonal_affective_trait = rand_number(0, max_sad);
     }
+
+    /* Initialize Shadow Timeline cognitive capacity (RFC-0001)
+     * Base capacity on emotional intelligence and level
+     * Higher EI = more efficient cognitive processing
+     * Formula: 700 + (EI * 3) to give range of ~700-1000 */
+    mob->ai_data->cognitive_capacity = 700 + (mob->ai_data->genetics.emotional_intelligence * 3);
+    mob->ai_data->cognitive_capacity = URANGE(500, mob->ai_data->cognitive_capacity, 1000);
 }
 
 /* Initialize mob climate preferences based on spawn room conditions.

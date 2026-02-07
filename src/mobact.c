@@ -27,6 +27,7 @@
 #include "shop.h"
 #include "quest.h"
 #include "spec_procs.h"
+#include "shadow_timeline.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -610,6 +611,11 @@ void mobile_activity(void)
 
         if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
             ch->ai_data->quest_posting_frustration_timer--;
+        }
+
+        /* Regenerate Shadow Timeline cognitive capacity (RFC-0001) */
+        if (ch->ai_data) {
+            shadow_regenerate_capacity(ch);
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
