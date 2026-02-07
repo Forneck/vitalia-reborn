@@ -22,10 +22,11 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
-#include "spells.h"     /* for calculate_mana_density */
-#include "act.h"        /* for do_tell */
-#include "dg_scripts.h" /* for char_script_id */
-#include "modify.h"     /* for page_string */
+#include "spells.h"          /* for calculate_mana_density */
+#include "act.h"             /* for do_tell */
+#include "dg_scripts.h"      /* for char_script_id */
+#include "modify.h"          /* for page_string */
+#include "shadow_timeline.h" /* for cognitive capacity constants */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -3642,6 +3643,16 @@ void init_mob_ai_data(struct char_data *mob)
         int max_sad = MAX(0, 110 - GET_LEVEL(mob));
         mob->ai_data->seasonal_affective_trait = rand_number(0, max_sad);
     }
+
+    /* Initialize Shadow Timeline cognitive capacity (RFC-0001)
+     * Base capacity on emotional intelligence and level
+     * Higher EI = more efficient cognitive processing
+     * Formula: COGNITIVE_CAPACITY_BASE + (EI * COGNITIVE_CAPACITY_EI_MULT)
+     * Range: ~700-1000 */
+    mob->ai_data->cognitive_capacity =
+        COGNITIVE_CAPACITY_BASE + (mob->ai_data->genetics.emotional_intelligence * COGNITIVE_CAPACITY_EI_MULT);
+    mob->ai_data->cognitive_capacity =
+        URANGE(COGNITIVE_CAPACITY_LOWER_BOUND, mob->ai_data->cognitive_capacity, COGNITIVE_CAPACITY_MAX);
 }
 
 /* Initialize mob climate preferences based on spawn room conditions.

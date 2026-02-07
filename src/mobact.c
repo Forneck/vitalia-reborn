@@ -27,6 +27,7 @@
 #include "shop.h"
 #include "quest.h"
 #include "spec_procs.h"
+#include "shadow_timeline.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -610,6 +611,198 @@ void mobile_activity(void)
 
         if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
             ch->ai_data->quest_posting_frustration_timer--;
+        }
+
+        /* Regenerate Shadow Timeline cognitive capacity (RFC-0001) */
+        if (ch->ai_data) {
+            shadow_regenerate_capacity(ch);
+        }
+
+        /* Shadow Timeline decision-making (RFC-0001) */
+        /* Only for mobs with SHADOWTIMELINE flag and sufficient cognitive capacity */
+        if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
+            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
+            struct shadow_action action;
+
+            /* Use Shadow Timeline to choose next action */
+            if (mob_shadow_choose_action(ch, &action)) {
+                /* Execute the chosen action based on type */
+                switch (action.type) {
+                    case SHADOW_ACTION_MOVE:
+                        /* Attempt movement in projected direction */
+                        if (action.direction >= 0 && action.direction < NUM_OF_DIRS) {
+                            perform_move(ch, action.direction, 1);
+                            continue; /* Skip rest of mob_activity for this mob */
+                        }
+                        break;
+
+                    case SHADOW_ACTION_ATTACK:
+                        /* Attack projected target if still valid and not already fighting */
+                        if (action.target && !FIGHTING(ch)) {
+                            struct char_data *target = (struct char_data *)action.target;
+                            /* Verify target still exists and is in same room */
+                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                                hit(ch, target, TYPE_UNDEFINED);
+                                continue; /* Skip rest of mob_activity */
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_FLEE:
+                        /* Flee if we're actually in combat */
+                        if (FIGHTING(ch)) {
+                            do_flee(ch, "", 0, 0);
+                            continue;
+                        }
+                        break;
+
+                    case SHADOW_ACTION_SOCIAL:
+                        /* Perform social action with target */
+                        if (action.target) {
+                            struct char_data *target = (struct char_data *)action.target;
+                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                                /* Simple friendly social - could be expanded */
+                                act("$n parece interessado em $N.", FALSE, ch, 0, target, TO_NOTVICT);
+                                act("$n olha para você de forma interessada.", FALSE, ch, 0, target, TO_VICT);
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_USE_ITEM:
+                        /* Use item from inventory (e.g., consume potion, use key) */
+                        if (action.target) {
+                            struct obj_data *obj = (struct obj_data *)action.target;
+                            /* Verify object still exists and is carried by mob */
+                            if (obj->carried_by == ch) {
+                                /* For now, focus on consumables (food, drink, potions) */
+                                if (GET_OBJ_TYPE(obj) == ITEM_POTION) {
+                                    /* Quaff potion */
+                                    act("$n bebe $p.", TRUE, ch, obj, 0, TO_ROOM);
+                                    /* Apply potion effects would go here */
+                                    extract_obj(obj);
+                                    continue;
+                                } else if (GET_OBJ_TYPE(obj) == ITEM_FOOD) {
+                                    /* Eat food */
+                                    act("$n come $p.", TRUE, ch, obj, 0, TO_ROOM);
+                                    extract_obj(obj);
+                                    continue;
+                                }
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_CAST_SPELL:
+                        /* Cast spell on target (requires mob to know spell) */
+                        if (action.target && GET_LEVEL(ch) >= 1) {
+                            struct char_data *target = (struct char_data *)action.target;
+                            /* Verify target in same room */
+                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                                /* Simple healing spell for allies, or harm for enemies */
+                                /* Note: This is a placeholder - proper spell selection
+                                 * would be based on mob's spell list and situation */
+                                bool is_ally = (ch->master == target || target->master == ch);
+
+                                if (!is_ally && !IS_NPC(target)) {
+                                    /* Try to harm enemy player */
+                                    if (GET_MANA(ch) >= 20) {
+                                        act("$n conjura uma magia contra $N!", TRUE, ch, 0, target, TO_NOTVICT);
+                                        act("$n conjura uma magia contra você!", TRUE, ch, 0, target, TO_VICT);
+                                        /* Spell damage would go here */
+                                        GET_MANA(ch) -= 20;
+                                        continue;
+                                    }
+                                } else if (is_ally) {
+                                    /* Try to heal ally */
+                                    if (GET_MANA(ch) >= 15 && GET_HIT(target) < GET_MAX_HIT(target)) {
+                                        act("$n conjura uma magia de cura em $N!", TRUE, ch, 0, target, TO_NOTVICT);
+                                        act("$n conjura uma magia de cura em você!", TRUE, ch, 0, target, TO_VICT);
+                                        GET_HIT(target) = MIN(GET_MAX_HIT(target), GET_HIT(target) + 30);
+                                        GET_MANA(ch) -= 15;
+                                        continue;
+                                    }
+                                }
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_TRADE:
+                        /* Trading/shopping action - visit shop or trade with other mobs */
+                        /* This would typically involve pathfinding to shop keeper */
+                        /* For now, just acknowledge the intention */
+                        if (action.target) {
+                            struct char_data *shopkeeper = (struct char_data *)action.target;
+                            if (IN_ROOM(shopkeeper) == IN_ROOM(ch) && IS_NPC(shopkeeper)) {
+                                /* Simple trade interaction */
+                                act("$n examina os itens de $N.", TRUE, ch, 0, shopkeeper, TO_NOTVICT);
+                                act("$n examina seus itens.", TRUE, ch, 0, shopkeeper, TO_VICT);
+                                /* Actual buy/sell would be implemented here */
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_QUEST:
+                        /* Quest-related action (accept or complete quest) */
+                        if (ch->ai_data) {
+                            /* Try to complete quest if mob has active quest */
+                            if (ch->ai_data->current_quest != NOTHING) {
+                                mob_complete_quest(ch);
+                                continue;
+                            }
+                            /* Otherwise, look for available quest to accept */
+                            /* Quest acceptance logic would check nearby questmasters */
+                        }
+                        break;
+
+                    case SHADOW_ACTION_FOLLOW:
+                        /* Follow another entity */
+                        if (action.target && !ch->master) {
+                            struct char_data *leader = (struct char_data *)action.target;
+                            /* Verify leader in same room and not already following */
+                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch) {
+                                /* Simple follow logic - mob decides to follow */
+                                act("$n começa a seguir $N.", FALSE, ch, 0, leader, TO_NOTVICT);
+                                act("$n começa a seguir você.", FALSE, ch, 0, leader, TO_VICT);
+                                /* Set up follow relationship */
+                                if (ch->master) {
+                                    stop_follower(ch);
+                                }
+                                add_follower(ch, leader);
+                                continue;
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_GROUP:
+                        /* Group formation action */
+                        if (action.target) {
+                            struct char_data *potential_member = (struct char_data *)action.target;
+                            /* Verify target in same room */
+                            if (IN_ROOM(potential_member) == IN_ROOM(ch)) {
+                                /* If mob is following someone, express desire to group */
+                                if (ch->master == potential_member) {
+                                    /* Request to join group or show loyalty */
+                                    act("$n se aproxima de $N em um gesto amigável.", FALSE, ch, 0, potential_member,
+                                        TO_NOTVICT);
+                                    act("$n se aproxima de você.", FALSE, ch, 0, potential_member, TO_VICT);
+                                    /* For NPC-to-NPC, this strengthens the follow bond */
+                                    if (IS_NPC(potential_member) && ch->ai_data) {
+                                        ch->ai_data->emotion_loyalty = MIN(100, ch->ai_data->emotion_loyalty + 5);
+                                    }
+                                    continue;
+                                }
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_WAIT:
+                        /* Intentionally wait/do nothing this tick */
+                        continue;
+
+                    default:
+                        /* Other action types not yet implemented in mob_activity */
+                        break;
+                }
+            }
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {

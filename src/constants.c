@@ -103,11 +103,31 @@ const char *player_bits[] = {"KILLER",  "THIEF",    "FROZEN",   "DONTSET", "WRIT
 /** Mob action flags.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *action_bits[] = {"SPEC",      "SENTINEL", "SCAVENGER", "NO_POISON", "AWARE",        "AGGR",
-                             "STAY-ZONE", "WIMPY",    "AGGR_EVIL", "AGGR_GOOD", "AGGR_NEUTRAL", "MEMORY",
-                             "HELPER",    "NO_CHARM", "NO_SUMMN",  "NO_SLEEP",  "NO_BASH",      "NO_BLIND",
-                             "MOUNTABLE", "CAN_FLY",  "NO_KILL",   "ISNPC",     "DEAD", /* You should never see this. */
-                             "BRAVE", /*Para este mob, lutar até a morte é bom */
+const char *action_bits[] = {"SPEC",
+                             "SENTINEL",
+                             "SCAVENGER",
+                             "NO_POISON",
+                             "AWARE",
+                             "AGGR",
+                             "STAY-ZONE",
+                             "WIMPY",
+                             "AGGR_EVIL",
+                             "AGGR_GOOD",
+                             "AGGR_NEUTRAL",
+                             "MEMORY",
+                             "HELPER",
+                             "NO_CHARM",
+                             "NO_SUMMN",
+                             "NO_SLEEP",
+                             "NO_BASH",
+                             "NO_BLIND",
+                             "MOUNTABLE",
+                             "CAN_FLY",
+                             "NO_KILL",
+                             "ISNPC",
+                             "DEAD",           /* You should never see this. */
+                             "BRAVE",          /*Para este mob, lutar até a morte é bom */
+                             "SHADOWTIMELINE", /* Uses Shadow Timeline cognitive simulation */
                              "\n"};
 
 /** PC Preference flags.

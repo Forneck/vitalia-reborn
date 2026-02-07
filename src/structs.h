@@ -263,12 +263,13 @@
 #define MOB_NOBLIND 17      /**< Mob can't be blinded */
 #define MOB_MOUNTABLE 18
 #define MOB_CAN_FLY 19
-#define MOB_NOKILL 20     /**< Mob can't be attacked */
-#define MOB_ISNPC 21      /**< (R) Automatically set on all Mobs */
-#define MOB_NOTDEADYET 22 /**< (R) Mob being extracted */
-#define MOB_BRAVE 23      /** < Fight until death */
+#define MOB_NOKILL 20         /**< Mob can't be attacked */
+#define MOB_ISNPC 21          /**< (R) Automatically set on all Mobs */
+#define MOB_NOTDEADYET 22     /**< (R) Mob being extracted */
+#define MOB_BRAVE 23          /**< Fight until death */
+#define MOB_SHADOWTIMELINE 24 /**< Mob uses Shadow Timeline for decision-making */
 
-#define NUM_MOB_FLAGS 24
+#define NUM_MOB_FLAGS 25
 
 /* Preference flags: used by char_data.player_specials.pref */
 #define PRF_BRIEF 0       /**< Room descs won't normally be shown */
@@ -1247,6 +1248,9 @@ struct mob_ai_data {
     /* Emotion memory system - tracks recent interactions for persistent relationships */
     struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
     int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+
+    /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
+    int cognitive_capacity; /* Available cognitive capacity for projections (0-1000) */
 };
 
 /**
