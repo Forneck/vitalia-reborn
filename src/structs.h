@@ -263,12 +263,13 @@
 #define MOB_NOBLIND 17      /**< Mob can't be blinded */
 #define MOB_MOUNTABLE 18
 #define MOB_CAN_FLY 19
-#define MOB_NOKILL 20     /**< Mob can't be attacked */
-#define MOB_ISNPC 21      /**< (R) Automatically set on all Mobs */
-#define MOB_NOTDEADYET 22 /**< (R) Mob being extracted */
-#define MOB_BRAVE 23      /** < Fight until death */
+#define MOB_NOKILL 20         /**< Mob can't be attacked */
+#define MOB_ISNPC 21          /**< (R) Automatically set on all Mobs */
+#define MOB_NOTDEADYET 22     /**< (R) Mob being extracted */
+#define MOB_BRAVE 23          /**< Fight until death */
+#define MOB_SHADOWTIMELINE 24 /**< Mob uses Shadow Timeline for decision-making */
 
-#define NUM_MOB_FLAGS 24
+#define NUM_MOB_FLAGS 25
 
 /* Preference flags: used by char_data.player_specials.pref */
 #define PRF_BRIEF 0       /**< Room descs won't normally be shown */

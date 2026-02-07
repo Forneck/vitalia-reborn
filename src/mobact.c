@@ -618,6 +618,67 @@ void mobile_activity(void)
             shadow_regenerate_capacity(ch);
         }
 
+        /* Shadow Timeline decision-making (RFC-0001) */
+        /* Only for mobs with SHADOWTIMELINE flag and sufficient cognitive capacity */
+        if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
+            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
+            struct shadow_action action;
+
+            /* Use Shadow Timeline to choose next action */
+            if (mob_shadow_choose_action(ch, &action)) {
+                /* Execute the chosen action based on type */
+                switch (action.type) {
+                    case SHADOW_ACTION_MOVE:
+                        /* Attempt movement in projected direction */
+                        if (action.direction >= 0 && action.direction < NUM_OF_DIRS) {
+                            perform_move(ch, action.direction, 1);
+                            continue; /* Skip rest of mob_activity for this mob */
+                        }
+                        break;
+
+                    case SHADOW_ACTION_ATTACK:
+                        /* Attack projected target if still valid and not already fighting */
+                        if (action.target && !FIGHTING(ch)) {
+                            struct char_data *target = (struct char_data *)action.target;
+                            /* Verify target still exists and is in same room */
+                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                                hit(ch, target, TYPE_UNDEFINED);
+                                continue; /* Skip rest of mob_activity */
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_FLEE:
+                        /* Flee if we're actually in combat */
+                        if (FIGHTING(ch)) {
+                            do_flee(ch, "", 0, 0);
+                            continue;
+                        }
+                        break;
+
+                    case SHADOW_ACTION_SOCIAL:
+                        /* Perform social action with target */
+                        if (action.target) {
+                            struct char_data *target = (struct char_data *)action.target;
+                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                                /* Simple friendly social - could be expanded */
+                                act("$n parece interessado em $N.", FALSE, ch, 0, target, TO_NOTVICT);
+                                act("$n olha para você de forma interessada.", FALSE, ch, 0, target, TO_VICT);
+                            }
+                        }
+                        break;
+
+                    case SHADOW_ACTION_WAIT:
+                        /* Intentionally wait/do nothing this tick */
+                        continue;
+
+                    default:
+                        /* Other action types not yet implemented in mob_activity */
+                        break;
+                }
+            }
+        }
+
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
             /* Re-verify room validity before complex AI operations */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {

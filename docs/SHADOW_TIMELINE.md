@@ -176,7 +176,7 @@ if (ctx) {
 
 ### Integration with Mob AI
 
-The Shadow Timeline is integrated into the mob activity loop:
+The Shadow Timeline is integrated into the mob activity loop and controlled by the `MOB_SHADOWTIMELINE` flag:
 
 ```c
 void mobile_activity(void) {
@@ -188,11 +188,39 @@ void mobile_activity(void) {
             shadow_regenerate_capacity(ch);
         }
         
-        // Mob can use Shadow Timeline for decision-making
-        // (integration examples to be added)
+        // Shadow Timeline decision-making (only for flagged mobs)
+        if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
+            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
+            struct shadow_action action;
+            
+            if (mob_shadow_choose_action(ch, &action)) {
+                // Execute chosen action (move, attack, flee, social, wait)
+                // ... implementation details ...
+            }
+        }
     }
 }
 ```
+
+### Enabling Shadow Timeline for Mobs
+
+To enable Shadow Timeline for a specific mob, add the `SHADOWTIMELINE` flag to the mob's action flags in the world files:
+
+```
+#12345
+mob_name~
+short description~
+long description~
+detailed description
+~
+ISNPC SHADOWTIMELINE    <-- Add SHADOWTIMELINE flag here
+...
+```
+
+**Important**: Start with testing on a few select mobs before enabling widely. The Shadow Timeline is a cognitive system that:
+- Uses computational resources (bounded by cognitive capacity)
+- Makes mobs more intelligent but less predictable
+- Should be tested for gameplay balance
 
 ### Simple Integration Example
 
@@ -260,6 +288,18 @@ The Shadow Timeline supports projecting these action types:
 | `SHADOW_ACTION_WAIT` | Wait/do nothing | 3 |
 | `SHADOW_ACTION_FOLLOW` | Follow entity | 5 |
 | `SHADOW_ACTION_GROUP` | Group formation | 5 |
+
+### Implemented Actions in mobile_activity()
+
+Currently, the following action types are implemented in the mob AI loop:
+
+- **SHADOW_ACTION_MOVE**: Executes `perform_move()` in the projected direction
+- **SHADOW_ACTION_ATTACK**: Attacks the projected target if still valid and in same room
+- **SHADOW_ACTION_FLEE**: Executes `do_flee()` if currently in combat
+- **SHADOW_ACTION_SOCIAL**: Performs a simple friendly social interaction
+- **SHADOW_ACTION_WAIT**: Intentionally skips action this tick (strategic waiting)
+
+Other action types (USE_ITEM, CAST_SPELL, TRADE, QUEST, FOLLOW, GROUP) are projected and scored but not yet executed in `mobile_activity()`. They can be added as needed.
 
 ---
 
