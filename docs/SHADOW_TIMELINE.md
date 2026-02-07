@@ -291,15 +291,21 @@ The Shadow Timeline supports projecting these action types:
 
 ### Implemented Actions in mobile_activity()
 
-Currently, the following action types are implemented in the mob AI loop:
+All action types are now implemented in the mob AI loop for mobs with the `MOB_SHADOWTIMELINE` flag:
 
 - **SHADOW_ACTION_MOVE**: Executes `perform_move()` in the projected direction
 - **SHADOW_ACTION_ATTACK**: Attacks the projected target if still valid and in same room
 - **SHADOW_ACTION_FLEE**: Executes `do_flee()` if currently in combat
 - **SHADOW_ACTION_SOCIAL**: Performs a simple friendly social interaction
+- **SHADOW_ACTION_USE_ITEM**: Uses items from inventory (potions, food, etc.)
+- **SHADOW_ACTION_CAST_SPELL**: Casts spells on allies (healing) or enemies (damage)
+- **SHADOW_ACTION_TRADE**: Examines shopkeeper's wares (placeholder for full trading)
+- **SHADOW_ACTION_QUEST**: Completes active quests when objectives are met
+- **SHADOW_ACTION_FOLLOW**: Starts following another character
+- **SHADOW_ACTION_GROUP**: Strengthens bonds with master/leader
 - **SHADOW_ACTION_WAIT**: Intentionally skips action this tick (strategic waiting)
 
-Other action types (USE_ITEM, CAST_SPELL, TRADE, QUEST, FOLLOW, GROUP) are projected and scored but not yet executed in `mobile_activity()`. They can be added as needed.
+All actions include proper validation and safety checks to prevent crashes or invalid state.
 
 ---
 
