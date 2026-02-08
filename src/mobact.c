@@ -1216,13 +1216,14 @@ void mobile_activity(void)
 
                         /* Posta a quest no questmaster */
                         mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
+                        /* Safety check: mob_posts_quest() calls act() internally which can trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+
                         act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
                         /* Safety check: act() can trigger DG scripts which may cause extraction */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
-
-                        /* Remove o item da wishlist para evitar loop */
-                        remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                     }
                     /* Clear goal after posting quest or if no item to post */
                     ch->ai_data->current_goal = GOAL_NONE;
