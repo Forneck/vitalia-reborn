@@ -3221,6 +3221,7 @@ int attacks_per_round(struct char_data *ch)
 void transcend(struct char_data *ch)
 {
     struct char_data *k;
+    int i;
 
     /* Set the experience */
     GET_EXP(ch) = level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - 1;
@@ -3233,6 +3234,16 @@ void transcend(struct char_data *ch)
         next_combat_list = k->next_fighting;
         if (FIGHTING(k) == ch)
             stop_fighting(k);
+    }
+
+    /* Remove all affects from the player */
+    affect_remove_all(ch);
+
+    /* Unequip all equipment to prevent level 1 players using high-level items */
+    for (i = 0; i < NUM_WEARS; i++) {
+        if (GET_EQ(ch, i)) {
+            perform_remove(ch, i);
+        }
     }
 
     /* Set the transcendent flag */
