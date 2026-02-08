@@ -3221,6 +3221,7 @@ int attacks_per_round(struct char_data *ch)
 void transcend(struct char_data *ch)
 {
     struct char_data *k;
+    int i;
 
     /* Set the experience */
     GET_EXP(ch) = level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - 1;
@@ -3234,6 +3235,24 @@ void transcend(struct char_data *ch)
         if (FIGHTING(k) == ch)
             stop_fighting(k);
     }
+
+    /* Unequip all equipment to prevent level 1 players using high-level items.
+     * We must bypass normal removal restrictions (cursed items, capacity limits,
+     * remove_otrigger failures), so we forcibly unequip and move items to inventory
+     * even if above carrying limit. This is done BEFORE removing affects to avoid
+     * capacity issues when affects that increase carry capacity are removed.
+     */
+    for (i = 0; i < NUM_WEARS; i++) {
+        if (GET_EQ(ch, i)) {
+            struct obj_data *obj = unequip_char(ch, i);
+            if (obj) {
+                obj_to_char(obj, ch);
+            }
+        }
+    }
+
+    /* Remove all affects from the player */
+    affect_remove_all(ch);
 
     /* Set the transcendent flag */
     SET_BIT_AR(PLR_FLAGS(ch), PLR_TRNS);
