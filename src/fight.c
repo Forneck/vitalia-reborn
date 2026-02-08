@@ -3250,7 +3250,7 @@ void transcend(struct char_data *ch)
 
     /* Explain what happened */
     send_to_char(ch,
-                 "\n@+cAo lutar, uma estranha sensaçãoo vem sobre você, e você\r\n"
+                 "\n@+cAo lutar, uma estranha sensação vem sobre você, e você\r\n"
                  "sente como se você não pudesse mais aprender, como se o seu\r\n"
                  "conhecimento houvesse chegado ao limite...\r\n\n"
                  "\a\a@+WVocê transcendeu!!@+n\r\n\n");
