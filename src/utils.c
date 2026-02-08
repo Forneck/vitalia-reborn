@@ -2486,6 +2486,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 
     /* Check if we've reached the limit of mob-posted quests */
     if (!can_add_mob_posted_quest()) {
+        /* Don't remove from wishlist - let mob try other methods (hunt/buy) */
         return;
     }
 
@@ -2493,6 +2494,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     for (int i = 0; i < total_quests; i++) {
         if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == item_vnum && QST_TYPE(i) == AQ_OBJ_RETURN) {
             /* Already have an active quest for this item from this mob */
+            /* Don't remove from wishlist - let mob try other methods (hunt/buy) */
             return;
         }
     }
