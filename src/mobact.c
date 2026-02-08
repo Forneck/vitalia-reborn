@@ -5084,6 +5084,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
     room_rnum shop_room;
     obj_rnum obj_rnum;
     int item_cost, required_gold;
+    bool has_active_quest;
+    int i;
 
     if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
         return; /* Já tem um objetivo ou não é um mob com AI */
@@ -5248,8 +5250,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
     /* Skip if there's already an active quest for this item - try other methods instead */
-    bool has_active_quest = FALSE;
-    for (int i = 0; i < total_quests; i++) {
+    has_active_quest = FALSE;
+    for (i = 0; i < total_quests; i++) {
         if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == desired_item->vnum &&
             QST_TYPE(i) == AQ_OBJ_RETURN) {
             has_active_quest = TRUE;
