@@ -349,13 +349,6 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
     if (victim == NULL || ch == NULL)
         return MAGIC_FAILED;
 
-    /* Transcended players cannot be affected by spells */
-    if (!IS_NPC(victim) && PLR_FLAGGED(victim, PLR_TRNS)) {
-        if (ch != victim)
-            send_to_char(ch, "Sua magia não tem efeito em %s, que transcendeu!\r\n", GET_NAME(victim));
-        return MAGIC_FAILED;
-    }
-
     spell = get_spell_by_vnum(spellnum);
     if (!spell) {
         log1("SYSERR: unknown spellnum %d passed to mag_affects.", spellnum);
