@@ -5247,7 +5247,17 @@ void mob_process_wishlist_goals(struct char_data *ch)
     }
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
-    if (GET_GOLD(ch) >= desired_item->priority * 2) {
+    /* Skip if there's already an active quest for this item - try other methods instead */
+    bool has_active_quest = FALSE;
+    for (int i = 0; i < total_quests; i++) {
+        if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == desired_item->vnum &&
+            QST_TYPE(i) == AQ_OBJ_RETURN) {
+            has_active_quest = TRUE;
+            break;
+        }
+    }
+
+    if (!has_active_quest && GET_GOLD(ch) >= desired_item->priority * 2) {
         /* Early exit: Check quest limit BEFORE expensive pathfinding
          * With 451 autoquests, pathfinding for questmasters is catastrophically expensive:
          * - Loops through 451 quests × ALL characters × BFS pathfinding
