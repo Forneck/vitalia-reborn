@@ -1213,13 +1213,21 @@ void mobile_activity(void)
                         struct mob_wishlist_item *wishlist_item =
                             find_item_in_wishlist(ch, ch->ai_data->goal_item_vnum);
                         int reward = wishlist_item ? wishlist_item->priority * 2 : ch->ai_data->goal_item_vnum;
+                        obj_vnum item_vnum = ch->ai_data->goal_item_vnum;
 
                         /* Posta a quest no questmaster */
-                        mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
-                        act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
-                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        mob_posts_quest(ch, item_vnum, reward);
+                        /* Safety check: mob_posts_quest() calls act() internally which can trigger DG scripts */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
+
+                        /* Only show message if quest was successfully posted (item removed from wishlist) */
+                        if (!find_item_in_wishlist(ch, item_vnum)) {
+                            act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                        }
                     }
                     /* Clear goal after posting quest or if no item to post */
                     ch->ai_data->current_goal = GOAL_NONE;
@@ -5076,6 +5084,8 @@ void mob_process_wishlist_goals(struct char_data *ch)
     room_rnum shop_room;
     obj_rnum obj_rnum;
     int item_cost, required_gold;
+    bool has_active_quest;
+    int i;
 
     if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
         return; /* Já tem um objetivo ou não é um mob com AI */
@@ -5239,7 +5249,17 @@ void mob_process_wishlist_goals(struct char_data *ch)
     }
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
-    if (GET_GOLD(ch) >= desired_item->priority * 2) {
+    /* Skip if there's already an active quest for this item - try other methods instead */
+    has_active_quest = FALSE;
+    for (i = 0; i < total_quests; i++) {
+        if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == desired_item->vnum &&
+            QST_TYPE(i) == AQ_OBJ_RETURN) {
+            has_active_quest = TRUE;
+            break;
+        }
+    }
+
+    if (!has_active_quest && GET_GOLD(ch) >= desired_item->priority * 2) {
         /* Early exit: Check quest limit BEFORE expensive pathfinding
          * With 451 autoquests, pathfinding for questmasters is catastrophically expensive:
          * - Loops through 451 quests × ALL characters × BFS pathfinding
