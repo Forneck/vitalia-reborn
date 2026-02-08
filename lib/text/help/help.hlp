@@ -6476,7 +6476,7 @@ MAGIA-HEAL
 Uso        : cast 'heal' <alvo>
 Acumulativa: Nao
 Duracao    : Instantanea
-Nivel      : Clerigo Nivel 24
+Nivel      : Clerigo Nivel 24, Ranger 90
 Escola     : Conjuração
 
 Essa magia cura todos os pontos de vida do alvo, menos 1d4. No
