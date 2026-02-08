@@ -1213,17 +1213,21 @@ void mobile_activity(void)
                         struct mob_wishlist_item *wishlist_item =
                             find_item_in_wishlist(ch, ch->ai_data->goal_item_vnum);
                         int reward = wishlist_item ? wishlist_item->priority * 2 : ch->ai_data->goal_item_vnum;
+                        obj_vnum item_vnum = ch->ai_data->goal_item_vnum;
 
                         /* Posta a quest no questmaster */
-                        mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
+                        mob_posts_quest(ch, item_vnum, reward);
                         /* Safety check: mob_posts_quest() calls act() internally which can trigger DG scripts */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
 
-                        act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
-                        /* Safety check: act() can trigger DG scripts which may cause extraction */
-                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                            continue;
+                        /* Only show message if quest was successfully posted (item removed from wishlist) */
+                        if (!find_item_in_wishlist(ch, item_vnum)) {
+                            act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                        }
                     }
                     /* Clear goal after posting quest or if no item to post */
                     ch->ai_data->current_goal = GOAL_NONE;
