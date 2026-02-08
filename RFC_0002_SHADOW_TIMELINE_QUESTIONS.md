@@ -5,7 +5,7 @@
 **Target Audience:** Engine Developers, Systems Designers  
 **Related RFCs:**
 - RFC-0001 (Implementation Summary)
-- INVARIANTS_ANALYSIS.md
+- docs/INVARIANTS_ANALYSIS.md
 - docs/SHADOW_TIMELINE.md
 
 **Scope:** Conceptual / Architectural  
