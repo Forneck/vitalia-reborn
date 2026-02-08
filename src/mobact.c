@@ -1220,6 +1220,9 @@ void mobile_activity(void)
                         /* Safety check: act() can trigger DG scripts which may cause extraction */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
+
+                        /* Remove o item da wishlist para evitar loop */
+                        remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                     }
                     /* Clear goal after posting quest or if no item to post */
                     ch->ai_data->current_goal = GOAL_NONE;
