@@ -1,7 +1,7 @@
 /**
  * @file shadow_timeline.h
  * Shadow Timeline: Cognitive Future Simulation Layer
- * 
+ *
  * RFC-0003 COMPLIANT - Conformant to RFC-0003 normative specification
  * Implementation: RFC-0001
  * Architecture: RFC-0003
