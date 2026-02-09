@@ -1,10 +1,13 @@
 /**
  * @file shadow_timeline.h
- * Shadow Timeline: Cognitive Future Simulation Layer (RFC-0001)
+ * Shadow Timeline: Cognitive Future Simulation Layer
+ * 
+ * RFC-0003 COMPLIANT - Conformant to RFC-0003 normative specification
+ * Implementation: RFC-0001
+ * Architecture: RFC-0003
  *
- * The Shadow Timeline is a non-authoritative, non-causal, isolated simulation layer
- * that allows autonomous entities (players and mobs) to internally explore possible
- * future outcomes of actions without modifying the real world state.
+ * The Shadow Timeline is a non-authoritative, observational domain that models
+ * possible future state trajectories without committing them to reality.
  *
  * Core Principles (Axioms):
  * - ST-1: Observational Only - Never mutates real world state
@@ -12,6 +15,17 @@
  * - ST-3: Bounded Cognition - Intentionally incomplete, no exhaustive search
  * - ST-4: Subjectivity - Different entities generate different projections
  * - ST-5: Non-determinism - Repeated evaluations may yield different results
+ *
+ * RFC-0003 Compliance:
+ * ✅ Domain separation (§4.1) - Separate module, no embedding in game entities
+ * ✅ Zero temporal authority (§5.1) - Proposes possibilities, never asserts facts
+ * ✅ Invariant enforcement (§5.3) - Discards actions violating global invariants
+ * ✅ Autonomous entity restriction (§6.1) - Only cognitive entities may consult
+ * ✅ Cognitive cost modeling (§7.2) - Capacity consumption and regeneration
+ * ✅ Bounded horizon (§8.1) - Limited by cognitive capacity and entropy
+ * ✅ Reset boundaries (§8.2) - Respects temporal horizons
+ * ✅ Non-persistent (§10.1) - No recording of predictions
+ * ✅ Past non-influence (§11) - Cannot modify committed history
  *
  * Part of Vitalia Reborn MUD engine.
  * Copyright (C) 2026 Vitalia Reborn Design

@@ -1,17 +1,34 @@
 # Shadow Timeline: Cognitive Future Simulation Layer
 
-**RFC-0001 Implementation**  
-**Status:** Implemented  
+**RFC-0003 COMPLIANT**  
+**Implementation:** RFC-0001 (completed 2026-02-07)  
+**Architecture:** RFC-0003 (normative 2026-02-09)  
+**Status:** Production Ready  
 **Version:** 1.0  
-**Date:** 2026-02-07
+
+---
+
+## Compliance Statement
+
+This implementation is **RFC-0003 COMPLIANT**, conforming to the normative specification defined in RFC-0003 "Shadow Timeline — Definition, Scope, and Authority".
+
+See **RFC_0003_DEFINITION.md** for the authoritative architectural specification.
 
 ---
 
 ## Overview
 
-The Shadow Timeline is a non-authoritative, non-causal, isolated simulation layer that allows autonomous entities (players and mobs) to internally explore possible future outcomes of actions without modifying the real world state.
+The Shadow Timeline is a non-authoritative, observational domain that allows autonomous entities (players and mobs) to internally explore possible future outcomes of actions without modifying the real world state.
 
 This system formalizes what currently exists implicitly (player foresight and heuristic AI decisions) into a system-level construct that improves realism, plausibility, and decision quality.
+
+**Key RFC-0003 Principles:**
+- **Non-authoritative** (§5.1) - Proposes possibilities, never asserts facts
+- **Observational only** (§4.2) - Never mutates live world state
+- **Invariant-safe** (§5.3) - Discards actions violating global invariants
+- **Cognitively bounded** (§7.2) - Limited by entity capacity and entropy
+- **Non-persistent** (§10.1) - No recording of predictions
+- **Reset-bounded** (§8.2) - Respects temporal horizons
 
 ---
 
@@ -463,10 +480,39 @@ shadow_dump_context(ctx);
 
 ## References
 
-- RFC-0001: Shadow Timeline Design Document
+- **RFC-0003:** Shadow Timeline — Definition, Scope, and Authority (normative specification)
+- **RFC-0001:** Shadow Timeline Implementation Summary (design document)
+- **RFC-0002:** Shadow Timeline Questions (architectural analysis)
+- **docs/INVARIANTS_ANALYSIS.md:** Invariant system documentation
 - Emotion System (`mob_ai_data` emotions)
 - Genetic Traits System (`mob_genetics`)
 - Mob AI Goal System (`current_goal`)
+
+---
+
+## Compliance and Verification
+
+### RFC-0003 Compliance Verification
+
+This implementation has been verified as **RFC-0003 COMPLIANT**:
+
+✅ Domain separation (§4.1) - Separate module, no embedding  
+✅ Zero temporal authority (§5.1) - Proposes possibilities only  
+✅ Invariant enforcement (§5.3) - Validates before projection  
+✅ Autonomous entity restriction (§6.1) - Cognitive entities only  
+✅ Cognitive cost modeling (§7.2) - Capacity system implemented  
+✅ Bounded horizon (§8.1) - Limited by capacity and entropy  
+✅ Reset boundaries (§8.2) - Temporal horizons respected  
+✅ Non-persistent (§10.1) - Ephemeral projections only  
+✅ Past non-influence (§11) - Forward-only observation  
+
+For detailed compliance assessment, see **RFC_0003_DEFINITION.md §18**.
+
+### Compliance Markers
+
+All Shadow Timeline code includes compliance markers:
+- `/* RFC-0003 COMPLIANT */` - Fully conformant
+- References to specific RFC-0003 sections in comments
 
 ---
 
