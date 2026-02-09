@@ -10,9 +10,10 @@
 
 **Overall Compliance:** ✅ **COMPLIANT** with 2 partial implementations
 
-- **Fully Compliant:** 10/12 normative requirements
-- **Partially Compliant:** 2/12 normative requirements (documented, acceptable)
-- **Non-Compliant:** 0/12 normative requirements
+- **Fully Compliant:** 10/14 normative requirements (10 MUST)
+- **Partially Compliant:** 2/14 normative requirements (2 MUST; documented, acceptable)
+- **Fully Compliant SHOULD:** 2/2 SHOULD requirements
+- **Non-Compliant:** 0/14 normative requirements
 
 ---
 
@@ -362,10 +363,10 @@ void shadow_regenerate_capacity(struct char_data *ch) {
 
 ## Compliance Score
 
-**12/12 requirements met** (10 full, 2 partial)
+**14/14 requirements met** (12 full, 2 partial)
 
-- **Full Compliance:** 10 requirements (83%)
-- **Partial Compliance:** 2 requirements (17%) - both acceptable
+- **Full Compliance:** 12 requirements (86%) - 10 MUST + 2 SHOULD
+- **Partial Compliance:** 2 requirements (14%) - 2 MUST (both acceptable)
 - **Non-Compliance:** 0 requirements (0%)
 
 ---

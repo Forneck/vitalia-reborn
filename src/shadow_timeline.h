@@ -3,6 +3,7 @@
  * Shadow Timeline: Cognitive Future Simulation Layer
  *
  * RFC-0003 COMPLIANT - Conformant to RFC-0003 normative specification
+ * (with acceptable partial implementations for §8.2 and §9.1, see RFC_0003_DEFINITION.md §18.2)
  * Implementation: RFC-0001
  * Architecture: RFC-0003
  *
@@ -23,7 +24,8 @@
  * ✅ Autonomous entity restriction (§6.1) - Only cognitive entities may consult
  * ✅ Cognitive cost modeling (§7.2) - Capacity consumption and regeneration
  * ✅ Bounded horizon (§8.1) - Limited by cognitive capacity and entropy
- * ✅ Reset boundaries (§8.2) - Respects temporal horizons
+ * 🔶 Reset boundaries (§8.2) - Partial: implicitly via 5-step horizon
+ * 🔶 RNG independence (§9.1) - Partial: uses heuristics (no RNG to share)
  * ✅ Non-persistent (§10.1) - No recording of predictions
  * ✅ Past non-influence (§11) - Cannot modify committed history
  *

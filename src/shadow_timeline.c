@@ -3,6 +3,7 @@
  * Shadow Timeline: Cognitive Future Simulation Layer
  *
  * RFC-0003 COMPLIANT - Implementation conformant to RFC-0003 normative specification
+ * (with acceptable partial implementations for §8.2 and §9.1, see RFC_0003_DEFINITION.md §18.2)
  * Implementation: RFC-0001 (completed 2026-02-07)
  * Architecture: RFC-0003 (normative 2026-02-09)
  *
@@ -10,7 +11,7 @@
  * outcomes without modifying the real world state.
  *
  * RFC-0003 Compliance Statement:
- * This implementation fully complies with RFC-0003 "Shadow Timeline — Definition,
+ * This implementation complies with RFC-0003 "Shadow Timeline — Definition,
  * Scope, and Authority" normative requirements. See RFC_0003_DEFINITION.md §18
  * for detailed compliance assessment.
  *

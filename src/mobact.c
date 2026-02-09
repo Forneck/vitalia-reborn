@@ -818,8 +818,8 @@ void mobile_activity(void)
                         break;
                 }
             }
-            /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral, not recorded */
-            /* Action has been executed; projection context was freed by mob_shadow_choose_action */
+            /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
+            /* Projection context has been freed by mob_shadow_choose_action */
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
