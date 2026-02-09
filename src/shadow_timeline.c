@@ -591,20 +591,32 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
                     }
                     /* If sentinel is away from post, check if this move brings them closer */
                     else if (guard_post != NOWHERE) {
-                        /* Calculate if destination is closer to post than current location */
-                        int current_dist = find_first_step(ch->in_room, guard_post);
-                        int dest_dist = find_first_step(dest, guard_post);
-
                         if (dest == guard_post) {
                             /* Moving directly to post - highest priority! */
                             outcome->score += 70;
                             outcome->achieves_goal = TRUE;
-                        } else if (current_dist != -1 && dest_dist != -1 && dest_dist < current_dist) {
-                            /* Moving closer to post - good */
-                            outcome->score += 40;
-                        } else if (dest_dist == -1 || dest_dist > current_dist) {
-                            /* Moving away from post - penalize */
-                            outcome->score -= 50;
+                        } else {
+                            /* Calculate if destination is closer to post than current location */
+                            int current_dist = find_first_step(ch->in_room, guard_post);
+                            int dest_dist = find_first_step(dest, guard_post);
+
+                            /* Only apply distance-based scoring if both distances are valid */
+                            if (current_dist != -1 && dest_dist != -1) {
+                                if (dest_dist < current_dist) {
+                                    /* Moving closer to post - good */
+                                    outcome->score += 40;
+                                } else if (dest_dist > current_dist) {
+                                    /* Moving away from post - penalize */
+                                    outcome->score -= 50;
+                                }
+                            } else if (current_dist == -1 && dest_dist != -1) {
+                                /* Currently unreachable, moving to reachable location - don't penalize */
+                                /* Neutral scoring - let other factors decide */
+                            } else if (current_dist != -1 && dest_dist == -1) {
+                                /* Moving from reachable to unreachable - penalize */
+                                outcome->score -= 50;
+                            }
+                            /* If both unreachable, neutral - let other factors decide */
                         }
                     }
                 }
