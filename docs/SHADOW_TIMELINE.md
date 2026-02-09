@@ -222,6 +222,24 @@ ISNPC SHADOWTIMELINE    <-- Add SHADOWTIMELINE flag here
 - Makes mobs more intelligent but less predictable
 - Should be tested for gameplay balance
 
+### Sentinel Compatibility
+
+The Shadow Timeline is fully compatible with `MOB_SENTINEL` flag. Sentinel mobs with Shadow Timeline will:
+
+1. **Prioritize guard duty**: When at their post, they generate a `SHADOW_ACTION_GUARD` projection that encourages staying put
+2. **Avoid abandoning posts**: Movement projections that take sentinels away from their posts receive heavy score penalties (-60)
+3. **Return to post**: When away from their post, movement projections toward the post receive bonuses:
+   - Moving directly to post: +70 score bonus
+   - Moving closer to post: +40 score bonus
+   - Moving away from post: -50 score penalty
+
+This ensures that sentinels with Shadow Timeline maintain their posts while still being able to use cognitive simulation for combat decisions, social interactions, and other duties.
+
+**Example**: A guard at a castle gate with both `MOB_SENTINEL` and `MOB_SHADOWTIMELINE` will:
+- Stand guard when no threats are present (selecting `SHADOW_ACTION_GUARD`)
+- Intelligently evaluate combat options if attacked (using Shadow Timeline combat projections)
+- Return to post after handling threats (due to movement scoring bonuses)
+
 ### Simple Integration Example
 
 Here's how a mob could use Shadow Timeline to make intelligent decisions:
@@ -288,6 +306,7 @@ The Shadow Timeline supports projecting these action types:
 | `SHADOW_ACTION_WAIT` | Wait/do nothing | 3 |
 | `SHADOW_ACTION_FOLLOW` | Follow entity | 5 |
 | `SHADOW_ACTION_GROUP` | Group formation | 5 |
+| `SHADOW_ACTION_GUARD` | Stand guard at post (sentinels) | 5 |
 
 ### Implemented Actions in mobile_activity()
 
@@ -304,6 +323,7 @@ All action types are now implemented in the mob AI loop for mobs with the `MOB_S
 - **SHADOW_ACTION_FOLLOW**: Starts following another character
 - **SHADOW_ACTION_GROUP**: Strengthens bonds with master/leader
 - **SHADOW_ACTION_WAIT**: Intentionally skips action this tick (strategic waiting)
+- **SHADOW_ACTION_GUARD**: Sentinel stands guard at their post, maintaining vigilance
 
 All actions include proper validation and safety checks to prevent crashes or invalid state.
 

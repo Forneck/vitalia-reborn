@@ -67,6 +67,7 @@ enum shadow_action_type
     SHADOW_ACTION_WAIT,       /**< Wait/do nothing */
     SHADOW_ACTION_FOLLOW,     /**< Follow another entity */
     SHADOW_ACTION_GROUP,      /**< Group formation action */
+    SHADOW_ACTION_GUARD,      /**< Stand guard at post (for sentinels) */
     SHADOW_ACTION_MAX         /**< Sentinel value */
 };
 

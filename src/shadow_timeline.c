@@ -21,6 +21,7 @@
 #include "shadow_timeline.h"
 #include "act.h"
 #include "fight.h"
+#include "graph.h"
 
 /* External variables */
 extern struct room_data *world;
@@ -30,6 +31,7 @@ static void generate_movement_projections(struct shadow_context *ctx);
 static void generate_combat_projections(struct shadow_context *ctx);
 static void generate_social_projections(struct shadow_context *ctx);
 static void generate_item_projections(struct shadow_context *ctx);
+static void generate_guard_projection(struct shadow_context *ctx);
 static int score_projection_for_entity(struct char_data *ch, struct shadow_projection *proj);
 static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
@@ -115,6 +117,15 @@ int shadow_generate_projections(struct shadow_context *ctx)
 
     /* Generate different types of projections based on context */
     /* Bounded by cognitive capacity - won't generate exhaustive search */
+
+    /* Check if sentinel is at their post - prioritize guard duty */
+    if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_SENTINEL) && ch->ai_data) {
+        room_rnum guard_post = real_room(ch->ai_data->guard_post);
+        if (guard_post != NOWHERE && ch->in_room == guard_post) {
+            /* Sentinel at post - prioritize guarding */
+            generate_guard_projection(ctx);
+        }
+    }
 
     if (FIGHTING(ch)) {
         /* In combat - focus on combat projections */
@@ -360,6 +371,70 @@ static void generate_item_projections(struct shadow_context *ctx)
 }
 
 /**
+ * Generate guard action projection for sentinels
+ * Projects standing guard at post (intentional waiting)
+ */
+static void generate_guard_projection(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch)) {
+        return;
+    }
+
+    /* Only generate guard action for sentinels at their post */
+    if (!MOB_FLAGGED(ch, MOB_SENTINEL) || !ch->ai_data) {
+        return;
+    }
+
+    room_rnum guard_post = real_room(ch->ai_data->guard_post);
+    if (guard_post == NOWHERE || ch->in_room != guard_post) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Set up guard action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_GUARD;
+    action.target = NULL;
+    action.cost = SHADOW_BASE_COST / 2; /* Guarding costs less than other actions */
+
+    /* Validate action */
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
  * Validate that an action is feasible and doesn't violate invariants
  * Implements ST-2 (Invariant Preservation)
  */
@@ -435,6 +510,23 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
             /* Always feasible */
             break;
 
+        case SHADOW_ACTION_GUARD:
+            /* Guard action is only feasible for sentinels at their guard post */
+            if (!IS_NPC(ch) || !MOB_FLAGGED(ch, MOB_SENTINEL)) {
+                return ACTION_INVALID_STATE;
+            }
+            if (!ch->ai_data) {
+                return ACTION_INVALID_STATE;
+            }
+            /* Verify sentinel is at their guard post */
+            {
+                room_rnum guard_post = real_room(ch->ai_data->guard_post);
+                if (guard_post == NOWHERE || ch->in_room != guard_post) {
+                    return ACTION_INVALID_STATE;
+                }
+            }
+            break;
+
         default:
             /* Unknown action type */
             return ACTION_IMPOSSIBLE;
@@ -505,6 +597,63 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
                 outcome->achieves_goal = (ch->ai_data && ch->ai_data->goal_destination == dest);
                 outcome->score = outcome->achieves_goal ? 30 : 5;
                 outcome->obvious = TRUE;
+
+                /* Sentinel awareness: heavily penalize moving away from post */
+                if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_SENTINEL) && ch->ai_data) {
+                    room_rnum guard_post = real_room(ch->ai_data->guard_post);
+
+                    /* If sentinel is at their post, strongly discourage leaving */
+                    if (ch->in_room == guard_post) {
+                        outcome->score -= 60; /* Heavy penalty for leaving post */
+                        outcome->achieves_goal = FALSE;
+                    }
+                    /* If sentinel is away from post, check if this move brings them closer */
+                    else if (guard_post != NOWHERE) {
+                        if (dest == guard_post) {
+                            /* Moving directly to post - highest priority! */
+                            outcome->score += 70;
+                            outcome->achieves_goal = TRUE;
+                        } else {
+                            /*
+                             * Use BFS distance (room hops) rather than find_first_step()
+                             * which returns a direction or BFS_* codes, not distance.
+                             */
+                            int current_dist = bfs_distance(ch->in_room, guard_post);
+                            int dest_dist = bfs_distance(dest, guard_post);
+
+                            /* Ignore scoring if either call failed catastrophically */
+                            if (current_dist != BFS_ERROR && dest_dist != BFS_ERROR) {
+                                if (current_dist == BFS_NO_PATH && dest_dist != BFS_NO_PATH) {
+                                    /*
+                                     * Currently unreachable, moving to a room from which the
+                                     * post is reachable. Keep this neutral and let other
+                                     * factors decide.
+                                     */
+                                } else if (current_dist != BFS_NO_PATH && dest_dist == BFS_NO_PATH) {
+                                    /* Moving from reachable to unreachable - penalize */
+                                    outcome->score -= 50;
+                                } else if (current_dist != BFS_NO_PATH && dest_dist != BFS_NO_PATH) {
+                                    /*
+                                     * Both rooms have valid paths to post.
+                                     * Compare actual distances.
+                                     */
+                                    if (dest_dist < current_dist) {
+                                        /* Moving closer to post - good */
+                                        outcome->score += 40;
+                                    } else if (dest_dist > current_dist) {
+                                        /* Moving away from post - penalize */
+                                        outcome->score -= 50;
+                                    }
+                                    /* If equal distance, neutral - let other factors decide */
+                                }
+                                /*
+                                 * If both rooms are unreachable (BFS_NO_PATH), keep
+                                 * this heuristic neutral and let other factors decide.
+                                 */
+                            }
+                        }
+                    }
+                }
             }
             break;
         }
@@ -583,6 +732,14 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
         case SHADOW_ACTION_WAIT: {
             /* Waiting is safe but unproductive */
             outcome->score = 0;
+            outcome->obvious = TRUE;
+            break;
+        }
+
+        case SHADOW_ACTION_GUARD: {
+            /* Standing guard - safe and fulfills sentinel duty */
+            outcome->score = 15; /* Better than waiting, fulfills duty */
+            outcome->danger_level = 5;
             outcome->obvious = TRUE;
             break;
         }
@@ -784,7 +941,8 @@ bool shadow_is_obvious(struct char_data *ch, struct shadow_action *action, struc
     }
 
     /* Simple actions are obvious */
-    if (action->type == SHADOW_ACTION_WAIT || action->type == SHADOW_ACTION_SOCIAL) {
+    if (action->type == SHADOW_ACTION_WAIT || action->type == SHADOW_ACTION_SOCIAL ||
+        action->type == SHADOW_ACTION_GUARD) {
         return TRUE;
     }
 

@@ -798,6 +798,11 @@ void mobile_activity(void)
                         /* Intentionally wait/do nothing this tick */
                         continue;
 
+                    case SHADOW_ACTION_GUARD:
+                        /* Stand guard at post - sentinel duty fulfilled */
+                        /* No action needed, just maintain vigilance */
+                        continue;
+
                     default:
                         /* Other action types not yet implemented in mob_activity */
                         break;
