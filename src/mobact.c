@@ -2,6 +2,10 @@
  *  File: mobact.c                                          Part of tbaMUD *
  *  Usage: Functions for generating intelligent (?) behavior in mobiles.   *
  *                                                                         *
+ *  Shadow Timeline Integration: RFC-0003 COMPLIANT                        *
+ *  This file consumes Shadow Timeline projections for mob AI decisions.   *
+ *  See shadow_timeline.h for core RFC-0003 implementation.                *
+ *                                                                         *
  *  All rights reserved.  See license for complete information.            *
  *                                                                         *
  *  Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University *
@@ -613,19 +617,25 @@ void mobile_activity(void)
             ch->ai_data->quest_posting_frustration_timer--;
         }
 
-        /* Regenerate Shadow Timeline cognitive capacity (RFC-0001) */
+        /* RFC-0003 §7.2: Regenerate Shadow Timeline cognitive capacity */
+        /* Cognitive cost regenerates naturally over time */
         if (ch->ai_data) {
             shadow_regenerate_capacity(ch);
         }
 
-        /* Shadow Timeline decision-making (RFC-0001) */
+        /* RFC-0003 COMPLIANT: Shadow Timeline decision-making */
+        /* RFC-0003 §6.1: Only autonomous decision-making entities may consult */
+        /* RFC-0003 §6.2: Entity must have internal decision logic and action selection */
         /* Only for mobs with SHADOWTIMELINE flag and sufficient cognitive capacity */
         if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
             ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
             struct shadow_action action;
 
-            /* Use Shadow Timeline to choose next action */
+            /* RFC-0003 §5.1: Shadow Timeline proposes possibilities, never asserts facts */
+            /* Use Shadow Timeline to choose next action based on non-authoritative projection */
             if (mob_shadow_choose_action(ch, &action)) {
+                /* RFC-0003 §4.2: Execute action in live world (Shadow Timeline never mutates) */
+                /* RFC-0003 §5.2: Action chosen from hypothetical, probabilistic projections */
                 /* Execute the chosen action based on type */
                 switch (action.type) {
                     case SHADOW_ACTION_MOVE:
@@ -808,6 +818,8 @@ void mobile_activity(void)
                         break;
                 }
             }
+            /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral, not recorded */
+            /* Action has been executed; projection context was freed by mob_shadow_choose_action */
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
