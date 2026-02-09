@@ -1,10 +1,19 @@
 /**
  * @file shadow_timeline.c
- * Shadow Timeline: Cognitive Future Simulation Layer (RFC-0001)
+ * Shadow Timeline: Cognitive Future Simulation Layer
  *
- * Implementation of the Shadow Timeline system for cognitive future simulation.
+ * RFC-0003 COMPLIANT - Implementation conformant to RFC-0003 normative specification
+ * (with acceptable partial implementations for §8.2 and §9.1, see RFC_0003_DEFINITION.md §18.2)
+ * Implementation: RFC-0001 (completed 2026-02-07)
+ * Architecture: RFC-0003 (normative 2026-02-09)
+ *
  * This system allows autonomous entities to internally explore possible future
  * outcomes without modifying the real world state.
+ *
+ * RFC-0003 Compliance Statement:
+ * This implementation complies with RFC-0003 "Shadow Timeline — Definition,
+ * Scope, and Authority" normative requirements. See RFC_0003_DEFINITION.md §18
+ * for detailed compliance assessment.
  *
  * Part of Vitalia Reborn MUD engine.
  * Copyright (C) 2026 Vitalia Reborn Design
@@ -39,12 +48,15 @@ static bool check_invariant_action(struct char_data *ch, enum shadow_action_type
 
 /**
  * Initialize a shadow context for an entity
+ * RFC-0003 §6.1: Only autonomous decision-making entities may consult
+ * RFC-0003 §4.1: Domain separation - context is external to entity
  * Allocates memory and sets up projection tracking
  */
 struct shadow_context *shadow_init_context(struct char_data *ch)
 {
     struct shadow_context *ctx;
 
+    /* RFC-0003 §6.2: Verify cognitive requirement */
     if (!IS_COGNITIVE_ENTITY(ch)) {
         return NULL;
     }
@@ -67,7 +79,7 @@ struct shadow_context *shadow_init_context(struct char_data *ch)
     ctx->horizon = SHADOW_DEFAULT_HORIZON;
     ctx->active = TRUE;
 
-    /* Set cognitive budget based on entity's capacity */
+    /* RFC-0003 §7.2: Set cognitive budget based on entity's capacity */
     if (IS_NPC(ch) && ch->ai_data) {
         ctx->cognitive_budget = ch->ai_data->cognitive_capacity;
     } else {
@@ -79,6 +91,7 @@ struct shadow_context *shadow_init_context(struct char_data *ch)
 
 /**
  * Free a shadow context and all associated projections
+ * RFC-0003 §10.1: Ensures no recording - projections are ephemeral
  * ST-1: Ensures no memory leaks in shadow system
  */
 void shadow_free_context(struct shadow_context *ctx)
@@ -436,6 +449,7 @@ static void generate_guard_projection(struct shadow_context *ctx)
 
 /**
  * Validate that an action is feasible and doesn't violate invariants
+ * RFC-0003 §5.3: Invariant Enforcement - MUST discard actions violating invariants
  * Implements ST-2 (Invariant Preservation)
  */
 int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
@@ -444,7 +458,7 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
         return ACTION_INVALID_STATE;
     }
 
-    /* Check entity existence invariant */
+    /* RFC-0003 §5.3: Check entity existence invariant (absolute invariant) */
     if (!check_invariant_existence(ch, ENTITY_TYPE_MOB)) {
         return ACTION_VIOLATES_INVARIANT;
     }
