@@ -22,6 +22,7 @@ ACMD(do_track);
 ACMD(do_pathfind);
 void hunt_victim(struct char_data *ch);
 int find_first_step(room_rnum src, room_rnum target);
+int bfs_distance(room_rnum src, room_rnum target);
 int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost);
 int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost, int *required_mv,
                         char **path_description);

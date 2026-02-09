@@ -807,6 +807,55 @@ int find_first_step(room_rnum src, room_rnum target)
     return (BFS_NO_PATH);
 }
 
+/* Calculate BFS distance (in rooms) between source and target rooms.
+ * Returns the number of rooms (hops) from src to target, or BFS error codes.
+ * Used for distance-based comparisons in AI decision-making. */
+int bfs_distance(room_rnum src, room_rnum target)
+{
+    int curr_dir;
+    room_rnum curr_room;
+    int distance = 0;
+
+    if (src == NOWHERE || target == NOWHERE || src > top_of_world || target > top_of_world) {
+        log1("SYSERR: Illegal value %d or %d passed to bfs_distance. (%s)", src, target, __FILE__);
+        return (BFS_ERROR);
+    }
+    if (src == target)
+        return (0); /* Already there - distance is 0 */
+
+    /* clear marks first */
+    for (curr_room = 0; curr_room <= top_of_world; curr_room++)
+        UNMARK(curr_room);
+
+    MARK(src);
+
+    /* Enqueue the first steps with distance 1 */
+    for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
+        if (VALID_EDGE(src, curr_dir)) {
+            MARK(TOROOM(src, curr_dir));
+            bfs_enqueue(TOROOM(src, curr_dir), 1); /* Using dir field for distance */
+        }
+
+    /* BFS with distance tracking */
+    while (queue_head) {
+        if (queue_head->room == target) {
+            distance = queue_head->dir; /* dir field contains distance */
+            bfs_clear_queue();
+            return (distance);
+        } else {
+            int next_distance = queue_head->dir + 1;
+            for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
+                if (VALID_EDGE(queue_head->room, curr_dir)) {
+                    MARK(TOROOM(queue_head->room, curr_dir));
+                    bfs_enqueue(TOROOM(queue_head->room, curr_dir), next_distance);
+                }
+            bfs_dequeue();
+        }
+    }
+
+    return (BFS_NO_PATH);
+}
+
 /* Enhanced pathfinding that considers movement costs and MV availability
  * Returns the first direction to take, and sets total_cost to the total MV needed for the path */
 int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost)

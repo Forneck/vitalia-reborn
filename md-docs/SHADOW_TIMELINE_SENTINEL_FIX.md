@@ -66,11 +66,19 @@ Modified movement action outcome scoring to be sentinel-aware:
 - Proper handling of unreachable locations (see below)
 
 #### 4. Pathfinding Edge Case Handling
-Properly handles cases where `find_first_step()` returns -1 (unreachable):
-- Both locations reachable: Compare distances normally
-- Current unreachable, destination reachable: Neutral (don't penalize)
-- Current reachable, destination unreachable: Penalize (-50)
-- Both unreachable: Neutral (let other factors decide)
+
+The scoring logic uses the standard CircleMUD/tbaMUD-style BFS helpers:
+- `find_first_step()` returns either the first direction to take toward the goal (0..`DIR_COUNT`-1), or one of the negative `BFS_*` codes:
+  - `BFS_ERROR` (-1)
+  - `BFS_ALREADY_THERE` (-2)
+  - `BFS_NO_PATH` (-3)
+- A new `bfs_distance()` function calculates the actual BFS distance (room hop count) from one room to another for "closer/farther" comparisons.
+
+When evaluating a potential move for a sentinel that is away from its post:
+- If both the current room and the candidate room have a valid path to the post, compare their BFS distances and favor the room that is strictly closer to the post.
+- If the current room has no path to the post (`BFS_NO_PATH`) and the candidate room does, treat the move as non-penalized so sentinels can escape dead-end areas.
+- If the current room has a valid path and the candidate room has no path, apply the standard away-from-post penalty (-50).
+- If neither room has a valid path to the post, treat the move as neutral and let other scoring factors decide.
 
 #### 5. Guard Action Implementation
 **File:** `src/mobact.c`
@@ -111,6 +119,21 @@ action.cost = SHADOW_BASE_COST / 2;
 ```
 
 This makes guarding "cheap" from a cognitive standpoint, reflecting that standing guard is less mentally taxing than other activities.
+
+### BFS Distance Calculation
+A new helper function `bfs_distance()` was added to `graph.c`:
+```c
+int bfs_distance(room_rnum src, room_rnum target);
+```
+
+This function:
+- Returns the actual number of rooms (hops) between source and target
+- Returns 0 if already at target (BFS_ALREADY_THERE case)
+- Returns `BFS_NO_PATH` (-3) if target is unreachable
+- Returns `BFS_ERROR` (-1) if parameters are invalid
+- Uses the same BFS algorithm as `find_first_step()` but tracks distance instead of direction
+
+This function is critical for correct distance comparisons in sentinel scoring, as `find_first_step()` returns a direction (0..DIR_COUNT-1) or error codes, not a distance metric.
 
 ### Integration with Existing Systems
 The fix doesn't break any existing functionality:
@@ -178,6 +201,29 @@ if (current_dist != -1 && dest_dist != -1) {
 - Don't penalize movement from unreachable to reachable
 - Only penalize movement from reachable to unreachable
 - Neutral scoring when both unreachable
+
+### Issue 3: Incorrect Distance Metric Usage
+**Finding:** Original code used `find_first_step()` return value as distance, but it returns direction or BFS codes
+
+**Resolution:** 
+- Created new `bfs_distance()` function in `graph.c` that returns actual room hop count
+- Updated sentinel scoring logic to use `bfs_distance()` for distance comparisons
+- Properly handle all BFS return codes (BFS_ERROR, BFS_NO_PATH, etc.)
+
+### Issue 4: GUARD Action Validation
+**Finding:** `shadow_validate_action()` didn't handle SHADOW_ACTION_GUARD case, causing all guard projections to fail
+
+**Resolution:**
+- Added validation case for SHADOW_ACTION_GUARD
+- Validates that only sentinels with ai_data can guard
+- Validates that sentinel is at their guard_post
+
+### Issue 5: Guard Action Not Obvious
+**Finding:** `shadow_is_obvious()` didn't treat GUARD as obvious, causing unnecessary cognitive cost
+
+**Resolution:**
+- Added SHADOW_ACTION_GUARD to the list of obvious actions
+- Guard action now has reduced cognitive cost calculation
 
 ---
 

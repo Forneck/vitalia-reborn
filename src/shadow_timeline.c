@@ -21,6 +21,7 @@
 #include "shadow_timeline.h"
 #include "act.h"
 #include "fight.h"
+#include "graph.h"
 
 /* External variables */
 extern struct room_data *world;
@@ -509,6 +510,23 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
             /* Always feasible */
             break;
 
+        case SHADOW_ACTION_GUARD:
+            /* Guard action is only feasible for sentinels at their guard post */
+            if (!IS_NPC(ch) || !MOB_FLAGGED(ch, MOB_SENTINEL)) {
+                return ACTION_INVALID_STATE;
+            }
+            if (!ch->ai_data) {
+                return ACTION_INVALID_STATE;
+            }
+            /* Verify sentinel is at their guard post */
+            {
+                room_rnum guard_post = real_room(ch->ai_data->guard_post);
+                if (guard_post == NOWHERE || ch->in_room != guard_post) {
+                    return ACTION_INVALID_STATE;
+                }
+            }
+            break;
+
         default:
             /* Unknown action type */
             return ACTION_IMPOSSIBLE;
@@ -596,27 +614,43 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
                             outcome->score += 70;
                             outcome->achieves_goal = TRUE;
                         } else {
-                            /* Calculate if destination is closer to post than current location */
-                            int current_dist = find_first_step(ch->in_room, guard_post);
-                            int dest_dist = find_first_step(dest, guard_post);
+                            /*
+                             * Use BFS distance (room hops) rather than find_first_step()
+                             * which returns a direction or BFS_* codes, not distance.
+                             */
+                            int current_dist = bfs_distance(ch->in_room, guard_post);
+                            int dest_dist = bfs_distance(dest, guard_post);
 
-                            /* Only apply distance-based scoring if both distances are valid */
-                            if (current_dist != -1 && dest_dist != -1) {
-                                if (dest_dist < current_dist) {
-                                    /* Moving closer to post - good */
-                                    outcome->score += 40;
-                                } else if (dest_dist > current_dist) {
-                                    /* Moving away from post - penalize */
+                            /* Ignore scoring if either call failed catastrophically */
+                            if (current_dist != BFS_ERROR && dest_dist != BFS_ERROR) {
+                                if (current_dist == BFS_NO_PATH && dest_dist != BFS_NO_PATH) {
+                                    /*
+                                     * Currently unreachable, moving to a room from which the
+                                     * post is reachable. Keep this neutral and let other
+                                     * factors decide.
+                                     */
+                                } else if (current_dist != BFS_NO_PATH && dest_dist == BFS_NO_PATH) {
+                                    /* Moving from reachable to unreachable - penalize */
                                     outcome->score -= 50;
+                                } else if (current_dist != BFS_NO_PATH && dest_dist != BFS_NO_PATH) {
+                                    /*
+                                     * Both rooms have valid paths to post.
+                                     * Compare actual distances.
+                                     */
+                                    if (dest_dist < current_dist) {
+                                        /* Moving closer to post - good */
+                                        outcome->score += 40;
+                                    } else if (dest_dist > current_dist) {
+                                        /* Moving away from post - penalize */
+                                        outcome->score -= 50;
+                                    }
+                                    /* If equal distance, neutral - let other factors decide */
                                 }
-                            } else if (current_dist == -1 && dest_dist != -1) {
-                                /* Currently unreachable, moving to reachable location - don't penalize */
-                                /* Neutral scoring - let other factors decide */
-                            } else if (current_dist != -1 && dest_dist == -1) {
-                                /* Moving from reachable to unreachable - penalize */
-                                outcome->score -= 50;
+                                /*
+                                 * If both rooms are unreachable (BFS_NO_PATH), keep
+                                 * this heuristic neutral and let other factors decide.
+                                 */
                             }
-                            /* If both unreachable, neutral - let other factors decide */
                         }
                     }
                 }
@@ -907,7 +941,8 @@ bool shadow_is_obvious(struct char_data *ch, struct shadow_action *action, struc
     }
 
     /* Simple actions are obvious */
-    if (action->type == SHADOW_ACTION_WAIT || action->type == SHADOW_ACTION_SOCIAL) {
+    if (action->type == SHADOW_ACTION_WAIT || action->type == SHADOW_ACTION_SOCIAL ||
+        action->type == SHADOW_ACTION_GUARD) {
         return TRUE;
     }
 
