@@ -1,9 +1,9 @@
 # Preliminary Causal Ledger Audit
 ## Vitalia Reborn MUD Engine
 
-**Date:** 2026-02-09  
-**Version:** 1.0  
-**Status:** Complete
+**Date:** 2026-02-09 (Initial), 2026-02-11 (Second Pass)  
+**Version:** 2.0  
+**Status:** Complete with OCT Reclassification
 
 ---
 
@@ -11,7 +11,11 @@
 
 This document presents a conceptual audit of events in the Vitalia Reborn MUD engine that qualify as **immutable facts** under the Causal Ledger definition. The Causal Ledger records events that have occurred in the world and cannot be removed or altered without introducing causal inconsistencies, invariant violations, or paradoxes, regardless of observation by any entity.
 
-This audit identifies **seven primary categories** of causal events and documents why each event's erasure would break causality or violate invariants.
+**Initial Audit (v1.0):** Identified **23 event categories** across **7 major domains** based on systemic importance and gameplay relevance.
+
+**Second Pass (v2.0):** Applied the **Ontological Collapse Test (OCT)** to reclassify events by **ontological necessity** rather than systemic importance. 
+
+**Final Result:** **11 true Causal Ledger events**, **7 derived state events**, and **1 shadow-only constraint**.
 
 ---
 
@@ -705,27 +709,305 @@ Based on this audit, any future Causal Ledger implementation should follow these
 
 ---
 
+## Second-Pass Analysis: Ontological Collapse Test
+
+### Methodology Refinement
+
+The preliminary audit identified events based on **systemic importance** and **gameplay relevance**. This second pass applies a stricter criterion: the **Ontological Collapse Test (OCT)**.
+
+**Ontological Collapse Test (OCT):**
+
+> An event qualifies for the Causal Ledger only if erasing it completely—leaving no trace—would cause the world to become internally inconsistent.
+
+**Formal Definition:**
+
+> If an event is removed after it occurred and the world:
+> 1. Violates global invariants, OR
+> 2. Enters a causal contradiction, OR
+> 3. Becomes able to assert a false history about itself
+>
+> Then the event is **ontologically irreversible** and must be recorded in the Causal Ledger.
+
+**Key Distinction:**
+
+> The Causal Ledger requires **ontological irreversibility**, not merely systemic relevance.
+
+An event may be highly relevant, widely referenced, and long-lived, yet still not qualify as a Ledger fact if it can be erased without collapsing causality or invariants.
+
+---
+
+### Reclassification Framework
+
+All events are now classified into three categories:
+
+#### 1. Causal Ledger (Ontologically Irreversible)
+**Characteristics:**
+- Removal creates paradoxes or invariant violations
+- Permanently constrains future world state
+- World cannot coherently exist "as if they never happened"
+- These are **facts about the world's history**
+
+#### 2. Derived State (Reversible/Recomputable)
+**Characteristics:**
+- Can be recalculated from other facts
+- Can decay or be overwritten without contradiction
+- Absence changes outcomes, but not consistency
+- These are **consequences of Ledger facts**
+
+#### 3. Shadow-Only Constraints (Possibilities/Intent)
+**Characteristics:**
+- Never become facts themselves
+- Guide decision-making and prediction
+- Collapse only indirectly via Ledger commits
+- These are **unrealized possibilities**
+
+---
+
+### Event Reclassification Results
+
+#### Category I: Character Lifecycle Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Character Creation** | Causal | **CAUSAL LEDGER** | Creates permanent identity. Violates Identity Invariant if erased. Future actions reference this ID. |
+| **Character Death** | Causal | **CAUSAL LEDGER** | Irreversible state transition. Experience loss is permanent. Corpse creation is witnessed. |
+| **Level Advancement** | Causal | **DERIVED STATE** | Recomputable from experience total. Level is a function of XP, not an independent fact. |
+| **Class Change** | Causal | **CAUSAL LEDGER** | Irreversible identity transition. Class history is append-only. Retained skills prove past classes. |
+
+**Key Insight:** Level is derived from experience, but class changes are ontological transitions.
+
+---
+
+#### Category II: Economic Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Currency Gain/Loss** | Causal | **DERIVED STATE** | Current balance is recomputable from transaction history. Balance itself is not a fact. |
+| **Bank Transactions** | Causal | **CAUSAL LEDGER** | Irreversible contract between player and bank. Creates obligation. Deposit fact cannot be erased without fraud. |
+| **Item Rent/Storage** | Causal | **CAUSAL LEDGER** | Payment creates persistent storage obligation. Items must be retrievable. Contract fact. |
+
+**Key Insight:** Balance is derived; transactions creating obligations are facts.
+
+---
+
+#### Category III: Quest and Achievement Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Quest Completion** | Causal | **CAUSAL LEDGER** | Non-repeatable quests create permanent constraint. Rewards were received. NPC behavior changed. |
+| **Skill Learning** | Causal | **DERIVED STATE** | Skill proficiency is computed from practice history. Can be recalculated from usage logs. |
+
+**Key Insight:** Quest completion is a fact; skill level is a computed statistic.
+
+---
+
+#### Category IV: Combat and Interaction Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Significant Damage** | Causal | **DERIVED STATE** | Hit points are cumulative. Damage events are recomputable from combat log. Current HP is derived. |
+| **Kill/Death Events** | Causal | **CAUSAL LEDGER** | Death is ontologically irreversible (see Event 1.2). Kill creates causal dependency between actors. |
+| **Reputation Changes** | Causal | **DERIVED STATE** | Reputation is computed from interaction history. Can be recalculated from witnessed events. |
+
+**Key Insight:** Death is a fact; damage and reputation are derived statistics.
+
+---
+
+#### Category V: Item Lifecycle Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Item Creation** | Causal | **CAUSAL LEDGER** | Creates new entity in world. Subsequent references depend on creation event. Violates existence invariant if erased. |
+| **Item Destruction** | Causal | **CAUSAL LEDGER** | Irreversible state transition. Item cannot be "undeleted" without paradox. Witnesses observed destruction. |
+| **Item Ownership Transfer** | Causal | **CAUSAL LEDGER** | Creates mutual obligation. Trade contract cannot be erased without fraud. Both parties' inventories changed. |
+
+**Key Insight:** All item lifecycle events are ontologically irreversible state transitions.
+
+---
+
+#### Category VI: World State Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Zone Reset** | Causal | **DERIVED STATE** | Deterministic event based on timer. Can be recomputed from reset schedule. Not a historical fact. |
+| **Weather/Time Changes** | Causal | **DERIVED STATE** | Computed from world clock. Weather is a function of time and RNG seed. Recomputable. |
+
+**Key Insight:** Scheduled/computed events are not historical facts, even if they affect gameplay.
+
+---
+
+#### Category VII: Communication and Social Events
+
+| Event | Original Classification | OCT Classification | Rationale |
+|-------|------------------------|-------------------|-----------|
+| **Significant Communications** | Causal | **SHADOW-ONLY** | Communication intent/content never persists. Only *consequences* (reputation, contracts) become facts. |
+| **House Purchase** | Causal | **CAUSAL LEDGER** | Irreversible ownership transfer. Payment was made. Property rights established. Cannot be undone without fraud. |
+
+**Key Insight:** Speech is ephemeral; ownership contracts are facts.
+
+---
+
+### Summary: OCT Reclassification
+
+| Category | Causal Ledger | Derived State | Shadow-Only | Notes |
+|----------|--------------|---------------|-------------|-------|
+| **Character Lifecycle** | 3 | 1 | 0 | Creation, Death, Class Change are facts. Level is derived. |
+| **Economic** | 2 | 1 | 0 | Transactions creating obligations are facts. Balance is derived. |
+| **Quest/Achievement** | 1 | 1 | 0 | Quest completion is fact. Skill level is derived. |
+| **Combat** | 1 | 2 | 0 | Death is fact. Damage and reputation are derived. |
+| **Item Lifecycle** | 3 | 0 | 0 | All item lifecycle events are irreversible facts. |
+| **World State** | 0 | 2 | 0 | Scheduled/computed events are not facts. |
+| **Social** | 1 | 0 | 1 | Ownership is fact. Communication is shadow-only. |
+| **TOTAL** | **11** | **7** | **1** | 19 events reclassified |
+
+---
+
+### Critical Findings
+
+**True Causal Ledger Events (11):**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Bank Transactions (deposit/withdraw)
+5. Item Rent/Storage
+6. Quest Completion (non-repeatable)
+7. Kill Events (death of another entity)
+8. Item Creation
+9. Item Destruction
+10. Item Ownership Transfer
+11. House Purchase
+
+**Derived State (7):**
+- Level Advancement (from XP)
+- Currency Balance (from transactions)
+- Skill Proficiency (from practice)
+- Damage Received (from combat log)
+- Reputation (from interactions)
+- Zone Resets (from schedule)
+- Weather/Time (from clock)
+
+**Shadow-Only (1):**
+- Communication Content (intent, never fact)
+
+---
+
+### Implications
+
+**For Implementation:**
+1. Causal Ledger should only persist the **11 core facts**
+2. Derived state can be stored in separate "cache" or "index" systems
+3. Shadow constraints live in prediction/AI systems, never in Ledger
+
+**For System Architecture:**
+```
+Causal Ledger (11 facts)
+    ↓ (recompute)
+Derived State (7 statistics)
+    ↓ (inform)
+Shadow Timeline (possibilities)
+```
+
+**Critical Distinction:**
+> The Ledger records **what happened**. Everything else is either **what it means** (derived) or **what might happen** (shadow).
+
+---
+
+### Ontological Necessity vs. Systemic Importance
+
+**High Importance, NOT Ledger Facts:**
+- Level (important for gameplay, but derived from XP)
+- Reputation (important for AI, but computed from interactions)
+- Currency Balance (important for economy, but sum of transactions)
+
+**Why this matters:**
+> If the Ledger includes derived state, it risks becoming a "high-importance event log" rather than the world's source of truth.
+
+**The Ledger must record what the world cannot afford to forget, not merely what the systems care about.**
+
+---
+
 ## Recommendations
 
-1. **Phase 1 (High Priority)**: Implement logging for character lifecycle and economic events
-2. **Phase 2 (Medium Priority)**: Add quest/achievement and combat event logging
-3. **Phase 3 (Low Priority)**: Implement world state and social event logging
-4. **Phase 4 (Optimization)**: Add causal graph queries and invariant checking
+### Revised Implementation Strategy (Post-OCT)
+
+**Phase 1: Causal Ledger Core (11 Facts)**
+Implement persistence for ontologically irreversible events only:
+1. Character Creation/Death
+2. Class Changes
+3. Bank Transactions (deposits/withdrawals)
+4. Item Rent/Storage Contracts
+5. Quest Completions (non-repeatable)
+6. Kill Events
+7. Item Creation/Destruction/Transfer
+8. House Purchases
+
+**Phase 2: Derived State Caching**
+Implement recomputation and caching for derived statistics:
+- Level (from XP)
+- Currency Balance (from transaction log)
+- Skill Proficiency (from practice history)
+- Reputation (from interaction history)
+- Combat Statistics (from combat log)
+
+**Phase 3: Shadow Timeline Integration**
+Connect Causal Ledger facts to Shadow Timeline predictions:
+- Use facts to constrain possibility space
+- Update predictions when facts commit
+- Maintain separation between what happened (Ledger) and what might happen (Shadow)
+
+**Phase 4: Validation and Auditing**
+- Implement invariant checking against Ledger
+- Build audit tools to explain current state from historical facts
+- Add causal graph queries
+
+### Critical Success Factors
+
+1. **Strict Separation:** Ledger contains ONLY the 11 ontologically irreversible facts
+2. **Recomputation:** Derived state is always computed from Ledger facts, never stored alongside
+3. **No Shortcuts:** Resist temptation to add "convenient" but non-causal events to Ledger
 
 ---
 
 ## Conclusion
 
-This audit identifies **23 distinct event categories** across **7 major domains** that qualify as immutable facts under the Causal Ledger definition. These events define the permanent reality of the Vitalia Reborn world and cannot be erased without introducing paradoxes or invariant violations.
+### Initial Audit (v1.0)
+This audit initially identified **23 distinct event categories** across **7 major domains** that were considered important to gameplay and systems.
 
-The most critical events are:
-1. Character creation and death
-2. Level advancement
-3. Economic transactions (gold, banking)
-4. Quest completions
-5. Item creation and destruction
+### Second-Pass Analysis (v2.0)
+Applying the **Ontological Collapse Test**, we refined this to **11 true Causal Ledger events**:
 
-These events form the backbone of the game's causal reality and should be prioritized for any future Causal Ledger implementation.
+**The 11 Ontologically Irreversible Facts:**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Bank Transactions
+5. Item Rent/Storage Contracts
+6. Quest Completion (non-repeatable)
+7. Kill Events
+8. Item Creation
+9. Item Destruction
+10. Item Ownership Transfer
+11. House Purchase
+
+**Key Principle:**
+> The Causal Ledger records what the world cannot afford to forget—not merely what the systems care about.
+
+**Critical Distinction:**
+- **Causal Ledger** = Ontologically irreversible facts (what happened)
+- **Derived State** = Recomputable consequences (what it means)
+- **Shadow Constraints** = Unrealized possibilities (what might happen)
+
+### Architectural Implication
+
+```
+Causal Ledger (11 facts)
+    ↓ (recompute)
+Derived State (7 statistics: level, balance, reputation, etc.)
+    ↓ (inform)
+Shadow Timeline (possibilities and predictions)
+```
+
+Without this distinction, the Causal Ledger risks becoming a high-importance event log rather than the world's source of truth.
 
 ---
 
@@ -754,9 +1036,14 @@ Key persistent data structures:
 
 ---
 
-**Document Status:** Complete v1.0  
-**Completion Date:** 2026-02-09  
+**Document Status:** Complete v2.0 with OCT Reclassification  
+**Initial Audit:** 2026-02-09  
+**Second Pass (OCT):** 2026-02-11  
 **Author:** GitHub Copilot (Automated Code Analysis)  
 **Audited Codebase:** Vitalia Reborn (tbaMUD/CircleMUD derivative)  
+**Total Events Audited:** 23 events across 7 domains  
+**True Causal Ledger Events:** 11 ontologically irreversible facts  
+**Derived State Events:** 7 recomputable statistics  
+**Shadow-Only Constraints:** 1 unrealized possibility  
 **Total Events Identified:** 23 causal event types across 7 major categories  
 **Total Invariants:** 8 fundamental invariants protected by causal logging
