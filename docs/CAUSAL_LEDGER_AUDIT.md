@@ -95,8 +95,8 @@ A character dies, loses experience, creates a corpse with inventory, and trigger
 
 **Systems That Depend On This:**
 - Experience system (`limits.c:gain_exp()`) - negative experience gain
-- Object lifecycle (`handler.c:make_corpse()`)
-- Reputation/emotion system (`mobact.c:mob_mourn_death()`)
+- Object lifecycle (`fight.c:make_corpse()`)
+- Reputation/emotion system (`utils.c:mob_mourn_death()`)
 - Combat statistics tracking
 - Room event history
 
@@ -131,7 +131,7 @@ A character reaches an experience threshold and advances to a new level, gaining
 
 **Systems That Depend On This:**
 - Zone access restrictions (minimum level requirements)
-- Quest availability (`quest.c:is_eligible_for_quest()`)
+- Quest availability (level-based checks in quest assignment and availability logic)
 - Equipment restrictions (level-based item requirements)
 - Command access (level-gated commands)
 - PVP and combat calculations
@@ -332,7 +332,7 @@ Yes. Skill learning permanently expands the character's action space and affects
 ### Event 4.1: Significant Damage Dealt/Received
 
 **Description:**  
-A character deals or receives significant damage in combat (threshold: >100 HP single hit or >500 HP total encounter).
+A character deals or receives significant damage in combat. For the purposes of this audit, a *proposed* ledger policy is to treat "significant" as damage exceeding approximately 100 HP in a single hit or 500 HP over an encounter; these values are heuristic examples for future scoping and do not reflect current engine invariants or implemented thresholds.
 
 **Why Erasure Would Break Causality:**  
 - Damage affects hit point totals, which are persistent
@@ -427,7 +427,8 @@ Yes. Reputation and emotion changes permanently affect future interactions with 
 An item is created in the world through looting, crafting, quest rewards, or zone resets.
 
 **Why Erasure Would Break Causality:**  
-- Items have unique identities (object IDs)
+- Items are treated as uniquely identifiable in gameplay (ownership, history, and location)
+- In the current engine, persistence is keyed by object prototypes (`obj_vnum` in saved/world files and `obj_rnum item_number` in memory), with only a transient runtime `script_id` from `obj_script_id()`; persistent per-instance IDs are not part of the core object persistence format
 - Items can be observed, picked up, or equipped by multiple characters
 - Item creation affects zone population and economy
 - Quest items enable quest progression
@@ -582,7 +583,8 @@ Public communications (shouts, gossip, auctions) are recorded in communication h
 - Communications establish social relationships
 - Auction bids create financial obligations
 - Public statements can be referenced later
-- Communication history is queryable (`comm_hist[]` in `structs.h`)
+- Recent communication may be available via per-session/channel history (`comm_hist[]` in `structs.h`), which is in-memory and not persisted in player files
+- A durable Causal Ledger for communications would require a separate persistence mechanism beyond `comm_hist[]`
 
 **Systems That Depend On This:**
 - Communication history recall
