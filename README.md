@@ -37,7 +37,7 @@ alias prep cast 'bless';cast 'armor';cast 'shield'
 alias info score;time;who;weather
 ```
 
-See [docs/MULTILINE_ALIASES.md](docs/MULTILINE_ALIASES.md) for detailed documentation and examples.
+See [md-docs/MULTILINE_ALIASES.md](md-docs/MULTILINE_ALIASES.md) for detailed documentation and examples.
 
 ### Genetic Algorithm System
 
@@ -184,13 +184,24 @@ The **Shadow Timeline** (RFC-0003 compliant) is a cognitive future simulation la
 - `SOCIAL`, `TRADE`, `QUEST`, `WAIT`, `FOLLOW`, `GROUP`, `GUARD`
 
 **Enabling Shadow Timeline:**
+
+> **Note:** Builders should use the in-game `medit` editor to configure mob flags. The example below shows the conceptual representation, but actual `.mob` files store flags as encoded bitvector values.
+
+**Recommended method (using `medit` online editor):**
 ```
-# In mob file (.mob):
+1. In-game: medit <vnum>
+2. Choose: F) Mob Flags
+3. Toggle: SHADOWTIMELINE
+4. Save: Q) Quit and save
+```
+
+**Conceptual representation in `.mob` files:**
+```
 #12345
 mob_name~
 short description~
 ...
-ISNPC SHADOWTIMELINE    <-- Add this flag
+ISNPC SHADOWTIMELINE    <-- Conceptual flag representation
 ```
 
 **Example Use Cases:**
