@@ -41,7 +41,7 @@ This document provides comprehensive answers to all questions raised in RFC-1000
 - **Function:** `update_mob_emotion_passive()` runs every 4 seconds (`PULSE_MOB_EMOTION`)
 - **Mechanism:** All emotions drift toward personality/alignment-defined baselines
 - **Decay formula:** `adjust_emotion(mob, &emotion, -rand_number(1, base_decay))`
-- **Adaptive decay:** Extreme emotions (>80) decay 50% faster via `extreme_decay_multiplier` (default 150%)
+- **Adaptive decay:** Extreme emotions (>80) decay at 150% rate (1.5x faster) via `extreme_decay_multiplier`
 - **Global control:** `CONFIG_EMOTION_DECAY_RATE_MULTIPLIER` (50-200%, default 100%)
 
 **Q: Can emotions accumulate indefinitely (trauma model)?**
@@ -248,7 +248,7 @@ actual = rand_number(1, base_decay);           // 1-3
 
 **Q: Should extreme states decay faster by design?**
 
-**A:** **YES, IMPLEMENTED (150% faster by default).**
+**A:** **YES, IMPLEMENTED (at 150% rate, or 1.5x faster by default).**
 - **Design rationale:** Prevents emotional saturation
 - **Default multiplier:** 150% (configurable 100-300%)
 - **Effect:** Emotions naturally stabilize below threshold
@@ -657,12 +657,13 @@ Mob with fear 85 (extreme):
 - Base decay: 2
 - Extreme multiplier: 2 * 150 / 100 = 3
 - Global multiplier: 3 * 100 / 100 = 3
-- Random: rand(1, 3) = average 2 per tick
-- Tick 1: 85 - 2 = 83
-- Tick 2: 83 - 2 = 81
-- Tick 3: 81 - 2 = 79 (below threshold)
-- After ~3 ticks (12 seconds): fear drops to 79
-- Decay rate returns to normal (2), continues toward baseline
+- Random range: rand(1, 3) produces 1-3 per tick
+- Tick 1: rand(1,3)=2 → 85 - 2 = 83
+- Tick 2: rand(1,3)=3 → 83 - 3 = 80
+- Tick 3: rand(1,3)=1 → 80 - 1 = 79 (below threshold)
+- After 3 ticks (12 seconds): fear drops to 79
+- Decay rate returns to normal (rate 2 = rand(1,2) per tick)
+Note: Actual time varies due to randomness (2-6 ticks possible)
 ```
 
 #### Display Thresholds (20 parameters)
