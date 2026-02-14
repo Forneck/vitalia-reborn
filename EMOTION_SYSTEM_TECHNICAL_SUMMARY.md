@@ -187,9 +187,9 @@ flee_at_hp = base_flee_hp + modifier;
 - Pain: 0 → 15-40 (damaged) → 0 (heals over time)
 
 **Decay timeline:**
-- Extreme emotion (90) → below threshold (79) in ~8 ticks (32 seconds)
-- Moderate emotion (60) → baseline (30) in ~15 ticks (60 seconds)
-- Minor emotion (40) → baseline (30) in ~5 ticks (20 seconds)
+- Extreme emotion (90) → below threshold (79) in ~6 ticks (24 seconds) with 150% decay
+- Moderate emotion (60) → baseline (30) in ~15 ticks (60 seconds) with normal decay
+- Minor emotion (40) → baseline (30) in ~5 ticks (20 seconds) with normal decay
 
 ## Event Examples
 

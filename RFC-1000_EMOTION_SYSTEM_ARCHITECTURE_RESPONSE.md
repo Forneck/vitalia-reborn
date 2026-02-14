@@ -657,10 +657,12 @@ Mob with fear 85 (extreme):
 - Base decay: 2
 - Extreme multiplier: 2 * 150 / 100 = 3
 - Global multiplier: 3 * 100 / 100 = 3
-- Random: rand(1, 3) = 2
-- New fear: 85 - 2 = 83 (next tick)
-- After ~8 ticks (32 seconds): fear drops to 79 (below threshold)
-- Decay rate returns to normal (2)
+- Random: rand(1, 3) = average 2 per tick
+- Tick 1: 85 - 2 = 83
+- Tick 2: 83 - 2 = 81
+- Tick 3: 81 - 2 = 79 (below threshold)
+- After ~3 ticks (12 seconds): fear drops to 79
+- Decay rate returns to normal (2), continues toward baseline
 ```
 
 #### Display Thresholds (20 parameters)
