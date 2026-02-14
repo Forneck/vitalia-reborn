@@ -185,6 +185,7 @@ All questions raised in the RFC have been answered with code references, formula
 
 - `RFC-1000_EMOTION_SYSTEM_ARCHITECTURE_RESPONSE.md` - Complete answers to all RFC questions
 - `EMOTION_SYSTEM_TECHNICAL_SUMMARY.md` - Developer quick reference
+- `CEDIT_EMOTION_CONFIGURATION_GUIDE.md` - Administrator cedit guide with examples
 - `EMOTION_CONFIG_SYSTEM.md` - Configuration system details
 - `HYBRID_EMOTION_SYSTEM.md` - Hybrid architecture guide
 - `EMOTION_SYSTEM_TODO.md` - Feature roadmap and future enhancements

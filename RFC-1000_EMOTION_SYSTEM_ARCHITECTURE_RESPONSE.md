@@ -13,7 +13,7 @@ This document provides comprehensive answers to all questions raised in RFC-1000
 
 - **20 distinct emotions** (fear, anger, happiness, sadness, trust, loyalty, love, friendship, courage, compassion, envy, greed, pride, shame, humiliation, pain, horror, disgust, excitement, curiosity)
 - **Hybrid emotion model** (mood + relationship layers)
-- **120+ configuration parameters** (all adjustable via cedit)
+- **120+ configuration parameters** (all adjustable via cedit - see CEDIT_EMOTION_CONFIGURATION_GUIDE.md)
 - **Homeostatic regulation** with personality-based baselines
 - **Memory system** with 10-entry circular buffer per mob
 
@@ -1104,6 +1104,17 @@ weighted_emotion = SUM(emotion * weight) / SUM(weight);
 | Combat (pain) | 30 | 50 | 70 |
 | Trade (trust) | 30 | 60 | N/A |
 | Quest (trust) | 40 | 70 | N/A |
+
+---
+
+## For Administrators
+
+**See CEDIT_EMOTION_CONFIGURATION_GUIDE.md** for:
+- Complete cedit menu navigation
+- Step-by-step configuration examples
+- Preset configurations for different server types
+- Troubleshooting common issues
+- How to test and tune emotion parameters
 
 ---
 
