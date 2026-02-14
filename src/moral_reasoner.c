@@ -17,6 +17,10 @@
 #include "handler.h"
 #include "db.h"
 
+/* Severity calculation constants */
+#define SEVERITY_SCALING_FACTOR 10 /* Divisor for HP-based severity calculation */
+#define DEFAULT_SEVERITY_HARM 5    /* Default severity when victim is unknown */
+
 /* Helper function to check if value indicates yes */
 static bool is_yes(int value) { return value == MORAL_YES; }
 
@@ -342,7 +346,7 @@ void moral_build_scenario_from_action(struct char_data *actor, struct char_data 
             scenario->harm_caused_as_planned = MORAL_YES;
             scenario->mental_state = MENTAL_STATE_INTEND;
             scenario->foreseeability = FORESEEABILITY_HIGH;
-            scenario->severity_harm = victim ? (GET_MAX_HIT(victim) / 10) : 5;
+            scenario->severity_harm = victim ? (GET_MAX_HIT(victim) / SEVERITY_SCALING_FACTOR) : DEFAULT_SEVERITY_HARM;
 
             /* Check if justified by alignment */
             if (victim && IS_EVIL(actor) && IS_GOOD(victim)) {

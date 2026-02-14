@@ -11,7 +11,7 @@ followed by predicate values for that case
 
 Total cases: 202
 - Guilty cases (p0-p101): 102 cases  
-- Innocent cases (n0-n28): 100 cases
+- Innocent cases (n0-n99): 100 cases
 
 Note: This is a reference dataset. The C implementation in moral_reasoner.c
 evaluates scenarios programmatically rather than loading this file.

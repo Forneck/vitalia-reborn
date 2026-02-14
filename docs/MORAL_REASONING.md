@@ -336,7 +336,7 @@ static int score_projection_for_entity(struct char_data *ch,
 The system is validated against 202 test scenarios from the original research:
 
 - **Guilty cases (p0-p101):** 102 scenarios where entity is morally guilty
-- **Innocent cases (n0-n60):** 100 scenarios where entity is innocent
+- **Innocent cases (n0-n99):** 100 scenarios where entity is innocent
 
 Dataset location: `lib/misc/moral_reasoning_dataset.txt`
 
