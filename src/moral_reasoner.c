@@ -421,18 +421,48 @@ void moral_build_scenario_from_action(struct char_data *actor, struct char_data 
             break;
     }
 
-    /* Adjust based on actor's traits if available */
+    /* Adjust based on actor's traits and emotions if available */
     if (IS_NPC(actor) && actor->ai_data) {
         /* Careful mobs are less likely to be reckless/negligent */
-        if (actor->ai_data->genetics.emotional_intelligence > 50) {
+        /* Fear increases carefulness, anger decreases it */
+        int carefulness = actor->ai_data->genetics.emotional_intelligence;
+        carefulness += actor->ai_data->emotion_fear / 5;
+        carefulness -= actor->ai_data->emotion_anger / 5;
+
+        if (carefulness > 50) {
             scenario->careful = MORAL_YES;
         } else {
             scenario->careful = MORAL_NO;
         }
 
-        /* Monitor behavior for mobs with high awareness */
-        if (actor->ai_data->genetics.emotional_intelligence > 70) {
+        /* Monitor behavior for mobs with high awareness or compassion */
+        if (actor->ai_data->genetics.emotional_intelligence > 70 || actor->ai_data->emotion_compassion > 60) {
             scenario->monitor = MORAL_YES;
+        }
+
+        /* High anger can make actions more reckless */
+        if (actor->ai_data->emotion_anger > 70 && !is_no(scenario->careful)) {
+            scenario->mental_state = MENTAL_STATE_RECKLESS;
+        }
+
+        /* High compassion affects harm perception and benefit calculations */
+        if (actor->ai_data->emotion_compassion > 70 && victim) {
+            /* Compassionate mobs perceive harm more severely */
+            scenario->severity_harm = (scenario->severity_harm * 120) / 100;
+        }
+
+        /* Greed affects benefit calculations */
+        if (actor->ai_data->emotion_greed > 60) {
+            scenario->benefit_protagonist = MORAL_YES;
+        }
+
+        /* Love and loyalty affect actions against loved ones */
+        if (victim && (actor->ai_data->emotion_love > 70 || actor->ai_data->emotion_loyalty > 70)) {
+            /* Check if victim is master or follower */
+            if (victim == actor->master || victim->master == actor) {
+                /* Harming loved ones increases severity dramatically */
+                scenario->severity_harm = (scenario->severity_harm * 200) / 100;
+            }
         }
     }
 }
@@ -469,18 +499,75 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
         else if (IS_EVIL(actor)) {
             moral_cost /= 2;
         }
+
+        /* Emotional modifiers for guilty actions */
+        if (IS_NPC(actor) && actor->ai_data) {
+            /* Shame and compassion increase aversion to guilty actions */
+            if (actor->ai_data->emotion_shame > 50) {
+                moral_cost -= (actor->ai_data->emotion_shame - 50) / 2;
+            }
+            if (actor->ai_data->emotion_compassion > 60) {
+                moral_cost -= (actor->ai_data->emotion_compassion - 60) / 3;
+            }
+
+            /* Pride can reduce sensitivity to moral judgments */
+            if (actor->ai_data->emotion_pride > 70) {
+                moral_cost = (moral_cost * 80) / 100; /* 20% reduction */
+            }
+
+            /* Anger can override moral concerns */
+            if (actor->ai_data->emotion_anger > 80) {
+                moral_cost = (moral_cost * 60) / 100; /* 40% reduction when very angry */
+            }
+
+            /* Disgust amplifies moral aversion to certain actions */
+            if (actor->ai_data->emotion_disgust > 60 &&
+                (action_type == MORAL_ACTION_BETRAY || action_type == MORAL_ACTION_DECEIVE)) {
+                moral_cost -= (actor->ai_data->emotion_disgust - 60) / 2;
+            }
+        }
     } else {
         /* Innocent/helpful actions have positive moral value */
         if (action_type == MORAL_ACTION_HELP || action_type == MORAL_ACTION_HEAL) {
             moral_cost = 30;
             if (IS_GOOD(actor))
                 moral_cost += 20;
+
+            /* Compassion and love increase value of helpful actions */
+            if (IS_NPC(actor) && actor->ai_data) {
+                if (actor->ai_data->emotion_compassion > 60) {
+                    moral_cost += (actor->ai_data->emotion_compassion - 60) / 3;
+                }
+                if (actor->ai_data->emotion_love > 60) {
+                    moral_cost += (actor->ai_data->emotion_love - 60) / 4;
+                }
+            }
         } else if (action_type == MORAL_ACTION_SACRIFICE_SELF) {
             moral_cost = 50;
             if (IS_GOOD(actor))
                 moral_cost += 30;
+
+            /* Loyalty and love dramatically increase value of self-sacrifice */
+            if (IS_NPC(actor) && actor->ai_data) {
+                if (actor->ai_data->emotion_loyalty > 70) {
+                    moral_cost += (actor->ai_data->emotion_loyalty - 70) / 2;
+                }
+                if (actor->ai_data->emotion_love > 70) {
+                    moral_cost += (actor->ai_data->emotion_love - 70) / 2;
+                }
+            }
         } else if (action_type == MORAL_ACTION_DEFEND) {
             moral_cost = 20;
+
+            /* Courage and loyalty increase value of defense */
+            if (IS_NPC(actor) && actor->ai_data) {
+                if (actor->ai_data->emotion_courage > 60) {
+                    moral_cost += (actor->ai_data->emotion_courage - 60) / 3;
+                }
+                if (actor->ai_data->emotion_loyalty > 60) {
+                    moral_cost += (actor->ai_data->emotion_loyalty - 60) / 4;
+                }
+            }
         }
     }
 
@@ -536,6 +623,77 @@ void moral_adjust_reputation(struct char_data *ch, struct moral_judgment *judgme
 
     /* Apply change with bounds checking */
     ch->ai_data->reputation = MAX(0, MIN(100, ch->ai_data->reputation + reputation_change));
+}
+
+/**
+ * Update mob's emotions based on moral judgment
+ * Emotional responses to moral actions create realistic psychological feedback
+ */
+void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment)
+{
+    if (!ch || !judgment || !IS_NPC(ch) || !ch->ai_data)
+        return;
+
+    /* Guilty actions trigger shame and potentially other negative emotions */
+    if (judgment->guilty == MORAL_JUDGMENT_GUILTY) {
+        /* Shame increases for guilty actions, especially for good-aligned mobs */
+        int shame_increase = judgment->blameworthiness_score / 10;
+        if (IS_GOOD(ch)) {
+            shame_increase = (shame_increase * 150) / 100; /* 50% more shame for good mobs */
+        } else if (IS_EVIL(ch)) {
+            shame_increase = (shame_increase * 40) / 100; /* Evil mobs feel less shame */
+        }
+        ch->ai_data->emotion_shame = MIN(100, ch->ai_data->emotion_shame + shame_increase);
+
+        /* Disgust with self for particularly egregious actions */
+        if (judgment->blameworthiness_score > 70) {
+            ch->ai_data->emotion_disgust = MIN(100, ch->ai_data->emotion_disgust + 5);
+        }
+
+        /* Guilt reduces happiness */
+        ch->ai_data->emotion_happiness = MAX(0, ch->ai_data->emotion_happiness - shame_increase / 2);
+
+        /* If action harmed loved ones, increase sadness and reduce love/loyalty */
+        if (judgment->was_responsible && judgment->blameworthiness_score > 50) {
+            ch->ai_data->emotion_sadness = MIN(100, ch->ai_data->emotion_sadness + shame_increase / 3);
+        }
+
+        /* Pride might decrease for good-aligned mobs who act badly */
+        if (IS_GOOD(ch)) {
+            ch->ai_data->emotion_pride = MAX(0, ch->ai_data->emotion_pride - shame_increase / 2);
+        }
+    } else {
+        /* Innocent/moral actions trigger positive emotions */
+
+        /* Pride increases for morally good actions */
+        if (judgment->responsibility_score > 50) {
+            int pride_increase = judgment->responsibility_score / 15;
+            if (IS_GOOD(ch)) {
+                pride_increase = (pride_increase * 120) / 100;
+            }
+            ch->ai_data->emotion_pride = MIN(100, ch->ai_data->emotion_pride + pride_increase);
+
+            /* Happiness increases from doing good */
+            ch->ai_data->emotion_happiness = MIN(100, ch->ai_data->emotion_happiness + pride_increase / 2);
+
+            /* Shame decreases when doing good deeds */
+            ch->ai_data->emotion_shame = MAX(0, ch->ai_data->emotion_shame - pride_increase / 3);
+        }
+
+        /* Compassionate actions reinforce compassion */
+        if (judgment->responsibility_score > 40 && !judgment->was_justified) {
+            /* Pure altruistic actions increase compassion */
+            ch->ai_data->emotion_compassion = MIN(100, ch->ai_data->emotion_compassion + 2);
+        }
+    }
+
+    /* Vicarious responsibility creates complex emotions */
+    if (judgment->was_vicarious) {
+        /* Shame for failing to prevent harm by subordinates */
+        ch->ai_data->emotion_shame = MIN(100, ch->ai_data->emotion_shame + 5);
+        /* Anger at subordinate who caused the problem */
+        ch->ai_data->emotion_anger = MIN(100, ch->ai_data->emotion_anger + 3);
+    }
 }
 
 /**

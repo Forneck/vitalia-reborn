@@ -1,12 +1,13 @@
 # Moral Reasoning System
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Production Ready  
 **Integration Date:** 2026-02-14  
+**Emotion Integration:** 2026-02-14
 
 ## Overview
 
-The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions, leading to more realistic and nuanced decision-making behavior.
+The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment with full integration of the 20-emotion mob AI system. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions while being influenced by and influencing their emotional states, leading to highly realistic and nuanced decision-making behavior.
 
 ## Theory Background
 
@@ -251,6 +252,68 @@ void moral_adjust_reputation(struct char_data *ch, struct moral_judgment *judgme
 - **Good-aligned mobs:** Lose reputation from guilty acts, gain from moral acts
 - **Neutral mobs:** Minor adjustments
 
+### Emotion System Integration
+
+**Version 1.1** - The moral reasoning system is fully integrated with the 20-emotion mob AI system:
+
+```c
+void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment)
+```
+
+#### Emotions Influence Moral Decisions
+
+**During Action Evaluation:**
+- **Compassion** (>70): Increases perceived harm severity by 20%, enhances monitoring
+- **Anger** (>70): Reduces carefulness, increases recklessness
+- **Fear** (>50): Increases carefulness by 20%
+- **Greed** (>60): Marks actions as self-beneficial
+- **Love/Loyalty** (>70): Dramatically increases harm severity (2x) when harming loved ones
+- **Pride** (>70): Reduces moral sensitivity by 20%
+- **Shame** (>50): Increases aversion to guilty actions
+- **Disgust** (>60): Amplifies aversion to betrayal and deception
+
+**Moral Cost Modifiers by Emotion:**
+
+For **Guilty Actions**:
+- Shame: Additional -1 to -25 penalty (based on shame level)
+- Compassion: Additional -1 to -13 penalty (based on compassion level)
+- Pride: 20% reduction in moral concern
+- Anger: Up to 40% reduction when very angry (>80)
+- Disgust: Additional penalty for betrayal/deception
+
+For **Helpful Actions**:
+- Compassion: +1 to +13 bonus for helping/healing
+- Love: +1 to +7 bonus for helping/healing
+- Loyalty: +1 to +15 bonus for self-sacrifice and defense
+- Courage: +1 to +13 bonus for defense
+
+#### Emotions Updated by Moral Judgments
+
+**After Guilty Actions:**
+- **Shame** increases (10-15 for good mobs, 4 for evil mobs)
+- **Disgust** increases (+5 for severe actions)
+- **Happiness** decreases (proportional to shame)
+- **Sadness** increases (for severe harm)
+- **Pride** decreases (for good-aligned mobs)
+
+**After Moral Actions:**
+- **Pride** increases (+5-8 for responsible actions)
+- **Happiness** increases (half of pride increase)
+- **Shame** decreases (fades with good deeds)
+- **Compassion** increases (+2 for altruistic acts)
+
+**Vicarious Responsibility:**
+- **Shame** +5 (failing to prevent subordinate's harm)
+- **Anger** +3 (at the subordinate)
+
+#### Emotion-Driven Behavior Examples
+
+1. **High Compassion + Low Shame** → More likely to help, heal, sacrifice
+2. **High Anger + Low Fear** → More likely to attack despite moral cost
+3. **High Shame + High Compassion** → Strong aversion to harmful actions
+4. **High Pride + Low Shame** → Less concerned with moral judgments
+5. **High Love/Loyalty** → Will not harm loved ones, increased defense
+
 ### Action Filtering
 
 Mobs with strong moral convictions filter actions inconsistent with their identity:
@@ -285,10 +348,10 @@ int moral_cost = moral_evaluate_action_cost(mob, target, MORAL_ACTION_ATTACK);
 /* If target is innocent and mob is good, moral_cost will be very negative */
 ```
 
-### Example 2: Post-Action Judgment
+### Example 2: Post-Action Judgment with Emotions
 
 ```c
-/* After mob performs an action, evaluate morality */
+/* After mob performs an action, evaluate morality and update emotions */
 struct moral_scenario scenario;
 struct moral_judgment judgment;
 
@@ -298,19 +361,40 @@ moral_build_scenario_from_action(mob, victim, MORAL_ACTION_ATTACK, &scenario);
 /* Evaluate guilt */
 moral_evaluate_guilt(&scenario, &judgment);
 
-/* Update mob's alignment and reputation */
+/* Update mob's alignment, reputation, and emotions */
 moral_adjust_alignment(mob, &judgment);
 moral_adjust_reputation(mob, &judgment);
+moral_adjust_emotions(mob, &judgment);  /* NEW: Emotions respond to moral actions */
 
 /* Log for debugging */
 if (judgment.guilty) {
-    log("Mob %s found guilty (blame: %d, resp: %d)",
+    log("Mob %s found guilty (blame: %d, resp: %d), shame increased to %d",
         GET_NAME(mob), judgment.blameworthiness_score,
-        judgment.responsibility_score);
+        judgment.responsibility_score, mob->ai_data->emotion_shame);
 }
 ```
 
-### Example 3: Shadow Timeline Integration
+### Example 3: Emotion-Influenced Decision
+
+```c
+/* Compassionate mob evaluating whether to heal ally */
+struct char_data *healer = ...;
+struct char_data *injured_ally = ...;
+
+/* High compassion increases moral value of healing */
+int moral_cost = moral_evaluate_action_cost(healer, injured_ally, MORAL_ACTION_HEAL);
+/* Returns base 30, +20 for good alignment, +13 for compassion (80) = 63 */
+
+/* Angry mob evaluating whether to attack despite moral concerns */
+struct char_data *angry_mob = ...;  /* emotion_anger = 85 */
+struct char_data *target = ...;
+
+int moral_cost = moral_evaluate_action_cost(angry_mob, target, MORAL_ACTION_ATTACK);
+/* Returns negative value (guilty), but reduced by 40% due to high anger */
+/* Anger overrides moral inhibitions */
+```
+
+### Example 4: Shadow Timeline Integration
 
 Shadow Timeline automatically evaluates moral costs when generating action projections:
 
@@ -419,25 +503,30 @@ The implementation passes all 202 test cases from the original dataset when manu
 
 ## Future Enhancements
 
-1. **Emotional Response Integration**
-   - Link moral judgments to emotional changes (guilt, shame, pride)
-   - Mobs with high compassion could feel worse about guilty actions
+1. ~~**Emotional Response Integration**~~ ✅ **COMPLETED (v1.1)**
+   - ✅ Moral judgments trigger emotional changes (guilt, shame, pride)
+   - ✅ Emotions influence moral decision-making (compassion, anger, fear)
+   - ✅ 20-emotion system fully integrated with moral reasoning
 
 2. **Memory-Based Moral Learning**
    - Track moral judgments in emotion_memory system
    - Bias future decisions based on past moral outcomes
+   - Learn from moral mistakes and successes
 
 3. **Group Moral Dynamics**
    - Evaluate collective responsibility
    - Peer pressure and moral conformity
+   - Moral reputation within groups
 
 4. **Complex Scenarios**
    - Multi-agent moral dilemmas
    - Trolley problem style situations
+   - Moral trade-offs with multiple victims
 
 5. **Cultural Moral Variation**
    - Different mob factions with varying moral frameworks
    - Alignment-specific moral weights
+   - Cultural relativism in moral judgments
 
 ## References
 
@@ -445,6 +534,7 @@ The implementation passes all 202 test cases from the original dataset when manu
 2. Shadow Timeline System (RFC-0003) - `docs/SHADOW_TIMELINE.md`
 3. Mob AI Architecture - `md-docs/MOBACT_REVIEW_SUMMARY.md`
 4. Reputation System - `md-docs/REPUTATION_SYSTEM.md`
+5. Emotion System - 20-emotion mob AI integrated with moral reasoning
 
 ## Files
 

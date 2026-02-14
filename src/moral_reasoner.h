@@ -252,6 +252,14 @@ void moral_adjust_alignment(struct char_data *ch, struct moral_judgment *judgmen
 void moral_adjust_reputation(struct char_data *ch, struct moral_judgment *judgment);
 
 /**
+ * Update mob's emotions based on moral judgment of action performed
+ * Mobs feel shame for guilty actions, pride for moral actions, etc.
+ * @param ch The mob whose emotions to update
+ * @param judgment The moral judgment of their action
+ */
+void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment);
+
+/**
  * Check if mob's moral conviction would prevent action
  * Used to filter out actions that conflict with moral identity
  * @param ch The mob
