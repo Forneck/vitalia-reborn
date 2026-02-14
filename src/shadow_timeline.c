@@ -28,6 +28,7 @@
 #include "handler.h"
 #include "db.h"
 #include "shadow_timeline.h"
+#include "moral_reasoner.h"
 #include "act.h"
 #include "fight.h"
 #include "graph.h"
@@ -797,6 +798,43 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
     }
 
     int score = proj->outcome.score;
+    int moral_cost = 0;
+
+    /* Apply moral reasoning to action evaluation */
+    if (IS_NPC(ch) && proj->action.target) {
+        struct char_data *target = (struct char_data *)proj->action.target;
+        int action_type = MORAL_ACTION_ATTACK; /* Default */
+
+        /* Map shadow action types to moral action types */
+        switch (proj->action.type) {
+            case SHADOW_ACTION_ATTACK:
+                action_type = MORAL_ACTION_ATTACK;
+                break;
+            case SHADOW_ACTION_TRADE:
+                action_type = MORAL_ACTION_TRADE;
+                break;
+            case SHADOW_ACTION_SOCIAL:
+                action_type = MORAL_ACTION_HELP;
+                break;
+            case SHADOW_ACTION_FLEE:
+                /* Fleeing could be abandoning allies */
+                if (ch->master || ch->followers) {
+                    action_type = MORAL_ACTION_ABANDON_ALLY;
+                } else {
+                    action_type = MORAL_ACTION_DEFEND;
+                }
+                break;
+            default:
+                action_type = -1; /* No moral evaluation */
+                break;
+        }
+
+        /* Evaluate moral cost if applicable */
+        if (action_type >= 0) {
+            moral_cost = moral_evaluate_action_cost(ch, target, action_type);
+            score += moral_cost;
+        }
+    }
 
     /* Adjust based on entity's emotional state */
     if (ch->ai_data) {
@@ -818,6 +856,11 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         /* Goal-oriented bonus */
         if (proj->outcome.achieves_goal) {
             score += 50;
+        }
+
+        /* Compassion influences helping behavior */
+        if (ch->ai_data->emotion_compassion > 60 && proj->action.type == SHADOW_ACTION_SOCIAL) {
+            score += 15;
         }
     }
 
