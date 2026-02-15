@@ -255,6 +255,20 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD;
     OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH;
 
+    /* Emotion decay rate configuration */
+    OLC_CONFIG(d)->emotion_config.decay_rate_multiplier = CONFIG_EMOTION_DECAY_RATE_MULTIPLIER;
+    OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold = CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier = CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER;
+    OLC_CONFIG(d)->emotion_config.decay_rate_fear = CONFIG_EMOTION_DECAY_RATE_FEAR;
+    OLC_CONFIG(d)->emotion_config.decay_rate_anger = CONFIG_EMOTION_DECAY_RATE_ANGER;
+    OLC_CONFIG(d)->emotion_config.decay_rate_happiness = CONFIG_EMOTION_DECAY_RATE_HAPPINESS;
+    OLC_CONFIG(d)->emotion_config.decay_rate_sadness = CONFIG_EMOTION_DECAY_RATE_SADNESS;
+    OLC_CONFIG(d)->emotion_config.decay_rate_pain = CONFIG_EMOTION_DECAY_RATE_PAIN;
+    OLC_CONFIG(d)->emotion_config.decay_rate_horror = CONFIG_EMOTION_DECAY_RATE_HORROR;
+    OLC_CONFIG(d)->emotion_config.decay_rate_disgust = CONFIG_EMOTION_DECAY_RATE_DISGUST;
+    OLC_CONFIG(d)->emotion_config.decay_rate_shame = CONFIG_EMOTION_DECAY_RATE_SHAME;
+    OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = CONFIG_EMOTION_DECAY_RATE_HUMILIATION;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -472,6 +486,20 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low;
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod;
     CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH = OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high;
+
+    /* Emotion decay rate configuration */
+    CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = OLC_CONFIG(d)->emotion_config.decay_rate_multiplier;
+    CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold;
+    CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier;
+    CONFIG_EMOTION_DECAY_RATE_FEAR = OLC_CONFIG(d)->emotion_config.decay_rate_fear;
+    CONFIG_EMOTION_DECAY_RATE_ANGER = OLC_CONFIG(d)->emotion_config.decay_rate_anger;
+    CONFIG_EMOTION_DECAY_RATE_HAPPINESS = OLC_CONFIG(d)->emotion_config.decay_rate_happiness;
+    CONFIG_EMOTION_DECAY_RATE_SADNESS = OLC_CONFIG(d)->emotion_config.decay_rate_sadness;
+    CONFIG_EMOTION_DECAY_RATE_PAIN = OLC_CONFIG(d)->emotion_config.decay_rate_pain;
+    CONFIG_EMOTION_DECAY_RATE_HORROR = OLC_CONFIG(d)->emotion_config.decay_rate_horror;
+    CONFIG_EMOTION_DECAY_RATE_DISGUST = OLC_CONFIG(d)->emotion_config.decay_rate_disgust;
+    CONFIG_EMOTION_DECAY_RATE_SHAME = OLC_CONFIG(d)->emotion_config.decay_rate_shame;
+    CONFIG_EMOTION_DECAY_RATE_HUMILIATION = OLC_CONFIG(d)->emotion_config.decay_rate_humiliation;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
