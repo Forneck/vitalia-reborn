@@ -6374,10 +6374,12 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (mob_count > 0 && total_fear > 0) {
         int avg_fear = total_fear / mob_count;
         /* Transfer 5-10% of average fear (stronger in larger crowds) */
-        int fear_transfer = (avg_fear * rand_number(5, 10)) / 100;
+	int diff = avg_fear - mob->ai_data->emotion_fear;
+        int rate = rand_number(5,10);
         /* Bonus contagion in crowds (3+ mobs) */
         if (mob_count >= 3)
-            fear_transfer += rand_number(1, 3);
+            rate += rand_number(1, 3);
+	int fear_transfer = (diff * rand_number(5, 10)) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_fear, fear_transfer);
     }
 
@@ -6385,10 +6387,12 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (mob_count >= 2 && total_happiness > 0) {
         int avg_happiness = total_happiness / mob_count;
         /* Transfer 8-15% of average happiness (very contagious) */
-        int happiness_transfer = (avg_happiness * rand_number(8, 15)) / 100;
+        int diff = avg_happiness - mob->ai_data->emotion_happiness;
+        int rate = rand_number(8, 15);
         /* Stronger in larger crowds */
         if (mob_count >= 4)
-            happiness_transfer += rand_number(2, 4);
+          rate += rand_number(2, 4);  /* aumenta taxa, não valor fixo */
+        int happiness_transfer = (diff * rate) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, happiness_transfer);
     }
 
@@ -6396,7 +6400,8 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (mob_count > 0 && total_anger > 0) {
         int avg_anger = total_anger / mob_count;
         /* Transfer 3-7% of average anger (moderate contagion) */
-        int anger_transfer = (avg_anger * rand_number(3, 7)) / 100;
+        int diff = avg_anger - mob->ai_data->emotion_anger;
+        int anger_transfer = (diff * rand_number(3, 7)) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_anger, anger_transfer);
     }
 
@@ -6404,7 +6409,8 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (mob_count >= 2 && total_excitement > 0) {
         int avg_excitement = total_excitement / mob_count;
         /* Transfer 7-12% of average excitement */
-        int excitement_transfer = (avg_excitement * rand_number(7, 12)) / 100;
+        int diff = avg_excitement - mob->ai_data->emotion_excitement;
+        int excitement_transfer = (diff * rand_number(7, 12)) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, excitement_transfer);
     }
 
@@ -6414,13 +6420,15 @@ void update_mob_emotion_contagion(struct char_data *mob)
         /* Fear spreads VERY strongly among group members */
         int avg_group_fear = group_fear / group_member_count;
         /* Transfer 12-20% of group fear (much stronger than crowd) */
-        int group_fear_transfer = (avg_group_fear * rand_number(12, 20)) / 100;
+        int diff_fear = avg_group_fear - mob->ai_data->emotion_fear;
+        int group_fear_transfer = (diff_fear * rand_number(12, 20)) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_fear, group_fear_transfer);
 
         /* Happiness spreads well in groups (bonding) */
         int avg_group_happiness = group_happiness / group_member_count;
         /* Transfer 10-15% of group happiness */
-        int group_happiness_transfer = (avg_group_happiness * rand_number(10, 15)) / 100;
+        int diff_happiness = avg_group_happiness - mob->ai_data->emotion_happiness;
+        int group_happiness_transfer = (diff_happiness * rand_number(10, 15)) / 100;
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, group_happiness_transfer);
     }
 
@@ -6429,26 +6437,33 @@ void update_mob_emotion_contagion(struct char_data *mob)
     if (has_leader) {
         /* Leader's fear has double influence */
         if (leader_fear > 50) {
-            int leader_fear_transfer = (leader_fear * rand_number(15, 25)) / 100;
+            int diff_fear = leader_fear - mob->ai_data->emotion_fear;
+            int leader_fear_transfer = (diff_fear * rand_number(15, 25)) / 100;
+
             adjust_emotion(mob, &mob->ai_data->emotion_fear, leader_fear_transfer);
         }
 
         /* Leader's courage (low fear) also influences */
         if (leader_fear < 30) {
-            int courage_transfer = rand_number(3, 8);
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, -courage_transfer);
-            adjust_emotion(mob, &mob->ai_data->emotion_courage, courage_transfer / 2);
+           int diff_fear = leader_fear - mob->ai_data->emotion_fear;
+           int courage_transfer = (diff_fear * rand_number(10, 20)) / 100;
+
+           adjust_emotion(mob, &mob->ai_data->emotion_fear, courage_transfer);
+           adjust_emotion(mob, &mob->ai_data->emotion_courage, -courage_transfer / 2);
         }
 
         /* Leader's happiness/morale influences followers */
         if (leader_happiness > 50) {
-            int leader_happiness_transfer = (leader_happiness * rand_number(12, 20)) / 100;
-            adjust_emotion(mob, &mob->ai_data->emotion_happiness, leader_happiness_transfer);
+           int diff_happiness = leader_happiness - mob->ai_data->emotion_happiness;
+           int leader_happiness_transfer = (diff_happiness * rand_number(12, 20)) / 100;
+
+           adjust_emotion(mob, &mob->ai_data->emotion_happiness, leader_happiness_transfer);
         }
 
         /* Leader's anger can rile up followers */
         if (leader_anger > 60) {
-            int leader_anger_transfer = (leader_anger * rand_number(10, 18)) / 100;
+            int diff_anger = leader_anger - mob->ai_data->emotion_anger;
+            int leader_anger_transfer = (diff_anger * rand_number(10, 18)) / 100;
             adjust_emotion(mob, &mob->ai_data->emotion_anger, leader_anger_transfer);
         }
     }
