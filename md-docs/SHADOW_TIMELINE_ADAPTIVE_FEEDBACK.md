@@ -377,8 +377,8 @@ case SHADOW_ACTION_FLEE:
 - Minimal overhead (~50 CPU cycles for feedback update)
 
 ### Memory Footprint
-- **4 integers + 1 boolean** = 17 bytes per mob
-- Total Shadow Timeline memory: ~1 KB per active mob
+- **4 integers + 1 boolean (+padding)** — typically ~16–24 bytes per mob, depending on platform and struct alignment
+- Total Shadow Timeline memory: on the order of ~1 KB per active mob (exact value is platform- and build-dependent)
 - No persistent storage required
 
 ### Numerical Stability
