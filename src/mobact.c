@@ -77,6 +77,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
 bool validate_goal_obj(struct char_data *ch);
+bool shadow_should_activate(struct char_data *ch)
 
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
@@ -628,7 +629,7 @@ void mobile_activity(void)
         /* RFC-0003 §6.2: Entity must have internal decision logic and action selection */
         /* Only for mobs with SHADOWTIMELINE flag and sufficient cognitive capacity */
         if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
-            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
+            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN && shadow_should_activate(ch)) {
             struct shadow_action action;
 
             /* RFC-0003 §5.1: Shadow Timeline proposes possibilities, never asserts facts */
@@ -5753,4 +5754,50 @@ bool mob_use_bank(struct char_data *ch)
     }
 
     return FALSE; /* No banking action taken */
+}
+
+bool shadow_should_activate(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data)
+        return FALSE;
+
+    int cap = ch->ai_data->cognitive_capacity;
+    if (cap < 50)
+        return FALSE;
+
+    int curiosity = ch->ai_data->emotion_curiosity;
+    int fear      = ch->ai_data->emotion_fear;
+    int greed     = ch->ai_data->emotion_greed;
+
+    /* --- Base motivational drive --- */
+    int base_drive =
+        (curiosity * 5) / 10 +   /* 0.5 */
+        (fear      * 7) / 10 +   /* 0.7 */
+        (greed     * 4) / 10;    /* 0.4 */
+
+    /* --- Context multiplier --- */
+    int multiplier = 100; /* 1.0 */
+
+    if (FIGHTING(ch))
+        multiplier += 60;
+
+    if (GET_HIT(ch) < GET_MAX_HIT(ch) / 3)
+        multiplier += 30;
+
+    int interest = (base_drive * multiplier) / 100;
+
+    /* --- Fatigue scaling --- */
+    interest = (interest * cap) / 1000;
+
+    /* --- Novelty immediate boost --- */
+    int novelty = ch->ai_data->recent_prediction_error;
+    interest += novelty / 3;
+
+    /* --- Attention bias (long-term adaptation) --- */
+    interest += ch->ai_data->attention_bias;
+
+    /* --- Dynamic threshold --- */
+    int threshold = rand_number(60, 120);
+
+    return interest > threshold;
 }

@@ -1251,6 +1251,9 @@ struct mob_ai_data {
 
     /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
     int cognitive_capacity; /* Available cognitive capacity for projections (0-1000) */
+
+    int recent_prediction_error;  /* 0–100 média suavizada */
+    int attention_bias;           /* -50 a +50 */
 };
 
 /**
