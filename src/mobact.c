@@ -77,7 +77,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
 bool validate_goal_obj(struct char_data *ch);
-bool shadow_should_activate(struct char_data *ch)
+bool shadow_should_activate(struct char_data *ch);
 
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
@@ -646,8 +646,8 @@ void mobile_activity(void)
 /* Helper macro for evaluating feedback before continuing */
 #define SHADOW_FEEDBACK_AND_CONTINUE()                                                                                 \
     do {                                                                                                               \
-        int real_score = shadow_evaluate_real_outcome(ch);                                                            \
-        shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);                                    \
+        int real_score = shadow_evaluate_real_outcome(ch);                                                             \
+        shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);                                     \
         continue;                                                                                                      \
     } while (0)
 
@@ -5789,14 +5789,13 @@ bool shadow_should_activate(struct char_data *ch)
         return FALSE;
 
     int curiosity = ch->ai_data->emotion_curiosity;
-    int fear      = ch->ai_data->emotion_fear;
-    int greed     = ch->ai_data->emotion_greed;
+    int fear = ch->ai_data->emotion_fear;
+    int greed = ch->ai_data->emotion_greed;
 
     /* --- Base motivational drive --- */
-    int base_drive =
-        (curiosity * 5) / 10 +   /* 0.5 */
-        (fear      * 7) / 10 +   /* 0.7 */
-        (greed     * 4) / 10;    /* 0.4 */
+    int base_drive = (curiosity * 5) / 10 + /* 0.5 */
+                     (fear * 7) / 10 +      /* 0.7 */
+                     (greed * 4) / 10;      /* 0.4 */
 
     /* --- Context multiplier --- */
     int multiplier = 100; /* 1.0 */

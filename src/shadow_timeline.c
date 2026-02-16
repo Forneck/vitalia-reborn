@@ -1245,8 +1245,8 @@ int shadow_evaluate_real_outcome(struct char_data *ch)
 }
 
 /**
- * Update prediction error feedback with precision weighting
- * Implements adaptive learning through prediction-error signals
+ * Update prediction error feedback with precision weighting and valence-specific adaptation
+ * Implements adaptive learning through prediction-error signals with asymmetric learning
  * @param ch The entity
  * @param real_score The actual outcome score
  * @param obvious Whether the outcome was obvious/predictable
@@ -1254,7 +1254,7 @@ int shadow_evaluate_real_outcome(struct char_data *ch)
 void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
 {
     int predicted;
-    int error;
+    int signed_error;
     int novelty;
     int delta_bias;
 
@@ -1262,19 +1262,38 @@ void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
         return;
     }
 
-    /* Step 1: Calculate raw prediction error */
+    /* Step 1: Calculate signed prediction error (valence-specific) */
     predicted = ch->ai_data->last_predicted_score;
-    error = abs(real_score - predicted);
+    signed_error = real_score - predicted;
 
-    /* Step 2: Apply precision weighting (Option B - Boolean obvious) */
-    novelty = MIN(error, 100);
+    /* Step 2: Base novelty from absolute error */
+    novelty = MIN(abs(signed_error), 100);
 
+    /* Step 3: Apply valence-specific weighting (asymmetric learning) */
+    /* Negative surprises (threats) are amplified - models loss aversion */
+    if (signed_error < 0) {
+        novelty = (novelty * 130) / 100; /* 30% amplification for threats */
+    }
+    /* Positive surprises (rewards) are slightly dampened */
+    else if (signed_error > 0) {
+        novelty = (novelty * 90) / 100; /* 10% reduction for rewards */
+    }
+
+    /* Step 4: Apply precision weighting (predictability modulation) */
     if (obvious) {
         /* 30% reduction for obvious outcomes */
         novelty = (novelty * 70) / 100;
     }
 
-    /* Step 3: Update smoothed prediction error (70% memory, 30% new signal) */
+    /* Clamp novelty to [0, 100] after all modifications */
+    if (novelty > 100) {
+        novelty = 100;
+    }
+    if (novelty < 0) {
+        novelty = 0;
+    }
+
+    /* Step 5: Update smoothed prediction error (70% memory, 30% new signal) */
     ch->ai_data->recent_prediction_error = (ch->ai_data->recent_prediction_error * 7 + novelty * 3) / 10;
 
     /* Ensure bounded [0, 100] */
@@ -1285,7 +1304,7 @@ void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
         ch->ai_data->recent_prediction_error = 0;
     }
 
-    /* Step 4: Update attention bias (long-term adaptation) */
+    /* Step 6: Update attention bias (long-term adaptation) */
     delta_bias = (novelty - 50) / 15;
     ch->ai_data->attention_bias += delta_bias;
 
