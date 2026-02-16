@@ -643,7 +643,10 @@ void mobile_activity(void)
                 /* RFC-0003 §4.2: Execute action in live world (Shadow Timeline never mutates) */
                 /* RFC-0003 §5.2: Action chosen from hypothetical, probabilistic projections */
 
-/* Helper macro for evaluating feedback before continuing */
+                /* Helper macro for evaluating feedback before continuing
+                 * NOTE: Intentionally scoped locally - references 'ch' from enclosing scope
+                 * and uses 'continue' which is specific to this loop context.
+                 * Cannot be moved to header without breaking encapsulation. */
 #define SHADOW_FEEDBACK_AND_CONTINUE()                                                                                 \
     do {                                                                                                               \
         int real_score = shadow_evaluate_real_outcome(ch);                                                             \
