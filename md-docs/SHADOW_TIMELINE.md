@@ -2,9 +2,22 @@
 
 **RFC-0003 COMPLIANT**  
 **Implementation:** RFC-0001 (completed 2026-02-07)  
+**Enhancement:** Adaptive Feedback (completed 2026-02-16)  
 **Architecture:** RFC-0003 (normative 2026-02-09)  
 **Status:** Production Ready  
-**Version:** 1.0  
+**Version:** 1.1  
+
+---
+
+## Latest Enhancement: Adaptive Feedback System ✨
+
+**NEW (2026-02-16):** The Shadow Timeline now includes a complete prediction-error feedback loop with valence-specific learning. This enhancement enables mobs to:
+- Learn from prediction accuracy
+- Adapt cognitive resource allocation based on environmental predictability
+- Model biological loss aversion (threats weighted +30%, rewards -10%)
+- Exhibit emergent vigilance adaptation
+
+**📖 See [SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md](SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md) for complete details.**
 
 ---
 
@@ -21,6 +34,8 @@ See **RFC_0003_DEFINITION.md** for the authoritative architectural specification
 The Shadow Timeline is a non-authoritative, observational domain that allows autonomous entities (players and mobs) to internally explore possible future outcomes of actions without modifying the real world state.
 
 This system formalizes what currently exists implicitly (player foresight and heuristic AI decisions) into a system-level construct that improves realism, plausibility, and decision quality.
+
+With the **Adaptive Feedback enhancement**, the system now closes the cognitive loop: **Project → Act → Observe → Compare → Adapt**
 
 **Key RFC-0003 Principles:**
 - **Non-authoritative** (§5.1) - Proposes possibilities, never asserts facts
@@ -130,6 +145,24 @@ struct shadow_context {
 };
 ```
 
+#### Adaptive Feedback Fields (mob_ai_data)
+**NEW (2026-02-16):** Added to `struct mob_ai_data`:
+```c
+/* Shadow Timeline - Adaptive Feedback System */
+int last_predicted_score;    /* Score predicted for chosen action (-100 to 100) */
+int last_hp_snapshot;        /* HP before action execution */
+int last_real_score;         /* Last evaluated real outcome (-100 to 100) */
+bool last_outcome_obvious;   /* Whether the last outcome was obvious/predictable */
+int recent_prediction_error; /* 0-100 smoothed novelty (exponentially smoothed) */
+int attention_bias;          /* -50 to +50 long-term adaptation */
+```
+
+These fields enable:
+- **Prediction-error learning**: Compare predicted vs. actual outcomes
+- **Valence-specific adaptation**: Amplify threats, dampen rewards
+- **Precision weighting**: Reduce learning from obvious outcomes
+- **Vigilance modulation**: Adapt activation frequency to environment
+
 ---
 
 ## Cognitive Capacity Model
@@ -137,11 +170,14 @@ struct shadow_context {
 Each cognitive entity has:
 - **K_e(t)**: Available cognitive capacity (0-1000)
 - **cost(π)**: Cost to simulate a projection
+- **recent_prediction_error**: Smoothed novelty signal (0-100) ✨ NEW
+- **attention_bias**: Long-term vigilance adaptation (-50 to +50) ✨ NEW
 
 ### Constraints
 - Sum of projection costs ≤ cognitive capacity
 - Capacity regenerates over time (50 per tick)
 - Entities differ in capacity based on emotional intelligence
+- **Activation frequency adapts** to prediction accuracy ✨ NEW
 
 ### Capacity Formula
 ```
@@ -429,17 +465,38 @@ Invalid actions are rejected with specific error codes:
 
 ---
 
+## Implemented Features
+
+### ✅ Phase 1: Core Shadow Timeline (2026-02-07)
+- [x] Projection generation and scoring
+- [x] Cognitive capacity system
+- [x] Invariant validation
+- [x] Subjectivity modeling
+- [x] Action execution integration
+
+### ✅ Phase 2: Adaptive Feedback (2026-02-16)
+- [x] **Learning from projection accuracy** ✨
+- [x] Prediction-error feedback loop
+- [x] Valence-specific adaptation (loss aversion)
+- [x] Precision weighting (obvious outcomes)
+- [x] Vigilance modulation (attention bias)
+- [x] Cognitive resource conservation
+
+**See [SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md](SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md) for details.**
+
+---
+
 ## Future Extensions
 
 The following are planned but not yet implemented:
 
-### Phase 6 Features
+### Phase 3 Features (Future)
 - [ ] Causal Ledger integration (record actual past)
 - [ ] Temporal Authority Layer hooks (decide what becomes real)
 - [ ] Player-accessible foresight mechanics
 - [ ] Multi-step planning with dependency chains
 - [ ] Collaborative projections (group decision-making)
-- [ ] Learning from projection accuracy
+- [ ] Confidence-based precision weighting (continuous confidence scores)
 
 ---
 
@@ -468,13 +525,28 @@ shadow_dump_context(ctx);
 
 ## Implementation Files
 
+| File | Description | Version |
+|------|-------------|---------|
+| `src/shadow_timeline.h` | Header with types and API | 1.1 (adds feedback functions) |
+| `src/shadow_timeline.c` | Core implementation | 1.1 (adds feedback logic) |
+| `src/structs.h` | Cognitive fields in `mob_ai_data` | 1.1 (adds feedback fields) |
+| `src/quest.c` | Initialize cognitive capacity in `init_mob_ai_data()` | 1.0 |
+| `src/mobact.c` | Capacity regen and feedback integration | 1.1 (adds feedback evaluation) |
+
+### New Functions (v1.1)
+- `shadow_evaluate_real_outcome()` - Compute real outcome score
+- `shadow_update_feedback()` - Update prediction error and attention bias
+
+---
+
+## Documentation Files
+
 | File | Description |
 |------|-------------|
-| `src/shadow_timeline.h` | Header with types and API |
-| `src/shadow_timeline.c` | Core implementation |
-| `src/structs.h` | Added `cognitive_capacity` to `mob_ai_data` |
-| `src/quest.c` | Initialize cognitive capacity in `init_mob_ai_data()` |
-| `src/mobact.c` | Regenerate capacity in `mobile_activity()` |
+| `md-docs/SHADOW_TIMELINE.md` | Main Shadow Timeline documentation (this file) |
+| `md-docs/SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md` | Adaptive feedback system details ✨ NEW |
+| `md-docs/RFC_0001_IMPLEMENTATION_SUMMARY.md` | Implementation summary |
+| `md-docs/RFC_0003_DEFINITION.md` | Normative specification |
 
 ---
 
@@ -483,6 +555,7 @@ shadow_dump_context(ctx);
 - **RFC-0003:** Shadow Timeline — Definition, Scope, and Authority (normative specification)
 - **RFC-0001:** Shadow Timeline Implementation Summary (design document)
 - **RFC-0002:** Shadow Timeline Questions (architectural analysis)
+- **SHADOW_TIMELINE_ADAPTIVE_FEEDBACK.md:** Feedback system documentation ✨ NEW
 - **docs/INVARIANTS_ANALYSIS.md:** Invariant system documentation
 - Emotion System (`mob_ai_data` emotions)
 - Genetic Traits System (`mob_genetics`)

@@ -1187,8 +1187,132 @@ bool mob_shadow_choose_action(struct char_data *ch, struct shadow_action *out_ac
     /* Copy selected action to caller-provided storage */
     *out_action = best->action;
 
+    /* Store predicted score and outcome flags for feedback system */
+    if (ch->ai_data) {
+        ch->ai_data->last_predicted_score = best->outcome.score;
+        ch->ai_data->last_outcome_obvious = best->outcome.obvious;
+    }
+
     /* Free context */
     shadow_free_context(ctx);
 
     return TRUE;
+}
+
+/**
+ * Evaluate real outcome after action execution
+ * Computes a score based on actual state changes
+ * @param ch The entity that executed the action
+ * @return Real outcome score (-100 to 100)
+ */
+int shadow_evaluate_real_outcome(struct char_data *ch)
+{
+    int real_score;
+    int hp_delta;
+
+    if (!ch || !ch->ai_data) {
+        return 0;
+    }
+
+    /* Compute HP delta */
+    hp_delta = GET_HIT(ch) - ch->ai_data->last_hp_snapshot;
+
+    /* Base score is HP delta */
+    real_score = hp_delta;
+
+    /* Apply penalties for negative situations */
+    if (FIGHTING(ch)) {
+        real_score -= 10;
+    }
+
+    /* Penalty for being at low HP (< 25% max) */
+    if (GET_HIT(ch) < GET_MAX_HIT(ch) / 4) {
+        real_score -= 20;
+    }
+
+    /* Clamp result to [-100, 100] */
+    if (real_score > 100) {
+        real_score = 100;
+    }
+    if (real_score < -100) {
+        real_score = -100;
+    }
+
+    /* Store in ai_data */
+    ch->ai_data->last_real_score = real_score;
+
+    return real_score;
+}
+
+/**
+ * Update prediction error feedback with precision weighting and valence-specific adaptation
+ * Implements adaptive learning through prediction-error signals with asymmetric learning
+ * @param ch The entity
+ * @param real_score The actual outcome score
+ * @param obvious Whether the outcome was obvious/predictable
+ */
+void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
+{
+    int predicted;
+    int signed_error;
+    int novelty;
+    int delta_bias;
+
+    if (!ch || !ch->ai_data) {
+        return;
+    }
+
+    /* Step 1: Calculate signed prediction error (valence-specific) */
+    predicted = ch->ai_data->last_predicted_score;
+    signed_error = real_score - predicted;
+
+    /* Step 2: Base novelty from absolute error */
+    novelty = MIN(abs(signed_error), 100);
+
+    /* Step 3: Apply valence-specific weighting (asymmetric learning) */
+    /* Negative surprises (threats) are amplified - models loss aversion */
+    if (signed_error < 0) {
+        novelty = (novelty * 130) / 100; /* 30% amplification for threats */
+    }
+    /* Positive surprises (rewards) are slightly dampened */
+    else if (signed_error > 0) {
+        novelty = (novelty * 90) / 100; /* 10% reduction for rewards */
+    }
+
+    /* Step 4: Apply precision weighting (predictability modulation) */
+    if (obvious) {
+        /* 30% reduction for obvious outcomes */
+        novelty = (novelty * 70) / 100;
+    }
+
+    /* Clamp novelty to [0, 100] after all modifications */
+    if (novelty > 100) {
+        novelty = 100;
+    }
+    if (novelty < 0) {
+        novelty = 0;
+    }
+
+    /* Step 5: Update smoothed prediction error (70% memory, 30% new signal) */
+    ch->ai_data->recent_prediction_error = (ch->ai_data->recent_prediction_error * 7 + novelty * 3) / 10;
+
+    /* Ensure bounded [0, 100] */
+    if (ch->ai_data->recent_prediction_error > 100) {
+        ch->ai_data->recent_prediction_error = 100;
+    }
+    if (ch->ai_data->recent_prediction_error < 0) {
+        ch->ai_data->recent_prediction_error = 0;
+    }
+
+    /* Step 6: Update attention bias (long-term adaptation) */
+    delta_bias = (novelty - 50) / 15;
+    ch->ai_data->attention_bias += delta_bias;
+
+    /* Clamp attention bias to [-50, 50] */
+    if (ch->ai_data->attention_bias > 50) {
+        ch->ai_data->attention_bias = 50;
+    }
+    if (ch->ai_data->attention_bias < -50) {
+        ch->ai_data->attention_bias = -50;
+    }
 }

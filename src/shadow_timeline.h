@@ -290,4 +290,23 @@ void shadow_dump_context(struct shadow_context *ctx);
  */
 bool mob_shadow_choose_action(struct char_data *ch, struct shadow_action *out_action);
 
+/* Shadow Timeline Adaptive Feedback System */
+
+/**
+ * Evaluate real outcome after action execution
+ * Computes a score based on actual state changes
+ * @param ch The entity that executed the action
+ * @return Real outcome score (-100 to 100)
+ */
+int shadow_evaluate_real_outcome(struct char_data *ch);
+
+/**
+ * Update prediction error feedback with precision weighting
+ * Implements adaptive learning through prediction-error signals
+ * @param ch The entity
+ * @param real_score The actual outcome score
+ * @param obvious Whether the outcome was obvious/predictable
+ */
+void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious);
+
 #endif /* _SHADOW_TIMELINE_H_ */
