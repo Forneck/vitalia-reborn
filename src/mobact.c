@@ -631,19 +631,33 @@ void mobile_activity(void)
         if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
             ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN && shadow_should_activate(ch)) {
             struct shadow_action action;
+            bool shadow_action_executed = FALSE;
 
             /* RFC-0003 §5.1: Shadow Timeline proposes possibilities, never asserts facts */
             /* Use Shadow Timeline to choose next action based on non-authoritative projection */
             if (mob_shadow_choose_action(ch, &action)) {
+                /* Capture pre-execution HP snapshot for feedback system */
+                ch->ai_data->last_hp_snapshot = GET_HIT(ch);
+                shadow_action_executed = TRUE;
+
                 /* RFC-0003 §4.2: Execute action in live world (Shadow Timeline never mutates) */
                 /* RFC-0003 §5.2: Action chosen from hypothetical, probabilistic projections */
+
+/* Helper macro for evaluating feedback before continuing */
+#define SHADOW_FEEDBACK_AND_CONTINUE()                                                                                 \
+    do {                                                                                                               \
+        int real_score = shadow_evaluate_real_outcome(ch);                                                            \
+        shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);                                    \
+        continue;                                                                                                      \
+    } while (0)
+
                 /* Execute the chosen action based on type */
                 switch (action.type) {
                     case SHADOW_ACTION_MOVE:
                         /* Attempt movement in projected direction */
                         if (action.direction >= 0 && action.direction < NUM_OF_DIRS) {
                             perform_move(ch, action.direction, 1);
-                            continue; /* Skip rest of mob_activity for this mob */
+                            SHADOW_FEEDBACK_AND_CONTINUE(); /* Evaluate feedback and skip rest of mob_activity */
                         }
                         break;
 
@@ -654,7 +668,7 @@ void mobile_activity(void)
                             /* Verify target still exists and is in same room */
                             if (IN_ROOM(target) == IN_ROOM(ch)) {
                                 hit(ch, target, TYPE_UNDEFINED);
-                                continue; /* Skip rest of mob_activity */
+                                SHADOW_FEEDBACK_AND_CONTINUE(); /* Evaluate feedback and skip rest of mob_activity */
                             }
                         }
                         break;
@@ -663,7 +677,7 @@ void mobile_activity(void)
                         /* Flee if we're actually in combat */
                         if (FIGHTING(ch)) {
                             do_flee(ch, "", 0, 0);
-                            continue;
+                            SHADOW_FEEDBACK_AND_CONTINUE();
                         }
                         break;
 
@@ -691,12 +705,12 @@ void mobile_activity(void)
                                     act("$n bebe $p.", TRUE, ch, obj, 0, TO_ROOM);
                                     /* Apply potion effects would go here */
                                     extract_obj(obj);
-                                    continue;
+                                    SHADOW_FEEDBACK_AND_CONTINUE();
                                 } else if (GET_OBJ_TYPE(obj) == ITEM_FOOD) {
                                     /* Eat food */
                                     act("$n come $p.", TRUE, ch, obj, 0, TO_ROOM);
                                     extract_obj(obj);
-                                    continue;
+                                    SHADOW_FEEDBACK_AND_CONTINUE();
                                 }
                             }
                         }
@@ -720,7 +734,7 @@ void mobile_activity(void)
                                         act("$n conjura uma magia contra você!", TRUE, ch, 0, target, TO_VICT);
                                         /* Spell damage would go here */
                                         GET_MANA(ch) -= 20;
-                                        continue;
+                                        SHADOW_FEEDBACK_AND_CONTINUE();
                                     }
                                 } else if (is_ally) {
                                     /* Try to heal ally */
@@ -729,7 +743,7 @@ void mobile_activity(void)
                                         act("$n conjura uma magia de cura em você!", TRUE, ch, 0, target, TO_VICT);
                                         GET_HIT(target) = MIN(GET_MAX_HIT(target), GET_HIT(target) + 30);
                                         GET_MANA(ch) -= 15;
-                                        continue;
+                                        SHADOW_FEEDBACK_AND_CONTINUE();
                                     }
                                 }
                             }
@@ -757,7 +771,7 @@ void mobile_activity(void)
                             /* Try to complete quest if mob has active quest */
                             if (ch->ai_data->current_quest != NOTHING) {
                                 mob_complete_quest(ch);
-                                continue;
+                                SHADOW_FEEDBACK_AND_CONTINUE();
                             }
                             /* Otherwise, look for available quest to accept */
                             /* Quest acceptance logic would check nearby questmasters */
@@ -778,7 +792,7 @@ void mobile_activity(void)
                                     stop_follower(ch);
                                 }
                                 add_follower(ch, leader);
-                                continue;
+                                SHADOW_FEEDBACK_AND_CONTINUE();
                             }
                         }
                         break;
@@ -799,7 +813,7 @@ void mobile_activity(void)
                                     if (IS_NPC(potential_member) && ch->ai_data) {
                                         ch->ai_data->emotion_loyalty = MIN(100, ch->ai_data->emotion_loyalty + 5);
                                     }
-                                    continue;
+                                    SHADOW_FEEDBACK_AND_CONTINUE();
                                 }
                             }
                         }
@@ -807,18 +821,27 @@ void mobile_activity(void)
 
                     case SHADOW_ACTION_WAIT:
                         /* Intentionally wait/do nothing this tick */
-                        continue;
+                        SHADOW_FEEDBACK_AND_CONTINUE();
 
                     case SHADOW_ACTION_GUARD:
                         /* Stand guard at post - sentinel duty fulfilled */
                         /* No action needed, just maintain vigilance */
-                        continue;
+                        SHADOW_FEEDBACK_AND_CONTINUE();
 
                     default:
                         /* Other action types not yet implemented in mob_activity */
                         break;
                 }
+
+                /* For actions that didn't continue, evaluate feedback here */
+                if (shadow_action_executed) {
+                    int real_score = shadow_evaluate_real_outcome(ch);
+                    shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);
+                }
             }
+
+#undef SHADOW_FEEDBACK_AND_CONTINUE
+
             /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
             /* Projection context has been freed by mob_shadow_choose_action */
         }
