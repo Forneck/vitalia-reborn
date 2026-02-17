@@ -845,7 +845,17 @@ void mobile_activity(void)
 
             /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
             /* Projection context has been freed by mob_shadow_choose_action */
-            continue; /* Skip rest of mob_activity for this mob */
+            
+            /* Only skip normal goal processing if Shadow Timeline successfully executed an action.
+             * If ST didn't handle the action (shadow_action_executed == FALSE), fall through to
+             * normal goal processing. This allows mobs with active goals (like GOAL_COMPLETE_QUEST)
+             * to continue processing their goals even when Shadow Timeline is enabled but doesn't
+             * provide an appropriate action. This prevents mobs from getting stuck when they accept
+             * a quest but Shadow Timeline doesn't handle quest processing. */
+            if (shadow_action_executed) {
+                continue; /* Skip rest of mob_activity for this mob */
+            }
+            /* Otherwise, fall through to normal goal processing below */
 
         shadow_feedback_and_continue:
             /* Evaluate feedback for actions that successfully executed */
