@@ -1,14 +1,15 @@
 # Moral Reasoning System
 
-**Version:** 1.2  
+**Version:** 1.3  
 **Status:** Production Ready  
 **Integration Date:** 2026-02-14  
 **Emotion Integration:** 2026-02-14  
-**Memory-Based Learning:** 2026-02-16
+**Memory-Based Learning:** 2026-02-16  
+**Group Moral Dynamics:** 2026-02-17
 
 ## Overview
 
-The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment with full integration of the 20-emotion mob AI system and memory-based learning. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions, learn from past moral decisions, and adjust future behavior based on experienced outcomes, leading to highly realistic, adaptive, and nuanced decision-making behavior.
+The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment with full integration of the 20-emotion mob AI system, memory-based learning, and group moral dynamics. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions individually and collectively, learn from past moral decisions, navigate peer pressure and conformity, and build group moral reputations, leading to highly realistic, adaptive, socially-aware, and nuanced decision-making behavior.
 
 ## Theory Background
 
@@ -516,10 +517,14 @@ The implementation passes all 202 test cases from the original dataset when manu
    - ✅ Regret calculation from emotional consequences
    - ✅ Learned avoidance patterns for harmful actions
 
-3. **Group Moral Dynamics**
-   - Evaluate collective responsibility
-   - Peer pressure and moral conformity
-   - Moral reputation within groups
+3. ~~**Group Moral Dynamics**~~ ✅ **COMPLETED (v1.3)**
+   - ✅ Evaluate collective responsibility
+   - ✅ Peer pressure and moral conformity
+   - ✅ Group moral reputation tracking
+   - ✅ Leader influence on moral decisions
+   - ✅ Dissent detection for strong convictions
+   - ✅ Inter-group reputation effects
+   - See: `md-docs/GROUP_MORAL_DYNAMICS.md`
 
 4. **Complex Scenarios**
    - Multi-agent moral dilemmas
