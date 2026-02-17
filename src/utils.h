@@ -1520,4 +1520,16 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_DECAY_RATE_SHAME config_info.emotion_config.decay_rate_shame
 #define CONFIG_EMOTION_DECAY_RATE_HUMILIATION config_info.emotion_config.decay_rate_humiliation
 
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+#define CONFIG_NEUROTICISM_GAIN_FEAR config_info.emotion_config.neuroticism_gain_fear
+#define CONFIG_NEUROTICISM_GAIN_SADNESS config_info.emotion_config.neuroticism_gain_sadness
+#define CONFIG_NEUROTICISM_GAIN_SHAME config_info.emotion_config.neuroticism_gain_shame
+#define CONFIG_NEUROTICISM_GAIN_HUMILIATION config_info.emotion_config.neuroticism_gain_humiliation
+#define CONFIG_NEUROTICISM_GAIN_PAIN config_info.emotion_config.neuroticism_gain_pain
+#define CONFIG_NEUROTICISM_GAIN_HORROR config_info.emotion_config.neuroticism_gain_horror
+#define CONFIG_NEUROTICISM_GAIN_DISGUST config_info.emotion_config.neuroticism_gain_disgust
+#define CONFIG_NEUROTICISM_GAIN_ENVY config_info.emotion_config.neuroticism_gain_envy
+#define CONFIG_NEUROTICISM_GAIN_ANGER config_info.emotion_config.neuroticism_gain_anger
+#define CONFIG_NEUROTICISM_SOFT_CLAMP_K config_info.emotion_config.neuroticism_soft_clamp_k
+
 #endif /* _UTILS_H_ */

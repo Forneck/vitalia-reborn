@@ -359,3 +359,18 @@ int special_in_comm = YES;
 
 /* Current Debug Mode */
 int debug_mode = YES;
+
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism
+ * Beta values stored as int * 100 (e.g., 0.40 = 40, 0.25 = 25, 0.20 = 20)
+ * These control how much Neuroticism amplifies negative emotions
+ * Formula: E_raw = E_base * (1.0 + (beta * N)) */
+int neuroticism_gain_fear = 40;        /* 0.40 - Primary threat */
+int neuroticism_gain_sadness = 40;     /* 0.40 - Loss/withdrawal */
+int neuroticism_gain_shame = 40;       /* 0.40 - Self-directed negative */
+int neuroticism_gain_humiliation = 40; /* 0.40 - Social degradation */
+int neuroticism_gain_pain = 40;        /* 0.40 - Physical suffering */
+int neuroticism_gain_horror = 40;      /* 0.40 - Extreme aversion */
+int neuroticism_gain_disgust = 25;     /* 0.25 - Moderate aversion */
+int neuroticism_gain_envy = 25;        /* 0.25 - Comparison-based negative */
+int neuroticism_gain_anger = 20;       /* 0.20 - Approach-oriented negative */
+int neuroticism_soft_clamp_k = 50;     /* Soft saturation constant */

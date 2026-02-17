@@ -5772,7 +5772,7 @@ float apply_soft_saturation_clamp(float raw_value)
         return 0.0f;
 
     const float threshold = 80.0f;
-    const float k = EMOTION_SOFT_CLAMP_K;
+    const float k = (float)CONFIG_NEUROTICISM_SOFT_CLAMP_K;
     const float headroom = 20.0f; /* Space from threshold to 100 */
 
     /* No compression below threshold */
@@ -5809,39 +5809,40 @@ float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_v
 
     /* Determine β (gain coefficient) based on emotion type
      * Only negative/aversive emotions get amplified
+     * Beta values are stored as int * 100, so divide by 100.0 to get float
      */
     switch (emotion_type) {
         /* Full gain emotions (β = 0.4) - primary threat responses */
         case EMOTION_TYPE_FEAR:
-            beta = NEUROTICISM_GAIN_FEAR;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_FEAR / 100.0f;
             break;
         case EMOTION_TYPE_SADNESS:
-            beta = NEUROTICISM_GAIN_SADNESS;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_SADNESS / 100.0f;
             break;
         case EMOTION_TYPE_SHAME:
-            beta = NEUROTICISM_GAIN_SHAME;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_SHAME / 100.0f;
             break;
         case EMOTION_TYPE_HUMILIATION:
-            beta = NEUROTICISM_GAIN_HUMILIATION;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_HUMILIATION / 100.0f;
             break;
         case EMOTION_TYPE_PAIN:
-            beta = NEUROTICISM_GAIN_PAIN;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_PAIN / 100.0f;
             break;
         case EMOTION_TYPE_HORROR:
-            beta = NEUROTICISM_GAIN_HORROR;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_HORROR / 100.0f;
             break;
 
         /* Reduced gain emotions (β = 0.25) - secondary aversive */
         case EMOTION_TYPE_DISGUST:
-            beta = NEUROTICISM_GAIN_DISGUST;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_DISGUST / 100.0f;
             break;
         case EMOTION_TYPE_ENVY:
-            beta = NEUROTICISM_GAIN_ENVY;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_ENVY / 100.0f;
             break;
 
         /* Lower gain emotions (β = 0.2) - approach-oriented negative */
         case EMOTION_TYPE_ANGER:
-            beta = NEUROTICISM_GAIN_ANGER;
+            beta = (float)CONFIG_NEUROTICISM_GAIN_ANGER / 100.0f;
             break;
 
         /* Positive emotions - no amplification */

@@ -1054,34 +1054,6 @@ struct mob_personality {
 };
 
 /**
- * Neuroticism Gain Configuration Constants
- * β values control how much Neuroticism amplifies negative emotions
- * Formula: E_raw = E_base * (1.0 + (β * N))
- *
- * These values are tuned based on emotion type:
- * - High gain (0.4): Primary threat emotions
- * - Medium gain (0.25): Secondary aversive emotions
- * - Lower gain (0.2): Arousal-based negative emotions
- */
-#define NEUROTICISM_GAIN_FEAR 0.4f        /* Fear - primary threat response */
-#define NEUROTICISM_GAIN_SADNESS 0.4f     /* Sadness - loss/withdrawal */
-#define NEUROTICISM_GAIN_SHAME 0.4f       /* Shame - self-directed negative */
-#define NEUROTICISM_GAIN_HUMILIATION 0.4f /* Humiliation - social degradation */
-#define NEUROTICISM_GAIN_PAIN 0.4f        /* Pain - physical suffering */
-#define NEUROTICISM_GAIN_HORROR 0.4f      /* Horror - extreme aversion */
-#define NEUROTICISM_GAIN_DISGUST 0.25f    /* Disgust - moderate aversion */
-#define NEUROTICISM_GAIN_ENVY 0.25f       /* Envy - comparison-based negative */
-#define NEUROTICISM_GAIN_ANGER 0.2f       /* Anger - approach-oriented negative */
-
-/**
- * Soft Saturation Constant
- * Used in rational soft clamp: E_eff = (100 + k) * (E_raw / (E_raw + k))
- * k = 50 provides smooth compression as values approach 100
- * Prevents hard caps while maintaining 0-100 scale
- */
-#define EMOTION_SOFT_CLAMP_K 50.0f
-
-/**
  * Estrutura para um item desejado na wishlist de um mob
  */
 struct mob_wishlist_item {
@@ -2049,6 +2021,20 @@ struct emotion_config_data {
     int decay_rate_disgust;     /**< Disgust decay rate (default: 2) */
     int decay_rate_shame;       /**< Shame decay rate - slower (default: 1) */
     int decay_rate_humiliation; /**< Humiliation decay rate - slower (default: 1) */
+
+    /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+    /* Neuroticism gain coefficients (β values) - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    int neuroticism_gain_fear;        /**< Fear gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_sadness;     /**< Sadness gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_shame;       /**< Shame gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_humiliation; /**< Humiliation gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_pain;        /**< Pain gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_horror;      /**< Horror gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_disgust;     /**< Disgust gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_envy;        /**< Envy gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_anger;       /**< Anger gain coefficient β * 100 (default: 20 = 0.20) */
+    int neuroticism_soft_clamp_k;     /**< Soft saturation constant k (default: 50) */
 };
 
 /** Experimental Features configuration. */

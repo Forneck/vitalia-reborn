@@ -97,6 +97,19 @@ extern int default_minimap_size;
 
 extern int medit_advanced_stats;
 extern int ibt_autosave;
+
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+extern int neuroticism_gain_fear;
+extern int neuroticism_gain_sadness;
+extern int neuroticism_gain_shame;
+extern int neuroticism_gain_humiliation;
+extern int neuroticism_gain_pain;
+extern int neuroticism_gain_horror;
+extern int neuroticism_gain_disgust;
+extern int neuroticism_gain_envy;
+extern int neuroticism_gain_anger;
+extern int neuroticism_soft_clamp_k;
+
 /*
  * Variables not controlled by cedit
  */
