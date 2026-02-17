@@ -1,13 +1,14 @@
 # Moral Reasoning System
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** Production Ready  
 **Integration Date:** 2026-02-14  
-**Emotion Integration:** 2026-02-14
+**Emotion Integration:** 2026-02-14  
+**Memory-Based Learning:** 2026-02-16
 
 ## Overview
 
-The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment with full integration of the 20-emotion mob AI system. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions while being influenced by and influencing their emotional states, leading to highly realistic and nuanced decision-making behavior.
+The Moral Reasoning System implements Shultz & Daley's rule-based model for qualitative moral judgment with full integration of the 20-emotion mob AI system and memory-based learning. It enables mobs in Vitalia Reborn to evaluate the moral implications of their actions, learn from past moral decisions, and adjust future behavior based on experienced outcomes, leading to highly realistic, adaptive, and nuanced decision-making behavior.
 
 ## Theory Background
 
@@ -508,10 +509,12 @@ The implementation passes all 202 test cases from the original dataset when manu
    - ✅ Emotions influence moral decision-making (compassion, anger, fear)
    - ✅ 20-emotion system fully integrated with moral reasoning
 
-2. **Memory-Based Moral Learning**
-   - Track moral judgments in emotion_memory system
-   - Bias future decisions based on past moral outcomes
-   - Learn from moral mistakes and successes
+2. ~~**Memory-Based Moral Learning**~~ ✅ **COMPLETED (v1.2)**
+   - ✅ Track moral judgments in emotion_memory system
+   - ✅ Bias future decisions based on past moral outcomes
+   - ✅ Learn from moral mistakes and successes
+   - ✅ Regret calculation from emotional consequences
+   - ✅ Learned avoidance patterns for harmful actions
 
 3. **Group Moral Dynamics**
    - Evaluate collective responsibility
@@ -527,6 +530,351 @@ The implementation passes all 202 test cases from the original dataset when manu
    - Different mob factions with varying moral frameworks
    - Alignment-specific moral weights
    - Cultural relativism in moral judgments
+
+## Memory-Based Moral Learning (v1.2)
+
+**Version:** 1.2  
+**Status:** Production Ready  
+**Integration Date:** 2026-02-16
+
+### Overview
+
+Mobs now learn from their past moral decisions and adjust future behavior based on experienced outcomes. This creates dynamic, adaptive moral behavior that evolves through experience rather than relying solely on static rules.
+
+### Architecture
+
+#### Extended emotion_memory Structure
+
+Each emotion memory entry now tracks moral judgment information:
+
+```c
+struct emotion_memory {
+    /* ... existing emotion fields ... */
+    
+    /* Moral judgment tracking */
+    sh_int moral_action_type;        /* Type of moral action (MORAL_ACTION_*) or -1 */
+    sh_int moral_was_guilty;         /* 1 if guilty, 0 if innocent, -1 if not evaluated */
+    sh_int moral_blameworthiness;    /* Blameworthiness score (0-100) or -1 */
+    sh_int moral_outcome_severity;   /* Actual outcome severity (0-100) or -1 */
+    sh_int moral_regret_level;       /* Regret from emotional consequences (0-100) */
+};
+```
+
+### Learning Mechanism
+
+#### 1. Recording Moral Judgments
+
+```c
+void moral_record_action(struct char_data *actor, struct char_data *target, int action_type);
+```
+
+Call this function after a mob completes a moral action:
+- Evaluates moral judgment for the action
+- Stores judgment in emotion memory with full emotional snapshot
+- Calculates regret level from emotional consequences
+- Updates alignment and reputation
+
+**Example:**
+```c
+/* After mob attacks someone */
+hit(mob, victim, TYPE_UNDEFINED);
+moral_record_action(mob, victim, MORAL_ACTION_ATTACK);
+```
+
+#### 2. Learning from Past Actions
+
+```c
+int moral_get_learned_bias(struct char_data *ch, int action_type);
+```
+
+Returns bias adjustment (-100 to +100) based on past experiences:
+- **Negative bias**: Past guilty actions with high regret → avoid repeating
+- **Positive bias**: Past innocent actions with positive outcomes → encourage repeating
+- **Weighted by recency**: Recent memories (< 5 min) have more influence
+- **Weighted by severity**: Major events have double weight
+
+**Learning Patterns:**
+
+```
+Guilty action + High regret (>70) + High severity (>60)
+    → Strong negative bias (-80 to -100)
+    → "I learned this action causes harm and suffering"
+
+Innocent action + Low regret (<20) + High happiness (>60)
+    → Positive bias (+40 to +60)
+    → "This action makes me feel good and helps others"
+```
+
+#### 3. Learned Avoidance
+
+```c
+bool moral_has_learned_avoidance(struct char_data *ch, int action_type);
+```
+
+Returns TRUE when mob has strongly learned to avoid an action:
+- At least 2 guilty judgments with 0 innocent ones, OR
+- At least 3 instances with high regret (>70)
+
+When learned avoidance is triggered:
+- Additional -50 penalty to action cost
+- Action may be filtered out entirely by Shadow Timeline
+
+#### 4. Regret Calculation
+
+```c
+int moral_calculate_regret(struct char_data *ch, int pre_shame, int pre_disgust, int pre_happiness);
+```
+
+Calculates regret (0-100) from emotional changes after action:
+- **Shame increase × 2**: Primary indicator of moral regret
+- **Disgust increase × 1**: Self-disgust reinforces regret
+- **Happiness decrease ÷ 2**: Lost happiness indicates negative outcome
+
+### Integration with Shadow Timeline
+
+When projecting actions, learned biases are automatically applied:
+
+```c
+int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim, int action_type)
+{
+    /* ... standard moral evaluation ... */
+    
+    /* Apply memory-based learning bias */
+    int learned_bias = moral_get_learned_bias(actor, action_type);
+    moral_cost += learned_bias;
+    
+    /* Strong learned avoidance adds penalty */
+    if (moral_has_learned_avoidance(actor, action_type)) {
+        moral_cost -= 50;
+    }
+    
+    return moral_cost;
+}
+```
+
+### Memory Decay and Recency
+
+Moral learning respects memory decay:
+- **< 5 minutes**: 100% weight (very fresh memory)
+- **< 15 minutes**: 80% weight (recent)
+- **< 30 minutes**: 60% weight (fading)
+- **< 60 minutes**: 40% weight (old)
+- **> 60 minutes**: Ignored (forgotten)
+
+This creates realistic learning where:
+- Recent experiences dominate decision-making
+- Old mistakes are gradually forgotten
+- Repeated patterns strengthen learning
+
+### Behavioral Effects by Alignment
+
+#### Good-Aligned Mobs
+- Learn quickly to avoid harming innocents
+- High shame/regret amplifies learning
+- Positive reinforcement from helping others
+- May refuse actions with learned negative outcomes
+
+**Example Learning Path:**
+```
+1. Attack innocent NPC → Guilty + High shame → Regret = 85
+2. Try again → Learned bias = -65 → Less likely to attack
+3. Third time → Learned avoidance = TRUE → Strong rejection
+```
+
+#### Evil-Aligned Mobs
+- Learn less from moral guilt (lower shame sensitivity)
+- Focus on outcome efficiency rather than morality
+- May still learn to avoid actions with negative personal consequences
+- Positive outcomes reinforce immoral behavior
+
+**Example Learning Path:**
+```
+1. Steal from strong NPC → Guilty but caught → Regret = 30 (outcome-based)
+2. Steal again → Learned bias = -20 → Slight discouragement
+3. Steal successfully → No regret → Bias neutralized
+```
+
+#### Neutral Mobs
+- Balanced learning from both moral and practical outcomes
+- Moderate shame/regret responses
+- Learn to optimize for overall benefit
+
+### Usage Examples
+
+#### Example 1: Simple Action Recording
+
+```c
+/* Mob performs attack */
+void mob_attack_target(struct char_data *mob, struct char_data *victim)
+{
+    /* Execute attack */
+    hit(mob, victim, TYPE_UNDEFINED);
+    
+    /* Record moral judgment for learning */
+    moral_record_action(mob, victim, MORAL_ACTION_ATTACK);
+}
+```
+
+#### Example 2: Checking Learned Patterns
+
+```c
+/* Before deciding to attack, check if mob has learned to avoid this */
+if (moral_has_learned_avoidance(mob, MORAL_ACTION_ATTACK)) {
+    /* Mob has learned attacking is harmful - skip this action */
+    return;
+}
+```
+
+#### Example 3: Shadow Timeline Integration (Automatic)
+
+```c
+/* Shadow Timeline automatically uses learned biases when scoring actions */
+struct shadow_context *ctx = shadow_init_context(mob);
+shadow_generate_projections(ctx);  /* Includes moral learning in scoring */
+struct shadow_projection *best = shadow_select_best_action(ctx);
+```
+
+#### Example 4: Inspecting Learning History
+
+```c
+/* Get history for debugging or display */
+int guilty_count = 0, innocent_count = 0;
+moral_get_action_history(mob, MORAL_ACTION_ATTACK, &guilty_count, &innocent_count);
+
+log("Mob %s attack history: %d guilty, %d innocent",
+    GET_NAME(mob), guilty_count, innocent_count);
+```
+
+### Learning Scenarios
+
+#### Scenario 1: Good Mob Learns Compassion
+
+**Initial State:**
+- Good-aligned guard (alignment +700)
+- Attacks thief on sight (standard behavior)
+
+**Learning Process:**
+1. **First attack:** Thief was stealing food for family
+   - Judgment: Guilty (attacking justified need)
+   - Shame increases: 15 → 45 (+30)
+   - Regret: 60
+   - Memory stored
+
+2. **Second attack:** Different thief, similar situation
+   - Learned bias: -45 (remembers regret)
+   - Still attacks but with hesitation
+   - Shame increases: 45 → 70 (+25)
+   - Regret: 55
+   - Memory updated
+
+3. **Third consideration:** Another hungry thief
+   - Learned bias: -65 (two negative experiences)
+   - Learned avoidance: TRUE
+   - Action rejected by Shadow Timeline
+   - **Guards food area instead of attacking**
+
+**Outcome:** Mob learned to balance duty with compassion.
+
+#### Scenario 2: Evil Mob Exploits Weaknesses
+
+**Initial State:**
+- Evil assassin (alignment -800)
+- Low shame sensitivity
+
+**Learning Process:**
+1. **Betray ally:** Successful ambush, gains loot
+   - Judgment: Guilty (betrayal)
+   - Shame: 10 → 15 (+5, minimal for evil mob)
+   - Regret: 10 (low due to success)
+   - Memory stored
+
+2. **Betray second ally:** Caught, loses fight
+   - Judgment: Guilty (betrayal)
+   - Outcome severity: High (lost HP, items)
+   - Regret: 45 (outcome-based, not moral)
+   - Memory stored
+
+3. **Consider betrayal again:**
+   - Learned bias: -30 (practical learning, not moral)
+   - **Still willing if conditions are better**
+
+**Outcome:** Evil mob learns strategic caution, not morality.
+
+#### Scenario 3: Neutral Mob Finds Balance
+
+**Initial State:**
+- Neutral merchant (alignment 0)
+- Moderate emotions
+
+**Learning Process:**
+1. **Refuses to help injured traveler:** Continues to town
+   - Judgment: Innocent (no obligation)
+   - But happiness decreases: 60 → 45
+   - Regret: 20 (mild)
+
+2. **Helps next traveler:** Provides healing
+   - Judgment: Innocent (moral action)
+   - Happiness increases: 45 → 70
+   - Regret: 0, positive reinforcement
+   - Memory stored
+
+3. **Next injured traveler:**
+   - Learned bias: +35 (helping felt good)
+   - **Chooses to help**
+
+**Outcome:** Neutral mob learns altruism through positive outcomes.
+
+### Performance Considerations
+
+**Memory Overhead:**
+- +10 bytes per emotion_memory entry (5 sh_int fields)
+- Per mob: +100 bytes (10 memories × 10 bytes)
+- For 6000 mobs: +600 KB (~0.6 MB)
+- Negligible impact on modern systems
+
+**Runtime Cost:**
+- Learning bias calculation: O(10) - scans 10 memory slots
+- Performed once per action evaluation in Shadow Timeline
+- Minimal CPU impact (~0.1ms per evaluation)
+
+**Memory Decay:**
+- Natural cleanup via circular buffer
+- Old memories (>60 min) ignored automatically
+- No manual cleanup needed
+
+### Testing and Validation
+
+To test moral learning:
+
+1. **Spawn test mob with emotions enabled:**
+   ```
+   mob load <vnum>
+   stat mob <name>  # Check emotional profile
+   ```
+
+2. **Force moral actions:**
+   ```
+   mob force <name> hit <target>
+   ```
+
+3. **Check learning state:**
+   ```
+   stat mob <name>  # View emotion memories with moral judgments
+   ```
+
+4. **Observe behavior change:**
+   - Repeat same action type
+   - Watch for bias accumulation
+   - Verify learned avoidance triggers
+
+### Debug Commands
+
+Use `stat mob <name>` to view emotion memories including moral learning data:
+```
+Memory 0 (5 seconds old): ATTACKED - Major Event
+  Shame: 45 -> Guilt learned
+  Moral: ATTACK, Guilty, Blame: 75, Severity: 80, Regret: 70
+```
 
 ## References
 
