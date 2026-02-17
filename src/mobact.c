@@ -772,8 +772,27 @@ void mobile_activity(void)
                                 shadow_action_executed = TRUE;
                                 goto shadow_feedback_and_continue;
                             }
-                            /* Otherwise, look for available quest to accept */
-                            /* Quest acceptance logic would check nearby questmasters */
+                            /* Try to accept quest if target is a questmaster */
+                            else if (action.target) {
+                                struct char_data *questmaster = (struct char_data *)action.target;
+                                /* Verify questmaster still exists and is in same room */
+                                if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
+                                    /* Find available quest from this questmaster */
+                                    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                                    if (available_quest != NOTHING) {
+                                        qst_rnum quest_rnum = real_quest(available_quest);
+                                        if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
+                                            set_mob_quest(ch, quest_rnum);
+                                            act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                            shadow_action_executed = TRUE;
+                                            /* Note: Don't goto feedback here, let it fall through to execute feedback */
+                                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                                goto shadow_feedback_and_continue;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         break;
 

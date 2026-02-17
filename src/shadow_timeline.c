@@ -32,6 +32,7 @@
 #include "act.h"
 #include "fight.h"
 #include "graph.h"
+#include "quest.h"
 
 /* External variables */
 extern struct room_data *world;
@@ -42,6 +43,7 @@ static void generate_combat_projections(struct shadow_context *ctx);
 static void generate_social_projections(struct shadow_context *ctx);
 static void generate_item_projections(struct shadow_context *ctx);
 static void generate_guard_projection(struct shadow_context *ctx);
+static void generate_quest_projections(struct shadow_context *ctx);
 static int score_projection_for_entity(struct char_data *ch, struct shadow_projection *proj);
 static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
@@ -148,11 +150,13 @@ int shadow_generate_projections(struct shadow_context *ctx)
         /* Has active goal - focus on goal-relevant actions */
         generate_movement_projections(ctx);
         generate_item_projections(ctx);
+        generate_quest_projections(ctx); /* Consider quest-related actions */
     } else {
         /* Exploring - generate diverse projections */
         generate_movement_projections(ctx);
         generate_social_projections(ctx);
         generate_item_projections(ctx);
+        generate_quest_projections(ctx); /* Consider quest opportunities */
     }
 
     /* Score and rank projections based on entity's subjective evaluation */
@@ -447,6 +451,167 @@ static void generate_guard_projection(struct shadow_context *ctx)
         shadow_consume_capacity(ctx, cost);
     }
 }
+
+/**
+ * Generate quest-related action projections
+ * Projects quest acceptance and completion opportunities
+ * RFC-0003 §6.1: Only autonomous entities with goals project quest actions
+ */
+static void generate_quest_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Generate quest completion projection if mob has active quest */
+    if (ch->ai_data->current_quest != NOTHING) {
+        /* Set up quest completion action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_QUEST;
+        action.target = NULL; /* Quest completion doesn't need a target */
+        action.cost = SHADOW_BASE_COST;
+
+        /* Validate action */
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            return;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            return;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Quest completion is highly rewarding */
+            outcome.score = 60;
+            outcome.reward_level = 80;
+            outcome.achieves_goal = (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST);
+            outcome.obvious = FALSE; /* Quest outcomes can be complex */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+        }
+        return; /* Don't generate quest acceptance if already has quest */
+    }
+
+    /* Generate quest acceptance projection if mob doesn't have quest and is interested */
+    /* Only consider quest acceptance if:
+     * 1. No active goal (exploring) OR goal is quest-related
+     * 2. Has sufficient curiosity or quest tendency
+     * 3. Cognitive capacity allows expensive questmaster search */
+
+    bool should_consider_quest = FALSE;
+
+    if (ch->ai_data->current_goal == GOAL_NONE || 
+        ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+        ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
+        /* Calculate interest in quests based on genetics and emotions */
+        int quest_interest = GET_GENQUEST(ch) / 5; /* 0-20 from quest_tendency */
+        quest_interest += ch->ai_data->emotion_curiosity / 10; /* 0-10 from curiosity */
+        
+        /* Random check with interest-based threshold */
+        if (rand_number(0, 100) < quest_interest) {
+            should_consider_quest = TRUE;
+        }
+    }
+
+    if (!should_consider_quest) {
+        return;
+    }
+
+    /* Safety check: Validate room before world array access */
+    if (ch->in_room == NOWHERE || ch->in_room < 0 || ch->in_room > top_of_world) {
+        return;
+    }
+
+    /* Look for accessible questmaster in mob's zone
+     * NOTE: This is an expensive operation, but Shadow Timeline already has
+     * cognitive capacity budgeting to limit frequency */
+    zone_rnum mob_zone = world[ch->in_room].zone;
+    struct char_data *questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
+
+    if (!questmaster || questmaster == ch) {
+        return; /* No accessible questmaster found */
+    }
+
+    /* Find available quest from this questmaster */
+    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+    if (available_quest == NOTHING) {
+        return; /* No quests available */
+    }
+
+    qst_rnum quest_rnum = real_quest(available_quest);
+    if (quest_rnum == NOTHING || !mob_should_accept_quest(ch, quest_rnum)) {
+        return; /* Quest not suitable or mob doesn't want it */
+    }
+
+    /* Set up quest acceptance action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_QUEST;
+    action.target = questmaster; /* Target is the questmaster to talk to */
+    action.cost = SHADOW_BASE_COST;
+
+    /* Validate action */
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Quest acceptance is moderately rewarding - represents new opportunities */
+        outcome.score = 30;
+        outcome.reward_level = 50;
+        outcome.achieves_goal = (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
+                                ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER);
+        outcome.obvious = TRUE; /* Accepting a quest is straightforward */
+
+        /* Increase happiness (new opportunity) and curiosity satisfaction */
+        outcome.happiness_change = 10;
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
 
 /**
  * Validate that an action is feasible and doesn't violate invariants
