@@ -343,4 +343,84 @@ void moral_get_action_history(struct char_data *ch, int action_type, int *out_gu
 #define MORAL_ACTION_BETRAY 9
 #define MORAL_ACTION_DEFEND 10
 
+/* ========================================================================== */
+/*                      GROUP MORAL DYNAMICS                                  */
+/* ========================================================================== */
+
+/**
+ * Calculate peer pressure influence on moral decision
+ * Evaluates how group members' moral stances influence an individual's choice
+ * @param ch The mob making the decision
+ * @param action_type Type of action being considered
+ * @return Peer pressure modifier (-100 to +100): negative = group disapproves, positive = group encourages
+ */
+int moral_get_peer_pressure(struct char_data *ch, int action_type);
+
+/**
+ * Evaluate collective moral responsibility for group action
+ * Determines if entire group shares guilt/innocence for an action
+ * @param leader The group leader or primary actor
+ * @param victim The target of the action
+ * @param action_type Type of action
+ * @param judgment Output parameter for group moral judgment
+ * @return TRUE if group shares responsibility
+ */
+bool moral_evaluate_group_action(struct char_data *leader, struct char_data *victim, int action_type,
+                                 struct moral_judgment *judgment);
+
+/**
+ * Update group moral reputation based on collective action
+ * Adjusts the group's moral standing based on their actions
+ * @param group The group to update
+ * @param judgment The moral judgment of the group action
+ */
+void moral_update_group_reputation(struct group_data *group, struct moral_judgment *judgment);
+
+/**
+ * Get group moral reputation modifier for interactions
+ * Returns bonus/penalty based on how other groups view this group morally
+ * @param acting_group The group performing an action
+ * @param target_group The group being targeted (may be NULL)
+ * @return Reputation modifier (-50 to +50)
+ */
+int moral_get_group_reputation_modifier(struct group_data *acting_group, struct group_data *target_group);
+
+/**
+ * Calculate moral conformity pressure from leader
+ * Strong leaders can override individual moral judgments
+ * @param follower The mob being influenced
+ * @param leader The group leader
+ * @param action_type Type of action
+ * @return Leader influence (-50 to +50)
+ */
+int moral_get_leader_influence(struct char_data *follower, struct char_data *leader, int action_type);
+
+/**
+ * Check if mob would dissent from group moral decision
+ * Returns TRUE if individual moral conviction would cause dissent
+ * @param ch The mob
+ * @param group_action_cost The moral cost as viewed by the group
+ * @param action_type Type of action
+ * @return TRUE if mob would dissent and potentially leave group
+ */
+bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type);
+
+/**
+ * Record group action in all members' moral memories
+ * Distributes collective responsibility across group members
+ * @param group The group that performed the action
+ * @param victim The target of the action
+ * @param action_type Type of action
+ * @param judgment The collective moral judgment
+ */
+void moral_record_group_action(struct group_data *group, struct char_data *victim, int action_type,
+                               struct moral_judgment *judgment);
+
+/**
+ * Initialize group moral reputation for new groups
+ * Sets default values based on initial members
+ * @param group The newly formed group
+ */
+void moral_init_group_reputation(struct group_data *group);
+
 #endif /* _MORAL_REASONER_H_ */

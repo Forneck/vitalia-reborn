@@ -1184,6 +1184,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             send_to_char(ch, "\r\n");
     }
 
+    /* Display group moral reputation if in a group */
+    if (k->group && k->group->leader) {
+        send_to_char(ch, "%sGroup Moral Reputation:%s %d/100 (Guilty:%d Good:%d)%s\r\n", CCYEL(ch, C_NRM),
+                     CCNRM(ch, C_NRM), k->group->moral_reputation, k->group->collective_guilt_count,
+                     k->group->collective_good_count, k->group->leader == k ? " [LEADER]" : "");
+    }
+
     /* Showing the bitvector */
     sprintbitarray(AFF_FLAGS(k), affected_bits, AF_ARRAY_MAX, buf);
     send_to_char(ch, "AFF: %s%s%s\r\n", CCYEL(ch, C_NRM), buf, CCNRM(ch, C_NRM));

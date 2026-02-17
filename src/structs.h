@@ -1309,6 +1309,12 @@ struct group_data {
     struct char_data *leader;
     struct list_data *members;
     int group_flags;
+
+    /* Group moral dynamics tracking */
+    int moral_reputation;       /* Group moral reputation (0-100) affects inter-group interactions */
+    int collective_guilt_count; /* Number of collective guilty actions */
+    int collective_good_count;  /* Number of collective moral actions */
+    time_t last_moral_action;   /* Timestamp of last group moral action */
 };
 
 /** The pclean_criteria_data is set up in config.c and used in db.c to determine

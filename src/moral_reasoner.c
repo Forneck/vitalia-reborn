@@ -16,6 +16,7 @@
 #include "moral_reasoner.h"
 #include "handler.h"
 #include "db.h"
+#include "lists.h"
 
 /* Severity calculation constants */
 #define SEVERITY_SCALING_FACTOR 10 /* Divisor for HP-based severity calculation */
@@ -585,6 +586,30 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
         }
     }
 
+    /* Apply group moral dynamics if actor is in a group */
+    if (IS_NPC(actor) && actor->group && actor->group->members) {
+        /* Peer pressure from group members */
+        int peer_pressure = moral_get_peer_pressure(actor, action_type);
+        moral_cost += peer_pressure;
+
+        /* Group reputation affects interactions */
+        if (victim && victim->group) {
+            int reputation_mod = moral_get_group_reputation_modifier(actor->group, victim->group);
+            moral_cost += reputation_mod;
+        } else if (victim) {
+            /* Single target, but acting group still has reputation */
+            int reputation_mod = moral_get_group_reputation_modifier(actor->group, NULL);
+            moral_cost += reputation_mod / 2; /* Reduced effect vs individuals */
+        }
+
+        /* Check for potential dissent */
+        /* If individual would strongly dissent, reduce the group's influence */
+        if (moral_would_dissent_from_group(actor, peer_pressure, action_type)) {
+            /* Independent thinker - reduce peer pressure by 50% */
+            moral_cost -= peer_pressure / 2;
+        }
+    }
+
     return moral_cost;
 }
 
@@ -1094,4 +1119,379 @@ bool moral_has_learned_avoidance(struct char_data *ch, int action_type)
         return TRUE;
 
     return FALSE;
+}
+
+/* ========================================================================== */
+/*                      GROUP MORAL DYNAMICS IMPLEMENTATION                   */
+/* ========================================================================== */
+
+/**
+ * Initialize group moral reputation for new groups
+ * Sets default values based on initial members' alignments
+ */
+void moral_init_group_reputation(struct group_data *group)
+{
+    if (!group || !group->members)
+        return;
+
+    /* Start with neutral reputation */
+    group->moral_reputation = 50;
+    group->collective_guilt_count = 0;
+    group->collective_good_count = 0;
+    group->last_moral_action = 0;
+
+    /* Adjust based on leader's alignment if present */
+    if (group->leader && IS_NPC(group->leader)) {
+        int alignment = GET_ALIGNMENT(group->leader);
+        if (alignment > 500) {
+            group->moral_reputation = 70; /* Good leader = good reputation */
+        } else if (alignment < -500) {
+            group->moral_reputation = 30; /* Evil leader = bad reputation */
+        }
+    }
+}
+
+/**
+ * Calculate peer pressure influence on moral decision
+ * Considers group members' alignments, emotions, and moral histories
+ */
+int moral_get_peer_pressure(struct char_data *ch, int action_type)
+{
+    if (!ch || !IS_NPC(ch) || !ch->group || !ch->group->members)
+        return 0;
+
+    int total_pressure = 0;
+    int member_count = 0;
+    struct list_data *members = ch->group->members;
+
+    /* Iterate through group members */
+    for (struct char_data *member = (struct char_data *)simple_list(members); member;
+         member = (struct char_data *)simple_list(NULL)) {
+
+        /* Skip self */
+        if (member == ch)
+            continue;
+
+        /* Skip non-NPCs or members without AI */
+        if (!IS_NPC(member) || !member->ai_data)
+            continue;
+
+        member_count++;
+
+        /* Calculate this member's moral stance on the action */
+        int member_stance = 0;
+
+        /* Alignment-based stance */
+        int alignment = GET_ALIGNMENT(member);
+        switch (action_type) {
+            case MORAL_ACTION_ATTACK:
+            case MORAL_ACTION_STEAL:
+            case MORAL_ACTION_BETRAY:
+                /* Evil approves, good disapproves */
+                if (alignment < -300)
+                    member_stance += 20;
+                else if (alignment > 300)
+                    member_stance -= 20;
+                break;
+
+            case MORAL_ACTION_HELP:
+            case MORAL_ACTION_HEAL:
+            case MORAL_ACTION_SACRIFICE_SELF:
+                /* Good approves, evil disapproves */
+                if (alignment > 300)
+                    member_stance += 20;
+                else if (alignment < -300)
+                    member_stance -= 20;
+                break;
+        }
+
+        /* Emotion-based stance */
+        /* High loyalty increases conformity pressure */
+        if (member->ai_data->emotion_loyalty > 70) {
+            member_stance = (member_stance * 150) / 100; /* 50% more influence */
+        }
+
+        /* High compassion opposes harmful actions */
+        if (member->ai_data->emotion_compassion > 70 &&
+            (action_type == MORAL_ACTION_ATTACK || action_type == MORAL_ACTION_BETRAY)) {
+            member_stance -= 15;
+        }
+
+        /* High courage encourages defensive/protective actions */
+        if (member->ai_data->emotion_courage > 70 && action_type == MORAL_ACTION_DEFEND) {
+            member_stance += 15;
+        }
+
+        /* Check member's learned biases */
+        int learned_bias = moral_get_learned_bias(member, action_type);
+        /* Reduce learned bias influence (it's personal, not group pressure) */
+        member_stance += learned_bias / 3;
+
+        total_pressure += member_stance;
+    }
+
+    /* Average the pressure */
+    if (member_count == 0)
+        return 0;
+
+    int average_pressure = total_pressure / member_count;
+
+    /* Leader has extra influence */
+    int leader_bonus = moral_get_leader_influence(ch, ch->group->leader, action_type);
+    average_pressure += leader_bonus;
+
+    /* Group size amplifies pressure (larger groups = more conformity) */
+    if (member_count >= 5) {
+        average_pressure = (average_pressure * 120) / 100; /* 20% boost */
+    } else if (member_count >= 3) {
+        average_pressure = (average_pressure * 110) / 100; /* 10% boost */
+    }
+
+    /* Clamp to reasonable range */
+    return MAX(-100, MIN(100, average_pressure));
+}
+
+/**
+ * Calculate moral conformity pressure from leader
+ * Strong leaders can override individual moral judgments
+ */
+int moral_get_leader_influence(struct char_data *follower, struct char_data *leader, int action_type)
+{
+    if (!follower || !leader || !IS_NPC(follower) || !IS_NPC(leader))
+        return 0;
+
+    if (!follower->ai_data || !leader->ai_data)
+        return 0;
+
+    int influence = 0;
+
+    /* Level difference increases influence */
+    int level_diff = GET_LEVEL(leader) - GET_LEVEL(follower);
+    influence += MIN(20, MAX(0, level_diff * 2));
+
+    /* Follower's loyalty increases susceptibility to influence */
+    int loyalty = follower->ai_data->emotion_loyalty;
+    if (loyalty > 80) {
+        influence += 15;
+    } else if (loyalty > 60) {
+        influence += 10;
+    } else if (loyalty < 30) {
+        influence -= 10; /* Low loyalty reduces influence */
+    }
+
+    /* Follower's emotional intelligence affects independence */
+    int ei = follower->ai_data->genetics.emotional_intelligence;
+    if (ei > 80) {
+        /* High EI = more independent thinking */
+        influence = (influence * 70) / 100;
+    } else if (ei < 30) {
+        /* Low EI = more susceptible to influence */
+        influence = (influence * 130) / 100;
+    }
+
+    /* Leader's reputation amplifies influence */
+    if (leader->ai_data->reputation > 70) {
+        influence = (influence * 120) / 100;
+    }
+
+    /* Leader's alignment influences moral direction */
+    int leader_alignment = GET_ALIGNMENT(leader);
+    if ((action_type == MORAL_ACTION_ATTACK || action_type == MORAL_ACTION_BETRAY) && leader_alignment < -500) {
+        /* Evil leader encourages harmful actions */
+        influence = abs(influence); /* Make it positive (encouraging) */
+    } else if ((action_type == MORAL_ACTION_HELP || action_type == MORAL_ACTION_HEAL) && leader_alignment > 500) {
+        /* Good leader encourages helpful actions */
+        influence = abs(influence);
+    }
+
+    return MAX(-50, MIN(50, influence));
+}
+
+/**
+ * Check if mob would dissent from group moral decision
+ * Strong moral convictions can cause dissent
+ */
+bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return FALSE;
+
+    /* Calculate individual moral stance */
+    int individual_cost = moral_evaluate_action_cost(ch, NULL, action_type);
+
+    /* If individual strongly opposes but group encourages, potential dissent */
+    if (individual_cost < -60 && group_action_cost > 20) {
+        /* Check if moral conviction is strong enough */
+
+        /* High compassion + good alignment = strong dissent potential */
+        if (ch->ai_data->emotion_compassion > 70 && GET_ALIGNMENT(ch) > 500) {
+            return TRUE;
+        }
+
+        /* Learned avoidance = strong conviction */
+        if (moral_has_learned_avoidance(ch, action_type)) {
+            return TRUE;
+        }
+
+        /* High emotional intelligence = more independent moral reasoning */
+        if (ch->ai_data->genetics.emotional_intelligence > 80) {
+            return TRUE;
+        }
+    }
+
+    /* Low loyalty makes dissent more likely */
+    if (ch->ai_data->emotion_loyalty < 30 && abs(individual_cost - group_action_cost) > 50) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * Evaluate collective moral responsibility for group action
+ * All group members share in the moral judgment
+ */
+bool moral_evaluate_group_action(struct char_data *leader, struct char_data *victim, int action_type,
+                                 struct moral_judgment *judgment)
+{
+    if (!leader || !judgment)
+        return FALSE;
+
+    /* Evaluate the action using standard moral reasoning */
+    struct moral_scenario scenario;
+    moral_build_scenario_from_action(leader, victim, action_type, &scenario);
+    moral_evaluate_guilt(&scenario, judgment);
+
+    /* Check if this is truly a group action */
+    if (!leader->group || !leader->group->members)
+        return FALSE; /* No group, no collective responsibility */
+
+    /* Group action if:
+     * 1. Leader initiated it, OR
+     * 2. Multiple members participated
+     */
+
+    /* For now, treat any action by grouped mob as group action */
+    /* TODO: Could add more sophisticated "group action" detection */
+
+    return TRUE; /* Group shares responsibility */
+}
+
+/**
+ * Update group moral reputation based on collective action
+ * Group reputation affects how others view and interact with the group
+ */
+void moral_update_group_reputation(struct group_data *group, struct moral_judgment *judgment)
+{
+    if (!group || !judgment)
+        return;
+
+    int reputation_change = 0;
+
+    if (judgment->guilty == MORAL_JUDGMENT_GUILTY) {
+        /* Guilty group actions damage reputation */
+        group->collective_guilt_count++;
+        reputation_change = -(judgment->blameworthiness_score / 10);
+
+        /* Repeated guilty actions compound reputation loss */
+        if (group->collective_guilt_count > 5) {
+            reputation_change -= 5;
+        }
+    } else {
+        /* Innocent/moral group actions improve reputation */
+        if (judgment->responsibility_score > 50) {
+            group->collective_good_count++;
+            reputation_change = judgment->responsibility_score / 15;
+
+            /* Consistent moral behavior improves reputation more */
+            if (group->collective_good_count > 5) {
+                reputation_change += 3;
+            }
+        }
+    }
+
+    /* Apply reputation change with bounds */
+    group->moral_reputation = MAX(0, MIN(100, group->moral_reputation + reputation_change));
+
+    /* Track last moral action timestamp */
+    group->last_moral_action = time(0);
+}
+
+/**
+ * Get group moral reputation modifier for inter-group interactions
+ * Groups with bad reputations face penalties, good reputations get bonuses
+ */
+int moral_get_group_reputation_modifier(struct group_data *acting_group, struct group_data *target_group)
+{
+    if (!acting_group)
+        return 0;
+
+    int modifier = 0;
+
+    /* Acting group's reputation affects their actions */
+    int reputation = acting_group->moral_reputation;
+
+    if (reputation > 70) {
+        /* Good reputation = positive interactions */
+        modifier = (reputation - 70) / 3; /* +0 to +10 */
+    } else if (reputation < 30) {
+        /* Bad reputation = negative interactions */
+        modifier = (reputation - 30) / 2; /* -15 to 0 */
+    }
+
+    /* If there's a target group, consider their reputation too */
+    if (target_group) {
+        int target_rep = target_group->moral_reputation;
+
+        /* Good groups are less likely to attack other good groups */
+        if (reputation > 60 && target_rep > 60) {
+            modifier += 20; /* Strong positive modifier to prevent good-vs-good fights */
+        }
+
+        /* Evil groups prey on good groups */
+        if (reputation < 40 && target_rep > 60) {
+            modifier -= 10; /* Encouraged to attack good groups */
+        }
+
+        /* Reputation difference matters */
+        int rep_diff = reputation - target_rep;
+        modifier += rep_diff / 10; /* +/- based on reputation difference */
+    }
+
+    return MAX(-50, MIN(50, modifier));
+}
+
+/**
+ * Record group action in all members' moral memories
+ * Distributes collective responsibility across group
+ */
+void moral_record_group_action(struct group_data *group, struct char_data *victim, int action_type,
+                               struct moral_judgment *judgment)
+{
+    if (!group || !group->members || !judgment)
+        return;
+
+    /* Iterate through all group members */
+    for (struct char_data *member = (struct char_data *)simple_list(group->members); member;
+         member = (struct char_data *)simple_list(NULL)) {
+
+        /* Skip non-NPCs or members without AI */
+        if (!IS_NPC(member) || !member->ai_data)
+            continue;
+
+        /* Record in individual moral memory */
+        /* Note: This uses the same judgment for all members (collective responsibility) */
+        moral_store_judgment_in_memory(member, victim, action_type, judgment);
+
+        /* Adjust individual alignment based on group action */
+        moral_adjust_alignment(member, judgment);
+
+        /* Group leader gets extra reputation impact */
+        if (member == group->leader) {
+            moral_adjust_reputation(member, judgment);
+        }
+    }
+
+    /* Update group reputation */
+    moral_update_group_reputation(group, judgment);
 }
