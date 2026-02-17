@@ -22,6 +22,10 @@
 #define SEVERITY_SCALING_FACTOR 10 /* Divisor for HP-based severity calculation */
 #define DEFAULT_SEVERITY_HARM 5    /* Default severity when victim is unknown */
 
+/* Forward declarations for internal functions */
+static int moral_evaluate_action_cost_internal(struct char_data *actor, struct char_data *victim, int action_type,
+                                               bool include_group_dynamics);
+
 /* Helper function to check if value indicates yes */
 static bool is_yes(int value) { return value == MORAL_YES; }
 
@@ -469,10 +473,15 @@ void moral_build_scenario_from_action(struct char_data *actor, struct char_data 
 }
 
 /**
- * Evaluate moral cost of a proposed action
- * Returns value for Shadow Timeline scoring: negative = immoral, positive = moral
+ * Evaluate moral cost of a proposed action (internal helper)
+ * @param actor The mob considering the action
+ * @param victim The potential victim
+ * @param action_type Type of action
+ * @param include_group_dynamics Whether to include group dynamics (prevent recursion)
+ * @return Moral cost (-100 to +100, negative is bad, positive is good)
  */
-int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim, int action_type)
+static int moral_evaluate_action_cost_internal(struct char_data *actor, struct char_data *victim, int action_type,
+                                               bool include_group_dynamics)
 {
     struct moral_scenario scenario;
     struct moral_judgment judgment;
@@ -586,8 +595,8 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
         }
     }
 
-    /* Apply group moral dynamics if actor is in a group */
-    if (IS_NPC(actor) && actor->group && actor->group->members) {
+    /* Apply group moral dynamics if actor is in a group (only if not disabled for recursion prevention) */
+    if (include_group_dynamics && IS_NPC(actor) && actor->group && actor->group->members) {
         /* Calculate individual moral cost before group influence */
         int individual_cost = moral_cost;
 
@@ -617,6 +626,15 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
     }
 
     return moral_cost;
+}
+
+/**
+ * Evaluate moral cost of a proposed action
+ * Returns value for Shadow Timeline scoring: negative = immoral, positive = moral
+ */
+int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim, int action_type)
+{
+    return moral_evaluate_action_cost_internal(actor, victim, action_type, TRUE);
 }
 
 /**
@@ -1170,6 +1188,9 @@ int moral_get_peer_pressure(struct char_data *ch, int action_type)
     int member_count = 0;
     struct list_data *members = ch->group->members;
 
+    /* Reset iterator before iterating group members */
+    clear_simple_list();
+
     /* Iterate through group members */
     for (struct char_data *member = (struct char_data *)simple_list(members); member;
          member = (struct char_data *)simple_list(NULL)) {
@@ -1242,9 +1263,11 @@ int moral_get_peer_pressure(struct char_data *ch, int action_type)
 
     int average_pressure = total_pressure / member_count;
 
-    /* Leader has extra influence */
-    int leader_bonus = moral_get_leader_influence(ch, ch->group->leader, action_type);
-    average_pressure += leader_bonus;
+    /* Leader has extra influence (but leaders don't influence themselves) */
+    if (ch != ch->group->leader) {
+        int leader_bonus = moral_get_leader_influence(ch, ch->group->leader, action_type);
+        average_pressure += leader_bonus;
+    }
 
     /* Group size amplifies pressure (larger groups = more conformity) */
     if (member_count >= 5) {
@@ -1324,7 +1347,8 @@ bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost,
         return FALSE;
 
     /* Calculate individual moral stance with victim context */
-    int individual_cost = moral_evaluate_action_cost(ch, victim, action_type);
+    /* Use internal version without group dynamics to prevent infinite recursion */
+    int individual_cost = moral_evaluate_action_cost_internal(ch, victim, action_type, FALSE);
 
     /* If individual strongly opposes but group encourages, potential dissent */
     if (individual_cost < -60 && group_action_cost > 20) {
@@ -1477,6 +1501,9 @@ void moral_record_group_action(struct group_data *group, struct char_data *victi
 {
     if (!group || !group->members || !judgment)
         return;
+
+    /* Reset simple_list iterator before iterating group members */
+    clear_simple_list();
 
     /* Iterate through all group members */
     for (struct char_data *member = (struct char_data *)simple_list(group->members); member;

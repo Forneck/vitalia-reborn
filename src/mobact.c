@@ -2539,18 +2539,12 @@ bool mob_handle_grouping(struct char_data *ch)
 
             if (leader_to_be != NULL && leader_to_be == ch) {
                 /* O próprio mob 'ch' é o melhor candidato a líder, então ele cria o grupo. */
-                struct group_data *new_group;
-                CREATE(new_group, struct group_data, 1);
-                add_to_list(new_group, group_list);
-                new_group->leader = NULL;
-                new_group->members = create_list();
-                SET_BIT(new_group->group_flags, GROUP_ANON);
-                SET_BIT(new_group->group_flags, GROUP_OPEN);
-                SET_BIT(new_group->group_flags, GROUP_NPC); /* Marca como um grupo de mobs */
-
-                join_group(ch, new_group);
-                act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
-                return TRUE;
+                struct group_data *new_group = create_group(ch);
+                if (new_group) {
+                    SET_BIT(new_group->group_flags, GROUP_ANON);
+                    act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
+                    return TRUE;
+                }
             }
         }
     }
