@@ -870,6 +870,27 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
                 send_to_char(ch, "\r\n");
             }
 
+            /* Emotion trigger: Quest failure (Quest-Related 2.4) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
+                /* Find the questmaster mob and update their emotions */
+                mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+                if (questmaster_rnum != NOBODY) {
+                    /* Look for questmaster in current room */
+                    struct char_data *questmaster = NULL;
+                    struct char_data *temp_char;
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                            questmaster = temp_char;
+                            break;
+                        }
+                    }
+                    /* Update questmaster emotions if found */
+                    if (questmaster && questmaster->ai_data) {
+                        update_mob_emotion_quest_failed(questmaster, ch);
+                    }
+                }
+            }
+
             /* Clear the quest */
             clear_quest(ch);
             save_char(ch);
@@ -926,6 +947,27 @@ void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer)
                              QST_PENALTY(rnum));
             } else {
                 send_to_char(ch, "\r\n");
+            }
+
+            /* Emotion trigger: Quest failure (Quest-Related 2.4) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
+                /* Find the questmaster mob and update their emotions */
+                mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+                if (questmaster_rnum != NOBODY) {
+                    /* Look for questmaster in current room */
+                    struct char_data *questmaster = NULL;
+                    struct char_data *temp_char;
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                            questmaster = temp_char;
+                            break;
+                        }
+                    }
+                    /* Update questmaster emotions if found */
+                    if (questmaster && questmaster->ai_data) {
+                        update_mob_emotion_quest_failed(questmaster, ch);
+                    }
+                }
             }
 
             /* Clear the quest */
@@ -1670,6 +1712,27 @@ static void quest_quit(struct char_data *ch)
         send_to_char(ch, "Você não faz mais parte desta busca.\r\n");
         save_char(ch);
     } else {
+        /* Emotion trigger: Quest failure (Quest-Related 2.4) - abandonment */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE) {
+            /* Find the questmaster mob and update their emotions */
+            mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+            if (questmaster_rnum != NOBODY) {
+                /* Look for questmaster in current room */
+                struct char_data *questmaster = NULL;
+                struct char_data *temp_char;
+                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                    if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                        questmaster = temp_char;
+                        break;
+                    }
+                }
+                /* Update questmaster emotions if found */
+                if (questmaster && questmaster->ai_data) {
+                    update_mob_emotion_quest_failed(questmaster, ch);
+                }
+            }
+        }
+
         clear_quest(ch);
         if (QST_QUIT(rnum) && (str_cmp(QST_QUIT(rnum), "undefined") != 0))
             send_to_char(ch, "%s", QST_QUIT(rnum));
@@ -2579,6 +2642,27 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
 
     /* Log the failure */
     log1("QUEST FAILURE: %s failed quest %d (%s)", GET_NAME(mob), vnum, reason);
+
+    /* Emotion trigger: Quest failure (Quest-Related 2.4) - mob failing their quest */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE && rnum != NOTHING) {
+        /* Find the questmaster mob and update their emotions about mob's failure */
+        mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+        if (questmaster_rnum != NOBODY) {
+            /* Look for questmaster in current room */
+            struct char_data *questmaster = NULL;
+            struct char_data *temp_char;
+            for (temp_char = world[IN_ROOM(mob)].people; temp_char; temp_char = temp_char->next_in_room) {
+                if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum && temp_char != mob) {
+                    questmaster = temp_char;
+                    break;
+                }
+            }
+            /* Update questmaster emotions if found */
+            if (questmaster && questmaster->ai_data) {
+                update_mob_emotion_quest_failed(questmaster, mob);
+            }
+        }
+    }
 
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
