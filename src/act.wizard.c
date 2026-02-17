@@ -1524,6 +1524,22 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                             send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM),
                                          emotion_buf);
                         }
+
+                        /* Display moral judgment information if present */
+                        if (mem->moral_action_type >= 0 && mem->moral_was_guilty >= 0) {
+                            const char *action_names[] = {"None",    "Attack", "Steal",   "Help",
+                                                          "Heal",    "Trade",  "Deceive", "Sacrifice",
+                                                          "Abandon", "Betray", "Defend",  "Unknown"};
+                            int action_idx = (mem->moral_action_type >= 0 && mem->moral_action_type <= 10)
+                                                 ? mem->moral_action_type
+                                                 : 11;
+                            const char *guilt_str = mem->moral_was_guilty ? "Guilty" : "Innocent";
+
+                            send_to_char(ch, "      %sMoral:%s %s, %s, Blame:%d, Severity:%d, Regret:%d\r\n",
+                                         CCMAG(ch, C_NRM), CCNRM(ch, C_NRM), action_names[action_idx], guilt_str,
+                                         mem->moral_blameworthiness, mem->moral_outcome_severity,
+                                         mem->moral_regret_level);
+                        }
                     }
                 }
             } else {
