@@ -558,9 +558,19 @@ static void generate_quest_projections(struct shadow_context *ctx)
         return;
     }
 
+    /* Performance optimization: Early exit to prevent expensive questmaster search
+     * Similar to mob_try_to_accept_quest() load-shedding to avoid lag.
+     * When close to max quests, the expensive pathfinding in
+     * find_accessible_questmaster_in_zone() causes severe lag. */
+    if (count_mob_posted_quests() >= (CONFIG_MAX_MOB_POSTED_QUESTS * 9 / 10)) { /* 90% of max */
+        return;
+    }
+
     /* Look for accessible questmaster in mob's zone
-     * NOTE: This is an expensive operation, but Shadow Timeline already has
-     * cognitive capacity budgeting to limit frequency */
+     * NOTE: This is an expensive operation with repeated pathfinding.
+     * The above load-shedding check and the random interest check (line 547)
+     * help limit how often this runs. Shadow Timeline's cognitive capacity
+     * budgeting also provides natural rate limiting. */
     zone_rnum mob_zone = world[ch->in_room].zone;
     struct char_data *questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
 
@@ -1177,6 +1187,66 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
             }
             break;
 
+        case SHADOW_ACTION_QUEST:
+            /* Quest actions are feasible for mobs with AI data */
+            if (!IS_NPC(ch) || !ch->ai_data) {
+                return ACTION_INVALID_STATE;
+            }
+            /* If target is provided (questmaster), validate it exists */
+            if (action->target && !check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            break;
+
+        case SHADOW_ACTION_CAST_SPELL:
+            /* Check if target exists and mob has mana */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (GET_MANA(ch) < 15) {
+                return ACTION_INVALID_STATE; /* Not enough mana */
+            }
+            break;
+
+        case SHADOW_ACTION_TRADE:
+            /* Check if target (shopkeeper) exists */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            break;
+
+        case SHADOW_ACTION_FOLLOW:
+            /* Check if target exists and mob is not already following */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (ch->master) {
+                return ACTION_INVALID_STATE; /* Already following someone */
+            }
+            break;
+
+        case SHADOW_ACTION_GROUP:
+            /* Check if target exists and mob is following them */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!ch->master) {
+                return ACTION_INVALID_STATE; /* Not following anyone */
+            }
+            break;
+
         default:
             /* Unknown action type */
             return ACTION_IMPOSSIBLE;
@@ -1390,6 +1460,53 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             /* Standing guard - safe and fulfills sentinel duty */
             outcome->score = 15; /* Better than waiting, fulfills duty */
             outcome->danger_level = 5;
+            outcome->obvious = TRUE;
+            break;
+        }
+
+        case SHADOW_ACTION_QUEST: {
+            /* Quest-related action - acceptance or completion */
+            /* Default heuristic: quests are rewarding but outcomes vary */
+            outcome->score = 40; /* Moderate-high reward */
+            outcome->reward_level = 60;
+            outcome->danger_level = 20; /* Some quests involve danger */
+            outcome->obvious = FALSE; /* Quest outcomes are complex */
+            break;
+        }
+
+        case SHADOW_ACTION_CAST_SPELL: {
+            /* Spell casting - varies by target type */
+            outcome->score = 35;
+            outcome->reward_level = 45;
+            outcome->danger_level = 15; /* May provoke retaliation */
+            outcome->obvious = FALSE; /* Spell effects are unpredictable */
+            break;
+        }
+
+        case SHADOW_ACTION_TRADE: {
+            /* Trading with shopkeeper */
+            outcome->score = 20;
+            outcome->reward_level = 30;
+            outcome->danger_level = 5;
+            outcome->obvious = TRUE; /* Trading is straightforward */
+            break;
+        }
+
+        case SHADOW_ACTION_FOLLOW: {
+            /* Following another entity */
+            outcome->score = 25;
+            outcome->reward_level = 30;
+            outcome->danger_level = 10; /* Safety in numbers */
+            outcome->obvious = TRUE;
+            break;
+        }
+
+        case SHADOW_ACTION_GROUP: {
+            /* Group bonding with master */
+            outcome->score = 20;
+            outcome->reward_level = 35;
+            outcome->danger_level = 5;
+            outcome->happiness_change = 10;
             outcome->obvious = TRUE;
             break;
         }
