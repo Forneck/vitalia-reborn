@@ -14,7 +14,7 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
 
 **Key Findings:**
 - ✅ **20-dimensional emotion system** with memory-based learning
-- ✅ **Shultz & Daley (1990) moral reasoning** implementation with guilt/blame evaluation
+- ✅ **Shultz & Darley (1990) moral reasoning** implementation with guilt/blame evaluation
 - ✅ **Shadow Timeline RFC-0003** cognitive future simulation system
 - ✅ **Group moral dynamics** with peer pressure and collective responsibility
 - ✅ **Genetic trait system** with 11 heritable behavioral tendencies
@@ -277,11 +277,11 @@ struct cognitive_bias {
 
 ## 2. Morality and Decision-Making
 
-### [✅] How is the Shultz & Daley moral reasoning system integrated with emotional states?
+### [✅] How is the Shultz & Darley moral reasoning system integrated with emotional states?
 
 **Implemented via `moral_reasoner.c`:**
 
-**Shultz & Daley (1990) Core Predicates:**
+**Shultz & Darley (1990) Core Predicates:**
 
 1. **Harm Causation:**
    ```c
@@ -933,7 +933,7 @@ if (time_diff > 3600) {  // 1 hour
 
 **Strengths:**
 1. ✅ Comprehensive 20-emotion system with quantitative modeling
-2. ✅ Research-based moral reasoning (Shultz & Daley 1990)
+2. ✅ Research-based moral reasoning (Shultz & Darley 1990)
 3. ✅ Memory-based learning with regret and avoidance
 4. ✅ Group moral dynamics with peer pressure and collective responsibility
 5. ✅ Shadow Timeline cognitive future simulation (RFC-0003)
@@ -952,7 +952,7 @@ if (time_diff > 3600) {  // 1 hour
 8. ❌ No neurodivergence profiles (ASD, ADHD)
 
 **Scientific Rigor:**
-- Strong theoretical foundations (Shultz & Daley, Asch, Simon)
+- Strong theoretical foundations (Shultz & Darley, Asch, Simon)
 - Research-based emotion categories (Ekman, Plutchik)
 - Ethical design principles followed
 - Clear distinction between emotions and clinical conditions
