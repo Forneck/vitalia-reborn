@@ -816,7 +816,7 @@ Clinical mental health should NOT be "gamified" (e.g., "anxiety bar"). If implem
 
 ---
 
-### [❌] Are mental states constrained by ethical or mechanical limits?
+### [✅] Are mental states constrained by ethical or mechanical limits?
 
 **YES - Ethical Design Constraints:**
 
