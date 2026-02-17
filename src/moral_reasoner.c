@@ -588,6 +588,9 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
 
     /* Apply group moral dynamics if actor is in a group */
     if (IS_NPC(actor) && actor->group && actor->group->members) {
+        /* Calculate individual moral cost before group influence */
+        int individual_cost = moral_cost;
+
         /* Peer pressure from group members */
         int peer_pressure = moral_get_peer_pressure(actor, action_type);
         moral_cost += peer_pressure;
@@ -603,8 +606,11 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
         }
 
         /* Check for potential dissent */
-        /* If individual would strongly dissent, reduce the group's influence */
-        if (moral_would_dissent_from_group(actor, peer_pressure, action_type)) {
+        /* Calculate what the group's moral stance is (includes peer pressure) */
+        int group_moral_cost = individual_cost + peer_pressure;
+
+        /* If individual would strongly dissent from group's stance, reduce the group's influence */
+        if (moral_would_dissent_from_group(actor, group_moral_cost, action_type, victim)) {
             /* Independent thinker - reduce peer pressure by 50% */
             moral_cost -= peer_pressure / 2;
         }
@@ -1311,13 +1317,14 @@ int moral_get_leader_influence(struct char_data *follower, struct char_data *lea
  * Check if mob would dissent from group moral decision
  * Strong moral convictions can cause dissent
  */
-bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type)
+bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type,
+                                    struct char_data *victim)
 {
     if (!ch || !IS_NPC(ch) || !ch->ai_data)
         return FALSE;
 
-    /* Calculate individual moral stance */
-    int individual_cost = moral_evaluate_action_cost(ch, NULL, action_type);
+    /* Calculate individual moral stance with victim context */
+    int individual_cost = moral_evaluate_action_cost(ch, victim, action_type);
 
     /* If individual strongly opposes but group encourages, potential dissent */
     if (individual_cost < -60 && group_action_cost > 20) {

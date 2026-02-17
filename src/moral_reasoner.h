@@ -401,9 +401,11 @@ int moral_get_leader_influence(struct char_data *follower, struct char_data *lea
  * @param ch The mob
  * @param group_action_cost The moral cost as viewed by the group
  * @param action_type Type of action
+ * @param victim The target of the action (for context)
  * @return TRUE if mob would dissent and potentially leave group
  */
-bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type);
+bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type,
+                                    struct char_data *victim);
 
 /**
  * Record group action in all members' moral memories
