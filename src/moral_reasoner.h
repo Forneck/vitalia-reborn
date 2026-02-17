@@ -260,6 +260,16 @@ void moral_adjust_reputation(struct char_data *ch, struct moral_judgment *judgme
 void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment);
 
 /**
+ * Evaluate and record a completed moral action for learning
+ * This is a convenience function that evaluates moral judgment and stores it in memory
+ * Call this after an action is completed to enable moral learning
+ * @param actor The mob that performed the action
+ * @param target The target of the action (may be NULL)
+ * @param action_type Type of moral action performed
+ */
+void moral_record_action(struct char_data *actor, struct char_data *target, int action_type);
+
+/**
  * Check if mob's moral conviction would prevent action
  * Used to filter out actions that conflict with moral identity
  * @param ch The mob
@@ -268,7 +278,60 @@ void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment
  */
 bool moral_is_action_acceptable(struct char_data *ch, int action_type);
 
+/* Memory-based moral learning functions */
+
+/**
+ * Store moral judgment in emotion memory system
+ * Records the moral judgment for learning from past actions
+ * @param mob The mob that performed the action
+ * @param target The target of the action (may be NULL)
+ * @param action_type Type of moral action performed
+ * @param judgment The moral judgment result
+ */
+void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *target, int action_type,
+                                    struct moral_judgment *judgment);
+
+/**
+ * Calculate moral learning bias from past similar actions
+ * Analyzes past moral judgments to bias future decisions
+ * @param ch The mob
+ * @param action_type Type of action being considered
+ * @return Bias adjustment (-100 to +100): negative discourages, positive encourages
+ */
+int moral_get_learned_bias(struct char_data *ch, int action_type);
+
+/**
+ * Calculate regret level based on emotional changes after action
+ * Higher regret means the action caused negative emotional outcomes
+ * @param ch The mob
+ * @param pre_shame Shame level before action
+ * @param pre_disgust Disgust level before action
+ * @param pre_happiness Happiness level before action
+ * @return Regret level (0-100)
+ */
+int moral_calculate_regret(struct char_data *ch, int pre_shame, int pre_disgust, int pre_happiness);
+
+/**
+ * Check if mob has learned to avoid this action type
+ * Returns TRUE if past experiences strongly suggest avoiding this action
+ * @param ch The mob
+ * @param action_type Type of action
+ * @return TRUE if action should be avoided based on learning
+ */
+bool moral_has_learned_avoidance(struct char_data *ch, int action_type);
+
+/**
+ * Get count of guilty vs innocent judgments for action type from memory
+ * Used to assess moral learning patterns
+ * @param ch The mob
+ * @param action_type Type of action
+ * @param out_guilty Output: count of guilty judgments
+ * @param out_innocent Output: count of innocent judgments
+ */
+void moral_get_action_history(struct char_data *ch, int action_type, int *out_guilty, int *out_innocent);
+
 /* Action type constants for moral evaluation */
+#define MORAL_ACTION_NONE 0
 #define MORAL_ACTION_ATTACK 1
 #define MORAL_ACTION_STEAL 2
 #define MORAL_ACTION_HELP 3

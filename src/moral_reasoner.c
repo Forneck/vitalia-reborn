@@ -571,6 +571,20 @@ int moral_evaluate_action_cost(struct char_data *actor, struct char_data *victim
         }
     }
 
+    /* Apply memory-based moral learning bias */
+    if (IS_NPC(actor) && actor->ai_data) {
+        int learned_bias = moral_get_learned_bias(actor, action_type);
+
+        /* Apply learned bias to moral cost */
+        moral_cost += learned_bias;
+
+        /* Strong learned avoidance can completely override current judgment */
+        if (moral_has_learned_avoidance(actor, action_type)) {
+            /* Add strong negative penalty for actions learned to be harmful */
+            moral_cost -= 50;
+        }
+    }
+
     return moral_cost;
 }
 
@@ -697,6 +711,32 @@ void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment
 }
 
 /**
+ * Evaluate and record a completed moral action for learning
+ * Convenience wrapper that evaluates judgment and stores in memory
+ */
+void moral_record_action(struct char_data *actor, struct char_data *target, int action_type)
+{
+    struct moral_scenario scenario;
+    struct moral_judgment judgment;
+
+    if (!actor || !IS_NPC(actor) || !actor->ai_data)
+        return;
+
+    /* Build scenario from the completed action */
+    moral_build_scenario_from_action(actor, target, action_type, &scenario);
+
+    /* Evaluate moral judgment */
+    moral_evaluate_guilt(&scenario, &judgment);
+
+    /* Store judgment in memory for learning */
+    moral_store_judgment_in_memory(actor, target, action_type, &judgment);
+
+    /* Apply standard moral adjustments (alignment, reputation) */
+    moral_adjust_alignment(actor, &judgment);
+    moral_adjust_reputation(actor, &judgment);
+}
+
+/**
  * Check if action is morally acceptable to this mob
  * Used to filter actions based on moral identity
  */
@@ -732,4 +772,326 @@ bool moral_is_action_acceptable(struct char_data *ch, int action_type)
     }
 
     return TRUE;
+}
+
+/* ========================================================================== */
+/*                      MEMORY-BASED MORAL LEARNING                           */
+/* ========================================================================== */
+
+/**
+ * Store moral judgment in emotion memory system
+ * This links the moral reasoning system with the emotion memory system
+ * to enable learning from past moral decisions
+ */
+void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *target, int action_type,
+                                    struct moral_judgment *judgment)
+{
+    struct emotion_memory *memory;
+    int pre_shame, pre_disgust, pre_happiness;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !judgment)
+        return;
+
+    /* Store pre-action emotional state for regret calculation */
+    pre_shame = mob->ai_data->emotion_shame;
+    pre_disgust = mob->ai_data->emotion_disgust;
+    pre_happiness = mob->ai_data->emotion_happiness;
+
+    /* First, store the interaction in emotion memory (if there's a target) */
+    /* This creates the memory entry with the current emotional state */
+    if (target) {
+        /* Determine interaction type based on action */
+        int interaction_type = INTERACT_ATTACKED; /* Default */
+        int major_event = judgment->guilty ? 1 : 0;
+
+        switch (action_type) {
+            case MORAL_ACTION_ATTACK:
+                interaction_type = INTERACT_ATTACKED;
+                break;
+            case MORAL_ACTION_STEAL:
+                interaction_type = INTERACT_STOLEN_FROM;
+                major_event = 1;
+                break;
+            case MORAL_ACTION_HELP:
+            case MORAL_ACTION_HEAL:
+                interaction_type = INTERACT_ASSISTED;
+                break;
+            case MORAL_ACTION_BETRAY:
+                interaction_type = INTERACT_ATTACKED;
+                major_event = 1;
+                break;
+            case MORAL_ACTION_DEFEND:
+                interaction_type = INTERACT_ATTACKED;
+                break;
+        }
+
+        /* Store interaction memory (this will create the base memory entry) */
+        add_emotion_memory(mob, target, interaction_type, major_event, NULL);
+    } else {
+        /* No target - create a memory entry manually for the action */
+        memory = &mob->ai_data->memories[mob->ai_data->memory_index];
+
+        /* Initialize memory slot */
+        memory->entity_type = ENTITY_TYPE_MOB;
+        memory->entity_id = 0; /* No specific target */
+        memory->interaction_type = INTERACT_ATTACKED;
+        memory->major_event = judgment->guilty ? 1 : 0;
+        memory->timestamp = time(0);
+        memory->social_name[0] = '\0';
+
+        /* Store emotion snapshot */
+        memory->fear_level = mob->ai_data->emotion_fear;
+        memory->anger_level = mob->ai_data->emotion_anger;
+        memory->happiness_level = mob->ai_data->emotion_happiness;
+        memory->sadness_level = mob->ai_data->emotion_sadness;
+        memory->friendship_level = mob->ai_data->emotion_friendship;
+        memory->love_level = mob->ai_data->emotion_love;
+        memory->trust_level = mob->ai_data->emotion_trust;
+        memory->loyalty_level = mob->ai_data->emotion_loyalty;
+        memory->curiosity_level = mob->ai_data->emotion_curiosity;
+        memory->greed_level = mob->ai_data->emotion_greed;
+        memory->pride_level = mob->ai_data->emotion_pride;
+        memory->compassion_level = mob->ai_data->emotion_compassion;
+        memory->envy_level = mob->ai_data->emotion_envy;
+        memory->courage_level = mob->ai_data->emotion_courage;
+        memory->excitement_level = mob->ai_data->emotion_excitement;
+        memory->disgust_level = mob->ai_data->emotion_disgust;
+        memory->shame_level = mob->ai_data->emotion_shame;
+        memory->pain_level = mob->ai_data->emotion_pain;
+        memory->horror_level = mob->ai_data->emotion_horror;
+        memory->humiliation_level = mob->ai_data->emotion_humiliation;
+
+        /* Advance circular buffer */
+        mob->ai_data->memory_index = (mob->ai_data->memory_index + 1) % EMOTION_MEMORY_SIZE;
+    }
+
+    /* Now update the most recent memory with moral judgment data */
+    /* The memory_index was just incremented, so we need the previous slot */
+    int prev_index = (mob->ai_data->memory_index - 1 + EMOTION_MEMORY_SIZE) % EMOTION_MEMORY_SIZE;
+    memory = &mob->ai_data->memories[prev_index];
+
+    /* Store moral judgment information */
+    memory->moral_action_type = action_type;
+    memory->moral_was_guilty = judgment->guilty;
+    memory->moral_blameworthiness = judgment->blameworthiness_score;
+
+    /* Calculate outcome severity based on judgment */
+    /* Higher blameworthiness = more severe moral outcome */
+    memory->moral_outcome_severity = judgment->blameworthiness_score;
+
+    /* Calculate regret from emotional changes that occurred */
+    /* We need to apply the moral judgment's emotional effects first */
+    moral_adjust_emotions(mob, judgment);
+
+    /* Now calculate regret based on emotional state change */
+    memory->moral_regret_level = moral_calculate_regret(mob, pre_shame, pre_disgust, pre_happiness);
+}
+
+/**
+ * Calculate regret level based on emotional changes after action
+ * Higher regret = action caused negative emotional consequences
+ */
+int moral_calculate_regret(struct char_data *ch, int pre_shame, int pre_disgust, int pre_happiness)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return 0;
+
+    int regret = 0;
+
+    /* Increased shame indicates regret */
+    int shame_increase = ch->ai_data->emotion_shame - pre_shame;
+    if (shame_increase > 0) {
+        regret += shame_increase * 2; /* Shame is strong indicator of regret */
+    }
+
+    /* Increased disgust indicates regret (with self) */
+    int disgust_increase = ch->ai_data->emotion_disgust - pre_disgust;
+    if (disgust_increase > 0) {
+        regret += disgust_increase;
+    }
+
+    /* Decreased happiness indicates regret */
+    int happiness_decrease = pre_happiness - ch->ai_data->emotion_happiness;
+    if (happiness_decrease > 0) {
+        regret += happiness_decrease / 2;
+    }
+
+    /* Bound to 0-100 range */
+    return MIN(100, MAX(0, regret));
+}
+
+/**
+ * Get count of past guilty vs innocent judgments for action type
+ * Scans emotion memories to find patterns
+ */
+void moral_get_action_history(struct char_data *ch, int action_type, int *out_guilty, int *out_innocent)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data || !out_guilty || !out_innocent)
+        return;
+
+    *out_guilty = 0;
+    *out_innocent = 0;
+
+    time_t current_time = time(0);
+
+    /* Scan all memories for this action type */
+    for (int i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &ch->ai_data->memories[i];
+
+        /* Skip empty/old slots */
+        if (mem->timestamp == 0)
+            continue;
+
+        /* Only count recent memories (within last 30 minutes) */
+        int age_seconds = current_time - mem->timestamp;
+        if (age_seconds > 1800) /* 30 minutes */
+            continue;
+
+        /* Check if this memory is about the action type we care about */
+        if (mem->moral_action_type == action_type && mem->moral_was_guilty >= 0) {
+            if (mem->moral_was_guilty == MORAL_JUDGMENT_GUILTY) {
+                (*out_guilty)++;
+            } else {
+                (*out_innocent)++;
+            }
+        }
+    }
+}
+
+/**
+ * Calculate moral learning bias from past actions
+ * Mobs learn to avoid actions that resulted in guilt and regret
+ * Mobs are encouraged to repeat actions that were innocent and positive
+ */
+int moral_get_learned_bias(struct char_data *ch, int action_type)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return 0;
+
+    int total_weight = 0;
+    int weighted_bias = 0;
+    time_t current_time = time(0);
+
+    /* Scan memories for this action type */
+    for (int i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &ch->ai_data->memories[i];
+
+        /* Skip empty slots or entries without moral judgment */
+        if (mem->timestamp == 0 || mem->moral_action_type != action_type || mem->moral_was_guilty < 0)
+            continue;
+
+        /* Calculate memory age and weight */
+        int age_seconds = current_time - mem->timestamp;
+
+        /* Skip very old memories (beyond 1 hour) */
+        if (age_seconds > 3600)
+            continue;
+
+        /* Recent memories have more weight */
+        int weight = 100;
+        if (age_seconds < 300) { /* < 5 minutes */
+            weight = 100;
+        } else if (age_seconds < 900) { /* < 15 minutes */
+            weight = 80;
+        } else if (age_seconds < 1800) { /* < 30 minutes */
+            weight = 60;
+        } else { /* < 60 minutes */
+            weight = 40;
+        }
+
+        /* Major events have double weight */
+        if (mem->major_event) {
+            weight *= 2;
+        }
+
+        total_weight += weight;
+
+        /* Calculate bias from this memory */
+        int memory_bias = 0;
+
+        if (mem->moral_was_guilty == MORAL_JUDGMENT_GUILTY) {
+            /* Guilty actions generate negative bias (avoid repeating) */
+            memory_bias = -mem->moral_blameworthiness;
+
+            /* High regret amplifies the negative bias */
+            if (mem->moral_regret_level > 50) {
+                memory_bias -= (mem->moral_regret_level - 50) / 2;
+            }
+
+            /* High outcome severity amplifies avoidance */
+            if (mem->moral_outcome_severity > 60) {
+                memory_bias -= (mem->moral_outcome_severity - 60) / 3;
+            }
+        } else {
+            /* Innocent actions generate positive bias (encourage repeating) */
+            memory_bias = 30; /* Base encouragement for innocent actions */
+
+            /* Low regret increases positive bias */
+            if (mem->moral_regret_level < 20) {
+                memory_bias += 10;
+            }
+
+            /* Positive emotional outcomes increase bias */
+            if (mem->happiness_level > 60) {
+                memory_bias += (mem->happiness_level - 60) / 5;
+            }
+        }
+
+        /* Accumulate weighted bias */
+        weighted_bias += memory_bias * weight;
+    }
+
+    /* Calculate final bias */
+    if (total_weight == 0)
+        return 0;
+
+    int final_bias = weighted_bias / total_weight;
+
+    /* Clamp to reasonable range */
+    return MAX(-100, MIN(100, final_bias));
+}
+
+/**
+ * Check if mob has learned to strongly avoid this action type
+ * Returns TRUE if past experiences strongly suggest avoiding
+ */
+bool moral_has_learned_avoidance(struct char_data *ch, int action_type)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return FALSE;
+
+    int guilty_count = 0;
+    int innocent_count = 0;
+    int high_regret_count = 0;
+
+    moral_get_action_history(ch, action_type, &guilty_count, &innocent_count);
+
+    /* Scan for high regret instances */
+    time_t current_time = time(0);
+    for (int i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &ch->ai_data->memories[i];
+
+        if (mem->timestamp == 0 || mem->moral_action_type != action_type)
+            continue;
+
+        int age_seconds = current_time - mem->timestamp;
+        if (age_seconds > 1800) /* 30 minutes */
+            continue;
+
+        if (mem->moral_regret_level > 70) {
+            high_regret_count++;
+        }
+    }
+
+    /* Strong avoidance learned if:
+     * - At least 2 guilty judgments with no innocent ones, OR
+     * - At least 3 instances with high regret
+     */
+    if (guilty_count >= 2 && innocent_count == 0)
+        return TRUE;
+
+    if (high_regret_count >= 3)
+        return TRUE;
+
+    return FALSE;
 }

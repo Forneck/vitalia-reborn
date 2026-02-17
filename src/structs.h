@@ -1156,6 +1156,13 @@ struct emotion_memory {
     sh_int pain_level;        /* Pain at time of interaction (0-100) */
     sh_int horror_level;      /* Horror at time of interaction (0-100) */
     sh_int humiliation_level; /* Humiliation at time of interaction (0-100) */
+
+    /* Moral judgment tracking - for memory-based moral learning */
+    sh_int moral_action_type;      /* Type of moral action (MORAL_ACTION_*) or -1 if none */
+    sh_int moral_was_guilty;       /* 1 if judged guilty, 0 if innocent, -1 if not evaluated */
+    sh_int moral_blameworthiness;  /* Blameworthiness score (0-100) or -1 if not evaluated */
+    sh_int moral_outcome_severity; /* Actual outcome severity (0-100) or -1 if unknown */
+    sh_int moral_regret_level;     /* How much regret after action (0-100) computed from emotion changes */
 };
 
 struct mob_ai_data {
