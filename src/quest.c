@@ -836,34 +836,51 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
     return TRUE;
 }
 
+/** Helper to find the questmaster mob present in the same room as the entity.
+ *  This centralizes the lookup logic so it can be reused by multiple quest paths.
+ *
+ * @param entity The character whose room we search (player or mob)
+ * @param rnum   The quest rnum whose questmaster we are looking for
+ * @return Pointer to the questmaster in the room, or NULL if not found/invalid
+ */
+static struct char_data *find_questmaster_in_room(struct char_data *entity, qst_rnum rnum)
+{
+    mob_rnum questmaster_rnum;
+    struct char_data *temp_char;
+
+    if (!entity || IN_ROOM(entity) == NOWHERE || rnum == NOTHING)
+        return NULL;
+
+    questmaster_rnum = real_mobile(QST_MASTER(rnum));
+    if (questmaster_rnum == NOBODY)
+        return NULL;
+
+    /* Look for questmaster in current room */
+    for (temp_char = world[IN_ROOM(entity)].people; temp_char; temp_char = temp_char->next_in_room) {
+        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+            /* For mob quests, skip if questmaster is the mob itself */
+            if (IS_NPC(entity) && temp_char == entity)
+                continue;
+            return temp_char;
+        }
+    }
+
+    return NULL;
+}
+
 /** Trigger quest failure emotion memory for questmaster
  * @param entity The character who failed the quest (player or mob)
  * @param rnum The quest rnum that was failed
  */
 static void trigger_quest_failure_emotion(struct char_data *entity, qst_rnum rnum)
 {
+    struct char_data *questmaster;
+
     if (!entity || !CONFIG_MOB_CONTEXTUAL_SOCIALS || IN_ROOM(entity) == NOWHERE || rnum == NOTHING)
         return;
 
     /* Find the questmaster mob and update their emotions */
-    mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
-    if (questmaster_rnum == NOBODY)
-        return;
-
-    /* Look for questmaster in current room */
-    struct char_data *questmaster = NULL;
-    struct char_data *temp_char;
-    for (temp_char = world[IN_ROOM(entity)].people; temp_char; temp_char = temp_char->next_in_room) {
-        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
-            /* For mob quests, skip if questmaster is the mob itself */
-            if (IS_NPC(entity) && temp_char == entity)
-                continue;
-            questmaster = temp_char;
-            break;
-        }
-    }
-
-    /* Update questmaster emotions if found */
+    questmaster = find_questmaster_in_room(entity, rnum);
     if (questmaster && questmaster->ai_data) {
         update_mob_emotion_quest_failed(questmaster, entity);
     }
@@ -1081,21 +1098,9 @@ void generic_complete_quest(struct char_data *ch)
         /* Emotion trigger: Quest completion (Quest-Related 2.4) */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
             /* Find the questmaster mob and update their emotions */
-            mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
-            if (questmaster_rnum != NOBODY) {
-                /* Look for questmaster in current room */
-                struct char_data *questmaster = NULL;
-                struct char_data *temp_char;
-                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                    if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
-                        questmaster = temp_char;
-                        break;
-                    }
-                }
-                /* Update questmaster emotions if found */
-                if (questmaster && questmaster->ai_data) {
-                    update_mob_emotion_quest_completed(questmaster, ch);
-                }
+            struct char_data *questmaster = find_questmaster_in_room(ch, rnum);
+            if (questmaster && questmaster->ai_data) {
+                update_mob_emotion_quest_completed(questmaster, ch);
             }
         }
 
@@ -2723,19 +2728,9 @@ void mob_complete_quest(struct char_data *mob)
 
     /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
-        mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
-        if (questmaster_rnum != NOBODY) {
-            struct char_data *questmaster = NULL;
-            struct char_data *temp_char;
-            for (temp_char = world[IN_ROOM(mob)].people; temp_char; temp_char = temp_char->next_in_room) {
-                if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
-                    questmaster = temp_char;
-                    break;
-                }
-            }
-            if (questmaster && questmaster->ai_data) {
-                update_mob_emotion_quest_completed(questmaster, mob);
-            }
+        struct char_data *questmaster = find_questmaster_in_room(mob, rnum);
+        if (questmaster && questmaster->ai_data) {
+            update_mob_emotion_quest_completed(questmaster, mob);
         }
     }
 
