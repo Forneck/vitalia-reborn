@@ -5747,14 +5747,21 @@ int get_mob_skill(struct char_data *ch, int skill_num)
 
 /**
  * Apply soft saturation clamp to prevent hard 100 cap on emotions
- * Uses rational function: E_eff = (100 + k) * (E_raw / (E_raw + k))
+ * Uses piecewise rational function with compression only above threshold
+ *
+ * For E_raw <= 80: E_eff = E_raw (no compression, linear)
+ * For E_raw > 80:  E_eff = 80 + 20 * ((E_raw-80) / (E_raw-80 + k))
  *
  * This provides smooth compression as values approach 100 while preserving gradient:
- * - E_raw = 0   → E_eff ≈ 0
- * - E_raw = 50  → E_eff ≈ 75
- * - E_raw = 100 → E_eff ≈ 94
- * - E_raw = 200 → E_eff ≈ 97
- * - E_raw → ∞   → E_eff → 100
+ * - E_raw = 0-80 → E_eff = 0-80 (no change)
+ * - E_raw = 100  → E_eff ≈ 89.2
+ * - E_raw = 120  → E_eff ≈ 91.8
+ * - E_raw = 150  → E_eff ≈ 94.0
+ * - E_raw = 200  → E_eff ≈ 96.0
+ * - E_raw → ∞    → E_eff → 100
+ *
+ * This allows Neuroticism to have meaningful effect while preventing
+ * runaway values and maintaining smooth gradient near the cap.
  *
  * @param raw_value The raw emotion value (can exceed 100)
  * @return The compressed value in range [0, 100)
@@ -5764,10 +5771,17 @@ float apply_soft_saturation_clamp(float raw_value)
     if (raw_value <= 0.0f)
         return 0.0f;
 
+    const float threshold = 80.0f;
     const float k = EMOTION_SOFT_CLAMP_K;
-    const float ceiling = 100.0f + k;
+    const float headroom = 20.0f; /* Space from threshold to 100 */
 
-    return ceiling * (raw_value / (raw_value + k));
+    /* No compression below threshold */
+    if (raw_value <= threshold)
+        return raw_value;
+
+    /* Soft compression above threshold */
+    float excess = raw_value - threshold;
+    return threshold + (headroom * (excess / (excess + k)));
 }
 
 /**
