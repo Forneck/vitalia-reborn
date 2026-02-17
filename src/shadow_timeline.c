@@ -44,6 +44,11 @@ static void generate_social_projections(struct shadow_context *ctx);
 static void generate_item_projections(struct shadow_context *ctx);
 static void generate_guard_projection(struct shadow_context *ctx);
 static void generate_quest_projections(struct shadow_context *ctx);
+static void generate_spell_projections(struct shadow_context *ctx);
+static void generate_trade_projections(struct shadow_context *ctx);
+static void generate_wait_projection(struct shadow_context *ctx);
+static void generate_follow_projections(struct shadow_context *ctx);
+static void generate_group_projections(struct shadow_context *ctx);
 static int score_projection_for_entity(struct char_data *ch, struct shadow_projection *proj);
 static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
@@ -146,17 +151,24 @@ int shadow_generate_projections(struct shadow_context *ctx)
     if (FIGHTING(ch)) {
         /* In combat - focus on combat projections */
         generate_combat_projections(ctx);
+        generate_spell_projections(ctx); /* Consider spell casting in combat */
     } else if (ch->ai_data && ch->ai_data->current_goal != 0) {
         /* Has active goal - focus on goal-relevant actions */
         generate_movement_projections(ctx);
         generate_item_projections(ctx);
         generate_quest_projections(ctx); /* Consider quest-related actions */
+        generate_wait_projection(ctx); /* Consider strategic waiting */
     } else {
         /* Exploring - generate diverse projections */
         generate_movement_projections(ctx);
         generate_social_projections(ctx);
         generate_item_projections(ctx);
         generate_quest_projections(ctx); /* Consider quest opportunities */
+        generate_spell_projections(ctx); /* Consider helpful spells */
+        generate_trade_projections(ctx); /* Consider trading opportunities */
+        generate_follow_projections(ctx); /* Consider following others */
+        generate_group_projections(ctx); /* Consider group formation */
+        generate_wait_projection(ctx); /* Consider doing nothing */
     }
 
     /* Score and rank projections based on entity's subjective evaluation */
@@ -598,6 +610,464 @@ static void generate_quest_projections(struct shadow_context *ctx)
 
         /* Increase happiness (new opportunity) and curiosity satisfaction */
         outcome.happiness_change = 10;
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
+ * Generate spell casting projections
+ * Projects healing allies or harming enemies with spells
+ * RFC-0003 §4.2: Only projects if entity has mana and spell knowledge
+ */
+static void generate_spell_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *target;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Only generate spell projections if mob has sufficient mana */
+    if (GET_MANA(ch) < 15) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Find potential spell targets in room */
+    for (target = world[ch->in_room].people; target && ctx->num_projections < ctx->max_projections;
+         target = target->next_in_room) {
+
+        if (target == ch) {
+            continue; /* Skip self */
+        }
+
+        /* Determine if target is ally or enemy */
+        /* Allies: following same master, in same group, or not aggressive to each other */
+        bool is_ally = FALSE;
+        
+        if (ch->master == target || target->master == ch) {
+            is_ally = TRUE; /* Following relationship indicates alliance */
+        } else if (IS_NPC(ch) && IS_NPC(target)) {
+            /* Two NPCs - check if they're in combat or have aggro flags */
+            if (FIGHTING(ch) == target || FIGHTING(target) == ch) {
+                is_ally = FALSE; /* Currently fighting = not allies */
+            } else {
+                /* Default to neutral/ally unless explicitly hostile */
+                is_ally = TRUE;
+            }
+        }
+
+        /* Set up spell action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_CAST_SPELL;
+        action.target = target;
+        action.cost = SHADOW_BASE_COST * 2; /* Spells are more expensive to project */
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Evaluate outcome based on whether it's healing or harming */
+            if (is_ally && GET_HIT(target) < GET_MAX_HIT(target)) {
+                /* Healing projection */
+                outcome.score = 40;
+                outcome.reward_level = 50;
+                outcome.hp_delta = 30; /* Estimated healing */
+                outcome.happiness_change = 5;
+            } else if (!is_ally) {
+                /* Offensive spell projection */
+                outcome.score = FIGHTING(ch) ? 50 : 20;
+                outcome.reward_level = 40;
+                outcome.danger_level = 30; /* May provoke retaliation */
+                outcome.leads_to_combat = !FIGHTING(ch);
+            } else {
+                /* No good target, skip */
+                continue;
+            }
+
+            outcome.obvious = FALSE; /* Spell effects can be unpredictable */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Limit to one spell projection per call to manage projection count.
+             * In combat scenarios, one spell decision per tick is sufficient.
+             * This prevents projection array overflow while still allowing spell choices. */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate trade/shopping projections
+ * Projects visiting shopkeepers and trading
+ */
+static void generate_trade_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *shopkeeper;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Look for shopkeepers in current room */
+    for (shopkeeper = world[ch->in_room].people; shopkeeper && ctx->num_projections < ctx->max_projections;
+         shopkeeper = shopkeeper->next_in_room) {
+
+        if (shopkeeper == ch || !IS_NPC(shopkeeper)) {
+            continue;
+        }
+
+        /* Use is_shopkeeper() function to properly detect shopkeepers */
+        if (!is_shopkeeper(shopkeeper)) {
+            continue; /* Skip non-shopkeepers to avoid false projections */
+        }
+
+        /* Set up trade action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_TRADE;
+        action.target = shopkeeper;
+        action.cost = SHADOW_BASE_COST;
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Trade is moderately rewarding - represents economic opportunity */
+            outcome.score = 25;
+            outcome.reward_level = 30;
+            outcome.achieves_goal = (ch->ai_data && 
+                                    (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
+                                     ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY));
+            outcome.obvious = TRUE; /* Trading is straightforward */
+            outcome.happiness_change = 5; /* Small satisfaction from commerce */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Only project one trade to avoid spam */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate wait/do-nothing projection
+ * Projects intentionally waiting for better circumstances
+ * ST-3: Bounded Cognition - sometimes best action is to wait
+ */
+static void generate_wait_projection(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Waiting is more valuable in certain situations */
+    bool should_consider_waiting = FALSE;
+
+    if (FIGHTING(ch)) {
+        /* Don't project waiting in combat - already have flee */
+        return;
+    }
+
+    /* Consider waiting if: */
+    if (ch->ai_data) {
+        /* 1. Low energy/mana - wait to regenerate */
+        if (GET_HIT(ch) < GET_MAX_HIT(ch) / 2 || GET_MANA(ch) < GET_MAX_MANA(ch) / 2) {
+            should_consider_waiting = TRUE;
+        }
+        /* 2. High fear - wait for danger to pass */
+        if (ch->ai_data->emotion_fear > 70) {
+            should_consider_waiting = TRUE;
+        }
+        /* 3. Cognitive capacity low - wait to recover */
+        if (ch->ai_data->cognitive_capacity < COGNITIVE_CAPACITY_MIN * 2) {
+            should_consider_waiting = TRUE; /* Twice minimum ensures meaningful cognitive function */
+        }
+    }
+
+    if (!should_consider_waiting) {
+        return;
+    }
+
+    /* Set up wait action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_WAIT;
+    action.target = NULL;
+    action.cost = SHADOW_BASE_COST / 3; /* Waiting is cheap cognitively */
+
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Waiting score depends on why we're waiting */
+        outcome.score = 15; /* Generally low priority unless situation demands it */
+        
+        if (GET_HIT(ch) < GET_MAX_HIT(ch) / 3) {
+            outcome.score = 35; /* Higher when injured */
+            outcome.hp_delta = 10; /* Expect some regeneration */
+        }
+        
+        if (ch->ai_data && ch->ai_data->emotion_fear > 80) {
+            outcome.score = 40; /* Even higher when afraid */
+            outcome.fear_change = -5; /* Waiting reduces fear */
+        }
+
+        outcome.reward_level = 20;
+        outcome.obvious = TRUE; /* Waiting outcomes are predictable */
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
+ * Generate follow projections
+ * Projects following other entities for various reasons
+ */
+static void generate_follow_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *target;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Don't generate follow projections if already following someone */
+    if (ch->master) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Find potential leaders in room */
+    for (target = world[ch->in_room].people; target && ctx->num_projections < ctx->max_projections;
+         target = target->next_in_room) {
+
+        if (target == ch) {
+            continue; /* Skip self */
+        }
+
+        /* Don't follow if target is already following us */
+        if (target->master == ch) {
+            continue;
+        }
+
+        /* Set up follow action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_FOLLOW;
+        action.target = target;
+        action.cost = SHADOW_BASE_COST / 2; /* Following is relatively cheap */
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Following score depends on target's strength and mob's traits */
+            outcome.score = 20; /* Base score */
+            
+            /* Higher score if target is stronger (safety in numbers) */
+            if (GET_LEVEL(target) > GET_LEVEL(ch)) {
+                outcome.score += 15;
+            }
+            
+            /* Higher score if mob has high loyalty trait */
+            if (ch->ai_data && ch->ai_data->emotion_loyalty > 60) {
+                outcome.score += 10;
+            }
+
+            /* Higher score if afraid and target looks protective */
+            if (ch->ai_data && ch->ai_data->emotion_fear > 50) {
+                outcome.score += 10;
+                outcome.fear_change = -10; /* Following reduces fear */
+            }
+
+            outcome.reward_level = 30;
+            outcome.achieves_goal = (ch->ai_data && ch->ai_data->current_goal == GOAL_FOLLOW);
+            outcome.obvious = TRUE; /* Following is straightforward */
+            outcome.happiness_change = 5; /* Social bonding */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Only project one follow to avoid spam */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate group formation projections
+ * Projects strengthening bonds with master/leader
+ */
+static void generate_group_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Only generate group projection if mob is following someone */
+    if (!ch->master || ch->master->in_room != ch->in_room) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Set up group action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_GROUP;
+    action.target = ch->master;
+    action.cost = SHADOW_BASE_COST / 2; /* Group bonding is cheap */
+
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Group bonding is moderately valuable for social cohesion */
+        outcome.score = 25;
+        outcome.reward_level = 35;
+        
+        /* Higher value if mob has high loyalty */
+        if (ch->ai_data && ch->ai_data->emotion_loyalty > 70) {
+            outcome.score += 15;
+        }
+
+        outcome.obvious = TRUE; /* Social bonding is straightforward */
+        outcome.happiness_change = 10; /* Strengthening bonds increases happiness */
 
         /* Store projection */
         ctx->projections[ctx->num_projections].action = action;
