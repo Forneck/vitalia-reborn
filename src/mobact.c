@@ -772,8 +772,27 @@ void mobile_activity(void)
                                 shadow_action_executed = TRUE;
                                 goto shadow_feedback_and_continue;
                             }
-                            /* Otherwise, look for available quest to accept */
-                            /* Quest acceptance logic would check nearby questmasters */
+                            /* Try to accept quest if target is a questmaster */
+                            else if (action.target) {
+                                struct char_data *questmaster = (struct char_data *)action.target;
+                                /* Verify questmaster still exists and is in same room */
+                                if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
+                                    /* Find available quest from this questmaster */
+                                    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                                    if (available_quest != NOTHING) {
+                                        qst_rnum quest_rnum = real_quest(available_quest);
+                                        if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
+                                            set_mob_quest(ch, quest_rnum);
+                                            act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                            shadow_action_executed = TRUE;
+                                            /* Note: Don't goto feedback here, let it fall through to execute feedback */
+                                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                                goto shadow_feedback_and_continue;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         break;
 
@@ -845,7 +864,17 @@ void mobile_activity(void)
 
             /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
             /* Projection context has been freed by mob_shadow_choose_action */
-            continue; /* Skip rest of mob_activity for this mob */
+            
+            /* Only skip normal goal processing if Shadow Timeline successfully executed an action.
+             * If ST didn't handle the action (shadow_action_executed == FALSE), fall through to
+             * normal goal processing. This allows mobs with active goals (like GOAL_COMPLETE_QUEST)
+             * to continue processing their goals even when Shadow Timeline is enabled but doesn't
+             * provide an appropriate action. This prevents mobs from getting stuck when they accept
+             * a quest but Shadow Timeline doesn't handle quest processing. */
+            if (shadow_action_executed) {
+                continue; /* Skip rest of mob_activity for this mob */
+            }
+            /* Otherwise, fall through to normal goal processing below */
 
         shadow_feedback_and_continue:
             /* Evaluate feedback for actions that successfully executed */
