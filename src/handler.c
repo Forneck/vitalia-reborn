@@ -25,6 +25,7 @@
 #include "quest.h"
 #include "mud_event.h"
 #include "lists.h"
+#include "moral_reasoner.h"
 
 /* local file scope variables */
 static int extractions_pending = 0;
@@ -1678,6 +1679,9 @@ struct group_data *create_group(struct char_data *leader)
         SET_BIT(GROUP_FLAGS(new_group), GROUP_NPC);
 
     join_group(leader, new_group);
+
+    /* Initialize group moral reputation */
+    moral_init_group_reputation(new_group);
 
     return (new_group);
 }

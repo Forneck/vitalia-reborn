@@ -260,6 +260,16 @@ void moral_adjust_reputation(struct char_data *ch, struct moral_judgment *judgme
 void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment);
 
 /**
+ * Evaluate and record a completed moral action for learning
+ * This is a convenience function that evaluates moral judgment and stores it in memory
+ * Call this after an action is completed to enable moral learning
+ * @param actor The mob that performed the action
+ * @param target The target of the action (may be NULL)
+ * @param action_type Type of moral action performed
+ */
+void moral_record_action(struct char_data *actor, struct char_data *target, int action_type);
+
+/**
  * Check if mob's moral conviction would prevent action
  * Used to filter out actions that conflict with moral identity
  * @param ch The mob
@@ -268,7 +278,60 @@ void moral_adjust_emotions(struct char_data *ch, struct moral_judgment *judgment
  */
 bool moral_is_action_acceptable(struct char_data *ch, int action_type);
 
+/* Memory-based moral learning functions */
+
+/**
+ * Store moral judgment in emotion memory system
+ * Records the moral judgment for learning from past actions
+ * @param mob The mob that performed the action
+ * @param target The target of the action (may be NULL)
+ * @param action_type Type of moral action performed
+ * @param judgment The moral judgment result
+ */
+void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *target, int action_type,
+                                    struct moral_judgment *judgment);
+
+/**
+ * Calculate moral learning bias from past similar actions
+ * Analyzes past moral judgments to bias future decisions
+ * @param ch The mob
+ * @param action_type Type of action being considered
+ * @return Bias adjustment (-100 to +100): negative discourages, positive encourages
+ */
+int moral_get_learned_bias(struct char_data *ch, int action_type);
+
+/**
+ * Calculate regret level based on emotional changes after action
+ * Higher regret means the action caused negative emotional outcomes
+ * @param ch The mob
+ * @param pre_shame Shame level before action
+ * @param pre_disgust Disgust level before action
+ * @param pre_happiness Happiness level before action
+ * @return Regret level (0-100)
+ */
+int moral_calculate_regret(struct char_data *ch, int pre_shame, int pre_disgust, int pre_happiness);
+
+/**
+ * Check if mob has learned to avoid this action type
+ * Returns TRUE if past experiences strongly suggest avoiding this action
+ * @param ch The mob
+ * @param action_type Type of action
+ * @return TRUE if action should be avoided based on learning
+ */
+bool moral_has_learned_avoidance(struct char_data *ch, int action_type);
+
+/**
+ * Get count of guilty vs innocent judgments for action type from memory
+ * Used to assess moral learning patterns
+ * @param ch The mob
+ * @param action_type Type of action
+ * @param out_guilty Output: count of guilty judgments
+ * @param out_innocent Output: count of innocent judgments
+ */
+void moral_get_action_history(struct char_data *ch, int action_type, int *out_guilty, int *out_innocent);
+
 /* Action type constants for moral evaluation */
+#define MORAL_ACTION_NONE 0
 #define MORAL_ACTION_ATTACK 1
 #define MORAL_ACTION_STEAL 2
 #define MORAL_ACTION_HELP 3
@@ -279,5 +342,87 @@ bool moral_is_action_acceptable(struct char_data *ch, int action_type);
 #define MORAL_ACTION_ABANDON_ALLY 8
 #define MORAL_ACTION_BETRAY 9
 #define MORAL_ACTION_DEFEND 10
+
+/* ========================================================================== */
+/*                      GROUP MORAL DYNAMICS                                  */
+/* ========================================================================== */
+
+/**
+ * Calculate peer pressure influence on moral decision
+ * Evaluates how group members' moral stances influence an individual's choice
+ * @param ch The mob making the decision
+ * @param action_type Type of action being considered
+ * @return Peer pressure modifier (-100 to +100): negative = group disapproves, positive = group encourages
+ */
+int moral_get_peer_pressure(struct char_data *ch, int action_type);
+
+/**
+ * Evaluate collective moral responsibility for group action
+ * Determines if entire group shares guilt/innocence for an action
+ * @param leader The group leader or primary actor
+ * @param victim The target of the action
+ * @param action_type Type of action
+ * @param judgment Output parameter for group moral judgment
+ * @return TRUE if group shares responsibility
+ */
+bool moral_evaluate_group_action(struct char_data *leader, struct char_data *victim, int action_type,
+                                 struct moral_judgment *judgment);
+
+/**
+ * Update group moral reputation based on collective action
+ * Adjusts the group's moral standing based on their actions
+ * @param group The group to update
+ * @param judgment The moral judgment of the group action
+ */
+void moral_update_group_reputation(struct group_data *group, struct moral_judgment *judgment);
+
+/**
+ * Get group moral reputation modifier for interactions
+ * Returns bonus/penalty based on how other groups view this group morally
+ * @param acting_group The group performing an action
+ * @param target_group The group being targeted (may be NULL)
+ * @return Reputation modifier (-50 to +50)
+ */
+int moral_get_group_reputation_modifier(struct group_data *acting_group, struct group_data *target_group);
+
+/**
+ * Calculate moral conformity pressure from leader
+ * Strong leaders can override individual moral judgments
+ * @param follower The mob being influenced
+ * @param leader The group leader
+ * @param action_type Type of action
+ * @return Leader influence (-50 to +50)
+ */
+int moral_get_leader_influence(struct char_data *follower, struct char_data *leader, int action_type);
+
+/**
+ * Check if mob would dissent from group moral decision
+ * Returns TRUE if individual moral conviction would cause dissent
+ * @param ch The mob
+ * @param group_action_cost The moral cost as viewed by the group
+ * @param action_type Type of action
+ * @param victim The target of the action (for context)
+ * @return TRUE if mob would dissent and potentially leave group
+ */
+bool moral_would_dissent_from_group(struct char_data *ch, int group_action_cost, int action_type,
+                                    struct char_data *victim);
+
+/**
+ * Record group action in all members' moral memories
+ * Distributes collective responsibility across group members
+ * @param group The group that performed the action
+ * @param victim The target of the action
+ * @param action_type Type of action
+ * @param judgment The collective moral judgment
+ */
+void moral_record_group_action(struct group_data *group, struct char_data *victim, int action_type,
+                               struct moral_judgment *judgment);
+
+/**
+ * Initialize group moral reputation for new groups
+ * Sets default values based on initial members
+ * @param group The newly formed group
+ */
+void moral_init_group_reputation(struct group_data *group);
 
 #endif /* _MORAL_REASONER_H_ */
