@@ -156,6 +156,9 @@ int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
 /* Mob emotion system functions */
+float apply_soft_saturation_clamp(float raw_value);
+float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_value);
+int get_emotion_type_from_pointer(struct char_data *mob, int *emotion_ptr);
 void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
 void adjust_emotional_intelligence(struct char_data *mob, int change);
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);

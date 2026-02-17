@@ -1031,6 +1031,57 @@ struct mob_genetics {
 };
 
 /**
+ * Big Five (OCEAN) Personality Model Structure
+ * Phase 1: Only Neuroticism (N) is implemented and functional
+ * Other traits (O, C, E, A) reserved for future phases
+ *
+ * All values normalized to range [0.0 - 1.0]
+ * - 0.0 = minimum trait expression
+ * - 0.5 = average/neutral
+ * - 1.0 = maximum trait expression
+ *
+ * NEUROTICISM (N) - Emotional Stability vs. Sensitivity
+ * - Low N (0.0): Emotionally stable, calm, not easily upset
+ * - High N (1.0): Emotionally reactive, anxious, threat-sensitive
+ * - Functions as emotional gain amplifier for aversive emotions only
+ */
+struct mob_personality {
+    float openness;          /* (O) Openness to experience - Future use (Phase 4) */
+    float conscientiousness; /* (C) Self-discipline/control - Future use (Phase 2) */
+    float extraversion;      /* (E) Social engagement - Future use (Phase 3) */
+    float agreeableness;     /* (A) Compassion/cooperation - Future use (Phase 3) */
+    float neuroticism;       /* (N) Emotional sensitivity - ACTIVE in Phase 1 */
+};
+
+/**
+ * Neuroticism Gain Configuration Constants
+ * β values control how much Neuroticism amplifies negative emotions
+ * Formula: E_raw = E_base * (1.0 + (β * N))
+ *
+ * These values are tuned based on emotion type:
+ * - High gain (0.4): Primary threat emotions
+ * - Medium gain (0.25): Secondary aversive emotions
+ * - Lower gain (0.2): Arousal-based negative emotions
+ */
+#define NEUROTICISM_GAIN_FEAR 0.4f        /* Fear - primary threat response */
+#define NEUROTICISM_GAIN_SADNESS 0.4f     /* Sadness - loss/withdrawal */
+#define NEUROTICISM_GAIN_SHAME 0.4f       /* Shame - self-directed negative */
+#define NEUROTICISM_GAIN_HUMILIATION 0.4f /* Humiliation - social degradation */
+#define NEUROTICISM_GAIN_PAIN 0.4f        /* Pain - physical suffering */
+#define NEUROTICISM_GAIN_HORROR 0.4f      /* Horror - extreme aversion */
+#define NEUROTICISM_GAIN_DISGUST 0.25f    /* Disgust - moderate aversion */
+#define NEUROTICISM_GAIN_ENVY 0.25f       /* Envy - comparison-based negative */
+#define NEUROTICISM_GAIN_ANGER 0.2f       /* Anger - approach-oriented negative */
+
+/**
+ * Soft Saturation Constant
+ * Used in rational soft clamp: E_eff = (100 + k) * (E_raw / (E_raw + k))
+ * k = 50 provides smooth compression as values approach 100
+ * Prevents hard caps while maintaining 0-100 scale
+ */
+#define EMOTION_SOFT_CLAMP_K 50.0f
+
+/**
  * Estrutura para um item desejado na wishlist de um mob
  */
 struct mob_wishlist_item {
@@ -1166,8 +1217,9 @@ struct emotion_memory {
 };
 
 struct mob_ai_data {
-    struct mob_genetics genetics; /* Contém todos os genes. */
-    room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
+    struct mob_genetics genetics;       /* Contém todos os genes. */
+    struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
+    room_vnum guard_post;               /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     int quest_posting_frustration_timer; /* Prevents quest posting after fleeing */
     struct mob_wishlist_item *wishlist;  /* Lista de itens desejados */

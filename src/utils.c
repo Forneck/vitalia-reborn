@@ -5746,8 +5746,176 @@ int get_mob_skill(struct char_data *ch, int skill_num)
 }
 
 /**
+ * Apply soft saturation clamp to prevent hard 100 cap on emotions
+ * Uses rational function: E_eff = (100 + k) * (E_raw / (E_raw + k))
+ *
+ * This provides smooth compression as values approach 100 while preserving gradient:
+ * - E_raw = 0   → E_eff ≈ 0
+ * - E_raw = 50  → E_eff ≈ 75
+ * - E_raw = 100 → E_eff ≈ 94
+ * - E_raw = 200 → E_eff ≈ 97
+ * - E_raw → ∞   → E_eff → 100
+ *
+ * @param raw_value The raw emotion value (can exceed 100)
+ * @return The compressed value in range [0, 100)
+ */
+float apply_soft_saturation_clamp(float raw_value)
+{
+    if (raw_value <= 0.0f)
+        return 0.0f;
+
+    const float k = EMOTION_SOFT_CLAMP_K;
+    const float ceiling = 100.0f + k;
+
+    return ceiling * (raw_value / (raw_value + k));
+}
+
+/**
+ * Apply Neuroticism gain to aversive emotions only
+ * Formula: E_raw = E_base * (1.0 + (β * N))
+ *
+ * Neuroticism amplifies negative emotional intensity based on:
+ * - Emotion type (different β values per emotion)
+ * - Neuroticism level (0.0 to 1.0)
+ *
+ * Positive emotions are NOT affected (preserved at base value)
+ *
+ * @param mob The mob whose emotion is being adjusted
+ * @param emotion_type The emotion type constant (EMOTION_TYPE_*)
+ * @param base_value The base emotion value before Neuroticism gain
+ * @return The amplified emotion value (may exceed 100, will be clamped later)
+ */
+float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_value)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return (float)base_value;
+
+    float neuroticism = mob->ai_data->personality.neuroticism;
+    float beta = 0.0f;
+
+    /* Determine β (gain coefficient) based on emotion type
+     * Only negative/aversive emotions get amplified
+     */
+    switch (emotion_type) {
+        /* Full gain emotions (β = 0.4) - primary threat responses */
+        case EMOTION_TYPE_FEAR:
+            beta = NEUROTICISM_GAIN_FEAR;
+            break;
+        case EMOTION_TYPE_SADNESS:
+            beta = NEUROTICISM_GAIN_SADNESS;
+            break;
+        case EMOTION_TYPE_SHAME:
+            beta = NEUROTICISM_GAIN_SHAME;
+            break;
+        case EMOTION_TYPE_HUMILIATION:
+            beta = NEUROTICISM_GAIN_HUMILIATION;
+            break;
+        case EMOTION_TYPE_PAIN:
+            beta = NEUROTICISM_GAIN_PAIN;
+            break;
+        case EMOTION_TYPE_HORROR:
+            beta = NEUROTICISM_GAIN_HORROR;
+            break;
+
+        /* Reduced gain emotions (β = 0.25) - secondary aversive */
+        case EMOTION_TYPE_DISGUST:
+            beta = NEUROTICISM_GAIN_DISGUST;
+            break;
+        case EMOTION_TYPE_ENVY:
+            beta = NEUROTICISM_GAIN_ENVY;
+            break;
+
+        /* Lower gain emotions (β = 0.2) - approach-oriented negative */
+        case EMOTION_TYPE_ANGER:
+            beta = NEUROTICISM_GAIN_ANGER;
+            break;
+
+        /* Positive emotions - no amplification */
+        case EMOTION_TYPE_HAPPINESS:
+        case EMOTION_TYPE_PRIDE:
+        case EMOTION_TYPE_FRIENDSHIP:
+        case EMOTION_TYPE_LOVE:
+        case EMOTION_TYPE_TRUST:
+        case EMOTION_TYPE_LOYALTY:
+        case EMOTION_TYPE_CURIOSITY:
+        case EMOTION_TYPE_COMPASSION:
+        case EMOTION_TYPE_COURAGE:
+        case EMOTION_TYPE_EXCITEMENT:
+        case EMOTION_TYPE_GREED: /* Greed is neutral/approach, not aversive */
+        default:
+            return (float)base_value; /* No gain for positive emotions */
+    }
+
+    /* Apply Neuroticism gain formula: E_raw = E_base * (1.0 + β * N) */
+    float gain_multiplier = 1.0f + (beta * neuroticism);
+    return (float)base_value * gain_multiplier;
+}
+
+/**
+ * Determine emotion type from emotion pointer
+ * Compares the pointer against known emotion field offsets in mob_ai_data
+ *
+ * @param mob The mob whose emotion is being checked
+ * @param emotion_ptr Pointer to the emotion field
+ * @return The emotion type constant (EMOTION_TYPE_*) or -1 if unknown
+ */
+int get_emotion_type_from_pointer(struct char_data *mob, int *emotion_ptr)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
+        return -1;
+
+    /* Compare pointer against each emotion field to determine type */
+    if (emotion_ptr == &mob->ai_data->emotion_fear)
+        return EMOTION_TYPE_FEAR;
+    if (emotion_ptr == &mob->ai_data->emotion_anger)
+        return EMOTION_TYPE_ANGER;
+    if (emotion_ptr == &mob->ai_data->emotion_happiness)
+        return EMOTION_TYPE_HAPPINESS;
+    if (emotion_ptr == &mob->ai_data->emotion_sadness)
+        return EMOTION_TYPE_SADNESS;
+    if (emotion_ptr == &mob->ai_data->emotion_friendship)
+        return EMOTION_TYPE_FRIENDSHIP;
+    if (emotion_ptr == &mob->ai_data->emotion_love)
+        return EMOTION_TYPE_LOVE;
+    if (emotion_ptr == &mob->ai_data->emotion_trust)
+        return EMOTION_TYPE_TRUST;
+    if (emotion_ptr == &mob->ai_data->emotion_loyalty)
+        return EMOTION_TYPE_LOYALTY;
+    if (emotion_ptr == &mob->ai_data->emotion_curiosity)
+        return EMOTION_TYPE_CURIOSITY;
+    if (emotion_ptr == &mob->ai_data->emotion_greed)
+        return EMOTION_TYPE_GREED;
+    if (emotion_ptr == &mob->ai_data->emotion_pride)
+        return EMOTION_TYPE_PRIDE;
+    if (emotion_ptr == &mob->ai_data->emotion_compassion)
+        return EMOTION_TYPE_COMPASSION;
+    if (emotion_ptr == &mob->ai_data->emotion_envy)
+        return EMOTION_TYPE_ENVY;
+    if (emotion_ptr == &mob->ai_data->emotion_courage)
+        return EMOTION_TYPE_COURAGE;
+    if (emotion_ptr == &mob->ai_data->emotion_excitement)
+        return EMOTION_TYPE_EXCITEMENT;
+    if (emotion_ptr == &mob->ai_data->emotion_disgust)
+        return EMOTION_TYPE_DISGUST;
+    if (emotion_ptr == &mob->ai_data->emotion_shame)
+        return EMOTION_TYPE_SHAME;
+    if (emotion_ptr == &mob->ai_data->emotion_pain)
+        return EMOTION_TYPE_PAIN;
+    if (emotion_ptr == &mob->ai_data->emotion_horror)
+        return EMOTION_TYPE_HORROR;
+    if (emotion_ptr == &mob->ai_data->emotion_humiliation)
+        return EMOTION_TYPE_HUMILIATION;
+
+    return -1; /* Unknown emotion type */
+}
+
+/**
  * Adjust a mob's emotion by a specified amount, keeping it within 0-100 bounds
- * Also applies EI (Emotional Intelligence) effects on volatility
+ * Applies the following pipeline:
+ * 1. EI (Emotional Intelligence) modulation of volatility
+ * 2. Neuroticism gain amplification (Phase 1 - negative emotions only)
+ * 3. Soft saturation clamping (prevents hard 100 cap)
+ *
  * @param mob The mob whose emotion to adjust
  * @param emotion_ptr Pointer to the emotion value
  * @param amount Amount to adjust (positive or negative)
@@ -5759,7 +5927,7 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
 
     int ei = GET_GENEMOTIONAL_IQ(mob);
 
-    /* Emotional Intelligence affects volatility of emotion changes:
+    /* PIPELINE STEP 1: Emotional Intelligence affects volatility of emotion changes
      * - Low EI (0-35): More extreme reactions (120-150% of amount)
      * - Average EI (36-65): Normal reactions (100% of amount)
      * - High EI (66-100): More measured reactions (70-90% of amount)
@@ -5773,7 +5941,23 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     }
     /* Average EI (36-65): No modification to amount */
 
-    *emotion_ptr = URANGE(0, *emotion_ptr + amount, 100);
+    /* Calculate new base emotion value */
+    int base_emotion = *emotion_ptr + amount;
+
+    /* PIPELINE STEP 2: Apply Neuroticism gain (Phase 1 - negative emotions only)
+     * Determines emotion type and applies appropriate β gain if aversive
+     */
+    int emotion_type = get_emotion_type_from_pointer(mob, emotion_ptr);
+    float raw_emotion = apply_neuroticism_gain(mob, emotion_type, base_emotion);
+
+    /* PIPELINE STEP 3: Apply soft saturation clamp
+     * Prevents hard 100 cap while maintaining gradient
+     */
+    float final_emotion = apply_soft_saturation_clamp(raw_emotion);
+
+    /* Convert to integer and ensure bounds [0, 100] */
+    *emotion_ptr = (int)(final_emotion + 0.5f); /* Round to nearest int */
+    *emotion_ptr = URANGE(0, *emotion_ptr, 100);
 }
 
 /**
