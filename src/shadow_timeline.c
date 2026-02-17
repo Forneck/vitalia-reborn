@@ -539,9 +539,11 @@ static void generate_quest_projections(struct shadow_context *ctx)
     if (ch->ai_data->current_goal == GOAL_NONE || 
         ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
         ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
-        /* Calculate interest in quests based on genetics and emotions */
-        int quest_interest = GET_GENQUEST(ch) / 5; /* 0-20 from quest_tendency */
-        quest_interest += ch->ai_data->emotion_curiosity / 10; /* 0-10 from curiosity */
+        /* Calculate interest in quests based on emotions and genetics
+         * Curiosity emotion is primary driver (0-50), genetics provides baseline (0-20)
+         * More curious mobs will actively seek and pursue quests */
+        int quest_interest = ch->ai_data->emotion_curiosity / 2; /* 0-50 from curiosity (primary) */
+        quest_interest += GET_GENQUEST(ch) / 5; /* 0-20 from quest_tendency (secondary) */
         
         /* Random check with interest-based threshold */
         if (rand_number(0, 100) < quest_interest) {
