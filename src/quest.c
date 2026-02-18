@@ -3676,19 +3676,23 @@ void init_mob_ai_data(struct char_data *mob)
          *
          * CONSCIENTIOUSNESS INITIALIZATION:
          * C represents self-discipline, organization, and goal-directed behavior.
-         * If not explicitly set in the mob file (indicated by value of 0.5),
-         * generate using Gaussian distribution centered at 50 with std_dev of 15.
-         * This produces a realistic population distribution where most mobs have
-         * moderate conscientiousness (35-65 range), with rarer extremes.
+         * After memset, conscientiousness = 0.0. If file loading sets a value,
+         * it will be >= 0.0. Otherwise, we set sentinel -1.0 and generate.
          *
-         * Storage: 0-100 in genetics, normalized to 0.0-1.0 in personality struct
+         * Strategy: Check if value is still 0.0 from memset. If yes, set sentinel
+         * then generate. If not 0.0, it was loaded from file, so keep it.
+         *
+         * Storage: 0-100 in files/UI, normalized to 0.0-1.0 in personality struct
+         * Note: 0.0 is valid (low conscientiousness), memset initializes to 0.0
          */
-        if (mob->ai_data->personality.conscientiousness == 0.5f) {
-            /* Not set from file, generate new value */
+        if (mob->ai_data->personality.conscientiousness == 0.0f) {
+            /* Could be uninitialized OR explicitly set to 0 in file.
+             * Since file format doesn't save 0 values (they're defaults),
+             * 0.0 here means "not loaded from file", so generate new value. */
             int c_value = rand_gaussian(50, 15, 0, 100);
             mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
         }
-        /* If already set from file, keep the loaded value */
+        /* If not 0.0, it was loaded from file, keep it */
 
         mob->ai_data->personality.openness = 0.5f;
         mob->ai_data->personality.extraversion = 0.5f;
