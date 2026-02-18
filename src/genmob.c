@@ -388,6 +388,11 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             fprintf(fd, "GenEmotionalIQ: %d\n", GET_GENEMOTIONAL_IQ(mob));
         if (mob->ai_data && mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL)
             fprintf(fd, "EmotionProfile: %d\n", mob->ai_data->emotional_profile);
+
+        /* Big Five Phase 2: Conscientiousness - Always save to persist generated/edited values
+         * Convert from normalized 0.0-1.0 to 0-100 for file storage */
+        int c_value = (int)(mob->ai_data->personality.conscientiousness * 100.0f);
+        fprintf(fd, "Conscientiousness: %d\n", c_value);
     }
 
     fputs("E\n", fd);

@@ -2035,6 +2035,14 @@ struct emotion_config_data {
     int neuroticism_gain_envy;        /**< Envy gain coefficient β * 100 (default: 25 = 0.25) */
     int neuroticism_gain_anger;       /**< Anger gain coefficient β * 100 (default: 20 = 0.20) */
     int neuroticism_soft_clamp_k;     /**< Soft saturation constant k (default: 50) */
+
+    /* Big Five (OCEAN) Personality System - Phase 2: Conscientiousness */
+    /* Executive control parameters - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    int conscientiousness_impulse_control; /**< Impulse control strength γ * 100 (default: 100 = 1.0) */
+    int conscientiousness_reaction_delay;  /**< Reaction delay sensitivity β * 100 (default: 100 = 1.0) */
+    int conscientiousness_moral_weight;    /**< Moral amplification factor * 100 (default: 100 = 1.0) */
+    int conscientiousness_debug;           /**< Debug flag: show executive calculations (default: 0 = OFF) */
 };
 
 /** Experimental Features configuration. */

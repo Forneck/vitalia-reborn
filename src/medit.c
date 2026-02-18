@@ -472,6 +472,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     "%sC%s) Healing Tendency       : %s%d%s\r\n"
                     "%sD%s) Emotional Intelligence : %s%d%s\r\n"
                     "%sE%s) Emotion Profile        : %s%s%s\r\n"
+                    "%sF%s) Conscientiousness      : %s%d%s (Big Five)\r\n"
                     "%sQ%s) Return to main menu\r\n"
                     "Enter choice : ",
 
@@ -487,7 +488,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
                          ? emotion_profile_types[mob->ai_data->emotional_profile]
                          : "Unknown"),
-                    nrm, grn, nrm);
+                    nrm, grn, nrm, yel, (int)(mob->ai_data->personality.conscientiousness * 100), nrm, grn, nrm);
 
     OLC_MODE(d) = MEDIT_GENETICS_MENU;
 }
@@ -952,6 +953,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = MEDIT_EMOTION_PROFILE;
                     i = 2; /* Special handling for emotion profile */
                     break;
+                case 'f':
+                case 'F':
+                    OLC_MODE(d) = MEDIT_GEN_CONSCIENTIOUSNESS;
+                    i++;
+                    break;
                 default:
                     medit_disp_genetics_menu(d);
                     return;
@@ -1355,6 +1361,17 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->emotional_profile = LIMIT(i, 0, 7);
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_CONSCIENTIOUSNESS:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
+            }
+            /* Big Five Phase 2: Conscientiousness (0-100, normalized to 0.0-1.0) */
+            OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 0, 100) / 100.0f;
             medit_disp_genetics_menu(d);
             return;
 

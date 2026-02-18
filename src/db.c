@@ -1983,6 +1983,15 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
+    CASE("Conscientiousness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness personality trait
+             * Valid range: 0-100, normalized to 0.0-1.0 internally */
+            RANGE(0, 100);
+            mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+        }
+    }
     CASE("PreferredWeather")
     {
         if (mob_proto[i].ai_data) {
@@ -4642,6 +4651,12 @@ static void load_default_config(void)
     CONFIG_NEUROTICISM_GAIN_ENVY = neuroticism_gain_envy;
     CONFIG_NEUROTICISM_GAIN_ANGER = neuroticism_gain_anger;
     CONFIG_NEUROTICISM_SOFT_CLAMP_K = neuroticism_soft_clamp_k;
+
+    /* Big Five (OCEAN) Personality - Phase 2: Conscientiousness */
+    CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL = conscientiousness_impulse_control;
+    CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = conscientiousness_reaction_delay;
+    CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = conscientiousness_moral_weight;
+    CONFIG_CONSCIENTIOUSNESS_DEBUG = conscientiousness_debug;
 }
 
 void load_config(void)
@@ -4680,6 +4695,15 @@ void load_config(void)
             case 'c':
                 if (!str_cmp(tag, "crash_file_timeout"))
                     CONFIG_CRASH_TIMEOUT = num;
+                /* Big Five Phase 2: Conscientiousness */
+                else if (!str_cmp(tag, "conscientiousness_impulse_control"))
+                    CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_reaction_delay"))
+                    CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_moral_weight"))
+                    CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_debug"))
+                    CONFIG_CONSCIENTIOUSNESS_DEBUG = LIMIT(num, 0, 1);
                 break;
 
             case 'd':

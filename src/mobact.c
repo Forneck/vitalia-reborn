@@ -48,6 +48,39 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
+
+/**
+ * Big Five Phase 2B: Conscientiousness Executive Control Helper
+ *
+ * Apply conscientiousness modulation to a deliberative decision.
+ * This should be called ONCE per decision cycle, not for reflexive actions.
+ *
+ * @param ch The mob making a decision
+ * @param base_impulse_prob Base probability of impulsive action [0.0, 1.0]
+ * @param needs_delay Whether this decision should have reaction delay
+ * @param delay_ptr Pointer to delay value to modify (can be NULL if !needs_delay)
+ * @return Modified impulse probability after conscientiousness filtering
+ */
+static float apply_executive_control(struct char_data *ch, float base_impulse_prob, bool needs_delay, float *delay_ptr)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return base_impulse_prob;
+
+    /* Calculate emotional arousal for this decision cycle */
+    float arousal = calculate_emotional_arousal(ch);
+
+    /* Apply impulse modulation (high C reduces impulsive actions) */
+    float modulated_impulse = apply_conscientiousness_impulse_modulation(ch, base_impulse_prob);
+
+    /* Apply reaction delay if needed (high C increases deliberation under arousal)
+     * Remove the > 0.0f check to allow delay calculation even when starting from 0 */
+    if (needs_delay && delay_ptr) {
+        *delay_ptr = apply_conscientiousness_reaction_delay(ch, *delay_ptr, arousal);
+    }
+
+    return modulated_impulse;
+}
+
 bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
 bool mob_try_heal_ally(struct char_data *ch);
@@ -659,9 +692,37 @@ void mobile_activity(void)
                             struct char_data *target = (struct char_data *)action.target;
                             /* Verify target still exists and is in same room */
                             if (IN_ROOM(target) == IN_ROOM(ch)) {
-                                hit(ch, target, TYPE_UNDEFINED);
-                                shadow_action_executed = TRUE;
-                                goto shadow_feedback_and_continue;
+                                /* Big Five Phase 2B: Apply Conscientiousness to Shadow Timeline Attack Decision
+                                 * This is a DELIBERATIVE choice from projected futures.
+                                 * High C reduces impulsive attack execution, adds reaction delay under arousal.
+                                 * Base impulse = 0.8 (shadow projections are inherently somewhat impulsive)
+                                 * Base delay = 1.0 tick (unit baseline for executive modulation) */
+                                float base_impulse = 0.8f;
+                                float base_delay = 1.0f; /* Unit baseline for delay modulation */
+                                float modulated_impulse = apply_executive_control(ch, base_impulse, TRUE, &base_delay);
+
+                                /* Check if impulse succeeds (probabilistic execution) */
+                                if (rand_number(0, 100) <= (int)(modulated_impulse * 100.0f)) {
+                                    /* Apply reaction delay if high C under arousal */
+                                    if (base_delay > 0.5f) {
+                                        /* Delay implemented as probability of postponing action
+                                         * Higher delay = higher chance to skip this tick */
+                                        int delay_chance = (int)(base_delay * 20.0f); /* Scale to percentage */
+                                        if (rand_number(0, 100) < delay_chance) {
+                                            /* Deliberation causes hesitation - skip action this tick */
+                                            shadow_action_executed = FALSE;
+                                            break;
+                                        }
+                                    }
+
+                                    /* Execute attack */
+                                    hit(ch, target, TYPE_UNDEFINED);
+                                    shadow_action_executed = TRUE;
+                                    goto shadow_feedback_and_continue;
+                                } else {
+                                    /* Impulse suppressed by high C - don't attack */
+                                    shadow_action_executed = FALSE;
+                                }
                             }
                         }
                         break;
@@ -778,14 +839,17 @@ void mobile_activity(void)
                                 /* Verify questmaster still exists and is in same room */
                                 if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
                                     /* Find available quest from this questmaster */
-                                    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                                    qst_vnum available_quest =
+                                        find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
                                     if (available_quest != NOTHING) {
                                         qst_rnum quest_rnum = real_quest(available_quest);
                                         if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
                                             set_mob_quest(ch, quest_rnum);
-                                            act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                            act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster,
+                                                TO_ROOM);
                                             shadow_action_executed = TRUE;
-                                            /* Note: Don't goto feedback here, let it fall through to execute feedback */
+                                            /* Note: Don't goto feedback here, let it fall through to execute feedback
+                                             */
                                             /* Safety check: act() can trigger DG scripts which may cause extraction */
                                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                                 goto shadow_feedback_and_continue;
@@ -864,7 +928,7 @@ void mobile_activity(void)
 
             /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
             /* Projection context has been freed by mob_shadow_choose_action */
-            
+
             /* Only skip normal goal processing if Shadow Timeline successfully executed an action.
              * If ST didn't handle the action (shadow_action_executed == FALSE), fall through to
              * normal goal processing. This allows mobs with active goals (like GOAL_COMPLETE_QUEST)
@@ -1920,7 +1984,26 @@ void mobile_activity(void)
                     // if (IS_NPC(vict))
                     // continue;
 
-                    if (rand_number(0, 20) <= GET_CHA(vict)) {
+                    /* Big Five Phase 2B: Apply Conscientiousness to Aggressive Targeting
+                     * This is a DELIBERATIVE decision point: mob chooses to attack or not.
+                     * High C reduces impulsive aggression, low C increases it.
+                     * Charisma provides base resistance, C modulates the impulse. */
+
+                    /* Base impulse probability: 1.0 - (charisma_resistance / 20.0)
+                     * CHA 0  = 100% impulse, CHA 20 = 0% impulse
+                     * This represents victim's ability to diffuse aggression */
+                    float base_impulse = 1.0f - (MIN(GET_CHA(vict), 20) / 20.0f);
+
+                    /* Apply executive control (C modulation of impulse) */
+                    float modulated_impulse = apply_executive_control(ch, base_impulse, FALSE, NULL);
+
+                    /* Convert back to threshold for rand_number check
+                     * Original: if (rand_number(0, 20) <= GET_CHA(vict))
+                     * New: if (rand_number(0, 100) > modulated_impulse * 100) */
+                    int impulse_threshold = (int)(modulated_impulse * 100.0f);
+
+                    if (rand_number(0, 100) > impulse_threshold) {
+                        /* Resisted impulse - intimidate instead of attack */
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
                         /* Safety check: act() can trigger DG scripts which may extract ch or vict */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -1938,6 +2021,7 @@ void mobile_activity(void)
                             continue;
                         }
                     } else {
+                        /* Impulse succeeded - attack */
                         hit(ch, vict, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))

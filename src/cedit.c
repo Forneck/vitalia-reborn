@@ -30,6 +30,7 @@ static void cedit_disp_experimental_options(struct descriptor_data *d);
 static void cedit_disp_emotion_menu(struct descriptor_data *d);
 static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d);
+static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data *d);
 static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
@@ -1194,6 +1195,14 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "neuroticism_gain_anger = %d\n", CONFIG_NEUROTICISM_GAIN_ANGER);
     fprintf(fl, "neuroticism_soft_clamp_k = %d\n\n", CONFIG_NEUROTICISM_SOFT_CLAMP_K);
 
+    /* Big Five Phase 2: Conscientiousness Configuration */
+    fprintf(fl, "* Big Five (OCEAN) - Phase 2: Conscientiousness Configuration\n");
+    fprintf(fl, "* Executive control parameters (values * 100 for precision)\n");
+    fprintf(fl, "conscientiousness_impulse_control = %d\n", CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL);
+    fprintf(fl, "conscientiousness_reaction_delay = %d\n", CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY);
+    fprintf(fl, "conscientiousness_moral_weight = %d\n", CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT);
+    fprintf(fl, "conscientiousness_debug = %d\n\n", CONFIG_CONSCIENTIOUSNESS_DEBUG);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1488,10 +1497,12 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sF%s) Combat Behavior (Anger/Pain Effects)\r\n"
                     "%sG%s) Emotion Decay Rates\r\n"
                     "%sH%s) Big Five (OCEAN) - Neuroticism Configuration\r\n"
+                    "%sI%s) Big Five (OCEAN) - Conscientiousness Configuration\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm,
+                    grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -1580,6 +1591,45 @@ static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d)
                     OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_BIGFIVE_NEUROTICISM_SUBMENU;
+}
+
+/* Display Big Five Conscientiousness (Phase 2) configuration menu */
+static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Big Five (OCEAN) Personality - Phase 2: Conscientiousness Configuration\r\n"
+                    "---\r\n"
+                    "Conscientiousness (C) acts as an executive control filter before action selection.\r\n"
+                    "It modulates impulsivity, reaction time, and moral weighting based on emotional arousal.\r\n"
+                    "\r\n"
+                    "Executive Control Parameters (values * 100 for precision):\r\n"
+                    "%s1%s) Impulse Control Strength (γ*100):  %s%d%s (default: 100 = 1.0)\r\n"
+                    "     Formula: impulse_prob = base * (1 - γC)\r\n"
+                    "     Higher values = stronger impulse suppression with high C\r\n"
+                    "\r\n"
+                    "%s2%s) Reaction Delay Sensitivity (β*100): %s%d%s (default: 100 = 1.0)\r\n"
+                    "     Formula: delay = base * (1 + βC * arousal)\r\n"
+                    "     Higher values = more deliberation under emotional arousal\r\n"
+                    "\r\n"
+                    "%s3%s) Moral Weight Amplification (*100):  %s%d%s (default: 100 = 1.0)\r\n"
+                    "     Formula: moral_weight = base * (1 + factor * C)\r\n"
+                    "     Higher values = stronger moral consideration with high C\r\n"
+                    "\r\n"
+                    "Debugging:\r\n"
+                    "%s4%s) Debug Logging:                      %s%s%s\r\n"
+                    "     Logs executive calculations to syslog (0=OFF, 1=ON)\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.conscientiousness_impulse_control, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.conscientiousness_reaction_delay, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.conscientiousness_debug ? "ON" : "OFF", nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_BIGFIVE_CONSCIENTIOUSNESS_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3219,6 +3269,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     cedit_disp_bigfive_neuroticism_submenu(d);
                     return;
 
+                case 'i':
+                case 'I':
+                    cedit_disp_bigfive_conscientiousness_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3731,6 +3786,33 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'A':
                     write_to_output(d, "\r\nEnter Soft Clamp Constant k (10-200, default 50) : ");
                     OLC_MODE(d) = CEDIT_NEUROTICISM_SOFT_CLAMP_K;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_BIGFIVE_CONSCIENTIOUSNESS_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Impulse Control Strength*100 (0-200, default 100 = 1.0) : ");
+                    OLC_MODE(d) = CEDIT_CONSCIENTIOUSNESS_IMPULSE_CONTROL;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Reaction Delay Sensitivity*100 (0-200, default 100 = 1.0) : ");
+                    OLC_MODE(d) = CEDIT_CONSCIENTIOUSNESS_REACTION_DELAY;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Moral Weight Amplification*100 (0-200, default 100 = 1.0) : ");
+                    OLC_MODE(d) = CEDIT_CONSCIENTIOUSNESS_MORAL_WEIGHT;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Debug Logging (0=OFF, 1=ON) : ");
+                    OLC_MODE(d) = CEDIT_CONSCIENTIOUSNESS_DEBUG;
                     return;
                 case 'q':
                 case 'Q':
@@ -4795,6 +4877,26 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_NEUROTICISM_SOFT_CLAMP_K:
             OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k = LIMIT(atoi(arg), 10, 200);
             cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_CONSCIENTIOUSNESS_IMPULSE_CONTROL:
+            OLC_CONFIG(d)->emotion_config.conscientiousness_impulse_control = LIMIT(atoi(arg), 0, 200);
+            cedit_disp_bigfive_conscientiousness_submenu(d);
+            break;
+
+        case CEDIT_CONSCIENTIOUSNESS_REACTION_DELAY:
+            OLC_CONFIG(d)->emotion_config.conscientiousness_reaction_delay = LIMIT(atoi(arg), 0, 200);
+            cedit_disp_bigfive_conscientiousness_submenu(d);
+            break;
+
+        case CEDIT_CONSCIENTIOUSNESS_MORAL_WEIGHT:
+            OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight = LIMIT(atoi(arg), 0, 200);
+            cedit_disp_bigfive_conscientiousness_submenu(d);
+            break;
+
+        case CEDIT_CONSCIENTIOUSNESS_DEBUG:
+            OLC_CONFIG(d)->emotion_config.conscientiousness_debug = LIMIT(atoi(arg), 0, 1);
+            cedit_disp_bigfive_conscientiousness_submenu(d);
             break;
 
         default: /* We should never get here, but just in

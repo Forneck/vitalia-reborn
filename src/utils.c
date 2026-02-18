@@ -72,6 +72,32 @@ int dice(int num, int size)
     return (sum);
 }
 
+/** Generate a random value approximating a Gaussian/Normal distribution.
+ * Uses Central Limit Theorem by averaging multiple uniform random samples.
+ * @param mean The center of the distribution (typically 50 for personality traits).
+ * @param std_dev The standard deviation (typically 15 for personality traits).
+ * @param min The minimum value to clamp to (typically 0).
+ * @param max The maximum value to clamp to (typically 100).
+ * @return A value approximating a normal distribution, clamped to [min, max]. */
+int rand_gaussian(int mean, int std_dev, int min, int max)
+{
+    /* Approximate Gaussian using Central Limit Theorem:
+     * Sum of N uniform random variables approximates a normal distribution.
+     * Using 3 samples gives a reasonable approximation with low overhead. */
+    int sum = rand_number(0, 100) + rand_number(0, 100) + rand_number(0, 100);
+
+    /* Average the samples and adjust from [0,100] range to desired distribution */
+    float avg = sum / 3.0f;
+
+    /* Map from uniform [0,100] to normal distribution with given mean and std_dev
+     * Formula: value = mean + (normalized_avg - 0.5) * std_dev * scale_factor
+     * Scale factor of 2.5 approximates the spread of a normal distribution */
+    int value = (int)(mean + ((avg - 50.0f) / 50.0f) * std_dev * 2.5f);
+
+    /* Clamp to valid range */
+    return URANGE(min, value, max);
+}
+
 /** Return the smaller number. Original note: Be wary of sign issues with this.
  * @param a The first number.
  * @param b The second number. */
@@ -6003,6 +6029,129 @@ void adjust_emotional_intelligence(struct char_data *mob, int change)
 
     /* Apply the change with bounds checking (10-95) */
     mob->ai_data->genetics.emotional_intelligence = URANGE(10, current_ei + change, 95);
+}
+
+/**
+ * Calculate aggregate emotional arousal for a character.
+ * Arousal is the sum of high-intensity emotions (both positive and negative).
+ * Used for Conscientiousness reaction delay modulation.
+ *
+ * @param ch The character to calculate arousal for
+ * @return Normalized arousal value [0.0, 1.0]
+ */
+float calculate_emotional_arousal(struct char_data *ch)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return 0.0f;
+
+    /* Sum high-activation emotions (both positive and negative) */
+    int arousal_sum = 0;
+
+    /* Negative high-arousal emotions */
+    arousal_sum += ch->ai_data->emotion_fear;
+    arousal_sum += ch->ai_data->emotion_anger;
+    arousal_sum += ch->ai_data->emotion_horror;
+    arousal_sum += ch->ai_data->emotion_pain;
+
+    /* Positive high-arousal emotions */
+    arousal_sum += ch->ai_data->emotion_happiness;
+    arousal_sum += ch->ai_data->emotion_excitement;
+    arousal_sum += ch->ai_data->emotion_courage;
+
+    /* Average across emotions and normalize to [0.0, 1.0] */
+    float arousal = (float)arousal_sum / 700.0f; /* 7 emotions * 100 max */
+
+    return URANGE(0.0f, arousal, 1.0f);
+}
+
+/**
+ * Apply Conscientiousness impulse modulation.
+ * High C reduces impulsive action probability.
+ *
+ * Formula: impulse_probability = base_impulse * (1 - γC)
+ * where γ is the impulse control strength parameter
+ *
+ * @param ch The character
+ * @param base_impulse_prob Base impulse probability [0.0, 1.0]
+ * @return Modulated impulse probability [0.0, 1.0]
+ */
+float apply_conscientiousness_impulse_modulation(struct char_data *ch, float base_impulse_prob)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return base_impulse_prob;
+
+    float C = ch->ai_data->personality.conscientiousness;
+    float gamma = (float)CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL / 100.0f;
+
+    /* Apply formula: base * (1 - γC) */
+    float modulated = base_impulse_prob * (1.0f - (gamma * C));
+
+    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_impulse_prob) {
+        log1("CONSCIENTIOUSNESS: Mob %s (#%d) impulse modulation: base=%.2f, C=%.2f, γ=%.2f -> result=%.2f",
+             GET_NAME(ch), GET_MOB_VNUM(ch), base_impulse_prob, C, gamma, modulated);
+    }
+
+    return URANGE(0.0f, modulated, 1.0f);
+}
+
+/**
+ * Apply Conscientiousness reaction delay scaling.
+ * High C increases deliberation time under emotional arousal.
+ *
+ * Formula: reaction_delay = base_delay * (1 + βC * arousal)
+ * where β is the reaction delay sensitivity parameter
+ *
+ * @param ch The character
+ * @param base_delay Base delay in ticks/seconds
+ * @param arousal Emotional arousal level [0.0, 1.0]
+ * @return Modulated delay
+ */
+float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_delay, float arousal)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return base_delay;
+
+    float C = ch->ai_data->personality.conscientiousness;
+    float beta = (float)CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY / 100.0f;
+
+    /* Apply formula: base * (1 + βC * arousal) */
+    float modulated = base_delay * (1.0f + (beta * C * arousal));
+
+    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_delay) {
+        log1("CONSCIENTIOUSNESS: Mob %s (#%d) reaction delay: base=%.2f, C=%.2f, β=%.2f, arousal=%.2f -> result=%.2f",
+             GET_NAME(ch), GET_MOB_VNUM(ch), base_delay, C, beta, arousal, modulated);
+    }
+
+    return modulated;
+}
+
+/**
+ * Apply Conscientiousness moral weight scaling.
+ * High C increases adherence to moral evaluation.
+ *
+ * Formula: moral_weight = base_weight * (1 + C)
+ *
+ * @param ch The character
+ * @param base_weight Base moral weight [0.0, 1.0]
+ * @return Modulated moral weight
+ */
+float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weight)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return base_weight;
+
+    float C = ch->ai_data->personality.conscientiousness;
+    float factor = (float)CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT / 100.0f;
+
+    /* Apply formula: base * (1 + factor * C) */
+    float modulated = base_weight * (1.0f + (factor * C));
+
+    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_weight) {
+        log1("CONSCIENTIOUSNESS: Mob %s (#%d) moral weight: base=%.2f, C=%.2f, factor=%.2f -> result=%.2f",
+             GET_NAME(ch), GET_MOB_VNUM(ch), base_weight, C, factor, modulated);
+    }
+
+    return modulated;
 }
 
 /**

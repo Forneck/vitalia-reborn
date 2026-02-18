@@ -310,6 +310,7 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define MEDIT_GEN_HEALING 52
 #define MEDIT_GEN_EMOTIONAL_IQ 53
 #define MEDIT_EMOTION_PROFILE 54
+#define MEDIT_GEN_CONSCIENTIOUSNESS 55
 
 /* Submodes of SEDIT connectedness. */
 #define SEDIT_MAIN_MENU 0
@@ -544,6 +545,13 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_NEUROTICISM_GAIN_ENVY 176
 #define CEDIT_NEUROTICISM_GAIN_ANGER 177
 #define CEDIT_NEUROTICISM_SOFT_CLAMP_K 178
+
+/* Big Five Phase 2: Conscientiousness configuration */
+#define CEDIT_BIGFIVE_CONSCIENTIOUSNESS_SUBMENU 179
+#define CEDIT_CONSCIENTIOUSNESS_IMPULSE_CONTROL 180
+#define CEDIT_CONSCIENTIOUSNESS_REACTION_DELAY 181
+#define CEDIT_CONSCIENTIOUSNESS_MORAL_WEIGHT 182
+#define CEDIT_CONSCIENTIOUSNESS_DEBUG 183
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

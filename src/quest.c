@@ -3511,6 +3511,12 @@ void init_mob_ai_data(struct char_data *mob)
      * placing mobs in the "average" reputation tier (40-59) with no modifiers. */
     mob->ai_data->reputation = 40;
 
+    /* Big Five Phase 2: Initialize Conscientiousness sentinel value.
+     * After memset, conscientiousness = 0.0. We set it to -1.0 as a sentinel
+     * to distinguish "uninitialized" from "explicitly set to 0 (very low C)".
+     * File loading will overwrite this with actual values 0.0-1.0 if present. */
+    mob->ai_data->personality.conscientiousness = -1.0f;
+
     /* Set default values for genetics if not already set from mob files.
      * This ensures mobs have reasonable default behavior even without explicit genetics.
      * These defaults can be overridden by GenFollow, GenRoam, etc. in mob files. */
@@ -3670,9 +3676,30 @@ void init_mob_ai_data(struct char_data *mob)
         /* Clamp to valid range [0.0, 1.0] */
         mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
 
-        /* Initialize other OCEAN traits to neutral baseline (0.5) for Phase 1 */
+        /* Initialize other OCEAN traits:
+         * Phase 2: Conscientiousness (C) - Generate if not explicitly set
+         * Phase 3+: Other traits remain at neutral baseline (0.5) for now
+         *
+         * CONSCIENTIOUSNESS INITIALIZATION:
+         * C represents self-discipline, organization, and goal-directed behavior.
+         *
+         * Strategy: Use -1.0 as sentinel value for "uninitialized".
+         * During AI data creation, conscientiousness is NOT initialized (unlike memset which sets to 0).
+         * If file loading occurs, it will set a valid 0.0-1.0 value.
+         * Otherwise, we detect -1.0 and generate a new value.
+         *
+         * Storage: 0-100 in files/UI, normalized to 0.0-1.0 in personality struct.
+         * Note: 0.0 is a valid value (very low conscientiousness) and must be distinguished
+         * from "not initialized", so we use -1.0 as the sentinel.
+         */
+        if (mob->ai_data->personality.conscientiousness < 0.0f) {
+            /* Uninitialized/sentinel value: generate a new conscientiousness */
+            int c_value = rand_gaussian(50, 15, 0, 100);
+            mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
+        }
+        /* If non-negative, it was explicitly set or loaded from file; keep it as-is. */
+
         mob->ai_data->personality.openness = 0.5f;
-        mob->ai_data->personality.conscientiousness = 0.5f;
         mob->ai_data->personality.extraversion = 0.5f;
         mob->ai_data->personality.agreeableness = 0.5f;
     }
