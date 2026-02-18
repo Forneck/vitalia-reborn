@@ -5056,25 +5056,25 @@ void load_config(void)
                     CONFIG_NEW_AUCTION_SYSTEM = num;
                 /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
                 else if (!str_cmp(tag, "neuroticism_gain_fear"))
-                    CONFIG_NEUROTICISM_GAIN_FEAR = num;
+                    CONFIG_NEUROTICISM_GAIN_FEAR = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_sadness"))
-                    CONFIG_NEUROTICISM_GAIN_SADNESS = num;
+                    CONFIG_NEUROTICISM_GAIN_SADNESS = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_shame"))
-                    CONFIG_NEUROTICISM_GAIN_SHAME = num;
+                    CONFIG_NEUROTICISM_GAIN_SHAME = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_humiliation"))
-                    CONFIG_NEUROTICISM_GAIN_HUMILIATION = num;
+                    CONFIG_NEUROTICISM_GAIN_HUMILIATION = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_pain"))
-                    CONFIG_NEUROTICISM_GAIN_PAIN = num;
+                    CONFIG_NEUROTICISM_GAIN_PAIN = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_horror"))
-                    CONFIG_NEUROTICISM_GAIN_HORROR = num;
+                    CONFIG_NEUROTICISM_GAIN_HORROR = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_disgust"))
-                    CONFIG_NEUROTICISM_GAIN_DISGUST = num;
+                    CONFIG_NEUROTICISM_GAIN_DISGUST = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_envy"))
-                    CONFIG_NEUROTICISM_GAIN_ENVY = num;
+                    CONFIG_NEUROTICISM_GAIN_ENVY = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_gain_anger"))
-                    CONFIG_NEUROTICISM_GAIN_ANGER = num;
+                    CONFIG_NEUROTICISM_GAIN_ANGER = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "neuroticism_soft_clamp_k"))
-                    CONFIG_NEUROTICISM_SOFT_CLAMP_K = num;
+                    CONFIG_NEUROTICISM_SOFT_CLAMP_K = LIMIT(num, 10, 200);
                 else if (!str_cmp(tag, "noperson")) {
                     char tmp[READ_SIZE];
                     if (CONFIG_NOPERSON)

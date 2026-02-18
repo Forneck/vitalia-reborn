@@ -3670,11 +3670,11 @@ void init_mob_ai_data(struct char_data *mob)
         /* Clamp to valid range [0.0, 1.0] */
         mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
 
-        /* Initialize other OCEAN traits to neutral (0.0) for Phase 1 */
-        mob->ai_data->personality.openness = 0.0f;
-        mob->ai_data->personality.conscientiousness = 0.0f;
-        mob->ai_data->personality.extraversion = 0.0f;
-        mob->ai_data->personality.agreeableness = 0.0f;
+        /* Initialize other OCEAN traits to neutral baseline (0.5) for Phase 1 */
+        mob->ai_data->personality.openness = 0.5f;
+        mob->ai_data->personality.conscientiousness = 0.5f;
+        mob->ai_data->personality.extraversion = 0.5f;
+        mob->ai_data->personality.agreeableness = 0.5f;
     }
 
     /* Initialize overall mood from initial emotions */

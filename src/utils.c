@@ -5960,15 +5960,25 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     int base_emotion = *emotion_ptr + amount;
 
     /* PIPELINE STEP 2: Apply Neuroticism gain (Phase 1 - negative emotions only)
-     * Determines emotion type and applies appropriate β gain if aversive
+     * Only apply to positive stimulus-driven increases (amount > 0) for negative emotions
+     * This prevents decay/reduction from being amplified and keeps positive emotions unchanged
      */
     int emotion_type = get_emotion_type_from_pointer(mob, emotion_ptr);
-    float raw_emotion = apply_neuroticism_gain(mob, emotion_type, base_emotion);
+    float raw_emotion = (float)base_emotion;
+
+    /* Only amplify if this is a positive change (stimulus increase) for a negative emotion */
+    if (amount > 0 && emotion_type >= 0) {
+        raw_emotion = apply_neuroticism_gain(mob, emotion_type, base_emotion);
+    }
 
     /* PIPELINE STEP 3: Apply soft saturation clamp
-     * Prevents hard 100 cap while maintaining gradient
+     * Only apply compression when value exceeds 100 (above normal cap)
+     * This preserves positive emotions and normal-range values unchanged
      */
-    float final_emotion = apply_soft_saturation_clamp(raw_emotion);
+    float final_emotion = raw_emotion;
+    if (raw_emotion > 100.0f) {
+        final_emotion = apply_soft_saturation_clamp(raw_emotion);
+    }
 
     /* Convert to integer and ensure bounds [0, 100] */
     *emotion_ptr = (int)(final_emotion + 0.5f); /* Round to nearest int */

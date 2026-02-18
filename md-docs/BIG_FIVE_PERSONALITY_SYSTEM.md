@@ -172,20 +172,35 @@ N = CLAMP(N, 0.0f, 1.0f);
 
 ## Configuration Constants
 
-Defined in `src/structs.h`:
+All Neuroticism parameters are now configurable at runtime via CEDIT and stored in `config_info.emotion_config`. They are accessed through CONFIG macros defined in `src/utils.h`:
 
+**Default Values (in config.c):**
 ```c
-#define NEUROTICISM_GAIN_FEAR 0.4f
-#define NEUROTICISM_GAIN_SADNESS 0.4f
-#define NEUROTICISM_GAIN_SHAME 0.4f
-#define NEUROTICISM_GAIN_HUMILIATION 0.4f
-#define NEUROTICISM_GAIN_PAIN 0.4f
-#define NEUROTICISM_GAIN_HORROR 0.4f
-#define NEUROTICISM_GAIN_DISGUST 0.25f
-#define NEUROTICISM_GAIN_ENVY 0.25f
-#define NEUROTICISM_GAIN_ANGER 0.2f
-#define EMOTION_SOFT_CLAMP_K 50.0f
+/* Beta values stored as int * 100 (e.g., 0.40 = 40, 0.25 = 25) */
+int neuroticism_gain_fear = 40;        /* 0.40 - Primary threat */
+int neuroticism_gain_sadness = 40;     /* 0.40 - Loss/withdrawal */
+int neuroticism_gain_shame = 40;       /* 0.40 - Self-directed negative */
+int neuroticism_gain_humiliation = 40; /* 0.40 - Social degradation */
+int neuroticism_gain_pain = 40;        /* 0.40 - Physical suffering */
+int neuroticism_gain_horror = 40;      /* 0.40 - Extreme aversion */
+int neuroticism_gain_disgust = 25;     /* 0.25 - Moderate aversion */
+int neuroticism_gain_envy = 25;        /* 0.25 - Comparison-based negative */
+int neuroticism_gain_anger = 20;       /* 0.20 - Approach-oriented negative */
+int neuroticism_soft_clamp_k = 50;     /* Soft saturation constant */
 ```
+
+**Runtime Access (via CONFIG macros in utils.h):**
+```c
+CONFIG_NEUROTICISM_GAIN_FEAR         // config_info.emotion_config.neuroticism_gain_fear
+CONFIG_NEUROTICISM_GAIN_SADNESS      // config_info.emotion_config.neuroticism_gain_sadness
+// ... etc
+CONFIG_NEUROTICISM_SOFT_CLAMP_K      // config_info.emotion_config.neuroticism_soft_clamp_k
+```
+
+**In-Game Configuration:**
+- Menu: `cedit → Emotion Config → [H] Big Five (OCEAN) - Neuroticism`
+- Values persist to `lib/etc/config` file
+- Changes take effect immediately (hot-reload)
 
 ## Behavioral Impact
 
