@@ -72,6 +72,32 @@ int dice(int num, int size)
     return (sum);
 }
 
+/** Generate a random value approximating a Gaussian/Normal distribution.
+ * Uses Central Limit Theorem by averaging multiple uniform random samples.
+ * @param mean The center of the distribution (typically 50 for personality traits).
+ * @param std_dev The standard deviation (typically 15 for personality traits).
+ * @param min The minimum value to clamp to (typically 0).
+ * @param max The maximum value to clamp to (typically 100).
+ * @return A value approximating a normal distribution, clamped to [min, max]. */
+int rand_gaussian(int mean, int std_dev, int min, int max)
+{
+    /* Approximate Gaussian using Central Limit Theorem:
+     * Sum of N uniform random variables approximates a normal distribution.
+     * Using 3 samples gives a reasonable approximation with low overhead. */
+    int sum = rand_number(0, 100) + rand_number(0, 100) + rand_number(0, 100);
+
+    /* Average the samples and adjust from [0,100] range to desired distribution */
+    float avg = sum / 3.0f;
+
+    /* Map from uniform [0,100] to normal distribution with given mean and std_dev
+     * Formula: value = mean + (normalized_avg - 0.5) * std_dev * scale_factor
+     * Scale factor of 2.5 approximates the spread of a normal distribution */
+    int value = (int)(mean + ((avg - 50.0f) / 50.0f) * std_dev * 2.5f);
+
+    /* Clamp to valid range */
+    return URANGE(min, value, max);
+}
+
 /** Return the smaller number. Original note: Be wary of sign issues with this.
  * @param a The first number.
  * @param b The second number. */

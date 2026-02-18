@@ -3670,9 +3670,27 @@ void init_mob_ai_data(struct char_data *mob)
         /* Clamp to valid range [0.0, 1.0] */
         mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
 
-        /* Initialize other OCEAN traits to neutral baseline (0.5) for Phase 1 */
+        /* Initialize other OCEAN traits:
+         * Phase 2: Conscientiousness (C) - Generate if not explicitly set
+         * Phase 3+: Other traits remain at neutral baseline (0.5) for now
+         *
+         * CONSCIENTIOUSNESS INITIALIZATION:
+         * C represents self-discipline, organization, and goal-directed behavior.
+         * If not explicitly set in the mob file (indicated by value of 0.5),
+         * generate using Gaussian distribution centered at 50 with std_dev of 15.
+         * This produces a realistic population distribution where most mobs have
+         * moderate conscientiousness (35-65 range), with rarer extremes.
+         *
+         * Storage: 0-100 in genetics, normalized to 0.0-1.0 in personality struct
+         */
+        if (mob->ai_data->personality.conscientiousness == 0.5f) {
+            /* Not set from file, generate new value */
+            int c_value = rand_gaussian(50, 15, 0, 100);
+            mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
+        }
+        /* If already set from file, keep the loaded value */
+
         mob->ai_data->personality.openness = 0.5f;
-        mob->ai_data->personality.conscientiousness = 0.5f;
         mob->ai_data->personality.extraversion = 0.5f;
         mob->ai_data->personality.agreeableness = 0.5f;
     }

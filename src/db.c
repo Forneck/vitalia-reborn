@@ -1983,6 +1983,15 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
+    CASE("Conscientiousness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness personality trait
+             * Valid range: 0-100, normalized to 0.0-1.0 internally */
+            RANGE(0, 100);
+            mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+        }
+    }
     CASE("PreferredWeather")
     {
         if (mob_proto[i].ai_data) {
