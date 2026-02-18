@@ -162,6 +162,13 @@ float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_v
 int get_emotion_type_from_pointer(struct char_data *mob, int *emotion_ptr);
 void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
 void adjust_emotional_intelligence(struct char_data *mob, int change);
+
+/* Big Five Phase 2: Conscientiousness functions */
+float calculate_emotional_arousal(struct char_data *ch);
+float apply_conscientiousness_impulse_modulation(struct char_data *ch, float base_impulse_prob);
+float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_delay, float arousal);
+float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weight);
+
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
 void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
 void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
@@ -1532,5 +1539,11 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_NEUROTICISM_GAIN_ENVY config_info.emotion_config.neuroticism_gain_envy
 #define CONFIG_NEUROTICISM_GAIN_ANGER config_info.emotion_config.neuroticism_gain_anger
 #define CONFIG_NEUROTICISM_SOFT_CLAMP_K config_info.emotion_config.neuroticism_soft_clamp_k
+
+/* Big Five Phase 2: Conscientiousness configuration macros */
+#define CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL config_info.emotion_config.conscientiousness_impulse_control
+#define CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY config_info.emotion_config.conscientiousness_reaction_delay
+#define CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT config_info.emotion_config.conscientiousness_moral_weight
+#define CONFIG_CONSCIENTIOUSNESS_DEBUG config_info.emotion_config.conscientiousness_debug
 
 #endif /* _UTILS_H_ */

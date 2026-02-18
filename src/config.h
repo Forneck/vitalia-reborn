@@ -99,6 +99,7 @@ extern int medit_advanced_stats;
 extern int ibt_autosave;
 
 /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+/* Big Five Phase 1: Neuroticism configuration variables */
 extern int neuroticism_gain_fear;
 extern int neuroticism_gain_sadness;
 extern int neuroticism_gain_shame;
@@ -109,6 +110,12 @@ extern int neuroticism_gain_disgust;
 extern int neuroticism_gain_envy;
 extern int neuroticism_gain_anger;
 extern int neuroticism_soft_clamp_k;
+
+/* Big Five Phase 2: Conscientiousness configuration variables */
+extern int conscientiousness_impulse_control;
+extern int conscientiousness_reaction_delay;
+extern int conscientiousness_moral_weight;
+extern int conscientiousness_debug;
 
 /*
  * Variables not controlled by cedit

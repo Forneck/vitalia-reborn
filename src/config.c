@@ -364,6 +364,7 @@ int debug_mode = YES;
  * Beta values stored as int * 100 (e.g., 0.40 = 40, 0.25 = 25, 0.20 = 20)
  * These control how much Neuroticism amplifies negative emotions
  * Formula: E_raw = E_base * (1.0 + (beta * N)) */
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
 int neuroticism_gain_fear = 40;        /* 0.40 - Primary threat */
 int neuroticism_gain_sadness = 40;     /* 0.40 - Loss/withdrawal */
 int neuroticism_gain_shame = 40;       /* 0.40 - Self-directed negative */
@@ -374,3 +375,9 @@ int neuroticism_gain_disgust = 25;     /* 0.25 - Moderate aversion */
 int neuroticism_gain_envy = 25;        /* 0.25 - Comparison-based negative */
 int neuroticism_gain_anger = 20;       /* 0.20 - Approach-oriented negative */
 int neuroticism_soft_clamp_k = 50;     /* Soft saturation constant */
+
+/* Big Five (OCEAN) Personality System - Phase 2: Conscientiousness */
+int conscientiousness_impulse_control = 100; /* 1.0 - Impulse control strength γ */
+int conscientiousness_reaction_delay = 100;  /* 1.0 - Reaction delay sensitivity β */
+int conscientiousness_moral_weight = 100;    /* 1.0 - Moral amplification factor */
+int conscientiousness_debug = 0;             /* 0 = OFF, 1 = ON - Debug logging */
