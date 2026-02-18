@@ -1017,6 +1017,20 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Inteligência Emocional (Genética): [%s%d%s]\r\n", CCYEL(ch, C_NRM), GET_GENEMOTIONAL_IQ(k),
                      CCNRM(ch, C_NRM));
+
+        /* Display Big Five (OCEAN) Personality Traits */
+        if (k->ai_data) {
+            send_to_char(ch, "%sBig Five (OCEAN) Personality:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(
+                ch, "  Openness (O): [%s%.2f%s]  Conscientiousness (C): [%s%.2f%s]  Extraversion (E): [%s%.2f%s]\r\n",
+                CCCYN(ch, C_NRM), k->ai_data->personality.openness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                k->ai_data->personality.conscientiousness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                k->ai_data->personality.extraversion, CCNRM(ch, C_NRM));
+            send_to_char(ch, "  Agreeableness (A): [%s%.2f%s]  Neuroticism (N): [%s%.2f%s]\r\n", CCCYN(ch, C_NRM),
+                         k->ai_data->personality.agreeableness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                         k->ai_data->personality.neuroticism, CCNRM(ch, C_NRM));
+        }
+
         /* Display Overall Mood */
         if (k->ai_data) {
             int mood = GET_MOB_MOOD(k);
@@ -1260,6 +1274,18 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "  Arousal: Courage[%s%d%s] Excitement[%s%d%s]\r\n", CCCYN(ch, C_NRM),
                      k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
                      CCNRM(ch, C_NRM));
+
+        /* Display calculated arousal showing all contributing emotions */
+        {
+            float arousal = calculate_emotional_arousal(k);
+            send_to_char(ch,
+                         "  %sCalculated Arousal: [%s%.2f%s]%s (Fear:%d Anger:%d Horror:%d Pain:%d Happiness:%d "
+                         "Excitement:%d Courage:%d)\r\n",
+                         CCYEL(ch, C_NRM), CCCYN(ch, C_NRM), arousal, CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                         k->ai_data->emotion_fear, k->ai_data->emotion_anger, k->ai_data->emotion_horror,
+                         k->ai_data->emotion_pain, k->ai_data->emotion_happiness, k->ai_data->emotion_excitement,
+                         k->ai_data->emotion_courage);
+        }
         send_to_char(
             ch,
             "  Negative/aversive: Disgust[%s%d%s] Shame[%s%d%s] Pain[%s%d%s] Horror[%s%d%s] Humiliation[%s%d%s]\r\n",
