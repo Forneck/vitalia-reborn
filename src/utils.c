@@ -6052,10 +6052,10 @@ float calculate_emotional_arousal(struct char_data *ch)
     arousal_sum += ch->ai_data->emotion_anger;
     arousal_sum += ch->ai_data->emotion_horror;
     arousal_sum += ch->ai_data->emotion_pain;
-    arousal_sum += ch->ai_data->emotion_excitement;
 
     /* Positive high-arousal emotions */
     arousal_sum += ch->ai_data->emotion_happiness;
+    arousal_sum += ch->ai_data->emotion_excitement;
     arousal_sum += ch->ai_data->emotion_courage;
 
     /* Average across emotions and normalize to [0.0, 1.0] */

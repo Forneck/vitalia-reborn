@@ -72,8 +72,9 @@ static float apply_executive_control(struct char_data *ch, float base_impulse_pr
     /* Apply impulse modulation (high C reduces impulsive actions) */
     float modulated_impulse = apply_conscientiousness_impulse_modulation(ch, base_impulse_prob);
 
-    /* Apply reaction delay if needed (high C increases deliberation under arousal) */
-    if (needs_delay && delay_ptr && *delay_ptr > 0.0f) {
+    /* Apply reaction delay if needed (high C increases deliberation under arousal)
+     * Remove the > 0.0f check to allow delay calculation even when starting from 0 */
+    if (needs_delay && delay_ptr) {
         *delay_ptr = apply_conscientiousness_reaction_delay(ch, *delay_ptr, arousal);
     }
 
@@ -694,9 +695,10 @@ void mobile_activity(void)
                                 /* Big Five Phase 2B: Apply Conscientiousness to Shadow Timeline Attack Decision
                                  * This is a DELIBERATIVE choice from projected futures.
                                  * High C reduces impulsive attack execution, adds reaction delay under arousal.
-                                 * Base impulse = 0.8 (shadow projections are inherently somewhat impulsive) */
+                                 * Base impulse = 0.8 (shadow projections are inherently somewhat impulsive)
+                                 * Base delay = 1.0 tick (unit baseline for executive modulation) */
                                 float base_impulse = 0.8f;
-                                float base_delay = 0.0f; /* No inherent delay */
+                                float base_delay = 1.0f; /* Unit baseline for delay modulation */
                                 float modulated_impulse = apply_executive_control(ch, base_impulse, TRUE, &base_delay);
 
                                 /* Check if impulse succeeds (probabilistic execution) */
