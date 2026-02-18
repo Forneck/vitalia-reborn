@@ -4630,6 +4630,18 @@ static void load_default_config(void)
     CONFIG_EMOTION_DECAY_RATE_DISGUST = 2;     /* Standard decay */
     CONFIG_EMOTION_DECAY_RATE_SHAME = 1;       /* Slower - shame lingers */
     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = 1; /* Slower - humiliation lingers */
+
+    /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+    CONFIG_NEUROTICISM_GAIN_FEAR = neuroticism_gain_fear;
+    CONFIG_NEUROTICISM_GAIN_SADNESS = neuroticism_gain_sadness;
+    CONFIG_NEUROTICISM_GAIN_SHAME = neuroticism_gain_shame;
+    CONFIG_NEUROTICISM_GAIN_HUMILIATION = neuroticism_gain_humiliation;
+    CONFIG_NEUROTICISM_GAIN_PAIN = neuroticism_gain_pain;
+    CONFIG_NEUROTICISM_GAIN_HORROR = neuroticism_gain_horror;
+    CONFIG_NEUROTICISM_GAIN_DISGUST = neuroticism_gain_disgust;
+    CONFIG_NEUROTICISM_GAIN_ENVY = neuroticism_gain_envy;
+    CONFIG_NEUROTICISM_GAIN_ANGER = neuroticism_gain_anger;
+    CONFIG_NEUROTICISM_SOFT_CLAMP_K = neuroticism_soft_clamp_k;
 }
 
 void load_config(void)
@@ -5054,6 +5066,27 @@ void load_config(void)
                     CONFIG_NEWBIE_START = num;
                 else if (!str_cmp(tag, "new_auction_system"))
                     CONFIG_NEW_AUCTION_SYSTEM = num;
+                /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+                else if (!str_cmp(tag, "neuroticism_gain_fear"))
+                    CONFIG_NEUROTICISM_GAIN_FEAR = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_sadness"))
+                    CONFIG_NEUROTICISM_GAIN_SADNESS = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_shame"))
+                    CONFIG_NEUROTICISM_GAIN_SHAME = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_humiliation"))
+                    CONFIG_NEUROTICISM_GAIN_HUMILIATION = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_pain"))
+                    CONFIG_NEUROTICISM_GAIN_PAIN = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_horror"))
+                    CONFIG_NEUROTICISM_GAIN_HORROR = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_disgust"))
+                    CONFIG_NEUROTICISM_GAIN_DISGUST = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_envy"))
+                    CONFIG_NEUROTICISM_GAIN_ENVY = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_anger"))
+                    CONFIG_NEUROTICISM_GAIN_ANGER = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_soft_clamp_k"))
+                    CONFIG_NEUROTICISM_SOFT_CLAMP_K = LIMIT(num, 10, 200);
                 else if (!str_cmp(tag, "noperson")) {
                     char tmp[READ_SIZE];
                     if (CONFIG_NOPERSON)

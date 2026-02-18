@@ -1031,6 +1031,29 @@ struct mob_genetics {
 };
 
 /**
+ * Big Five (OCEAN) Personality Model Structure
+ * Phase 1: Only Neuroticism (N) is implemented and functional
+ * Other traits (O, C, E, A) reserved for future phases
+ *
+ * All values normalized to range [0.0 - 1.0]
+ * - 0.0 = minimum trait expression
+ * - 0.5 = average/neutral
+ * - 1.0 = maximum trait expression
+ *
+ * NEUROTICISM (N) - Emotional Stability vs. Sensitivity
+ * - Low N (0.0): Emotionally stable, calm, not easily upset
+ * - High N (1.0): Emotionally reactive, anxious, threat-sensitive
+ * - Functions as emotional gain amplifier for aversive emotions only
+ */
+struct mob_personality {
+    float openness;          /* (O) Openness to experience - Future use (Phase 4) */
+    float conscientiousness; /* (C) Self-discipline/control - Future use (Phase 2) */
+    float extraversion;      /* (E) Social engagement - Future use (Phase 3) */
+    float agreeableness;     /* (A) Compassion/cooperation - Future use (Phase 3) */
+    float neuroticism;       /* (N) Emotional sensitivity - ACTIVE in Phase 1 */
+};
+
+/**
  * Estrutura para um item desejado na wishlist de um mob
  */
 struct mob_wishlist_item {
@@ -1166,8 +1189,9 @@ struct emotion_memory {
 };
 
 struct mob_ai_data {
-    struct mob_genetics genetics; /* Contém todos os genes. */
-    room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
+    struct mob_genetics genetics;       /* Contém todos os genes. */
+    struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
+    room_vnum guard_post;               /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     int quest_posting_frustration_timer; /* Prevents quest posting after fleeing */
     struct mob_wishlist_item *wishlist;  /* Lista de itens desejados */
@@ -1997,6 +2021,20 @@ struct emotion_config_data {
     int decay_rate_disgust;     /**< Disgust decay rate (default: 2) */
     int decay_rate_shame;       /**< Shame decay rate - slower (default: 1) */
     int decay_rate_humiliation; /**< Humiliation decay rate - slower (default: 1) */
+
+    /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+    /* Neuroticism gain coefficients (β values) - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    int neuroticism_gain_fear;        /**< Fear gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_sadness;     /**< Sadness gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_shame;       /**< Shame gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_humiliation; /**< Humiliation gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_pain;        /**< Pain gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_horror;      /**< Horror gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_disgust;     /**< Disgust gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_envy;        /**< Envy gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_anger;       /**< Anger gain coefficient β * 100 (default: 20 = 0.20) */
+    int neuroticism_soft_clamp_k;     /**< Soft saturation constant k (default: 50) */
 };
 
 /** Experimental Features configuration. */

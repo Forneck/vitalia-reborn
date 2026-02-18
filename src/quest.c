@@ -3633,6 +3633,50 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
     mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
 
+    /* Initialize Big Five (OCEAN) Personality traits
+     * Phase 1: Only Neuroticism (N) is implemented
+     * Other traits (O, C, E, A) reserved for future phases
+     *
+     * NEUROTICISM INITIALIZATION:
+     * N is derived from genetic traits that indicate emotional sensitivity:
+     * - Low brave_prevalence → Higher N (less brave = more threat-sensitive)
+     * - Low emotional_intelligence → Higher N (less emotional control = more reactive)
+     *
+     * Formula: N = weighted_inverse_bravery + weighted_low_ei
+     * Components:
+     * - Inverse bravery: (100 - brave_prevalence) / 100 → [0, 1]
+     * - Low EI factor: (50 - min(ei, 50)) / 50 → [0, 1] when EI < 50, else 0
+     *
+     * Weight distribution:
+     * - Bravery: 70% weight (primary determinant of threat sensitivity)
+     * - EI: 30% weight (secondary determinant of emotional volatility)
+     */
+    {
+        int brave = mob->ai_data->genetics.brave_prevalence;
+        int ei = mob->ai_data->genetics.emotional_intelligence;
+
+        /* Calculate inverse bravery component (0.0 to 1.0) */
+        float inverse_bravery = (100.0f - (float)brave) / 100.0f;
+
+        /* Calculate low EI component (0.0 to 1.0, only if EI < 50) */
+        float low_ei_factor = 0.0f;
+        if (ei < 50) {
+            low_ei_factor = (50.0f - (float)ei) / 50.0f;
+        }
+
+        /* Weighted combination: 70% bravery, 30% EI */
+        float neuroticism = (inverse_bravery * 0.7f) + (low_ei_factor * 0.3f);
+
+        /* Clamp to valid range [0.0, 1.0] */
+        mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
+
+        /* Initialize other OCEAN traits to neutral baseline (0.5) for Phase 1 */
+        mob->ai_data->personality.openness = 0.5f;
+        mob->ai_data->personality.conscientiousness = 0.5f;
+        mob->ai_data->personality.extraversion = 0.5f;
+        mob->ai_data->personality.agreeableness = 0.5f;
+    }
+
     /* Initialize overall mood from initial emotions */
     mob->ai_data->overall_mood = calculate_mob_mood(mob);
     mob->ai_data->mood_timer = 0;

@@ -2,6 +2,26 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Feb 17 2026] - Vitalia Reborn Development
+  feature: Big Five (OCEAN) Personality System - Phase 1: Neuroticism
+    - Implemented structural personality layer for mobs using Big Five model
+    - Phase 1 introduces Neuroticism (N) as emotional gain amplifier
+    - Neuroticism amplifies negative emotions only (fear, sadness, shame, horror, pain, etc.)
+    - Positive emotions (happiness, pride, friendship, etc.) remain unaffected
+    - Different gain coefficients (β) for different emotion types:
+      * β=0.4 for primary threat emotions (fear, sadness, shame, horror, pain, humiliation)
+      * β=0.25 for secondary aversive emotions (disgust, envy)
+      * β=0.2 for arousal-based negative emotions (anger)
+    - Soft saturation clamp prevents hard 100 cap while preserving gradient:
+      * Linear pass-through for values 0-80
+      * Smooth compression above 80, asymptotically approaching 100
+    - Neuroticism initialized from genetics: N = 0.7*(1-brave/100) + 0.3*low_EI_factor
+    - Integration through existing adjust_emotion() pipeline (EI → N gain → soft clamp)
+    - All other OCEAN traits (O, C, E, A) reserved for future phases
+    - Zero performance impact, stable runtime behavior
+    - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
+    - Foundation for future personality phases: Conscientiousness, Extraversion, Agreeableness, Openness
+@
 [Dec 10 2024] - Vitalia Reborn Development
   feature: Parnassus Zone Integration (Zone 211)
     - Translated Parnassus Tarot zone from English to Portuguese

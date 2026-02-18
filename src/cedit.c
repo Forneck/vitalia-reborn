@@ -28,6 +28,8 @@ static void cedit_disp_operation_options(struct descriptor_data *d);
 static void cedit_disp_autowiz_options(struct descriptor_data *d);
 static void cedit_disp_experimental_options(struct descriptor_data *d);
 static void cedit_disp_emotion_menu(struct descriptor_data *d);
+static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d);
+static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d);
 static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
@@ -269,6 +271,18 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.decay_rate_shame = CONFIG_EMOTION_DECAY_RATE_SHAME;
     OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = CONFIG_EMOTION_DECAY_RATE_HUMILIATION;
 
+    /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear = CONFIG_NEUROTICISM_GAIN_FEAR;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_sadness = CONFIG_NEUROTICISM_GAIN_SADNESS;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_shame = CONFIG_NEUROTICISM_GAIN_SHAME;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_humiliation = CONFIG_NEUROTICISM_GAIN_HUMILIATION;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_pain = CONFIG_NEUROTICISM_GAIN_PAIN;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_horror = CONFIG_NEUROTICISM_GAIN_HORROR;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_disgust = CONFIG_NEUROTICISM_GAIN_DISGUST;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_envy = CONFIG_NEUROTICISM_GAIN_ENVY;
+    OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger = CONFIG_NEUROTICISM_GAIN_ANGER;
+    OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k = CONFIG_NEUROTICISM_SOFT_CLAMP_K;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -500,6 +514,18 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_DECAY_RATE_DISGUST = OLC_CONFIG(d)->emotion_config.decay_rate_disgust;
     CONFIG_EMOTION_DECAY_RATE_SHAME = OLC_CONFIG(d)->emotion_config.decay_rate_shame;
     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = OLC_CONFIG(d)->emotion_config.decay_rate_humiliation;
+
+    /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+    CONFIG_NEUROTICISM_GAIN_FEAR = OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear;
+    CONFIG_NEUROTICISM_GAIN_SADNESS = OLC_CONFIG(d)->emotion_config.neuroticism_gain_sadness;
+    CONFIG_NEUROTICISM_GAIN_SHAME = OLC_CONFIG(d)->emotion_config.neuroticism_gain_shame;
+    CONFIG_NEUROTICISM_GAIN_HUMILIATION = OLC_CONFIG(d)->emotion_config.neuroticism_gain_humiliation;
+    CONFIG_NEUROTICISM_GAIN_PAIN = OLC_CONFIG(d)->emotion_config.neuroticism_gain_pain;
+    CONFIG_NEUROTICISM_GAIN_HORROR = OLC_CONFIG(d)->emotion_config.neuroticism_gain_horror;
+    CONFIG_NEUROTICISM_GAIN_DISGUST = OLC_CONFIG(d)->emotion_config.neuroticism_gain_disgust;
+    CONFIG_NEUROTICISM_GAIN_ENVY = OLC_CONFIG(d)->emotion_config.neuroticism_gain_envy;
+    CONFIG_NEUROTICISM_GAIN_ANGER = OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger;
+    CONFIG_NEUROTICISM_SOFT_CLAMP_K = OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -1151,6 +1177,23 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_decay_rate_shame = %d\n", CONFIG_EMOTION_DECAY_RATE_SHAME);
     fprintf(fl, "emotion_decay_rate_humiliation = %d\n\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
 
+    /* Big Five (OCEAN) Personality - Phase 1: Neuroticism Configuration */
+    fprintf(fl,
+            "* [ Big Five (OCEAN) Personality - Phase 1: Neuroticism ]\n"
+            "* Neuroticism gain coefficients (beta * 100)\n"
+            "* These control how much Neuroticism amplifies negative emotions\n"
+            "* Formula: E_raw = E_base * (1.0 + (beta * N))\n");
+    fprintf(fl, "neuroticism_gain_fear = %d\n", CONFIG_NEUROTICISM_GAIN_FEAR);
+    fprintf(fl, "neuroticism_gain_sadness = %d\n", CONFIG_NEUROTICISM_GAIN_SADNESS);
+    fprintf(fl, "neuroticism_gain_shame = %d\n", CONFIG_NEUROTICISM_GAIN_SHAME);
+    fprintf(fl, "neuroticism_gain_humiliation = %d\n", CONFIG_NEUROTICISM_GAIN_HUMILIATION);
+    fprintf(fl, "neuroticism_gain_pain = %d\n", CONFIG_NEUROTICISM_GAIN_PAIN);
+    fprintf(fl, "neuroticism_gain_horror = %d\n", CONFIG_NEUROTICISM_GAIN_HORROR);
+    fprintf(fl, "neuroticism_gain_disgust = %d\n", CONFIG_NEUROTICISM_GAIN_DISGUST);
+    fprintf(fl, "neuroticism_gain_envy = %d\n", CONFIG_NEUROTICISM_GAIN_ENVY);
+    fprintf(fl, "neuroticism_gain_anger = %d\n", CONFIG_NEUROTICISM_GAIN_ANGER);
+    fprintf(fl, "neuroticism_soft_clamp_k = %d\n\n", CONFIG_NEUROTICISM_SOFT_CLAMP_K);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1444,10 +1487,11 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sE%s) Group Behavior Thresholds\r\n"
                     "%sF%s) Combat Behavior (Anger/Pain Effects)\r\n"
                     "%sG%s) Emotion Decay Rates\r\n"
+                    "%sH%s) Big Five (OCEAN) - Neuroticism Configuration\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -1493,6 +1537,49 @@ static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d)
                     OLC_CONFIG(d)->emotion_config.decay_rate_humiliation, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_DECAY_SUBMENU;
+}
+
+/* Display Big Five (OCEAN) Neuroticism submenu */
+static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Big Five (OCEAN) Personality - Phase 1: Neuroticism Configuration\r\n"
+                    "---\r\n"
+                    "Neuroticism acts as an emotional gain amplifier for negative emotions only.\r\n"
+                    "Formula: E_raw = E_base * (1.0 + (beta * N))\r\n"
+                    "Beta values are stored as integers (multiply by 100): 0.40 = 40, 0.25 = 25, 0.20 = 20\r\n"
+                    "\r\n"
+                    "Neuroticism Gain Coefficients (Beta values * 100):\r\n"
+                    "%s1%s) Fear Gain (β*100):        %s%d%s (default: 40 = 0.40) Primary threat\r\n"
+                    "%s2%s) Sadness Gain (β*100):     %s%d%s (default: 40 = 0.40) Loss/withdrawal\r\n"
+                    "%s3%s) Shame Gain (β*100):       %s%d%s (default: 40 = 0.40) Self-directed\r\n"
+                    "%s4%s) Humiliation Gain (β*100): %s%d%s (default: 40 = 0.40) Social degradation\r\n"
+                    "%s5%s) Pain Gain (β*100):        %s%d%s (default: 40 = 0.40) Physical suffering\r\n"
+                    "%s6%s) Horror Gain (β*100):      %s%d%s (default: 40 = 0.40) Extreme aversion\r\n"
+                    "%s7%s) Disgust Gain (β*100):     %s%d%s (default: 25 = 0.25) Moderate aversion\r\n"
+                    "%s8%s) Envy Gain (β*100):        %s%d%s (default: 25 = 0.25) Comparison-based\r\n"
+                    "%s9%s) Anger Gain (β*100):       %s%d%s (default: 20 = 0.20) Approach-oriented\r\n"
+                    "\r\n"
+                    "Soft Saturation:\r\n"
+                    "%sA%s) Soft Clamp Constant (k):  %s%d%s (default: 50) Compression threshold\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_sadness, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_shame, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_humiliation, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_pain, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_horror, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_disgust, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_envy, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_BIGFIVE_NEUROTICISM_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3127,6 +3214,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     cedit_disp_emotion_decay_submenu(d);
                     return;
 
+                case 'h':
+                case 'H':
+                    cedit_disp_bigfive_neuroticism_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3587,6 +3679,58 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'C':
                     write_to_output(d, "\r\nEnter Humiliation Decay Rate (0-10, should be slower) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HUMILIATION;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_BIGFIVE_NEUROTICISM_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Fear Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_FEAR;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Sadness Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_SADNESS;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Shame Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_SHAME;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Humiliation Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_HUMILIATION;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Pain Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_PAIN;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Horror Gain Beta*100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_HORROR;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Disgust Gain Beta*100 (0-100, default 25 = 0.25) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_DISGUST;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Envy Gain Beta*100 (0-100, default 25 = 0.25) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_ENVY;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Anger Gain Beta*100 (0-100, default 20 = 0.20) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_GAIN_ANGER;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Soft Clamp Constant k (10-200, default 50) : ");
+                    OLC_MODE(d) = CEDIT_NEUROTICISM_SOFT_CLAMP_K;
                     return;
                 case 'q':
                 case 'Q':
@@ -4600,6 +4744,57 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_EMOTION_DECAY_RATE_HUMILIATION:
             OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = LIMIT(atoi(arg), 0, 10);
             cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+        case CEDIT_NEUROTICISM_GAIN_FEAR:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_SADNESS:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_sadness = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_SHAME:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_shame = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_HUMILIATION:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_humiliation = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_PAIN:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_pain = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_HORROR:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_horror = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_DISGUST:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_disgust = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_ENVY:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_envy = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_GAIN_ANGER:
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_neuroticism_submenu(d);
+            break;
+
+        case CEDIT_NEUROTICISM_SOFT_CLAMP_K:
+            OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k = LIMIT(atoi(arg), 10, 200);
+            cedit_disp_bigfive_neuroticism_submenu(d);
             break;
 
         default: /* We should never get here, but just in
