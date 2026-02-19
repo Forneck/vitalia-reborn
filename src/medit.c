@@ -1395,8 +1395,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
                 init_mob_ai_data(OLC_MOB(d));
             }
-            /* Big Five Phase 2: Conscientiousness (0-100, normalized to 0.0-1.0) */
-            OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 0, 100) / 100.0f;
+            /* Big Five Phase 2: Conscientiousness (1-100, normalized to 0.01-1.0).
+             * Minimum is 1, not 0, so that C=0 in saved files always means
+             * "uninitialized" (legacy bug) and never an intentional builder choice.
+             * This makes the db.c num_arg>0 guard unambiguous. */
+            OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 1, 100) / 100.0f;
             OLC_MOB(d)->ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized */
             OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);

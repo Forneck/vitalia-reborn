@@ -1987,10 +1987,17 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     {
         if (mob_proto[i].ai_data) {
             /* Big Five Phase 2: Conscientiousness personality trait
-             * Valid range: 0-100, normalized to 0.0-1.0 internally */
+             * Valid range: 0-100, normalized to 0.0-1.0 internally.
+             * Treat value 0 as uninitialized to handle legacy files written before
+             * the initialization-flag fix: those files contain "Conscientiousness: 0"
+             * for mobs that were never explicitly set, and we must not lock them to C=0. */
             RANGE(0, 100);
-            mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
-            mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
+            }
+            /* num_arg == 0: leave conscientiousness at 0.0 and initialized=0 so
+             * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
         }
     }
     CASE("PreferredWeather")

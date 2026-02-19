@@ -73,26 +73,31 @@ int dice(int num, int size)
 }
 
 /** Generate a random value approximating a Gaussian/Normal distribution.
- * Uses Central Limit Theorem by averaging multiple uniform random samples.
- * @param mean The center of the distribution (typically 50 for personality traits).
- * @param std_dev The standard deviation (typically 15 for personality traits).
- * @param min The minimum value to clamp to (typically 0).
- * @param max The maximum value to clamp to (typically 100).
- * @return A value approximating a normal distribution, clamped to [min, max]. */
+ * Uses the Irwin-Hall method: summing N uniform random variables yields a
+ * distribution that converges to Normal by the Central Limit Theorem.
+ * Using 6 samples gives a much better bell-curve approximation than 3 and
+ * keeps the standard deviation of the output equal to the requested std_dev.
+ *
+ * Math: sum of 6 uniform [0,100] has mean=300, std_dev=sqrt(6*850)~71.4.
+ * Normalizing with (sum-300)/71.4 gives ~N(0,1); scaling by std_dev and
+ * shifting by mean produces the desired distribution.
+ *
+ * @param mean    Centre of the distribution (e.g. 50 for personality traits).
+ * @param std_dev Standard deviation (e.g. 15 for personality traits).
+ * @param min     Minimum value to clamp to (e.g. 1).
+ * @param max     Maximum value to clamp to (e.g. 100).
+ * @return A value approximating N(mean, std_dev), clamped to [min, max]. */
 int rand_gaussian(int mean, int std_dev, int min, int max)
 {
-    /* Approximate Gaussian using Central Limit Theorem:
-     * Sum of N uniform random variables approximates a normal distribution.
-     * Using 3 samples gives a reasonable approximation with low overhead. */
-    int sum = rand_number(0, 100) + rand_number(0, 100) + rand_number(0, 100);
+    /* Irwin-Hall with N=6: better Gaussian approximation than N=3.
+     * sum in [0, 600], mean=300, std_dev ~71.4 */
+    int sum = 0, i;
+    for (i = 0; i < 6; i++)
+        sum += rand_number(0, 100);
 
-    /* Average the samples and adjust from [0,100] range to desired distribution */
-    float avg = sum / 3.0f;
-
-    /* Map from uniform [0,100] to normal distribution with given mean and std_dev
-     * Formula: value = mean + (normalized_avg - 0.5) * std_dev * scale_factor
-     * Scale factor of 2.5 approximates the spread of a normal distribution */
-    int value = (int)(mean + ((avg - 50.0f) / 50.0f) * std_dev * 2.5f);
+    /* Normalize to N(mean, std_dev):
+     * value = mean + (sum - 300) / 71.4 * std_dev */
+    int value = (int)(mean + ((float)(sum - 300) / 71.4f) * (float)std_dev);
 
     /* Clamp to valid range */
     return URANGE(min, value, max);
