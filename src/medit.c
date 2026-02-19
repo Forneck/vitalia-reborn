@@ -1242,6 +1242,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.wimpy_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1252,6 +1253,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.loot_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1262,6 +1264,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.equip_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1272,6 +1275,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.roam_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1282,6 +1286,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.brave_prevalence = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1292,6 +1297,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.group_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1302,6 +1308,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.use_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1312,6 +1319,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.trade_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1322,6 +1330,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.quest_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1332,6 +1341,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.adventurer_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1342,6 +1352,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.follow_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1352,6 +1363,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1362,6 +1374,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.emotional_intelligence = LIMIT(i, 10, 95);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1372,6 +1385,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->emotional_profile = LIMIT(i, 0, 7);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1384,6 +1398,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             /* Big Five Phase 2: Conscientiousness (0-100, normalized to 0.0-1.0) */
             OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 0, 100) / 100.0f;
             OLC_MOB(d)->ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized */
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
