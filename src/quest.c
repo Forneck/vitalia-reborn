@@ -3602,8 +3602,10 @@ void init_mob_ai_data(struct char_data *mob)
          * properly distinguished from "not initialized" via the flag.
          */
         if (!mob->ai_data->personality.conscientiousness_initialized) {
-            /* Uninitialized: generate a new conscientiousness value */
-            int c_value = rand_gaussian(50, 15, 0, 100);
+            /* Uninitialized: generate a new conscientiousness value.
+             * Use min=1 so that C=0 remains an unambiguous "uninitialized"
+             * sentinel in saved files, consistent with db.c and medit.c. */
+            int c_value = rand_gaussian(50, 15, 1, 100);
             mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
             mob->ai_data->personality.conscientiousness_initialized = 1;
         }

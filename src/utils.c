@@ -78,8 +78,9 @@ int dice(int num, int size)
  * Using 6 samples gives a much better bell-curve approximation than 3 and
  * keeps the standard deviation of the output equal to the requested std_dev.
  *
- * Math: sum of 6 uniform [0,100] has mean=300, std_dev=sqrt(6*850)~71.4.
- * Normalizing with (sum-300)/71.4 gives ~N(0,1); scaling by std_dev and
+ * Math: Var(Uniform[0,100]) = 100^2/12 = 833.33.
+ * Sum of 6 such variables has mean=300, std_dev=sqrt(6*833.33)=sqrt(5000)~70.71.
+ * Normalizing with (sum-300)/70.71 gives ~N(0,1); scaling by std_dev and
  * shifting by mean produces the desired distribution.
  *
  * @param mean    Centre of the distribution (e.g. 50 for personality traits).
@@ -90,14 +91,14 @@ int dice(int num, int size)
 int rand_gaussian(int mean, int std_dev, int min, int max)
 {
     /* Irwin-Hall with N=6: better Gaussian approximation than N=3.
-     * sum in [0, 600], mean=300, std_dev ~71.4 */
+     * sum in [0, 600], mean=300, std_dev=sqrt(6*833.33)=sqrt(5000)~70.71 */
     int sum = 0, i;
     for (i = 0; i < 6; i++)
         sum += rand_number(0, 100);
 
     /* Normalize to N(mean, std_dev):
-     * value = mean + (sum - 300) / 71.4 * std_dev */
-    int value = (int)(mean + ((float)(sum - 300) / 71.4f) * (float)std_dev);
+     * value = mean + (sum - 300) / 70.71 * std_dev */
+    int value = (int)(mean + ((float)(sum - 300) / 70.71f) * (float)std_dev);
 
     /* Clamp to valid range */
     return URANGE(min, value, max);
