@@ -1372,6 +1372,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             }
             /* Big Five Phase 2: Conscientiousness (0-100, normalized to 0.0-1.0) */
             OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 0, 100) / 100.0f;
+            OLC_MOB(d)->ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized */
             medit_disp_genetics_menu(d);
             return;
 
