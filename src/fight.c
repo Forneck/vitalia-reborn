@@ -78,7 +78,12 @@ int attacks_per_round(struct char_data *ch);
 /* Check if a spell has the MAG_AURA flag */
 static int is_aura_spell(int spellnum)
 {
+    /* Reject non-spell values early to avoid invalid lookups and SYSERRs. */
     if (spellnum <= 0)
+        return 0;
+    if (spellnum > TOP_SPELL_DEFINE)
+        return 0;
+    if (IS_WEAPON(spellnum))
         return 0;
     return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA);
 }
