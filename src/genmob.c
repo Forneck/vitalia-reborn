@@ -254,6 +254,9 @@ int free_mobile(struct char_data *mob)
         free_mobile_strings(mob);
         /* free script proto list */
         free_proto_script(mob, MOB_TRIGGER);
+        /* free ai_data for new mobiles */
+        if (mob->ai_data)
+            free(mob->ai_data);
     } else { /* Prototyped mobile. */
         if (mob->player.name && mob->player.name != mob_proto[i].player.name)
             free(mob->player.name);
@@ -268,6 +271,9 @@ int free_mobile(struct char_data *mob)
         /* free script proto list if it's not the prototype */
         if (mob->proto_script && mob->proto_script != mob_proto[i].proto_script)
             free_proto_script(mob, MOB_TRIGGER);
+        /* free ai_data if it's not the prototype (e.g., deep-copied in OLC) */
+        if (mob->ai_data && mob->ai_data != mob_proto[i].ai_data)
+            free(mob->ai_data);
     }
     while (mob->affected)
         affect_remove(mob, mob->affected);
