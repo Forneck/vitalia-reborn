@@ -284,6 +284,12 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger = CONFIG_NEUROTICISM_GAIN_ANGER;
     OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k = CONFIG_NEUROTICISM_SOFT_CLAMP_K;
 
+    /* Big Five (OCEAN) Personality - Phase 2: Conscientiousness */
+    OLC_CONFIG(d)->emotion_config.conscientiousness_impulse_control = CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL;
+    OLC_CONFIG(d)->emotion_config.conscientiousness_reaction_delay = CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY;
+    OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight = CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT;
+    OLC_CONFIG(d)->emotion_config.conscientiousness_debug = CONFIG_CONSCIENTIOUSNESS_DEBUG;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
