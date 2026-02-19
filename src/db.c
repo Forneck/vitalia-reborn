@@ -1986,11 +1986,21 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     CASE("Conscientiousness")
     {
         if (mob_proto[i].ai_data) {
-            /* Big Five Phase 2: Conscientiousness personality trait
-             * Valid range: 0-100, normalized to 0.0-1.0 internally */
+            /* Big Five Phase 2: Conscientiousness personality trait.
+             * File format range: 0-100, normalized to 0.0-1.0 internally.
+             * Value 0 is treated as "uninitialized" sentinel: files written by
+             * the pre-fix genmob.c contained "Conscientiousness: 0" for every mob
+             * that had never been explicitly set. Loading such a value with
+             * initialized=1 would permanently prevent Gaussian generation in quest.c.
+             * Values 1-100 represent actual conscientiousness levels (medit clamps
+             * builder input to this range as well). */
             RANGE(0, 100);
-            mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
-            mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
+            }
+            /* num_arg == 0: leave conscientiousness at 0.0 and initialized=0 so
+             * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
         }
     }
     CASE("PreferredWeather")
