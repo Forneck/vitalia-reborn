@@ -3514,8 +3514,12 @@ void init_mob_ai_data(struct char_data *mob)
     /* Big Five Phase 2: Initialize Conscientiousness sentinel value.
      * After memset, conscientiousness = 0.0. We set it to -1.0 as a sentinel
      * to distinguish "uninitialized" from "explicitly set to 0 (very low C)".
-     * File loading will overwrite this with actual values 0.0-1.0 if present. */
-    mob->ai_data->personality.conscientiousness = -1.0f;
+     * File loading will overwrite this with actual values 0.0-1.0 if present.
+     * IMPORTANT: Only set sentinel if currently 0.0 (uninitialized from memset).
+     * If already set (from prototype copy), preserve the existing value. */
+    if (mob->ai_data->personality.conscientiousness == 0.0f) {
+        mob->ai_data->personality.conscientiousness = -1.0f;
+    }
 
     /* Set default values for genetics if not already set from mob files.
      * This ensures mobs have reasonable default behavior even without explicit genetics.
