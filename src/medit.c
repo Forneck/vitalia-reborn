@@ -197,11 +197,22 @@ static void medit_setup_new(struct descriptor_data *d)
 void medit_setup_existing(struct descriptor_data *d, int rmob_num)
 {
     struct char_data *mob;
+    struct mob_ai_data *original_ai;
 
     /* Allocate a scratch mobile structure. */
     CREATE(mob, struct char_data, 1);
 
     copy_mobile(mob, mob_proto + rmob_num);
+
+    /* Deep copy ai_data to prevent OLC edits from affecting the prototype.
+     * copy_mobile does a shallow copy (*to = *from), so ai_data pointer
+     * is shared between the OLC copy and the prototype. We need a separate
+     * copy for editing. */
+    if (mob->ai_data) {
+        original_ai = mob->ai_data;
+        CREATE(mob->ai_data, struct mob_ai_data, 1);
+        *mob->ai_data = *original_ai;
+    }
 
     OLC_MOB(d) = mob;
     OLC_ITEM_TYPE(d) = MOB_TRIGGER;
