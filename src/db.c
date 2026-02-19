@@ -1990,6 +1990,7 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
              * Valid range: 0-100, normalized to 0.0-1.0 internally */
             RANGE(0, 100);
             mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+            mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
         }
     }
     CASE("PreferredWeather")

@@ -1051,6 +1051,8 @@ struct mob_personality {
     float extraversion;      /* (E) Social engagement - Future use (Phase 3) */
     float agreeableness;     /* (A) Compassion/cooperation - Future use (Phase 3) */
     float neuroticism;       /* (N) Emotional sensitivity - ACTIVE in Phase 1 */
+    byte
+        conscientiousness_initialized; /* Flag: 1 if conscientiousness has been set (file/random), 0 if uninitialized */
 };
 
 /**
