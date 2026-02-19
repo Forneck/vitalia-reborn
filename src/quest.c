@@ -3547,6 +3547,73 @@ void init_mob_ai_data(struct char_data *mob)
         mob->ai_data->genetics.emotional_intelligence = URANGE(10, base_ei + variation, 90);
     }
 
+    /* Initialize Big Five (OCEAN) Personality traits
+     * Phase 1: Only Neuroticism (N) is implemented
+     * Other traits (O, C, E, A) reserved for future phases
+     *
+     * NEUROTICISM INITIALIZATION:
+     * N is derived from genetic traits that indicate emotional sensitivity:
+     * - Low brave_prevalence → Higher N (less brave = more threat-sensitive)
+     * - Low emotional_intelligence → Higher N (less emotional control = more reactive)
+     *
+     * Formula: N = weighted_inverse_bravery + weighted_low_ei
+     * Components:
+     * - Inverse bravery: (100 - brave_prevalence) / 100 → [0, 1]
+     * - Low EI factor: (50 - min(ei, 50)) / 50 → [0, 1] when EI < 50, else 0
+     *
+     * Weight distribution:
+     * - Bravery: 70% weight (primary determinant of threat sensitivity)
+     * - EI: 30% weight (secondary determinant of emotional volatility)
+     *
+     * NOTE: This initialization must happen before the emotional profile early return
+     * to ensure all mobs (including those with profiles) get proper personality values.
+     */
+    {
+        int brave = mob->ai_data->genetics.brave_prevalence;
+        int ei = mob->ai_data->genetics.emotional_intelligence;
+
+        /* Calculate inverse bravery component (0.0 to 1.0) */
+        float inverse_bravery = (100.0f - (float)brave) / 100.0f;
+
+        /* Calculate low EI component (0.0 to 1.0, only if EI < 50) */
+        float low_ei_factor = 0.0f;
+        if (ei < 50) {
+            low_ei_factor = (50.0f - (float)ei) / 50.0f;
+        }
+
+        /* Weighted combination: 70% bravery, 30% EI */
+        float neuroticism = (inverse_bravery * 0.7f) + (low_ei_factor * 0.3f);
+
+        /* Clamp to valid range [0.0, 1.0] */
+        mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
+
+        /* Initialize other OCEAN traits:
+         * Phase 2: Conscientiousness (C) - Generate if not explicitly set
+         * Phase 3+: Other traits remain at neutral baseline (0.5) for now
+         *
+         * CONSCIENTIOUSNESS INITIALIZATION:
+         * C represents self-discipline, organization, and goal-directed behavior.
+         *
+         * Strategy: Use explicit initialization flag instead of sentinel values.
+         * This avoids confusion between "uninitialized" and "explicitly set to 0.0".
+         *
+         * Storage: 0-100 in files/UI, normalized to 0.0-1.0 in personality struct.
+         * Note: 0.0 is a valid value (very low conscientiousness) and can now be
+         * properly distinguished from "not initialized" via the flag.
+         */
+        if (!mob->ai_data->personality.conscientiousness_initialized) {
+            /* Uninitialized: generate a new conscientiousness value */
+            int c_value = rand_gaussian(50, 15, 0, 100);
+            mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
+            mob->ai_data->personality.conscientiousness_initialized = 1;
+        }
+        /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
+
+        mob->ai_data->personality.openness = 0.5f;
+        mob->ai_data->personality.extraversion = 0.5f;
+        mob->ai_data->personality.agreeableness = 0.5f;
+    }
+
     /* If a specific emotional profile is set, apply it first
      * This provides consistent personality archetypes aligned with behavior thresholds */
     if (mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL) {
@@ -3642,70 +3709,6 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_love = URANGE(0, mob->ai_data->emotion_love, 100);
     mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
     mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
-
-    /* Initialize Big Five (OCEAN) Personality traits
-     * Phase 1: Only Neuroticism (N) is implemented
-     * Other traits (O, C, E, A) reserved for future phases
-     *
-     * NEUROTICISM INITIALIZATION:
-     * N is derived from genetic traits that indicate emotional sensitivity:
-     * - Low brave_prevalence → Higher N (less brave = more threat-sensitive)
-     * - Low emotional_intelligence → Higher N (less emotional control = more reactive)
-     *
-     * Formula: N = weighted_inverse_bravery + weighted_low_ei
-     * Components:
-     * - Inverse bravery: (100 - brave_prevalence) / 100 → [0, 1]
-     * - Low EI factor: (50 - min(ei, 50)) / 50 → [0, 1] when EI < 50, else 0
-     *
-     * Weight distribution:
-     * - Bravery: 70% weight (primary determinant of threat sensitivity)
-     * - EI: 30% weight (secondary determinant of emotional volatility)
-     */
-    {
-        int brave = mob->ai_data->genetics.brave_prevalence;
-        int ei = mob->ai_data->genetics.emotional_intelligence;
-
-        /* Calculate inverse bravery component (0.0 to 1.0) */
-        float inverse_bravery = (100.0f - (float)brave) / 100.0f;
-
-        /* Calculate low EI component (0.0 to 1.0, only if EI < 50) */
-        float low_ei_factor = 0.0f;
-        if (ei < 50) {
-            low_ei_factor = (50.0f - (float)ei) / 50.0f;
-        }
-
-        /* Weighted combination: 70% bravery, 30% EI */
-        float neuroticism = (inverse_bravery * 0.7f) + (low_ei_factor * 0.3f);
-
-        /* Clamp to valid range [0.0, 1.0] */
-        mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
-
-        /* Initialize other OCEAN traits:
-         * Phase 2: Conscientiousness (C) - Generate if not explicitly set
-         * Phase 3+: Other traits remain at neutral baseline (0.5) for now
-         *
-         * CONSCIENTIOUSNESS INITIALIZATION:
-         * C represents self-discipline, organization, and goal-directed behavior.
-         *
-         * Strategy: Use explicit initialization flag instead of sentinel values.
-         * This avoids confusion between "uninitialized" and "explicitly set to 0.0".
-         *
-         * Storage: 0-100 in files/UI, normalized to 0.0-1.0 in personality struct.
-         * Note: 0.0 is a valid value (very low conscientiousness) and can now be
-         * properly distinguished from "not initialized" via the flag.
-         */
-        if (!mob->ai_data->personality.conscientiousness_initialized) {
-            /* Uninitialized: generate a new conscientiousness value */
-            int c_value = rand_gaussian(50, 15, 0, 100);
-            mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
-            mob->ai_data->personality.conscientiousness_initialized = 1;
-        }
-        /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
-
-        mob->ai_data->personality.openness = 0.5f;
-        mob->ai_data->personality.extraversion = 0.5f;
-        mob->ai_data->personality.agreeableness = 0.5f;
-    }
 
     /* Initialize overall mood from initial emotions */
     mob->ai_data->overall_mood = calculate_mob_mood(mob);
