@@ -80,6 +80,8 @@ static int is_aura_spell(int spellnum)
 {
     if (spellnum <= 0)
         return 0;
+    if (IS_WEAPON(spellnum))
+        return 0;
     return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA);
 }
 
