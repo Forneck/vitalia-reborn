@@ -842,7 +842,7 @@ in `lib/misc/ideas`. They are organized by implementation status.
 
 | Player | Idea | Overlap |
 |--------|------|---------|
-| Motharo | Skill `aware of danger`/`sentir perigo` — show trap direction while moving, no armour penalty while sleeping | Partially covered by the **Danger Sense** skill (A-20) which protects Thieves from death-trap rooms on flee. The *direction indicator* and *sleep armour penalty* aspects are **not yet implemented**. |
+| Motharo | Skill `aware of danger`/`sentir perigo` — show trap direction while moving, no armour penalty while sleeping | **Direction indicator now implemented** in `check_danger_sense()` at skill ≥ 75%: shows exact direction(s) of death trap; at skill < 75%: shows vague "PERIGO mortal por perto" warning. The *sleep armour penalty removal* aspect is **not yet implemented**. |
 | Cansian | Aspas (single quotes) only required for multi-word spell names, not single words | Relates to Voice Casting (A-12). The current behaviour requires quotes universally; relaxing this rule is a UX enhancement not yet made. |
 
 ---
@@ -923,9 +923,9 @@ be triaged and prioritised.
 | F-2.13 | `retorno pro templo após quit` — player who quit in the Abyss was not returned to temple after ~72 hours | Yazid | 9752 | Loadroom / respawn logic |
 | F-2.14 | `magia errada quando fez o port dos remorts` — `skin like steel` replaced by `skin like diamond` after remort port | Yazid | 3019 | Spell-assignment mismatch during rebegin |
 | F-2.15 | `transport via plants impossível de praticar` — spell listed for Druid/Mage in help but not in practice list | Yazid / Astus | 3019 | Spell-assignment / class table issue |
-| F-2.16 | **Portas com Palavras** — no word-triggered doors work anywhere (Fênix na China, Fenda, Gondolin, etc.) | Lupulis | 5429 | Widespread trigger-keyword system failure |
+| F-2.16 | **Portas com Palavras** — no word-triggered doors work anywhere (Fênix na China, Fenda, Gondolin, etc.) | Lupulis | 5429 | **Fixed** — triggers now attached to rooms; flag values corrected (`ao`/`aop`); same-keyword pairs merged (zones 69, 114) |
 | F-2.17 | `Sala Shogum Tei` — `up` exit cannot be unlocked even with the correct amulet | Laguna | 15132 | World content — lock/key vnum |
-| F-2.18 | `Fenda Entre Mundos` — password `avarohana` no longer opens the `escuridão` door to Yama | Laguna / Astus | 11417 | Trigger broken (multiple reporters, different dates) |
+| F-2.18 | `Fenda Entre Mundos` — password `avarohana` no longer opens the `escuridão` door to Yama | Laguna / Astus | 11417 | **Fixed** — trigger 11400 attached to room 11417; merged with 11401; flag `aco`→open `ac` |
 | F-2.19 | `Rua Luar de Safira, casas 3 e 4` — house door cannot be opened | Lupulis | 1021 | World content |
 | F-2.20 | `Sala "Muitos Caminhos" – Loctus` — stone door cannot be opened with the stone key | Laguna | 8310 | World content — lock/key vnum |
 | F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | Skill not assigned to any class table |
@@ -933,8 +933,8 @@ be triaged and prioritised.
 | F-2.23 | `flee` — flee failing far too often in combat | Panoramix | 2 | Flee formula or random roll calibration |
 | F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | Practice formula not using WIS stat |
 | F-2.25 | `Magia não aparecendo no affect` — debuff spells (curse, blind, sleep from potions) not shown in `affects` | Durandal | 29041 | Missing affect-tracking for certain spell effects |
-| F-2.26 | `Porto de Madeira – Gondolin` — gate cannot be unlocked even with the sentinel key | Laguna | 4520 | World content — key/lock vnum or keyword |
-| F-2.27 | `Porta da Fenda entre Mundos` (repeated) — `avarohana` no longer opens the door | Astus | 3001 | Same as F-2.18; confirmed by second reporter |
+| F-2.26 | `Porto de Madeira – Gondolin` — gate cannot be unlocked even with the sentinel key | Laguna | 4520 | **Fixed** — triggers 4510-4513 attached to room 4520; flag values corrected |
+| F-2.27 | `Porta da Fenda entre Mundos` (repeated) — `avarohana` no longer opens the door | Astus | 3001 | **Fixed** — same as F-2.18 |
 | F-2.28 | `Visible/loja` — `visible` effect wears off between shop transactions, forcing repeated casting | Durandal | 3020 | Affect-duration / shop-interaction issue |
 | F-2.29 | `erro lvl 60 comando level` — `level` command shows identical XP requirement for 59→60 as for 58→59 | Thorgal | 3001 | XP table display bug in `do_level` |
 | F-2.30 | `A balada do Andarilho ignora a mana zerada` — song continues working with 0 mana | Panoramix | 12058 | Mana-check missing in bard song loop |
@@ -1182,8 +1182,7 @@ Ordered by severity and number of reporters. Address before adding new features.
       Rangers/archers; relates directly to the `MV` shortfall bug context.
     - **E-2.2 — Comma-separated item keywords** (Yazid): restore legacy `buy pao,via`
       parsing behaviour.
-    - **E-2.1 / Motharo — `sentir perigo` enhancements**: show exit direction for traps;
-      no armour penalty while sleeping (beyond the current death-trap protection).
+    - **E-2.1 / Motharo — `sentir perigo` enhancements**: direction display at skill ≥ 75% **now implemented** (shows vague warning below 75%). Remaining: no armour penalty while sleeping.
 
 ---
 
@@ -1301,7 +1300,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Monk class (player design) | `lib/misc/ideas` (Kasper) | ❌ Not implemented (design exists) | E-2.18 |
 | Stoneskin points in `affects` | `lib/misc/ideas` (Laguna) | ❌ Not implemented | E-2.19 |
 | Flecha de Sagitário as worn item | `lib/misc/ideas` (Lupulis) | ❌ World content design | E-2.20 |
-| Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | 🔴 Open — multiple reporters | F-2.16/18/27 |
+| Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | ✅ **Fixed** — triggers attached; flags corrected; same-kw pairs merged | F-2.16/18/27 |
 | `who` command showing 3× player count | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.33 |
 | `toggle wimp` changes page size | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.34 |
 | `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | 🔴 Open | F-2.21 |
