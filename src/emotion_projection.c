@@ -195,6 +195,18 @@ static const float emotion_profile_matrices[EMOTION_PROFILE_NUM][DECISION_SPACE_
 /* clang-format on */
 
 /* ========================================================================== */
+/*  Module-level constants                                                      */
+/* ========================================================================== */
+
+/* Pre-computed drift scale: PERSONAL_DRIFT_MAX_PCT / 100 */
+#define DRIFT_SCALE 0.2f /* 20 / 100 */
+
+/* Maximum points the Shadow Timeline forecast may shift the Valence axis.
+ * Kept deliberately small so that reactive emotional behavior dominates
+ * over strategic anticipation (see emotion_apply_contextual_modulation). */
+#define SHADOW_FORECAST_VALENCE_CAP 10.0f
+
+/* ========================================================================== */
 /*  Helper: L1-normalised dot product along one axis                          */
 /* ========================================================================== */
 
@@ -387,11 +399,11 @@ void emotion_apply_contextual_modulation(struct char_data *mob, struct char_data
     if (mob && IS_NPC(mob) && mob->ai_data) {
         int pred_score = mob->ai_data->last_predicted_score; /* −100 to 100 */
         float forecast_bias = (float)pred_score * 0.10f;
-        /* Hard cap: forecast may nudge valence by at most ±10 pts */
-        if (forecast_bias > 10.0f)
-            forecast_bias = 10.0f;
-        if (forecast_bias < -10.0f)
-            forecast_bias = -10.0f;
+        /* Hard cap: forecast may nudge valence by at most ±SHADOW_FORECAST_VALENCE_CAP pts */
+        if (forecast_bias > SHADOW_FORECAST_VALENCE_CAP)
+            forecast_bias = SHADOW_FORECAST_VALENCE_CAP;
+        if (forecast_bias < -SHADOW_FORECAST_VALENCE_CAP)
+            forecast_bias = -SHADOW_FORECAST_VALENCE_CAP;
         effective_out[DECISION_AXIS_VALENCE] += forecast_bias;
     }
 
@@ -460,9 +472,6 @@ float compute_coping_potential(struct char_data *mob) { return emotion_compute_c
 /*  Personal drift                                                             */
 /* ========================================================================== */
 
-/* Pre-computed drift scale: PERSONAL_DRIFT_MAX_PCT / 100 */
-#define DRIFT_SCALE 0.2f /* 20 / 100 */
-
 void update_personal_drift(struct char_data *mob, int axis, int emotion_type, float event_weight)
 {
     float *drift;
@@ -501,8 +510,10 @@ void update_personal_drift(struct char_data *mob, int axis, int emotion_type, fl
         *drift = -max_drift;
 
     /* Runtime assertion: drift must remain within bounds after clamping.
-     * This catches potential floating-point creep or logic errors in debug builds. */
-    if ((*drift > max_drift + 1e-4f) || (*drift < -(max_drift + 1e-4f)))
+     * Uses fabsf() for clarity: fires only if drift genuinely exceeds the
+     * hard cap by more than epsilon, catching floating-point creep or
+     * logic errors. */
+    if (fabsf(*drift) > max_drift + 1e-4f)
         log1("SYSERR: 4D personal_drift[%d][%d] out of bounds (%.4f, max=%.4f) for mob %s (#%d)", axis, emotion_type,
              *drift, max_drift, GET_NAME(mob), GET_MOB_VNUM(mob));
 }
