@@ -1300,7 +1300,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Monk class (player design) | `lib/misc/ideas` (Kasper) | ❌ Not implemented (design exists) | E-2.18 |
 | Stoneskin points in `affects` | `lib/misc/ideas` (Laguna) | ❌ Not implemented | E-2.19 |
 | Flecha de Sagitário as worn item | `lib/misc/ideas` (Lupulis) | ❌ World content design | E-2.20 |
-| Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | ✅ **Fixed** — triggers attached; flags corrected; same-kw pairs merged | F-2.16/18/27 |
+| Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | ✅ **Fixed** — triggers attached; flags corrected; same-kw pairs merged | F-2.16/18/26/27 |
 | `who` command showing 3× player count | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.33 |
 | `toggle wimp` changes page size | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.34 |
 | `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | 🔴 Open | F-2.21 |
