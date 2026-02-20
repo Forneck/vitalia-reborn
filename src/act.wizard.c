@@ -937,7 +937,8 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
                 : "Unknown";
         send_to_char(ch, "Profile: %s%s%s   Coping Potential: %s%.1f%s\r\n", CCYEL(ch, C_NRM), profile_name,
                      CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), coping, CCNRM(ch, C_NRM));
-        send_to_char(ch, "  %sRaw projection%s   (M_profile + drift) * E:\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "  %sDrift-adjusted projection%s   (M_profile + ΔM_personal) * E, pre-context:\r\n",
+                     CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
         send_to_char(ch, "    Valence:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_valence, CCNRM(ch, C_NRM));
         send_to_char(ch, "    Arousal:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_arousal, CCNRM(ch, C_NRM));
         send_to_char(ch, "    Dominance:   %s%+7.1f%s  (perceived control / assertiveness bias)\r\n", CCCYN(ch, C_NRM),
@@ -950,7 +951,7 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
                      state4d.valence, CCNRM(ch, C_NRM));
         send_to_char(ch, "    Arousal:     %s%+7.1f%s  (env intensity applied)\r\n", CCYEL(ch, C_NRM), state4d.arousal,
                      CCNRM(ch, C_NRM));
-        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (coping potential modulated)\r\n", CCYEL(ch, C_NRM),
+        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (coping potential additively blended)\r\n", CCYEL(ch, C_NRM),
                      state4d.dominance, CCNRM(ch, C_NRM));
         send_to_char(ch, "    Affiliation: %s%+7.1f%s  (relationship memory applied)\r\n", CCYEL(ch, C_NRM),
                      state4d.affiliation, CCNRM(ch, C_NRM));

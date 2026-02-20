@@ -1137,7 +1137,9 @@ struct emotion_4d_state {
 
     float coping_potential; /**< Objective situational capacity modulator (0 to 100); separate from Dominance */
 
-    /* Raw values before contextual modulation – used for debugging and auditing */
+    /* Raw values before contextual modulation – used for debugging and auditing.
+     * These represent (M_profile + ΔM_personal) * E: the drift-adjusted projection
+     * BEFORE the Contextual Modulation Layer is applied. */
     float raw_valence;
     float raw_arousal;
     float raw_dominance;

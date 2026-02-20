@@ -339,9 +339,11 @@ void emotion_apply_contextual_modulation(struct char_data *mob, struct char_data
     for (axis = 0; axis < DECISION_SPACE_DIMS; axis++)
         effective_out[axis] = raw[axis];
 
-    /* --- Dominance: adjusted by objective Coping Potential --- */
-    /* coping_pot is 0–100; neutral is 50.  Delta = (coping_pot − 50) * 0.4   */
-    /* This pulls perceived Dominance toward objective situational capacity.    */
+    /* --- Dominance: additively modulated by objective Coping Potential ---    */
+    /* Formula: D_effective = D_projected + (coping_pot − 50) * 0.4            */
+    /* This is a bounded additive blend: coping can shift dominance by at most  */
+    /* ±20 pts (when coping_pot = 0 or 100), preserving the profile projection. */
+    /* It does NOT overwrite the projected dominance value.                     */
     float dominance_adj = (coping_pot - 50.0f) * 0.4f;
     effective_out[DECISION_AXIS_DOMINANCE] += dominance_adj;
 
@@ -378,10 +380,18 @@ void emotion_apply_contextual_modulation(struct char_data *mob, struct char_data
     }
 
     /* --- Valence: optionally biased by Shadow Timeline anticipated outcome --- */
-    /* Use the mob's last prediction score as a forward-looking valence signal.  */
+    /* Influence coefficient is intentionally small (0.10) to keep reactive     */
+    /* emotional behavior dominant over strategic anticipation.                 */
+    /* Bias is explicitly clamped to ±SHADOW_FORECAST_VALENCE_CAP so that even */
+    /* a corrupted pred_score cannot over-ride the projected valence.           */
     if (mob && IS_NPC(mob) && mob->ai_data) {
         int pred_score = mob->ai_data->last_predicted_score; /* −100 to 100 */
-        float forecast_bias = (float)pred_score * 0.10f;     /* max ±10 pts  */
+        float forecast_bias = (float)pred_score * 0.10f;
+        /* Hard cap: forecast may nudge valence by at most ±10 pts */
+        if (forecast_bias > 10.0f)
+            forecast_bias = 10.0f;
+        if (forecast_bias < -10.0f)
+            forecast_bias = -10.0f;
         effective_out[DECISION_AXIS_VALENCE] += forecast_bias;
     }
 
@@ -489,6 +499,12 @@ void update_personal_drift(struct char_data *mob, int axis, int emotion_type, fl
         *drift = max_drift;
     if (*drift < -max_drift)
         *drift = -max_drift;
+
+    /* Runtime assertion: drift must remain within bounds after clamping.
+     * This catches potential floating-point creep or logic errors in debug builds. */
+    if ((*drift > max_drift + 1e-4f) || (*drift < -(max_drift + 1e-4f)))
+        log1("SYSERR: 4D personal_drift[%d][%d] out of bounds (%.4f, max=%.4f) for mob %s (#%d)", axis, emotion_type,
+             *drift, max_drift, GET_NAME(mob), GET_MOB_VNUM(mob));
 }
 
 /* ========================================================================== */
@@ -506,9 +522,12 @@ void log_4d_state(struct char_data *mob, struct char_data *target, const struct 
             ? emotion_profile_types[mob->ai_data->emotional_profile]
             : "Unknown";
 
+    /* PROJ = drift-adjusted projection (M_profile + ΔM_personal)*E, pre-context
+     * COPING = objective situational capacity (separate from Dominance axis)
+     * EFF  = final state after Contextual Modulation Layer */
     log1(
         "4D-SPACE: mob=%s(#%d) profile=%s target=%s "
-        "RAW[V=%.1f A=%.1f D=%.1f Af=%.1f] "
+        "PROJ[V=%.1f A=%.1f D=%.1f Af=%.1f] "
         "COPING=%.1f "
         "EFF[V=%.1f A=%.1f D=%.1f Af=%.1f]",
         GET_NAME(mob), GET_MOB_VNUM(mob), profile_name, target_name, state->raw_valence, state->raw_arousal,
