@@ -1342,6 +1342,12 @@ struct mob_ai_data {
     /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */
     float personal_drift[DECISION_SPACE_DIMS][20]; /* [axis 0..3][EMOTION_TYPE_* 0..19] */
     struct emotion_4d_state last_4d_state;         /* Most recently computed 4D projection */
+
+    /* 4D target hysteresis: persist the idle fallback target across ticks to prevent
+     * oscillation when multiple valid candidates share the same room.
+     * The combat target (FIGHTING) always takes priority and resets these fields. */
+    long last_4d_target_id;  /* Entity ID of the last idle fallback target (0 = none) */
+    int last_4d_target_type; /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
 };
 
 /**
