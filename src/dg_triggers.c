@@ -163,27 +163,17 @@ void greet_memory_mtrigger(char_data *actor)
         if (!SCRIPT_MEM(ch) || !AWAKE(ch) || FIGHTING(ch) || (ch == actor) || AFF_FLAGGED(ch, AFF_CHARM))
             continue;
         /* find memory line with command only */
-        for (mem = SCRIPT_MEM(ch); mem && SCRIPT_MEM(ch); mem = mem->next) {
-            if (char_script_id(actor) != mem->id)
+        for (mem = SCRIPT_MEM(ch); mem; ) {
+            struct script_memory *next = mem->next;
+
+            if (char_script_id(actor) != mem->id) {
+                mem = next;
                 continue;
+            }
             if (mem->cmd) {
                 command_interpreter(ch, mem->cmd); /* no script */
                 command_performed = 1;
-                break;
-            }
-            /* if a command was not performed execute the memory script */
-            if (mem && !command_performed) {
-                for (t = TRIGGERS(SCRIPT(ch)); t; t = t->next) {
-                    if (IS_SET(GET_TRIG_TYPE(t), MTRIG_MEMORY) && CAN_SEE(ch, actor) && !GET_TRIG_DEPTH(t) &&
-                        rand_number(1, 100) <= GET_TRIG_NARG(t)) {
-                        ADD_UID_VAR(buf, t, char_script_id(actor), "actor", 0);
-                        script_driver(&ch, t, MOB_TRIGGER, TRIG_NEW);
-                        break;
-                    }
-                }
-            }
-            /* delete the memory */
-            if (mem) {
+                /* delete the memory */
                 if (SCRIPT_MEM(ch) == mem) {
                     SCRIPT_MEM(ch) = mem->next;
                 } else {
@@ -196,6 +186,33 @@ void greet_memory_mtrigger(char_data *actor)
                 if (mem->cmd)
                     free(mem->cmd);
                 free(mem);
+                break;
+            }
+            /* if a command was not performed execute the memory script */
+            if (!command_performed) {
+                for (t = TRIGGERS(SCRIPT(ch)); t; t = t->next) {
+                    if (IS_SET(GET_TRIG_TYPE(t), MTRIG_MEMORY) && CAN_SEE(ch, actor) && !GET_TRIG_DEPTH(t) &&
+                        rand_number(1, 100) <= GET_TRIG_NARG(t)) {
+                        ADD_UID_VAR(buf, t, char_script_id(actor), "actor", 0);
+                        script_driver(&ch, t, MOB_TRIGGER, TRIG_NEW);
+                        break;
+                    }
+                }
+            }
+            /* delete the memory */
+            if (SCRIPT_MEM(ch) == mem) {
+                SCRIPT_MEM(ch) = mem->next;
+            } else {
+                struct script_memory *prev;
+                prev = SCRIPT_MEM(ch);
+                while (prev->next != mem)
+                    prev = prev->next;
+                prev->next = mem->next;
+            if (mem->cmd)
+                free(mem->cmd);
+            free(mem);
+
+            mem = next;
             }
         }
     }
