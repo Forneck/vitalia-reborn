@@ -171,6 +171,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
     OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
     OLC_CONFIG(d)->experimental.emotion_alignment_shifts = CONFIG_EMOTION_ALIGNMENT_SHIFTS;
+    OLC_CONFIG(d)->experimental.mob_4d_debug = CONFIG_MOB_4D_DEBUG;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -421,6 +422,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
     CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
     CONFIG_EMOTION_ALIGNMENT_SHIFTS = OLC_CONFIG(d)->experimental.emotion_alignment_shifts;
+    CONFIG_MOB_4D_DEBUG = OLC_CONFIG(d)->experimental.mob_4d_debug;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -1066,6 +1068,11 @@ int save_config(IDXTYPE nowhere)
             "* Emotions influence alignment over time? (experimental, default NO)\n"
             "emotion_alignment_shifts = %d\n\n",
             CONFIG_EMOTION_ALIGNMENT_SHIFTS);
+
+    fprintf(fl,
+            "* Log 4D decision-space raw and effective values for debugging (default NO)\n"
+            "mob_4d_debug = %d\n\n",
+            CONFIG_MOB_4D_DEBUG);
 
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 

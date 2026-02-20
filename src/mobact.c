@@ -32,6 +32,7 @@
 #include "quest.h"
 #include "spec_procs.h"
 #include "shadow_timeline.h"
+#include "emotion_projection.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -632,6 +633,27 @@ void mobile_activity(void)
         // but we must re-check here before proceeding.
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
+
+        /* 4D Relational Decision Space: compute projection state once per AI tick.
+         * This runs for both fighting and non-fighting mobs so the 4D state is
+         * always current when downstream systems (Shadow Timeline, combat, social)
+         * consume it.  Target priority: current fight target → first visible
+         * non-mob in the room → NULL. */
+        if (ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *target_4d = FIGHTING(ch);
+            if (!target_4d && IN_ROOM(ch) != NOWHERE) {
+                struct char_data *nearby;
+                for (nearby = world[IN_ROOM(ch)].people; nearby; nearby = nearby->next_in_room) {
+                    if (nearby != ch && !IS_NPC(nearby)) {
+                        target_4d = nearby;
+                        break;
+                    }
+                }
+            }
+            ch->ai_data->last_4d_state = compute_emotion_4d_state(ch, target_4d);
+            if (CONFIG_MOB_4D_DEBUG)
+                log_4d_state(ch, target_4d, &ch->ai_data->last_4d_state);
+        }
 
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;

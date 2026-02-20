@@ -208,6 +208,12 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
+/* 4D Relational Decision Space - Emotional Profile projection system */
+struct emotion_4d_state compute_emotion_4d_state(struct char_data *mob, struct char_data *target);
+float compute_coping_potential(struct char_data *mob);
+void update_personal_drift(struct char_data *mob, int axis, int emotion_type, float event_weight);
+void log_4d_state(struct char_data *mob, struct char_data *target, const struct emotion_4d_state *state);
+
 /* Hybrid emotion system - combines mood (global) with relationship (per-entity) emotions */
 int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
 int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
@@ -1405,6 +1411,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MAX_MOB_POSTED_QUESTS config_info.experimental.max_mob_posted_quests
 /** Emotions influence alignment over time? */
 #define CONFIG_EMOTION_ALIGNMENT_SHIFTS config_info.experimental.emotion_alignment_shifts
+/** Log 4D decision-space raw and effective values for debugging */
+#define CONFIG_MOB_4D_DEBUG config_info.experimental.mob_4d_debug
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */

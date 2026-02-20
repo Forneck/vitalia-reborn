@@ -1102,6 +1102,49 @@ struct mob_wishlist_item {
 #define EMOTION_PROFILE_CONFIDENT 5  /**< Confident profile - high courage, low fear */
 #define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
 #define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
+#define EMOTION_PROFILE_NUM 8        /**< Total number of emotional profile types */
+
+/* 4D Relational Decision Space dimensions */
+#define DECISION_SPACE_DIMS 4       /**< Number of axes: Valence, Arousal, Dominance, Affiliation */
+#define DECISION_AXIS_VALENCE 0     /**< Positive vs. negative evaluation of current interaction */
+#define DECISION_AXIS_AROUSAL 1     /**< Activation / urgency level */
+#define DECISION_AXIS_DOMINANCE 2   /**< Perceived control / assertiveness bias */
+#define DECISION_AXIS_AFFILIATION 3 /**< Relational orientation toward target */
+
+/* Personal drift bound (±% from profile baseline per axis/emotion weight) */
+#define PERSONAL_DRIFT_MAX_PCT 20 /**< Maximum personal drift: ±20% of profile baseline weight */
+
+/**
+ * 4D Relational Decision State
+ *
+ * Represents the projected emotional state of a mob in the 4D relational space.
+ * Computed per interaction via the Emotional Profile projection matrix.
+ *
+ * Axes:
+ *  - Valence     : positive (+100) vs. negative (-100) evaluation of interaction
+ *  - Arousal     : calm (0) to highly activated (100)
+ *  - Dominance   : perceived control / assertiveness bias (-100 to +100)
+ *  - Affiliation : relational orientation toward target (-100=avoidance, +100=approach)
+ *
+ * Note: Dominance is the subjective projected state (perceived control).
+ *       Coping Potential is the separate objective situational capacity modifier.
+ */
+struct emotion_4d_state {
+    float valence;     /**< Effective valence after contextual modulation (-100 to +100) */
+    float arousal;     /**< Effective arousal after contextual modulation (0 to 100) */
+    float dominance;   /**< Effective dominance: perceived control / assertiveness bias (-100 to +100) */
+    float affiliation; /**< Effective affiliation toward target (-100 to +100) */
+
+    float coping_potential; /**< Objective situational capacity modulator (0 to 100); separate from Dominance */
+
+    /* Raw values before contextual modulation – used for debugging and auditing */
+    float raw_valence;
+    float raw_arousal;
+    float raw_dominance;
+    float raw_affiliation;
+
+    bool valid; /**< TRUE if state has been computed for the current tick */
+};
 
 /* Emotion type constants for hybrid emotion system */
 #define EMOTION_TYPE_FEAR 0
@@ -1292,6 +1335,11 @@ struct mob_ai_data {
     bool last_outcome_obvious;   /* Whether the last outcome was obvious/predictable */
     int recent_prediction_error; /* 0–100 smoothed novelty */
     int attention_bias;          /* -50 to +50 long-term adaptation */
+
+    /* 4D Relational Decision Space - Emotional Profile projection layer */
+    /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */
+    float personal_drift[DECISION_SPACE_DIMS][20]; /* [axis 0..3][EMOTION_TYPE_* 0..19] */
+    struct emotion_4d_state last_4d_state;         /* Most recently computed 4D projection */
 };
 
 /**
@@ -2059,6 +2107,7 @@ struct experimental_data {
     int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
     int max_mob_posted_quests;     /**< Maximum number of mob-posted autoquests (default: 450) */
     int emotion_alignment_shifts;  /**< Emotions influence alignment over time? (default: NO) */
+    int mob_4d_debug;              /**< Log 4D decision-space raw and effective values for debugging (default: NO) */
 };
 
 /**

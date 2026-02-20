@@ -5229,6 +5229,8 @@ void load_config(void)
                     CONFIG_MAX_MOB_POSTED_QUESTS = num;
                 else if (!str_cmp(tag, "emotion_alignment_shifts"))
                     CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
+                else if (!str_cmp(tag, "mob_4d_debug"))
+                    CONFIG_MOB_4D_DEBUG = num;
                 break;
 
             default:
