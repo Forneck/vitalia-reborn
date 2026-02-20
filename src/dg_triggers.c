@@ -163,7 +163,7 @@ void greet_memory_mtrigger(char_data *actor)
         if (!SCRIPT_MEM(ch) || !AWAKE(ch) || FIGHTING(ch) || (ch == actor) || AFF_FLAGGED(ch, AFF_CHARM))
             continue;
         /* find memory line with command only */
-        for (mem = SCRIPT_MEM(ch); mem; ) {
+        for (mem = SCRIPT_MEM(ch); mem;) {
             struct script_memory *next = mem->next;
 
             if (char_script_id(actor) != mem->id) {
@@ -208,12 +208,12 @@ void greet_memory_mtrigger(char_data *actor)
                 while (prev->next != mem)
                     prev = prev->next;
                 prev->next = mem->next;
+            }
             if (mem->cmd)
                 free(mem->cmd);
             free(mem);
 
             mem = next;
-            }
         }
     }
 }
