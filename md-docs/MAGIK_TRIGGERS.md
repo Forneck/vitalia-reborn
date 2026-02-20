@@ -144,42 +144,71 @@ This ensures consistent door state across both rooms.
 - **Close**: "A porta se fecha."
 - **Lock/Unlock**: "Você escuta um ruído vindo da porta." / "...do alçapão."
 
-## Attachment Instructions
+## Attachment Status
 
-Triggers should be attached to appropriate rooms using the `T <trigger_vnum>` format in world files. The user has indicated that attachment will be done separately.
+All triggers are now attached to their respective rooms. The table below summarises the room-to-trigger mapping.
 
-**Example attachment** (to be done later):
-```
-#1200
-A Sala de Reunião dos Deuses~
-...room description...
-~
-12 8 0 0 0 0
-D0
-...door description...
-~
-porta~
-2 -1 1204
-T 90000
-T 90001
-T 90002
-T 90003
-S
-```
+| Zone | Room | Triggers | Description |
+|------|------|----------|-------------|
+| 12 | 1290 | 1200, 1201, 1202, 1203 | Área de Experiências — N door: abra/fecha/tranca/destranca |
+| 45 | 4520 | 4510, 4511, 4512, 4513 | O Portão de Madeira (Gondolin) — N door: Ulmo/Turgon/fecha/tranca |
+| 69 | 6910 | 6902 | Um Altar para Anura — down: BUFONIDAE |
+| 69 | 6921 | 6904 | O Jardim — down: OPISTHOCOELA |
+| 69 | 6957 | 6906 | O Lago — down: PIPIDAE |
+| 69 | 6964 | 6908 | Poço de Fogo — down: BREVICIPITIDAE |
+| 69 | 6976 | 6910 | Altar Principal — down: SALIENTIA |
+| 114 | 11417 | 11400 | A Fenda Entre Mundos — E door: avarohana |
+| 176 | *TBD* | 17600, 17601 | Chinese zone — E door: baohe lin tsung lee-dah/lee-duh (room TBD) |
+
+> **Note — Zone 176**: The east door for triggers 17600/17601 has not yet been
+> confirmed.  The triggers are in `176.trg` with correct flag values but remain
+> unattached until the target room is identified.
+
+## Flag Correction (important)
+
+All triggers were originally written with wrong `%door% flags` values because
+of a mismatch between `asciiflag_conv` letter codes and the actual `EX_*` bit
+positions:
+
+| Intended state | Wrong value | Correct value | Explanation |
+|---|---|---|---|
+| Closed (not locked) | `ab` | `ao` | `b`=EX_PICKPROOF; `o`=EX_CLOSED |
+| Closed + Locked | `abc` | `aop` | `c`=EX_GHOSTPROOF; `p`=EX_LOCKED |
+| Open | `a` | `a` | Correct — no change needed |
+
+This has been corrected in all trigger files (12, 45, 69, 114, 176).
+
+## Merged Triggers (zones 69 and 114)
+
+`speech_wtrigger` breaks after the **first** matching trigger, so having two
+triggers with the same keyword (unlock + open) means only the first ever fires.
+Zones 69 and 114 had this problem; each pair has been merged into a single
+trigger that unlocks then opens the door with a 1-second dramatic pause between:
+
+- Zone 69: 6902 (was 6902+6903), 6904 (was 6904+6905), 6906 (was 6906+6907), 6908 (was 6908+6909), 6910 (was 6910+6911)
+- Zone 114: 11400 (was 11400+11401)
+
+The "second" triggers (6903, 6905, 6907, 6909, 6911, 11401) are kept in the
+`.trg` file as stubs with keyword `*UNUSED*` so they never fire.
 
 ## Notes
 
 1. **Multiple Keywords**: Some triggers check for both uppercase and lowercase variants to be case-insensitive (e.g., "Ulmo" and "ulmo").
 
-2. **Phrase Matching**: Zone 176 triggers use complete phrases which must be spoken exactly as specified.
+2. **Phrase Matching**: Zone 176 triggers use complete phrases which must be spoken exactly as specified ("baohe lin tsung lee-dah" to unlock, then "baohe lin tsung lee-duh" to open).
 
-3. **Order Dependency**: For zones with multiple actions on the same exit (unlock then open), players must speak both keywords in sequence.
+3. **Merged vs. Separate**: Zones with the same keyword for unlock+open (69, 114) now use merged single triggers. Zones with different keywords (12, 45, 176) keep separate triggers, so each action requires its own spoken word.
 
 4. **Error Handling**: Triggers check if exits exist before attempting to manipulate them, preventing errors.
 
 5. **Echo Consistency**: Messages are in Portuguese, matching the MUD's language theme.
 
-6. **Room-Specific Triggers**: Each trigger is designed for a specific room. For example, in Zone 69, each taxonomic name (BUFONIDAE, OPISTHOCOELA, etc.) is meant for a different room with its own trapdoor. During attachment, builders should assign the appropriate trigger pair (unlock + open) to each room.
+6. **Room-Specific Triggers**: In Zone 69 each taxonomic name (BUFONIDAE, OPISTHOCOELA, etc.) is assigned to a different room. The mapping is:
+   - Room 6910 → BUFONIDAE (trigger 6902)
+   - Room 6921 → OPISTHOCOELA (trigger 6904)
+   - Room 6957 → PIPIDAE (trigger 6906)
+   - Room 6964 → BREVICIPITIDAE (trigger 6908)
+   - Room 6976 → SALIENTIA (trigger 6910)
 
 ## Original Specification Reference
 
