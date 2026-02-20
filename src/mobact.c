@@ -637,14 +637,25 @@ void mobile_activity(void)
         /* 4D Relational Decision Space: compute projection state once per AI tick.
          * This runs for both fighting and non-fighting mobs so the 4D state is
          * always current when downstream systems (Shadow Timeline, combat, social)
-         * consume it.  Target priority: current fight target → first visible
-         * non-mob in the room → NULL. */
+         * consume it.
+         *
+         * Target priority: current fight target → first visible, awake character
+         * in the room (player or mob) → NULL.
+         *
+         * We allow NPC targets because:
+         *  - get_relationship_emotion() fully supports mob-to-mob memories.
+         *  - FIGHTING(ch) can already be a mob; the idle fallback should be consistent.
+         *  - Mob-to-mob Affiliation/Dominance projection drives group dynamics,
+         *    loyalty, and inter-mob social behaviour.
+         *  - The scan is O(n) over room occupants with an early break; removing the
+         *    !IS_NPC guard has no measurable performance impact. */
         if (ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
             struct char_data *target_4d = FIGHTING(ch);
             if (!target_4d && IN_ROOM(ch) != NOWHERE) {
                 struct char_data *nearby;
                 for (nearby = world[IN_ROOM(ch)].people; nearby; nearby = nearby->next_in_room) {
-                    if (nearby != ch && !IS_NPC(nearby) && CAN_SEE(ch, nearby) && AWAKE(nearby)) {
+                    if (nearby != ch && CAN_SEE(ch, nearby) && AWAKE(nearby) &&
+                        (!IS_NPC(nearby) || !MOB_FLAGGED(nearby, MOB_NOTDEADYET))) {
                         target_4d = nearby;
                         break;
                     }
