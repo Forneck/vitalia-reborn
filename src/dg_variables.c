@@ -477,7 +477,7 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig, int typ
              * will return the number of bags of gold.
              * Addition inspired by Jamie Nelson */
             else if (!str_cmp(var, "findmob")) {
-                if (!*field || !subfield || !*subfield) {
+                if (!subfield || !*subfield) {
                     script_log("findmob.vnum(mvnum) - illegal syntax");
                     strcpy(str, "0");
                 } else {
