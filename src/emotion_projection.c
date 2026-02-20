@@ -450,6 +450,9 @@ float compute_coping_potential(struct char_data *mob) { return emotion_compute_c
 /*  Personal drift                                                             */
 /* ========================================================================== */
 
+/* Pre-computed drift scale: PERSONAL_DRIFT_MAX_PCT / 100 */
+#define DRIFT_SCALE 0.2f /* 20 / 100 */
+
 void update_personal_drift(struct char_data *mob, int axis, int emotion_type, float event_weight)
 {
     float *drift;
@@ -473,7 +476,7 @@ void update_personal_drift(struct char_data *mob, int axis, int emotion_type, fl
 
     /* Bound: ±PERSONAL_DRIFT_MAX_PCT% of the absolute baseline weight.       */
     /* If the baseline weight is zero, use a small absolute cap (0.01).        */
-    max_drift = fabsf(M_base) * (PERSONAL_DRIFT_MAX_PCT / 100.0f);
+    max_drift = fabsf(M_base) * DRIFT_SCALE;
     if (max_drift < 0.01f)
         max_drift = 0.01f;
 
@@ -491,8 +494,6 @@ void update_personal_drift(struct char_data *mob, int axis, int emotion_type, fl
 /* ========================================================================== */
 /*  Debug logging                                                              */
 /* ========================================================================== */
-
-static const char *axis_names[DECISION_SPACE_DIMS] = {"Valence", "Arousal", "Dominance", "Affiliation"};
 
 void log_4d_state(struct char_data *mob, struct char_data *target, const struct emotion_4d_state *state)
 {
@@ -513,6 +514,4 @@ void log_4d_state(struct char_data *mob, struct char_data *target, const struct 
         GET_NAME(mob), GET_MOB_VNUM(mob), profile_name, target_name, state->raw_valence, state->raw_arousal,
         state->raw_dominance, state->raw_affiliation, state->coping_potential, state->valence, state->arousal,
         state->dominance, state->affiliation);
-
-    (void)axis_names; /* suppress unused-variable warning if log is compiled out */
 }
