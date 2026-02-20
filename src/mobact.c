@@ -32,6 +32,8 @@
 #include "quest.h"
 #include "spec_procs.h"
 #include "shadow_timeline.h"
+#include "emotion_projection.h"
+#include "dg_scripts.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -632,6 +634,83 @@ void mobile_activity(void)
         // but we must re-check here before proceeding.
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
+
+        /* 4D Relational Decision Space: compute projection state once per AI tick.
+         * This runs for both fighting and non-fighting mobs so the 4D state is
+         * always current when downstream systems (Shadow Timeline, combat, social)
+         * consume it.
+         *
+         * Target priority:
+         *  1. Current fight target (always authoritative; overrides hysteresis).
+         *  2. Previous idle-fallback target if still valid in this room (hysteresis:
+         *     prevents oscillation when multiple candidates share the same room).
+         *  3. First visible, awake, non-extracting character in the room.
+         *  4. NULL.
+         *
+         * Hysteresis strategy: the entity ID/type of the last idle target is stored
+         * in mob_ai_data and reused as long as the character remains a valid target.
+         * A new scan is only run when the stored target is gone or no longer eligible.
+         *
+         * We allow NPC targets because:
+         *  - get_relationship_emotion() fully supports mob-to-mob memories.
+         *  - FIGHTING(ch) can already be a mob; the idle fallback should be consistent.
+         *  - Mob-to-mob Affiliation/Dominance drives group dynamics and loyalty. */
+        if (ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *target_4d = FIGHTING(ch);
+
+            if (target_4d) {
+                /* Combat target always wins; clear stored idle target to avoid stale
+                 * hysteresis resuming after combat ends. */
+                ch->ai_data->last_4d_target_id = 0;
+            } else if (IN_ROOM(ch) != NOWHERE) {
+                /* Check whether the stored hysteresis target is still valid. */
+                struct char_data *sticky = NULL;
+                if (ch->ai_data->last_4d_target_id != 0) {
+                    struct char_data *scan;
+                    long want_id = ch->ai_data->last_4d_target_id;
+                    int want_type = ch->ai_data->last_4d_target_type;
+                    for (scan = world[IN_ROOM(ch)].people; scan; scan = scan->next_in_room) {
+                        if (scan == ch)
+                            continue;
+                        bool type_match =
+                            IS_NPC(scan) ? (want_type == ENTITY_TYPE_MOB) : (want_type == ENTITY_TYPE_PLAYER);
+                        if (!type_match)
+                            continue;
+                        long scan_id = IS_NPC(scan) ? char_script_id(scan) : GET_IDNUM(scan);
+                        if (scan_id != want_id)
+                            continue;
+                        /* Found – validate eligibility */
+                        if (CAN_SEE(ch, scan) && AWAKE(scan) && (!IS_NPC(scan) || !MOB_FLAGGED(scan, MOB_NOTDEADYET))) {
+                            sticky = scan;
+                        }
+                        break; /* ID is unique in room */
+                    }
+                }
+
+                if (sticky) {
+                    target_4d = sticky;
+                } else {
+                    /* Scan for a new target and store it for hysteresis. */
+                    struct char_data *nearby;
+                    for (nearby = world[IN_ROOM(ch)].people; nearby; nearby = nearby->next_in_room) {
+                        if (nearby != ch && CAN_SEE(ch, nearby) && AWAKE(nearby) &&
+                            (!IS_NPC(nearby) || !MOB_FLAGGED(nearby, MOB_NOTDEADYET))) {
+                            target_4d = nearby;
+                            ch->ai_data->last_4d_target_id =
+                                IS_NPC(nearby) ? char_script_id(nearby) : GET_IDNUM(nearby);
+                            ch->ai_data->last_4d_target_type = IS_NPC(nearby) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+                            break;
+                        }
+                    }
+                    if (!target_4d)
+                        ch->ai_data->last_4d_target_id = 0;
+                }
+            }
+
+            ch->ai_data->last_4d_state = compute_emotion_4d_state(ch, target_4d);
+            if (CONFIG_MOB_4D_DEBUG)
+                log_4d_state(ch, target_4d, &ch->ai_data->last_4d_state);
+        }
 
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;

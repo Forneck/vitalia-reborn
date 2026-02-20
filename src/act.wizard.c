@@ -37,6 +37,7 @@
 #include "spedit.h"
 #include "spirits.h"
 #include "graph.h"
+#include "emotion_projection.h"
 #include <math.h>
 
 /* external functions*/
@@ -924,6 +925,39 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
                  CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
     send_to_char(ch, "%sRelationships:%s Increase/decrease based on interaction memories with this target.\r\n",
                  CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    /* 4D Relational Decision Space display */
+    send_to_char(ch, "\r\n%s=== 4D Relational Decision Space ===%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    struct emotion_4d_state state4d = compute_emotion_4d_state(mob, target);
+    if (state4d.valid) {
+        float coping = state4d.coping_potential;
+        const char *profile_name =
+            (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile < EMOTION_PROFILE_NUM)
+                ? emotion_profile_types[mob->ai_data->emotional_profile]
+                : "Unknown";
+        send_to_char(ch, "Profile: %s%s%s   Coping Potential: %s%.1f%s\r\n", CCYEL(ch, C_NRM), profile_name,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), coping, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  %sDrift-adjusted projection%s   (M_profile + ΔM_personal) * E, pre-context:\r\n",
+                     CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Valence:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_valence, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Arousal:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_arousal, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (perceived control / assertiveness bias)\r\n", CCCYN(ch, C_NRM),
+                     state4d.raw_dominance, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Affiliation: %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_affiliation,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "  %sEffective state%s (after contextual modulation):\r\n", CCGRN(ch, C_NRM),
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Valence:     %s%+7.1f%s  (shadow forecast bias applied)\r\n", CCYEL(ch, C_NRM),
+                     state4d.valence, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Arousal:     %s%+7.1f%s  (env intensity applied)\r\n", CCYEL(ch, C_NRM), state4d.arousal,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (coping potential additively blended)\r\n", CCYEL(ch, C_NRM),
+                     state4d.dominance, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Affiliation: %s%+7.1f%s  (relationship memory applied)\r\n", CCYEL(ch, C_NRM),
+                     state4d.affiliation, CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "  (4D state not available for this mob)\r\n");
+    }
 }
 
 static void do_stat_character(struct char_data *ch, struct char_data *k)
