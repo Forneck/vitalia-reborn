@@ -123,11 +123,11 @@ if %speech.contains(Ulmo)% || %speech.contains(ulmo)%
   * Check if door exists
   if %self.north(room)%
     * Remove locked flag (keep closed flag)
-    %door% %self.vnum% north flags ab
+    %door% %self.vnum% north flags ao
     %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.north(vnum)%
-    %door% %otherroom% south flags ab
+    %door% %otherroom% south flags ao
   end
 end
 ~
@@ -162,12 +162,12 @@ if %speech.contains(fecha)%
   * Check if door exists
   if %self.north(room)%
     * Set closed flag
-    %door% %self.vnum% north flags ab
+    %door% %self.vnum% north flags ao
     %echo% A porta se fecha.
     * Close the other side if it exists
     eval otherroom %self.north(vnum)%
     %at% %otherroom% %echo% A porta se fecha.
-    %door% %otherroom% south flags ab
+    %door% %otherroom% south flags ao
   end
 end
 ~
@@ -182,11 +182,11 @@ if %speech.contains(tranca)%
   * Check if door exists
   if %self.north(room)%
     * Set closed and locked flags
-    %door% %self.vnum% north flags abc
+    %door% %self.vnum% north flags aop
     %echo% Você escuta um ruído vindo da porta.
     * Lock the other side if it exists
     eval otherroom %self.north(vnum)%
-    %door% %otherroom% south flags abc
+    %door% %otherroom% south flags aop
   end
 end
 ~
@@ -201,11 +201,11 @@ if %speech.contains(Ulmo)% || %speech.contains(ulmo)%
   * Check if door exists
   if %self.south(room)%
     * Remove locked flag (keep closed flag)
-    %door% %self.vnum% south flags ab
+    %door% %self.vnum% south flags ao
     %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.south(vnum)%
-    %door% %otherroom% north flags ab
+    %door% %otherroom% north flags ao
   end
 end
 ~
@@ -240,12 +240,12 @@ if %speech.contains(fecha)%
   * Check if door exists
   if %self.south(room)%
     * Set closed flag
-    %door% %self.vnum% south flags ab
+    %door% %self.vnum% south flags ao
     %echo% A porta se fecha.
     * Close the other side if it exists
     eval otherroom %self.south(vnum)%
     %at% %otherroom% %echo% A porta se fecha.
-    %door% %otherroom% north flags ab
+    %door% %otherroom% north flags ao
   end
 end
 ~
@@ -260,11 +260,11 @@ if %speech.contains(tranca)%
   * Check if door exists
   if %self.south(room)%
     * Set closed and locked flags
-    %door% %self.vnum% south flags abc
+    %door% %self.vnum% south flags aop
     %echo% Você escuta um ruído vindo da porta.
     * Lock the other side if it exists
     eval otherroom %self.south(vnum)%
-    %door% %otherroom% north flags abc
+    %door% %otherroom% north flags aop
   end
 end
 ~

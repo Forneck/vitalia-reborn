@@ -1557,7 +1557,9 @@ ACMD(do_spy)
 }
 
 /* Danger Sense: Check for death traps in adjacent rooms
- * Returns 1 if danger was detected and message was shown, 0 otherwise */
+ * Returns 1 if danger was detected and message was shown, 0 otherwise.
+ * At skill < 75: shows a vague warning without revealing the direction.
+ * At skill >= 75: shows the specific direction(s) of the death trap(s). */
 int check_danger_sense(struct char_data *ch)
 {
     int dir;
@@ -1567,6 +1569,7 @@ int check_danger_sense(struct char_data *ch)
     char buf[MAX_STRING_LENGTH];
     size_t len = 0;
     int ret;
+    int skill_level;
 
     /* Only works for thieves with the danger sense skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_DANGER_SENSE))
@@ -1576,8 +1579,10 @@ int check_danger_sense(struct char_data *ch)
     if (IN_ROOM(ch) == NOWHERE)
         return 0;
 
+    skill_level = GET_SKILL(ch, SKILL_DANGER_SENSE);
+
     /* Check proficiency - higher skill level = better detection chance */
-    if (rand_number(1, 101) > GET_SKILL(ch, SKILL_DANGER_SENSE))
+    if (rand_number(1, 101) > skill_level)
         return 0;
 
     /* Check all directions for death traps */
@@ -1609,13 +1614,18 @@ int check_danger_sense(struct char_data *ch)
 
     /* Alert the character if danger was sensed */
     if (danger_count > 0) {
-        /* Use correct Portuguese preposition for singular/plural */
-        if (danger_count == 1) {
-            snprintf(buf, sizeof(buf), "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!@n\r\n",
-                     directions);
+        /* At skill >= 75 show the specific direction; below that, only a vague warning */
+        if (skill_level >= 75) {
+            if (danger_count == 1) {
+                snprintf(buf, sizeof(buf), "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo do %s!@n\r\n",
+                         directions);
+            } else {
+                snprintf(buf, sizeof(buf),
+                         "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo das direções %s!@n\r\n",
+                         directions);
+            }
         } else {
-            snprintf(buf, sizeof(buf),
-                     "@RVocê sente um arrepio na espinha... há PERIGO mortal vindo das direções %s!@n\r\n", directions);
+            snprintf(buf, sizeof(buf), "@RVocê sente um arrepio na espinha... há PERIGO mortal por perto!@n\r\n");
         }
         send_to_char(ch, "%s", buf);
         return 1;
@@ -1654,7 +1664,8 @@ int check_danger_sense_prevents_flee(struct char_data *ch, int dir)
         return 0; /* Skill check failed, danger sense doesn't prevent flee */
 
     /* Skill check succeeded - warn and prevent fleeing to death trap */
-    send_to_char(ch, "@RSeu senso de perigo te alerta! Você recusa-se a fugir para %s - há uma ARMADILHA MORTAL lá!@n\r\n", 
+    send_to_char(ch,
+                 "@RSeu senso de perigo te alerta! Você recusa-se a fugir para %s - há uma ARMADILHA MORTAL lá!@n\r\n",
                  dirs_pt[dir]);
     return 1;
 }

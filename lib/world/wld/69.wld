@@ -239,6 +239,7 @@ Ali há uma pequena sala.
 ~
 barreira magica~
 0 -1 6917
+T 6902
 S
 #6911
 Atrás do Altar~
@@ -436,6 +437,7 @@ Você vê um buraco.
 ~
 barreira magica~
 0 -1 6934
+T 6904
 S
 #6922
 Dentro do Templo~
@@ -1164,6 +1166,7 @@ Você vê ume espécie de bolha de ar ali.
 ~
 barreira magica~
 0 -1 6945
+T 6906
 S
 #6958
 O Lago~
@@ -1298,6 +1301,7 @@ Você vê fogo.
 ~
 barreira magica~
 0 -1 6970
+T 6908
 S
 #6965
 Dentro do Templo~
@@ -1490,6 +1494,7 @@ Você vê uma pequena sala.
 ~
 barreira magica~
 0 -1 6987
+T 6910
 S
 #6977
 Antes do Altar Principal~
