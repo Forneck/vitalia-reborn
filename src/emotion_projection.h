@@ -6,14 +6,16 @@
  * 4-dimensional decision space (Valence, Arousal, Dominance, Affiliation).
  *
  * Core formula:
- *   P_raw      = M_profile * E
- *   P_effective = (M_profile + ΔM_personal) * E
+ *   P_base      = M_profile * E
+ *   P_raw       = (M_profile + ΔM_personal) * E
+ *   P_effective = ContextualMod(P_raw, mob, target, environment, memory, shadow)
  *
  * Where:
  *   M_profile    = Emotional Profile projection matrix (fixed, per profile type)
  *   ΔM_personal  = Personal drift matrix (bounded ±PERSONAL_DRIFT_MAX_PCT%)
  *   E            = Current emotional vector (20 components, each 0–100)
- *   P_raw        = Raw 4D projection before contextual modulation
+ *   P_base       = Pure profile-based 4D projection (no personal drift, no context)
+ *   P_raw        = Drift-adjusted 4D projection before contextual modulation
  *   P_effective  = Final 4D state after contextual modulation
  *
  * Axis semantics:

@@ -644,7 +644,7 @@ void mobile_activity(void)
             if (!target_4d && IN_ROOM(ch) != NOWHERE) {
                 struct char_data *nearby;
                 for (nearby = world[IN_ROOM(ch)].people; nearby; nearby = nearby->next_in_room) {
-                    if (nearby != ch && !IS_NPC(nearby)) {
+                    if (nearby != ch && !IS_NPC(nearby) && CAN_SEE(ch, nearby) && AWAKE(nearby)) {
                         target_4d = nearby;
                         break;
                     }

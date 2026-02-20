@@ -198,8 +198,9 @@ static const float emotion_profile_matrices[EMOTION_PROFILE_NUM][DECISION_SPACE_
 /*  Module-level constants                                                      */
 /* ========================================================================== */
 
-/* Pre-computed drift scale: PERSONAL_DRIFT_MAX_PCT / 100 */
-#define DRIFT_SCALE 0.2f /* 20 / 100 */
+/* Drift scale derived from PERSONAL_DRIFT_MAX_PCT so the bound stays
+ * consistent if the percentage constant changes. */
+#define DRIFT_SCALE (PERSONAL_DRIFT_MAX_PCT / 100.0f)
 
 /* Maximum points the Shadow Timeline forecast may shift the Valence axis.
  * Kept deliberately small so that reactive emotional behavior dominates
@@ -386,9 +387,22 @@ void emotion_apply_contextual_modulation(struct char_data *mob, struct char_data
     if (mob && target && IS_NPC(mob) && mob->ai_data) {
         int rel_trust = get_relationship_emotion(mob, target, EMOTION_TYPE_TRUST);
         int rel_friend = get_relationship_emotion(mob, target, EMOTION_TYPE_FRIENDSHIP);
-        /* Positive memories → approach; negative → avoidance */
-        float rel_bias = ((float)(rel_trust + rel_friend) - 100.0f) * 0.15f;
-        effective_out[DECISION_AXIS_AFFILIATION] += rel_bias;
+
+        int have_trust = (rel_trust != 0);
+        int have_friend = (rel_friend != 0);
+
+        /* get_relationship_emotion() returns 0 as a sentinel for "no memories yet".
+         * Skip bias entirely when no relationship data exists.
+         * If only one emotion has memories, treat the unknown as neutral (50)
+         * to avoid spurious negative bias from a missing data point. */
+        if (have_trust || have_friend) {
+            float trust_val = have_trust ? (float)rel_trust : 50.0f;
+            float friend_val = have_friend ? (float)rel_friend : 50.0f;
+            float avg = (trust_val + friend_val) * 0.5f; /* average in [0,100] */
+            /* (avg - 50) * 0.30 maps [0,100] → [-15, +15] */
+            float rel_bias = (avg - 50.0f) * 0.30f;
+            effective_out[DECISION_AXIS_AFFILIATION] += rel_bias;
+        }
     }
 
     /* --- Valence: optionally biased by Shadow Timeline anticipated outcome --- */

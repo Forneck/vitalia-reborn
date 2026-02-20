@@ -930,7 +930,7 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
     send_to_char(ch, "\r\n%s=== 4D Relational Decision Space ===%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
     struct emotion_4d_state state4d = compute_emotion_4d_state(mob, target);
     if (state4d.valid) {
-        float coping = compute_coping_potential(mob);
+        float coping = state4d.coping_potential;
         const char *profile_name =
             (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile < EMOTION_PROFILE_NUM)
                 ? emotion_profile_types[mob->ai_data->emotional_profile]
