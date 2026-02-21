@@ -1624,7 +1624,8 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         /* OCEAN Phase 3: Extraversion (E) influences social initiation and group payoff.
          * High E → higher expected utility from social/group actions.
          * Low E → prefers solitary actions (lower social penalty when alone).
-         * Modifier is in range [-15, +15]. */
+         * Individual trait modifiers are each in range [-15, +15]; combined social
+         * score adjustment from A+E terms ranges from -30 to +30. */
         float E_final = sec_get_extraversion_final(ch);
 
         if (proj->action.type == SHADOW_ACTION_ATTACK) {
