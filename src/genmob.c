@@ -403,6 +403,25 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             int c_value = (int)(mob->ai_data->personality.conscientiousness * 100.0f);
             fprintf(fd, "Conscientiousness: %d\n", c_value);
         }
+
+        /* Big Five Phase 3: Agreeableness - save base if initialized, and modifier if non-zero.
+         * Uninitialized base (flag=0) is not written; Gaussian generation occurs at spawn. */
+        if (mob->ai_data->personality.agreeableness_initialized) {
+            int a_value = (int)(mob->ai_data->personality.agreeableness * 100.0f);
+            if (a_value > 0)
+                fprintf(fd, "Agreeableness: %d\n", a_value);
+        }
+        if (mob->ai_data->personality.agreeableness_modifier != 0)
+            fprintf(fd, "AgreeablenessModifier: %d\n", mob->ai_data->personality.agreeableness_modifier);
+
+        /* Big Five Phase 3: Extraversion - save base if initialized, and modifier if non-zero. */
+        if (mob->ai_data->personality.extraversion_initialized) {
+            int e_value = (int)(mob->ai_data->personality.extraversion * 100.0f);
+            if (e_value > 0)
+                fprintf(fd, "Extraversion: %d\n", e_value);
+        }
+        if (mob->ai_data->personality.extraversion_modifier != 0)
+            fprintf(fd, "ExtraversionModifier: %d\n", mob->ai_data->personality.extraversion_modifier);
     }
 
     fputs("E\n", fd);

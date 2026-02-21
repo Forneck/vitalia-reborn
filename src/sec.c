@@ -212,3 +212,51 @@ float sec_get_target_bias(struct char_data *mob, struct char_data *target)
     float bias = 0.5f + s->anger * 1.0f;
     return sec_clamp(bias, 0.5f, 1.5f);
 }
+
+/* ── OCEAN Phase 3: Agreeableness & Extraversion final value getters ──────── */
+
+/*
+ * Tuning constants for emotional modulation of A and E.
+ * |mod| is capped at SEC_OCEAN_MOD_CAP to guarantee no personality inversion.
+ */
+#define SEC_OCEAN_MOD_CAP 0.10f /* Maximum |emotional modulation| for A and E */
+#define SEC_OCEAN_K1 0.10f      /* E modulation: happiness coefficient */
+#define SEC_OCEAN_K2 0.10f      /* E modulation: fear coefficient */
+#define SEC_OCEAN_K3 0.10f      /* A modulation: happiness coefficient */
+#define SEC_OCEAN_K4 0.10f      /* A modulation: anger coefficient */
+
+float sec_get_agreeableness_final(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.5f;
+
+    const struct mob_personality *p = &mob->ai_data->personality;
+    const struct sec_state *s = &mob->ai_data->sec;
+
+    float base = p->agreeableness;
+    float builder_mod = (float)p->agreeableness_modifier / 100.0f;
+
+    /* A_mod = k3*happiness - k4*anger, capped at ±SEC_OCEAN_MOD_CAP */
+    float a_mod = SEC_OCEAN_K3 * s->happiness - SEC_OCEAN_K4 * s->anger;
+    a_mod = sec_clamp(a_mod, -SEC_OCEAN_MOD_CAP, SEC_OCEAN_MOD_CAP);
+
+    return sec_clamp(base + builder_mod + a_mod, 0.0f, 1.0f);
+}
+
+float sec_get_extraversion_final(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.5f;
+
+    const struct mob_personality *p = &mob->ai_data->personality;
+    const struct sec_state *s = &mob->ai_data->sec;
+
+    float base = p->extraversion;
+    float builder_mod = (float)p->extraversion_modifier / 100.0f;
+
+    /* E_mod = k1*happiness - k2*fear, capped at ±SEC_OCEAN_MOD_CAP */
+    float e_mod = SEC_OCEAN_K1 * s->happiness - SEC_OCEAN_K2 * s->fear;
+    e_mod = sec_clamp(e_mod, -SEC_OCEAN_MOD_CAP, SEC_OCEAN_MOD_CAP);
+
+    return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);
+}

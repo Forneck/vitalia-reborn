@@ -33,6 +33,7 @@
 #include "fight.h"
 #include "graph.h"
 #include "quest.h"
+#include "sec.h"
 
 /* External variables */
 extern struct room_data *world;
@@ -157,18 +158,18 @@ int shadow_generate_projections(struct shadow_context *ctx)
         generate_movement_projections(ctx);
         generate_item_projections(ctx);
         generate_quest_projections(ctx); /* Consider quest-related actions */
-        generate_wait_projection(ctx); /* Consider strategic waiting */
+        generate_wait_projection(ctx);   /* Consider strategic waiting */
     } else {
         /* Exploring - generate diverse projections */
         generate_movement_projections(ctx);
         generate_social_projections(ctx);
         generate_item_projections(ctx);
-        generate_quest_projections(ctx); /* Consider quest opportunities */
-        generate_spell_projections(ctx); /* Consider helpful spells */
-        generate_trade_projections(ctx); /* Consider trading opportunities */
+        generate_quest_projections(ctx);  /* Consider quest opportunities */
+        generate_spell_projections(ctx);  /* Consider helpful spells */
+        generate_trade_projections(ctx);  /* Consider trading opportunities */
         generate_follow_projections(ctx); /* Consider following others */
-        generate_group_projections(ctx); /* Consider group formation */
-        generate_wait_projection(ctx); /* Consider doing nothing */
+        generate_group_projections(ctx);  /* Consider group formation */
+        generate_wait_projection(ctx);    /* Consider doing nothing */
     }
 
     /* Score and rank projections based on entity's subjective evaluation */
@@ -536,15 +537,14 @@ static void generate_quest_projections(struct shadow_context *ctx)
 
     bool should_consider_quest = FALSE;
 
-    if (ch->ai_data->current_goal == GOAL_NONE || 
-        ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+    if (ch->ai_data->current_goal == GOAL_NONE || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
         ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
         /* Calculate interest in quests based on emotions and genetics
          * Curiosity emotion is primary driver (0-50), genetics provides baseline (0-20)
          * More curious mobs will actively seek and pursue quests */
         int quest_interest = ch->ai_data->emotion_curiosity / 2; /* 0-50 from curiosity (primary) */
-        quest_interest += GET_GENQUEST(ch) / 5; /* 0-20 from quest_tendency (secondary) */
-        
+        quest_interest += GET_GENQUEST(ch) / 5;                  /* 0-20 from quest_tendency (secondary) */
+
         /* Random check with interest-based threshold */
         if (rand_number(0, 100) < quest_interest) {
             should_consider_quest = TRUE;
@@ -616,8 +616,8 @@ static void generate_quest_projections(struct shadow_context *ctx)
         /* Quest acceptance is moderately rewarding - represents new opportunities */
         outcome.score = 30;
         outcome.reward_level = 50;
-        outcome.achieves_goal = (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
-                                ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER);
+        outcome.achieves_goal =
+            (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER);
         outcome.obvious = TRUE; /* Accepting a quest is straightforward */
 
         /* Increase happiness (new opportunity) and curiosity satisfaction */
@@ -673,7 +673,7 @@ static void generate_spell_projections(struct shadow_context *ctx)
         /* Determine if target is ally or enemy */
         /* Allies: following same master, in same group, or not aggressive to each other */
         bool is_ally = FALSE;
-        
+
         if (ch->master == target || target->master == ch) {
             is_ally = TRUE; /* Following relationship indicates alliance */
         } else if (IS_NPC(ch) && IS_NPC(target)) {
@@ -803,10 +803,9 @@ static void generate_trade_projections(struct shadow_context *ctx)
             /* Trade is moderately rewarding - represents economic opportunity */
             outcome.score = 25;
             outcome.reward_level = 30;
-            outcome.achieves_goal = (ch->ai_data && 
-                                    (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
-                                     ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY));
-            outcome.obvious = TRUE; /* Trading is straightforward */
+            outcome.achieves_goal = (ch->ai_data && (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
+                                                     ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY));
+            outcome.obvious = TRUE;       /* Trading is straightforward */
             outcome.happiness_change = 5; /* Small satisfaction from commerce */
 
             /* Store projection */
@@ -897,14 +896,14 @@ static void generate_wait_projection(struct shadow_context *ctx)
     if (shadow_execute_projection(ctx, &action, &outcome)) {
         /* Waiting score depends on why we're waiting */
         outcome.score = 15; /* Generally low priority unless situation demands it */
-        
+
         if (GET_HIT(ch) < GET_MAX_HIT(ch) / 3) {
-            outcome.score = 35; /* Higher when injured */
+            outcome.score = 35;    /* Higher when injured */
             outcome.hp_delta = 10; /* Expect some regeneration */
         }
-        
+
         if (ch->ai_data && ch->ai_data->emotion_fear > 80) {
-            outcome.score = 40; /* Even higher when afraid */
+            outcome.score = 40;       /* Even higher when afraid */
             outcome.fear_change = -5; /* Waiting reduces fear */
         }
 
@@ -985,12 +984,12 @@ static void generate_follow_projections(struct shadow_context *ctx)
         if (shadow_execute_projection(ctx, &action, &outcome)) {
             /* Following score depends on target's strength and mob's traits */
             outcome.score = 20; /* Base score */
-            
+
             /* Higher score if target is stronger (safety in numbers) */
             if (GET_LEVEL(target) > GET_LEVEL(ch)) {
                 outcome.score += 15;
             }
-            
+
             /* Higher score if mob has high loyalty trait */
             if (ch->ai_data && ch->ai_data->emotion_loyalty > 60) {
                 outcome.score += 10;
@@ -1004,7 +1003,7 @@ static void generate_follow_projections(struct shadow_context *ctx)
 
             outcome.reward_level = 30;
             outcome.achieves_goal = (ch->ai_data && ch->ai_data->current_goal == GOAL_FOLLOW);
-            outcome.obvious = TRUE; /* Following is straightforward */
+            outcome.obvious = TRUE;       /* Following is straightforward */
             outcome.happiness_change = 5; /* Social bonding */
 
             /* Store projection */
@@ -1072,13 +1071,13 @@ static void generate_group_projections(struct shadow_context *ctx)
         /* Group bonding is moderately valuable for social cohesion */
         outcome.score = 25;
         outcome.reward_level = 35;
-        
+
         /* Higher value if mob has high loyalty */
         if (ch->ai_data && ch->ai_data->emotion_loyalty > 70) {
             outcome.score += 15;
         }
 
-        outcome.obvious = TRUE; /* Social bonding is straightforward */
+        outcome.obvious = TRUE;        /* Social bonding is straightforward */
         outcome.happiness_change = 10; /* Strengthening bonds increases happiness */
 
         /* Store projection */
@@ -1093,7 +1092,6 @@ static void generate_group_projections(struct shadow_context *ctx)
         shadow_consume_capacity(ctx, cost);
     }
 }
-
 
 /**
  * Validate that an action is feasible and doesn't violate invariants
@@ -1472,7 +1470,7 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             outcome->score = 40; /* Moderate-high reward */
             outcome->reward_level = 60;
             outcome->danger_level = 20; /* Some quests involve danger */
-            outcome->obvious = FALSE; /* Quest outcomes are complex */
+            outcome->obvious = FALSE;   /* Quest outcomes are complex */
             break;
         }
 
@@ -1481,7 +1479,7 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             outcome->score = 35;
             outcome->reward_level = 45;
             outcome->danger_level = 15; /* May provoke retaliation */
-            outcome->obvious = FALSE; /* Spell effects are unpredictable */
+            outcome->obvious = FALSE;   /* Spell effects are unpredictable */
             break;
         }
 
@@ -1615,6 +1613,34 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         /* Compassion influences helping behavior */
         if (ch->ai_data->emotion_compassion > 60 && proj->action.type == SHADOW_ACTION_SOCIAL) {
             score += 15;
+        }
+
+        /* OCEAN Phase 3: Agreeableness (A) influences attack retaliation and social weight.
+         * High A → dampens aggression, boosts social utility.
+         * Low A → amplifies aggression, reduces social preference.
+         * Modifier is in range [-20, +20] to keep within ±OUTCOME_SCORE_MAX bounds. */
+        float A_final = sec_get_agreeableness_final(ch);
+        if (proj->action.type == SHADOW_ACTION_ATTACK) {
+            /* Low A amplifies attack utility; high A dampens it */
+            int a_attack_mod = (int)((0.5f - A_final) * 40.0f); /* -20 to +20 */
+            score += a_attack_mod;
+        } else if (proj->action.type == SHADOW_ACTION_SOCIAL) {
+            /* High A amplifies social utility */
+            int a_social_mod = (int)((A_final - 0.5f) * 30.0f); /* -15 to +15 */
+            score += a_social_mod;
+        }
+
+        /* OCEAN Phase 3: Extraversion (E) influences social initiation and group payoff.
+         * High E → higher expected utility from social/group actions.
+         * Low E → prefers solitary actions (lower social penalty when alone).
+         * Modifier is in range [-15, +15]. */
+        float E_final = sec_get_extraversion_final(ch);
+        if (proj->action.type == SHADOW_ACTION_SOCIAL) {
+            int e_social_mod = (int)((E_final - 0.5f) * 30.0f); /* -15 to +15 */
+            score += e_social_mod;
+        } else if (proj->action.type == SHADOW_ACTION_FOLLOW || proj->action.type == SHADOW_ACTION_GROUP) {
+            int e_group_mod = (int)((E_final - 0.5f) * 20.0f); /* -10 to +10 */
+            score += e_group_mod;
         }
     }
 

@@ -311,6 +311,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define MEDIT_GEN_EMOTIONAL_IQ 53
 #define MEDIT_EMOTION_PROFILE 54
 #define MEDIT_GEN_CONSCIENTIOUSNESS 55
+#define MEDIT_GEN_AGREEABLENESS 56
+#define MEDIT_GEN_EXTRAVERSION 57
 
 /* Submodes of SEDIT connectedness. */
 #define SEDIT_MAIN_MENU 0

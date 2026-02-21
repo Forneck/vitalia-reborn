@@ -38,6 +38,7 @@
 #include "spirits.h"
 #include "graph.h"
 #include "emotion_projection.h"
+#include "sec.h"
 #include <math.h>
 
 /* external functions*/
@@ -1056,13 +1057,32 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         if (k->ai_data) {
             send_to_char(ch, "%sBig Five (OCEAN) Personality:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
             send_to_char(
-                ch, "  Openness (O): [%s%.2f%s]  Conscientiousness (C): [%s%.2f%s]  Extraversion (E): [%s%.2f%s]\r\n",
+                ch, "  Openness (O): [%s%.2f%s]  Conscientiousness (C): [%s%.2f%s]  Neuroticism (N): [%s%.2f%s]\r\n",
                 CCCYN(ch, C_NRM), k->ai_data->personality.openness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
                 k->ai_data->personality.conscientiousness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
-                k->ai_data->personality.extraversion, CCNRM(ch, C_NRM));
-            send_to_char(ch, "  Agreeableness (A): [%s%.2f%s]  Neuroticism (N): [%s%.2f%s]\r\n", CCCYN(ch, C_NRM),
-                         k->ai_data->personality.agreeableness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
-                         k->ai_data->personality.neuroticism, CCNRM(ch, C_NRM));
+                k->ai_data->personality.neuroticism, CCNRM(ch, C_NRM));
+            /* Agreeableness (A) - show Base / Builder / SEC Mod / Final */
+            {
+                float a_base = k->ai_data->personality.agreeableness;
+                int a_bmod = k->ai_data->personality.agreeableness_modifier;
+                float a_final = sec_get_agreeableness_final(k);
+                float a_mod = a_final - a_base - (float)a_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Agreeableness (A): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), a_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), a_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), a_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), a_final, CCNRM(ch, C_NRM));
+            }
+            /* Extraversion (E) - show Base / Builder / SEC Mod / Final */
+            {
+                float e_base = k->ai_data->personality.extraversion;
+                int e_bmod = k->ai_data->personality.extraversion_modifier;
+                float e_final = sec_get_extraversion_final(k);
+                float e_mod = e_final - e_base - (float)e_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Extraversion  (E): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), e_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), e_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), e_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), e_final, CCNRM(ch, C_NRM));
+            }
         }
 
         /* Display Overall Mood */
