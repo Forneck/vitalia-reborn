@@ -9757,7 +9757,8 @@ void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_
 
     /* SEC Tetrad Social Appraisal:
      * Retrieve the witness's relational orientation toward both parties.
-     * get_relationship_emotion() returns 0-100 (50 = neutral baseline). */
+     * get_relationship_emotion() returns 0-100, where 0 means no memories/data
+     * and values around 50 represent a neutral baseline when relationship data exists. */
     int affil_to_actor = get_relationship_emotion(witness, actor, EMOTION_TYPE_FRIENDSHIP);
     int affil_to_target =
         (target && target != witness) ? get_relationship_emotion(witness, target, EMOTION_TYPE_FRIENDSHIP) : 0;
