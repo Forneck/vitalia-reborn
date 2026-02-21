@@ -2948,25 +2948,6 @@ void perform_violence(void)
             /* Reset per-round counters */
             ch->ai_data->combat_damage_dealt = 0;
             ch->ai_data->combat_damage_received = 0;
-
-            /* Attempt helplessness-driven flee if still in combat */
-            if (FIGHTING(ch) && GET_POS(ch) > POS_STUNNED && !MOB_FLAGGED(ch, MOB_BRAVE)) {
-                int flee_chance = 0;
-                if (ch->ai_data->helplessness >= 70.0f)
-                    flee_chance = 25; /* High helplessness: 25% flee chance */
-                else if (ch->ai_data->helplessness >= 40.0f)
-                    flee_chance = 10; /* Moderate helplessness: 10% flee chance */
-
-                if (flee_chance > 0 && rand_number(1, 100) <= flee_chance) {
-                    act("$n percebe que não consegue avançar nesta luta e recua!", TRUE, ch, 0, 0, TO_ROOM);
-                    do_flee(ch, NULL, 0, 0);
-                    if (ch->ai_data) {
-                        ch->ai_data->quest_posting_frustration_timer = 6;
-                        if (MOB_FLAGGED(ch, MOB_SENTINEL))
-                            ch->ai_data->duty_frustration_timer = 6;
-                    }
-                }
-            }
         }
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
