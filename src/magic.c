@@ -534,36 +534,73 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
     /* Emotion triggers for spell affects (Magic/Spell Trigger 2.3) */
     if (effect && CONFIG_MOB_CONTEXTUAL_SOCIALS && ch != victim) {
         if (IS_NPC(victim) && victim->ai_data) {
-            /* Determine if spell is harmful or beneficial based on multiple factors */
+            /* Determine if spell is harmful or beneficial based on multiple factors.
+             *
+             * Harmful indicators (offensive / debuff magic):
+             *   - spell->violent flag (explicitly marked hostile)
+             *   - SCHOOL_NECROMANCY or ELEMENT_UNHOLY (dark magic schools)
+             *   - Offensive elemental damage schools (fire, lightning, ice, acid, poison,
+             *     mental, physical) when cast on another character (ch != victim)
+             *   - Negative stat modifiers (debuffs), except AC where lower = better
+             *
+             * Beneficial indicators (support / buff magic):
+             *   - MAG_AURA flag (protective aura / shield spells)
+             *   - MAG_UNAFFECTS flag (dispel / curse-removal spells)
+             *   - MAG_POINTS flag (spells that restore hp/mana/move)
+             *   - ELEMENT_HOLY (sacred / divine restoration element)
+             *   - SCHOOL_ABJURATION (protection and warding school)
+             *   - Positive stat modifiers (buffs), AC reduction (better defense)
+             *
+             * Mixed spells (both flags set) are treated as neutral and trigger nothing.
+             */
             int is_harmful = 0;
             int is_beneficial = 0;
 
-            /* Check if spell is violent */
-            if (spell->violent) {
-                is_harmful = 1;
-            }
+            /* ── Harmful indicators ────────────────────────────────────────── */
 
-            /* Check if spell is from harmful schools/elements */
-            if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+            /* Explicitly violent spell */
+            if (spell->violent)
                 is_harmful = 1;
-            }
 
-            /* MAG_AURA spells are always protective/beneficial buffs */
-            if (spell->mag_flags & MAG_AURA) {
+            /* Dark magic schools / unholy element */
+            if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY)
+                is_harmful = 1;
+
+            /* Elemental damage elements — only harmful when targeting someone else */
+            if (spell->element == ELEMENT_FIRE || spell->element == ELEMENT_LIGHTNING ||
+                spell->element == ELEMENT_ICE || spell->element == ELEMENT_ACID || spell->element == ELEMENT_POISON ||
+                spell->element == ELEMENT_MENTAL || spell->element == ELEMENT_PHYSICAL)
+                is_harmful = 1;
+
+            /* ── Beneficial indicators ─────────────────────────────────────── */
+
+            /* MAG_AURA: protective shield / aura spells are always buffs */
+            if (spell->mag_flags & MAG_AURA)
                 is_beneficial = 1;
-            }
 
-            /* Check if spell has negative modifiers (debuffs) */
+            /* MAG_UNAFFECTS: dispel / remove-curse / cure spells */
+            if (spell->mag_flags & MAG_UNAFFECTS)
+                is_beneficial = 1;
+
+            /* MAG_POINTS: spells that restore hit points / mana / movement */
+            if (spell->mag_flags & MAG_POINTS)
+                is_beneficial = 1;
+
+            /* Holy element and abjuration school are inherently protective */
+            if (spell->element == ELEMENT_HOLY || spell->school == SCHOOL_ABJURATION)
+                is_beneficial = 1;
+
+            /* ── Modifier-based classification ─────────────────────────────── */
             for (i = 0; i < MAX_SPELL_AFFECTS; i++) {
                 if (af[i].location != APPLY_NONE) {
-                    /* Note: For AC, negative modifier is BENEFICIAL (lower AC = better defense)
-                     * For other stats, negative modifier is harmful */
+                    /* AC: lower is better for the recipient (beneficial = negative modifier) */
                     if (af[i].location == APPLY_AC) {
                         if (af[i].modifier < 0)
                             is_beneficial = 1;
                         else if (af[i].modifier > 0)
                             is_harmful = 1;
                     } else {
+                        /* All other stats: positive modifier = buff, negative = debuff */
                         if (af[i].modifier < 0)
                             is_harmful = 1;
                         else if (af[i].modifier > 0)
@@ -572,13 +609,27 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
                 }
             }
 
-            /* Trigger appropriate emotion based on spell type */
+            /* ── Trigger emotion based on classification ────────────────────── */
             if (is_harmful && !is_beneficial) {
-                /* Harmful spell (curse/debuff) */
+                /* Harmful spell (curse / debuff) */
                 update_mob_emotion_harmed_by_spell(victim, ch);
             } else if (is_beneficial && !is_harmful) {
-                /* Beneficial spell (buff/bless) */
+                /* Beneficial spell (buff / bless) */
                 update_mob_emotion_blessed_by_spell(victim, ch);
+            }
+            /* Mixed or unclassified spells trigger no emotion change */
+        }
+
+        /* Witness reaction: broadcast beneficial magic to AWARE/SENTINEL NPCs in the room */
+        if (IN_ROOM(victim) != NOWHERE) {
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(victim)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                /* Skip non-NPCs, combatants, actor, and victim */
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == victim ||
+                    MOB_FLAGGED(witness, MOB_NOTDEADYET) || FIGHTING(witness))
+                    continue;
+                update_mob_emotion_witnessed_offensive_magic(witness, ch);
             }
         }
     }
