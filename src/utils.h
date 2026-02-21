@@ -1554,4 +1554,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT config_info.emotion_config.conscientiousness_moral_weight
 #define CONFIG_CONSCIENTIOUSNESS_DEBUG config_info.emotion_config.conscientiousness_debug
 
+/* Big Five Phase 3: Agreeableness (A) and Extraversion (E) SEC modulation coefficients */
+#define CONFIG_OCEAN_AE_K1 config_info.emotion_config.ocean_ae_k1
+#define CONFIG_OCEAN_AE_K2 config_info.emotion_config.ocean_ae_k2
+#define CONFIG_OCEAN_AE_K3 config_info.emotion_config.ocean_ae_k3
+#define CONFIG_OCEAN_AE_K4 config_info.emotion_config.ocean_ae_k4
+
 #endif /* _UTILS_H_ */

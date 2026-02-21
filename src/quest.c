@@ -3613,8 +3613,21 @@ void init_mob_ai_data(struct char_data *mob)
         /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
 
         mob->ai_data->personality.openness = 0.5f;
-        mob->ai_data->personality.extraversion = 0.5f;
-        mob->ai_data->personality.agreeableness = 0.5f;
+
+        /* Big Five Phase 3: Agreeableness (A) - Gaussian Trait_base generation.
+         * μ=0.5, σ=0.15, clamped 1-100. Value 0 remains "uninitialized" sentinel. */
+        if (!mob->ai_data->personality.agreeableness_initialized) {
+            int a_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.agreeableness = (float)a_value / 100.0f;
+            mob->ai_data->personality.agreeableness_initialized = 1;
+        }
+
+        /* Big Five Phase 3: Extraversion (E) - Gaussian Trait_base generation. */
+        if (!mob->ai_data->personality.extraversion_initialized) {
+            int e_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.extraversion = (float)e_value / 100.0f;
+            mob->ai_data->personality.extraversion_initialized = 1;
+        }
     }
 
     /* If a specific emotional profile is set, apply it first

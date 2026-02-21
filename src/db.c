@@ -2003,6 +2003,48 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
              * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
         }
     }
+    CASE("Agreeableness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Agreeableness base (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.agreeableness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.agreeableness_initialized = 1;
+            }
+        }
+    }
+    CASE("AgreeablenessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Agreeableness builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.agreeableness_modifier = num_arg;
+        }
+    }
+    CASE("Extraversion")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Extraversion base (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.extraversion = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.extraversion_initialized = 1;
+            }
+        }
+    }
+    CASE("ExtraversionModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Extraversion builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.extraversion_modifier = num_arg;
+        }
+    }
     CASE("PreferredWeather")
     {
         if (mob_proto[i].ai_data) {
@@ -4668,6 +4710,12 @@ static void load_default_config(void)
     CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = conscientiousness_reaction_delay;
     CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = conscientiousness_moral_weight;
     CONFIG_CONSCIENTIOUSNESS_DEBUG = conscientiousness_debug;
+
+    /* Big Five (OCEAN) Personality - Phase 3: Agreeableness (A) and Extraversion (E) */
+    CONFIG_OCEAN_AE_K1 = ocean_ae_k1;
+    CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
+    CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
+    CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
 }
 
 void load_config(void)
@@ -5145,6 +5193,15 @@ void load_config(void)
                     snprintf(tmp, sizeof(tmp), "%s\r\n", line);
                     CONFIG_OK = strdup(tmp);
                 }
+                /* Big Five Phase 3: OCEAN A/E SEC modulation coefficients */
+                else if (!str_cmp(tag, "ocean_ae_k1"))
+                    CONFIG_OCEAN_AE_K1 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k2"))
+                    CONFIG_OCEAN_AE_K2 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k3"))
+                    CONFIG_OCEAN_AE_K3 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k4"))
+                    CONFIG_OCEAN_AE_K4 = LIMIT(num, 0, 100);
                 break;
 
             case 'p':
