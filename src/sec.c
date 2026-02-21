@@ -52,21 +52,21 @@
 static float sec_clamp(float f, float lo, float hi) { return f < lo ? lo : (f > hi ? hi : f); }
 
 /**
- * Apply α-smoothing to fear/anger/happiness targets and re-normalise so that
+ * Apply α-smoothing to fear/sadness/anger/happiness targets and re-normalise so that
  * their sum equals A (Arousal).  This is the energy-conservation step that
- * prevents emotional "state leakage" (Happiness + Anger > Arousal).
+ * prevents emotional "state leakage".
  *
  * Algorithm:
  *   1. Exponential smoothing with SEC_EMOTION_ALPHA.
- *   2. Compute W_total = new_fear + new_anger + new_happy.
+ *   2. Compute W_total = new_fear + new_sad + new_anger + new_happy.
  *   3. Renormalise: each weight *= A / W_total  (W_total is the divisor).
  *
- * Guarantee: after this call, sec.fear + sec.anger + sec.happiness = A.
- * Lateral inhibition emerges naturally: when the Anger partition grows,
- * the Happiness partition must shrink to keep the sum constant.
+ * Guarantee: after this call, sec.fear + sec.sadness + sec.anger + sec.happiness = A.
+ * Lateral inhibition emerges naturally: when the Sadness partition grows (low D + low V),
+ * the Anger and Happiness partitions shrink to keep the sum constant.
  */
-static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear, float t_anger, float t_happy,
-                                   float C_final)
+static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear, float t_sad, float t_anger,
+                                   float t_happy, float C_final)
 {
     /* Conscientiousness alpha regulation: high C resists sudden emotional spikes.
      * alpha_effective = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE)
@@ -79,37 +79,29 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
 
     /* Step 1: exponential smoothing toward partition targets. */
     float new_fear = ai->sec.fear * (1.0f - a) + t_fear * a;
+    float new_sad = ai->sec.sadness * (1.0f - a) + t_sad * a;
     float new_anger = ai->sec.anger * (1.0f - a) + t_anger * a;
     float new_happy = ai->sec.happiness * (1.0f - a) + t_happy * a;
 
-    /* Step 2: compute W_total — the sum of smoothed weights before normalisation.
-     * This value is logged so that debug output confirms the divisor used. */
-    float W_total = new_fear + new_anger + new_happy;
+    /* Step 2: compute W_total — the sum of smoothed weights before normalisation. */
+    float W_total = new_fear + new_sad + new_anger + new_happy;
     float scale = 0.0f;
 
-    /* Step 3: renormalise to Arousal.
-     * Guard threshold matches SEC_AROUSAL_EPSILON so that the normalisation
-     * gate is consistent with the passive-decay guard and the WTA filter.
-     * Below this threshold the mob is emotionally inert; leaving the raw
-     * smoothed values in place (all near zero) is correct behaviour. */
+    /* Step 3: renormalise to Arousal. */
     if (W_total > SEC_AROUSAL_EPSILON) {
         scale = A / W_total;
         new_fear *= scale;
+        new_sad *= scale;
         new_anger *= scale;
         new_happy *= scale;
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f anger=%.4f happy=%.4f alpha=%.3f C=%.2f", W_total,
-             A, scale, new_fear, new_anger, new_happy, a, C_final);
+        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f sad=%.4f anger=%.4f happy=%.4f alpha=%.3f C=%.2f",
+             W_total, A, scale, new_fear, new_sad, new_anger, new_happy, a, C_final);
 
-    /* Defensive clamp: A ∈ [0,1] and scale = A/W_total, so each scaled value
-     * is bounded by A ≤ 1 in steady state.  At start-up (all emotions = 0)
-     * scale can briefly exceed 1 until convergence; the clamp is the safety
-     * net that prevents a transient spike from escaping the [0,1] range.
-     * Note: after clamping the sum may fall fractionally below A; this
-     * transient is corrected within one additional tick by the smoothing. */
     ai->sec.fear = sec_clamp(new_fear, 0.0f, 1.0f);
+    ai->sec.sadness = sec_clamp(new_sad, 0.0f, 1.0f);
     ai->sec.anger = sec_clamp(new_anger, 0.0f, 1.0f);
     ai->sec.happiness = sec_clamp(new_happy, 0.0f, 1.0f);
 }
@@ -118,20 +110,20 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
 
 /*
  * Default personality baselines per emotional profile.
- * Each row: { fear_base, anger_base, happiness_base }.
+ * Each row: { fear_base, anger_base, happiness_base, sadness_base }.
  * Columns are intentionally kept distinct so the passive-decay convergence
  * reflects the emotional colour of each profile.
  */
 /* clang-format off */
-static const float sec_profile_baselines[EMOTION_PROFILE_NUM][3] = {
-    /* 0 NEUTRAL    */ { 0.20f, 0.20f, 0.30f },
-    /* 1 AGGRESSIVE */ { 0.10f, 0.60f, 0.15f },
-    /* 2 DEFENSIVE  */ { 0.60f, 0.10f, 0.10f },
-    /* 3 BALANCED   */ { 0.25f, 0.25f, 0.35f },
-    /* 4 SENSITIVE  */ { 0.35f, 0.15f, 0.40f },
-    /* 5 CONFIDENT  */ { 0.10f, 0.30f, 0.45f },
-    /* 6 GREEDY     */ { 0.20f, 0.40f, 0.20f },
-    /* 7 LOYAL      */ { 0.15f, 0.20f, 0.50f },
+static const float sec_profile_baselines[EMOTION_PROFILE_NUM][4] = {
+    /* 0 NEUTRAL    */ { 0.20f, 0.20f, 0.30f, 0.10f },
+    /* 1 AGGRESSIVE */ { 0.10f, 0.60f, 0.15f, 0.05f },
+    /* 2 DEFENSIVE  */ { 0.60f, 0.10f, 0.10f, 0.15f },
+    /* 3 BALANCED   */ { 0.25f, 0.25f, 0.35f, 0.10f },
+    /* 4 SENSITIVE  */ { 0.35f, 0.15f, 0.40f, 0.20f },
+    /* 5 CONFIDENT  */ { 0.10f, 0.30f, 0.45f, 0.05f },
+    /* 6 GREEDY     */ { 0.20f, 0.40f, 0.20f, 0.10f },
+    /* 7 LOYAL      */ { 0.15f, 0.20f, 0.50f, 0.15f },
 };
 /* clang-format on */
 
@@ -148,6 +140,7 @@ void sec_init(struct char_data *mob)
     ai->sec.fear = 0.0f;
     ai->sec.anger = 0.0f;
     ai->sec.happiness = 0.0f;
+    ai->sec.sadness = 0.0f;
     ai->sec.helplessness = 0.0f;
     /* Disgust: persistent trait seeded from the emotion vector on spawn.
      * Subsequent updates use the slow δ update rule, not direct mirroring. */
@@ -161,6 +154,7 @@ void sec_init(struct char_data *mob)
     ai->sec_base.fear_base = sec_profile_baselines[profile][0];
     ai->sec_base.anger_base = sec_profile_baselines[profile][1];
     ai->sec_base.happiness_base = sec_profile_baselines[profile][2];
+    ai->sec_base.sadness_base = sec_profile_baselines[profile][3];
 }
 
 /* ── OCEAN Phase 2: Conscientiousness final value getter ─────────────────── */
@@ -210,19 +204,25 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
-    /* Partition weights — guarantee: w_fear + w_anger + w_happy = A.
-     * This identity holds only for the defined triad: Fear, Anger, Happiness.
+    /* Partition weights — tetradic 4-way split in D×V space.
+     * Guarantee: w_fear + w_sad + w_anger + w_happy = A.
+     *
+     *   w_fear    = A * (1-D) * V       — low dominance, high valence  (threat/uncertainty)
+     *   w_sadness = A * (1-D) * (1-V)   — low dominance, low valence   (passive loss / grief)
+     *   w_anger   = A * D    * (1-V)    — high dominance, low valence  (active loss / fight)
+     *   w_happy   = A * D    * V        — high dominance, high valence  (approach / reward)
+     *
+     * Sadness rises when Goal Incongruence (low V) AND low Coping Potential (low D) combine,
+     * creating the "passive loss" state described in the SEC design specification.
+     * High Sadness mathematically suppresses Anger and Happiness via renormalisation.
      * Helplessness and Disgust are updated separately outside this partition. */
-    float w_fear = A * (1.0f - D);
+    float w_fear = A * (1.0f - D) * V;
+    float w_sad = A * (1.0f - D) * (1.0f - V);
     float w_anger = A * D * (1.0f - V);
-    float w_happy = A * V * D;
+    float w_happy = A * D * V;
 
-    /* Defensive clamps: A, D, V are each clamped to [0,1] on lines 163-165,
-     * so the partition weights w_fear = A*(1-D), w_anger = A*D*(1-V), and
-     * w_happy = A*V*D are all mathematically in [0, A] ⊆ [0,1].  These
-     * clamps are kept as an explicit defensive bound in case the partition
-     * formula changes in future; they carry no cost in normal operation. */
     float t_fear = sec_clamp(w_fear, 0.0f, 1.0f);
+    float t_sad = sec_clamp(w_sad, 0.0f, 1.0f);
     float t_anger = sec_clamp(w_anger, 0.0f, 1.0f);
     float t_happy = sec_clamp(w_happy, 0.0f, 1.0f);
 
@@ -236,7 +236,7 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
      * clamped effective α and C_final are logged inside sec_update_partitioned()
      * when CONFIG_MOB_4D_DEBUG is on. */
     float C_final = sec_get_conscientiousness_final(mob);
-    sec_update_partitioned(ai, A, t_fear, t_anger, t_happy, C_final);
+    sec_update_partitioned(ai, A, t_fear, t_sad, t_anger, t_happy, C_final);
 
     /* Helplessness: medium timescale smoothing of (1 − D). */
     float h_target = 1.0f - D;
@@ -273,6 +273,7 @@ void sec_passive_decay(struct char_data *mob)
     ai->sec.fear = ai->sec.fear * (1.0f - lm) + ai->sec_base.fear_base * lm;
     ai->sec.anger = ai->sec.anger * (1.0f - lm) + ai->sec_base.anger_base * lm;
     ai->sec.happiness = ai->sec.happiness * (1.0f - lm) + ai->sec_base.happiness_base * lm;
+    ai->sec.sadness = ai->sec.sadness * (1.0f - lm) + ai->sec_base.sadness_base * lm;
     /* Helplessness decays toward 0 (no external resting value). */
     ai->sec.helplessness = ai->sec.helplessness * (1.0f - lm);
 }
@@ -287,10 +288,14 @@ float sec_get_4d_modifier(struct char_data *mob)
     const struct sec_state *s = &mob->ai_data->sec;
 
     /*
-     * Anger boosts behavioural intensity; fear and helplessness reduce it.
+     * Anger boosts behavioural intensity; fear, helplessness, and sadness reduce it.
+     * Sadness acts as the "Lethargy Buffer": high sadness suppresses both approach
+     * and threat behaviours, modelling the low-arousal / low-coping passive loss state.
      * Modifier ∈ [0.5, 2.0] so it never fully suppresses nor doubles effort.
      */
-    float mod = 1.0f + (s->anger - s->fear - s->helplessness * 0.5f) * 0.5f;
+    float mod = 1.0f + (s->anger - s->fear - s->helplessness * SEC_MOD_HELPLESSNESS_WEIGHT -
+                        s->sadness * SEC_MOD_SADNESS_WEIGHT) *
+                           0.5f;
     return sec_clamp(mod, 0.5f, 2.0f);
 }
 
@@ -302,6 +307,20 @@ float sec_get_flee_bias(struct char_data *mob)
     const struct sec_state *s = &mob->ai_data->sec;
 
     float bias = (s->fear + s->helplessness) * 0.5f;
+    return sec_clamp(bias, 0.0f, 1.0f);
+}
+
+float sec_get_lethargy_bias(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.0f;
+
+    /* Lethargy is driven primarily by the sadness partition; helplessness
+     * contributes at half weight since it captures lost-control without
+     * the grief component.  Range [0, 1]: at sadness=1 the mob is fully
+     * lethargic and should skip most idle/aggressive pulse actions. */
+    const struct sec_state *s = &mob->ai_data->sec;
+    float bias = s->sadness + s->helplessness * 0.5f;
     return sec_clamp(bias, 0.0f, 1.0f);
 }
 
@@ -427,17 +446,19 @@ int sec_get_dominant_emotion(struct char_data *mob)
     const struct sec_state *s = &mob->ai_data->sec;
 
     /* Quiescent: total arousal partition is negligible. */
-    if (s->fear + s->anger + s->happiness < SEC_AROUSAL_EPSILON)
+    if (s->fear + s->sadness + s->anger + s->happiness < SEC_AROUSAL_EPSILON)
         return SEC_DOMINANT_NONE;
 
     /* Return the emotion with the highest SEC weight.
-     * Tie-breaking priority: Anger > Fear > Happiness.
-     * Rationale: aggressive/threat responses take precedence over passive
-     * happiness for game-safety reasons (avoids "cheerful-while-attacking"
-     * incoherence).  Maintainers should preserve this ordering. */
-    if (s->anger >= s->fear && s->anger >= s->happiness)
+     * Tie-breaking priority: Anger > Fear > Sadness > Happiness.
+     * Rationale: aggressive/threat responses take precedence; sadness is placed
+     * above happiness because passive-loss states should suppress approach
+     * behaviours before allowing positive affect to dominate. */
+    if (s->anger >= s->fear && s->anger >= s->sadness && s->anger >= s->happiness)
         return SEC_DOMINANT_ANGER;
-    if (s->fear >= s->happiness)
+    if (s->fear >= s->sadness && s->fear >= s->happiness)
         return SEC_DOMINANT_FEAR;
+    if (s->sadness >= s->happiness)
+        return SEC_DOMINANT_SADNESS;
     return SEC_DOMINANT_HAPPINESS;
 }
