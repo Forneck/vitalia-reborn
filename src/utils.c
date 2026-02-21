@@ -9668,6 +9668,10 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
         adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
         adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 10));
     }
+
+    /* Record in memory: witnessed caster use threatening magic */
+    if (caster)
+        add_emotion_memory(mob, caster, INTERACT_WITNESSED_DEATH, 0, NULL);
 }
 
 /**
@@ -9954,6 +9958,9 @@ void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trad
 
     /* Decrease any negative emotions slightly */
     adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(3, 8));
+
+    /* Record in memory: positive trading relationship with this entity */
+    add_emotion_memory(mob, trader, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
 
 /**
@@ -9978,6 +9985,9 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 10));
     }
+
+    /* Record in memory: received valuable goods from this entity */
+    add_emotion_memory(mob, seller, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
 
 /**

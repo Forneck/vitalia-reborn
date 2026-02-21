@@ -1112,7 +1112,7 @@ struct mob_wishlist_item {
  * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
  * - Memories older than 1 hour have minimal influence
  */
-#define EMOTION_MEMORY_SIZE 10
+#define EMOTION_MEMORY_SIZE 20
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 
