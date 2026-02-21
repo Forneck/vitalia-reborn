@@ -1653,33 +1653,51 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
 
         /* OCEAN Phase 4: Openness (O) cognitive flexibility modifiers.
          *
-         * 1. MOVE novelty weighting: high O favours exploring unfamiliar paths.
-         *    Score ∈ [-7, +7] pts applied to MOVE actions only.
+         * Pipeline order (after emotional/A/E/C weighting above):
+         *   1. MOVE exploration weighting (±7 pts based on O vs 0.5 baseline)
+         *   2. Depth-aware novelty bonus for non-repeated action types
+         *   3. Routine preference bonus for low-O repeated actions
          *
-         * 2. Action-history novelty/repetition: O gates preference for variety vs routine.
-         *    Evaluated when a prior action type is known (last_chosen_action_type ≥ 0):
-         *      - Different type than last → novelty bonus = O * SEC_O_NOVELTY_BONUS (0..+15).
-         *      - Same type as last → repetition bias = (1-O) * SEC_O_REPETITION_BONUS (0..+15).
-         *    High O/High C: C consistency bonus overlaps novelty penalty on same action type
-         *    creating a balanced tension (discipline vs. flexibility). This is intentional.
+         * Depth-aware novelty prevents "ADHD oscillation" in high-O mobs:
+         *   bonus = clamp(O × depth × SEC_O_NOVELTY_DEPTH_SCALE, 0, SEC_O_NOVELTY_BONUS_CAP)
+         * Because 'depth' (consecutive same-type repetitions) starts at 0 and builds
+         * slowly, a high-O mob needs sustained repetition before novelty pressure
+         * outweighs the action's survival utility.  First repetition = 6 pts (low
+         * pressure); at 5 consecutive repeats the cap of 30 pts is reached.
          *
-         * O_final must not be derived from SEC emotional state (see sec_get_openness_final()). */
+         * Repetition dampening for low O:
+         *   Bonus = (1 - O) × SEC_O_REPETITION_BONUS  (0 to +15 pts for O ∈ [0,1]).
+         *   Low-O mobs get a routine preference reward that disappears as O→1.
+         *
+         * Hard cap: SEC_O_NOVELTY_BONUS_CAP = 30 = 0.3 × OUTCOME_SCORE_MAX.
+         * Neither novelty nor repetition bonuses modify emotional gain/decay
+         * or SEC energy partition.
+         * O_final must not be derived from SEC state (see sec_get_openness_final()). */
         {
             float O_final = sec_get_openness_final(ch);
 
-            /* MOVE exploration weighting (already in range [-7, +7]) */
+            /* 1. MOVE exploration weighting (range [-7, +7]) */
             if (proj->action.type == SHADOW_ACTION_MOVE) {
                 score += (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE);
             }
 
-            /* Action-history novelty vs. routine preference */
+            /* 2 & 3. Action-history novelty vs. routine using repetition depth */
             int prior_type_o = ch->ai_data->last_chosen_action_type;
             if (prior_type_o >= 0) {
                 if ((int)proj->action.type != prior_type_o) {
-                    /* Novel action type: reward based on O */
-                    score += (int)(O_final * (float)SEC_O_NOVELTY_BONUS); /* 0 to +15 */
+                    /* Novel action type: depth-aware bonus (builds over consecutive repeats).
+                     * prior_depth = how many ticks the mob was stuck doing the prior action type.
+                     * action_repetition_count reflects prior ticks because it is updated in
+                     * mobact.c *after* action selection, so during scoring it still holds the
+                     * count for the previous action type — this is semantically correct.
+                     * At prior_depth=0 (no tracked repetition yet) bonus is 0 — no instant flip. */
+                    int prior_depth = MIN(ch->ai_data->action_repetition_count, SEC_O_REPETITION_CAP);
+                    int novel_bonus = MIN((int)(O_final * (float)prior_depth * (float)SEC_O_NOVELTY_DEPTH_SCALE),
+                                          SEC_O_NOVELTY_BONUS_CAP);
+                    score += novel_bonus; /* 0 to +30 pts */
                 } else {
-                    /* Repeated action type: reward routine-preference (low O) */
+                    /* Repeated action type: routine-preference for low O.
+                     * Dampening interpretation: (1-O) scales the bonus to 0 as O→1. */
                     score += (int)((1.0f - O_final) * (float)SEC_O_REPETITION_BONUS); /* 0 to +15 */
                 }
             }
@@ -1725,7 +1743,7 @@ struct shadow_projection *shadow_select_best_action(struct shadow_context *ctx)
     if (ent && IS_NPC(ent) && ent->ai_data && ctx->num_projections > 1) {
         float O_final = sec_get_openness_final(ent);
         int explore_chance = (int)(O_final * (float)SEC_O_EXPLORATION_BASE); /* 0..20 */
-        if (explore_chance > 0 && rand_number(1, 100) <= explore_chance) {
+        if (rand_number(1, 100) <= explore_chance) {
             /* Build a candidate list of non-best, non-negative-score projections */
             int candidates[SHADOW_MAX_PROJECTIONS];
             int ncand = 0;

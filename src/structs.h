@@ -1384,6 +1384,7 @@ struct mob_ai_data {
     int recent_prediction_error; /* 0–100 smoothed novelty */
     int attention_bias;          /* -50 to +50 long-term adaptation */
     int last_chosen_action_type; /* Type of last Shadow Timeline action (SHADOW_ACTION_* or -1) */
+    int action_repetition_count; /* Consecutive ticks the same action type was chosen (0 = unknown) */
 
     /* 4D Relational Decision Space - Emotional Profile projection layer */
     /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */

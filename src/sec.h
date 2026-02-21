@@ -188,25 +188,38 @@
 /**
  * Openness action-history modifiers (applied in shadow_score_outcome).
  *
- * SEC_O_NOVELTY_BONUS: score bonus for choosing a *different* action type than last tick.
- *   At O=1: +SEC_O_NOVELTY_BONUS pts.  At O=0: 0 pts.  Models novelty preference.
+ * Depth-aware novelty model — prevents oscillation in high-O mobs:
+ *   novelty_bonus = clamp(O_final × depth × SEC_O_NOVELTY_DEPTH_SCALE, 0, SEC_O_NOVELTY_BONUS_CAP)
+ *   where depth = min(action_repetition_count, SEC_O_REPETITION_CAP).
+ *
+ * Behaviour by repetition depth (at O=1.0):
+ *   depth=0 (no prior): 0 pts — no pressure to switch
+ *   depth=1:  6 pts — gentle pressure
+ *   depth=3: 18 pts — moderate pressure
+ *   depth=5: 30 pts — hard cap (= 0.3 × OUTCOME_SCORE_MAX)
+ * At O=0.5: all values halved.  At O=0: bonus is always 0.
+ *
+ * Because the bonus only builds after sustained same-type repetitions, high-O
+ * mobs do NOT flip on every tick: novelty pressure must exceed the action's
+ * base survival utility before a switch occurs — preventing "ADHD oscillation."
  *
  * SEC_O_REPETITION_BONUS: score bonus for *repeating* the last action type (low O = routine).
- *   At O=0: +SEC_O_REPETITION_BONUS pts.  At O=1: 0 pts.  Symmetric with novelty bonus.
+ *   At O=0: +SEC_O_REPETITION_BONUS pts.  At O=1: 0 pts.
  *
  * SEC_O_EXPLORATION_BASE: base exploration probability (integer %).
- *   ExplorationChance = SEC_O_EXPLORATION_BASE * O_final → 0% at O=0, 20% at O=1.
+ *   ExplorationChance = SEC_O_EXPLORATION_BASE × O_final → 0% at O=0, 20% at O=1.
  *   Used in shadow_select_best_action() to occasionally pick a sub-dominant action.
  *   Must not bypass WTA energy gating.
  *
  * SEC_O_THREAT_BIAS: scaling factor for threat amplification reduction.
- *   ThreatAmpPct = round(30.0 * (1.0 - SEC_O_THREAT_BIAS * O_final)) ∈ [18, 30].
- *   High O interprets ambiguous negative surprises less catastrophically.
+ *   ThreatAmpPct = 30 × (1 - SEC_O_THREAT_BIAS × O_final) ∈ [18, 30] percent.
  */
-#define SEC_O_NOVELTY_BONUS 15    /* pts at O=1.0 for non-repeated action type */
-#define SEC_O_REPETITION_BONUS 15 /* pts at O=0 for repeated action type */
-#define SEC_O_EXPLORATION_BASE 20 /* % × O_final; range [0, 20%] exploration chance */
-#define SEC_O_THREAT_BIAS 0.4f    /* reduces threat amp: 30%*(1-0.4*O) ∈ [18%,30%] */
+#define SEC_O_NOVELTY_DEPTH_SCALE 6 /* pts per repetition-depth step at O=1 */
+#define SEC_O_NOVELTY_BONUS_CAP 30  /* hard cap = 0.3 × OUTCOME_SCORE_MAX */
+#define SEC_O_REPETITION_CAP 5      /* bonus plateaus after this many consecutive repeats */
+#define SEC_O_REPETITION_BONUS 15   /* pts at O=0 for same action type as last tick */
+#define SEC_O_EXPLORATION_BASE 20   /* % × O_final; range [0, 20%] exploration chance */
+#define SEC_O_THREAT_BIAS 0.4f      /* reduces threat amp: 30%×(1-0.4×O) ∈ [18%,30%] */
 
 /* ── Public API ──────────────────────────────────────────────────────────── */
 

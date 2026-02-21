@@ -869,7 +869,14 @@ void mobile_activity(void)
             if (mob_shadow_choose_action(ch, &action)) {
                 /* Capture pre-execution HP snapshot for feedback system */
                 ch->ai_data->last_hp_snapshot = GET_HIT(ch);
-                /* Record chosen action type for Conscientiousness consistency bias. */
+                /* Record chosen action type for consistency and novelty tracking.
+                 * action_repetition_count builds when the same type is chosen consecutively,
+                 * giving the depth-aware O novelty bonus time to grow before a switch occurs. */
+                if (ch->ai_data->last_chosen_action_type == (int)action.type) {
+                    ch->ai_data->action_repetition_count++;
+                } else {
+                    ch->ai_data->action_repetition_count = 1;
+                }
                 ch->ai_data->last_chosen_action_type = (int)action.type;
 
                 /* RFC-0003 §4.2: Execute action in live world (Shadow Timeline never mutates) */
