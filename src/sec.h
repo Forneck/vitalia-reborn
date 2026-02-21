@@ -109,6 +109,38 @@
 #define SEC_E_SOCIAL_CENTER 0.5f
 #define SEC_E_SOCIAL_SCALE 20.0f
 
+/* ── OCEAN C modulation constants ───────────────────────────────────────── */
+
+/**
+ * Conscientiousness SEC alpha regulation.
+ * alpha_effective = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE).
+ * At C=0: alpha_effective = SEC_EMOTION_ALPHA * SEC_C_ALPHA_SCALE_MAX (fastest response).
+ * At C=1: alpha_effective = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - SEC_C_ALPHA_SCALE_RANGE)
+ *                         = SEC_EMOTION_ALPHA * 0.70 (most resistant to spikes).
+ * alpha_effective is always clamped to [SEC_C_ALPHA_MIN, SEC_C_ALPHA_MAX] to prevent
+ * freeze-state or instability.
+ */
+#define SEC_C_ALPHA_SCALE_MAX 1.20f   /* multiplier at C=0 */
+#define SEC_C_ALPHA_SCALE_RANGE 0.50f /* total range across [0,1] */
+#define SEC_C_ALPHA_MIN 0.05f         /* never allow α to reach 0 */
+#define SEC_C_ALPHA_MAX 0.95f         /* never allow α to reach 1 */
+
+/**
+ * Conscientiousness emotional persistence (decay resistance).
+ * decay_effective = base_decay * (SEC_C_DECAY_BASE - SEC_C_DECAY_RANGE * C_final).
+ * At C=0: decay * SEC_C_DECAY_BASE        (fastest decay — volatile).
+ * At C=1: decay * (SEC_C_DECAY_BASE - SEC_C_DECAY_RANGE) = decay * 0.60 (slowest — persistent).
+ */
+#define SEC_C_DECAY_BASE 1.20f  /* multiplier at C=0 */
+#define SEC_C_DECAY_RANGE 0.60f /* total range across [0,1] */
+
+/**
+ * Conscientiousness decision consistency bias in Shadow Timeline utility.
+ * score bonus = SEC_C_CONSISTENCY_SCALE * C_final when action matches prior commitment.
+ * Range: [0, +SEC_C_CONSISTENCY_SCALE] score points.
+ */
+#define SEC_C_CONSISTENCY_SCALE 12
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -179,6 +211,18 @@ float sec_get_agreeableness_final(struct char_data *mob);
  * @param mob  The NPC.
  */
 float sec_get_extraversion_final(struct char_data *mob);
+
+/**
+ * Return the final Conscientiousness value for a mob, incorporating:
+ *   Trait_base (genetic) + Trait_builder_modifier/100 + Trait_emotional_modulation
+ * Result is clamped to [0.0, 1.0].  |Trait_emotional_modulation| <= 0.05.
+ *
+ * Modulation formula: C_mod = clamp(-0.05 * SEC_disgust, -0.05, +0.05)
+ * Disgust erodes conscientiousness slightly under persistent aversive states.
+ *
+ * @param mob  The NPC.
+ */
+float sec_get_conscientiousness_final(struct char_data *mob);
 
 /**
  * Return the dominant SEC emotion (SEC_DOMINANT_*).

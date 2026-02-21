@@ -2003,6 +2003,14 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
              * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
         }
     }
+    CASE("ConscientiousnessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.conscientiousness_modifier = num_arg;
+        }
+    }
     CASE("Agreeableness")
     {
         if (mob_proto[i].ai_data) {

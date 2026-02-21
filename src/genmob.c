@@ -403,6 +403,8 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             int c_value = (int)(mob->ai_data->personality.conscientiousness * 100.0f);
             fprintf(fd, "Conscientiousness: %d\n", c_value);
         }
+        if (mob->ai_data->personality.conscientiousness_modifier != 0)
+            fprintf(fd, "ConscientiousnessModifier: %d\n", mob->ai_data->personality.conscientiousness_modifier);
 
         /* Big Five Phase 3: Agreeableness - save base if initialized, and modifier if non-zero.
          * Uninitialized base (flag=0) is not written; Gaussian generation occurs at spawn.

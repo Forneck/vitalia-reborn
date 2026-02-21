@@ -1638,6 +1638,18 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         } else if (proj->action.type == SHADOW_ACTION_FOLLOW || proj->action.type == SHADOW_ACTION_GROUP) {
             score += (int)((E_final - 0.5f) * 20.0f); /* E group bias: -10 to +10 */
         }
+
+        /* OCEAN Phase 2: Conscientiousness (C) decision consistency bias.
+         * High C → rewards actions that match the prior commitment (last chosen type).
+         * This reduces flip-flopping without hard-clamping or suppressing options.
+         * Score bonus ∈ [0, SEC_C_CONSISTENCY_SCALE] points; low C = near zero bonus.
+         * last_chosen_action_type is an int with -1 as "no prior commitment" sentinel;
+         * comparison uses a local int variable to avoid enum/int cast. */
+        int prior_type = ch->ai_data->last_chosen_action_type;
+        if (prior_type >= 0 && (int)proj->action.type == prior_type) {
+            float C_final = sec_get_conscientiousness_final(ch);
+            score += (int)(C_final * SEC_C_CONSISTENCY_SCALE); /* 0 to +SEC_C_CONSISTENCY_SCALE */
+        }
     }
 
     return URANGE(OUTCOME_SCORE_MIN, score, OUTCOME_SCORE_MAX);

@@ -3495,6 +3495,10 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
 
+    /* Initialize last_chosen_action_type to -1 (no prior commitment).
+     * Used by Conscientiousness consistency bias in Shadow Timeline scoring. */
+    mob->ai_data->last_chosen_action_type = -1;
+
     /* Initialize goal fields to sentinel values to prevent SIGSEGV.
      * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.
      * Setting them to 0 (from memset) would cause incorrect behavior. */

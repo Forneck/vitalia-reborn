@@ -65,9 +65,17 @@ static float sec_clamp(float f, float lo, float hi) { return f < lo ? lo : (f > 
  * Lateral inhibition emerges naturally: when the Anger partition grows,
  * the Happiness partition must shrink to keep the sum constant.
  */
-static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear, float t_anger, float t_happy)
+static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear, float t_anger, float t_happy,
+                                   float C_final)
 {
-    float a = SEC_EMOTION_ALPHA;
+    /* Conscientiousness alpha regulation: high C resists sudden emotional spikes.
+     * alpha_effective = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE)
+     * At C=0: alpha * 1.20 (responsive).
+     * At C=1: alpha * 0.70 (resistant).
+     * Clamped to [SEC_C_ALPHA_MIN, SEC_C_ALPHA_MAX] to prevent freeze-state (α→0) or
+     * instability (α→1).  This modifies timing, never the energy sum. */
+    float a = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE);
+    a = sec_clamp(a, SEC_C_ALPHA_MIN, SEC_C_ALPHA_MAX);
 
     /* Step 1: exponential smoothing toward partition targets. */
     float new_fear = ai->sec.fear * (1.0f - a) + t_fear * a;
@@ -92,8 +100,8 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f anger=%.4f happy=%.4f", W_total, A, scale,
-             new_fear, new_anger, new_happy);
+        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f anger=%.4f happy=%.4f alpha=%.3f C=%.2f", W_total,
+             A, scale, new_fear, new_anger, new_happy, a, C_final);
 
     /* Defensive clamp: A ∈ [0,1] and scale = A/W_total, so each scaled value
      * is bounded by A ≤ 1 in steady state.  At start-up (all emotions = 0)
@@ -155,6 +163,29 @@ void sec_init(struct char_data *mob)
     ai->sec_base.happiness_base = sec_profile_baselines[profile][2];
 }
 
+/* ── OCEAN Phase 2: Conscientiousness final value getter ─────────────────── */
+
+float sec_get_conscientiousness_final(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.5f;
+
+    const struct mob_personality *p = &mob->ai_data->personality;
+    const struct sec_state *s = &mob->ai_data->sec;
+
+    float base = p->conscientiousness;
+    float builder_mod = (float)p->conscientiousness_modifier / 100.0f;
+
+    /* C_mod: persistent disgust slightly erodes self-discipline.
+     * Cap is half that of A/E (±0.05) — C is the most structurally stable trait.
+     * Disgust accumulates slowly (SEC_DISGUST_DELTA = 0.01) so this modulation
+     * can only invert across many ticks of sustained aversion. */
+#define SEC_C_MOD_CAP 0.05f
+    float c_mod = sec_clamp(-s->disgust * 0.05f, -SEC_C_MOD_CAP, SEC_C_MOD_CAP);
+
+    return sec_clamp(base + builder_mod + c_mod, 0.0f, 1.0f);
+}
+
 void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
 {
     if (!IS_NPC(mob) || !mob->ai_data || !r || !r->valid)
@@ -193,8 +224,12 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     /* sec_update_partitioned() applies α-smoothing then renormalises the three
      * emotions to sum to A, enforcing the Arousal partition invariant even
      * across tick boundaries.  Lateral inhibition (Anger ∝ D, Fear ∝ 1−D)
-     * emerges automatically from the renormalisation step. */
-    sec_update_partitioned(ai, A, t_fear, t_anger, t_happy);
+     * emerges automatically from the renormalisation step.
+     * C_final is passed so Conscientiousness can regulate the α rate; the
+     * clamped effective α and C_final are logged inside sec_update_partitioned()
+     * when CONFIG_MOB_4D_DEBUG is on. */
+    float C_final = sec_get_conscientiousness_final(mob);
+    sec_update_partitioned(ai, A, t_fear, t_anger, t_happy, C_final);
 
     /* Helplessness: medium timescale smoothing of (1 − D). */
     float h_target = 1.0f - D;
@@ -325,6 +360,8 @@ float sec_get_extraversion_final(struct char_data *mob)
 
     return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);
 }
+
+/* ── OCEAN Phase 3: A/E getters are above; C getter is near sec_update ──── */
 
 int sec_get_dominant_emotion(struct char_data *mob)
 {

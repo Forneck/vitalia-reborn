@@ -1072,6 +1072,7 @@ struct mob_personality {
     byte extraversion_initialized;      /* Flag: 1 if E base set (file/random), 0 if uninitialized */
     int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int conscientiousness_modifier;     /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
 };
 
 /**
@@ -1379,6 +1380,7 @@ struct mob_ai_data {
     bool last_outcome_obvious;   /* Whether the last outcome was obvious/predictable */
     int recent_prediction_error; /* 0–100 smoothed novelty */
     int attention_bias;          /* -50 to +50 long-term adaptation */
+    int last_chosen_action_type; /* Type of last Shadow Timeline action (SHADOW_ACTION_* or -1) */
 
     /* 4D Relational Decision Space - Emotional Profile projection layer */
     /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */
