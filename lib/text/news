@@ -8,6 +8,14 @@
 @n
 @C-@G=@Y>@W Janeiro e Fevereiro de 2026 @C@Y<@G=@C-@n
 
+   Fixed emotional state leakage and implemented SEC energy partitioning.
+   The SEC (Competing Emotions System) now normalises fear, anger, and
+   happiness so that their sum never exceeds the 4D Arousal value.
+   A Winner-Takes-All filter was added to the social-action selector,
+   preventing contradictory behaviours (e.g., biting and praising in the
+   same tick) by requiring any chosen social category to carry at least
+   60 % of the dominant SEC emotional weight.
+
    Correções de estabilidade e de bugs.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n

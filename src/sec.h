@@ -59,6 +59,24 @@
 
 /* sec_state and sec_baseline are defined in structs.h (inside mob_ai_data) */
 
+/* ── Dominant-emotion constants (used by Winner-Takes-All filter) ─────────── */
+
+/** No dominant emotion — arousal is below threshold. */
+#define SEC_DOMINANT_NONE 0
+/** Fear is the dominant SEC emotion. */
+#define SEC_DOMINANT_FEAR 1
+/** Anger is the dominant SEC emotion. */
+#define SEC_DOMINANT_ANGER 2
+/** Happiness is the dominant SEC emotion. */
+#define SEC_DOMINANT_HAPPINESS 3
+
+/**
+ * Winner-Takes-All threshold: a social category's driving emotion must be
+ * at least this fraction of the dominant SEC weight to be allowed.
+ * Below this ratio the selector falls back to neutral socials.
+ */
+#define SEC_WTA_THRESHOLD 0.60f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -129,5 +147,17 @@ float sec_get_agreeableness_final(struct char_data *mob);
  * @param mob  The NPC.
  */
 float sec_get_extraversion_final(struct char_data *mob);
+
+/**
+ * Return the dominant SEC emotion (SEC_DOMINANT_*).
+ *
+ * Returns SEC_DOMINANT_NONE when the total arousal partition is below
+ * SEC_AROUSAL_EPSILON, indicating an emotionally quiescent state.
+ * Used by the social-action Winner-Takes-All filter to prevent contradictory
+ * behaviours when opposing raw emotions are simultaneously elevated.
+ *
+ * @param mob  The NPC to query.
+ */
+int sec_get_dominant_emotion(struct char_data *mob);
 
 #endif /* _SEC_H_ */

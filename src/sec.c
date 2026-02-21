@@ -51,6 +51,53 @@
 /** Clamp f to [lo, hi]. */
 static float sec_clamp(float f, float lo, float hi) { return f < lo ? lo : (f > hi ? hi : f); }
 
+/**
+ * Apply α-smoothing to fear/anger/happiness targets and re-normalise so that
+ * their sum equals A (Arousal).  This is the energy-conservation step that
+ * prevents emotional "state leakage" (Happiness + Anger > Arousal).
+ *
+ * Algorithm:
+ *   1. Exponential smoothing with SEC_EMOTION_ALPHA.
+ *   2. Compute W_total = new_fear + new_anger + new_happy.
+ *   3. Renormalise: each weight *= A / W_total  (W_total is the divisor).
+ *
+ * Guarantee: after this call, sec.fear + sec.anger + sec.happiness = A.
+ * Lateral inhibition emerges naturally: when the Anger partition grows,
+ * the Happiness partition must shrink to keep the sum constant.
+ */
+static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear, float t_anger, float t_happy)
+{
+    float a = SEC_EMOTION_ALPHA;
+
+    /* Step 1: exponential smoothing toward partition targets. */
+    float new_fear = ai->sec.fear * (1.0f - a) + t_fear * a;
+    float new_anger = ai->sec.anger * (1.0f - a) + t_anger * a;
+    float new_happy = ai->sec.happiness * (1.0f - a) + t_happy * a;
+
+    /* Step 2: compute W_total — the sum of smoothed weights before normalisation.
+     * This value is logged so that debug output confirms the divisor used. */
+    float W_total = new_fear + new_anger + new_happy;
+    float scale = 0.0f;
+
+    /* Step 3: renormalise to Arousal.
+     * Only when W_total is non-trivial; otherwise the mob is emotionally inert
+     * and all values collapse to zero naturally. */
+    if (W_total > 1e-6f) {
+        scale = A / W_total;
+        new_fear *= scale;
+        new_anger *= scale;
+        new_happy *= scale;
+    }
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f anger=%.4f happy=%.4f", W_total, A, scale,
+             new_fear, new_anger, new_happy);
+
+    ai->sec.fear = sec_clamp(new_fear, 0.0f, 1.0f);
+    ai->sec.anger = sec_clamp(new_anger, 0.0f, 1.0f);
+    ai->sec.happiness = sec_clamp(new_happy, 0.0f, 1.0f);
+}
+
 /* ── Baseline table ──────────────────────────────────────────────────────── */
 
 /*
@@ -128,12 +175,13 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     float t_anger = sec_clamp(w_anger, 0.0f, 1.0f);
     float t_happy = sec_clamp(w_happy, 0.0f, 1.0f);
 
-    /* ── Medium timescale: Emotional smoothing (α) ──────────────────────── */
+    /* ── Medium timescale: Emotional smoothing (α) with energy conservation ─ */
 
-    float a = SEC_EMOTION_ALPHA;
-    ai->sec.fear = sec_clamp(ai->sec.fear * (1.0f - a) + t_fear * a, 0.0f, 1.0f);
-    ai->sec.anger = sec_clamp(ai->sec.anger * (1.0f - a) + t_anger * a, 0.0f, 1.0f);
-    ai->sec.happiness = sec_clamp(ai->sec.happiness * (1.0f - a) + t_happy * a, 0.0f, 1.0f);
+    /* sec_update_partitioned() applies α-smoothing then renormalises the three
+     * emotions to sum to A, enforcing the Arousal partition invariant even
+     * across tick boundaries.  Lateral inhibition (Anger ∝ D, Fear ∝ 1−D)
+     * emerges automatically from the renormalisation step. */
+    sec_update_partitioned(ai, A, t_fear, t_anger, t_happy);
 
     /* Helplessness: medium timescale smoothing of (1 − D). */
     float h_target = 1.0f - D;
@@ -263,4 +311,23 @@ float sec_get_extraversion_final(struct char_data *mob)
     e_mod = sec_clamp(e_mod, -SEC_OCEAN_MOD_CAP, SEC_OCEAN_MOD_CAP);
 
     return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);
+}
+
+int sec_get_dominant_emotion(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return SEC_DOMINANT_NONE;
+
+    const struct sec_state *s = &mob->ai_data->sec;
+
+    /* Quiescent: total arousal partition is negligible. */
+    if (s->fear + s->anger + s->happiness < SEC_AROUSAL_EPSILON)
+        return SEC_DOMINANT_NONE;
+
+    /* Return the emotion with the highest SEC weight. */
+    if (s->anger >= s->fear && s->anger >= s->happiness)
+        return SEC_DOMINANT_ANGER;
+    if (s->fear >= s->happiness)
+        return SEC_DOMINANT_FEAR;
+    return SEC_DOMINANT_HAPPINESS;
 }

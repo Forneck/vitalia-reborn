@@ -409,6 +409,67 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
         social_list = neutral_socials;
     }
 
+    /* ── Winner-Takes-All: SEC dominant-emotion filter ────────────────────
+     * Query the dominant SEC vector and fall back to neutral socials when
+     * the driving emotion of the chosen category is less than SEC_WTA_THRESHOLD
+     * of the dominant SEC weight.  This prevents contradictory actions (e.g.,
+     * an aggressive "bite" and a positive "thumbsup" within the same tick)
+     * that arise when opposing raw emotion values are simultaneously high. */
+    if (ch->ai_data) {
+        const struct sec_state *sec_s = &ch->ai_data->sec;
+
+        /* Classify the chosen social category by its primary SEC emotion. */
+        int social_emotion;
+        if (social_list == positive_socials || social_list == grateful_socials || social_list == loving_socials ||
+            social_list == playful_socials || social_list == excited_socials || social_list == triumphant_socials) {
+            social_emotion = SEC_DOMINANT_HAPPINESS;
+        } else if (social_list == aggressive_socials || social_list == negative_socials ||
+                   social_list == mocking_socials) {
+            social_emotion = SEC_DOMINANT_ANGER;
+        } else if (social_list == fearful_socials || social_list == submissive_socials) {
+            social_emotion = SEC_DOMINANT_FEAR;
+        } else {
+            social_emotion = SEC_DOMINANT_NONE; /* neutral/mixed — no restriction */
+        }
+
+        if (social_emotion != SEC_DOMINANT_NONE) {
+            /* Use sec_get_dominant_emotion() to identify the strongest SEC axis,
+             * then extract its weight for the 60 % threshold comparison. */
+            int dom_type = sec_get_dominant_emotion(ch);
+
+            float dom_val;
+            switch (dom_type) {
+                case SEC_DOMINANT_FEAR:
+                    dom_val = sec_s->fear;
+                    break;
+                case SEC_DOMINANT_ANGER:
+                    dom_val = sec_s->anger;
+                    break;
+                case SEC_DOMINANT_HAPPINESS:
+                    dom_val = sec_s->happiness;
+                    break;
+                default:
+                    dom_val = 0.0f;
+                    break;
+            }
+
+            /* Weight of the emotion driving the chosen social category. */
+            float chosen_val;
+            if (social_emotion == SEC_DOMINANT_HAPPINESS)
+                chosen_val = sec_s->happiness;
+            else if (social_emotion == SEC_DOMINANT_ANGER)
+                chosen_val = sec_s->anger;
+            else
+                chosen_val = sec_s->fear;
+
+            /* If the chosen emotion is less than SEC_WTA_THRESHOLD of the dominant,
+             * the SEC state does not support this social category — use
+             * neutral socials to maintain emotional coherence. */
+            if (dom_val > 1e-4f && chosen_val < dom_val * SEC_WTA_THRESHOLD)
+                social_list = neutral_socials;
+        }
+    }
+
     /* Select a random social from the chosen category */
     /* Count number of non-NULL elements in the social list */
     for (social_index = 0; social_list[social_index] != NULL; social_index++)
