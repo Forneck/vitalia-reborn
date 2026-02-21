@@ -7561,6 +7561,47 @@ void check_emotional_breakdown(struct char_data *mob)
  * @param mob The mob doing the mourning
  * @param deceased The character who died
  */
+
+/**
+ * Check if mob has any positive remembered interactions with an entity.
+ * Used to differentiate true allies (with specific memories) from incidental
+ * compassionate witnesses (no relationship with deceased).
+ * @param mob    The mob whose memory to search
+ * @param entity The entity to look up
+ * @return TRUE if mob has a positive interaction memory with entity, FALSE otherwise
+ */
+static bool mob_has_positive_memory_of(struct char_data *mob, struct char_data *entity)
+{
+    int i, entity_type;
+    long entity_id;
+
+    if (!mob || !entity || !mob->ai_data)
+        return FALSE;
+
+    if (IS_NPC(entity)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(entity);
+        if (entity_id == 0)
+            return FALSE;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(entity);
+        if (entity_id <= 0)
+            return FALSE;
+    }
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+        if (mem->timestamp > 0 && mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            int t = mem->interaction_type;
+            if (t == INTERACT_HEALED || t == INTERACT_RECEIVED_ITEM || t == INTERACT_RESCUED ||
+                t == INTERACT_ASSISTED || t == INTERACT_SOCIAL_POSITIVE)
+                return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
 {
     const char *mourning_socials[] = {"cry", "sob", "weep", "mourn", NULL};
@@ -7580,19 +7621,25 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
         return;
 
     /* Determine relationship strength */
-    /* High friendship (60+), high love (50+), or high loyalty (60+) indicates close relationship */
-    if (mob->ai_data->emotion_friendship >= 60 || mob->ai_data->emotion_love >= 50 ||
-        mob->ai_data->emotion_loyalty >= 60) {
-        is_close_relationship = TRUE;
-    }
-
-    /* Group members are considered close */
+    /* Close relationship: same group is the definitive indicator, or mob has specific
+     * positive memories of the deceased (healed, assisted, rescued, etc.).
+     * We intentionally do NOT use general emotion levels (friendship >= 60 etc.) here
+     * because those reflect the mob's overall emotional state, not a bond with this
+     * specific entity. An unrelated high-compassion mob should NOT be treated as an ally. */
     if (GROUP(mob) && GROUP(deceased) && GROUP(mob) == GROUP(deceased)) {
         is_close_relationship = TRUE;
+    } else if (mob_has_positive_memory_of(mob, deceased)) {
+        is_close_relationship = TRUE;
     }
 
-    /* Update emotions for witnessing death */
-    update_mob_emotion_ally_died(mob, deceased);
+    /* Update emotions based on actual relationship */
+    if (is_close_relationship) {
+        update_mob_emotion_ally_died(mob, deceased);
+    } else {
+        /* Non-ally witness: mild fear and horror, no ally-level grief */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 8));
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(2, 6));
+    }
 
     /* If not a close relationship and low compassion, mob might not mourn visibly */
     if (!is_close_relationship && mob->ai_data->emotion_compassion < 30) {

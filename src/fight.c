@@ -1477,11 +1477,9 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
             /* Update witness emotions based on the death */
             if (IS_NPC(ch) && witness->ai_data) {
-                /* Witnessing mob death */
-                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
-                    /* Ally died */
-                    update_mob_emotion_ally_died(witness, ch);
-                } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
+                /* Witnessing mob death: ally case is already handled inside mob_mourn_death above.
+                 * Only handle the enemy-died satisfaction case here. */
+                if (IS_GOOD(witness) && IS_EVIL(ch)) {
                     /* Enemy died - good witness might feel satisfaction */
                     if (witness->ai_data) {
                         witness->ai_data->emotion_happiness =
