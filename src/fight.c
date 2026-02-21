@@ -2936,7 +2936,7 @@ void perform_violence(void)
 
         /* HELPLESSNESS: Update accumulator after each combat round for NPCs */
         if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch)) {
-            int grace_threshold = GET_MAX_HIT(ch) / HELPLESSNESS_GRACE_PCT; /* non-trivial = 10% max HP */
+            int grace_threshold = MAX(1, GET_MAX_HIT(ch) / HELPLESSNESS_GRACE_PCT); /* non-trivial = 10% max HP */
             if (ch->ai_data->combat_damage_received >= grace_threshold) {
                 float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
                 if (eff < 1.0f)
