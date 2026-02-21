@@ -116,7 +116,9 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
-    /* Partition weights — guarantee: w_fear + w_anger + w_happy = A. */
+    /* Partition weights — guarantee: w_fear + w_anger + w_happy = A.
+     * This identity holds only for the defined triad: Fear, Anger, Happiness.
+     * Helplessness and Disgust are updated separately outside this partition. */
     float w_fear = A * (1.0f - D);
     float w_anger = A * D * (1.0f - V);
     float w_happy = A * V * D;
