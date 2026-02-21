@@ -2,13 +2,20 @@
  * @file sec.c
  * SEC – Sistema de Emoções Concorrentes (Competing Emotions System)
  *
- * Implements the internal emotional inference layer for mobs, driven by
- * post-hysteresis 4D results.  See sec.h for full design documentation.
+ * Implements the four-timescale internal emotional inference layer for mobs,
+ * driven by post-hysteresis 4D results.  See sec.h for full design documentation.
  *
- * Arousal partition guarantee: fear + anger + happiness = A ∈ [0, 1].
- * Helplessness is an exponentially smoothed projection of (1 − Dominance).
- * Passive decay blends all projections toward the personality baseline
- * when Arousal is below SEC_AROUSAL_EPSILON.
+ * Timescales:
+ *   Fast      – Arousal partition computed from 4D axes every tick.
+ *   Medium    – Emotional smoothing (α) applied to fear/anger/happiness and
+ *               helplessness, providing behavioral continuity.
+ *   Slow      – Passive decay (λ) toward personality baseline when A < ε.
+ *   Very slow – Persistent trait update (δ) for Disgust.
+ *
+ * Partition guarantee: fear_target + anger_target + happiness_target = A ∈ [0,1].
+ * After α smoothing the smoothed values may temporarily deviate from A while
+ * converging — the bound [0,1] is always enforced by clamp.
+ * Disgust is structurally independent of the Arousal partition.
  *
  * Part of Vitalia Reborn MUD engine.
  * Copyright (C) 2026 Vitalia Reborn Design
@@ -23,13 +30,20 @@
 /* ── Tuning constants ────────────────────────────────────────────────────── */
 
 /** Passive-decay activates when normalised arousal < ε. */
-#define SEC_AROUSAL_EPSILON 0.10f
+#define SEC_AROUSAL_EPSILON 0.05f
 
-/** Passive-decay rate λ: blend speed toward baseline per tick. */
+/** Passive-decay rate λ (slow timescale): blend speed toward baseline. */
 #define SEC_DECAY_LAMBDA 0.05f
 
-/** Helplessness exponential-smoothing rate α. */
+/** Emotional-smoothing rate α (medium timescale): applied each tick to
+ *  fear, anger, and happiness projections for behavioral continuity. */
+#define SEC_EMOTION_ALPHA 0.40f
+
+/** Helplessness exponential-smoothing rate (medium-fast timescale). */
 #define SEC_HELPLESSNESS_ALPHA 0.30f
+
+/** Persistent-trait update rate δ (very slow timescale): used for Disgust. */
+#define SEC_DISGUST_DELTA 0.01f
 
 /* ── Internal helpers ────────────────────────────────────────────────────── */
 
@@ -66,12 +80,13 @@ void sec_init(struct char_data *mob)
 
     struct mob_ai_data *ai = mob->ai_data;
 
-    /* Zero the live state. */
+    /* Zero the volatile state. */
     ai->sec.fear = 0.0f;
     ai->sec.anger = 0.0f;
     ai->sec.happiness = 0.0f;
     ai->sec.helplessness = 0.0f;
-    /* Disgust is a persistent trait seeded from the emotion vector. */
+    /* Disgust: persistent trait seeded from the emotion vector on spawn.
+     * Subsequent updates use the slow δ update rule, not direct mirroring. */
     ai->sec.disgust = sec_clamp(ai->emotion_disgust / 100.0f, 0.0f, 1.0f);
 
     /* Set baseline from emotional profile. */
@@ -91,39 +106,48 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
 
     struct mob_ai_data *ai = mob->ai_data;
 
+    /* ── Fast timescale: Arousal partition ─────────────────────────────── */
+
     /* Normalise 4D axes to [0, 1]. */
     float A = sec_clamp(r->arousal / 100.0f, 0.0f, 1.0f);
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
-    /* Arousal partition weights. */
+    /* Partition weights — guarantee: w_fear+w_anger+w_happy = A. */
     float w_fear = A * (1.0f - D);
     float w_anger = A * D * (1.0f - V);
     float w_happy = A * V * D;
     float total = w_fear + w_anger + w_happy;
 
-    /*
-     * Normalise against total weight and scale by A so that
-     * fear + anger + happiness = A ∈ [0, 1] is always guaranteed.
-     * When total == 0 (A == 0) all projections are zero.
-     */
+    float t_fear, t_anger, t_happy;
     if (total > 0.0f) {
-        ai->sec.fear = sec_clamp(A * (w_fear / total), 0.0f, 1.0f);
-        ai->sec.anger = sec_clamp(A * (w_anger / total), 0.0f, 1.0f);
-        ai->sec.happiness = sec_clamp(A * (w_happy / total), 0.0f, 1.0f);
+        t_fear = sec_clamp(A * (w_fear / total), 0.0f, 1.0f);
+        t_anger = sec_clamp(A * (w_anger / total), 0.0f, 1.0f);
+        t_happy = sec_clamp(A * (w_happy / total), 0.0f, 1.0f);
     } else {
-        ai->sec.fear = 0.0f;
-        ai->sec.anger = 0.0f;
-        ai->sec.happiness = 0.0f;
+        t_fear = t_anger = t_happy = 0.0f;
     }
 
-    /* Helplessness: exponential smoothing of (1 − D). */
-    float h_target = 1.0f - D;
-    ai->sec.helplessness = ai->sec.helplessness * (1.0f - SEC_HELPLESSNESS_ALPHA) + h_target * SEC_HELPLESSNESS_ALPHA;
-    ai->sec.helplessness = sec_clamp(ai->sec.helplessness, 0.0f, 1.0f);
+    /* ── Medium timescale: Emotional smoothing (α) ──────────────────────── */
 
-    /* Disgust is a persistent trait; refresh from the emotion vector each tick. */
-    ai->sec.disgust = sec_clamp(ai->emotion_disgust / 100.0f, 0.0f, 1.0f);
+    float a = SEC_EMOTION_ALPHA;
+    ai->sec.fear = sec_clamp(ai->sec.fear * (1.0f - a) + t_fear * a, 0.0f, 1.0f);
+    ai->sec.anger = sec_clamp(ai->sec.anger * (1.0f - a) + t_anger * a, 0.0f, 1.0f);
+    ai->sec.happiness = sec_clamp(ai->sec.happiness * (1.0f - a) + t_happy * a, 0.0f, 1.0f);
+
+    /* Helplessness: medium timescale smoothing of (1 − D). */
+    float h_target = 1.0f - D;
+    ai->sec.helplessness = sec_clamp(
+        ai->sec.helplessness * (1.0f - SEC_HELPLESSNESS_ALPHA) + h_target * SEC_HELPLESSNESS_ALPHA, 0.0f, 1.0f);
+
+    /* ── Very slow timescale: Persistent trait — Disgust (δ) ────────────── */
+
+    /* Disgust does not compete for Arousal.  It slowly converges toward the
+     * current emotion_disgust value using a very small δ, accumulating
+     * structural memory across events without volatile oscillation. */
+    float disgust_event = sec_clamp(ai->emotion_disgust / 100.0f, 0.0f, 1.0f);
+    ai->sec.disgust =
+        sec_clamp(ai->sec.disgust * (1.0f - SEC_DISGUST_DELTA) + disgust_event * SEC_DISGUST_DELTA, 0.0f, 1.0f);
 }
 
 void sec_passive_decay(struct char_data *mob)

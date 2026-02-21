@@ -13,6 +13,15 @@
  *  - SEC does not modify hysteresis logic directly.
  *  - Input must be a post-hysteresis emotion_4d_state.
  *
+ * ── Four-timescale model ──────────────────────────────────────────────────
+ *
+ *   Layer              Timescale    Rate    Purpose
+ *   ─────────────────  ──────────   ──────  ───────────────────────────────
+ *   Arousal partition  Fast         —       Active state projection (V,D,A)
+ *   Emotional smooth.  Medium       α≈0.40  Behavioral continuity (F,An,H)
+ *   Passive decay      Slow         λ=0.05  Homeostatic convergence to base
+ *   Persistent trait   Very slow    δ=0.01  Structural memory (Disgust)
+ *
  * Arousal partition (all values normalised to [0, 1]):
  *   A = arousal / 100
  *   D = (dominance + 100) / 200
@@ -21,14 +30,23 @@
  *   w_fear  = A * (1 − D)
  *   w_anger = A * D * (1 − V)
  *   w_happy = A * V * D
- *   → fear + anger + happiness = A  (guaranteed)
+ *   → fear_target + anger_target + happiness_target = A  (guaranteed)
+ *
+ * Emotional smoothing (α) applied after partition each tick:
+ *   emotion_new = emotion_old * (1 − α) + target * α
  *
  * Helplessness:
  *   target = 1 − D
- *   h_new  = h_old * (1 − α) + target * α   (exponential smoothing)
+ *   h_new  = h_old * (1 − α_h) + target * α_h   (exponential smoothing)
  *
  * Passive decay (when A < ε):
- *   emotion = emotion * (1 − λ) + baseline * λ
+ *   emotion_new = emotion_old * (1 − λ) + baseline * λ
+ *   Ensures asymptotic convergence to baseline.  No divergence, no oscillation.
+ *
+ * Persistent trait — Disgust (δ update, out-of-partition):
+ *   disgust_new = disgust_old * (1 − δ) + event_value * δ
+ *   Very small δ ensures disgust changes slowly, accumulating structural memory.
+ *   Disgust does not compete for Arousal.
  *
  * Part of Vitalia Reborn MUD engine.
  * Copyright (C) 2026 Vitalia Reborn Design
