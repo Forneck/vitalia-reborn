@@ -1309,13 +1309,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
                      CCNRM(ch, C_NRM));
 
-        /* Display calculated arousal showing all contributing emotions */
+        /* Display 4D arousal (contextually deformed) — consistent with SEC */
         {
-            float arousal = calculate_emotional_arousal(k);
+            float arousal4d = k->ai_data->last_4d_state.valid ? k->ai_data->last_4d_state.arousal / 100.0f : 0.0f;
             send_to_char(ch,
-                         "  %sCalculated Arousal: [%s%.2f%s]%s (Fear:%d Anger:%d Horror:%d Pain:%d Happiness:%d "
-                         "Excitement:%d Courage:%d)\r\n",
-                         CCYEL(ch, C_NRM), CCCYN(ch, C_NRM), arousal, CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                         "  %s4D Arousal: [%s%.2f%s]%s (contextually deformed; raw emotions: Fear:%d Anger:%d "
+                         "Horror:%d Pain:%d Happiness:%d Excitement:%d Courage:%d)\r\n",
+                         CCYEL(ch, C_NRM), CCCYN(ch, C_NRM), arousal4d, CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
                          k->ai_data->emotion_fear, k->ai_data->emotion_anger, k->ai_data->emotion_horror,
                          k->ai_data->emotion_pain, k->ai_data->emotion_happiness, k->ai_data->emotion_excitement,
                          k->ai_data->emotion_courage);
