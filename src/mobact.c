@@ -480,10 +480,10 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
             else
                 chosen_val = sec_s->fear;
 
-            /* If the chosen emotion is less than SEC_WTA_THRESHOLD of the dominant,
+            /* If the chosen emotion is less than sec_wta_threshold of the dominant,
              * the SEC state does not support this social category — use
              * neutral socials to maintain emotional coherence. */
-            if (dom_val > SEC_AROUSAL_EPSILON && chosen_val < dom_val * SEC_WTA_THRESHOLD)
+            if (dom_val > SEC_AROUSAL_EPSILON && chosen_val < dom_val * ((float)CONFIG_SEC_WTA_THRESHOLD / 100.0f))
                 social_list = neutral_socials;
         }
     }

@@ -1676,9 +1676,9 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         {
             float O_final = sec_get_openness_final(ch);
 
-            /* 1. MOVE exploration weighting (range [-7, +7]) */
+            /* 1. MOVE exploration weighting */
             if (proj->action.type == SHADOW_ACTION_MOVE) {
-                score += (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE);
+                score += (int)((O_final - SEC_O_NOVELTY_CENTER) * ((float)CONFIG_SEC_O_NOVELTY_MOVE_SCALE / 10.0f));
             }
 
             /* 2 & 3. Action-history novelty vs. routine using repetition depth */
@@ -1691,14 +1691,14 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
                      * mobact.c *after* action selection, so during scoring it still holds the
                      * count for the previous action type — this is semantically correct.
                      * At prior_depth=0 (no tracked repetition yet) bonus is 0 — no instant flip. */
-                    int prior_depth = MIN(ch->ai_data->action_repetition_count, SEC_O_REPETITION_CAP);
-                    int novel_bonus = MIN((int)(O_final * (float)prior_depth * (float)SEC_O_NOVELTY_DEPTH_SCALE),
-                                          SEC_O_NOVELTY_BONUS_CAP);
-                    score += novel_bonus; /* 0 to +30 pts */
+                    int prior_depth = MIN(ch->ai_data->action_repetition_count, CONFIG_SEC_O_REPETITION_CAP);
+                    int novel_bonus = MIN((int)(O_final * (float)prior_depth * (float)CONFIG_SEC_O_NOVELTY_DEPTH_SCALE),
+                                          CONFIG_SEC_O_NOVELTY_BONUS_CAP);
+                    score += novel_bonus; /* 0 to cap pts */
                 } else {
                     /* Repeated action type: routine-preference for low O.
                      * Dampening interpretation: (1-O) scales the bonus to 0 as O→1. */
-                    score += (int)((1.0f - O_final) * (float)SEC_O_REPETITION_BONUS); /* 0 to +15 */
+                    score += (int)((1.0f - O_final) * (float)CONFIG_SEC_O_REPETITION_BONUS);
                 }
             }
         }
@@ -1742,7 +1742,7 @@ struct shadow_projection *shadow_select_best_action(struct shadow_context *ctx)
     struct char_data *ent = ctx->entity;
     if (ent && IS_NPC(ent) && ent->ai_data && ctx->num_projections > 1) {
         float O_final = sec_get_openness_final(ent);
-        int explore_chance = (int)(O_final * (float)SEC_O_EXPLORATION_BASE); /* 0..20 */
+        int explore_chance = (int)(O_final * (float)CONFIG_SEC_O_EXPLORATION_BASE); /* 0..max */
         if (rand_number(1, 100) <= explore_chance) {
             /* Build a candidate list of non-best, non-negative-score projections */
             int candidates[SHADOW_MAX_PROJECTIONS];
@@ -2145,8 +2145,9 @@ void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
      * O_final must not be derived from SEC state (see sec_get_openness_final()). */
     if (signed_error < 0) {
         float O_final_threat = sec_get_openness_final(ch);
-        int amp_pct = (int)(30.0f * (1.0f - SEC_O_THREAT_BIAS * O_final_threat));
-        novelty = (novelty * (100 + amp_pct)) / 100; /* 118..130 % */
+        float threat_bias = (float)CONFIG_SEC_O_THREAT_BIAS / 100.0f;
+        int amp_pct = (int)(30.0f * (1.0f - threat_bias * O_final_threat));
+        novelty = (novelty * (100 + amp_pct)) / 100;
     }
     /* Positive surprises (rewards) are slightly dampened */
     else if (signed_error > 0) {

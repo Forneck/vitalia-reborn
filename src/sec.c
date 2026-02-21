@@ -74,7 +74,7 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
      * At C=1: alpha * 0.70 (resistant).
      * Clamped to [SEC_C_ALPHA_MIN, SEC_C_ALPHA_MAX] to prevent freeze-state (α→0) or
      * instability (α→1).  This modifies timing, never the energy sum. */
-    float a = SEC_EMOTION_ALPHA * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE);
+    float a = ((float)CONFIG_SEC_EMOTION_ALPHA / 100.0f) * (SEC_C_ALPHA_SCALE_MAX - C_final * SEC_C_ALPHA_SCALE_RANGE);
     a = sec_clamp(a, SEC_C_ALPHA_MIN, SEC_C_ALPHA_MAX);
 
     /* Step 1: exponential smoothing toward partition targets. */

@@ -4759,6 +4759,19 @@ static void load_default_config(void)
     CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
     CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
     CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
+
+    /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
+    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = sec_o_novelty_move_scale;
+    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = sec_o_novelty_depth_scale;
+    CONFIG_SEC_O_NOVELTY_BONUS_CAP = sec_o_novelty_bonus_cap;
+    CONFIG_SEC_O_REPETITION_CAP = sec_o_repetition_cap;
+    CONFIG_SEC_O_REPETITION_BONUS = sec_o_repetition_bonus;
+    CONFIG_SEC_O_EXPLORATION_BASE = sec_o_exploration_base;
+    CONFIG_SEC_O_THREAT_BIAS = sec_o_threat_bias;
+
+    /* SEC Core tuning parameters */
+    CONFIG_SEC_EMOTION_ALPHA = sec_emotion_alpha;
+    CONFIG_SEC_WTA_THRESHOLD = sec_wta_threshold;
 }
 
 void load_config(void)
@@ -5290,6 +5303,26 @@ void load_config(void)
                     CONFIG_SPECIAL_IN_COMM = num;
                 else if (!str_cmp(tag, "school_weather_affects"))
                     CONFIG_SCHOOL_WEATHER_AFFECTS = num;
+                /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+                else if (!str_cmp(tag, "sec_o_novelty_move_scale"))
+                    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "sec_o_novelty_depth_scale"))
+                    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = LIMIT(num, 1, 20);
+                else if (!str_cmp(tag, "sec_o_novelty_bonus_cap"))
+                    CONFIG_SEC_O_NOVELTY_BONUS_CAP = LIMIT(num, 10, 50);
+                else if (!str_cmp(tag, "sec_o_repetition_cap"))
+                    CONFIG_SEC_O_REPETITION_CAP = LIMIT(num, 1, 10);
+                else if (!str_cmp(tag, "sec_o_repetition_bonus"))
+                    CONFIG_SEC_O_REPETITION_BONUS = LIMIT(num, 0, 30);
+                else if (!str_cmp(tag, "sec_o_exploration_base"))
+                    CONFIG_SEC_O_EXPLORATION_BASE = LIMIT(num, 0, 40);
+                else if (!str_cmp(tag, "sec_o_threat_bias"))
+                    CONFIG_SEC_O_THREAT_BIAS = LIMIT(num, 0, 100);
+                /* SEC Core tuning parameters */
+                else if (!str_cmp(tag, "sec_emotion_alpha"))
+                    CONFIG_SEC_EMOTION_ALPHA = LIMIT(num, 10, 80);
+                else if (!str_cmp(tag, "sec_wta_threshold"))
+                    CONFIG_SEC_WTA_THRESHOLD = LIMIT(num, 30, 90);
                 else if (!str_cmp(tag, "start_messg")) {
                     strncpy(buf, "Reading start message in load_config()", sizeof(buf));
                     if (CONFIG_START_MESSG)
