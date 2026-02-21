@@ -1112,7 +1112,7 @@ struct mob_wishlist_item {
  * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
  * - Memories older than 1 hour have minimal influence
  */
-#define EMOTION_MEMORY_SIZE 10
+#define EMOTION_MEMORY_SIZE 20
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 
@@ -1208,6 +1208,8 @@ struct emotion_4d_state {
 #define INTERACT_QUEST_COMPLETE 11
 #define INTERACT_QUEST_FAIL 12
 #define INTERACT_BETRAYAL 13
+#define INTERACT_WITNESSED_OFFENSIVE_MAGIC 14 /**< Witnessed harmful/debuff spell cast by this entity */
+#define INTERACT_WITNESSED_SUPPORT_MAGIC 15   /**< Witnessed healing/buff spell cast by this entity */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */

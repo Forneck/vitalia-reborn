@@ -196,6 +196,8 @@ void update_mob_emotion_entered_safe_area(struct char_data *mob);
 void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster);
 void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster);
 void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_data *actor, struct char_data *target,
+                                         const char *social_name);
 void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player);
 void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player);
 void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);

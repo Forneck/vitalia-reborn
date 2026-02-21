@@ -982,6 +982,11 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
             ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + rand_number(1, 2));
         }
     }
+
+    /* Update NPC emotions on receiving gold — mirrors the item-give path */
+    if (IS_NPC(vict) && vict->ai_data) {
+        update_mob_emotion_received_item(vict, ch);
+    }
 }
 
 ACMD(do_give)
