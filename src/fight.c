@@ -2011,11 +2011,13 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
 
-    /* HELPLESSNESS: Track per-round combat damage for futility detection */
+    /* HELPLESSNESS: Track per-round combat damage for futility detection.
+     * Only count when attacker and victim are actively fighting each other
+     * to avoid leaking non-combat or cross-fight damage into the accumulator. */
     if (dam > 0 && ch != victim) {
-        if (IS_NPC(ch) && ch->ai_data)
+        if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch) == victim)
             ch->ai_data->combat_damage_dealt += dam;
-        if (IS_NPC(victim) && victim->ai_data)
+        if (IS_NPC(victim) && victim->ai_data && FIGHTING(victim) == ch)
             victim->ai_data->combat_damage_received += dam;
     }
 
@@ -2934,18 +2936,22 @@ void perform_violence(void)
         if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
             continue;
 
-        /* HELPLESSNESS: Update accumulator after each combat round for NPCs */
-        if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch)) {
-            int grace_threshold = MAX(1, GET_MAX_HIT(ch) / HELPLESSNESS_GRACE_PCT); /* non-trivial = 10% max HP */
-            if (ch->ai_data->combat_damage_received >= grace_threshold) {
-                float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
-                if (eff < 1.0f)
-                    ch->ai_data->helplessness += 5.0f * (1.0f - eff);
-                else
-                    ch->ai_data->helplessness -= 3.0f;
-                ch->ai_data->helplessness = MIN(MAX(ch->ai_data->helplessness, 0.0f), 100.0f);
+        /* HELPLESSNESS: Update accumulator after each combat round for NPCs.
+         * Always reset per-round counters so they don't leak into the next fight. */
+        if (IS_NPC(ch) && ch->ai_data) {
+            if (FIGHTING(ch)) {
+                /* non-trivial = HELPLESSNESS_GRACE_PCT% of max HP (ceiling), at least 1 */
+                int grace_threshold = MAX(1, (GET_MAX_HIT(ch) * HELPLESSNESS_GRACE_PCT + 99) / 100);
+                if (ch->ai_data->combat_damage_received >= grace_threshold) {
+                    float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
+                    if (eff < 1.0f)
+                        ch->ai_data->helplessness += 5.0f * (1.0f - eff);
+                    else
+                        ch->ai_data->helplessness -= 3.0f;
+                    ch->ai_data->helplessness = MIN(MAX(ch->ai_data->helplessness, 0.0f), 100.0f);
+                }
             }
-            /* Reset per-round counters */
+            /* Reset per-round counters regardless of combat state */
             ch->ai_data->combat_damage_dealt = 0;
             ch->ai_data->combat_damage_received = 0;
         }
