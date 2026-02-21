@@ -108,4 +108,26 @@ float sec_get_flee_bias(struct char_data *mob);
  */
 float sec_get_target_bias(struct char_data *mob, struct char_data *target);
 
+/**
+ * Return the final Agreeableness value for a mob, incorporating:
+ *   Trait_base (genetic) + Trait_builder_modifier/100 + Trait_emotional_modulation
+ * Result is clamped to [0.0, 1.0].  |Trait_emotional_modulation| <= 0.10.
+ *
+ * Modulation formula: A_mod = k3*happiness - k4*anger  (k3=0.10, k4=0.10)
+ *
+ * @param mob  The NPC.
+ */
+float sec_get_agreeableness_final(struct char_data *mob);
+
+/**
+ * Return the final Extraversion value for a mob, incorporating:
+ *   Trait_base (genetic) + Trait_builder_modifier/100 + Trait_emotional_modulation
+ * Result is clamped to [0.0, 1.0].  |Trait_emotional_modulation| <= 0.10.
+ *
+ * Modulation formula: E_mod = k1*happiness - k2*fear  (k1=0.10, k2=0.10)
+ *
+ * @param mob  The NPC.
+ */
+float sec_get_extraversion_final(struct char_data *mob);
+
 #endif /* _SEC_H_ */

@@ -381,3 +381,11 @@ int conscientiousness_impulse_control = 100; /* 1.0 - Impulse control strength Î
 int conscientiousness_reaction_delay = 100;  /* 1.0 - Reaction delay sensitivity Î² */
 int conscientiousness_moral_weight = 100;    /* 1.0 - Moral amplification factor */
 int conscientiousness_debug = 0;             /* 0 = OFF, 1 = ON - Debug logging */
+
+/* Big Five (OCEAN) Personality System - Phase 3: Agreeableness (A) and Extraversion (E) */
+/* SEC emotional modulation coefficients (stored *100; actual = value/100.0) */
+/* E_mod = k1*happiness - k2*fear,  A_mod = k3*happiness - k4*anger */
+int ocean_ae_k1 = 10; /* 0.10 - E modulation: happiness coefficient */
+int ocean_ae_k2 = 10; /* 0.10 - E modulation: fear coefficient       */
+int ocean_ae_k3 = 10; /* 0.10 - A modulation: happiness coefficient  */
+int ocean_ae_k4 = 10; /* 0.10 - A modulation: anger coefficient      */

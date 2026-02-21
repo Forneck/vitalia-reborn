@@ -317,7 +317,7 @@ max_mob_posted_quests = 450
 emotion_alignment_shifts = 1
 
 * Log 4D decision-space raw and effective values for debugging (default NO)
-mob_4d_debug = 0
+mob_4d_debug = 1
 
 
 
@@ -464,4 +464,13 @@ conscientiousness_impulse_control = 50
 conscientiousness_reaction_delay = 40
 conscientiousness_moral_weight = 35
 conscientiousness_debug = 1
+
+* Big Five (OCEAN) - Phase 3: A/E SEC Modulation Coefficients
+* E_mod = k1*happiness - k2*fear  (capped +/-0.10)
+* A_mod = k3*happiness - k4*anger (capped +/-0.10)
+* Values stored *100 (actual = value/100.0)
+ocean_ae_k1 = 10
+ocean_ae_k2 = 10
+ocean_ae_k3 = 10
+ocean_ae_k4 = 10
 

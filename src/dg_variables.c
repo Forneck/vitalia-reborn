@@ -293,7 +293,7 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig, int typ
             if (!str_cmp(vd->name, var) && (vd->context == 0 || vd->context == sc->context))
                 break;
 
-    if (!*field) {
+    if (!field || !*field) {
         if (vd)
             snprintf(str, slen, "%s", vd->value);
         else {
@@ -498,7 +498,7 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig, int typ
             }
             /* Addition inspired by Jamie Nelson. */
             else if (!str_cmp(var, "findobj")) {
-                if (!field || !*field || !subfield || !*subfield) {
+                if (!*field || !subfield || !*subfield) {
                     script_log("findobj.vnum(ovnum) - illegal syntax");
                     strcpy(str, "0");
                 } else {
