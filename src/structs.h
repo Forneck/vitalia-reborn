@@ -1348,6 +1348,11 @@ struct mob_ai_data {
      * The combat target (FIGHTING) always takes priority and resets these fields. */
     long last_4d_target_id;  /* Entity ID of the last idle fallback target (0 = none) */
     int last_4d_target_type; /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+
+    /* Helplessness accumulator - combat futility detection (not an emotion, not player-facing) */
+    float helplessness;         /* 0.0-100.0: accumulated combat ineffectiveness */
+    int combat_damage_dealt;    /* damage dealt this combat round (reset each round) */
+    int combat_damage_received; /* damage received this combat round (reset each round) */
 };
 
 /**

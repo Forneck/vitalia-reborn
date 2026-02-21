@@ -75,6 +75,9 @@ int attacks_per_round(struct char_data *ch);
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
 
+/* Percentage of max HP that counts as non-trivial damage for helplessness tracking */
+#define HELPLESSNESS_GRACE_PCT 10
+
 /* Check if a spell has the MAG_AURA flag */
 static int is_aura_spell(int spellnum)
 {
@@ -2008,6 +2011,14 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
 
+    /* HELPLESSNESS: Track per-round combat damage for futility detection */
+    if (dam > 0 && ch != victim) {
+        if (IS_NPC(ch) && ch->ai_data)
+            ch->ai_data->combat_damage_dealt += dam;
+        if (IS_NPC(victim) && victim->ai_data)
+            victim->ai_data->combat_damage_received += dam;
+    }
+
     /* EMOTION SYSTEM: Update pain based on damage taken (experimental feature) */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim) && victim->ai_data && dam > 0) {
         int pain_amount = 0;
@@ -2922,6 +2933,41 @@ void perform_violence(void)
             continue;
         if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
             continue;
+
+        /* HELPLESSNESS: Update accumulator after each combat round for NPCs */
+        if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch)) {
+            int grace_threshold = GET_MAX_HIT(ch) / HELPLESSNESS_GRACE_PCT; /* non-trivial = 10% max HP */
+            if (ch->ai_data->combat_damage_received >= grace_threshold) {
+                float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
+                if (eff < 1.0f)
+                    ch->ai_data->helplessness += 5.0f * (1.0f - eff);
+                else
+                    ch->ai_data->helplessness -= 3.0f;
+                ch->ai_data->helplessness = MIN(MAX(ch->ai_data->helplessness, 0.0f), 100.0f);
+            }
+            /* Reset per-round counters */
+            ch->ai_data->combat_damage_dealt = 0;
+            ch->ai_data->combat_damage_received = 0;
+
+            /* Attempt helplessness-driven flee if still in combat */
+            if (FIGHTING(ch) && GET_POS(ch) > POS_STUNNED && !MOB_FLAGGED(ch, MOB_BRAVE)) {
+                int flee_chance = 0;
+                if (ch->ai_data->helplessness >= 70.0f)
+                    flee_chance = 25; /* High helplessness: 25% flee chance */
+                else if (ch->ai_data->helplessness >= 40.0f)
+                    flee_chance = 10; /* Moderate helplessness: 10% flee chance */
+
+                if (flee_chance > 0 && rand_number(1, 100) <= flee_chance) {
+                    act("$n percebe que não consegue avançar nesta luta e recua!", TRUE, ch, 0, 0, TO_ROOM);
+                    do_flee(ch, NULL, 0, 0);
+                    if (ch->ai_data) {
+                        ch->ai_data->quest_posting_frustration_timer = 6;
+                        if (MOB_FLAGGED(ch, MOB_SENTINEL))
+                            ch->ai_data->duty_frustration_timer = 6;
+                    }
+                }
+            }
+        }
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";

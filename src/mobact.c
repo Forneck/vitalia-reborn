@@ -730,6 +730,16 @@ void mobile_activity(void)
             ch->ai_data->quest_posting_frustration_timer--;
         }
 
+        /* HELPLESSNESS: decay faster out of combat, slower in combat */
+        if (ch->ai_data && ch->ai_data->helplessness > 0.0f) {
+            if (!FIGHTING(ch))
+                ch->ai_data->helplessness -= 5.0f; /* Faster decay out of combat */
+            else
+                ch->ai_data->helplessness -= 1.0f; /* Slow passive decay in combat */
+            if (ch->ai_data->helplessness < 0.0f)
+                ch->ai_data->helplessness = 0.0f;
+        }
+
         /* RFC-0003 §7.2: Regenerate Shadow Timeline cognitive capacity */
         /* Cognitive cost regenerates naturally over time */
         if (ch->ai_data) {
