@@ -557,6 +557,13 @@ void mob_emotion_activity(void)
             if (ch->ai_data->emotion_sadness >= CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD) {
                 social_chance -= 15; /* -15% for high sadness (withdrawn) */
             }
+            /* Extraversion (E) modulates social action probability.
+             * High E (sociable) increases the chance; low E (introverted) reduces it.
+             * Formula: E_final ∈ [0,1] → modifier = (E_final - 0.5) * 20 ∈ [-10, +10].
+             * This is a gain-rate modulation, not an emotion injection. */
+            float E_final = sec_get_extraversion_final(ch);
+            int e_mod = (int)((E_final - SEC_E_SOCIAL_CENTER) * SEC_E_SOCIAL_SCALE);
+            social_chance += e_mod;
             /* Ensure social_chance stays within reasonable bounds */
             social_chance = MAX(1, MIN(social_chance, 95));
         }

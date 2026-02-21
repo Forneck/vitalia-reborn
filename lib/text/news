@@ -16,6 +16,17 @@
    same tick) by requiring any chosen social category to carry at least
    60 % of the dominant SEC emotional weight.
 
+   Implemented OCEAN Agreeableness (A) and Extraversion (E) as structural
+   personality modulators:
+   - Agreeableness damps anger gain when attacked: high-A mobs absorb
+     conflict without escalating (Anger_gain *= 1.2 - A).
+   - Agreeableness accelerates anger decay (forgiveness): high-A mobs
+     release anger faster toward baseline.
+   - Extraversion modulates social action probability: high-E mobs
+     interact more frequently; low-E mobs are more reserved.
+   Traits never inject emotional values; they only adjust gain/decay rates,
+   preserving SEC energy conservation.
+
    Correções de estabilidade e de bugs.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n

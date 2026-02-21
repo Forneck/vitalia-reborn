@@ -31,6 +31,7 @@
 #include "graph.h"
 #include "genolc.h"
 #include "dg_scripts.h"
+#include "sec.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -6170,9 +6171,30 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
 
-    /* Being attacked increases fear and anger */
+    /* Being attacked increases fear and anger.
+     *
+     * Agreeableness (A) damps the anger gain: high-A mobs absorb conflict
+     * without escalating.  Factor = (1.2 - A) ∈ [0.2, 1.2].
+     * This is a modulation of the gain rate, never a direct injection.
+     * Formula: Anger_gain *= (1.2 - A_final).
+     */
+    int raw_anger_gain = rand_number(10, 20);
+    float A_final = sec_get_agreeableness_final(mob);
+    float anger_factor = SEC_A_ANGER_DAMP_MAX - A_final;
+    if (anger_factor < SEC_A_ANGER_DAMP_MIN)
+        anger_factor = SEC_A_ANGER_DAMP_MIN;
+    if (anger_factor > SEC_A_ANGER_DAMP_MAX)
+        anger_factor = SEC_A_ANGER_DAMP_MAX;
+    int scaled_anger_gain = (int)(raw_anger_gain * anger_factor);
+    if (scaled_anger_gain < 1)
+        scaled_anger_gain = 1;
+
     adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
-    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, scaled_anger_gain);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("OCEAN-A: mob=%s(#%d) A_final=%.2f anger_factor=%.2f raw_anger=%d scaled=%d", GET_NAME(mob),
+             GET_MOB_VNUM(mob), A_final, anger_factor, raw_anger_gain, scaled_anger_gain);
 
     /* Decreases happiness and trust */
     adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 15));
@@ -6481,7 +6503,13 @@ void update_mob_emotion_passive(struct char_data *mob)
         adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, MAX(1, base_increase)));
     }
 
-    /* Anger decays toward alignment-based baseline */
+    /* Anger decays toward alignment-based baseline.
+     *
+     * Agreeableness (A) accelerates forgiveness: high-A mobs let go of anger
+     * faster.  Decay multiplier = (0.8 + A_final) ∈ [0.8, 1.8].
+     * The scale is applied after all other multipliers so it does not
+     * interact multiplicatively with the extreme-emotion or global-rate factors.
+     */
     int anger_baseline = IS_EVIL(mob) ? 35 : (IS_GOOD(mob) ? 15 : 25);
     if (mob->ai_data->emotion_anger > anger_baseline) {
         int base_decay = CONFIG_EMOTION_DECAY_RATE_ANGER; /* Default: 2 */
@@ -6489,6 +6517,12 @@ void update_mob_emotion_passive(struct char_data *mob)
             base_decay = (base_decay * extreme_multiplier) / 100;
         }
         base_decay = (base_decay * global_multiplier) / 100;
+        /* Agreeableness: high A → faster forgiveness, low A → slower. */
+        float A_final = sec_get_agreeableness_final(mob);
+        float forgive_scale = SEC_A_FORGIVE_BASE + A_final;
+        base_decay = (int)(base_decay * forgive_scale);
+        if (base_decay < 1)
+            base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_anger < anger_baseline) {
         int base_increase = CONFIG_EMOTION_DECAY_RATE_ANGER / 2;

@@ -84,6 +84,31 @@
  */
 #define SEC_AROUSAL_EPSILON 0.05f
 
+/* ── OCEAN A/E modulation constants ─────────────────────────────────────── */
+
+/**
+ * Agreeableness anger-gain damping: Anger_gain *= (SEC_A_ANGER_DAMP_MAX - A_final).
+ * At A=0: gain * SEC_A_ANGER_DAMP_MAX (full escalation).
+ * At A=1: gain * SEC_A_ANGER_DAMP_MIN (minimal escalation).
+ */
+#define SEC_A_ANGER_DAMP_MAX 1.2f
+#define SEC_A_ANGER_DAMP_MIN 0.2f
+
+/**
+ * Agreeableness forgiveness decay: decay *= (SEC_A_FORGIVE_BASE + A_final).
+ * At A=0: decay * SEC_A_FORGIVE_BASE (slowest forgiveness).
+ * At A=1: decay * (SEC_A_FORGIVE_BASE + 1.0) (fastest forgiveness).
+ */
+#define SEC_A_FORGIVE_BASE 0.8f
+
+/**
+ * Extraversion social-probability sensitivity.
+ * Social chance modifier = (E_final - SEC_E_SOCIAL_CENTER) * SEC_E_SOCIAL_SCALE.
+ * Range: [-SEC_E_SOCIAL_SCALE/2, +SEC_E_SOCIAL_SCALE/2] percentage points.
+ */
+#define SEC_E_SOCIAL_CENTER 0.5f
+#define SEC_E_SOCIAL_SCALE 20.0f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
