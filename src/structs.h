@@ -1235,6 +1235,29 @@ struct emotion_memory {
     sh_int moral_regret_level;     /* How much regret after action (0-100) computed from emotion changes */
 };
 
+/**
+ * SEC – Sistema de Emoções Concorrentes
+ * Internal emotional state derived from the 4D Arousal partition.
+ * All values ∈ [0.0, 1.0].  Only sec.c may write these fields.
+ */
+struct sec_state {
+    float fear;         /**< Projected fear intensity from Arousal partition */
+    float anger;        /**< Projected anger intensity from Arousal partition */
+    float happiness;    /**< Projected happiness intensity from Arousal partition */
+    float helplessness; /**< Smoothed helplessness: (1 − Dominance_normalised) */
+    float disgust;      /**< Persistent disgust trait (mirrors emotion_disgust) */
+};
+
+/**
+ * SEC personality baseline: passive-decay convergence target.
+ * Initialised from the mob's emotional profile.
+ */
+struct sec_baseline {
+    float fear_base;      /**< Resting fear level ∈ [0.0, 1.0] */
+    float anger_base;     /**< Resting anger level ∈ [0.0, 1.0] */
+    float happiness_base; /**< Resting happiness level ∈ [0.0, 1.0] */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics;       /* Contém todos os genes. */
     struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
@@ -1348,6 +1371,15 @@ struct mob_ai_data {
      * The combat target (FIGHTING) always takes priority and resets these fields. */
     long last_4d_target_id;  /* Entity ID of the last idle fallback target (0 = none) */
     int last_4d_target_type; /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+
+    /* Helplessness accumulator - combat futility detection (not an emotion, not player-facing) */
+    float helplessness;         /* 0.0-100.0: accumulated combat ineffectiveness */
+    int combat_damage_dealt;    /* damage dealt this combat round (reset each round) */
+    int combat_damage_received; /* damage received this combat round (reset each round) */
+
+    /* SEC – Sistema de Emoções Concorrentes */
+    struct sec_state sec;      /* Current SEC emotional state (written only by sec.c) */
+    struct sec_baseline sec_base; /* Personality baseline for passive decay */
 };
 
 /**

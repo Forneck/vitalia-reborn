@@ -75,6 +75,9 @@ int attacks_per_round(struct char_data *ch);
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
 
+/* Percentage of max HP that counts as non-trivial damage for helplessness tracking */
+#define HELPLESSNESS_GRACE_PCT 10
+
 /* Check if a spell has the MAG_AURA flag */
 static int is_aura_spell(int spellnum)
 {
@@ -2008,6 +2011,16 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
 
+    /* HELPLESSNESS: Track per-round combat damage for futility detection.
+     * Only count when attacker and victim are actively fighting each other
+     * to avoid leaking non-combat or cross-fight damage into the accumulator. */
+    if (dam > 0 && ch != victim) {
+        if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch) == victim)
+            ch->ai_data->combat_damage_dealt += dam;
+        if (IS_NPC(victim) && victim->ai_data && FIGHTING(victim) == ch)
+            victim->ai_data->combat_damage_received += dam;
+    }
+
     /* EMOTION SYSTEM: Update pain based on damage taken (experimental feature) */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim) && victim->ai_data && dam > 0) {
         int pain_amount = 0;
@@ -2922,6 +2935,26 @@ void perform_violence(void)
             continue;
         if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
             continue;
+
+        /* HELPLESSNESS: Update accumulator after each combat round for NPCs.
+         * Always reset per-round counters so they don't leak into the next fight. */
+        if (IS_NPC(ch) && ch->ai_data) {
+            if (FIGHTING(ch)) {
+                /* non-trivial = HELPLESSNESS_GRACE_PCT% of max HP (ceiling), at least 1 */
+                int grace_threshold = MAX(1, (GET_MAX_HIT(ch) * HELPLESSNESS_GRACE_PCT + 99) / 100);
+                if (ch->ai_data->combat_damage_received >= grace_threshold) {
+                    float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
+                    if (eff < 1.0f)
+                        ch->ai_data->helplessness += 5.0f * (1.0f - eff);
+                    else
+                        ch->ai_data->helplessness -= 3.0f;
+                    ch->ai_data->helplessness = MIN(MAX(ch->ai_data->helplessness, 0.0f), 100.0f);
+                }
+            }
+            /* Reset per-round counters regardless of combat state */
+            ch->ai_data->combat_damage_dealt = 0;
+            ch->ai_data->combat_damage_received = 0;
+        }
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";
