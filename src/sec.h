@@ -4,7 +4,7 @@
  *
  * A deterministic, 4D-driven internal emotional inference layer for mobs.
  * SEC receives post-hysteresis 4D results and partitions Arousal into
- * competing emotional projections (fear, anger, happiness), maintaining
+ * competing emotional projections (fear, sadness, anger, happiness), maintaining
  * bounded emotional state with passive decay toward a personality baseline.
  *
  * Design constraints:
@@ -18,7 +18,7 @@
  *   Layer              Timescale    Rate    Purpose
  *   ─────────────────  ──────────   ──────  ───────────────────────────────
  *   Arousal partition  Fast         —       Active state projection (V,D,A)
- *   Emotional smooth.  Medium       α≈0.40  Behavioral continuity (F,An,H)
+ *   Emotional smooth.  Medium       α≈0.40  Behavioral continuity (F,Sd,An,H)
  *   Passive decay      Slow         λ=0.05  Homeostatic convergence to base
  *   Persistent trait   Very slow    δ=0.01  Structural memory (Disgust)
  *

@@ -7,12 +7,12 @@
  *
  * Timescales:
  *   Fast      – Arousal partition computed from 4D axes every tick.
- *   Medium    – Emotional smoothing (α) applied to fear/anger/happiness and
+ *   Medium    – Emotional smoothing (α) applied to fear/sadness/anger/happiness and
  *               helplessness, providing behavioral continuity.
  *   Slow      – Passive decay (λ) toward personality baseline when A < ε.
  *   Very slow – Persistent trait update (δ) for Disgust.
  *
- * Partition guarantee: fear_target + anger_target + happiness_target = A ∈ [0,1].
+ * Partition guarantee: fear_target + sadness_target + anger_target + happiness_target = A ∈ [0,1].
  * After α smoothing the smoothed values may temporarily deviate from A while
  * converging — the bound [0,1] is always enforced by clamp.
  * Disgust is structurally independent of the Arousal partition.
@@ -37,7 +37,7 @@
 #define SEC_DECAY_LAMBDA 0.05f
 
 /** Emotional-smoothing rate α (medium timescale): applied each tick to
- *  fear, anger, and happiness projections for behavioral continuity. */
+ *  fear, sadness, anger, and happiness projections for behavioral continuity. */
 #define SEC_EMOTION_ALPHA 0.40f
 
 /** Helplessness exponential-smoothing rate (medium-fast timescale). */
