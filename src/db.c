@@ -4710,6 +4710,12 @@ static void load_default_config(void)
     CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = conscientiousness_reaction_delay;
     CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = conscientiousness_moral_weight;
     CONFIG_CONSCIENTIOUSNESS_DEBUG = conscientiousness_debug;
+
+    /* Big Five (OCEAN) Personality - Phase 3: Agreeableness (A) and Extraversion (E) */
+    CONFIG_OCEAN_AE_K1 = ocean_ae_k1;
+    CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
+    CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
+    CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
 }
 
 void load_config(void)
@@ -5187,6 +5193,15 @@ void load_config(void)
                     snprintf(tmp, sizeof(tmp), "%s\r\n", line);
                     CONFIG_OK = strdup(tmp);
                 }
+                /* Big Five Phase 3: OCEAN A/E SEC modulation coefficients */
+                else if (!str_cmp(tag, "ocean_ae_k1"))
+                    CONFIG_OCEAN_AE_K1 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k2"))
+                    CONFIG_OCEAN_AE_K2 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k3"))
+                    CONFIG_OCEAN_AE_K3 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k4"))
+                    CONFIG_OCEAN_AE_K4 = LIMIT(num, 0, 100);
                 break;
 
             case 'p':

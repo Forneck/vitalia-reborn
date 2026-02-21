@@ -25,6 +25,7 @@
 #include "sysdep.h"
 #include "structs.h"
 #include "utils.h"
+#include "db.h"
 #include "sec.h"
 
 /* ── Tuning constants ────────────────────────────────────────────────────── */
@@ -216,14 +217,11 @@ float sec_get_target_bias(struct char_data *mob, struct char_data *target)
 /* ── OCEAN Phase 3: Agreeableness & Extraversion final value getters ──────── */
 
 /*
- * Tuning constants for emotional modulation of A and E.
- * |mod| is capped at SEC_OCEAN_MOD_CAP to guarantee no personality inversion.
+ * Maximum |emotional modulation| for A and E.
+ * Ensures personality cannot be fully inverted by a single emotional spike.
+ * k1-k4 are configurable via cedit; this cap is a hard structural guarantee.
  */
-#define SEC_OCEAN_MOD_CAP 0.10f /* Maximum |emotional modulation| for A and E */
-#define SEC_OCEAN_K1 0.10f      /* E modulation: happiness coefficient */
-#define SEC_OCEAN_K2 0.10f      /* E modulation: fear coefficient */
-#define SEC_OCEAN_K3 0.10f      /* A modulation: happiness coefficient */
-#define SEC_OCEAN_K4 0.10f      /* A modulation: anger coefficient */
+#define SEC_OCEAN_MOD_CAP 0.10f
 
 float sec_get_agreeableness_final(struct char_data *mob)
 {
@@ -236,8 +234,11 @@ float sec_get_agreeableness_final(struct char_data *mob)
     float base = p->agreeableness;
     float builder_mod = (float)p->agreeableness_modifier / 100.0f;
 
-    /* A_mod = k3*happiness - k4*anger, capped at ±SEC_OCEAN_MOD_CAP */
-    float a_mod = SEC_OCEAN_K3 * s->happiness - SEC_OCEAN_K4 * s->anger;
+    /* A_mod = k3*happiness - k4*anger, capped at ±SEC_OCEAN_MOD_CAP.
+     * k3 and k4 are server-configurable via cedit (default 10 = 0.10). */
+    float k3 = (float)CONFIG_OCEAN_AE_K3 / 100.0f;
+    float k4 = (float)CONFIG_OCEAN_AE_K4 / 100.0f;
+    float a_mod = k3 * s->happiness - k4 * s->anger;
     a_mod = sec_clamp(a_mod, -SEC_OCEAN_MOD_CAP, SEC_OCEAN_MOD_CAP);
 
     return sec_clamp(base + builder_mod + a_mod, 0.0f, 1.0f);
@@ -254,8 +255,11 @@ float sec_get_extraversion_final(struct char_data *mob)
     float base = p->extraversion;
     float builder_mod = (float)p->extraversion_modifier / 100.0f;
 
-    /* E_mod = k1*happiness - k2*fear, capped at ±SEC_OCEAN_MOD_CAP */
-    float e_mod = SEC_OCEAN_K1 * s->happiness - SEC_OCEAN_K2 * s->fear;
+    /* E_mod = k1*happiness - k2*fear, capped at ±SEC_OCEAN_MOD_CAP.
+     * k1 and k2 are server-configurable via cedit (default 10 = 0.10). */
+    float k1 = (float)CONFIG_OCEAN_AE_K1 / 100.0f;
+    float k2 = (float)CONFIG_OCEAN_AE_K2 / 100.0f;
+    float e_mod = k1 * s->happiness - k2 * s->fear;
     e_mod = sec_clamp(e_mod, -SEC_OCEAN_MOD_CAP, SEC_OCEAN_MOD_CAP);
 
     return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);

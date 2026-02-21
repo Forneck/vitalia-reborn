@@ -31,6 +31,7 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d);
 static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data *d);
+static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d);
 static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
@@ -291,6 +292,12 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight = CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT;
     OLC_CONFIG(d)->emotion_config.conscientiousness_debug = CONFIG_CONSCIENTIOUSNESS_DEBUG;
 
+    /* Big Five (OCEAN) Personality - Phase 3: A/E SEC modulation coefficients */
+    OLC_CONFIG(d)->emotion_config.ocean_ae_k1 = CONFIG_OCEAN_AE_K1;
+    OLC_CONFIG(d)->emotion_config.ocean_ae_k2 = CONFIG_OCEAN_AE_K2;
+    OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = CONFIG_OCEAN_AE_K3;
+    OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = CONFIG_OCEAN_AE_K4;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -541,6 +548,12 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = OLC_CONFIG(d)->emotion_config.conscientiousness_reaction_delay;
     CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight;
     CONFIG_CONSCIENTIOUSNESS_DEBUG = OLC_CONFIG(d)->emotion_config.conscientiousness_debug;
+
+    /* Big Five (OCEAN) Personality - Phase 3: A/E SEC modulation coefficients */
+    CONFIG_OCEAN_AE_K1 = OLC_CONFIG(d)->emotion_config.ocean_ae_k1;
+    CONFIG_OCEAN_AE_K2 = OLC_CONFIG(d)->emotion_config.ocean_ae_k2;
+    CONFIG_OCEAN_AE_K3 = OLC_CONFIG(d)->emotion_config.ocean_ae_k3;
+    CONFIG_OCEAN_AE_K4 = OLC_CONFIG(d)->emotion_config.ocean_ae_k4;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -1222,6 +1235,16 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "conscientiousness_moral_weight = %d\n", CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT);
     fprintf(fl, "conscientiousness_debug = %d\n\n", CONFIG_CONSCIENTIOUSNESS_DEBUG);
 
+    /* Big Five Phase 3: Agreeableness (A) and Extraversion (E) */
+    fprintf(fl, "* Big Five (OCEAN) - Phase 3: A/E SEC Modulation Coefficients\n");
+    fprintf(fl, "* E_mod = k1*happiness - k2*fear  (capped +/-0.10)\n");
+    fprintf(fl, "* A_mod = k3*happiness - k4*anger (capped +/-0.10)\n");
+    fprintf(fl, "* Values stored *100 (actual = value/100.0)\n");
+    fprintf(fl, "ocean_ae_k1 = %d\n", CONFIG_OCEAN_AE_K1);
+    fprintf(fl, "ocean_ae_k2 = %d\n", CONFIG_OCEAN_AE_K2);
+    fprintf(fl, "ocean_ae_k3 = %d\n", CONFIG_OCEAN_AE_K3);
+    fprintf(fl, "ocean_ae_k4 = %d\n\n", CONFIG_OCEAN_AE_K4);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1517,11 +1540,12 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sG%s) Emotion Decay Rates\r\n"
                     "%sH%s) Big Five (OCEAN) - Neuroticism Configuration\r\n"
                     "%sI%s) Big Five (OCEAN) - Conscientiousness Configuration\r\n"
+                    "%sJ%s) Big Five (OCEAN) - A/E SEC Modulation Coefficients (k1-k4)\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
                     grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm,
-                    grn, nrm);
+                    grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -1649,6 +1673,39 @@ static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data 
                     OLC_CONFIG(d)->emotion_config.conscientiousness_debug ? "ON" : "OFF", nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_BIGFIVE_CONSCIENTIOUSNESS_SUBMENU;
+}
+
+/* Display Big Five Phase 3: OCEAN A/E modulation coefficients menu */
+static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Big Five (OCEAN) Personality - Phase 3: A/E SEC Modulation Coefficients\r\n"
+                    "---\r\n"
+                    "These coefficients tune how emotional state (SEC layer) modulates the\r\n"
+                    "Agreeableness (A) and Extraversion (E) final trait values each tick.\r\n"
+                    "\r\n"
+                    "Formulae (results capped at +/-0.10 before applying to trait_final):\r\n"
+                    "  E_mod = k1 * happiness - k2 * fear\r\n"
+                    "  A_mod = k3 * happiness - k4 * anger\r\n"
+                    "\r\n"
+                    "Values stored *100 (actual float = value/100.0). Range: 0-100.\r\n"
+                    "\r\n"
+                    "%s1%s) k1 - E modulation: happiness coeff: %s%d%s (default: 10 = 0.10)\r\n"
+                    "%s2%s) k2 - E modulation: fear coeff:      %s%d%s (default: 10 = 0.10)\r\n"
+                    "%s3%s) k3 - A modulation: happiness coeff: %s%d%s (default: 10 = 0.10)\r\n"
+                    "%s4%s) k4 - A modulation: anger coeff:     %s%d%s (default: 10 = 0.10)\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.ocean_ae_k1, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_ae_k2, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_ae_k3, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_ae_k4, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_BIGFIVE_OCEAN_AE_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3293,6 +3350,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     cedit_disp_bigfive_conscientiousness_submenu(d);
                     return;
 
+                case 'j':
+                case 'J':
+                    cedit_disp_bigfive_ocean_ae_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3832,6 +3894,33 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '4':
                     write_to_output(d, "\r\nEnter Debug Logging (0=OFF, 1=ON) : ");
                     OLC_MODE(d) = CEDIT_CONSCIENTIOUSNESS_DEBUG;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_BIGFIVE_OCEAN_AE_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter k1 (E happiness coeff *100, 0-100, default 10 = 0.10) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_AE_K1;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter k2 (E fear coeff *100, 0-100, default 10 = 0.10) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_AE_K2;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter k3 (A happiness coeff *100, 0-100, default 10 = 0.10) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_AE_K3;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter k4 (A anger coeff *100, 0-100, default 10 = 0.10) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_AE_K4;
                     return;
                 case 'q':
                 case 'Q':
@@ -4916,6 +5005,26 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_CONSCIENTIOUSNESS_DEBUG:
             OLC_CONFIG(d)->emotion_config.conscientiousness_debug = LIMIT(atoi(arg), 0, 1);
             cedit_disp_bigfive_conscientiousness_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_AE_K1:
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k1 = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_AE_K2:
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k2 = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_AE_K3:
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_AE_K4:
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
             break;
 
         default: /* We should never get here, but just in

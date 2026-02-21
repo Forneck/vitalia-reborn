@@ -555,6 +555,13 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_CONSCIENTIOUSNESS_MORAL_WEIGHT 182
 #define CEDIT_CONSCIENTIOUSNESS_DEBUG 183
 
+/* Big Five Phase 3: Agreeableness (A) and Extraversion (E) SEC modulation coefficients */
+#define CEDIT_BIGFIVE_OCEAN_AE_SUBMENU 184
+#define CEDIT_OCEAN_AE_K1 185
+#define CEDIT_OCEAN_AE_K2 186
+#define CEDIT_OCEAN_AE_K3 187
+#define CEDIT_OCEAN_AE_K4 188
+
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0
 #define HEDIT_CONFIRM_EDIT 1

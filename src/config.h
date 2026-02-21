@@ -117,6 +117,12 @@ extern int conscientiousness_reaction_delay;
 extern int conscientiousness_moral_weight;
 extern int conscientiousness_debug;
 
+/* Big Five Phase 3: Agreeableness (A) and Extraversion (E) SEC modulation coefficients */
+extern int ocean_ae_k1;
+extern int ocean_ae_k2;
+extern int ocean_ae_k3;
+extern int ocean_ae_k4;
+
 /*
  * Variables not controlled by cedit
  */

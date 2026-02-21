@@ -1062,16 +1062,16 @@ struct mob_genetics {
  * - High E (1.0): Sociable, initiates contact, high social payoff weighting
  */
 struct mob_personality {
-    float openness;          /* (O) Openness to experience - Future use (Phase 4) */
-    float conscientiousness; /* (C) Self-discipline/control - ACTIVE Phase 2 */
-    float extraversion;      /* (E) Social engagement - Trait_base, ACTIVE Phase 3 */
-    float agreeableness;     /* (A) Compassion/cooperation - Trait_base, ACTIVE Phase 3 */
-    float neuroticism;       /* (N) Emotional sensitivity - ACTIVE Phase 1 */
+    float openness;                     /* (O) Openness to experience - Future use (Phase 4) */
+    float conscientiousness;            /* (C) Self-discipline/control - ACTIVE Phase 2 */
+    float extraversion;                 /* (E) Social engagement - Trait_base, ACTIVE Phase 3 */
+    float agreeableness;                /* (A) Compassion/cooperation - Trait_base, ACTIVE Phase 3 */
+    float neuroticism;                  /* (N) Emotional sensitivity - ACTIVE Phase 1 */
     byte conscientiousness_initialized; /* Flag: 1 if C set (file/random), 0 if uninitialized */
     byte agreeableness_initialized;     /* Flag: 1 if A base set (file/random), 0 if uninitialized */
     byte extraversion_initialized;      /* Flag: 1 if E base set (file/random), 0 if uninitialized */
-    int agreeableness_modifier; /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
-    int extraversion_modifier;  /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
 };
 
 /**
@@ -1397,7 +1397,7 @@ struct mob_ai_data {
     int combat_damage_received; /* damage received this combat round (reset each round) */
 
     /* SEC – Sistema de Emoções Concorrentes */
-    struct sec_state sec;      /* Current SEC emotional state (written only by sec.c) */
+    struct sec_state sec;         /* Current SEC emotional state (written only by sec.c) */
     struct sec_baseline sec_base; /* Personality baseline for passive decay */
 };
 
@@ -2152,6 +2152,16 @@ struct emotion_config_data {
     int conscientiousness_reaction_delay;  /**< Reaction delay sensitivity β * 100 (default: 100 = 1.0) */
     int conscientiousness_moral_weight;    /**< Moral amplification factor * 100 (default: 100 = 1.0) */
     int conscientiousness_debug;           /**< Debug flag: show executive calculations (default: 0 = OFF) */
+
+    /* Big Five (OCEAN) Personality System - Phase 3: Agreeableness (A) and Extraversion (E) */
+    /* SEC emotional modulation coefficients - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    /* E_mod = k1*happiness - k2*fear  (capped ±0.10) */
+    /* A_mod = k3*happiness - k4*anger (capped ±0.10) */
+    int ocean_ae_k1; /**< E modulation: happiness coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k2; /**< E modulation: fear coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k3; /**< A modulation: happiness coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k4; /**< A modulation: anger coefficient * 100 (default: 10 = 0.10) */
 };
 
 /** Experimental Features configuration. */
