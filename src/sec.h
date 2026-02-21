@@ -4,7 +4,7 @@
  *
  * A deterministic, 4D-driven internal emotional inference layer for mobs.
  * SEC receives post-hysteresis 4D results and partitions Arousal into
- * competing emotional projections (fear, anger, happiness), maintaining
+ * competing emotional projections (fear, sadness, anger, happiness), maintaining
  * bounded emotional state with passive decay toward a personality baseline.
  *
  * Design constraints:
@@ -18,31 +18,31 @@
  *   Layer              Timescale    Rate    Purpose
  *   ─────────────────  ──────────   ──────  ───────────────────────────────
  *   Arousal partition  Fast         —       Active state projection (V,D,A)
- *   Emotional smooth.  Medium       α≈0.40  Behavioral continuity (F,An,H)
+ *   Emotional smooth.  Medium       α≈0.40  Behavioral continuity (F,Sd,An,H)
  *   Passive decay      Slow         λ=0.05  Homeostatic convergence to base
  *   Persistent trait   Very slow    δ=0.01  Structural memory (Disgust)
  *
  * Arousal partition (all values from post-hysteresis 4D state, normalised to [0, 1]):
- *   A = r->raw_arousal / 100  — pre-modulation projection (NOT the contextually
- *                               multiplied effective arousal; see Lateral Inhibition
- *                               section below for the rationale)
+ *   A = r->raw_arousal / 100  — pre-modulation projection
  *   D = (dominance + 100) / 200
  *   V = (valence  + 100) / 200
  *
- *   w_fear  = A * (1 − D)
- *   w_anger = A * D * (1 − V)
- *   w_happy = A * V * D
- *   → fear_target + anger_target + happiness_target = A  (guaranteed)
+ *   Tetradic 4-way split (quadrants in D×V space):
+ *   w_fear    = A * (1 − D) * V        — low dominance, high valence  (threat/uncertainty)
+ *   w_sadness = A * (1 − D) * (1 − V)  — low dominance, low valence   (passive loss / grief)
+ *   w_anger   = A * D * (1 − V)        — high dominance, low valence  (active loss / fight)
+ *   w_happy   = A * D * V              — high dominance, high valence  (approach / reward)
+ *   → fear_target + sadness_target + anger_target + happiness_target = A  (guaranteed)
  *
  * ── Lateral Inhibition and the Arousal Budget ─────────────────────────────
  *
- * The three competing SEC emotions (Fear, Anger, Happiness) share a single
+ * The four competing SEC emotions (Fear, Sadness, Anger, Happiness) share a single
  * Arousal budget A ∈ [0, 1].  True Lateral Inhibition requires that increasing
  * one emotion forces the others to decrease proportionally.  This is only
  * possible if the budget is strictly bounded.
  *
  * Raw-emotion invariant (enforced in adjust_emotion()):
- *   emotion_fear + emotion_anger + emotion_happiness <= 100  (one Arousal unit)
+ *   emotion_fear + emotion_sadness + emotion_anger + emotion_happiness <= 100  (one Arousal unit)
  *
  * SEC budget source: raw_arousal (pre-modulation) rather than the effective
  * arousal (post-modulation).  The contextual Arousal multiplier (combat
@@ -89,6 +89,8 @@
 #define SEC_DOMINANT_ANGER 2
 /** Happiness is the dominant SEC emotion. */
 #define SEC_DOMINANT_HAPPINESS 3
+/** Sadness is the dominant SEC emotion (low valence + low dominance / passive loss). */
+#define SEC_DOMINANT_SADNESS 4
 
 /**
  * Winner-Takes-All threshold: a social category's driving emotion must be
@@ -103,6 +105,24 @@
  * the WTA filter so all three use the same "emotionally inert" definition.
  */
 #define SEC_AROUSAL_EPSILON 0.05f
+
+/**
+ * sec_get_4d_modifier() weighting coefficients.
+ * Sadness has a stronger suppressive effect than helplessness because it
+ * represents a sustained passive-loss state (grief/apathy) rather than a
+ * momentary loss-of-control signal.  At sadness=1 the modifier is reduced
+ * by 0.8×0.5 = 0.40 (nearly the maximum downward range of the modifier).
+ */
+#define SEC_MOD_HELPLESSNESS_WEIGHT 0.5f /**< Helplessness contribution to 4D modifier suppression */
+#define SEC_MOD_SADNESS_WEIGHT 0.8f      /**< Sadness contribution to 4D modifier suppression */
+
+/**
+ * Lethargy suppression threshold: when sec_get_lethargy_bias() equals or
+ * exceeds this value the mob is strongly lethargic and skips all social
+ * pulse actions entirely.  Below this threshold the social chance is
+ * scaled down proportionally by the lethargy bias.
+ */
+#define SEC_LETHARGY_SUPPRESS_THRESHOLD 0.70f
 
 /* ── OCEAN A/E modulation constants ─────────────────────────────────────── */
 
@@ -280,6 +300,13 @@ float sec_get_4d_modifier(struct char_data *mob);
  * High fear + high helplessness → bias approaches 1.0.
  */
 float sec_get_flee_bias(struct char_data *mob);
+
+/**
+ * Return a lethargy bias ∈ [0.0, 1.0] driven by the sadness partition.
+ * High sadness → bias approaches 1.0, suppressing idle and aggressive pulses.
+ * This is the "Lethargy Buffer" that models grief, apathy, and post-loss states.
+ */
+float sec_get_lethargy_bias(struct char_data *mob);
 
 /**
  * Return a target-selection weight multiplier ∈ [0.5, 1.5].

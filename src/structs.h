@@ -1267,6 +1267,7 @@ struct sec_state {
     float fear;         /**< Projected fear intensity from Arousal partition */
     float anger;        /**< Projected anger intensity from Arousal partition */
     float happiness;    /**< Projected happiness intensity from Arousal partition */
+    float sadness;      /**< Projected sadness intensity: low valence + low dominance (passive loss) */
     float helplessness; /**< Smoothed helplessness: (1 − Dominance_normalised) */
     float disgust;      /**< Persistent disgust trait (mirrors emotion_disgust) */
 };
@@ -1279,6 +1280,7 @@ struct sec_baseline {
     float fear_base;      /**< Resting fear level ∈ [0.0, 1.0] */
     float anger_base;     /**< Resting anger level ∈ [0.0, 1.0] */
     float happiness_base; /**< Resting happiness level ∈ [0.0, 1.0] */
+    float sadness_base;   /**< Resting sadness level ∈ [0.0, 1.0] */
 };
 
 struct mob_ai_data {

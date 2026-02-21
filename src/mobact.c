@@ -420,7 +420,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 
         /* Classify the chosen social category by its primary SEC emotion.
          *
-         * Mapping rationale (SEC has three axes: Fear, Anger, Happiness):
+         * Mapping rationale (SEC now has four axes: Fear, Sadness, Anger, Happiness):
          *   HAPPINESS : positive/grateful/loving/playful/excited/triumphant —
          *               positive valence, typically high dominance.
          *   HAPPINESS : proud — pride = positive valence + high dominance.
@@ -428,10 +428,9 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
          *   ANGER     : aggressive/negative/mocking — negative valence,
          *               mid-to-high dominance (threat posture).
          *   ANGER     : envious — negative valence, mid-high dominance;
-         *               envy has aggression potential, not sadness.
-         *   FEAR      : fearful/submissive — low dominance, threat response.
-         *   FEAR      : sad/mourning — negative valence + low dominance
-         *               maps closest to the fear axis in the SEC triad.
+         *               envy has aggression potential.
+         *   FEAR      : fearful/submissive — low dominance + high valence (threat/uncertainty).
+         *   SADNESS   : sad/mourning — low valence + low dominance (passive loss / grief).
          *   NONE      : neutral/mixed, resting, respectful, curious, confused
          *               — contextual or cognitive signals that should not be
          *               restricted by the dominant emotional vector. */
@@ -443,9 +442,10 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
         } else if (social_list == aggressive_socials || social_list == negative_socials ||
                    social_list == mocking_socials || social_list == envious_socials) {
             social_emotion = SEC_DOMINANT_ANGER;
-        } else if (social_list == fearful_socials || social_list == submissive_socials || social_list == sad_socials ||
-                   social_list == mourning_socials) {
+        } else if (social_list == fearful_socials || social_list == submissive_socials) {
             social_emotion = SEC_DOMINANT_FEAR;
+        } else if (social_list == sad_socials || social_list == mourning_socials) {
+            social_emotion = SEC_DOMINANT_SADNESS;
         } else {
             social_emotion = SEC_DOMINANT_NONE; /* contextual/cognitive — no restriction */
         }
@@ -459,6 +459,9 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
             switch (dom_type) {
                 case SEC_DOMINANT_FEAR:
                     dom_val = sec_s->fear;
+                    break;
+                case SEC_DOMINANT_SADNESS:
+                    dom_val = sec_s->sadness;
                     break;
                 case SEC_DOMINANT_ANGER:
                     dom_val = sec_s->anger;
@@ -477,6 +480,8 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
                 chosen_val = sec_s->happiness;
             else if (social_emotion == SEC_DOMINANT_ANGER)
                 chosen_val = sec_s->anger;
+            else if (social_emotion == SEC_DOMINANT_SADNESS)
+                chosen_val = sec_s->sadness;
             else
                 chosen_val = sec_s->fear;
 
@@ -545,6 +550,17 @@ void mob_emotion_activity(void)
         int social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
 
         if (ch->ai_data) {
+            /* Lethargy Buffer: high SEC sadness strongly suppresses all social activity.
+             * A lethargic mob (sadness-dominant) withdraws from interaction — it will
+             * not perform socials unless the lethargy bias is low enough to allow it.
+             * Skip directly when lethargy_bias >= SEC_LETHARGY_SUPPRESS_THRESHOLD (strongly lethargic). */
+            float lethargy = sec_get_lethargy_bias(ch);
+            if (lethargy >= SEC_LETHARGY_SUPPRESS_THRESHOLD)
+                continue;
+            /* Moderate lethargy scales down the social chance proportionally. */
+            if (lethargy > 0.0f)
+                social_chance = (int)(social_chance * (1.0f - lethargy));
+
             /* High happiness increases social probability */
             if (ch->ai_data->emotion_happiness >= CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD) {
                 social_chance += 15; /* +15% for high happiness */
