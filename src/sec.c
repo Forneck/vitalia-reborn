@@ -62,7 +62,7 @@ static float sec_clamp(float f, float lo, float hi) { return f < lo ? lo : (f > 
 static const float sec_profile_baselines[EMOTION_PROFILE_NUM][3] = {
     /* 0 NEUTRAL    */ { 0.20f, 0.20f, 0.30f },
     /* 1 AGGRESSIVE */ { 0.10f, 0.60f, 0.15f },
-    /* 2 COWARDLY   */ { 0.60f, 0.10f, 0.10f },
+    /* 2 DEFENSIVE  */ { 0.60f, 0.10f, 0.10f },
     /* 3 BALANCED   */ { 0.25f, 0.25f, 0.35f },
     /* 4 SENSITIVE  */ { 0.35f, 0.15f, 0.40f },
     /* 5 CONFIDENT  */ { 0.10f, 0.30f, 0.45f },
@@ -116,20 +116,14 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
-    /* Partition weights — guarantee: w_fear+w_anger+w_happy = A. */
+    /* Partition weights — guarantee: w_fear + w_anger + w_happy = A. */
     float w_fear = A * (1.0f - D);
     float w_anger = A * D * (1.0f - V);
     float w_happy = A * V * D;
-    float total = w_fear + w_anger + w_happy;
 
-    float t_fear, t_anger, t_happy;
-    if (total > 0.0f) {
-        t_fear = sec_clamp(A * (w_fear / total), 0.0f, 1.0f);
-        t_anger = sec_clamp(A * (w_anger / total), 0.0f, 1.0f);
-        t_happy = sec_clamp(A * (w_happy / total), 0.0f, 1.0f);
-    } else {
-        t_fear = t_anger = t_happy = 0.0f;
-    }
+    float t_fear = sec_clamp(w_fear, 0.0f, 1.0f);
+    float t_anger = sec_clamp(w_anger, 0.0f, 1.0f);
+    float t_happy = sec_clamp(w_happy, 0.0f, 1.0f);
 
     /* ── Medium timescale: Emotional smoothing (α) ──────────────────────── */
 
