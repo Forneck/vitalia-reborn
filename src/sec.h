@@ -23,7 +23,9 @@
  *   Persistent trait   Very slow    δ=0.01  Structural memory (Disgust)
  *
  * Arousal partition (all values from post-hysteresis 4D state, normalised to [0, 1]):
- *   A = r->arousal / 100       — contextually deformed (environment, combat, helplessness)
+ *   A = r->raw_arousal / 100  — pre-modulation projection (NOT the contextually
+ *                               multiplied effective arousal; see Lateral Inhibition
+ *                               section below for the rationale)
  *   D = (dominance + 100) / 200
  *   V = (valence  + 100) / 200
  *
@@ -31,6 +33,24 @@
  *   w_anger = A * D * (1 − V)
  *   w_happy = A * V * D
  *   → fear_target + anger_target + happiness_target = A  (guaranteed)
+ *
+ * ── Lateral Inhibition and the Arousal Budget ─────────────────────────────
+ *
+ * The three competing SEC emotions (Fear, Anger, Happiness) share a single
+ * Arousal budget A ∈ [0, 1].  True Lateral Inhibition requires that increasing
+ * one emotion forces the others to decrease proportionally.  This is only
+ * possible if the budget is strictly bounded.
+ *
+ * Raw-emotion invariant (enforced in adjust_emotion()):
+ *   emotion_fear + emotion_anger + emotion_happiness <= 100  (one Arousal unit)
+ *
+ * SEC budget source: raw_arousal (pre-modulation) rather than the effective
+ * arousal (post-modulation).  The contextual Arousal multiplier (combat
+ * intensity, crowd density) can inflate the effective arousal to 100 in nearly
+ * every combat tick, which would fix A = 1.0 permanently and make Lateral
+ * Inhibition mathematically impossible — multiple partition slots could
+ * simultaneously saturate their ceiling.  Using raw_arousal keeps A
+ * proportional to the mob's intrinsic emotional state.
  *
  * Emotional smoothing (α) applied after partition each tick:
  *   emotion_new = emotion_old * (1 − α) + target * α

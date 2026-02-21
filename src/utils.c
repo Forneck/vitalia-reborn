@@ -6016,6 +6016,44 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     /* Convert to integer and ensure bounds [0, 100] */
     *emotion_ptr = (int)(final_emotion + 0.5f); /* Round to nearest int */
     *emotion_ptr = URANGE(0, *emotion_ptr, 100);
+
+    /* PIPELINE STEP 4: Lateral Inhibition for the competing triad (fear/anger/happiness).
+     * The three SEC emotions compete for a shared Arousal budget of 100 units.
+     * When one increases above the budget ceiling, excess energy is drained from
+     * the other two proportionally — this is Lateral Inhibition.
+     *
+     * Invariant enforced: emotion_fear + emotion_anger + emotion_happiness <= 100.
+     * Only applies when a triad emotion is *increased* (amount > 0), keeping the
+     * inhibition directional and preventing decay from triggering inhibition. */
+    if (amount > 0 && (emotion_type == EMOTION_TYPE_FEAR || emotion_type == EMOTION_TYPE_ANGER ||
+                       emotion_type == EMOTION_TYPE_HAPPINESS)) {
+        /* total includes the newly-updated *emotion_ptr (already committed above). */
+        int total = mob->ai_data->emotion_fear + mob->ai_data->emotion_anger + mob->ai_data->emotion_happiness;
+        int excess = total - 100;
+        if (excess > 0) {
+            int *a_ptr, *b_ptr;
+            if (emotion_type == EMOTION_TYPE_FEAR) {
+                a_ptr = &mob->ai_data->emotion_anger;
+                b_ptr = &mob->ai_data->emotion_happiness;
+            } else if (emotion_type == EMOTION_TYPE_ANGER) {
+                a_ptr = &mob->ai_data->emotion_fear;
+                b_ptr = &mob->ai_data->emotion_happiness;
+            } else {
+                a_ptr = &mob->ai_data->emotion_fear;
+                b_ptr = &mob->ai_data->emotion_anger;
+            }
+            int sum_others = *a_ptr + *b_ptr;
+            if (sum_others > 0) {
+                int reduce_a = excess * *a_ptr / sum_others;
+                int reduce_b = excess - reduce_a; /* ensures exact total */
+                *a_ptr = URANGE(0, *a_ptr - reduce_a, 100);
+                *b_ptr = URANGE(0, *b_ptr - reduce_b, 100);
+            } else {
+                /* Both competitors are at 0; absorb the excess from the new emotion. */
+                *emotion_ptr = URANGE(0, *emotion_ptr - excess, 100);
+            }
+        }
+    }
 }
 
 /**
