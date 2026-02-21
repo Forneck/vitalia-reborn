@@ -108,12 +108,11 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
 
     /* ── Fast timescale: Arousal partition ─────────────────────────────── */
 
-    /* A: use the established Calculated Arousal (same value shown in do_stat
-     * and used for Conscientiousness modulation) — derived from the 7
-     * high-activation emotions (fear, anger, horror, pain, happiness,
-     * excitement, courage), already normalised to [0, 1].
-     * D and V still come from the post-hysteresis 4D state. */
-    float A = calculate_emotional_arousal(mob);
+    /* A: use the post-hysteresis 4D arousal — it is contextually deformed by
+     * environment, combat intensity, and the helplessness step, so it better
+     * reflects the mob's actual activation level than a raw emotion average.
+     * D and V also come from the same post-hysteresis 4D state. */
+    float A = sec_clamp(r->arousal / 100.0f, 0.0f, 1.0f);
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
@@ -162,8 +161,8 @@ void sec_passive_decay(struct char_data *mob)
     struct mob_ai_data *ai = mob->ai_data;
 
     /* Guard: only decay when the mob is calm (low arousal).
-     * Uses the same Calculated Arousal as sec_update() for consistency. */
-    float A = calculate_emotional_arousal(mob);
+     * Uses the same post-hysteresis 4D arousal as sec_update(). */
+    float A = sec_clamp(ai->last_4d_state.arousal / 100.0f, 0.0f, 1.0f);
     if (A >= SEC_AROUSAL_EPSILON)
         return;
 

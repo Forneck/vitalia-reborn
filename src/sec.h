@@ -22,10 +22,8 @@
  *   Passive decay      Slow         λ=0.05  Homeostatic convergence to base
  *   Persistent trait   Very slow    δ=0.01  Structural memory (Disgust)
  *
- * Arousal partition (A from calculate_emotional_arousal(), D and V from 4D):
- *   A = calculate_emotional_arousal(mob)   [0, 1]
- *       (fear + anger + horror + pain + happiness + excitement + courage) / 700
- *       — consistent with the Calculated Arousal displayed by do_stat
+ * Arousal partition (all values from post-hysteresis 4D state, normalised to [0, 1]):
+ *   A = r->arousal / 100       — contextually deformed (environment, combat, helplessness)
  *   D = (dominance + 100) / 200
  *   V = (valence  + 100) / 200
  *
