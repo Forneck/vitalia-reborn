@@ -708,8 +708,41 @@ void mobile_activity(void)
             }
 
             ch->ai_data->last_4d_state = compute_emotion_4d_state(ch, target_4d);
+
+            /* HELPLESSNESS: post-4D deformation of Dominance and Arousal axes.
+             * D_final = D_base * (1 - H/100)  → Helplessness erodes perceived control.
+             * A_final = A_base * (1 - H/150)  → Helplessness slightly dampens urgency.
+             * Behavior naturally shifts toward disengagement as the 4D region changes.
+             * Only affects the effective axes; raw values are preserved for auditing. */
+            if (ch->ai_data->helplessness > 0.0f && ch->ai_data->last_4d_state.valid) {
+                float h_factor_d = MAX(0.0f, 1.0f - (ch->ai_data->helplessness / 100.0f));
+                float h_factor_a = MAX(0.0f, 1.0f - (ch->ai_data->helplessness / 150.0f));
+                ch->ai_data->last_4d_state.dominance *= h_factor_d;
+                ch->ai_data->last_4d_state.arousal *= h_factor_a;
+                if (CONFIG_MOB_4D_DEBUG)
+                    log1("4D-HELPLESSNESS: mob=%s(#%d) H=%.1f D_deformed=%.1f A_deformed=%.1f", GET_NAME(ch),
+                         GET_MOB_VNUM(ch), ch->ai_data->helplessness, ch->ai_data->last_4d_state.dominance,
+                         ch->ai_data->last_4d_state.arousal);
+            }
+
             if (CONFIG_MOB_4D_DEBUG)
                 log_4d_state(ch, target_4d, &ch->ai_data->last_4d_state);
+        }
+
+        if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
+            ch->ai_data->duty_frustration_timer--;
+        }
+
+        if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
+            ch->ai_data->quest_posting_frustration_timer--;
+        }
+
+        /* HELPLESSNESS: decay faster out of combat, slower in combat.
+         * Placed before the FIGHTING/AWAKE continue so fighting mobs also decay. */
+        if (ch->ai_data && ch->ai_data->helplessness > 0.0f) {
+            ch->ai_data->helplessness -= FIGHTING(ch) ? 1.0f : 5.0f;
+            if (ch->ai_data->helplessness < 0.0f)
+                ch->ai_data->helplessness = 0.0f;
         }
 
         if (FIGHTING(ch) || !AWAKE(ch))
@@ -721,14 +754,6 @@ void mobile_activity(void)
 
         /* Check if mob can level up from gained experience */
         check_mob_level_up(ch);
-
-        if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
-            ch->ai_data->duty_frustration_timer--;
-        }
-
-        if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
-            ch->ai_data->quest_posting_frustration_timer--;
-        }
 
         /* RFC-0003 §7.2: Regenerate Shadow Timeline cognitive capacity */
         /* Cognitive cost regenerates naturally over time */
