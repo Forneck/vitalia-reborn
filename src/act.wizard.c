@@ -1380,8 +1380,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, memory_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
-                                               "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
+            const char *interaction_names[] = {"Attacked",   "Healed",   "ReceivedItem",   "StolenFrom",
+                                               "Rescued",    "Assisted", "Social+",        "Social-",
+                                               "SocialViol", "AllyDied", "WitnessedDeath", "QuestComplete",
+                                               "QuestFail",  "Betrayal", "OffensiveMagic", "SupportMagic"};
 
             /* Safety check: ensure memory_index is within valid range */
             if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
@@ -1396,8 +1398,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             }
 
             if (memory_count > 0) {
-                send_to_char(ch, "%sEmotion Memory:%s (%d/10 slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
-                             memory_count);
+                send_to_char(ch, "%sEmotion Memory:%s (%d/%d slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                             memory_count, EMOTION_MEMORY_SIZE);
 
                 /* Display memories in chronological order (oldest to newest) */
                 for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
@@ -1408,7 +1410,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 9)
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 15)
                                                            ? interaction_names[mem->interaction_type]
                                                            : "Unknown";
 

@@ -460,11 +460,8 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
 
                 /* Update witness emotions based on the death */
                 if (IS_NPC(ch) && witness->ai_data) {
-                    /* Witnessing mob death in trap */
+                    /* Witnessing mob death in trap: ally case already handled inside mob_mourn_death above. */
                     if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
-                        /* Ally died in trap */
-                        update_mob_emotion_ally_died(witness, ch);
-
                         /* Safety check: emotion update shouldn't cause extraction, but verify */
                         if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
                             continue;
