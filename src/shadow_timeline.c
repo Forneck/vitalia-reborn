@@ -1618,7 +1618,7 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         /* OCEAN Phase 3: Agreeableness (A) influences attack retaliation and social weight.
          * High A → dampens aggression, boosts social utility.
          * Low A → amplifies aggression, reduces social preference.
-         * Modifier is in range [-20, +20] to keep within ±OUTCOME_SCORE_MAX bounds. */
+         * Score adjustment is in range [-20, +20] to keep within ±OUTCOME_SCORE_MAX bounds. */
         float A_final = sec_get_agreeableness_final(ch);
 
         /* OCEAN Phase 3: Extraversion (E) influences social initiation and group payoff.
