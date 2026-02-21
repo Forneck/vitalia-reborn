@@ -1620,27 +1620,22 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
          * Low A → amplifies aggression, reduces social preference.
          * Modifier is in range [-20, +20] to keep within ±OUTCOME_SCORE_MAX bounds. */
         float A_final = sec_get_agreeableness_final(ch);
-        if (proj->action.type == SHADOW_ACTION_ATTACK) {
-            /* Low A amplifies attack utility; high A dampens it */
-            int a_attack_mod = (int)((0.5f - A_final) * 40.0f); /* -20 to +20 */
-            score += a_attack_mod;
-        } else if (proj->action.type == SHADOW_ACTION_SOCIAL) {
-            /* High A amplifies social utility */
-            int a_social_mod = (int)((A_final - 0.5f) * 30.0f); /* -15 to +15 */
-            score += a_social_mod;
-        }
 
         /* OCEAN Phase 3: Extraversion (E) influences social initiation and group payoff.
          * High E → higher expected utility from social/group actions.
          * Low E → prefers solitary actions (lower social penalty when alone).
          * Modifier is in range [-15, +15]. */
         float E_final = sec_get_extraversion_final(ch);
-        if (proj->action.type == SHADOW_ACTION_SOCIAL) {
-            int e_social_mod = (int)((E_final - 0.5f) * 30.0f); /* -15 to +15 */
-            score += e_social_mod;
+
+        if (proj->action.type == SHADOW_ACTION_ATTACK) {
+            /* Low A amplifies attack utility; high A dampens it */
+            score += (int)((0.5f - A_final) * 40.0f); /* -20 to +20 */
+        } else if (proj->action.type == SHADOW_ACTION_SOCIAL) {
+            /* High A and high E both amplify social utility */
+            score += (int)((A_final - 0.5f) * 30.0f); /* A: -15 to +15 */
+            score += (int)((E_final - 0.5f) * 30.0f); /* E: -15 to +15 */
         } else if (proj->action.type == SHADOW_ACTION_FOLLOW || proj->action.type == SHADOW_ACTION_GROUP) {
-            int e_group_mod = (int)((E_final - 0.5f) * 20.0f); /* -10 to +10 */
-            score += e_group_mod;
+            score += (int)((E_final - 0.5f) * 20.0f); /* E group bias: -10 to +10 */
         }
     }
 
