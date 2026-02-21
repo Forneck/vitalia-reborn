@@ -195,11 +195,18 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
 
     /* ── Fast timescale: Arousal partition ─────────────────────────────── */
 
-    /* A: use the post-hysteresis 4D arousal — it is contextually deformed by
-     * environment, combat intensity, and the helplessness step, so it better
-     * reflects the mob's actual activation level than a raw emotion average.
-     * D and V also come from the same post-hysteresis 4D state. */
-    float A = sec_clamp(r->arousal / 100.0f, 0.0f, 1.0f);
+    /* A: use the pre-modulation raw 4D arousal as the SEC partition budget.
+     * The contextual Arousal multiplier (environment, combat intensity) inflates
+     * the effective arousal artificially — using it would make A ≈ 1.0 in almost
+     * every combat tick, collapsing the budget to its ceiling and making Lateral
+     * Inhibition mathematically impossible (multiple emotions could saturate their
+     * partition simultaneously).  The raw projection, before the multiplier, gives
+     * a budget that is proportional to the mob's intrinsic emotional state so that
+     * the dominant emotion only fills the partition when the underlying emotions
+     * genuinely warrant it.
+     * D and V still come from the post-contextual effective axes (dominance and
+     * valence are legitimately context-deformed). */
+    float A = sec_clamp(r->raw_arousal / 100.0f, 0.0f, 1.0f);
     float D = sec_clamp((r->dominance + 100.0f) / 200.0f, 0.0f, 1.0f);
     float V = sec_clamp((r->valence + 100.0f) / 200.0f, 0.0f, 1.0f);
 
@@ -253,9 +260,11 @@ void sec_passive_decay(struct char_data *mob)
 
     struct mob_ai_data *ai = mob->ai_data;
 
-    /* Guard: only decay when the mob is calm (low arousal).
-     * Uses the same post-hysteresis 4D arousal as sec_update(). */
-    float A = sec_clamp(ai->last_4d_state.arousal / 100.0f, 0.0f, 1.0f);
+    /* Guard: only decay when the mob is calm (low raw arousal).
+     * Uses the pre-modulation raw_arousal so that the contextual Arousal
+     * multiplier (combat, crowd density) does not suppress decay when the mob's
+     * intrinsic emotional state is genuinely low. */
+    float A = sec_clamp(ai->last_4d_state.raw_arousal / 100.0f, 0.0f, 1.0f);
     if (A >= SEC_AROUSAL_EPSILON)
         return;
 
