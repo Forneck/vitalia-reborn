@@ -123,6 +123,19 @@ extern int ocean_ae_k2;
 extern int ocean_ae_k3;
 extern int ocean_ae_k4;
 
+/* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+extern int sec_o_novelty_move_scale;
+extern int sec_o_novelty_depth_scale;
+extern int sec_o_novelty_bonus_cap;
+extern int sec_o_repetition_cap;
+extern int sec_o_repetition_bonus;
+extern int sec_o_exploration_base;
+extern int sec_o_threat_bias;
+
+/* SEC Core tuning parameters */
+extern int sec_emotion_alpha;
+extern int sec_wta_threshold;
+
 /*
  * Variables not controlled by cedit
  */

@@ -1056,11 +1056,39 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         /* Display Big Five (OCEAN) Personality Traits */
         if (k->ai_data) {
             send_to_char(ch, "%sBig Five (OCEAN) Personality:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
-            send_to_char(
-                ch, "  Openness (O): [%s%.2f%s]  Conscientiousness (C): [%s%.2f%s]  Neuroticism (N): [%s%.2f%s]\r\n",
-                CCCYN(ch, C_NRM), k->ai_data->personality.openness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
-                k->ai_data->personality.conscientiousness, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
-                k->ai_data->personality.neuroticism, CCNRM(ch, C_NRM));
+            /* Openness (O) - show Base / Builder / Mod / Final */
+            {
+                float o_base = k->ai_data->personality.openness;
+                int o_bmod = k->ai_data->personality.openness_modifier;
+                float o_final = sec_get_openness_final(k);
+                float o_mod = o_final - o_base - (float)o_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Openness      (O): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), o_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), o_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), o_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), o_final, CCNRM(ch, C_NRM));
+            }
+            /* Neuroticism (N) - show Base / Builder / SEC Mod / Final */
+            {
+                float n_base = k->ai_data->personality.neuroticism;
+                int n_bmod = k->ai_data->personality.neuroticism_modifier;
+                float n_final = sec_get_neuroticism_final(k);
+                float n_mod = n_final - n_base - (float)n_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Neuroticism   (N): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), n_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), n_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), n_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), n_final, CCNRM(ch, C_NRM));
+            }
+            /* Conscientiousness (C) - show Base / Builder / SEC Mod / Final */
+            {
+                float c_base = k->ai_data->personality.conscientiousness;
+                int c_bmod = k->ai_data->personality.conscientiousness_modifier;
+                float c_final = sec_get_conscientiousness_final(k);
+                float c_mod = c_final - c_base - (float)c_bmod / 100.0f;
+                send_to_char(
+                    ch, "  Conscientiousness (C): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                    CCCYN(ch, C_NRM), c_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), c_bmod, CCNRM(ch, C_NRM),
+                    CCGRN(ch, C_NRM), c_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), c_final, CCNRM(ch, C_NRM));
+            }
             /* Agreeableness (A) - show Base / Builder / SEC Mod / Final */
             {
                 float a_base = k->ai_data->personality.agreeableness;

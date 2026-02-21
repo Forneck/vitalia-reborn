@@ -1560,4 +1560,17 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_OCEAN_AE_K3 config_info.emotion_config.ocean_ae_k3
 #define CONFIG_OCEAN_AE_K4 config_info.emotion_config.ocean_ae_k4
 
+/* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+#define CONFIG_SEC_O_NOVELTY_MOVE_SCALE config_info.emotion_config.sec_o_novelty_move_scale
+#define CONFIG_SEC_O_NOVELTY_DEPTH_SCALE config_info.emotion_config.sec_o_novelty_depth_scale
+#define CONFIG_SEC_O_NOVELTY_BONUS_CAP config_info.emotion_config.sec_o_novelty_bonus_cap
+#define CONFIG_SEC_O_REPETITION_CAP config_info.emotion_config.sec_o_repetition_cap
+#define CONFIG_SEC_O_REPETITION_BONUS config_info.emotion_config.sec_o_repetition_bonus
+#define CONFIG_SEC_O_EXPLORATION_BASE config_info.emotion_config.sec_o_exploration_base
+#define CONFIG_SEC_O_THREAT_BIAS config_info.emotion_config.sec_o_threat_bias
+
+/* SEC Core tuning parameters */
+#define CONFIG_SEC_EMOTION_ALPHA config_info.emotion_config.sec_emotion_alpha
+#define CONFIG_SEC_WTA_THRESHOLD config_info.emotion_config.sec_wta_threshold
+
 #endif /* _UTILS_H_ */

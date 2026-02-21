@@ -32,6 +32,8 @@ static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_neuroticism_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d);
+static void cedit_disp_bigfive_ocean_o_submenu(struct descriptor_data *d);
+static void cedit_disp_sec_core_submenu(struct descriptor_data *d);
 static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
@@ -298,6 +300,19 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = CONFIG_OCEAN_AE_K3;
     OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = CONFIG_OCEAN_AE_K4;
 
+    /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
+    OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale = CONFIG_SEC_O_NOVELTY_MOVE_SCALE;
+    OLC_CONFIG(d)->emotion_config.sec_o_novelty_depth_scale = CONFIG_SEC_O_NOVELTY_DEPTH_SCALE;
+    OLC_CONFIG(d)->emotion_config.sec_o_novelty_bonus_cap = CONFIG_SEC_O_NOVELTY_BONUS_CAP;
+    OLC_CONFIG(d)->emotion_config.sec_o_repetition_cap = CONFIG_SEC_O_REPETITION_CAP;
+    OLC_CONFIG(d)->emotion_config.sec_o_repetition_bonus = CONFIG_SEC_O_REPETITION_BONUS;
+    OLC_CONFIG(d)->emotion_config.sec_o_exploration_base = CONFIG_SEC_O_EXPLORATION_BASE;
+    OLC_CONFIG(d)->emotion_config.sec_o_threat_bias = CONFIG_SEC_O_THREAT_BIAS;
+
+    /* SEC Core tuning parameters */
+    OLC_CONFIG(d)->emotion_config.sec_emotion_alpha = CONFIG_SEC_EMOTION_ALPHA;
+    OLC_CONFIG(d)->emotion_config.sec_wta_threshold = CONFIG_SEC_WTA_THRESHOLD;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -554,6 +569,19 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_OCEAN_AE_K2 = OLC_CONFIG(d)->emotion_config.ocean_ae_k2;
     CONFIG_OCEAN_AE_K3 = OLC_CONFIG(d)->emotion_config.ocean_ae_k3;
     CONFIG_OCEAN_AE_K4 = OLC_CONFIG(d)->emotion_config.ocean_ae_k4;
+
+    /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
+    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale;
+    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = OLC_CONFIG(d)->emotion_config.sec_o_novelty_depth_scale;
+    CONFIG_SEC_O_NOVELTY_BONUS_CAP = OLC_CONFIG(d)->emotion_config.sec_o_novelty_bonus_cap;
+    CONFIG_SEC_O_REPETITION_CAP = OLC_CONFIG(d)->emotion_config.sec_o_repetition_cap;
+    CONFIG_SEC_O_REPETITION_BONUS = OLC_CONFIG(d)->emotion_config.sec_o_repetition_bonus;
+    CONFIG_SEC_O_EXPLORATION_BASE = OLC_CONFIG(d)->emotion_config.sec_o_exploration_base;
+    CONFIG_SEC_O_THREAT_BIAS = OLC_CONFIG(d)->emotion_config.sec_o_threat_bias;
+
+    /* SEC Core tuning parameters */
+    CONFIG_SEC_EMOTION_ALPHA = OLC_CONFIG(d)->emotion_config.sec_emotion_alpha;
+    CONFIG_SEC_WTA_THRESHOLD = OLC_CONFIG(d)->emotion_config.sec_wta_threshold;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -1245,6 +1273,23 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "ocean_ae_k3 = %d\n", CONFIG_OCEAN_AE_K3);
     fprintf(fl, "ocean_ae_k4 = %d\n\n", CONFIG_OCEAN_AE_K4);
 
+    /* Big Five Phase 4: Openness (O) Shadow Timeline Configuration */
+    fprintf(fl, "* Big Five (OCEAN) - Phase 4: Openness (O) Shadow Timeline Parameters\n");
+    fprintf(fl, "* novelty_move_scale *10 (actual=value/10.0), others as-is or *100\n");
+    fprintf(fl, "sec_o_novelty_move_scale = %d\n", CONFIG_SEC_O_NOVELTY_MOVE_SCALE);
+    fprintf(fl, "sec_o_novelty_depth_scale = %d\n", CONFIG_SEC_O_NOVELTY_DEPTH_SCALE);
+    fprintf(fl, "sec_o_novelty_bonus_cap = %d\n", CONFIG_SEC_O_NOVELTY_BONUS_CAP);
+    fprintf(fl, "sec_o_repetition_cap = %d\n", CONFIG_SEC_O_REPETITION_CAP);
+    fprintf(fl, "sec_o_repetition_bonus = %d\n", CONFIG_SEC_O_REPETITION_BONUS);
+    fprintf(fl, "sec_o_exploration_base = %d\n", CONFIG_SEC_O_EXPLORATION_BASE);
+    fprintf(fl, "sec_o_threat_bias = %d\n\n", CONFIG_SEC_O_THREAT_BIAS);
+
+    /* SEC Core tuning parameters */
+    fprintf(fl, "* SEC Core Tuning Parameters\n");
+    fprintf(fl, "* Values stored *100 (actual = value/100.0)\n");
+    fprintf(fl, "sec_emotion_alpha = %d\n", CONFIG_SEC_EMOTION_ALPHA);
+    fprintf(fl, "sec_wta_threshold = %d\n\n", CONFIG_SEC_WTA_THRESHOLD);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1541,11 +1586,13 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sH%s) Big Five (OCEAN) - Neuroticism Configuration\r\n"
                     "%sI%s) Big Five (OCEAN) - Conscientiousness Configuration\r\n"
                     "%sJ%s) Big Five (OCEAN) - A/E SEC Modulation Coefficients (k1-k4)\r\n"
+                    "%sK%s) Big Five (OCEAN) - Openness (O) Shadow Timeline Parameters\r\n"
+                    "%sL%s) SEC Core - Alpha Smoothing & Winner-Takes-All Threshold\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
                     grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm,
-                    grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -1706,6 +1753,71 @@ static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d)
                     OLC_CONFIG(d)->emotion_config.ocean_ae_k4, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_BIGFIVE_OCEAN_AE_SUBMENU;
+}
+
+/* Display Big Five Phase 4: Openness (O) Shadow Timeline parameters menu */
+static void cedit_disp_bigfive_ocean_o_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Big Five (OCEAN) Personality - Phase 4: Openness (O) Parameters\r\n"
+                    "---\r\n"
+                    "These settings govern how Openness modulates Shadow Timeline scoring.\r\n"
+                    "\r\n"
+                    "MOVE novelty (score adjustment per O unit):\r\n"
+                    "%s1%s) novelty_move_scale (*10): %s%d%s (default: 140 = 14.0; range [-7,+7] pts)\r\n"
+                    "\r\n"
+                    "Action-history depth-aware novelty bonus:\r\n"
+                    "%s2%s) novelty_depth_scale:  %s%d%s pts per repeat-step at O=1 (default: 6)\r\n"
+                    "%s3%s) novelty_bonus_cap:    %s%d%s hard cap in score pts (default: 30)\r\n"
+                    "%s4%s) repetition_cap:       %s%d%s depth plateau (default: 5 ticks)\r\n"
+                    "%s5%s) repetition_bonus:     %s%d%s routine pref bonus at O=0 (default: 15)\r\n"
+                    "\r\n"
+                    "Exploration gate and ambiguity tolerance:\r\n"
+                    "%s6%s) exploration_base:     %s%d%%%s max explore chance at O=1 (default: 20)\r\n"
+                    "%s7%s) threat_bias (*100):   %s%d%s threat amp reduction at O=1 (default: 40=0.40)\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_novelty_depth_scale, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_novelty_bonus_cap, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_repetition_cap, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_repetition_bonus, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_exploration_base, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_o_threat_bias, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_BIGFIVE_OCEAN_O_SUBMENU;
+}
+
+/* Display SEC Core tuning parameters menu */
+static void cedit_disp_sec_core_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "SEC Core Tuning Parameters\r\n"
+                    "---\r\n"
+                    "These control the fundamental SEC energy-partition behavior.\r\n"
+                    "Values stored *100 (actual float = value/100.0).\r\n"
+                    "\r\n"
+                    "%s1%s) sec_emotion_alpha (*100): %s%d%s base alpha-smoothing rate (default: 40=0.40)\r\n"
+                    "   Controls how fast emotions converge toward partition targets each tick.\r\n"
+                    "   Range: 10-80 (0.10-0.80). High C mobs dampen this further.\r\n"
+                    "\r\n"
+                    "%s2%s) sec_wta_threshold (*100): %s%d%s Winner-Takes-All ratio (default: 60=0.60)\r\n"
+                    "   Social actions with driving emotion < threshold*dominant are blocked.\r\n"
+                    "   Range: 30-90 (0.30-0.90).\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.sec_emotion_alpha, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.sec_wta_threshold, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_SEC_CORE_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3379,6 +3491,16 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     cedit_disp_bigfive_ocean_ae_submenu(d);
                     return;
 
+                case 'k':
+                case 'K':
+                    cedit_disp_bigfive_ocean_o_submenu(d);
+                    return;
+
+                case 'l':
+                case 'L':
+                    cedit_disp_sec_core_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -3945,6 +4067,64 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '4':
                     write_to_output(d, "\r\nEnter k4 (A anger coeff *100, 0-100, default 10 = 0.10) : ");
                     OLC_MODE(d) = CEDIT_OCEAN_AE_K4;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_BIGFIVE_OCEAN_O_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter novelty_move_scale *10 (0-200, default 140 = 14.0) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_NOVELTY_MOVE_SCALE;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter novelty_depth_scale pts/step at O=1 (1-20, default 6) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_NOVELTY_DEPTH_SCALE;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter novelty_bonus_cap score pts (10-50, default 30) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_NOVELTY_BONUS_CAP;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter repetition_cap depth (1-10, default 5) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_REPETITION_CAP;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter repetition_bonus score pts at O=0 (0-30, default 15) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_REPETITION_BONUS;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter exploration_base max %% at O=1 (0-40, default 20) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_EXPLORATION_BASE;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter threat_bias *100 (0-100, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_O_THREAT_BIAS;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_SEC_CORE_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter sec_emotion_alpha *100 (10-80, default 40 = 0.40) : ");
+                    OLC_MODE(d) = CEDIT_SEC_CORE_EMOTION_ALPHA;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter sec_wta_threshold *100 (30-90, default 60 = 0.60) : ");
+                    OLC_MODE(d) = CEDIT_SEC_CORE_WTA_THRESHOLD;
                     return;
                 case 'q':
                 case 'Q':
@@ -5049,6 +5229,53 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_OCEAN_AE_K4:
             OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = LIMIT(atoi(arg), 0, 100);
             cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        /* Big Five (OCEAN) Personality - Phase 4: Openness (O) */
+        case CEDIT_OCEAN_O_NOVELTY_MOVE_SCALE:
+            OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale = LIMIT(atoi(arg), 0, 200);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_NOVELTY_DEPTH_SCALE:
+            OLC_CONFIG(d)->emotion_config.sec_o_novelty_depth_scale = LIMIT(atoi(arg), 1, 20);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_NOVELTY_BONUS_CAP:
+            OLC_CONFIG(d)->emotion_config.sec_o_novelty_bonus_cap = LIMIT(atoi(arg), 10, 50);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_REPETITION_CAP:
+            OLC_CONFIG(d)->emotion_config.sec_o_repetition_cap = LIMIT(atoi(arg), 1, 10);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_REPETITION_BONUS:
+            OLC_CONFIG(d)->emotion_config.sec_o_repetition_bonus = LIMIT(atoi(arg), 0, 30);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_EXPLORATION_BASE:
+            OLC_CONFIG(d)->emotion_config.sec_o_exploration_base = LIMIT(atoi(arg), 0, 40);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_O_THREAT_BIAS:
+            OLC_CONFIG(d)->emotion_config.sec_o_threat_bias = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_o_submenu(d);
+            break;
+
+        /* SEC Core tuning parameters */
+        case CEDIT_SEC_CORE_EMOTION_ALPHA:
+            OLC_CONFIG(d)->emotion_config.sec_emotion_alpha = LIMIT(atoi(arg), 10, 80);
+            cedit_disp_sec_core_submenu(d);
+            break;
+
+        case CEDIT_SEC_CORE_WTA_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.sec_wta_threshold = LIMIT(atoi(arg), 30, 90);
+            cedit_disp_sec_core_submenu(d);
             break;
 
         default: /* We should never get here, but just in

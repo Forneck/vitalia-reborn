@@ -562,6 +562,21 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_OCEAN_AE_K3 187
 #define CEDIT_OCEAN_AE_K4 188
 
+/* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+#define CEDIT_BIGFIVE_OCEAN_O_SUBMENU 189
+#define CEDIT_OCEAN_O_NOVELTY_MOVE_SCALE 190
+#define CEDIT_OCEAN_O_NOVELTY_DEPTH_SCALE 191
+#define CEDIT_OCEAN_O_NOVELTY_BONUS_CAP 192
+#define CEDIT_OCEAN_O_REPETITION_CAP 193
+#define CEDIT_OCEAN_O_REPETITION_BONUS 194
+#define CEDIT_OCEAN_O_EXPLORATION_BASE 195
+#define CEDIT_OCEAN_O_THREAT_BIAS 196
+
+/* SEC Core tuning parameters */
+#define CEDIT_SEC_CORE_SUBMENU 197
+#define CEDIT_SEC_CORE_EMOTION_ALPHA 198
+#define CEDIT_SEC_CORE_WTA_THRESHOLD 199
+
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0
 #define HEDIT_CONFIRM_EDIT 1

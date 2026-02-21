@@ -31,6 +31,7 @@
 #include "graph.h"
 #include "genolc.h"
 #include "dg_scripts.h"
+#include "sec.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -5836,7 +5837,7 @@ float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_v
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return (float)base_value;
 
-    float neuroticism = mob->ai_data->personality.neuroticism;
+    float neuroticism = sec_get_neuroticism_final(mob);
     float beta = 0.0f;
 
     /* Determine β (gain coefficient) based on emotion type
@@ -6086,7 +6087,7 @@ float apply_conscientiousness_impulse_modulation(struct char_data *ch, float bas
     if (!ch || !IS_NPC(ch) || !ch->ai_data)
         return base_impulse_prob;
 
-    float C = ch->ai_data->personality.conscientiousness;
+    float C = sec_get_conscientiousness_final(ch);
     float gamma = (float)CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL / 100.0f;
 
     /* Apply formula: base * (1 - γC) */
@@ -6117,7 +6118,7 @@ float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_de
     if (!ch || !IS_NPC(ch) || !ch->ai_data)
         return base_delay;
 
-    float C = ch->ai_data->personality.conscientiousness;
+    float C = sec_get_conscientiousness_final(ch);
     float beta = (float)CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY / 100.0f;
 
     /* Apply formula: base * (1 + βC * arousal) */
@@ -6146,7 +6147,7 @@ float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weig
     if (!ch || !IS_NPC(ch) || !ch->ai_data)
         return base_weight;
 
-    float C = ch->ai_data->personality.conscientiousness;
+    float C = sec_get_conscientiousness_final(ch);
     float factor = (float)CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT / 100.0f;
 
     /* Apply formula: base * (1 + factor * C) */
@@ -6170,9 +6171,30 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
 
-    /* Being attacked increases fear and anger */
+    /* Being attacked increases fear and anger.
+     *
+     * Agreeableness (A) damps the anger gain: high-A mobs absorb conflict
+     * without escalating.  Factor = (1.2 - A) ∈ [0.2, 1.2].
+     * This is a modulation of the gain rate, never a direct injection.
+     * Formula: Anger_gain *= (1.2 - A_final).
+     */
+    int raw_anger_gain = rand_number(10, 20);
+    float A_final = sec_get_agreeableness_final(mob);
+    float anger_factor = SEC_A_ANGER_DAMP_MAX - A_final;
+    if (anger_factor < SEC_A_ANGER_DAMP_MIN)
+        anger_factor = SEC_A_ANGER_DAMP_MIN;
+    if (anger_factor > SEC_A_ANGER_DAMP_MAX)
+        anger_factor = SEC_A_ANGER_DAMP_MAX;
+    int scaled_anger_gain = (int)(raw_anger_gain * anger_factor);
+    if (scaled_anger_gain < 1)
+        scaled_anger_gain = 1;
+
     adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
-    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, scaled_anger_gain);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("OCEAN-A: mob=%s(#%d) A_final=%.2f anger_factor=%.2f raw_anger=%d scaled=%d", GET_NAME(mob),
+             GET_MOB_VNUM(mob), A_final, anger_factor, raw_anger_gain, scaled_anger_gain);
 
     /* Decreases happiness and trust */
     adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 15));
@@ -6465,6 +6487,28 @@ void update_mob_emotion_passive(struct char_data *mob)
     int extreme_threshold = CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD; /* Default: 80 */
     int extreme_multiplier = CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER; /* Default: 150% */
 
+    /* Conscientiousness (C) persistence: high-C mobs hold emotional states longer.
+     * Decay multiplier = (SEC_C_DECAY_BASE - SEC_C_DECAY_RANGE * C_final) ∈ [0.60, 1.20].
+     * This is applied after extreme/global multipliers to avoid multiplicative stacking.
+     * C modifies timing only; it does not change the energy partition. */
+    float C_final_decay = sec_get_conscientiousness_final(mob);
+    float c_persist_scale = SEC_C_DECAY_BASE - SEC_C_DECAY_RANGE * C_final_decay;
+
+    /* Neuroticism (N) decay resistance for negative emotions (fear/anger only).
+     * High-N mobs ruminate — negative states linger longer before fading.
+     * N_fear_scale = SEC_N_FEAR_DECAY_BASE - SEC_N_FEAR_DECAY_COEFF * N_final ∈ [0.60, 1.20].
+     * N_anger_scale = SEC_N_ANGER_DECAY_BASE - SEC_N_ANGER_DECAY_COEFF * N_final ∈ [0.70, 1.20].
+     * Lower bound SEC_N_DECAY_MIN_SCALE prevents decay from inverting or zeroing.
+     * Applied after C persistence; the combined product is bounded by design:
+     *   worst case C * N = 0.60 * 0.60 = 0.36 (decay never fully halts). */
+    float N_final_decay = sec_get_neuroticism_final(mob);
+    float n_fear_scale = SEC_N_FEAR_DECAY_BASE - SEC_N_FEAR_DECAY_COEFF * N_final_decay;
+    if (n_fear_scale < SEC_N_DECAY_MIN_SCALE)
+        n_fear_scale = SEC_N_DECAY_MIN_SCALE;
+    float n_anger_scale = SEC_N_ANGER_DECAY_BASE - SEC_N_ANGER_DECAY_COEFF * N_final_decay;
+    if (n_anger_scale < SEC_N_DECAY_MIN_SCALE)
+        n_anger_scale = SEC_N_DECAY_MIN_SCALE;
+
     /* Fear decays toward wimpy_tendency baseline */
     int fear_baseline = mob->ai_data->genetics.wimpy_tendency / 2;
     if (mob->ai_data->emotion_fear > fear_baseline) {
@@ -6474,6 +6518,12 @@ void update_mob_emotion_passive(struct char_data *mob)
             base_decay = (base_decay * extreme_multiplier) / 100;
         }
         base_decay = (base_decay * global_multiplier) / 100;
+        /* Conscientiousness persistence: high C slows fear decay (holds vigilance). */
+        base_decay = (int)(base_decay * c_persist_scale);
+        /* Neuroticism persistence: high N slows fear decay further (rumination). */
+        base_decay = (int)(base_decay * n_fear_scale);
+        if (base_decay < 1)
+            base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_fear < fear_baseline) {
         int base_increase = CONFIG_EMOTION_DECAY_RATE_FEAR / 2;
@@ -6481,7 +6531,13 @@ void update_mob_emotion_passive(struct char_data *mob)
         adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, MAX(1, base_increase)));
     }
 
-    /* Anger decays toward alignment-based baseline */
+    /* Anger decays toward alignment-based baseline.
+     *
+     * Agreeableness (A) accelerates forgiveness: high-A mobs let go of anger
+     * faster.  Decay multiplier = (0.8 + A_final) ∈ [0.8, 1.8].
+     * The scale is applied after all other multipliers so it does not
+     * interact multiplicatively with the extreme-emotion or global-rate factors.
+     */
     int anger_baseline = IS_EVIL(mob) ? 35 : (IS_GOOD(mob) ? 15 : 25);
     if (mob->ai_data->emotion_anger > anger_baseline) {
         int base_decay = CONFIG_EMOTION_DECAY_RATE_ANGER; /* Default: 2 */
@@ -6489,6 +6545,16 @@ void update_mob_emotion_passive(struct char_data *mob)
             base_decay = (base_decay * extreme_multiplier) / 100;
         }
         base_decay = (base_decay * global_multiplier) / 100;
+        /* Agreeableness: high A → faster forgiveness, low A → slower. */
+        float A_final = sec_get_agreeableness_final(mob);
+        float forgive_scale = SEC_A_FORGIVE_BASE + A_final;
+        base_decay = (int)(base_decay * forgive_scale);
+        /* Conscientiousness persistence: high C holds anger longer (applied after A scale). */
+        base_decay = (int)(base_decay * c_persist_scale);
+        /* Neuroticism persistence: high N slows anger decay (emotional rumination). */
+        base_decay = (int)(base_decay * n_anger_scale);
+        if (base_decay < 1)
+            base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_anger < anger_baseline) {
         int base_increase = CONFIG_EMOTION_DECAY_RATE_ANGER / 2;
@@ -6504,6 +6570,10 @@ void update_mob_emotion_passive(struct char_data *mob)
             base_decay = (base_decay * extreme_multiplier) / 100;
         }
         base_decay = (base_decay * global_multiplier) / 100;
+        /* Conscientiousness persistence: high C holds positive emotional states longer. */
+        base_decay = (int)(base_decay * c_persist_scale);
+        if (base_decay < 1)
+            base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, MAX(1, base_decay)));
     } else if (mob->ai_data->emotion_happiness < happiness_baseline) {
         int base_increase = CONFIG_EMOTION_DECAY_RATE_HAPPINESS + 1; /* Happiness grows faster */
