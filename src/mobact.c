@@ -1089,13 +1089,7 @@ void mobile_activity(void)
                             struct char_data *leader = (struct char_data *)action.target;
                             /* Verify leader in same room and not already following */
                             if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch) {
-                                /* Simple follow logic - mob decides to follow */
-                                act("$n começa a seguir $N.", FALSE, ch, 0, leader, TO_NOTVICT);
-                                act("$n começa a seguir você.", FALSE, ch, 0, leader, TO_VICT);
-                                /* Set up follow relationship */
-                                if (ch->master) {
-                                    stop_follower(ch);
-                                }
+                                /* add_follower sends "começa a seguir" messages itself */
                                 add_follower(ch, leader);
                                 shadow_action_executed = TRUE;
                                 goto shadow_feedback_and_continue;
