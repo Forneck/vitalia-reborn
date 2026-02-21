@@ -51,6 +51,20 @@
    - Added NeuroticismModifier builder field with save/load support.
    - Stat command now shows N base/builder/sec_mod/final breakdown.
 
+   Implemented OCEAN Openness (O) as structurally stable cognitive trait:
+   - O_base generated via Gaussian distribution (μ=0.5, σ=0.15) at spawn;
+     replaces the hardcoded 0.5f placeholder.
+   - O_builder applied as delta (never replaces base); ±50 range.
+   - O_mod = 0 by design — Openness must NEVER derive from SEC emotional
+     state to avoid SEC ↔ utility feedback loops.
+   - O_final influences Shadow Timeline MOVE novelty weighting:
+     score += (O_final - 0.5) * 14.0  (range -7 to +7 points on MOVE).
+     High-O mobs explore more freely; low-O mobs prefer familiar territory.
+   - O does NOT influence emotional gain/decay, SEC partition, or WTA gating.
+   - Added OpennessModifier builder field with Openness/OpennessModifier
+     save/load support.
+   - Stat command now shows O base/builder/sec_mod/final breakdown.
+
    Correções de estabilidade e de bugs.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n

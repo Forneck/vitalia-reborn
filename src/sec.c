@@ -361,6 +361,28 @@ float sec_get_extraversion_final(struct char_data *mob)
     return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);
 }
 
+/* ── OCEAN Phase 4: Openness final value getter ──────────────────────────── */
+
+float sec_get_openness_final(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.5f;
+
+    const struct mob_personality *p = &mob->ai_data->personality;
+
+    float base = p->openness;
+    float builder_mod = (float)p->openness_modifier / 100.0f;
+
+    /* O_mod = 0.0f by architectural constraint.
+     * Openness must NEVER be derived from SEC emotional state.
+     * The SEC_O_MOD_CAP constant (0.05) documents the maximum allowed adaptation
+     * if a slow long-term O_mod is implemented in the future; for now it is zero
+     * to prevent any risk of SEC ↔ utility feedback loops. */
+    float o_mod = 0.0f;
+
+    return sec_clamp(base + builder_mod + o_mod, 0.0f, 1.0f);
+}
+
 /* ── OCEAN Phase 1: Neuroticism final value getter ───────────────────────── */
 
 float sec_get_neuroticism_final(struct char_data *mob)

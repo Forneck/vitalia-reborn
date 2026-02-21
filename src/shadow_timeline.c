@@ -1650,6 +1650,20 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
             float C_final = sec_get_conscientiousness_final(ch);
             score += (int)(C_final * SEC_C_CONSISTENCY_SCALE); /* 0 to +SEC_C_CONSISTENCY_SCALE */
         }
+
+        /* OCEAN Phase 4: Openness (O) novelty weighting for MOVE actions.
+         * High O → favours exploring novel/unfamiliar paths (positive bias).
+         * Low O → prefers familiar territory (negative bias).
+         * Score adjustment = (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE).
+         * Truncation is intentional: sub-point differences between O values are
+         * below the decision threshold and need not be preserved.
+         * Effective range: [-7, +7] score points at O=0/1.0 respectively.
+         * Applied only to MOVE actions to model exploration probability.
+         * O_final must not be derived from SEC emotional state (see sec_get_openness_final()). */
+        if (proj->action.type == SHADOW_ACTION_MOVE) {
+            float O_final = sec_get_openness_final(ch);
+            score += (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE); /* -7 to +7 */
+        }
     }
 
     return URANGE(OUTCOME_SCORE_MIN, score, OUTCOME_SCORE_MAX);

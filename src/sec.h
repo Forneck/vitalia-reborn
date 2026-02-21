@@ -169,6 +169,22 @@
  */
 #define SEC_N_STRESS_SCALE 0.05f
 
+/* ── OCEAN O modulation constants ───────────────────────────────────────── */
+
+/**
+ * Openness novelty weighting in Shadow Timeline MOVE scoring.
+ * High O → favours exploring novel/unfamiliar rooms; low O → prefers familiar territory.
+ * Novelty bonus = SEC_O_NOVELTY_SCALE * (O_final - SEC_O_NOVELTY_CENTER) per MOVE action.
+ * Range: [-SEC_O_NOVELTY_SCALE/2, +SEC_O_NOVELTY_SCALE/2] score points.
+ *
+ * NOTE: Openness must NEVER be derived from SEC emotional state (no O_mod from fear/anger).
+ * O_mod is reserved for extremely slow long-term adaptation only (±0.05 cap, not per-tick).
+ * For now O_mod = 0; this constant documents the architectural constraint.
+ */
+#define SEC_O_NOVELTY_CENTER 0.5f /* baseline O value — no bonus/penalty */
+#define SEC_O_NOVELTY_SCALE 14.0f /* max bonus/penalty ∈ [-7, +7] score points */
+#define SEC_O_MOD_CAP 0.05f       /* max |O_mod|: slow adaptation only, never per-tick */
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -266,6 +282,30 @@ float sec_get_conscientiousness_final(struct char_data *mob);
  * @param mob  The NPC.
  */
 float sec_get_neuroticism_final(struct char_data *mob);
+
+/**
+ * Return the final Openness value for a mob, incorporating:
+ *   Trait_base (Gaussian-generated at spawn) + Trait_builder_modifier/100 + O_mod
+ * Result is clamped to [0.0, 1.0].  |O_mod| <= SEC_O_MOD_CAP (0.05).
+ *
+ * STRUCTURAL CONSTRAINT: O_mod must NEVER be derived from SEC emotional state.
+ * Openness is a cognitive trait (flexibility, novelty tolerance), not an emotional one.
+ * Deriving O from fear/anger would create an SEC ↔ utility feedback loop.
+ * For now O_mod = 0.0; the field is reserved for slow long-term adaptation only.
+ *
+ * Openness influences:
+ *   - MOVE novelty weighting in Shadow Timeline (exploration probability)
+ *   - Ambiguity tolerance in utility scoring (future use)
+ *
+ * Openness must NOT influence:
+ *   - Emotional gain or decay
+ *   - SEC energy partition
+ *   - Dominance axis
+ *   - WTA gating
+ *
+ * @param mob  The NPC.
+ */
+float sec_get_openness_final(struct char_data *mob);
 
 /**
  * Return the dominant SEC emotion (SEC_DOMINANT_*).

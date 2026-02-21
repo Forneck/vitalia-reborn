@@ -1062,14 +1062,16 @@ struct mob_genetics {
  * - High E (1.0): Sociable, initiates contact, high social payoff weighting
  */
 struct mob_personality {
-    float openness;                     /* (O) Openness to experience - Future use (Phase 4) */
+    float openness;                     /* (O) Cognitive flexibility - Trait_base, ACTIVE Phase 4 */
     float conscientiousness;            /* (C) Self-discipline/control - ACTIVE Phase 2 */
     float extraversion;                 /* (E) Social engagement - Trait_base, ACTIVE Phase 3 */
     float agreeableness;                /* (A) Compassion/cooperation - Trait_base, ACTIVE Phase 3 */
     float neuroticism;                  /* (N) Emotional sensitivity - ACTIVE Phase 1 */
+    byte openness_initialized;          /* Flag: 1 if O set (file/random), 0 if uninitialized */
     byte conscientiousness_initialized; /* Flag: 1 if C set (file/random), 0 if uninitialized */
     byte agreeableness_initialized;     /* Flag: 1 if A base set (file/random), 0 if uninitialized */
     byte extraversion_initialized;      /* Flag: 1 if E base set (file/random), 0 if uninitialized */
+    int openness_modifier;              /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int conscientiousness_modifier;     /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */

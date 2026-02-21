@@ -1983,6 +1983,29 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
+    CASE("Openness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness personality trait (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn.
+             * O_base is structural/genetic; it must never be derived from SEC state. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.openness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.openness_initialized = 1;
+            }
+        }
+    }
+    CASE("OpennessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness builder modifier (-50..+50).
+             * Applied as delta on top of Gaussian base; never replaces it. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.openness_modifier = num_arg;
+        }
+    }
     CASE("Conscientiousness")
     {
         if (mob_proto[i].ai_data) {

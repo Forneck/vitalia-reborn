@@ -395,6 +395,15 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
         if (mob->ai_data && mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL)
             fprintf(fd, "EmotionProfile: %d\n", mob->ai_data->emotional_profile);
 
+        /* Big Five Phase 4: Openness - save base if initialized, and modifier if non-zero.
+         * Same pattern as C/A/E: uninitialized flag means Gaussian generation at spawn. */
+        if (mob->ai_data->personality.openness_initialized) {
+            int o_value = (int)(mob->ai_data->personality.openness * 100.0f);
+            fprintf(fd, "Openness: %d\n", o_value);
+        }
+        if (mob->ai_data->personality.openness_modifier != 0)
+            fprintf(fd, "OpennessModifier: %d\n", mob->ai_data->personality.openness_modifier);
+
         /* Big Five Phase 2: Conscientiousness - Only save if explicitly initialized.
          * Uninitialized mobs (flag=0) must NOT write "Conscientiousness: 0" to disk;
          * doing so would cause db.c to mark them as initialized=1 on next load,
