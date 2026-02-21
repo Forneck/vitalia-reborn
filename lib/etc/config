@@ -76,6 +76,9 @@ default_minimap_size = 2
 * Do you want scripts to be attachable to players?
 script_players = 0
 
+* Enable fit evolve system?
+fit_evolve = 0
+
 * Does weather affect spell effectiveness?
 weather_affects_spells = 1
 
@@ -146,20 +149,28 @@ frozen_start_room = 1202
 dead_start_room = 1890
 
 * The virtual numbers of the donation rooms.  Note: Add donation rooms
-* sequentially (1 & 2 before 3). If you don't, you might not be able to
+* sequentially (1 & 2 before 3, 3 before 4). If you don't, you might not be able to
 * donate. Use -1 for 'no such room'.
 donation_room_1 = 3063
 donation_room_2 = 5510
 donation_room_3 = 278
+donation_room_4 = 11316
 
 * The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.
 hometown_1 = 3001
 hometown_2 = 5509
 hometown_3 = 13400
+hometown_4 = 11315
 * The virtual numbers of the corpses rooms. Use -1 for 'no such room'.
 ress_room_1 = 1803
 ress_room_2 = 5505
 ress_room_3 = 13435
+ress_room_4 = 11319
+
+* The virtual number of the death trap object warehouse room.
+* Objects from entities dying in death traps are sent here when
+* dts_are_dumps is FALSE. Use -1 for 'no such room'.
+dt_warehouse_room = 2
 
 
 
@@ -276,7 +287,7 @@ debug_mode = 0
 
 * [ Experimental Features ]
 * Enable the new auction system?
-new_auction_system = 0
+new_auction_system = 1
 
 * Enable the experimental bank system?
 experimental_bank_system = 0
@@ -293,6 +304,21 @@ mob_emotion_social_chance = 5
 * Probability (%) of mob updating emotions per emotion tick (4 seconds)
 mob_emotion_update_chance = 50
 
+* Enable weather affects on mob emotions?
+weather_affects_emotions = 1
+
+* Weather emotion effect multiplier (0-200%, default 100)
+weather_effect_multiplier = 100
+
+* Maximum number of mob-posted autoquests (prevents lag, default 450)
+max_mob_posted_quests = 450
+
+* Emotions influence alignment over time? (experimental, default NO)
+emotion_alignment_shifts = 1
+
+* Log 4D decision-space raw and effective values for debugging (default NO)
+mob_4d_debug = 0
+
 
 
 * [ Emotion System Configuration ]
@@ -304,6 +330,20 @@ emotion_display_happiness_threshold = 80
 emotion_display_sadness_threshold = 70
 emotion_display_horror_threshold = 80
 emotion_display_pain_threshold = 70
+emotion_display_compassion_threshold = 70
+emotion_display_courage_threshold = 70
+emotion_display_curiosity_threshold = 70
+emotion_display_disgust_threshold = 70
+emotion_display_envy_threshold = 70
+emotion_display_excitement_threshold = 70
+emotion_display_friendship_threshold = 70
+emotion_display_greed_threshold = 70
+emotion_display_humiliation_threshold = 70
+emotion_display_love_threshold = 70
+emotion_display_loyalty_threshold = 70
+emotion_display_pride_threshold = 70
+emotion_display_shame_threshold = 70
+emotion_display_trust_threshold = 70
 
 * Combat Flee Behavior Thresholds (0-100)
 emotion_flee_fear_low_threshold = 50
@@ -350,4 +390,78 @@ emotion_memory_age_old = 3600
 
 * Memory System Baseline Offset (0-100)
 emotion_memory_baseline_offset = 50
+
+* Trading Behavior Thresholds (0-100)
+emotion_trade_trust_high_threshold = 60
+emotion_trade_trust_low_threshold = 30
+emotion_trade_greed_high_threshold = 70
+emotion_trade_friendship_high_threshold = 70
+
+* Quest Behavior Thresholds (0-100)
+emotion_quest_curiosity_high_threshold = 70
+emotion_quest_loyalty_high_threshold = 70
+emotion_quest_trust_high_threshold = 60
+emotion_quest_trust_low_threshold = 30
+
+* Social Initiation Thresholds (0-100)
+emotion_social_happiness_high_threshold = 70
+emotion_social_anger_high_threshold = 70
+emotion_social_sadness_high_threshold = 70
+emotion_social_love_follow_threshold = 80
+
+* Group Behavior Thresholds (0-100)
+emotion_group_loyalty_high_threshold = 70
+emotion_group_loyalty_low_threshold = 30
+emotion_group_friendship_high_threshold = 70
+emotion_group_envy_high_threshold = 70
+
+* Combat Behavior Thresholds and Modifiers
+emotion_combat_anger_high_threshold = 70
+emotion_combat_anger_damage_bonus = 15
+emotion_combat_anger_attack_bonus = 25
+emotion_combat_pain_low_threshold = 30
+emotion_combat_pain_moderate_threshold = 50
+emotion_combat_pain_high_threshold = 70
+emotion_combat_pain_accuracy_penalty_low = 1
+emotion_combat_pain_accuracy_penalty_mod = 2
+emotion_combat_pain_accuracy_penalty_high = 4
+emotion_combat_pain_damage_penalty_low = 5
+emotion_combat_pain_damage_penalty_mod = 10
+emotion_combat_pain_damage_penalty_high = 20
+
+* Emotion Decay Rate Configuration
+emotion_decay_rate_multiplier = 100
+emotion_extreme_emotion_threshold = 80
+emotion_extreme_decay_multiplier = 150
+emotion_decay_rate_fear = 2
+emotion_decay_rate_anger = 2
+emotion_decay_rate_happiness = 2
+emotion_decay_rate_sadness = 2
+emotion_decay_rate_pain = 4
+emotion_decay_rate_horror = 3
+emotion_decay_rate_disgust = 2
+emotion_decay_rate_shame = 1
+emotion_decay_rate_humiliation = 1
+
+* [ Big Five (OCEAN) Personality - Phase 1: Neuroticism ]
+* Neuroticism gain coefficients (beta * 100)
+* These control how much Neuroticism amplifies negative emotions
+* Formula: E_raw = E_base * (1.0 + (beta * N))
+neuroticism_gain_fear = 40
+neuroticism_gain_sadness = 40
+neuroticism_gain_shame = 40
+neuroticism_gain_humiliation = 40
+neuroticism_gain_pain = 40
+neuroticism_gain_horror = 40
+neuroticism_gain_disgust = 25
+neuroticism_gain_envy = 25
+neuroticism_gain_anger = 20
+neuroticism_soft_clamp_k = 50
+
+* Big Five (OCEAN) - Phase 2: Conscientiousness Configuration
+* Executive control parameters (values * 100 for precision)
+conscientiousness_impulse_control = 50
+conscientiousness_reaction_delay = 40
+conscientiousness_moral_weight = 35
+conscientiousness_debug = 1
 
