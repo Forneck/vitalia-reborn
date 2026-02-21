@@ -65,6 +65,22 @@
      save/load support.
    - Stat command now shows O base/builder/sec_mod/final breakdown.
 
+   Extended OCEAN Openness (O) with full cognitive flexibility mechanisms:
+   - Action-history novelty bonus: high-O mobs gain +O*15 pts when choosing
+     a different action type from last tick (variety preference).
+   - Repetition dampening: low-O mobs gain +(1-O)*15 pts when repeating
+     the last action type (routine preference).  High-O/High-C tension is
+     intentional: discipline (C) vs. curiosity (O).
+   - Exploration probability gate in shadow_select_best_action(): with
+     probability (O*20)% a random non-negative sub-dominant action is
+     selected instead of the top scorer. WTA energy gating is preserved
+     (only non-negative alternatives are eligible).
+   - Ambiguity tolerance in prediction-error feedback: threat amplification
+     scales with (1 - 0.4*O), range 18-30%, so high-O mobs interpret
+     ambiguous negative surprises less catastrophically.
+   All O mechanisms act at the decision/interpretation layer only; no
+   emotional gain, decay, or SEC partition is affected.
+
    Correções de estabilidade e de bugs.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n

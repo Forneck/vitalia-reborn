@@ -185,6 +185,29 @@
 #define SEC_O_NOVELTY_SCALE 14.0f /* max bonus/penalty ∈ [-7, +7] score points */
 #define SEC_O_MOD_CAP 0.05f       /* max |O_mod|: slow adaptation only, never per-tick */
 
+/**
+ * Openness action-history modifiers (applied in shadow_score_outcome).
+ *
+ * SEC_O_NOVELTY_BONUS: score bonus for choosing a *different* action type than last tick.
+ *   At O=1: +SEC_O_NOVELTY_BONUS pts.  At O=0: 0 pts.  Models novelty preference.
+ *
+ * SEC_O_REPETITION_BONUS: score bonus for *repeating* the last action type (low O = routine).
+ *   At O=0: +SEC_O_REPETITION_BONUS pts.  At O=1: 0 pts.  Symmetric with novelty bonus.
+ *
+ * SEC_O_EXPLORATION_BASE: base exploration probability (integer %).
+ *   ExplorationChance = SEC_O_EXPLORATION_BASE * O_final → 0% at O=0, 20% at O=1.
+ *   Used in shadow_select_best_action() to occasionally pick a sub-dominant action.
+ *   Must not bypass WTA energy gating.
+ *
+ * SEC_O_THREAT_BIAS: scaling factor for threat amplification reduction.
+ *   ThreatAmpPct = round(30.0 * (1.0 - SEC_O_THREAT_BIAS * O_final)) ∈ [18, 30].
+ *   High O interprets ambiguous negative surprises less catastrophically.
+ */
+#define SEC_O_NOVELTY_BONUS 15    /* pts at O=1.0 for non-repeated action type */
+#define SEC_O_REPETITION_BONUS 15 /* pts at O=0 for repeated action type */
+#define SEC_O_EXPLORATION_BASE 20 /* % × O_final; range [0, 20%] exploration chance */
+#define SEC_O_THREAT_BIAS 0.4f    /* reduces threat amp: 30%*(1-0.4*O) ∈ [18%,30%] */
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**

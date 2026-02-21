@@ -1651,18 +1651,38 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
             score += (int)(C_final * SEC_C_CONSISTENCY_SCALE); /* 0 to +SEC_C_CONSISTENCY_SCALE */
         }
 
-        /* OCEAN Phase 4: Openness (O) novelty weighting for MOVE actions.
-         * High O → favours exploring novel/unfamiliar paths (positive bias).
-         * Low O → prefers familiar territory (negative bias).
-         * Score adjustment = (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE).
-         * Truncation is intentional: sub-point differences between O values are
-         * below the decision threshold and need not be preserved.
-         * Effective range: [-7, +7] score points at O=0/1.0 respectively.
-         * Applied only to MOVE actions to model exploration probability.
+        /* OCEAN Phase 4: Openness (O) cognitive flexibility modifiers.
+         *
+         * 1. MOVE novelty weighting: high O favours exploring unfamiliar paths.
+         *    Score ∈ [-7, +7] pts applied to MOVE actions only.
+         *
+         * 2. Action-history novelty/repetition: O gates preference for variety vs routine.
+         *    Evaluated when a prior action type is known (last_chosen_action_type ≥ 0):
+         *      - Different type than last → novelty bonus = O * SEC_O_NOVELTY_BONUS (0..+15).
+         *      - Same type as last → repetition bias = (1-O) * SEC_O_REPETITION_BONUS (0..+15).
+         *    High O/High C: C consistency bonus overlaps novelty penalty on same action type
+         *    creating a balanced tension (discipline vs. flexibility). This is intentional.
+         *
          * O_final must not be derived from SEC emotional state (see sec_get_openness_final()). */
-        if (proj->action.type == SHADOW_ACTION_MOVE) {
+        {
             float O_final = sec_get_openness_final(ch);
-            score += (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE); /* -7 to +7 */
+
+            /* MOVE exploration weighting (already in range [-7, +7]) */
+            if (proj->action.type == SHADOW_ACTION_MOVE) {
+                score += (int)((O_final - SEC_O_NOVELTY_CENTER) * SEC_O_NOVELTY_SCALE);
+            }
+
+            /* Action-history novelty vs. routine preference */
+            int prior_type_o = ch->ai_data->last_chosen_action_type;
+            if (prior_type_o >= 0) {
+                if ((int)proj->action.type != prior_type_o) {
+                    /* Novel action type: reward based on O */
+                    score += (int)(O_final * (float)SEC_O_NOVELTY_BONUS); /* 0 to +15 */
+                } else {
+                    /* Repeated action type: reward routine-preference (low O) */
+                    score += (int)((1.0f - O_final) * (float)SEC_O_REPETITION_BONUS); /* 0 to +15 */
+                }
+            }
         }
     }
 
@@ -1692,6 +1712,33 @@ struct shadow_projection *shadow_select_best_action(struct shadow_context *ctx)
     /* Don't return actions that are clearly bad */
     if (best_score < -50) {
         return NULL;
+    }
+
+    /* OCEAN Phase 4: Openness (O) exploration probability gate.
+     * With probability (SEC_O_EXPLORATION_BASE * O_final)%, occasionally deviate from the
+     * top-ranked action to a random non-negative sub-dominant alternative.
+     * This prevents deterministic behavioral loops without bypassing WTA energy gating:
+     * - Only non-negative-score alternatives are considered (safety floor retained).
+     * - Exploration is gated by O_final [0,1], so low-O mobs never explore randomly.
+     * - Range: 0% (O=0) to SEC_O_EXPLORATION_BASE% (O=1). */
+    struct char_data *ent = ctx->entity;
+    if (ent && IS_NPC(ent) && ent->ai_data && ctx->num_projections > 1) {
+        float O_final = sec_get_openness_final(ent);
+        int explore_chance = (int)(O_final * (float)SEC_O_EXPLORATION_BASE); /* 0..20 */
+        if (explore_chance > 0 && rand_number(1, 100) <= explore_chance) {
+            /* Build a candidate list of non-best, non-negative-score projections */
+            int candidates[SHADOW_MAX_PROJECTIONS];
+            int ncand = 0;
+            for (i = 0; i < ctx->num_projections; i++) {
+                if (i != best_idx && ctx->projections[i].outcome.score >= 0) {
+                    candidates[ncand++] = i;
+                }
+            }
+            if (ncand > 0) {
+                int chosen = candidates[rand_number(0, ncand - 1)];
+                return &ctx->projections[chosen];
+            }
+        }
     }
 
     return &ctx->projections[best_idx];
@@ -2072,9 +2119,16 @@ void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
     novelty = MIN(abs(signed_error), 100);
 
     /* Step 3: Apply valence-specific weighting (asymmetric learning) */
-    /* Negative surprises (threats) are amplified - models loss aversion */
+    /* Negative surprises (threats) are amplified - models loss aversion.
+     * OCEAN Phase 4: Openness (O) ambiguity tolerance reduces this amplification.
+     * ThreatAmpPct = round(30.0 * (1.0 - SEC_O_THREAT_BIAS * O_final)) ∈ [18, 30].
+     * High O interprets ambiguous/negative surprises less catastrophically;
+     * low O applies full 30% threat amplification (loss aversion preserved).
+     * O_final must not be derived from SEC state (see sec_get_openness_final()). */
     if (signed_error < 0) {
-        novelty = (novelty * 130) / 100; /* 30% amplification for threats */
+        float O_final_threat = sec_get_openness_final(ch);
+        int amp_pct = (int)(30.0f * (1.0f - SEC_O_THREAT_BIAS * O_final_threat));
+        novelty = (novelty * (100 + amp_pct)) / 100; /* 118..130 % */
     }
     /* Positive surprises (rewards) are slightly dampened */
     else if (signed_error > 0) {
