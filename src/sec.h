@@ -77,6 +77,13 @@
  */
 #define SEC_WTA_THRESHOLD 0.60f
 
+/**
+ * Arousal epsilon: normalised arousal below this value is treated as
+ * quiescent.  Shared by passive-decay guard, partition normalisation, and
+ * the WTA filter so all three use the same "emotionally inert" definition.
+ */
+#define SEC_AROUSAL_EPSILON 0.05f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**

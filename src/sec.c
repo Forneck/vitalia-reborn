@@ -30,8 +30,8 @@
 
 /* ── Tuning constants ────────────────────────────────────────────────────── */
 
-/** Passive-decay activates when normalised arousal < ε. */
-#define SEC_AROUSAL_EPSILON 0.05f
+/* SEC_AROUSAL_EPSILON is declared in sec.h so external consumers (e.g. mobact.c)
+ * can use the same threshold without an additional header. */
 
 /** Passive-decay rate λ (slow timescale): blend speed toward baseline. */
 #define SEC_DECAY_LAMBDA 0.05f
@@ -80,9 +80,11 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
     float scale = 0.0f;
 
     /* Step 3: renormalise to Arousal.
-     * Only when W_total is non-trivial; otherwise the mob is emotionally inert
-     * and all values collapse to zero naturally. */
-    if (W_total > 1e-6f) {
+     * Guard threshold matches SEC_AROUSAL_EPSILON so that the normalisation
+     * gate is consistent with the passive-decay guard and the WTA filter.
+     * Below this threshold the mob is emotionally inert; leaving the raw
+     * smoothed values in place (all near zero) is correct behaviour. */
+    if (W_total > SEC_AROUSAL_EPSILON) {
         scale = A / W_total;
         new_fear *= scale;
         new_anger *= scale;
@@ -93,6 +95,12 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
         log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f anger=%.4f happy=%.4f", W_total, A, scale,
              new_fear, new_anger, new_happy);
 
+    /* Defensive clamp: A ∈ [0,1] and scale = A/W_total, so each scaled value
+     * is bounded by A ≤ 1 in steady state.  At start-up (all emotions = 0)
+     * scale can briefly exceed 1 until convergence; the clamp is the safety
+     * net that prevents a transient spike from escaping the [0,1] range.
+     * Note: after clamping the sum may fall fractionally below A; this
+     * transient is corrected within one additional tick by the smoothing. */
     ai->sec.fear = sec_clamp(new_fear, 0.0f, 1.0f);
     ai->sec.anger = sec_clamp(new_anger, 0.0f, 1.0f);
     ai->sec.happiness = sec_clamp(new_happy, 0.0f, 1.0f);
@@ -171,6 +179,11 @@ void sec_update(struct char_data *mob, const struct emotion_4d_state *r)
     float w_anger = A * D * (1.0f - V);
     float w_happy = A * V * D;
 
+    /* Defensive clamps: A, D, V are each clamped to [0,1] on lines 163-165,
+     * so the partition weights w_fear = A*(1-D), w_anger = A*D*(1-V), and
+     * w_happy = A*V*D are all mathematically in [0, A] ⊆ [0,1].  These
+     * clamps are kept as an explicit defensive bound in case the partition
+     * formula changes in future; they carry no cost in normal operation. */
     float t_fear = sec_clamp(w_fear, 0.0f, 1.0f);
     float t_anger = sec_clamp(w_anger, 0.0f, 1.0f);
     float t_happy = sec_clamp(w_happy, 0.0f, 1.0f);
@@ -324,7 +337,11 @@ int sec_get_dominant_emotion(struct char_data *mob)
     if (s->fear + s->anger + s->happiness < SEC_AROUSAL_EPSILON)
         return SEC_DOMINANT_NONE;
 
-    /* Return the emotion with the highest SEC weight. */
+    /* Return the emotion with the highest SEC weight.
+     * Tie-breaking priority: Anger > Fear > Happiness.
+     * Rationale: aggressive/threat responses take precedence over passive
+     * happiness for game-safety reasons (avoids "cheerful-while-attacking"
+     * incoherence).  Maintainers should preserve this ordering. */
     if (s->anger >= s->fear && s->anger >= s->happiness)
         return SEC_DOMINANT_ANGER;
     if (s->fear >= s->happiness)

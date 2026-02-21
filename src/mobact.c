@@ -418,18 +418,36 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     if (ch->ai_data) {
         const struct sec_state *sec_s = &ch->ai_data->sec;
 
-        /* Classify the chosen social category by its primary SEC emotion. */
+        /* Classify the chosen social category by its primary SEC emotion.
+         *
+         * Mapping rationale (SEC has three axes: Fear, Anger, Happiness):
+         *   HAPPINESS : positive/grateful/loving/playful/excited/triumphant —
+         *               positive valence, typically high dominance.
+         *   HAPPINESS : proud — pride = positive valence + high dominance.
+         *   HAPPINESS : protective — compassion/care = positive valence.
+         *   ANGER     : aggressive/negative/mocking — negative valence,
+         *               mid-to-high dominance (threat posture).
+         *   ANGER     : envious — negative valence, mid-high dominance;
+         *               envy has aggression potential, not sadness.
+         *   FEAR      : fearful/submissive — low dominance, threat response.
+         *   FEAR      : sad/mourning — negative valence + low dominance
+         *               maps closest to the fear axis in the SEC triad.
+         *   NONE      : neutral/mixed, resting, respectful, curious, confused
+         *               — contextual or cognitive signals that should not be
+         *               restricted by the dominant emotional vector. */
         int social_emotion;
         if (social_list == positive_socials || social_list == grateful_socials || social_list == loving_socials ||
-            social_list == playful_socials || social_list == excited_socials || social_list == triumphant_socials) {
+            social_list == playful_socials || social_list == excited_socials || social_list == triumphant_socials ||
+            social_list == proud_socials || social_list == protective_socials) {
             social_emotion = SEC_DOMINANT_HAPPINESS;
         } else if (social_list == aggressive_socials || social_list == negative_socials ||
-                   social_list == mocking_socials) {
+                   social_list == mocking_socials || social_list == envious_socials) {
             social_emotion = SEC_DOMINANT_ANGER;
-        } else if (social_list == fearful_socials || social_list == submissive_socials) {
+        } else if (social_list == fearful_socials || social_list == submissive_socials || social_list == sad_socials ||
+                   social_list == mourning_socials) {
             social_emotion = SEC_DOMINANT_FEAR;
         } else {
-            social_emotion = SEC_DOMINANT_NONE; /* neutral/mixed — no restriction */
+            social_emotion = SEC_DOMINANT_NONE; /* contextual/cognitive — no restriction */
         }
 
         if (social_emotion != SEC_DOMINANT_NONE) {
@@ -465,7 +483,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
             /* If the chosen emotion is less than SEC_WTA_THRESHOLD of the dominant,
              * the SEC state does not support this social category — use
              * neutral socials to maintain emotional coherence. */
-            if (dom_val > 1e-4f && chosen_val < dom_val * SEC_WTA_THRESHOLD)
+            if (dom_val > SEC_AROUSAL_EPSILON && chosen_val < dom_val * SEC_WTA_THRESHOLD)
                 social_list = neutral_socials;
         }
     }
