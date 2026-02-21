@@ -9640,7 +9640,7 @@ void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data
 
     /* Add to emotion memory */
     if (caster) {
-        add_emotion_memory(mob, caster, INTERACT_HEALED, 0, NULL);
+        add_emotion_memory(mob, caster, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
     }
 }
 
@@ -9671,7 +9671,7 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
 
     /* Record in memory: witnessed caster use threatening magic */
     if (caster)
-        add_emotion_memory(mob, caster, INTERACT_WITNESSED_DEATH, 0, NULL);
+        add_emotion_memory(mob, caster, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
 }
 
 /**
