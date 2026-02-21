@@ -105,6 +105,19 @@ ACMD(do_action)
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(vict) && !IS_NPC(ch) && vict->ai_data) {
             update_mob_emotion_from_social(vict, ch, action->command);
         }
+
+        /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
+         * Only triggers when a player (non-NPC) performs a targeted social so that
+         * observer NPCs can process the event through their SEC Tetrad appraisal. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && !IS_NPC(ch)) {
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (!IS_NPC(witness) || !witness->ai_data || witness == vict || MOB_FLAGGED(witness, MOB_NOTDEADYET))
+                    continue;
+                update_mob_emotion_witnessed_social(witness, ch, vict, action->command);
+            }
+        }
     }
 }
 

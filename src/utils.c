@@ -9671,6 +9671,197 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
 }
 
 /**
+ * Update mob emotions when witnessing a social action between two other entities.
+ *
+ * Implements the Witness Mechanism (SEC Tetrad Social Appraisal):
+ *   - Only processes NPCs with MOB_AWARE or MOB_SENTINEL flags that have ai_data.
+ *   - A distance multiplier of 0.50 reduces emotional impact vs. being the direct target.
+ *   - Appraisal is driven by the witness's relational orientation toward both parties:
+ *       * Positive/romantic social → envy/sadness if the target is a rival to the witness;
+ *         vicarious happiness if the target is a friend.
+ *       * Violent social → disgust/fear/anger proportional to affinity with the target.
+ *       * Negative social → protective anger/sadness when the target is a friend.
+ *   - Actor affiliation is updated via emotion memory so that the 4D projection layer
+ *     recalculates Affiliation and Valence on the next emotional tick.
+ *
+ * @param witness     The observing NPC (must have MOB_AWARE or MOB_SENTINEL and ai_data).
+ * @param actor       The character performing the social action.
+ * @param target      The target of the social action (NULL for untargeted socials).
+ * @param social_name The name of the social command (e.g. "flirt", "slap").
+ */
+void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_data *actor, struct char_data *target,
+                                         const char *social_name)
+{
+    /* Social classification arrays – subset of the full lists used by
+     * update_mob_emotion_from_social(), covering the emotionally significant categories
+     * that drive the SEC Tetrad appraisal for witnesses. */
+    static const char *positive_socials[] = {
+        "bow",   "smile",  "applaud", "clap",     "greet",   "grin",    "comfort", "pat",       "hug",      "cuddle",
+        "kiss",  "nuzzle", "squeeze", "stroke",   "snuggle", "worship", "giggle",  "laughs",    "bounce",   "dance",
+        "sing",  "tango",  "whistle", "curtsey",  "salute",  "admire",  "welcome", "handshake", "highfive", "nods",
+        "waves", "winks",  "thanks",  "chuckles", "beam",    "happy",   "gleam",   "cheers",    "enthuse",  NULL};
+
+    static const char *romantic_socials[] = {"flirt",   "love",   "ogle",   "beckon", "charm",  "smooch",  "snog",
+                                             "propose", "caress", "huggle", "ghug",   "cradle", "bearhug", "fondle",
+                                             "grope",   "french", "sex",    "seduce", NULL};
+
+    static const char *violent_socials[] = {"needle", "shock", "whip",     "bite",  "smack",  "clobber", "thwap",
+                                            "whack",  "pound", "shootout", "burn",  "charge", "despine", "shiskabob",
+                                            "vice",   "choke", "strangle", "smite", "sword",  NULL};
+
+    static const char *negative_socials[] = {
+        "frown", "glare", "spit", "accuse", "curse",  "taunt",    "snicker", "slap",      "snap",  "snarl", "growl",
+        "fume",  "sneer", "jeer", "mock",   "ignore", "threaten", "blame",   "criticize", "scold", "hate",  NULL};
+
+    int i;
+    bool is_positive = FALSE;
+    bool is_romantic = FALSE;
+    bool is_violent = FALSE;
+    bool is_negative = FALSE;
+
+    if (!witness || !actor || !IS_NPC(witness) || !witness->ai_data || !social_name || !*social_name ||
+        !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Exclude mobs being extracted */
+    if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+        return;
+
+    /* Only perceptive NPCs observe social events in the room */
+    if (!MOB_FLAGGED(witness, MOB_AWARE) && !MOB_FLAGGED(witness, MOB_SENTINEL))
+        return;
+
+    /* Classify the social action */
+    for (i = 0; positive_socials[i] && !is_positive; i++)
+        if (!strcmp(social_name, positive_socials[i]))
+            is_positive = TRUE;
+
+    if (!is_positive)
+        for (i = 0; romantic_socials[i] && !is_romantic; i++)
+            if (!strcmp(social_name, romantic_socials[i]))
+                is_romantic = TRUE;
+
+    if (!is_positive && !is_romantic)
+        for (i = 0; violent_socials[i] && !is_violent; i++)
+            if (!strcmp(social_name, violent_socials[i]))
+                is_violent = TRUE;
+
+    if (!is_positive && !is_romantic && !is_violent)
+        for (i = 0; negative_socials[i] && !is_negative; i++)
+            if (!strcmp(social_name, negative_socials[i]))
+                is_negative = TRUE;
+
+    /* Skip socials with no relevant emotional signature for witnesses */
+    if (!is_positive && !is_romantic && !is_violent && !is_negative)
+        return;
+
+    /* SEC Tetrad Social Appraisal:
+     * Retrieve the witness's relational orientation toward both parties.
+     * get_relationship_emotion() returns 0-100 (50 = neutral baseline). */
+    int affil_to_actor = get_relationship_emotion(witness, actor, EMOTION_TYPE_FRIENDSHIP);
+    int affil_to_target =
+        (target && target != witness) ? get_relationship_emotion(witness, target, EMOTION_TYPE_FRIENDSHIP) : 0;
+
+    /* Distance multiplier: witnessed events are 50 % as impactful as direct interactions.
+     * Applied by halving each raw emotion delta (integer right-shift by 1). */
+#define W_SCALE(x) ((x) / 2)
+
+    if (is_positive || is_romantic) {
+        /* ── Positive / Romantic social appraisal ──────────────────────────────
+         * Dispatch:
+         *   Envy / Sadness – witness is close to actor but target is a stranger/rival.
+         *   Happiness      – witness is a friend of the target (vicarious joy).
+         *   Jealousy       – witness has love toward actor/target (romantic threat). */
+
+        /* Social jealousy: high actor affiliation + low target affiliation */
+        if (affil_to_actor >= 60 && affil_to_target < 30 && target) {
+            adjust_emotion(witness, &witness->ai_data->emotion_envy, W_SCALE(rand_number(8, 18)));
+            adjust_emotion(witness, &witness->ai_data->emotion_sadness, W_SCALE(rand_number(4, 10)));
+        }
+
+        /* Vicarious joy: witness is a friend of the target */
+        if (affil_to_target >= 60 && target) {
+            adjust_emotion(witness, &witness->ai_data->emotion_happiness, W_SCALE(rand_number(4, 12)));
+            adjust_emotion(witness, &witness->ai_data->emotion_friendship, W_SCALE(rand_number(2, 6)));
+        }
+
+        /* Romantic jealousy from love relationships */
+        if (is_romantic && target) {
+            int love_to_actor = get_relationship_emotion(witness, actor, EMOTION_TYPE_LOVE);
+            int love_to_target = get_relationship_emotion(witness, target, EMOTION_TYPE_LOVE);
+
+            if (love_to_actor >= 50) {
+                /* Witness loves the actor: seeing them romance someone else → jealousy */
+                adjust_emotion(witness, &witness->ai_data->emotion_envy, W_SCALE(rand_number(10, 20)));
+                adjust_emotion(witness, &witness->ai_data->emotion_sadness, W_SCALE(rand_number(8, 15)));
+            }
+            if (love_to_target >= 50) {
+                /* Witness loves the target: protective concern at unwanted advances */
+                adjust_emotion(witness, &witness->ai_data->emotion_envy, W_SCALE(rand_number(5, 12)));
+                adjust_emotion(witness, &witness->ai_data->emotion_anger, W_SCALE(rand_number(3, 8)));
+            }
+        }
+
+        /* 4D Affiliation update: kind/positive actor → slight approach toward actor */
+        adjust_emotion(witness, &witness->ai_data->emotion_friendship, W_SCALE(rand_number(1, 4)));
+
+        add_emotion_memory(witness, actor, INTERACT_SOCIAL_POSITIVE, 0, social_name);
+
+    } else if (is_violent) {
+        /* ── Violent social appraisal ──────────────────────────────────────────
+         * Dispatch:
+         *   Disgust        – always (scaled by distance).
+         *   Fear / Anger   – proportional to witness affinity with the target.
+         *   Compassion     – compassionate mobs react more strongly. */
+
+        adjust_emotion(witness, &witness->ai_data->emotion_disgust, W_SCALE(rand_number(10, 20)));
+
+        if (affil_to_target >= 40 && target) {
+            /* Target is a friend/acquaintance → stronger protective reaction */
+            adjust_emotion(witness, &witness->ai_data->emotion_anger, W_SCALE(rand_number(10, 20)));
+            adjust_emotion(witness, &witness->ai_data->emotion_sadness, W_SCALE(rand_number(5, 12)));
+            adjust_emotion(witness, &witness->ai_data->emotion_fear, W_SCALE(rand_number(5, 12)));
+        } else if (affil_to_target >= 20) {
+            /* Neutral relationship with target → generic fear */
+            adjust_emotion(witness, &witness->ai_data->emotion_fear, W_SCALE(rand_number(5, 12)));
+        }
+
+        /* Compassionate witnesses react more strongly to any violence */
+        if (witness->ai_data->emotion_compassion >= 60) {
+            adjust_emotion(witness, &witness->ai_data->emotion_disgust, W_SCALE(rand_number(5, 10)));
+            adjust_emotion(witness, &witness->ai_data->emotion_sadness, W_SCALE(rand_number(4, 8)));
+        }
+
+        /* 4D Affiliation update: violent actor → avoidance / trust loss toward actor */
+        adjust_emotion(witness, &witness->ai_data->emotion_friendship, -W_SCALE(rand_number(5, 12)));
+        adjust_emotion(witness, &witness->ai_data->emotion_trust, -W_SCALE(rand_number(3, 8)));
+
+        add_emotion_memory(witness, actor, INTERACT_SOCIAL_VIOLENT, 1, social_name);
+
+    } else if (is_negative) {
+        /* ── Negative social appraisal ─────────────────────────────────────────
+         * Dispatch:
+         *   Disgust        – mild baseline.
+         *   Anger / Sadness – when the target is a friend of the witness. */
+
+        adjust_emotion(witness, &witness->ai_data->emotion_disgust, W_SCALE(rand_number(4, 10)));
+
+        if (affil_to_target >= 50 && target) {
+            adjust_emotion(witness, &witness->ai_data->emotion_anger, W_SCALE(rand_number(5, 12)));
+            adjust_emotion(witness, &witness->ai_data->emotion_sadness, W_SCALE(rand_number(3, 8)));
+            adjust_emotion(witness, &witness->ai_data->emotion_trust, -W_SCALE(rand_number(3, 8)));
+        }
+
+        /* 4D Affiliation update: hostile actor → slight avoidance toward actor */
+        adjust_emotion(witness, &witness->ai_data->emotion_friendship, -W_SCALE(rand_number(2, 6)));
+
+        add_emotion_memory(witness, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
+    }
+
+#undef W_SCALE
+}
+
+/**
  * Update mob emotions when a quest is completed (Quest-Related Trigger 2.4)
  * @param mob The quest giver mob
  * @param player The player completing the quest
