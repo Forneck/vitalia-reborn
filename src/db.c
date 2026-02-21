@@ -1983,6 +1983,29 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->emotional_profile = num_arg;
         }
     }
+    CASE("Openness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness personality trait (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn.
+             * O_base is structural/genetic; it must never be derived from SEC state. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.openness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.openness_initialized = 1;
+            }
+        }
+    }
+    CASE("OpennessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness builder modifier (-50..+50).
+             * Applied as delta on top of Gaussian base; never replaces it. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.openness_modifier = num_arg;
+        }
+    }
     CASE("Conscientiousness")
     {
         if (mob_proto[i].ai_data) {
@@ -2001,6 +2024,14 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             }
             /* num_arg == 0: leave conscientiousness at 0.0 and initialized=0 so
              * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
+        }
+    }
+    CASE("ConscientiousnessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.conscientiousness_modifier = num_arg;
         }
     }
     CASE("Agreeableness")
@@ -2043,6 +2074,18 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             /* Big Five Phase 3: Extraversion builder modifier (-50..+50). */
             RANGE(-50, 50);
             mob_proto[i].ai_data->personality.extraversion_modifier = num_arg;
+        }
+    }
+    CASE("NeuroticismModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 1: Neuroticism builder modifier (-50..+50).
+             * Positive values heighten volatility; negative values dampen it.
+             * N_base is always generated from genetics at spawn; this modifier
+             * allows builders to tune archetype-level volatility without
+             * overriding the genetic foundation. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.neuroticism_modifier = num_arg;
         }
     }
     CASE("PreferredWeather")
@@ -4716,6 +4759,19 @@ static void load_default_config(void)
     CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
     CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
     CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
+
+    /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
+    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = sec_o_novelty_move_scale;
+    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = sec_o_novelty_depth_scale;
+    CONFIG_SEC_O_NOVELTY_BONUS_CAP = sec_o_novelty_bonus_cap;
+    CONFIG_SEC_O_REPETITION_CAP = sec_o_repetition_cap;
+    CONFIG_SEC_O_REPETITION_BONUS = sec_o_repetition_bonus;
+    CONFIG_SEC_O_EXPLORATION_BASE = sec_o_exploration_base;
+    CONFIG_SEC_O_THREAT_BIAS = sec_o_threat_bias;
+
+    /* SEC Core tuning parameters */
+    CONFIG_SEC_EMOTION_ALPHA = sec_emotion_alpha;
+    CONFIG_SEC_WTA_THRESHOLD = sec_wta_threshold;
 }
 
 void load_config(void)
@@ -5247,6 +5303,26 @@ void load_config(void)
                     CONFIG_SPECIAL_IN_COMM = num;
                 else if (!str_cmp(tag, "school_weather_affects"))
                     CONFIG_SCHOOL_WEATHER_AFFECTS = num;
+                /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+                else if (!str_cmp(tag, "sec_o_novelty_move_scale"))
+                    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "sec_o_novelty_depth_scale"))
+                    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = LIMIT(num, 1, 20);
+                else if (!str_cmp(tag, "sec_o_novelty_bonus_cap"))
+                    CONFIG_SEC_O_NOVELTY_BONUS_CAP = LIMIT(num, 10, 50);
+                else if (!str_cmp(tag, "sec_o_repetition_cap"))
+                    CONFIG_SEC_O_REPETITION_CAP = LIMIT(num, 1, 10);
+                else if (!str_cmp(tag, "sec_o_repetition_bonus"))
+                    CONFIG_SEC_O_REPETITION_BONUS = LIMIT(num, 0, 30);
+                else if (!str_cmp(tag, "sec_o_exploration_base"))
+                    CONFIG_SEC_O_EXPLORATION_BASE = LIMIT(num, 0, 40);
+                else if (!str_cmp(tag, "sec_o_threat_bias"))
+                    CONFIG_SEC_O_THREAT_BIAS = LIMIT(num, 0, 100);
+                /* SEC Core tuning parameters */
+                else if (!str_cmp(tag, "sec_emotion_alpha"))
+                    CONFIG_SEC_EMOTION_ALPHA = LIMIT(num, 10, 80);
+                else if (!str_cmp(tag, "sec_wta_threshold"))
+                    CONFIG_SEC_WTA_THRESHOLD = LIMIT(num, 30, 90);
                 else if (!str_cmp(tag, "start_messg")) {
                     strncpy(buf, "Reading start message in load_config()", sizeof(buf));
                     if (CONFIG_START_MESSG)

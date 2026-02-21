@@ -1062,16 +1062,20 @@ struct mob_genetics {
  * - High E (1.0): Sociable, initiates contact, high social payoff weighting
  */
 struct mob_personality {
-    float openness;                     /* (O) Openness to experience - Future use (Phase 4) */
+    float openness;                     /* (O) Cognitive flexibility - Trait_base, ACTIVE Phase 4 */
     float conscientiousness;            /* (C) Self-discipline/control - ACTIVE Phase 2 */
     float extraversion;                 /* (E) Social engagement - Trait_base, ACTIVE Phase 3 */
     float agreeableness;                /* (A) Compassion/cooperation - Trait_base, ACTIVE Phase 3 */
     float neuroticism;                  /* (N) Emotional sensitivity - ACTIVE Phase 1 */
+    byte openness_initialized;          /* Flag: 1 if O set (file/random), 0 if uninitialized */
     byte conscientiousness_initialized; /* Flag: 1 if C set (file/random), 0 if uninitialized */
     byte agreeableness_initialized;     /* Flag: 1 if A base set (file/random), 0 if uninitialized */
     byte extraversion_initialized;      /* Flag: 1 if E base set (file/random), 0 if uninitialized */
+    int openness_modifier;              /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int conscientiousness_modifier;     /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int neuroticism_modifier;           /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
 };
 
 /**
@@ -1379,6 +1383,8 @@ struct mob_ai_data {
     bool last_outcome_obvious;   /* Whether the last outcome was obvious/predictable */
     int recent_prediction_error; /* 0–100 smoothed novelty */
     int attention_bias;          /* -50 to +50 long-term adaptation */
+    int last_chosen_action_type; /* Type of last Shadow Timeline action (SHADOW_ACTION_* or -1) */
+    int action_repetition_count; /* Consecutive ticks the same action type was chosen (0 = unknown) */
 
     /* 4D Relational Decision Space - Emotional Profile projection layer */
     /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */
@@ -2162,6 +2168,20 @@ struct emotion_config_data {
     int ocean_ae_k2; /**< E modulation: fear coefficient * 100 (default: 10 = 0.10) */
     int ocean_ae_k3; /**< A modulation: happiness coefficient * 100 (default: 10 = 0.10) */
     int ocean_ae_k4; /**< A modulation: anger coefficient * 100 (default: 10 = 0.10) */
+
+    /* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
+    /* Shadow Timeline novelty and exploration coefficients */
+    int sec_o_novelty_move_scale;  /**< MOVE score bonus per O unit * 10 (default: 140 = 14.0) */
+    int sec_o_novelty_depth_scale; /**< Novelty score pts per repetition step at O=1 (default: 6) */
+    int sec_o_novelty_bonus_cap;   /**< Hard cap on novelty bonus in pts (default: 30 = 0.3×MAX) */
+    int sec_o_repetition_cap;      /**< Depth at which novelty bonus plateaus (default: 5) */
+    int sec_o_repetition_bonus;    /**< Routine-preference bonus at O=0 (default: 15) */
+    int sec_o_exploration_base;    /**< Max exploration % chance (% × O_final; default: 20) */
+    int sec_o_threat_bias;         /**< O threat-amplification reduction * 100 (default: 40 = 0.40) */
+
+    /* SEC Core tuning parameters */
+    int sec_emotion_alpha; /**< Base α-smoothing rate * 100 (default: 40 = 0.40) */
+    int sec_wta_threshold; /**< Winner-Takes-All ratio * 100 (default: 60 = 0.60) */
 };
 
 /** Experimental Features configuration. */

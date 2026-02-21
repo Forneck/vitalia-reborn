@@ -3495,6 +3495,11 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
 
+    /* Initialize last_chosen_action_type to -1 (no prior commitment).
+     * Used by Conscientiousness consistency bias in Shadow Timeline scoring. */
+    mob->ai_data->last_chosen_action_type = -1;
+    mob->ai_data->action_repetition_count = 0;
+
     /* Initialize goal fields to sentinel values to prevent SIGSEGV.
      * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.
      * Setting them to 0 (from memset) would cause incorrect behavior. */
@@ -3612,7 +3617,18 @@ void init_mob_ai_data(struct char_data *mob)
         }
         /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
 
-        mob->ai_data->personality.openness = 0.5f;
+        /* Big Five Phase 4: Openness (O) - Gaussian Trait_base generation.
+         * μ=50 (int), σ=15, clamped [1, 100]; normalized to [0.01, 1.0] float.
+         * Value 0 remains "uninitialized" sentinel consistent with other traits.
+         * IMPORTANT: O_base is structural (genetic); it must never be derived from
+         * SEC emotional state.  O_mod is reserved for slow long-term adaptation only
+         * (±SEC_O_MOD_CAP = ±0.05); it must not be recalculated per tick. */
+        if (!mob->ai_data->personality.openness_initialized) {
+            int o_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.openness = (float)o_value / 100.0f;
+            mob->ai_data->personality.openness_initialized = 1;
+        }
+        /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
 
         /* Big Five Phase 3: Agreeableness (A) - Gaussian Trait_base generation.
          * μ=0.5, σ=0.15, clamped 1-100. Value 0 remains "uninitialized" sentinel. */

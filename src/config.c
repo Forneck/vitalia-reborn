@@ -389,3 +389,17 @@ int ocean_ae_k1 = 10; /* 0.10 - E modulation: happiness coefficient */
 int ocean_ae_k2 = 10; /* 0.10 - E modulation: fear coefficient       */
 int ocean_ae_k3 = 10; /* 0.10 - A modulation: happiness coefficient  */
 int ocean_ae_k4 = 10; /* 0.10 - A modulation: anger coefficient      */
+
+/* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
+/* Shadow Timeline novelty and exploration coefficients */
+int sec_o_novelty_move_scale = 140; /* 14.0 - MOVE score bonus per O unit (*10) */
+int sec_o_novelty_depth_scale = 6;  /* pts per repetition step at O=1 */
+int sec_o_novelty_bonus_cap = 30;   /* hard cap on novelty bonus (0.3 * OUTCOME_SCORE_MAX) */
+int sec_o_repetition_cap = 5;       /* depth at which novelty bonus plateaus */
+int sec_o_repetition_bonus = 15;    /* routine-preference bonus at O=0 */
+int sec_o_exploration_base = 20;    /* max exploration % chance (% * O_final) */
+int sec_o_threat_bias = 40;         /* 0.40 - O threat-amplification reduction (*100) */
+
+/* SEC Core tuning parameters */
+int sec_emotion_alpha = 40; /* 0.40 - base alpha-smoothing rate (*100) */
+int sec_wta_threshold = 60; /* 0.60 - Winner-Takes-All ratio (*100) */
