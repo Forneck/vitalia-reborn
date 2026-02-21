@@ -120,7 +120,7 @@ static const float sec_profile_baselines[EMOTION_PROFILE_NUM][4] = {
     /* 1 AGGRESSIVE */ { 0.10f, 0.60f, 0.15f, 0.05f },
     /* 2 DEFENSIVE  */ { 0.60f, 0.10f, 0.10f, 0.15f },
     /* 3 BALANCED   */ { 0.25f, 0.25f, 0.35f, 0.10f },
-    /* 4 SENSITIVE  */ { 0.35f, 0.15f, 0.40f, 0.20f },
+    /* 4 SENSITIVE  */ { 0.35f, 0.15f, 0.35f, 0.15f },
     /* 5 CONFIDENT  */ { 0.10f, 0.30f, 0.45f, 0.05f },
     /* 6 GREEDY     */ { 0.20f, 0.40f, 0.20f, 0.10f },
     /* 7 LOYAL      */ { 0.15f, 0.20f, 0.50f, 0.15f },

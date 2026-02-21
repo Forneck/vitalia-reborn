@@ -31,7 +31,7 @@
  *   w_fear    = A * (1 − D) * V        — low dominance, high valence  (threat/uncertainty)
  *   w_sadness = A * (1 − D) * (1 − V)  — low dominance, low valence   (passive loss / grief)
  *   w_anger   = A * D * (1 − V)        — high dominance, low valence  (active loss / fight)
- *   w_happy   = A * V * D              — high dominance, high valence  (approach / reward)
+ *   w_happy   = A * D * V              — high dominance, high valence  (approach / reward)
  *   → fear_target + sadness_target + anger_target + happiness_target = A  (guaranteed)
  *
  * ── Lateral Inhibition and the Arousal Budget ─────────────────────────────
