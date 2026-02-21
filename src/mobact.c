@@ -34,6 +34,7 @@
 #include "shadow_timeline.h"
 #include "emotion_projection.h"
 #include "dg_scripts.h"
+#include "sec.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -727,6 +728,9 @@ void mobile_activity(void)
 
             if (CONFIG_MOB_4D_DEBUG)
                 log_4d_state(ch, target_4d, &ch->ai_data->last_4d_state);
+
+            /* SEC: update internal emotional projections from post-hysteresis 4D result. */
+            sec_update(ch, &ch->ai_data->last_4d_state);
         }
 
         if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
@@ -744,6 +748,10 @@ void mobile_activity(void)
             if (ch->ai_data->helplessness < 0.0f)
                 ch->ai_data->helplessness = 0.0f;
         }
+
+        /* SEC: passive decay toward emotional baseline when arousal is low. */
+        if (ch->ai_data)
+            sec_passive_decay(ch);
 
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;

@@ -27,6 +27,7 @@
 #include "dg_scripts.h"      /* for char_script_id */
 #include "modify.h"          /* for page_string */
 #include "shadow_timeline.h" /* for cognitive capacity constants */
+#include "sec.h"             /* for sec_init */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -3772,6 +3773,9 @@ void init_mob_ai_data(struct char_data *mob)
         COGNITIVE_CAPACITY_BASE + (mob->ai_data->genetics.emotional_intelligence * COGNITIVE_CAPACITY_EI_MULT);
     mob->ai_data->cognitive_capacity =
         URANGE(COGNITIVE_CAPACITY_LOWER_BOUND, mob->ai_data->cognitive_capacity, COGNITIVE_CAPACITY_MAX);
+
+    /* SEC: initialise internal emotional state and personality baseline. */
+    sec_init(mob);
 }
 
 /* Initialize mob climate preferences based on spawn room conditions.
