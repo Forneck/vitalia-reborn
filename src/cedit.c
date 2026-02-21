@@ -2018,6 +2018,30 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
             OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
             OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
+
+            /* Big Five Phase 1: Neuroticism - reset to defaults */
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_sadness = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_shame = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_humiliation = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_pain = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_horror = 40;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_disgust = 25;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_envy = 25;
+            OLC_CONFIG(d)->emotion_config.neuroticism_gain_anger = 20;
+            OLC_CONFIG(d)->emotion_config.neuroticism_soft_clamp_k = 50;
+
+            /* Big Five Phase 2: Conscientiousness - reset to defaults */
+            OLC_CONFIG(d)->emotion_config.conscientiousness_impulse_control = 100;
+            OLC_CONFIG(d)->emotion_config.conscientiousness_reaction_delay = 100;
+            OLC_CONFIG(d)->emotion_config.conscientiousness_moral_weight = 100;
+            OLC_CONFIG(d)->emotion_config.conscientiousness_debug = 0;
+
+            /* Big Five Phase 3: Agreeableness (A) and Extraversion (E) - reset to defaults */
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k1 = 10;
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k2 = 10;
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = 10;
+            OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = 10;
             break;
 
         case 4: /* Sensitive - Emotions display more, memory lasts longer */

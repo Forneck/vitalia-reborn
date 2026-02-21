@@ -351,3 +351,87 @@ emotion_memory_age_old = 3600
 * Memory System Baseline Offset (0-100)
 emotion_memory_baseline_offset = 50
 
+* Trading Behavior Thresholds (0-100)
+emotion_trade_trust_high_threshold = 60
+emotion_trade_trust_low_threshold = 30
+emotion_trade_greed_high_threshold = 70
+emotion_trade_friendship_high_threshold = 70
+
+* Quest Behavior Thresholds (0-100)
+emotion_quest_curiosity_high_threshold = 70
+emotion_quest_loyalty_high_threshold = 70
+emotion_quest_trust_high_threshold = 60
+emotion_quest_trust_low_threshold = 30
+
+* Social Initiation Thresholds (0-100)
+emotion_social_happiness_high_threshold = 70
+emotion_social_anger_high_threshold = 70
+emotion_social_sadness_high_threshold = 70
+emotion_social_love_follow_threshold = 80
+
+* Group Behavior Thresholds (0-100)
+emotion_group_loyalty_high_threshold = 70
+emotion_group_loyalty_low_threshold = 30
+emotion_group_friendship_high_threshold = 70
+emotion_group_envy_high_threshold = 70
+
+* Combat Behavior Thresholds and Modifiers
+emotion_combat_anger_high_threshold = 70
+emotion_combat_anger_damage_bonus = 15
+emotion_combat_anger_attack_bonus = 25
+emotion_combat_pain_low_threshold = 30
+emotion_combat_pain_moderate_threshold = 50
+emotion_combat_pain_high_threshold = 70
+emotion_combat_pain_accuracy_penalty_low = 1
+emotion_combat_pain_accuracy_penalty_mod = 2
+emotion_combat_pain_accuracy_penalty_high = 4
+emotion_combat_pain_damage_penalty_low = 5
+emotion_combat_pain_damage_penalty_mod = 10
+emotion_combat_pain_damage_penalty_high = 20
+
+* Emotion Decay Rate Configuration
+emotion_decay_rate_multiplier = 100
+emotion_extreme_emotion_threshold = 80
+emotion_extreme_decay_multiplier = 150
+emotion_decay_rate_fear = 2
+emotion_decay_rate_anger = 2
+emotion_decay_rate_happiness = 2
+emotion_decay_rate_sadness = 2
+emotion_decay_rate_pain = 4
+emotion_decay_rate_horror = 3
+emotion_decay_rate_disgust = 2
+emotion_decay_rate_shame = 1
+emotion_decay_rate_humiliation = 1
+
+* [ Big Five (OCEAN) Personality - Phase 1: Neuroticism ]
+* Neuroticism gain coefficients (beta * 100)
+* These control how much Neuroticism amplifies negative emotions
+* Formula: E_raw = E_base * (1.0 + (beta * N))
+neuroticism_gain_fear = 40
+neuroticism_gain_sadness = 40
+neuroticism_gain_shame = 40
+neuroticism_gain_humiliation = 40
+neuroticism_gain_pain = 40
+neuroticism_gain_horror = 40
+neuroticism_gain_disgust = 25
+neuroticism_gain_envy = 25
+neuroticism_gain_anger = 20
+neuroticism_soft_clamp_k = 50
+
+* Big Five (OCEAN) - Phase 2: Conscientiousness Configuration
+* Executive control parameters (values * 100 for precision)
+conscientiousness_impulse_control = 100
+conscientiousness_reaction_delay = 100
+conscientiousness_moral_weight = 100
+conscientiousness_debug = 0
+
+* Big Five (OCEAN) - Phase 3: A/E SEC Modulation Coefficients
+* E_mod = k1*happiness - k2*fear  (capped +/-0.10)
+* A_mod = k3*happiness - k4*anger (capped +/-0.10)
+* Values stored *100 (actual = value/100.0)
+ocean_ae_k1 = 10
+ocean_ae_k2 = 10
+ocean_ae_k3 = 10
+ocean_ae_k4 = 10
+
+
