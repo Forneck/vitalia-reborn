@@ -5837,7 +5837,7 @@ float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_v
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return (float)base_value;
 
-    float neuroticism = mob->ai_data->personality.neuroticism;
+    float neuroticism = sec_get_neuroticism_final(mob);
     float beta = 0.0f;
 
     /* Determine β (gain coefficient) based on emotion type
@@ -6494,6 +6494,21 @@ void update_mob_emotion_passive(struct char_data *mob)
     float C_final_decay = sec_get_conscientiousness_final(mob);
     float c_persist_scale = SEC_C_DECAY_BASE - SEC_C_DECAY_RANGE * C_final_decay;
 
+    /* Neuroticism (N) decay resistance for negative emotions (fear/anger only).
+     * High-N mobs ruminate — negative states linger longer before fading.
+     * N_fear_scale = SEC_N_FEAR_DECAY_BASE - SEC_N_FEAR_DECAY_COEFF * N_final ∈ [0.60, 1.20].
+     * N_anger_scale = SEC_N_ANGER_DECAY_BASE - SEC_N_ANGER_DECAY_COEFF * N_final ∈ [0.70, 1.20].
+     * Lower bound SEC_N_DECAY_MIN_SCALE prevents decay from inverting or zeroing.
+     * Applied after C persistence; the combined product is bounded by design:
+     *   worst case C * N = 0.60 * 0.60 = 0.36 (decay never fully halts). */
+    float N_final_decay = sec_get_neuroticism_final(mob);
+    float n_fear_scale = SEC_N_FEAR_DECAY_BASE - SEC_N_FEAR_DECAY_COEFF * N_final_decay;
+    if (n_fear_scale < SEC_N_DECAY_MIN_SCALE)
+        n_fear_scale = SEC_N_DECAY_MIN_SCALE;
+    float n_anger_scale = SEC_N_ANGER_DECAY_BASE - SEC_N_ANGER_DECAY_COEFF * N_final_decay;
+    if (n_anger_scale < SEC_N_DECAY_MIN_SCALE)
+        n_anger_scale = SEC_N_DECAY_MIN_SCALE;
+
     /* Fear decays toward wimpy_tendency baseline */
     int fear_baseline = mob->ai_data->genetics.wimpy_tendency / 2;
     if (mob->ai_data->emotion_fear > fear_baseline) {
@@ -6505,6 +6520,8 @@ void update_mob_emotion_passive(struct char_data *mob)
         base_decay = (base_decay * global_multiplier) / 100;
         /* Conscientiousness persistence: high C slows fear decay (holds vigilance). */
         base_decay = (int)(base_decay * c_persist_scale);
+        /* Neuroticism persistence: high N slows fear decay further (rumination). */
+        base_decay = (int)(base_decay * n_fear_scale);
         if (base_decay < 1)
             base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(1, MAX(1, base_decay)));
@@ -6534,6 +6551,8 @@ void update_mob_emotion_passive(struct char_data *mob)
         base_decay = (int)(base_decay * forgive_scale);
         /* Conscientiousness persistence: high C holds anger longer (applied after A scale). */
         base_decay = (int)(base_decay * c_persist_scale);
+        /* Neuroticism persistence: high N slows anger decay (emotional rumination). */
+        base_decay = (int)(base_decay * n_anger_scale);
         if (base_decay < 1)
             base_decay = 1;
         adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, MAX(1, base_decay)));

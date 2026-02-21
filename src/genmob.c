@@ -424,6 +424,12 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
         }
         if (mob->ai_data->personality.extraversion_modifier != 0)
             fprintf(fd, "ExtraversionModifier: %d\n", mob->ai_data->personality.extraversion_modifier);
+
+        /* Big Five Phase 1: Neuroticism - only save builder modifier if non-zero.
+         * N_base is derived from genetics at spawn; it is not stored in mob files.
+         * The modifier lets builders adjust per-archetype volatility. */
+        if (mob->ai_data->personality.neuroticism_modifier != 0)
+            fprintf(fd, "NeuroticismModifier: %d\n", mob->ai_data->personality.neuroticism_modifier);
     }
 
     fputs("E\n", fd);

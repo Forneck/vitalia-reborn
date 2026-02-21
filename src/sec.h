@@ -141,6 +141,34 @@
  */
 #define SEC_C_CONSISTENCY_SCALE 12
 
+/* ── OCEAN N modulation constants ───────────────────────────────────────── */
+
+/**
+ * Neuroticism decay resistance for negative emotions.
+ * Negative-emotion decay *= (SEC_N_DECAY_BASE - coeff * N_final).
+ * At N=0: decay * SEC_N_DECAY_BASE (normal speed).
+ * At N=1: decay * (SEC_N_DECAY_BASE - coeff)  (slowest — holds negative states).
+ * Lower bound (SEC_N_DECAY_MIN_SCALE) prevents decay from reaching 0.
+ */
+#define SEC_N_FEAR_DECAY_BASE 1.20f  /* at N=0 */
+#define SEC_N_FEAR_DECAY_COEFF 0.60f /* total range; at N=1: 1.20-0.60 = 0.60 */
+#define SEC_N_ANGER_DECAY_BASE 1.20f
+#define SEC_N_ANGER_DECAY_COEFF 0.50f /* at N=1: 1.20-0.50 = 0.70 */
+#define SEC_N_DECAY_MIN_SCALE 0.20f   /* lower bound: decay never drops below 20% */
+
+/**
+ * Neuroticism emotional modulation cap.
+ * N_mod driven by SEC fear+anger stress signal (prevents recursive loop).
+ * |N_mod| <= SEC_N_MOD_CAP to prevent structural inversion.
+ */
+#define SEC_N_MOD_CAP 0.05f
+
+/**
+ * Neuroticism stress signal scale: fraction of (sec.fear + sec.anger) used as modulation.
+ * N_mod = clamp(SEC_N_STRESS_SCALE * (fear + anger), -SEC_N_MOD_CAP, +SEC_N_MOD_CAP).
+ */
+#define SEC_N_STRESS_SCALE 0.05f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -223,6 +251,21 @@ float sec_get_extraversion_final(struct char_data *mob);
  * @param mob  The NPC.
  */
 float sec_get_conscientiousness_final(struct char_data *mob);
+
+/**
+ * Return the final Neuroticism value for a mob, incorporating:
+ *   Trait_base (genetic, derived from bravery/EI) + Trait_builder_modifier/100
+ *   + Trait_emotional_modulation
+ * Result is clamped to [0.0, 1.0].  |Trait_emotional_modulation| <= SEC_N_MOD_CAP (0.05).
+ *
+ * Modulation formula:
+ *   N_mod = clamp(SEC_N_STRESS_SCALE * (sec.fear + sec.anger), -SEC_N_MOD_CAP, +SEC_N_MOD_CAP)
+ * The SEC fear+anger signal acts as a bounded, one-way stress signal; because it is
+ * capped at ±0.05 it cannot drive a recursive amplification loop.
+ *
+ * @param mob  The NPC.
+ */
+float sec_get_neuroticism_final(struct char_data *mob);
 
 /**
  * Return the dominant SEC emotion (SEC_DOMINANT_*).

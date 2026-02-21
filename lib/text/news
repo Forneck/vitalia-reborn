@@ -38,6 +38,19 @@
    - Added ConscientiousnessModifier builder field with save/load support.
    - Stat command now shows C base/builder/sec_mod/final breakdown.
 
+   Implemented OCEAN Neuroticism (N) as structural volatility amplifier:
+   - N amplifies negative emotion gain via sec_get_neuroticism_final():
+     existing apply_neuroticism_gain() pipeline now uses N_final instead
+     of raw base (builder modifier and bounded SEC stress modulation).
+   - N adds decay resistance to fear/anger: high-N mobs ruminate longer
+     (fear_decay *= 1.2 - 0.6*N, anger_decay *= 1.2 - 0.5*N; clamped
+     to prevent sign inversion or zeroing of decay).
+   - N_final = N_base + builder_modifier/100 + N_mod (capped ±0.05).
+     N_mod = clamp(0.05 * (sec.fear + sec.anger), -0.05, +0.05) — prevents
+     recursive amplification loops (fear escalates N, N amplifies fear).
+   - Added NeuroticismModifier builder field with save/load support.
+   - Stat command now shows N base/builder/sec_mod/final breakdown.
+
    Correções de estabilidade e de bugs.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n

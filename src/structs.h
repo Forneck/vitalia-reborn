@@ -1073,6 +1073,7 @@ struct mob_personality {
     int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
     int conscientiousness_modifier;     /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int neuroticism_modifier;           /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
 };
 
 /**

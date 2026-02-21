@@ -2053,6 +2053,18 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->personality.extraversion_modifier = num_arg;
         }
     }
+    CASE("NeuroticismModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 1: Neuroticism builder modifier (-50..+50).
+             * Positive values heighten volatility; negative values dampen it.
+             * N_base is always generated from genetics at spawn; this modifier
+             * allows builders to tune archetype-level volatility without
+             * overriding the genetic foundation. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.neuroticism_modifier = num_arg;
+        }
+    }
     CASE("PreferredWeather")
     {
         if (mob_proto[i].ai_data) {

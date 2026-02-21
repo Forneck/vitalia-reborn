@@ -361,6 +361,31 @@ float sec_get_extraversion_final(struct char_data *mob)
     return sec_clamp(base + builder_mod + e_mod, 0.0f, 1.0f);
 }
 
+/* ── OCEAN Phase 1: Neuroticism final value getter ───────────────────────── */
+
+float sec_get_neuroticism_final(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0.5f;
+
+    const struct mob_personality *p = &mob->ai_data->personality;
+    const struct sec_state *s = &mob->ai_data->sec;
+
+    float base = p->neuroticism;
+    float builder_mod = (float)p->neuroticism_modifier / 100.0f;
+
+    /* N_mod: bounded stress signal from the current SEC fear+anger state.
+     * Formula: N_mod = clamp(SEC_N_STRESS_SCALE * (fear + anger), -cap, +cap).
+     * The cap (±0.05) prevents this from driving a recursive amplification loop:
+     *   high N → more fear/anger → N_mod rises → N_final rises → …
+     * The cap limits the feedback to at most 0.05 gain, which is absorbed by
+     * the structural range and cannot cause runaway escalation. */
+    float stress = s->fear + s->anger;
+    float n_mod = sec_clamp(SEC_N_STRESS_SCALE * stress, -SEC_N_MOD_CAP, SEC_N_MOD_CAP);
+
+    return sec_clamp(base + builder_mod + n_mod, 0.0f, 1.0f);
+}
+
 /* ── OCEAN Phase 3: A/E getters are above; C getter is near sec_update ──── */
 
 int sec_get_dominant_emotion(struct char_data *mob)
