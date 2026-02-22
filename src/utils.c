@@ -8270,38 +8270,40 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: friendly gestures, affectionate actions, appreciation, happy/playful actions
      */
     const char *positive_socials[] = {
-        "bow",    "smile",   "applaud",   "clap",     "greet",   "grin",    "comfort", "pat",     "hug",
-        "cuddle", "kiss",    "nuzzle",    "squeeze",  "stroke",  "snuggle", "worship", "giggle",  "laughs",
-        "cackle", "bounce",  "dance",     "sing",     "tango",   "whistle", "yodel",   "curtsey", "salute",
-        "admire", "welcome", "handshake", "highfive", "nods",    "waves",   "winks",   "thanks",  "chuckles",
-        "beam",   "happy",   "gleam",     "cheers",   "enthuse", "adoring", NULL};
+        "bow",    "smile",   "applaud",   "clap",     "greet",   "grin",    "comfort",    "pat",     "hug",
+        "cuddle", "kiss",    "nuzzle",    "squeeze",  "stroke",  "snuggle", "worship",    "giggle",  "laughs",
+        "cackle", "bounce",  "dance",     "sing",     "tango",   "whistle", "yodel",      "curtsey", "salute",
+        "admire", "welcome", "handshake", "highfive", "nods",    "waves",   "winks",      "thanks",  "chuckles",
+        "beam",   "happy",   "gleam",     "cheers",   "enthuse", "adoring", "sweetsmile", "tuck",    NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship
      * Emotion changes: +anger, -trust, -friendship, -happiness
      * Includes: hostile expressions, aggressive actions, verbal hostility
      */
-    const char *negative_socials[] = {"frown", "glare", "spit",    "accuse",   "curse", "taunt",     "snicker",
-                                      "slap",  "snap",  "snarl",   "growl",    "fume",  "sneer",     "eye",
-                                      "jeer",  "mock",  "ignore",  "threaten", "blame", "criticize", "disapprove",
-                                      "scold", "hate",  "grimace", "evileye",  NULL};
+    const char *negative_socials[] = {
+        "frown",      "glare", "spit",  "accuse",  "curse",   "taunt", "snicker", "slap",     "snap",  "snarl",
+        "growl",      "fume",  "sneer", "eye",     "jeer",    "mock",  "ignore",  "threaten", "blame", "criticize",
+        "disapprove", "scold", "hate",  "grimace", "evileye", "swear", "envy",    "greed",    NULL};
 
     /* Neutral/curious socials that increase curiosity
      * Emotion changes: +curiosity, slight +friendship if already friendly
      * Includes: observing, thinking, pointing, neutral actions
      * Note: "look" and "examine" are commands (not socials), removed
      */
-    const char *neutral_socials[] = {"ponder",      "peer",     "think",  "stare",  "point", "comb",
-                                     "sneeze",      "cough",    "hiccup", "yawn",   "snore", "shrugs",
-                                     "contemplate", "daydream", "gaze",   "listen", "blink", NULL};
+    const char *neutral_socials[] = {"ponder",      "peer",     "think",   "stare",  "point", "comb",
+                                     "sneeze",      "cough",    "hiccup",  "yawn",   "snore", "shrugs",
+                                     "contemplate", "daydream", "gaze",    "listen", "blink", "wonder",
+                                     "wait",        "scratch",  "stretch", NULL};
 
     /* Fearful socials that the actor shows - might increase mob's courage/pride
      * Emotion changes (for mob): +courage, +pride, -fear (mob's own fear decreases)
      * Actor showing fear/submission makes mob feel emboldened
      * Includes: fear/submission actions, sadness expressions
      */
-    const char *fearful_socials[] = {"beg",     "grovel",  "cringe",  "cry",   "sulk",     "sigh", "whine",  "cower",
-                                     "whimper", "sob",     "weep",    "panic", "eek",      "eep",  "flinch", "dread",
-                                     "worry",   "despair", "crushed", "blue",  "crylaugh", NULL};
+    const char *fearful_socials[] = {"beg",     "grovel",  "cringe", "cry",     "sulk",    "sigh", "whine",
+                                     "cower",   "whimper", "sob",    "weep",    "panic",   "eek",  "eep",
+                                     "flinch",  "dread",   "worry",  "despair", "crushed", "blue", "crylaugh",
+                                     "shivers", "sad",     "kneel",  NULL};
 
     /* Severely inappropriate socials - context dependent responses (not fully blocked)
      * Sexual: Positive if very high intimacy/trust (love ≥80, trust ≥70), negative otherwise
@@ -8329,8 +8331,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Note: vampire and haircut moved to silly/contextual categories (not actually violent)
      * Note: choke, strangle, smite, sword moved to blocked_socials as extreme violence
      */
-    const char *violent_socials[] = {"needle", "shock", "whip",     "bite", "smack",  "clobber", "thwap",
-                                     "whack",  "pound", "shootout", "burn", "charge", NULL};
+    const char *violent_socials[] = {"needle", "shock",    "whip", "bite",   "smack",     "clobber", "thwap", "whack",
+                                     "pound",  "shootout", "burn", "charge", "warscream", "roar",    NULL};
 
     /* Humiliating socials - trigger shame and humiliation
      * Emotion changes: +humiliation, +shame, +anger, -trust, -friendship, -pride
@@ -8530,6 +8532,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(30, 50));
                 act("$n recua em pânico absoluto!", FALSE, mob, 0, actor, TO_ROOM);
             }
+            add_emotion_memory(mob, actor, INTERACT_SOCIAL_VIOLENT, 1, social_name);
             return;
         }
 
@@ -8545,6 +8548,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             if (rand_number(1, 100) <= 50) {
                 act("$n responde afetuosamente.", FALSE, mob, 0, actor, TO_ROOM);
             }
+            add_emotion_memory(mob, actor, INTERACT_SOCIAL_POSITIVE, 0, social_name);
             return;
         }
         /* High intimacy/love (60+) with moderate trust (50+) - mixed/curious */
@@ -8560,6 +8564,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             if (rand_number(1, 100) <= 40) {
                 act("$n parece desconfortável mas não reage com raiva.", FALSE, mob, 0, actor, TO_ROOM);
             }
+            add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             return;
         }
         /* Moderate relationship (30-59) - uncomfortable/disgusted */
@@ -8576,6 +8581,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n afasta-se com nojo evidente.", FALSE, mob, 0, actor, TO_VICT);
                 act("$n afasta-se de $N com nojo evidente.", FALSE, mob, 0, actor, TO_NOTVICT);
             }
+            add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             return;
         }
         /* Low/no relationship - hostile/extreme negative response */
@@ -8599,6 +8605,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
                 act("$n recua horrorizado e com nojo!", FALSE, mob, 0, actor, TO_ROOM);
             }
+            add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1, social_name);
             return;
         }
     }
@@ -9747,22 +9754,25 @@ void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_
      * update_mob_emotion_from_social(), covering the emotionally significant categories
      * that drive the SEC Tetrad appraisal for witnesses. */
     static const char *positive_socials[] = {
-        "bow",   "smile",  "applaud", "clap",     "greet",   "grin",    "comfort", "pat",       "hug",      "cuddle",
-        "kiss",  "nuzzle", "squeeze", "stroke",   "snuggle", "worship", "giggle",  "laughs",    "bounce",   "dance",
-        "sing",  "tango",  "whistle", "curtsey",  "salute",  "admire",  "welcome", "handshake", "highfive", "nods",
-        "waves", "winks",  "thanks",  "chuckles", "beam",    "happy",   "gleam",   "cheers",    "enthuse",  NULL};
+        "bow",       "smile",    "applaud", "clap",       "greet",   "grin",    "comfort",  "pat",    "hug",
+        "cuddle",    "kiss",     "nuzzle",  "squeeze",    "stroke",  "snuggle", "worship",  "giggle", "laughs",
+        "bounce",    "dance",    "sing",    "tango",      "whistle", "curtsey", "salute",   "admire", "welcome",
+        "handshake", "highfive", "nods",    "waves",      "winks",   "thanks",  "chuckles", "beam",   "happy",
+        "gleam",     "cheers",   "enthuse", "sweetsmile", "tuck",    NULL};
 
     static const char *romantic_socials[] = {"flirt",   "love",   "ogle",   "beckon", "charm",  "smooch",  "snog",
                                              "propose", "caress", "huggle", "ghug",   "cradle", "bearhug", "fondle",
                                              "grope",   "french", "sex",    "seduce", NULL};
 
-    static const char *violent_socials[] = {"needle", "shock", "whip",     "bite",  "smack",  "clobber", "thwap",
-                                            "whack",  "pound", "shootout", "burn",  "charge", "despine", "shiskabob",
-                                            "vice",   "choke", "strangle", "smite", "sword",  NULL};
+    static const char *violent_socials[] = {"needle",  "shock",     "whip",  "bite",     "smack",    "clobber",
+                                            "thwap",   "whack",     "pound", "shootout", "burn",     "charge",
+                                            "despine", "shiskabob", "vice",  "choke",    "strangle", "smite",
+                                            "sword",   "warscream", "roar",  NULL};
 
-    static const char *negative_socials[] = {
-        "frown", "glare", "spit", "accuse", "curse",  "taunt",    "snicker", "slap",      "snap",  "snarl", "growl",
-        "fume",  "sneer", "jeer", "mock",   "ignore", "threaten", "blame",   "criticize", "scold", "hate",  NULL};
+    static const char *negative_socials[] = {"frown", "glare",  "spit",     "accuse", "curse",     "taunt", "snicker",
+                                             "slap",  "snap",   "snarl",    "growl",  "fume",      "sneer", "jeer",
+                                             "mock",  "ignore", "threaten", "blame",  "criticize", "scold", "hate",
+                                             "swear", "envy",   "greed",    NULL};
 
     int i;
     bool is_positive = FALSE;

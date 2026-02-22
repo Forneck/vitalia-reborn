@@ -42,6 +42,18 @@ ACMD(do_action)
     if (!argument || !*argument) {
         send_to_char(ch, "%s\r\n", action->char_no_arg);
         act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
+
+        /* Witness mechanism for untargeted socials (e.g. "Venus smiles happily").
+         * AWARE/SENTINEL NPCs in the room observe the actor's emotional expression. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || MOB_FLAGGED(witness, MOB_NOTDEADYET))
+                    continue;
+                update_mob_emotion_witnessed_social(witness, ch, NULL, action->command);
+            }
+        }
         return;
     }
 
