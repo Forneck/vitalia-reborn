@@ -101,8 +101,8 @@ ACMD(do_action)
             act(action->vict_found, action->hide, ch, 0, vict, TO_VICT);
         }
 
-        /* Update mob emotions when player performs social on them (experimental feature) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(vict) && !IS_NPC(ch) && vict->ai_data) {
+        /* Update mob emotions when a social is performed on them (player or mob actor) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(vict) && vict->ai_data) {
             update_mob_emotion_from_social(vict, ch, action->command);
         }
 
