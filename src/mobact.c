@@ -210,38 +210,167 @@ bool validate_goal_obj(struct char_data *ch)
  */
 static void mob_contextual_social(struct char_data *ch, struct char_data *target)
 {
-    /* Expanded social lists with more variety for mob usage */
-    const char *positive_socials[] = {"bow",     "smile", "nods",     "waves",      "applaud", "agree",
-                                      "beam",    "clap",  "grin",     "greet",      "thanks",  "thumbsup",
-                                      "welcome", "winks", "backclap", "sweetsmile", "happy",   NULL};
-    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", "growl", "snarl",
-                                      "curse", "mock",  "hate", "steam", "swear",  NULL};
-    const char *neutral_socials[] = {"ponder", "shrugs",  "peer", "blink",   "wonder", "think",
-                                     "wait",   "scratch", "yawn", "stretch", NULL};
-    const char *resting_socials[] = {"comfort", "pat", "calm", "console", "cradle", "tuck", NULL};
-    const char *fearful_socials[] = {"cower", "whimper", "cringe", "flinch",  "gasp",
-                                     "panic", "shake",   "worry",  "shivers", NULL};
-    const char *loving_socials[] = {"hug",   "cuddle", "kiss",  "bearhug", "blush",  "caress", "embrace",
-                                    "flirt", "love",   "swoon", "charm",   "huggle", "ghug",   NULL};
-    const char *proud_socials[] = {"strut", "flex", "boast", "brag", "pose", NULL};
+    /* Social lists for mob autonomous behaviour.
+     * Every social in lib/misc/socials.new (except extreme-violence ones that are
+     * only appropriate as targeted reactions, not as autonomous expressions) is
+     * reachable from at least one list below.
+     *
+     * Intentionally excluded (never used autonomously – always hostile):
+     *   choke, strangle, smite, sword, despine, shiskabob, vice
+     */
+
+    /* ── Positive / warm ─────────────────────────────────────────────── */
+    const char *positive_socials[] = {
+        "bow",        "smile",     "nods",     "nod",     "waves",  "wink",     "applaud", "agree",     "beam",
+        "clap",       "grin",      "greet",    "thanks",  "thank",  "thumbsup", "welcome", "winks",     "backclap",
+        "sweetsmile", "happy",     "admire",   "adoring", "cackle", "chitter",  "croon",   "enthuse",   "gleam",
+        "halo",       "handshake", "highfive", "hum",     "nuzzle", "snuggle",  "squeeze", "stroke",    "tango",
+        "whistle",    "worship",   "yodel",    "lol",     "yes",    "ok",       "ack",     "apologize", "forgive",
+        "handraise",  "lau",       "nudge",    "beckon",  "sorry",  "touch",    "rainbow", NULL};
+
+    /* ── Negative / hostile expressions ──────────────────────────────── */
+    const char *negative_socials[] = {"frown",      "glare",   "spit",   "sneer",     "accuse", "growl", "snarl",
+                                      "curse",      "mock",    "hate",   "steam",     "swear",  "blame", "criticize",
+                                      "disapprove", "evileye", "fume",   "grimace",   "ignore", "scold", "snap",
+                                      "rebuke",     "wrong",   "nono",   "raspberry", "pooh",   "stomp", "swat",
+                                      "sue",        "lame",    "tongue", "smir",      NULL};
+
+    /* ── Neutral / observational ──────────────────────────────────────── */
+    const char *neutral_socials[] = {"ponder",  "shrugs",    "peer",    "blink",  "wonder",      "think",    "wait",
+                                     "scratch", "yawn",      "stretch", "comb",   "contemplate", "cough",    "daydream",
+                                     "hiccup",  "hush",      "listen",  "mumble", "mutter",      "nailfile", "pace",
+                                     "point",   "sage",      "shh",     "sneeze", "snore",       "type",     "wipe",
+                                     "slump",   "slouch",    "lean",    "roll",   "jog",         "sidle",    "scout",
+                                     "sheathe", "unsheathe", "modest",  "raise",  "tip",         "revolve",  "dark",
+                                     "bored",   "flip",      "pity",    "furrow", "fade",        "nodrugs",  "night",
+                                     "run",     "tap",       "curl",    "pin",    "job",         "mooch",    NULL};
+
+    /* ── Resting / caring / comforting ───────────────────────────────── */
+    const char *resting_socials[] = {"comfort", "pat",     "calm",       "console", "cradle",
+                                     "tuck",    "massage", "haircut",    "relax",   "breathe",
+                                     "relief",  "phew",    "spongebath", "conso",   NULL};
+
+    /* ── Fearful / submissive / sad ───────────────────────────────────── */
+    const char *fearful_socials[] = {"cower",  "whimper", "cringe",   "flinch", "gasp",    "panic",    "shake",
+                                     "worry",  "shivers", "beg",      "blue",   "crushed", "crylaugh", "dread",
+                                     "eek",    "eep",     "quiver",   "shy",    "sigh",    "whine",    "puppyeyes",
+                                     "squeak", "meep",    "insomnia", NULL};
+
+    /* ── Loving / romantic ────────────────────────────────────────────── */
+    const char *loving_socials[] = {"hug",    "cuddle", "kiss",   "bearhug", "blush",  "caress", "embrace",
+                                    "flirt",  "love",   "swoon",  "charm",   "huggle", "ghug",   "rose",
+                                    "honey",  "lust",   "nibble", "ogle",    "peck",   "pet",    "propose",
+                                    "smooch", "snog",   "sways",  "chu",     NULL};
+
+    /* ── Very intimate (sexual) – requires very high relationship ─────── */
+    const char *very_intimate_socials[] = {"sex", "french", "fondle", "grope", "seduce", "makeout", NULL};
+
+    /* ── Proud / boastful ─────────────────────────────────────────────── */
+    const char *proud_socials[] = {"strut", "flex",  "boast",    "brag", "pose",   "ego",  "juggle",
+                                   "model", "pride", "drumroll", "mic",  "pushup", "smug", NULL};
+
+    /* ── Envious / greedy ─────────────────────────────────────────────── */
     const char *envious_socials[] = {"envy", "eye", "greed", NULL};
-    /* New social categories for more emotional variety */
-    const char *playful_socials[] = {"tickle", "poke", "tease", "bounce", "giggle",
-                                     "dance",  "skip", "joke",  "sing",   NULL};
-    const char *aggressive_socials[] = {"threaten", "challenge", "growl",     "snarl", "bite",
-                                        "slap",     "battlecry", "warscream", NULL};
+
+    /* ── Playful / teasing ────────────────────────────────────────────── */
+    const char *playful_socials[] = {
+        "tickle",  "poke",     "tease",  "bounce",    "giggle",  "dance",    "skip",   "joke",   "sing",
+        "knuckle", "snowball", "tackle", "spank",     "vampire", "boink",    "bonk",   "bop",    "cartwheel",
+        "hop",     "hustle",   "jest",   "madgiggle", "mosh",    "nyuk",     "pillow", "pop",    "pounce",
+        "pout",    "pur",      "rofl",   "squeal",    "tag",     "tapdance", "tug",    "tummy",  "tweak",
+        "twiddle", "waggle",   "waltz",  "wiggle",    "goose",   "noogie",   "pinch",  "ruffle", "suckit-up",
+        "wedgie",  "zaps",     "spin",   "hotfoot",   "hula",    "splash",   "flail",  NULL};
+
+    /* ── Aggressive / combat-flavoured ───────────────────────────────── */
+    const char *aggressive_socials[] = {"threaten",  "challenge", "growl",  "snarl",   "bite",  "slap",     "battlecry",
+                                        "warscream", "smash",     "smack",  "charge",  "burn",  "pound",    "whack",
+                                        "whip",      "shock",     "needle", "clobber", "thwap", "shootout", "mace",
+                                        "flame",     "fwap",      "arrest", NULL};
+
+    /* ── Disgusting ───────────────────────────────────────────────────── */
+    const char *disgusting_socials[] = {"belch",  "booger",   "burp", "drool", "earlick", "fart", "gag",  "moan",
+                                        "phlegm", "picknose", "puke", "snort", "spew",    "moon", "pant", NULL};
+
+    /* ── Sad / mourning ───────────────────────────────────────────────── */
     const char *sad_socials[] = {"cry", "sob", "weep", "sulk", "sad", NULL};
-    const char *confused_socials[] = {"boggle", "blink", "puzzle", "wonder", "scratch", "think", NULL};
-    const char *excited_socials[] = {"bounce", "whoo", "cheers", NULL};
+
+    /* ── Confused / puzzled ───────────────────────────────────────────── */
+    const char *confused_socials[] = {"boggle",    "blink",     "puzzle",  "wonder", "scratch", "think",  "confuse",
+                                      "discombob", "disturbed", "doh",     "duh",    "eww",     "gibber", "hmmmmm",
+                                      "hrmph",     "lost",      "newidea", "jaw",    "...",     NULL};
+
+    /* ── Excited / celebratory ────────────────────────────────────────── */
+    const char *excited_socials[] = {"bounce", "whoo", "cheers",   "huzzah", "tada",
+                                     "yayfor", "romp", "sundance", "toast",  NULL};
+
+    /* ── Respectful ───────────────────────────────────────────────────── */
     const char *respectful_socials[] = {"salute", "curtsey", "kneel", NULL};
-    /* Additional emotional categories for richer mob behavior */
+
+    /* ── Grateful ─────────────────────────────────────────────────────── */
     const char *grateful_socials[] = {"thanks", "bow", "applaud", "backclap", "beam", "salute", NULL};
+
+    /* ── Mocking ──────────────────────────────────────────────────────── */
     const char *mocking_socials[] = {"mock", "sneer", "snicker", "jeer", "taunt", NULL};
-    const char *submissive_socials[] = {"cower", "grovel", "bow", "kneel", "whimper", "cringe", "flinch", NULL};
-    const char *curious_socials[] = {"peer", "ponder", "wonder", "sniff", "gaze", "stare", NULL};
+
+    /* ── Submissive ───────────────────────────────────────────────────── */
+    const char *submissive_socials[] = {"cower",  "grovel", "bow",       "kneel", "whimper",
+                                        "cringe", "flinch", "puppyeyes", "shy",   NULL};
+
+    /* ── Curious ──────────────────────────────────────────────────────── */
+    const char *curious_socials[] = {"peer", "ponder",  "wonder", "sniff", "gaze", "stare",
+                                     "lean", "curious", "creep",  "scout", NULL};
+
+    /* ── Triumphant ───────────────────────────────────────────────────── */
     const char *triumphant_socials[] = {"cheers", "flex", "roar", "battlecry", "strut", NULL};
+
+    /* ── Protective / comforting ──────────────────────────────────────── */
     const char *protective_socials[] = {"embrace", "pat", "comfort", "console", NULL};
+
+    /* ── Mourning ─────────────────────────────────────────────────────── */
     const char *mourning_socials[] = {"cry", "sob", "weep", "sulk", "despair", NULL};
+
+    /* ── Angry expression (frustration/outrage) ──────────────────────── */
+    const char *angry_expression_socials[] = {"argh", "grumbles", "grunt", "hysterical", "postal", "tantrum",
+                                              "fuss", "stomp",    "fume",  "snap",       "steam",  NULL};
+
+    /* ── Amused ───────────────────────────────────────────────────────── */
+    const char *amused_socials[] = {"amused", "chortle", "egrin", "snigger", "titter", "cackle", "lol", "rofl", NULL};
+
+    /* ── Animal sounds ────────────────────────────────────────────────── */
+    const char *animal_socials[] = {"bark", "hiss", "howl", "meow", "moo", "pur", NULL};
+
+    /* ── Silly / absurd ───────────────────────────────────────────────── */
+    const char *silly_socials[] = {
+        "abc",        "abrac",   "babble",  "batman", "bloob",  "christmas", "crazed", "crazy",      "defib",  "doodle",
+        "elephantma", "fish",    "insane",  "meds",   "prozac", "snoopy",    "spork",  "testsocial", "wakka",  "zip",
+        "lala",       "muahaha", "lofr",    "dbc",    "bo",     "pa",        "sal",    "sm",         "ki",     "ren",
+        "orcs",       "humans",  "mortals", "joint",  "lz",     "com",       "dead",   "deaf",       "gibber", NULL};
+
+    /* ── Communication / meta ─────────────────────────────────────────── */
+    const char *communication_socials[] = {"adieu", "brb", "channel", "goodbye", "reconnect", "wb", "night", NULL};
+
+    /* ── Food / drink ─────────────────────────────────────────────────── */
+    const char *food_drink_socials[] = {"beer", "cake", "carrot", "coffee", "custard", "pie", NULL};
+
+    /* ── Gesture ──────────────────────────────────────────────────────── */
+    const char *gesture_socials[] = {"arch",     "armcross", "behind", "crossfinger", "eyebrow", "eyer",
+                                     "facegrab", "facepalm", "fan",    "foot",        NULL};
+
+    /* ── Exclamation ──────────────────────────────────────────────────── */
+    const char *exclamation_socials[] = {"ahem", "aww", "blah", "boo", "heh", "oh", "ouch", "tsk", NULL};
+
+    /* ── Self-directed / physical expression ─────────────────────────── */
+    const char *self_directed_socials[] = {"bleed", "collapse", "faint",  "fall",    "groan", "headache", "perspire",
+                                           "pray",  "scream",   "shiver", "shudder", "sweat", "twitch",   "wince",
+                                           "shame", "froth",    "foam",   "curl",    "flail", "blush",    NULL};
+
+    /* ── Miscellaneous neutral (catch-all for remaining socials) ──────── */
+    const char *misc_socials[] = {
+        "aim",        "avsalute", "bat",    "box",      "buzz",  "cold",    "conga",    "conga2",  "creep", "curious",
+        "scab",       "scuf",     "secret", "slippers", "stone", "sunset",  "sunshade", "target",  "tie",   "trance",
+        "understand", "wipe",     "women",  "pull",     "pulse", "lic",     "mooch",    "muffle",  "muss",  "knight",
+        "flare",      "flash",    "flick",  "floor",    "flop",  "flutter", "innocent", "smoke",   "dive",  "duck",
+        "excuse",     "sidle",    "differ", "rainbow",  "pin",   "lame",    "pity",     "hotfoot", NULL};
 
     const char **social_list = NULL;
     int target_reputation;
@@ -291,43 +420,49 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     if (FIGHTING(ch) || FIGHTING(target) || target_pos <= POS_STUNNED)
         return;
 
-    /* Determine which social category to use based on multiple factors */
-    /* Priority order: extreme emotions > moderate emotions > reputation > alignment > position */
+    /* ── Emotion-based social selection (priority order) ─────────────────
+     * Extreme states are checked first; moderate states and context-based
+     * selections follow.  The default is misc_socials (catch-all). */
 
-    /* Very high fear (80+) and very low courage (20-) - show submissive behavior */
+    /* Very high fear (80+) and very low courage (20-) - submissive behaviour */
     if (mob_fear >= 80 && mob_courage <= 20) {
         social_list = submissive_socials;
     }
-    /* High fear (70+) and low courage - show fearful behavior */
+    /* High fear (70+) and low courage - fearful behaviour */
     else if (mob_fear >= 70 && mob_courage < 40) {
         social_list = fearful_socials;
     }
-    /* Very high pride (85+) with high courage after victory - triumphant behavior */
+    /* Very high pride (85+) with high courage after victory - triumphant */
     else if (mob_pride >= 85 && mob_courage >= 70 && mob_excitement >= 60) {
         social_list = triumphant_socials;
     }
-    /* High pride (75+) - show proud behavior */
+    /* High pride (75+) - proud / boastful */
     else if (mob_pride >= 75) {
         social_list = proud_socials;
     }
-    /* High compassion (70+) with loyalty towards injured/weak target - protective behavior */
+    /* High compassion (70+) with loyalty towards injured/weak target - protective */
     else if (mob_compassion >= 70 && mob_loyalty >= 60 &&
              (target_pos <= POS_RESTING || GET_HIT(target) < GET_MAX_HIT(target) / 2)) {
         social_list = protective_socials;
     }
-    /* High sadness (75+) with low excitement - mourning behavior (for death responses) */
+    /* High sadness (75+) with low excitement - mourning */
     else if (mob_sadness >= 75 && mob_excitement < 30) {
         social_list = mourning_socials;
     }
-    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful behavior */
+    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful */
     else if (mob_happiness >= 60 && mob_friendship >= 70 && mob_trust >= 60) {
         social_list = grateful_socials;
     }
-    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking behavior */
+    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking */
     else if (mob_anger >= 60 && mob_pride >= 60 && mob_courage >= 50 && !FIGHTING(ch)) {
         social_list = mocking_socials;
     }
-    /* High curiosity (75+) with moderate excitement - curious/investigating behavior */
+    /* Very high love (85+) AND trust (75+) AND friendship (75+) - very intimate.
+     * Placed before envy/curiosity so deep intimacy takes priority. */
+    else if (mob_love >= 85 && mob_trust >= 75 && mob_friendship >= 75) {
+        social_list = very_intimate_socials;
+    }
+    /* High curiosity (75+) with moderate excitement - curious/investigating */
     else if (mob_curiosity >= 75 && mob_excitement >= 40 && mob_excitement < 70) {
         social_list = curious_socials;
     }
@@ -339,120 +474,151 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     else if (mob_love >= 70 || (mob_friendship >= 80 && mob_trust >= 60)) {
         social_list = loving_socials;
     }
-    /* High anger (70+) or high anger with low loyalty to good targets - be aggressive */
+    /* High anger (70+) or high anger with low loyalty to good targets - aggressive */
     else if (mob_anger >= 70 || (mob_anger >= 50 && mob_loyalty < 30 && IS_GOOD(target))) {
         social_list = aggressive_socials;
     }
-    /* Moderate anger with low courage - show negative but not aggressive behavior */
+    /* Moderate anger (40-69) expressing frustration - angry expression */
+    else if (mob_anger >= 40 && mob_anger < 70 && mob_courage >= 30) {
+        social_list = angry_expression_socials;
+    }
+    /* Moderate anger with low courage - negative behaviour */
     else if (mob_anger >= 50 && mob_courage < 50) {
         social_list = negative_socials;
     }
-    /* High sadness (70+) - show sad behavior */
+    /* Low happiness (<40) with moderate anger (30+) and low pride (<50) – mob
+     * performs gross or distasteful acts out of apathy or resentment */
+    else if (mob_happiness < 40 && mob_anger >= 30 && mob_pride < 50) {
+        social_list = disgusting_socials;
+    }
+    /* High sadness (70+) - sad behaviour */
     else if (mob_sadness >= 70) {
         social_list = sad_socials;
     }
-    /* High happiness (70+) with very high excitement (75+) - show excited behavior */
+    /* High happiness (70+) with very high excitement (75+) - excited */
     else if (mob_happiness >= 70 && mob_excitement >= 75) {
         social_list = excited_socials;
     }
-    /* High happiness (70+) with high excitement (60-74) - show playful behavior */
+    /* High happiness (70+) with high excitement (60-74) and high curiosity - amused */
+    else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_curiosity >= 60) {
+        social_list = amused_socials;
+    }
+    /* High happiness (70+) with high excitement (60-74) - playful */
     else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_excitement < 75) {
         social_list = playful_socials;
     }
-    /* High curiosity (70+) with moderate happiness (30-69) - show confused/wondering behavior */
+    /* High happiness (70+) with high curiosity (70+) but moderate excitement - silly */
+    else if (mob_happiness >= 70 && mob_curiosity >= 70 && mob_excitement < 60) {
+        social_list = silly_socials;
+    }
+    /* High curiosity (70+) with moderate happiness (30-69) - confused/wondering */
     else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
         social_list = confused_socials;
     }
-    /* High happiness (70+) shows positive behavior */
+    /* High happiness (70+) shows positive behaviour */
     else if (mob_happiness >= 70) {
         social_list = positive_socials;
     }
-    /* Moderate emotions combined with other factors */
-    /* High reputation target (60+) gets positive socials from happy/friendly mobs */
+    /* High reputation target (60+) - positive from happy/friendly mobs */
     else if (target_reputation >= 60 && (mob_happiness >= 40 || mob_friendship >= 50 || mob_alignment >= -350)) {
         social_list = positive_socials;
     }
-    /* Low reputation target (<20) triggers anger/negative response */
+    /* Low reputation target (<20) - negative response */
     else if (target_reputation < 20 || mob_anger >= 40) {
         social_list = negative_socials;
     }
-    /* Alignment-based social selection modified by emotions */
+    /* Alignment-based selection */
     else if (IS_GOOD(ch) && IS_EVIL(target) && mob_anger >= 20) {
-        social_list = negative_socials; /* Good doesn't like evil, especially if angry */
+        social_list = negative_socials;
     } else if (IS_EVIL(ch) && IS_GOOD(target) && mob_sadness < 50) {
-        social_list = negative_socials; /* Evil doesn't like good unless sad/remorseful */
+        social_list = negative_socials;
     } else if (IS_GOOD(ch) && IS_GOOD(target) && mob_friendship >= 30) {
-        social_list = positive_socials; /* Good likes good, especially if friendly */
+        social_list = positive_socials;
     } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
-        /* Evil respects reputable evil - show respect */
         social_list = respectful_socials;
     } else if (IS_GOOD(ch) && target_reputation >= 80) {
-        /* Good mobs respect highly reputable targets */
         social_list = respectful_socials;
     }
-    /* Target is resting/sitting - use comforting socials if mob has compassion (low anger, high compassion/friendship)
-     */
+    /* Target is resting/sitting - comforting socials (low anger, high compassion/friendship) */
     else if ((target_pos == POS_RESTING || target_pos == POS_SITTING) && mob_anger < 30 &&
              (mob_compassion >= 50 || mob_friendship >= 40)) {
         social_list = resting_socials;
     }
-    /* High sadness with low excitement leads to withdrawn/neutral behavior */
+    /* High sadness with low excitement - withdrawn/neutral */
     else if (mob_sadness >= 60 && mob_excitement < 40) {
         social_list = neutral_socials;
     }
+    /* Moderate curiosity (40+) with moderate but not high excitement (30-49) –
+     * mob makes instinctive animal sounds while alert/observing but not fully engaged */
+    else if (mob_curiosity >= 40 && mob_excitement >= 30 && mob_excitement < 50) {
+        social_list = animal_socials;
+    }
+    /* Moderate happiness + any state - food/drink sharing */
+    else if (mob_happiness >= 50 && mob_friendship >= 40 && mob_curiosity >= 30) {
+        social_list = food_drink_socials;
+    }
+    /* Moderate happiness + moderate curiosity - gesture/communication */
+    else if (mob_happiness >= 40 && mob_curiosity >= 50) {
+        social_list = gesture_socials;
+    }
+    /* Low excitement with low curiosity - exclamation */
+    else if (mob_excitement < 30 && mob_curiosity < 40 && mob_happiness >= 30) {
+        social_list = exclamation_socials;
+    }
     /* High curiosity with high excitement - show interest */
     else if (mob_curiosity >= 60 && mob_excitement >= 50) {
-        social_list = neutral_socials; /* Curious/observing behavior */
-    }
-    /* Default to neutral socials */
-    else {
         social_list = neutral_socials;
+    }
+    /* Low emotional arousal - self-directed physical expression */
+    else if (mob_happiness < 40 && mob_anger < 30 && mob_fear >= 20) {
+        social_list = self_directed_socials;
+    }
+    /* Communication meta (very low arousal, no strong emotion) */
+    else if (mob_happiness < 50 && mob_anger < 30 && mob_excitement < 30) {
+        social_list = communication_socials;
+    }
+    /* Default - miscellaneous / catch-all */
+    else {
+        social_list = misc_socials;
     }
 
     /* ── Winner-Takes-All: SEC dominant-emotion filter ────────────────────
-     * Query the dominant SEC vector and fall back to neutral socials when
-     * the driving emotion of the chosen category is less than SEC_WTA_THRESHOLD
-     * of the dominant SEC weight.  This prevents contradictory actions (e.g.,
-     * an aggressive "bite" and a positive "thumbsup" within the same tick)
-     * that arise when opposing raw emotion values are simultaneously high. */
+     * Prevents contradictory actions when opposing emotions are simultaneously
+     * high by suppressing socials whose driving emotion is weaker than
+     * SEC_WTA_THRESHOLD % of the dominant SEC axis weight. */
     if (ch->ai_data) {
         const struct sec_state *sec_s = &ch->ai_data->sec;
 
-        /* Classify the chosen social category by its primary SEC emotion.
+        /* Map chosen social category to its primary SEC emotion.
          *
-         * Mapping rationale (SEC now has four axes: Fear, Sadness, Anger, Happiness):
-         *   HAPPINESS : positive/grateful/loving/playful/excited/triumphant —
-         *               positive valence, typically high dominance.
-         *   HAPPINESS : proud — pride = positive valence + high dominance.
-         *   HAPPINESS : protective — compassion/care = positive valence.
-         *   ANGER     : aggressive/negative/mocking — negative valence,
-         *               mid-to-high dominance (threat posture).
-         *   ANGER     : envious — negative valence, mid-high dominance;
-         *               envy has aggression potential.
-         *   FEAR      : fearful/submissive — low dominance + high valence (threat/uncertainty).
-         *   SADNESS   : sad/mourning — low valence + low dominance (passive loss / grief).
-         *   NONE      : neutral/mixed, resting, respectful, curious, confused
-         *               — contextual or cognitive signals that should not be
-         *               restricted by the dominant emotional vector. */
+         * HAPPINESS : positive/grateful/loving/very_intimate/playful/excited/
+         *             triumphant/proud/protective/amused/food_drink
+         * ANGER     : aggressive/negative/mocking/envious/angry_expression/disgusting
+         * FEAR      : fearful/submissive
+         * SADNESS   : sad/mourning
+         * NONE      : neutral/mixed, resting, respectful, curious, confused,
+         *             silly, animal, gesture, exclamation, self_directed,
+         *             communication, misc — contextual/cognitive, not restricted
+         */
         int social_emotion;
         if (social_list == positive_socials || social_list == grateful_socials || social_list == loving_socials ||
-            social_list == playful_socials || social_list == excited_socials || social_list == triumphant_socials ||
-            social_list == proud_socials || social_list == protective_socials) {
+            social_list == very_intimate_socials || social_list == playful_socials || social_list == excited_socials ||
+            social_list == triumphant_socials || social_list == proud_socials || social_list == protective_socials ||
+            social_list == amused_socials || social_list == food_drink_socials) {
             social_emotion = SEC_DOMINANT_HAPPINESS;
         } else if (social_list == aggressive_socials || social_list == negative_socials ||
-                   social_list == mocking_socials || social_list == envious_socials) {
+                   social_list == mocking_socials || social_list == envious_socials ||
+                   social_list == angry_expression_socials || social_list == disgusting_socials) {
             social_emotion = SEC_DOMINANT_ANGER;
         } else if (social_list == fearful_socials || social_list == submissive_socials) {
             social_emotion = SEC_DOMINANT_FEAR;
         } else if (social_list == sad_socials || social_list == mourning_socials) {
             social_emotion = SEC_DOMINANT_SADNESS;
         } else {
-            social_emotion = SEC_DOMINANT_NONE; /* contextual/cognitive — no restriction */
+            social_emotion = SEC_DOMINANT_NONE;
         }
 
         if (social_emotion != SEC_DOMINANT_NONE) {
-            /* Use sec_get_dominant_emotion() to identify the strongest SEC axis,
-             * then extract its weight for the 60 % threshold comparison. */
             int dom_type = sec_get_dominant_emotion(ch);
 
             float dom_val;
@@ -474,7 +640,6 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
                     break;
             }
 
-            /* Weight of the emotion driving the chosen social category. */
             float chosen_val;
             if (social_emotion == SEC_DOMINANT_HAPPINESS)
                 chosen_val = sec_s->happiness;
@@ -485,21 +650,17 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
             else
                 chosen_val = sec_s->fear;
 
-            /* If the chosen emotion is less than sec_wta_threshold of the dominant,
-             * the SEC state does not support this social category — use
-             * neutral socials to maintain emotional coherence. */
             if (dom_val > SEC_AROUSAL_EPSILON && chosen_val < dom_val * ((float)CONFIG_SEC_WTA_THRESHOLD / 100.0f))
                 social_list = neutral_socials;
         }
     }
 
     /* Select a random social from the chosen category */
-    /* Count number of non-NULL elements in the social list */
     for (social_index = 0; social_list[social_index] != NULL; social_index++)
         ;
 
     if (social_index == 0)
-        return; /* No socials in this category */
+        return;
 
     social_index = rand_number(0, social_index - 1);
 
