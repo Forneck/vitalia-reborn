@@ -8,20 +8,15 @@
 @n
 @C-@G=@Y>@W Janeiro e Fevereiro de 2026 @C@Y<@G=@C-@n
 
-   @MMem�ria Emocional Ativa dos Mobs@n
-   Os habitantes de Vitália agora possuem @Ydois tipos independentes@n de
-   memória emocional:
-   - @YMem�ria Passiva@n: registra o que foi feito @Yao@n mob (ataques,
-     curas, sociais recebidos). Funciona como antes.
-   - @YMem�ria Ativa@n: registra tudo que o mob @Yfez@n — ataques iniciados,
-     sociais realizados, resgates, curas concedidas — capturando seu estado
-     emocional no momento da ação.
-   As ações dos mobs agora @Yalimentam de volta suas emoções@n: abraçar
-   alguém aumenta a felicidade do abraçador; resgatar um aliado aumenta
-   orgulho e compaixão; violência extrema gera vergonha em criaturas bondosas.
-   O sistema de decisão dos mobs (Shadow Timeline) considera a memória ativa
-   como @Yhisterese@n: ações que foram emocionalmente positivas no passado
-   recebem um bônus na avaliação futura.
+   @MMemorias Emocionais dos Mobs@n
+   Os mobs agora possuem dois registros separados de memoria emocional:
+   - @YMemoria Passiva@n: registra o que aconteceu @Ycom@n o mob.
+   - @YMemoria Ativa@n: registra o que o mob @Yfez@n (ataques, curas, sociais).
+   As acoes dos mobs agora afetam suas proprias emocoes: um mob que abraca
+   alguem fica mais feliz; um mob que resgata um aliado ganha orgulho e
+   coragem. O sistema de decisao usa esse historico para escolher acoes
+   com base no que funcionou emocionalmente no passado.
+
 
    @MSistema de Personalidade dos Mobs@n
    Os habitantes de Vitália agora possuem @Ytraços de personalidade@n únicos

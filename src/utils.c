@@ -8191,11 +8191,20 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
 
-    /* Clear all memories matching the entity */
+    /* Clear all passive memories matching the entity */
     for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
         struct emotion_memory *mem = &mob->ai_data->memories[i];
         if (mem->entity_type == entity_type && mem->entity_id == entity_id) {
             /* Mark slot as unused */
+            mem->timestamp = 0;
+            mem->entity_id = 0;
+        }
+    }
+
+    /* Clear all active memories matching the entity */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->active_memories[i];
+        if (mem->entity_type == entity_type && mem->entity_id == entity_id) {
             mem->timestamp = 0;
             mem->entity_id = 0;
         }

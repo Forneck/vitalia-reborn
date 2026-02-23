@@ -1735,7 +1735,11 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
                     interact_type = INTERACT_ATTACKED;
                     break;
                 case SHADOW_ACTION_SOCIAL:
-                    interact_type = INTERACT_SOCIAL_POSITIVE;
+                    /* Combine remembered valence from all social subtypes so that
+                     * past negative/violent socials also influence future choices. */
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_POSITIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_NEGATIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_VIOLENT);
                     break;
                 case SHADOW_ACTION_TRADE:
                     interact_type = INTERACT_RECEIVED_ITEM;
