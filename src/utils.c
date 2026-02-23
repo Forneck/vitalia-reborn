@@ -6292,10 +6292,94 @@ void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victi
         adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 10));
     }
 
+    /* Good-aligned mobs attacking others feel shame/regret (bidirectional feedback):
+     * aggression conflicts with their moral self-image → shame increases */
+    if (IS_GOOD(mob) && mob->ai_data->emotion_compassion >= 40) {
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(2, 6));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 7));
+    }
+
     /* Active memory: record that this mob initiated the attack */
     if (victim) {
         add_active_emotion_memory(mob, victim, INTERACT_ATTACKED, 0, NULL);
     }
+}
+
+/**
+ * Update the ACTOR mob's own emotional state after performing a social action.
+ * This is the "Action → Emotion" feedback half of the bidirectional loop:
+ *   Emotion → Action (Shadow Timeline scoring) and Action → Emotion (this function).
+ *
+ * Called by act.social.c whenever an NPC performs a targeted social, regardless
+ * of whether the target is a player or another mob.  The victim's emotions are
+ * updated separately by update_mob_emotion_from_social().
+ *
+ * Emotional consequences:
+ *  - Positive social : mild happiness/friendship gain; compassionate mobs gain extra
+ *  - Negative social : angry mobs feel slight relief; compassionate mobs feel shame
+ *  - Violent social  : courage increases; extreme violence adds anger;
+ *                      compassionate mobs gain shame; evil mobs gain pride
+ *
+ * @param actor       The NPC performing the social action
+ * @param target      The target of the social (may be player or mob)
+ * @param social_name The social command name
+ */
+void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_data *target, const char *social_name)
+{
+    int major = 0;
+    int interact_type;
+
+    if (!actor || !IS_NPC(actor) || !actor->ai_data || !social_name || !*social_name || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Safety: don't process actors being extracted */
+    if (MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+        return;
+
+    interact_type = classify_social_interact_type(social_name, &major);
+
+    switch (interact_type) {
+        case INTERACT_SOCIAL_POSITIVE:
+            /* Expressing kindness feels rewarding: small happiness and friendship boost */
+            adjust_emotion(actor, &actor->ai_data->emotion_happiness, rand_number(2, 6));
+            adjust_emotion(actor, &actor->ai_data->emotion_friendship, rand_number(1, 4));
+            /* Compassionate actors feel even more satisfaction from positive acts */
+            if (actor->ai_data->emotion_compassion >= 60)
+                adjust_emotion(actor, &actor->ai_data->emotion_compassion, rand_number(1, 3));
+            break;
+
+        case INTERACT_SOCIAL_NEGATIVE:
+            /* Expressing hostility: angry mobs feel slight relief (venting);
+             * compassionate mobs feel guilt for being unkind */
+            if (actor->ai_data->emotion_anger >= 50)
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, -rand_number(2, 5));
+            if (actor->ai_data->emotion_compassion >= 60)
+                adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(1, 4));
+            break;
+
+        case INTERACT_SOCIAL_VIOLENT:
+            /* Violence raises courage regardless of severity */
+            adjust_emotion(actor, &actor->ai_data->emotion_courage, rand_number(2, 6));
+
+            if (major) {
+                /* Extreme violence: anger increases; compassionate mobs feel strong shame */
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, rand_number(3, 8));
+                if (actor->ai_data->emotion_compassion >= 50)
+                    adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(3, 8));
+                /* Evil mobs feel pride from dominating others */
+                if (IS_EVIL(actor))
+                    adjust_emotion(actor, &actor->ai_data->emotion_pride, rand_number(2, 5));
+            } else {
+                /* Moderate violence: slight anger venting */
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, -rand_number(1, 4));
+            }
+            break;
+
+        default:
+            break;
+    }
+
+    (void)target; /* target reserved for future context-aware feedback */
 }
 
 /**
@@ -6328,8 +6412,13 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     /* Add to emotion memory */
     if (healer) {
         add_emotion_memory(mob, healer, INTERACT_HEALED, 0, NULL);
-        if (IS_NPC(healer) && healer->ai_data)
+        if (IS_NPC(healer) && healer->ai_data) {
             add_active_emotion_memory(healer, mob, INTERACT_HEALED, 0, NULL);
+            /* Bidirectional feedback: healer gains compassion/happiness from helping */
+            adjust_emotion(healer, &healer->ai_data->emotion_compassion, rand_number(2, 5));
+            adjust_emotion(healer, &healer->ai_data->emotion_happiness, rand_number(2, 6));
+            adjust_emotion(healer, &healer->ai_data->emotion_pride, rand_number(1, 3));
+        }
     }
 }
 
@@ -6498,8 +6587,14 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
     /* Add to emotion memory - rescue is a MAJOR positive event */
     if (rescuer) {
         add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1, NULL);
-        if (IS_NPC(rescuer) && rescuer->ai_data)
+        if (IS_NPC(rescuer) && rescuer->ai_data) {
             add_active_emotion_memory(rescuer, mob, INTERACT_RESCUED, 1, NULL);
+            /* Bidirectional feedback: rescuer gains pride/compassion/happiness from saving another */
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_pride, rand_number(3, 8));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_compassion, rand_number(2, 6));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_happiness, rand_number(3, 7));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_courage, rand_number(2, 5));
+        }
     }
 }
 
@@ -6530,8 +6625,13 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
     /* Add to emotion memory */
     if (assistant) {
         add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0, NULL);
-        if (IS_NPC(assistant) && assistant->ai_data)
+        if (IS_NPC(assistant) && assistant->ai_data) {
             add_active_emotion_memory(assistant, mob, INTERACT_ASSISTED, 0, NULL);
+            /* Bidirectional feedback: assistant gains loyalty/compassion from supporting others */
+            adjust_emotion(assistant, &assistant->ai_data->emotion_loyalty, rand_number(2, 5));
+            adjust_emotion(assistant, &assistant->ai_data->emotion_compassion, rand_number(2, 5));
+            adjust_emotion(assistant, &assistant->ai_data->emotion_happiness, rand_number(1, 4));
+        }
     }
 }
 

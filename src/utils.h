@@ -188,6 +188,7 @@ void check_extreme_emotional_states(struct char_data *mob);
 void check_conflicting_emotions(struct char_data *mob);
 void check_emotional_breakdown(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
+void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_data *target, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
 void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);

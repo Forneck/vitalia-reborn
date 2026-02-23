@@ -127,6 +127,12 @@ ACMD(do_action)
             add_active_emotion_memory(ch, vict, social_type, social_major, action->command);
         }
 
+        /* Bidirectional feedback: actor's own emotions change after performing a social.
+         * Covers both NPC->mob and NPC->player cases. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            update_mob_actor_emotion_from_social(ch, vict, action->command);
+        }
+
         /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
          * Triggers for any actor (player or mob) performing a targeted social so that
          * observer NPCs can process the event through their SEC Tetrad appraisal. */
