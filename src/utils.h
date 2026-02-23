@@ -207,6 +207,8 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
 /* Emotion memory system functions */
 void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
                         const char *social_name);
+void add_active_emotion_memory(struct char_data *mob, struct char_data *target, int interaction_type, int major_event,
+                               const char *social_name);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 

@@ -1374,8 +1374,12 @@ struct mob_ai_data {
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
 
     /* Emotion memory system - tracks recent interactions for persistent relationships */
-    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
-    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of passive memories (received/witnessed) */
+    int memory_index; /* Current position in passive circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+
+    /* Active emotion memory - records actions performed by this mob (actor perspective) */
+    struct emotion_memory active_memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of active memories (performed actions) */
+    int active_memory_index; /* Current position in active circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 
     /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
     int cognitive_capacity; /* Available cognitive capacity for projections (0-1000) */

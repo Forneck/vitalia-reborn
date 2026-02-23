@@ -6291,6 +6291,11 @@ void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victi
     if (IS_EVIL(mob) && victim && IS_GOOD(victim)) {
         adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 10));
     }
+
+    /* Active memory: record that this mob initiated the attack */
+    if (victim) {
+        add_active_emotion_memory(mob, victim, INTERACT_ATTACKED, 0, NULL);
+    }
 }
 
 /**
@@ -7859,6 +7864,108 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
 
     /* Advance circular buffer index */
     mob->ai_data->memory_index = (mob->ai_data->memory_index + 1) % EMOTION_MEMORY_SIZE;
+}
+
+/**
+ * Record an action performed by a mob in its active emotional memory.
+ * Captures the mob's own emotional state at the moment it acted on a target.
+ * This is the actor-perspective counterpart to add_emotion_memory() (which records
+ * the receiver/witness perspective).
+ *
+ * @param mob            The mob performing the action (actor)
+ * @param target         The target of the action (can be mob or player)
+ * @param interaction_type Type of action performed (INTERACT_*)
+ * @param major_event    1 for major events (extreme violence, betrayal), 0 for normal
+ * @param social_name    Name of the social command if applicable (NULL otherwise)
+ */
+void add_active_emotion_memory(struct char_data *mob, struct char_data *target, int interaction_type, int major_event,
+                               const char *social_name)
+{
+    struct emotion_memory *memory;
+    int entity_type;
+    long entity_id;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !target || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Safety: ensure mob isn't being extracted */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return;
+
+    /* Safety: ensure target isn't being extracted */
+    if (IS_NPC(target) && MOB_FLAGGED(target, MOB_NOTDEADYET))
+        return;
+    if (!IS_NPC(target) && PLR_FLAGGED(target, PLR_NOTDEADYET))
+        return;
+
+    /* Determine target type and ID */
+    if (IS_NPC(target)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(target);
+        if (entity_id == 0)
+            return;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(target);
+        if (entity_id <= 0)
+            return;
+    }
+
+    /* Get active memory slot using circular buffer */
+    memory = &mob->ai_data->active_memories[mob->ai_data->active_memory_index];
+
+    /* Store memory */
+    memory->entity_type = entity_type;
+    memory->entity_id = entity_id;
+    memory->interaction_type = interaction_type;
+    memory->major_event = major_event;
+    memory->timestamp = time(0);
+
+    /* Store social name if provided */
+    if (social_name && *social_name) {
+        strncpy(memory->social_name, social_name, sizeof(memory->social_name) - 1);
+        memory->social_name[sizeof(memory->social_name) - 1] = '\0';
+    } else {
+        memory->social_name[0] = '\0';
+    }
+
+    /* Store complete emotion snapshot - captures mob's emotional state at time of action */
+    memory->fear_level = mob->ai_data->emotion_fear;
+    memory->anger_level = mob->ai_data->emotion_anger;
+    memory->happiness_level = mob->ai_data->emotion_happiness;
+    memory->sadness_level = mob->ai_data->emotion_sadness;
+
+    memory->friendship_level = mob->ai_data->emotion_friendship;
+    memory->love_level = mob->ai_data->emotion_love;
+    memory->trust_level = mob->ai_data->emotion_trust;
+    memory->loyalty_level = mob->ai_data->emotion_loyalty;
+
+    memory->curiosity_level = mob->ai_data->emotion_curiosity;
+    memory->greed_level = mob->ai_data->emotion_greed;
+    memory->pride_level = mob->ai_data->emotion_pride;
+
+    memory->compassion_level = mob->ai_data->emotion_compassion;
+    memory->envy_level = mob->ai_data->emotion_envy;
+
+    memory->courage_level = mob->ai_data->emotion_courage;
+    memory->excitement_level = mob->ai_data->emotion_excitement;
+
+    memory->disgust_level = mob->ai_data->emotion_disgust;
+    memory->shame_level = mob->ai_data->emotion_shame;
+    memory->pain_level = mob->ai_data->emotion_pain;
+    memory->horror_level = mob->ai_data->emotion_horror;
+    memory->humiliation_level = mob->ai_data->emotion_humiliation;
+
+    /* Initialize moral judgment fields */
+    memory->moral_action_type = -1;
+    memory->moral_was_guilty = -1;
+    memory->moral_blameworthiness = -1;
+    memory->moral_outcome_severity = -1;
+    memory->moral_regret_level = 0;
+
+    /* Advance circular buffer index */
+    mob->ai_data->active_memory_index = (mob->ai_data->active_memory_index + 1) % EMOTION_MEMORY_SIZE;
 }
 
 /**

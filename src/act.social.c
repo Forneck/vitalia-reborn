@@ -118,6 +118,11 @@ ACMD(do_action)
             update_mob_emotion_from_social(vict, ch, action->command);
         }
 
+        /* Active memory: record in the actor's active memory when a mob performs a social */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            add_active_emotion_memory(ch, vict, INTERACT_SOCIAL_POSITIVE, 0, action->command);
+        }
+
         /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
          * Triggers for any actor (player or mob) performing a targeted social so that
          * observer NPCs can process the event through their SEC Tetrad appraisal. */
