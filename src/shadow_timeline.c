@@ -652,6 +652,25 @@ static void generate_spell_projections(struct shadow_context *ctx)
         return;
     }
 
+    /* Only generate spell projections if mob has spellcasting items.
+     * Mana alone is not sufficient — the mob must actually possess a wand,
+     * staff, scroll, or potion to use.  Without items the execution stub
+     * cannot cast a real spell, so skip projection entirely to avoid
+     * showing misleading "conjura uma magia" messages. */
+    {
+        bool has_spell_item = FALSE;
+        struct obj_data *obj;
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            int t = GET_OBJ_TYPE(obj);
+            if (t == ITEM_WAND || t == ITEM_STAFF || t == ITEM_SCROLL || t == ITEM_POTION) {
+                has_spell_item = TRUE;
+                break;
+            }
+        }
+        if (!has_spell_item)
+            return;
+    }
+
     /* Only generate spell projections if mob has sufficient mana */
     if (GET_MANA(ch) < 15) {
         return;
