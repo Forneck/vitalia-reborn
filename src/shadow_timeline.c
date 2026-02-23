@@ -1702,6 +1702,40 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
                 }
             }
         }
+
+        /* Active memory hysteresis: bias prediction toward actions with positive
+         * prior emotional outcomes from the mob's own action history.
+         * Maps shadow action type → INTERACT_* and queries the active memory
+         * buffer for a time-weighted valence modifier in [-20, +20].
+         * This prevents oscillatory action selection by anchoring predictions
+         * in remembered self-actions. */
+        {
+            int interact_type = -1;
+            switch (proj->action.type) {
+                case SHADOW_ACTION_ATTACK:
+                    interact_type = INTERACT_ATTACKED;
+                    break;
+                case SHADOW_ACTION_SOCIAL:
+                    interact_type = INTERACT_SOCIAL_POSITIVE;
+                    break;
+                case SHADOW_ACTION_TRADE:
+                    interact_type = INTERACT_RECEIVED_ITEM;
+                    break;
+                case SHADOW_ACTION_QUEST:
+                    interact_type = INTERACT_QUEST_COMPLETE;
+                    break;
+                case SHADOW_ACTION_CAST_SPELL:
+                    interact_type = INTERACT_WITNESSED_SUPPORT_MAGIC;
+                    break;
+                case SHADOW_ACTION_FOLLOW:
+                    interact_type = INTERACT_ASSISTED;
+                    break;
+                default:
+                    break;
+            }
+            if (interact_type >= 0)
+                score += get_active_memory_hysteresis(ch, interact_type);
+        }
     }
 
     return URANGE(OUTCOME_SCORE_MIN, score, OUTCOME_SCORE_MAX);

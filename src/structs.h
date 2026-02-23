@@ -1378,7 +1378,8 @@ struct mob_ai_data {
     int memory_index; /* Current position in passive circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 
     /* Active emotion memory - records actions performed by this mob (actor perspective) */
-    struct emotion_memory active_memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of active memories (performed actions) */
+    struct emotion_memory
+        active_memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of active memories (performed actions) */
     int active_memory_index; /* Current position in active circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 
     /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
