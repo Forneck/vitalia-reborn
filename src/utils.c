@@ -8718,8 +8718,9 @@ int get_effective_emotion_toward(struct char_data *mob, struct char_data *target
 
 /**
  * Classify a social action name into an INTERACT_* emotion memory type.
- * Used to record the correct interaction type in active (actor-perspective) memory.
- * Mirrors the classification logic inside update_mob_emotion_from_social().
+ * This is the single source of truth for social → INTERACT_* mapping.
+ * update_mob_emotion_from_social() delegates its final memory recording to this
+ * function, so both passive and active memory always use the same classification.
  *
  * @param social_name Name of the social command (e.g. "hug", "slap", "despine")
  * @param out_major   Output: set to 1 if this is a major event, 0 otherwise (may be NULL)
@@ -10029,37 +10030,11 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Add to emotion memory - classify social type for memory */
+    /* Add to emotion memory - derive type from shared classifier to avoid
+     * duplicating the list logic maintained by classify_social_interact_type(). */
     if (actor && mob->ai_data) {
-        int interaction_type;
         int is_major = 0;
-
-        /* Check if it was an extremely violent social (despine, shiskabob, vice, choke, strangle, smite, sword) */
-        if (is_blocked &&
-            (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice"))) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-            is_major = 1; /* Extreme violence is a major event */
-        }
-        /* Check if it was other extreme violence not in blocked list */
-        else if (is_violent && (!strcmp(social_name, "choke") || !strcmp(social_name, "strangle") ||
-                                !strcmp(social_name, "smite") || !strcmp(social_name, "sword"))) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-            is_major = 1; /* Extreme violence is a major event */
-        }
-        /* Check if it was any other violent social */
-        else if (is_violent || is_humiliating) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-        }
-        /* Check if it was a negative or disgusting social */
-        else if (is_negative || is_disgusting || is_blocked) {
-            /* is_blocked but not extreme violence = inappropriate sexual or other severe negative */
-            interaction_type = INTERACT_SOCIAL_NEGATIVE;
-            is_major = is_blocked ? 1 : 0; /* Blocked socials are major events */
-        }
-        /* Otherwise it's positive, neutral, or fearful */
-        else {
-            interaction_type = INTERACT_SOCIAL_POSITIVE;
-        }
+        int interaction_type = classify_social_interact_type(social_name, &is_major);
 
         add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
         if (IS_NPC(actor) && actor->ai_data)
