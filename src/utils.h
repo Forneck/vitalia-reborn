@@ -204,6 +204,7 @@ void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *pl
 void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);
 void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader);
 void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value);
+void update_mob_emotion_ally_fled(struct char_data *mob, struct char_data *fled);
 
 /* Emotion memory system functions */
 void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
@@ -212,6 +213,7 @@ void add_active_emotion_memory(struct char_data *mob, struct char_data *target, 
                                const char *social_name);
 int classify_social_interact_type(const char *social_name, int *out_major);
 int get_active_memory_hysteresis(struct char_data *mob, int interact_type);
+int get_passive_memory_hysteresis(struct char_data *mob, int interact_type);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
