@@ -1664,6 +1664,123 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                              CCNRM(ch, C_NRM));
             }
         }
+
+        /* Display active emotion memory (actions performed by this mob) */
+        {
+            int i, active_count = 0;
+            time_t current_time = time(0);
+            const char *interaction_names[] = {"Attacked",   "Healed",   "ReceivedItem",   "StolenFrom",
+                                               "Rescued",    "Assisted", "Social+",        "Social-",
+                                               "SocialViol", "AllyDied", "WitnessedDeath", "QuestComplete",
+                                               "QuestFail",  "Betrayal", "OffensiveMagic", "SupportMagic"};
+
+            /* Safety check */
+            if (k->ai_data->active_memory_index < 0 || k->ai_data->active_memory_index >= EMOTION_MEMORY_SIZE)
+                k->ai_data->active_memory_index = 0;
+
+            for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                if (k->ai_data->active_memories[i].timestamp > 0)
+                    active_count++;
+            }
+
+            if (active_count > 0) {
+                send_to_char(ch, "%sActive Memory:%s (%d/%d slots used)\r\n", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM),
+                             active_count, EMOTION_MEMORY_SIZE);
+
+                for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                    int idx = (k->ai_data->active_memory_index + i) % EMOTION_MEMORY_SIZE;
+                    struct emotion_memory *mem = &k->ai_data->active_memories[idx];
+
+                    if (mem->timestamp > 0) {
+                        int age_seconds = current_time - mem->timestamp;
+                        int age_minutes = age_seconds / 60;
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 15)
+                                                           ? interaction_names[mem->interaction_type]
+                                                           : "Unknown";
+
+                        /* Resolve target name */
+                        char entity_name[MAX_NAME_LENGTH + 20];
+                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
+                            struct char_data *player = NULL;
+                            for (player = character_list; player; player = player->next) {
+                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
+                                    const char *name = GET_NAME(player);
+                                    snprintf(entity_name, sizeof(entity_name), "%s", (name && *name) ? name : "?");
+                                    break;
+                                }
+                            }
+                            if (!player)
+                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
+                        } else {
+                            struct char_data *mob_t = NULL;
+                            for (mob_t = character_list; mob_t; mob_t = mob_t->next) {
+                                if (IS_NPC(mob_t) && char_script_id(mob_t) == mem->entity_id) {
+                                    const char *name = GET_NAME(mob_t);
+                                    snprintf(entity_name, sizeof(entity_name), "%s", (name && *name) ? name : "?");
+                                    break;
+                                }
+                            }
+                            if (!mob_t)
+                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
+                        }
+
+                        /* Build emotion string */
+                        char emotion_buf[512];
+                        size_t offset = 0;
+                        int has_emotions = 0;
+#define AME(field, label)                                                                                              \
+    if (mem->field > 0) {                                                                                              \
+        int _n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " " label ":%d", mem->field);            \
+        if (_n > 0 && offset + _n < sizeof(emotion_buf)) {                                                             \
+            offset += _n;                                                                                              \
+            has_emotions = 1;                                                                                          \
+        }                                                                                                              \
+    }
+                        AME(fear_level, "Fear")
+                        AME(anger_level, "Anger") AME(happiness_level, "Happy") AME(sadness_level, "Sad")
+                            AME(friendship_level, "Friend") AME(love_level, "Love") AME(trust_level, "Trust")
+                                AME(loyalty_level, "Loyal") AME(curiosity_level, "Curious") AME(greed_level, "Greed")
+                                    AME(pride_level, "Pride") AME(compassion_level, "Compassion")
+                                        AME(envy_level, "Envy") AME(courage_level, "Courage")
+                                            AME(excitement_level, "Excited") AME(disgust_level, "Disgust")
+                                                AME(shame_level, "Shame") AME(pain_level, "Pain")
+                                                    AME(horror_level, "Horror") AME(humiliation_level, "Humiliated")
+#undef AME
+                            /* Build interaction label */
+                            char interaction_details[128];
+                        if (mem->social_name[0] != '\0') {
+                            mem->social_name[sizeof(mem->social_name) - 1] = '\0';
+                            snprintf(interaction_details, sizeof(interaction_details), "%s(%s)", interaction_name,
+                                     mem->social_name);
+                        } else {
+                            snprintf(interaction_details, sizeof(interaction_details), "%s", interaction_name);
+                        }
+
+                        send_to_char(ch, "  [%s%2d min ago%s] actor->%s %s%-18s%s%s\r\n", CCGRN(ch, C_NRM), age_minutes,
+                                     CCNRM(ch, C_NRM), entity_name, CCMAG(ch, C_NRM), interaction_details,
+                                     CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "");
+                        if (has_emotions)
+                            send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                                         emotion_buf);
+
+                        if (mem->moral_action_type >= 0 && mem->moral_was_guilty >= 0) {
+                            const char *action_names[] = {"None",    "Attack", "Steal",   "Help",
+                                                          "Heal",    "Trade",  "Deceive", "Sacrifice",
+                                                          "Abandon", "Betray", "Defend",  "Unknown"};
+                            int action_idx = (mem->moral_action_type >= 0 && mem->moral_action_type <= 10)
+                                                 ? mem->moral_action_type
+                                                 : 11;
+                            send_to_char(ch, "      %sMoral:%s %s, %s, Blame:%d, Severity:%d, Regret:%d\r\n",
+                                         CCMAG(ch, C_NRM), CCNRM(ch, C_NRM), action_names[action_idx],
+                                         mem->moral_was_guilty ? "Guilty" : "Innocent", mem->moral_blameworthiness,
+                                         mem->moral_outcome_severity, mem->moral_regret_level);
+                        }
+                    }
+                }
+            } else {
+                send_to_char(ch, "%sActive Memory:%s No actions recorded yet\r\n", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM));
+            }
+        }
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);

@@ -8169,6 +8169,42 @@ int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity,
         }
     }
 
+    /* Include active memories at 30% weight so self-initiated actions also
+     * feed into the relationship modifier (e.g., a mob that repeatedly helps
+     * a player will also feel positively about them through this layer). */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *amem = &mob->ai_data->active_memories[i];
+
+        if (amem->timestamp > 0 && amem->entity_type == entity_type && amem->entity_id == entity_id) {
+            int age_seconds = current_time - amem->timestamp;
+            int weight;
+
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            else
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+            if (amem->major_event)
+                weight *= 2;
+
+            /* Active memories contribute at 30% of passive weight */
+            weight = weight * 3 / 10;
+            if (weight < 1)
+                weight = 1;
+
+            total_trust += amem->trust_level * weight;
+            total_friendship += amem->friendship_level * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
     /* Calculate average weighted modifiers */
     if (total_weight > 0) {
         *trust_mod = total_trust / total_weight;
@@ -8446,6 +8482,107 @@ int get_relationship_emotion(struct char_data *mob, struct char_data *target, in
             }
 
             /* Accumulate weighted emotions */
+            total_emotion += emotion_value * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
+    /* Include active memories at 30% weight so the mob's own past actions
+     * toward the target also modulate the relationship emotion level. */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *amem = &mob->ai_data->active_memories[i];
+
+        if (amem->timestamp > 0 && amem->entity_type == entity_type && amem->entity_id == entity_id) {
+            int age_seconds = current_time - amem->timestamp;
+            int weight;
+            int emotion_value = 0;
+
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            else
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+            if (amem->major_event)
+                weight *= 2;
+
+            /* Active memories contribute at 30% of passive weight */
+            weight = weight * 3 / 10;
+            if (weight < 1)
+                weight = 1;
+
+            switch (emotion_type) {
+                case EMOTION_TYPE_FEAR:
+                    emotion_value = amem->fear_level;
+                    break;
+                case EMOTION_TYPE_ANGER:
+                    emotion_value = amem->anger_level;
+                    break;
+                case EMOTION_TYPE_HAPPINESS:
+                    emotion_value = amem->happiness_level;
+                    break;
+                case EMOTION_TYPE_SADNESS:
+                    emotion_value = amem->sadness_level;
+                    break;
+                case EMOTION_TYPE_FRIENDSHIP:
+                    emotion_value = amem->friendship_level;
+                    break;
+                case EMOTION_TYPE_LOVE:
+                    emotion_value = amem->love_level;
+                    break;
+                case EMOTION_TYPE_TRUST:
+                    emotion_value = amem->trust_level;
+                    break;
+                case EMOTION_TYPE_LOYALTY:
+                    emotion_value = amem->loyalty_level;
+                    break;
+                case EMOTION_TYPE_CURIOSITY:
+                    emotion_value = amem->curiosity_level;
+                    break;
+                case EMOTION_TYPE_GREED:
+                    emotion_value = amem->greed_level;
+                    break;
+                case EMOTION_TYPE_PRIDE:
+                    emotion_value = amem->pride_level;
+                    break;
+                case EMOTION_TYPE_COMPASSION:
+                    emotion_value = amem->compassion_level;
+                    break;
+                case EMOTION_TYPE_ENVY:
+                    emotion_value = amem->envy_level;
+                    break;
+                case EMOTION_TYPE_COURAGE:
+                    emotion_value = amem->courage_level;
+                    break;
+                case EMOTION_TYPE_EXCITEMENT:
+                    emotion_value = amem->excitement_level;
+                    break;
+                case EMOTION_TYPE_DISGUST:
+                    emotion_value = amem->disgust_level;
+                    break;
+                case EMOTION_TYPE_SHAME:
+                    emotion_value = amem->shame_level;
+                    break;
+                case EMOTION_TYPE_PAIN:
+                    emotion_value = amem->pain_level;
+                    break;
+                case EMOTION_TYPE_HORROR:
+                    emotion_value = amem->horror_level;
+                    break;
+                case EMOTION_TYPE_HUMILIATION:
+                    emotion_value = amem->humiliation_level;
+                    break;
+                default:
+                    emotion_value = 0;
+                    break;
+            }
+
             total_emotion += emotion_value * weight;
             total_weight += weight;
             memory_count++;
