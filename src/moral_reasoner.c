@@ -973,9 +973,13 @@ void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *tar
             case MORAL_ACTION_TRADE:
                 active_interact = INTERACT_RECEIVED_ITEM;
                 break;
+            case MORAL_ACTION_ABANDON_ALLY:
+                active_interact = INTERACT_ABANDON_ALLY;
+                break;
             default:
-                /* MORAL_ACTION_DECEIVE, SACRIFICE_SELF, ABANDON_ALLY have no
-                 * direct active-memory counterpart — skip back-fill. */
+                /* MORAL_ACTION_DECEIVE: no code trigger yet (INTERACT_DECEIVE reserved for future).
+                 * MORAL_ACTION_SACRIFICE_SELF: no execution path yet (INTERACT_SACRIFICE_SELF reserved).
+                 * Skip back-fill for these. */
                 break;
         }
 

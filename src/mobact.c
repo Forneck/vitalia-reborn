@@ -1114,6 +1114,10 @@ void mobile_activity(void)
                     case SHADOW_ACTION_FLEE:
                         /* Flee if we're actually in combat */
                         if (FIGHTING(ch)) {
+                            /* If mob has a master or followers it is abandoning them */
+                            if (IS_NPC(ch) && ch->ai_data && (ch->master || ch->followers))
+                                add_active_emotion_memory(ch, FIGHTING(ch),
+                                    INTERACT_ABANDON_ALLY, 1, "flee");
                             do_flee(ch, "", 0, 0);
                             shadow_action_executed = TRUE;
                             goto shadow_feedback_and_continue;

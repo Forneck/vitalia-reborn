@@ -1210,6 +1210,9 @@ struct emotion_4d_state {
 #define INTERACT_BETRAYAL 13
 #define INTERACT_WITNESSED_OFFENSIVE_MAGIC 14 /**< Witnessed harmful/debuff spell cast by this entity */
 #define INTERACT_WITNESSED_SUPPORT_MAGIC 15   /**< Witnessed healing/buff spell cast by this entity */
+#define INTERACT_ABANDON_ALLY 16              /**< Actor fled combat while group-members remained; witness = saw ally flee */
+#define INTERACT_SACRIFICE_SELF 17            /**< Actor sacrificed itself for group (future: no execution path yet) */
+#define INTERACT_DECEIVE 18                   /**< Actor deceived another entity (future: no code trigger yet) */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
