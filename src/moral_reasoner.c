@@ -947,24 +947,39 @@ void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *tar
         int found_active;
         time_t now_t;
 
-        /* Map action_type → INTERACT_* the same way we did for passive memory */
-        active_interact = INTERACT_ATTACKED; /* default */
+        /* Map action_type → the INTERACT_* type stored by add_active_emotion_memory()
+         * for that same action.  If no active-memory counterpart exists, skip the
+         * back-fill entirely by pre-setting found_active = 1. */
+        active_interact = -1;
         switch (action_type) {
             case MORAL_ACTION_ATTACK:
-            case MORAL_ACTION_BETRAY:
-            case MORAL_ACTION_DEFEND:
                 active_interact = INTERACT_ATTACKED;
+                break;
+            case MORAL_ACTION_BETRAY:
+                active_interact = INTERACT_BETRAYAL;
+                break;
+            case MORAL_ACTION_DEFEND:
+                active_interact = INTERACT_RESCUED;
                 break;
             case MORAL_ACTION_STEAL:
                 active_interact = INTERACT_STOLEN_FROM;
                 break;
             case MORAL_ACTION_HELP:
-            case MORAL_ACTION_HEAL:
                 active_interact = INTERACT_ASSISTED;
+                break;
+            case MORAL_ACTION_HEAL:
+                active_interact = INTERACT_HEALED;
+                break;
+            case MORAL_ACTION_TRADE:
+                active_interact = INTERACT_RECEIVED_ITEM;
+                break;
+            default:
+                /* MORAL_ACTION_DECEIVE, SACRIFICE_SELF, ABANDON_ALLY have no
+                 * direct active-memory counterpart — skip back-fill. */
                 break;
         }
 
-        found_active = 0;
+        found_active = (active_interact < 0) ? 1 : 0; /* skip loop if no mapping */
         now_t = time(0);
 
         for (ai = 0; ai < EMOTION_MEMORY_SIZE && !found_active; ai++) {
