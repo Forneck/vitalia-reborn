@@ -188,6 +188,7 @@ void check_extreme_emotional_states(struct char_data *mob);
 void check_conflicting_emotions(struct char_data *mob);
 void check_emotional_breakdown(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
+void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_data *target, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
 void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);
@@ -207,6 +208,10 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
 /* Emotion memory system functions */
 void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
                         const char *social_name);
+void add_active_emotion_memory(struct char_data *mob, struct char_data *target, int interaction_type, int major_event,
+                               const char *social_name);
+int classify_social_interact_type(const char *social_name, int *out_major);
+int get_active_memory_hysteresis(struct char_data *mob, int interact_type);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 

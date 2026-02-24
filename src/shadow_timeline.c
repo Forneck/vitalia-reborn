@@ -652,6 +652,25 @@ static void generate_spell_projections(struct shadow_context *ctx)
         return;
     }
 
+    /* Only generate spell projections if mob has spellcasting items.
+     * Mana alone is not sufficient — the mob must actually possess a wand,
+     * staff, scroll, or potion to use.  Without items the execution stub
+     * cannot cast a real spell, so skip projection entirely to avoid
+     * showing misleading "conjura uma magia" messages. */
+    {
+        bool has_spell_item = FALSE;
+        struct obj_data *obj;
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            int t = GET_OBJ_TYPE(obj);
+            if (t == ITEM_WAND || t == ITEM_STAFF || t == ITEM_SCROLL || t == ITEM_POTION) {
+                has_spell_item = TRUE;
+                break;
+            }
+        }
+        if (!has_spell_item)
+            return;
+    }
+
     /* Only generate spell projections if mob has sufficient mana */
     if (GET_MANA(ch) < 15) {
         return;
@@ -1701,6 +1720,44 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
                     score += (int)((1.0f - O_final) * (float)CONFIG_SEC_O_REPETITION_BONUS);
                 }
             }
+        }
+
+        /* Active memory hysteresis: bias prediction toward actions with positive
+         * prior emotional outcomes from the mob's own action history.
+         * Maps shadow action type → INTERACT_* and queries the active memory
+         * buffer for a time-weighted valence modifier in [-20, +20].
+         * This prevents oscillatory action selection by anchoring predictions
+         * in remembered self-actions. */
+        {
+            int interact_type = -1;
+            switch (proj->action.type) {
+                case SHADOW_ACTION_ATTACK:
+                    interact_type = INTERACT_ATTACKED;
+                    break;
+                case SHADOW_ACTION_SOCIAL:
+                    /* Combine remembered valence from all social subtypes so that
+                     * past negative/violent socials also influence future choices. */
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_POSITIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_NEGATIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_VIOLENT);
+                    break;
+                case SHADOW_ACTION_TRADE:
+                    interact_type = INTERACT_RECEIVED_ITEM;
+                    break;
+                case SHADOW_ACTION_QUEST:
+                    interact_type = INTERACT_QUEST_COMPLETE;
+                    break;
+                case SHADOW_ACTION_CAST_SPELL:
+                    interact_type = INTERACT_WITNESSED_SUPPORT_MAGIC;
+                    break;
+                case SHADOW_ACTION_FOLLOW:
+                    interact_type = INTERACT_ASSISTED;
+                    break;
+                default:
+                    break;
+            }
+            if (interact_type >= 0)
+                score += get_active_memory_hysteresis(ch, interact_type);
         }
     }
 

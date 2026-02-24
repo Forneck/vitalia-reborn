@@ -6291,6 +6291,105 @@ void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victi
     if (IS_EVIL(mob) && victim && IS_GOOD(victim)) {
         adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 10));
     }
+
+    /* Good-aligned mobs attacking others feel shame/regret (bidirectional feedback):
+     * aggression conflicts with their moral self-image → shame increases */
+    if (IS_GOOD(mob) && mob->ai_data->emotion_compassion >= 40) {
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(2, 6));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 7));
+    }
+
+    /* Active memory: record that this mob initiated the attack */
+    if (victim) {
+        add_active_emotion_memory(mob, victim, INTERACT_ATTACKED, 0, NULL);
+    }
+}
+
+/**
+ * Update the ACTOR mob's own emotional state after performing a social action.
+ * This is the "Action → Emotion" feedback half of the bidirectional loop:
+ *   Emotion → Action (Shadow Timeline scoring) and Action → Emotion (this function).
+ *
+ * Called by act.social.c whenever an NPC performs a targeted social, regardless
+ * of whether the target is a player or another mob.  The victim's emotions are
+ * updated separately by update_mob_emotion_from_social().
+ *
+ * Emotional consequences:
+ *  - Positive social : mild happiness/friendship gain; compassionate mobs gain extra
+ *  - Negative social : angry mobs feel slight relief; compassionate mobs feel shame
+ *  - Violent social  : courage increases; extreme violence adds anger;
+ *                      compassionate mobs gain shame; evil mobs gain pride
+ *
+ * @param actor       The NPC performing the social action
+ * @param target      The target of the social (may be player or mob)
+ * @param social_name The social command name
+ */
+void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_data *target, const char *social_name)
+{
+    int major = 0;
+    int interact_type;
+    int rel_bonus = 0;
+
+    if (!actor || !IS_NPC(actor) || !actor->ai_data || !social_name || !*social_name || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Safety: don't process actors being extracted */
+    if (MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+        return;
+
+    /* Scale feedback by relationship depth with target: a mob acting toward
+     * someone it loves/trusts feels more intensely about the action.
+     * rel_bonus: 0 (strangers) to 5 (deeply bonded) added to each rand range. */
+    if (target) {
+        int rel_love = get_effective_emotion_toward(actor, target, EMOTION_TYPE_LOVE);
+        int rel_friend = get_effective_emotion_toward(actor, target, EMOTION_TYPE_FRIENDSHIP);
+        rel_bonus = (rel_love + rel_friend) / 40;
+        if (rel_bonus > 5)
+            rel_bonus = 5;
+    }
+
+    interact_type = classify_social_interact_type(social_name, &major);
+
+    switch (interact_type) {
+        case INTERACT_SOCIAL_POSITIVE:
+            /* Expressing kindness feels rewarding; stronger with a loved/trusted target */
+            adjust_emotion(actor, &actor->ai_data->emotion_happiness, rand_number(2 + rel_bonus, 6 + rel_bonus));
+            adjust_emotion(actor, &actor->ai_data->emotion_friendship, rand_number(1 + rel_bonus, 4 + rel_bonus));
+            /* Compassionate actors feel even more satisfaction from positive acts */
+            if (actor->ai_data->emotion_compassion >= 60)
+                adjust_emotion(actor, &actor->ai_data->emotion_compassion, rand_number(1, 3));
+            break;
+
+        case INTERACT_SOCIAL_NEGATIVE:
+            /* Expressing hostility: angry mobs feel slight relief (venting);
+             * compassionate mobs feel guilt — worse if the target is someone they care about */
+            if (actor->ai_data->emotion_anger >= 50)
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, -rand_number(2, 5));
+            if (actor->ai_data->emotion_compassion >= 60)
+                adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(1 + rel_bonus, 4 + rel_bonus));
+            break;
+
+        case INTERACT_SOCIAL_VIOLENT:
+            /* Violence raises courage regardless of severity */
+            adjust_emotion(actor, &actor->ai_data->emotion_courage, rand_number(2, 6));
+
+            if (major) {
+                /* Extreme violence: anger increases; shame is amplified by relationship */
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, rand_number(3, 8));
+                if (actor->ai_data->emotion_compassion >= 50)
+                    adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(3 + rel_bonus, 8 + rel_bonus));
+                /* Evil mobs feel pride from dominating others */
+                if (IS_EVIL(actor))
+                    adjust_emotion(actor, &actor->ai_data->emotion_pride, rand_number(2, 5));
+            } else {
+                /* Moderate violence: slight anger venting */
+                adjust_emotion(actor, &actor->ai_data->emotion_anger, -rand_number(1, 4));
+            }
+            break;
+
+        default:
+            break;
+    }
 }
 
 /**
@@ -6323,6 +6422,13 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     /* Add to emotion memory */
     if (healer) {
         add_emotion_memory(mob, healer, INTERACT_HEALED, 0, NULL);
+        if (IS_NPC(healer) && healer->ai_data) {
+            add_active_emotion_memory(healer, mob, INTERACT_HEALED, 0, NULL);
+            /* Bidirectional feedback: healer gains compassion/happiness from helping */
+            adjust_emotion(healer, &healer->ai_data->emotion_compassion, rand_number(2, 5));
+            adjust_emotion(healer, &healer->ai_data->emotion_happiness, rand_number(2, 6));
+            adjust_emotion(healer, &healer->ai_data->emotion_pride, rand_number(1, 3));
+        }
     }
 }
 
@@ -6379,6 +6485,8 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
     /* Add to emotion memory */
     if (giver) {
         add_emotion_memory(mob, giver, INTERACT_RECEIVED_ITEM, 0, NULL);
+        if (IS_NPC(giver) && giver->ai_data)
+            add_active_emotion_memory(giver, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
 }
 
@@ -6413,6 +6521,8 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
     /* Add to emotion memory - theft is a MAJOR negative event */
     if (thief) {
         add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1, NULL);
+        if (IS_NPC(thief) && thief->ai_data)
+            add_active_emotion_memory(thief, mob, INTERACT_STOLEN_FROM, 1, NULL);
     }
 }
 
@@ -6449,6 +6559,8 @@ void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_dat
     /* Add to emotion memory - unfair trade is a negative event */
     if (keeper) {
         add_emotion_memory(buyer, keeper, INTERACT_RECEIVED_ITEM, 0, NULL);
+        if (IS_NPC(keeper) && keeper->ai_data)
+            add_active_emotion_memory(keeper, buyer, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
 }
 
@@ -6485,6 +6597,14 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
     /* Add to emotion memory - rescue is a MAJOR positive event */
     if (rescuer) {
         add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1, NULL);
+        if (IS_NPC(rescuer) && rescuer->ai_data) {
+            add_active_emotion_memory(rescuer, mob, INTERACT_RESCUED, 1, NULL);
+            /* Bidirectional feedback: rescuer gains pride/compassion/happiness from saving another */
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_pride, rand_number(3, 8));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_compassion, rand_number(2, 6));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_happiness, rand_number(3, 7));
+            adjust_emotion(rescuer, &rescuer->ai_data->emotion_courage, rand_number(2, 5));
+        }
     }
 }
 
@@ -6515,6 +6635,13 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
     /* Add to emotion memory */
     if (assistant) {
         add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0, NULL);
+        if (IS_NPC(assistant) && assistant->ai_data) {
+            add_active_emotion_memory(assistant, mob, INTERACT_ASSISTED, 0, NULL);
+            /* Bidirectional feedback: assistant gains loyalty/compassion from supporting others */
+            adjust_emotion(assistant, &assistant->ai_data->emotion_loyalty, rand_number(2, 5));
+            adjust_emotion(assistant, &assistant->ai_data->emotion_compassion, rand_number(2, 5));
+            adjust_emotion(assistant, &assistant->ai_data->emotion_happiness, rand_number(1, 4));
+        }
     }
 }
 
@@ -7862,6 +7989,108 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
 }
 
 /**
+ * Record an action performed by a mob in its active emotional memory.
+ * Captures the mob's own emotional state at the moment it acted on a target.
+ * This is the actor-perspective counterpart to add_emotion_memory() (which records
+ * the receiver/witness perspective).
+ *
+ * @param mob            The mob performing the action (actor)
+ * @param target         The target of the action (can be mob or player)
+ * @param interaction_type Type of action performed (INTERACT_*)
+ * @param major_event    1 for major events (extreme violence, betrayal), 0 for normal
+ * @param social_name    Name of the social command if applicable (NULL otherwise)
+ */
+void add_active_emotion_memory(struct char_data *mob, struct char_data *target, int interaction_type, int major_event,
+                               const char *social_name)
+{
+    struct emotion_memory *memory;
+    int entity_type;
+    long entity_id;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !target || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Safety: ensure mob isn't being extracted */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return;
+
+    /* Safety: ensure target isn't being extracted */
+    if (IS_NPC(target) && MOB_FLAGGED(target, MOB_NOTDEADYET))
+        return;
+    if (!IS_NPC(target) && PLR_FLAGGED(target, PLR_NOTDEADYET))
+        return;
+
+    /* Determine target type and ID */
+    if (IS_NPC(target)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(target);
+        if (entity_id == 0)
+            return;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(target);
+        if (entity_id <= 0)
+            return;
+    }
+
+    /* Get active memory slot using circular buffer */
+    memory = &mob->ai_data->active_memories[mob->ai_data->active_memory_index];
+
+    /* Store memory */
+    memory->entity_type = entity_type;
+    memory->entity_id = entity_id;
+    memory->interaction_type = interaction_type;
+    memory->major_event = major_event;
+    memory->timestamp = time(0);
+
+    /* Store social name if provided */
+    if (social_name && *social_name) {
+        strncpy(memory->social_name, social_name, sizeof(memory->social_name) - 1);
+        memory->social_name[sizeof(memory->social_name) - 1] = '\0';
+    } else {
+        memory->social_name[0] = '\0';
+    }
+
+    /* Store complete emotion snapshot - captures mob's emotional state at time of action */
+    memory->fear_level = mob->ai_data->emotion_fear;
+    memory->anger_level = mob->ai_data->emotion_anger;
+    memory->happiness_level = mob->ai_data->emotion_happiness;
+    memory->sadness_level = mob->ai_data->emotion_sadness;
+
+    memory->friendship_level = mob->ai_data->emotion_friendship;
+    memory->love_level = mob->ai_data->emotion_love;
+    memory->trust_level = mob->ai_data->emotion_trust;
+    memory->loyalty_level = mob->ai_data->emotion_loyalty;
+
+    memory->curiosity_level = mob->ai_data->emotion_curiosity;
+    memory->greed_level = mob->ai_data->emotion_greed;
+    memory->pride_level = mob->ai_data->emotion_pride;
+
+    memory->compassion_level = mob->ai_data->emotion_compassion;
+    memory->envy_level = mob->ai_data->emotion_envy;
+
+    memory->courage_level = mob->ai_data->emotion_courage;
+    memory->excitement_level = mob->ai_data->emotion_excitement;
+
+    memory->disgust_level = mob->ai_data->emotion_disgust;
+    memory->shame_level = mob->ai_data->emotion_shame;
+    memory->pain_level = mob->ai_data->emotion_pain;
+    memory->horror_level = mob->ai_data->emotion_horror;
+    memory->humiliation_level = mob->ai_data->emotion_humiliation;
+
+    /* Initialize moral judgment fields */
+    memory->moral_action_type = -1;
+    memory->moral_was_guilty = -1;
+    memory->moral_blameworthiness = -1;
+    memory->moral_outcome_severity = -1;
+    memory->moral_regret_level = 0;
+
+    /* Advance circular buffer index */
+    mob->ai_data->active_memory_index = (mob->ai_data->active_memory_index + 1) % EMOTION_MEMORY_SIZE;
+}
+
+/**
  * Get emotion modifiers based on past interactions with an entity
  * Returns weighted sum of past emotions, with recent memories having more weight
  * @param mob The mob whose memories to check
@@ -7950,6 +8179,42 @@ int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity,
         }
     }
 
+    /* Include active memories at 30% weight so self-initiated actions also
+     * feed into the relationship modifier (e.g., a mob that repeatedly helps
+     * a player will also feel positively about them through this layer). */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *amem = &mob->ai_data->active_memories[i];
+
+        if (amem->timestamp > 0 && amem->entity_type == entity_type && amem->entity_id == entity_id) {
+            int age_seconds = current_time - amem->timestamp;
+            int weight;
+
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            else
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+            if (amem->major_event)
+                weight *= 2;
+
+            /* Active memories contribute at 30% of passive weight */
+            weight = weight * 3 / 10;
+            if (weight < 1)
+                weight = 1;
+
+            total_trust += amem->trust_level * weight;
+            total_friendship += amem->friendship_level * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
     /* Calculate average weighted modifiers */
     if (total_weight > 0) {
         *trust_mod = total_trust / total_weight;
@@ -7972,7 +8237,7 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
 
-    /* Clear all memories matching the entity */
+    /* Clear all passive memories matching the entity */
     for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
         struct emotion_memory *mem = &mob->ai_data->memories[i];
         if (mem->entity_type == entity_type && mem->entity_id == entity_id) {
@@ -7981,6 +8246,109 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
             mem->entity_id = 0;
         }
     }
+
+    /* Clear all active memories matching the entity */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->active_memories[i];
+        if (mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            mem->timestamp = 0;
+            mem->entity_id = 0;
+        }
+    }
+}
+
+/**
+ * Compute an active-memory hysteresis modifier for Shadow Timeline action scoring.
+ *
+ * Scans the mob's active_memories[] for entries whose interaction_type matches
+ * the given shadow action type (passed as INTERACT_*).  For each matching entry
+ * it computes an emotion-valence score from the stored snapshot and accumulates
+ * a time-weighted average using the same age buckets as passive memory.
+ *
+ * Valence formula per entry:
+ *   valence = happiness - 0.4 * (fear + anger + sadness + pain + horror + humiliation)
+ *             + 0.2 * (courage + pride + excitement)
+ * This captures net positivity at the moment of the action.
+ *
+ * The returned modifier is in the range [-20, +20].  Positive values indicate
+ * the mob had a positive emotional state when performing similar actions in the
+ * past (hysteresis toward repetition); negative values indicate the opposite.
+ *
+ * If no matching active memories are found, returns 0 (no hysteresis).
+ *
+ * @param mob          The mob whose active memories to scan
+ * @param interact_type INTERACT_* type corresponding to the projected action
+ * @return Hysteresis modifier in [-ACTIVE_HYSTERESIS_MAX, +ACTIVE_HYSTERESIS_MAX]
+ */
+int get_active_memory_hysteresis(struct char_data *mob, int interact_type)
+{
+#define ACTIVE_HYSTERESIS_MAX 20
+    int i;
+    int total_valence = 0;
+    int total_weight = 0;
+    time_t now;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return 0;
+
+    now = time(0);
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->active_memories[i];
+        int age_seconds, weight, valence;
+
+        /* Skip unused slots and non-matching interaction types */
+        if (mem->timestamp == 0 || mem->interaction_type != interact_type)
+            continue;
+
+        age_seconds = (int)(now - mem->timestamp);
+
+        /* Same time-decay buckets as passive memory */
+        if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+        else
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+        /* Major events carry double weight */
+        if (mem->major_event)
+            weight *= 2;
+
+        /* Compute valence from the emotion snapshot:
+         * positive emotions push valence up; negative ones pull it down.
+         * Scaled to fit in integer arithmetic (×10 factor, divided later). */
+        valence = (int)mem->happiness_level * 10 -
+                  4 * (int)(mem->fear_level + mem->anger_level + mem->sadness_level + mem->pain_level +
+                            mem->horror_level + mem->humiliation_level) +
+                  2 * (int)(mem->courage_level + mem->pride_level + mem->excitement_level);
+
+        total_valence += valence * weight;
+        total_weight += weight;
+    }
+
+    if (total_weight == 0)
+        return 0;
+
+    /* Weighted average valence, rescaled to [-ACTIVE_HYSTERESIS_MAX, +ACTIVE_HYSTERESIS_MAX].
+     * Raw valence range: happiness(0-100)×10 minus negatives = roughly [-3640, +3640].
+     * We map that range to [-20, +20] by dividing by ~182. */
+    {
+        int avg = total_valence / total_weight;
+        int modifier = avg / 182;
+        if (modifier > ACTIVE_HYSTERESIS_MAX)
+            modifier = ACTIVE_HYSTERESIS_MAX;
+        if (modifier < -ACTIVE_HYSTERESIS_MAX)
+            modifier = -ACTIVE_HYSTERESIS_MAX;
+        return modifier;
+    }
+#undef ACTIVE_HYSTERESIS_MAX
 }
 
 /**
@@ -8130,6 +8498,107 @@ int get_relationship_emotion(struct char_data *mob, struct char_data *target, in
         }
     }
 
+    /* Include active memories at 30% weight so the mob's own past actions
+     * toward the target also modulate the relationship emotion level. */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *amem = &mob->ai_data->active_memories[i];
+
+        if (amem->timestamp > 0 && amem->entity_type == entity_type && amem->entity_id == entity_id) {
+            int age_seconds = current_time - amem->timestamp;
+            int weight;
+            int emotion_value = 0;
+
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            else
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+            if (amem->major_event)
+                weight *= 2;
+
+            /* Active memories contribute at 30% of passive weight */
+            weight = weight * 3 / 10;
+            if (weight < 1)
+                weight = 1;
+
+            switch (emotion_type) {
+                case EMOTION_TYPE_FEAR:
+                    emotion_value = amem->fear_level;
+                    break;
+                case EMOTION_TYPE_ANGER:
+                    emotion_value = amem->anger_level;
+                    break;
+                case EMOTION_TYPE_HAPPINESS:
+                    emotion_value = amem->happiness_level;
+                    break;
+                case EMOTION_TYPE_SADNESS:
+                    emotion_value = amem->sadness_level;
+                    break;
+                case EMOTION_TYPE_FRIENDSHIP:
+                    emotion_value = amem->friendship_level;
+                    break;
+                case EMOTION_TYPE_LOVE:
+                    emotion_value = amem->love_level;
+                    break;
+                case EMOTION_TYPE_TRUST:
+                    emotion_value = amem->trust_level;
+                    break;
+                case EMOTION_TYPE_LOYALTY:
+                    emotion_value = amem->loyalty_level;
+                    break;
+                case EMOTION_TYPE_CURIOSITY:
+                    emotion_value = amem->curiosity_level;
+                    break;
+                case EMOTION_TYPE_GREED:
+                    emotion_value = amem->greed_level;
+                    break;
+                case EMOTION_TYPE_PRIDE:
+                    emotion_value = amem->pride_level;
+                    break;
+                case EMOTION_TYPE_COMPASSION:
+                    emotion_value = amem->compassion_level;
+                    break;
+                case EMOTION_TYPE_ENVY:
+                    emotion_value = amem->envy_level;
+                    break;
+                case EMOTION_TYPE_COURAGE:
+                    emotion_value = amem->courage_level;
+                    break;
+                case EMOTION_TYPE_EXCITEMENT:
+                    emotion_value = amem->excitement_level;
+                    break;
+                case EMOTION_TYPE_DISGUST:
+                    emotion_value = amem->disgust_level;
+                    break;
+                case EMOTION_TYPE_SHAME:
+                    emotion_value = amem->shame_level;
+                    break;
+                case EMOTION_TYPE_PAIN:
+                    emotion_value = amem->pain_level;
+                    break;
+                case EMOTION_TYPE_HORROR:
+                    emotion_value = amem->horror_level;
+                    break;
+                case EMOTION_TYPE_HUMILIATION:
+                    emotion_value = amem->humiliation_level;
+                    break;
+                default:
+                    emotion_value = 0;
+                    break;
+            }
+
+            total_emotion += emotion_value * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
     /* Calculate average weighted emotion */
     if (total_weight > 0) {
         return total_emotion / total_weight;
@@ -8255,6 +8724,69 @@ int get_effective_emotion_toward(struct char_data *mob, struct char_data *target
 
     /* Clamp to valid range */
     return URANGE(0, effective_emotion, 100);
+}
+
+/**
+ * Classify a social action name into an INTERACT_* emotion memory type.
+ * This is the single source of truth for social → INTERACT_* mapping.
+ * update_mob_emotion_from_social() delegates its final memory recording to this
+ * function, so both passive and active memory always use the same classification.
+ *
+ * @param social_name Name of the social command (e.g. "hug", "slap", "despine")
+ * @param out_major   Output: set to 1 if this is a major event, 0 otherwise (may be NULL)
+ * @return INTERACT_SOCIAL_VIOLENT, INTERACT_SOCIAL_NEGATIVE, or INTERACT_SOCIAL_POSITIVE
+ */
+int classify_social_interact_type(const char *social_name, int *out_major)
+{
+    int i;
+
+    if (out_major)
+        *out_major = 0;
+    if (!social_name || !*social_name)
+        return INTERACT_SOCIAL_POSITIVE;
+
+    /* Extreme violence - always a major event */
+    const char *extreme_violent[] = {"despine", "shiskabob", "vice", "choke", "strangle", "smite", "sword", NULL};
+    for (i = 0; extreme_violent[i]; i++) {
+        if (!strcmp(social_name, extreme_violent[i])) {
+            if (out_major)
+                *out_major = 1;
+            return INTERACT_SOCIAL_VIOLENT;
+        }
+    }
+
+    /* Other violent and humiliating socials */
+    const char *violent[] = {"needle", "shock",     "whip",   "bite",   "smack",     "clobber", "thwap", "whack",
+                             "pound",  "shootout",  "burn",   "charge", "warscream", "roar",    "poke",  "tickle",
+                             "ruffle", "suckit-up", "wedgie", "noogie", "pinch",     "goose",   NULL};
+    for (i = 0; violent[i]; i++) {
+        if (!strcmp(social_name, violent[i]))
+            return INTERACT_SOCIAL_VIOLENT;
+    }
+
+    /* Blocked sexual socials - major negative event */
+    const char *blocked[] = {"fondle", "grope", "french", "sex", "seduce", NULL};
+    for (i = 0; blocked[i]; i++) {
+        if (!strcmp(social_name, blocked[i])) {
+            if (out_major)
+                *out_major = 1;
+            return INTERACT_SOCIAL_NEGATIVE;
+        }
+    }
+
+    /* Negative and disgusting socials */
+    const char *negative[] = {"frown",   "glare",    "spit",   "accuse",    "curse",      "taunt", "snicker", "slap",
+                              "snap",    "snarl",    "growl",  "fume",      "sneer",      "eye",   "jeer",    "mock",
+                              "ignore",  "threaten", "blame",  "criticize", "disapprove", "scold", "hate",    "grimace",
+                              "evileye", "swear",    "envy",   "greed",     "drool",      "puke",  "burp",    "fart",
+                              "licks",   "moan",     "sniff",  "earlick",   "pant",       "moon",  "booger",  "belch",
+                              "gag",     "spew",     "phlegm", NULL};
+    for (i = 0; negative[i]; i++) {
+        if (!strcmp(social_name, negative[i]))
+            return INTERACT_SOCIAL_NEGATIVE;
+    }
+
+    return INTERACT_SOCIAL_POSITIVE;
 }
 
 /**
@@ -8533,6 +9065,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n recua em pânico absoluto!", FALSE, mob, 0, actor, TO_ROOM);
             }
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_VIOLENT, 1, social_name);
+            if (IS_NPC(actor) && actor->ai_data)
+                add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_VIOLENT, 1, social_name);
             return;
         }
 
@@ -8549,6 +9083,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n responde afetuosamente.", FALSE, mob, 0, actor, TO_ROOM);
             }
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_POSITIVE, 0, social_name);
+            if (IS_NPC(actor) && actor->ai_data)
+                add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_POSITIVE, 0, social_name);
             return;
         }
         /* High intimacy/love (60+) with moderate trust (50+) - mixed/curious */
@@ -8565,6 +9101,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n parece desconfortável mas não reage com raiva.", FALSE, mob, 0, actor, TO_ROOM);
             }
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
+            if (IS_NPC(actor) && actor->ai_data)
+                add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             return;
         }
         /* Moderate relationship (30-59) - uncomfortable/disgusted */
@@ -8582,6 +9120,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n afasta-se de $N com nojo evidente.", FALSE, mob, 0, actor, TO_NOTVICT);
             }
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
+            if (IS_NPC(actor) && actor->ai_data)
+                add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             return;
         }
         /* Low/no relationship - hostile/extreme negative response */
@@ -8606,6 +9146,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 act("$n recua horrorizado e com nojo!", FALSE, mob, 0, actor, TO_ROOM);
             }
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1, social_name);
+            if (IS_NPC(actor) && actor->ai_data)
+                add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 1, social_name);
             return;
         }
     }
@@ -9498,39 +10040,15 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Add to emotion memory - classify social type for memory */
+    /* Add to emotion memory - derive type from shared classifier to avoid
+     * duplicating the list logic maintained by classify_social_interact_type(). */
     if (actor && mob->ai_data) {
-        int interaction_type;
         int is_major = 0;
-
-        /* Check if it was an extremely violent social (despine, shiskabob, vice, choke, strangle, smite, sword) */
-        if (is_blocked &&
-            (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice"))) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-            is_major = 1; /* Extreme violence is a major event */
-        }
-        /* Check if it was other extreme violence not in blocked list */
-        else if (is_violent && (!strcmp(social_name, "choke") || !strcmp(social_name, "strangle") ||
-                                !strcmp(social_name, "smite") || !strcmp(social_name, "sword"))) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-            is_major = 1; /* Extreme violence is a major event */
-        }
-        /* Check if it was any other violent social */
-        else if (is_violent || is_humiliating) {
-            interaction_type = INTERACT_SOCIAL_VIOLENT;
-        }
-        /* Check if it was a negative or disgusting social */
-        else if (is_negative || is_disgusting || is_blocked) {
-            /* is_blocked but not extreme violence = inappropriate sexual or other severe negative */
-            interaction_type = INTERACT_SOCIAL_NEGATIVE;
-            is_major = is_blocked ? 1 : 0; /* Blocked socials are major events */
-        }
-        /* Otherwise it's positive, neutral, or fearful */
-        else {
-            interaction_type = INTERACT_SOCIAL_POSITIVE;
-        }
+        int interaction_type = classify_social_interact_type(social_name, &is_major);
 
         add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
+        if (IS_NPC(actor) && actor->ai_data)
+            add_active_emotion_memory(actor, mob, interaction_type, is_major, social_name);
     }
 }
 
@@ -9669,6 +10187,8 @@ void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data 
     /* Add to emotion memory */
     if (caster) {
         add_emotion_memory(mob, caster, INTERACT_ATTACKED, 0, NULL);
+        if (IS_NPC(caster) && caster->ai_data)
+            add_active_emotion_memory(caster, mob, INTERACT_ATTACKED, 0, NULL);
     }
 }
 
@@ -9695,6 +10215,8 @@ void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data
     /* Add to emotion memory */
     if (caster) {
         add_emotion_memory(mob, caster, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
+        if (IS_NPC(caster) && caster->ai_data)
+            add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
     }
 }
 
@@ -9724,8 +10246,11 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
     }
 
     /* Record in memory: witnessed caster use threatening magic */
-    if (caster)
+    if (caster) {
         add_emotion_memory(mob, caster, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
+        if (IS_NPC(caster) && caster->ai_data)
+            add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
+    }
 }
 
 /**
@@ -9996,6 +10521,8 @@ void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *
 
     /* Add to emotion memory - this is a MAJOR event */
     add_emotion_memory(mob, killer, INTERACT_BETRAYAL, 1, NULL);
+    if (IS_NPC(killer) && killer->ai_data)
+        add_active_emotion_memory(killer, mob, INTERACT_BETRAYAL, 1, NULL);
 }
 
 /**
@@ -10018,6 +10545,8 @@ void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trad
 
     /* Record in memory: positive trading relationship with this entity */
     add_emotion_memory(mob, trader, INTERACT_RECEIVED_ITEM, 0, NULL);
+    if (IS_NPC(trader) && trader->ai_data)
+        add_active_emotion_memory(trader, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
 
 /**
@@ -10045,6 +10574,8 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
 
     /* Record in memory: received valuable goods from this entity */
     add_emotion_memory(mob, seller, INTERACT_RECEIVED_ITEM, 0, NULL);
+    if (IS_NPC(seller) && seller->ai_data)
+        add_active_emotion_memory(seller, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
 
 /**

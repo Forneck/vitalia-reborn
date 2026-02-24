@@ -934,6 +934,81 @@ void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *tar
 
     /* Now calculate regret based on emotional state change */
     memory->moral_regret_level = moral_calculate_regret(mob, pre_shame, pre_disgust, pre_happiness);
+
+    /* Back-fill the corresponding active memory slot.
+     * When the mob was the actor (which is always the case when moral_store_judgment_in_memory
+     * is called), add_active_emotion_memory() should have recorded the action just before
+     * the moral evaluation.  Find the most recently written active memory slot that matches
+     * the interaction type and hasn't been judged yet, then stamp it with the same moral data.
+     * We walk backwards from active_memory_index so we catch the freshest entry first. */
+    {
+        int active_interact;
+        int ai;
+        int found_active;
+        time_t now_t;
+
+        /* Map action_type → the INTERACT_* type stored by add_active_emotion_memory()
+         * for that same action.  If no active-memory counterpart exists, skip the
+         * back-fill entirely by pre-setting found_active = 1. */
+        active_interact = -1;
+        switch (action_type) {
+            case MORAL_ACTION_ATTACK:
+                active_interact = INTERACT_ATTACKED;
+                break;
+            case MORAL_ACTION_BETRAY:
+                active_interact = INTERACT_BETRAYAL;
+                break;
+            case MORAL_ACTION_DEFEND:
+                active_interact = INTERACT_RESCUED;
+                break;
+            case MORAL_ACTION_STEAL:
+                active_interact = INTERACT_STOLEN_FROM;
+                break;
+            case MORAL_ACTION_HELP:
+                active_interact = INTERACT_ASSISTED;
+                break;
+            case MORAL_ACTION_HEAL:
+                active_interact = INTERACT_HEALED;
+                break;
+            case MORAL_ACTION_TRADE:
+                active_interact = INTERACT_RECEIVED_ITEM;
+                break;
+            case MORAL_ACTION_ABANDON_ALLY:
+                active_interact = INTERACT_ABANDON_ALLY;
+                break;
+            default:
+                /* MORAL_ACTION_DECEIVE: no code trigger yet (INTERACT_DECEIVE reserved for future).
+                 * MORAL_ACTION_SACRIFICE_SELF: no execution path yet (INTERACT_SACRIFICE_SELF reserved).
+                 * Skip back-fill for these. */
+                break;
+        }
+
+        found_active = (active_interact < 0) ? 1 : 0; /* skip loop if no mapping */
+        now_t = time(0);
+
+        for (ai = 0; ai < EMOTION_MEMORY_SIZE && !found_active; ai++) {
+            /* Walk backwards from the slot just written */
+            int slot = (mob->ai_data->active_memory_index - 1 - ai + EMOTION_MEMORY_SIZE * 2) % EMOTION_MEMORY_SIZE;
+            struct emotion_memory *amem = &mob->ai_data->active_memories[slot];
+
+            /* Only consider recent, unjudged, type-matching entries */
+            if (amem->timestamp == 0)
+                continue;
+            if (amem->interaction_type != active_interact)
+                continue;
+            if (amem->moral_was_guilty >= 0)
+                continue; /* already judged */
+            if ((int)(now_t - amem->timestamp) > 60)
+                continue; /* more than 60 s old — wrong action */
+
+            amem->moral_action_type = action_type;
+            amem->moral_was_guilty = judgment->guilty;
+            amem->moral_blameworthiness = judgment->blameworthiness_score;
+            amem->moral_outcome_severity = judgment->blameworthiness_score;
+            amem->moral_regret_level = memory->moral_regret_level; /* reuse computed value */
+            found_active = 1;
+        }
+    }
 }
 
 /**
@@ -1087,6 +1162,57 @@ int moral_get_learned_bias(struct char_data *ch, int action_type)
         }
 
         /* Accumulate weighted bias */
+        weighted_bias += memory_bias * weight;
+    }
+
+    /* Also scan active memories (actor-perspective) at 30% weight so self-
+     * initiated actions contribute to learned bias alongside passive ones. */
+    for (int i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &ch->ai_data->active_memories[i];
+
+        if (mem->timestamp == 0 || mem->moral_action_type != action_type || mem->moral_was_guilty < 0)
+            continue;
+
+        int age_seconds = current_time - mem->timestamp;
+        if (age_seconds > 3600)
+            continue;
+
+        int weight = 100;
+        if (age_seconds < 300) {
+            weight = 100;
+        } else if (age_seconds < 900) {
+            weight = 80;
+        } else if (age_seconds < 1800) {
+            weight = 60;
+        } else {
+            weight = 40;
+        }
+
+        if (mem->major_event)
+            weight *= 2;
+
+        /* Active memories contribute at 30% of passive weight */
+        weight = weight * 3 / 10;
+        if (weight == 0)
+            continue;
+
+        total_weight += weight;
+
+        int memory_bias = 0;
+        if (mem->moral_was_guilty == MORAL_JUDGMENT_GUILTY) {
+            memory_bias = -mem->moral_blameworthiness;
+            if (mem->moral_regret_level > 50)
+                memory_bias -= (mem->moral_regret_level - 50) / 2;
+            if (mem->moral_outcome_severity > 60)
+                memory_bias -= (mem->moral_outcome_severity - 60) / 3;
+        } else {
+            memory_bias = 30;
+            if (mem->moral_regret_level < 20)
+                memory_bias += 10;
+            if (mem->happiness_level > 60)
+                memory_bias += (mem->happiness_level - 60) / 5;
+        }
+
         weighted_bias += memory_bias * weight;
     }
 

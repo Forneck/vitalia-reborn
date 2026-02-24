@@ -1210,6 +1210,9 @@ struct emotion_4d_state {
 #define INTERACT_BETRAYAL 13
 #define INTERACT_WITNESSED_OFFENSIVE_MAGIC 14 /**< Witnessed harmful/debuff spell cast by this entity */
 #define INTERACT_WITNESSED_SUPPORT_MAGIC 15   /**< Witnessed healing/buff spell cast by this entity */
+#define INTERACT_ABANDON_ALLY 16              /**< Actor fled combat while group-members remained; witness = saw ally flee */
+#define INTERACT_SACRIFICE_SELF 17            /**< Actor sacrificed itself for group (future: no execution path yet) */
+#define INTERACT_DECEIVE 18                   /**< Actor deceived another entity (future: no code trigger yet) */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
@@ -1374,8 +1377,13 @@ struct mob_ai_data {
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
 
     /* Emotion memory system - tracks recent interactions for persistent relationships */
-    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
-    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of passive memories (received/witnessed) */
+    int memory_index; /* Current position in passive circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+
+    /* Active emotion memory - records actions performed by this mob (actor perspective) */
+    struct emotion_memory
+        active_memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of active memories (performed actions) */
+    int active_memory_index; /* Current position in active circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 
     /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
     int cognitive_capacity; /* Available cognitive capacity for projections (0-1000) */

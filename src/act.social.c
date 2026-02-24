@@ -118,6 +118,21 @@ ACMD(do_action)
             update_mob_emotion_from_social(vict, ch, action->command);
         }
 
+        /* Active memory: record in the actor's memory when a mob performs a social on a player.
+         * When the victim is also a mob, update_mob_emotion_from_social() handles this already.
+         * We only need to cover the NPC-actor -> player-victim path here. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data && !IS_NPC(vict)) {
+            int social_major = 0;
+            int social_type = classify_social_interact_type(action->command, &social_major);
+            add_active_emotion_memory(ch, vict, social_type, social_major, action->command);
+        }
+
+        /* Bidirectional feedback: actor's own emotions change after performing a social.
+         * Covers both NPC->mob and NPC->player cases. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            update_mob_actor_emotion_from_social(ch, vict, action->command);
+        }
+
         /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
          * Triggers for any actor (player or mob) performing a targeted social so that
          * observer NPCs can process the event through their SEC Tetrad appraisal. */

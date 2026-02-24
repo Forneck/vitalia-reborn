@@ -3765,6 +3765,16 @@ void init_mob_ai_data(struct char_data *mob)
             mob->ai_data->memories[i].anger_level = 0;
         }
         mob->ai_data->memory_index = 0; /* Start at beginning of circular buffer */
+
+        /* Initialize active emotion memory - zero out all slots */
+        for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+            mob->ai_data->active_memories[i].timestamp = 0; /* Mark as unused */
+            mob->ai_data->active_memories[i].entity_id = 0;
+            mob->ai_data->active_memories[i].entity_type = 0;
+            mob->ai_data->active_memories[i].interaction_type = 0;
+            mob->ai_data->active_memories[i].major_event = 0;
+        }
+        mob->ai_data->active_memory_index = 0; /* Start at beginning of circular buffer */
     }
 
     /* Initialize climate preferences - these will be set to appropriate values

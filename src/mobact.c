@@ -1114,6 +1114,10 @@ void mobile_activity(void)
                     case SHADOW_ACTION_FLEE:
                         /* Flee if we're actually in combat */
                         if (FIGHTING(ch)) {
+                            /* If mob has a master or followers it is abandoning them */
+                            if (IS_NPC(ch) && ch->ai_data && (ch->master || ch->followers))
+                                add_active_emotion_memory(ch, FIGHTING(ch),
+                                    INTERACT_ABANDON_ALLY, 1, "flee");
                             do_flee(ch, "", 0, 0);
                             shadow_action_executed = TRUE;
                             goto shadow_feedback_and_continue;
@@ -1158,38 +1162,15 @@ void mobile_activity(void)
                         break;
 
                     case SHADOW_ACTION_CAST_SPELL:
-                        /* Cast spell on target (requires mob to know spell) */
-                        if (action.target && GET_LEVEL(ch) >= 1) {
-                            struct char_data *target = (struct char_data *)action.target;
-                            /* Verify target in same room */
-                            if (IN_ROOM(target) == IN_ROOM(ch)) {
-                                /* Simple healing spell for allies, or harm for enemies */
-                                /* Note: This is a placeholder - proper spell selection
-                                 * would be based on mob's spell list and situation */
-                                bool is_ally = (ch->master == target || target->master == ch);
-
-                                if (!is_ally && !IS_NPC(target)) {
-                                    /* Try to harm enemy player */
-                                    if (GET_MANA(ch) >= 20) {
-                                        act("$n conjura uma magia contra $N!", TRUE, ch, 0, target, TO_NOTVICT);
-                                        act("$n conjura uma magia contra você!", TRUE, ch, 0, target, TO_VICT);
-                                        /* Spell damage would go here */
-                                        GET_MANA(ch) -= 20;
-                                        shadow_action_executed = TRUE;
-                                        goto shadow_feedback_and_continue;
-                                    }
-                                } else if (is_ally) {
-                                    /* Try to heal ally */
-                                    if (GET_MANA(ch) >= 15 && GET_HIT(target) < GET_MAX_HIT(target)) {
-                                        act("$n conjura uma magia de cura em $N!", TRUE, ch, 0, target, TO_NOTVICT);
-                                        act("$n conjura uma magia de cura em você!", TRUE, ch, 0, target, TO_VICT);
-                                        GET_HIT(target) = MIN(GET_MAX_HIT(target), GET_HIT(target) + 30);
-                                        GET_MANA(ch) -= 15;
-                                        shadow_action_executed = TRUE;
-                                        goto shadow_feedback_and_continue;
-                                    }
-                                }
-                            }
+                        /* Delegate to the real mob spell/item system.
+                         * The old placeholder emitted "conjura uma magia" messages
+                         * without casting a real spell.  mob_handle_item_usage()
+                         * finds the best item+spell combination in the mob's
+                         * inventory, calls cast_spell(), and handles all messages
+                         * through the normal spell system. */
+                        if (mob_handle_item_usage(ch)) {
+                            shadow_action_executed = TRUE;
+                            goto shadow_feedback_and_continue;
                         }
                         break;
 
