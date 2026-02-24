@@ -934,6 +934,62 @@ void moral_store_judgment_in_memory(struct char_data *mob, struct char_data *tar
 
     /* Now calculate regret based on emotional state change */
     memory->moral_regret_level = moral_calculate_regret(mob, pre_shame, pre_disgust, pre_happiness);
+
+    /* Back-fill the corresponding active memory slot.
+     * When the mob was the actor (which is always the case when moral_store_judgment_in_memory
+     * is called), add_active_emotion_memory() should have recorded the action just before
+     * the moral evaluation.  Find the most recently written active memory slot that matches
+     * the interaction type and hasn't been judged yet, then stamp it with the same moral data.
+     * We walk backwards from active_memory_index so we catch the freshest entry first. */
+    {
+        int active_interact;
+        int ai;
+        int found_active;
+        time_t now_t;
+
+        /* Map action_type → INTERACT_* the same way we did for passive memory */
+        active_interact = INTERACT_ATTACKED; /* default */
+        switch (action_type) {
+            case MORAL_ACTION_ATTACK:
+            case MORAL_ACTION_BETRAY:
+            case MORAL_ACTION_DEFEND:
+                active_interact = INTERACT_ATTACKED;
+                break;
+            case MORAL_ACTION_STEAL:
+                active_interact = INTERACT_STOLEN_FROM;
+                break;
+            case MORAL_ACTION_HELP:
+            case MORAL_ACTION_HEAL:
+                active_interact = INTERACT_ASSISTED;
+                break;
+        }
+
+        found_active = 0;
+        now_t = time(0);
+
+        for (ai = 0; ai < EMOTION_MEMORY_SIZE && !found_active; ai++) {
+            /* Walk backwards from the slot just written */
+            int slot = (mob->ai_data->active_memory_index - 1 - ai + EMOTION_MEMORY_SIZE * 2) % EMOTION_MEMORY_SIZE;
+            struct emotion_memory *amem = &mob->ai_data->active_memories[slot];
+
+            /* Only consider recent, unjudged, type-matching entries */
+            if (amem->timestamp == 0)
+                continue;
+            if (amem->interaction_type != active_interact)
+                continue;
+            if (amem->moral_was_guilty >= 0)
+                continue; /* already judged */
+            if ((int)(now_t - amem->timestamp) > 60)
+                continue; /* more than 60 s old — wrong action */
+
+            amem->moral_action_type = action_type;
+            amem->moral_was_guilty = judgment->guilty;
+            amem->moral_blameworthiness = judgment->blameworthiness_score;
+            amem->moral_outcome_severity = judgment->blameworthiness_score;
+            amem->moral_regret_level = memory->moral_regret_level; /* reuse computed value */
+            found_active = 1;
+        }
+    }
 }
 
 /**
