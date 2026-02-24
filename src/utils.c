@@ -6328,6 +6328,7 @@ void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_d
 {
     int major = 0;
     int interact_type;
+    int rel_bonus = 0;
 
     if (!actor || !IS_NPC(actor) || !actor->ai_data || !social_name || !*social_name || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
@@ -6336,13 +6337,24 @@ void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_d
     if (MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
         return;
 
+    /* Scale feedback by relationship depth with target: a mob acting toward
+     * someone it loves/trusts feels more intensely about the action.
+     * rel_bonus: 0 (strangers) to 5 (deeply bonded) added to each rand range. */
+    if (target) {
+        int rel_love = get_effective_emotion_toward(actor, target, EMOTION_TYPE_LOVE);
+        int rel_friend = get_effective_emotion_toward(actor, target, EMOTION_TYPE_FRIENDSHIP);
+        rel_bonus = (rel_love + rel_friend) / 40;
+        if (rel_bonus > 5)
+            rel_bonus = 5;
+    }
+
     interact_type = classify_social_interact_type(social_name, &major);
 
     switch (interact_type) {
         case INTERACT_SOCIAL_POSITIVE:
-            /* Expressing kindness feels rewarding: small happiness and friendship boost */
-            adjust_emotion(actor, &actor->ai_data->emotion_happiness, rand_number(2, 6));
-            adjust_emotion(actor, &actor->ai_data->emotion_friendship, rand_number(1, 4));
+            /* Expressing kindness feels rewarding; stronger with a loved/trusted target */
+            adjust_emotion(actor, &actor->ai_data->emotion_happiness, rand_number(2 + rel_bonus, 6 + rel_bonus));
+            adjust_emotion(actor, &actor->ai_data->emotion_friendship, rand_number(1 + rel_bonus, 4 + rel_bonus));
             /* Compassionate actors feel even more satisfaction from positive acts */
             if (actor->ai_data->emotion_compassion >= 60)
                 adjust_emotion(actor, &actor->ai_data->emotion_compassion, rand_number(1, 3));
@@ -6350,11 +6362,11 @@ void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_d
 
         case INTERACT_SOCIAL_NEGATIVE:
             /* Expressing hostility: angry mobs feel slight relief (venting);
-             * compassionate mobs feel guilt for being unkind */
+             * compassionate mobs feel guilt — worse if the target is someone they care about */
             if (actor->ai_data->emotion_anger >= 50)
                 adjust_emotion(actor, &actor->ai_data->emotion_anger, -rand_number(2, 5));
             if (actor->ai_data->emotion_compassion >= 60)
-                adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(1, 4));
+                adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(1 + rel_bonus, 4 + rel_bonus));
             break;
 
         case INTERACT_SOCIAL_VIOLENT:
@@ -6362,10 +6374,10 @@ void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_d
             adjust_emotion(actor, &actor->ai_data->emotion_courage, rand_number(2, 6));
 
             if (major) {
-                /* Extreme violence: anger increases; compassionate mobs feel strong shame */
+                /* Extreme violence: anger increases; shame is amplified by relationship */
                 adjust_emotion(actor, &actor->ai_data->emotion_anger, rand_number(3, 8));
                 if (actor->ai_data->emotion_compassion >= 50)
-                    adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(3, 8));
+                    adjust_emotion(actor, &actor->ai_data->emotion_shame, rand_number(3 + rel_bonus, 8 + rel_bonus));
                 /* Evil mobs feel pride from dominating others */
                 if (IS_EVIL(actor))
                     adjust_emotion(actor, &actor->ai_data->emotion_pride, rand_number(2, 5));
@@ -6378,8 +6390,6 @@ void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_d
         default:
             break;
     }
-
-    (void)target; /* target reserved for future context-aware feedback */
 }
 
 /**
