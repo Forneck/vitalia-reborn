@@ -1438,6 +1438,17 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             outcome->leads_to_combat = FALSE;
             outcome->score = 20;
             outcome->obvious = TRUE;
+
+            /* Probability-of-being-abandoned: if the mob has passive memories of
+             * allies fleeing (INTERACT_ABANDON_ALLY), it has already experienced
+             * abandonment and will weight fleeing more favorably when under threat. */
+            if (ch && IS_NPC(ch) && ch->ai_data) {
+                int abandon_bias = get_passive_memory_hysteresis(ch, INTERACT_ABANDON_ALLY);
+                /* abandon_bias is negative when memories are emotionally painful (high fear/
+                 * anger, low happiness); subtracting a negative value raises the flee score,
+                 * making a mob that has been abandoned more likely to flee pre-emptively. */
+                outcome->score -= abandon_bias;
+            }
             break;
         }
 
@@ -1752,6 +1763,9 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
                     break;
                 case SHADOW_ACTION_FOLLOW:
                     interact_type = INTERACT_ASSISTED;
+                    break;
+                case SHADOW_ACTION_FLEE:
+                    interact_type = INTERACT_ABANDON_ALLY;
                     break;
                 default:
                     break;

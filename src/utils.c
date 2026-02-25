@@ -8352,6 +8352,79 @@ int get_active_memory_hysteresis(struct char_data *mob, int interact_type)
 }
 
 /**
+ * Query passive (witnessed) memory buffer for a time-weighted valence modifier.
+ * Mirrors get_active_memory_hysteresis() but reads from mob->ai_data->memories[].
+ * Used by the shadow timeline to model the probability of being abandoned:
+ * if a mob has passive memories of allies fleeing (INTERACT_ABANDON_ALLY), that
+ * biases its flee-score projection.
+ *
+ * @param mob           The mob whose passive memories to query
+ * @param interact_type The INTERACT_* type to search for
+ * @return Time-weighted valence modifier in [-20, +20]
+ */
+int get_passive_memory_hysteresis(struct char_data *mob, int interact_type)
+{
+#define PASSIVE_HYSTERESIS_MAX 20
+    int i;
+    int total_valence = 0;
+    int total_weight = 0;
+    time_t now;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return 0;
+
+    now = time(0);
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+        int age_seconds, weight, valence;
+
+        if (mem->timestamp == 0 || mem->interaction_type != interact_type)
+            continue;
+
+        age_seconds = (int)(now - mem->timestamp);
+
+        if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+        else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD)
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+        else
+            weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+
+        if (mem->major_event)
+            weight *= 2;
+
+        valence = (int)mem->happiness_level * 10 -
+                  4 * (int)(mem->fear_level + mem->anger_level + mem->sadness_level + mem->pain_level +
+                            mem->horror_level + mem->humiliation_level) +
+                  2 * (int)(mem->courage_level + mem->pride_level + mem->excitement_level);
+
+        total_valence += valence * weight;
+        total_weight += weight;
+    }
+
+    if (total_weight == 0)
+        return 0;
+
+    {
+        int avg = total_valence / total_weight;
+        int modifier = avg / 182;
+        if (modifier > PASSIVE_HYSTERESIS_MAX)
+            modifier = PASSIVE_HYSTERESIS_MAX;
+        if (modifier < -PASSIVE_HYSTERESIS_MAX)
+            modifier = -PASSIVE_HYSTERESIS_MAX;
+        return modifier;
+    }
+#undef PASSIVE_HYSTERESIS_MAX
+}
+
+/**
  * Get relationship-based emotion level toward a specific entity from memories.
  * This implements the "relationship layer" of the hybrid emotion system.
  *
@@ -10576,6 +10649,36 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
     add_emotion_memory(mob, seller, INTERACT_RECEIVED_ITEM, 0, NULL);
     if (IS_NPC(seller) && seller->ai_data)
         add_active_emotion_memory(seller, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
+}
+
+/**
+ * Update mob emotions when witnessing an ally flee combat (passive side of INTERACT_ABANDON_ALLY).
+ * Called for each NPC group member still in the original room after a group member flees.
+ * @param mob     The witnessing NPC (remains in combat)
+ * @param fled    The character who just fled
+ */
+void update_mob_emotion_ally_fled(struct char_data *mob, struct char_data *fled)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !fled)
+        return;
+
+    if (mob == fled)
+        return;
+
+    /* Witnessing an ally flee increases fear and anger, decreases happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(5, 10));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 20));
+
+    /* Loyal mobs feel the betrayal more acutely */
+    if (mob->ai_data->emotion_loyalty > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(5, 10));
+    }
+
+    /* Record passive memory: witnessed ally flee — major event */
+    add_emotion_memory(mob, fled, INTERACT_ABANDON_ALLY, 1, NULL);
 }
 
 /**

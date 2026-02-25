@@ -475,6 +475,7 @@ ACMD(do_flee)
 {
     int i, attempt, loss;
     struct char_data *was_fighting;
+    room_rnum old_room;
 
     /* Safety check: validate room before accessing world array */
     if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
@@ -509,6 +510,7 @@ ACMD(do_flee)
 
             act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
             was_fighting = FIGHTING(ch);
+            old_room = IN_ROOM(ch);
 
             if (AFF_FLAGGED(ch, AFF_PARALIZE)) {
                 send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
@@ -548,6 +550,30 @@ ACMD(do_flee)
                 if (was_fighting && ch == FIGHTING(was_fighting) && !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
                     !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
                     stop_fighting(was_fighting);
+
+                /* Active memory: record the actor's own abandonment if it fled while grouped */
+                if (IS_NPC(ch) && ch->ai_data && GROUP(ch) && was_fighting &&
+                    !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) && !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
+                    add_active_emotion_memory(ch, was_fighting, INTERACT_ABANDON_ALLY, 1, "flee");
+
+                /* Passive witness: notify NPC group members who remained in the old room */
+                if (GROUP(ch) && GROUP(ch)->members && GROUP(ch)->members->iSize) {
+                    struct iterator_data WitnessIterator;
+                    struct char_data *witness =
+                        (struct char_data *)merge_iterator(&WitnessIterator, GROUP(ch)->members);
+                    for (; witness; witness = next_in_list(&WitnessIterator)) {
+                        if (witness == ch)
+                            continue;
+                        if (IN_ROOM(witness) != old_room)
+                            continue;
+                        if (!IS_NPC(witness) || !witness->ai_data)
+                            continue;
+                        if (MOB_FLAGGED(witness, MOB_NOTDEADYET))
+                            continue;
+                        update_mob_emotion_ally_fled(witness, ch);
+                    }
+                    remove_iterator(&WitnessIterator);
+                }
             } else {
                 send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
                 act("$n tenta fugir mas não consegue!", TRUE, ch, 0, 0, TO_ROOM);
