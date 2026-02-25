@@ -551,6 +551,11 @@ ACMD(do_flee)
                     !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
                     stop_fighting(was_fighting);
 
+                /* Active memory: record the actor's own abandonment if it fled while grouped */
+                if (IS_NPC(ch) && ch->ai_data && GROUP(ch) && was_fighting &&
+                    !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) && !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
+                    add_active_emotion_memory(ch, was_fighting, INTERACT_ABANDON_ALLY, 1, "flee");
+
                 /* Passive witness: notify NPC group members who remained in the old room */
                 if (GROUP(ch) && GROUP(ch)->members && GROUP(ch)->members->iSize) {
                     struct iterator_data WitnessIterator;
