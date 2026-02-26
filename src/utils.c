@@ -4863,13 +4863,10 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
  */
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone)
 {
-    qst_rnum rnum;
-    mob_rnum qm_mob_rnum;
     struct char_data *qm_char;
     room_rnum qm_room;
     struct timeval start_time, end_time;
     long elapsed_ms;
-    int quest_loop_count = 0;
     int char_loop_count = 0;
     int pathfinding_calls = 0;
 
@@ -4880,38 +4877,38 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
     /* Track performance of this expensive operation */
     gettimeofday(&start_time, NULL);
 
-    /* Procura por questmasters carregados na zona especificada */
-    for (rnum = 0; rnum < total_quests; rnum++) {
-        quest_loop_count++;
-        if (QST_MASTER(rnum) != NOBODY) {
-            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
-            if (qm_mob_rnum != NOBODY) {
-                /* Procura este questmaster carregado no mundo */
-                for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
-                    char_loop_count++;
-                    if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == qm_mob_rnum) {
-                        qm_room = IN_ROOM(qm_char);
-                        if (qm_room != NOWHERE && world[qm_room].zone == zone) {
-                            /* Verifica se é acessível usando pathfinding - VERY EXPENSIVE! */
-                            pathfinding_calls++;
-                            if (find_first_step(IN_ROOM(ch), qm_room) != BFS_NO_PATH) {
-                                /* Log performance before returning */
-                                gettimeofday(&end_time, NULL);
-                                elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 +
-                                             (end_time.tv_usec - start_time.tv_usec) / 1000;
-                                if (elapsed_ms > 30) {
-                                    log1(
-                                        "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
-                                        "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-                                        elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch),
-                                        zone);
-                                }
-                                return qm_char;
-                            }
-                        }
-                    }
-                }
+    /* OPTIMIZED: Scan character_list ONCE instead of O(quests * chars).
+     * The old algorithm iterated all quests and for each scanned all characters,
+     * producing ~1.6M iterations with 345 quests and 4835 characters.
+     * The new algorithm uses the mob_index function pointer (O(1)) to check
+     * if a character in the target zone is a questmaster, reducing to O(chars). */
+    for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+        mob_rnum qm_rnum;
+        char_loop_count++;
+        if (!IS_NPC(qm_char))
+            continue;
+        qm_rnum = GET_MOB_RNUM(qm_char);
+        if (qm_rnum == NOBODY || qm_rnum > top_of_mobt)
+            continue;
+        qm_room = IN_ROOM(qm_char);
+        if (qm_room == NOWHERE || world[qm_room].zone != zone)
+            continue;
+        /* Check if this mob is a questmaster using O(1) mob_index lookup */
+        if (mob_index[qm_rnum].func != questmaster && mob_index[qm_rnum].func != temp_questmaster)
+            continue;
+        /* Verifica se é acessível usando pathfinding - VERY EXPENSIVE! */
+        pathfinding_calls++;
+        if (find_first_step(IN_ROOM(ch), qm_room) != BFS_NO_PATH) {
+            /* Log performance before returning */
+            gettimeofday(&end_time, NULL);
+            elapsed_ms = (end_time.tv_sec - start_time.tv_sec) * 1000 + (end_time.tv_usec - start_time.tv_usec) / 1000;
+            if (elapsed_ms > 30) {
+                log1(
+                    "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms "
+                    "(chars:%d pathfinding:%d) - mob %s in zone %d",
+                    elapsed_ms, char_loop_count, pathfinding_calls, GET_NAME(ch), zone);
             }
+            return qm_char;
         }
     }
 
@@ -4921,8 +4918,8 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
     if (elapsed_ms > 30) {
         log1(
             "PERFORMANCE: find_accessible_questmaster_in_zone() took %ldms and found NO questmaster "
-            "(quests:%d chars:%d pathfinding:%d) - mob %s in zone %d",
-            elapsed_ms, quest_loop_count, char_loop_count, pathfinding_calls, GET_NAME(ch), zone);
+            "(chars:%d pathfinding:%d) - mob %s in zone %d",
+            elapsed_ms, char_loop_count, pathfinding_calls, GET_NAME(ch), zone);
     }
 
     return NULL;
