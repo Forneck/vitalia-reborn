@@ -849,6 +849,10 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         send_to_char(ch, "%s (construindo)%s", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
         send_to_char(ch, "%s (away)%s", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    if (!IS_NPC(i) && PLR_FLAGGED(i, PLR_KILLER))
+        send_to_char(ch, " %s(ASSASSINO)%s", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+    if (!IS_NPC(i) && PLR_FLAGGED(i, PLR_THIEF))
+        send_to_char(ch, " %s(LADRAO)%s", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
 
     if (GET_POS(i) != POS_FIGHTING) {
 
@@ -2577,6 +2581,14 @@ ACMD(do_who)
             else
                 enc_buf[0] = '\0';
 
+            /* monta indicadores de bandido/assassino */
+            char outlaw_buf[64];
+            outlaw_buf[0] = '\0';
+            if (PLR_FLAGGED(tch, PLR_KILLER))
+                strncat(outlaw_buf, " \tR(ASSASSINO)\tn", sizeof(outlaw_buf) - strlen(outlaw_buf) - 1);
+            if (PLR_FLAGGED(tch, PLR_THIEF))
+                strncat(outlaw_buf, " \tR(LADRAO)\tn", sizeof(outlaw_buf) - strlen(outlaw_buf) - 1);
+
             /* ----------------------------------- */
             /* --- Lógica de Alinhamento à Direita --- */
             /* ----------------------------------- */
@@ -2619,7 +2631,7 @@ ACMD(do_who)
 
             /* imprime a linha */
             // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
-            send_to_char(ch, "%s[%3d \tC%-3s\tn%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+            send_to_char(ch, "%s[%3d \tC%-3s\tn%s%s] \tB%s%s\tW%s%s%s%s\tn\r\n",
                          corNivel,                       // %s (1) Cor do colchete/nível
                          GET_LEVEL(tch),                 // %-3d (2) Nível
                          CLASS_ABBR(tch),                // \tC%-3s (3) Classe
@@ -2629,7 +2641,8 @@ ACMD(do_who)
                          (*GET_TITLE(tch) ? " " : ""),   // %s (7) ESPAÇO CONDICIONAL
                          GET_TITLE(tch),                 // \tW%s (8) Título
                          padding_buf,                    // %s (9) **PADDING DE ALINHAMENTO**
-                         enc_buf                         // %s (10) Encarnação
+                         enc_buf,                        // %s (10) Encarnação
+                         outlaw_buf                      // %s (11) Flags assassino/ladrão
             );
         }
 
