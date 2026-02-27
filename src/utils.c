@@ -2456,8 +2456,8 @@ static qst_vnum find_free_quest_vnum(zone_rnum mob_zone)
     if (range_size <= 0)
         return NOTHING;
 
-    /* Pick a starting point within the valid range [bot+9000, top+9000-1] */
-    start_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % (range_size - 1 > 0 ? range_size - 1 : 1));
+    /* Pick a starting point within the valid range [bot+9000, top+9000] */
+    start_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % range_size);
     vnum = start_vnum;
 
     do {
@@ -2619,6 +2619,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Gera VNUM único para a nova quest baseado na zona */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("WISHLIST QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -2887,6 +2888,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("COMBAT QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3148,6 +3150,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("EXPLORATION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3413,6 +3416,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("PROTECTION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3611,6 +3615,7 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("GENERAL KILL QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3776,6 +3781,7 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     /* Gera VNUM único para a nova quest baseado na zona */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("ESCORT QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3958,6 +3964,7 @@ void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int
 
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("EMOTION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -4077,6 +4084,7 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
 
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("MAGIC GATHER QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -4228,6 +4236,7 @@ void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, ob
 
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("DELIVERY QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -4370,6 +4379,7 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
 
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("RESOURCE GATHER QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -4499,6 +4509,7 @@ void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, 
 
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
+        log1("REPUTATION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -4662,10 +4673,14 @@ void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quan
         log1("SHOP BUY QUEST: %s doesn't have enough gold (%d < %d)", GET_NAME(ch), GET_GOLD(ch), calculated_reward);
         return;
     }
-    decrease_gold(ch, calculated_reward);
 
-    /* Generate unique quest vnum */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    /* Find free quest VNUM before deducting gold to avoid losing gold on failure */
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        log1("SHOP BUY QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
+        return;
+    }
+    decrease_gold(ch, calculated_reward);
 
     /* Create the quest */
     CREATE(new_quest, struct aq_data, 1);
@@ -4809,10 +4824,14 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
         log1("SHOP SELL QUEST: %s doesn't have enough gold (%d < %d)", GET_NAME(ch), GET_GOLD(ch), calculated_reward);
         return;
     }
-    decrease_gold(ch, calculated_reward);
 
-    /* Generate unique quest vnum */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    /* Find free quest VNUM before deducting gold to avoid losing gold on failure */
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        log1("SHOP SELL QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
+        return;
+    }
+    decrease_gold(ch, calculated_reward);
 
     /* Create the quest */
     CREATE(new_quest, struct aq_data, 1);
