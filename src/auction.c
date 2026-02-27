@@ -91,9 +91,8 @@ static int give_gold_to_offline_player(const char *name, long amount)
         log1("ERROR: Failed to load character %s for gold credit", name);
     }
 
-    /* Clean up - free_char handles player_specials internally */
+    /* free_char handles player_specials and the char struct itself */
     free_char(temp_char);
-    free(temp_char);
 
     return success;
 }
@@ -156,9 +155,8 @@ static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
         log1("ERROR: Failed to load character %s for item delivery", name);
     }
 
-    /* Clean up - free_char handles player_specials internally */
+    /* free_char handles player_specials and the char struct itself */
     free_char(temp_char);
-    free(temp_char);
 
     return success;
 }
