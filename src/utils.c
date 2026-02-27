@@ -2437,6 +2437,42 @@ int count_mob_posted_quests(void)
 bool can_add_mob_posted_quest(void) { return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS); }
 
 /**
+ * Find a free quest VNUM in the zone's mob-posted range [bot+9000, top+9000].
+ * Avoids an infinite loop when all VNUMs in the range are already taken.
+ * @param mob_zone Zone rnum to search in
+ * @return A free qst_vnum, or NOTHING if no free VNUM exists in the range
+ */
+static qst_vnum find_free_quest_vnum(zone_rnum mob_zone)
+{
+    qst_vnum vnum;
+    qst_vnum start_vnum;
+    int range_size;
+
+    /* Validate zone boundaries to prevent undefined behavior on subtraction */
+    if (zone_table[mob_zone].top < zone_table[mob_zone].bot)
+        return NOTHING;
+
+    range_size = (int)(zone_table[mob_zone].top - zone_table[mob_zone].bot) + 1;
+    if (range_size <= 0)
+        return NOTHING;
+
+    /* Pick a starting point within the valid range [bot+9000, top+9000-1] */
+    start_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % (range_size - 1 > 0 ? range_size - 1 : 1));
+    vnum = start_vnum;
+
+    do {
+        if (real_quest(vnum) == NOTHING)
+            return vnum;
+        vnum++;
+        if (vnum > zone_table[mob_zone].top + 9000)
+            vnum = zone_table[mob_zone].bot + 9000;
+    } while (vnum != start_vnum);
+
+    /* Wrapped all the way around – no free VNUM available */
+    return NOTHING;
+}
+
+/**
  * Faz um mob postar uma quest para obter um item.
  * Esta é uma implementação básica que simula a postagem de uma quest.
  * Em uma implementação futura, isto seria integrado com o sistema de quest boards.
@@ -2581,12 +2617,10 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest baseado na zona */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura a quest */
@@ -2851,12 +2885,10 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura a quest */
@@ -3114,12 +3146,10 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura a quest */
@@ -3381,12 +3411,10 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura a quest */
@@ -3581,12 +3609,10 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura a quest */
@@ -3748,12 +3774,10 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     CREATE(new_quest, struct aq_data, 1);
 
     /* Gera VNUM único para a nova quest baseado na zona */
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     /* Configura quest básica */
@@ -3932,12 +3956,10 @@ void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int
 
     CREATE(new_quest, struct aq_data, 1);
 
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     new_quest->vnum = new_quest_vnum;
@@ -4053,12 +4075,10 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
 
     CREATE(new_quest, struct aq_data, 1);
 
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     new_quest->vnum = new_quest_vnum;
@@ -4206,12 +4226,10 @@ void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, ob
 
     CREATE(new_quest, struct aq_data, 1);
 
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     new_quest->vnum = new_quest_vnum;
@@ -4350,12 +4368,10 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
 
     CREATE(new_quest, struct aq_data, 1);
 
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     new_quest->vnum = new_quest_vnum;
@@ -4481,12 +4497,10 @@ void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, 
 
     CREATE(new_quest, struct aq_data, 1);
 
-    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
-    while (real_quest(new_quest_vnum) != NOTHING) {
-        new_quest_vnum++;
-        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
-            new_quest_vnum = zone_table[mob_zone].bot + 9000;
-        }
+    new_quest_vnum = find_free_quest_vnum(mob_zone);
+    if (new_quest_vnum == NOTHING) {
+        free(new_quest);
+        return;
     }
 
     new_quest->vnum = new_quest_vnum;
