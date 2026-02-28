@@ -192,6 +192,14 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse)
     if (offline) {
         raise_offline(ch, corpse);
         free_char(ch);
+    } else if (!ch->desc) {
+        /* Linkless player: in game as a ghost but has no active connection.
+         * Raise them online so items are transferred to the in-memory character
+         * (preserved for when they reconnect), then also save their crash file
+         * so items survive a server crash before they reconnect. */
+        mudlog(NRM, LVL_GOD, TRUE, "Auto-raising linkless ghost %s; saving crash file.", GET_NAME(ch));
+        raise_online(ch, NULL, corpse, corpse->in_room, 2);
+        Crash_crashsave(ch);
     } else {
         raise_online(ch, NULL, corpse, corpse->in_room, 2);
     }
