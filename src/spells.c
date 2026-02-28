@@ -217,19 +217,20 @@ ASPELL(spell_summon)
                 FALSE, ch, 0, victim, TO_CHAR);
             return;
         }
-        if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE) && !PLR_FLAGGED(victim, PLR_KILLER)) {
-            send_to_char(victim,
-                         "%s acabou de tentar te invocar para: %s.\r\n"
-                         "%s falhou porquê você está com a proteção ligada.\r\n"
-                         "Digite NOSUMMON para permitir que outros jogadores lhe\r\n"
-                         "convoquem para outros lugares.\r\n",
-                         GET_NAME(ch), world[IN_ROOM(ch)].name, ELEAUpper(ch));
+    }
 
-            send_to_char(ch, "Voce falhou porquê %s está com a protecao ligada.\r\n", GET_NAME(victim));
-            mudlog(BRF, MAX(LVL_IMMORT, MAX(GET_INVIS_LEV(ch), GET_INVIS_LEV(victim))), TRUE,
-                   "%s falhou invocar %s para %s.", GET_NAME(ch), GET_NAME(victim), world[IN_ROOM(ch)].name);
-            return;
-        }
+    if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE) && !PLR_FLAGGED(victim, PLR_KILLER)) {
+        send_to_char(victim,
+                     "%s acabou de tentar te invocar para: %s.\r\n"
+                     "%s falhou porquê você está com a proteção ligada.\r\n"
+                     "Digite NOSUMMON para permitir que outros jogadores lhe\r\n"
+                     "convoquem para outros lugares.\r\n",
+                     GET_NAME(ch), world[IN_ROOM(ch)].name, ELEAUpper(ch));
+
+        send_to_char(ch, "Voce falhou porquê %s está com a protecao ligada.\r\n", GET_NAME(victim));
+        mudlog(BRF, MAX(LVL_IMMORT, MAX(GET_INVIS_LEV(ch), GET_INVIS_LEV(victim))), TRUE,
+               "%s falhou invocar %s para %s.", GET_NAME(ch), GET_NAME(victim), world[IN_ROOM(ch)].name);
+        return;
     }
 
     if (MOB_FLAGGED(victim, MOB_NOSUMMON) || (IS_NPC(victim) && mag_savingthrow(victim, SAVING_SPELL, 0))) {
