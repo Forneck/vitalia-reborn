@@ -3,7 +3,7 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Feb 28 2026] - Vitalia Reborn Development
-  feature: Big Five (OCEAN) Personality System - Phase 2: Conscientiousness
+  feature: Big Five (OCEAN) Personality System - Phase 2: Conscientiousness (initial, utils.c)
     - Implemented Conscientiousness (C) as inhibitory control layer for mobs
     - Conscientiousness reduces impulsive action probability: base * (1 - γC)
     - Reaction delay scaling under arousal: base * (1 + βC * arousal)
@@ -13,6 +13,99 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
     - stat mob extended to display Conscientiousness (C) value alongside Neuroticism (N)
     - Initialized from personality struct (same genetic/drift system as Neuroticism)
     - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
+@
+[Feb 2026] - Vitalia Reborn Development
+  fix: ALLY_DIED vs UNRELATED_DIED differentiation (utils.c, fight.c, act.movement.c)
+    - mob_mourn_death() used global emotion levels (friendship/love/loyalty) to determine
+      is_close_relationship, causing any friendly mob to record INTERACT_ALLY_DIED for
+      strangers and emit "era tudo para mim" lines
+    - Added static mob_has_positive_memory_of() helper (utils.c): scans emotion memory
+      for positive interaction types with the specific entity (INTERACT_HEALED,
+      INTERACT_RECEIVED_ITEM, INTERACT_RESCUED, INTERACT_ASSISTED,
+      INTERACT_SOCIAL_POSITIVE)
+    - is_close_relationship is now TRUE only for same-group members or mobs with recorded
+      positive memories of the deceased
+    - update_mob_emotion_ally_died() is only called for true allies; non-ally witnesses
+      receive mild fear/horror (rand 3-8 / 2-6) instead
+    - Removed duplicate update_mob_emotion_ally_died() calls in fight.c and act.movement.c
+      that double-counted the ally emotion update for group members already handled inside
+      mob_mourn_death()
+  fix: Duplicate follow message in SHADOW_ACTION_FOLLOW (mobact.c)
+    - SHADOW_ACTION_FOLLOW manually sent "comeca a seguir" act() messages before calling
+      add_follower(), which already sends those same messages
+    - Removed redundant act() calls and the dead stop_follower() guard (unreachable: outer
+      !ch->master check guarantees master is NULL there)
+  fix: Emotion memory buffer stat display (act.wizard.c)
+    - stat mob "Emotion Memory" header hardcoded "10" as max slots; changed to
+      EMOTION_MEMORY_SIZE (20)
+    - interaction_names[] array only covered types 0-9; extended to cover all 16 defined
+      INTERACT_* constants (0-15), including INTERACT_WITNESSED_DEATH (10),
+      INTERACT_QUEST_COMPLETE (11), INTERACT_QUEST_FAIL (12), INTERACT_BETRAYAL (13),
+      INTERACT_WITNESSED_OFFENSIVE_MAGIC (14), INTERACT_WITNESSED_SUPPORT_MAGIC (15)
+    - Bounds check updated from <= 9 to <= 15
+  feature: OCEAN Openness (O) - cognitive flexibility depth model (shadow_timeline.c)
+    - Extended OCEAN Openness with depth-aware novelty model to prevent oscillation in
+      high-O mobs: bonus = min(O * depth * 6, 30) where depth = consecutive repetitions
+    - No pressure at depth=0; gentle at depth=1 (+6 pts); hard cap at depth=5 (+30 pts)
+    - High-O mobs need sustained repetition before novelty pressure outweighs survival
+      utility, eliminating "ADHD flip-flop" while preserving behavioral variety
+    - Added action_repetition_count to mob_ai_data: incremented each tick the same action
+      type is chosen, reset to 1 on type change
+    - Repetition dampening: low-O mobs gain +(1-O)*15 pts for same-type repetition
+    - Exploration probability gate in shadow_select_best_action(): with probability
+      (O*20)% a random non-negative sub-dominant action is selected
+    - Ambiguity tolerance in prediction-error feedback: threat amplification scales with
+      (1 - 0.4*O), range 18-30%
+    - All O mechanisms act at decision/interpretation layer only; no emotional gain,
+      decay, or SEC partition is affected
+  feature: OCEAN Openness (O) - initial implementation (sec.c, shadow_timeline.c)
+    - O_base generated via Gaussian distribution (mu=0.5, sigma=0.15) at spawn; replaces
+      the hardcoded 0.5f placeholder
+    - O_builder applied as delta (never replaces base); +/-50 range
+    - O_mod = 0 by design: Openness must NEVER derive from SEC emotional state to avoid
+      SEC <-> utility feedback loops
+    - O_final influences Shadow Timeline MOVE novelty weighting:
+      score += (O_final - 0.5) * 14.0 (range -7 to +7 pts on MOVE)
+    - High-O mobs explore more freely; low-O mobs prefer familiar territory
+    - Added OpennessModifier builder field with save/load support
+    - Stat command now shows O base/builder/sec_mod/final breakdown
+  feature: OCEAN Neuroticism (N) - SEC layer integration (sec.c)
+    - N amplifies negative emotion gain via sec_get_neuroticism_final(): existing
+      apply_neuroticism_gain() pipeline now uses N_final instead of raw base
+    - N adds decay resistance to fear/anger: high-N mobs ruminate longer
+      (fear_decay *= 1.2 - 0.6*N, anger_decay *= 1.2 - 0.5*N; clamped to prevent
+      sign inversion or zeroing of decay)
+    - N_final = N_base + builder_modifier/100 + N_mod (capped +/-0.05)
+      N_mod = clamp(0.05 * (sec.fear + sec.anger), -0.05, +0.05) -- prevents recursive
+      amplification loops (fear escalates N, N amplifies fear)
+    - Added NeuroticismModifier builder field with save/load support
+    - Stat command now shows N base/builder/sec_mod/final breakdown
+  feature: OCEAN Conscientiousness (C) - SEC layer extension (sec.c, shadow_timeline.c)
+    - C regulates SEC alpha smoothing: high-C mobs resist sudden emotional spikes
+      (alpha_eff = alpha_base * (1.2 - 0.5*C), clamped [0.05, 0.95])
+    - C adds emotional persistence: high-C mobs hold dominant emotional states longer
+      (decay *= 1.2 - 0.6*C applied to fear/anger/happiness)
+    - C adds decision consistency bias in Shadow Timeline: score bonus for actions
+      matching the prior commitment (0 to +12 based on C_final)
+    - C_final = C_base + builder_modifier/100 + sec_mod (capped +/-0.05)
+    - Added ConscientiousnessModifier builder field with save/load support
+    - Stat command now shows C base/builder/sec_mod/final breakdown
+  feature: OCEAN Agreeableness (A) and Extraversion (E) (sec.c)
+    - Agreeableness damps anger gain when attacked: high-A mobs absorb conflict without
+      escalating (Anger_gain *= 1.2 - A)
+    - Agreeableness accelerates anger decay (forgiveness): high-A mobs release anger
+      faster toward baseline
+    - Extraversion modulates social action probability: high-E mobs interact more
+      frequently; low-E mobs are more reserved
+    - Traits never inject emotional values; they only adjust gain/decay rates, preserving
+      SEC energy conservation
+  feature: SEC energy partitioning (sec.c, sec.h)
+    - Fixed emotional state leakage and implemented SEC energy partitioning
+    - SEC (Competing Emotions System) now normalises fear, anger, and happiness so that
+      their sum never exceeds the 4D Arousal value
+    - Winner-Takes-All (WTA) filter added to social-action selector: prevents
+      contradictory behaviours (e.g., biting and praising in the same tick) by requiring
+      any chosen social category to carry at least 60% of the dominant SEC emotional weight
 @
 [Feb 17 2026] - Vitalia Reborn Development
   feature: Big Five (OCEAN) Personality System - Phase 1: Neuroticism

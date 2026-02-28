@@ -486,6 +486,7 @@ grep neuroticism lib/etc/config
 - ✅ CEDIT integration: all γ/β/factor parameters configurable at runtime via CEDIT
 - ✅ Debug logging controlled by `CONFIG_CONSCIENTIOUSNESS_DEBUG`
 - ✅ `stat mob` extended to show Conscientiousness (C) value alongside N/O/E/A
+- ✅ SEC layer extension (`sec.c`): alpha smoothing, emotional persistence, Shadow Timeline decision-consistency bias
 
 ### Version 1.1 (February 2026) - Final Review Update
 - ✅ Documentation updated with accurate pipeline behavior
