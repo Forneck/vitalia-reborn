@@ -14,7 +14,7 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
     - Initialized from personality struct (same genetic/drift system as Neuroticism)
     - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
 @
-[Feb 2026] - Vitalia Reborn Development
+[Jan-Feb 2026] - Vitalia Reborn Development
   fix: ALLY_DIED vs UNRELATED_DIED differentiation (utils.c, fight.c, act.movement.c)
     - mob_mourn_death() used global emotion levels (friendship/love/loyalty) to determine
       is_close_relationship, causing any friendly mob to record INTERACT_ALLY_DIED for

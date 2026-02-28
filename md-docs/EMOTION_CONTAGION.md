@@ -3,8 +3,8 @@
 ## Status
 
 **Status**: ✅ Implemented (February 2026)  
-**Source**: `src/utils.c` — `update_mob_emotion_contagion()` (lines 6306–6455)  
-**Integration**: `src/mobact.c` — called every 4 seconds during mob update cycle
+**Source**: `src/utils.c` — `update_mob_emotion_contagion()`  
+**Integration**: `src/mobact.c` — called probabilistically during mob emotion update cycle (gated by `CONFIG_MOB_EMOTION_UPDATE_CHANCE`, then an additional 50% chance)
 
 ## Overview
 
@@ -531,7 +531,7 @@ for (other = world[IN_ROOM(mob)].people; other; other = other->next_in_room) {
 ```c
 void update_mob_emotion_contagion(struct char_data *mob)
 ```
-**Location:** `src/utils.c`, lines 6306-6455
+**Location:** `src/utils.c` — `update_mob_emotion_contagion()`
 
 **Purpose:** Updates a single mob's emotions based on contagion from nearby mobs
 
@@ -723,7 +723,7 @@ The Emotion Contagion system creates realistic group dynamics through three laye
 The system is **performance-optimized** for typical gameplay (O(N²) complexity, automatically disabled in rooms with >20 NPCs) and **balances with passive decay** to prevent saturation while maintaining dynamic emotional states.
 
 **Files:**
-- `src/utils.c` - Core contagion logic (lines 6306-6455)
+- `src/utils.c` - Core contagion logic (`update_mob_emotion_contagion()`)
 - `src/utils.h` - Function declarations
 - `src/mobact.c` - Integration into mob update cycle
 - `src/structs.h` - Data structures (emotion_memory, mob_ai_data, genetics)

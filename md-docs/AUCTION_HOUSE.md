@@ -155,15 +155,15 @@ struct auction_data {
 };
 ```
 
-Auction state is **not persisted across reboots** in the current experimental version; all active auctions are cleared on crash or intentional reboot.
+Auction state is persisted via `save_auctions()` / `load_auctions()` using `lib/etc/auctions.dat`.  When the new auction system is enabled, active auctions saved to this file are reloaded at boot by `src/db.c`, so most auctions survive a normal reboot.  Periodic saves occur in `src/comm.c`; any state written since the last save can still be lost on a crash or abrupt shutdown.
 
 ---
 
 ## Known Limitations (Experimental)
 
-- Auction state is lost on reboot (no persistence layer yet).
+- Auction persistence is best-effort: auctions are periodically saved to `lib/etc/auctions.dat` and reloaded at boot, but crashes between saves can lose recent bids or configuration changes.  Invitation and pass bookkeeping is not separately persisted and resets on reboot.
 - Closed auctions require Belchior to be reachable; if Belchior is extracted (e.g., zone reset), pass requests silently fail.
-- Descending-price (Dutch) auctions require buyers to monitor the auction actively, as there is no automatic price-drop mechanism yet — the seller or admin must adjust current price manually via `leilao configurar`.
+- Descending-price (Dutch) auctions use an automatic price-drop mechanism in `update_auctions()`: price drops by **5% of starting price every 30 seconds** while no bids exist, down to the reserve price (or 1 gold).  Buyers must monitor `leilao info` actively to catch a specific price point; the drop cadence is system-defined and not configurable per auction.
 - No in-game announcement channel integration; buyers must poll with `leilao listar`.
 
 ---

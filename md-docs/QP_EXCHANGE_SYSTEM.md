@@ -39,7 +39,7 @@ Comandos disponíveis:
 Purchase QP with gold.  Cost = `amount × current_rate`.
 
 - Player must carry enough gold on hand (`GET_GOLD`).
-- QP is capped at `MAX_QP`; overflow is silently clamped.
+- QP is capped at `MAX_QP`; overflow is clamped and the player is warned when already at or when reaching the cap.
 - Transaction is logged at `NRM` importance for immortals.
 
 ### `vender <quantidade>` / `sell <quantidade>`
@@ -54,17 +54,25 @@ Sell QP for gold.  Gold received = `amount × current_rate`.
 
 ## Dynamic Exchange Rate
 
-### Calculation
+The system uses two related but distinct rate mechanisms:
 
-The base rate is computed as:
+### Runtime Rate (`get_qp_exchange_rate()`)
 
+The rate seen by players during transactions is computed by `get_qp_exchange_rate()` in `src/utils.c`.  It calculates `total_gold / total_qp` from live economy statistics and caches the result for **30 minutes** (`QP_EXCHANGE_CACHE_TTL = 1800 s`).  On the next transaction after the cache expires, the rate is silently recalculated.
+
+This means the displayed rate can reflect economy changes within 30 minutes without any manual action.
+
+### Monthly Base Rate (`qp_exchange_base_rate`)
+
+A separate monthly recalculation runs once per MUD month (17 months per year: Brumis, Kames'Hi, Teriany, …, Tellus) via `calculate_qp_exchange_base_rate()`, triggered from `weather.c` when `time_info.month` changes:
+
+```c
+update_qp_exchange_rate_on_month_change();
 ```
-rate = total_gold_in_economy / total_qp_in_economy
-```
 
-Where the sums iterate over **all registered mortal players** (level ≤ 100), including both carried gold (`GET_GOLD`) and bank gold (`GET_BANK_GOLD`).
+This function iterates all player files to get a precise economy snapshot and saves the result to `lib/etc/qp_exchange_rate` for persistence across reboots.  The 30-minute runtime cache seeds from this saved value at boot.
 
-The result is clamped to the safe range:
+### Rate Bounds
 
 | Constant | Value | Description |
 |----------|-------|-------------|
@@ -72,25 +80,15 @@ The result is clamped to the safe range:
 | `QP_EXCHANGE_MIN_BASE_RATE` | 1 000 | Floor: never cheaper than 1 000 gold/QP |
 | `QP_EXCHANGE_MAX_BASE_RATE` | 100 000 000 | Ceiling: prevents int overflow |
 
-### When It Updates
-
-The rate recalculates **once per MUD month** (17 months per year: Brumis, Kames'Hi, Teriany, …, Tellus).  The update is triggered in `weather.c` when `time_info.month` changes:
-
-```c
-update_qp_exchange_rate_on_month_change();
-```
-
-Because the calculation loads all player files, it runs in a single pass and is logged with elapsed time.  Typical impact is negligible on servers with few hundred players.
-
 ### Persistence
 
-The current rate and the month it was last calculated are stored in:
+The monthly base rate and the month it was last calculated are stored in:
 
 ```
 lib/etc/qp_exchange_rate
 ```
 
-Format: `<rate> <month>` on a single line.  The file is written after each recalculation and read at boot (`load_qp_exchange_rate()`).  If the file is absent or invalid, the default rate is used.
+Format: `<rate> <month>` on a single line.  The file is written after each monthly recalculation and read at boot (`load_qp_exchange_rate()`).  If the file is absent or invalid, `QP_EXCHANGE_DEFAULT_BASE_RATE` is used.
 
 ---
 

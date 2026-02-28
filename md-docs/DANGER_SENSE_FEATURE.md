@@ -97,16 +97,19 @@ A room becomes a death trap by setting the `ROOM_DEATH` (also written as `DEATH`
 3. Toggle **DEATH** (flag number varies by build; search for "DEATH" in the flag list).
 4. Save the room (`Q`, then `zedit save <zone>`).
 
-### Zone file syntax
+### Zone file syntax (`.wld` files)
 
-In a `.wld` file, the room flags field accepts `DEATH` as a keyword:
+Room flags in `.wld` files are stored as **numeric bitvectors** (or ASCII-flag letters) in the second field of the room header line.  `ROOM_DEATH` is bit 1 (0-indexed), so its bitvector value is **`2`**.  A minimal death-trap room looks like:
 
 ```
 #12345
 Some Dangerous Corridor~
 You feel uneasy here.~
-0  DEATH  0
+0 2 0
+S
 ```
+
+> **Note:** Editing `.wld` files directly is error-prone.  Always prefer OLC (`redit`) for toggling flags — the in-game editor writes the correct bitvector for you.
 
 ### Warnings and conventions
 
