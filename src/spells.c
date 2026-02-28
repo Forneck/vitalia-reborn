@@ -121,7 +121,8 @@ ASPELL(spell_recall)
     if (victim == NULL || IS_NPC(victim))
         return;
 
-    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
+    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL) ||
+        ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NORECALL)) {
         send_to_char(ch, "Uma estranha força não lhe deixa sair daqui.\r\n");
         return;
     }
@@ -1081,6 +1082,13 @@ ASPELL(spell_portal)
 
     if (ROOM_FLAGGED(IN_ROOM(victim), ROOM_NOMAGIC | ROOM_ATRIUM | ROOM_HOUSE)) {
         send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
+        extract_obj(portal_obj);
+        return;
+    }
+
+    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(ch)), ZONE_NOASTRAL) ||
+        ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
+        send_to_char(ch, "Uma estranha força impede a criação do portal.\r\n");
         extract_obj(portal_obj);
         return;
     }
