@@ -2,6 +2,18 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Feb 28 2026] - Vitalia Reborn Development
+  feature: Big Five (OCEAN) Personality System - Phase 2: Conscientiousness
+    - Implemented Conscientiousness (C) as inhibitory control layer for mobs
+    - Conscientiousness reduces impulsive action probability: base * (1 - γC)
+    - Reaction delay scaling under arousal: base * (1 + βC * arousal)
+    - Moral weight amplification: stronger adherence to moral evaluation for high-C mobs
+    - All γ/β/factor parameters configurable at runtime via CEDIT without recompilation
+    - Debug logging controlled by CONFIG_CONSCIENTIOUSNESS_DEBUG flag
+    - stat mob extended to display Conscientiousness (C) value alongside Neuroticism (N)
+    - Initialized from personality struct (same genetic/drift system as Neuroticism)
+    - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
+@
 [Feb 17 2026] - Vitalia Reborn Development
   feature: Big Five (OCEAN) Personality System - Phase 1: Neuroticism
     - Implemented structural personality layer for mobs using Big Five model

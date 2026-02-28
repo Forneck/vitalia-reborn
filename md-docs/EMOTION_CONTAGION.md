@@ -1,5 +1,11 @@
 # Emotion Contagion System Documentation
 
+## Status
+
+**Status**: ✅ Implemented (February 2026)  
+**Source**: `src/utils.c` — `update_mob_emotion_contagion()` (lines 6306–6455)  
+**Integration**: `src/mobact.c` — called every 4 seconds during mob update cycle
+
 ## Overview
 
 The Emotion Contagion system in Vitalia Reborn simulates how emotions spread between mobs (NPCs) in the same room, creating emergent group dynamics and realistic emotional responses. This system is inspired by real-world psychological phenomena where emotions are "caught" from others in social situations.
