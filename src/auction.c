@@ -43,7 +43,7 @@ static struct char_data *find_player_online(const char *name)
     }
 
     for (i = character_list; i; i = i->next) {
-        if (!IS_NPC(i) && i->desc && !str_cmp(GET_NAME(i), name)) {
+        if (!IS_NPC(i) && !str_cmp(GET_NAME(i), name)) {
             return i;
         }
     }
@@ -153,6 +153,35 @@ static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
         }
     } else {
         log1("ERROR: Failed to load character %s for item delivery", name);
+    }
+
+    /* Extract all in-memory items from temp_char before freeing it.
+     * Crash_load and obj_to_char add objects to the global object_list with
+     * carried_by pointing to temp_char.  If we free temp_char without removing
+     * those objects first, every remaining pointer becomes a dangling reference
+     * that shows up as "carried by (null)" in the void.
+     *
+     * Note: temp_char is never placed in a room (IN_ROOM(temp_char) == NOWHERE),
+     * so we must not call unequip_char() here — it would spam SYSERR logs and
+     * attempt invalid world-array accesses.  For this temporary character we
+     * detach equipment pointers directly (no AC/affect bookkeeping is needed
+     * for a char that is about to be freed) and then extract_obj the object. */
+    {
+        int wear_pos;
+        for (wear_pos = 0; wear_pos < NUM_WEARS; wear_pos++) {
+            if (GET_EQ(temp_char, wear_pos)) {
+                struct obj_data *obj = GET_EQ(temp_char, wear_pos);
+                GET_EQ(temp_char, wear_pos) = NULL;
+                obj->worn_by = NULL;
+                obj->worn_on = NOWHERE;
+                extract_obj(obj);
+            }
+        }
+        while (temp_char->carrying) {
+            struct obj_data *obj = temp_char->carrying;
+            obj_from_char(obj);
+            extract_obj(obj);
+        }
     }
 
     /* free_char handles player_specials and the char struct itself */
@@ -764,6 +793,9 @@ void end_auction(struct auction_data *auction)
                 increase_gold(bidder_char, bid->amount);
                 send_to_char(bidder_char, "Seu lance de %s moedas no leilão #%d foi superado. Moedas devolvidas.\r\n",
                              format_long_br(bid->amount), auction->auction_id);
+                /* Link-less player: save gold to disk in case of crash before reconnect */
+                if (!bidder_char->desc)
+                    save_char(bidder_char);
             } else {
                 /* Bidder offline - log for manual refund */
                 log1("AUCTION: Bidder %s offline, needs %ld gold refunded", bid->bidder_name, bid->amount);
@@ -773,6 +805,9 @@ void end_auction(struct auction_data *auction)
         /* Refund winner if second-price mechanism */
         if (refund_to_winner > 0 && winner) {
             increase_gold(winner, refund_to_winner);
+            /* Link-less winner: save gold refund to disk in case of crash before reconnect */
+            if (!winner->desc)
+                save_char(winner);
         }
 
         /* Create the item for the winner */
@@ -784,6 +819,9 @@ void end_auction(struct auction_data *auction)
                     /* Deliver item to winner */
                     if (winner) {
                         obj_to_char(item, winner);
+                        /* Link-less winner: crash-save immediately so item survives a server crash */
+                        if (!winner->desc)
+                            Crash_crashsave(winner);
                         /* Safely access item description */
                         const char *item_desc = item->short_description ? item->short_description : "um item";
                         if (auction->price_mechanism == AUCTION_SECOND_PRICE && refund_to_winner > 0) {
@@ -821,6 +859,9 @@ void end_auction(struct auction_data *auction)
             snprintf(buf, sizeof(buf), "Seu leilão #%d foi vendido por %s moedas!\r\n", auction->auction_id,
                      format_long_br(final_price));
             send_to_char(seller, "%s", buf);
+            /* Link-less seller: save gold to disk in case of crash before reconnect */
+            if (!seller->desc)
+                save_char(seller);
         } else {
             /* Seller offline - credit gold to their character file */
             if (!give_gold_to_offline_player(auction->seller_name, final_price)) {
@@ -846,6 +887,9 @@ void end_auction(struct auction_data *auction)
                 increase_gold(bidder_char, bid->amount);
                 send_to_char(bidder_char, "O leilão #%d foi cancelado. Seu lance de %s moedas foi devolvido.\r\n",
                              auction->auction_id, format_long_br(bid->amount));
+                /* Link-less player: save gold to disk in case of crash before reconnect */
+                if (!bidder_char->desc)
+                    save_char(bidder_char);
             } else {
                 /* Refund offline bidder */
                 if (!give_gold_to_offline_player(bid->bidder_name, bid->amount)) {
@@ -867,6 +911,9 @@ void end_auction(struct auction_data *auction)
                         obj_to_char(item, seller);
                         send_to_char(seller, "Seu leilão #%d não teve lances válidos. O item foi devolvido.\r\n",
                                      auction->auction_id);
+                        /* Link-less seller: crash-save immediately so item survives a server crash */
+                        if (!seller->desc)
+                            Crash_crashsave(seller);
                     } else {
                         /* Return item to offline seller */
                         if (give_item_to_offline_player(auction->seller_name, auction->item_vnum)) {
