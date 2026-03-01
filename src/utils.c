@@ -8909,7 +8909,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         "cuddle", "kiss",    "nuzzle",    "squeeze",  "stroke",  "snuggle", "worship",    "giggle",  "laughs",
         "cackle", "bounce",  "dance",     "sing",     "tango",   "whistle", "yodel",      "curtsey", "salute",
         "admire", "welcome", "handshake", "highfive", "nods",    "waves",   "winks",      "thanks",  "chuckles",
-        "beam",   "happy",   "gleam",     "cheers",   "enthuse", "adoring", "sweetsmile", "tuck",    NULL};
+        "beam",   "feliz",   "gleam",     "cheers",   "enthuse", "adoring", "sweetsmile", "tuck",    NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship
      * Emotion changes: +anger, -trust, -friendship, -happiness
@@ -10385,7 +10385,7 @@ void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_
         "bow",       "smile",    "applaud", "clap",       "greet",   "grin",    "comfort",  "pat",    "hug",
         "cuddle",    "kiss",     "nuzzle",  "squeeze",    "stroke",  "snuggle", "worship",  "giggle", "laughs",
         "bounce",    "dance",    "sing",    "tango",      "whistle", "curtsey", "salute",   "admire", "welcome",
-        "handshake", "highfive", "nods",    "waves",      "winks",   "thanks",  "chuckles", "beam",   "happy",
+        "handshake", "highfive", "nods",    "waves",      "winks",   "thanks",  "chuckles", "beam",   "feliz",
         "gleam",     "cheers",   "enthuse", "sweetsmile", "tuck",    NULL};
 
     static const char *romantic_socials[] = {"flirt",   "love",   "ogle",   "beckon", "charm",  "smooch",  "snog",

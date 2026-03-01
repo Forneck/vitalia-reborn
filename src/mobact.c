@@ -223,7 +223,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     const char *positive_socials[] = {
         "bow",        "smile",     "nods",     "nod",     "waves",  "wink",     "applaud", "agree",     "beam",
         "clap",       "grin",      "greet",    "thanks",  "thank",  "thumbsup", "welcome", "winks",     "backclap",
-        "sweetsmile", "happy",     "admire",   "adoring", "cackle", "chitter",  "croon",   "enthuse",   "gleam",
+        "sweetsmile", "feliz",     "admire",   "adoring", "cackle", "chitter",  "croon",   "enthuse",   "gleam",
         "halo",       "handshake", "highfive", "hum",     "nuzzle", "snuggle",  "squeeze", "stroke",    "tango",
         "whistle",    "worship",   "yodel",    "lol",     "yes",    "ok",       "ack",     "apologize", "forgive",
         "handraise",  "lau",       "nudge",    "beckon",  "sorry",  "touch",    "rainbow", NULL};
