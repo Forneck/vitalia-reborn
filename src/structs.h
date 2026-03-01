@@ -1210,9 +1210,9 @@ struct emotion_4d_state {
 #define INTERACT_BETRAYAL 13
 #define INTERACT_WITNESSED_OFFENSIVE_MAGIC 14 /**< Witnessed harmful/debuff spell cast by this entity */
 #define INTERACT_WITNESSED_SUPPORT_MAGIC 15   /**< Witnessed healing/buff spell cast by this entity */
-#define INTERACT_ABANDON_ALLY 16              /**< Actor fled combat while group-members remained; witness = saw ally flee */
-#define INTERACT_SACRIFICE_SELF 17            /**< Actor sacrificed itself for group (future: no execution path yet) */
-#define INTERACT_DECEIVE 18                   /**< Actor deceived another entity (future: no code trigger yet) */
+#define INTERACT_ABANDON_ALLY 16   /**< Actor fled combat while group-members remained; witness = saw ally flee */
+#define INTERACT_SACRIFICE_SELF 17 /**< Actor sacrificed itself for group (future: no execution path yet) */
+#define INTERACT_DECEIVE 18        /**< Actor deceived another entity (future: no code trigger yet) */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
@@ -2180,6 +2180,12 @@ struct emotion_config_data {
     int ocean_ae_k2; /**< E modulation: fear coefficient * 100 (default: 10 = 0.10) */
     int ocean_ae_k3; /**< A modulation: happiness coefficient * 100 (default: 10 = 0.10) */
     int ocean_ae_k4; /**< A modulation: anger coefficient * 100 (default: 10 = 0.10) */
+
+    /* Big Five (OCEAN) Personality System - Phase 3: behavioral scale factors */
+    /* Stored * 10 (actual float = value / 10.0). Range: 0-500. */
+    int ocean_e_social_reward; /**< E social reward gain scale * 10 (default: 100 = 10.0) */
+    int ocean_a_aggr_scale;    /**< A aggression initiation resistance scale * 10 (default: 200 = 20.0) */
+    int ocean_a_group_scale;   /**< A group cooperation bonus scale * 10 (default: 200 = 20.0) */
 
     /* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
     /* Shadow Timeline novelty and exploration coefficients */

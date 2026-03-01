@@ -390,6 +390,12 @@ int ocean_ae_k2 = 10; /* 0.10 - E modulation: fear coefficient       */
 int ocean_ae_k3 = 10; /* 0.10 - A modulation: happiness coefficient  */
 int ocean_ae_k4 = 10; /* 0.10 - A modulation: anger coefficient      */
 
+/* Big Five (OCEAN) Personality System - Phase 3: behavioral scale factors */
+/* Stored *10 (actual float = value / 10.0) */
+int ocean_e_social_reward = 100; /* 10.0 - E social reward gain scale (max +5 happiness at E=1.0) */
+int ocean_a_aggr_scale = 200;    /* 20.0 - A aggression initiation resistance (+-10 pts at A=0/1) */
+int ocean_a_group_scale = 200;   /* 20.0 - A group cooperation bonus (+-10 pts at A=0/1) */
+
 /* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
 /* Shadow Timeline novelty and exploration coefficients */
 int sec_o_novelty_move_scale = 140; /* 14.0 - MOVE score bonus per O unit (*10) */

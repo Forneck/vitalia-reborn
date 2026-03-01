@@ -686,7 +686,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
              social_list == excited_socials || social_list == playful_socials || social_list == resting_socials ||
              social_list == protective_socials)) {
             float E_final = sec_get_extraversion_final(ch);
-            int e_reward = (int)((E_final - SEC_E_SOCIAL_CENTER) * SEC_E_SOCIAL_REWARD_SCALE);
+            int e_reward = (int)((E_final - SEC_E_SOCIAL_CENTER) * (CONFIG_OCEAN_E_SOCIAL_REWARD / 10.0f));
             if (e_reward > 0) {
                 adjust_emotion(ch, &ch->ai_data->emotion_happiness, e_reward);
                 if (CONFIG_MOB_4D_DEBUG)
@@ -2385,13 +2385,13 @@ void mobile_activity(void)
                      * High A reduces willingness to initiate unprovoked attacks;
                      * low A increases it.  Applied after C modulation so both traits
                      * contribute independently to the final aggression probability.
-                     * Formula: impulse_threshold -= (A_final - 0.5) * SEC_A_AGGR_SCALE
+                     * Formula: impulse_threshold -= (A_final - 0.5) * (CONFIG_OCEAN_A_AGGR_SCALE/10)
                      * At A=1.0: -10 pts (less aggressive).
                      * At A=0.0: +10 pts (more aggressive).
                      * At A=0.5: no change (neutral). */
                     if (ch->ai_data) {
                         float A_final = sec_get_agreeableness_final(ch);
-                        int a_aggr_mod = (int)((A_final - 0.5f) * SEC_A_AGGR_SCALE);
+                        int a_aggr_mod = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_AGGR_SCALE / 10.0f));
                         impulse_threshold = MAX(0, MIN(100, impulse_threshold - a_aggr_mod));
                         if (CONFIG_MOB_4D_DEBUG)
                             log1("OCEAN-A: aggr mod %+d (A=%.2f) threshold=%d for %s(#%d)", -a_aggr_mod, A_final,
@@ -2926,10 +2926,10 @@ bool mob_handle_grouping(struct char_data *ch)
     /* Big Five Phase 3: Agreeableness group cooperation bonus.
      * High A → cooperative disposition, higher grouping initiative.
      * Low A  → solitary/territorial, lower grouping initiative.
-     * Formula: bonus = (A_final - 0.5) * SEC_A_GROUP_SCALE ∈ [-10, +10]. */
+     * Formula: bonus = (A_final - 0.5) * (CONFIG_OCEAN_A_GROUP_SCALE/10) ∈ [-10, +10]. */
     if (ch->ai_data) {
         float A_final = sec_get_agreeableness_final(ch);
-        int a_group_bonus = (int)((A_final - 0.5f) * SEC_A_GROUP_SCALE);
+        int a_group_bonus = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_GROUP_SCALE / 10.0f));
         grouping_chance = MAX(CURIOSIDADE_MINIMA_GRUPO, MIN(100, grouping_chance + a_group_bonus));
     }
 
