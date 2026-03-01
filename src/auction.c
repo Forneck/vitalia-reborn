@@ -43,7 +43,7 @@ static struct char_data *find_player_online(const char *name)
     }
 
     for (i = character_list; i; i = i->next) {
-        if (!IS_NPC(i) && i->desc && !str_cmp(GET_NAME(i), name)) {
+        if (!IS_NPC(i) && !str_cmp(GET_NAME(i), name)) {
             return i;
         }
     }
@@ -153,6 +153,25 @@ static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
         }
     } else {
         log1("ERROR: Failed to load character %s for item delivery", name);
+    }
+
+    /* Extract all in-memory items from temp_char before freeing it.
+     * Crash_load and obj_to_char add objects to the global object_list with
+     * carried_by pointing to temp_char.  If we free temp_char without removing
+     * those objects first, every remaining pointer becomes a dangling reference
+     * that shows up as "carried by (null)" in the void. */
+    {
+        struct obj_data *obj;
+        int wear_pos;
+        for (wear_pos = 0; wear_pos < NUM_WEARS; wear_pos++) {
+            if (GET_EQ(temp_char, wear_pos))
+                extract_obj(unequip_char(temp_char, wear_pos));
+        }
+        while (temp_char->carrying) {
+            obj = temp_char->carrying;
+            obj_from_char(obj);
+            extract_obj(obj);
+        }
     }
 
     /* free_char handles player_specials and the char struct itself */
