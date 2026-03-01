@@ -6,6 +6,21 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
+@C-@G=@Y>@W Março de 2026 @C@Y<@G=@C-@n
+
+   @MSistema de Personalidade - Escalas de Comportamento Configuráveis@n
+   Os parâmetros que definem como os traços de @YExtraversão@n e @YAmabilidade@n
+   dos mobs se expressam em Vitália agora podem ser ajustados pelos
+   administradores em tempo real, sem reiniciar o servidor:
+   - Mobs @Yextrovertidos@n ganham mais felicidade ao interagir socialmente —
+     a intensidade dessa recompensa é agora configurável via @YCEDIT@n.
+   - Mobs @Yamáveis@n resistem com mais ou menos força a iniciar ataques não
+     provocados e se aproximam de grupos com maior ou menor disposição —
+     ambas as escalas são configuráveis individualmente.
+   Essas configurações ficam no menu @YPhase 3: A/E@n dentro de @YCEDIT > Emoções@n
+   e permitem afinar o comportamento dos habitantes de Vitália de forma
+   dinâmica para a melhor experiência de jogo.
+
 @C-@G=@Y>@W Janeiro e Fevereiro de 2026 @C@Y<@G=@C-@n
 
    @MMemorias Emocionais dos Mobs@n

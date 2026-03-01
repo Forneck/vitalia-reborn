@@ -2,6 +2,31 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 01 2026] - Vitalia Reborn Development
+  config: Phase 3 A/E behavioral scale factors made cedit-configurable (cedit.c, db.c, structs.h, utils.h, oasis.h, config.c, config.h, mobact.c, sec.h)
+    - Three Phase 3 compile-time constants promoted to runtime CEDIT parameters:
+        SEC_E_SOCIAL_REWARD_SCALE=10.0f  →  CONFIG_OCEAN_E_SOCIAL_REWARD (stored *10, default 100)
+        SEC_A_AGGR_SCALE=20.0f          →  CONFIG_OCEAN_A_AGGR_SCALE    (stored *10, default 200)
+        SEC_A_GROUP_SCALE=20.0f         →  CONFIG_OCEAN_A_GROUP_SCALE   (stored *10, default 200)
+    - Storage convention: int * 10, matching existing sec_o_novelty_move_scale pattern; range 0-500
+    - New struct fields in emotion_config_data (structs.h): ocean_e_social_reward, ocean_a_aggr_scale,
+      ocean_a_group_scale
+    - New CONFIG macros (utils.h): CONFIG_OCEAN_E_SOCIAL_REWARD, CONFIG_OCEAN_A_AGGR_SCALE,
+      CONFIG_OCEAN_A_GROUP_SCALE
+    - New extern declarations (config.h) and default variable definitions (config.c)
+    - New CEDIT mode constants (oasis.h): CEDIT_OCEAN_E_SOCIAL_REWARD=200,
+      CEDIT_OCEAN_A_AGGR_SCALE=201, CEDIT_OCEAN_A_GROUP_SCALE=202
+    - Full config pipeline in db.c and cedit.c: load_default_config() assignments,
+      load_config() tag parsing (case 'o': ocean_e_social_reward, ocean_a_aggr_scale,
+      ocean_a_group_scale), cedit_setup_internally(), cedit_save_internally(),
+      save_config() disk fprintf, preset reset
+    - Phase 3 A/E cedit submenu (cedit_disp_bigfive_ocean_ae_submenu) extended with
+      menu items 5/6/7; navigation switch and input-parse cases added accordingly
+    - mobact.c: mob_contextual_social(), mobile_activity(), mob_handle_grouping() updated
+      to use CONFIG_OCEAN_* / 10.0f replacing the SEC_* hardcoded compile-time constants
+    - sec.h: SEC_E_SOCIAL_REWARD_SCALE, SEC_A_AGGR_SCALE, SEC_A_GROUP_SCALE comments
+      updated to document them as compile-time defaults; runtime values come from cedit
+@
 [Feb 28 2026] - Vitalia Reborn Development
   feature: Big Five (OCEAN) Personality System - Phase 2: Conscientiousness (initial, utils.c)
     - Implemented Conscientiousness (C) as inhibitory control layer for mobs
