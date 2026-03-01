@@ -159,12 +159,23 @@ static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
      * Crash_load and obj_to_char add objects to the global object_list with
      * carried_by pointing to temp_char.  If we free temp_char without removing
      * those objects first, every remaining pointer becomes a dangling reference
-     * that shows up as "carried by (null)" in the void. */
+     * that shows up as "carried by (null)" in the void.
+     *
+     * Note: temp_char is never placed in a room (IN_ROOM(temp_char) == NOWHERE),
+     * so we must not call unequip_char() here — it would spam SYSERR logs and
+     * attempt invalid world-array accesses.  For this temporary character we
+     * detach equipment pointers directly (no AC/affect bookkeeping is needed
+     * for a char that is about to be freed) and then extract_obj the object. */
     {
         int wear_pos;
         for (wear_pos = 0; wear_pos < NUM_WEARS; wear_pos++) {
-            if (GET_EQ(temp_char, wear_pos))
-                extract_obj(unequip_char(temp_char, wear_pos));
+            if (GET_EQ(temp_char, wear_pos)) {
+                struct obj_data *obj = GET_EQ(temp_char, wear_pos);
+                GET_EQ(temp_char, wear_pos) = NULL;
+                obj->worn_by = NULL;
+                obj->worn_on = NOWHERE;
+                extract_obj(obj);
+            }
         }
         while (temp_char->carrying) {
             struct obj_data *obj = temp_char->carrying;
@@ -794,6 +805,9 @@ void end_auction(struct auction_data *auction)
         /* Refund winner if second-price mechanism */
         if (refund_to_winner > 0 && winner) {
             increase_gold(winner, refund_to_winner);
+            /* Link-less winner: save gold refund to disk in case of crash before reconnect */
+            if (!winner->desc)
+                save_char(winner);
         }
 
         /* Create the item for the winner */
