@@ -299,6 +299,9 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.ocean_ae_k2 = CONFIG_OCEAN_AE_K2;
     OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = CONFIG_OCEAN_AE_K3;
     OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = CONFIG_OCEAN_AE_K4;
+    OLC_CONFIG(d)->emotion_config.ocean_e_social_reward = CONFIG_OCEAN_E_SOCIAL_REWARD;
+    OLC_CONFIG(d)->emotion_config.ocean_a_aggr_scale = CONFIG_OCEAN_A_AGGR_SCALE;
+    OLC_CONFIG(d)->emotion_config.ocean_a_group_scale = CONFIG_OCEAN_A_GROUP_SCALE;
 
     /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
     OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale = CONFIG_SEC_O_NOVELTY_MOVE_SCALE;
@@ -569,6 +572,9 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_OCEAN_AE_K2 = OLC_CONFIG(d)->emotion_config.ocean_ae_k2;
     CONFIG_OCEAN_AE_K3 = OLC_CONFIG(d)->emotion_config.ocean_ae_k3;
     CONFIG_OCEAN_AE_K4 = OLC_CONFIG(d)->emotion_config.ocean_ae_k4;
+    CONFIG_OCEAN_E_SOCIAL_REWARD = OLC_CONFIG(d)->emotion_config.ocean_e_social_reward;
+    CONFIG_OCEAN_A_AGGR_SCALE = OLC_CONFIG(d)->emotion_config.ocean_a_aggr_scale;
+    CONFIG_OCEAN_A_GROUP_SCALE = OLC_CONFIG(d)->emotion_config.ocean_a_group_scale;
 
     /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
     CONFIG_SEC_O_NOVELTY_MOVE_SCALE = OLC_CONFIG(d)->emotion_config.sec_o_novelty_move_scale;
@@ -1271,7 +1277,11 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "ocean_ae_k1 = %d\n", CONFIG_OCEAN_AE_K1);
     fprintf(fl, "ocean_ae_k2 = %d\n", CONFIG_OCEAN_AE_K2);
     fprintf(fl, "ocean_ae_k3 = %d\n", CONFIG_OCEAN_AE_K3);
-    fprintf(fl, "ocean_ae_k4 = %d\n\n", CONFIG_OCEAN_AE_K4);
+    fprintf(fl, "ocean_ae_k4 = %d\n", CONFIG_OCEAN_AE_K4);
+    fprintf(fl, "* Behavioral scale factors stored *10 (actual = value/10.0)\n");
+    fprintf(fl, "ocean_e_social_reward = %d\n", CONFIG_OCEAN_E_SOCIAL_REWARD);
+    fprintf(fl, "ocean_a_aggr_scale = %d\n", CONFIG_OCEAN_A_AGGR_SCALE);
+    fprintf(fl, "ocean_a_group_scale = %d\n\n", CONFIG_OCEAN_A_GROUP_SCALE);
 
     /* Big Five Phase 4: Openness (O) Shadow Timeline Configuration */
     fprintf(fl, "* Big Five (OCEAN) - Phase 4: Openness (O) Shadow Timeline Parameters\n");
@@ -1745,12 +1755,21 @@ static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d)
                     "%s3%s) k3 - A modulation: happiness coeff: %s%d%s (default: 10 = 0.10)\r\n"
                     "%s4%s) k4 - A modulation: anger coeff:     %s%d%s (default: 10 = 0.10)\r\n"
                     "\r\n"
+                    "Behavioral scale factors stored *10 (actual = value/10.0). Range: 0-500.\r\n"
+                    "\r\n"
+                    "%s5%s) E social reward scale (*10): %s%d%s (default: 100 = 10.0; max = (E-0.5)*scale)\r\n"
+                    "%s6%s) A aggr resistance (*10):     %s%d%s (default: 200 = 20.0; +-10 impulse pts)\r\n"
+                    "%s7%s) A group cooperation (*10):   %s%d%s (default: 200 = 20.0; +-10 grouping pts)\r\n"
+                    "\r\n"
                     "%sQ%s) Return to Emotion Menu\r\n"
                     "Enter your choice : ",
                     grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.ocean_ae_k1, nrm, grn, nrm, cyn,
                     OLC_CONFIG(d)->emotion_config.ocean_ae_k2, nrm, grn, nrm, cyn,
                     OLC_CONFIG(d)->emotion_config.ocean_ae_k3, nrm, grn, nrm, cyn,
-                    OLC_CONFIG(d)->emotion_config.ocean_ae_k4, nrm, grn, nrm);
+                    OLC_CONFIG(d)->emotion_config.ocean_ae_k4, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_e_social_reward, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_a_aggr_scale, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.ocean_a_group_scale, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_BIGFIVE_OCEAN_AE_SUBMENU;
 }
@@ -2154,6 +2173,9 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.ocean_ae_k2 = 10;
             OLC_CONFIG(d)->emotion_config.ocean_ae_k3 = 10;
             OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = 10;
+            OLC_CONFIG(d)->emotion_config.ocean_e_social_reward = 100;
+            OLC_CONFIG(d)->emotion_config.ocean_a_aggr_scale = 200;
+            OLC_CONFIG(d)->emotion_config.ocean_a_group_scale = 200;
             break;
 
         case 4: /* Sensitive - Emotions display more, memory lasts longer */
@@ -4068,6 +4090,18 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     write_to_output(d, "\r\nEnter k4 (A anger coeff *100, 0-100, default 10 = 0.10) : ");
                     OLC_MODE(d) = CEDIT_OCEAN_AE_K4;
                     return;
+                case '5':
+                    write_to_output(d, "\r\nEnter E social reward scale *10 (0-500, default 100 = 10.0) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_E_SOCIAL_REWARD;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter A aggression resistance scale *10 (0-500, default 200 = 20.0) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_A_AGGR_SCALE;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter A group cooperation scale *10 (0-500, default 200 = 20.0) : ");
+                    OLC_MODE(d) = CEDIT_OCEAN_A_GROUP_SCALE;
+                    return;
                 case 'q':
                 case 'Q':
                     cedit_disp_emotion_menu(d);
@@ -5228,6 +5262,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
         case CEDIT_OCEAN_AE_K4:
             OLC_CONFIG(d)->emotion_config.ocean_ae_k4 = LIMIT(atoi(arg), 0, 100);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_E_SOCIAL_REWARD:
+            OLC_CONFIG(d)->emotion_config.ocean_e_social_reward = LIMIT(atoi(arg), 0, 500);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_A_AGGR_SCALE:
+            OLC_CONFIG(d)->emotion_config.ocean_a_aggr_scale = LIMIT(atoi(arg), 0, 500);
+            cedit_disp_bigfive_ocean_ae_submenu(d);
+            break;
+
+        case CEDIT_OCEAN_A_GROUP_SCALE:
+            OLC_CONFIG(d)->emotion_config.ocean_a_group_scale = LIMIT(atoi(arg), 0, 500);
             cedit_disp_bigfive_ocean_ae_submenu(d);
             break;
 

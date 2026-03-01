@@ -1569,6 +1569,11 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_OCEAN_AE_K3 config_info.emotion_config.ocean_ae_k3
 #define CONFIG_OCEAN_AE_K4 config_info.emotion_config.ocean_ae_k4
 
+/* Big Five Phase 3: behavioral scale factors (stored * 10; actual = value / 10.0) */
+#define CONFIG_OCEAN_E_SOCIAL_REWARD config_info.emotion_config.ocean_e_social_reward
+#define CONFIG_OCEAN_A_AGGR_SCALE config_info.emotion_config.ocean_a_aggr_scale
+#define CONFIG_OCEAN_A_GROUP_SCALE config_info.emotion_config.ocean_a_group_scale
+
 /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
 #define CONFIG_SEC_O_NOVELTY_MOVE_SCALE config_info.emotion_config.sec_o_novelty_move_scale
 #define CONFIG_SEC_O_NOVELTY_DEPTH_SCALE config_info.emotion_config.sec_o_novelty_depth_scale

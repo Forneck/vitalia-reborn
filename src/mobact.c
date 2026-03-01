@@ -673,6 +673,27 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     if (*complete_cmd_info[cmd_num].command != '\n') {
         /* Execute the social */
         do_action(ch, GET_NAME(target), cmd_num, 0);
+
+        /* Big Five Phase 3: Extraversion social reward gain.
+         * Extroverted mobs receive a small happiness boost from successful positive
+         * social interactions — modelling the social bonding reward that drives
+         * high-E individuals to seek out interaction.  The reward is proportional
+         * to (E_final − 0.5), capped so it never exceeds +5 happiness per social.
+         * Only applies to warm/positive categories; aggressive or fearful socials
+         * do not generate a bonding reward. */
+        if (ch->ai_data &&
+            (social_list == positive_socials || social_list == loving_socials || social_list == grateful_socials ||
+             social_list == excited_socials || social_list == playful_socials || social_list == resting_socials ||
+             social_list == protective_socials)) {
+            float E_final = sec_get_extraversion_final(ch);
+            int e_reward = (int)((E_final - SEC_E_SOCIAL_CENTER) * (CONFIG_OCEAN_E_SOCIAL_REWARD / 10.0f));
+            if (e_reward > 0) {
+                adjust_emotion(ch, &ch->ai_data->emotion_happiness, e_reward);
+                if (CONFIG_MOB_4D_DEBUG)
+                    log1("OCEAN-E: social reward +%d happiness for %s(#%d) E_final=%.2f", e_reward, GET_NAME(ch),
+                         GET_MOB_VNUM(ch), E_final);
+            }
+        }
     }
 }
 
@@ -1116,8 +1137,7 @@ void mobile_activity(void)
                         if (FIGHTING(ch)) {
                             /* If mob has a master or followers it is abandoning them */
                             if (IS_NPC(ch) && ch->ai_data && (ch->master || ch->followers))
-                                add_active_emotion_memory(ch, FIGHTING(ch),
-                                    INTERACT_ABANDON_ALLY, 1, "flee");
+                                add_active_emotion_memory(ch, FIGHTING(ch), INTERACT_ABANDON_ALLY, 1, "flee");
                             do_flee(ch, "", 0, 0);
                             shadow_action_executed = TRUE;
                             goto shadow_feedback_and_continue;
@@ -2361,6 +2381,23 @@ void mobile_activity(void)
                      * New: if (rand_number(0, 100) > modulated_impulse * 100) */
                     int impulse_threshold = (int)(modulated_impulse * 100.0f);
 
+                    /* Big Five Phase 3: Agreeableness aggression modulation.
+                     * High A reduces willingness to initiate unprovoked attacks;
+                     * low A increases it.  Applied after C modulation so both traits
+                     * contribute independently to the final aggression probability.
+                     * Formula: impulse_threshold -= (A_final - 0.5) * (CONFIG_OCEAN_A_AGGR_SCALE/10)
+                     * At A=1.0: -10 pts (less aggressive).
+                     * At A=0.0: +10 pts (more aggressive).
+                     * At A=0.5: no change (neutral). */
+                    if (ch->ai_data) {
+                        float A_final = sec_get_agreeableness_final(ch);
+                        int a_aggr_mod = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_AGGR_SCALE / 10.0f));
+                        impulse_threshold = MAX(0, MIN(100, impulse_threshold - a_aggr_mod));
+                        if (CONFIG_MOB_4D_DEBUG)
+                            log1("OCEAN-A: aggr mod %+d (A=%.2f) threshold=%d for %s(#%d)", -a_aggr_mod, A_final,
+                                 impulse_threshold, GET_NAME(ch), GET_MOB_VNUM(ch));
+                    }
+
                     if (rand_number(0, 100) > impulse_threshold) {
                         /* Resisted impulse - intimidate instead of attack */
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
@@ -2884,7 +2921,17 @@ bool mob_handle_grouping(struct char_data *ch)
 
     /* Verifica a chance de tentar agrupar-se. */
     const int CURIOSIDADE_MINIMA_GRUPO = 5;
-    if (rand_number(1, 100) > MAX(GET_GENGROUP(ch), CURIOSIDADE_MINIMA_GRUPO))
+    int grouping_chance = MAX(GET_GENGROUP(ch), CURIOSIDADE_MINIMA_GRUPO);
+
+    /* Big Five Phase 3: Agreeableness group cooperation bonus.
+     * High A → cooperative disposition, higher grouping initiative.
+     * Low A  → solitary/territorial, lower grouping initiative.
+     * Formula: bonus = (A_final - 0.5) * (CONFIG_OCEAN_A_GROUP_SCALE/10) ∈ [-10, +10]. */
+    float A_final = sec_get_agreeableness_final(ch);
+    int a_group_bonus = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_GROUP_SCALE / 10.0f));
+    grouping_chance = MAX(CURIOSIDADE_MINIMA_GRUPO, MIN(100, grouping_chance + a_group_bonus));
+
+    if (rand_number(1, 100) > grouping_chance)
         return FALSE;
 
     struct char_data *vict, *best_target_leader = NULL;

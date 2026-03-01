@@ -1,9 +1,9 @@
-# Big Five (OCEAN) Personality System - Phases 1 & 2
+# Big Five (OCEAN) Personality System - Phases 1, 2 & 3
 
 ## Quick Reference
 
-**Status**: ✅ Phase 1 Complete - Neuroticism Fully Implemented | ✅ Phase 2 Complete - Conscientiousness Fully Implemented  
-**Version**: 1.2 (February 2026)  
+**Status**: ✅ Phase 1 Complete - Neuroticism Fully Implemented | ✅ Phase 2 Complete - Conscientiousness Fully Implemented | ✅ Phase 3 Complete - Extraversion & Agreeableness Implemented
+**Version**: 1.3 (March 2026)  
 **Commits**: 52b583c (initial), 05a2345 (soft clamp), 0b346f7 (CEDIT), d63ec02 (pipeline fix), 090afb8 (config fix)
 
 ### At a Glance
@@ -63,19 +63,19 @@ The Big Five personality model (OCEAN) provides a structural personality layer f
 - **Function**: Inhibitory control on impulsive actions; reaction delay scaling; moral weight amplification
 - **Effect**: Higher C → reduced impulsive action probability, longer deliberation under arousal, stronger adherence to moral evaluation
 
-### Reserved for Future Phases
+### Active Phases
 
-#### Openness (O) - Openness to Experience [Phase 4]
+#### Openness (O) - Openness to Experience [Phase 4 — Shadow Timeline ACTIVE]
 - **Planned Use**: Prediction error weighting, curiosity modulation
-- **Current Value**: 0.5 (neutral baseline)
+- **Current Value**: Gaussian-generated at spawn
+- **Active In**: Shadow Timeline utility scoring (`shadow_timeline.c`)
 
-#### Extraversion (E) - Social Engagement [Phase 3]
-- **Planned Use**: Social reward gain, interaction frequency
-- **Current Value**: 0.5 (neutral baseline)
+#### Extraversion (E) - Social Engagement [Phase 3 — ACTIVE]
+- **Active Use**: Social interaction frequency, social reward gain
+- **Effect**: High E → more frequent social actions, happiness reward after positive socials
 
-#### Agreeableness (A) - Compassion/Cooperation [Phase 3]
-- **Planned Use**: Interpersonal aggression modulation
-- **Current Value**: 0.5 (neutral baseline)
+#### Agreeableness (A) - Compassion/Cooperation [Phase 3 — ACTIVE]
+- **Active Use**: Interpersonal aggression modulation, group cooperation
 
 ## Neuroticism (Phase 1) - Technical Details
 
@@ -453,21 +453,25 @@ grep neuroticism lib/etc/config
 - **Effect**: High C → better self-control, longer deliberation, stronger moral weight
 - **Integration**: `apply_conscientiousness_impulse_modulation()`, `apply_conscientiousness_reaction_delay()`, `apply_conscientiousness_moral_weight()`
 
-### Phase 3: Extraversion (E) & Agreeableness (A)
-- **Extraversion**: Social reward gain, interaction frequency
-- **Agreeableness**: Interpersonal aggression modulation
-- **Integration**: Social system and combat decision logic
+### ✅ Phase 3: Extraversion (E) & Agreeableness (A) — Implemented
+- **Extraversion**: Social reward gain (happiness after positive socials, proportional to E); interaction frequency (social_chance modifier in `mob_emotion_activity()`); group affinity scoring in Shadow Timeline
+- **Agreeableness**: Interpersonal aggression damping on attack initiation (`mobile_activity()`); anger gain reduction when attacked (`update_mob_emotion_attacked()`); faster anger forgiveness in emotion decay; cooperation bonus for group formation (`mob_handle_grouping()`); shadow timeline attack/social scoring
+- **New SEC constants**: `SEC_E_SOCIAL_REWARD_SCALE`, `SEC_A_AGGR_SCALE`, `SEC_A_GROUP_SCALE`
 
-### Phase 4: Openness (O)
-- **Function**: Prediction error weighting, curiosity
-- **Integration**: Shadow Timeline exploration bonus
+### Phase 4: Openness (O) — Partially Active
+- **Function**: Prediction error weighting, curiosity, exploration drive
+- **Active**: Shadow Timeline MOVE exploration weighting, action-history novelty bonus, repetition dampening, threat-bias reduction (`shadow_timeline.c`)
+- **Deferred**: Explicit exploration drive in `mobact.c` (wandering/room novelty outside Shadow Timeline)
 
 ## Implementation Files
 
 - **`src/structs.h`**: Personality struct definition, configuration constants
-- **`src/utils.c`**: Core functions (gain, soft clamp, pipeline)
+- **`src/utils.c`**: Core functions (gain, soft clamp, pipeline, anger gain, forgiveness decay)
 - **`src/utils.h`**: Function prototypes
 - **`src/quest.c`**: Personality initialization (`init_mob_ai_data()`)
+- **`src/mobact.c`**: Phase 2B executive control, Phase 3 social reward gain, aggression damping, group cooperation
+- **`src/shadow_timeline.c`**: Phase 3 A/E scoring, Phase 4 O exploration scoring
+- **`src/sec.h`**: OCEAN modulation constants (SEC_E_*, SEC_A_*, SEC_O_*, SEC_C_*, SEC_N_*)
 
 ## References
 
@@ -477,6 +481,15 @@ grep neuroticism lib/etc/config
 - Emotion Config: `md-docs/EMOTION_CONFIG_SYSTEM.md`
 
 ## Changelog
+
+### Version 1.3 (March 2026) - Phase 3: Extraversion & Agreeableness
+- ✅ Phase 3 (Extraversion & Agreeableness) implemented in `mobact.c`
+- ✅ **Extraversion social reward gain**: `mob_contextual_social()` grants E-proportional happiness after positive socials (formula: `reward = clamp((E_final − 0.5) × 10, 0, 5)`)
+- ✅ **Agreeableness aggression damping**: `mobile_activity()` applies A-based impulse threshold reduction on attack initiation (formula: `threshold -= (A_final − 0.5) × 20`)
+- ✅ **Agreeableness group cooperation**: `mob_handle_grouping()` adjusts grouping chance by A bonus (formula: `grouping_chance += (A_final − 0.5) × 20`)
+- ✅ New SEC constants: `SEC_E_SOCIAL_REWARD_SCALE`, `SEC_A_AGGR_SCALE`, `SEC_A_GROUP_SCALE` in `sec.h`
+- ✅ Phase 3 traits already active in `utils.c` (anger gain, forgiveness decay) and `shadow_timeline.c` (utility scoring) — confirmed, not deferred
+- ✅ Phase 4 (Openness) confirmed active in `shadow_timeline.c` — exploration weighting, novelty bonus, repetition dampening
 
 ### Version 1.2 (February 2026) - Phase 2: Conscientiousness
 - ✅ Phase 2 (Conscientiousness) implemented and fully integrated
@@ -522,7 +535,7 @@ grep neuroticism lib/etc/config
    - Range validation on config load (β: 0-100, k: 10-200)
 
 ### Upcoming
-- ⏳ Phase 3: Extraversion & Agreeableness
-- ⏳ Phase 4: Openness
+- ✅ Phase 3: Extraversion & Agreeableness — implemented (March 2026)
+- ⏳ Phase 4: Openness — partially active in Shadow Timeline; direct mobact.c wandering behavior deferred
 - ⏳ Enhanced debugging tools (stat mob shows N value)
 - ⏳ Visual personality indicators in mob descriptions

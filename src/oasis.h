@@ -561,6 +561,10 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_OCEAN_AE_K2 186
 #define CEDIT_OCEAN_AE_K3 187
 #define CEDIT_OCEAN_AE_K4 188
+/* Big Five Phase 3: behavioral scale factors (stored *10; actual = value/10.0) */
+#define CEDIT_OCEAN_E_SOCIAL_REWARD 200
+#define CEDIT_OCEAN_A_AGGR_SCALE 201
+#define CEDIT_OCEAN_A_GROUP_SCALE 202
 
 /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
 #define CEDIT_BIGFIVE_OCEAN_O_SUBMENU 189

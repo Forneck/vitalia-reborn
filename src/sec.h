@@ -149,6 +149,39 @@
 #define SEC_E_SOCIAL_CENTER 0.5f
 #define SEC_E_SOCIAL_SCALE 20.0f
 
+/**
+ * Extraversion social reward gain (Phase 3) — compile-time default.
+ * Runtime value is CONFIG_OCEAN_E_SOCIAL_REWARD (stored *10; cedit-configurable).
+ * After a positive social interaction, happiness gain is proportional to
+ * (E_final - 0.5) * scale, with a floor at 0 (no negative reward) but no
+ * hard upper cap imposed by SEC itself.
+ * High E → small but consistent happiness gain from successful social bonding.
+ * With scale = 10 and E_final ∈ [0, 1], the mathematical maximum reward is
+ * +5 happiness at E=1.0; neutral at E=0.5; no penalty below.  Increasing
+ * CONFIG_OCEAN_E_SOCIAL_REWARD raises this potential maximum proportionally.
+ */
+#define SEC_E_SOCIAL_REWARD_SCALE 10.0f
+
+/**
+ * Agreeableness aggressive initiation resistance (Phase 3) — compile-time default.
+ * Runtime value is CONFIG_OCEAN_A_AGGR_SCALE (stored *10; cedit-configurable).
+ * impulse_threshold -= (int)((A_final - 0.5) * scale).
+ * High A → lower impulse threshold (less likely to initiate attacks).
+ * Low A  → higher impulse threshold (more likely to initiate attacks).
+ * Range: [-10, +10] percentage-point modification to impulse_threshold.
+ */
+#define SEC_A_AGGR_SCALE 20.0f
+
+/**
+ * Agreeableness group cooperation bonus (Phase 3) — compile-time default.
+ * Runtime value is CONFIG_OCEAN_A_GROUP_SCALE (stored *10; cedit-configurable).
+ * grouping_bonus = (int)((A_final - 0.5) * scale).
+ * High A → higher chance of forming/joining groups (cooperative disposition).
+ * Low A  → lower chance (solitary/territorial disposition).
+ * Range: [-10, +10] percentage points added to grouping chance check.
+ */
+#define SEC_A_GROUP_SCALE 20.0f
+
 /* ── OCEAN C modulation constants ───────────────────────────────────────── */
 
 /**

@@ -406,27 +406,44 @@ approval and playtesting before enabling.
 
 ---
 
-### B-2 · Big Five (OCEAN) – Phases 3 & 4
+### A-7b · Big Five (OCEAN) – Phase 3: Extraversion & Agreeableness
 
 **Documentation:** `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md`
 
-**What is implemented:**
-- Struct fields `extraversion`, `agreeableness`, `openness` are declared in
-  `struct mob_personality` (storage and initialization from genetics)
+**Confirmed in:** `src/mobact.c`, `src/utils.c`, `src/shadow_timeline.c`, `src/sec.h`
 
-**What is missing:**
-- Phase 3 — Extraversion (social reward gain, interaction frequency) and Agreeableness
-  (interpersonal aggression modulation): struct fields exist but no behavioral code
-  uses them in `mobact.c`
-- Phase 4 — Openness (prediction error weighting, curiosity, exploration drive):
-  declared only, no implementation anywhere
+| Component | Code Status |
+|-----------|-------------|
+| Extraversion social-frequency modifier (`mob_emotion_activity()`) | ✅ Implemented |
+| Extraversion social reward gain (`mob_contextual_social()`) | ✅ Implemented (Phase 3) |
+| Agreeableness anger-gain damping (`update_mob_emotion_attacked()`) | ✅ Implemented |
+| Agreeableness forgiveness decay (`decay_mob_emotions()`) | ✅ Implemented |
+| Agreeableness aggression damping on initiation (`mobile_activity()`) | ✅ Implemented (Phase 3) |
+| Agreeableness group cooperation bonus (`mob_handle_grouping()`) | ✅ Implemented (Phase 3) |
+| A/E Shadow Timeline utility scoring (`shadow_timeline.c`) | ✅ Implemented |
+| SEC constants: `SEC_E_SOCIAL_REWARD_SCALE`, `SEC_A_AGGR_SCALE`, `SEC_A_GROUP_SCALE` | ✅ Added |
 
-**Status:** Correctly marked as `⏳ reserved` in `BIG_FIVE_PERSONALITY_SYSTEM.md`.
-Phases 3 and 4 are intentionally deferred pending validation of Phases 1 and 2.
+**Documentation status:** `BIG_FIVE_PERSONALITY_SYSTEM.md` updated to v1.3 (March 2026), Phase 3 marked ✅ Active.
 
 ---
 
-### B-3 · Clan System
+### A-7c · Big Five (OCEAN) – Phase 4: Openness
+
+**Documentation:** `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md`
+
+**Confirmed in:** `src/shadow_timeline.c`, `src/sec.h`
+
+| Component | Code Status |
+|-----------|-------------|
+| MOVE exploration weighting (novelty bonus/penalty) | ✅ Implemented in Shadow Timeline |
+| Depth-aware novelty bonus for non-repeated action types | ✅ Implemented in Shadow Timeline |
+| Routine preference bonus for low-O repeated actions | ✅ Implemented in Shadow Timeline |
+| Threat-amplification bias reduction | ✅ Implemented in Shadow Timeline |
+| Direct wandering/room-novelty drive in `mobact.c` | ⏳ Deferred |
+
+**Documentation status:** Phase 4 correctly noted as partially active in `BIG_FIVE_PERSONALITY_SYSTEM.md`.
+
+---
 
 **Documentation:** None (only `TODO` root file mentions it)  
 **Source:** `src/clan.c` exists but contains only ~10 lines of header boilerplate;
@@ -656,27 +673,26 @@ Planned player-facing and builder tools not yet implemented:
 
 ---
 
-### C-11 · Big Five Phase 3 (Extraversion / Agreeableness) and Phase 4 (Openness)
+### ~~C-11~~ · Big Five Phase 3 (Extraversion / Agreeableness) and Phase 4 (Openness) — **RESOLVED**
 
 **Source:** `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md §Future Phases`
 
-Although `struct mob_personality` fields exist for all five traits (see B-2), no behavioral
-code in `mobact.c` currently uses the Phase 3 or Phase 4 fields.
+**Audit finding (February 2026):** The original B-2/C-11 entries incorrectly described
+Phase 3 and Phase 4 as "struct only, no behavior." A code review (March 2026) found that
+significant behavioral code was already present:
 
-**Phase 3 – Extraversion** (planned):
-- Social reward gain bonus for extroverted mobs
-- Increased interaction frequency (more frequent social emotes/dialogue)
+- `src/utils.c` — Agreeableness anger-gain damping and forgiveness-decay acceleration
+- `src/shadow_timeline.c` — A/E utility scoring for ATTACK/SOCIAL/FOLLOW/GROUP actions; O exploration weighting, novelty/repetition bonuses
+- `src/mobact.c` — Extraversion social-frequency modifier (`mob_emotion_activity()`)
 
-**Phase 3 – Agreeableness** (planned):
-- Modulation of interpersonal aggression (disagreeable mobs escalate faster)
-- Cooperation bonus in group tasks
+**Phase 3 behavioral code added (March 2026):**
+- Extraversion social reward gain in `mob_contextual_social()` — happiness reward after positive socials, proportional to E_final
+- Agreeableness aggression initiation damping in `mobile_activity()` — reduces attack impulse_threshold for high-A mobs
+- Agreeableness group cooperation bonus in `mob_handle_grouping()` — adjusts grouping chance by A_final
 
-**Phase 4 – Openness** (planned):
-- Exploration drive modifier (curious mobs wander more, enter new areas)
-- Quest curiosity boost (higher acceptance of new/unusual quests)
-- Shadow Timeline exploration preference bonus (per `SHADOW_TIMELINE.md §Future Extensions`)
+**Phase 4 status:** Active in Shadow Timeline. Direct `mobact.c` wandering drive deferred (low priority).
 
-**Relevant source files:** `src/mobact.c`, `src/cedit.c`, `src/structs.h`
+**Relevant source files:** `src/mobact.c`, `src/utils.c`, `src/shadow_timeline.c`, `src/sec.h`
 
 ---
 
@@ -1143,8 +1159,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 
 ### Priority 5 – Medium-Term Feature Work
 
-27. **Big Five Phase 3: Extraversion and Agreeableness (C-11):** Implement behavioral
-    code for the two Phase 3 traits. Should not begin until Phase 2 is validated in-game.
+27. ~~**Big Five Phase 3: Extraversion and Agreeableness (C-11):**~~ **COMPLETED (March 2026).** Social reward gain, aggression damping, and group cooperation bonus implemented in `mobact.c`. See A-7b.
 
 28. **NPC Emotion-Driven Dialogue (C-4):** Requires a design decision on approach
     (dialogue tables vs. DG Script triggers vs. coded response logic). Coordinate with
@@ -1189,7 +1204,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 36. **Vitalia Banking System (C-17):** Full-featured bank beyond the existing tbaMUD
     spec_proc (statements, interest, dedicated UI). Requires economy design.
 
-37. **Big Five Phase 4: Openness (C-11):** Deferred until Phase 3 is validated.
+37. **Big Five Phase 4: Openness — direct `mobact.c` wandering drive (C-11):** Phase 4 is already active in Shadow Timeline (exploration weighting, novelty/repetition bonuses). The remaining deferred item is an explicit O-driven wandering probability in `mobile_activity()` (low priority, Shadow Timeline coverage is sufficient for now).
 
 38. **Shadow Timeline Phase 3 features (C-12):** Causal Ledger, Temporal Authority Layer,
     multi-step planning. These are advanced architectural additions requiring a design RFC.
@@ -1239,7 +1254,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 | QP ↔ Gold Exchange System | `QP_EXCHANGE_SYSTEM.md` ✅ | ✅ Implemented | A-19 |
 | Danger Sense / Death-Trap protection | `DANGER_SENSE_FEATURE.md` ✅ | ✅ Implemented | A-20 |
 | Rebegin / Remort | `REBEGIN_FEATURE.md` | ⚠️ Code complete, command disabled | B-1 |
-| Big Five Phases 3 & 4 | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ⚠️ Struct fields only, no behavior | B-2 |
+| Big Five Phases 3 & 4 | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ✅ Phase 3 implemented; Phase 4 active in Shadow Timeline | A-7b/c |
 | Clan System | *(TODO only)* | ⚠️ Stub (10-line file) | B-3 |
 | Hometown System | *(TODO only)* | ⚠️ Partial — zone 113 WIP | B-4 |
 | Guild System (zone 134) | *(TODO only)* | ⚠️ Content incomplete | B-5 |
@@ -1254,8 +1269,8 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Faction / Deity emotion integration | `EMOTION_SYSTEM_TODO.md §8.2-8.3` | ❌ No faction system exists | C-8 |
 | Emotional immunity (undead/constructs) | `EMOTION_SYSTEM_TODO.md §9.2` | ❌ Not implemented | C-9 |
 | Player emotion visibility tools | `EMOTION_SYSTEM_TODO.md §7` | ❌ Not implemented | C-10 |
-| Big Five Phase 3: Extraversion/Agreeableness | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ❌ Struct only, no behavior | C-11 |
-| Big Five Phase 4: Openness | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ❌ Struct only, no behavior | C-11 |
+| Big Five Phase 3: Extraversion/Agreeableness | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ✅ Implemented (March 2026) | A-7b |
+| Big Five Phase 4: Openness | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ✅ Active in Shadow Timeline; direct mobact.c wandering deferred | A-7c |
 | Shadow Timeline Phase 3 features | `SHADOW_TIMELINE.md §Future Extensions` | ❌ Not implemented | C-12 |
 | FANN neural network integration | `RFC-1001_NPC_PSYCHOLOGY_CHECKLIST.md` | ❌ Included, not integrated | C-13 |
 | Monk class | *(TODO only)* | ❌ Not implemented | C-14 |

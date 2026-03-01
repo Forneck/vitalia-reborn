@@ -123,6 +123,11 @@ extern int ocean_ae_k2;
 extern int ocean_ae_k3;
 extern int ocean_ae_k4;
 
+/* Big Five Phase 3: behavioral scale factors (stored *10; actual = value/10.0) */
+extern int ocean_e_social_reward;
+extern int ocean_a_aggr_scale;
+extern int ocean_a_group_scale;
+
 /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
 extern int sec_o_novelty_move_scale;
 extern int sec_o_novelty_depth_scale;

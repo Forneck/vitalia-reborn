@@ -4759,6 +4759,9 @@ static void load_default_config(void)
     CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
     CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
     CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
+    CONFIG_OCEAN_E_SOCIAL_REWARD = ocean_e_social_reward;
+    CONFIG_OCEAN_A_AGGR_SCALE = ocean_a_aggr_scale;
+    CONFIG_OCEAN_A_GROUP_SCALE = ocean_a_group_scale;
 
     /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
     CONFIG_SEC_O_NOVELTY_MOVE_SCALE = sec_o_novelty_move_scale;
@@ -5258,6 +5261,13 @@ void load_config(void)
                     CONFIG_OCEAN_AE_K3 = LIMIT(num, 0, 100);
                 else if (!str_cmp(tag, "ocean_ae_k4"))
                     CONFIG_OCEAN_AE_K4 = LIMIT(num, 0, 100);
+                /* Big Five Phase 3: behavioral scale factors */
+                else if (!str_cmp(tag, "ocean_e_social_reward"))
+                    CONFIG_OCEAN_E_SOCIAL_REWARD = LIMIT(num, 0, 500);
+                else if (!str_cmp(tag, "ocean_a_aggr_scale"))
+                    CONFIG_OCEAN_A_AGGR_SCALE = LIMIT(num, 0, 500);
+                else if (!str_cmp(tag, "ocean_a_group_scale"))
+                    CONFIG_OCEAN_A_GROUP_SCALE = LIMIT(num, 0, 500);
                 break;
 
             case 'p':
