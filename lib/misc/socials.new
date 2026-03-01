@@ -6118,119 +6118,119 @@ Você estrangula $p.
 $n estrangula $p.
 
 ~stretch stretch 0 5 0 0
-You stretch your tired muscles.  That feels so good.
-$n stretches $s aching muscles.
-You stretch $N.
-$n stretches $N.
-$n stretches you.
-I hope you know this person!
-You stretch yourself.
-$n stretches $mself, $e must be getting ready for some exercise.
-You stretch $S $t.
-$n stretches $N's $t.
-$n stretches your $t, it feels nice.
-You stretch $p.
-$n stretches $p.
+Você estica os músculos cansados. Que sensação boa.
+$n estica os músculos doloridos.
+Você estica $N.
+$n estica $N.
+$n te estica.
+Espero que você conheça essa pessoa!
+Você se estica.
+$n se estica, $l deve estar se preparando para algum exercício.
+Você estica o $t de $S.
+$n estica o $t de $N.
+$n estica o seu $t, que bom.
+Você estica $p.
+$n estica $p.
 
 ~stroke stroke 0 5 0 0
-Who would you like to stroke?
-$n is looking for something to stroke?!?
-You gently stroke $S inner thigh.
-$n gently strokes $N's inner thigh... hrmm...
-$n gently strokes your inner thigh...
-That person is not within reach.
-You are about to do something you would rather not be caught doing.
-$n starts to do something disgusting and then stops.
-You gently stroke $S $t.
-$n gently strokes $N's $t... hrmm...
-$n gently strokes your $t...
-You gently stroke $p...
-$n gently strokes $p...
+Quem você gostaria de acariciar?
+$n está procurando algo para acariciar?!?
+Você acaricia gentilmente a coxa interna de $S.
+$n acaricia gentilmente a coxa interna de $N... hrm...
+$n acaricia gentilmente a sua coxa interna...
+Essa pessoa não está ao alcance.
+Você está prestes a fazer algo que preferiria não ser pego(a) fazendo.
+$n começa a fazer algo nojento e então para.
+Você acaricia gentilmente o $t de $S.
+$n acaricia gentilmente o $t de $N... hrm...
+$n acaricia gentilmente o seu $t...
+Você acaricia gentilmente $p...
+$n acaricia gentilmente $p...
 
 ~strut strut 0 5 0 0
-Strut your stuff.
-$n struts proudly.
-You strut proudly in front of $N.
-$n struts proudly in front of $N.
-$n struts proudly in front of $N.
-They left before you could strut proudly in front of them.
-You strut proudly, admiring yourself.
-$n struts proudly, admiring $mself.
-You strut proudly in front of $S $t.
-$n struts proudly in front of $N's $t.
-$n struts proudly in front of your $t.
-You strut proudly in front of $p.
-$n struts proudly in front of $p.
+Desfile seu estilo.
+$n desfila orgulhoso(a).
+Você desfila orgulhoso(a) diante de $N.
+$n desfila orgulhoso(a) diante de $N.
+$n desfila orgulhoso(a) diante de $N.
+Eles foram embora antes que você pudesse desfilar diante deles.
+Você desfila orgulhoso(a), se admirando.
+$n desfila orgulhoso(a), se admirando.
+Você desfila orgulhoso(a) diante do $t de $S.
+$n desfila orgulhoso(a) diante do $t de $N.
+$n desfila orgulhoso(a) diante do seu $t.
+Você desfila orgulhoso(a) diante de $p.
+$n desfila orgulhoso(a) diante de $p.
 
 ~suckit-up suckit-up 0 8 8 0
-You drive on.
-$n looks for someone to give a can of suckit-up.
-You give $N a can of suckit-up.
-$n gives $N a can of suckit-up.
-$n gives you a can of suckit-up.
-Who do you want to tell to suckit-up?
-You tell yourself to suckit-up.
-$n gets $mself a can of suckit-up.
-You give $S $t a can of suckit-up.
-$n gives $N's $t a can of suckit-up.
-$n gives your $t a can of suckit-up.
-You give $p a can of suckit-up.
-$n gives $p a can of suckit-up.
+Você segue em frente.
+$n está procurando alguém para dar um 'engole o choro'.
+Você dá a $N um 'engole o choro'.
+$n dá a $N um 'engole o choro'.
+$n te dá um 'engole o choro'.
+Para quem você quer dizer para engolir o choro?
+Você diz a si mesm$r para engolir o choro.
+$n se dá um 'engole o choro'.
+Você dá ao $t de $S um 'engole o choro'.
+$n dá ao $t de $N um 'engole o choro'.
+$n dá ao seu $t um 'engole o choro'.
+Você dá a $p um 'engole o choro'.
+$n dá a $p um 'engole o choro'.
 
 ~sue sue 0 8 8 0
-You sue everyone for all they're worth!!!
-$n sues everyone for all they're worth!!!
-You sue $N for all $E's worth!!!
-$n sues $N for all $E's worth!!!
-$n sues you for all you're worth!!!
-You sue them for... not being there?
-You sue yourself for all you're worth!!!
-$n sues $mself for all $e's worth!!!
-You sue $N for the state of $S $t.
-$n sues $N for the state of $S $t.
-$n sues you for the state of your $t.
-You take one look at $p and decides to sue!!!
-$n takes one look at $p and decides to sue!!!
+Você processa todo mundo por tudo que valem!!!
+$n processa todo mundo por tudo que valem!!!
+Você processa $N por tudo que $L vale!!!
+$n processa $N por tudo que $L vale!!!
+$n te processa por tudo que você vale!!!
+Você os processa por... não estar aqui?
+Você processa a si mesm$r por tudo que vale!!!
+$n processa a si mesm$r por tudo que $l vale!!!
+Você processa $N pelo estado do $t de $S.
+$n processa $N pelo estado do $t de $S.
+$n te processa pelo estado do seu $t.
+Você dá uma olhada em $p e decide processar!!!
+$n dá uma olhada em $p e decide processar!!!
 
 ~sulk sulk 0 5 0 0
-You sulk.
-$n sulks in a corner.  $e looks so pitiful, you can't help but feel a bit sorry for $m.
-You look at $M and sulk.
-$n looks at $N and goes and sulks in a corner.
-$N looks at you and goes and sulks in a corner.
-No worries, they're not here.
-You look at your pitiful equipment and sulk.
-$n looks at $s pitiful equipment and sulks in a corner.
-You look at $S $t and sulk.
-$n looks at $N's $t and goes and sulks in a corner.
-$n looks at your $t and goes and sulks in a corner.  Guess $e's jealous...
-You look at $p, and then go sulk in a corner.
-$n looks at $p, and then goes and sulks in a corner.
+Você fica emburrado(a).
+$n fica emburrad$r num canto. $l parece tão miserável que você não pode deixar de sentir um pouco de pena.
+Você olha para $M e fica emburrado(a).
+$n olha para $N e vai ficcar emburrad$r num canto.
+$N te olha e vai ficar emburrad$r num canto.
+Sem preocupação, eles não estão aqui.
+Você olha para o seu equipamento miserável e fica emburrado(a).
+$n olha para $z equipamento miserável e fica emburrad$r num canto.
+Você olha para o $t de $S e fica emburrado(a).
+$n olha para o $t de $N e vai ficar emburrad$r num canto.
+$n olha para o seu $t e vai ficar emburrad$r num canto. Deve estar com ciúmes...
+Você olha para $p, e então vai ficar emburrad$r num canto.
+$n olha para $p, e então vai ficar emburrad$r num canto.
 
 ~sundance sundance 0 5 0 0
-BONGA BONGA!!  You don't believe in weather forecasts?
-$n dances around trying to summon the sun out of the clouds.
-You dance wildly around $M trying to summon the sun out of the clouds.
-$n dances wildly around $N trying to summon the sun out of the clouds.
-$n dances wildly around you trying to summon the sun out of the clouds.
-A totem pole is good for one thing, you understand that now. They don't move!
-You BONGAWONGA around yourself, quicker, quicker and quicker!
-$n attempts to dance the sundance around $mself.
-You perform a sundance around $S $t.
-$n performs a sundance around $N's $t.
-$n performs a sundance around your $t.
-You perform a sundance around $p.
-$n performs a sundance around $p.
+BONGA BONGA!! Você não acredita em previsões do tempo?
+$n dança tentando invocar o sol para sair das nuvens.
+Você dança loucamente ao redor de $M tentando invocar o sol para sair das nuvens.
+$n dança loucamente ao redor de $N tentando invocar o sol para sair das nuvens.
+$n dança loucamente ao redor de você tentando invocar o sol para sair das nuvens.
+Um poste de totem é bom para uma coisa, você entende agora. Eles não se movem!
+Você dança BONGAWONGA ao redor de si mesm$r, cada vez mais rápido!
+$n tenta dançar o sundance ao redor de si mesm$r.
+Você faz um sundance ao redor do $t de $S.
+$n faz um sundance ao redor do $t de $N.
+$n faz um sundance ao redor do seu $t.
+Você faz um sundance ao redor de $p.
+$n faz um sundance ao redor de $p.
 
 ~sunset sunset 0 8 8 0
-You ride off into the sunset.
-$n rides off into the sunset.
+Você cavalga em direção ao pôr do sol.
+$n cavalga em direção ao pôr do sol.
 #
 #
 #
-Sorry, pardner, but $E ain't here.
-You ride off into the sunset, all alone.
-$n rides off, a lonely silhouette against the sunset.
+Desculpe, mas $L não está aqui.
+Você cavalga em direção ao pôr do sol, completamente sozinho(a).
+$n cavalga, uma silhueta solitária contra o pôr do sol.
 #
 #
 #
@@ -6238,12 +6238,12 @@ $n rides off, a lonely silhouette against the sunset.
 #
 
 ~sunshade sunshade 0 8 8 0
-You take out some black sunshades and slip them on.
-$n takes out some dark sunshades and slips them on.
+Você tira seus óculos escuros e os veste.
+$n tira seus óculos escuros bem pretos e os veste.
 #
 #
 #
-They're not here to admire your cool shades.
+Eles não estão aqui para admirar seus óculos estilosos.
 #
 #
 #
@@ -6253,14 +6253,14 @@ They're not here to admire your cool shades.
 #
 
 ~swat swat 0 8 8 0
-You really should try to swat someone.
-$n runs around with a fly swatter looking for a bug to squash.
-You swat $N like the bug that they are.
-$n swats $N like the bug that $E is.
-$n starts running after you with a fly swatter and a crazed look on $s face.
-They buzzed away too quickly.
-You turn the fly swatter on yourself and commence the swatting.
-$n starts smacking $mself with $s fly swatter.
+Você realmente deveria tentar enxotar alguém.
+$n corre com um mata-mosca procurando um inseto para esmagar.
+Você enxota $N como o inseto que $L é.
+$n enxota $N como o inseto que $L é.
+$n começa a correr atrás de você com um mata-mosca e um olhar crazed.
+Eles zumbiram rápido demais.
+Você vira o mata-mosca para si mesm$r e começa a se enxotar.
+$n começa a se bater com o próprio mata-mosca.
 #
 #
 #
@@ -6268,8 +6268,8 @@ $n starts smacking $mself with $s fly swatter.
 #
 
 ~sways sways 0 5 8 0
-You sway with the rhythm.
-$n sways with the rhythm.
+Você balança com o ritmo.
+$n balança com o ritmo.
 #
 #
 #
@@ -6283,44 +6283,44 @@ $n sways with the rhythm.
 #
 
 ~swear swear 0 5 0 0
-You swear loudly for a long time.
-$n swears: @*"*&^$$%@*&!!!!!!
-You swear $M and all $S ancestors and descendants.
-$n swears at $N's profanely.
-$n swears at you profanely, what a jerk!
-Your swearing echo's emptily.
-You swear at yourself profanely.
-$n swears under $s breath.
-You swear at $S $t.
-$n swears at $N's $t.
-$n swears at your $t.
-You swear at $p.
-$n swears at $p.
+Você xinga alto por muito tempo.
+$n xinga: @*"*&^$$%@*&!!!!!!
+Você xinga $M e todos os $S antepassados e descendentes.
+$n xinga $N de forma profana.
+$n te xinga de forma profana, que imbecil!
+Seus xingamentos ecoam no vazio.
+Você se xinga de forma profana.
+$n xinga em surdina.
+Você xinga o $t de $S.
+$n xinga o $t de $N.
+$n xinga o seu $t.
+Você xinga $p.
+$n xinga $p.
 
 ~sweat sweat 0 5 0 0
-Cool down?
-$n sweats a river!
-You look at $S and break out into a sweat.
-$n looks at $N and breaks out in a sweat.
-$n looks at you and starts sweating.
-You break out in a sweat.
-You sweat like a pig and begin to smell like one.
-$n is sweating freely and is beginning to smell funny.
-You sweat on $S $t.
-$n sweats on $N's $t.
-$n sweats on your $t.
-You sweat on $p.
-$n sweats on $p.
+Esfrie?
+$n sua um rio!
+Você olha para $S e começa a suar.
+$n olha para $N e começa a suar.
+$n te olha e começa a suar.
+Você começa a suar.
+Você sua como um porco e começa a cheirar como um.
+$n está suando muito e começando a cheirar mal.
+Você suou no $t de $S.
+$n suou no $t de $N.
+$n suou no seu $t.
+Você suou em $p.
+$n suou em $p.
 
 ~sweetsmile sweetsmile 0 8 8 0
-You smile sweetly.
-$n smiles sweetly.
-You smile sweetly at $M.
-$n smiles sweetly at $N.
-$n smiles sweetly at you. Hmm...
-You smile sweetly at...someone who isn't here anymore...
-You smile sweetly at...yourself.
-$n smiles sweetly at...$mself?
+Você sorri docemente.
+$n sorri docemente.
+Você sorri docemente para $M.
+$n sorri docemente para $N.
+$n sorri docemente para você. Hmm...
+Você sorri docemente para...alguém que não está mais aqui...
+Você sorri docemente para...si mesm$r.
+$n sorri docemente para...$mself?
 #
 #
 #
@@ -6328,29 +6328,29 @@ $n smiles sweetly at...$mself?
 #
 
 ~swoon swoon 0 8 8 0
-You swoon!
-$n swoons!
-You swoon into $S arms.
-$n swoons into $N's arms.
-$n swoons into your arms.
-That person isn't here to catch you.
-You can't catch yourself when you swoon!
+Você desmaia!
+$n desmaia!
+Você desmaia nos braços de $S.
+$n desmaia nos braços de $N.
+$n desmaia nos seus braços.
+Essa pessoa não está aqui para te pegar.
+Você não consegue se pegar quando desmaia!
 #
 #
 #
 #
-You swoon onto $p.
-$n swoons onto $p.
+Você desmaia em cima de $p.
+$n desmaia em cima de $p.
 
 ~sword sword 0 8 0 0
-You unsheathe your blade and threaten to lop someone's head off.
-$n draws forth $s sword and threatens to lop someone's head off.
-You unsheathe your sword and point it directly at the neck of $N.
-$n unsheathes $s sword and points it directly at the neck of $N.
-$n draws $s sword and points it directly at your neck!
-Who shall you threaten with your sword?
-You draw your sword and threaten to lop off your own head...
-$n draws $s sword from its scabbard and begins to threaten $mself.
+Você desembanha a lâmina e ameaça cortar a cabeça de alguém.
+$n saca $z espada e ameaça cortar a cabeça de alguém.
+Você desembanha a espada e a aponta diretamente para o pescoço de $N.
+$n desembanha $z espada e a aponta diretamente para o pescoço de $N.
+$n saca $z espada e a aponta diretamente para o seu pescoço!
+Contra quem você vai ameaçar com a sua espada?
+Você saca a espada e ameaça cortar a própria cabeça...
+$n saca $z espada da bainha e começa a se ameaçar.
 #
 #
 #
