@@ -1380,10 +1380,11 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, memory_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",   "Healed",   "ReceivedItem",   "StolenFrom",
-                                               "Rescued",    "Assisted", "Social+",        "Social-",
-                                               "SocialViol", "AllyDied", "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",  "Betrayal", "OffensiveMagic", "SupportMagic"};
+            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
+                                               "Rescued",       "Assisted",  "Social+",        "Social-",
+                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
+                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
+                                               "AbandonedAlly", "Sacrifice", "Deceive"};
 
             /* Safety check: ensure memory_index is within valid range */
             if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
@@ -1410,7 +1411,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 15)
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 18)
                                                            ? interaction_names[mem->interaction_type]
                                                            : "Unknown";
 
@@ -1669,10 +1670,11 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, active_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",   "Healed",   "ReceivedItem",   "StolenFrom",
-                                               "Rescued",    "Assisted", "Social+",        "Social-",
-                                               "SocialViol", "AllyDied", "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",  "Betrayal", "OffensiveMagic", "SupportMagic"};
+            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
+                                               "Rescued",       "Assisted",  "Social+",        "Social-",
+                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
+                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
+                                               "AbandonedAlly", "Sacrifice", "Deceive"};
 
             /* Safety check */
             if (k->ai_data->active_memory_index < 0 || k->ai_data->active_memory_index >= EMOTION_MEMORY_SIZE)
@@ -1694,7 +1696,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 15)
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 18)
                                                            ? interaction_names[mem->interaction_type]
                                                            : "Unknown";
 
@@ -1737,14 +1739,15 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         }                                                                                                              \
     }
                         AME(fear_level, "Fear")
-                        AME(anger_level, "Anger") AME(happiness_level, "Happy") AME(sadness_level, "Sad")
-                            AME(friendship_level, "Friend") AME(love_level, "Love") AME(trust_level, "Trust")
-                                AME(loyalty_level, "Loyal") AME(curiosity_level, "Curious") AME(greed_level, "Greed")
-                                    AME(pride_level, "Pride") AME(compassion_level, "Compassion")
-                                        AME(envy_level, "Envy") AME(courage_level, "Courage")
-                                            AME(excitement_level, "Excited") AME(disgust_level, "Disgust")
-                                                AME(shame_level, "Shame") AME(pain_level, "Pain")
-                                                    AME(horror_level, "Horror") AME(humiliation_level, "Humiliated")
+                        AME(anger_level, "Anger")
+                        AME(happiness_level, "Happy") AME(sadness_level, "Sad") AME(friendship_level, "Friend")
+                            AME(love_level, "Love") AME(trust_level, "Trust") AME(loyalty_level, "Loyal")
+                                AME(curiosity_level, "Curious") AME(greed_level, "Greed") AME(pride_level, "Pride")
+                                    AME(compassion_level, "Compassion") AME(envy_level, "Envy")
+                                        AME(courage_level, "Courage") AME(excitement_level, "Excited")
+                                            AME(disgust_level, "Disgust") AME(shame_level, "Shame")
+                                                AME(pain_level, "Pain") AME(horror_level, "Horror")
+                                                    AME(humiliation_level, "Humiliated")
 #undef AME
                             /* Build interaction label */
                             char interaction_details[128];
