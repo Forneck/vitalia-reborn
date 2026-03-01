@@ -1757,7 +1757,7 @@ static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d)
                     "\r\n"
                     "Behavioral scale factors stored *10 (actual = value/10.0). Range: 0-500.\r\n"
                     "\r\n"
-                    "%s5%s) E social reward scale (*10): %s%d%s (default: 100 = 10.0; max +5 happiness)\r\n"
+                    "%s5%s) E social reward scale (*10): %s%d%s (default: 100 = 10.0; max = (E-0.5)*scale)\r\n"
                     "%s6%s) A aggr resistance (*10):     %s%d%s (default: 200 = 20.0; +-10 impulse pts)\r\n"
                     "%s7%s) A group cooperation (*10):   %s%d%s (default: 200 = 20.0; +-10 grouping pts)\r\n"
                     "\r\n"

@@ -2927,11 +2927,9 @@ bool mob_handle_grouping(struct char_data *ch)
      * High A → cooperative disposition, higher grouping initiative.
      * Low A  → solitary/territorial, lower grouping initiative.
      * Formula: bonus = (A_final - 0.5) * (CONFIG_OCEAN_A_GROUP_SCALE/10) ∈ [-10, +10]. */
-    if (ch->ai_data) {
-        float A_final = sec_get_agreeableness_final(ch);
-        int a_group_bonus = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_GROUP_SCALE / 10.0f));
-        grouping_chance = MAX(CURIOSIDADE_MINIMA_GRUPO, MIN(100, grouping_chance + a_group_bonus));
-    }
+    float A_final = sec_get_agreeableness_final(ch);
+    int a_group_bonus = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_GROUP_SCALE / 10.0f));
+    grouping_chance = MAX(CURIOSIDADE_MINIMA_GRUPO, MIN(100, grouping_chance + a_group_bonus));
 
     if (rand_number(1, 100) > grouping_chance)
         return FALSE;

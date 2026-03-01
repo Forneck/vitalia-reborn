@@ -152,9 +152,13 @@
 /**
  * Extraversion social reward gain (Phase 3) — compile-time default.
  * Runtime value is CONFIG_OCEAN_E_SOCIAL_REWARD (stored *10; cedit-configurable).
- * After a positive social interaction, happiness += clamp((E_final - 0.5) * scale, 0, 5).
+ * After a positive social interaction, happiness gain is proportional to
+ * (E_final - 0.5) * scale, with a floor at 0 (no negative reward) but no
+ * hard upper cap imposed by SEC itself.
  * High E → small but consistent happiness gain from successful social bonding.
- * Scale of 10 → max reward of +5 happiness at E=1.0; neutral at E=0.5; no penalty below.
+ * With scale = 10 and E_final ∈ [0, 1], the mathematical maximum reward is
+ * +5 happiness at E=1.0; neutral at E=0.5; no penalty below.  Increasing
+ * CONFIG_OCEAN_E_SOCIAL_REWARD raises this potential maximum proportionally.
  */
 #define SEC_E_SOCIAL_REWARD_SCALE 10.0f
 
