@@ -6358,23 +6358,23 @@ $n saca $z espada da bainha e começa a se ameaçar.
 #
 
 ~tackle tackle 0 5 0 0
-You tackle the air.  It stands not a chance.
-$n starts running around $mself in a desperate attempt to tackle the air.
-You ruthlessly tackle $M to the ground.
-$n ruthlessly tackles $N, pinning $M to the ground.
-$n suddenly lunges at you and tackles you to the ground!
-That person isn't here (luck for them, it would seem...)
-Tackle yourself?  Yeah, right....
-$n makes a dexterous move and kicks $s left leg away with $s right.
-You tackle $S $t.
-$n tackles $N's $t.
-$n tackles your $t.
-You tackle $p.
-$n tackles $p.
+Você derruba o ar. Ele não tinha chance.
+$n começa a correr ao redor de si mesm$r numa tentativa desesperada de derrubar o ar.
+Você derruba $M sem piedade no chão.
+$n derruba $N sem piedade, prendendo $M no chão.
+$n de repente se lança em você e te derruba no chão!
+Essa pessoa não está aqui (sorte para eles, aparentemente...)
+Derrubar a si mesm$r? É, com certeza....
+$n faz um movimento ágil e chuta a própria perna esquerda com a direita.
+Você derruba o $t de $S.
+$n derruba o $t de $N.
+$n derruba o seu $t.
+Você derruba $p.
+$n derruba $p.
 
 ~tada tada 0 5 0 0
-You give out a big 'TADA!' and jazz your hands!
-$n gives a big 'TADA!' as $e jazzes $s hands!
+Você solta um grande 'TADA!' e agita as mãos!
+$n solta um grande 'TADA!' enquanto $l agita as mãos!
 #
 #
 #
@@ -6388,128 +6388,128 @@ $n gives a big 'TADA!' as $e jazzes $s hands!
 #
 
 ~tag tag 0 5 0 0
-You should really be tagging someone specific.
-$n seems to want to play tag!
-You tag $M and scream "YOU'RE IT!"
-$n tags $N and screams, "YOU'RE IT!"
-$n tags you!  YOURE IT!!!!
-Swing.. miss.. dang, they must have run off.
-You tag yourself and say, "I'M IT!"
-$n tags $mself and says, "I'M IT!"
-You tag $S $t.
-$n tags $N's $t.
-$n tags your $t.
-You tag $p.
-$n tags $p.
+Você realmente deveria marcar alguém específico.
+$n parece querer jogar pique!
+Você marca $M e grita 'VOCÊ ESTÁ!'
+$n marca $N e grita, 'VOCÊ ESTÁ!'
+$n te marca! VOCÊ ESTÁ!!!!
+Errou.. falhou.. caramba, devem ter corrido.
+Você se marca e diz, 'ESTOU!'
+$n se marca e diz, 'ESTOU!'
+Você marca o $t de $S.
+$n marca o $t de $N.
+$n marca o seu $t.
+Você marca $p.
+$n marca $p.
 
 ~tango tango 0 5 0 0
-With whom would you like to tango?
-$n puts a rose between $s teeth, but takes it out since no one joins $m.
-You put a rose between your teeth and tango with $M seductively.
-$n puts a rose between $s teeth and tangos with $N seductively.
-$n puts a rose between $s teeth and tangos with you seductively.
-That person isn't around.  Better sit this one out.
-Feels rather stupid, doesn't it?
-$n puts a rose between $s teeth and tries to tango with $mself.
-You tango with $S $t.
-$n tangos with $N's $t.
-$n tangos with your $t.
-You tango with $p.
-$n tangos with $p.
+Com quem você gostaria de dançar o tango?
+$n coloca uma rosa entre os dentes, mas a tira pois ninguém se junta a $l.
+Você coloca uma rosa entre os dentes e dança o tango com $M sedutoramente.
+$n coloca uma rosa entre os dentes e dança o tango com $N sedutoramente.
+$n coloca uma rosa entre os dentes e dança o tango com você sedutoramente.
+Essa pessoa não está por aqui. É melhor sentar esse fora.
+É meio idiota, não é?
+$n coloca uma rosa entre os dentes e tenta dançar o tango consigo mesm$r.
+Você dança o tango com o $t de $S.
+$n dança o tango com o $t de $N.
+$n dança o tango com o seu $t.
+Você dança o tango com $p.
+$n dança o tango com $p.
 
 ~tantrum tantrum 0 8 8 0
-You flop to the floor having a tantrum.
-$n flops to the floor, flailing $s arms in tantrum.
-You flop to the floor, flailing your arms in tantrum at $N.
-$n flops to the floor, flailing $s arms in tantrum at $N.
-$n flops to the floor, flailing $s arms in tantrum at you.
-Pity they aren't here to witness your performance.
-You flop to the floor, flailing your arms in frustration at yourself.
-$n flops to the floor, flailing $s arms in tantrum at $mself.
+Você cai no chão fazendo uma birra.
+$n cai no chão, sacudindo os braços em birra.
+Você cai no chão, sacudindo os braços em birra para $N.
+$n cai no chão, sacudindo os braços em birra para $N.
+$n cai no chão, sacudindo os braços em birra para você.
+Pena que eles não estão aqui para presenciar sua performance.
+Você cai no chão, sacudindo os braços frustrado(a) consigo mesm$r.
+$n cai no chão, sacudindo os braços em birra para si mesm$r.
 #
 #
 #
-You flop to the floor, flailing your arms in tantrum at $p.
-$n flops to the floor, flailing $s arms in tantrum at $p.
+Você cai no chão, sacudindo os braços em birra para $p.
+$n cai no chão, sacudindo os braços em birra para $p.
 
 ~tap tap 0 5 0 0
-You tap your foot impatiently.
-$n starts tapping $s foot.
-You tap $M on the shoulder.
-$n taps $N on the shoulder.
-$n taps you on the shoulder.
-You move to tap them -- but they are gone.
-You knowingly tap yourself on the side of your head.
-$n knowingly taps $mself on the side of $s head.
-You tap $S $t.
-$n taps $N's $t.
-$n taps your $t.
-You tap $p.
-$n taps $p.
+Você bate o pé impaciente.
+$n começa a bater o pé.
+Você bate em $M no ombro.
+$n bate em $N no ombro.
+$n bate em você no ombro.
+Você se prepara para bater neles -- mas eles foram embora.
+Você bate no próprio lado da cabeça de forma sabida.
+$n bate no próprio lado da cabeça de forma sabida.
+Você bate no $t de $S.
+$n bate no $t de $N.
+$n bate no seu $t.
+Você bate em $p.
+$n bate em $p.
 
 ~tapdance tapdance 0 8 8 0
-You do a little tapdance for everyone's amusement.
-$n does a little tapdance for everyone's amusement.
-You do a little tapdance for $N's amusement.
-$n does a little tapdance for $N's amusement.
-$n does a little tapdance for your amusement.
-You do a fantastic dance, but that person is not here to see it.
-You tapdance happily for yourself.
-$n tapdances happily for $mself.
-You do a tapdance on $N's $t.
-$n does a tapdance on $N's $t.
-$n does a tapdance on your $t.
-You do a tapdance around $p.
-$n does a tapdance around $p.
+Você faz uma pequena sapateado para diversão de todos.
+$n faz uma pequena sapateado para diversão de todos.
+Você faz uma pequena sapateado para diversão de $N.
+$n faz uma pequena sapateado para diversão de $N.
+$n faz uma pequena sapateado para sua diversão.
+Você faz uma dança fantástica, mas essa pessoa não está aqui para ver.
+Você sapatea feliz para si mesm$r.
+$n sapatea feliz para si mesm$r.
+Você sapatea no $t de $N.
+$n sapatea no $t de $N.
+$n sapatea no seu $t.
+Você sapatea ao redor de $p.
+$n sapatea ao redor de $p.
 
 ~target target 0 5 0 0
-You look for a target to attack.
-$n looks for a target to attack.
-You target $N, making sure not to mess up and miss.
-$n targets $N, preparing to attack!
-$n targets you for attack. Better hope $e misses!
-You can't target someone that isn't here you nimrod!
-You point your weapon at yourself, attempting to commit suicide.
-$n points $s weapon at $mself, preparing to commit suicide!
-You target $S $t.
-$n targets $N's $t!
-$n targets your $t, watch out!!!
-You target $p.
-$n targets $p.
+Você procura um alvo para atacar.
+$n procura um alvo para atacar.
+Você mira em $N, tendo cuidado para não errar.
+$n mira em $N, preparando-se para atacar!
+$n mira em você para atacar. Espera que $l erre!
+Você não pode mirar em alguém que não está aqui, idiota!
+Você aponta sua arma para si mesm$r, tentando se suicidar.
+$n aponta $z arma para si mesm$r, preparando-se para se suicidar!
+Você mira no $t de $S.
+$n mira no $t de $N!
+$n mira no seu $t, cuidado!!!
+Você mira em $p.
+$n mira em $p.
 
 ~taunt taunt 0 5 0 0
-You taunt the nothing in front of you. 
-$n taunts something that seems to be right in front of $m.
-You taunt $M, to your own delight.
-$n taunts $N rather insultingly.  $n seems to enjoy it tremendously.
-$n taunts you.  It really hurts your feelings.
-Hmmmmmmm.....nope, no one by that name here.
-You taunt yourself, almost making you cry...:(
-$n taunts $mself to tears.
-You taunt $S $t.
-$n taunts $N's $t.
-$n taunts your $t.
-You taunt $p.
-$n taunts $p.
+Você provoca o nada à sua frente.
+$n provoca algo que parece estar bem à frente de $l.
+Você provoca $M, para sua própria diversão.
+$n provoca $N de forma bastante insultante. $n parece gostar muito.
+$n te provoca. Dói muito seus sentimentos.
+Hmmmm.....não, ninguém com esse nome aqui.
+Você se provoca, quase te fazendo chorar...:(
+$n se provoca até as lágrimas.
+Você provoca o $t de $S.
+$n provoca o $t de $N.
+$n provoca o seu $t.
+Você provoca $p.
+$n provoca $p.
 
 ~tease tease 0 5 0 0
-Please don't play these games with me, you tease!
-$n is such a tease.
-You tease $M.
-$n teases $N. Tee Hee Hee Hee...
-$n teases you gently.
-Hmmmmmmm.....nope, no one by that name here.
-You tease yourself, this is fun!
-$n teases $mself. What a peculiar person.
-You tease $S $t.
-$n teases $N's $t.
-$n teases your $t.
-You tease $p.
-$n teases $p.
+Por favor, não jogue esses jogos comigo, seu(sua) sedutor(a)!
+$n é um(a) sedutor(a).
+Você seduz $M.
+$n seduz $N. Tee Hee Hee Hee...
+$n te seduz suavemente.
+Hmmmm.....não, ninguém com esse nome aqui.
+Você se seduz, que divertido!
+$n se seduz. Que pessoa peculiar.
+Você seduz o $t de $S.
+$n seduz o $t de $N.
+$n seduz o seu $t.
+Você seduz $p.
+$n seduz $p.
 
 ~testsocial testsocial 0 8 8 2
-This action is unfinished.
-This action is unfinished.
+Esta ação está incompleta.
+Esta ação está incompleta.
 #
 #
 #
@@ -6538,44 +6538,44 @@ Você agradece a $p.
 $n agradece a $p.
 
 ~think think 0 5 0 0
-You think about life, the universe and everything.
-$n sinks deeply into thought about the meaning of life.
-You think about what purpose $E has in relation to your part of life.
-$n stops and thinks about $N, completely lost in thought.
-Your ears burn as $n thinks about you.. you wonder what about.
-You'd better think harder, if you hope to make contact!
-You think about yourself (for once).
-$n thinks about $mself for a change.....(?)
-You think about $S $t.
-$n thinks about $N's $t.
-$n thinks about your $t.
-You spend some time thinking about $p.
-$n seems to be spending a lot of time thinking about $p.
+Você pensa sobre a vida, o universo e tudo mais.
+$n mergulha profundamente nos pensamentos sobre o sentido da vida.
+Você pensa sobre qual propósito $L tem em relação à sua parte da vida.
+$n para e pensa em $N, completamente perdido(a) nos pensamentos.
+Suas orelhas queimam enquanto $n pensa em você.. você se pergunta sobre o quê.
+É melhor pensar mais, se espera fazer contato!
+Você pensa em si mesm$r (por uma vez).
+$n pensa em si mesm$r por uma vez.....(?).
+Você pensa no $t de $S.
+$n pensa no $t de $N.
+$n pensa no seu $t.
+Você passa um tempo pensando em $p.
+$n parece estar passando muito tempo pensando em $p.
 
 ~threaten threaten 0 5 0 0
-You threaten everyone and everything, you are just that good.
-$n threatens everyone and everything.
-You threaten $M.
-$n threatens $N.
-$n threatens you.
-They ran away in fear before you could threaten them.
-You threaten yourself, that's an under statement.
-$n threatens $mself. No duh!
-You threaten $S $t.
-$n threatens $N's $t.
-$n threatens your $t.
-You threaten $p.
-$n threatens $p.
+Você ameaça todos e tudo, você é simplesmente o melhor.
+$n ameaça todos e tudo.
+Você ameaça $M.
+$n ameaça $N.
+$n te ameaça.
+Eles fugiram de medo antes que você pudesse ameaçá-los.
+Você se ameaça, isso é exagero.
+$n se ameaça. É claro!
+Você ameaça o $t de $S.
+$n ameaça o $t de $N.
+$n ameaça o seu $t.
+Você ameaça $p.
+$n ameaça $p.
 
 ~thumbsup thumbsup 0 5 0 0
-You seem very happy today.
-$n gives everyone a big thumbs up.
-You give $N a big thumbs up.
-$n gives $N a big thumbs up.
-$n gives you a big thumbs up.
-You don't see that person.
-You feel extremely silly.
-$n gives $mself a big thumbs up.  How silly.
+Você parece muito feliz hoje.
+$n dá um grande joinha para todos.
+Você dá a $N um grande joinha.
+$n dá a $N um grande joinha.
+$n te dá um grande joinha.
+Você não vê essa pessoa.
+Você se sente extremamente bobo(a).
+$n se dá um grande joinha. Que bobo(a).
 #
 #
 #
@@ -6583,43 +6583,43 @@ $n gives $mself a big thumbs up.  How silly.
 #
 
 ~thwap thwap 0 5 0 0
-Thwap?? THWAP?! Thwap WHO?!
-$n puts $s hand out, looking for someone to thwap.
-You pull back your hand and THWAP $N.
-$n pulls back $s hand and THWAPs $N!
-$n pulls back $s hand and THWAPs you!
-You thwap thin air..
-You pull back your hand and.. THWAP!
-$n pulls back $s hand and THWAPS $mself.
-You THWAP $N's $t.
-$n THWAPs $N's $t.
-$n THWAPs your $t!
-You pull back your hand and THWAP $p.
-$n pulls back and THWAPs $p.
+Thwap?? THWAP?! Thwap em QUEM?!
+$n estende a mão, procurando alguém para dar um thwap.
+Você recua a mão e dá um THWAP em $N.
+$n recua a mão e dá um THWAP em $N!
+$n recua a mão e te dá um THWAP!
+Você dá um thwap no ar..
+Você recua a mão e.. THWAP!
+$n recua a mão e dá um THWAP em si mesm$r.
+Você dá um THWAP no $t de $N.
+$n dá um THWAP no $t de $N.
+$n dá um THWAP no seu $t!
+Você recua a mão e dá um THWAP em $p.
+$n recua e dá um THWAP em $p.
 
 ~tickle tickle 0 5 0 0
-Who do you want to tickle??
-$n is looking for someone to tickle.
-You tickle $N.
-$n tickles $N.
-$n tickles you - hee hee hee.
-Who is that??
-You tickle yourself, how funny!
-$n tickles $mself.
-You tickle $S $t.
-$n tickles $N's $t.
-$n tickles your $t.
-You tickle $p.
-$n tickles $p.
+Em quem você quer fazer cócegas??
+$n está procurando alguém para fazer cócegas.
+Você faz cócegas em $N.
+$n faz cócegas em $N.
+$n faz cócegas em você - hee hee hee.
+Quem é esse??
+Você faz cócegas em si mesm$r, que engraçado!
+$n faz cócegas em si mesm$r.
+Você faz cócegas no $t de $S.
+$n faz cócegas no $t de $N.
+$n faz cócegas no seu $t.
+Você faz cócegas em $p.
+$n faz cócegas em $p.
 
 ~tie tie 0 8 0 0
-Whom do you wish to tie?
+A quem você deseja amarrar?
 #
-You tie $M up with all possible speed!
-$n ties $N up!
-You find yourself being tied up by $n!
-That person is not here!
-You can't tie yourself up!
+Você amarra $M com toda a velocidade possível!
+$n amarra $N!
+Você se vê sendo amarrado(a) por $n!
+Essa pessoa não está aqui!
+Você não pode se amarrar!
 #
 #
 #
@@ -6628,29 +6628,29 @@ You can't tie yourself up!
 #
 
 ~tip tip 0 5 0 0
-You tip your hat gallantly.
-$n gallantly tips $s hat.
-You tip your hat to $M.
-$n gallantly tips $s hat to $N.
-$n gallantly tips $s hat to you.
-Who?
-That's silly. You tip your hat to yourself.
-$n tips $s hat to $mself.
-You tip your hat at $S $t.
-$n tips $s hat at $N's $t.
-$n tips $s hat at your $t.
-You tip your hat at $p.
-$n tips $s hat at $p.
+Você inclina o chapéu galantemente.
+$n inclina o chapéu galantemente.
+Você inclina o chapéu para $M.
+$n inclina galantemente o chapéu para $N.
+$n inclina galantemente o chapéu para você.
+Quem?
+Que bobo(a). Você inclina o chapéu para si mesm$r.
+$n inclina o chapéu para si mesm$r.
+Você inclina o chapéu para o $t de $S.
+$n inclina o chapéu para o $t de $N.
+$n inclina o chapéu para o seu $t.
+Você inclina o chapéu para $p.
+$n inclina o chapéu para $p.
 
 ~titter titter 0 5 0 0
-You titter nervously.
-$n titters nervously.
-You titter nervously and shrink away from $N.
-$n titters nervously and shrinks away from $N.
-$n titters nervously and shrinks away from you.
-They've left, phew!
-You titter privately to yourself.
-$n titters privately to $mself.
+Você ri nervosamente.
+$n ri nervosamente.
+Você ri nervosamente e recua de $N.
+$n ri nervosamente e recua de $N.
+$n ri nervosamente e recua de você.
+Eles foram embora, ufa!
+Você ri quietamente para si mesm$r.
+$n ri quietamente para si mesm$r.
 #
 #
 #
@@ -6658,29 +6658,29 @@ $n titters privately to $mself.
 #
 
 ~toast toast 0 1 8 0
-Looking for someone to toast eh, you pyromaniac!
-$n looks around for someone $e can toast... HIDE!
-You pull out a pocket dragon and squeeze it at $N. You wicked you!
-$n pulls out a pocket dragon and toasts $N. $N is no more. $N is ashes, ashes and only ashes, and the ashes blow away in the wind. Buhbye $N.
-$n pulls out a pocket dragon and toasts you. You are no more! Ow...
-POOF! Maybe your victim disintegrated... Then again, maybe it was just a figment of your imagination.
-You toast yourself. You are no more! Ow...
-$n toasts $mself. $n is no more. $n is ashes, ashes and only ashes, and the ashes blow away in the wind. Buhbye $n.
+Procurando alguém para torrar hein, seu(sua) piromaníaco(a)!
+$n olha ao redor procurando alguém para torrar... ESCONDA-SE!
+Você tira um dragão de bolso e aperta-o em $N. Que maldade sua!
+$n tira um dragão de bolso e torra $N. $N não existe mais. $N é cinzas, só cinzas, e as cinzas voam ao vento. Tchau $N.
+$n tira um dragão de bolso e te torra. Você não existe mais! Ai...
+POOF! Talvez sua vítima tenha desintegrado... Ou talvez fosse só fruto da sua imaginação.
+Você se torra. Você não existe mais! Ai...
+$n se torra. $n não existe mais. $n é cinzas, só cinzas, e as cinzas voam ao vento. Tchau $n.
 #
 #
 #
-You pull out a pocket dragon and squeeze it at $p. $p bursts in flame. $p is toast. Poor $p.
-$n pulls out a pocket dragon and squeezes it at $p. $p bursts in flame. $p is toast. Poor $p.
+Você tira um dragão de bolso e aperta-o em $p. $p estoura em chamas. $p está torrado. Pobre $p.
+$n tira um dragão de bolso e aperta-o em $p. $p estoura em chamas. $p está torrado. Pobre $p.
 
 ~tongue tongue 0 5 5 0
-You stick your tongue out.
-$n sticks $s tongue out.
-You stick your tongue out at $M.
-$n sticks $s tongue out at $N.
-$n sticks $s tongue out at you.
-That's a little hard to do, what with no-one being there.
-You stick your tongue out at yourself... How the?!
-$n sticks $s tongue out at $mself... Somehow.
+Você mostra a língua.
+$n mostra a língua.
+Você mostra a língua para $M.
+$n mostra a língua para $N.
+$n mostra a língua para você.
+É um pouco difícil fazer isso, sem ninguém estar aqui.
+Você mostra a língua para si mesm$r... Como???
+$n mostra a língua para si mesm$r... De alguma forma.
 #
 #
 #
@@ -6688,44 +6688,44 @@ $n sticks $s tongue out at $mself... Somehow.
 #
 
 ~touch touch 0 5 0 0
-You're feeling very touchy!
-$n is feeling very touchy!
-You touch $M.
-For some reason, $n has just touched $N.
-For some reason, $n has just touched you.
-You can't touch that person, they don't exist.
-You touch yourself, eww!
-$n does something a little discusting.
-You curiously touch $S $t.
-$n curiously touches $N's $t.
-$n curiously touches your $t.
-You curiously touch $p.
-$n curiously touches $p.
+Você é muito sensível!
+$n é muito sensível!
+Você toca $M.
+Por alguma razão, $n acabou de tocar $N.
+Por alguma razão, $n acabou de te tocar.
+Você não pode tocar essa pessoa, ela não existe.
+Você se toca, ixi!
+$n faz algo um pouco nojento.
+Você toca curioso(a) o $t de $S.
+$n toca curioso(a) o $t de $N.
+$n toca curioso(a) o seu $t.
+Você toca curioso(a) $p.
+$n toca curioso(a) $p.
 
 ~trance trance 0 5 0 0
-You sit down in a yogin style position and begin to go, "Huuuuuuuuuuuuuuuuuuuu"
-$n sits down with crossed legs and goes, "Huuuuuuuuuuuuuuuuuuuuuuu" slowly.
-You try to put $N into a trance.
-$n tries to put $N into a trance.
-$n tries to put you into a trance.
-You stare and stare but can't find anyone to put into a trance.
-You put yourself into a deep trance, to never awaken again.
-$n puts $mself into a deep trance.
-You try to put $S $t into a deep trance.
-$n tries to put $N's $t into a trance.
-$n tries to put your $t into a deep trance.
-You try to put $p into a deep trance.
-$n tries to put $p into a deep trance.
+Você senta em posição de yogi e começa a fazer, 'Huuuuuuuuuuuuuuuuuuuu'
+$n senta com as pernas cruzadas e faz, 'Huuuuuuuuuuuuuuuuuuuuuuu' devagar.
+Você tenta colocar $N em transe.
+$n tenta colocar $N em transe.
+$n tenta te colocar em transe.
+Você olha e olha mas não encontra ninguém para colocar em transe.
+Você se coloca em transe profundo, para nunca acordar de novo.
+$n se coloca em transe profundo.
+Você tenta colocar o $t de $S em transe profundo.
+$n tenta colocar o $t de $N em transe.
+$n tenta colocar o seu $t em transe profundo.
+Você tenta colocar $p em transe profundo.
+$n tenta colocar $p em transe profundo.
 
 ~tsk tsk 0 5 0 0
-Feeling very irritated, you tsk.
-$n is irritated and starts to tsk.
-You tsk at $N.
-$n tsks at $N.
-$n tsks at you.
-Who's that supposed to be? I don't see anyone.
-You tsk quietly to yourself.
-$n tsks quietly to $mself.
+Sentindo-se muito irritado(a), você faz tsk.
+$n está irritado(a) e começa a fazer tsk.
+Você faz tsk para $N.
+$n faz tsk para $N.
+$n faz tsk para você.
+Quem é esse? Eu não vejo ninguém.
+Você faz tsk quietamente para si mesm$r.
+$n faz tsk quietamente para si mesm$r.
 #
 #
 #
@@ -6733,14 +6733,14 @@ $n tsks quietly to $mself.
 #
 
 ~tuck tuck 0 8 8 0
-You grab a big cozy blanket... ready to tuck someone in!
-$n grabs a big cozy blanket... ready to tuck someone in!
-You grab a big cozy blanket and tuck it warmly around $N.
-$n grabs a big cozy blanket and tucks it warmly around $N.
-$n grabs a big cozy blanket and tucks it warmly around you.
-You go to tuck them in but they're not here!
-You grab a big cozy blanket and tuck yourself in.
-$n grabs a big cozy blanket and tucks $mself in.
+Você pega um cobertor grande e aconchegante... pronto para aconchegar alguém!
+$n pega um cobertor grande e aconchegante... pronto para aconchegar alguém!
+Você pega um cobertor grande e aconchegante e o enrola bem quente ao redor de $N.
+$n pega um cobertor grande e aconchegante e o enrola bem quente ao redor de $N.
+$n pega um cobertor grande e aconchegante e o enrola bem quente ao redor de você.
+Você vai aconchegá-los mas eles não estão aqui!
+Você pega um cobertor grande e aconchegante e se aconchega.
+$n pega um cobertor grande e aconchegante e se aconchega.
 #
 #
 #
@@ -6748,64 +6748,64 @@ $n grabs a big cozy blanket and tucks $mself in.
 #
 
 ~tug tug 0 5 0 0
-You tug on your clothes a bit.
-$n tugs on $s clothes a bit.
-You tug on $N to try and get $S attention.
-$n tugs on $N to try and get $S attention.
-$n tugs on you to try and get your attention.
-What are you trying to tug on?  Air?
-That's silly. You tug on yourself.
-$n tugs on $mself.
-You tug on $S $t.
-$n tugs on $N's $t.
-$n tugs on your $t.
-$n tug on $p.
-$n tugs on $p.
+Você puxa nas próprias roupas um pouco.
+$n puxa nas $z roupas um pouco.
+Você puxa em $N tentando chamar $S atenção.
+$n puxa em $N tentando chamar $S atenção.
+$n puxa em você tentando chamar sua atenção.
+O que você está tentando puxar? Ar?
+Que bobo(a). Você puxa em si mesm$r.
+$n puxa em si mesm$r.
+Você puxa no $t de $S.
+$n puxa no $t de $N.
+$n puxa no seu $t.
+$n puxa em $p.
+$n puxa em $p.
 
 ~tummy tummy 0 5 0 0
-You rub your tummy, wishing you had bought that bagel earlier.
-$n rubs $s tummy, $e looks famished!
-You vigorously rub $M in the tummy!
-$n vigorously rubs $N's tummy!
-$n vigorously rubs your tummy!
-Whos tummy did you want to rub?
-You rub your tummy, wishing you had bought that bagel earlier.
-$n rubs $s tummy, $e looks famished!
-You look at $S $t and rub your tummy hungrily.
-$n looks at $N's $t and rubs $s tummy hungrily.
-$n looks at your $t and rubs $s tummy hungrily.
-You look at $p and rub your tummy hungrily.
-$n looks at $p and rubs $s tummy hungrily.
+Você esfrega a barriga, desejando ter comprado aquele bagel antes.
+$n esfrega a barriga, $l parece faminto(a)!
+Você esfrega $M na barriga vigorosamente!
+$n esfrega a barriga de $N vigorosamente!
+$n esfrega sua barriga vigorosamente!
+Na barriga de quem você quer esfregar?
+Você esfrega a barriga, desejando ter comprado aquele bagel antes.
+$n esfrega a barriga, $l parece faminto(a)!
+Você olha para o $t de $S e esfrega a barriga famint$r.
+$n olha para o $t de $N e esfrega a barriga famint$r.
+$n olha para o seu $t e esfrega a barriga famint$r.
+Você olha para $p e esfrega a barriga famint$r.
+$n olha para $p e esfrega a barriga famint$r.
 
 ~tweak tweak 0 5 0 0
-You look for a cheek to tweak.
-$n starts scanning $s surroundings, flexing her fingers.
-You tweak $S's cheek.
-$n tweaks $N's cheek.
-$n tweaks your cheek.
-Aw, no cheek to be found!
-You tweak your own cheek... Such a beautiful blush!
-$n tweaks $s cheek... Look at that blush!
-You tweak $S $t
-$n tweaks $N's $t
-$n tweaks your $t
-You tweak $p
-$n tweaks $p
+Você procura uma bochecha para beliscar.
+$n começa a escanear os arredores, flexionando os dedos.
+Você belisca a bochecha de $S.
+$n belisca a bochecha de $N.
+$n belisca a sua bochecha.
+Ah, nenhuma bochecha para encontrar!
+Você belisca a própria bochecha... Que rubor bonito!
+$n belisca a própria bochecha... Olha aquele rubor!
+Você belisca o $t de $S
+$n belisca o $t de $N
+$n belisca o seu $t
+Você belisca $p
+$n belisca $p
 
 ~twiddle twiddle 0 5 0 0
-You patiently twiddle your thumbs.
-$n patiently twiddles $s thumbs.
-You twiddle your thumbs patiently as you wait for $N.
-$n twiddles $s thumbs patiently as $e waits for $N.
-$n twiddles $s thumbs, patiently waiting for you.
-They left before you could twiddle at them.
-You twiddle your thumbs impatiently.
-$n twiddles $s thumbs impatiently.
-You twiddle your thumbs at $S $t.
-$n twiddles $s thumbs at $N's $t.
-$n twiddles $s thumbs at your $t.
-You twiddle your thumbs at $p.
-$n twiddles $s thumbs at $p.
+Você pacientemente gira os polegares.
+$n pacientemente gira os $z polegares.
+Você gira os polegares pacientemente enquanto espera por $N.
+$n gira os polegares pacientemente enquanto $l espera por $N.
+$n gira os polegares, pacientemente esperando por você.
+Eles foram embora antes que você pudesse girar os polegares para eles.
+Você gira os polegares impaciente.
+$n gira os polegares impaciente.
+Você gira os polegares para o $t de $S.
+$n gira os polegares para o $t de $N.
+$n gira os polegares para o seu $t.
+Você gira os polegares para $p.
+$n gira os polegares para $p.
 
 ~twitch twitch 0 5 0 0
 You lie there, twitching helplessly.
