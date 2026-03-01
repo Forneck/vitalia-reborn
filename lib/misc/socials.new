@@ -1784,22 +1784,22 @@ $n se esconde atrás de $p.
 
 ~doh doh 0 5 0 0
 Doh!
-$n dohs!
-You look at $M and exclaim 'doh!'
-$n looks at $N and exclaims 'doh!'
-$n looks at you and exclaims 'doh!'
-Doh a deer, a female deer...
-You slap your forehead and exclaim 'doh!'
-$n slaps $s forehead and exclaims 'doh!'
-You look at $S $t and exclaim 'doh!'
-$n looks at $N's $t and exclaims 'doh!'
-$n looks at your $t and exclaims 'doh!'
-You look at $p and and exclaim 'doh!'
-$n looks at $p and and exclaims 'doh!'
+$n grunhe 'doh'!
+Você olha para $M e exclama 'doh!'
+$n olha para $N e exclama 'doh!'
+$n olha para você e exclama 'doh!'
+Doh ré mi... uma cerva uma cerva...
+Você bate na própria testa e exclama 'doh!'
+$n bate na própria testa e exclama 'doh!'
+Você olha para o $t de $S e exclama 'doh!'
+$n olha para o $t de $N e exclama 'doh!'
+$n olha para o seu $t e exclama 'doh!'
+Você olha para $p e exclama 'doh!'
+$n olha para $p e exclama 'doh!'
 
 ~doodle doodle 0 -1 -1 0
-You doodle in the dirt.
-$n doodles in the dirt.
+Você rabisca no chão.
+$n rabisca no chão.
 #
 #
 #
@@ -1813,68 +1813,68 @@ $n doodles in the dirt.
 #
 
 ~dread dread 0 8 8 0
-You dread to think.
-$n dreads to think.
-You recoil from $N in mortal dread.
-$n recoils from $N in mortal dread.
-$n recoils from you in mortal dread.
-You dread them even when they're not here.
-You recoil from yourself in mortal dread.
-$n recoils from $mself in mortal dread.
-You recoil from $N's $t in mortal dread.
-$n recoils from $N's $t in mortal dread.
-$n recoils from your $t in mortal dread.
-You recoil from $p in mortal dread.
-$n recoils from $p in mortal dread.
+Você treme só de pensar.
+$n treme só de pensar.
+Você recua de $N com terror mortal.
+$n recua de $N com terror mortal.
+$n recua de você com terror mortal.
+Você teme até mesmo quando eles não estão aqui.
+Você recua de si mesm$r com terror mortal.
+$n recua de si mesm$r com terror mortal.
+Você recua do $t de $N com terror mortal.
+$n recua do $t de $N com terror mortal.
+$n recua do seu $t com terror mortal.
+Você recua de $p com terror mortal.
+$n recua de $p com terror mortal.
 
 ~drool drool 0 5 0 0
-You start to drool.
-$n starts to drool.
-You drool all over $N.
-$n drools all over $N.
-$n drools all over you.
-Pardon??
-Sure, go ahead and drool...yuk!
-$n drools on $mself.  What a sight.
-You drool all over $S $t.
-$n drools all over $N's $t.
-$n drools all over your $t.
-You drool on $p.
-$n drools on $p.
+Você começa a babar.
+$n começa a babar.
+Você baba em cima de $N.
+$n baba em cima de $N.
+$n baba em cima de você.
+Com licença??
+Claro, pode babar... iféeeee!
+$n baba em si mesm$r. Que espetáculo.
+Você baba no $t de $S.
+$n baba no $t de $N.
+$n baba no seu $t.
+Você baba em $p.
+$n baba em $p.
 
 ~drumroll drumroll 0 8 8 0
-You pound out a drumroll.
-$n pounds out a drumroll.
-You give $M a drumroll.
-$n gives $N a drumroll.
-$n gives you a drumroll.
-You give a drumroll for someone that is not there.
-You give yourself a drumroll.
-$n gives $mself a drumroll.
-You pound out a drumroll on $S $t.
-$n pounds out a drumroll on $N's $t.
-$n pounds out a drumroll on your $t.
-You pound out a drumroll on $p.
-$n pounds out a drumroll on $p.
+Você faz uma rufada de tambor.
+$n faz uma rufada de tambor.
+Você faz uma rufada de tambor para $M.
+$n faz uma rufada de tambor para $N.
+$n faz uma rufada de tambor para você.
+Você faz uma rufada de tambor para alguém que não está aqui.
+Você faz uma rufada de tambor para si mesm$r.
+$n faz uma rufada de tambor para si mesm$r.
+Você faz uma rufada de tambor no $t de $S.
+$n faz uma rufada de tambor no $t de $N.
+$n faz uma rufada de tambor no seu $t.
+Você faz uma rufada de tambor em $p.
+$n faz uma rufada de tambor em $p.
 
 ~duck duck 0 5 0 0
-You duck out of the way.
-$n ducks out of the way.
-You duck past $M.
-$n ducks past $N.
-$n ducks past you.
+Você se abaixa para se esquivar.
+$n se abaixa para se esquivar.
+Você passa por baixo de $M.
+$n passa por baixo de $N.
+$n passa por baixo de você.
 Quack?
-You begin to waddle and quack like a duck.
-$n begins to waddle and quack like a duck.
-You duck under $S $t.
-$n ducks under $N's $t.
-$n ducks under your $t.
-You duck under $p.
-$n ducks under $p.
+Você começa a grasnar e andar como um pato.
+$n começa a grasnar e andar como um pato.
+Você se abaixa sob o $t de $S.
+$n se abaixa sob o $t de $N.
+$n se abaixa sob o seu $t.
+Você se abaixa sob $p.
+$n se abaixa sob $p.
 
 ~duh duh 0 8 8 0
-You hit yourself in the forehead and go, 'Duh!'.
-$n hits themselves in the head and goes, 'Duh!'. What the?
+Você bate na própria cabeça e faz, 'Duh!'.
+$n bate na própria cabeça e faz, 'Duh!'. Que foi?
 #
 #
 #
@@ -1888,14 +1888,14 @@ $n hits themselves in the head and goes, 'Duh!'. What the?
 #
 
 ~earlick earlick 0 5 0 0
-There must be two people to do this you know...
-$n looks seems to be looking for something.
-You start to lick $N's ear gently and light in the touch.
-$n whispers something to $N.
-$n gently starts to lick your ear. MMmmmm...
-Not here.. sorry. Pick another ear.
-You can't.
-$n seems to have something stuck between $s teeth.
+Precisa de duas pessoas para isso, sabia...
+$n parece estar procurando por algo.
+Você começa a lamber a orelha de $N gentilmente.
+$n sussurra algo para $N.
+$n começa a lamber gentilmente sua orelha. Mmmmm...
+Não está aqui... desculpe. Escolha outra orelha.
+Você não consegue.
+$n parece ter algo preso entre os dentes.
 #
 #
 #
@@ -1903,44 +1903,44 @@ $n seems to have something stuck between $s teeth.
 #
 
 ~eek eek 0 5 0 0
-Eeeeeeeek!
-$n leaps onto a table and screams, 'Eeeeeeeeek!'
-$N is terrifying!!!
-$n leaps onto a table and screams 'Eeeeeeeeek!' at the sight of $N.
-$n leaps onto a table and screams 'Eeeeeeeeek!' at the sight of you.
-Panting you realise that the foul creature has left.   Phewww....
-You point at yourself and scream, 'Eeeeeeeeek!'
-$n points at $mself and screams, 'Eeeeeeeeek!'
-You point at $S $t and scream, 'Eeeeeeeeek!'.
-$n points at $N's $t and screams, 'Eeeeeeeeek!'.
-$n points at your $t and screams, 'Eeeeeeeeek!'.
-You point at $p and scream, 'Eeeeeeeeek!'.
-$n points at $p and screams, 'Eeeeeeeeek!'.
+Eeeeeek!
+$n pula em cima de uma mesa e grita, 'Eeeeeeeeek!'
+$N é aterrorizante!!!
+$n pula em cima de uma mesa e grita 'Eeeeeeeeek!' ao ver $N.
+$n pula em cima de uma mesa e grita 'Eeeeeeeeek!' ao ver você.
+Ofegante você percebe que a criatura asquerosa foi embora. Ufa...
+Você aponta para si mesm$r e grita, 'Eeeeeeeeek!'
+$n aponta para si mesm$r e grita, 'Eeeeeeeeek!'
+Você aponta para o $t de $S e grita, 'Eeeeeeeeek!'.
+$n aponta para o $t de $N e grita, 'Eeeeeeeeek!'.
+$n aponta para o seu $t e grita, 'Eeeeeeeeek!'.
+Você aponta para $p e grita, 'Eeeeeeeeek!'.
+$n aponta para $p e grita, 'Eeeeeeeeek!'.
 
 ~eep eep 0 5 0 0
 Eeeeep!
-$n looks a little sheepish and goes 'eep'.
-You look at $M and go 'eep'.
-$n looks at $N and goes 'eep'.
-$n looks at you and goes 'eep'.
-Find someone else to eep at.
-You look down go 'eep'.
-$n looks down and goes 'eep'.
-You look at $S $i and go 'eep'.
-$n looks at $N's $i and goes 'eep'.
-$n looks at your $i and goes 'eep'.
-You look at $p and go 'eep'.
-$n looks at $p and goes 'eep'.
+$n parece um pouco envergonhado(a) e faz 'eep'.
+Você olha para $M e faz 'eep'.
+$n olha para $N e faz 'eep'.
+$n olha para você e faz 'eep'.
+Encontre outra pessoa para fazer 'eep'.
+Você olha para baixo e faz 'eep'.
+$n olha para baixo e faz 'eep'.
+Você olha para o $i de $S e faz 'eep'.
+$n olha para o $i de $N e faz 'eep'.
+$n olha para o seu $i e faz 'eep'.
+Você olha para $p e faz 'eep'.
+$n olha para $p e faz 'eep'.
 
 ~ego ego 0 8 8 0
-Your ego inflates like a giant balloon.
-$n's ego inflates like a giant balloon!
-You watch $N's ego inflate like a balloon.
-$n watches $N's ego inflate like a balloon.
-$n watches your ego inflate like a balloon.
-They're not here to admire your ego.
-You inflate your own ego like a giant balloon!
-$n inflates $s ego like a giant balloon!
+Seu ego se infla como um balão gigante.
+O ego de $n se infla como um balão gigante!
+Você observa o ego de $N se inflar como um balão.
+$n observa o ego de $N se inflar como um balão.
+$n observa seu ego se inflar como um balão.
+Eles não estão aqui para admirar o seu ego.
+Você infla seu próprio ego como um balão gigante!
+$n infla o próprio ego como um balão gigante!
 #
 #
 #
@@ -1948,23 +1948,23 @@ $n inflates $s ego like a giant balloon!
 #
 
 ~egrin egrin 0 5 5 0
-You grin very evilly.
-$n grins very evilly.
-You grin evilly, trying to frighten $M.
-$n grins evilly, trying to frighten $N.
-$n grins evilly, trying to frighten you.
-Now, what's the point in trying to intimidate nothing?
-You grin evilly, thinking about your own devious plans.
-$n grins evilly, thinking about $s own devious plans.
-You grin evilly at $N's $t.
-$n grins evilly at $N's $t.
-$n grins evilly at your $t.
+Você sorri de forma muito perversa.
+$n sorri de forma muito perversa.
+Você sorri perversamente, tentando assustar $M.
+$n sorri perversamente, tentando assustar $N.
+$n sorri perversamente, tentando assustar você.
+Qual a razão de tentar intimidar o vazio?
+Você sorri perversamente, pensando em seus próprios planos maquiavélicos.
+$n sorri perversamente, pensando nos próprios planos maquiavélicos.
+Você sorri perversamente para o $t de $N.
+$n sorri perversamente para o $t de $N.
+$n sorri perversamente para o seu $t.
 #
 #
 
 ~elephantma elephantma 0 5 0 0
-You show your grotesque face and scream, 'I AM NOT AN ANIMAL!!'
-$n with the grotesque face screams, 'I AM NOT AN ANIMAL!!'
+Você mostra sua cara grotesca e grita, 'EU NÃO SOU UM ANIMAL!!'
+$n com a cara grotesca grita, 'EU NÃO SOU UM ANIMAL!!'
 #
 #
 #
@@ -1978,179 +1978,179 @@ $n with the grotesque face screams, 'I AM NOT AN ANIMAL!!'
 #
 
 ~embrace embrace 0 5 0 0
-You reach but come away empty.  :(
-$n reaches out for an embrace, but no one is there.
-You embrace $M warmly.
-$n embraces $N warmly.  
-$n embraces you warmly.  
-Alas, your embracee is not here.  
-You embrace yourself??  
-$n wraps $s arms around $mself for a warm self-embrace.
-You embrace $S $t warmly.
-$n embraces $N's $t warmly.
-$n embraces your $t warmly.
-You embrace $p warmly.
-$n embraces $p warmly.
+Você estende os braços mas não abraça nada. :(
+$n estende os braços para um abraço, mas não há ninguém lá.
+Você abraça $M calorosamente.
+$n abraça $N calorosamente.
+$n abraça você calorosamente.
+Infelizmente, quem você quer abraçar não está aqui.
+Você abraça a si mesm$r??
+$n envolve os próprios braços em si mesm$r num caloroso auto-abraço.
+Você abraça o $t de $S calorosamente.
+$n abraça o $t de $N calorosamente.
+$n abraça o seu $t calorosamente.
+Você abraça $p calorosamente.
+$n abraça $p calorosamente.
 
 ~enthuse enthuse 0 5 0 0
-You throw your arms wide and express enthusiasm for the beautiful day!
-$n throws $s arms wide and expresses enthusiasm for the beautiful day!
-You throw your arms around $N and hug $M enthusiastically!
-$n throws $s arms around $N and hugs $s enthusiastically!
-$n throws $s arms around you and hugs you enthusiastically!
-Not here to enthuse.
-You hug yourself enthusiastically, caught up in the moment!
-$n hugs $mself enthusiastically, caught up in the moment!
-You look enthusiastically at $S $t.
-$n seems very enthused by $N's $t.
-$n seems very enthused by your $t.
-You throw your arms around $p and hug it enthusiastically!
-$n throws $s arms around $p and hugs it enthusiastically!
+Você abre os braços e expressa entusiasmo pelo lindo dia!
+$n abre os braços e expressa entusiasmo pelo lindo dia!
+Você coloca os braços em torno de $N e abraça-$r com entusiasmo!
+$n coloca os braços em torno de $N e abraça-$r com entusiasmo!
+$n coloca os braços em torno de você e te abraça com entusiasmo!
+Não está aqui para entusiasmar.
+Você se abraça com entusiasmo, tomado(a) pelo momento!
+$n se abraça com entusiasmo, tomad$r pelo momento!
+Você olha entusiasmadament para o $t de $S.
+$n parece muito entusiasmad$r com o $t de $N.
+$n parece muito entusiasmad$r com o seu $t.
+Você abre os braços e abraça $p com entusiasmo!
+$n abre os braços e abraça $p com entusiasmo!
 
 ~envy envy 0 8 8 0
-You turn green with envy!
-$n turns green with envy!
-You become an attractive green colour as you envy $N.
-$n turns an attractive shade of green as $e envies $N.
-$n turns an attractive shade of green as $e envies you.
-You envy their... lack of presence?
-You are envious of yourself.
-$n turns green, envious of $mself.
-You become an attractive green colour as you envy $N's $t.
-$n turns an attractive shade of green as $e envies $N's $t.
-$n turns an attractive shade of green as $e envies your $t.
-You become an attractive green colour as you envy $p.
-$n turns an attractive shade of green as $e envies $p.
+Você fica verde de inveja!
+$n fica verde de inveja!
+Você fica de uma cor esverdeada atraente enquanto inveja $N.
+$n fica de uma bela cor verde enquanto inveja $N.
+$n fica de uma bela cor verde enquanto te inveja.
+Você inveja a... ausência deles?
+Você tem inveja de si mesm$r.
+$n fica verde, com inveja de si mesm$r.
+Você fica de uma cor esverdeada atraente enquanto inveja o $t de $N.
+$n fica de uma bela cor verde enquanto inveja o $t de $N.
+$n fica de uma bela cor verde enquanto inveja o seu $t.
+Você fica de uma cor esverdeada atraente enquanto inveja $p.
+$n fica de uma bela cor verde enquanto inveja $p.
 
 ~evileye evileye 0 5 0 0
-Whom do you wish to give the evileye?
-$n looks for someone to give an evileye at.
-You give $M the evileye.
-$n gives $M the evileye.
-$n gives you the evileye... scary!
-Better check out that evileye.
-You give yourself the evileye?
-$n gives $mself the evileye.
-You give $S $t the evileye.
-$n gives $N's $t the evileye.
-$n gives your $t the evileye.
-You give $p the evileye.
-$n gives $p the evileye.
+A quem você quer lançar o olho gordo?
+$n procura alguém para lançar o olho gordo.
+Você lança o olho gordo em $M.
+$n lança o olho gordo em $M.
+$n te lança o olho gordo... assustador!
+É melhor verificar esse olho gordo.
+Você lança o olho gordo em si mesm$r?
+$n lança o olho gordo em si mesm$r.
+Você lança o olho gordo no $t de $S.
+$n lança o olho gordo no $t de $N.
+$n lança o olho gordo no seu $t.
+Você lança o olho gordo em $p.
+$n lança o olho gordo em $p.
 
 ~eww eww 0 8 8 0
-Your face distorts in unspeakable horror - Ewwwwww!
-$n's face distorts in unspeakable horror as $e shrieks Ewwwww!
-You grimace in horror at $N and shriek Ewwwwww!
-$n grimaces in horror at $N and shrieks Ewwwww!
-$n grimaces in horror at you and shrieks Ewwwww!
-Hmm... imaginary friend of yours?
-You grimace in horror at yourself and shriek Ewwwww!
-$n grimaces in horror at $mself and shrieks Ewwwww!
-You grimace in horror at $N's $t and shriek Ewwwwww!
-$n grimaces in horror at $N's $t and shrieks Ewwwww!
-$n grimaces in horror at your $t and shrieks Ewwwww!
-You grimace in horror at $p and shriek Ewwwwww!
-$n grimaces in horror at $p and shrieks Ewwwww!
+Seu rosto se distorce em horror indescritível - Ewwwwww!
+O rosto de $n se distorce em horror enquanto $l grita Ewwwww!
+Você faz careta de horror para $N e grita Ewwwwww!
+$n faz careta de horror para $N e grita Ewwwww!
+$n faz careta de horror para você e grita Ewwwww!
+Hmm... amigo(a) imaginário(a) seu(sua)?
+Você faz careta de horror para si mesm$r e grita Ewwwww!
+$n faz careta de horror para si mesm$r e grita Ewwwww!
+Você faz careta de horror para o $t de $N e grita Ewwwwww!
+$n faz careta de horror para o $t de $N e grita Ewwwww!
+$n faz careta de horror para o seu $t e grita Ewwwww!
+Você faz careta de horror para $p e grita Ewwwwww!
+$n faz careta de horror para $p e grita Ewwwww!
 
 ~excuse excuse 0 5 0 0
-You say 'excuse me'
-$n exclaims 'Excuse me!'
-You excuse yourself to $M.
-$n excuses $mself to $N.
-$n excuses $mself to you.
-Well EXCUSE me!
-You excuse yourself.
-$n excuses $mself.
-You excuse yourself to $S $t.
-$n excuses $mself to $N's $t.
-$n excuses $mself to your $t.
-You excuse yourself to $p.
-$n excuses $mself to $p.
+Você diz 'com licença'
+$n exclama 'Com licença!'
+Você pede licença a $M.
+$n pede licença a $N.
+$n pede licença a você.
+Bem, COM LICENÇA!
+Você pede licença a si mesm$r.
+$n pede licença a si mesm$r.
+Você pede licença ao $t de $S.
+$n pede licença ao $t de $N.
+$n pede licença ao seu $t.
+Você pede licença a $p.
+$n pede licença a $p.
 
 ~eye eye 0 5 0 0
-Your eyes take on a quizzical expression.
-$n's eyes take on a quizzical expression.
-You eye $N quizzically.
-$n eyes $N quizzically.
-$n eyes you quizzically.
-You eye up the empty room.
-You eye yourself quizzically.
-$n eyes $mself quizzically.
-You eye $N's $t quizzically.
-$n eyes $N's $t quizzically.
-$n eyes your $t quizzically.
-You eye $p quizzically.
-$n eyes $p quizzically.
+Seus olhos tomam uma expressão curiosa.
+Os olhos de $n tomam uma expressão curiosa.
+Você observa $N curiosamente.
+$n observa $N curiosamente.
+$n te observa curiosamente.
+Você observa o quarto vazio.
+Você se observa curiosamente.
+$n se observa curiosamente.
+Você observa o $t de $N curiosamente.
+$n observa o $t de $N curiosamente.
+$n observa o seu $t curiosamente.
+Você observa $p curiosamente.
+$n observa $p curiosamente.
 
 ~eyebrow eyebrow 0 8 8 0
-You raise an eyebrow inquiringly.
-$n raises an eyebrow inquiringly.
-You raise an eyebrow at $N, confused about what $E means.
-$n raises an eyebrow at $N.
-$n raises an eyebrow at you.
-At whom do you wish to raise your eyebrows?
-You raise and eyebrow at yourself, very questionable.
-$n raises an eyebrow at $mself.
-You look at $S $t and raise your eyebrows!
-$n looks at $N's $t and raises $s eyebrows!
-$n looks at your $t and raises $s eyebrows!
-You look at $p and raise your eyebrows!
-$n looks at $p and raises $s eyebrows!
+Você levanta uma sobrancelha inquisitivamente.
+$n levanta uma sobrancelha inquisitivamente.
+Você levanta uma sobrancelha para $N, confuso(a) com o que $L quis dizer.
+$n levanta uma sobrancelha para $N.
+$n levanta uma sobrancelha para você.
+Para quem você quer levantar as sobrancelhas?
+Você levanta uma sobrancelha para si mesm$r, muito questionável.
+$n levanta uma sobrancelha para si mesm$r.
+Você olha para o $t de $S e levanta as sobrancelhas!
+$n olha para o $t de $N e levanta as sobrancelhas!
+$n olha para o seu $t e levanta as sobrancelhas!
+Você olha para $p e levanta as sobrancelhas!
+$n olha para $p e levanta as sobrancelhas!
 
 ~eyeroll eyer 0 5 0 0
-You roll your eyes.
-$n rolls $s eyes.
-You look at $M and roll your eyes.
-$n rolls $s eyes at $N.
-$n stares at you and rolls $s eyes.
-Um... who?
-You roll your eyes, disgusted with your own incompetence.
-$n rolls $s eyes, disgusted with $mself.
-You roll your eyes at $S $t.
-$n rolls $s eyes at $N's $t.
-$n rolls $s eyes at your $t.
-You roll your eyes at $p!
-$n rolls $s eyes at $p.
+Você revira os olhos.
+$n revira os olhos.
+Você olha para $M e revira os olhos.
+$n revira os olhos para $N.
+$n te fita e revira os olhos.
+Hum... quem?
+Você revira os olhos, enojado(a) com a própria incompetência.
+$n revira os olhos, enojado(a) consigo mesm$r.
+Você revira os olhos para o $t de $S.
+$n revira os olhos para o $t de $N.
+$n revira os olhos para o seu $t.
+Você revira os olhos para $p!
+$n revira os olhos para $p.
 
 ~facegrab facegrab 0 5 0 0
-You look around for someone's face to grab.
-$n looks around for someone's face to grab!
-You grab $N's face tightly!
-$n grabs $N's face tightly!
-$n grabs your face tightly!
-They're not here.
-You grab your own face in disbelief.
-$n grabs $s own face in disbelief.
-You look at $S $t and contemplate grabbing it.
-$n looks at $N's $t and contemplates grabbing it.
-$n looks at your $t and contemplates grabbing it.
-You look at $p and contemplates grabbing it.
-$n looks at $p and contemplates grabbing it.
+Você procura a cara de alguém para agarrar.
+$n procura a cara de alguém para agarrar!
+Você agarra firmemente a cara de $N!
+$n agarra firmemente a cara de $N!
+$n agarra firmemente a sua cara!
+Eles não estão aqui.
+Você agarra o próprio rosto em incredulidade.
+$n agarra o próprio rosto em incredulidade.
+Você olha para o $t de $S e contempla agarrá-lo.
+$n olha para o $t de $N e contempla agarrá-lo.
+$n olha para o seu $t e contempla agarrá-lo.
+Você olha para $p e contempla agarrá-lo.
+$n olha para $p e contempla agarrá-lo.
 
 ~facepalm facepalm 0 8 8 0
-You plant your face in the palm of your hand with disbelief.
-$n plants $s face into the palm of $s hand, full of disbelief.
-You plant your face in the palm of your hand, mumbling something about $N's ways.
-$n plants $s face into the palm of $s hand, mumbling something about $N's ways.
-$n plants $s face into the palm of $s hand, mumbling something about your ways.
-They're not around, bub.     
-You plant your face in the palm of your hand, not quite sure where you went wrong.
-$n plants $s face into the palm of $s hand at $s own mistake.
+Você bate a mão na testa em incredulidade.
+$n bate a mão na testa, repleto(a) de incredulidade.
+Você bate a mão na testa, murmurando algo sobre o jeito de $N.
+$n bate a mão na testa, murmurando algo sobre o jeito de $N.
+$n bate a mão na testa, murmurando algo sobre o seu jeito.
+Eles não estão por aqui.
+Você bate a mão na testa, sem saber bem onde errou.
+$n bate a mão na testa por causa do próprio erro.
 #
 #
 #
-You plant your face in the palm of your hand, cursing the day $p was ever conceived.
-$n plants $s face into the palm of $s hand, cursing the day $p was ever conceived.
+Você bate a mão na testa, amaldiçoando o dia em que $p foi criado(a).
+$n bate a mão na testa, amaldiçoando o dia em que $p foi criado(a).
 
 ~fade fade 0 5 0 0
-You disappear into the void.
-$n slowly fades out of existence.
-You make $N disappear.
-$n makes $N fade out of existence.
-You follow $n and disappear into the void $n.
-Already gone.  Good Job.
-You disappear into the void.
-$n slowly fades out of existence.
+Você desaparece no vazio.
+$n desvanece lentamente da existência.
+Você faz $N desaparecer.
+$n faz $N desvanecer da existência.
+Você segue $n e desaparece no vazio $n.
+Já se foi. Bom trabalho.
+Você desaparece no vazio.
+$n desvanece lentamente da existência.
 #
 #
 #
@@ -2158,44 +2158,44 @@ $n slowly fades out of existence.
 #
 
 ~faint faint 0 5 0 0
-You faint dead away.
-$n faints dead away.
-You faint into $N's arms.
-$n faints into $N's arms.
-Feeling heroic, you catch $n as $e faints into your arms.
-That person is not here to catch you, and you fall to the ground.
-You faint at the sight of yourself.
-$n faints at the sight of $mself.
-You look at $S $t and faint.
-$n looks at $N's $t and faints.
-$n looks at your $t and faints.
-You faint at the sight of $p.
-$n faints at the sight of $p.
+Você desmaia completamente.
+$n desmaia completamente.
+Você desmaia nos braços de $N.
+$n desmaia nos braços de $N.
+Sentindo-se heróic$r, você pega $n enquanto $l desmaia nos seus braços.
+Essa pessoa não está aqui para te pegar e você cai no chão.
+Você desmaia ao ver a si mesm$r.
+$n desmaia ao ver a si mesm$r.
+Você olha para o $t de $S e desmaia.
+$n olha para o $t de $N e desmaia.
+$n olha para o seu $t e desmaia.
+Você desmaia ao ver $p.
+$n desmaia ao ver $p.
 
 ~fall fall 0 5 0 0
-You fall on your face!
-$n falls flat on $s face, what a klutz!
-You fall on $M!
-$n falls on $N, how clumsy!
-$n falls on you!
-Who did you want to fall on?
-Its pretty hard to fall on yourself.
-$n tries to fall on $mself and fails miserably.
-You fall on $S $t.
-$n falls on $N's $t.
-$n falls on your $t.
-You fall on $p.
-$n falls on $p.
+Você cai de cara no chão!
+$n cai de cara no chão, que desajeitad$r!
+Você cai em cima de $M!
+$n cai em cima de $N, que desajeitad$r!
+$n cai em cima de você!
+Em quem você queria cair?
+É bem difícil cair em cima de si mesm$r.
+$n tenta cair em cima de si mesm$r e falha miseravelmente.
+Você cai no $t de $S.
+$n cai no $t de $N.
+$n cai no seu $t.
+Você cai em $p.
+$n cai em $p.
 
 ~fan fan 0 5 0 0
-Fan who?
-$n begins fanning the air, how odd!
-You wave your paper fan at $N in an attempt to cool $M down.
-$n pulls out a large cloth fan, and slowly waves it near $N , *now where did those grapes go?*
-$n cools you down by fanning you.
-Maybe you should check the WHO list again?
-You feel much cooler, after fanning yourself.
-$n cools $mself off, with a paper fan
+Abanar quem?
+$n começa a abanar o ar, que estranho!
+Você acena o leque para $N tentando refrescá-$r.
+$n puxa um grande leque de pano e o acena devagar perto de $N, *agora onde estão aquelas uvas?*
+$n te refresca abanando você.
+Talvez você deva verificar a lista WHO de novo?
+Você se sente muito mais fresco(a) depois de se abanar.
+$n se refresca com um leque de papel.
 #
 #
 #
@@ -2203,34 +2203,34 @@ $n cools $mself off, with a paper fan
 #
 
 ~fart fart 0 5 0 0
-Where are your manners?
-$n lets off a real rip-roarer!
-You fart in $s general direction.
-$n farts in $N's general direction.
-$n farts in your general direction.
-You let loose a noxious stinky cloud that only you can smell.
-You fart and are overwhelmed by the odiferous stench.
-$n farts and nearly faints from the smell.
-You fart on $S $t.
-$n farts on $N's $t.
-$n farts on your $t.
-You fart on $p.
-$n farts on $p.
+Onde estão suas maneiras?
+$n solta uma real espetacular!
+Você solta um pum na direção geral de $M.
+$n solta um pum na direção geral de $N.
+$n solta um pum na sua direção geral.
+Você solta uma nuvem fedorenta que só você consegue cheirar.
+Você solta um pum e fica tontinhad$r com o fedor.
+$n solta um pum e quase desmaia com o cheiro.
+Você solta um pum no $t de $S.
+$n solta um pum no $t de $N.
+$n solta um pum no seu $t.
+Você solta um pum em $p.
+$n solta um pum em $p.
 
 ~fish fish 0 5 0 0
-You take out your smelly fish. Who wants some??
-$n takes out a smelly fish and grins a devilish grin.
-You take out your smelly fish and whack the muffins out of $M.
-$n goes on a wild whacking-rampage with a smelly fish on $N.
-$n starts whacking you uncontrollably with a smelly fish.
-You whack whack whack....wait...they're not here. dumbass.
-You whack yourself with a smelly fish. Ahh, the joys of life!
-$n whacks $mself with a smelly.
-You whack at $N's $t with your smelly fish.
-$n whacks $N's $t with $s smelly fish, like a wild Britney Spears on steroids!
-$n mercilessly whacks at your $t with a smelly fish.
-You whack at $p with your smelly fish.
-$n starts whacking at $p with a smelly fish for absolutely no reason whatsoever.
+Você pega seu peixe fedorento. Quem quer um pouco??
+$n pega um peixe fedorento e sorri um sorriso diabólico.
+Você pega seu peixe fedorento e dá uma surra em $M.
+$n entra numa frenética surra com um peixe fedorento em $N.
+$n começa a te surrar descontroladamente com um peixe fedorento.
+Você bate bate bate... espera... eles não estão aqui.
+Você se surra com um peixe fedorento. Ah, as alegrias da vida!
+$n se surra com um peixe fedorento.
+Você bate no $t de $N com o seu peixe fedorento.
+$n bate no $t de $N com $z peixe fedorento, como uma selvagem Britney Spears com esteróides!
+$n bate sem piedade no seu $t com um peixe fedorento.
+Você bate em $p com o seu peixe fedorento.
+$n começa a bater em $p com um peixe fedorento sem absolutamente nenhum motivo.
 
 ~flail flail 0 5 0 0
 You flail your arms about wildly.
