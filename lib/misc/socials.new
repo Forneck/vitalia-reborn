@@ -4108,14 +4108,14 @@ Você acena para $p.
 $n acena para $p.
 
 ~nodrugs nodrugs 0 8 8 0
-You chant "say no to drugs."
-$n says no to drugs.
-You tell $N to say no to drugs.
-$n tells $N to say no to drugs.
-$n reminds you to say no to drugs.
-They didn't stick around.
-You remind yourself once again to say no to drugs.
-$n reminds $mself to say no to drugs.
+Você canta 'diga não às drogas.'
+$n diz não às drogas.
+Você diz a $N para dizer não às drogas.
+$n diz a $N para dizer não às drogas.
+$n te lembra de dizer não às drogas.
+Eles não ficaram por aqui.
+Você se lembra mais uma vez de dizer não às drogas.
+$n se lembra de dizer não às drogas.
 #
 #
 #
@@ -4123,14 +4123,14 @@ $n reminds $mself to say no to drugs.
 #
 
 ~nono nono 0 8 8 0
-@yYou wag your finger, shouting, '@gNo@G! @gNo@G!@y'@n
-@y$n wags $s finger, shouting, '@gNo@G! @gNo@G!@y'@n
-@yYou wag your finger at $N, shouting '@gNo@G! @gNo@G!@y'@n
-@y$n wags $s finger at $N, shouting '@gNo@G! @gNo@G!@y'@n
-@y$n wags $s finger at you like your momma would, shouting, '@gNo@G! @gNo@G!'@n
-@yWho are you trying to scold?@n
-@yYou mutter to yourself, '@gNo@G! @gNo@G!@y'@n
-@yWhat's $n muttering about?@n
+@yVocê chacoalha o dedo, gritando, '@gNão@G! @gNão@G!@y'@n
+@y$n chacoalha o dedo, gritando, '@gNão@G! @gNão@G!@y'@n
+@yVocê chacoalha o dedo para $N, gritando '@gNão@G! @gNão@G!@y'@n
+@y$n chacoalha o dedo para $N, gritando '@gNão@G! @gNão@G!@y'@n
+@y$n chacoalha o dedo para você como sua mãe faria, gritando, '@gNão@G! @gNão@G!'@n
+@yA quem você quer repreender?@n
+@yVocê murmura para si mesm$r, '@gNão@G! @gNão@G!@y'@n
+@yO que $n está murmurando?@n
 #
 #
 #
@@ -4138,83 +4138,83 @@ $n reminds $mself to say no to drugs.
 #
 
 ~noogie noogie 0 5 0 0
-Whom do you wish to noogie?
-Run! $n is looking for someone to Noogie.
-You give $M a noogie!
-$n noogies $N.
-$n gives you a noogie!
-Such childish behavior and no one real to play with.
-You give yourself a big noogie. Ouch!
-$n gives $mself a big noogie!
-You give $M $t a noogie.
-$n gives $N's $t a noogie.
-$n gives your $t a noogie.
-You give $p a noogie.
-$n gives $p a noogie.
+A quem você quer dar um cocorote?
+Corra! $n está procurando alguém para dar cocorote.
+Você dá um cocorote em $M!
+$n dá um cocorote em $N.
+$n te dá um cocorote!
+Que comportamento infantil e sem ninguém real para brincar.
+Você se dá um grande cocorote. Ai!
+$n se dá um grande cocorote!
+Você dá um cocorote no $t de $M.
+$n dá um cocorote no $t de $N.
+$n dá um cocorote no seu $t.
+Você dá um cocorote em $p.
+$n dá um cocorote em $p.
 
 ~nudge nudge 0 5 0 0
-Nudge?  Nudge???  The HELL you say!!!!
-$n nudges everyone in the room suggestively.
-You nudge $M with your elbow.
-$n nudges $N suggestively with $s elbow.
-$n nudges you suggestively.  You two have an understanding.
-Eh?  That person isn't here, you know.
-Well, just nudge yourself, but how do you get your elbow in that position?
-$n nudges $mself with $s elbows, making $m look like a large chicken.
-You give $M $t a nudge.
-$n gives $N's $t a nudge.
-$n gives your $t a nudge.
-You give $p a nudge.
-$n gives $p a nudge.
+Cutuco? Cutuco??? Que negócio é esse!!!!
+$n cutuca todo mundo no quarto sugestivamente.
+Você cutuca $M com o cotovelo.
+$n cutuca $N sugestivamente com o cotovelo.
+$n te cutuca sugestivamente. Vocês dois se entendem.
+Ei? Essa pessoa não está aqui, sabia.
+Bem, basta se cutucar, mas como você coloca o cotovelo nessa posição?
+$n se cutuca com os cotovelos, parecendo uma galinha.
+Você dá uma cotovelada no $t de $M.
+$n dá uma cotovelada no $t de $N.
+$n dá uma cotovelada no seu $t.
+Você dá uma cotovelada em $p.
+$n dá uma cotovelada em $p.
 
 ~nuzzle nuzzle 0 5 0 0
-Nuzzle who??
-$n is looking for someone to nuzzle.
-You nuzzle $S neck softly.
-$n softly nuzzles $N's neck.
-$n softly nuzzles your neck.
-No.. they aren't here..
-I'm sorry, friend, but that's impossible.
-$n tries to nuzzle $mself?
-You nuzzle $N's $t.
-$n nuzzles $N's $t.
-$n nuzzles your $t.
-You nuzzle $p.
-$n nuzzles $p.
+Esfregar o nariz em quem??
+$n está procurando alguém para esfregar o nariz.
+Você esfrega o nariz no pescoço de $S suavemente.
+$n esfrega suavemente o nariz no pescoço de $N.
+$n esfrega suavemente o nariz no seu pescoço.
+Não... eles não estão aqui...
+Sinto muito, amigo(a), isso é impossível.
+$n tenta esfregar o nariz em si mesm$r?
+Você esfrega o nariz no $t de $N.
+$n esfrega o nariz no $t de $N.
+$n esfrega o nariz no seu $t.
+Você esfrega o nariz em $p.
+$n esfrega o nariz em $p.
 
 ~nyuk nyuk 0 5 0 0
 Nyuk, nyuk, nyuk!
-$n goes 'Nyuk, nyuk, nyuk!'
-You poke at $S eyes and go 'nyuk, nyuk, nyuk!'
-$n pokes at $N's eyes and goes 'nyuk, nyuk, nyuk!
-$n pokes at your eyes and goes 'nyuk, nyuk, nyuk!
-Oh? A wise guy, huh?
-You look at yourself and go 'Nyuk, nyuk, nyuk!'
-$n looks at $mself and goes 'Nyuk, nyuk, nyuk!'
-You look at $S $t and go 'Nyuk, nyuk, nyuk!'
-$n looks atat $N's $t and goes 'Nyuk, nyuk, nyuk!'
-$n looks at your $t and goes 'Nyuk, nyuk, nyuk!'
-You look at $p and go 'Nyuk, nyuk, nyuk!'
-$n looks at $p and goes 'Nyuk, nyuk, nyuk!'
+$n faz 'Nyuk, nyuk, nyuk!'
+Você cutucar os olhos de $S e faz 'nyuk, nyuk, nyuk!'
+$n cutuca os olhos de $N e faz 'nyuk, nyuk, nyuk!
+$n cutuca seus olhos e faz 'nyuk, nyuk, nyuk!
+Oh? Um sabidinho(a), hein?
+Você se olha e faz 'Nyuk, nyuk, nyuk!'
+$n se olha e faz 'Nyuk, nyuk, nyuk!'
+Você olha para o $t de $S e faz 'Nyuk, nyuk, nyuk!'
+$n olha para o $t de $N e faz 'Nyuk, nyuk, nyuk!'
+$n olha para o seu $t e faz 'Nyuk, nyuk, nyuk!'
+Você olha para $p e faz 'Nyuk, nyuk, nyuk!'
+$n olha para $p e faz 'Nyuk, nyuk, nyuk!'
 
 ~ogle ogle 0 5 0 0
-At whom do you wish to ogle?
-$n is looking for someone to ogle at.
-You amorously ogle $M.
-$n amorously ogles $N.
-$n is amorously ogling you.
-Who do you love?
-You ogle yourself amorously.
-$n ogles at $mself, talk about conceited?
-You ogle at $M $t amorously.
-$n ogles at $N's $t amorously.
-$n ogles at your $t amorously.
-You ogle at $p amorously.
-$n ogles at $p amorously.
+A quem você deseja fitar com admiração?
+$n está procurando alguém para fitar com admiração.
+Você fita $M amorosamente.
+$n fita $N amorosamente.
+$n te fita amorosamente.
+Quem você ama?
+Você se fita amorosamente.
+$n se fita, que vaidoso(a)?
+Você fita o $t de $M amorosamente.
+$n fita o $t de $N amorosamente.
+$n fita o seu $t amorosamente.
+Você fita $p amorosamente.
+$n fita $p amorosamente.
 
 ~oh oh 0 5 0 0
-You give out a little, 'Oh..'
-$n gives out a little, 'Oh..'
+Você solta um pequeno, 'Oh...'
+$n solta um pequeno, 'Oh...'
 #
 #
 #
@@ -4228,12 +4228,12 @@ $n gives out a little, 'Oh..'
 #
 
 ~ok ok 0 8 8 0
-You let out a big, 'OK!'
-$n lets out a big, 'OK!'
-You nod towards $N and let out a big, 'OK!'
-$n nods towards $N and lets out a big, 'OK!'
-$n nods towards you and lets out a big, 'OK!'
-You can't find them here.
+Você solta um grande, 'OK!'
+$n solta um grande, 'OK!'
+Você acena para $N e solta um grande, 'OK!'
+$n acena para $N e solta um grande, 'OK!'
+$n acena para você e solta um grande, 'OK!'
+Você não os encontra aqui.
 #
 #
 #
@@ -4243,12 +4243,12 @@ You can't find them here.
 #
 
 ~orcs orcs 0 5 0 0
-'Orcs...' you patronize.
-'Orcs...' patronizes $n.
-You motion towards $N saying, 'Orcs...' patronizingly.
-$n motions towards $N saying, 'Orcs...' patronizingly.
-$n motions towards you saying, 'Orcs...' patronizingly.
-You can't find them to patronize.
+'Orcs...' você patroniza.
+'Orcs...' patroniza $n.
+Você gesticula em direção a $N dizendo, 'Orcs...' paternalisticamente.
+$n gesticula em direção a $N dizendo, 'Orcs...' paternalisticamente.
+$n gesticula em direção a você dizendo, 'Orcs...' paternalisticamente.
+Você não os encontra para patronizar.
 #
 #
 #
@@ -4258,179 +4258,179 @@ You can't find them to patronize.
 #
 
 ~ouch ouch 0 5 0 0
-You say ouch.
-$n says ouch.
-You look at $M and say ouch.
-$n looks at $N and says ouch.
-$n looks at you and says ouch.
-I don't see anyone by that name here..?
-You look at yourself and say ouch.
-$n looks at $mself and says ouch, how strange.
-You look at $S $t and say ouch.
-$n looks at $N's $t and says ouch.
-$n looks at your $t and says ouch.
-You look at $p and say ouch.
-$n looks at $p and says ouch.
+Você diz ai.
+$n diz ai.
+Você olha para $M e diz ai.
+$n olha para $N e diz ai.
+$n olha para você e diz ai.
+Não vejo ninguém com esse nome aqui..?
+Você se olha e diz ai.
+$n se olha e diz ai, que estranho.
+Você olha para o $t de $S e diz ai.
+$n olha para o $t de $N e diz ai.
+$n olha para o seu $t e diz ai.
+Você olha para $p e diz ai.
+$n olha para $p e diz ai.
 
 ~pat pa 0 5 0 0
-Pat who??
-$n is looking for someone to pet.
-You pat $N on $S head.
-$n pats $N on $S head.
-$n pats you on your head.
-Who, where, what??
-You pat yourself on your head, very reassuring.
-$n pats $mself on the head.
-You pat $M on $S $t.
-$n pats $N on $S $t.
-$n pats you on your $t.
-You pat $p.
-$n pats $p.
+Afagar quem??
+$n está procurando alguém para afagar.
+Você afaga $N na $S cabeça.
+$n afaga $N na $S cabeça.
+$n te afaga na cabeça.
+Quem, onde, o quê??
+Você se afaga na própria cabeça, muito reconfortante.
+$n se afaga na própria cabeça.
+Você afaga $M no $t de $S.
+$n afaga $N no $t de $S.
+$n te afaga no seu $t.
+Você afaga $p.
+$n afaga $p.
 
 ~pace pace 0 5 0 0
-You pace the floor.
-$n paces the floor, wearing a rut in it.
-You pace in front of $N.
-$n paces in front of $N.
-$n paces in front of you.
-They left before you could pace in front of them.
-You pace back and forth across the room impatiently.
-$n paces back and forth across the room impatiently.
-You pace in front of $S $t.
-$n paces in front of $N's $t.
-$n paces in front of your $t.
-You pace in front of $p.
-$n paces in front of $p.
+Você passa de um lado para o outro.
+$n passa de um lado para o outro, fazendo um sulco.
+Você passa de um lado para o outro diante de $N.
+$n passa de um lado para o outro diante de $N.
+$n passa de um lado para o outro diante de você.
+Eles foram embora antes que você pudesse passar diante deles.
+Você passa impaciente de um lado para o outro pelo quarto.
+$n passa impaciente de um lado para o outro pelo quarto.
+Você passa diante do $t de $S.
+$n passa diante do $t de $N.
+$n passa diante do seu $t.
+Você passa diante de $p.
+$n passa diante de $p.
 
 ~panic panic 0 5 0 0
-The sky is falling! We're all doomed! They're everywhere! Don't panic, don't PANIC!!!
-$n starts to panic, $s eyes wide open with fear.
-You take one look at $M and start to panic!
-$n takes one look at $N and starts to panic!
-$n takes one look at you and starts to panic!
-Good idea, panic about nothing!
-You take one look at yourself and start to panic!
-$n takes one look at $mself and starts to panic!
-You take one look at $S $t and start to panic.
-$n takes one look at $N's $t and starts to panic.
-$n takes one look at your $t and starts to panic.
-You take one look at $p and start to panic.
-$n takes one look at $p and starts to panic.
+O céu está caindo! Estamos todos condenados! Eles estão por toda parte! Não entre em pânico, NÃO ENTRE EM PÂNICO!!!
+$n começa a entrar em pânico, com os olhos bem abertos de medo.
+Você dá uma olhada em $M e começa a entrar em pânico!
+$n dá uma olhada em $N e começa a entrar em pânico!
+$n dá uma olhada em você e começa a entrar em pânico!
+Boa ideia, entre em pânico por nada!
+Você dá uma olhada em si mesm$r e começa a entrar em pânico!
+$n dá uma olhada em si mesm$r e começa a entrar em pânico!
+Você dá uma olhada no $t de $S e começa a entrar em pânico.
+$n dá uma olhada no $t de $N e começa a entrar em pânico.
+$n dá uma olhada no seu $t e começa a entrar em pânico.
+Você dá uma olhada em $p e começa a entrar em pânico.
+$n dá uma olhada em $p e começa a entrar em pânico.
 
 ~pant pant 0 5 0 0
-You start panting, damn near out of breath.
-$n begins panting, $e looks out of breath.
-You pant at $N, showing you're out of breath.
-$n pants at $N, showing that $e is out of breath.
-$n pants at you, showing that $e is out of breath.
-They obviously aren't here.
-You pant to yourself, not wanting to show how tired you are.
-$n quietly pants to $mself, trying to disguise $s tiredness.
-You pant on $S $t, drool everywhere.
-$n pants on $N's $t, getting drool everywhere.
-$n pants on your $t, getting drool everywhere.
-You pant on $p, drool everywhere.
-$n pants on $p, getting drool all over it.
+Você começa a ofegar, quase sem fôlego.
+$n começa a ofegar, $l parece sem fôlego.
+Você ofega para $N, mostrando que está sem fôlego.
+$n ofega para $N, mostrando que está sem fôlego.
+$n ofega para você, mostrando que está sem fôlego.
+Eles obviamente não estão aqui.
+Você ofega para si mesm$r, não querendo mostrar o quanto está cansado(a).
+$n ofega quietinho para si mesm$r, tentando disfarçar o cansaço.
+Você ofega no $t de $S, babando por tudo.
+$n ofega no $t de $N, babando por tudo.
+$n ofega no seu $t, babando por tudo.
+Você ofega em $p, babando por tudo.
+$n ofega em $p, babando por tudo.
 
 ~peck peck 0 5 5 0
-Who do you want to give a gentle peck on the cheek?
-$n is looking for someone to give a peck on the cheek.
-You give $N a gentle peck on the cheek.
-$n gives $N a gentle peck on the cheek.
-$n gives you a gentle peck on the cheek.
-No, I'm afraid not. That person isn't here.
-That's not very possible you know?
-$n tries to give $mself a peck on the cheek. Failing miserably.
-You give $N a gentle peck on $S $t.
-$n gives $N a gentle peck on $S $t.
-$n gives you a gentle peck on your $t.
+Em quem você quer dar um beijo na bochecha?
+$n está procurando alguém para dar um beijo na bochecha.
+Você dá em $N um beijo gentil na bochecha.
+$n dá em $N um beijo gentil na bochecha.
+$n te dá um beijo gentil na bochecha.
+Não, essa pessoa não está aqui.
+Isso não é muito possível, sabia?
+$n tenta se dar um beijo na bochecha. Falhou miseravelmente.
+Você dá em $N um beijo gentil no $t de $S.
+$n dá em $N um beijo gentil no $t de $S.
+$n te dá um beijo gentil no seu $t.
 #
 #
 
 ~peer peer 0 5 0 0
-You peer around you, uncertain that what you see is actually true.
-$n peers around, looking as if $e has trouble seeing everything clearly.
-You peer intently at $N.
-$n peers intently at $N, what is $e looking for?
-$n peers intently at you, what is $e looking for?
-Sorry buddy, no one here like that.
-You peer at yourself, no small feat.
-$n peers at $mself .. no small feat.
-You peer intently at $S $t.
-$n peers intently at $N's $t.
-$n peers intently at your $t.
-You peer intently at $p.
-$n peers intently at $p.
+Você espia ao redor, incerto(a) se o que vê é realmente verdade.
+$n espia ao redor, parecendo ter dificuldade para ver tudo claramente.
+Você observa $N atentamente.
+$n observa $N atentamente, o que $l está procurando?
+$n te observa atentamente, o que $l está procurando?
+Desculpe amigo(a), ninguém assim aqui.
+Você se observa, não é fácil.
+$n se observa... não é fácil.
+Você observa atentamente o $t de $S.
+$n observa atentamente o $t de $N.
+$n observa atentamente o seu $t.
+Você observa atentamente $p.
+$n observa atentamente $p.
 
 ~perspire perspire 0 5 0 0
-Cool down?
-$n perspires!
-You look at $S and begin to perspire.
-$n looks at $N and begins to perspire.
-$n looks at you and begins to perspire.
-You begin to perspire.
-You perspire like a pig and begin to smell like one.
-$n is perspiring and is beginning to smell funny.
-You perspire on $S $t.
-$n perspires on $N's $t.
-$n perspires on your $t.
-You perspire on $p.
-$n perspires on $p.
+Esfrie?
+$n sua muito!
+Você olha para $S e começa a transpirar.
+$n olha para $N e começa a transpirar.
+$n te olha e começa a suar.
+Você começa a transpirar.
+Você sua como um porco e começa a cheirar como um.
+$n está suando muito e começando a cheirar mal.
+Você suou no $t de $S.
+$n suou no $t de $N.
+$n suou no seu $t.
+Você suou em $p.
+$n suou em $p.
 
 ~pet pet 0 5 0 0
-What do you want to pet?
-$n tries to pet the air.
-You pet $M.
-$n pets $N.
-$n pets you.
-You are not in Kansas anymore, pet someone that is near you.
-You pet yourself, ummm wouldn't privacy be a good thing.
-You see $n pet $mself -- not a pretty sight.
-You pet $S $t.
-$n pets $N's $t.
-$n pets your $t.
-You pet $p.
-$n pets $p.
+O que você quer afagar?
+$n tenta afagar o ar.
+Você afaga $M.
+$n afaga $N.
+$n te afaga.
+Você não está em Kansas mais, afague alguém que esteja perto de você.
+Você se afaga, hmmm privacidade não seria uma boa ideia?
+Você vê $n se afagar -- não é uma visão bonita.
+Você afaga o $t de $S.
+$n afaga o $t de $N.
+$n afaga o seu $t.
+Você afaga $p.
+$n afaga $p.
 
 ~phew phew 0 5 0 0
-You let out a loud pheew!
-$n wipes the sweat off $s brow and exclaims, Phew!
-You wipe the sweat off your brow and exclaim, Phew to $M!
-$n wipes the sweat off $s brow and exclaims, Phew! to $N.
-$n wipes the sweat off $s brow and exclaims, Phew! to you.
-You can't exclaim phew to them, they aren't here.
-You exclaim phew to yourself.
-$n exclaims phew to $mself.
-You look at $S $t and exclaim, Phew!
-$n looks at $N's $t and exclaims, Phew!
-$n looks at your $t and exclaims, Phew!
-You relax at the sight of the $p and exclaim, Phew!
-$n relaxes at the sight of the $p and exclaims, Phew!
+Você solta um alto ufa!
+$n limpa o suor da testa e exclama, Ufa!
+Você limpa o suor da testa e exclama, Ufa! para $M!
+$n limpa o suor da testa e exclama, Ufa! para $N.
+$n limpa o suor da testa e exclama, Ufa! para você.
+Você não pode exclamar ufa para eles, não estão aqui.
+Você exclama ufa para si mesm$r.
+$n exclama ufa para si mesm$r.
+Você olha para o $t de $S e exclama, Ufa!
+$n olha para o $t de $N e exclama, Ufa!
+$n olha para o seu $t e exclama, Ufa!
+Você relaxa ao ver $p e exclama, Ufa!
+$n relaxa ao ver $p e exclama, Ufa!
 
 ~phlegm phlegm 0 5 0 0
-You phlegm.
-$n phlegms all over the place, making a mess.
-You phlegm on $S.
-$n phlegms on $N.
-$n phlegms on you.
-Phlegming on someone is not polite.
-You try to phlegm all over yourself.
-$n phlegms all over $mself.
-You phlegm on $S $t, that is so disgusting.
-$n phlegms on $N's $t, how disgusting.
-$n phlegms on your $t, all green and slimy.
-You phlegm on $p.
-$n phlegms on $p.
+Você escarrou.
+$n escarrou por todo lado, que nojo.
+Você escarrou em $S.
+$n escarrou em $N.
+$n escarrou em você.
+Escarrar em alguém não é educado.
+Você tenta escarrar em si mesm$r.
+$n escarrou em si mesm$r.
+Você escarrou no $t de $S, que nojo.
+$n escarrou no $t de $N, que nojo.
+$n escarrou no seu $t, todo verde e viscoso.
+Você escarrou em $p.
+$n escarrou em $p.
 
 ~picknose picknose 0 8 8 0
-You pick your nose.  Gross!
-$n picks $s nose. Apparently someone doesn't know any manners.
-You pick your nose, unfortunately at the same time as $N glances over at you!
-$n picks $s nose right when $N glances over at $m! How unfortunate!
-As you glance at $n, they pick their nose!! Ewwww!
-You don't see them here.
-You pick your nose, hoping noone will notice you.
-$n picks $s nose, looking around making sure noone notices.
+Você catou o nariz. Que nojo!
+$n catou o nariz. Aparentemente alguém não tem educação.
+Você catou o nariz, infelizmente bem quando $N olhava para você!
+$n catou o nariz bem quando $N olhou para $l! Que infelicidade!
+Enquanto você olha para $n, eles catam o nariz!! Iféeeee!
+Você não os vê aqui.
+Você catou o nariz, esperando que ninguém percebesse.
+$n catou o nariz, olhando ao redor para garantir que ninguém percebesse.
 #
 #
 #
@@ -4438,29 +4438,29 @@ $n picks $s nose, looking around making sure noone notices.
 #
 
 ~pie pie 0 5 0 0
-You get hold of a new, fresh slimy pie and look around for someone who seems hungry...
-$n gets hold of a new, fresh slimy pie and looks around for someone who seems hungry...
-You toss a pie straight into $N's face, Bwahahahaha!!
-$n tosses a pie straight into the face of $N, yuck, goo all over $S face.
-You are too late to see $n tossing a pie straight at your face. You try to move, but, no... Cherry flavored goo all over your face!
-You can't see that person here, sorry. Aim again. :)
-You plant a pie in your face, making a good work to get yourself as messy as possible, after all you like cherry...
-$n looks at a pie and suddenly plants it straight in $s own face, whirling it around till it falls into tiny bits and pieces...
-You toss a pie straight at $S $t.
-$n tosses a pie straight at $N's $t, what a mess.
-$n tosses a pie straight at your $t, what a mess, cherry you think.
-You toss a pie onto $p.
-$n tosses a pie onto $p.
+Você pega uma torta nova e fresca e olha ao redor procurando alguém com fome...
+$n pega uma torta nova e fresca e olha ao redor procurando alguém com fome...
+Você joga uma torta bem na cara de $N, Bwahahaha!!
+$n joga uma torta bem na cara de $N, que nojo, lama por toda a $S cara.
+Você chegou tarde demais para ver $n jogar uma torta bem na sua cara. Você tenta se desviar, mas, não... Recheio de cereja por toda a sua cara!
+Você não vê essa pessoa aqui, desculpe. Mire de novo. :)
+Você enfia uma torta na própria cara, se esforçando ao máximo para se sujar, afinal você gosta de cereja...
+$n olha para uma torta e de repente a enfia na própria cara, girando-a até ela cair em pedaços...
+Você joga uma torta diretamente no $t de $S.
+$n joga uma torta diretamente no $t de $N, que bagunça.
+$n joga uma torta diretamente no seu $t, que bagunça, cereja acredito.
+Você joga uma torta em $p.
+$n joga uma torta em $p.
 
 ~pillow pillow 1 5 5 0
-You yell, 'PILLOW FIGHT!' and wait for the feathers to fly.
-$n yells, 'PILLOW FIGHT!'
-You whack $N right in the noggin with a pillow.
-$n beans $N neatly with a pillow.
-You get a mouthful of feathers as $n hits you with a pillow.
-Try someone who's here.
-You smack yourself with a pillow. Weirdo.
-$n smacks $mself with a pillow... okayyy...
+Você grita, 'GUERRA DE TRAVESSEIRO!' e espera as penas voarem.
+$n grita, 'GUERRA DE TRAVESSEIRO!'
+Você acerta $N bem na cabeça com um travesseiro.
+$n acerta $N direitinho com um travesseiro.
+Você fica com a boca cheia de penas enquanto $n te acerta com um travesseiro.
+Tente alguém que esteja aqui.
+Você se bate com um travesseiro. Estranho.
+$n se bate com um travesseiro... tá...
 #
 #
 #
@@ -4468,8 +4468,8 @@ $n smacks $mself with a pillow... okayyy...
 #
 
 ~pindrop pin 0 8 8 0
-You test the silence by dropping a pin
-$n drops a pin.  @RTWAAAAAAAANNNGGGG!@n
+Você testa o silêncio derrubando um alfinete.
+$n derruba um alfinete. @RTWAAAAAAAANNNGGGG!@n
 #
 #
 #
@@ -4483,64 +4483,64 @@ $n drops a pin.  @RTWAAAAAAAANNNGGGG!@n
 #
 
 ~pinch pinch 0 5 0 0
-Whom do you want to pinch?  Choose carefully.
-$n is looking for a tush to pinch!!!
-You pinch $S tush!
-$n pinches $N's tush.
-$n pinches your tush!
-They ran away before you could pinch them.
-You pinch your own tush!
-$n pinches $s own tush.
-You pinch $S $t.
-$n pinches $N's $t.
-$n pinches your $t.
-You pinch $p.
-$n pinches $p.
+A quem você quer beliscar? Escolha com cuidado.
+$n está procurando uma bunda para beliscar!!!
+Você belisca a bunda de $S!
+$n belisca a bunda de $N.
+$n belisca a sua bunda!
+Eles fugiram antes que você pudesse beliscá-los.
+Você belisca a própria bunda!
+$n belisca a própria bunda.
+Você belisca o $t de $S.
+$n belisca o $t de $N.
+$n belisca o seu $t.
+Você belisca $p.
+$n belisca $p.
 
 ~pity pity 0 5 0 0
-You pity the world. 
-$n is looking for something to pity.
-You pity $M, $E is so pathetic.
-$n pities $N and everything $E stands for.
-$n pities you and everything you stand for.
-Hmmmmmmm.....nope, no one by that name here.
-You pity yourself.
-$n pities $mself to tears.
-You pity $S $t.
-$n pities $N's $t.
-$n pities your $t.
-You pity $p.
-$n pities $p.
+Você tem pena do mundo.
+$n está procurando algo para ter pena.
+Você tem pena de $M, $L é tão patético(a).
+$n tem pena de $N e de tudo que $L representa.
+$n tem pena de você e de tudo que você representa.
+Hmmmmmmm..... não, ninguém com esse nome aqui.
+Você tem pena de si mesm$r.
+$n tem pena de si mesm$r até as lágrimas.
+Você tem pena do $t de $S.
+$n tem pena do $t de $N.
+$n tem pena do seu $t.
+Você tem pena de $p.
+$n tem pena de $p.
 
 ~point point 0 5 0 0
-Who do you want to point at?
-$n points in all directions, seemingly confused.
-You point at $M.
-$n points at $N.
-$n points at you.
-You must have a VERY long index-finger...
-You point at yourself.  Insinuating something?
-$n points at $mself, suggesting that the center of matters is $e.
-You point at $S $t.
-$n points at $N's $t.
-$n points at your $t.
-You point at $p.
-$n points at $p.
+Para quem você quer apontar?
+$n aponta em todas as direções, parecendo confuso(a).
+Você aponta para $M.
+$n aponta para $N.
+$n aponta para você.
+Você deve ter um indicador muito comprido...
+Você aponta para si mesm$r. Insinuando algo?
+$n aponta para si mesm$r, sugerindo que $l é o centro das atenções.
+Você aponta para o $t de $S.
+$n aponta para o $t de $N.
+$n aponta para o seu $t.
+Você aponta para $p.
+$n aponta para $p.
 
 ~poke poke 0 5 0 0
-Poke who??
-$n seems to be poking around for something.
-You poke $M.
-$n pokes $N.
-$n pokes you.
-You can't poke someone who's not here!
-You poke yourself in the ribs, feeling very silly.
-$n pokes $mself in the ribs, looking very sheepish.
-You poke $M in $S $t.
-$n pokes $N in $S $t.
-$n pokes you in your $t.
-You poke at $p.
-$n pokes at $p.
+Cutucar quem??
+$n parece estar cutucando por aí.
+Você cutuca $M.
+$n cutuca $N.
+$n te cutuca.
+Você não pode cutucar alguém que não está aqui!
+Você se cutuca nas costelas, sentindo-se muito bobo(a).
+$n se cutuca nas costelas, parecendo muito envergonhado(a).
+Você cutuca $M no $t de $S.
+$n cutuca $N no $t de $S.
+$n te cutuca no seu $t.
+Você cutuca $p.
+$n cutuca $p.
 
 ~ponder ponder 0 5 0 0
 You ponder over matters as they appear to you at this moment.
