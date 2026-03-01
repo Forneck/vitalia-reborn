@@ -1,9 +1,9 @@
-# Big Five (OCEAN) Personality System - Phase 1: Neuroticism
+# Big Five (OCEAN) Personality System - Phases 1 & 2
 
 ## Quick Reference
 
-**Status**: ✅ Phase 1 Complete - Neuroticism Fully Implemented  
-**Version**: 1.1 (February 2026)  
+**Status**: ✅ Phase 1 Complete - Neuroticism Fully Implemented | ✅ Phase 2 Complete - Conscientiousness Fully Implemented  
+**Version**: 1.2 (February 2026)  
 **Commits**: 52b583c (initial), 05a2345 (soft clamp), 0b346f7 (CEDIT), d63ec02 (pipeline fix), 090afb8 (config fix)
 
 ### At a Glance
@@ -42,27 +42,31 @@
 
 The Big Five personality model (OCEAN) provides a structural personality layer for mobs that operates independently of the reactive emotional system. This creates stable temperament parameters that modulate how mobs experience and process events.
 
-**Phase 1 Status**: Only **Neuroticism (N)** is currently implemented and functional.
+**Phase 1 Status**: **Neuroticism (N)** — implemented and functional.  
+**Phase 2 Status**: **Conscientiousness (C)** — implemented and functional.
 
 ## Personality Traits (OCEAN Model)
 
 ### Implemented
 
-#### Neuroticism (N) - Emotional Sensitivity [ACTIVE]
+#### Neuroticism (N) - Emotional Sensitivity [Phase 1 — ACTIVE]
 - **Range**: 0.0 to 1.0 (float)
 - **Low N (0.0)**: Emotionally stable, calm, not easily upset
 - **High N (1.0)**: Emotionally reactive, anxious, threat-sensitive
 - **Function**: Amplifies negative emotional intensity only
 - **Effect**: Higher N → stronger negative emotional responses to same stimuli
 
+#### Conscientiousness (C) - Self-Discipline [Phase 2 — ACTIVE]
+- **Range**: 0.0 to 1.0 (float)
+- **Low C (0.0)**: Impulsive, acts without deliberation, easily swayed
+- **High C (1.0)**: Disciplined, deliberate, weighs moral cost before acting
+- **Function**: Inhibitory control on impulsive actions; reaction delay scaling; moral weight amplification
+- **Effect**: Higher C → reduced impulsive action probability, longer deliberation under arousal, stronger adherence to moral evaluation
+
 ### Reserved for Future Phases
 
 #### Openness (O) - Openness to Experience [Phase 4]
 - **Planned Use**: Prediction error weighting, curiosity modulation
-- **Current Value**: 0.5 (neutral baseline)
-
-#### Conscientiousness (C) - Self-Discipline [Phase 2]
-- **Planned Use**: Inhibitory control, goal persistence
 - **Current Value**: 0.5 (neutral baseline)
 
 #### Extraversion (E) - Social Engagement [Phase 3]
@@ -444,10 +448,10 @@ grep neuroticism lib/etc/config
 
 ## Future Phases
 
-### Phase 2: Conscientiousness (C)
-- **Function**: Inhibitory control on impulsive actions
-- **Effect**: High C → better self-control, goal persistence
-- **Integration**: Modify goal abandonment probability
+### ✅ Phase 2: Conscientiousness (C) — Implemented
+- **Function**: Inhibitory control on impulsive actions; reaction delay scaling; moral weight amplification
+- **Effect**: High C → better self-control, longer deliberation, stronger moral weight
+- **Integration**: `apply_conscientiousness_impulse_modulation()`, `apply_conscientiousness_reaction_delay()`, `apply_conscientiousness_moral_weight()`
 
 ### Phase 3: Extraversion (E) & Agreeableness (A)
 - **Extraversion**: Social reward gain, interaction frequency
@@ -473,6 +477,16 @@ grep neuroticism lib/etc/config
 - Emotion Config: `md-docs/EMOTION_CONFIG_SYSTEM.md`
 
 ## Changelog
+
+### Version 1.2 (February 2026) - Phase 2: Conscientiousness
+- ✅ Phase 2 (Conscientiousness) implemented and fully integrated
+- ✅ `apply_conscientiousness_impulse_modulation()`: Reduces impulsive action probability (formula: `base * (1 − γC)`)
+- ✅ `apply_conscientiousness_reaction_delay()`: Scales deliberation time under arousal (formula: `base * (1 + βC × arousal)`)
+- ✅ `apply_conscientiousness_moral_weight()`: Amplifies adherence to moral evaluation (formula: `base * (1 + factor × C)`)
+- ✅ CEDIT integration: all γ/β/factor parameters configurable at runtime via CEDIT
+- ✅ Debug logging controlled by `CONFIG_CONSCIENTIOUSNESS_DEBUG`
+- ✅ `stat mob` extended to show Conscientiousness (C) value alongside N/O/E/A
+- ✅ SEC layer extension (`sec.c`): alpha smoothing, emotional persistence, Shadow Timeline decision-consistency bias
 
 ### Version 1.1 (February 2026) - Final Review Update
 - ✅ Documentation updated with accurate pipeline behavior
@@ -508,7 +522,6 @@ grep neuroticism lib/etc/config
    - Range validation on config load (β: 0-100, k: 10-200)
 
 ### Upcoming
-- ⏳ Phase 2: Conscientiousness
 - ⏳ Phase 3: Extraversion & Agreeableness
 - ⏳ Phase 4: Openness
 - ⏳ Enhanced debugging tools (stat mob shows N value)

@@ -1,6 +1,6 @@
 # Vitalia Reborn – Comprehensive TODO Audit
 
-**Generated:** February 2026  
+**Generated:** February 2026 | **Last Updated:** February 28 2026 (Priority 1 documentation corrections completed)  
 **Purpose:** Cross-reference all `.md` files, the root `TODO` file, `lib/text/news`,
 `changelog.txt`, `lib/misc/ideas`, `lib/misc/bugs`, and `lib/misc/typos` against the
 actual source code to determine the true implementation status of every planned or
@@ -58,10 +58,7 @@ Those documents need to be updated to reflect the current production state.
 | Weather and time-of-day mood influence | ✅ Implemented |
 | Emotion display per-viewer in `stat mob` | ✅ Implemented |
 
-**Documentation issue:** `EMOTION_SYSTEM_TODO.md` sections 1.x, 2.x, 3.x, 5.x, and 9.1
-contain inline `**DONE**` markers but their surrounding phase-roadmap bullets still list
-these items as "Phase 3/4 long-term." The roadmap section needs to be updated to match the
-inline statuses.
+**Documentation status:** ✅ **Resolved** — `EMOTION_SYSTEM_TODO.md` phase roadmap updated (Feb 28 2026). Phase 2 items confirmed complete; Phase 3/4 roadmap now accurately reflects pending work only.
 
 ---
 
@@ -81,10 +78,7 @@ inline statuses.
 | Adaptive feedback (`attention_bias`, `recent_prediction_error`) | ✅ Implemented (Phase 2) |
 | Sentinel guard-duty integration | ✅ Implemented (per `SHADOW_TIMELINE_SENTINEL_FIX.md`) |
 
-**Documentation issue:** `SHADOW_TIMELINE.md` header still reads "Implementation Plan" in
-some sections. Phase 1 (✅ 2026-02-07) and Phase 2 (✅ 2026-02-16) are both confirmed
-complete. The document's "Future Extensions" section (Phase 3) correctly marks those items
-as unimplemented — that section is accurate.
+**Documentation status:** ✅ **Resolved** — `SHADOW_TIMELINE.md` "Implemented Features" section already carried ✅ for both Phase 1 (2026-02-07) and Phase 2 (2026-02-16). "Future Extensions" section (Phase 3) remains correctly marked as unimplemented. No further update required.
 
 ---
 
@@ -111,9 +105,7 @@ No updates required.
 **Documentation:** `md-docs/HYBRID_EMOTION_SYSTEM.md` (referenced but not detailed)  
 **Confirmed in:** `src/emotion_projection.c`, `src/structs.h` (`emotion_4d_state`, `last_4d_state`)
 
-**Documentation issue:** No standalone design document exists for this component.
-`HYBRID_EMOTION_SYSTEM.md` should add a section describing the 4D projection layer and
-its relationship to the mood/relationship layers.
+**Documentation status:** ✅ **Resolved** — `HYBRID_EMOTION_SYSTEM.md` updated (Feb 28 2026) with a new "4D Emotion Projection Component" section covering the 4-axis model (Valence/Arousal/Dominance/Affiliation), core formula, Contextual Modulation Layer, relationship to mood/relationship layers, and full API reference.
 
 ---
 
@@ -148,8 +140,7 @@ Neuroticism — the group moral dynamics entry may be missing from the changelog
 | Fear spreading in groups (12–20%) | ✅ Implemented |
 | Leader emotion influence (2× multiplier) | ✅ Implemented |
 
-**Documentation issue:** `EMOTION_CONTAGION.md` may still describe contagion as a
-"planned enhancement." It should be updated to reflect production status.
+**Documentation status:** ✅ **Resolved** — `EMOTION_CONTAGION.md` updated (Feb 28 2026) with an explicit "Status: ✅ Implemented" header block.
 
 ---
 
@@ -175,10 +166,7 @@ Neuroticism — the group moral dynamics entry may be missing from the changelog
 | Phase 2 – CEDIT configuration | ✅ Implemented |
 | Phase 2 – Shadow Timeline attack integration | ✅ Implemented |
 
-**Documentation issue (critical):** `BIG_FIVE_PERSONALITY_SYSTEM.md` roadmap still shows
-`⏳ Phase 2: Conscientiousness` as pending. This must be updated to ✅ since
-`CONSCIENTIOUSNESS_SUMMARY.md` confirms full implementation. Similarly, the `changelog.txt`
-only records Phase 1 — an entry for Phase 2 Conscientiousness is missing.
+**Documentation status:** ✅ **Resolved** — `BIG_FIVE_PERSONALITY_SYSTEM.md` updated (Feb 28 2026): Phase 2 (Conscientiousness) marked ✅ complete; Conscientiousness moved from "Reserved for Future Phases" to "Implemented"; Phase 2 changelog entry added; "Upcoming" section updated. `changelog.txt` entry added for [Feb 28 2026].
 
 ---
 
@@ -375,8 +363,7 @@ zone listed above.
 | `show stats` QP/gold exchange info | ✅ Implemented |
 | Dynamic exchange rate (monthly, overflow-protected) | ✅ Implemented |
 
-**Documentation issue:** No `md-docs/` file documents this feature. A short design note
-should be created so the feature is discoverable for future maintainers.
+**Documentation status:** ✅ **Resolved** — `md-docs/QP_EXCHANGE_SYSTEM.md` created (Feb 28 2026) covering commands, dynamic rate algorithm, persistence, overflow protection, and administration notes.
 
 ---
 
@@ -385,8 +372,7 @@ should be created so the feature is discoverable for future maintainers.
 **Documentation:** (referenced in `lib/text/news` only — no dedicated `.md` file exists)  
 **Confirmed in:** `lib/text/news` Dec 2025 — *"Habilidade danger sense agora protege Ladroes de armadilhas mortais ao fugir."*
 
-**Documentation issue:** No `md-docs/` file covers this feature. A brief note should be
-added to document the mechanic for builders who design dangerous rooms.
+**Documentation status:** ✅ **Resolved** — `md-docs/DANGER_SENSE_FEATURE.md` created (Feb 28 2026) covering passive warning, flee prevention, skill levels, NPC behaviour, and builder notes for death-trap room configuration.
 
 ---
 
@@ -509,10 +495,10 @@ Phases 3 and 4 are intentionally deferred pending validation of Phases 1 and 2.
 
 **What is missing:**
 - The feature is flagged **experimental** in news; full player access not yet enabled
-- A dedicated `md-docs/` design document
+- ~~A dedicated `md-docs/` design document~~ ✅ Created: `md-docs/AUCTION_HOUSE.md` (Feb 28 2026)
 
 **Status:** Functional but access-restricted. Needs stability validation before opening
-to all players. A design doc should be created.
+to all players.
 
 ---
 
@@ -992,18 +978,18 @@ Typos submitted via the in-game `typo` command and stored in `lib/misc/typos`.
 This section summarizes specific files where the documented status does not match the
 current implementation state. These are documentation corrections to be made, not code changes.
 
-| Document | Current (Incorrect) Text | Correct Status |
-|----------|--------------------------|----------------|
-| `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md` | `⏳ Phase 2: Conscientiousness` (pending) | ✅ Phase 2 fully implemented — see `CONSCIENTIOUSNESS_SUMMARY.md` |
-| `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md` | Changelog section missing Phase 2 entry | Add Phase 2 completion entry (Feb 2026) |
-| `changelog.txt` | No entry for Phase 2 Conscientiousness | Add `[Feb 2026] - Vitalia Reborn Development: Big Five Phase 2: Conscientiousness` entry |
-| `md-docs/SHADOW_TIMELINE.md` | Some sections still read "Implementation Plan" | Update Phase 1 and Phase 2 status headers to ✅ Production |
-| `md-docs/EMOTION_CONTAGION.md` | May describe contagion as "planned future" | Update to ✅ Implemented (confirmed in `src/mobact.c:577`) |
-| `md-docs/EMOTION_SYSTEM_TODO.md` | Phase 3/4 roadmap bullets list already-done items as future | Reconcile inline `**DONE**` markers with surrounding roadmap status |
-| `README.md` | Refers to `HYBRID_EMOTION_SYSTEM.md` for Emotion System docs | Reference should also point to `EMOTION_SYSTEM_TODO.md` and updated status |
-| No `md-docs/` file | QP ↔ Gold Exchange System (A-19) has no design doc | Create `md-docs/QP_EXCHANGE_SYSTEM.md` |
-| No `md-docs/` file | Danger Sense / Death-Trap Protection (A-20) has no design doc | Create `md-docs/DANGER_SENSE_FEATURE.md` |
-| No `md-docs/` file | Auction House experimental phase (B-6) has no design doc | Create `md-docs/AUCTION_HOUSE.md` |
+| Document | Original (Incorrect) Text | Correct Status | Resolution |
+|----------|--------------------------|----------------|------------|
+| `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md` | `⏳ Phase 2: Conscientiousness` (pending) | ✅ Phase 2 fully implemented | ✅ Fixed Feb 28 2026 |
+| `md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md` | Changelog section missing Phase 2 entry | Add Phase 2 completion entry (Feb 2026) | ✅ Fixed Feb 28 2026 |
+| `changelog.txt` | No entry for Phase 2 Conscientiousness | Add `[Feb 28 2026]` entry | ✅ Fixed Feb 28 2026 |
+| `md-docs/SHADOW_TIMELINE.md` | Some sections still read "Implementation Plan" | Update Phase 1 and Phase 2 status headers to ✅ Production | ✅ Already correct — no change needed |
+| `md-docs/EMOTION_CONTAGION.md` | May describe contagion as "planned future" | Update to ✅ Implemented (confirmed in `src/mobact.c:577`) | ✅ Fixed Feb 28 2026 |
+| `md-docs/EMOTION_SYSTEM_TODO.md` | Phase 3/4 roadmap bullets list already-done items as future | Reconcile inline `**DONE**` markers with surrounding roadmap status | ✅ Fixed Feb 28 2026 |
+| `README.md` | Refers to `HYBRID_EMOTION_SYSTEM.md` for Emotion System docs | Reference should also point to `EMOTION_SYSTEM_TODO.md` and updated status | ⏳ Pending |
+| No `md-docs/` file | QP ↔ Gold Exchange System (A-19) has no design doc | Create `md-docs/QP_EXCHANGE_SYSTEM.md` | ✅ Created Feb 28 2026 |
+| No `md-docs/` file | Danger Sense / Death-Trap Protection (A-20) has no design doc | Create `md-docs/DANGER_SENSE_FEATURE.md` | ✅ Created Feb 28 2026 |
+| No `md-docs/` file | Auction House experimental phase (B-6) has no design doc | Create `md-docs/AUCTION_HOUSE.md` | ✅ Created Feb 28 2026 |
 
 ---
 
@@ -1020,36 +1006,37 @@ current implementation state. These are documentation corrections to be made, no
 These are pure documentation tasks and should be completed first as they correct misleading
 information that could confuse developers.
 
-1. **Update `BIG_FIVE_PERSONALITY_SYSTEM.md`**: Mark Phase 2 (Conscientiousness) as ✅
-   complete. Add a Phase 2 changelog entry. This is the most critical documentation
-   inaccuracy found.
+1. ✅ **`BIG_FIVE_PERSONALITY_SYSTEM.md`**: Phase 2 (Conscientiousness) marked ✅ complete.
+   Phase 2 changelog entry added. (Feb 28 2026)
 
-2. **Add Phase 2 entry to `changelog.txt`**: The [Feb 2026] entry only records Phase 1.
-   A Phase 2 Conscientiousness entry should be appended.
+2. ✅ **`changelog.txt`**: Phase 2 Conscientiousness entry appended as `[Feb 28 2026]`.
+   (Feb 28 2026)
 
-3. **Update `SHADOW_TIMELINE.md`**: Change "Implementation Plan" section headers for
-   Phase 1 and Phase 2 to ✅ "Implemented." Keep the "Future Extensions (Phase 3)" section
-   as-is — it is accurate.
+3. ✅ **`SHADOW_TIMELINE.md`**: Verified — Phase 1 and Phase 2 section headers already carry
+   ✅ "Implemented" markers. "Future Extensions (Phase 3)" section is accurate. No change needed.
 
-4. **Update `EMOTION_CONTAGION.md`**: Change status from planned/future to implemented.
+4. ✅ **`EMOTION_CONTAGION.md`**: Explicit "Status: ✅ Implemented" header block added.
+   (Feb 28 2026)
 
-5. **Reconcile `EMOTION_SYSTEM_TODO.md`**: The inline `**DONE**` markers are correct; the
-   surrounding phase-roadmap language still says "Phase 3/4 long-term" for things that
-   are done. Update the roadmap section to reflect current state.
+5. ✅ **`EMOTION_SYSTEM_TODO.md`**: Phase roadmap reconciled — completed contagion and
+   advanced-mechanics items moved to Phase 2 (COMPLETED); future-only items remain in
+   Phase 3/4. (Feb 28 2026)
 
-6. **Create `md-docs/QP_EXCHANGE_SYSTEM.md`**: Document the QP ↔ Gold exchange feature
-   (commands `rate`/`cotacao`, dynamic exchange rate, overflow protection).
+6. ✅ **`md-docs/QP_EXCHANGE_SYSTEM.md`**: Created — covers commands `rate`/`cotacao`,
+   dynamic exchange rate algorithm, overflow protection, persistence, and admin notes.
+   (Feb 28 2026)
 
-7. **Create `md-docs/DANGER_SENSE_FEATURE.md`**: Document the Danger Sense skill protection
-   against death-trap rooms, including builder notes on death-trap configuration.
+7. ✅ **`md-docs/DANGER_SENSE_FEATURE.md`**: Created — covers passive warning, flee
+   prevention, skill levels, NPC behaviour, and builder notes on death-trap configuration.
+   (Feb 28 2026)
 
-8. **Create `md-docs/AUCTION_HOUSE.md`**: Document the current experimental auction system
-   (access via Belchior's shop, available commands, CEDIT toggle, current access
-   restrictions, and the path to opening it to all players).
+8. ✅ **`md-docs/AUCTION_HOUSE.md`**: Created — covers access via Belchior's shop,
+   available commands, CEDIT toggle, access restrictions, and path to full player access.
+   (Feb 28 2026)
 
-9. **Update `HYBRID_EMOTION_SYSTEM.md`**: Add a section describing the 4D Emotion
-   Projection component (`emotion_projection.c`) and how it relates to the mood and
-   relationship layers.
+9. ✅ **`HYBRID_EMOTION_SYSTEM.md`**: New "4D Emotion Projection Component" section added
+   describing `emotion_projection.c`, the 4-axis model, Contextual Modulation Layer, and
+   API. (Feb 28 2026)
 
 ---
 
@@ -1233,11 +1220,11 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Emotion memory / relationship layer | `HYBRID_EMOTION_SYSTEM.md` | ✅ Implemented | A-1 |
 | Shadow Timeline (Phase 1 + Phase 2) | `SHADOW_TIMELINE.md` | ✅ Implemented | A-2 |
 | Moral Reasoner (Shultz & Daley) | `MORAL_REASONING.md` | ✅ Implemented | A-3 |
-| Emotion Projection (4D) | *(no standalone doc)* | ✅ Implemented | A-4 |
+| Emotion Projection (4D) | `HYBRID_EMOTION_SYSTEM.md` ✅ | ✅ Implemented | A-4 |
 | Group Moral Dynamics | `GROUP_MORAL_DYNAMICS.md` | ✅ Implemented | A-5 |
 | Emotion Contagion | `EMOTION_CONTAGION.md` | ✅ Implemented | A-6 |
 | Big Five Phase 1: Neuroticism | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ✅ Implemented | A-7 |
-| Big Five Phase 2: Conscientiousness | `CONSCIENTIOUSNESS_SUMMARY.md` | ✅ Implemented *(doc mismatch)* | A-7 |
+| Big Five Phase 2: Conscientiousness | `BIG_FIVE_PERSONALITY_SYSTEM.md` ✅ | ✅ Implemented | A-7 |
 | Reputation System (players + mobs) | `REPUTATION_SYSTEM.md` | ✅ Implemented | A-8 |
 | Evil Reputation System | `EVIL_REPUTATION_SYSTEM.md` | ✅ Implemented | A-9 |
 | Escort Quests (`AQ_MOB_ESCORT`) | `ESCORT_QUESTS.md` | ✅ Implemented | A-10 |
@@ -1249,14 +1236,14 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Weather / Mana Density System | `WEATHER_SPELL_ENHANCEMENT.md` | ✅ Implemented | A-16 |
 | Spell Variant Chains + `experiment` | `SPELL_VARIANT_CHAINS.md` | ✅ Implemented | A-17 |
 | Emotion Configuration (cedit) | `CEDIT_EMOTION_CONFIGURATION_GUIDE.md` | ✅ Implemented | A-18 |
-| QP ↔ Gold Exchange System | *(no doc file — see news Dec 2025)* | ✅ Implemented | A-19 |
-| Danger Sense / Death-Trap protection | *(no doc file — see news Dec 2025)* | ✅ Implemented | A-20 |
+| QP ↔ Gold Exchange System | `QP_EXCHANGE_SYSTEM.md` ✅ | ✅ Implemented | A-19 |
+| Danger Sense / Death-Trap protection | `DANGER_SENSE_FEATURE.md` ✅ | ✅ Implemented | A-20 |
 | Rebegin / Remort | `REBEGIN_FEATURE.md` | ⚠️ Code complete, command disabled | B-1 |
 | Big Five Phases 3 & 4 | `BIG_FIVE_PERSONALITY_SYSTEM.md` | ⚠️ Struct fields only, no behavior | B-2 |
 | Clan System | *(TODO only)* | ⚠️ Stub (10-line file) | B-3 |
 | Hometown System | *(TODO only)* | ⚠️ Partial — zone 113 WIP | B-4 |
 | Guild System (zone 134) | *(TODO only)* | ⚠️ Content incomplete | B-5 |
-| Auction House | *(news Oct 2025 only)* | ⚠️ Experimental — restricted access | B-6 |
+| Auction House | `AUCTION_HOUSE.md` ✅ | ⚠️ Experimental — restricted access | B-6 |
 | Communication emotion triggers | `EMOTION_SYSTEM_TODO.md §2.1` | ❌ Not implemented | C-1 |
 | Reputation → emotion seeding | `EMOTION_SYSTEM_TODO.md §3.2` | ❌ Not implemented | C-2 |
 | Emotion visual cues in `look` | `EMOTION_SYSTEM_TODO.md §4.1` | ❌ Not implemented | C-3 |
