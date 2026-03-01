@@ -5698,74 +5698,74 @@ Você rosna para $p.
 $n rosna para $p.
 
 ~sneer sneer 0 5 0 0
-You sneer at no one in particular.
-$n sneers at everyone!
-You sneer at $M.
-$n sneers at $N!
-$n sneers at you!
-Did you wish to sneer at an actual person?
-You try to sneer at yourself.
-$n looks like a retard as $e tries to sneer at $mself.
-You sneer at $S $t.
-$n sneers at $N's $t.
-$n sneers at your $t.
-You sneer at $p.
-$n sneers at $p.
+Você faz uma careta de desdém para ninguém em particular.
+$n desdenha de todos!
+Você desdenha de $M.
+$n desdenha de $N!
+$n desdenha de você!
+Você queria desdenhair de uma pessoa de verdade?
+Você tenta desdenhair de si mesm$r.
+$n parece um idiota tentando desdenhair de si mesm$r.
+Você desdenha do $t de $S.
+$n desdenha do $t de $N.
+$n desdenha do seu $t.
+Você desdenha de $p.
+$n desdenha de $p.
 
 ~sneeze sneeze 0 5 0 0
-Gesundheit!
-$n sneezes.
-You sneeze on $M.
-$n sneezes all over $N.
-$n sneezes all over you.
-Aww-chooo!
-Something tickles your nose and you sneeze.
-$n sneezes snot all over $mself.
-You sneeze all over $S $t.
-$n sneezes all over $N's $t.
-$n sneezes all over your $t.
-You sneeze all over $p.
-$n sneezes all over $p.
+Saúde!
+$n espirra.
+Você espirra em $M.
+$n espirra em cima de $N.
+$n espirra em cima de você.
+Atchim!
+Algo faz seu nariz coçar e você espirra.
+$n espirra catarro por toda si mesm$r.
+Você espirra em cima do $t de $S.
+$n espirra em cima do $t de $N.
+$n espirra em cima do seu $t.
+Você espirra em cima de $p.
+$n espirra em cima de $p.
 
 ~snicker snicker 0 5 0 0
-You snicker softly.
-$n snickers softly.
-You snicker at $M.
-$n snickers at $N.
-$n snickers at you.
-Hmm no one like that to be seen.
-You snicker quietly to yourself.
-$n snickers quietly to $mself, obviously some private joke.
-You snicker at $S $t.
-$n snickers at $N's $t.
-$n snickers at your $t.
-You snicker at $p.
-$n snickers at $p.
+Você ri baixinho.
+$n ri baixinho.
+Você ri baixinho de $M.
+$n ri baixinho de $N.
+$n ri baixinho de você.
+Hmm, ninguém assim para ser visto.
+Você ri baixinho para si mesm$r.
+$n ri baixinho para si mesm$r, obviamente alguma piada interna.
+Você ri baixinho do $t de $S.
+$n ri baixinho do $t de $N.
+$n ri baixinho do seu $t.
+Você ri baixinho de $p.
+$n ri baixinho de $p.
 
 ~sniff sniff 0 5 0 0
-You sniff sadly.  *SNIFF*
-$n sniffs sadly.
-You sniff $M.
-$n sniffs $N.
-$n sniffs under your arm. Hope you have bathed!
-You sniff about - Hmmm nowhere to be found.
-You sniff under your arm and nearly faint from the fumes.
-$n sniffs under $s underarm and nearly faints.
-You sniff $S $t.
-$n sniffs $N's $t.
-$n sniffs your $t.
-You sniff $p.
-$n sniffs $p.
+Você funfa tristemente. *FUNFA*
+$n funfa tristemente.
+Você funfa em $M.
+$n funfa em $N.
+$n funfa embaixo do seu braço. Espero que você tenha tomado banho!
+Você funfa por aí - Hmm, não está em lugar algum.
+Você funfa embaixo do próprio braço e quase desmaia com o fedor.
+$n funfa embaixo do próprio sovaco e quase desmaia.
+Você funfa no $t de $S.
+$n funfa no $t de $N.
+$n funfa no seu $t.
+Você funfa em $p.
+$n funfa em $p.
 
 ~snigger snigger 0 5 0 0
-You snigger like a school child.
-$n sniggers like an immature child.
-You snigger at $N.
-$n sniggers at $N.
-$n sniggers at you.
-You can't find the person you wish to snigger at.
-You snigger at yourself.
-$n sniggers at $mself.
+Você dá risadinhas como uma criança.
+$n dá risadinhas como uma criança imatura.
+Você dá risadinhas de $N.
+$n dá risadinhas de $N.
+$n dá risadinhas de você.
+Você não encontra a pessoa que deseja ridicularizar.
+Você dá risadinhas de si mesm$r.
+$n dá risadinhas de si mesm$r.
 #
 #
 #
@@ -5773,14 +5773,14 @@ $n sniggers at $mself.
 #
 
 ~snog snog 0 5 0 0
-You must snog someone!
+Você deve beijar alguém!
 #
-You give $N a fierce snogging! Thou art brave!
-$n gives $N a fierce snogging!
-$n moves forward and gives you a fierce snogging!
-You can't find them here.
-You attempt to snog yourself..
-$n disregards physical impossibility and tries to snog $mself!
+Você dá um beijo fervoroso em $N! Você é corajoso(a)!
+$n dá um beijo fervoroso em $N!
+$n avança e te dá um beijo fervoroso!
+Você não os encontra aqui.
+Você tenta se beijar..
+$n desconsidera a impossibilidade física e tenta se beijar!
 #
 #
 #
@@ -5788,10 +5788,10 @@ $n disregards physical impossibility and tries to snog $mself!
 #
 
 ~snoopy snoopy 0 5 0 0
-You do a snoopy dance
-$n hops up onto Linus' piano and does a Snoopy dance.
+Você faz a dança do Snoopy.
+$n pula no piano de Linus e faz a dança do Snoopy.
 #
-$n hops up onto Linus' piano and does a Snoopy dance.
+$n pula no piano de Linus e faz a dança do Snoopy.
 #
 #
 #
@@ -5803,87 +5803,87 @@ $n hops up onto Linus' piano and does a Snoopy dance.
 #
 
 ~snore snore 0 4 0 0
-Zzzzzzzzzzzzzzzzz.
-$n snores loudly.
-You accuse $M of snoring.
-$n accuses $N of snoring.
-$n accuses you of snoring like a pig.
-You hear snoring?
-You snore loud enough to wake yourself.
-$n snores so loud that $e wakes $mself.
-You snore boringly at $S $t.
-$n snores boringly at $N's $t.
-$n snores boringly at your $t.
-You snore boringly at $p.
-$n snores boringly at $p.
+Zzzzzzzzzzzzzzzz.
+$n ronca alto.
+Você acusa $M de roncar.
+$n acusa $N de roncar.
+$n te acusa de roncar como um porco.
+Você ouve ronco?
+Você ronca alto o suficiente para se acordar.
+$n ronca tão alto que acorda a si mesm$r.
+Você ronca entediante para o $t de $S.
+$n ronca entediante para o $t de $N.
+$n ronca entediante para o seu $t.
+Você ronca entediante para $p.
+$n ronca entediante para $p.
 
 ~snort snort 0 5 0 0
-You snort in discontent.
-$n snorts in discontent.
-You snort in discontent at $M.
-$n snorts in discontent at $N.
-$n snorts in discontent at you.
-Snort away, they are not here to hear your discontent.
-You snort in discontent at yourself.
-$n snorts in discontent at $mself.
-You snort in discontent at $S $t.
-$n snorts in discontent at $N's $t.
-$n snorts in discontent at your $t.
-You snort in discontent at $p.
-$n snorts in discontent at $p.
+Você resmunga em descontentamento.
+$n resmunga em descontentamento.
+Você resmunga em descontentamento para $M.
+$n resmunga em descontentamento para $N.
+$n resmunga em descontentamento para você.
+Resmunga à vontade, eles não estão aqui para ouvir seu descontentamento.
+Você resmunga em descontentamento para si mesm$r.
+$n resmunga em descontentamento para si mesm$r.
+Você resmunga em descontentamento para o $t de $S.
+$n resmunga em descontentamento para o $t de $N.
+$n resmunga em descontentamento para o seu $t.
+Você resmunga em descontentamento para $p.
+$n resmunga em descontentamento para $p.
 
 ~snowball snowball 0 5 0 0
-Who do you want to throw a snowball at??
-$n has a snowball $e needs to get rid of.
-You throw a snowball in $N's face.
-$n conjures a snowball from thin air and throws it at $N.
-$n conjures a snowball from thin air and throws it at you.
-You stand with the snowball in your hand because your victim is not here.
-You conjure a snowball from thin air and throw it at yourself.
-$n conjures a snowball out of the thin air and throws it at $mself.
-You conjure a snowball out of thin air and throw it at $S $t.
-$n conjures a snowball out of thin air and throws it at $N's $t.
-$n conjures a snowball out of thin air and throws it at your $t.
-You conjure a snowball out of thin air and throw it at $p.
-$n conjures a snowball out of thin air and throws it at $p.
+Em quem você quer jogar uma bola de neve??
+$n tem uma bola de neve que precisa se livrar.
+Você joga uma bola de neve na cara de $N.
+$n conjura uma bola de neve do nada e a joga em $N.
+$n conjura uma bola de neve do nada e a joga em você.
+Você fica com a bola de neve na mão pois a vítima não está aqui.
+Você conjura uma bola de neve do nada e a joga em si mesm$r.
+$n conjura uma bola de neve do nada e a joga em si mesm$r.
+Você conjura uma bola de neve do nada e a joga no $t de $S.
+$n conjura uma bola de neve do nada e a joga no $t de $N.
+$n conjura uma bola de neve do nada e a joga no seu $t.
+Você conjura uma bola de neve do nada e a joga em $p.
+$n conjura uma bola de neve do nada e a joga em $p.
 
 ~snuggle snuggle 0 5 0 0
-You wish to do some laundry?
-$n wants to snuggle.
-you snuggle $M.
-$n snuggles up to $N.
-$n snuggles up to you.
-They aren't here.
-You snuggle with yourself.
-$n tries to snuggle $mself?
-You snuggle up to $N's $t.
-$n snuggles up to $N's $t.
-$n snuggles up to your $t.
-You snuggle up to $p.
-$n snuggles up to $p.
+Você quer fazer uma lavagem?
+$n quer se aninhar.
+Você se aninha com $M.
+$n se aninha com $N.
+$n se aninha com você.
+Eles não estão aqui.
+Você se aninha consigo mesm$r.
+$n tenta se aninhar consigo mesm$r?
+Você se aninha com o $t de $N.
+$n se aninha com o $t de $N.
+$n se aninha com o seu $t.
+Você se aninha com $p.
+$n se aninha com $p.
 
 ~sob sob 0 5 0 0
-Who's shoulder do you want to cry on?
-$n looks around for a shoulder to cry on.
-You bawl your eyes out on $N's shoulder.
-$n leans on $N's shoulder and bawls $s eyes out.
-$n leans on your shoulder and bawls $s eyes out, soaking you.
-Aww....all alone again huh?
-You break down bawling, tears flying everywhere.
-$n breaks down bawling, tears flying everywhere.
-You sob on $S $t.
-$n sobs on $N's $t.
-$n sobs on your $t.
-You sob on $p.
-$n sobs on $p.
+No ombro de quem você quer chorar?
+$n procura um ombro para chorar.
+Você chora de coração partido no ombro de $N.
+$n se apoia no ombro de $N e chora de coração partido.
+$n se apoia no seu ombro e chora de coração partido, te encharcando.
+Sozinho(a) de novo hein?
+Você desmorona chorando, lágrimas por todo lado.
+$n desmorona chorando, lágrimas por todo lado.
+Você chora no $t de $S.
+$n chora no $t de $N.
+$n chora no seu $t.
+Você chora em $p.
+$n chora em $p.
 
 ~sorry sorry 0 5 0 0
-You snivel out a, 'Sorry.'
-$n snivels out a, 'Sorry.'
-You snivel out a, 'Sorry,' to $N.
-$n snivels out, 'Sorry,' to $N.
-$n snivels out, 'Sorry,' to you.
-You don't see them here.
+Você engole seco um, 'Desculpe.'
+$n engole seco um, 'Desculpe.'
+Você engole seco um, 'Desculpe,' para $N.
+$n engole seco, 'Desculpe,' para $N.
+$n engole seco, 'Desculpe,' para você.
+Você não os vê aqui.
 #
 #
 #
