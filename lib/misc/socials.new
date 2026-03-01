@@ -2863,59 +2863,59 @@ Você reclama infeliz de $p.
 $n reclama infeliz de $p.
 
 ~grunts grunt 0 5 0 0
-You grunt loudly.
-$n grunts at you vigorously!
-You grunt vigorously at $M!
-$n grunts vigorously at $N!
-$n grunts vigorously at you!
-Try grunting at a real person.
-You grunt at yourself, maybe you should consider professional help...
-You fall over with laughter as$n grunts at $mself.
-You grunt at $S $t.
-$n grunts at $N's $t.
-$n grunts at your $t.
-You grunt at $p.
-$n grunts at $p.
+Você grunhe alto.
+$n grunhe vigorosamente para você!
+Você grunhe vigorosamente para $M!
+$n grunhe vigorosamente para $N!
+$n grunhe vigorosamente para você!
+Tente grunhir para uma pessoa de verdade.
+Você grunhe para si mesm$r, talvez devesse considerar ajuda profissional...
+Você cai de rir enquanto $n grunhe para si mesm$r.
+Você grunhe para o $t de $S.
+$n grunhe para o $t de $N.
+$n grunhe para o seu $t.
+Você grunhe para $p.
+$n grunhe para $p.
 
 ~haircut haircut 0 5 0 0
-You whine about your crappy haircut.
-$n whines about $s crappy haircut!  Waaaahhh...
-You cut a few snips out of $N's hair.
-$n cuts a few snips out of $N's hair.
-$n cuts a few snips out of your hair.
-You can't cut their hair, because they aren't here!
-You almost cut your fingers trying to cut your hair.
-$n tries to cut $s hair, but almost cuts $s finger instead.
-You look at $S $t and think $E could use a little trimming off the top.
-$n looks at $N's $t and seems to think it could use a little trimming off the top.
-$n looks at your $t and seems to think it could use a little trimming off the top.
-You look at $p and think it could use a little trimming off the top.
-$n looks at $p and seems to think it could use a little trimming off the top.
+Você reclama do seu corte de cabelo horrível.
+$n reclama do $z corte de cabelo horrível! Buaaaaa...
+Você corta algumas mechas do cabelo de $N.
+$n corta algumas mechas do cabelo de $N.
+$n corta algumas mechas do seu cabelo.
+Você não pode cortar o cabelo deles, pois eles não estão aqui!
+Você quase corta os dedos tentando cortar o próprio cabelo.
+$n tenta cortar o próprio cabelo, mas quase corta o dedo.
+Você olha para o $t de $S e acha que $L poderia aparar um pouquinho.
+$n olha para o $t de $N e parece achar que poderia aparar um pouco.
+$n olha para o seu $t e parece achar que poderia aparar um pouco.
+Você olha para $p e acha que poderia aparar um pouco.
+$n olha para $p e parece achar que poderia aparar um pouco.
 
 ~halo halo 0 8 8 31
-You whip out the ol' halo. That should prove your innocence.
-$n loads a halo and dons it.
-$N could use a good disguise.
-$n loads a halo and gives it to $N.
-$n gives you a halo. Apparently you don't look angelic enough.
-Too late, that person already made a getaway.
-You load a halo and place it on your head.
-$n loads a halo and dons it.
-You place a halo on $S $t.
-$n places a halo on $N's $t.
-$n places a halo on your $t.
-You place a halo on $p.
-$n places a halo on $p.
+Você tira o bom e velho halo. Isso deve provar sua inocência.
+$n coloca um halo na cabeça.
+$N poderia usar um bom disfarce.
+$n coloca um halo na cabeça de $N.
+$n te dá um halo. Aparentemente você não parece angelical o suficiente.
+Tarde demais, essa pessoa já escapou.
+Você coloca um halo na própria cabeça.
+$n coloca um halo na própria cabeça.
+Você coloca um halo no $t de $S.
+$n coloca um halo no $t de $N.
+$n coloca um halo no seu $t.
+Você coloca um halo em $p.
+$n coloca um halo em $p.
 
 ~handraise handraise 0 8 8 0
-You raise your hand - me me me!
-$n raises $s hand - me me me!
-You raise your hand, trying to get $N's attention?
-$n raises $s hand in response to $N.
-$n raises $s hand in response to you.
-If you raise your hand in an empty room, does anyone see?
-You raise your hand... at least that's one of you.
-$n raises $s hand to $mself... that makes one.
+Você levanta a mão - eu eu eu!
+$n levanta a mão - eu eu eu!
+Você levanta a mão, tentando chamar a atenção de $N?
+$n levanta a mão em resposta a $N.
+$n levanta a mão em resposta a você.
+Se você levantar a mão num quarto vazio, alguém vê?
+Você levanta a mão... pelo menos um de você.
+$n levanta a mão para si mesm$r... isso faz um.
 #
 #
 #
@@ -2923,149 +2923,149 @@ $n raises $s hand to $mself... that makes one.
 #
 
 ~handshake handshake 0 5 0 0
-You look for a hand to shake.
-$n is looking for a hand to shake and babies to kiss.
-You shake $N's hand.
-$n shakes $N's hand.
-$n shakes your hand.
-They left before you could shake their hand.
-You shake your own hand vigorously.
-$n shakes $s own hand vigorously.
-$n shakes $S $t.
-$n shakes $N's $t.
-$n shakes your $t.
-You shake $p.
-$n shakes $p.
+Você procura uma mão para apertar.
+$n está procurando uma mão para apertar e bebês para beijar.
+Você aperta a mão de $N.
+$n aperta a mão de $N.
+$n aperta a sua mão.
+Eles foram embora antes que você pudesse apertar a mão deles.
+Você aperta vigorosamente a própria mão.
+$n aperta vigorosamente a própria mão.
+$n aperta o $t de $S.
+$n aperta o $t de $N.
+$n aperta o seu $t.
+Você aperta $p.
+$n aperta $p.
 
 ~happy happy 0 5 0 0
-You look happy.
-$n looks happy.
-You look happily at $M.
-$n looks happily at $N.
-$n looks happily in your direction.
-You need someone to look happy?
-You are so happy with yourself.
-$n looks happily at $mself.
-You look happily at $S $t.
-$n looks happily at $N's $t.
-$n looks happily at your $t.
-You look happily at $p.
-$n looks happily at $p.
+Você parece feliz.
+$n parece feliz.
+Você olha feliz para $M.
+$n olha feliz para $N.
+$n olha feliz na sua direção.
+Você precisa de alguém para parecer feliz?
+Você está tão feliz consigo mesm$r.
+$n olha feliz para si mesm$r.
+Você olha feliz para o $t de $S.
+$n olha feliz para o $t de $N.
+$n olha feliz para o seu $t.
+Você olha feliz para $p.
+$n olha feliz para $p.
 
 ~hate hate 0 5 0 0
-Take it easy now!  Count to ten, very slowly.
-$n's eyes burn with hatred.
-You stare at $M, your eyes trying to burn through $S skull.
-$n stares at $N, $s eyes burning with hatred.
-$n stares at you, $s eyes burning with hatred.
-Hate away.. they ain't here.
-That's right - hate yourself!
-$n clenches $s fists and stomps $s feet, hating $mself.
-You stare at $S $t with hatred.
-$n stares at $N's $t with hatred.
-$n stares at your $s $t with hatred.
-You stare at $p with hatred.
-$n stares at $p with hatred.
+Relaxe! Conte até dez, devagar.
+Os olhos de $n ardem de ódio.
+Você olha para $M, seus olhos tentando penetrar o crânio de $S.
+$n olha para $N, seus olhos ardendo de ódio.
+$n olha para você, seus olhos ardendo de ódio.
+Odeie... eles não estão aqui.
+Certo - odeie a si mesm$r!
+$n aperta os punhos e bate os pés, odiando a si mesm$r.
+Você olha para o $t de $S com ódio.
+$n olha para o $t de $N com ódio.
+$n olha para o seu $t com ódio.
+Você olha para $p com ódio.
+$n olha para $p com ódio.
 
 ~headache headache 0 8 8 0
-You rub your aching temples.
-$n rubs $s aching temples.
-You rub your aching temples, indicating that $N is giving you a headache.
-$n rubs $s aching temples, indicating that $N is giving $m a headache.
-$n rubs $s aching temples, indicating that you are giving $m a headache.
-That person gives you a headache even when they're not here.
-You're giving yourself a headache.
-$n gives $mself a headache.
-You rub your aching temples, indicating that $N's $t is giving you a headache.
-$n rubs $s aching temples, indicating that $N's $t is giving $m a headache.
-$n rubs $s aching temples, indicating that your $t is giving $m a headache.
-You rub your aching temples, indicating that $p is giving you a headache.
-$n rubs $s aching temples, indicating that $p is giving $m a headache.
+Você esfrega as têmporas doloridas.
+$n esfrega as têmporas doloridas.
+Você esfrega as têmporas doloridas, indicando que $N está te dando dor de cabeça.
+$n esfrega as têmporas doloridas, indicando que $N está dando dor de cabeça em $l.
+$n esfrega as têmporas doloridas, indicando que você está dando dor de cabeça em $l.
+Essa pessoa te dá dor de cabeça mesmo quando não está aqui.
+Você está se dando dor de cabeça.
+$n se dá dor de cabeça.
+Você esfrega as têmporas doloridas, indicando que o $t de $N está te dando dor de cabeça.
+$n esfrega as têmporas doloridas, indicando que o $t de $N está dando dor de cabeça em $l.
+$n esfrega as têmporas doloridas, indicando que o seu $t está dando dor de cabeça em $l.
+Você esfrega as têmporas doloridas, indicando que $p está te dando dor de cabeça.
+$n esfrega as têmporas doloridas, indicando que $p está dando dor de cabeça em $l.
 
 ~heh heh 0 5 0 0
-You heh. Heh, heh, heh.
-$n hehs. Heh, heh, heh!
-You heh at $M. Heh, heh, heh.
-$n hehs at $N. Heh, heh, heh.
-$n hehs at you. Heh heh!
-You heh at someone no longer around.
-You heh at yourself. Silly you!
-$n hehs at $mself. So silly!
-You heh at $S $t. Heh, heh, heh.
-$n hehs at $N's $t. Heh, heh!
-$n hehs at your $t. Heh heh!
-You heh at $p. Heh, heh!
-$n hehs at $p. Heh, heh!
+Você heee. Heh, heh, heh.
+$n dá risadinhas. Heh, heh, heh!
+Você heee para $M. Heh, heh, heh.
+$n dá risadinhas para $N. Heh, heh, heh.
+$n dá risadinhas para você. Heh heh!
+Você dá risadinhas para alguém que não está mais aqui.
+Você dá risadinhas para si mesm$r. Que bobão(a)!
+$n dá risadinhas para si mesm$r. Tão bobo(a)!
+Você dá risadinhas para o $t de $S. Heh, heh, heh.
+$n dá risadinhas para o $t de $N. Heh, heh!
+$n dá risadinhas para o seu $t. Heh heh!
+Você dá risadinhas para $p. Heh, heh!
+$n dá risadinhas para $p. Heh, heh!
 
 ~hiccup hiccup 0 5 0 0
-*HIC*
-$n hiccups.
-You hiccup in $S face.
-$n hiccups in $N's face.
-$n hiccups in your face.
-Hiccupping in someone's face is not polite.
-You try to stifle some hiccups.
-$n's hiccups uncontrollably.
-You look at $S $t and hiccup at it.
-$n looks at $N's $t and hiccups at it.
-$n looks at your $t and hiccups at it.
-You look at $p and hiccups at it.
-$n looks at $p and hiccups at it.
+*SLU*
+$n soluça.
+Você soluça na cara de $S.
+$n soluça na cara de $N.
+$n soluça na sua cara.
+Soluçar na cara de alguém não é educado.
+Você tenta segurar alguns soluços.
+$n soluça incontrolavelmente.
+Você olha para o $t de $S e soluça.
+$n olha para o $t de $N e soluça.
+$n olha para o seu $t e soluça.
+Você olha para $p e soluça.
+$n olha para $p e soluça.
 
 ~highfive highfive 0 5 0 0
-Whom do you wish to highfive?
-$n is looking for someone to highfive.
-You leap up and highfive $M.
-$n leaps up and highfives $N.
-$n leaps up and highfives you.
-Sky me, baby!
-You try to give yourself a highfive.
-$n's attempts to give $mself a highfive.
-You attempt to give $S $t a highfive.
-$n attempts to give $N's $t a highfive.
-$n attempts to give your $t a highfive.
-You attempt to give $p a highfive.
-$n attempts to give $p a highfive.
+A quem você quer dar um toca-aqui?
+$n está procurando alguém para dar um toca-aqui.
+Você pula e dá um toca-aqui em $M.
+$n pula e dá um toca-aqui em $N.
+$n pula e te dá um toca-aqui.
+Me passa aqui, meu bem!
+Você tenta se dar um toca-aqui.
+$n tenta se dar um toca-aqui.
+Você tenta dar um toca-aqui no $t de $S.
+$n tenta dar um toca-aqui no $t de $N.
+$n tenta dar um toca-aqui no seu $t.
+Você tenta dar um toca-aqui em $p.
+$n tenta dar um toca-aqui em $p.
 
 ~hiss hiss 0 5 0 0
-You hiss, trying to look menacing.
-$n hisses, making your neck hairs stand on end!
-You hiss at $N, trying to scare $M.
-$n hisses at $N.
-$n hisses at you! Maybe $e wants to start a fight?
-Who are you hissing at?
-You cross your eyes and hiss at yourself, getting even more pissed!
-$n crosses $s eyes and hisses at $mself!
-You hiss at $S $t.
-$n hisses at $N's $t.
-$n hisses at your $t.
-You hiss at $p.
-$n hisses at $p.
+Você sibila tentando parecer ameaçador(a).
+$n sibilou, fazendo os pelos do seu pescoço se arrepiarem!
+Você sibila para $N, tentando assustá-$r.
+$n sibila para $N.
+$n sibila para você! Talvez $l queira uma briga?
+Para quem você está sibilando?
+Você cruza os olhos e sibila para si mesm$r, ficando ainda mais irritado(a)!
+$n cruza os olhos e sibila para si mesm$r!
+Você sibila para o $t de $S.
+$n sibila para o $t de $N.
+$n sibila para o seu $t.
+Você sibila para $p.
+$n sibila para $p.
 
 ~hmmmmm hmmmmm 0 5 0 0
 Hmmmmm.
-$n seems to think about it for a while, and then goes hmm.
-You go hmmmmm over what $E just said.
-$n goes hmmmmm over $N's words.
-$n goes hmmmmm your words.
-They left you!
-You go hmmm.
-$n goes hmmmm.
-You look at $S $t and go hmmmmmm.
-$n looks at $N's $t and goes hmmmmmm.
-$n looks at your $t and goes hmmmmmm.
-You look at $p and go hmmmmmm.
-$n looks at $p and goes hmmmmmm.
+$n parece pensar por um tempo e então faz 'hmm'.
+Você vai hmmmm sobre o que $L acabou de dizer.
+$n vai hmmmmm sobre as palavras de $N.
+$n vai hmmmmm sobre suas palavras.
+Eles foram embora!
+Você vai hmmm.
+$n vai hmmmm.
+Você olha para o $t de $S e vai hmmmmmm.
+$n olha para o $t de $N e vai hmmmmmm.
+$n olha para o seu $t e vai hmmmmmm.
+Você olha para $p e vai hmmmmmm.
+$n olha para $p e vai hmmmmmm.
 
 ~honey honey 0 8 8 0
-You pick up a big honeypot, mmm.
-$n picks up a big honeypot, mmm.
-You hand $N a big honeypot.
-$n hands $N a big honeypot.
-$n hands you a big honeypot.
-Guess you've got it all to yourself.
-You pick up a big honeypot and stick your paws in for a taste.
-$n picks up a big honeypot and sticks $s paws in for a taste.
+Você pega um grande pote de mel, mmm.
+$n pega um grande pote de mel, mmm.
+Você entrega um grande pote de mel para $N.
+$n entrega um grande pote de mel para $N.
+$n te entrega um grande pote de mel.
+Acho que ficou tudo para você.
+Você pega um grande pote de mel e enfia as patinhas para provar.
+$n pega um grande pote de mel e enfia as patinhas para provar.
 #
 #
 #
@@ -3073,64 +3073,64 @@ $n picks up a big honeypot and sticks $s paws in for a taste.
 #
 
 ~hop hop 0 5 0 0
-You hop about on one foot
-$n hops about looking anxious.
-You hop around merrily with $M.
-$n hops around merrily with $N.
-$n hops around merrily with you.
-Hard to play `Leap-Frog' when no one is around.
-You hop around yourself. What are you? A frog, right?
-$n hops around $mself.
-You hop over $S $t.
-$n hops over $N's $t.
-$n hops over your $t.
-You hop over $p.
-$n hops over $p.
+Você pula em um pé só.
+$n pula por aí parecendo ansioso(a).
+Você pula alegremente com $M.
+$n pula alegremente com $N.
+$n pula alegremente com você.
+Difícil jogar 'pular sapo' quando não há ninguém por perto.
+Você pula ao redor de si mesm$r. O que você é? Um sapo, é?
+$n pula ao redor de si mesm$r.
+Você pula sobre o $t de $S.
+$n pula sobre o $t de $N.
+$n pula sobre o seu $t.
+Você pula sobre $p.
+$n pula sobre $p.
 
 ~hotfoot hotfoot 0 5 0 0
-Whom do you wish to give a hotfoot?
-$n is looking for someone to give a hotfoot.
-You light a match and give $M a hotfoot!
-$n lights a match and gives $N a hotfoot!
-$n lights a match and gives you a hotfoot!
-They are already hotfooting it away from you.
-You light a match and gives yourself a hotfoot!
-$n lights a match and gives $mself a hotfoot!
-You give $S $t a hotfoot?
-$n gives $N's $t a hotfoot?
-$n gives your $t a hotfoot?
-You give $p a hotfoot?
-$n gives $p a hotfoot?
+A quem você quer dar uma brasa no pé?
+$n está procurando alguém para dar uma brasa no pé.
+Você risca um fósforo e dá uma brasa no pé de $M!
+$n risca um fósforo e dá uma brasa no pé de $N!
+$n risca um fósforo e dá uma brasa no seu pé!
+Eles já foram na brasa de você.
+Você risca um fósforo e se dá uma brasa no próprio pé!
+$n risca um fósforo e se dá uma brasa no próprio pé!
+Você dá uma brasa no $t de $S?
+$n dá uma brasa no $t de $N?
+$n dá uma brasa no seu $t?
+Você dá uma brasa em $p?
+$n dá uma brasa em $p?
 
 ~howl howl 0 5 0 0
-AWWWWROOOOO!
-$n howls at the moon.
-You howl at $M.
-$n howls at $N.
-$n howls at you.
-Full moon tonight, eh?
-You howl at yourself.
-$n howls at $mself!
-You howl at $S $t.
-$n howls at $N's $t.
-$n howls at your $t.
-You howl at $p.
-$n howls at $p.
+AUUUUUUU!
+$n uiva para a lua.
+Você uiva para $M.
+$n uiva para $N.
+$n uiva para você.
+Lua cheia esta noite, hein?
+Você uiva para si mesm$r.
+$n uiva para si mesm$r!
+Você uiva para o $t de $S.
+$n uiva para o $t de $N.
+$n uiva para o seu $t.
+Você uiva para $p.
+$n uiva para $p.
 
 ~hrmph hrmph 0 5 0 0
 Hrmph.
-$n goes hrmph.
-You goe hrmph over what $E just said.
-$n goes hrmph over $N's words.
-$n goes hrmph your words.
-They left before you could hrmph them.
-You go hrmph at yourself.
-$n goes hrmph at $mself.
-You look at $S $t and go hrmph.
-$n looks at $N's $t and goes hrmph.
-$n looks at your $t and goes hrmph.
-You look at $p and go hrmph.
-$n looks at $p and goes hrmph.
+$n faz hrmph.
+Você faz hrmph sobre o que $L acabou de dizer.
+$n faz hrmph sobre as palavras de $N.
+$n faz hrmph sobre suas palavras.
+Eles foram embora antes que você pudesse fazer hrmph para eles.
+Você faz hrmph para si mesm$r.
+$n faz hrmph para si mesm$r.
+Você olha para o $t de $S e faz hrmph.
+$n olha para o $t de $N e faz hrmph.
+$n olha para o seu $t e faz hrmph.
+Você olha para $p e faz hrmph.
+$n olha para $p e faz hrmph.
 
 ~hug hug 0 5 0 0
 Abraçar quem?
@@ -3148,57 +3148,57 @@ Você abraça $p.
 $n abraça $p.
 
 ~huggle huggle 0 8 5 0
-Who do you want to huggle?
+Quem você quer abraçar?
 #
-You huggle $M, sending them to the ground.
-$n tackle hugs $N to the ground.
-$n huggles you to the ground!
-You can't huggle someone who doesn't exit you know.
-You huggle yourself, nobody loves you!
-$n huggles $mself, nobody loves $m!
-You wrap your arms around $M and huggle $S $t.
-$n wraps $s arms around $N and huggles $S $t.
-$n wraps $s arms around you and huggles your $t.
+Você abraça $M e os derruba no chão.
+$n abraça $N no chão.
+$n te abraça e te derruba!
+Você não pode abraçar alguém que não existe, sabia.
+Você se abraça, ninguém te ama!
+$n abraça a si mesm$r, ninguém ama $l!
+Você envolve os braços em $M e abraça o $t de $S.
+$n envolve os braços em $N e abraça o $t de $S.
+$n envolve os braços em você e abraça o seu $t.
 #
 #
 
 ~hula hula 0 8 8 0
-You put on a grass skirt and start to hula dance.
-$n puts on a grass skirt and starts to hula dance.
-You put on a grass skirt and hula dance with $M.
-$n puts on a grass skirt and hula dances with $N.
-$n puts on a grass skirt and hula dances with you.
-Who do you want to hula dance with?
-You put on a grass skirt and start to hula dance.
-$n puts on a grass skirt and starts to hula dance.
-You put on a grass skirt and start to hula dance with $S $t.
-$n puts on a grass skirt and hula dances with $N's $t.
-$n puts on a grass skirt and hula dances with your $t.
-You put on a grass skirt and hula dance with $p.
-$n puts on a grass skirt and hula dances with $p.
+Você coloca uma saia de palha e começa a dançar hula.
+$n coloca uma saia de palha e começa a dançar hula.
+Você coloca uma saia de palha e dança hula com $M.
+$n coloca uma saia de palha e dança hula com $N.
+$n coloca uma saia de palha e dança hula com você.
+Com quem você quer dançar hula?
+Você coloca uma saia de palha e começa a dançar hula.
+$n coloca uma saia de palha e começa a dançar hula.
+Você coloca uma saia de palha e começa a dançar hula com o $t de $S.
+$n coloca uma saia de palha e dança hula com o $t de $N.
+$n coloca uma saia de palha e dança hula com o seu $t.
+Você coloca uma saia de palha e dança hula com $p.
+$n coloca uma saia de palha e dança hula com $p.
 
 ~hum hum 0 5 0 0
-You hum.
-$n hums.
-You hum an annoying little tune in $M's ear.
-$n hums in $N's ear.
-$n hums an annoying little tune in your ear.
-Humming is so very much fun, no?
-You hum to yourself.
-$n hums to $mself.
-You hum at $S $t.
-$n hums at $N's $t.
-$n hums at your $t.
-You hum at $p.
-$n hums at $p.
+Você cantarola.
+$n cantarola.
+Você cantarola uma musiquinha irritante no ouvido de $M.
+$n cantarola no ouvido de $N.
+$n cantarola uma musiquinha irritante no seu ouvido.
+Cantarolar é muito divertido, não é?
+Você cantarola para si mesm$r.
+$n cantarola para si mesm$r.
+Você cantarola para o $t de $S.
+$n cantarola para o $t de $N.
+$n cantarola para o seu $t.
+Você cantarola para $p.
+$n cantarola para $p.
 
 ~humans humans 0 5 0 0
-You make an agitated statement, 'Humans! Bah..'
-'Humans! Bah...' blurts out $n.
-You point at $N and blurt out, 'Humans! Bah..'
-$n points at $N and blurts out, 'Humans! Bah...'
-$n points at you and blurts out, 'Humans!  Bah...'
-You don't see them here.
+Você faz uma declaração agitada, 'Humanos! Bah..'
+'Humanos! Bah...' escapa da boca de $n.
+Você aponta para $N e grita, 'Humanos! Bah..'
+$n aponta para $N e grita, 'Humanos! Bah...'
+$n aponta para você e grita, 'Humanos! Bah...'
+Você não os vê aqui.
 #
 #
 #
@@ -3208,113 +3208,113 @@ You don't see them here.
 #
 
 ~hush hush 0 5 0 0
-You hush.
-$n hushes.
-You try to hush $M.
-$n tries to hush $N.
-$n tries to hush you.
-Whom do you wish to hush?
-You hush yourself.
-$n hushes $mself.
-You hush $S $t.
-$n hushes $N's $t.
-$n hushes your $t.
-You hush $p.
-$n hushes $p.
+Você fica em silêncio.
+$n fica em silêncio.
+Você tenta calar $M.
+$n tenta calar $N.
+$n tenta te calar.
+A quem você quer calar?
+Você se cala.
+$n se cala.
+Você cala o $t de $S.
+$n cala o $t de $N.
+$n cala o seu $t.
+Você cala $p.
+$n cala $p.
 
 ~hustle hustle 0 5 0 0
-You hustle along.
-$n hustles along.
-You hustle past $M.
-$n hustles past $N.
-$n hustles past you.
-Do the Hustle!
-You do the Hustle!
-$n does the Hustle!
-You tell $S $t to hustle.
-$n tells $N's $t to hustle.
-$n tells your $t to hustle.
-You tell $p to hustle.
-$n tell $p to hustle.
+Você se apressa.
+$n se apressa.
+Você passa apressado(a) por $M.
+$n passa apressado(a) por $N.
+$n passa apressado(a) por você.
+Faça o Hustle!
+Você faz o Hustle!
+$n faz o Hustle!
+Você manda o $t de $S se apressar.
+$n manda o $t de $N se apressar.
+$n manda o seu $t se apressar.
+Você manda $p se apressar.
+$n manda $p se apressar.
 
 ~huzzah huzzah 0 5 0 0
-You give a resounding, HUZZAH!
-$n huzzahs!
-You huzzah $M!
-$n huzzahs $N.
-$n huzzahs you!
+Você solta um retumbante, VIVAAAA!
+$n grita Vivaaaa!
+Você viva $M!
+$n viva $N.
+$n te viva!
 Hmmm?
-You give a resounding, HUZZAH! at yourself.
-$n gives a resounding, HUZZAH! at $mself.
-You HUZZAH at $S $t.
-$n HUZZAHS at $N's $t.
-$n HUZZAHS at your $t.
-You HUZZAH at $p.
-$n HUZZAHS at $p.
+Você solta um retumbante, VIVAAAA! para si mesm$r.
+$n solta um retumbante, VIVAAAA! para si mesm$r.
+Você grita VIVA! para o $t de $S.
+$n grita VIVA! para o $t de $N.
+$n grita VIVA! para o seu $t.
+Você grita VIVA! para $p.
+$n grita VIVA! para $p.
 
 ~hysterical hysterical 0 8 8 0
-You clutch your sides, doubling over with laughter.
-$n clutches $s sides, doubling over with laughter.
-You clutch your sides, doubling over with laughter at $N.
-$n clutches $s sides, doubling over with laughter at $N.
-$n clutches $s sides, doubling over with laughter at you.
-Hmm they're not here. Hallucinating again?
-You clutch your sides, doubling over with laughter at yourself.
-$n clutches $s sides, doubling over with laughter at $mself.
-You clutch your sides, doubling over with laughter at $N's $t.
-$n clutches $s sides, doubling over with laughter at $N's $t.
-$n clutches $s sides, doubling over with laughter at your $t.
-You clutch your sides, doubling over with laughter at $p.
-$n clutches $s sides, doubling over with laughter at $p.
+Você se dobra de rir, segurando os lados.
+$n se dobra de rir, segurando os lados.
+Você se dobra de rir de $N.
+$n se dobra de rir de $N.
+$n se dobra de rir de você.
+Hmm, eles não estão aqui. Alucinando de novo?
+Você se dobra de rir de si mesm$r.
+$n se dobra de rir de si mesm$r.
+Você se dobra de rir do $t de $N.
+$n se dobra de rir do $t de $N.
+$n se dobra de rir do seu $t.
+Você se dobra de rir de $p.
+$n se dobra de rir de $p.
 
 ~ignore ignore 0 5 0 0
-You ignore everyone.
-$n ignores everyone, how rude!
-You ignore $M.
-$n ignores $N.
-$n turns $s back towards you.
-Who did you want to ignore?
-You can't ignore yourself!
-You watch as $n ignores $mself.
-You try to ignore $S $t.
-$n tries to ignore $N's $t.
-$n tries to ignore your $t.
-You try to ignore $p.
-$n tries to ignore $p.
+Você ignora todo mundo.
+$n ignora todo mundo, que grosseria!
+Você ignora $M.
+$n ignora $N.
+$n vira as costas para você.
+Quem você queria ignorar?
+Você não pode se ignorar!
+Você observa $n ignorar a si mesm$r.
+Você tenta ignorar o $t de $S.
+$n tenta ignorar o $t de $N.
+$n tenta ignorar o seu $t.
+Você tenta ignorar $p.
+$n tenta ignorar $p.
 
 ~innocent innocent 0 5 0 0
-You do your best to look innocent....I don't think they're buying it.
-$n bats $s eyelashes and smiles innocently.
-You give $N an innocent glance, wonder if they're catching on...
-$n gives $N an innocent glance... what is $e up to?
-$n gives you an innocent glance... what could $e be up to?
-You don't seem that innocent to me.
-You look innocently at yourself.
-$n looks innocently at $mself.
-You look innocently at $S $t.
-$n looks innocently at $N's $t.
-$n looks innocently at your $t.
-You look innocently at $p.
-$n looks innocently at $p.
+Você faz seu melhor rosto de inocente... não acho que estão acreditando.
+$n bate cílios e sorri inocentemente.
+Você lança a $N um olhar inocente, será que eles estão percebendo...
+$n lança a $N um olhar inocente... o que $l está aprontando?
+$n te lança um olhar inocente... o que $l poderia estar aprontando?
+Você não parece tão inocente para mim.
+Você se olha inocentemente.
+$n se olha inocentemente.
+Você olha inocentemente para o $t de $S.
+$n olha inocentemente para o $t de $N.
+$n olha inocentemente para o seu $t.
+Você olha inocentemente para $p.
+$n olha inocentemente para $p.
 
 ~insane insane 0 5 0 0
-You always were a bit daft.
-$n is insane!
-You think $E is insane.
-$n thinks $N is insane.
-$n thinks you are insane.
-You think someone is insane? You're right.
-You become even more insane than you already were.
-$n is losing $s sanity.
-You look at $S $t and declare it insane.
-$n looks at $N's $t and declares it insane.
-$n looks at your $t and declares it insane.
-You look at $p and declare it insane.
-$n looks at $p and declares it insane.
+Você sempre foi um pouco maluco(a).
+$n é insano(a)!
+Você acha $L insano(a).
+$n acha $N insano(a).
+$n acha que você está insano(a).
+Você acha alguém insano? Você tem razão.
+Você fica ainda mais insano(a) do que já era.
+$n está perdendo a razão.
+Você olha para o $t de $S e o declara insano.
+$n olha para o $t de $N e o declara insano.
+$n olha para o seu $t e o declara insano.
+Você olha para $p e o declara insano.
+$n olha para $p e o declara insano.
 
 ~insomnia insomnia 0 0 8 0
-Go to bed this instant!
-Someone tell $n to quit and go to sleep.
+Vá dormir agora!
+Alguém manda $n sair e ir dormir.
 #
 #
 #
@@ -3343,38 +3343,38 @@ $n's jaw drops to the ground in disbelief.
 #
 
 ~jeer jeer 0 5 0 0
-You jeer at the world in general.
-$n seems upset with the world.
-You jeer $M.
-$n jeers at $N, how cruel.
-$n jeers at you in an insulting and hurtful way.
-Hmmm wonder where they went?
-You laugh at your own inadequacies.
-$n succeeds in making a fool of $mself.
-You jeer at $S $t.
-$n jeers at $N's $t.
-$n jeers at your $t.
-You jeer at $p.
-$n jeers at $p.
+Você vaia o mundo em geral.
+$n parece incomodado(a) com o mundo.
+Você vaia $M.
+$n vaia $N, que crueldade.
+$n vaia você de forma insultante e dolorosa.
+Hmm, será que foi embora?
+Você ri das próprias deficiências.
+$n consegue fazer um papel de idiota.
+Você vaia o $t de $S.
+$n vaia o $t de $N.
+$n vaia o seu $t.
+Você vaia $p.
+$n vaia $p.
 
 ~jest jest 1 5 5 0
-You're only jesting!
-$n is only jesting!
-You playfully jest with $M.
-$n playfully jests with $N.
-$n playfully jests with you.
-You fool! That person isn't here.
-You make a fool of yourself.
-$n makes a fool of $mself.
-You make fun of $N's $t.
-$n makes fun of $N's $t.
-$n makes fun of your $t.
+Você está só brincando!
+$n está só brincando!
+Você brinca com $M.
+$n brinca com $N.
+$n brinca com você.
+Tolo(a)! Essa pessoa não está aqui.
+Você se faz de idiota.
+$n se faz de idiota.
+Você caçoa do $t de $N.
+$n caçoa do $t de $N.
+$n caçoa do seu $t.
 #
 #
 
 ~job job 0 8 8 0
-This looks like a job for you!
-This looks like a job for... $n!
+Esse parece um trabalho para você!
+Esse parece um trabalho para... $n!
 #
 #
 #
@@ -3388,12 +3388,12 @@ This looks like a job for... $n!
 #
 
 ~jog jog 0 8 8 0
-You start to jog in place.
-$n starts to jog in place.
-You jog around $N in circles!
-$n jogs around $N in circles!
-$n is jogging around you in circles!
-You can't jog around people who aren't here.
+Você começa a correr no lugar.
+$n começa a correr no lugar.
+Você corre ao redor de $N em círculos!
+$n corre ao redor de $N em círculos!
+$n está correndo ao redor de você em círculos!
+Você não pode correr ao redor de pessoas que não estão aqui.
 #
 #
 #
@@ -3403,8 +3403,8 @@ You can't jog around people who aren't here.
 #
 
 ~joint joint 0 8 8 0
-You whip out a JoInT and get ready to meet the clouds...
-$n whips out a JoInT and gets ready to meet the clouds...
+Você saca um baseado e se prepara para encontrar as nuvens...
+$n saca um baseado e se prepara para encontrar as nuvens...
 #
 #
 #
@@ -3418,14 +3418,14 @@ $n whips out a JoInT and gets ready to meet the clouds...
 #
 
 ~joke joke 0 5 0 0
-You were only joking!
-$n was only joking!
-You play a cruel joke on $N!
-$n plays a cruel joke on $N!
-$n plays a cruel joke on you!
-Find someone who actually exists to play a joke on.
-You tell yourself a joke. I bet you'd laugh as well, huh?
-$n tells $mself a joke... strange.
+Você estava só brincando!
+$n estava só brincando!
+Você prega uma peça cruel em $N!
+$n prega uma peça cruel em $N!
+$n prega uma peça cruel em você!
+Encontre alguém que realmente exista para pregar uma peça.
+Você se conta uma piada. Aposto que você ri também, hein?
+$n se conta uma piada... estranho.
 #
 #
 #
@@ -3433,19 +3433,19 @@ $n tells $mself a joke... strange.
 #
 
 ~juggle juggle 0 8 8 0
-You begin to juggle.
-$n begins to juggle.
-You begin juggling with $N.
-$n begins juggling with $N.
-$n begins juggling with you.
-That person is not here to juggle with.
-You've only got so many hands.
+Você começa a fazer malabarismo.
+$n começa a fazer malabarismo.
+Você começa a fazer malabarismo com $N.
+$n começa a fazer malabarismo com $N.
+$n começa a fazer malabarismo com você.
+Essa pessoa não está aqui para fazer malabarismo com você.
+Você só tem tantas mãos.
 #
 #
 #
 #
-You juggle a knife, a flaming torch, a bowling ball, and $p.
-$n juggles a knife, a flaming torch, a bowling ball, and $p.
+Você faz malabarismo com uma faca, uma tocha em chamas, uma bola de boliche e $p.
+$n faz malabarismo com uma faca, uma tocha em chamas, uma bola de boliche e $p.
 
 ~kiss ki 0 5 0 0
 Não há alguém que você queira beijar?
@@ -3463,59 +3463,59 @@ Você beija $p.
 $n beija $p.
 
 ~kneel kneel 0 5 0 0
-You kneel.
-$n kneels.
-You kneel before $M.
-$n kneels before $N.
-$n kneels before you.
-You fall over and bruise your knee.
-You kneel before yourself.
-$n looks pretty foolish trying kneel before $mself.
-You kneel at $S $t
-$n kneels at $N's $t.
-$n kneels at your $t.
-You kneel at $p.
-$n kneels at $p.
+Você ajoelha.
+$n ajoelha.
+Você ajoelha diante de $M.
+$n ajoelha diante de $N.
+$n ajoelha diante de você.
+Você cai e machuca o joelho.
+Você ajoelha diante de si mesm$r.
+$n parece bastante tolo(a) tentando ajoelhar diante de si mesm$r.
+Você ajoelha ao $t de $S.
+$n ajoelha ao $t de $N.
+$n ajoelha ao seu $t.
+Você ajoelha ao $p.
+$n ajoelha ao $p.
 
 ~knight knight 0 5 0 0
-Whom do you wish to knight?
-$n is looking for someone to knight.
-You tap a magical sword on $N's shoulder and knight $M.
-$n taps a magical sword on $N's shoulder and knights $M.
-$n taps a magical sword on your shoulder and knights you!
-You want to knight someone?
-You knight yourself, wouldn't your mother be proud.
-$n knights $mself, $s mother must be proud.
-You knight $S $t
-$n knights $N's $t.
-$n knights your $t.
-You knight $p.
-$n knights $p.
+A quem você deseja armar cavaleiro?
+$n está procurando alguém para armar cavaleiro.
+Você toca uma espada mágica no ombro de $N e o(a) arma cavaleiro.
+$n toca uma espada mágica no ombro de $N e o(a) arma cavaleiro.
+$n toca uma espada mágica no seu ombro e te arma cavaleiro!
+Você quer armar alguém cavaleiro?
+Você se arma cavaleiro, sua mãe ficaria orgulhosa.
+$n se arma cavaleiro, a mãe de $l deve estar orgulhosa.
+Você arma o $t de $S cavaleiro.
+$n arma o $t de $N cavaleiro.
+$n arma o seu $t cavaleiro.
+Você arma $p cavaleiro.
+$n arma $p cavaleiro.
 
 ~knuckle knuckle 0 5 0 0
-You start to pop your knuckles. Time to kick some ass.
-$n starts to pop $s knuckles. $e looks like $e means business!
-You feed $N a knuckle sandwich!
-$n feeds $N a knuckle sandwich!
-$n feeds you a knuckle sandwich! Are you gonna take that???
-You can't do that, they arent here!
-You crack your knuckles in a cacophonous explosion of joints.
-$n cracks $s knuckles. Causing a cacophony of exploding joints.
-You knuckle $S $t.
-$n knuckles $N's $t.
-$n knuckles your $t.
-You knuckle $p.
-$n knuckle $p.
+Você começa a estalar os nós dos dedos. Hora de brigar.
+$n começa a estalar os nós dos dedos. $l parece querer briga!
+Você dá um soco em $N!
+$n dá um soco em $N!
+$n te dá um soco! Vai ficar assim?
+Você não pode fazer isso, eles não estão aqui!
+Você estala os nós dos dedos numa explosão estrepitosa de articulações.
+$n estala os nós dos dedos. Que barulho de articulações.
+Você da um soco no $t de $S.
+$n dá um soco no $t de $N.
+$n dá um soco no seu $t.
+Você dá um soco em $p.
+$n dá um soco em $p.
 
 ~lala lala 0 8 8 0
-You stick your fingers in your ears - LA LA LA!
-$n sticks $s fingers in $s ears and shouts LA LA LA!
-You stick your fingers in $N's ears and shout LA LA LA!
-$n sticks $s fingers in $N's ears and shouts LA LA LA!
-$n sticks $s fingers in your ears and shouts LA LA LA!
-Maybe you better take your fingers out of your eyes first - they're not here!
-You stick your fingers in your ears, can you hear yourself?
-$n sticks $s fingers in $s ears and goes LA LA LA!
+Você enfia os dedos nos ouvidos - LÁ LÁ LÁ!
+$n enfia os dedos nos ouvidos e grita LÁ LÁ LÁ!
+Você enfia os dedos nos ouvidos de $N e grita LÁ LÁ LÁ!
+$n enfia os dedos nos ouvidos de $N e grita LÁ LÁ LÁ!
+$n enfia os dedos nos seus ouvidos e grita LÁ LÁ LÁ!
+Talvez você deva tirar os dedos dos olhos primeiro - eles não estão aqui!
+Você enfia os dedos nos próprios ouvidos, consegue se ouvir?
+$n enfia os dedos nos próprios ouvidos e grita LÁ LÁ LÁ!
 #
 #
 #
@@ -3523,89 +3523,89 @@ $n sticks $s fingers in $s ears and goes LA LA LA!
 #
 
 ~lame lame 0 8 8 0
-You know that was lame, but you couldn't help yourself.
-$n knows that was lame, but $e couldn't help $mself.
-You think $N's comments were really lame.
-$n thinks $N's comments were really lame.
-$n thinks that was really lame.
-You are so lame that they didn't stick around for you to tell them.
-You are being lame.
-$n is being lame.
-You think $N's $t is lame.
-$n thinks $N's $t is lame.
-$n thinks your $t is lame.
-You think $p is lame.
-$n thinks $p is lame.
+Você sabe que foi idiota, mas não conseguiu se segurar.
+$n sabe que foi idiota, mas $l não conseguiu se segurar.
+Você acha que os comentários de $N foram realmente idiotas.
+$n acha que os comentários de $N foram realmente idiotas.
+$n acha isso realmente idiota.
+Você é tão idiota que eles nem esperaram para ouvir.
+Você está sendo idiota.
+$n está sendo idiota.
+Você acha que o $t de $N é idiota.
+$n acha que o $t de $N é idiota.
+$n acha que o seu $t é idiota.
+Você acha que $p é idiota.
+$n acha que $p é idiota.
 
 ~laughs lau 0 5 0 0
-You laugh.
-$n laughs.
-You laugh wholeheartedly with $M.
-$n laughs wholeheartedly with $N.
-$n laughs wholeheartedly with you!
-Well you may see something funny but I don't.
-You seem to find yourself very amusing.
-$n starts laughing at $s own joke.
-You laugh at $S $t.
-$n laughs at $N's $t.
-$n laughs at your $t.
-You laugh at $p.
-$n laughs at $p.
+Você ri.
+$n ri.
+Você ri de coração com $M.
+$n ri de coração com $N.
+$n ri de coração com você!
+Você pode estar vendo algo engraçado, mas eu não estou.
+Você parece se achar muito engraçado(a).
+$n começa a rir da própria piada.
+Você ri do $t de $S.
+$n ri do $t de $N.
+$n ri do seu $t.
+Você ri de $p.
+$n ri de $p.
 
 ~lean lean 0 8 5 0
-You lean against a nearby tree.
-$n leans against a nearby tree.
-You lean against $N, pressing your body close.
-$n leans against $N, pressing $s body close.
-$n leans against you, pressing $s body close.
-You try to lean on someone but end up on your butt.
-That's not even possible!
+Você se apoia em uma árvore próxima.
+$n se apoia em uma árvore próxima.
+Você se apoia em $N, pressionando o corpo.
+$n se apoia em $N, pressionando o corpo.
+$n se apoia em você, pressionando o corpo.
+Você tenta se apoiar em alguém mas acaba sentado(a) no chão.
+Isso não é nem possível!
 #
-You lean against $S $i, pressing your body close.
-$n leans against $N's $i, pressing $s body close.
-$n leans against your $i, pressing $s body close.
+Você se apoia no $i de $S, pressionando o corpo.
+$n se apoia no $i de $N, pressionando o corpo.
+$n se apoia no seu $i, pressionando o corpo.
 #
 #
 
 ~licks lic 0 5 0 0
-You lick your lips and smile.
-$n licks $s lips and smiles.
-You lick your lips and look at $M.
-$n licks $s lips and looks at $N.
-$n licks $s lips and looks at you.
-Lick away, nobody's here with that name.
-You lick your lips.
-$n licks $s lips.
-You lick $S $t.
-$n licks $N's $t.
-$n licks your $t.
-You lick $p.
-$n licks $p.
+Você passa a língua nos lábios e sorri.
+$n passa a língua nos lábios e sorri.
+Você passa a língua nos lábios e olha para $M.
+$n passa a língua nos lábios e olha para $N.
+$n passa a língua nos lábios e olha para você.
+Lamba à vontade, ninguém com esse nome está aqui.
+Você passa a língua nos lábios.
+$n passa a língua nos lábios.
+Você lambe o $t de $S.
+$n lambe o $t de $N.
+$n lambe o seu $t.
+Você lambe $p.
+$n lambe $p.
 
 ~listen listen 0 5 0 0
-You listen with great attention.
-$n listens carefully.
-You listen carefully to what $N has to say.
-$n pays close attention to $N.
-$n listens to what you have to say.
-Who you tryin' to listen to stupid? The air???
-You listen to yourself talk and start to wonder...
-$n listens to $mself talk.
-You listen to $S $t.
-$n listens to $N's $t.
-$n listens to your $t.
-You listen to $p.
-$n listens to $p.
+Você ouve com grande atenção.
+$n ouve atentamente.
+Você ouve atentamente o que $N tem a dizer.
+$n presta muita atenção em $N.
+$n ouve o que você tem a dizer.
+A quem você está tentando ouvir? Ao ar?
+Você se ouve falar e começa a se questionar...
+$n se ouve falar.
+Você ouve o $t de $S.
+$n ouve o $t de $N.
+$n ouve o seu $t.
+Você ouve $p.
+$n ouve $p.
 
 ~lofr lofr 0 5 5 0
-You laugh on the floor, rolling.
-$n laughs on the floor, rolling.
-You laugh on the floor, rolling at $M.
-$n laughs on the floor, rolling at $N.
-$n laughs on the floor, rolling at you.
-You can't laugh at someone who isn't there, that would be silly.
-You laugh on the floor, rolling because you know you're silly.
-$n laughs on the floor, rolling because $e knows $e's silly.
+Você ri rolando no chão.
+$n ri rolando no chão.
+Você ri rolando no chão de $M.
+$n ri rolando no chão de $N.
+$n ri rolando no chão de você.
+Você não pode rir de alguém que não está aqui, seria bobo.
+Você ri rolando no chão porque sabe que é bobo(a).
+$n ri rolando no chão porque $l sabe que é bobo(a).
 #
 #
 #
@@ -3613,14 +3613,14 @@ $n laughs on the floor, rolling because $e knows $e's silly.
 #
 
 ~lol lol 0 5 5 0
-You laugh out loud.
-$n laughs out loud.
-You laugh out loud at $M.
-$n laughs out loud at $N.
-$n laughs out loud at you.
-You can't laugh at someone who isn't even here!
-You laugh out loud at yourself.
-$n laughs out loud at $mself.
+Você ri às gargalhadas.
+$n ri às gargalhadas.
+Você ri às gargalhadas de $M.
+$n ri às gargalhadas de $N.
+$n ri às gargalhadas de você.
+Você não pode rir de alguém que nem está aqui!
+Você ri às gargalhadas de si mesm$r.
+$n ri às gargalhadas de si mesm$r.
 #
 #
 #
