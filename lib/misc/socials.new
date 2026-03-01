@@ -138,30 +138,30 @@ Você olha de nariz empinado e grunhe 'Ahem!'
 $n olha de nariz empinado e grunhe 'Ahem!'
 Você olha de nariz empinado e grunhe 'Ahem!' para $N.
 $n olha de nariz empinado e grunhe 'Ahem!' para $N.
-$n looks down $s nose and grunts 'Ahem!' at you.
-Ahem! That person isn't here!
-You look down your nose and grunt 'Ahem!' to yourself.
-$n looks down $s nose and grunts 'Ahem!' to $mself.
-You look down your nose and grunt 'Ahem!' at $N's $t.
-$n looks down $s nose and grunts 'Ahem!' at $N's $t.
-$n looks down $s nose and grunts 'Ahem!' at your $t.
-You look down your nose and grunt 'Ahem!' at $p.
-$n looks down $s nose and grunts 'Ahem!' at your $p.
+$n olha de nariz empinado e grunhe 'Ahem!' para você.
+Ahem! Essa pessoa não está aqui!
+Você olha de nariz empinado e grunhe 'Ahem!' para si mesm$r.
+$n olha de nariz empinado e grunhe 'Ahem!' para si mesm$r.
+Você olha de nariz empinado e grunhe 'Ahem!' para o $t de $S.
+$n olha de nariz empinado e grunhe 'Ahem!' para o $t de $N.
+$n olha de nariz empinado e grunhe 'Ahem!' para seu $t.
+Você olha de nariz empinado e grunhe 'Ahem!' para $p.
+$n olha de nariz empinado e grunhe 'Ahem!' para $p.
 
 ~aim aim 0 5 0 0
-You have to point your weapon at someone!!!
-$n looks around the room frantically.  $e looks like $e's in a violent mood.
-You point your weapon at $N, showing $M you will kill $M in a heartbeat.
-$n points $s weapon at $N.  $e looks like $e means business!
-$n points $n weapon at you.  $e looks quite annoyed!
-How are you gonna scare $m with that if $e isn't even here???
-You point your weapon at yourself. Ready to die?
-$n points $s weapon at $mself, he's going to kill $mself!
-You point your weapon at $S $t preparing to strike.
-$n points $s weapon at $N's $t and prepares to strike.
-$n points $s weapon at your $t and prepares to strike.
-You take your best aim at $p.
-$n takes $s best aim at $p.
+Você precisa apontar sua arma para alguém!!!
+$n olha freneticamente ao redor. $l parece estar com um humor violento.
+Você aponta sua arma para $N, mostrando a $M que vai matá-$r num piscar de olhos.
+$n aponta $z arma para $N. $l parece falar sério!
+$n aponta a arma para você. $l parece bastante irritad$r!
+Como vai assustar $M com isso se $L nem está aqui???
+Você aponta sua arma para si mesm$r. Pronto para morrer?
+$n aponta $z arma para si mesm$r, vai se matar!
+Você aponta sua arma para o $t de $S preparando-se para golpear.
+$n aponta $z arma para o $t de $N e se prepara para golpear.
+$n aponta $z arma para seu $t e se prepara para golpear.
+Você mira com precisão em $p.
+$n mira com precisão em $p.
 
 ~amused amused 0 8 8 0
 Seus olhos brilham com diversão.
@@ -1348,8 +1348,8 @@ Você olha para $p com um olhar enlouquecido em seus olhos.
 $n olha para $p com um olhar enlouquecido em $s olhos.
 
 ~crazy crazy 0 8 8 0
-You look around. "Crazy, I used to be crazy once... they put me in a rubber room with rubber rats." The memories flow back.
-$n looks around. "Crazy, I used to be crazy once. They put me in a rubber room with rubber rats." Their eyes daze over as they start to remember.
+Você olha ao redor. "Louco, fui louco uma vez... me colocaram num quarto forrado de borracha com ratos de borracha." As memórias voltam.
+$n olha ao redor. "Louco, fui louco uma vez. Me colocaram num quarto forrado de borracha com ratos de borracha." Os olhos de $l ficam vidrados ao começar a lembrar.
 #
 #
 #
@@ -1363,74 +1363,74 @@ $n looks around. "Crazy, I used to be crazy once. They put me in a rubber room w
 #
 
 ~creep creep 0 5 0 0
-You creep quietly.
-$n is creeping along quietly.
-You creep towards $N.
-$n creeps towards $N.
-$n creeps towards you.
-Sorry, they aren't here, you creep.
-You creep towards yourself.
-$n creeps towards $mself, how strange.
-You creep towards $S $t.
-$n creeps towards $N's $t.
-$n creeps towards your $t.
-You creep towards $p.
-$n creeps towards $p.
+Você se esgueira em silêncio.
+$n se esgueira silenciosamente.
+Você se esgueira em direção a $N.
+$n se esgueira em direção a $N.
+$n se esgueira em direção a você.
+Desculpe, eles não estão aqui, covarde.
+Você se esgueira em direção a si mesm$r.
+$n se esgueira em direção a si mesm$r, que estranho.
+Você se esgueira em direção ao $t de $S.
+$n se esgueira em direção ao $t de $N.
+$n se esgueira em direção ao seu $t.
+Você se esgueira em direção a $p.
+$n se esgueira em direção a $p.
 
 ~cringe cringe 0 5 0 0
-You cringe in terror.
-$n cringes in terror!
-You cringe away from $M.
-$n cringes away from $N in mortal terror.
-$n cringes away from you.
-I don't see anyone by that name here.. what are you afraid of?
-You cringe at yourself, what are you afraid of?
-$n cringes at $mself, how strange.
-You cringe at $S $t.
-$n cringes at $N's $t.
-$n cringes at your $t.
-You cringe at $p.
-$n cringes at $p.
+Você estremece de terror.
+$n estremece de terror!
+Você recua de $M.
+$n recua de $N em terror mortal.
+$n recua de você.
+Não vejo ninguém com esse nome aqui... do que você tem medo?
+Você estremece diante de si mesm$r, do que você tem medo?
+$n estremece diante de si mesm$r, que estranho.
+Você estremece diante do $t de $S.
+$n estremece diante do $t de $N.
+$n estremece diante do seu $t.
+Você estremece diante de $p.
+$n estremece diante de $p.
 
 ~criticize criticize 0 5 0 0
-You criticize the whole world.
-$n criticizes everything and everyone.
-You harshly criticize $M.
-$n harshly criticizes $N.
-$n harshly criticizes you, $e should talk!
-Whom do you wish to criticize?
-Don't be so hard on yourself!
-$n harshly criticizes $mself.
-You criticize $S $t.
-$n criticizes $N's $t.
-$n criticizes your $t.
-You criticize $p.
-$n criticizes $p.
+Você critica o mundo inteiro.
+$n critica tudo e todos.
+Você critica $M duramente.
+$n critica $N duramente.
+$n te critica duramente, $l devia se olhar no espelho!
+A quem você deseja criticar?
+Não seja tão duro(a) consigo mesm$r!
+$n se critica duramente.
+Você critica o $t de $S.
+$n critica o $t de $N.
+$n critica seu $t.
+Você critica $p.
+$n critica $p.
 
 ~croon croon 0 5 0 0
-You croon a melody in a mellow, soothing voice.
-$n croons a soulful melody.
-You croon a soothing tune to $M.
-$n croons a song to $N in a soothing voice.
-$n soulfully croons a song to you.
-You croon away... off into space...
-Ol' Blue Eyes, eh?
-$n thinks $e croons like Frank Sinatra.
-You croon at $S $t.
-$n croons at $N's $t.
-$n croons at your $t.
-You croon at $p.
-$n croons at $p.
+Você cantarola uma melodia suave e reconfortante.
+$n cantarola uma melodia emocionante.
+Você cantarola uma melodia suave para $M.
+$n cantarola uma canção para $N com voz suave.
+$n cantarola emocionadamente uma canção para você.
+Você cantarola... perdido(a) no espaço...
+Velho Olhos Azuis, hein?
+$n acha que cantarola como Frank Sinatra.
+Você cantarola para o $t de $S.
+$n cantarola para o $t de $N.
+$n cantarola para seu $t.
+Você cantarola para $p.
+$n cantarola para $p.
 
 ~crossfinger crossfinger 0 8 8 0
-You cross your fingers and hope for the best.
-$n crosses $s fingers and hopes for the best.
-You cross your fingers and ask $N to wish you luck.
-$n crosses $s fingers and asks $N to wish $m luck.
-$n crosses $s fingers and asks you to wish $m luck.
-They didn't wait around to wish you luck.
-You cross your fingers and pray you don't mess things up.
-$n crosses $s fingers and hopes he doesn't mess things up.
+Você cruza os dedos e torce pelo melhor.
+$n cruza os dedos e torce pelo melhor.
+Você cruza os dedos e pede a $N que torça por você.
+$n cruza os dedos e pede a $N para torcer por $l.
+$n cruza os dedos e pede a você para torcer por $l.
+Eles não esperaram para torcer pela sua sorte.
+Você cruza os dedos e reza para não estragar tudo.
+$n cruza os dedos e espera não estragar tudo.
 #
 #
 #
@@ -1438,19 +1438,19 @@ $n crosses $s fingers and hopes he doesn't mess things up.
 #
 
 ~crushed crushed 0 8 8 0
-You collapse into broken pieces on the floor - CRUSHED!
-$n collapses into broken pieces on the floor - CRUSHED!
-You collapse into broken pieces on the floor - CRUSHED by $N!
-$n collapses into broken pieces on the floor - CRUSHED by $N!
-$n collapses into broken pieces on the floor - CRUSHED by you!
-You are CRUSHED by their nonexistance.
-You are CRUSHED by yourself!
-$n is CRUSHED by $mself.
-You collapse into broken pieces on the floor - CRUSHED by $N's $t!
-$n collapses into broken pieces on the floor - CRUSHED by $N's $t!
-$n collapses into broken pieces on the floor - CRUSHED by your $t!
-You collapse into broken pieces on the floor - CRUSHED by $p!
-$n collapses into broken pieces on the floor - CRUSHED by $p!
+Você desmorona em pedaços no chão - ESMAGAD$r!
+$n desmorona em pedaços no chão - ESMAGAD$r!
+Você desmorona em pedaços no chão - ESMAGAD$r por $N!
+$n desmorona em pedaços no chão - ESMAGAD$r por $N!
+$n desmorona em pedaços no chão - ESMAGAD$r por você!
+Você é ESMAGAD$r pela ausência deles.
+Você é ESMAGAD$r por si mesm$r!
+$n é ESMAGAD$r por si mesm$r.
+Você desmorona em pedaços no chão - ESMAGAD$r pelo $t de $N!
+$n desmorona em pedaços no chão - ESMAGAD$r pelo $t de $N!
+$n desmorona em pedaços no chão - ESMAGAD$r pelo seu $t!
+Você desmorona em pedaços no chão - ESMAGAD$r por $p!
+$n desmorona em pedaços no chão - ESMAGAD$r por $p!
 
 ~cry cry 0 5 0 0
 Buuuuaaaaaaa!!!
@@ -1468,59 +1468,59 @@ Você chora em $p.
 $n chora em $p.
 
 ~crylaugh crylaugh 0 8 8 0
-You wipe a tear from your eye.
-$n wipes a tear from $s eye.
-You wipe a tear from your eye as you laugh heartily at $N.
-$n wipes a tear from $s eye as $e laughs heartily at $N.
-$n wipes a tear from $s eye as $e laughs heartily at you.
-You're crying with laughter that they left?
-You wipe a tear from your eye as you laugh heartily at yourself.
-$n wipes a tear from $s eye as $e laughs heartily at $mself.
-You wipe a tear from your eye as you laugh heartily at $N's $t.
-$n wipes a tear from $s eye as $e laughs heartily at $N's $t.
-$n wipes a tear from $s eye as $e laughs heartily at your $t.
-You wipe a tear from your eye as you laugh heartily at $p.
-$n wipes a tear from $s eye as $e laughs heartily at $p.
+Você enxuga uma lágrima do olho.
+$n enxuga uma lágrima do olho.
+Você enxuga uma lágrima do olho enquanto ri gostosamente de $N.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente de $N.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente de você.
+Você está chorando de rir porque eles foram embora?
+Você enxuga uma lágrima do olho enquanto ri gostosamente de si mesm$r.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente de si mesm$r.
+Você enxuga uma lágrima do olho enquanto ri gostosamente do $t de $N.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente do $t de $N.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente do seu $t.
+Você enxuga uma lágrima do olho enquanto ri gostosamente de $p.
+$n enxuga uma lágrima do olho enquanto $l ri gostosamente de $p.
 
 ~cuddle cuddle 0 5 0 0
-Who do you feel like cuddling today?
-$n wants to cuddle with someone.
-You cuddle $M.
-$n cuddles $N.
-$n cuddles you.
-They aren't here.
-You must feel very cuddly indeed.. :)
-$n cuddles $mself.
-You cuddle $S $t.
-$n cuddles $N's $t.
-$n cuddles your $t.
-You cuddle $p.
-$n cuddle $p.
+Com quem você quer se aconchegar hoje?
+$n quer se aconchegar com alguém.
+Você se aconchega em $M.
+$n se aconchega em $N.
+$n se aconchega em você.
+Eles não estão aqui.
+Você deve se sentir muito aconchegante mesmo... :)
+$n se aconchega em si mesm$r.
+Você se aconchega no $t de $S.
+$n se aconchega no $t de $N.
+$n se aconchega no seu $t.
+Você se aconchega em $p.
+$n se aconchega em $p.
 
 ~curious curious 0 8 8 0
-You look curiously about.
-$n looks curiously about.
-You look curiously at $N.
-$n looks curiously at $N.
-$n looks curiously at you.
-Are you curious that they're not here?
-You examine yourself curiously.
-$n examines $mself curiously.
-You look curiously at $N's $t.
-$n looks curiously at $N's $t.
-$n looks curiously at your $t.
-You look curiously at $p.
-$n looks curiously at $p.
+Você olha ao redor com curiosidade.
+$n olha ao redor com curiosidade.
+Você olha para $N com curiosidade.
+$n olha para $N com curiosidade.
+$n olha para você com curiosidade.
+Você está curioso(a) que eles não estão aqui?
+Você se examina com curiosidade.
+$n se examina com curiosidade.
+Você olha com curiosidade para o $t de $N.
+$n olha com curiosidade para o $t de $N.
+$n olha com curiosidade para o seu $t.
+Você olha com curiosidade para $p.
+$n olha com curiosidade para $p.
 
 ~curl curl 0 5 0 0
-Curl what?
-$n curls up into a little ball.
-You curl up at $N's feet.
-$n curls up into a little ball at $N's feet and goes to sleep.
-$n curls up into a little ball and falls asleep at your feet.
-You curl up to your imaginary friend.
-You curl up and go to sleep.
-$n curls and goes to sleep.
+Enrolar o quê?
+$n se enrola como uma bolinha.
+Você se enrola aos pés de $N.
+$n se enrola como uma bolinha aos pés de $N e adormece.
+$n se enrola como uma bolinha e adormece aos seus pés.
+Você se enrola ao lado do seu amigo imaginário.
+Você se enrola e adormece.
+$n se enrola e adormece.
 #
 #
 #
@@ -1528,100 +1528,100 @@ $n curls and goes to sleep.
 #
 
 ~curse curse 0 5 0 0
-You swear loudly for a long time.
-$n swears: @*"*&^$$%@*&!!!!!!
-You curse $M and all $S ancestors and descendants.
-$n calls doubt on $N's parentage.
-$n curses you, what a moron!
-Your curses echo emptily.
-You make yourself a solemn promise.
-$n curses under $s breath.
-You curse $S $t.
-$n curses $N's $t.
-$n curses your $t.
-You curse $p.
-$n curses $p.
+Você xinga alto por muito tempo.
+$n xinga: @*"*&^$$%@*&!!!!!!
+Você amaldiçoa $M e todos os $Z antepassados e descendentes.
+$n questiona a filiação de $N.
+$n te amaldiçoa, que imbecil!
+Suas maldições ecoam no vazio.
+Você faz uma promessa solene a si mesm$r.
+$n xinga em surdina.
+Você amaldiçoa o $t de $S.
+$n amaldiçoa o $t de $N.
+$n amaldiçoa seu $t.
+Você amaldiçoa $p.
+$n amaldiçoa $p.
 
 ~curtsey curtsey 0 5 0 0
-You curtsey to your audience.
-$n curtseys gracefully.
-You curtsey to $M.
-$n curtsies gracefully to $N.
-$n curtsies to you.
-But there is nobody by that name here.
-You try to curtsy to yourself and fall over.
-$n falls over on $s derriere.
-You curtsey  at $S $t.
-$n curtseys at $N's $t.
-$n curtseys at your $t.
-You curtsey at $p.
-$n curtseys at $p.
+Você faz uma reverência para o seu público.
+$n faz uma graciosa reverência.
+Você faz uma reverência para $M.
+$n faz uma graciosa reverência para $N.
+$n faz uma reverência para você.
+Mas não há ninguém com esse nome aqui.
+Você tenta fazer uma reverência para si mesm$r e cai.
+$n cai de bunda no chão.
+Você faz uma reverência diante do $t de $S.
+$n faz uma reverência diante do $t de $N.
+$n faz uma reverência diante do seu $t.
+Você faz uma reverência diante de $p.
+$n faz uma reverência diante de $p.
 
 ~custard custard 0 5 0 0
-You pull out a large custard pie and begin munching on it.
-$n pulls out a large custard pie and eats it face-first.
-You whip out a custard pie and slam it into $N's face, laughing all the while.
-$n whips out a custard pie and slams it into $N's face!  Whipped cream everywhere!
-$n slams a custard pie into your face, which permanently dents your forehead.
-You can't throw a pie at someone when they aren't here.  *reality check*
-You pull out a custard pie and slam it into your face.  YUMMY.
-$n pulls out a custard pie and slams it into $s face.  YUM.
-You toss a pie straight at $S $t.
-$n tosses a custard pie straight at $N's $t, what a mess.
-$n tosses a custard pie straight at your $t, what a mess, cherry you think.
-You toss a custard pie onto $p.
-$n tosses a custard pie onto $p.
+Você pega uma grande torta de creme e começa a comê-la.
+$n pega uma grande torta de creme e a come de cara.
+Você pega uma torta de creme e a esmaga na cara de $N, rindo o tempo todo.
+$n pega uma torta de creme e a esmaga na cara de $N! Chantilly por todo lado!
+$n esmaga uma torta de creme na sua cara, criando um amassado permanente na sua testa.
+Não dá para jogar uma torta em alguém que não está aqui. *volta à realidade*
+Você pega uma torta de creme e a esmaga na própria cara. QUE DELÍCIA.
+$n pega uma torta de creme e a esmaga na própria cara. QUE DELÍCIA.
+Você arremessa uma torta diretamente no $t de $S.
+$n joga uma torta de creme diretamente no $t de $N, que bagunça.
+$n joga uma torta de creme diretamente no seu $t, que bagunça.
+Você joga uma torta de creme em $p.
+$n joga uma torta de creme em $p.
 
 ~dance dance 0 5 8 0
-You dance around happily.
-$n dances a little jig.
-You dance around happily with $M.
-$n dances around happily with $N.
-$n dances around happily with you.
-Eh, WHO?
-You dance around happily by yourself.
-$n skips a light Fandango.
-You grab $S $t and start dancing with it.
-$n grabs $N's $t and starts dancing with it.
-$n grabs your $t and starts dancing with it.
-You dance around happily with $p.
-$n grabs $p and starts dancing with it.
+Você dança feliz.
+$n faz uma pequena dança.
+Você dança feliz com $M.
+$n dança feliz com $N.
+$n dança feliz com você.
+Ei, QUEM?
+Você dança feliz sozinho(a).
+$n dança uma dança ligeira.
+Você pega o $t de $S e começa a dançar com ele.
+$n pega o $t de $N e começa a dançar com ele.
+$n pega seu $t e começa a dançar com ele.
+Você dança feliz com $p.
+$n pega $p e começa a dançar com ele.
 
 ~dark dark 0 5 0 0
-As you concentrate the room appears to darken.
-$n concentrates on something, and the light in the room dims.
-You raise your hand, palm open, towards $N.
-$n raises $s hand, palm open, towards $N who staggers back.
-$n raises $s hand, palm open towards you, and a wave of darkness passes through you!
-You raise your hand and concentrate, but nothing happens.
-You place your own hand over your heart, and a wave of darkness passes through you.
-$n places $s hand over $s heart, and stumbles back.
-You grab $S $t and send a wave of darkness through it.
-$n grabs $N's $t and sends a wave of darkness through it.
-$n grabs your $t and sends a wave of darkness through it.
-You take $p and send a wave of darkness through it.
-$n grabs $p and sends a wave of darkness through it.
+Enquanto você se concentra, o quarto parece escurecer.
+$n se concentra em algo e a luz no quarto diminui.
+Você ergue a mão, com a palma aberta, em direção a $N.
+$n ergue a mão, com a palma aberta, em direção a $N, que recua.
+$n ergue a mão, com a palma aberta para você, e uma onda de escuridão passa por você!
+Você ergue a mão e se concentra, mas nada acontece.
+Você coloca sua própria mão sobre o coração e uma onda de escuridão passa por você.
+$n coloca a mão sobre o próprio coração e vacila.
+Você pega o $t de $S e manda uma onda de escuridão através dele.
+$n pega o $t de $N e manda uma onda de escuridão através dele.
+$n pega seu $t e manda uma onda de escuridão através dele.
+Você pega $p e manda uma onda de escuridão através dele.
+$n pega $p e manda uma onda de escuridão através dele.
 
 ~daydream daydream 0 5 0 0
-You dream of better times.
-$n looks absent-minded, $s eyes staring into space.
-You look at $M dreamily.
-$n looks at $N dreamily.
-$n looks dreamily at you.
-Your idol seems not to be here...
-You must love yourself, huh?
-$n daydreams about $mself... get a life, huh?
-You look at $S $t dreamily.
-$n looks at $N's $t dreamily.
-$n looks at your $t dreamily.
-You look dreamily at $p.
-$n looks dreamily at $p.
+Você sonha com tempos melhores.
+$n parece distrait$r, com os olhos fixos no nada.
+Você olha para $M de forma sonhadora.
+$n olha para $N de forma sonhadora.
+$n olha para você de forma sonhadora.
+Seu ídolo parece não estar aqui...
+Você deve se amar muito, hein?
+$n sonha consigo mesm$r... arranje uma vida, hein?
+Você olha para o $t de $S de forma sonhadora.
+$n olha para o $t de $N de forma sonhadora.
+$n olha para seu $t de forma sonhadora.
+Você olha sonhadoramente para $p.
+$n olha sonhadoramente para $p.
 
 ~dbc dbc 0 6 0 0
-This action is unfinished.
-This action is unfinished.
-You conjure up a bowl of icecream
-$n conjures up a large bowl filled with Chocolate icecream, dipped in chocolate fudge sitting on a chocolate fudge brownie and hands it to $N - DBC
+Esta ação está incompleta.
+Esta ação está incompleta.
+Você conjura uma tigela de sorvete
+$n conjura uma grande tigela cheia de sorvete de Chocolate, coberto de calda de chocolate em cima de um brownie de chocolate e entrega para $N - DBC
 #
 #
 #
@@ -1633,12 +1633,12 @@ $n conjures up a large bowl filled with Chocolate icecream, dipped in chocolate 
 #
 
 ~dead dead 0 8 8 0
-You stagger weakly about the room before keeling over... DEAD!
-$n staggers weakly about the room before keeling over... DEAD!
-You stagger weakly, grasping $N's shoulder before keeling over... DEAD!
-$n staggers weakly, grasping $N's shoulder before keeling over... DEAD!
-$n staggers weakly, grasping your shoulder before keeling over... DEAD!
-They're not here to observe your tragic demise.
+Você cambaleia pelo quarto antes de cair... MORTO!
+$n cambaleia pelo quarto antes de cair... MORTO!
+Você cambaleia, segurando o ombro de $N antes de cair... MORTO!
+$n cambaleia, segurando o ombro de $N antes de cair... MORTO!
+$n cambaleia, segurando seu ombro antes de cair... MORTO!
+Eles não estão aqui para testemunhar sua trágica morte.
 #
 #
 #
@@ -1648,14 +1648,14 @@ They're not here to observe your tragic demise.
 #
 
 ~deaf deaf 0 8 8 0
-You plug your ears with your fingers and scream 'I CAN'T HEAR YOU!'
-$n plugs $s ears with $s fingers and loudly screams 'I CAN'T HEAR YOU!!!'
-You plug your ears and scream loudly so you can't hear $N.
-$n plugs $s ears and screams violently at $N.
-$n plugs $s ears and screams 'I CAN'T HEAR YOU!!!' in your face.
-You plug your ears with your fingers and make a scene for no reason in particular.
-You try and drown out your own speech by plugging your ears and screaming obscenely.
-$n plugs $s ears and screams at $mself because $e doesn't know how to shut up. That'll teach $m.
+Você tapa os ouvidos com os dedos e grita 'NÃO CONSIGO TE OUVIR!'
+$n tapa os ouvidos com os dedos e grita bem alto 'NÃO CONSIGO TE OUVIR!!!'
+Você tapa os ouvidos e grita alto para não ouvir $N.
+$n tapa os ouvidos e grita violentamente para $N.
+$n tapa os ouvidos e grita 'NÃO CONSIGO TE OUVIR!!!' na sua cara.
+Você tapa os ouvidos com os dedos e faz uma cena por nenhum motivo.
+Você tenta se abafar tapando os ouvidos e gritando obscenidades.
+$n tapa os próprios ouvidos e grita porque não sabe como parar de falar. Isso vai ensiná-$r.
 #
 #
 #
@@ -1663,14 +1663,14 @@ $n plugs $s ears and screams at $mself because $e doesn't know how to shut up. T
 #
 
 ~defib defib 0 8 8 0
-You charge up the defibrillator and yell 'Clear.'
-$n charges up $s defibrillator and yells 'clear.'
-You place the defibrillator paddles on $N's chest and give $M a jolt.
-$n places some defibrillator paddles against $N's chest and gives $M a jolt.
-$n places some defibrillator paddles against your chest and jolts you half to death.
-You look around for someone to jolt.
-You place the paddles against yourself. Are you crazy?
-$n places the defibrillator paddles on $mself and is jolted by the shock.
+Você carrega o desfibrilador e grita 'Limpo.'
+$n carrega o desfibrilador e grita 'limpo.'
+Você coloca as pás do desfibrilador no peito de $N e dá um choque em $M.
+$n coloca as pás do desfibrilador no peito de $N e dá um choque em $M.
+$n coloca as pás do desfibrilador no seu peito e quase te mata de choque.
+Você procura alguém para dar um choque.
+Você coloca as pás em si mesm$r. Você é louc$r?
+$n coloca as pás do desfibrilador em si mesm$r e leva um choque.
 #
 #
 #
@@ -1678,109 +1678,109 @@ $n places the defibrillator paddles on $mself and is jolted by the shock.
 #
 
 ~despair despair 0 5 0 0
-You throw your hands up in despair. You give up.
-$n surrenders, and throws $s hands up in despair.
-You throw your hands up in despair at $N.
-$n thinks of $N, and throws $s hands in the air.
-$n thinks of you, and throws $s hand up in despair.
-If you want to show despair find someone to show it to.
-You are fed up with yourself.
-$n is fed up with $mself.
-You look at $S $t despairingly.
-$n looks at $N's $t despairingly.
-$n looks at your $t despairingly.
-You look despairingly at $p.
-$n looks despairingly at $p.
+Você joga os braços para o alto em desespero. Você desiste.
+$n se rende e joga as mãos para o alto em desespero.
+Você joga os braços para o alto em desespero diante de $N.
+$n pensa em $N e joga as mãos pelo ar.
+$n pensa em você e levanta as mãos em desespero.
+Se quer mostrar desespero, encontre alguém para mostrar.
+Você está farto(a) de si mesm$r.
+$n está farto(a) de si mesm$r.
+Você olha para o $t de $S com desespero.
+$n olha com desespero para o $t de $N.
+$n olha com desespero para seu $t.
+Você olha com desespero para $p.
+$n olha com desespero para $p.
 
 ~despine despine 0 5 0 0
-You de-spine yourself... Ow.
-$n de-spined $mself. Damn, that *HAD* to hurt...
-You rip out $N's spine and cackle insanely, holding it up!
-$n reaches over to $N's back, rips out $M spine, and laughs insanely!
-$n has just ripped out your spine! Damn, that *HURT!*
-Who do you wish to de-spine?
-You de-spine yourself... Ow.
-$n de-spines $mself. Damn, that *HAD* to hurt...
-You try to de-spine $S $t.
-$n tries to de-spine $N's $t.
-$n tries to de-spine your $t.
-You rip the spine out of the $p, then realize... inanimate objects don't have spines.
-$n tries in vain to rip the $p's spine out, because it has no spine.
+Você arranca sua própria espinha dorsal... Ai.
+$n arrancou a própria espinha. Caramba, isso *DEVE* ter doído...
+Você arranca a espinha de $N e gargalha loucamente, erguendo-a!
+$n vai pelas costas de $N, arranca $Z espinha dorsal e ri loucamente!
+$n acabou de arrancar sua espinha dorsal! Caramba, isso *DOEU!*
+A quem você quer arrancar a espinha?
+Você arranca sua própria espinha... Ai.
+$n arranca a própria espinha. Caramba, isso *DEVE* ter doído...
+Você tenta arrancar o $t de $S.
+$n tenta arrancar o $t de $N.
+$n tenta arrancar seu $t.
+Você tenta arrancar a espinha de $p, então percebe... objetos inanimados não têm espinha.
+$n tenta em vão arrancar a espinha de $p, pois ele não tem espinha.
 
 ~differ differ 0 5 0 0
-You differ with that.
-$n begs to differ.
-You differ with what $E just said.
-$n begs to differ with what $N just said.
-$n begs to differ with what you just said.
-You differ with whom?
-You are disagreeing with yourself?
-$n is disagreeing with $mself, AGAIN!
-You disagree with $S $t.
-$n disagrees with $N's $t.
-$n disagrees with your $t.
-You disagree with $p.
-$n disagree with $p.
+Você discorda disso.
+$n pede licença para discordar.
+Você discorda do que $L acabou de dizer.
+$n pede licença para discordar do que $N acabou de dizer.
+$n pede licença para discordar do que você acabou de dizer.
+Você discorda de quem?
+Você está discordando de si mesm$r?
+$n está discordando de si mesm$r, DE NOVO!
+Você discorda do $t de $S.
+$n discorda do $t de $N.
+$n discorda do seu $t.
+Você discorda de $p.
+$n discorda de $p.
 
 ~disapprove disapprove 0 8 8 0
-You shake your head disapprovingly.
-$n shakes $s head disapprovingly.
-You give $N a disapproving glance.
-$n gives $N a disapproving glance.
-$n glances disapprovingly at you.
-You disapprove of them but they're not here to notice.
-You disapprove of yourself.
-$n gives $mself a disapproving glance.
-You glance disapprovingly at $N's $t.
-$n glances disapprovingly at $N's $t.
-$n glances disapprovingly at your $t.
-You glance disapprovingly at $p.
-$n glances disapprovingly at $p.
+Você balança a cabeça em sinal de desaprovação.
+$n balança a cabeça em sinal de desaprovação.
+Você lança um olhar de desaprovação para $N.
+$n lança um olhar de desaprovação para $N.
+$n lança um olhar de desaprovação para você.
+Você desaprova deles, mas eles não estão aqui para notar.
+Você se desaprova.
+$n se lança um olhar reprovador.
+Você olha com desaprovação para o $t de $N.
+$n olha com desaprovação para o $t de $N.
+$n olha com desaprovação para o seu $t.
+Você olha com desaprovação para $p.
+$n olha com desaprovação para $p.
 
 ~discombob discombob 0 5 0 0
-You feel discombobulated.
-$n feels discombobulated.
-You think $M is discombobulated.
-$n thinks $N is discombobulated.
-$n thinks you are discombobulated.
-You think someone is discombobulated? You're right.
-You become all discombobulated.
-$n becomes all discombobulated.
-You look at $S discombobulated $t.
-$n looks at $N's $t and declares it discombobulated.
-$n looks at your $t and declares it discombobulated.
-You look at $p and declare it discombobulated.
-$n looks at $p and declares it discombobulated.
+Você se sente desorientado(a).
+$n se sente desorientado(a).
+Você acha $M desorientad$r.
+$n acha $N desorientad$r.
+$n acha que você está desorientad$r.
+Você acha alguém desorientado? Você está certo(a).
+Você fica totalmente desorientad$r.
+$n fica totalmente desorientad$r.
+Você olha para o $t de $S e o declara desorientado.
+$n olha para o $t de $N e o declara desorientado.
+$n olha para o seu $t e o declara desorientado.
+Você olha para $p e o declara desorientado.
+$n olha para $p e o declara desorientado.
 
 ~disturbed disturbed 0 8 8 0
-You are highly disturbed...
-$n is highly disturbed...
-You find $N highly disturbing...
-$n finds $N highly disturbing...
-$n finds you highly disturbing...
-They're not there... disturbing!
-You are actually disturbed by yourself.
-$n is disturbed by $mself.
-$N's $t disturbs you...
-$n is highly disturbed by $N's $t...
-$n is highly disturbed by your $t...
-You find $p highly disturbing...
-$n finds $p highly disturbing...
+Você está muito perturbado(a)...
+$n está muito perturbado(a)...
+Você acha $N muito perturbador(a)...
+$n acha $N muito perturbador(a)...
+$n te acha muito perturbador(a)...
+Eles não estão... perturbador!
+Você está perturbado(a) por si mesm$r.
+$n está perturbado(a) por si mesm$r.
+O $t de $N te perturba...
+$n está muito perturbado(a) pelo $t de $N...
+$n está muito perturbado(a) pelo seu $t...
+Você acha $p muito perturbador...
+$n acha $p muito perturbador...
 
 ~dive dive 0 5 0 0
-You dive into the dirt.
-$n dives into the dirt.
-You dive behind $N's massive butt.
-$n dives behind $N's massive butt.
-$n dives behind your massive butt!
-Sorry, that person's massive butt isn't here..
-Thats not an easy thing to do.
-$n tries to dive behind $s own ass, but fails miserably.
-You dive behind $N's massive $t.
-$n dives behind $N's massive $t.
-$n dives behind your massive $N.
-You dive behind $p.
-$n dives behind $p.
+Você mergulha no chão.
+$n mergulha no chão.
+Você se esconde atrás da enorme bunda de $N.
+$n se esconde atrás da enorme bunda de $N.
+$n se esconde atrás da sua enorme bunda!
+Desculpe, a enorme bunda dessa pessoa não está aqui...
+Isso não é uma coisa fácil de fazer.
+$n tenta se esconder atrás do próprio traseiro, mas falha miseravelmente.
+Você se esconde atrás do enorme $t de $N.
+$n se esconde atrás do enorme $t de $N.
+$n se esconde atrás do seu enorme $N.
+Você se esconde atrás de $p.
+$n se esconde atrás de $p.
 
 ~doh doh 0 5 0 0
 Doh!
