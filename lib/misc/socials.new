@@ -5893,29 +5893,29 @@ Você não os vê aqui.
 #
 
 ~spank spank 0 5 0 0
-You spank WHO?  Eh?  How?  Naaah, you'd never.
-$n spanks the thin air with a flat hand.
-You spank $M vigorously, long and hard.  Your hand hurts.
-$n spanks $N over $s knee.  It hurts to even watch.
-$n spanks you long and hard.  You feel like a naughty child.
-Are you sure about this?  I mean, that person isn't even here!
-You spank yourself, such a naughty person.
-$n spanks $mself, $e seems to enjoy it a little too much.
-You spank $M $t.
-$n spanks $N's $t.
-$n spanks your $t.
-You spank $p.
-$n spanks $p.
+Você bate em QUEM? Ei? Como? Nãão, você nunca faria isso.
+$n bate no ar com a mão aberta.
+Você bate em $M vigorosamente, por muito tempo. Sua mão dói.
+$n bate em $N sobre o $z joelho. Dói só de ver.
+$n bate em você por muito tempo. Você se sente como uma criança travessa.
+Tem certeza disso? Quer dizer, essa pessoa nem está aqui!
+Você bate em si mesm$r, que pessoa travessa.
+$n bate em si mesm$r, $l parece gostar demais disso.
+Você bate no $t de $M.
+$n bate no $t de $N.
+$n bate no seu $t.
+Você bate em $p.
+$n bate em $p.
 
 ~spew spew 0 5 0 0
-SPEW!!!!!
-EWW!!! $n spews all over.
-EWW!!! You spew all over $M.
-YECK!!! $n spews all over $N.
-YECK!!! $n spews all over you!
-Again?
-You spew all over yourself.
-$n spews all over $s own clothes.
+VOMITAR!!!!!
+IIIII!!! $n vomita por todo lado.
+IIIII!!! Você vomita em cima de $M.
+CARAMBA!!! $n vomita em cima de $N.
+CARAMBA!!! $n vomita em cima de você!
+De novo?
+Você vomita em cima de si mesm$r.
+$n vomita nas próprias roupas.
 #
 #
 #
@@ -5923,14 +5923,14 @@ $n spews all over $s own clothes.
 #
 
 ~spin spin 0 8 8 0
-You spin joyously in a circle.
-$n spins around cheerfully.
-You spin joyously in a circle.
-$n spins around cheerfully.
+Você gira alegremente em círculos.
+$n gira alegremente.
+Você gira alegremente em círculos.
+$n gira alegremente.
 #
-You spin $N around and into your arms.
-$n twirls $N around and into $s arms.
-$n twirls you around and into $s warm embrace.
+Você gira $N e o(a) puxa para os seus braços.
+$n faz $N girar e o(a) puxa para os $z braços.
+$n faz você girar e te puxa para $z caloroso abraço.
 #
 #
 #
@@ -5938,59 +5938,59 @@ $n twirls you around and into $s warm embrace.
 #
 
 ~spit spit 0 5 0 0
-You spit on the ground.
-$n spits on the ground.
-You spit on $M.
-$n spits at $N.
-$n spits at you.
-Can you spit that far?
-You drool down your front.
-$n drools down $s front.
-You spit on $S $t.
-$n spits on $N's $t.
-$n spits on your $t.
-You spit on $p.
-$n spits on $p.
+Você cospe no chão.
+$n cospe no chão.
+Você cospe em $M.
+$n cospe em $N.
+$n cospe em você.
+Você consegue cuspir tão longe?
+Você baba pela frente.
+$n baba pela frente.
+Você cospe no $t de $S.
+$n cospe no $t de $N.
+$n cospe no seu $t.
+Você cospe em $p.
+$n cospe em $p.
 
 ~splash splash 0 5 0 0
-You splash your face with water.
-$n splashes $s face water.
-You splash water on $N soaking $M.... how rude.
-$n splashes water on $N soaking $M.... run you might be next.
-$n splashes you with water... you are soaked... REVENGE!
-Whom do you want to splash water on again?
-You splash water all over yourself..... FOOL you are drenched.....
-$n splashes water all over $mself... the FOOL is drenched... 
-You playfully splash $N's $t with water.
-$n playfully splashes $N's $t with water.
-$n playfully splashes water at your $t...... going to take that?
-You splash $p with water, trying to clean off those nasty bloodstains. 
-$n splashes $p with water, and starts to wash away an imaginary bloodstain.
+Você joga água no rosto.
+$n joga água no rosto.
+Você joga água em $N encharcando $M.... que falta de educação.
+$n joga água em $N encharcando $M.... corra, você pode ser o próximo.
+$n joga água em você... você está encharcado(a)... VINGANÇA!
+Em quem você quer jogar água de novo?
+Você joga água em si mesm$r..... TOLO(A) você está encharcado(a).....
+$n joga água em si mesm$r... O(A) TOLO(A) está encharcad$r...
+Você joga água brincalhonamente no $t de $N.
+$n joga água brincalhonamente no $t de $N.
+$n joga água brincalhonamente no seu $t...... vai engolir isso?
+Você joga água em $p, tentando limpar aquelas nódoas de sangue.
+$n joga água em $p, e começa a lavar uma mancha imaginária de sangue.
 
 ~spongebath spongebath 0 6 0 0
-You demand a sponge bath.
-$n demands a sponge bath.
-You look at $N and demand your sponge bath.
-$n looks at $N and demands $s sponge bath.
-$n looks at you and demands you give $m a sponge bath.
-They left before you could give them a sponge bath.
-You give yourself a sponge bath.
-$n gives $mself a sponge bath...
-You look at $N's $t and demand a sponge bath.
-$n looks at $N's $t and demands a sponge bath.
-$n looks at your $t and demands you give $m a sponge bath.
-You look at $p and demand a sponge bath.
-$n looks at $p and demands a sponge bath.
+Você exige um banho de esponja.
+$n exige um banho de esponja.
+Você olha para $N e exige seu banho de esponja.
+$n olha para $N e exige $z banho de esponja.
+$n te olha e exige que você dê a $l um banho de esponja.
+Eles foram embora antes que você pudesse dar a eles um banho de esponja.
+Você se dá um banho de esponja.
+$n se dá um banho de esponja...
+Você olha para o $t de $N e exige um banho de esponja.
+$n olha para o $t de $N e exige um banho de esponja.
+$n olha para o seu $t e exige que você dê a $l um banho de esponja.
+Você olha para $p e exige um banho de esponja.
+$n olha para $p e exige um banho de esponja.
 
 ~spork spork 0 8 8 0
-You whip out your spork and prepare for the worst.
-$n pulls out a spork.
-You spork $N ruthlessly.
-$n sporks $N ruthlessly.
-You are sporked by $n. It hurts!
-They did not wait for you to spork them.
-You spork yourself until it hurts
-$n sporks $mself, it looks painful.
+Você saca seu garfo-colher e se prepara para o pior.
+$n puxa um garfo-colher.
+Você espeta $N sem piedade com o garfo-colher.
+$n espeta $N sem piedade com o garfo-colher.
+Você é espetat$r por $n. Dói!
+Eles não esperaram para ser espetados.
+Você se espeta com o garfo-colher até doer.
+$n se espeta com o garfo-colher, parece doloroso.
 #
 #
 #
@@ -5998,26 +5998,26 @@ $n sporks $mself, it looks painful.
 #
 
 ~squeak squeak 0 5 0 0
-You let out a pitiful squeak.
-$n lets out a pitiful squeak.
-You look at $M and squeak in fear.
-$n looks at $N and squeaks in fear.
-$n looks at you and squeaks in fear.
-Your squeak goes unanswered.
-You squeak quietly to yourself.
-$n squeaks quietly to $mself.
-You nudge at $N's $t and squeak adorably.
-$n nudges at $N's $t and squeaks adorably.
-$n nudges at your $t and squeaks adorably.
+Você solta um piado lamentável.
+$n solta um piado lamentável.
+Você olha para $M e pía de medo.
+$n olha para $N e pía de medo.
+$n olha para você e pía de medo.
+Seu piado fica sem resposta.
+Você pía quietamente para si mesm$r.
+$n pía quietamente para si mesm$r.
+Você cutuca o $t de $N e pía adoravelmente.
+$n cutuca o $t de $N e pía adoravelmente.
+$n cutuca o seu $t e pía adoravelmente.
 #
 #
 
 ~squeal squeal 0 8 8 0
-You squeal with delight!
-$n squeals with delight!
-You look at $N and squeal with delight!
-$n squeals with delight at $N's actions.
-$n looks at you and squeals with delight!
+Você grita de alegria!
+$n grita de alegria!
+Você olha para $N e grita de alegria!
+$n grita de alegria com as ações de $N.
+$n te olha e grita de alegria!
 #
 #
 #
@@ -6028,94 +6028,94 @@ $n looks at you and squeals with delight!
 #
 
 ~squeeze squeeze 0 5 0 0
-Where, what, how, WHO???
-$n is looking for someone to squeeze.
-You squeeze $M fondly.
-$n squeezes $N fondly.
-$n squeezes you fondly.
-Where, what, how, WHO???
-You squeeze yourself -- try to relax a little!
-$n squeezes $mself.
-You fondly squeeze $N's $t.
-$n fondly squeezes $N's $t.
-$n fondly squeezes your $t.
-You squeeze $p.
-$n squeezes $p.
+Onde, o quê, como, QUEM???
+$n está procurando alguém para apertar.
+Você aperta $M carinhosamente.
+$n aperta $N carinhosamente.
+$n te aperta carinhosamente.
+Onde, o quê, como, QUEM???
+Você se aperta -- tente relaxar um pouco!
+$n se aperta.
+Você aperta carinhosamente o $t de $N.
+$n aperta carinhosamente o $t de $N.
+$n aperta carinhosamente o seu $t.
+Você aperta $p.
+$n aperta $p.
 
 ~stare stare 0 5 0 0
-You stare at the sky.
-$n stares at the sky.
-You stare dreamily at $N, completely lost in $S eyes..
-$n stares dreamily at $N.
-$n stares dreamily at you, completely lost in your eyes.
-You stare and stare but can't see that person anywhere...
-You stare dreamily at yourself - enough narcissism for now.
-$n stares dreamily at $mself - NARCISSIST!
-You stare at $S $t.
-$n stares at $N's $t.
-$n stares at your $t.
-You stare at $p.
-$n stares at $p.
+Você contempla o céu.
+$n contempla o céu.
+Você olha sonhadoramente para $N, completamente perdido(a) nos $S olhos..
+$n olha sonhadoramente para $N.
+$n te olha sonhadoramente, completamente perdido(a) nos seus olhos.
+Você olha e olha mas não consegue ver essa pessoa em lugar algum...
+Você olha sonhadoramente para si mesm$r - basta de narcisismo por agora.
+$n olha sonhadoramente para si mesm$r - NARCISISTA!
+Você olha para o $t de $S.
+$n olha para o $t de $N.
+$n olha para o seu $t.
+Você olha para $p.
+$n olha para $p.
 
 ~steam steam 0 5 0 0
-You let out some steam, much to the others' relief (and your own!)
-$n lets out a lot of steam, much to your relief.
-You fume and rage at $M.
-$n starts ranting at $N, $s face purple with rage.
-$n starts yelling at you, $e should calm down.
-Sure sure, but who might that be?
-You scold yourself, there thats better, you told yourself.
-$n seems furious about something or other.
-You fume and rage at $S $t.
-$n fumes and rages at $N's $t.
-$n fumes and rages at your $t.
-You fume and rage at $p.
-$n fumes and rages at $p.
+Você descarrega um pouco de vapor, para alívio dos outros (e do seu também!)
+$n descarrega muito vapor, para seu alívio.
+Você bufa e ralha com $M.
+$n começa a ralhar com $N, $z rosto roxo de raiva.
+$n começa a gritar com você, $l deveria se acalmar.
+Claro, mas quem poderia ser?
+Você se repreende, pronto está melhor, você se disse.
+$n parece furioso(a) com algo ou outro.
+Você bufa e ralha com o $t de $S.
+$n bufa e ralha com o $t de $N.
+$n bufa e ralha com o seu $t.
+Você bufa e ralha com $p.
+$n bufa e ralha com $p.
 
 ~stomp stomp 0 5 0 0
-You stomp around like a little child.
-$n stomps around in an irate manner.
-You stomp on $N's toes! CRUNCH!
-$n stomps on $N's toes! CRUNCH!
-$n stomps on your toes! CRUNCH!
-You go to stomp on them then stop short, realizing they're not here.
-You stomp on your toes, way to go klutz!
-$n stomps on $s own toes, don't they look stupid?
-You stomp on $S $t.
-$n stomps on $N's $t.
-$n stomps on your $t.
-You stomp on $p, breaking it into a million pieces.
-$n stomps on $p, breaking it into a million pieces.
+Você bate o pé como uma criança.
+$n bate os pés de forma irritada.
+Você pisa no pé de $N! CRAC!
+$n pisa no pé de $N! CRAC!
+$n pisa no seu pé! CRAC!
+Você vai pisando neles mas para no susto, percebendo que não estão aqui.
+Você pisa no próprio pé, que jeito, palhaço(a)!
+$n pisa no próprio pé, que idiota hein?
+Você pisa no $t de $S.
+$n pisa no $t de $N.
+$n pisa no seu $t.
+Você pisa em $p, quebrando em mil pedaços.
+$n pisa em $p, quebrando em mil pedaços.
 
 ~stone stone 0 8 8 0
-You call for a stoning! There's a SINNER about!
-$n calls for a stoning! There's a SINNER about!
-You start hurling stones at $N, SINNER!
-$n starts hurling stones at $N the SINNER!
-$n starts hurling stones at you, what did you do?
-The stone whistles through the empty air.
-You start pummeling yourself with stones, feel better yet?
-$n starts pummeling $mself with stones, $e must be feeling guilty!
-You hurl stones at $N's $t, it must have sinned!
-$n hurls stones at $N's $t, it must have sinned!
-$n hurls stones at your $t, what did it do?
-You start hurling stones at $p, it must be evil!
-$n starts hurling stones at $p, it must be evil!
+Você clama por uma apedrejamento! Há um PECADOR por aí!
+$n clama por um apedrejamento! Há um PECADOR por aí!
+Você começa a atirar pedras em $N, PECADOR!
+$n começa a atirar pedras em $N o PECADOR!
+$n começa a atirar pedras em você, o que você fez?
+A pedra assobia pelo ar vazio.
+Você começa a se bombardear com pedras, se sente melhor agora?
+$n começa a se bombardear com pedras, $l deve estar se sentindo culpado(a)!
+Você atira pedras no $t de $N, deve ter pecado!
+$n atira pedras no $t de $N, deve ter pecado!
+$n atira pedras no seu $t, o que ele fez?
+Você começa a atirar pedras em $p, deve ser maligno!
+$n começa a atirar pedras em $p, deve ser maligno!
 
 ~strangle strangle 0 5 0 0
-You look around for a victim...
-$n looks around for a victim to strangle.
-You throw yourself against $N's throat, trying to squeeze the life out.
-$n throws $mself after $N's throat.
-$n throws $mself after your throat, you try to defend yourself.
-AARGH! They must have left... #&%�@!
-You put your hands around your throat and stop breathing.
-$n tries to strangle $mself, making a very strange noise and getting blue in the face.
-You strangle $M $t.
-$n strangles $N's $t.
-$n strangles your $t.
-You strangle $p.
-$n strangles $p.
+Você olha ao redor procurando uma vítima...
+$n olha ao redor procurando uma vítima para estrangular.
+Você se lança contra a garganta de $N, tentando espremer a vida para fora.
+$n se lança em direção à garganta de $N.
+$n se lança em direção à sua garganta, você tenta se defender.
+AARGH! Eles devem ter saído... #&%?@!
+Você coloca as próprias mãos em volta da garganta e para de respirar.
+$n tenta se estrangular, fazendo um barulho muito estranho e ficando azul.
+Você estrangula o $t de $M.
+$n estrangula o $t de $N.
+$n estrangula o seu $t.
+Você estrangula $p.
+$n estrangula $p.
 
 ~stretch stretch 0 5 0 0
 You stretch your tired muscles.  That feels so good.
