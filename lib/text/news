@@ -6,7 +6,33 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
-@C-@G=@Y>@W Marco de 2026 @C@Y<@G=@C-@n
+@C-@G=@Y>@W Março de 2026 @C@Y<@G=@C-@n
+
+   @RCorreções de Magias e Bugs Antigos@n
+   Diversas magias foram corrigidas e bugs antigos confirmados como resolvidos:
+
+   - @YDesintegrar@n: O comportamento ao resistir ao teste de salvação foi corrigido.
+     Se a vítima tiver mais de 100 pontos de vida e resistir, perde agora metade de
+     seus pontos de vida atuais, limitado a 100 — e não mais um valor fixo de 50.
+     Além disso, a magia agora destrói cadáveres no chão (e tudo que contêm).
+   - @YHarm@n: As versões normal e @Yminus@n estavam causando apenas ~20 de dano em vez
+     dos valores corretos. Corrigido — a magia agora remove corretamente os PV do
+     alvo até deixar apenas 1d4 restantes, limitado a 100 de dano.
+   - @YExplosão Vocal@n: A magia não exibia mensagens de dano ou efeitos nos inimigos.
+     Corrigido — os textos de acerto, falha e morte agora aparecem normalmente.
+   - @YParede de Vento@n: A aura de reflexão de dano não funcionava quando concedida
+     por equipamentos. Corrigido — o dano agora é corretamente refletido.
+   - @YTransporte via Plantas@n: A magia estava disponível na ajuda para Magos, mas não
+     aparecia na lista de práticas. Corrigido — Magos podem agora praticá-la.
+   - @YO Grito da Morte@n: A canção de bardo agora funciona corretamente.
+   - @YArmas de Hasta (Polearms)@n: A habilidade agora é ensinada a Guerreiros.
+
+   @WBugs Antigos Confirmados Resolvidos@n
+   Dez bugs reportados por jogadores foram confirmados corrigidos e arquivados:
+   stoneskin infinita, combate durante transcendência, mensagem de ressurreição,
+   habilidades de remort incorretas, poção de Cura conjurando invigorate,
+   word of recall indo para a sala da Puff, cor sumindo após título colorido,
+   sangramento de cor no status away, Paralyze não impedindo fuga e comando fly.
 
    @MSistema de Personalidade - Escalas de Comportamento Configuráveis@n
    Os parâmetros que definem como os traços de @YExtraversão@n e @YAmabilidade@n
