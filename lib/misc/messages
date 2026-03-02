@@ -393,6 +393,22 @@ Você tenta controlar a força do vento mas acaba sendo controlado por ela e cai
 $n tenta sem sucesso controlar a força do vento e acaba caindo.
 $n tenta atingir $N com a fúria do vento mas é mandad$r para o chão.
 
+* Voice Explosion
+M
+ 89
+Sua explosão de voz destrói $N completamente!
+Você é destruíd$r pela explosão de voz de $n!
+$n usa uma explosão de voz que destrói $N!
+Sua explosão de voz passa longe de $N sem efeito.
+Você desvia da explosão de voz de $n com facilidade.
+$n tenta atingir $N com uma explosão de voz, sem sucesso!
+Sua explosão de voz atinge $N em cheio!
+Você é atingid$r pela explosão de voz de $n!
+$n solta uma explosão de voz que acerta $N!
+Sua explosão de voz mal arranha $N.
+A explosão de voz de $n mal te arranha.
+$N ri enquanto $n tenta atingi-l$r com uma explosão de voz.
+
 * Windwall
 M
  96

@@ -372,7 +372,7 @@ IdNum     50
 Dated     1761568059
 Level     90
 Room      10984
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      Porta aqui nessa sala nao abre~
 Body      porta aqui nessa sala nao abre
@@ -644,7 +644,7 @@ IdNum     562
 Dated     1764015735
 Level     45
 Room      1627
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      porta aqui N nao abre~
 Body      porta aqui N nao abre
@@ -665,7 +665,7 @@ IdNum     517
 Dated     1764107126
 Level     98
 Room      13798
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      Windwall nao esta dando dano~
 Body      Ola, nao sei se isso faz parte das recentes mudancas das auras, mas a magia windwall nao esta devolvendo dano nos mobs.
@@ -675,7 +675,7 @@ IdNum     517
 Dated     1764336117
 Level     70
 Room      12670
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      disintegrate~
 Body      Disintegrate nao desintegra os corpos
@@ -685,7 +685,7 @@ IdNum     562
 Dated     1764439684
 Level     98
 Room      12769
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      museu do colecionador~
 Body      Boa noite no museu da para comprar os card mais baratos e vender mais caro.
@@ -1023,7 +1023,7 @@ IdNum     175
 Dated     1767842635
 Level     93
 Room      3375
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      porta aqui para S nao abre~
 Body      bug submit porta aqui para S nao abre

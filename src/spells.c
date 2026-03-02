@@ -981,6 +981,25 @@ ASPELL(spell_control_weather)
                  month_name[expire_time.month]);
 }
 
+ASPELL(spell_disintegrate)
+{
+    if (obj == NULL)
+        return; /* Character target is handled by MAG_DAMAGE special case */
+
+    if (GET_OBJ_TYPE(obj) != ITEM_CORPSE) {
+        act("A magia não tem efeito sobre $p.", FALSE, ch, obj, 0, TO_CHAR);
+        return;
+    }
+
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_ROOM);
+
+    /* Destroy all items inside the corpse, then the corpse itself */
+    while (obj->contains)
+        extract_obj(obj->contains);
+    extract_obj(obj);
+}
+
 ASPELL(spell_transport_via_plants)
 {
     obj_vnum obj_num = NOTHING;

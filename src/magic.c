@@ -276,11 +276,23 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
                 return (0);
             }
             break;
+        case SPELL_HARM:
+            /* Reduces target to 1d4 HP remaining; max 100 HP removed (help: MAGIA-HARM) */
+            dam = MIN(100, MAX(0, GET_HIT(victim) - dice(1, 4)));
+            break;
+        case SPELL_DISINTEGRATE:
+            /* If target has < 100 HP: lethal; otherwise max 100 damage (help: MAGIA-DISINTEGRATE) */
+            dam = (GET_HIT(victim) < 100) ? GET_HIT(victim) : 100;
+            break;
     }
 
     /* divide damage by two if victim makes his saving throw */
     if (mag_savingthrow(victim, savetype, 0))
         dam /= 2;
+
+    /* SPELL_HARM cannot kill — clamp to leave at least 1 HP remaining */
+    if (spellnum == SPELL_HARM && victim)
+        dam = MIN(dam, GET_HIT(victim) - 1);
 
     /* Reputation changes for offensive spellcasting - dynamic reputation system */
     if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && dam > 0 && ch != victim) {

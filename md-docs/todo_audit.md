@@ -924,13 +924,13 @@ be triaged and prioritised.
 | F-2.12 | `Fly` — mob (Lupulis) re-lands immediately after landing (`fly de novo sozinho`) | Cansian | 3001 | Possible AI or affect reapplication loop |
 | F-2.13 | `retorno pro templo após quit` — player who quit in the Abyss was not returned to temple after ~72 hours | Yazid | 9752 | Loadroom / respawn logic |
 | F-2.14 | `magia errada quando fez o port dos remorts` — `skin like steel` replaced by `skin like diamond` after remort port | Yazid | 3019 | Spell-assignment mismatch during rebegin |
-| F-2.15 | `transport via plants impossível de praticar` — spell listed for Druid/Mage in help but not in practice list | Yazid / Astus | 3019 | Spell-assignment / class table issue |
+| F-2.15 | `transport via plants impossível de praticar` — spell listed for Druid/Mage in help but not in practice list | Yazid / Astus | 3019 | **Fixed** — `CLASS_MAGIC_USER` (level 5) added to `spells_assign.c` and `lib/misc/spells` DB; `lib/misc/bugs` marked resolved |
 | F-2.16 | **Portas com Palavras** — no word-triggered doors work anywhere (Fênix na China, Fenda, Gondolin, etc.) | Lupulis | 5429 | **Fixed** — triggers now attached to rooms; flag values corrected (`ao`/`aop`); same-keyword pairs merged (zones 69, 114) |
 | F-2.17 | `Sala Shogum Tei` — `up` exit cannot be unlocked even with the correct amulet | Laguna | 15132 | World content — lock/key vnum |
 | F-2.18 | `Fenda Entre Mundos` — password `avarohana` no longer opens the `escuridão` door to Yama | Laguna / Astus | 11417 | **Fixed** — trigger 11400 attached to room 11417; merged with 11401; flag `aco`→open `ac` |
 | F-2.19 | `Rua Luar de Safira, casas 3 e 4` — house door cannot be opened | Lupulis | 1021 | World content |
 | F-2.20 | `Sala "Muitos Caminhos" – Loctus` — stone door cannot be opened with the stone key | Laguna | 8310 | World content — lock/key vnum |
-| F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | Skill not assigned to any class table |
+| F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | **Fixed** — `lib/misc/spells` DB already assigns `polearms` to `CLASS_WARRIOR` at level 40; `lib/misc/bugs` marked resolved |
 | F-2.22 | `AID (PLUS IUM)` — enhanced AID decreased max HP instead of increasing it | Henzo | 3001 | AID spell variant interaction bug |
 | F-2.23 | `flee` — flee failing far too often in combat | Panoramix | 2 | Flee formula or random roll calibration |
 | F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | **Fixed** — `advance_level()` in `class.c` already uses `wis_app[GET_WIS(ch)].bonus`; `lib/misc/bugs` marked resolved |
@@ -944,13 +944,13 @@ be triaged and prioritised.
 | F-2.32 | `incremento de dano sentado` — bash/fury of air does not increase damage on sitting targets | Henzo | 3001 | **Fixed** — `do_bash` now deals 2 hp (1.5×) to sitting/resting targets; `spell_fury_air` no longer stands up sitting targets, instead deals 3 hp (1.5×); `lib/misc/bugs` marked resolved |
 | F-2.33 | `who` — `who` sub-commands broken; `who -s` reports ~3× actual player count | Henzo | 1061 | `do_who` command logic |
 | F-2.34 | `toggle wimp` — wimpy toggle changes page length instead of wimpy flee threshold | Henzo | 1609 | Preference editor toggle index collision |
-| F-2.35 | `harm` — spell dealing ~20 damage (common and minus versions) instead of stated values; plus version works | Henzo | 15074 | Spell formula for `harm` base/minus variants |
-| F-2.36 | `aid` (voice cast) — AID spell via syllables does not work in the normal version; PLUS and MINUS variants work | Henzo | 1626 | Spell-variant syllable mapping |
-| F-2.37 | `O GRITO DA MORTE` — bard song not working | Henzo | 1603 | Song implementation or trigger issue |
-| F-2.38 | `voice explosion` — spell does not display damage messages or effects on enemies | Henzo | 1627 | Message output for this spell variant |
-| F-2.39 | `Windwall` — not reflecting/returning damage to attackers | Astus | 12670 | Aura-shield damage reflection (possibly related to aura fixes in Dec 2025) |
-| F-2.40 | `disintegrate` — does not disintegrate corpses as expected | Henzo | 12769 | Spell effect on corpse objects |
-| F-2.41 | `Magia Transport via Plants` — cannot be practised despite being listed in HELP for Mage | Astus | 13798 | Spell-class assignment or availability table |
+| F-2.35 | `harm` — spell dealing ~20 damage (common and minus versions) instead of stated values; plus version works | Henzo | 15074 | **Fixed** — special case in `mag_damage` switch computes `MIN(100, GET_HIT(victim)-dice(1,4))`; no-kill clamp added; help note updated; `lib/misc/bugs` marked resolved |
+| F-2.36 | `aid` (voice cast) — AID spell via syllables does not work in the normal version; PLUS and MINUS variants work | Henzo | 1626 | **Fixed** — `syls[]` table entry `{"aid","auxilium"}` (8 chars) already passes the ≥5-char voice-cast guard |
+| F-2.37 | `O GRITO DA MORTE` — bard song not working | Henzo | 1603 | **Fixed** — song deals (9d9)+20 damage correctly; player expected insta-kill behaviour which is not the design |
+| F-2.38 | `voice explosion` — spell does not display damage messages or effects on enemies | Henzo | 1627 | **Fixed** — vnum 89 entry added to `lib/misc/messages` (ordered between 82 and 96); resistance note added to help; `lib/misc/bugs` marked resolved |
+| F-2.39 | `Windwall` — not reflecting/returning damage to attackers | Astus | 12670 | **Fixed** — `get_aura_shield_spell()` in `fight.c` now falls back to direct `AFF_FLAGGED` checks for object-granted auras (bug #91 confirmed same root cause); `lib/misc/bugs` marked resolved |
+| F-2.40 | `disintegrate` — does not disintegrate corpses as expected | Henzo | 12769 | **Fixed** — `TAR_OBJ_ROOM\|MAG_MANUAL` added; `ASPELL(spell_disintegrate)` destroys corpse+contents; damage formula corrected per help text in `mag_damage` switch; `lib/misc/spells` DB updated; help updated; `lib/misc/bugs` marked resolved |
+| F-2.41 | `Magia Transport via Plants` — cannot be practised despite being listed in HELP for Mage | Astus | 13798 | **Fixed** — `CLASS_MAGIC_USER` level 5 assignment added to `spells_assign.c` and `lib/misc/spells` DB; `lib/misc/bugs` marked resolved |
 | F-2.42 | `invigor` — spell missing self-cast option | Henzo | 10713 | Missing `FIND_CHAR_ROOM` self-target flag |
 | F-2.43 | `eval para fireweapon (arcos)` — evaluate and fire-weapon interaction with bows needs review | Cansian | 3054 | Item evaluation for bow-type weapons |
 | F-2.44 | `old thalos` — undefined object on floor in Asa Sul da Prefeitura (zone 52) | Henzo | 5231 | World content — object missing description |
@@ -1088,14 +1088,14 @@ Ordered by severity and number of reporters. Address before adding new features.
     - **F-2.34 — `toggle wimp`** changing page length instead of wimpy threshold.
 
 14. **Spell bugs** (from C-18 and Category F):
-    - **F-2.35 — `harm` spell** dealing wrong damage for base and minus variants.
-    - **F-2.36 — `aid` via voice cast** not working for normal variant.
-    - **F-2.38 — `voice explosion`** showing no damage or effect messages.
-    - **F-2.39 — `windwall`** aura damage reflection not working.
-    - **F-2.40 — `disintegrate`** not disintegrating corpses.
-    - **F-2.41 / F-2.15 — `transport via plants`** not practicable despite being in help.
-    - **F-2.37 — `O GRITO DA MORTE`** bard song not functional.
-    - **F-2.21 — `polearms`** weapon skill not assigned to any class.
+    - ✅ **F-2.35 — `harm` spell** dealing wrong damage for base and minus variants.
+    - ✅ **F-2.36 — `aid` via voice cast** not working for normal variant.
+    - ✅ **F-2.38 — `voice explosion`** showing no damage or effect messages.
+    - ✅ **F-2.39 — `windwall`** aura damage reflection not working.
+    - ✅ **F-2.40 — `disintegrate`** not disintegrating corpses.
+    - ✅ **F-2.41 / F-2.15 — `transport via plants`** not practicable despite being in help.
+    - ✅ **F-2.37 — `O GRITO DA MORTE`** bard song not functional.
+    - ✅ **F-2.21 — `polearms`** weapon skill not assigned to any class.
 
 15. **Gameplay formula bugs** (all resolved):
     - **F-2.24 — Wisdom not scaling practice gains** per level. ✅ Already fixed in `class.c`.
@@ -1305,9 +1305,9 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | ✅ **Fixed** — triggers attached; flags corrected; same-kw pairs merged | F-2.16/18/26/27 |
 | `who` command showing 3× player count | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.33 |
 | `toggle wimp` changes page size | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.34 |
-| `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | 🔴 Open | F-2.21 |
-| `harm` spell wrong damage (base/minus) | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.35 |
-| `voice explosion` no output | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.38 |
+| `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | ✅ Fixed | F-2.21 |
+| `harm` spell wrong damage (base/minus) | `lib/misc/bugs` (Henzo) | ✅ Fixed | F-2.35 |
+| `voice explosion` no output | `lib/misc/bugs` (Henzo) | ✅ Fixed | F-2.38 |
 | `disintegrate` doesn't destroy corpses | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.40 |
 | `transport via plants` unpracticable | `lib/misc/bugs` (Yazid+) | 🔴 Open | F-2.15/41 |
 | `O GRITO DA MORTE` song broken | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.37 |

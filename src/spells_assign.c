@@ -1703,6 +1703,9 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 7;
     new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->assign[1].class_num = CLASS_MAGIC_USER;
+    new_spell->assign[1].level = 5;
+    new_spell->assign[1].num_mana = strdup(buf);
     new_spell->school = SCHOOL_CONJURATION; /* Transportation magic */
     new_spell->element = ELEMENT_EARTH;     /* Plant/nature-based transport */
 
@@ -1893,14 +1896,15 @@ void create_spells_db()
     new_spell->name = strdup("disintegrate");
     new_spell->type = SPELL;
     new_spell->min_pos = POS_FIGHTING;
-    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT;
-    new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT;
+    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_ROOM;
+    new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT | MAG_MANUAL;
+    new_spell->function = spell_disintegrate;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(90 - (10 * self.level)) > 50 ? (90 - (10 * self.level)) : 5");
     new_spell->assign[0].class_num = CLASS_MAGIC_USER;
     new_spell->assign[0].level = 85;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->damages = strdup("dice(3, self.class == 0 ? 8 : 6) + (self.class == 0 ? 195 : 180)");
+    new_spell->damages = strdup("0");       /* overridden by mag_damage special case */
     new_spell->school = SCHOOL_EVOCATION;   /* Pure destruction */
     new_spell->element = ELEMENT_UNDEFINED; /* Disintegration force */
     spedit_save_internally(new_spell);
