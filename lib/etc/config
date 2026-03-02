@@ -317,7 +317,7 @@ max_mob_posted_quests = 450
 emotion_alignment_shifts = 1
 
 * Log 4D decision-space raw and effective values for debugging (default NO)
-mob_4d_debug = 1
+mob_4d_debug = 0
 
 
 
@@ -469,8 +469,23 @@ conscientiousness_debug = 1
 * E_mod = k1*happiness - k2*fear  (capped +/-0.10)
 * A_mod = k3*happiness - k4*anger (capped +/-0.10)
 * Values stored *100 (actual = value/100.0)
-ocean_ae_k1 = 10
-ocean_ae_k2 = 10
-ocean_ae_k3 = 10
-ocean_ae_k4 = 10
+ocean_ae_k1 = 8
+ocean_ae_k2 = 12
+ocean_ae_k3 = 7
+ocean_ae_k4 = 13
+
+* Big Five (OCEAN) - Phase 4: Openness (O) Shadow Timeline Parameters
+* novelty_move_scale *10 (actual=value/10.0), others as-is or *100
+sec_o_novelty_move_scale = 100
+sec_o_novelty_depth_scale = 6
+sec_o_novelty_bonus_cap = 30
+sec_o_repetition_cap = 5
+sec_o_repetition_bonus = 12
+sec_o_exploration_base = 12
+sec_o_threat_bias = 30
+
+* SEC Core Tuning Parameters
+* Values stored *100 (actual = value/100.0)
+sec_emotion_alpha = 35
+sec_wta_threshold = 65
 

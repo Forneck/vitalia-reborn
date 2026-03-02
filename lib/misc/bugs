@@ -48,16 +48,6 @@ Level     110
 Room      3054
 Flags     1 0 0 0
 End
-Text      pick~
-Body      pick lock so deveria funcionar com lad
-~
-Name      Cansian~
-IdNum     1
-Dated     1605402159
-Level     110
-Room      3469
-Flags     0 0 0 0
-End
 Text      kanakajja~
 Body      Fazer o trigger do especial dela
 ~
@@ -267,16 +257,6 @@ Level     95
 Room      5429
 Flags     0 0 0 0
 End
-Text      fly~
-Body      Lupulis tagarela, 'nao adianta aterrisar, que voa de novo sozinho'
-~
-Name      Cansian~
-IdNum     1
-Dated     1761239432
-Level     110
-Room      3001
-Flags     0 0 0 0
-End
 Text      retorno pro templo apos o quit~
 Body      Faz uns 72 horas que dei quit na area do Abismo e nao voltei pro templo de Midgaard
 ~
@@ -318,16 +298,6 @@ IdNum     517
 Dated     1761249522
 Level     80
 Room      3008
-Flags     0 0 0 0
-End
-Text      transport via plants impossivel de praticar~
-Body      < 333Hp 439Mn 294Mv > prac transport via plants Voce nao pode praticar essa magia.
-~
-Name      Yazid~
-IdNum     37
-Dated     1761250173
-Level     96
-Room      3019
 Flags     0 0 0 0
 End
 Text      O portao de madeira - Gondolin~
@@ -423,17 +393,6 @@ IdNum     293
 Dated     1761730488
 Level     92
 Room      3415
-Flags     0 0 0 0
-End
-Text      PLUS IUM~
-Body      AID aumentado diminuiu minha vida. 
-Antes de usar a magia, minha vida mxima era 1253 e apos o uso da magia amplificada, caiu para 1237
-~
-Name      Henzo~
-IdNum     562
-Dated     1761875258
-Level     90
-Room      3001
 Flags     0 0 0 0
 End
 Text      flee~
@@ -545,16 +504,6 @@ IdNum     734
 Dated     1763340527
 Level     10
 Room      3044
-Flags     0 0 0 0
-End
-Text      esta aparecendo a mensagem Este lugar e muito calmo, sem violencias... durante a meditacao no templo~
-Body      esta aparecendo a mensagem Este lugar e muito calmo, sem violencias... durante a meditacao no templo
-~
-Name      Kasper~
-IdNum     507
-Dated     1763488103
-Level     66
-Room      3001
 Flags     0 0 0 0
 End
 Text      Visible/loja~
@@ -675,7 +624,7 @@ IdNum     175
 Dated     1763967585
 Level     100
 Room      14480
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      grito~
 Body      A cancao O GRITO DA MORTE nao esta funcionando
@@ -728,7 +677,7 @@ Level     70
 Room      12670
 Flags     0 0 0 0
 End
-Text       disintegrate~
+Text      disintegrate~
 Body      Disintegrate nao desintegra os corpos
 ~
 Name      Henzo~
@@ -737,4 +686,491 @@ Dated     1764439684
 Level     98
 Room      12769
 Flags     0 0 0 0
+End
+Text      museu do colecionador~
+Body      Boa noite no museu da para comprar os card mais baratos e vender mais caro.
+~
+Name      Thorgal~
+IdNum     726
+Dated     1764538034
+Level     13
+Room      3811
+Flags     0 0 0 0
+End
+Text      portao aqui N nao abre~
+Body      portao aqui N nao abre
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1764556299
+Level     100
+Room      4520
+Flags     1 0 0 0
+End
+Text      Aqui faltou uma conexao ao leste~
+Body      aqui faltou uma conexao ao leste com a sala Penhasco Leste Baixo
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765153865
+Level     89
+Room      20620
+Flags     1 0 0 0
+End
+Text      a partir dessa sala aqui...~
+Body      a partir dessa sala aqui...
+Se vou pra N (Colinas do Nordeste) e depois vou pra W (Colinas Orientais) eu nao consigo voltar pra E (Colinas do Nordeste)
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765157743
+Level     90
+Room      20603
+Flags     1 0 0 0
+End
+Text      porta aqui SE - cascata - nao abre~
+Body      porta aqui SE - cascata - nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765558292
+Level     46
+Room      13873
+Flags     1 0 0 0
+End
+Text      Magia AID~
+Body      a magia AID no modo normal esta gastando em torno de 110 mana e como beneficio, aumenta o HP durante a  duracao da magia. 
+
+Quando usada com o plus, amplificado, ela gasta o dobro de mana porem aumenta apenas +7 o hp
+
+como sugestao, no modo amplificado, poderia tambem duplicar o buff do hp
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765841578
+Level     100
+Room      3054
+Flags     0 0 0 0
+End
+Text      MINDSHIELD nao esta refletindo dano~
+Body      eu ACHO que a mindshield nao ta refletindo dano...
+testei ela sozinha de shield e nao refletiu 
+(17)O mestre espadachim de Ghenna golpeia voce.
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766063081
+Level     73
+Room      17397
+Flags     0 0 0 0
+End
+Text      Porta aqui UP bugada~
+Body      Porta aqui UP bugada
+~
+Name      o clone~
+IdNum     175
+Dated     1766083336
+Level     96
+Room      421
+Flags     1 0 0 0
+End
+Text      Interacao com abertura de portas~
+Body      Se existe apenas uma porta na sala, eu posso usar open por que ele abre tudo ok
+
+Se tem mais de uma porta na sala, eu nao consigo usar open <direcao> (n, e, w, s, etc) ou open por <direcao>
+
+Eu tenho que digitar o comando completo, open porta n
+
+antigamente funcionava apenas digitando open <direcao> ex: open n
+
+se for possivel facilita bastante no dia a dia
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766161543
+Level     98
+Room      3001
+Flags     0 0 0 0
+End
+Text      SAVE_PARA~
+Body      Precisamos rever a tabela das resistencias dos mobs. talvez usar tabela propria.
+~
+Name      Cansian~
+IdNum     1
+Dated     1766331642
+Level     110
+Room      3001
+Flags     0 0 0 0
+End
+Text      Sala aqui esta sem ligacao com o resto da area~
+Body      Sala aqui esta sem ligacao com o resto da area
+
+porem nao sei qual sala deveria ligar aqui
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766757294
+Level     70
+Room      13859
+Flags     0 0 0 0
+End
+Text      Falha de continuidade aqui na sala~
+Body      tem uma falha de continuidade aqui na area dos Dragoes
+
+aqui poderia ter uma ligacao que volta pra sul para poder voltar para o resto da area
+
+se quiser eu mostro no caminho como chega aqui e a passagem sul some
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766767640
+Level     88
+Room      9341
+Flags     0 0 0 0
+End
+Text      Falha na saida a W ?~
+Body      na descricao fala sobre uma ilha a oeste
+
+porem ao ir pra oeste nao sai dessa mesma sala
+
+nao sei se esta correto ou se falta alguma ligacao de sala
+
+so reportando para avaliar
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766966612
+Level     91
+Room      27849
+Flags     0 0 0 0
+End
+Text      Aqui tambem deveria ter algo a SUL ?~
+Body      aqui tambem fala de uma ilha a sul mas esta em loop nessa sala
+
+vai sul e nao sai da mesma sala
+so reportando para ver se deveria ter algo
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766967206
+Level     91
+Room      27839
+Flags     0 0 0 0
+End
+Text      Aqui deveria ter algo a Norte?~
+Body      mesma situacao, na descricao fala de um novo continente, uma enorme caverna a norte
+
+mas a sala fica em loop
+
+so reportando para avaliar se esta ok
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766967391
+Level     91
+Room      27842
+Flags     0 0 0 0
+End
+Text      alcapao aqui nessa sala pra D nao da pra abrir~
+Body      alcapao aqui nessa sala pra D nao da pra abrir
+
+down  - alcapao (caminho fechado).
+
+< 643Hp 1002Mn 289Mv > 
+op alc
+Voce nao pode abre  isso!!
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767049448
+Level     52
+Room      14636
+Flags     0 0 0 0
+End
+Text      depois que sobe pra UP nao consegue voltar~
+Body      depois que sobe pra UP nao consegue voltar
+
+fica preso la na parte de cima
+
+todos os mobs ficam presos la
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767051042
+Level     52
+Room      14578
+Flags     0 0 0 0
+End
+Text      O Flee nao funciona mais nessa sala~
+Body      O Flee nao funciona mais nessa sala
+
+parece que nao esta funcionando em sala que so tem 1 saida
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767311496
+Level     100
+Room      9302
+Flags     0 0 0 0
+End
+Text      porta aqui pra E nao abre~
+Body      porta aqui pra E nao abre
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577371
+Level     70
+Room      7527
+Flags     1 0 0 0
+End
+Text      porta aqui pra E nao abre~
+Body      porta aqui pra E nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577376
+Level     70
+Room      7526
+Flags     1 0 0 0
+End
+Text      porta aqui pra S nao abre~
+Body      bug submit porta aqui pra S nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577410
+Level     70
+Room      7537
+Flags     1 0 0 0
+End
+Text      porta aqui pra s nao abre~
+Body      porta aqui pra s nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577466
+Level     70
+Room      7520
+Flags     1 0 0 0
+End
+Text      portas aqui pra S e W nao abrem~
+Body      bug submit portas aqui pra S e W nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577491
+Level     70
+Room      7519
+Flags     1 0 0 0
+End
+Text      porta aqui pra W nao abre~
+Body      bug submit porta aqui pra W nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767577508
+Level     70
+Room      7516
+Flags     1 0 0 0
+End
+Text      RSKILL gravar a habilidade com a enc correta -1~
+Body      bug submit RSKILL gravar a habilidade com a enc correta -1
+
+No meu Rskill ele ta salvando a skill na enc atual pos remorte, talvez vc tenha que clocar pra gravar enc -1 pra ficar certinho
+
+exemplo:
+[ scan                 ] ---- [ Ladrao     ] ---- [ 24? enc. ]
+eu fui ladrao na enc 23. remortei, virou enc 24, ai qdo escolhi a magia, eu ja estava na 24 provavelmente la no sistema. ai ele grava com a enc que eu ainda vou passar
+Mas, o mais correto mesmo, seria gravar [ scan                 ] ---- [ Ladrao     ] ---- [ 23? enc. ]
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767634583
+Level     50
+Room      1055
+Flags     0 0 0 0
+End
+Text      Magia Heal~
+Body      No help magia heal aparece que é apenas para classes de clérigo, porem ranger também possui no lvl 90.
+~
+Name      Thorgal~
+IdNum     726
+Dated     1767635996
+Level     72
+Room      3001
+Flags     1 0 0 0
+End
+Text      Auras de origem de equipamentos parece que nao estao funcionando~
+Body      Auras de origem de equipamentos parece que nao estao funcionando
+
+parece que quando a aura eh de origem de algum item, ela nao esta refletindo dano, apenas mostra a aura no personagem
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767842635
+Level     93
+Room      3375
+Flags     0 0 0 0
+End
+Text      porta aqui para S nao abre~
+Body      bug submit porta aqui para S nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768274886
+Level     39
+Room      13881
+Flags     0 0 0 0
+End
+Text      o NOSUMMON nao esta funcionando~
+Body      bug submit o NOSUMMON nao esta funcionando
+sc
+Voce NAO pode ser convocado!
+
+< 911Hp 1040Mn 380Mv  (invis)> summ lupulis
+As palavras misticas ressoam com poder... [Reduzido]
+Pronto.
+Lupulis chega repentinamente.
+/
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768363874
+Level     95
+Room      3008
+Flags     1 0 0 0
+End
+Text      portas aqui pra N e E nao abrem~
+Body      ex
+bug submit portas aqui pra N e E nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510355
+Level     90
+Room      7548
+Flags     0 0 0 0
+End
+Text      portas aqui pra E e S nao abrem~
+Body      bug submit portas aqui pra E e S nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510371
+Level     90
+Room      7551
+Flags     0 0 0 0
+End
+Text      porta aqui pra S nao abre~
+Body      bug submit porta aqui pra S nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510393
+Level     90
+Room      7573
+Flags     0 0 0 0
+End
+Text      porta aqui pra W nao abre~
+Body      n
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510407
+Level     90
+Room      7571
+Flags     0 0 0 0
+End
+Text      porta aqui pra E nao abre~
+Body      bug submit porta aqui pra E nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510418
+Level     90
+Room      7568
+Flags     0 0 0 0
+End
+Text      porta aqui pra E nao abre~
+Body      bug submit porta aqui pra E nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510431
+Level     90
+Room      7545
+Flags     0 0 0 0
+End
+Text      porta aqui pra W nao abre~
+Body      bug submit porta aqui pra W nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510441
+Level     90
+Room      7542
+Flags     0 0 0 0
+End
+Text      portas aqui pra N E W nao abrem~
+Body      bug submit portas aqui pra N E W nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510453
+Level     90
+Room      7539
+Flags     0 0 0 0
+End
+Text      porta aqui pra N nao abre~
+Body      bug submit porta aqui pra N nao abre
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510472
+Level     90
+Room      7554
+Flags     0 0 0 0
+End
+Text      porttas aqui pra N W nao abrem~
+Body      bug submit porttas aqui pra N W nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510494
+Level     90
+Room      7555
+Flags     0 0 0 0
+End
+Text      portas aqui pra S W nao abrem~
+Body      bug submit portas aqui pra S W nao abrem
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768510511
+Level     90
+Room      7559
+Flags     0 0 0 0
+End
+Text      porta aqui S nao funciona~
+Body      bug submit porta aqui S nao funciona
+~
+Name      Lupulis~
+IdNum     175
+Dated     1768785026
+Level     100
+Room      3081
+Flags     1 0 0 0
 End

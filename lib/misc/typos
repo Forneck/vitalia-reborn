@@ -60,7 +60,7 @@ Level     96
 Room      15129
 Flags     0 0 0 0
 End
-Text       mercador nomade~
+Text      mercador nomade~
 Body      O mercador nomade falou telepaticamente com voce, 'Saia daqui antes quw eu chame OS GUARDAS!'
 ~
 Name      Henzo~
@@ -68,5 +68,45 @@ IdNum     562
 Dated     1763310510
 Level     79
 Room      5462
+Flags     0 0 0 0
+End
+Text      magia armor quando acaba~
+Body      Voce se sente menos protegid$r.
+
+magia armor quando acaba
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1764734746
+Level     91
+Room      1104
+Flags     0 0 0 0
+End
+Text      O Sol do deserto do paraiso dos dragoe esta brilhando aqui.~
+Body      O Sol do deserto do paraiso dos dragoe esta brilhando aqui.
+
+falta um S no dragoes
+
+quando o item esta dropado no chao
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1767318218
+Level     70
+Room      3063
+Flags     0 0 0 0
+End
+Text       Oceania cotornando a ilha~
+Body      vento sopra constantemente aqui.  A corrente parece estar serpenteando ao redor de uma grande
+ilha ao seu sulwest.
+"sulwest"
+~
+Name      Henzo~
+IdNum     562
+Dated     1769351342
+Level     97
+Room      27848
 Flags     0 0 0 0
 End
