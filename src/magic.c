@@ -199,6 +199,7 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     struct str_spells *spell;
     int dam = 0;
     int rts_code;
+    int special_save = 0; /* set to 1 when a spell handles its own saving throw */
 
     if (victim == NULL || ch == NULL)
         return (0);
@@ -280,14 +281,25 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
             /* Reduces target to 1d4 HP remaining; max 100 HP removed (help: MAGIA-HARM) */
             dam = MIN(100, MAX(0, GET_HIT(victim) - dice(1, 4)));
             break;
-        case SPELL_DISINTEGRATE:
-            /* If target has < 100 HP: lethal; otherwise max 100 damage (help: MAGIA-DISINTEGRATE) */
-            dam = (GET_HIT(victim) < 100) ? GET_HIT(victim) : 100;
+        case SPELL_DISINTEGRATE: {
+            /* Handle save here so the general check below does not double-apply.
+             * Pass save: lose half current HP, capped at 100 (help: MAGIA-DISINTEGRATE).
+             * Fail save + < 100 HP: lethal. Fail save + >= 100 HP: exactly 100. */
+            int saved = mag_savingthrow(victim, savetype, 0);
+            if (saved) {
+                dam = MIN(100, MAX(1, GET_HIT(victim) / 2));
+            } else if (GET_HIT(victim) < 100) {
+                dam = GET_HIT(victim); /* lethal */
+            } else {
+                dam = 100;
+            }
+            special_save = 1;
             break;
+        }
     }
 
     /* divide damage by two if victim makes his saving throw */
-    if (mag_savingthrow(victim, savetype, 0))
+    if (!special_save && mag_savingthrow(victim, savetype, 0))
         dam /= 2;
 
     /* SPELL_HARM cannot kill — clamp to leave at least 1 HP remaining */

@@ -1905,6 +1905,7 @@ void create_spells_db()
     new_spell->assign[0].level = 85;
     new_spell->assign[0].num_mana = strdup(buf);
     new_spell->damages = strdup("0");       /* overridden by mag_damage special case */
+    new_spell->max_dam = 100;               /* actual cap; switch case computes exact value */
     new_spell->school = SCHOOL_EVOCATION;   /* Pure destruction */
     new_spell->element = ELEMENT_UNDEFINED; /* Disintegration force */
     spedit_save_internally(new_spell);

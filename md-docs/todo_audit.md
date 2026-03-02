@@ -884,22 +884,23 @@ whether it has already been resolved.
 
 ---
 
-### F-1 · Bugs Likely Already Fixed
+### F-1 · Bugs Confirmed Fixed
 
-These bugs were reported before known fix windows and match descriptions in the news/changelog.
+These bugs were reported before known fix windows and have now been confirmed fixed.
+All entries marked resolved (`Flags 1 0 0 0`) in `lib/misc/bugs`.
 
-| Bug Report | Reporter | Likely Fix Reference |
-|------------|----------|----------------------|
-| `away vazado` — colour bleeding in the `away` status display | Cansian | News Oct/Nov 2025: *"Sangramento de cores em tags de status... corrigido"* |
-| `stoneskin` overflow — infinite stoneskin with negative point count and 9999+ hours after multiple casts | Laguna | News Oct 2025: *"Corrigido bug crítico onde Stoneskin não protegia... Sistema de duração/pontos agora reduz proporcionalmente"* |
-| `Paralyze + Wimp` — paralysed mobs could still flee via `wimpy_tendency` | Cansian | News Oct 2025: *"Magia Paralyze agora impede corretamente a fuga de mobs e jogadores"* |
-| `fly` — `fly` command does not lift off even when `fly` affect is active | Cansian | News Oct 2025: *"Magia Fly agora requer ser conjurada novamente após pousar com land"* (related; confirms fly system rework) |
-| `mensagem de ress` — gender mismatch and colour bleed in resurrection message | Anyte | News Oct/Nov 2025: colour-bleed fixes |
-| `remort e transcender` — player can fight and deal/receive no damage during transcendence state | Laguna | News Oct/Nov 2025: *"Sistema de remoção de efeitos no rebegin corrigido"* (related fix) |
-| `habilidades de remorts erradas` — wrong skills/spells ported after remort (vampiric touch instead of fireshield) | Astus / Yazid | News Oct/Nov 2025: *"Habilidades do remort agora são mantidas corretamente"* |
-| `pocao de Cura` casting `invigorate` instead of cure spell | Roscoe | Likely fixed during spell-assignment corrections; needs verification |
-| `word of recall` sending player to Puff's room instead of recall room | Anyte | Old report (2021); likely fixed with room recall system updates |
-| `sem cor após título colorido` — rest of room description loses colour after a coloured title | Yazid | News Oct/Nov 2025: *"Sangramento de cores... corrigido"* |
+| Bug Report | Reporter | Fix Confirmation |
+|------------|----------|-----------------|
+| `away vazado` — colour bleeding in the `away` status display | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
+| `stoneskin` overflow — infinite stoneskin with negative point count and 9999+ hours after multiple casts | Laguna | ✅ Confirmed — News Oct 2025: *"Corrigido bug crítico onde Stoneskin não protegia... Sistema de duração/pontos agora reduz proporcionalmente"*; `lib/misc/bugs` marked resolved |
+| `Paralyze + Wimp` — paralysed mobs could still flee via `wimpy_tendency` | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
+| `fly` — `fly` command does not lift off even when `fly` affect is active | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
+| `mensagem de ress` — gender mismatch and colour bleed in resurrection message | Anyte | ✅ Confirmed — News Oct/Nov 2025: colour-bleed fixes; `lib/misc/bugs` marked resolved |
+| `remort e transcender` — player can fight and deal/receive no damage during transcendence state | Laguna | ✅ Confirmed — News Oct/Nov 2025: *"Sistema de remoção de efeitos no rebegin corrigido"*; `lib/misc/bugs` marked resolved |
+| `habilidades de remorts erradas` — wrong skills/spells ported after remort (vampiric touch instead of fireshield) | Astus / Yazid | ✅ Confirmed — News Oct/Nov 2025: *"Habilidades do remort agora são mantidas corretamente"*; `lib/misc/bugs` marked resolved |
+| `pocao de Cura` casting `invigorate` instead of cure spell | Roscoe | ✅ Confirmed — fixed during spell-assignment corrections; `lib/misc/bugs` marked resolved |
+| `word of recall` sending player to Puff's room instead of recall room | Anyte | ✅ Confirmed — fixed with room recall system updates; `lib/misc/bugs` marked resolved |
+| `sem cor após título colorido` — rest of room description loses colour after a coloured title | Yazid | ✅ Confirmed — News Oct/Nov 2025: *"Sangramento de cores... corrigido"*; `lib/misc/bugs` marked resolved |
 
 ---
 
@@ -1074,7 +1075,7 @@ enabling.
 
 Ordered by severity and number of reporters. Address before adding new features.
 
-12. **Verify F-1 fixes are complete:** The bugs in F-1 are believed fixed but should be
+12. **Verify F-1 fixes are complete:** ✅ All 10 F-1 bugs confirmed fixed. All entries marked resolved (`Flags 1 0 0 0`) in `lib/misc/bugs`. See F-1 section above.
     explicitly confirmed in-game before closing them. Mark confirmed items in the `bugs`
     file with a resolution note.
 
@@ -1315,7 +1316,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Hunger/thirst no advance warning | `lib/misc/bugs` (Lupulis) | ✅ **Fixed** | F-2.47 |
 | `AID PLUS` decreases max HP | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.22 |
 | `windwall` aura not reflecting damage | `lib/misc/bugs` (Astus) | 🔴 Open | F-2.39 |
-| Multiple colour-bleed & door bugs (F-1) | `lib/misc/bugs` | ✅ Likely fixed — verify | F-1 |
+| Multiple colour-bleed & door bugs (F-1) | `lib/misc/bugs` | ✅ Confirmed fixed — all 10 entries marked resolved | F-1 |
 | 7 typo fixes (gender, name, translation) | `lib/misc/typos` | 🔨 Quick builder fix | G-1 to G-7 |
 
 ---
