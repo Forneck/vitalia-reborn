@@ -884,23 +884,22 @@ whether it has already been resolved.
 
 ---
 
-### F-1 · Bugs Confirmed Fixed
+### F-1 · Bugs Likely Already Fixed
 
-These bugs were reported before known fix windows and have now been confirmed fixed.
-All entries marked resolved (`Flags 1 0 0 0`) in `lib/misc/bugs`.
+These bugs were reported before known fix windows and match descriptions in the news/changelog.
 
-| Bug Report | Reporter | Fix Confirmation |
-|------------|----------|-----------------|
-| `away vazado` — colour bleeding in the `away` status display | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
-| `stoneskin` overflow — infinite stoneskin with negative point count and 9999+ hours after multiple casts | Laguna | ✅ Confirmed — News Oct 2025: *"Corrigido bug crítico onde Stoneskin não protegia... Sistema de duração/pontos agora reduz proporcionalmente"*; `lib/misc/bugs` marked resolved |
-| `Paralyze + Wimp` — paralysed mobs could still flee via `wimpy_tendency` | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
-| `fly` — `fly` command does not lift off even when `fly` affect is active | Cansian | ✅ Confirmed — `lib/misc/bugs` already marked resolved |
-| `mensagem de ress` — gender mismatch and colour bleed in resurrection message | Anyte | ✅ Confirmed — News Oct/Nov 2025: colour-bleed fixes; `lib/misc/bugs` marked resolved |
-| `remort e transcender` — player can fight and deal/receive no damage during transcendence state | Laguna | ✅ Confirmed — News Oct/Nov 2025: *"Sistema de remoção de efeitos no rebegin corrigido"*; `lib/misc/bugs` marked resolved |
-| `habilidades de remorts erradas` — wrong skills/spells ported after remort (vampiric touch instead of fireshield) | Astus / Yazid | ✅ Confirmed — News Oct/Nov 2025: *"Habilidades do remort agora são mantidas corretamente"*; `lib/misc/bugs` marked resolved |
-| `pocao de Cura` casting `invigorate` instead of cure spell | Roscoe | ✅ Confirmed — fixed during spell-assignment corrections; `lib/misc/bugs` marked resolved |
-| `word of recall` sending player to Puff's room instead of recall room | Anyte | ✅ Confirmed — fixed with room recall system updates; `lib/misc/bugs` marked resolved |
-| `sem cor após título colorido` — rest of room description loses colour after a coloured title | Yazid | ✅ Confirmed — News Oct/Nov 2025: *"Sangramento de cores... corrigido"*; `lib/misc/bugs` marked resolved |
+| Bug Report | Reporter | Likely Fix Reference |
+|------------|----------|----------------------|
+| `away vazado` — colour bleeding in the `away` status display | Cansian | News Oct/Nov 2025: *"Sangramento de cores em tags de status... corrigido"* |
+| `stoneskin` overflow — infinite stoneskin with negative point count and 9999+ hours after multiple casts | Laguna | News Oct 2025: *"Corrigido bug crítico onde Stoneskin não protegia... Sistema de duração/pontos agora reduz proporcionalmente"* |
+| `Paralyze + Wimp` — paralysed mobs could still flee via `wimpy_tendency` | Cansian | News Oct 2025: *"Magia Paralyze agora impede corretamente a fuga de mobs e jogadores"* |
+| `fly` — `fly` command does not lift off even when `fly` affect is active | Cansian | News Oct 2025: *"Magia Fly agora requer ser conjurada novamente após pousar com land"* (related; confirms fly system rework) |
+| `mensagem de ress` — gender mismatch and colour bleed in resurrection message | Anyte | News Oct/Nov 2025: colour-bleed fixes |
+| `remort e transcender` — player can fight and deal/receive no damage during transcendence state | Laguna | News Oct/Nov 2025: *"Sistema de remoção de efeitos no rebegin corrigido"* (related fix) |
+| `habilidades de remorts erradas` — wrong skills/spells ported after remort (vampiric touch instead of fireshield) | Astus / Yazid | News Oct/Nov 2025: *"Habilidades do remort agora são mantidas corretamente"* |
+| `pocao de Cura` casting `invigorate` instead of cure spell | Roscoe | Likely fixed during spell-assignment corrections; needs verification |
+| `word of recall` sending player to Puff's room instead of recall room | Anyte | Old report (2021); likely fixed with room recall system updates |
+| `sem cor após título colorido` — rest of room description loses colour after a coloured title | Yazid | News Oct/Nov 2025: *"Sangramento de cores... corrigido"* |
 
 ---
 
@@ -925,39 +924,39 @@ be triaged and prioritised.
 | F-2.12 | `Fly` — mob (Lupulis) re-lands immediately after landing (`fly de novo sozinho`) | Cansian | 3001 | Possible AI or affect reapplication loop |
 | F-2.13 | `retorno pro templo após quit` — player who quit in the Abyss was not returned to temple after ~72 hours | Yazid | 9752 | Loadroom / respawn logic |
 | F-2.14 | `magia errada quando fez o port dos remorts` — `skin like steel` replaced by `skin like diamond` after remort port | Yazid | 3019 | Spell-assignment mismatch during rebegin |
-| F-2.15 | `transport via plants impossível de praticar` — spell listed for Druid/Mage in help but not in practice list | Yazid / Astus | 3019 | **Fixed** — `CLASS_MAGIC_USER` (level 5) added to `spells_assign.c` and `lib/misc/spells` DB; `lib/misc/bugs` marked resolved |
+| F-2.15 | `transport via plants impossível de praticar` — spell listed for Druid/Mage in help but not in practice list | Yazid / Astus | 3019 | Spell-assignment / class table issue |
 | F-2.16 | **Portas com Palavras** — no word-triggered doors work anywhere (Fênix na China, Fenda, Gondolin, etc.) | Lupulis | 5429 | **Fixed** — triggers now attached to rooms; flag values corrected (`ao`/`aop`); same-keyword pairs merged (zones 69, 114) |
 | F-2.17 | `Sala Shogum Tei` — `up` exit cannot be unlocked even with the correct amulet | Laguna | 15132 | World content — lock/key vnum |
 | F-2.18 | `Fenda Entre Mundos` — password `avarohana` no longer opens the `escuridão` door to Yama | Laguna / Astus | 11417 | **Fixed** — trigger 11400 attached to room 11417; merged with 11401; flag `aco`→open `ac` |
 | F-2.19 | `Rua Luar de Safira, casas 3 e 4` — house door cannot be opened | Lupulis | 1021 | World content |
 | F-2.20 | `Sala "Muitos Caminhos" – Loctus` — stone door cannot be opened with the stone key | Laguna | 8310 | World content — lock/key vnum |
-| F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | **Fixed** — `lib/misc/spells` DB already assigns `polearms` to `CLASS_WARRIOR` at level 40; `lib/misc/bugs` marked resolved |
+| F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | Skill not assigned to any class table |
 | F-2.22 | `AID (PLUS IUM)` — enhanced AID decreased max HP instead of increasing it | Henzo | 3001 | AID spell variant interaction bug |
 | F-2.23 | `flee` — flee failing far too often in combat | Panoramix | 2 | Flee formula or random roll calibration |
-| F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | **Fixed** — `advance_level()` in `class.c` already uses `wis_app[GET_WIS(ch)].bonus`; `lib/misc/bugs` marked resolved |
+| F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | Practice formula not using WIS stat |
 | F-2.25 | `Magia não aparecendo no affect` — debuff spells (curse, blind, sleep from potions) not shown in `affects` | Durandal | 29041 | Missing affect-tracking for certain spell effects |
 | F-2.26 | `Porto de Madeira – Gondolin` — gate cannot be unlocked even with the sentinel key | Laguna | 4520 | **Fixed** — triggers 4510-4513 attached to room 4520; flag values corrected |
 | F-2.27 | `Porta da Fenda entre Mundos` (repeated) — `avarohana` no longer opens the door | Astus | 3001 | **Fixed** — same as F-2.18 |
 | F-2.28 | `Visible/loja` — `visible` effect wears off between shop transactions, forcing repeated casting | Durandal | 3020 | Affect-duration / shop-interaction issue |
-| F-2.29 | `erro lvl 60 comando level` — `level` command shows identical XP requirement for 59→60 as for 58→59 | Thorgal | 3001 | **Fixed** — `exp_table` entries for levels 59/60/61 are distinct; `lib/misc/bugs` already marked resolved |
-| F-2.30 | `A balada do Andarilho ignora a mana zerada` — song continues working with 0 mana | Panoramix | 12058 | **Fixed** — `spell_parser.c` mana check guards CHANSON type; `MAX(1,mana)` ensures cost ≥ 1; `lib/misc/bugs` marked resolved |
+| F-2.29 | `erro lvl 60 comando level` — `level` command shows identical XP requirement for 59→60 as for 58→59 | Thorgal | 3001 | XP table display bug in `do_level` |
+| F-2.30 | `A balada do Andarilho ignora a mana zerada` — song continues working with 0 mana | Panoramix | 12058 | Mana-check missing in bard song loop |
 | F-2.31 | `Cajado de pedra do Rizzo` — wand sold by Rizzo changed spell from Stoneskin to another spell | Astus | 3001 | World content — object vnum or spell field |
-| F-2.32 | `incremento de dano sentado` — bash/fury of air does not increase damage on sitting targets | Henzo | 3001 | **Fixed** — `do_bash` now deals 2 hp (1.5×) to sitting/resting targets; `spell_fury_air` no longer stands up sitting targets, instead deals 3 hp (1.5×); `lib/misc/bugs` marked resolved |
+| F-2.32 | `incremento de dano sentado` — bash/fury of air does not increase damage on sitting targets | Henzo | 3001 | Combat position modifier not applying |
 | F-2.33 | `who` — `who` sub-commands broken; `who -s` reports ~3× actual player count | Henzo | 1061 | `do_who` command logic |
 | F-2.34 | `toggle wimp` — wimpy toggle changes page length instead of wimpy flee threshold | Henzo | 1609 | Preference editor toggle index collision |
-| F-2.35 | `harm` — spell dealing ~20 damage (common and minus versions) instead of stated values; plus version works | Henzo | 15074 | **Fixed** — special case in `mag_damage` switch computes `MIN(100, GET_HIT(victim)-dice(1,4))`; no-kill clamp added; help note updated; `lib/misc/bugs` marked resolved |
-| F-2.36 | `aid` (voice cast) — AID spell via syllables does not work in the normal version; PLUS and MINUS variants work | Henzo | 1626 | **Fixed** — `syls[]` table entry `{"aid","auxilium"}` (8 chars) already passes the ≥5-char voice-cast guard |
-| F-2.37 | `O GRITO DA MORTE` — bard song not working | Henzo | 1603 | **Fixed** — song deals (9d9)+20 damage correctly; player expected insta-kill behaviour which is not the design |
-| F-2.38 | `voice explosion` — spell does not display damage messages or effects on enemies | Henzo | 1627 | **Fixed** — vnum 89 entry added to `lib/misc/messages` (ordered between 82 and 96); resistance note added to help; `lib/misc/bugs` marked resolved |
-| F-2.39 | `Windwall` — not reflecting/returning damage to attackers | Astus | 12670 | **Fixed** — `get_aura_shield_spell()` in `fight.c` now falls back to direct `AFF_FLAGGED` checks for object-granted auras (bug #91 confirmed same root cause); `lib/misc/bugs` marked resolved |
-| F-2.40 | `disintegrate` — does not disintegrate corpses as expected | Henzo | 12769 | **Fixed** — `TAR_OBJ_ROOM\|MAG_MANUAL` added; `ASPELL(spell_disintegrate)` destroys corpse+contents; damage formula corrected per help text in `mag_damage` switch; `lib/misc/spells` DB updated; help updated; `lib/misc/bugs` marked resolved |
-| F-2.41 | `Magia Transport via Plants` — cannot be practised despite being listed in HELP for Mage | Astus | 13798 | **Fixed** — `CLASS_MAGIC_USER` level 5 assignment added to `spells_assign.c` and `lib/misc/spells` DB; `lib/misc/bugs` marked resolved |
+| F-2.35 | `harm` — spell dealing ~20 damage (common and minus versions) instead of stated values; plus version works | Henzo | 15074 | Spell formula for `harm` base/minus variants |
+| F-2.36 | `aid` (voice cast) — AID spell via syllables does not work in the normal version; PLUS and MINUS variants work | Henzo | 1626 | Spell-variant syllable mapping |
+| F-2.37 | `O GRITO DA MORTE` — bard song not working | Henzo | 1603 | Song implementation or trigger issue |
+| F-2.38 | `voice explosion` — spell does not display damage messages or effects on enemies | Henzo | 1627 | Message output for this spell variant |
+| F-2.39 | `Windwall` — not reflecting/returning damage to attackers | Astus | 12670 | Aura-shield damage reflection (possibly related to aura fixes in Dec 2025) |
+| F-2.40 | `disintegrate` — does not disintegrate corpses as expected | Henzo | 12769 | Spell effect on corpse objects |
+| F-2.41 | `Magia Transport via Plants` — cannot be practised despite being listed in HELP for Mage | Astus | 13798 | Spell-class assignment or availability table |
 | F-2.42 | `invigor` — spell missing self-cast option | Henzo | 10713 | Missing `FIND_CHAR_ROOM` self-target flag |
 | F-2.43 | `eval para fireweapon (arcos)` — evaluate and fire-weapon interaction with bows needs review | Cansian | 3054 | Item evaluation for bow-type weapons |
 | F-2.44 | `old thalos` — undefined object on floor in Asa Sul da Prefeitura (zone 52) | Henzo | 5231 | World content — object missing description |
 | F-2.45 | `Pessegueiro bugado` (room 14060) | Lupulis | 14060 | World content — specific peach-tree interaction |
 | F-2.46 | Multiple `porta aqui não abre` reports (rooms 766, 13872, 13879, 13888, 14046, 4574, 757) | Lupulis | Various | World content — door/lock vnum mismatches across multiple zones |
-| F-2.47 | `Fome e sede` — no warning tick before hunger/thirst penalty; penalty fires immediately | Lupulis | 1016 | **Fixed** — `gain_condition()` in `limits.c` sends advance warning at condition == 1 (one tick before damage); `lib/misc/bugs` already marked resolved |
+| F-2.47 | `Fome e sede` — no warning tick before hunger/thirst penalty; penalty fires immediately | Lupulis | 1016 | Missing one-tick warning in hunger/thirst loop |
 | F-2.48 | `caminho SW` bugado (room 14480) | Lupulis | 14480 | World content — broken exit |
 
 ---
@@ -1075,7 +1074,7 @@ enabling.
 
 Ordered by severity and number of reporters. Address before adding new features.
 
-12. **Verify F-1 fixes are complete:** ✅ All 10 F-1 bugs confirmed fixed. All entries marked resolved (`Flags 1 0 0 0`) in `lib/misc/bugs`. See F-1 section above.
+12. **Verify F-1 fixes are complete:** The bugs in F-1 are believed fixed but should be
     explicitly confirmed in-game before closing them. Mark confirmed items in the `bugs`
     file with a resolution note.
 
@@ -1089,21 +1088,21 @@ Ordered by severity and number of reporters. Address before adding new features.
     - **F-2.34 — `toggle wimp`** changing page length instead of wimpy threshold.
 
 14. **Spell bugs** (from C-18 and Category F):
-    - ✅ **F-2.35 — `harm` spell** dealing wrong damage for base and minus variants.
-    - ✅ **F-2.36 — `aid` via voice cast** not working for normal variant.
-    - ✅ **F-2.38 — `voice explosion`** showing no damage or effect messages.
-    - ✅ **F-2.39 — `windwall`** aura damage reflection not working.
-    - ✅ **F-2.40 — `disintegrate`** not disintegrating corpses.
-    - ✅ **F-2.41 / F-2.15 — `transport via plants`** not practicable despite being in help.
-    - ✅ **F-2.37 — `O GRITO DA MORTE`** bard song not functional.
-    - ✅ **F-2.21 — `polearms`** weapon skill not assigned to any class.
+    - **F-2.35 — `harm` spell** dealing wrong damage for base and minus variants.
+    - **F-2.36 — `aid` via voice cast** not working for normal variant.
+    - **F-2.38 — `voice explosion`** showing no damage or effect messages.
+    - **F-2.39 — `windwall`** aura damage reflection not working.
+    - **F-2.40 — `disintegrate`** not disintegrating corpses.
+    - **F-2.41 / F-2.15 — `transport via plants`** not practicable despite being in help.
+    - **F-2.37 — `O GRITO DA MORTE`** bard song not functional.
+    - **F-2.21 — `polearms`** weapon skill not assigned to any class.
 
-15. **Gameplay formula bugs** (all resolved):
-    - **F-2.24 — Wisdom not scaling practice gains** per level. ✅ Already fixed in `class.c`.
-    - **F-2.47 — Hunger/thirst** missing one-tick advance warning. ✅ Already fixed in `limits.c`.
-    - **F-2.29 — Level command** showing duplicate XP for level 59→60. ✅ Already fixed in `exp_table`.
-    - **F-2.32 — Sitting target damage bonus** not applying for bash/fury of air. ✅ Fixed in `act.offensive.c` and `spells.c`.
-    - **F-2.30 — Bard song `balada do andarilho`** working with 0 mana. ✅ Already fixed in `spell_parser.c`.
+15. **Gameplay formula bugs**:
+    - **F-2.24 — Wisdom not scaling practice gains** per level.
+    - **F-2.47 — Hunger/thirst** missing one-tick advance warning.
+    - **F-2.29 — Level command** showing duplicate XP for level 59→60.
+    - **F-2.32 — Sitting target damage bonus** not applying for bash/fury of air.
+    - **F-2.30 — Bard song `balada do andarilho`** working with 0 mana.
 
 16. **World content door/lock fixes (Category D + F-2.46):** Multiple rooms report doors
     that cannot be opened. These are builder tasks (key/lock vnum corrections):
@@ -1306,17 +1305,17 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Word-triggered doors broken (systemic) | `lib/misc/bugs` (Lupulis+) | ✅ **Fixed** — triggers attached; flags corrected; same-kw pairs merged | F-2.16/18/26/27 |
 | `who` command showing 3× player count | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.33 |
 | `toggle wimp` changes page size | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.34 |
-| `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | ✅ Fixed | F-2.21 |
-| `harm` spell wrong damage (base/minus) | `lib/misc/bugs` (Henzo) | ✅ Fixed | F-2.35 |
-| `voice explosion` no output | `lib/misc/bugs` (Henzo) | ✅ Fixed | F-2.38 |
+| `polearms` skill unassigned to any class | `lib/misc/bugs` (Laguna) | 🔴 Open | F-2.21 |
+| `harm` spell wrong damage (base/minus) | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.35 |
+| `voice explosion` no output | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.38 |
 | `disintegrate` doesn't destroy corpses | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.40 |
 | `transport via plants` unpracticable | `lib/misc/bugs` (Yazid+) | 🔴 Open | F-2.15/41 |
 | `O GRITO DA MORTE` song broken | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.37 |
-| Wisdom not scaling practice gains | `lib/misc/bugs` (Roscoe) | ✅ **Fixed** | F-2.24 |
-| Hunger/thirst no advance warning | `lib/misc/bugs` (Lupulis) | ✅ **Fixed** | F-2.47 |
+| Wisdom not scaling practice gains | `lib/misc/bugs` (Roscoe) | 🔴 Open | F-2.24 |
+| Hunger/thirst no advance warning | `lib/misc/bugs` (Lupulis) | 🔴 Open | F-2.47 |
 | `AID PLUS` decreases max HP | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.22 |
 | `windwall` aura not reflecting damage | `lib/misc/bugs` (Astus) | 🔴 Open | F-2.39 |
-| Multiple colour-bleed & door bugs (F-1) | `lib/misc/bugs` | ✅ Confirmed fixed — all 10 entries marked resolved | F-1 |
+| Multiple colour-bleed & door bugs (F-1) | `lib/misc/bugs` | ✅ Likely fixed — verify | F-1 |
 | 7 typo fixes (gender, name, translation) | `lib/misc/typos` | 🔨 Quick builder fix | G-1 to G-7 |
 
 ---

@@ -134,7 +134,7 @@ IdNum     6
 Dated     1606181286
 Level     80
 Room      3001
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      word of recall~
 Body      word of recall ta levando pra sala da Puff
@@ -144,7 +144,7 @@ IdNum     6
 Dated     1616703689
 Level     80
 Room      1
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Bilhete do Museu~
 Body      Bilhete nao some. (Golem nao pega ao liberar, arrumar o trigger)
@@ -175,7 +175,7 @@ IdNum     50
 Dated     1760884252
 Level     100
 Room      17370
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Help~
 Body      Nao sei se  exatamente bug, mas quando mandei "help comm" pra ser help command, apareceu "Nao encontrei ajuda para comm." seguido das linhas "Voce queria dizer: < send link = "help combo">combo" etc. O send link  para aparecer tambm?
@@ -215,7 +215,7 @@ IdNum     50
 Dated     1761078839
 Level     100
 Room      9386
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Paralyze + Wimp~
 Body      Mobs com paralyze nao deveriam ser capazes de fugir (wimpy) nem pelo wimpy_tendency.
@@ -275,7 +275,7 @@ IdNum     37
 Dated     1761245474
 Level     96
 Room      3000
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      magia errada quando fez o port dos remorts~
 Body      recordo que levei de Druida skin like diamond, e nao skin like steel, que esta agora entre minhas magias
@@ -298,7 +298,7 @@ IdNum     517
 Dated     1761249522
 Level     80
 Room      3008
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      O portao de madeira - Gondolin~
 Body      O primeiro portao em Gondolin, O Portao de Madeira, nao da pra destrancer.
@@ -372,7 +372,7 @@ IdNum     50
 Dated     1761568059
 Level     90
 Room      10984
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Porta aqui nessa sala nao abre~
 Body      porta aqui nessa sala nao abre
@@ -393,7 +393,7 @@ IdNum     293
 Dated     1761730488
 Level     92
 Room      3415
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      flee~
 Body      i110 < 472Hp 4000Mn 1000Mv (away)>                            Panoramix tagarela, 'o Anciao Dragao Vermelhori triunfante,
@@ -421,7 +421,7 @@ IdNum     293
 Dated     1762027500
 Level     9
 Room      3001
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Magia nao aparecendo no affect~
 Body      Tomei uma pocao de sleep (efeito negativo), n aparecendo o tempo de duracao no affected. Sugiro adicionar magias de debuff (curse, blind etc).
@@ -534,7 +534,7 @@ IdNum     46
 Dated     1763546616
 Level     11
 Room      12058
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Cajado de pedra do Rizzo~
 Body      O cajado de pedra que vende no Rizzo constumava ser wand de Stoneskin, porem agora esta com outra magia, nao sei se mudou mesmo ou se foi bug na transposicao de itens/afetamentos.
@@ -554,7 +554,7 @@ IdNum     562
 Dated     1763568491
 Level     97
 Room      3001
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      who~
 Body      Os comandos de who nao estao funcionando e o who -s  indica 3x mais jogadores online do que de fato tem
@@ -644,7 +644,7 @@ IdNum     562
 Dated     1764015735
 Level     45
 Room      1627
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      porta aqui N nao abre~
 Body      porta aqui N nao abre
@@ -665,7 +665,7 @@ IdNum     517
 Dated     1764107126
 Level     98
 Room      13798
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      Windwall nao esta dando dano~
 Body      Ola, nao sei se isso faz parte das recentes mudancas das auras, mas a magia windwall nao esta devolvendo dano nos mobs.
@@ -675,7 +675,7 @@ IdNum     517
 Dated     1764336117
 Level     70
 Room      12670
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      disintegrate~
 Body      Disintegrate nao desintegra os corpos
@@ -685,7 +685,7 @@ IdNum     562
 Dated     1764439684
 Level     98
 Room      12769
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      museu do colecionador~
 Body      Boa noite no museu da para comprar os card mais baratos e vender mais caro.
@@ -1023,7 +1023,7 @@ IdNum     175
 Dated     1767842635
 Level     93
 Room      3375
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      porta aqui para S nao abre~
 Body      bug submit porta aqui para S nao abre

@@ -679,9 +679,7 @@ ACMD(do_bash)
          * first to make sure they don't flee, then we can't bash them!  So now
          * we only set them sitting if they didn't flee. -gg 9/21/98
          */
-        /* F-2.32: sitting/resting targets receive 1.5x damage (2 hp) per help file */
-        int bash_dam = (GET_POS(vict) < POS_FIGHTING) ? 2 : 1;
-        if (damage(ch, vict, bash_dam, SKILL_BASH) > 0) { /* -1 = dead, 0 = miss */
+        if (damage(ch, vict, 1, SKILL_BASH) > 0) { /* -1 = dead, 0 = miss */
             WAIT_STATE(vict, PULSE_VIOLENCE * 3);
             if (IN_ROOM(ch) == IN_ROOM(vict))
                 GET_POS(vict) = POS_SITTING;

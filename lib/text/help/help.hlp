@@ -6223,25 +6223,18 @@ Permite a voce ver se uma pessoa, alimento ou bebida estao envenenados.
 #1
 MAGIA-DISINTEGRATE
 
-Uso        : cast 'disintegrate' <alvo | cadaver>
+Uso        : cast 'disintegrate' <alvo>
 Acumulativa: -
 Duracao    : Instantanea
 Nivel      : Mago Nivel 85
-Resistencia: Especial (veja descricao)
 
 Esta e a magia mais poderosa que um mago pode usar. Se o alvo possuir
 menos que 100 pontos de vida e falhar em um teste de resistencia,
 sera desintegrado, perdendo todos os bens que carregava ou vestia.
 Se o alvo possuir mais que 100, um maximo de 100 pontos de vida serao
-desintegrados para cada vez que a magia for lancada.
-
-Se o alvo passar em um teste de resistencia, a vitima perde apenas
-metade de seus pontos de vida atuais, para um maximo de 100.
-
-Os valores de dano acima nao consideram o teste de resistencia.
-
-Tambem pode ser usada sobre um cadaver no chao para desintegra-lo
-junto com todos os itens que ele contem.
+desintegrados para cada vez que a magia for lancada. Se o alvo passar
+em um teste de resistencia, a vitima perde apenas metade do seu total
+de pontos de vida, para um maximo de 100.
 #1
 MAGIA-DISPEL-EVIL
 
@@ -6442,9 +6435,6 @@ Essa magia provoca uma fortissima lufada de vento que derruba o adversario,
 impossibilitando-o de jogar por 2 turnos. O uso dessa magia requere muita
 energia por parte de quem a lanca, portanto deve ser usada com sabedoria.
 
-   Note que acertando uma pessoa que esteja descansando/sentado ira
-inflingir 1.5 vezes o dano.
-
 Veja tambem: BASH
 #1
 MAGIA-GROUP-ARMOR
@@ -6478,8 +6468,8 @@ Nivel      : Clerigo Nivel 28
 Resistencia: Contra magia para metade do dano
 
 Essa magia retira todos menos 1d4 pontos de vida do alvo.
-O numero maximo que pode ser retirado e 100 (sem considerar resistencia).
-Nao e possivel matar usando essa magia.
+O numero maximo que pode ser retirado e 100.  Nao e possivel
+matar usando essa magia.
 #1
 MAGIA-HEAL
 
@@ -7006,10 +6996,9 @@ Uso        : cast 'voice explosion'
 Acumulativa: -
 Duracao    : Instantanea
 Nivel      : Bardo Nivel 23
-Resistencia: Contra magia para metade do dano
 
 O som emitido por essa magia atinge a todos da sala, menos aquele que a lanca,
-causando um dano de (3d6)+nivel (sem considerar resistencia).
+causando um dano de (3d6)+nivel.
 #1
 MAGIA-WATERWALK
 

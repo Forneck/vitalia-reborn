@@ -157,33 +157,6 @@ static int get_aura_shield_spell(struct char_data *ch)
                 return af->spell;
         }
     }
-
-    /* Fallback: detect auras granted by equipped objects — those only set the AFF
-     * bit directly via affect_modify_ar without adding to ch->affected. */
-    if (AFF_FLAGGED(ch, AFF_FIRESHIELD))
-        return SPELL_FIRESHIELD;
-    if (AFF_FLAGGED(ch, AFF_THISTLECOAT))
-        return SPELL_THISTLECOAT;
-    if (AFF_FLAGGED(ch, AFF_WINDWALL))
-        return SPELL_WINDWALL;
-    if (AFF_FLAGGED(ch, AFF_WATERSHIELD))
-        return SPELL_WATERSHIELD;
-    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD))
-        return SPELL_ROCKSHIELD;
-    if (AFF_FLAGGED(ch, AFF_POISONSHIELD))
-        return SPELL_POISONSHIELD;
-    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD))
-        return SPELL_LIGHTNINGSHIELD;
-    if (AFF_FLAGGED(ch, AFF_ICESHIELD))
-        return SPELL_ICESHIELD;
-    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD))
-        return SPELL_ACIDSHIELD;
-    if (AFF_FLAGGED(ch, AFF_MINDSHIELD))
-        return SPELL_MINDSHIELD;
-    if (AFF_FLAGGED(ch, AFF_FORCESHIELD))
-        return SPELL_FORCESHIELD;
-    if (AFF_FLAGGED(ch, AFF_SOUNDBARRIER))
-        return SPELL_SOUNDBARRIER;
     return 0;
 }
 
