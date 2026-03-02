@@ -421,7 +421,7 @@ IdNum     293
 Dated     1762027500
 Level     9
 Room      3001
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      Magia nao aparecendo no affect~
 Body      Tomei uma pocao de sleep (efeito negativo), n aparecendo o tempo de duracao no affected. Sugiro adicionar magias de debuff (curse, blind etc).
@@ -534,7 +534,7 @@ IdNum     46
 Dated     1763546616
 Level     11
 Room      12058
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      Cajado de pedra do Rizzo~
 Body      O cajado de pedra que vende no Rizzo constumava ser wand de Stoneskin, porem agora esta com outra magia, nao sei se mudou mesmo ou se foi bug na transposicao de itens/afetamentos.
@@ -554,7 +554,7 @@ IdNum     562
 Dated     1763568491
 Level     97
 Room      3001
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      who~
 Body      Os comandos de who nao estao funcionando e o who -s  indica 3x mais jogadores online do que de fato tem

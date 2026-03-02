@@ -6435,6 +6435,9 @@ Essa magia provoca uma fortissima lufada de vento que derruba o adversario,
 impossibilitando-o de jogar por 2 turnos. O uso dessa magia requere muita
 energia por parte de quem a lanca, portanto deve ser usada com sabedoria.
 
+   Note que acertando uma pessoa que esteja descansando/sentado ira
+inflingir 1.5 vezes o dano.
+
 Veja tambem: BASH
 #1
 MAGIA-GROUP-ARMOR

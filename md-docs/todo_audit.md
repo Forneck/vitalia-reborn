@@ -933,15 +933,15 @@ be triaged and prioritised.
 | F-2.21 | `Polearms` — no class currently learns the `polearms` weapon skill | Laguna | 10984 | Skill not assigned to any class table |
 | F-2.22 | `AID (PLUS IUM)` — enhanced AID decreased max HP instead of increasing it | Henzo | 3001 | AID spell variant interaction bug |
 | F-2.23 | `flee` — flee failing far too often in combat | Panoramix | 2 | Flee formula or random roll calibration |
-| F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | Practice formula not using WIS stat |
+| F-2.24 | `taxa de práticas por nível × Wisdom` — practice gains per level do not scale with WIS attribute | Roscoe | 3001 | **Fixed** — `advance_level()` in `class.c` already uses `wis_app[GET_WIS(ch)].bonus`; `lib/misc/bugs` marked resolved |
 | F-2.25 | `Magia não aparecendo no affect` — debuff spells (curse, blind, sleep from potions) not shown in `affects` | Durandal | 29041 | Missing affect-tracking for certain spell effects |
 | F-2.26 | `Porto de Madeira – Gondolin` — gate cannot be unlocked even with the sentinel key | Laguna | 4520 | **Fixed** — triggers 4510-4513 attached to room 4520; flag values corrected |
 | F-2.27 | `Porta da Fenda entre Mundos` (repeated) — `avarohana` no longer opens the door | Astus | 3001 | **Fixed** — same as F-2.18 |
 | F-2.28 | `Visible/loja` — `visible` effect wears off between shop transactions, forcing repeated casting | Durandal | 3020 | Affect-duration / shop-interaction issue |
-| F-2.29 | `erro lvl 60 comando level` — `level` command shows identical XP requirement for 59→60 as for 58→59 | Thorgal | 3001 | XP table display bug in `do_level` |
-| F-2.30 | `A balada do Andarilho ignora a mana zerada` — song continues working with 0 mana | Panoramix | 12058 | Mana-check missing in bard song loop |
+| F-2.29 | `erro lvl 60 comando level` — `level` command shows identical XP requirement for 59→60 as for 58→59 | Thorgal | 3001 | **Fixed** — `exp_table` entries for levels 59/60/61 are distinct; `lib/misc/bugs` already marked resolved |
+| F-2.30 | `A balada do Andarilho ignora a mana zerada` — song continues working with 0 mana | Panoramix | 12058 | **Fixed** — `spell_parser.c` mana check guards CHANSON type; `MAX(1,mana)` ensures cost ≥ 1; `lib/misc/bugs` marked resolved |
 | F-2.31 | `Cajado de pedra do Rizzo` — wand sold by Rizzo changed spell from Stoneskin to another spell | Astus | 3001 | World content — object vnum or spell field |
-| F-2.32 | `incremento de dano sentado` — bash/fury of air does not increase damage on sitting targets | Henzo | 3001 | Combat position modifier not applying |
+| F-2.32 | `incremento de dano sentado` — bash/fury of air does not increase damage on sitting targets | Henzo | 3001 | **Fixed** — `do_bash` now deals 2 hp (1.5×) to sitting/resting targets; `spell_fury_air` no longer stands up sitting targets, instead deals 3 hp (1.5×); `lib/misc/bugs` marked resolved |
 | F-2.33 | `who` — `who` sub-commands broken; `who -s` reports ~3× actual player count | Henzo | 1061 | `do_who` command logic |
 | F-2.34 | `toggle wimp` — wimpy toggle changes page length instead of wimpy flee threshold | Henzo | 1609 | Preference editor toggle index collision |
 | F-2.35 | `harm` — spell dealing ~20 damage (common and minus versions) instead of stated values; plus version works | Henzo | 15074 | Spell formula for `harm` base/minus variants |
@@ -956,7 +956,7 @@ be triaged and prioritised.
 | F-2.44 | `old thalos` — undefined object on floor in Asa Sul da Prefeitura (zone 52) | Henzo | 5231 | World content — object missing description |
 | F-2.45 | `Pessegueiro bugado` (room 14060) | Lupulis | 14060 | World content — specific peach-tree interaction |
 | F-2.46 | Multiple `porta aqui não abre` reports (rooms 766, 13872, 13879, 13888, 14046, 4574, 757) | Lupulis | Various | World content — door/lock vnum mismatches across multiple zones |
-| F-2.47 | `Fome e sede` — no warning tick before hunger/thirst penalty; penalty fires immediately | Lupulis | 1016 | Missing one-tick warning in hunger/thirst loop |
+| F-2.47 | `Fome e sede` — no warning tick before hunger/thirst penalty; penalty fires immediately | Lupulis | 1016 | **Fixed** — `gain_condition()` in `limits.c` sends advance warning at condition == 1 (one tick before damage); `lib/misc/bugs` already marked resolved |
 | F-2.48 | `caminho SW` bugado (room 14480) | Lupulis | 14480 | World content — broken exit |
 
 ---
@@ -1097,12 +1097,12 @@ Ordered by severity and number of reporters. Address before adding new features.
     - **F-2.37 — `O GRITO DA MORTE`** bard song not functional.
     - **F-2.21 — `polearms`** weapon skill not assigned to any class.
 
-15. **Gameplay formula bugs**:
-    - **F-2.24 — Wisdom not scaling practice gains** per level.
-    - **F-2.47 — Hunger/thirst** missing one-tick advance warning.
-    - **F-2.29 — Level command** showing duplicate XP for level 59→60.
-    - **F-2.32 — Sitting target damage bonus** not applying for bash/fury of air.
-    - **F-2.30 — Bard song `balada do andarilho`** working with 0 mana.
+15. **Gameplay formula bugs** (all resolved):
+    - **F-2.24 — Wisdom not scaling practice gains** per level. ✅ Already fixed in `class.c`.
+    - **F-2.47 — Hunger/thirst** missing one-tick advance warning. ✅ Already fixed in `limits.c`.
+    - **F-2.29 — Level command** showing duplicate XP for level 59→60. ✅ Already fixed in `exp_table`.
+    - **F-2.32 — Sitting target damage bonus** not applying for bash/fury of air. ✅ Fixed in `act.offensive.c` and `spells.c`.
+    - **F-2.30 — Bard song `balada do andarilho`** working with 0 mana. ✅ Already fixed in `spell_parser.c`.
 
 16. **World content door/lock fixes (Category D + F-2.46):** Multiple rooms report doors
     that cannot be opened. These are builder tasks (key/lock vnum corrections):
@@ -1311,8 +1311,8 @@ Ordered by severity and number of reporters. Address before adding new features.
 | `disintegrate` doesn't destroy corpses | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.40 |
 | `transport via plants` unpracticable | `lib/misc/bugs` (Yazid+) | 🔴 Open | F-2.15/41 |
 | `O GRITO DA MORTE` song broken | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.37 |
-| Wisdom not scaling practice gains | `lib/misc/bugs` (Roscoe) | 🔴 Open | F-2.24 |
-| Hunger/thirst no advance warning | `lib/misc/bugs` (Lupulis) | 🔴 Open | F-2.47 |
+| Wisdom not scaling practice gains | `lib/misc/bugs` (Roscoe) | ✅ **Fixed** | F-2.24 |
+| Hunger/thirst no advance warning | `lib/misc/bugs` (Lupulis) | ✅ **Fixed** | F-2.47 |
 | `AID PLUS` decreases max HP | `lib/misc/bugs` (Henzo) | 🔴 Open | F-2.22 |
 | `windwall` aura not reflecting damage | `lib/misc/bugs` (Astus) | 🔴 Open | F-2.39 |
 | Multiple colour-bleed & door bugs (F-1) | `lib/misc/bugs` | ✅ Likely fixed — verify | F-1 |
