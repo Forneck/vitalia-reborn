@@ -1149,7 +1149,6 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),
                          emotion_profile_types[k->ai_data->emotional_profile], CCNRM(ch, C_NRM));
         }
-
         /* Display extreme emotional state timers */
         if (k->ai_data) {
             if (k->ai_data->berserk_timer > 0) {

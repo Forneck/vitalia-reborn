@@ -130,9 +130,10 @@ static void look_at_char(struct char_data *i, struct char_data *ch);
 static void look_at_target(struct char_data *ch, char *arg);
 static void look_in_direction(struct char_data *ch, int dir);
 static void look_in_obj(struct char_data *ch, char *arg);
-/* Emotion system helper */
+/* Emotion system helpers */
 static void get_highest_emotion_display(struct char_data *mob, struct char_data *viewer, const char **out_text,
                                         const char **out_color);
+static int show_emotion_cue_to_char(struct char_data *mob, struct char_data *viewer);
 /* do_look, do_inventory utility functions */
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show);
 /* do_look, do_equipment, do_examine, do_inventory */
@@ -461,6 +462,10 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
     else
         act("Você não vê nada de nada de especial n$l.", FALSE, i, 0, ch, TO_VICT);
 
+    /* Append emotion-state narrative cue for mobs with an active emotional state */
+    if (IS_NPC(i) && i->ai_data)
+        show_emotion_cue_to_char(i, ch);
+
     diag_char_to_char(i, ch);
 
     /* Check if this is a questmaster */
@@ -645,6 +650,68 @@ static void get_highest_emotion_display(struct char_data *mob, struct char_data 
         *out_text = "(confiante)";
         *out_color = CCGRN(viewer, C_NRM);
     }
+}
+
+/**
+ * Appends a lore-compatible, color-coded emotion-state narrative cue after a
+ * mob's description when a player uses 'look <mob>'.  Displayed regardless of
+ * PRF_DISPEMOTE — the preference only gates the brief room-list indicators.
+ * Exits silently when CONFIG_MOB_CONTEXTUAL_SOCIALS is off, the mob has no
+ * ai_data, or the viewer is an NPC.
+ *
+ * Uses act() so $n and $r tokens produce the correct name and gender suffix.
+ *
+ * @param mob    NPC whose emotional state is evaluated
+ * @param viewer PC performing the look command
+ * @return 1 if a cue was displayed, 0 otherwise
+ */
+static int show_emotion_cue_to_char(struct char_data *mob, struct char_data *viewer)
+{
+    /* Maps brief tag → embedded-color act() string */
+    static const struct {
+        const char *tag;
+        const char *act_str;
+    } cue_table[] = {{"(amedrontado)", "\tm$n treme de medo.\tn"},
+                     {"(furioso)", "\tr$n ferve de raiva.\tn"},
+                     {"(feliz)", "\ty$n irradia alegria.\tn"},
+                     {"(triste)", "\tb$n parece abatid$r.\tn"},
+                     {"(aterrorizado)", "\tM$n está transfixad$r pelo horror.\tn"},
+                     {"(sofrendo)", "\tr$n demonstra sofrimento visível.\tn"},
+                     {"(compassivo)", "\tg$n demonstra compaixão.\tn"},
+                     {"(corajoso)", "\ty$n exala determinação.\tn"},
+                     {"(curioso)", "\tc$n observa você com evidente curiosidade.\tn"},
+                     {"(enojado)", "\tg$n demonstra aversão clara.\tn"},
+                     {"(invejoso)", "\tm$n lança olhares invejosos.\tn"},
+                     {"(animado)", "\ty$n vibra de animação.\tn"},
+                     {"(amigavel)", "\tg$n demonstra amizade.\tn"},
+                     {"(ganancioso)", "\ty$n exibe olhos gananciosos.\tn"},
+                     {"(humilhado)", "\tm$n está visivelmente humilhad$r.\tn"},
+                     {"(apaixonado)", "\tr$n irradia afeto.\tn"},
+                     {"(leal)", "\tb$n demonstra lealdade inabalável.\tn"},
+                     {"(orgulhoso)", "\ty$n irradia orgulho.\tn"},
+                     {"(envergonhado)", "\tm$n carrega o peso da vergonha.\tn"},
+                     {"(confiante)", "\tg$n exibe confiança aberta.\tn"},
+                     {NULL, NULL}};
+    int idx;
+    const char *emotion_text = NULL;
+    const char *emotion_color = NULL;
+
+    if (!IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+    if (IS_NPC(viewer))
+        return 0;
+
+    get_highest_emotion_display(mob, viewer, &emotion_text, &emotion_color);
+    if (!emotion_text)
+        return 0;
+
+    for (idx = 0; cue_table[idx].tag != NULL; idx++) {
+        if (strcmp(cue_table[idx].tag, emotion_text) == 0) {
+            act(cue_table[idx].act_str, FALSE, mob, 0, viewer, TO_VICT);
+            return 1;
+        }
+    }
+    return 0;
 }
 
 static void list_one_char(struct char_data *i, struct char_data *ch)
