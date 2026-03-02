@@ -981,6 +981,25 @@ ASPELL(spell_control_weather)
                  month_name[expire_time.month]);
 }
 
+ASPELL(spell_disintegrate)
+{
+    if (obj == NULL)
+        return; /* Character target is handled by MAG_DAMAGE special case */
+
+    if (GET_OBJ_TYPE(obj) != ITEM_CORPSE) {
+        act("A magia não tem efeito sobre $p.", FALSE, ch, obj, 0, TO_CHAR);
+        return;
+    }
+
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_ROOM);
+
+    /* Destroy all items inside the corpse, then the corpse itself */
+    while (obj->contains)
+        extract_obj(obj->contains);
+    extract_obj(obj);
+}
+
 ASPELL(spell_transport_via_plants)
 {
     obj_vnum obj_num = NOTHING;
@@ -1196,13 +1215,10 @@ ASPELL(spell_fury_air)
         return;
     }
 
-    if (GET_POS(victim) == POS_SITTING) {
-        act("Um vento forte levanta $N.", FALSE, ch, NULL, victim, TO_CHAR);
-        GET_POS(victim) = POS_STANDING;
-        return;
-    }
+    /* F-2.32: sitting/resting targets receive 1.5x damage (3 hp) instead of being stood up */
+    int fury_dam = (GET_POS(victim) < POS_FIGHTING) ? 3 : 2;
 
-    if (damage(ch, victim, 2, SPELL_FURY_OF_AIR) > 0) {
+    if (damage(ch, victim, fury_dam, SPELL_FURY_OF_AIR) > 0) {
         if (GET_LEVEL(victim) < LVL_GOD)
             GET_WAIT_STATE(victim) += 2 * PULSE_VIOLENCE;
         if (IN_ROOM(ch) == IN_ROOM(victim))

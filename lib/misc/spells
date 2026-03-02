@@ -590,9 +590,9 @@
 99 (80 - (5 * self.level)) > 30 ? (80 - (5 * self.level)) : 30
  4 100
 55 1
- 1 P 56 1 18 4097 8 600
+ 1 P 56 1 274 5121 8 100
  2 disintegrate
- 3 dice(3, self.class == 0 ? 8 : 6) + (self.class == 0 ? 195 : 180)
+ 3 0
 90 0 85 
 99 (90 - (10 * self.level)) > 50 ? (90 - (10 * self.level)) : 5
  4 100
@@ -970,6 +970,8 @@
  1 P 93 1 256 1024 9 0
  2 transport via plants
 90 6 7 
+99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+91 0 5 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
  4 100
 55 3

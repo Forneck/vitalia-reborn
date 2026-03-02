@@ -6,7 +6,18 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
-@C-@G=@Y>@W Marco de 2026 @C@Y<@G=@C-@n
+@C-@G=@Y>@W Março de 2026 @C@Y<@G=@C-@n
+
+   @RCorreções de Magias e Habilidades@n
+   - @YDisintegrate@n: ao resistir ao teste de salvação, a vítima perde metade dos
+     seus PV atuais (máx. 100) em vez de um valor fixo. A magia também destrói
+     cadáveres no chão junto com seu conteúdo.
+   - @YHarm@n: versões normal e minus corrigidas — dano agora calculado corretamente.
+   - @YVoice Explosion@n: mensagens de dano e efeito agora aparecem normalmente.
+   - @YWindwall@n: reflexão de dano agora funciona quando a aura vem de equipamentos.
+   - @YTransport via Plants@n: Magos podem agora praticar a magia normalmente.
+   - @YO Grito da Morte@n: canção de bardo funcionando corretamente.
+   - @YPolearms@n: habilidade agora disponível para Guerreiros.
 
    @MSistema de Personalidade - Escalas de Comportamento Configuráveis@n
    Os parâmetros que definem como os traços de @YExtraversão@n e @YAmabilidade@n
