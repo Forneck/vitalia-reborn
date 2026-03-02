@@ -559,13 +559,16 @@ Planned behavior not yet implemented:
 
 **Source:** `md-docs/EMOTION_SYSTEM_TODO.md §4.1`
 
-Planned features not yet implemented:
-- Emotion-state appended to mob long description when looking (e.g.,
-  *"o goblin treme de medo"* / *"the goblin trembles with fear"*)
-- Color-coded emotional state indicators
+Implemented:
+- ✅ Emotion-state narrative cue appended to mob description when using `look <mob>`
+  (e.g., *"o goblin treme de medo"*) — color-coded, uses effective (viewer-specific)
+  hybrid emotions via `show_emotion_cue_to_char()` in `src/act.informative.c`
+- ✅ Color-coded emotional state indicators (room-list view, `PRF_DISPEMOTE`)
+
+Still pending:
 - Periodic spontaneous emotion emotes from mobs with extreme states
 
-**Relevant source files:** `src/act.informative.c` (`do_look`), `src/utils.c`
+**Relevant source files:** `src/act.informative.c` (`look_at_char`, `list_one_char`)
 
 ---
 
@@ -1262,7 +1265,7 @@ Ordered by severity and number of reporters. Address before adding new features.
 | Auction House | `AUCTION_HOUSE.md` ✅ | ⚠️ Experimental — restricted access | B-6 |
 | Communication emotion triggers | `EMOTION_SYSTEM_TODO.md §2.1` | ❌ Not implemented | C-1 |
 | Reputation → emotion seeding | `EMOTION_SYSTEM_TODO.md §3.2` | ❌ Not implemented | C-2 |
-| Emotion visual cues in `look` | `EMOTION_SYSTEM_TODO.md §4.1` | ❌ Not implemented | C-3 |
+| Emotion visual cues in `look` | `EMOTION_SYSTEM_TODO.md §4.1` | ✅ Implemented (`look <mob>` narrative cue) | C-3 |
 | NPC emotion-driven dialogue | `EMOTION_SYSTEM_TODO.md §4.2` | ❌ Not implemented | C-4 |
 | Emotion-based player skills | `EMOTION_SYSTEM_TODO.md §5.4` | ❌ Not implemented | C-5 |
 | Emotion decay rate tuning config | `EMOTION_SYSTEM_TODO.md §6` | ❌ Not implemented | C-6 |

@@ -8,6 +8,17 @@
 @n
 @C-@G=@Y>@W Março de 2026 @C@Y<@G=@C-@n
 
+   @MEstado Emocional dos Mobs visivel com Look@n
+   Ao usar @Ylook <mob>@n agora e possivel ver uma pista narrativa do estado
+   emocional do habitante. Se o mob tiver alguma emocao intensa o suficiente
+   (calculada pelo sistema hibrido de humor e relacionamento com voce), uma
+   linha colorida e exibida abaixo da descricao:
+   - @rFerve de raiva.@n  @bParece abatido.@n  @cClaramente curioso.@n  (entre outras)
+   O sistema usa as emocoes efetivas em relacao ao seu personagem, nao apenas
+   o humor global — o que significa que o mesmo mob pode exibir pistas
+   diferentes para jogadores diferentes, de acordo com o historico de
+   interacoes. Nenhuma configuracao extra e necessaria.
+
    @RCorreções de Magias e Habilidades@n
    - @YDisintegrate@n: ao resistir ao teste de salvação, a vítima perde metade dos
      seus PV atuais (máx. 100) em vez de um valor fixo. A magia também destrói
