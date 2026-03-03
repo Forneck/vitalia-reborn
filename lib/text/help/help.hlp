@@ -6418,6 +6418,8 @@ nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
+#1
+MAGIA-FLY
 
 Uso        : cast 'fly' <alvo>
 Acumulativa: Sim (Duracao)
@@ -6972,6 +6974,8 @@ nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, AURAS-INTERACOES
+#1
+MAGIA-VAMPIRIC-TOUCH
 
 Uso        : cast 'vampiric touch' <alvo>
 Acumulativa: -
@@ -16429,6 +16433,9 @@ Nao e possivel ter ambas as protecoes ativas simultaneamente.
 
 Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY, AURAS-INTERACOES
 
+#1
+GASSIST
+
 Uso: gassist
 
    Parecido com o 'assist', mas ajuda qualquer jogador do grupo que est�
@@ -16747,6 +16754,8 @@ nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT, AURAS-INTERACOES
+#1
+MAGIA-WATERSHIELD
 
 Uso        : cast 'watershield' <alvo>
 Acumulativa: Duracao
@@ -16767,6 +16776,8 @@ Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
 essas mesmas protecoes, evitando loops infinitos de dano.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
+#1
+MAGIA-ROCKSHIELD
 
 Uso        : cast 'rockshield' <alvo>
 Acumulativa: Duracao
@@ -16787,6 +16798,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
+#1
+MAGIA-POISONSHIELD
 
 Uso        : cast 'poisonshield' <alvo>
 Acumulativa: Duracao
@@ -16807,6 +16820,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON, AURAS-INTERACOES
+#1
+MAGIA-LIGHTNINGSHIELD
 
 Uso        : cast 'lightningshield' <alvo>
 Acumulativa: Duracao
@@ -16827,6 +16842,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT, AURAS-INTERACOES
+#1
+MAGIA-ICESHIELD
 
 Uso        : cast 'iceshield' <alvo>
 Acumulativa: Duracao
@@ -16847,6 +16864,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH, AURAS-INTERACOES
+#1
+MAGIA-ACIDSHIELD
 
 Uso        : cast 'acidshield' <alvo>
 Acumulativa: Duracao
@@ -16867,6 +16886,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
+#1
+MAGIA-MINDSHIELD
 
 Uso        : cast 'mindshield' <alvo>
 Acumulativa: Duracao
@@ -16887,6 +16908,8 @@ contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
 Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP, AURAS-INTERACOES
+#1
+MAGIA-FORCESHIELD
 
 Uso        : cast 'forceshield' <alvo>
 Acumulativa: Duracao
