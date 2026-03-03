@@ -420,10 +420,11 @@
      *option
      
 
-   Sistema de emoções dos NPCs melhorado:
-     * Transições emocionais agora são graduais — sem picos abruptos de Medo ou Vergonha.
-     * Reações dependem do contexto: relacionamento, consentimento, testemunhas e poder relativo.
-     * NPCs com simultaneidade emocional (ex: Empolgação + Medo) podem hesitar brevemente.
-     * Memórias emocionais desvanecem com o tempo (eventos marcantes duram mais).
-     * NPCs podem reagir à própria emoção: justificar, desviar, rir nervosamente ou se recompor.
-     * Traços de personalidade (OCEAN) calibram a intensidade e a regulação emocional de cada NPC.
+   Sistema de emocoes dos NPCs melhorado (mob e jogador):
+     * Transicoes emocionais agora sao graduais - sem picos abruptos de Medo ou Vergonha.
+     * Reacoes dependem do contexto: relacionamento, consentimento, testemunhas e poder relativo.
+     * Mobs e jogadores sao avaliados igualmente: acoes de mob para mob tambem sao processadas.
+     * NPCs com simultaneidade emocional (ex: Empolgacao + Medo) podem hesitar brevemente.
+     * Memorias emocionais desvanecem com o tempo (eventos marcantes duram mais).
+     * NPCs podem reagir a propria emocao: justificar, desviar, rir nervosamente ou se recompor.
+     * Tracos de personalidade (OCEAN) calibram a intensidade e a regulacao emocional de cada NPC.

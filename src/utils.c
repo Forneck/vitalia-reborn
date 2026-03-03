@@ -8950,10 +8950,13 @@ int classify_social_interact_type(const char *social_name, int *out_major)
  *   High Openness     → higher conflict tolerance (clips extreme amplification)
  *   High Agreeableness→ lowers anger reactivity for negative intents
  *
- * @param mob            The NPC receiving the social.
- * @param actor          The character performing the social.
+ * @param mob            The NPC receiving the social (must be NPC with ai_data).
+ * @param actor          The character performing the social — may be a PLAYER or another MOB.
+ *                       Mob-to-mob interactions are fully supported; intimate socials between
+ *                       two mobs (e.g., sex, fondle, seduce) go through the same consent and
+ *                       relationship evaluation as player-to-mob socials.
  * @param social_category INTERACT_SOCIAL_VIOLENT, INTERACT_SOCIAL_NEGATIVE, or INTERACT_SOCIAL_POSITIVE.
- * @param is_intimate    1 if this is a sexual/intimate action (fondle, grope, seduce…), 0 otherwise.
+ * @param is_intimate    1 if this is a sexual/intimate action (fondle, grope, seduce), 0 otherwise.
  * @return float multiplier in [0.1, 2.0].
  */
 static float appraise_social_context(struct char_data *mob, struct char_data *actor, int social_category,
@@ -8973,11 +8976,13 @@ static float appraise_social_context(struct char_data *mob, struct char_data *ac
     /* Consent flag: intimate action is welcomed only with high trust AND love */
     int consent = (mob->ai_data->emotion_trust >= 70 && mob->ai_data->emotion_love >= 60) ? 1 : 0;
 
-    /* Observability: number of third-party witnesses in the room amplifies social impact */
+    /* Observability: number of third-party witnesses in the room amplifies social impact.
+     * Counts both NPC and player witnesses; excludes dying characters of either type. */
     int observers = 0;
     struct char_data *ch_obs;
     for (ch_obs = world[IN_ROOM(mob)].people; ch_obs; ch_obs = ch_obs->next_in_room) {
-        if (ch_obs != mob && ch_obs != actor && !MOB_FLAGGED(ch_obs, MOB_NOTDEADYET))
+        if (ch_obs != mob && ch_obs != actor && !MOB_FLAGGED(ch_obs, MOB_NOTDEADYET) &&
+            !PLR_FLAGGED(ch_obs, PLR_NOTDEADYET))
             observers++;
     }
     float observability = (observers > 0) ? (observers >= 3 ? 1.0f : observers / 3.0f) : 0.0f;
