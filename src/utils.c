@@ -8980,10 +8980,13 @@ static float appraise_social_context(struct char_data *mob, struct char_data *ac
      * Counts both NPC and player witnesses; excludes dying characters of either type. */
     int observers = 0;
     struct char_data *ch_obs;
-    for (ch_obs = world[IN_ROOM(mob)].people; ch_obs; ch_obs = ch_obs->next_in_room) {
-        if (ch_obs != mob && ch_obs != actor && !MOB_FLAGGED(ch_obs, MOB_NOTDEADYET) &&
-            !PLR_FLAGGED(ch_obs, PLR_NOTDEADYET))
-            observers++;
+    int obs_room = IN_ROOM(mob);
+    if (obs_room != NOWHERE && obs_room >= 0 && obs_room <= top_of_world) {
+        for (ch_obs = world[obs_room].people; ch_obs; ch_obs = ch_obs->next_in_room) {
+            if (ch_obs != mob && ch_obs != actor && !MOB_FLAGGED(ch_obs, MOB_NOTDEADYET) &&
+                !PLR_FLAGGED(ch_obs, PLR_NOTDEADYET))
+                observers++;
+        }
     }
     float observability = (observers > 0) ? (observers >= 3 ? 1.0f : observers / 3.0f) : 0.0f;
 
@@ -9090,7 +9093,7 @@ static void apply_approach_avoidance_conflict(struct char_data *mob)
 void decay_emotion_memories(struct char_data *mob)
 {
     int i;
-    if (!IS_NPC(mob) || !mob->ai_data)
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
 
     time_t now = time(NULL);
@@ -9102,7 +9105,7 @@ void decay_emotion_memories(struct char_data *mob)
             continue;
         float age_hours = (float)(now - mem->timestamp) / 3600.0f;
         float lambda = mem->major_event ? MEMORY_DECAY_LAMBDA_MAJOR : MEMORY_DECAY_LAMBDA;
-        mem->intensity *= expf(-lambda * age_hours);
+        mem->intensity = expf(-lambda * age_hours);
         if (mem->intensity < MEMORY_INTENSITY_THRESHOLD)
             memset(mem, 0, sizeof(struct emotion_memory));
     }
@@ -9114,7 +9117,7 @@ void decay_emotion_memories(struct char_data *mob)
             continue;
         float age_hours = (float)(now - mem->timestamp) / 3600.0f;
         float lambda = mem->major_event ? MEMORY_DECAY_LAMBDA_MAJOR : MEMORY_DECAY_LAMBDA;
-        mem->intensity *= expf(-lambda * age_hours);
+        mem->intensity = expf(-lambda * age_hours);
         if (mem->intensity < MEMORY_INTENSITY_THRESHOLD)
             memset(mem, 0, sizeof(struct emotion_memory));
     }
@@ -9138,7 +9141,7 @@ void decay_emotion_memories(struct char_data *mob)
  */
 void perform_emotional_regulation(struct char_data *mob)
 {
-    if (!IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
 
     /* Rate-limit: only attempt regulation when cooldown has expired */
@@ -9447,6 +9450,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * changes for the relevant social categories (intimate, violent, negative). */
     int social_major = 0;
     int appraisal_category = classify_social_interact_type(social_name, &social_major);
+    (void)social_major; /* major flag not used for further branching in this function */
 
     /* Check for severely inappropriate socials - context dependent response */
     for (i = 0; blocked_socials[i] != NULL; i++) {
