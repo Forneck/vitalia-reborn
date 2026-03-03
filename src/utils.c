@@ -9447,10 +9447,11 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* ── Appraisal Module ────────────────────────────────────────────────────
      * Evaluate intent, relationship, consent, observability, and power_differential
      * before any emotional delta is applied.  The returned weight scales all
-     * changes for the relevant social categories (intimate, violent, negative). */
+     * changes for the relevant social categories (intimate, violent, negative).
+     * appraisal_category and social_major are also reused at the bottom of this
+     * function for memory recording, avoiding a duplicate classify call. */
     int social_major = 0;
     int appraisal_category = classify_social_interact_type(social_name, &social_major);
-    (void)social_major; /* major flag not used for further branching in this function */
 
     /* Check for severely inappropriate socials - context dependent response */
     for (i = 0; blocked_socials[i] != NULL; i++) {
@@ -10484,15 +10485,12 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Add to emotion memory - derive type from shared classifier to avoid
-     * duplicating the list logic maintained by classify_social_interact_type(). */
+    /* Add to emotion memory - reuse the classification already computed above
+     * (appraisal_category / social_major) to avoid a duplicate call. */
     if (actor && mob->ai_data) {
-        int is_major = 0;
-        int interaction_type = classify_social_interact_type(social_name, &is_major);
-
-        add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
+        add_emotion_memory(mob, actor, appraisal_category, social_major, social_name);
         if (IS_NPC(actor) && actor->ai_data)
-            add_active_emotion_memory(actor, mob, interaction_type, is_major, social_name);
+            add_active_emotion_memory(actor, mob, appraisal_category, social_major, social_name);
     }
 
     /* Approach–Avoidance Conflict: evaluate after all emotion updates. */
