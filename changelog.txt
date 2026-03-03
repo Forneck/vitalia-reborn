@@ -13,7 +13,7 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
     - Envy decay rate is configurable via cedit Emotion Decay Rates submenu (option D).
     - Config file key: emotion_decay_rate_envy.
 
-
+  feat: Emotional Smoothing and Contextual Evaluation (src/utils.c, src/utils.h, src/structs.h, src/db.c, src/cedit.c)
     Implements layered improvements to the NPC emotional AI system:
 
     1. Emotional Smoothing / Tau Rate-Limiting (adjust_emotion)

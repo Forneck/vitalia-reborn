@@ -1247,7 +1247,7 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_decay_rate_horror = %d\n", CONFIG_EMOTION_DECAY_RATE_HORROR);
     fprintf(fl, "emotion_decay_rate_disgust = %d\n", CONFIG_EMOTION_DECAY_RATE_DISGUST);
     fprintf(fl, "emotion_decay_rate_shame = %d\n", CONFIG_EMOTION_DECAY_RATE_SHAME);
-    fprintf(fl, "emotion_decay_rate_humiliation = %d\n\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
+    fprintf(fl, "emotion_decay_rate_humiliation = %d\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
     fprintf(fl, "emotion_decay_rate_envy = %d\n\n", CONFIG_EMOTION_DECAY_RATE_ENVY);
 
     /* Big Five (OCEAN) Personality - Phase 1: Neuroticism Configuration */
