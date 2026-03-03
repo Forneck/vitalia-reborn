@@ -6417,7 +6417,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
 #1
 MAGIA-FLY
 
@@ -6973,7 +6973,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD
+Veja tambem: MAGIA-FIRESHIELD, AURAS-INTERACOES
 #1
 MAGIA-VAMPIRIC-TOUCH
 
@@ -16431,7 +16431,7 @@ um efeito adicional de protecao.
 IMPORTANTE: Esta magia cancela e e cancelada por Sanctuary.
 Nao e possivel ter ambas as protecoes ativas simultaneamente.
 
-Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY
+Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY, AURAS-INTERACOES
 
 #1
 GASSIST
@@ -16650,8 +16650,8 @@ efeitos melhores.
    As quatro estacoes do ano combinam-se com diferentes biomas, criando
    condicoes unicas que afetam sobrevivencia e eficacia magica.
 
-Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS, 
-ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER
+Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS,
+ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER, AURAS-INTERACOES
 
 #1
 ESTACOES SEASONS
@@ -16753,7 +16753,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT, AURAS-INTERACOES
 #1
 MAGIA-WATERSHIELD
 
@@ -16775,7 +16775,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa (Fireshield, Thistlecoat
 Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
 essas mesmas protecoes, evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
 #1
 MAGIA-ROCKSHIELD
 
@@ -16797,7 +16797,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
 #1
 MAGIA-POISONSHIELD
 
@@ -16819,7 +16819,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON, AURAS-INTERACOES
 #1
 MAGIA-LIGHTNINGSHIELD
 
@@ -16841,7 +16841,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT
+Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT, AURAS-INTERACOES
 #1
 MAGIA-ICESHIELD
 
@@ -16863,7 +16863,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH
+Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH, AURAS-INTERACOES
 #1
 MAGIA-ACIDSHIELD
 
@@ -16885,7 +16885,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD
+Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
 #1
 MAGIA-MINDSHIELD
 
@@ -16907,7 +16907,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP
+Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP, AURAS-INTERACOES
 #1
 MAGIA-FORCESHIELD
 
@@ -16930,7 +16930,176 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-SHIELD, MAGIA-ARMOR, MAGIA-SANCTUARY
+Veja tambem: MAGIA-SHIELD, MAGIA-ARMOR, MAGIA-SANCTUARY, AURAS-INTERACOES
+#1
+AURAS-INTERACOES INTERACOES-AURA INTERACAO-AURA AURA-INTERACOES ESCUDOS-ELEMENTAIS
+
+   INTERACOES ENTRE MAGIAS DE AURA
+
+   Magias de aura (flag MAG_AURA) criam um campo elemental ao redor do
+conjurador. Quando dois combatentes possuem auras ativas, seus elementos
+podem interagir ao se atacarem, com tres resultados possiveis:
+
+   ANULACAO   : Ambas as auras sao removidas simultaneamente.
+   DOMINIO    : A aura do defensor e' removida (atacante prevalece).
+   AMPLIFICADO: Como DOMINIO, porem com dano extra causado ao defensor.
+
+   Se a interacao for NEUTRA nessa direcao, o sistema verifica se o
+elemento do defensor possui vantagem sobre o do atacante - nesse caso
+o escudo do atacante e' removido. Se nenhum dos dois tiver vantagem,
+ambos os escudos permanecem intactos (sem interacao).
+
+   AURAS DISPONIVEIS E SEUS ELEMENTOS:
+
+   Fireshield     → Fogo       (Mago Niv 31)
+   Thistlecoat    → Terra      (Druida Niv 8)
+   Windwall       → Ar         (Guardiao Niv 15)
+   Soundbarrier   → (nenhum)   (Bardo Niv 15 - sem interacoes elementais)
+   Sanctuary      → Sagrado    (Clerigo Niv 21)
+   Gloomshield    → Profano    (Clerigo Niv 21)
+   Shield         → Fisico     (base; Forceshield e' sua variante descobrivel)
+   Forceshield    → Fisico     (descobrivel: Shield)
+   Watershield    → Agua       (descobrivel: Fireshield)
+   Rockshield     → Terra      (descobrivel: Thistlecoat)
+   Poisonshield   → Veneno     (descobrivel: Thistlecoat)
+   Lightningshield → Relampago (descobrivel: Windwall)
+   Iceshield      → Gelo       (descobrivel: Watershield)
+   Acidshield     → Acido      (descobrivel: Poisonshield)
+   Mindshield     → Mental     (descobrivel: Soundbarrier)
+
+   INTERACOES POR ELEMENTO DO ATACANTE:
+
+   FOGO (Fireshield):
+     vs Agua  (Watershield)           → ANULACAO  (nuvem de vapor)
+     vs Terra (Thistlecoat/Rockshield)→ DOMINIO   (fogo queima a terra)
+     vs Gelo  (Iceshield)             → AMPLIFICADO (fogo derrete o gelo)
+     vs Ar    (Windwall)              → AMPLIFICADO (ar alimenta o fogo)
+     vs Fogo  (outro Fireshield)      → ANULACAO  (mesmo elemento)
+
+   AGUA (Watershield):
+     vs Fogo  (Fireshield)            → ANULACAO  (nuvem de vapor)
+     vs Relampago (Lightningshield)   → ANULACAO  (agua conduz e dispersa)
+     vs Acido (Acidshield)            → DOMINIO   (agua dilui o acido)
+     vs Terra (Thistlecoat/Rockshield)→ sem efeito (ambos escudos permanecem)
+     vs Agua  (outro Watershield)     → ANULACAO  (mesmo elemento)
+
+   TERRA (Thistlecoat / Rockshield):
+     vs Ar    (Windwall)              → DOMINIO   (terra bloqueia o ar)
+     vs Relampago (Lightningshield)   → DOMINIO   (terra aterra os raios)
+     vs Veneno (Poisonshield)         → DOMINIO   (terra absorve o veneno)
+     vs Agua  (Watershield)           → ANULACAO  (agua erode a terra)
+     vs Fogo  (Fireshield)            → DOMINIO do FOGO (terra perde)
+     vs Acido (Acidshield)            → AMPLIFICADO do ACIDO (terra perde)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (mesmo elemento)
+
+   AR (Windwall):
+     vs Fogo  (Fireshield)            → AMPLIFICADO (ar alimenta o fogo)
+     vs Veneno (Poisonshield)         → DOMINIO   (ar dispersa o veneno)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (terra bloqueia o ar)
+     vs Gelo  (Iceshield)             → DOMINIO do GELO (ar perde)
+     vs Ar    (outro Windwall)        → ANULACAO  (mesmo elemento)
+
+   RELAMPAGO (Lightningshield):
+     vs Agua  (Watershield)           → AMPLIFICADO (raios conduzem pela agua)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (terra aterra os raios)
+     vs Fisico (Forceshield)          → AMPLIFICADO (raios conduzem pelo metal)
+     vs Gelo  (Iceshield)             → DOMINIO do GELO (relampago perde)
+     vs Relampago (outro Lightningshield) → ANULACAO (mesmo elemento)
+
+   GELO (Iceshield):
+     vs Fogo  (Fireshield)            → DOMINIO   (gelo domina o fogo)
+     vs Agua  (Watershield)           → AMPLIFICADO (gelo congela a agua)
+     vs Relampago (Lightningshield)   → DOMINIO   (gelo desacelera o raio)
+     vs Ar    (Windwall)              → DOMINIO   (gelo congela o ar)
+     vs Gelo  (outro Iceshield)       → ANULACAO  (mesmo elemento)
+
+   VENENO (Poisonshield):
+     vs Agua  (Watershield)           → AMPLIFICADO (veneno se espalha na agua)
+     vs Ar    (Windwall)              → ANULACAO  (ar dispersa o veneno)
+     vs Terra (Thistlecoat/Rockshield)→ DOMINIO da TERRA (veneno perde)
+     vs Veneno (outro Poisonshield)   → ANULACAO  (mesmo elemento)
+
+   ACIDO (Acidshield):
+     vs Terra (Thistlecoat/Rockshield)→ AMPLIFICADO (acido dissolve a pedra)
+     vs Fisico (Forceshield)          → AMPLIFICADO (acido corroi a armadura)
+     vs Agua  (Watershield)           → ANULACAO  (agua dilui o acido)
+     vs Acido (outro Acidshield)      → ANULACAO  (mesmo elemento)
+
+   MENTAL (Mindshield):
+     vs Fisico (Forceshield)          → DOMINIO   (mente domina a materia)
+     vs Mental (outro Mindshield)     → ANULACAO  (mesmo elemento)
+
+   FISICO (Forceshield / Shield):
+     vs Mental (Mindshield)           → DOMINIO   (fisico perturba a mente)
+     vs Relampago (Lightningshield)   → AMPLIFICADO do RELAMPAGO (fisico perde)
+     vs Acido (Acidshield)            → AMPLIFICADO do ACIDO (fisico perde)
+     vs Fisico (outro Forceshield)    → ANULACAO  (mesmo elemento)
+
+   SAGRADO (Sanctuary):
+     vs Profano (Gloomshield)         → AMPLIFICADO mutuamente
+
+   PROFANO (Gloomshield):
+     vs Sagrado (Sanctuary)           → AMPLIFICADO mutuamente
+     vs Profano (outro Gloomshield)   → ANULACAO  (mesmo elemento)
+
+   SEM ELEMENTO (Soundbarrier):
+     Nao sofre nem causa interacoes elementais com nenhuma outra aura.
+
+   INTERACOES ASSIMETRICAS (resultado depende de quem ataca):
+
+   Certas combinacoes produzem resultados diferentes conforme o atacante:
+
+   AGUA ataca TERRA:  sem efeito    (ambos escudos permanecem)
+   TERRA ataca AGUA:  ANULACAO      (ambos escudos removidos)
+
+   AR ataca VENENO:   DOMINIO do AR (veneno removido)
+   VENENO ataca AR:   ANULACAO      (ambos escudos removidos)
+
+   AGUA ataca ACIDO:  DOMINIO da AGUA  (acido removido)
+   ACIDO ataca AGUA:  ANULACAO         (ambos removidos)
+
+   RELAMPAGO ataca TERRA:  ANULACAO     (ambos removidos)
+   TERRA ataca RELAMPAGO:  DOMINIO da TERRA (relampago removido)
+
+   FOGO ataca GELO:   AMPLIFICADO  (gelo removido com dano extra)
+   GELO ataca FOGO:   DOMINIO do GELO (fogo removido, sem amplificacao)
+
+   AR ataca FOGO:     AMPLIFICADO  (fogo alimentado, fogo removido com extra)
+   FOGO ataca AR:     AMPLIFICADO  (ar alimenta fogo, ar removido com extra)
+   [ambas as direcoes: a aura do defensor e' removida com dano amplificado]
+
+   NOTA SOBRE MESMOS ELEMENTOS: Thistlecoat e Rockshield sao ambos TERRA.
+   Se dois combatentes usarem um de cada (ou dois iguais), suas auras se
+   anulam mutuamente ao se atacarem, pois compartilham o mesmo elemento.
+
+   SINERGIA "CEBOLA MAGICA": Voce pode empilhar Fireshield + Thistlecoat
+   + Windwall ao mesmo tempo. Nas interacoes elementais, o sistema usa
+   apenas a primeira aura ativa da lista de efeitos (a mais recentemente
+   aplicada). Se essa aura for removida por uma interacao, a proxima da
+   pilha passa a ser usada nas interacoes seguintes.
+
+   EXEMPLOS PRATICOS:
+
+   Voce usa Fireshield e ataca inimigo com Thistlecoat:
+     "Sua barreira de fogo queima os espinhos de <inimigo>!"
+     [Escudo de terra do inimigo e' removido; seu Fireshield permanece]
+
+   Voce usa Watershield e ataca inimigo com Fireshield:
+     "Sua agua e o fogo de <inimigo> se anulam em uma nuvem de vapor!"
+     [Ambos os escudos sao removidos]
+
+   Voce usa Lightningshield e ataca inimigo com Watershield:
+     "Seus raios eletrocutam a agua de <inimigo> com condutividade amplificada!"
+     [Escudo de agua do inimigo e' removido com dano extra]
+
+   Voce usa Iceshield e ataca inimigo com Lightningshield:
+     "Sua barreira de gelo desacelera os raios de <inimigo>!"
+     [Escudo de relampago do inimigo e' removido]
+
+Veja tambem: SINERGIAS, MAGIA-FIRESHIELD, MAGIA-WATERSHIELD, MAGIA-THISTLECOAT,
+MAGIA-WINDWALL, MAGIA-ICESHIELD, MAGIA-ROCKSHIELD, MAGIA-POISONSHIELD,
+MAGIA-LIGHTNINGSHIELD, MAGIA-ACIDSHIELD, MAGIA-MINDSHIELD, MAGIA-FORCESHIELD,
+MAGIA-GLOOMSHIELD, MAGIA-SOUNDBARRIER, ELEMENTOS-MAGICOS
 #1
 MAGIA-CLONE
 
