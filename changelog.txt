@@ -3,7 +3,17 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Mar 03 2026] - Vitalia Reborn Development
-  feat: Emotional Smoothing and Contextual Evaluation (src/utils.c, src/utils.h, src/structs.h, src/db.c, src/cedit.c)
+  fix: Add Envy to Emotion Decay System (src/structs.h, src/utils.h, src/utils.c, src/db.c, src/cedit.c, src/oasis.h)
+    Envy was missing from the emotion decay loop, causing it to persist indefinitely.
+    Changes:
+    - Added decay_rate_envy field to emotion_config_data struct (default: 1, slow decay like Shame).
+    - Added CONFIG_EMOTION_DECAY_RATE_ENVY macro.
+    - Envy now decays in update_mob_emotion_passive() with global multiplier, extreme threshold
+      logic, and Neuroticism modulation (high-N mobs ruminate on envy longer).
+    - Envy decay rate is configurable via cedit Emotion Decay Rates submenu (option D).
+    - Config file key: emotion_decay_rate_envy.
+
+
     Implements layered improvements to the NPC emotional AI system:
 
     1. Emotional Smoothing / Tau Rate-Limiting (adjust_emotion)

@@ -2151,6 +2151,7 @@ struct emotion_config_data {
     int decay_rate_disgust;     /**< Disgust decay rate (default: 2) */
     int decay_rate_shame;       /**< Shame decay rate - slower (default: 1) */
     int decay_rate_humiliation; /**< Humiliation decay rate - slower (default: 1) */
+    int decay_rate_envy;        /**< Envy decay rate - slower (default: 1) */
 
     /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
     /* Neuroticism gain coefficients (β values) - multiplied by 100 for integer storage */

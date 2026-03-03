@@ -6869,6 +6869,24 @@ void update_mob_emotion_passive(struct char_data *mob)
         adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, MAX(1, base_decay)));
     }
 
+    /* Envy decreases slowly over time (social comparison emotion, lingers like shame)
+     * High Neuroticism slows envy decay — envious ruminators hold grudges longer. */
+    if (mob->ai_data->emotion_envy > 0) {
+        int base_decay = CONFIG_EMOTION_DECAY_RATE_ENVY; /* Default: 1 - slower */
+        if (mob->ai_data->emotion_envy > extreme_threshold) {
+            base_decay = (base_decay * extreme_multiplier) / 100;
+        }
+        base_decay = (base_decay * global_multiplier) / 100;
+        /* Neuroticism persistence: high N slows envy decay (social comparison rumination). */
+        float n_envy_scale = SEC_N_FEAR_DECAY_BASE - SEC_N_FEAR_DECAY_COEFF * N_final_decay;
+        if (n_envy_scale < SEC_N_DECAY_MIN_SCALE)
+            n_envy_scale = SEC_N_DECAY_MIN_SCALE;
+        base_decay = (int)(base_decay * n_envy_scale);
+        if (base_decay < 1)
+            base_decay = 1;
+        adjust_emotion(mob, &mob->ai_data->emotion_envy, -rand_number(1, MAX(1, base_decay)));
+    }
+
     /* Emotional Intelligence learning through emotion stabilization
      * Mobs learn EI by successfully returning emotions to baseline (emotional regulation)
      * Small chance (5%) to gain +1 EI when emotions are well-regulated */

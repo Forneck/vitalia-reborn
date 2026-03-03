@@ -1546,6 +1546,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_DECAY_RATE_DISGUST config_info.emotion_config.decay_rate_disgust
 #define CONFIG_EMOTION_DECAY_RATE_SHAME config_info.emotion_config.decay_rate_shame
 #define CONFIG_EMOTION_DECAY_RATE_HUMILIATION config_info.emotion_config.decay_rate_humiliation
+#define CONFIG_EMOTION_DECAY_RATE_ENVY config_info.emotion_config.decay_rate_envy
 
 /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
 #define CONFIG_NEUROTICISM_GAIN_FEAR config_info.emotion_config.neuroticism_gain_fear

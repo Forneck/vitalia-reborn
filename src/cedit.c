@@ -276,6 +276,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.decay_rate_disgust = CONFIG_EMOTION_DECAY_RATE_DISGUST;
     OLC_CONFIG(d)->emotion_config.decay_rate_shame = CONFIG_EMOTION_DECAY_RATE_SHAME;
     OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = CONFIG_EMOTION_DECAY_RATE_HUMILIATION;
+    OLC_CONFIG(d)->emotion_config.decay_rate_envy = CONFIG_EMOTION_DECAY_RATE_ENVY;
 
     /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
     OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear = CONFIG_NEUROTICISM_GAIN_FEAR;
@@ -550,6 +551,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_DECAY_RATE_DISGUST = OLC_CONFIG(d)->emotion_config.decay_rate_disgust;
     CONFIG_EMOTION_DECAY_RATE_SHAME = OLC_CONFIG(d)->emotion_config.decay_rate_shame;
     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = OLC_CONFIG(d)->emotion_config.decay_rate_humiliation;
+    CONFIG_EMOTION_DECAY_RATE_ENVY = OLC_CONFIG(d)->emotion_config.decay_rate_envy;
 
     /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
     CONFIG_NEUROTICISM_GAIN_FEAR = OLC_CONFIG(d)->emotion_config.neuroticism_gain_fear;
@@ -1246,6 +1248,7 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_decay_rate_disgust = %d\n", CONFIG_EMOTION_DECAY_RATE_DISGUST);
     fprintf(fl, "emotion_decay_rate_shame = %d\n", CONFIG_EMOTION_DECAY_RATE_SHAME);
     fprintf(fl, "emotion_decay_rate_humiliation = %d\n\n", CONFIG_EMOTION_DECAY_RATE_HUMILIATION);
+    fprintf(fl, "emotion_decay_rate_envy = %d\n\n", CONFIG_EMOTION_DECAY_RATE_ENVY);
 
     /* Big Five (OCEAN) Personality - Phase 1: Neuroticism Configuration */
     fprintf(fl,
@@ -1634,6 +1637,7 @@ static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d)
                     "%sA%s) Disgust Decay Rate: %s%d%s\r\n"
                     "%sB%s) Shame Decay Rate: %s%d%s (slower)\r\n"
                     "%sC%s) Humiliation Decay Rate: %s%d%s (slower)\r\n"
+                    "%sD%s) Envy Decay Rate: %s%d%s (slower)\r\n"
                     "\r\n"
                     "%sQ%s) Return to Emotion Menu\r\n"
                     "Enter your choice : ",
@@ -1648,7 +1652,8 @@ static void cedit_disp_emotion_decay_submenu(struct descriptor_data *d)
                     OLC_CONFIG(d)->emotion_config.decay_rate_horror, nrm, grn, nrm, cyn,
                     OLC_CONFIG(d)->emotion_config.decay_rate_disgust, nrm, grn, nrm, cyn,
                     OLC_CONFIG(d)->emotion_config.decay_rate_shame, nrm, grn, nrm, cyn,
-                    OLC_CONFIG(d)->emotion_config.decay_rate_humiliation, nrm, grn, nrm);
+                    OLC_CONFIG(d)->emotion_config.decay_rate_humiliation, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.decay_rate_envy, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_DECAY_SUBMENU;
 }
@@ -3987,6 +3992,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     write_to_output(d, "\r\nEnter Humiliation Decay Rate (0-10, should be slower) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_HUMILIATION;
                     return;
+                case 'd':
+                case 'D':
+                    write_to_output(d, "\r\nEnter Envy Decay Rate (0-10, should be slower) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_DECAY_RATE_ENVY;
+                    return;
                 case 'q':
                 case 'Q':
                     cedit_disp_emotion_menu(d);
@@ -5174,6 +5184,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
         case CEDIT_EMOTION_DECAY_RATE_HUMILIATION:
             OLC_CONFIG(d)->emotion_config.decay_rate_humiliation = LIMIT(atoi(arg), 0, 10);
+            cedit_disp_emotion_decay_submenu(d);
+            break;
+
+        case CEDIT_EMOTION_DECAY_RATE_ENVY:
+            OLC_CONFIG(d)->emotion_config.decay_rate_envy = LIMIT(atoi(arg), 0, 10);
             cedit_disp_emotion_decay_submenu(d);
             break;
 
