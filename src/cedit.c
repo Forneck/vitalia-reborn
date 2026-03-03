@@ -266,6 +266,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.decay_rate_multiplier = CONFIG_EMOTION_DECAY_RATE_MULTIPLIER;
     OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold = CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD;
     OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier = CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER;
+    OLC_CONFIG(d)->emotion_config.emotion_max_delta = CONFIG_EMOTION_MAX_DELTA;
     OLC_CONFIG(d)->emotion_config.decay_rate_fear = CONFIG_EMOTION_DECAY_RATE_FEAR;
     OLC_CONFIG(d)->emotion_config.decay_rate_anger = CONFIG_EMOTION_DECAY_RATE_ANGER;
     OLC_CONFIG(d)->emotion_config.decay_rate_happiness = CONFIG_EMOTION_DECAY_RATE_HAPPINESS;
@@ -539,6 +540,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = OLC_CONFIG(d)->emotion_config.decay_rate_multiplier;
     CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = OLC_CONFIG(d)->emotion_config.extreme_emotion_threshold;
     CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = OLC_CONFIG(d)->emotion_config.extreme_decay_multiplier;
+    CONFIG_EMOTION_MAX_DELTA = OLC_CONFIG(d)->emotion_config.emotion_max_delta;
     CONFIG_EMOTION_DECAY_RATE_FEAR = OLC_CONFIG(d)->emotion_config.decay_rate_fear;
     CONFIG_EMOTION_DECAY_RATE_ANGER = OLC_CONFIG(d)->emotion_config.decay_rate_anger;
     CONFIG_EMOTION_DECAY_RATE_HAPPINESS = OLC_CONFIG(d)->emotion_config.decay_rate_happiness;
@@ -1234,6 +1236,7 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "emotion_decay_rate_multiplier = %d\n", CONFIG_EMOTION_DECAY_RATE_MULTIPLIER);
     fprintf(fl, "emotion_extreme_emotion_threshold = %d\n", CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD);
     fprintf(fl, "emotion_extreme_decay_multiplier = %d\n", CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER);
+    fprintf(fl, "emotion_max_delta = %d\n", CONFIG_EMOTION_MAX_DELTA);
     fprintf(fl, "emotion_decay_rate_fear = %d\n", CONFIG_EMOTION_DECAY_RATE_FEAR);
     fprintf(fl, "emotion_decay_rate_anger = %d\n", CONFIG_EMOTION_DECAY_RATE_ANGER);
     fprintf(fl, "emotion_decay_rate_happiness = %d\n", CONFIG_EMOTION_DECAY_RATE_HAPPINESS);

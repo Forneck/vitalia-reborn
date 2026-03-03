@@ -2,7 +2,63 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
-[Mar 02 2026] - Vitalia Reborn Development
+[Mar 03 2026] - Vitalia Reborn Development
+  feat: Emotional Smoothing and Contextual Evaluation (src/utils.c, src/utils.h, src/structs.h, src/db.c, src/cedit.c)
+    Implements layered improvements to the NPC emotional AI system:
+
+    1. Emotional Smoothing / Tau Rate-Limiting (adjust_emotion)
+       - Per-call delta is now capped to ±CONFIG_EMOTION_MAX_DELTA (default 20) AFTER
+         EI and Neuroticism personality scaling.  Pipeline order: raw_delta → EI scaling
+         → Neuroticism gain → rate limit → soft saturation clamp → lateral inhibition.
+       - Prevents instant spikes such as Fear jumping from 1 → 96 in a single interaction.
+       - Configurable: add "emotion_max_delta = N" (1–100) to game.cfg; editable via cedit.
+
+    2. Appraisal Module (appraise_social_context)
+       - Evaluates intent (VIOLENT / NEGATIVE / INTIMATE / POSITIVE), relationship
+         status (trust + friendship + love), consent flag (trust≥70 + love≥60),
+         observability (witnesses in room), and power_differential (level gap).
+       - Returns a float weight [0.1, 2.0] that scales all emotional deltas before
+         they enter adjust_emotion().  Called from update_mob_emotion_from_social().
+       - OCEAN personality calibration: Neuroticism → more reactive (weight +N*0.20);
+         Agreeableness → reduces hostile reactivity (−A*0.10); Openness → clips
+         extreme amplification (−O*0.20 when weight > 1.5).
+
+    3. Approach–Avoidance Conflict Score (apply_approach_avoidance_conflict)
+       - Computed dynamically: positive_valence = (excitement+happiness+love)/3;
+         negative_valence = (fear+disgust+shame)/3; conflict_score = min(pos, neg).
+       - When conflict_score > 30 the mob's paralyzed_timer is bumped proportionally,
+         modelling the freeze / mixed-response described in the issue.
+       - High Openness provides conflict tolerance (reduces freeze severity).
+       - Not stored as an emotion; evaluated after each social interaction.
+
+    4. Memory Trace Decay (decay_emotion_memories)
+       - Exponential decay: intensity *= e^(-λ * age_hours) per memory slot.
+       - Standard λ = 0.70 (half-life ≈ 1 real hour); major events decay 3× slower
+         (λ_major = 0.23) to model traumatic / salient event persistence.
+       - When intensity < 0.05 the slot is cleared, preventing saturation from
+         historical stacking.
+       - New `intensity` field (float) added to emotion_memory struct (both passive
+         and active buffers); initialised to 1.0 on creation.
+       - Called every emotion tick from update_mob_emotion_passive().
+
+    5. Emotional Regulation Behaviors (perform_emotional_regulation)
+       - Fires when shame ≥ 55, fear ≥ 60, or anger ≥ 65 (base thresholds).
+       - Regulation behaviors: justify (shame), deflect (shame/fear), nervous laugh
+         (fear), reframe (shame), conciliatory gesture (anger) — all emit room-visible
+         strings and reduce the triggering emotion.
+       - Regulation capacity = (Conscientiousness + Agreeableness) / 2 → determines
+         activation probability (10–40%) and emotion reduction magnitude.
+       - regulation_timer field added to mob_ai_data to control cooldown between
+         regulation events (high C/A → shorter cooldown).
+
+    6. Personality Calibration
+       - Conscientiousness and Agreeableness control regulation strength and cooldown.
+       - Neuroticism amplifies emotional reactivity via the appraisal weight.
+       - Openness provides conflict tolerance in the approach–avoidance system.
+       - Existing Neuroticism gain in adjust_emotion() is now correctly applied
+         BEFORE the rate limit, not after.
+
+
   fix: disintegrate saving-throw damage formula (src/magic.c, src/spells_assign.c, lib/misc/spells)
     - max_dam was set to 0 for SPELL_DISINTEGRATE; the switch case in mag_damage() already
       overrides dam, so max_dam=0 did not block damage but caused wrong save-path output.
