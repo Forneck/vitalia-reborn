@@ -4736,6 +4736,7 @@ static void load_default_config(void)
     CONFIG_EMOTION_DECAY_RATE_DISGUST = 2;     /* Standard decay */
     CONFIG_EMOTION_DECAY_RATE_SHAME = 1;       /* Slower - shame lingers */
     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = 1; /* Slower - humiliation lingers */
+    CONFIG_EMOTION_DECAY_RATE_ENVY = 1;        /* Slower - envy lingers */
 
     /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
     CONFIG_NEUROTICISM_GAIN_FEAR = neuroticism_gain_fear;
@@ -5084,6 +5085,8 @@ void load_config(void)
                     CONFIG_EMOTION_DECAY_RATE_SHAME = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_humiliation"))
                     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_envy"))
+                    CONFIG_EMOTION_DECAY_RATE_ENVY = num;
                 break;
 
             case 'f':

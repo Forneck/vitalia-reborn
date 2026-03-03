@@ -534,6 +534,7 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_EMOTION_DECAY_RATE_DISGUST 165
 #define CEDIT_EMOTION_DECAY_RATE_SHAME 166
 #define CEDIT_EMOTION_DECAY_RATE_HUMILIATION 167
+#define CEDIT_EMOTION_DECAY_RATE_ENVY 203
 
 /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
 #define CEDIT_BIGFIVE_NEUROTICISM_SUBMENU 168
