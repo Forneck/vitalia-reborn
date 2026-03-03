@@ -1221,6 +1221,7 @@ struct emotion_memory {
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
     char social_name[20]; /* Name of the social command if interaction was social (empty string otherwise) */
+    float intensity;      /* Exponentially-decaying importance weight [0.0, 1.0]; 1.0 = fresh */
 
     /* Complete emotion snapshot - track all 20 emotions to see how each interaction affected them */
     /* Basic emotions */
@@ -1357,8 +1358,9 @@ struct mob_ai_data {
     int mood_timer;   /* Timer for periodic mood updates (updated every few ticks) */
 
     /* Extreme emotional state timers - for temporary affects */
-    int berserk_timer;   /* Berserk rage state timer (extra attack, +damage, -accuracy) */
-    int paralyzed_timer; /* Paralyzed by fear timer */
+    int berserk_timer;    /* Berserk rage state timer (extra attack, +damage, -accuracy) */
+    int paralyzed_timer;  /* Paralyzed by fear timer */
+    int regulation_timer; /* Cooldown between emotional self-regulation behaviors (ticks) */
 
     /* Weather adaptation system - for advanced weather effects */
     int weather_exposure_hours;      /* Hours exposed to current weather type (for adaptation) */
@@ -2137,6 +2139,7 @@ struct emotion_config_data {
     int decay_rate_multiplier;     /**< Global decay rate multiplier 50-200% (default: 100) */
     int extreme_emotion_threshold; /**< Threshold for extreme emotions that decay faster (default: 80) */
     int extreme_decay_multiplier;  /**< Multiplier for extreme emotion decay 100-300% (default: 150) */
+    int emotion_max_delta;         /**< Maximum per-call change in adjust_emotion() 1-100 (default: 20) */
 
     /* Individual emotion decay rates (base values, 0-10 scale) */
     int decay_rate_fear;        /**< Fear decay rate (default: 2) */

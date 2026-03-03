@@ -12,6 +12,7 @@
 
 #include "conf.h"
 #include "sysdep.h"
+#include <math.h>
 #include "structs.h"
 #include "utils.h"
 #include "db.h"
@@ -6003,6 +6004,7 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
         return;
 
+    int original_emotion = *emotion_ptr; /* snapshot before any modification */
     int ei = GET_GENEMOTIONAL_IQ(mob);
 
     /* PIPELINE STEP 1: Emotional Intelligence affects volatility of emotion changes
@@ -6033,6 +6035,21 @@ void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
     if (amount > 0 && emotion_type >= 0) {
         raw_emotion = apply_neuroticism_gain(mob, emotion_type, base_emotion);
     }
+
+    /* PIPELINE STEP 2.5: Tau / Rate-Limiting (applied AFTER personality scaling).
+     * Cap the total personality-scaled delta from the original value.
+     * This prevents Fear/Shame/Horror spiking 1→96 in one tick even after
+     * Neuroticism amplification and low-EI volatility have inflated the change.
+     * Formula: scaled_delta = raw_emotion - original_emotion; clamp to ±max_delta. */
+    int max_delta = CONFIG_EMOTION_MAX_DELTA;
+    if (max_delta < 1)
+        max_delta = 1;
+    float scaled_delta = raw_emotion - (float)original_emotion;
+    if (scaled_delta > (float)max_delta)
+        scaled_delta = (float)max_delta;
+    else if (scaled_delta < -(float)max_delta)
+        scaled_delta = -(float)max_delta;
+    raw_emotion = (float)original_emotion + scaled_delta;
 
     /* PIPELINE STEP 3: Apply soft saturation clamp
      * Only apply compression when value exceeds 100 (above normal cap)
@@ -6937,6 +6954,12 @@ void update_mob_emotion_passive(struct char_data *mob)
             adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
         }
     }
+
+    /* Exponential memory trace decay — prevents stale memories from saturation */
+    decay_emotion_memories(mob);
+
+    /* Emotional self-regulation behaviors (justify / deflect / apologize / reframe) */
+    perform_emotional_regulation(mob);
 }
 
 /**
@@ -7965,6 +7988,7 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
+    memory->intensity = 1.0f; /* fresh memory: full intensity, decays exponentially */
 
     /* Store social name if provided (for social interactions) */
     if (social_name && *social_name) {
@@ -8073,6 +8097,7 @@ void add_active_emotion_memory(struct char_data *mob, struct char_data *target, 
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
+    memory->intensity = 1.0f; /* fresh memory: full intensity, decays exponentially */
 
     /* Store social name if provided */
     if (social_name && *social_name) {
@@ -8892,6 +8917,293 @@ int classify_social_interact_type(const char *social_name, int *out_major)
     return INTERACT_SOCIAL_POSITIVE;
 }
 
+/* ── Emotional AI constants ─────────────────────────────────────────────────
+ * Named constants for the emotional smoothing and contextual evaluation layer.
+ * Using file-scope defines keeps them visible to all helper functions below
+ * while avoiding magic numbers in the code. */
+
+/** Approach–avoidance conflict: minimum combined valence score that triggers freeze */
+#define CONFLICT_FREEZE_THRESHOLD 30
+/** Approach–avoidance: scale freeze ticks per conflict point above threshold */
+#define CONFLICT_FREEZE_SCALE 10.0f
+/** Approach–avoidance: Openness tolerance factor for freeze reduction */
+#define CONFLICT_OPENNESS_TOLERANCE 0.5f
+
+/** Memory decay λ for normal interactions: half-life ≈ 1 real hour */
+#define MEMORY_DECAY_LAMBDA 0.7f
+/** Memory decay λ for major/salient events: half-life ≈ 3 real hours */
+#define MEMORY_DECAY_LAMBDA_MAJOR 0.23f
+/** Memory intensity below which a slot is cleared (prevents near-zero accumulation) */
+#define MEMORY_INTENSITY_THRESHOLD 0.05f
+
+/**
+ * Appraisal Module: evaluate the social interaction context and return a weighted multiplier.
+ *
+ * Evaluates intent, relationship status, consent, observability, and power_differential
+ * before emotional deltas are applied.  Returns a float in [0.1, 2.0]:
+ *   < 1.0 → context dampens the emotional response (e.g., trusted actor)
+ *   = 1.0 → neutral context
+ *   > 1.0 → context amplifies the emotional response (e.g., stranger + public)
+ *
+ * Personality calibration:
+ *   High Neuroticism  → more reactive (weight += N * 0.20)
+ *   High Openness     → higher conflict tolerance (clips extreme amplification)
+ *   High Agreeableness→ lowers anger reactivity for negative intents
+ *
+ * @param mob            The NPC receiving the social (must be NPC with ai_data).
+ * @param actor          The character performing the social — may be a PLAYER or another MOB.
+ *                       Mob-to-mob interactions are fully supported; intimate socials between
+ *                       two mobs (e.g., sex, fondle, seduce) go through the same consent and
+ *                       relationship evaluation as player-to-mob socials.
+ * @param social_category INTERACT_SOCIAL_VIOLENT, INTERACT_SOCIAL_NEGATIVE, or INTERACT_SOCIAL_POSITIVE.
+ * @param is_intimate    1 if this is a sexual/intimate action (fondle, grope, seduce), 0 otherwise.
+ * @return float multiplier in [0.1, 2.0].
+ */
+static float appraise_social_context(struct char_data *mob, struct char_data *actor, int social_category,
+                                     int is_intimate)
+{
+    float weight = 1.0f;
+
+    if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data)
+        return weight;
+
+    /* Relationship status: combined trust + friendship + love signal (0.0 – 1.0) */
+    float trust_f = (float)mob->ai_data->emotion_trust / 100.0f;
+    float friendship_f = (float)mob->ai_data->emotion_friendship / 100.0f;
+    float love_f = (float)mob->ai_data->emotion_love / 100.0f;
+    float relationship = (trust_f + friendship_f + love_f * 0.5f) / 2.5f;
+
+    /* Consent flag: intimate action is welcomed only with high trust AND love */
+    int consent = (mob->ai_data->emotion_trust >= 70 && mob->ai_data->emotion_love >= 60) ? 1 : 0;
+
+    /* Observability: number of third-party witnesses in the room amplifies social impact.
+     * Counts both NPC and player witnesses; excludes dying characters of either type. */
+    int observers = 0;
+    struct char_data *ch_obs;
+    int obs_room = IN_ROOM(mob);
+    if (obs_room != NOWHERE && obs_room >= 0 && obs_room <= top_of_world) {
+        for (ch_obs = world[obs_room].people; ch_obs; ch_obs = ch_obs->next_in_room) {
+            if (ch_obs != mob && ch_obs != actor && !MOB_FLAGGED(ch_obs, MOB_NOTDEADYET) &&
+                !PLR_FLAGGED(ch_obs, PLR_NOTDEADYET))
+                observers++;
+        }
+    }
+    float observability = (observers > 0) ? (observers >= 3 ? 1.0f : observers / 3.0f) : 0.0f;
+
+    /* Power differential: large level gap amplifies threat/humiliation */
+    int level_diff = GET_LEVEL(actor) - GET_LEVEL(mob);
+    float power_diff = (float)level_diff / 20.0f;
+    if (power_diff > 1.0f)
+        power_diff = 1.0f;
+    else if (power_diff < -1.0f)
+        power_diff = -1.0f;
+
+    if (social_category == INTERACT_SOCIAL_VIOLENT) {
+        /* Violent intent: relationship offers no protection; power amplifies threat */
+        weight = 1.0f + 0.30f * power_diff + 0.15f * observability;
+    } else if (social_category == INTERACT_SOCIAL_NEGATIVE) {
+        /* Negative intent: strong relationship reduces sting; witnesses amplify shame */
+        weight = 1.0f - 0.30f * relationship + 0.20f * observability + 0.15f * power_diff;
+    } else if (is_intimate) {
+        /* Intimate action: consent and relationship are decisive */
+        if (consent) {
+            weight = 0.6f + 0.5f * love_f; /* welcomed → subdued reaction, might be positive */
+        } else {
+            weight = 1.0f + 0.60f * (1.0f - relationship) + 0.20f * observability;
+        }
+    } else {
+        /* Positive / neutral intent: high relationship amplifies warmth */
+        weight = 0.7f + 0.6f * relationship;
+    }
+
+    /* OCEAN personality calibration */
+    float N_final = sec_get_neuroticism_final(mob);
+    float O_final = sec_get_openness_final(mob);
+    float A_final = sec_get_agreeableness_final(mob);
+
+    /* Neuroticism: more emotionally reactive overall */
+    weight += N_final * 0.20f;
+
+    /* Agreeableness: reduces weight for hostile/negative intents */
+    if (social_category == INTERACT_SOCIAL_VIOLENT || social_category == INTERACT_SOCIAL_NEGATIVE)
+        weight -= A_final * 0.10f;
+
+    /* Openness: higher conflict tolerance clips extreme amplification */
+    if (weight > 1.5f)
+        weight -= O_final * 0.20f;
+
+    /* Clamp to safe range */
+    if (weight < 0.1f)
+        weight = 0.1f;
+    if (weight > 2.0f)
+        weight = 2.0f;
+
+    return weight;
+}
+
+/**
+ * Approach–Avoidance Conflict: detect simultaneous strong positive and negative arousal.
+ *
+ * When both positive valence (excitement + happiness + love) and negative valence
+ * (fear + disgust + shame) exceed a shared threshold, the mob experiences conflict.
+ * conflict_score = min(positive_valence, negative_valence).
+ *
+ * Effect: when conflict_score > 30 the mob briefly hesitates (paralyzed_timer bumped),
+ * modelling the freeze/mixed-response described in the issue.
+ *
+ * @param mob  The NPC to evaluate.
+ */
+static void apply_approach_avoidance_conflict(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    int pos_valence =
+        (mob->ai_data->emotion_excitement + mob->ai_data->emotion_happiness + mob->ai_data->emotion_love) / 3;
+    int neg_valence = (mob->ai_data->emotion_fear + mob->ai_data->emotion_disgust + mob->ai_data->emotion_shame) / 3;
+    int conflict_score = (pos_valence < neg_valence) ? pos_valence : neg_valence;
+
+    if (conflict_score > CONFLICT_FREEZE_THRESHOLD) {
+        /* Brief hesitation proportional to conflict; higher Openness tolerates it better */
+        float O_final = sec_get_openness_final(mob);
+        int freeze_ticks = (int)((conflict_score - CONFLICT_FREEZE_THRESHOLD) / CONFLICT_FREEZE_SCALE *
+                                 (1.0f - O_final * CONFLICT_OPENNESS_TOLERANCE));
+        if (freeze_ticks > mob->ai_data->paralyzed_timer)
+            mob->ai_data->paralyzed_timer = freeze_ticks;
+    }
+}
+
+/**
+ * Memory Trace Decay: apply exponential decay to memory intensity for both
+ * passive (received/witnessed) and active (performed) circular buffers.
+ *
+ * Formula: intensity *= e^(-λ * age_hours)
+ * where λ = 0.7 gives a half-life of ~1 MUD-hour (60 min real time).
+ * Major-event memories decay 3× slower (λ_major = λ / 3) to model
+ * traumatic/salient event persistence.
+ *
+ * When intensity drops below 0.05 the memory slot is cleared, preventing
+ * emotional saturation from historical stacking.
+ *
+ * Memories are RUNTIME-ONLY (see structs.h) — clearing is always safe.
+ * Call periodically from update_mob_emotion_passive().
+ *
+ * @param mob  The NPC whose memories to decay.
+ */
+void decay_emotion_memories(struct char_data *mob)
+{
+    int i;
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    time_t now = time(NULL);
+
+    /* Passive memory buffer */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+        if (mem->timestamp == 0)
+            continue;
+        float age_hours = (float)(now - mem->timestamp) / 3600.0f;
+        float lambda = mem->major_event ? MEMORY_DECAY_LAMBDA_MAJOR : MEMORY_DECAY_LAMBDA;
+        mem->intensity = expf(-lambda * age_hours);
+        if (mem->intensity < MEMORY_INTENSITY_THRESHOLD)
+            memset(mem, 0, sizeof(struct emotion_memory));
+    }
+
+    /* Active memory buffer */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->active_memories[i];
+        if (mem->timestamp == 0)
+            continue;
+        float age_hours = (float)(now - mem->timestamp) / 3600.0f;
+        float lambda = mem->major_event ? MEMORY_DECAY_LAMBDA_MAJOR : MEMORY_DECAY_LAMBDA;
+        mem->intensity = expf(-lambda * age_hours);
+        if (mem->intensity < MEMORY_INTENSITY_THRESHOLD)
+            memset(mem, 0, sizeof(struct emotion_memory));
+    }
+}
+
+/**
+ * Emotional Regulation Behaviors.
+ *
+ * When shame, fear, or anger crosses a personality-dependent threshold, the NPC
+ * spontaneously performs one of five self-regulation actions:
+ *   Justify     – reframes past action internally (reduces Shame)
+ *   Deflect     – avoids the trigger topic (reduces Shame / Fear)
+ *   Apologize   – prosocial repair gesture (reduces Anger)
+ *   Nervous laugh – social coping (reduces Fear / Shame)
+ *   Reframe     – cognitive reappraisal (reduces Shame / Anger)
+ *
+ * Regulation strength is determined by Conscientiousness + Agreeableness.
+ * A cooldown (regulation_timer) prevents regulation on every tick.
+ *
+ * @param mob  The NPC to regulate.
+ */
+void perform_emotional_regulation(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Rate-limit: only attempt regulation when cooldown has expired */
+    if (mob->ai_data->regulation_timer > 0) {
+        mob->ai_data->regulation_timer--;
+        return;
+    }
+
+    /* Regulation capacity: average of Conscientiousness (self-control) and
+     * Agreeableness (prosocial motivation).  Range [0.0, 1.0]. */
+    float C_final = sec_get_conscientiousness_final(mob);
+    float A_final = sec_get_agreeableness_final(mob);
+    float reg_strength = (C_final + A_final) * 0.5f;
+
+    /* Minimum activation probability: 10%.  At reg_strength=1.0: 40%. */
+    int base_chance = (int)(10.0f + 30.0f * reg_strength);
+    bool regulated = FALSE;
+
+    /* ── Shame regulation ───────────────────────────────────────────────── */
+    if (mob->ai_data->emotion_shame >= 55 && rand_number(1, 100) <= base_chance) {
+        int behavior = rand_number(1, 3);
+        if (behavior == 1) {
+            act("$n contempla suas ações recentes, como se buscasse uma justificativa.", FALSE, mob, 0, 0, TO_ROOM);
+        } else if (behavior == 2) {
+            act("$n desvia o olhar, fingindo indiferença ao constrangimento.", FALSE, mob, 0, 0, TO_ROOM);
+        } else {
+            act("$n respira fundo e parece reprocessar os eventos com calma.", FALSE, mob, 0, 0, TO_ROOM);
+        }
+        int reduction = (int)(5.0f + 10.0f * reg_strength);
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, -reduction);
+        regulated = TRUE;
+    }
+
+    /* ── Fear regulation ────────────────────────────────────────────────── */
+    else if (mob->ai_data->emotion_fear >= 60 && rand_number(1, 100) <= base_chance) {
+        act("$n ri nervosamente, tentando disfarçar o medo.", FALSE, mob, 0, 0, TO_ROOM);
+        int reduction = (int)(3.0f + 8.0f * reg_strength);
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -reduction);
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, (int)(2.0f + 4.0f * reg_strength));
+        regulated = TRUE;
+    }
+
+    /* ── Anger regulation ───────────────────────────────────────────────── */
+    else if (mob->ai_data->emotion_anger >= 65 && rand_number(1, 100) <= base_chance) {
+        if (A_final >= 0.5f) {
+            act("$n faz um gesto conciliatório, tentando se controlar.", FALSE, mob, 0, 0, TO_ROOM);
+        } else {
+            act("$n desvia o assunto, esquivando-se da confrontação.", FALSE, mob, 0, 0, TO_ROOM);
+        }
+        int reduction = (int)(4.0f + 8.0f * reg_strength);
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -reduction);
+        regulated = TRUE;
+    }
+
+    if (regulated) {
+        /* Cooldown: high reg_strength mobs recover faster (shorter wait) */
+        mob->ai_data->regulation_timer = (int)(8.0f - 5.0f * reg_strength);
+        if (mob->ai_data->regulation_timer < 1)
+            mob->ai_data->regulation_timer = 1;
+    }
+}
+
 /**
  * Update mob emotions based on receiving a social/emote from a player
  * @param mob The mob receiving the social
@@ -9132,6 +9444,15 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
 
     player_reputation = GET_REPUTATION(actor);
 
+    /* ── Appraisal Module ────────────────────────────────────────────────────
+     * Evaluate intent, relationship, consent, observability, and power_differential
+     * before any emotional delta is applied.  The returned weight scales all
+     * changes for the relevant social categories (intimate, violent, negative).
+     * appraisal_category and social_major are also reused at the bottom of this
+     * function for memory recording, avoiding a duplicate classify call. */
+    int social_major = 0;
+    int appraisal_category = classify_social_interact_type(social_name, &social_major);
+
     /* Check for severely inappropriate socials - context dependent response */
     for (i = 0; blocked_socials[i] != NULL; i++) {
         if (!strcmp(social_name, blocked_socials[i])) {
@@ -9146,18 +9467,21 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         int mob_love = mob->ai_data->emotion_love;
         int mob_friendship = mob->ai_data->emotion_friendship;
 
-        /* Extremely violent socials (despine, shiskabob, vice, choke, strangle, smite, sword) - always hostile response
+        /* Extremely violent socials (despine, shiskabob, vice, choke, strangle, smite, sword) - always hostile
+         * response
          */
         if (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice") ||
             !strcmp(social_name, "choke") || !strcmp(social_name, "strangle") || !strcmp(social_name, "smite") ||
             !strcmp(social_name, "sword")) {
+            /* Appraisal: extreme violence — power differential and observability amplify terror */
+            float aw = appraise_social_context(mob, actor, INTERACT_SOCIAL_VIOLENT, 0);
             /* Extreme violence - always triggers horror, pain, and anger */
-            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(30, 50));
-            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(40, 60));
-            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
-            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(50, 70));
-            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(45, 65));
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, (int)(rand_number(30, 50) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, (int)(rand_number(40, 60) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(30, 50) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (int)(rand_number(20, 40) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(50, 70) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(45, 65) * aw));
 
             /* Very high chance of attack or flee */
             if (mob->ai_data->emotion_courage >= 40 && rand_number(1, 100) <= 60 && !FIGHTING(mob)) {
@@ -9170,16 +9494,19 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_VIOLENT, 1, social_name);
             if (IS_NPC(actor) && actor->ai_data)
                 add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_VIOLENT, 1, social_name);
+            apply_approach_avoidance_conflict(mob);
             return;
         }
 
         /* Sexual socials (sex, seduce, fondle, grope, french) - context dependent */
         /* Very high intimacy/love (80+) with high trust (70+) - receptive/positive */
         if (mob_love >= 80 && mob_trust >= 70 && mob_friendship >= 70) {
+            /* Appraisal: consented intimate gesture — weight < 1.0 (warmth dampens reaction) */
+            float aw = appraise_social_context(mob, actor, INTERACT_SOCIAL_POSITIVE, 1);
             /* Intimate/loving relationship - receptive to intimate gestures */
-            adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(10, 20));
-            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_love, (int)(rand_number(10, 20) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, (int)(rand_number(10, 20) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, (int)(rand_number(5, 10) * aw));
 
             /* Might respond affectionately */
             if (rand_number(1, 100) <= 50) {
@@ -9188,17 +9515,20 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_POSITIVE, 0, social_name);
             if (IS_NPC(actor) && actor->ai_data)
                 add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_POSITIVE, 0, social_name);
+            apply_approach_avoidance_conflict(mob);
             return;
         }
         /* High intimacy/love (60+) with moderate trust (50+) - mixed/curious */
         else if (mob_love >= 60 && mob_trust >= 50 && mob_friendship >= 60) {
+            /* Appraisal: ambiguous intimate gesture — mixed context */
+            float aw = appraise_social_context(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1);
             /* Developing relationship - uncertain but not hostile */
-            adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
-            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(10, 20));
-            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_love, (int)(rand_number(5, 15) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, (int)(rand_number(10, 20) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(rand_number(5, 15) * aw));
 
             /* Some trust loss but not hostile */
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(5, 15) * aw));
 
             if (rand_number(1, 100) <= 40) {
                 act("$n parece desconfortável mas não reage com raiva.", FALSE, mob, 0, actor, TO_ROOM);
@@ -9206,16 +9536,19 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             if (IS_NPC(actor) && actor->ai_data)
                 add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
+            apply_approach_avoidance_conflict(mob);
             return;
         }
         /* Moderate relationship (30-59) - uncomfortable/disgusted */
         else if (mob_trust >= 30 || mob_friendship >= 40) {
+            /* Appraisal: unwanted but from acquaintance — context modulates */
+            float aw = appraise_social_context(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1);
             /* Not intimate enough - uncomfortable and disgusted */
-            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(20, 40));
-            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(15, 30));
-            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(25, 45));
-            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, (int)(rand_number(20, 40) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(rand_number(15, 30) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(15, 30) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(25, 45) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(20, 35) * aw));
 
             /* Might push away or show disgust */
             if (rand_number(1, 100) <= 50) {
@@ -9225,18 +9558,21 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
             if (IS_NPC(actor) && actor->ai_data)
                 add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 0, social_name);
+            apply_approach_avoidance_conflict(mob);
             return;
         }
         /* Low/no relationship - hostile/extreme negative response */
         else {
+            /* Appraisal: stranger with no consent — observability and power amplify violation */
+            float aw = appraise_social_context(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1);
             /* Stranger or enemy - extreme negative response */
-            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(40, 60));
-            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 40));
-            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
-            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(20, 35));
-            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(15, 30));
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
-            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, (int)(rand_number(40, 60) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, (int)(rand_number(20, 40) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(30, 50) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(rand_number(20, 35) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, (int)(rand_number(15, 30) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(40, 60) * aw));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(35, 55) * aw));
 
             /* High chance of attack or flee based on courage */
             if (mob->ai_data->emotion_courage >= 50 && mob->ai_data->emotion_anger >= 60) {
@@ -9251,6 +9587,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             add_emotion_memory(mob, actor, INTERACT_SOCIAL_NEGATIVE, 1, social_name);
             if (IS_NPC(actor) && actor->ai_data)
                 add_active_emotion_memory(actor, mob, INTERACT_SOCIAL_NEGATIVE, 1, social_name);
+            apply_approach_avoidance_conflict(mob);
             return;
         }
     }
@@ -9501,10 +9838,11 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* Apply emotion changes based on social type */
     if (is_disgusting) {
         /* Disgusting socials trigger disgust, anger, decrease trust/friendship */
-        adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(15, 30));
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 25));
-        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 30));
-        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(10, 20));
+        float aw_dis = appraise_social_context(mob, actor, appraisal_category, 0);
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, (int)(rand_number(15, 30) * aw_dis));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(10, 25) * aw_dis));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(15, 30) * aw_dis));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(10, 20) * aw_dis));
 
         /* Decrease happiness */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 20));
@@ -9515,12 +9853,14 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             act("$n olha para $N com nojo.", FALSE, mob, 0, actor, TO_NOTVICT);
         }
     } else if (is_violent) {
+        /* Appraisal: power differential and observability amplify violent impact */
+        float aw_viol = appraise_social_context(mob, actor, INTERACT_SOCIAL_VIOLENT, 0);
         /* Violent socials trigger pain, fear, anger */
-        adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(20, 40));
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 35));
-        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 25));
-        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
-        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(15, 30));
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, (int)(rand_number(20, 40) * aw_viol));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(15, 35) * aw_viol));
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (int)(rand_number(10, 25) * aw_viol));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(20, 35) * aw_viol));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(15, 30) * aw_viol));
 
         /* Wimpy mobs react with more fear */
         if (mob->ai_data->genetics.wimpy_tendency > 50) {
@@ -9539,12 +9879,14 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             act("$n rosna ameaçadoramente para $N!", FALSE, mob, 0, actor, TO_NOTVICT);
         }
     } else if (is_humiliating) {
+        /* Appraisal: public humiliation is amplified by witnesses */
+        float aw_hum = appraise_social_context(mob, actor, INTERACT_SOCIAL_NEGATIVE, 0);
         /* Humiliating socials trigger shame, humiliation, anger */
-        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(15, 30));
-        adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(15, 25));
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
-        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
-        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(15, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, (int)(rand_number(15, 30) * aw_hum));
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(rand_number(15, 25) * aw_hum));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(rand_number(10, 20) * aw_hum));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(rand_number(20, 35) * aw_hum));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -(int)(rand_number(15, 25) * aw_hum));
 
         /* Decrease pride and self-esteem */
         adjust_emotion(mob, &mob->ai_data->emotion_pride, -rand_number(10, 20));
@@ -10143,16 +10485,16 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Add to emotion memory - derive type from shared classifier to avoid
-     * duplicating the list logic maintained by classify_social_interact_type(). */
+    /* Add to emotion memory - reuse the classification already computed above
+     * (appraisal_category / social_major) to avoid a duplicate call. */
     if (actor && mob->ai_data) {
-        int is_major = 0;
-        int interaction_type = classify_social_interact_type(social_name, &is_major);
-
-        add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
+        add_emotion_memory(mob, actor, appraisal_category, social_major, social_name);
         if (IS_NPC(actor) && actor->ai_data)
-            add_active_emotion_memory(actor, mob, interaction_type, is_major, social_name);
+            add_active_emotion_memory(actor, mob, appraisal_category, social_major, social_name);
     }
+
+    /* Approach–Avoidance Conflict: evaluate after all emotion updates. */
+    apply_approach_avoidance_conflict(mob);
 }
 
 /**
@@ -10767,7 +11109,7 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
         sad_multiplier = 100 + sad_trait;
     }
 
-/* Track weather adaptation - same weather reduces impact over time */
+    /* Track weather adaptation - same weather reduces impact over time */
 #define ADAPTATION_START_HOURS 24
 #define ADAPTATION_HOURS_PER_PERCENT 3
     adaptation_reduction = 0;

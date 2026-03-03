@@ -180,6 +180,8 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_contagion(struct char_data *mob);
+void decay_emotion_memories(struct char_data *mob);
+void perform_emotional_regulation(struct char_data *mob);
 int calculate_mob_mood(struct char_data *mob);
 void update_mob_mood(struct char_data *mob);
 void check_extreme_mood_effects(struct char_data *mob);
@@ -1586,5 +1588,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 /* SEC Core tuning parameters */
 #define CONFIG_SEC_EMOTION_ALPHA config_info.emotion_config.sec_emotion_alpha
 #define CONFIG_SEC_WTA_THRESHOLD config_info.emotion_config.sec_wta_threshold
+
+/** Maximum per-call emotion delta (rate limiting): clamps adjust_emotion() change (default: 20) */
+#define CONFIG_EMOTION_MAX_DELTA config_info.emotion_config.emotion_max_delta
 
 #endif /* _UTILS_H_ */

@@ -4724,6 +4724,7 @@ static void load_default_config(void)
     CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = 100;    /* 100% = normal speed */
     CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = 80; /* Above this, emotions decay faster */
     CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = 150; /* 150% = 1.5x faster for extreme emotions */
+    CONFIG_EMOTION_MAX_DELTA = 20;                 /* Max per-call change: prevents instant spikes */
 
     /* Individual emotion base decay rates (0-10 scale) */
     CONFIG_EMOTION_DECAY_RATE_FEAR = 2;        /* Standard decay */
@@ -5063,6 +5064,8 @@ void load_config(void)
                     CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_extreme_decay_multiplier"))
                     CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = num;
+                else if (!str_cmp(tag, "emotion_max_delta"))
+                    CONFIG_EMOTION_MAX_DELTA = LIMIT(num, 1, 100);
                 else if (!str_cmp(tag, "emotion_decay_rate_fear"))
                     CONFIG_EMOTION_DECAY_RATE_FEAR = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_anger"))
