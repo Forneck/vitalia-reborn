@@ -365,16 +365,13 @@ void malp_decay_tick(struct char_data *mob)
             }
             if (t->persistence == MALP_PERSIST_HIGH)
                 hl = (int)((float)hl * 1.5f);
-            /* Apply decay relative to current magnitude: multiply by the power-law
-             * shape factor derived from last_updated.  This preserves relative trait
-             * strength between older and newer traits rather than overwriting magnitude
-             * with a time-only curve that always starts at 1.0 after an update. */
-            {
-                float decay_factor = powerlaw_intensity(t->last_updated, hl);
-                if (decay_factor > 1.0f)
-                    decay_factor = 1.0f;
-                t->magnitude *= decay_factor;
-            }
+            /* Decay from encoded base_magnitude (strength at last reinforcement), exactly
+             * as MALP uses e->salience as its reference value.  This ensures the power-law
+             * curve is evaluated from a single fixed origin rather than being reapplied
+             * multiplicatively on every tick (which would cause compounding over-decay). */
+            t->magnitude = t->base_magnitude * powerlaw_intensity(t->last_updated, hl);
+            if (t->magnitude > 1.0f)
+                t->magnitude = 1.0f;
             if (t->magnitude >= 0.02f) {
                 if (w != i)
                     ai->mplp[w] = ai->mplp[i];
@@ -504,6 +501,7 @@ void consolidator_tick(struct char_data *mob)
                     trait->agent_type = (mem)->entity_type;                                                            \
                     trait->trait_type = _trait_type;                                                                   \
                     trait->magnitude = 0.0f;                                                                           \
+                    trait->base_magnitude = 0.0f;                                                                      \
                     trait->valence = valence;                                                                          \
                     trait->rehearsal_count = rehearsal;                                                                \
                     trait->persistence = MALP_PERSIST_LOW;                                                             \
@@ -517,6 +515,8 @@ void consolidator_tick(struct char_data *mob)
                 trait->magnitude += _delta;                                                                            \
                 if (trait->magnitude > 1.0f)                                                                           \
                     trait->magnitude = 1.0f;                                                                           \
+                /* Update encoded reference: decay will now be measured from this point */                             \
+                trait->base_magnitude = trait->magnitude;                                                              \
                 float _alpha = 0.2f;                                                                                   \
                 trait->valence = (1.0f - _alpha) * trait->valence + _alpha * valence;                                  \
                 trait->rehearsal_count = rehearsal;                                                                    \
@@ -535,6 +535,7 @@ void consolidator_tick(struct char_data *mob)
                             ai->mplp[_j].magnitude += 0.05f * S;                                                       \
                             if (ai->mplp[_j].magnitude > 1.0f)                                                         \
                                 ai->mplp[_j].magnitude = 1.0f;                                                         \
+                            ai->mplp[_j].base_magnitude = ai->mplp[_j].magnitude;                                      \
                             ai->mplp[_j].last_updated = now;                                                           \
                             _found_ab = TRUE;                                                                          \
                             break;                                                                                     \
@@ -547,6 +548,7 @@ void consolidator_tick(struct char_data *mob)
                         _ab->agent_type = (mem)->entity_type;                                                          \
                         _ab->trait_type = MPLP_TRAIT_AROUSAL_BIAS;                                                     \
                         _ab->magnitude = 0.10f * S;                                                                    \
+                        _ab->base_magnitude = _ab->magnitude;                                                          \
                         _ab->valence = valence;                                                                        \
                         _ab->rehearsal_count = rehearsal;                                                              \
                         _ab->persistence = MALP_PERSIST_LOW;                                                           \
