@@ -37,6 +37,14 @@
 
 /**
  * Ensure mob->ai_data->malp has room for at least one more entry.
+ *
+ * Capacity is tracked implicitly: the smallest power-of-two multiple of
+ * MALP_INITIAL_CAPACITY that is >= malp_count is the current capacity.
+ * When malp_count reaches that cap (i.e., malp_count >= cap), all slots
+ * are occupied and we realloc to cap * MALP_GROWTH_FACTOR before the
+ * caller appends.  This is safe: the condition is TRUE only when there
+ * is no room for one more element.
+ *
  * Returns TRUE on success, FALSE on allocation failure.
  */
 static bool malp_grow(struct char_data *mob)
@@ -49,13 +57,11 @@ static bool malp_grow(struct char_data *mob)
         ai->malp_count = 0;
         return TRUE;
     }
-    /* Current count equals capacity only when count is a power of 2 * INITIAL.
-     * Use a simple heuristic: grow when we would exceed the allocated block.
-     * We track capacity implicitly by rounding up count to next power-of-two
-     * multiple of MALP_INITIAL_CAPACITY. */
+    /* Find current implicit capacity (smallest power-of-2 × INITIAL >= count). */
     int cap = MALP_INITIAL_CAPACITY;
     while (cap < ai->malp_count)
         cap *= MALP_GROWTH_FACTOR;
+    /* If all slots are occupied, expand the array. */
     if (ai->malp_count >= cap) {
         int newcap = cap * MALP_GROWTH_FACTOR;
         struct malp_entry *tmp = realloc(ai->malp, newcap * sizeof(struct malp_entry));
@@ -68,6 +74,7 @@ static bool malp_grow(struct char_data *mob)
 
 /**
  * Ensure mob->ai_data->mplp has room for at least one more entry.
+ * Uses the same implicit-capacity heuristic as malp_grow().
  */
 static bool mplp_grow(struct char_data *mob)
 {
@@ -79,9 +86,11 @@ static bool mplp_grow(struct char_data *mob)
         ai->mplp_count = 0;
         return TRUE;
     }
+    /* Find current implicit capacity. */
     int cap = MPLP_INITIAL_CAPACITY;
     while (cap < ai->mplp_count)
         cap *= MALP_GROWTH_FACTOR;
+    /* If all slots are occupied, expand the array. */
     if (ai->mplp_count >= cap) {
         int newcap = cap * MALP_GROWTH_FACTOR;
         struct mplp_trait *tmp = realloc(ai->mplp, newcap * sizeof(struct mplp_trait));
@@ -187,9 +196,19 @@ static int count_rehearsal(struct char_data *mob, long agent_id, int agent_type)
 
 /**
  * Compute power-law decay intensity for an entry created at 'timestamp'.
- * Uses half-life to derive the power-law exponent:
- *   exponent = log(2) / log(1 + half_life_hours)
- *   intensity = pow(1 + age_hours, -exponent)
+ *
+ * Derivation: Ebbinghaus-style power-law forgetting I(t) = (1 + t)^(−c).
+ * At t = half_life_hours, I = 0.5:
+ *   0.5 = (1 + half_life)^(−c)
+ *   c   = log(2) / log(1 + half_life)        [= M_LN2 / log(1+half_life)]
+ *   I(t) = (1 + t)^(−c)
+ *
+ * This gives slower forgetting than simple exponential (log(intensity) is
+ * linear in log(1+t)), matching empirical human forgetting curves better.
+ *
+ * @param timestamp       Creation/update time of the memory entry.
+ * @param half_life_hours Age at which intensity reaches 0.5.
+ * @return                Intensity ∈ [0, 1].
  */
 static float powerlaw_intensity(time_t timestamp, int half_life_hours)
 {
@@ -319,7 +338,7 @@ void malp_decay_tick(struct char_data *mob)
             int hl = half_mplp;
             /* Neuroticism rumination: negative-valence MPLP decays slower for high-N mobs */
             if (t->valence < 0.0f) {
-                float n_scale = 1.0f + N_final; /* range [1.0, 2.0] */
+                float n_scale = 1.0f + MALP_N_RUMINATION_SCALE * N_final; /* range [1.0, 2.0] */
                 hl = (int)((float)hl * n_scale);
             }
             if (t->persistence == MALP_PERSIST_HIGH)
@@ -347,7 +366,7 @@ void consolidator_tick(struct char_data *mob)
 
     /* Conscientiousness raises effective consolidation threshold (fewer impulsive memories) */
     float C_final = sec_get_conscientiousness_final(mob);
-    theta = theta + 0.10f * C_final; /* C=1.0 → threshold +0.10 */
+    theta = theta + MALP_C_THETA_BOOST * C_final; /* C=1.0 → threshold +MALP_C_THETA_BOOST */
     if (theta > 0.95f)
         theta = 0.95f;
 
@@ -403,7 +422,8 @@ void consolidator_tick(struct char_data *mob)
         } else {
             /* Create new MALP entry */
             if (!malp_grow(mob)) {
-                log1("MALP: memory allocation failure for mob %s", GET_NAME(mob));
+                log1("MALP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),
+                     mob->ai_data->malp_count);
                 return;
             }
             struct malp_entry *e = &ai->malp[ai->malp_count];
@@ -444,7 +464,8 @@ void consolidator_tick(struct char_data *mob)
 
             if (!trait && ai->mplp_count < MPLP_MAX_PER_MOB) {
                 if (!mplp_grow(mob)) {
-                    log1("MPLP: memory allocation failure for mob %s", GET_NAME(mob));
+                    log1("MPLP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),
+                         mob->ai_data->mplp_count);
                     continue;
                 }
                 trait = &ai->mplp[ai->mplp_count];

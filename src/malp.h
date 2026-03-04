@@ -66,6 +66,22 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── OCEAN modulation constants ──────────────────────────────────────────── */
+/**
+ * Conscientiousness threshold boost: high-C mobs require higher salience
+ * before consolidating memories (fewer impulsive memories).
+ * θ_eff = θ_cons + MALP_C_THETA_BOOST × C_final   (C_final ∈ [0,1])
+ * At C=1: threshold rises by +0.10, preventing overly quick long-term judgements.
+ */
+#define MALP_C_THETA_BOOST 0.10f
+
+/**
+ * Neuroticism rumination scale: negative MPLP half-life is multiplied by
+ * (1 + MALP_N_RUMINATION_SCALE × N_final).
+ * At N=1: half-life doubles; traumatic avoidance traits persist much longer.
+ */
+#define MALP_N_RUMINATION_SCALE 1.0f
+
 /* ── Emotion-delta limits applied via adjust_emotion() ───────────────────── */
 /** Maximum single-tick emotion boost from a negative MALP retrieval */
 #define MALP_EMOTION_DELTA_MAX 8
