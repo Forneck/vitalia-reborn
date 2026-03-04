@@ -38,7 +38,6 @@
 #include "spirits.h"
 #include "graph.h"
 #include "emotion_projection.h"
-#include "malp.h"
 #include "sec.h"
 #include <math.h>
 
@@ -66,6 +65,13 @@ static void clear_recent(struct recent_player *this);
 static struct recent_player *create_recent(void);
 const char *get_spec_func_name(SPECIAL(*func));
 bool zedit_get_levels(struct descriptor_data *d, char *buf);
+
+/* Shared interaction-type names for INTERACT_* constants (structs.h).
+ * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_DECEIVE. */
+static const char *const interact_type_names[] = {
+    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",  "Social+",
+    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail", "Betrayal",
+    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive"};
 
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */
@@ -965,27 +971,9 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
 
 static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 {
-    static const char *interact_names[] = {"ATTACKED",
-                                           "HEALED",
-                                           "RECEIVED_ITEM",
-                                           "STOLEN_FROM",
-                                           "RESCUED",
-                                           "ASSISTED",
-                                           "SOCIAL_POSITIVE",
-                                           "SOCIAL_NEGATIVE",
-                                           "SOCIAL_VIOLENT",
-                                           "ALLY_DIED",
-                                           "WITNESSED_DEATH",
-                                           "QUEST_COMPLETE",
-                                           "QUEST_FAIL",
-                                           "BETRAYAL",
-                                           "WITNESSED_OFF_MAGIC",
-                                           "WITNESSED_SUP_MAGIC",
-                                           "ABANDON_ALLY",
-                                           "SACRIFICE_SELF",
-                                           "DECEIVE"};
     static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
     static const char *trait_names[] = {"AVOIDANCE", "APPROACH", "AROUSAL_BIAS"};
+    int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
     if (!IS_MOB(mob)) {
         send_to_char(ch, "MALP data is only available for mobs.\r\n");
@@ -996,6 +984,8 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
         send_to_char(ch, "This mob has no AI data.\r\n");
         return;
     }
+
+    time_t now = time(NULL);
 
     send_to_char(ch, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
                  CCNRM(ch, C_NRM));
@@ -1009,15 +999,14 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
         send_to_char(ch, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
         for (int i = 0; i < mob->ai_data->malp_count; i++) {
             struct malp_entry *e = &mob->ai_data->malp[i];
-            const char *iname = (e->interaction_type >= 0 &&
-                                 e->interaction_type < (int)(sizeof(interact_names) / sizeof(interact_names[0])))
-                                    ? interact_names[e->interaction_type]
+            const char *iname = (e->interaction_type >= 0 && e->interaction_type < num_interact)
+                                    ? interact_type_names[e->interaction_type]
                                     : "UNKNOWN";
             const char *pname =
                 (e->persistence >= 0 && e->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
                     ? persist_names[e->persistence]
                     : "?";
-            long age_secs = (long)(time(0) - e->timestamp);
+            long age_secs = (long)(now - e->timestamp);
             long age_h = age_secs / 3600;
             long age_m = (age_secs % 3600) / 60;
             long age_s = age_secs % 60;
@@ -1052,7 +1041,7 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                 (t->persistence >= 0 && t->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
                     ? persist_names[t->persistence]
                     : "?";
-            long age_secs = (long)(time(0) - t->last_updated);
+            long age_secs = (long)(now - t->last_updated);
             long age_h = age_secs / 3600;
             long age_m = (age_secs % 3600) / 60;
             long age_s = age_secs % 60;
@@ -1491,11 +1480,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, memory_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
-                                               "Rescued",       "Assisted",  "Social+",        "Social-",
-                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
-                                               "AbandonedAlly", "Sacrifice", "Deceive"};
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
             /* Safety check: ensure memory_index is within valid range */
             if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
@@ -1522,10 +1507,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        int num_interactions = (int)(sizeof(interaction_names) / sizeof(interaction_names[0]));
                         const char *interaction_name =
                             (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
-                                ? interaction_names[mem->interaction_type]
+                                ? interact_type_names[mem->interaction_type]
                                 : "Unknown";
 
                         /* Try to resolve entity name */
@@ -1533,7 +1517,6 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                         if (mem->entity_type == ENTITY_TYPE_PLAYER) {
                             /* For players, try to find them by ID */
                             struct char_data *player = NULL;
-                            /* Search through character_list for player with matching IDNUM */
                             for (player = character_list; player; player = player->next) {
                                 if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
                                     /* Found the player - validate and copy name safely */
@@ -1783,11 +1766,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, active_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
-                                               "Rescued",       "Assisted",  "Social+",        "Social-",
-                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
-                                               "AbandonedAlly", "Sacrifice", "Deceive"};
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
             /* Safety check */
             if (k->ai_data->active_memory_index < 0 || k->ai_data->active_memory_index >= EMOTION_MEMORY_SIZE)
@@ -1809,10 +1788,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        int num_interactions = (int)(sizeof(interaction_names) / sizeof(interaction_names[0]));
                         const char *interaction_name =
                             (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
-                                ? interaction_names[mem->interaction_type]
+                                ? interact_type_names[mem->interaction_type]
                                 : "Unknown";
 
                         /* Resolve target name */
