@@ -52,6 +52,7 @@ static void list_zone_commands_room(struct char_data *ch, room_vnum rvnum);
 static void do_stat_room(struct char_data *ch, struct room_data *rm);
 static void do_stat_object(struct char_data *ch, struct obj_data *j);
 static void do_stat_character(struct char_data *ch, struct char_data *k);
+static void do_stat_malp(struct char_data *ch, struct char_data *mob);
 static void stop_snooping(struct char_data *ch);
 static size_t print_zone_to_buf(char *bufptr, size_t left, zone_rnum zone, int listall);
 static struct char_data *is_in_game(long idnum);
@@ -64,6 +65,13 @@ static void clear_recent(struct recent_player *this);
 static struct recent_player *create_recent(void);
 const char *get_spec_func_name(SPECIAL(*func));
 bool zedit_get_levels(struct descriptor_data *d, char *buf);
+
+/* Shared interaction-type names for INTERACT_* constants (structs.h).
+ * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_DECEIVE. */
+static const char *const interact_type_names[] = {
+    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",  "Social+",
+    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail", "Betrayal",
+    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive"};
 
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */
@@ -961,6 +969,99 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
     }
 }
 
+static void do_stat_malp(struct char_data *ch, struct char_data *mob)
+{
+    static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
+    static const char *trait_names[] = {"AVOIDANCE", "APPROACH", "AROUSAL_BIAS"};
+    int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
+
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "MALP data is only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    time_t now = time(NULL);
+
+    send_to_char(ch, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 CCNRM(ch, C_NRM));
+    send_to_char(ch, "MALP entries: %s%d%s   MPLP traits: %s%d%s\r\n", CCCYN(ch, C_NRM), mob->ai_data->malp_count,
+                 CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), mob->ai_data->mplp_count, CCNRM(ch, C_NRM));
+
+    /* ── MALP (explicit episodic memories) ── */
+    if (mob->ai_data->malp_count == 0) {
+        send_to_char(ch, "\r\n%sMALP:%s (no explicit memories)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->malp_count; i++) {
+            struct malp_entry *e = &mob->ai_data->malp[i];
+            const char *iname = (e->interaction_type >= 0 && e->interaction_type < num_interact)
+                                    ? interact_type_names[e->interaction_type]
+                                    : "UNKNOWN";
+            const char *pname =
+                (e->persistence >= 0 && e->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[e->persistence]
+                    : "?";
+            long age_secs = (long)(now - e->timestamp);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            send_to_char(ch, " [%d] %s#%ld  Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1,
+                         (e->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", e->agent_id, iname, pname,
+                         e->major_event ? "YES" : "no");
+            send_to_char(ch,
+                         "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
+                         "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
+                         (e->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (e->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         e->valence, CCNRM(ch, C_NRM), (e->intensity > 0.6f) ? CCYEL(ch, C_NRM) : "", e->intensity,
+                         CCNRM(ch, C_NRM), e->salience, e->arousal, e->rehearsal, e->recon_ticks_left, age_h, age_m,
+                         age_s);
+        }
+    }
+
+    /* ── MPLP (implicit trait memories) ── */
+    if (mob->ai_data->mplp_count == 0) {
+        send_to_char(ch, "\r\n%sMPLP:%s (no implicit traits)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMPLP – Implicit Trait Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->mplp_count; i++) {
+            struct mplp_trait *t = &mob->ai_data->mplp[i];
+            const char *tname =
+                (t->trait_type >= 0 && t->trait_type < (int)(sizeof(trait_names) / sizeof(trait_names[0])))
+                    ? trait_names[t->trait_type]
+                    : "UNKNOWN";
+            const char *pname =
+                (t->persistence >= 0 && t->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[t->persistence]
+                    : "?";
+            long age_secs = (long)(now - t->last_updated);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            send_to_char(ch, " [%d] %s#%ld  Trait:%-12s Persist:%-6s Rehearsal:%d\r\n", i + 1,
+                         (t->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", t->anchor_agent_id, tname, pname,
+                         t->rehearsal_count);
+            send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
+                         (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
+                         t->base_magnitude,
+                         (t->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+        }
+    }
+
+    send_to_char(ch, "\r\n");
+}
+
 static void do_stat_character(struct char_data *ch, struct char_data *k)
 {
     char buf[MAX_STRING_LENGTH];
@@ -1379,11 +1480,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, memory_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
-                                               "Rescued",       "Assisted",  "Social+",        "Social-",
-                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
-                                               "AbandonedAlly", "Sacrifice", "Deceive"};
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
             /* Safety check: ensure memory_index is within valid range */
             if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
@@ -1410,10 +1507,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        int num_interactions = (int)(sizeof(interaction_names) / sizeof(interaction_names[0]));
                         const char *interaction_name =
                             (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
-                                ? interaction_names[mem->interaction_type]
+                                ? interact_type_names[mem->interaction_type]
                                 : "Unknown";
 
                         /* Try to resolve entity name */
@@ -1421,7 +1517,6 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                         if (mem->entity_type == ENTITY_TYPE_PLAYER) {
                             /* For players, try to find them by ID */
                             struct char_data *player = NULL;
-                            /* Search through character_list for player with matching IDNUM */
                             for (player = character_list; player; player = player->next) {
                                 if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
                                     /* Found the player - validate and copy name safely */
@@ -1671,11 +1766,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, active_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked",      "Healed",    "ReceivedItem",   "StolenFrom",
-                                               "Rescued",       "Assisted",  "Social+",        "Social-",
-                                               "SocialViol",    "AllyDied",  "WitnessedDeath", "QuestComplete",
-                                               "QuestFail",     "Betrayal",  "OffensiveMagic", "SupportMagic",
-                                               "AbandonedAlly", "Sacrifice", "Deceive"};
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
             /* Safety check */
             if (k->ai_data->active_memory_index < 0 || k->ai_data->active_memory_index >= EMOTION_MEMORY_SIZE)
@@ -1697,10 +1788,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        int num_interactions = (int)(sizeof(interaction_names) / sizeof(interaction_names[0]));
                         const char *interaction_name =
                             (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
-                                ? interaction_names[mem->interaction_type]
+                                ? interact_type_names[mem->interaction_type]
                                 : "Unknown";
 
                         /* Resolve target name */
@@ -1917,6 +2007,15 @@ ACMD(do_stat)
         } else {
             print_zone(ch, atoi(buf2));
             return;
+        }
+    } else if (is_abbrev(buf1, "malp")) {
+        if (!*buf2)
+            send_to_char(ch, "Estatísticas de MALP de qual mobile?\r\n");
+        else {
+            if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
+                do_stat_malp(ch, victim);
+            else
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
         }
     } else {
         char *name = buf1;
