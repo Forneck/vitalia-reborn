@@ -38,6 +38,7 @@
 #include "spirits.h"
 #include "graph.h"
 #include "emotion_projection.h"
+#include "malp.h"
 #include "sec.h"
 #include <math.h>
 
@@ -52,6 +53,7 @@ static void list_zone_commands_room(struct char_data *ch, room_vnum rvnum);
 static void do_stat_room(struct char_data *ch, struct room_data *rm);
 static void do_stat_object(struct char_data *ch, struct obj_data *j);
 static void do_stat_character(struct char_data *ch, struct char_data *k);
+static void do_stat_malp(struct char_data *ch, struct char_data *mob);
 static void stop_snooping(struct char_data *ch);
 static size_t print_zone_to_buf(char *bufptr, size_t left, zone_rnum zone, int listall);
 static struct char_data *is_in_game(long idnum);
@@ -959,6 +961,116 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
     } else {
         send_to_char(ch, "  (4D state not available for this mob)\r\n");
     }
+}
+
+static void do_stat_malp(struct char_data *ch, struct char_data *mob)
+{
+    static const char *interact_names[] = {"ATTACKED",
+                                           "HEALED",
+                                           "RECEIVED_ITEM",
+                                           "STOLEN_FROM",
+                                           "RESCUED",
+                                           "ASSISTED",
+                                           "SOCIAL_POSITIVE",
+                                           "SOCIAL_NEGATIVE",
+                                           "SOCIAL_VIOLENT",
+                                           "ALLY_DIED",
+                                           "WITNESSED_DEATH",
+                                           "QUEST_COMPLETE",
+                                           "QUEST_FAIL",
+                                           "BETRAYAL",
+                                           "WITNESSED_OFF_MAGIC",
+                                           "WITNESSED_SUP_MAGIC",
+                                           "ABANDON_ALLY",
+                                           "SACRIFICE_SELF",
+                                           "DECEIVE"};
+    static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
+    static const char *trait_names[] = {"AVOIDANCE", "APPROACH", "AROUSAL_BIAS"};
+
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "MALP data is only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    send_to_char(ch, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 CCNRM(ch, C_NRM));
+    send_to_char(ch, "MALP entries: %s%d%s   MPLP traits: %s%d%s\r\n", CCCYN(ch, C_NRM), mob->ai_data->malp_count,
+                 CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), mob->ai_data->mplp_count, CCNRM(ch, C_NRM));
+
+    /* ── MALP (explicit episodic memories) ── */
+    if (mob->ai_data->malp_count == 0) {
+        send_to_char(ch, "\r\n%sMALP:%s (no explicit memories)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->malp_count; i++) {
+            struct malp_entry *e = &mob->ai_data->malp[i];
+            const char *iname = (e->interaction_type >= 0 &&
+                                 e->interaction_type < (int)(sizeof(interact_names) / sizeof(interact_names[0])))
+                                    ? interact_names[e->interaction_type]
+                                    : "UNKNOWN";
+            const char *pname =
+                (e->persistence >= 0 && e->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[e->persistence]
+                    : "?";
+            long age_secs = (long)(time(0) - e->timestamp);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            send_to_char(ch, " [%d] %s#%ld  Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1,
+                         (e->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", e->agent_id, iname, pname,
+                         e->major_event ? "YES" : "no");
+            send_to_char(ch,
+                         "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
+                         "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
+                         (e->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (e->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         e->valence, CCNRM(ch, C_NRM), (e->intensity > 0.6f) ? CCYEL(ch, C_NRM) : "", e->intensity,
+                         CCNRM(ch, C_NRM), e->salience, e->arousal, e->rehearsal, e->recon_ticks_left, age_h, age_m,
+                         age_s);
+        }
+    }
+
+    /* ── MPLP (implicit trait memories) ── */
+    if (mob->ai_data->mplp_count == 0) {
+        send_to_char(ch, "\r\n%sMPLP:%s (no implicit traits)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMPLP – Implicit Trait Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->mplp_count; i++) {
+            struct mplp_trait *t = &mob->ai_data->mplp[i];
+            const char *tname =
+                (t->trait_type >= 0 && t->trait_type < (int)(sizeof(trait_names) / sizeof(trait_names[0])))
+                    ? trait_names[t->trait_type]
+                    : "UNKNOWN";
+            const char *pname =
+                (t->persistence >= 0 && t->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[t->persistence]
+                    : "?";
+            long age_secs = (long)(time(0) - t->last_updated);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            send_to_char(ch, " [%d] %s#%ld  Trait:%-12s Persist:%-6s Rehearsal:%d\r\n", i + 1,
+                         (t->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", t->anchor_agent_id, tname, pname,
+                         t->rehearsal_count);
+            send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
+                         (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
+                         t->base_magnitude,
+                         (t->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+        }
+    }
+
+    send_to_char(ch, "\r\n");
 }
 
 static void do_stat_character(struct char_data *ch, struct char_data *k)
@@ -1917,6 +2029,15 @@ ACMD(do_stat)
         } else {
             print_zone(ch, atoi(buf2));
             return;
+        }
+    } else if (is_abbrev(buf1, "malp")) {
+        if (!*buf2)
+            send_to_char(ch, "Estatísticas de MALP de qual mobile?\r\n");
+        else {
+            if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
+                do_stat_malp(ch, victim);
+            else
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
         }
     } else {
         char *name = buf1;
