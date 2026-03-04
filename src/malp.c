@@ -36,6 +36,23 @@
 /* ── Internal helpers ────────────────────────────────────────────────────── */
 
 /**
+ * Return mob's current peak arousal as a normalised float in [0, 1].
+ *
+ * Peak arousal is the maximum of fear, anger, and excitement, divided by 100.
+ * Used for state-dependent memory retrieval (Bower 1981) and for computing
+ * new_salience during reconsolidation.
+ */
+static float get_mob_peak_arousal(const struct char_data *mob)
+{
+    int peak = mob->ai_data->emotion_fear;
+    if (mob->ai_data->emotion_anger > peak)
+        peak = mob->ai_data->emotion_anger;
+    if (mob->ai_data->emotion_excitement > peak)
+        peak = mob->ai_data->emotion_excitement;
+    return (float)peak / 100.0f;
+}
+
+/**
  * Ensure mob->ai_data->malp has room for at least one more entry.
  *
  * Capacity is tracked implicitly: the smallest power-of-two multiple of
@@ -462,12 +479,12 @@ void consolidator_tick(struct char_data *mob)
             ai->malp_count++;                                                                                          \
         }                                                                                                              \
         /* Hebbian MPLP trait formation */                                                                             \
-        if (rehearsal >= rehearsal_threshold) {                                                                         \
+        if (rehearsal >= rehearsal_threshold) {                                                                        \
             struct mplp_trait *trait = NULL;                                                                           \
             int _trait_type = (valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;                          \
             /* Each agent has at most one approach/avoidance MPLP entry; its type can                                  \
-             * flip as the running-average valence shifts.  We exclude AROUSAL_BIAS   \
-             * entries, which are tracked separately for the same agent. */            \
+             * flip as the running-average valence shifts.  We exclude AROUSAL_BIAS                                    \
+             * entries, which are tracked separately for the same agent. */                                            \
             for (_j = 0; _j < ai->mplp_count; _j++) {                                                                  \
                 if (ai->mplp[_j].anchor_agent_id == (mem)->entity_id &&                                                \
                     ai->mplp[_j].agent_type == (mem)->entity_type &&                                                   \
@@ -582,22 +599,53 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
     if (!best)
         return NULL;
 
-    /* Compute retrieval probability P_ret = sigmoid(k * (intensity + cue_match)) */
-    float cue_score = best->intensity; /* simplified: use intensity as P_ret proxy */
-    float P_ret = 1.0f / (1.0f + expf(-MALP_PRET_K * (cue_score - 0.5f)));
+    /* Compute retrieval probability P_ret = sigmoid(k * (cue_score − 0.5)).
+     *
+     * cue_score combines three factors (weights defined in malp.h):
+     *  MALP_CUE_WEIGHT_INTENSITY × intensity     — primary strength of the memory
+     *  MALP_CUE_WEIGHT_AROUSAL   × arousal_match — state-dependent recall (Bower 1981):
+     *                                               easier when mob's current arousal
+     *                                               matches the arousal stored in memory
+     *  MALP_CUE_WEIGHT_RECENCY   × recency        — recently-retrieved memories are
+     *                                               more accessible (within 1 game-hour)
+     */
+    {
+        float mob_arousal = get_mob_peak_arousal(mob);
 
-    /* Open or extend the reconsolidation window when P_ret >= threshold.
-     * If the window is already open but smaller than the configured duration
-     * (e.g., from a previous retrieval), reset it to the full duration so
-     * that repeated, qualifying retrievals keep the entry mutable. */
-    if (P_ret >= MALP_THETA_REACT) {
-        int window = CONFIG_MALP_RECON_WINDOW_TICKS;
-        if (window < 1)
-            window = 60;
-        if (best->recon_ticks_left <= 0 || best->recon_ticks_left < window)
-            best->recon_ticks_left = window;
-        best->last_retrieved = time(NULL);
-        best->rehearsal++;
+        /* Arousal match: 1.0 when identical, 0.0 when completely opposite */
+        float arousal_match = 1.0f - fabsf(mob_arousal - best->arousal);
+        if (arousal_match < 0.0f)
+            arousal_match = 0.0f;
+
+        /* Recency: linear decay from 1.0 to 0.0 over the first game-hour.
+         * Guard against negative hours_since (clock skew / ntp step). */
+        float recency = 0.0f;
+        if (best->last_retrieved > 0) {
+            float hours_since = (float)(time(NULL) - best->last_retrieved) / 3600.0f;
+            if (hours_since >= 0.0f && hours_since < 1.0f)
+                recency = 1.0f - hours_since;
+        }
+
+        float cue_score = best->intensity * MALP_CUE_WEIGHT_INTENSITY + arousal_match * MALP_CUE_WEIGHT_AROUSAL +
+                          recency * MALP_CUE_WEIGHT_RECENCY;
+        if (cue_score > 1.0f)
+            cue_score = 1.0f;
+
+        float P_ret = 1.0f / (1.0f + expf(-MALP_PRET_K * (cue_score - 0.5f)));
+
+        /* Open or extend the reconsolidation window when P_ret >= threshold.
+         * If the window is already open but smaller than the configured duration
+         * (e.g., from a previous retrieval), reset it to the full duration so
+         * that repeated, qualifying retrievals keep the entry mutable. */
+        if (P_ret >= MALP_THETA_REACT) {
+            int window = CONFIG_MALP_RECON_WINDOW_TICKS;
+            if (window < 1)
+                window = 60;
+            if (best->recon_ticks_left <= 0 || best->recon_ticks_left < window)
+                best->recon_ticks_left = window;
+            best->last_retrieved = time(NULL);
+            best->rehearsal++;
+        }
     }
 
     return best;
@@ -653,7 +701,7 @@ float get_mplp_arousal_bias(struct char_data *mob, long agent_id, int agent_type
     return bias;
 }
 
-void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor)
+void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence)
 {
     if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data)
         return;
@@ -695,6 +743,20 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor)
             /* Positive memory: small trust / happiness boost */
             adjust_emotion(mob, &mob->ai_data->emotion_trust, (int)(delta * 0.5f));
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, (int)(delta * 0.4f));
+        }
+
+        /* Reconsolidation: if the MALP entry is labile (window is open) and the
+         * current interaction carries a valence signal, perform a bounded valence
+         * update.  new_salience is derived from the mob's current arousal state so
+         * that emotionally-charged reconsolidation carries proportionally more weight.
+         *
+         * Passing interaction_valence = 0.0f explicitly suppresses reconsolidation
+         * for neutral interactions that should not alter stored memories. */
+        if (malp->recon_ticks_left > 0 && interaction_valence != 0.0f) {
+            float social_w = (agent_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;
+            float mob_arousal = get_mob_peak_arousal(mob);
+            float new_salience = compute_salience(mob_arousal, malp->rehearsal, social_w, 0.0f);
+            retrieve_and_reconsolidate(mob, agent_id, agent_type, interaction_valence, new_salience);
         }
     }
 

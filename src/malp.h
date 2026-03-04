@@ -90,6 +90,14 @@
 /** MPLP approach/avoidance emotion modifier cap */
 #define MPLP_EMOTION_DELTA_MAX 5
 
+/* ── Cue-score weights for P_ret computation in get_malp_by_agent() ─────── */
+/** Weight of memory intensity in cue score (primary strength factor) */
+#define MALP_CUE_WEIGHT_INTENSITY 0.60f
+/** Weight of arousal state-match in cue score (state-dependent recall; Bower 1981) */
+#define MALP_CUE_WEIGHT_AROUSAL 0.25f
+/** Weight of retrieval recency in cue score (within-hour accessibility bonus) */
+#define MALP_CUE_WEIGHT_RECENCY 0.15f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -176,13 +184,21 @@ float get_mplp_arousal_bias(struct char_data *mob, long agent_id, int agent_type
 /**
  * Apply MALP/MPLP-derived emotion effects through the appraisal pipeline.
  *
- * Called when 'actor' enters the same room or interacts with 'mob'.
- * All emotion deltas go through adjust_emotion() (no pipeline bypass).
+ * Called when 'actor' interacts with 'mob'.  All emotion deltas go through
+ * adjust_emotion() (no pipeline bypass).
  *
- * @param mob    The NPC experiencing the memory effect.
- * @param actor  The character whose presence triggers the memory.
+ * If 'interaction_valence' is non-zero AND the relevant MALP entry has an open
+ * reconsolidation window, retrieve_and_reconsolidate() is called automatically
+ * to apply a bounded valence update — wiring all reconsolidation semantics into
+ * a single call site.  Pass 0.0f to suppress reconsolidation for neutral events.
+ *
+ * @param mob                 The NPC experiencing the memory effect.
+ * @param actor               The character whose presence triggers the memory.
+ * @param interaction_valence Signed valence of the current interaction (−1..+1).
+ *                            Negative for aversive events, positive for beneficial,
+ *                            0.0f for neutral/no reconsolidation update.
  */
-void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor);
+void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence);
 
 /**
  * Perform safe reconsolidation: update a MALP entry's valence/intensity

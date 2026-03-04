@@ -6312,8 +6312,9 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
     /* Add to emotion memory */
     if (attacker) {
         add_emotion_memory(mob, attacker, INTERACT_ATTACKED, 0, NULL);
-        /* MALP/MPLP: surface long-term memory effects triggered by this attacker */
-        apply_malp_emotion_effects(mob, attacker);
+        /* MALP/MPLP: surface long-term memory effects triggered by this attacker;
+         * being attacked is a significant negative event (valence −0.6). */
+        apply_malp_emotion_effects(mob, attacker, -0.6f);
     }
 }
 
@@ -6472,8 +6473,9 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     /* Add to emotion memory */
     if (healer) {
         add_emotion_memory(mob, healer, INTERACT_HEALED, 0, NULL);
-        /* MALP/MPLP: surface long-term memory effects triggered by this healer */
-        apply_malp_emotion_effects(mob, healer);
+        /* MALP/MPLP: surface long-term memory effects triggered by this healer;
+         * being healed is a significant positive event (valence +0.5). */
+        apply_malp_emotion_effects(mob, healer, +0.5f);
         if (IS_NPC(healer) && healer->ai_data) {
             add_active_emotion_memory(healer, mob, INTERACT_HEALED, 0, NULL);
             /* Bidirectional feedback: healer gains compassion/happiness from helping */
@@ -6573,8 +6575,9 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
     /* Add to emotion memory - theft is a MAJOR negative event */
     if (thief) {
         add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1, NULL);
-        /* MALP/MPLP: surface long-term memory effects triggered by this thief */
-        apply_malp_emotion_effects(mob, thief);
+        /* MALP/MPLP: surface long-term memory effects triggered by this thief;
+         * theft is a major negative event (valence −0.8). */
+        apply_malp_emotion_effects(mob, thief, -0.8f);
         if (IS_NPC(thief) && thief->ai_data)
             add_active_emotion_memory(thief, mob, INTERACT_STOLEN_FROM, 1, NULL);
     }
@@ -6651,8 +6654,9 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
     /* Add to emotion memory - rescue is a MAJOR positive event */
     if (rescuer) {
         add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1, NULL);
-        /* MALP/MPLP: surface long-term memory effects triggered by this rescuer */
-        apply_malp_emotion_effects(mob, rescuer);
+        /* MALP/MPLP: surface long-term memory effects triggered by this rescuer;
+         * rescue is a major positive event (valence +0.7). */
+        apply_malp_emotion_effects(mob, rescuer, +0.7f);
         if (IS_NPC(rescuer) && rescuer->ai_data) {
             add_active_emotion_memory(rescuer, mob, INTERACT_RESCUED, 1, NULL);
             /* Bidirectional feedback: rescuer gains pride/compassion/happiness from saving another */
@@ -10521,8 +10525,11 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         add_emotion_memory(mob, actor, appraisal_category, social_major, social_name);
         if (IS_NPC(actor) && actor->ai_data)
             add_active_emotion_memory(actor, mob, appraisal_category, social_major, social_name);
-        /* MALP/MPLP: surface long-term memory effects triggered by this actor */
-        apply_malp_emotion_effects(mob, actor);
+        /* MALP/MPLP: surface long-term memory effects triggered by this actor.
+         * Valence derives from the social classification already computed above:
+         *   violent → −0.7, negative → −0.4, positive → +0.4, neutral → 0.0 */
+        float social_valence = is_violent ? -0.7f : (is_negative ? -0.4f : (is_positive ? +0.4f : 0.0f));
+        apply_malp_emotion_effects(mob, actor, social_valence);
     }
 
     /* Approach–Avoidance Conflict: evaluate after all emotion updates. */
