@@ -6312,6 +6312,8 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
     /* Add to emotion memory */
     if (attacker) {
         add_emotion_memory(mob, attacker, INTERACT_ATTACKED, 0, NULL);
+        /* MALP/MPLP: surface long-term memory effects triggered by this attacker */
+        apply_malp_emotion_effects(mob, attacker);
     }
 }
 
@@ -6470,6 +6472,8 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     /* Add to emotion memory */
     if (healer) {
         add_emotion_memory(mob, healer, INTERACT_HEALED, 0, NULL);
+        /* MALP/MPLP: surface long-term memory effects triggered by this healer */
+        apply_malp_emotion_effects(mob, healer);
         if (IS_NPC(healer) && healer->ai_data) {
             add_active_emotion_memory(healer, mob, INTERACT_HEALED, 0, NULL);
             /* Bidirectional feedback: healer gains compassion/happiness from helping */
@@ -6569,6 +6573,8 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
     /* Add to emotion memory - theft is a MAJOR negative event */
     if (thief) {
         add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1, NULL);
+        /* MALP/MPLP: surface long-term memory effects triggered by this thief */
+        apply_malp_emotion_effects(mob, thief);
         if (IS_NPC(thief) && thief->ai_data)
             add_active_emotion_memory(thief, mob, INTERACT_STOLEN_FROM, 1, NULL);
     }
@@ -6645,6 +6651,8 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
     /* Add to emotion memory - rescue is a MAJOR positive event */
     if (rescuer) {
         add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1, NULL);
+        /* MALP/MPLP: surface long-term memory effects triggered by this rescuer */
+        apply_malp_emotion_effects(mob, rescuer);
         if (IS_NPC(rescuer) && rescuer->ai_data) {
             add_active_emotion_memory(rescuer, mob, INTERACT_RESCUED, 1, NULL);
             /* Bidirectional feedback: rescuer gains pride/compassion/happiness from saving another */
@@ -10513,6 +10521,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         add_emotion_memory(mob, actor, appraisal_category, social_major, social_name);
         if (IS_NPC(actor) && actor->ai_data)
             add_active_emotion_memory(actor, mob, appraisal_category, social_major, social_name);
+        /* MALP/MPLP: surface long-term memory effects triggered by this actor */
+        apply_malp_emotion_effects(mob, actor);
     }
 
     /* Approach–Avoidance Conflict: evaluate after all emotion updates. */

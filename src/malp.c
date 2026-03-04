@@ -157,8 +157,10 @@ static float slot_valence(const struct emotion_memory *mem)
               mem->pride_level + mem->excitement_level;
     int neg = mem->fear_level + mem->anger_level + mem->sadness_level + mem->disgust_level + mem->shame_level +
               mem->pain_level + mem->horror_level + mem->humiliation_level + mem->envy_level;
-    /* Sum range: 0..700 each; normalise to −1..+1 */
-    float v = (float)(pos - neg) / 700.0f;
+    /* pos: 7 emotions (0..700), neg: 9 emotions (0..900).
+     * (pos - neg) range is −900..+700; normalise by the larger side (900)
+     * to keep v ∈ [−1, +1] without biasing toward negative. */
+    float v = (float)(pos - neg) / 900.0f;
     if (v > 1.0f)
         v = 1.0f;
     if (v < -1.0f)
@@ -218,7 +220,7 @@ static float powerlaw_intensity(time_t timestamp, int half_life_hours)
     float age_hours = (float)(now - timestamp) / 3600.0f;
     if (age_hours < 0.0f)
         age_hours = 0.0f;
-    float exponent = (float)M_LN2 / logf(1.0f + (float)half_life_hours);
+    float exponent = logf(2.0f) / logf(1.0f + (float)half_life_hours);
     float intensity = powf(1.0f + age_hours, -exponent);
     if (intensity < 0.0f)
         intensity = 0.0f;
@@ -303,7 +305,10 @@ void malp_decay_tick(struct char_data *mob)
             if (e->agent_id == 0)
                 continue;
             int hl = (e->major_event || e->persistence == MALP_PERSIST_HIGH) ? half_major : half_std;
-            e->intensity = powerlaw_intensity(e->timestamp, hl);
+            /* Decay from encoded salience (strength at consolidation), not from 1.0.
+             * powerlaw_intensity() computes the shape-factor (0..1); scaling by
+             * salience preserves relative strength between stronger and weaker memories. */
+            e->intensity = e->salience * powerlaw_intensity(e->timestamp, hl);
             /* Tick down reconsolidation window */
             if (e->recon_ticks_left > 0)
                 e->recon_ticks_left--;
@@ -343,7 +348,16 @@ void malp_decay_tick(struct char_data *mob)
             }
             if (t->persistence == MALP_PERSIST_HIGH)
                 hl = (int)((float)hl * 1.5f);
-            t->magnitude = powerlaw_intensity(t->last_updated, hl);
+            /* Apply decay relative to current magnitude: multiply by the power-law
+             * shape factor derived from last_updated.  This preserves relative trait
+             * strength between older and newer traits rather than overwriting magnitude
+             * with a time-only curve that always starts at 1.0 after an update. */
+            {
+                float decay_factor = powerlaw_intensity(t->last_updated, hl);
+                if (decay_factor > 1.0f)
+                    decay_factor = 1.0f;
+                t->magnitude *= decay_factor;
+            }
             if (t->magnitude >= 0.02f) {
                 if (w != i)
                     ai->mplp[w] = ai->mplp[i];
@@ -377,162 +391,167 @@ void consolidator_tick(struct char_data *mob)
     time_t now = time(NULL);
     int i;
 
-    /* Process passive memory buffer */
+    /*
+     * CONSOLIDATE_SLOT(mem): process one episodic memory slot.
+     * Implemented as a macro to share the consolidation logic between the
+     * passive and active memory buffers without code duplication.
+     * Uses do-while(0) so 'break' exits cleanly on early-out conditions.
+     * Note: mem->entity_id is already validated by the first guard at the
+     * top of the macro; no duplicate check is needed below.
+     */
+#define CONSOLIDATE_SLOT(mem)                                                                                          \
+    do {                                                                                                               \
+        if ((mem)->timestamp == 0 || (mem)->entity_id == 0)                                                            \
+            break;                                                                                                     \
+        float age_hours = (float)(now - (mem)->timestamp) / 3600.0f;                                                   \
+        float arousal = slot_arousal(mem);                                                                             \
+        float social_w =                                                                                               \
+            ((mem)->entity_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;           \
+        int rehearsal = count_rehearsal(mob, (mem)->entity_id, (mem)->entity_type);                                    \
+        float S = compute_salience(arousal, rehearsal, social_w, age_hours);                                           \
+        if (S < theta)                                                                                                 \
+            break;                                                                                                     \
+        float valence = slot_valence(mem);                                                                             \
+        /* Find existing MALP entry for this agent */                                                                  \
+        struct malp_entry *existing = NULL;                                                                            \
+        int _j;                                                                                                        \
+        for (_j = 0; _j < ai->malp_count; _j++) {                                                                      \
+            if (ai->malp[_j].agent_id == (mem)->entity_id && ai->malp[_j].agent_type == (mem)->entity_type) {          \
+                existing = &ai->malp[_j];                                                                              \
+                break;                                                                                                 \
+            }                                                                                                          \
+        }                                                                                                              \
+        if (existing) {                                                                                                \
+            float lambda = 0.3f * S;                                                                                   \
+            if (lambda > 0.5f)                                                                                         \
+                lambda = 0.5f;                                                                                         \
+            existing->valence = (1.0f - lambda) * existing->valence + lambda * valence;                                \
+            existing->arousal = (1.0f - lambda) * existing->arousal + lambda * arousal;                                \
+            existing->salience = S;                                                                                    \
+            existing->rehearsal = rehearsal;                                                                           \
+            if ((mem)->major_event || arousal >= MALP_HIGH_PERSIST_AROUSAL) {                                          \
+                existing->persistence = MALP_PERSIST_HIGH;                                                             \
+                existing->major_event = 1;                                                                             \
+            }                                                                                                          \
+        } else {                                                                                                       \
+            if (!malp_grow(mob)) {                                                                                     \
+                log1("MALP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),                  \
+                     mob->ai_data->malp_count);                                                                        \
+                break;                                                                                                 \
+            }                                                                                                          \
+            struct malp_entry *_e = &ai->malp[ai->malp_count];                                                         \
+            memset(_e, 0, sizeof(struct malp_entry));                                                                  \
+            _e->agent_id = (mem)->entity_id;                                                                           \
+            _e->agent_type = (mem)->entity_type;                                                                       \
+            _e->interaction_type = (mem)->interaction_type;                                                            \
+            _e->major_event = (mem)->major_event;                                                                      \
+            _e->timestamp = (mem)->timestamp;                                                                          \
+            _e->last_retrieved = 0;                                                                                    \
+            _e->valence = valence;                                                                                     \
+            _e->arousal = arousal;                                                                                     \
+            _e->salience = S;                                                                                          \
+            _e->intensity = S;                                                                                         \
+            _e->rehearsal = rehearsal;                                                                                 \
+            _e->recon_ticks_left = 0;                                                                                  \
+            if ((mem)->major_event || arousal >= MALP_HIGH_PERSIST_AROUSAL)                                            \
+                _e->persistence = MALP_PERSIST_HIGH;                                                                   \
+            else if (S >= 0.80f)                                                                                       \
+                _e->persistence = MALP_PERSIST_MEDIUM;                                                                 \
+            else                                                                                                       \
+                _e->persistence = MALP_PERSIST_LOW;                                                                    \
+            ai->malp_count++;                                                                                          \
+        }                                                                                                              \
+        /* Hebbian MPLP trait formation */                                                                             \
+        if (rehearsal >= rehearsal_threshold) {                                                                         \
+            struct mplp_trait *trait = NULL;                                                                           \
+            int _trait_type = (valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;                          \
+            /* Each agent has at most one approach/avoidance MPLP entry; its type can                                  \
+             * flip as the running-average valence shifts.  We exclude AROUSAL_BIAS   \
+             * entries, which are tracked separately for the same agent. */            \
+            for (_j = 0; _j < ai->mplp_count; _j++) {                                                                  \
+                if (ai->mplp[_j].anchor_agent_id == (mem)->entity_id &&                                                \
+                    ai->mplp[_j].agent_type == (mem)->entity_type &&                                                   \
+                    ai->mplp[_j].trait_type != MPLP_TRAIT_AROUSAL_BIAS) {                                              \
+                    trait = &ai->mplp[_j];                                                                             \
+                    break;                                                                                             \
+                }                                                                                                      \
+            }                                                                                                          \
+            if (!trait && ai->mplp_count < MPLP_MAX_PER_MOB) {                                                         \
+                if (!mplp_grow(mob)) {                                                                                 \
+                    log1("MPLP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),              \
+                         mob->ai_data->mplp_count);                                                                    \
+                } else {                                                                                               \
+                    trait = &ai->mplp[ai->mplp_count];                                                                 \
+                    memset(trait, 0, sizeof(struct mplp_trait));                                                       \
+                    trait->anchor_agent_id = (mem)->entity_id;                                                         \
+                    trait->agent_type = (mem)->entity_type;                                                            \
+                    trait->trait_type = _trait_type;                                                                   \
+                    trait->magnitude = 0.0f;                                                                           \
+                    trait->valence = valence;                                                                          \
+                    trait->rehearsal_count = rehearsal;                                                                \
+                    trait->persistence = MALP_PERSIST_LOW;                                                             \
+                    trait->last_updated = now;                                                                         \
+                    ai->mplp_count++;                                                                                  \
+                }                                                                                                      \
+            } else if (trait) {                                                                                        \
+                float _delta = 0.15f * S;                                                                              \
+                if (_delta > 0.3f)                                                                                     \
+                    _delta = 0.3f;                                                                                     \
+                trait->magnitude += _delta;                                                                            \
+                if (trait->magnitude > 1.0f)                                                                           \
+                    trait->magnitude = 1.0f;                                                                           \
+                float _alpha = 0.2f;                                                                                   \
+                trait->valence = (1.0f - _alpha) * trait->valence + _alpha * valence;                                  \
+                trait->rehearsal_count = rehearsal;                                                                    \
+                trait->last_updated = now;                                                                             \
+                trait->trait_type = (trait->valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;             \
+                if (arousal >= MALP_HIGH_PERSIST_AROUSAL && trait->valence < 0.0f)                                     \
+                    trait->persistence = MALP_PERSIST_HIGH;                                                            \
+                else if (S >= 0.80f && trait->persistence < MALP_PERSIST_MEDIUM)                                       \
+                    trait->persistence = MALP_PERSIST_MEDIUM;                                                          \
+                if (arousal >= 0.70f) {                                                                                \
+                    bool _found_ab = FALSE;                                                                            \
+                    for (_j = 0; _j < ai->mplp_count; _j++) {                                                          \
+                        if (ai->mplp[_j].anchor_agent_id == (mem)->entity_id &&                                        \
+                            ai->mplp[_j].agent_type == (mem)->entity_type &&                                           \
+                            ai->mplp[_j].trait_type == MPLP_TRAIT_AROUSAL_BIAS) {                                      \
+                            ai->mplp[_j].magnitude += 0.05f * S;                                                       \
+                            if (ai->mplp[_j].magnitude > 1.0f)                                                         \
+                                ai->mplp[_j].magnitude = 1.0f;                                                         \
+                            ai->mplp[_j].last_updated = now;                                                           \
+                            _found_ab = TRUE;                                                                          \
+                            break;                                                                                     \
+                        }                                                                                              \
+                    }                                                                                                  \
+                    if (!_found_ab && ai->mplp_count < MPLP_MAX_PER_MOB && mplp_grow(mob)) {                           \
+                        struct mplp_trait *_ab = &ai->mplp[ai->mplp_count];                                            \
+                        memset(_ab, 0, sizeof(struct mplp_trait));                                                     \
+                        _ab->anchor_agent_id = (mem)->entity_id;                                                       \
+                        _ab->agent_type = (mem)->entity_type;                                                          \
+                        _ab->trait_type = MPLP_TRAIT_AROUSAL_BIAS;                                                     \
+                        _ab->magnitude = 0.10f * S;                                                                    \
+                        _ab->valence = valence;                                                                        \
+                        _ab->rehearsal_count = rehearsal;                                                              \
+                        _ab->persistence = MALP_PERSIST_LOW;                                                           \
+                        _ab->last_updated = now;                                                                       \
+                        ai->mplp_count++;                                                                              \
+                    }                                                                                                  \
+                }                                                                                                      \
+            }                                                                                                          \
+        }                                                                                                              \
+    } while (0)
+
+    /* Process passive memory buffer (received/witnessed interactions) */
     for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
-        struct emotion_memory *mem = &ai->memories[i];
-        if (mem->timestamp == 0 || mem->entity_id == 0)
-            continue;
-
-        float age_hours = (float)(now - mem->timestamp) / 3600.0f;
-        float arousal = slot_arousal(mem);
-        float social_w = (mem->entity_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;
-        int rehearsal = count_rehearsal(mob, mem->entity_id, mem->entity_type);
-        float S = compute_salience(arousal, rehearsal, social_w, age_hours);
-
-        if (S < theta)
-            continue;
-
-        /* ── Consolidate into MALP ─────────────────────────────────────── */
-        float valence = slot_valence(mem);
-
-        /* Find existing MALP entry for this agent */
-        struct malp_entry *existing = NULL;
-        int j;
-        for (j = 0; j < ai->malp_count; j++) {
-            if (ai->malp[j].agent_id == mem->entity_id && ai->malp[j].agent_type == mem->entity_type) {
-                existing = &ai->malp[j];
-                break;
-            }
-        }
-
-        if (existing) {
-            /* Update existing MALP entry (incremental mixing) */
-            float lambda = 0.3f * S; /* λ proportional to salience */
-            if (lambda > 0.5f)
-                lambda = 0.5f;
-            existing->valence = (1.0f - lambda) * existing->valence + lambda * valence;
-            existing->arousal = (1.0f - lambda) * existing->arousal + lambda * arousal;
-            existing->salience = S; /* refresh to current */
-            existing->rehearsal = rehearsal;
-            /* Upgrade persistence if warranted */
-            if (mem->major_event || arousal >= MALP_HIGH_PERSIST_AROUSAL) {
-                existing->persistence = MALP_PERSIST_HIGH;
-                existing->major_event = 1;
-            }
-        } else {
-            /* Create new MALP entry */
-            if (!malp_grow(mob)) {
-                log1("MALP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),
-                     mob->ai_data->malp_count);
-                return;
-            }
-            struct malp_entry *e = &ai->malp[ai->malp_count];
-            memset(e, 0, sizeof(struct malp_entry));
-            e->agent_id = mem->entity_id;
-            e->agent_type = mem->entity_type;
-            e->interaction_type = mem->interaction_type;
-            e->major_event = mem->major_event;
-            e->timestamp = mem->timestamp;
-            e->last_retrieved = 0;
-            e->valence = valence;
-            e->arousal = arousal;
-            e->salience = S;
-            e->intensity = S; /* initial intensity equals salience */
-            e->rehearsal = rehearsal;
-            e->recon_ticks_left = 0;
-            if (mem->major_event || arousal >= MALP_HIGH_PERSIST_AROUSAL)
-                e->persistence = MALP_PERSIST_HIGH;
-            else if (S >= 0.80f)
-                e->persistence = MALP_PERSIST_MEDIUM;
-            else
-                e->persistence = MALP_PERSIST_LOW;
-            ai->malp_count++;
-        }
-
-        /* ── Generate MPLP trait (Hebbian co-occurrence) ──────────────── */
-        if (rehearsal >= rehearsal_threshold && mem->entity_id != 0) {
-            /* Find or create MPLP trait for this agent */
-            struct mplp_trait *trait = NULL;
-            int trait_type = (valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;
-
-            for (j = 0; j < ai->mplp_count; j++) {
-                if (ai->mplp[j].anchor_agent_id == mem->entity_id && ai->mplp[j].agent_type == mem->entity_type) {
-                    trait = &ai->mplp[j];
-                    break;
-                }
-            }
-
-            if (!trait && ai->mplp_count < MPLP_MAX_PER_MOB) {
-                if (!mplp_grow(mob)) {
-                    log1("MPLP: memory allocation failure for mob %s (current count: %d)", GET_NAME(mob),
-                         mob->ai_data->mplp_count);
-                    continue;
-                }
-                trait = &ai->mplp[ai->mplp_count];
-                memset(trait, 0, sizeof(struct mplp_trait));
-                trait->anchor_agent_id = mem->entity_id;
-                trait->agent_type = mem->entity_type;
-                trait->trait_type = trait_type;
-                trait->magnitude = 0.0f;
-                trait->valence = valence;
-                trait->rehearsal_count = rehearsal;
-                trait->persistence = MALP_PERSIST_LOW;
-                trait->last_updated = now;
-                ai->mplp_count++;
-            } else if (trait) {
-                /* Update existing trait: Hebbian increment proportional to S */
-                float delta = 0.15f * S;
-                if (delta > 0.3f)
-                    delta = 0.3f;
-                trait->magnitude += delta;
-                if (trait->magnitude > 1.0f)
-                    trait->magnitude = 1.0f;
-                /* Running-average valence */
-                float alpha_t = 0.2f;
-                trait->valence = (1.0f - alpha_t) * trait->valence + alpha_t * valence;
-                trait->rehearsal_count = rehearsal;
-                trait->last_updated = now;
-                /* Upgrade trait type if valence shifted significantly */
-                trait->trait_type = (trait->valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;
-                /* Persistence upgrade for high-arousal negative traits */
-                if (arousal >= MALP_HIGH_PERSIST_AROUSAL && trait->valence < 0.0f)
-                    trait->persistence = MALP_PERSIST_HIGH;
-                else if (S >= 0.80f && trait->persistence < MALP_PERSIST_MEDIUM)
-                    trait->persistence = MALP_PERSIST_MEDIUM;
-                /* Add arousal-bias sub-trait if arousal is consistently high */
-                if (arousal >= 0.70f) {
-                    bool found_arousal = FALSE;
-                    for (j = 0; j < ai->mplp_count; j++) {
-                        if (ai->mplp[j].anchor_agent_id == mem->entity_id &&
-                            ai->mplp[j].agent_type == mem->entity_type &&
-                            ai->mplp[j].trait_type == MPLP_TRAIT_AROUSAL_BIAS) {
-                            ai->mplp[j].magnitude += 0.05f * S;
-                            if (ai->mplp[j].magnitude > 1.0f)
-                                ai->mplp[j].magnitude = 1.0f;
-                            ai->mplp[j].last_updated = now;
-                            found_arousal = TRUE;
-                            break;
-                        }
-                    }
-                    if (!found_arousal && ai->mplp_count < MPLP_MAX_PER_MOB) {
-                        if (mplp_grow(mob)) {
-                            struct mplp_trait *ab = &ai->mplp[ai->mplp_count];
-                            memset(ab, 0, sizeof(struct mplp_trait));
-                            ab->anchor_agent_id = mem->entity_id;
-                            ab->agent_type = mem->entity_type;
-                            ab->trait_type = MPLP_TRAIT_AROUSAL_BIAS;
-                            ab->magnitude = 0.10f * S;
-                            ab->valence = valence;
-                            ab->rehearsal_count = rehearsal;
-                            ab->persistence = MALP_PERSIST_LOW;
-                            ab->last_updated = now;
-                            ai->mplp_count++;
-                        }
-                    }
-                }
-            }
-        }
+        CONSOLIDATE_SLOT(&ai->memories[i]);
     }
+
+    /* Process active memory buffer (actions performed by this mob) */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        CONSOLIDATE_SLOT(&ai->active_memories[i]);
+    }
+
+#undef CONSOLIDATE_SLOT
 
     /* Prune to stay within limit */
     malp_prune(mob);
@@ -567,12 +586,16 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
     float cue_score = best->intensity; /* simplified: use intensity as P_ret proxy */
     float P_ret = 1.0f / (1.0f + expf(-MALP_PRET_K * (cue_score - 0.5f)));
 
-    /* Open reconsolidation window if P_ret >= threshold */
-    if (P_ret >= MALP_THETA_REACT && best->recon_ticks_left <= 0) {
+    /* Open or extend the reconsolidation window when P_ret >= threshold.
+     * If the window is already open but smaller than the configured duration
+     * (e.g., from a previous retrieval), reset it to the full duration so
+     * that repeated, qualifying retrievals keep the entry mutable. */
+    if (P_ret >= MALP_THETA_REACT) {
         int window = CONFIG_MALP_RECON_WINDOW_TICKS;
         if (window < 1)
             window = 60;
-        best->recon_ticks_left = window;
+        if (best->recon_ticks_left <= 0 || best->recon_ticks_left < window)
+            best->recon_ticks_left = window;
         best->last_retrieved = time(NULL);
         best->rehearsal++;
     }
