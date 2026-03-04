@@ -17,6 +17,7 @@
 #include "oasis.h"
 #include "improved-edit.h"
 #include "modify.h"
+#include "malp.h"
 
 /* local scope functions, not used externally */
 static void cedit_disp_menu(struct descriptor_data *d);
@@ -34,6 +35,7 @@ static void cedit_disp_bigfive_conscientiousness_submenu(struct descriptor_data 
 static void cedit_disp_bigfive_ocean_ae_submenu(struct descriptor_data *d);
 static void cedit_disp_bigfive_ocean_o_submenu(struct descriptor_data *d);
 static void cedit_disp_sec_core_submenu(struct descriptor_data *d);
+static void cedit_disp_malp_submenu(struct descriptor_data *d);
 static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
@@ -318,6 +320,15 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->emotion_config.sec_emotion_alpha = CONFIG_SEC_EMOTION_ALPHA;
     OLC_CONFIG(d)->emotion_config.sec_wta_threshold = CONFIG_SEC_WTA_THRESHOLD;
 
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    OLC_CONFIG(d)->emotion_config.malp_theta_cons = CONFIG_MALP_THETA_CONS;
+    OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks = CONFIG_MALP_RECON_WINDOW_TICKS;
+    OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold = CONFIG_MALP_REHEARSAL_THRESHOLD;
+    OLC_CONFIG(d)->emotion_config.malp_limit_per_mob = CONFIG_MALP_LIMIT_PER_MOB;
+    OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std = CONFIG_MALP_DECAY_HALFLIFE_STD;
+    OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major = CONFIG_MALP_DECAY_HALFLIFE_MAJOR;
+    OLC_CONFIG(d)->emotion_config.mplp_decay_halflife = CONFIG_MPLP_DECAY_HALFLIFE;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -592,6 +603,15 @@ static void cedit_save_internally(struct descriptor_data *d)
     /* SEC Core tuning parameters */
     CONFIG_SEC_EMOTION_ALPHA = OLC_CONFIG(d)->emotion_config.sec_emotion_alpha;
     CONFIG_SEC_WTA_THRESHOLD = OLC_CONFIG(d)->emotion_config.sec_wta_threshold;
+
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    CONFIG_MALP_THETA_CONS = OLC_CONFIG(d)->emotion_config.malp_theta_cons;
+    CONFIG_MALP_RECON_WINDOW_TICKS = OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks;
+    CONFIG_MALP_REHEARSAL_THRESHOLD = OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold;
+    CONFIG_MALP_LIMIT_PER_MOB = OLC_CONFIG(d)->emotion_config.malp_limit_per_mob;
+    CONFIG_MALP_DECAY_HALFLIFE_STD = OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std;
+    CONFIG_MALP_DECAY_HALFLIFE_MAJOR = OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major;
+    CONFIG_MPLP_DECAY_HALFLIFE = OLC_CONFIG(d)->emotion_config.mplp_decay_halflife;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -1306,6 +1326,17 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "sec_emotion_alpha = %d\n", CONFIG_SEC_EMOTION_ALPHA);
     fprintf(fl, "sec_wta_threshold = %d\n\n", CONFIG_SEC_WTA_THRESHOLD);
 
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    fprintf(fl, "* MALP/MPLP Long-Term Emotional Memory (RFC-1002)\n");
+    fprintf(fl, "* malp_theta_cons: consolidation threshold *100 (default 65=0.65)\n");
+    fprintf(fl, "malp_theta_cons = %d\n", CONFIG_MALP_THETA_CONS);
+    fprintf(fl, "malp_recon_window_ticks = %d\n", CONFIG_MALP_RECON_WINDOW_TICKS);
+    fprintf(fl, "malp_rehearsal_threshold = %d\n", CONFIG_MALP_REHEARSAL_THRESHOLD);
+    fprintf(fl, "malp_limit_per_mob = %d\n", CONFIG_MALP_LIMIT_PER_MOB);
+    fprintf(fl, "malp_decay_halflife_std = %d\n", CONFIG_MALP_DECAY_HALFLIFE_STD);
+    fprintf(fl, "malp_decay_halflife_major = %d\n", CONFIG_MALP_DECAY_HALFLIFE_MAJOR);
+    fprintf(fl, "mplp_decay_halflife = %d\n\n", CONFIG_MPLP_DECAY_HALFLIFE);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1604,11 +1635,12 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sJ%s) Big Five (OCEAN) - A/E SEC Modulation Coefficients (k1-k4)\r\n"
                     "%sK%s) Big Five (OCEAN) - Openness (O) Shadow Timeline Parameters\r\n"
                     "%sL%s) SEC Core - Alpha Smoothing & Winner-Takes-All Threshold\r\n"
+                    "%sM%s) MALP/MPLP - Long-Term Emotional Memory (RFC-1002)\r\n"
                     "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
                     grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm,
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
 }
@@ -1845,6 +1877,61 @@ static void cedit_disp_sec_core_submenu(struct descriptor_data *d)
                     OLC_CONFIG(d)->emotion_config.sec_wta_threshold, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_SEC_CORE_SUBMENU;
+}
+
+/* Display MALP/MPLP long-term memory submenu (RFC-1002) */
+static void cedit_disp_malp_submenu(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(
+        d,
+        "MALP/MPLP – Long-Term Emotional Memory Configuration (RFC-1002)\r\n"
+        "---\r\n"
+        "MALP = Memória Ativa de Longo Prazo (explicit episodic/semantic memory).\r\n"
+        "MPLP = Memória Passiva de Longo Prazo (implicit approach/avoid trait).\r\n"
+        "\r\n"
+        "%s1%s) Consolidation Threshold θ_cons (*100): %s%d%s (default: 65=0.65)\r\n"
+        "   Minimum salience S to consolidate an episodic slot into MALP.\r\n"
+        "   Range: 30-95. High-C mobs add +0.10 automatically.\r\n"
+        "\r\n"
+        "%s2%s) Reconsolidation Window (ticks):        %s%d%s (default: 60)\r\n"
+        "   Ticks the MALP entry is mutable after retrieval (≈1 game-minute).\r\n"
+        "   Range: 1-600.\r\n"
+        "\r\n"
+        "%s3%s) MPLP Rehearsal Threshold:              %s%d%s (default: 3)\r\n"
+        "   Co-occurrences with consistent valence before MPLP trait forms.\r\n"
+        "   Range: 1-20.\r\n"
+        "\r\n"
+        "%s4%s) Max MALP Entries per Mob:              %s%d%s (default: 200)\r\n"
+        "   Least-salient entries pruned when limit is reached.\r\n"
+        "   Range: 10-500.\r\n"
+        "\r\n"
+        "%s5%s) MALP Standard Half-Life (hours):       %s%d%s (default: 24)\r\n"
+        "   Power-law intensity half-life for normal MALP entries.\r\n"
+        "   Range: 1-720.\r\n"
+        "\r\n"
+        "%s6%s) MALP Major-Event Half-Life (hours):    %s%d%s (default: 72)\r\n"
+        "   Power-law intensity half-life for traumatic/major MALP entries.\r\n"
+        "   Range: 1-2160.\r\n"
+        "\r\n"
+        "%s7%s) MPLP Trait Half-Life (hours):          %s%d%s (default: 168 = 7 days)\r\n"
+        "   Power-law magnitude half-life for MPLP implicit traits.\r\n"
+        "   High-N mobs: negative traits decay slower (rumination).\r\n"
+        "   Range: 1-8760.\r\n"
+        "\r\n"
+        "%sQ%s) Return to Emotion Menu\r\n"
+        "Enter your choice : ",
+        grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.malp_theta_cons, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.malp_limit_per_mob, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major, nrm, grn, nrm, cyn,
+        OLC_CONFIG(d)->emotion_config.mplp_decay_halflife, nrm, grn, nrm);
+
+    OLC_MODE(d) = CEDIT_MALP_SUBMENU;
 }
 
 /* Load emotion configuration preset */
@@ -3531,6 +3618,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     cedit_disp_sec_core_submenu(d);
                     return;
 
+                case 'm':
+                case 'M':
+                    cedit_disp_malp_submenu(d);
+                    return;
+
                 case 'p':
                 case 'P':
                     write_to_output(d,
@@ -4180,6 +4272,53 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 default:
                     write_to_output(d, "\r\nInvalid choice!\r\n");
             }
+            return;
+
+        case CEDIT_MALP_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d,
+                                    "\r\nEnter malp_theta_cons *100 (30-95, default 65 = 0.65) : ");
+                    OLC_MODE(d) = CEDIT_MALP_THETA_CONS;
+                    return;
+                case '2':
+                    write_to_output(d,
+                                    "\r\nEnter malp_recon_window_ticks (1-600, default 60) : ");
+                    OLC_MODE(d) = CEDIT_MALP_RECON_WINDOW_TICKS;
+                    return;
+                case '3':
+                    write_to_output(d,
+                                    "\r\nEnter malp_rehearsal_threshold (1-20, default 3) : ");
+                    OLC_MODE(d) = CEDIT_MALP_REHEARSAL_THRESHOLD;
+                    return;
+                case '4':
+                    write_to_output(d,
+                                    "\r\nEnter malp_limit_per_mob (10-500, default 200) : ");
+                    OLC_MODE(d) = CEDIT_MALP_LIMIT_PER_MOB;
+                    return;
+                case '5':
+                    write_to_output(d,
+                                    "\r\nEnter malp_decay_halflife_std in hours (1-720, default 24) : ");
+                    OLC_MODE(d) = CEDIT_MALP_DECAY_HALFLIFE_STD;
+                    return;
+                case '6':
+                    write_to_output(d,
+                                    "\r\nEnter malp_decay_halflife_major in hours (1-2160, default 72) : ");
+                    OLC_MODE(d) = CEDIT_MALP_DECAY_HALFLIFE_MAJOR;
+                    return;
+                case '7':
+                    write_to_output(d,
+                                    "\r\nEnter mplp_decay_halflife in hours (1-8760, default 168) : ");
+                    OLC_MODE(d) = CEDIT_MPLP_DECAY_HALFLIFE;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            cedit_disp_malp_submenu(d);
             return;
 
         case CEDIT_LEVEL_CAN_SHOUT:
@@ -5343,6 +5482,42 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_SEC_CORE_WTA_THRESHOLD:
             OLC_CONFIG(d)->emotion_config.sec_wta_threshold = LIMIT(atoi(arg), 30, 90);
             cedit_disp_sec_core_submenu(d);
+            break;
+
+        /* MALP/MPLP long-term memory parameters (RFC-1002) */
+        case CEDIT_MALP_THETA_CONS:
+            OLC_CONFIG(d)->emotion_config.malp_theta_cons = LIMIT(atoi(arg), 30, 95);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MALP_RECON_WINDOW_TICKS:
+            OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks = LIMIT(atoi(arg), 1, 600);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MALP_REHEARSAL_THRESHOLD:
+            OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold = LIMIT(atoi(arg), 1, 20);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MALP_LIMIT_PER_MOB:
+            OLC_CONFIG(d)->emotion_config.malp_limit_per_mob = LIMIT(atoi(arg), 10, 500);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MALP_DECAY_HALFLIFE_STD:
+            OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std = LIMIT(atoi(arg), 1, 720);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MALP_DECAY_HALFLIFE_MAJOR:
+            OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major = LIMIT(atoi(arg), 1, 2160);
+            cedit_disp_malp_submenu(d);
+            break;
+
+        case CEDIT_MPLP_DECAY_HALFLIFE:
+            OLC_CONFIG(d)->emotion_config.mplp_decay_halflife = LIMIT(atoi(arg), 1, 8760);
+            cedit_disp_malp_submenu(d);
             break;
 
         default: /* We should never get here, but just in

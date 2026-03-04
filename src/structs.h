@@ -1289,6 +1289,58 @@ struct sec_baseline {
     float sadness_base;   /**< Resting sadness level ∈ [0.0, 1.0] */
 };
 
+/* ── MALP/MPLP persistence levels (RFC-1002) ─────────────────────────────── */
+#define MALP_PERSIST_LOW    0 /**< Low persistence: standard decay rate */
+#define MALP_PERSIST_MEDIUM 1 /**< Medium persistence: moderate decay rate */
+#define MALP_PERSIST_HIGH   2 /**< High persistence: slow decay (traumatic / major events) */
+
+/* MPLP trait types (implicit behavioural modifiers) */
+#define MPLP_TRAIT_AVOIDANCE   0 /**< Approach-avoidance: avoid this cue/agent */
+#define MPLP_TRAIT_APPROACH    1 /**< Approach-avoidance: approach this cue/agent */
+#define MPLP_TRAIT_AROUSAL_BIAS 2 /**< Increase arousal when cue/agent is present */
+
+/**
+ * MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002)
+ *
+ * Explicit episodic/semantic memory entry consolidated from high-salience
+ * episodes (S >= θ_cons).  Accessible for dialogue and social reasoning.
+ * Runtime-only (not saved across reboots), same as episodic buffer.
+ */
+struct malp_entry {
+    long   agent_id;          /**< Entity ID (GET_IDNUM for players, char_script_id for mobs; 0=unused) */
+    int    agent_type;        /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int    interaction_type;  /**< INTERACT_* category at consolidation time */
+    int    major_event;       /**< 1 = major/traumatic event; drives HIGH persistence */
+    time_t timestamp;         /**< Wall-clock creation time */
+    time_t last_retrieved;    /**< Last retrieval (reconsolidation check); 0 = never */
+    float  valence;           /**< Emotional valence −1..+1 (negative = aversive) */
+    float  arousal;           /**< Arousal at encoding 0..1 */
+    float  salience;          /**< Computed salience S ∈ [0,1] at consolidation */
+    float  intensity;         /**< Current intensity (power-law decayed from salience) */
+    int    rehearsal;         /**< Re-activation / co-occurrence count */
+    int    recon_ticks_left;  /**< Reconsolidation window remaining in ticks (0 = closed) */
+    int    persistence;       /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
+};
+
+/**
+ * MPLP – Memória Passiva de Longo Prazo (Passive Long-Term Memory, RFC-1002)
+ *
+ * Implicit trait modifier formed by Hebbian co-occurrence: when the same
+ * agent appears rehearsal_threshold times with consistent valence, an MPLP
+ * trait is created or incremented.  Never narrated directly; biases
+ * approach/avoidance decisions and arousal.
+ */
+struct mplp_trait {
+    long   anchor_agent_id;  /**< Anchor agent (0 = context-global) */
+    int    agent_type;       /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int    trait_type;       /**< MPLP_TRAIT_AVOIDANCE / APPROACH / AROUSAL_BIAS */
+    float  magnitude;        /**< Trait strength 0..1 */
+    float  valence;          /**< Running-average valence −1..+1 */
+    int    rehearsal_count;  /**< Co-occurrence count (Hebbian accumulator) */
+    int    persistence;      /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
+    time_t last_updated;     /**< Last update time */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics;       /* Contém todos os genes. */
     struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
@@ -1419,6 +1471,12 @@ struct mob_ai_data {
     /* SEC – Sistema de Emoções Concorrentes */
     struct sec_state sec;         /* Current SEC emotional state (written only by sec.c) */
     struct sec_baseline sec_base; /* Personality baseline for passive decay */
+
+    /* MALP/MPLP – Long-term emotional memory (RFC-1002) */
+    struct malp_entry *malp;  /**< Dynamic array of explicit long-term memory entries */
+    int    malp_count;        /**< Number of active MALP entries */
+    struct mplp_trait *mplp;  /**< Dynamic array of implicit trait entries */
+    int    mplp_count;        /**< Number of active MPLP traits */
 };
 
 /**
@@ -2204,6 +2262,15 @@ struct emotion_config_data {
     /* SEC Core tuning parameters */
     int sec_emotion_alpha; /**< Base α-smoothing rate * 100 (default: 40 = 0.40) */
     int sec_wta_threshold; /**< Winner-Takes-All ratio * 100 (default: 60 = 0.60) */
+
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    int malp_theta_cons;             /**< Consolidation threshold θ_cons * 100 (default: 65 = 0.65) */
+    int malp_recon_window_ticks;     /**< Reconsolidation window in ticks (default: 60) */
+    int malp_rehearsal_threshold;    /**< Rehearsal count for MPLP trait formation (default: 3) */
+    int malp_limit_per_mob;          /**< Max MALP entries per mob (default: 200) */
+    int malp_decay_halflife_std;     /**< Standard MALP intensity half-life in hours (default: 24) */
+    int malp_decay_halflife_major;   /**< Major-event MALP half-life in hours (default: 72) */
+    int mplp_decay_halflife;         /**< MPLP trait half-life in hours (default: 168 = 7 days) */
 };
 
 /** Experimental Features configuration. */

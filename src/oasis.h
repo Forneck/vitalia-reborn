@@ -582,6 +582,16 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_SEC_CORE_EMOTION_ALPHA 198
 #define CEDIT_SEC_CORE_WTA_THRESHOLD 199
 
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+#define CEDIT_MALP_SUBMENU               211
+#define CEDIT_MALP_THETA_CONS            212
+#define CEDIT_MALP_RECON_WINDOW_TICKS    213
+#define CEDIT_MALP_REHEARSAL_THRESHOLD   214
+#define CEDIT_MALP_LIMIT_PER_MOB         215
+#define CEDIT_MALP_DECAY_HALFLIFE_STD    216
+#define CEDIT_MALP_DECAY_HALFLIFE_MAJOR  217
+#define CEDIT_MPLP_DECAY_HALFLIFE        218
+
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0
 #define HEDIT_CONFIRM_EDIT 1

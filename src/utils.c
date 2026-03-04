@@ -33,6 +33,7 @@
 #include "genolc.h"
 #include "dg_scripts.h"
 #include "sec.h"
+#include "malp.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -6975,6 +6976,9 @@ void update_mob_emotion_passive(struct char_data *mob)
 
     /* Exponential memory trace decay — prevents stale memories from saturation */
     decay_emotion_memories(mob);
+
+    /* MALP/MPLP consolidation: evaluate episodic slots, build long-term memory (RFC-1002) */
+    consolidator_tick(mob);
 
     /* Emotional self-regulation behaviors (justify / deflect / apologize / reframe) */
     perform_emotional_regulation(mob);
