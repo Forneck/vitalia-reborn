@@ -1593,4 +1593,20 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 /** Maximum per-call emotion delta (rate limiting): clamps adjust_emotion() change (default: 20) */
 #define CONFIG_EMOTION_MAX_DELTA config_info.emotion_config.emotion_max_delta
 
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+/** Consolidation threshold θ_cons * 100 (default: 65 = 0.65) */
+#define CONFIG_MALP_THETA_CONS            config_info.emotion_config.malp_theta_cons
+/** Reconsolidation window in ticks (default: 60) */
+#define CONFIG_MALP_RECON_WINDOW_TICKS    config_info.emotion_config.malp_recon_window_ticks
+/** Rehearsal count threshold for MPLP trait formation (default: 3) */
+#define CONFIG_MALP_REHEARSAL_THRESHOLD   config_info.emotion_config.malp_rehearsal_threshold
+/** Maximum MALP entries per mob (default: 200) */
+#define CONFIG_MALP_LIMIT_PER_MOB         config_info.emotion_config.malp_limit_per_mob
+/** Standard MALP intensity half-life in hours (default: 24) */
+#define CONFIG_MALP_DECAY_HALFLIFE_STD    config_info.emotion_config.malp_decay_halflife_std
+/** Major-event MALP intensity half-life in hours (default: 72) */
+#define CONFIG_MALP_DECAY_HALFLIFE_MAJOR  config_info.emotion_config.malp_decay_halflife_major
+/** MPLP trait half-life in hours (default: 168 = 7 days) */
+#define CONFIG_MPLP_DECAY_HALFLIFE        config_info.emotion_config.mplp_decay_halflife
+
 #endif /* _UTILS_H_ */

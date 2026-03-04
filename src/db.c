@@ -39,6 +39,7 @@
 #include "mud_event.h"
 #include "msgedit.h"
 #include "screen.h"
+#include "malp.h"
 #include <sys/stat.h>
 
 #include "spedit.h"
@@ -3950,6 +3951,8 @@ void free_char(struct char_data *ch)
         clear_wishlist(ch);
         /* Clear temporary quest master data */
         clear_temp_questmaster(ch);
+        /* Free MALP/MPLP long-term memory (RFC-1002) */
+        malp_free(ch);
         free(ch->ai_data);
     }
 
@@ -4777,6 +4780,15 @@ static void load_default_config(void)
     /* SEC Core tuning parameters */
     CONFIG_SEC_EMOTION_ALPHA = sec_emotion_alpha;
     CONFIG_SEC_WTA_THRESHOLD = sec_wta_threshold;
+
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    CONFIG_MALP_THETA_CONS = malp_theta_cons;
+    CONFIG_MALP_RECON_WINDOW_TICKS = malp_recon_window_ticks;
+    CONFIG_MALP_REHEARSAL_THRESHOLD = malp_rehearsal_threshold;
+    CONFIG_MALP_LIMIT_PER_MOB = malp_limit_per_mob;
+    CONFIG_MALP_DECAY_HALFLIFE_STD = malp_decay_halflife_std;
+    CONFIG_MALP_DECAY_HALFLIFE_MAJOR = malp_decay_halflife_major;
+    CONFIG_MPLP_DECAY_HALFLIFE = mplp_decay_halflife;
 }
 
 void load_config(void)
@@ -5200,6 +5212,21 @@ void load_config(void)
                     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = num;
                 else if (!str_cmp(tag, "mob_emotion_update_chance"))
                     CONFIG_MOB_EMOTION_UPDATE_CHANCE = num;
+                /* MALP/MPLP long-term memory parameters (RFC-1002) */
+                else if (!str_cmp(tag, "malp_theta_cons"))
+                    CONFIG_MALP_THETA_CONS = LIMIT(num, 30, 95);
+                else if (!str_cmp(tag, "malp_recon_window_ticks"))
+                    CONFIG_MALP_RECON_WINDOW_TICKS = LIMIT(num, 1, 600);
+                else if (!str_cmp(tag, "malp_rehearsal_threshold"))
+                    CONFIG_MALP_REHEARSAL_THRESHOLD = LIMIT(num, 1, 20);
+                else if (!str_cmp(tag, "malp_limit_per_mob"))
+                    CONFIG_MALP_LIMIT_PER_MOB = LIMIT(num, 10, 500);
+                else if (!str_cmp(tag, "malp_decay_halflife_std"))
+                    CONFIG_MALP_DECAY_HALFLIFE_STD = LIMIT(num, 1, 720);
+                else if (!str_cmp(tag, "malp_decay_halflife_major"))
+                    CONFIG_MALP_DECAY_HALFLIFE_MAJOR = LIMIT(num, 1, 2160);
+                else if (!str_cmp(tag, "mplp_decay_halflife"))
+                    CONFIG_MPLP_DECAY_HALFLIFE = LIMIT(num, 1, 8760);
 
                 break;
 

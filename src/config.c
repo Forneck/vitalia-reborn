@@ -409,3 +409,12 @@ int sec_o_threat_bias = 40;         /* 0.40 - O threat-amplification reduction (
 /* SEC Core tuning parameters */
 int sec_emotion_alpha = 40; /* 0.40 - base alpha-smoothing rate (*100) */
 int sec_wta_threshold = 60; /* 0.60 - Winner-Takes-All ratio (*100) */
+
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+int malp_theta_cons = 65;            /* 0.65 - consolidation threshold (*100) */
+int malp_recon_window_ticks = 60;    /* reconsolidation window in ticks (~1 game-minute) */
+int malp_rehearsal_threshold = 3;    /* co-occurrences needed for MPLP trait formation */
+int malp_limit_per_mob = 200;        /* max MALP entries per mob */
+int malp_decay_halflife_std = 24;    /* standard MALP half-life in hours */
+int malp_decay_halflife_major = 72;  /* major-event MALP half-life in hours */
+int mplp_decay_halflife = 168;       /* MPLP trait half-life in hours (7 days) */

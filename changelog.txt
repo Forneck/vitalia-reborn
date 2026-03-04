@@ -2,6 +2,109 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 04 2026] - Vitalia Reborn Development
+  feat: MALP/MPLP – Memória Ativa/Passiva de Longo Prazo – RFC-1002 Phase A/B/C (src/malp.c, src/malp.h, src/utils.c, src/structs.h, src/db.c, src/cedit.c, src/config.c, src/config.h, src/utils.h)
+    Implements Active Long-Term Memory (MALP) and Passive/Implicit Long-Term Memory (MPLP)
+    per RFC-1002, covering Phases A (storage + API), B (consolidation + retrieval), and
+    C (reconsolidation + wiring). Phase D (observability/metrics) and advanced features
+    (narrative tags, persistent storage, admin utilities) are deferred to future sprints.
+
+    RFC-1002 compliance status
+    ──────────────────────────
+    FULLY IMPLEMENTED (§5, §7.1–7.6, §8, §9, §11, §12 Phases A–C):
+
+    1. Salience formula (§7.1) — exact RFC weights:
+         S = normalize(0.50*arousal + 0.25*log(1+rehearsal) + 0.25*social_weight)
+             × pow(1 + age_hours, -0.40)
+       Constants: MALP_W_AROUSAL=0.50, MALP_W_REHEARSAL=0.25, MALP_W_SOCIAL=0.25,
+       MALP_AGE_DECAY_EXPONENT=0.40, MALP_SALIENCE_NORM=1.35.
+
+    2. Consolidation criterion (§7.2) — consolidator_tick() evaluates both passive
+       and active episodic buffers. Consolidates when S >= θ_cons (default 0.65,
+       cedit-configurable via CONFIG_MALP_THETA_CONS). High-C mobs get an effective
+       threshold boost: θ_eff = θ_cons + 0.10 × C_final (MALP_C_THETA_BOOST).
+       Events with arousal >= 0.85 are set to HIGH persistence (MALP_HIGH_PERSIST_AROUSAL).
+
+    3. Hebbian trait generation (§7.3) — MPLP trait created/updated when rehearsal
+       count >= CONFIG_MALP_REHEARSAL_THRESHOLD (default 3). Trait magnitude grows
+       proportionally to averaged salience. High Neuroticism extends negative-trait
+       half-life via MALP_N_RUMINATION_SCALE (N=1 → half-life doubles), modelling
+       rumination. MPLP hard cap: MPLP_MAX_PER_MOB=50 traits.
+
+    4. Retrieval probability (§7.4) — get_malp_by_agent() uses a 3-factor weighted
+       cue score replacing the prior single-factor intensity proxy:
+         cue_score = 0.60 * intensity      (MALP_CUE_WEIGHT_INTENSITY)
+                   + 0.25 * arousal_match  (MALP_CUE_WEIGHT_AROUSAL — Bower 1981
+                                            state-dependent recall)
+                   + 0.15 * recency        (MALP_CUE_WEIGHT_RECENCY — within-hour
+                                            accessibility bonus)
+       P_ret = sigmoid(MALP_PRET_K × (cue_score − 0.50)).
+       Clock-skew guard: recency bonus only when hours_since >= 0.0.
+
+    5. Reconsolidation (§7.5) — get_malp_by_agent() opens AND extends the
+       reconsolidation window on every qualifying retrieval (P_ret >= MALP_THETA_REACT):
+       window = max(current_ticks, CONFIG_MALP_RECON_WINDOW_TICKS).
+       retrieve_and_reconsolidate() applies bounded λ update:
+         new_valence = (1 − λ) × old_valence + λ × delta
+       where λ = MALP_RECON_LAMBDA_BASE × salience × rehearsal_factor,
+       clamped to MALP_RECON_MAX_DELTA=0.25 per window to prevent instant inversions.
+
+    6. Decay (§7.6):
+       MALP: intensity = salience × powerlaw(timestamp, hl)  — decay anchored to
+             encoded strength (salience), not to 1.0, so newly consolidated entries
+             do not jump to full intensity.
+       MPLP: magnitude = base_magnitude × powerlaw(last_updated, hl) — base_magnitude
+             is the encoded strength at last Hebbian reinforcement, mirroring the
+             salience/intensity split in MALP. Fixes compounding-decay bug where
+             repeated tick multiplication drove traits to ~0 within 48 h even with a
+             168 h half-life (should retain ~47%). Half-lives configurable via cedit:
+             CONFIG_MALP_DECAY_HALF_LIFE_STD / CONFIG_MALP_DECAY_HALF_LIFE_MAJOR.
+       portability: powerlaw_intensity() uses logf(2.0f) instead of M_LN2 (MSVC safe).
+
+    7. SEC/OCEAN/appraisal integration (§8) — all MALP/MPLP emotion deltas go through
+       adjust_emotion() (no pipeline bypass). MALP-driven fear/anger (negative) and
+       happiness/excitement (positive) are capped at MALP_EMOTION_DELTA_MAX=8 /
+       MALP_EMOTION_DELTA_MIN=2; MPLP approach-avoidance capped at MPLP_EMOTION_DELTA_MAX=5.
+
+    8. Public API (§9):
+         consolidator_tick(mob)                         — called every passive tick
+         get_malp_by_agent(mob, agent_id, agent_type)   — retrieval + recon window
+         get_mplp_approach_modifier(mob, id, type)      — approach/avoidance float
+         get_mplp_arousal_bias(mob, id, type)           — arousal bias float
+         retrieve_and_reconsolidate(mob, id, type,      — bounded valence update
+                                     delta_valence, new_salience)
+         apply_malp_emotion_effects(mob, actor, val)    — single wiring call site
+         malp_free(mob)                                 — free stores on char free
+
+    9. Interaction valence wiring — all 14 update_mob_emotion_*() call sites now pass
+       psychologically-grounded valences to apply_malp_emotion_effects(), including
+       reconsolidation when the MALP entry is in its labile window:
+         gift received       +0.4  (Gouldner 1960 reciprocity)
+         ally died           −0.7  (Bowlby 1969 attachment)
+         assisted in combat  +0.5  (Cohen & Wills 1985 social support)
+         robbed              −0.3..−0.7 scaled (Fehr & Gächter 2002 equity)
+         harmed by spell     −0.6  (Lazarus 1991 threat appraisal)
+         blessed by spell    +0.5  (Lazarus 1991 benefit appraisal)
+         witnessed death     −0.5/−0.3/+0.2 by relationship (TMT; van Dijk 2002)
+         quest completed     +0.6  (Emmons & McCullough 2003 gratitude)
+         quest failed        −0.5  (Bell 1985 disappointment)
+         quest betrayal      −0.9  (Freyd 1994 betrayal trauma)
+         fair trade          +0.3  (Adams 1965 equity theory)
+         received valuable   +0.4  (goal-attainment reward)
+         ally fled           −0.5  (Fitness 2001 betrayal anger)
+         witnessed off. magic −0.3 (Lazarus 1991 indirect threat)
+
+    10. CEDIT configuration keys (all in game.cfg, editable at runtime):
+          malp_theta_cons, malp_recon_window_ticks, malp_rehearsal_threshold,
+          malp_decay_half_life_std, malp_decay_half_life_major.
+
+    DEFERRED to future sprints (Phase D and beyond):
+    - Persistent storage of MALP/MPLP in pfile/worldfile/db (§5, §12 Phase D).
+    - Narrative/context/sensory tags per §6 JSON schema (simplified to agent_id+type).
+    - MALP per-mob cap enforcement at malp_limit_per_mob=200 (§11).
+    - Admin utilities forget_malp() / anonymize_malp() (§15).
+    - Observability metrics and dashboard (§10.3, §16).
+
 [Mar 03 2026] - Vitalia Reborn Development
   fix: Add Envy to Emotion Decay System (src/structs.h, src/utils.h, src/utils.c, src/db.c, src/cedit.c, src/oasis.h)
     Envy was missing from the emotion decay loop, causing it to persist indefinitely.

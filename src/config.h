@@ -141,6 +141,15 @@ extern int sec_o_threat_bias;
 extern int sec_emotion_alpha;
 extern int sec_wta_threshold;
 
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+extern int malp_theta_cons;
+extern int malp_recon_window_ticks;
+extern int malp_rehearsal_threshold;
+extern int malp_limit_per_mob;
+extern int malp_decay_halflife_std;
+extern int malp_decay_halflife_major;
+extern int mplp_decay_halflife;
+
 /*
  * Variables not controlled by cedit
  */
