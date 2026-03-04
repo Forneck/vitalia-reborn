@@ -6513,6 +6513,10 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
     /* Add to emotion memory - this is a MAJOR event */
     if (dead_ally) {
         add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1, NULL);
+        /* MALP/MPLP: death of an ally is among the most aversive experiences
+         * (Bowlby 1969, attachment and loss; grief is a high-arousal negative
+         * state; valence −0.7). */
+        apply_malp_emotion_effects(mob, dead_ally, -0.7f);
     }
 }
 
@@ -6539,6 +6543,9 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
     /* Add to emotion memory */
     if (giver) {
         add_emotion_memory(mob, giver, INTERACT_RECEIVED_ITEM, 0, NULL);
+        /* MALP/MPLP: receiving a gift creates moderate positive affect (Gouldner 1960,
+         * reciprocity norm; Mauss 1925, gift exchange theory; valence +0.4). */
+        apply_malp_emotion_effects(mob, giver, +0.4f);
         if (IS_NPC(giver) && giver->ai_data)
             add_active_emotion_memory(giver, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
@@ -6616,6 +6623,15 @@ void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_dat
     /* Add to emotion memory - unfair trade is a negative event */
     if (keeper) {
         add_emotion_memory(buyer, keeper, INTERACT_RECEIVED_ITEM, 0, NULL);
+        /* MALP/MPLP: fairness violations in economic exchange create strong negative
+         * affect proportional to the perceived injustice (Fehr & Gächter 2002,
+         * ultimatum game; Adams 1965, equity theory).  Valence scales linearly from
+         * −0.3 (just over the 30% threshold) to −0.7 (extreme overcharge/underpay). */
+        float unfairness = (price_ratio >= 1.0f) ? (price_ratio - 1.0f) : (1.0f / price_ratio - 1.0f);
+        if (unfairness > 1.0f)
+            unfairness = 1.0f;
+        float rob_valence = -(0.3f + 0.4f * unfairness);
+        apply_malp_emotion_effects(buyer, keeper, rob_valence);
         if (IS_NPC(keeper) && keeper->ai_data)
             add_active_emotion_memory(keeper, buyer, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
@@ -6695,6 +6711,10 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
     /* Add to emotion memory */
     if (assistant) {
         add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0, NULL);
+        /* MALP/MPLP: receiving combat assistance under threat is strongly positive
+         * (Cohen & Wills 1985, social support buffer theory; instrumental support
+         * in high-stress conditions reduces distress; valence +0.5). */
+        apply_malp_emotion_effects(mob, assistant, +0.5f);
         if (IS_NPC(assistant) && assistant->ai_data) {
             add_active_emotion_memory(assistant, mob, INTERACT_ASSISTED, 0, NULL);
             /* Bidirectional feedback: assistant gains loyalty/compassion from supporting others */
@@ -10574,9 +10594,17 @@ void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data 
         adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(5, 10));
     }
 
-    /* Add to emotion memory if killer is known */
+    /* Add to emotion memory if killer is known.
+     * MALP/MPLP: valence of witnessed death varies with the mob's relationship
+     * to the victim (Terror Management Theory, Greenberg et al. 1986;
+     * Schadenfreude / counter-schadenfreude, van Dijk et al. 2002):
+     *   - Friendly victim → strong negative affect (grief, fear): −0.5
+     *   - Neutral/stranger victim → moderate negative (mortality salience): −0.3
+     *   - Enemy victim → mild positive (relief/catharsis, schadenfreude): +0.2 */
     if (killer && killer != mob) {
         add_emotion_memory(mob, killer, INTERACT_WITNESSED_DEATH, 1, NULL);
+        float death_valence = is_friendly ? -0.5f : (is_enemy ? +0.2f : -0.3f);
+        apply_malp_emotion_effects(mob, killer, death_valence);
     }
 }
 
@@ -10671,6 +10699,9 @@ void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data 
     /* Add to emotion memory */
     if (caster) {
         add_emotion_memory(mob, caster, INTERACT_ATTACKED, 0, NULL);
+        /* MALP/MPLP: being harmed by a spell is appraised as a deliberate attack
+         * (Lazarus 1991, threat appraisal; same valence as melee attack −0.6). */
+        apply_malp_emotion_effects(mob, caster, -0.6f);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_ATTACKED, 0, NULL);
     }
@@ -10699,6 +10730,9 @@ void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data
     /* Add to emotion memory */
     if (caster) {
         add_emotion_memory(mob, caster, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
+        /* MALP/MPLP: a beneficial spell is appraised similarly to being healed
+         * (Lazarus 1991, benefit appraisal; gratitude research; valence +0.5). */
+        apply_malp_emotion_effects(mob, caster, +0.5f);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
     }
@@ -10732,6 +10766,9 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
     /* Record in memory: witnessed caster use threatening magic */
     if (caster) {
         add_emotion_memory(mob, caster, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
+        /* MALP/MPLP: witnessing threatening magic from a distance is an indirect
+         * threat (Lazarus 1991); lower intensity than direct attack; valence −0.3. */
+        apply_malp_emotion_effects(mob, caster, -0.3f);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
     }
@@ -10954,6 +10991,10 @@ void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data 
 
     /* Add to emotion memory */
     add_emotion_memory(mob, player, INTERACT_QUEST_COMPLETE, 0, NULL);
+    /* MALP/MPLP: quest completion elicits gratitude and goal-attainment reward
+     * (Emmons & McCullough 2003, gratitude intervention research; Lazarus 1991,
+     * goal attainment → joy; valence +0.6). */
+    apply_malp_emotion_effects(mob, player, +0.6f);
 }
 
 /**
@@ -10977,6 +11018,10 @@ void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *pl
 
     /* Add to emotion memory */
     add_emotion_memory(mob, player, INTERACT_QUEST_FAIL, 0, NULL);
+    /* MALP/MPLP: quest failure triggers frustration and disappointment
+     * (Dollard et al. 1939, frustration–aggression hypothesis; Bell 1985,
+     * disappointment theory; valence −0.5). */
+    apply_malp_emotion_effects(mob, player, -0.5f);
 }
 
 /**
@@ -11005,6 +11050,10 @@ void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *
 
     /* Add to emotion memory - this is a MAJOR event */
     add_emotion_memory(mob, killer, INTERACT_BETRAYAL, 1, NULL);
+    /* MALP/MPLP: betrayal is among the most intensely negative social emotions
+     * (Freyd 1994, betrayal trauma theory; Fitness 2001, betrayal anger;
+     * moral outrage research, Rozin et al. 1999; valence −0.9). */
+    apply_malp_emotion_effects(mob, killer, -0.9f);
     if (IS_NPC(killer) && killer->ai_data)
         add_active_emotion_memory(killer, mob, INTERACT_BETRAYAL, 1, NULL);
 }
@@ -11029,6 +11078,9 @@ void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trad
 
     /* Record in memory: positive trading relationship with this entity */
     add_emotion_memory(mob, trader, INTERACT_RECEIVED_ITEM, 0, NULL);
+    /* MALP/MPLP: equitable exchange creates mild positive affect (Adams 1965,
+     * equity theory; distributive justice research; valence +0.3). */
+    apply_malp_emotion_effects(mob, trader, +0.3f);
     if (IS_NPC(trader) && trader->ai_data)
         add_active_emotion_memory(trader, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
@@ -11058,6 +11110,9 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
 
     /* Record in memory: received valuable goods from this entity */
     add_emotion_memory(mob, seller, INTERACT_RECEIVED_ITEM, 0, NULL);
+    /* MALP/MPLP: receiving high-value goods triggers goal-attainment reward
+     * (positive affect from acquisition; valence +0.4). */
+    apply_malp_emotion_effects(mob, seller, +0.4f);
     if (IS_NPC(seller) && seller->ai_data)
         add_active_emotion_memory(seller, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
@@ -11090,6 +11145,10 @@ void update_mob_emotion_ally_fled(struct char_data *mob, struct char_data *fled)
 
     /* Record passive memory: witnessed ally flee — major event */
     add_emotion_memory(mob, fled, INTERACT_ABANDON_ALLY, 1, NULL);
+    /* MALP/MPLP: witnessing an ally abandon the group triggers betrayal emotions
+     * and fear contagion (Keltner & Haidt 1999, social functions of emotion;
+     * Fitness 2001, betrayal anger; fear spreading in group contexts; valence −0.5). */
+    apply_malp_emotion_effects(mob, fled, -0.5f);
 }
 
 /**
