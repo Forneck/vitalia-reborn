@@ -10559,16 +10559,34 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * implicit trait that shapes the NPC's future reactions independently of who
      * performs the social.  Over repeated interactions the NPC can develop a
      * "flirtatious" personality (high EXHIBITION_RESPONSE) or a "prudish" one
-     * (high MODESTY_RESPONSE) — or the inverse of each. */
+     * (high MODESTY_RESPONSE) — or the inverse of each.
+     *
+     * Additionally, masculine-coded and feminine-coded socials reinforce gender-
+     * expression traits (MASCULINITY_RESPONSE, FEMININITY_RESPONSE), while
+     * gender-mixed expression reinforces ANDROGYNY_TOLERANCE and repeated
+     * cross-norm situations accumulate GENDER_NORM_SENSITIVITY. */
     {
         static const char *exhibition_socials[] = {"catwalk",      "sexy",  "seduce", "shakeass",   "twerk",
                                                    "dancesensual", "strut", "flirt",  "femininity", "masculinity",
                                                    "wink",         "lust",  NULL};
         static const char *explicit_socials[] = {"rub",    "grope", "fondle", "sex",      "french", "massage", "stroke",
                                                  "caress", "touch", "twerk",  "shakeass", "lust",   NULL};
+        /* Masculine-coded: strength, dominance, assertiveness, competitive displays */
+        static const char *masculine_socials[] = {"masculinity", "flex",    "taunt", "glare", "challenge",
+                                                  "imposing",    "sneer",   "strut", "smirk", "threaten",
+                                                  "scowl",       "posture", NULL};
+        /* Feminine-coded: grace, delicacy, nurturing, flirtatious refinement */
+        static const char *feminine_socials[] = {"femininity", "curtsy", "catwalk", "flirt", "wink",  "blow", "coy",
+                                                 "pout",       "giggle", "sigh",    "blush", "smile", NULL};
+        /* Androgynous: mix of both registers in a single social */
+        static const char *androgynous_socials[] = {"dancesensual", "tango", "waltz", "embrace",
+                                                    "kiss",         "dance", "sway",  NULL};
 
         bool is_exhibition_social = FALSE;
         bool is_explicit_social = FALSE;
+        bool is_masculine_social = FALSE;
+        bool is_feminine_social = FALSE;
+        bool is_androgynous_social = FALSE;
         int _i;
         for (_i = 0; exhibition_socials[_i]; _i++)
             if (!strcmp(social_name, exhibition_socials[_i])) {
@@ -10580,8 +10598,24 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 is_explicit_social = TRUE;
                 break;
             }
+        for (_i = 0; masculine_socials[_i]; _i++)
+            if (!strcmp(social_name, masculine_socials[_i])) {
+                is_masculine_social = TRUE;
+                break;
+            }
+        for (_i = 0; feminine_socials[_i]; _i++)
+            if (!strcmp(social_name, feminine_socials[_i])) {
+                is_feminine_social = TRUE;
+                break;
+            }
+        for (_i = 0; androgynous_socials[_i]; _i++)
+            if (!strcmp(social_name, androgynous_socials[_i])) {
+                is_androgynous_social = TRUE;
+                break;
+            }
 
-        if (is_exhibition_social || is_explicit_social) {
+        if (is_exhibition_social || is_explicit_social || is_masculine_social || is_feminine_social ||
+            is_androgynous_social) {
             /* Salience: major or blocked events are more salient than mild ones */
             float ctx_salience = social_major ? 0.70f : (is_blocked ? 0.60f : 0.40f);
 
@@ -10618,9 +10652,58 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                 reinforce_mplp_context_trait(mob, MPLP_TRAIT_MODESTY_RESPONSE, mod_val, ctx_salience);
             }
 
-            /* Apply accumulated trait influence to the current emotional response */
+            if (is_masculine_social) {
+                /* Masculinity-response valence: pride and low disgust → positive;
+                 * shame or disgust → negative. */
+                float masc_val;
+                if (mob->ai_data->emotion_pride >= 40 || mob->ai_data->emotion_courage >= 40)
+                    masc_val = +0.35f;
+                else if (mob->ai_data->emotion_disgust > MPLP_EXHIBITION_DISGUST_THRESHOLD ||
+                         mob->ai_data->emotion_shame > MPLP_EXHIBITION_DISGUST_THRESHOLD)
+                    masc_val = -0.30f;
+                else
+                    masc_val = +0.15f;
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_MASCULINITY_RESPONSE, masc_val, ctx_salience);
+                /* Masculine expression also nudges gender-norm sensitivity upward */
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY, +0.20f, ctx_salience * 0.5f);
+            }
+
+            if (is_feminine_social) {
+                /* Femininity-response valence: happiness and curiosity → positive;
+                 * anger or contempt → negative. */
+                float fem_val;
+                if (mob->ai_data->emotion_happiness >= 40 || mob->ai_data->emotion_love >= 40)
+                    fem_val = +0.35f;
+                else if (mob->ai_data->emotion_anger > MPLP_GENDER_NORM_ANGER_THRESHOLD ||
+                         mob->ai_data->emotion_disgust > MPLP_EXHIBITION_DISGUST_THRESHOLD)
+                    fem_val = -0.30f;
+                else
+                    fem_val = +0.15f;
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_FEMININITY_RESPONSE, fem_val, ctx_salience);
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY, +0.20f, ctx_salience * 0.5f);
+            }
+
+            if (is_androgynous_social) {
+                /* Androgyny-tolerance valence: curiosity → positive; low trust → negative. */
+                float and_val;
+                if (mob->ai_data->emotion_curiosity >= MPLP_ANDROGYNY_CURIOSITY_THRESHOLD ||
+                    sec_get_openness_final(mob) >= 0.5f)
+                    and_val = +0.30f;
+                else if (mob->ai_data->emotion_trust < MPLP_GENDER_NORM_TRUST_THRESHOLD)
+                    and_val = -0.25f;
+                else
+                    and_val = +0.10f;
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_ANDROGYNY_TOLERANCE, and_val, ctx_salience);
+            }
+
+            /* ── Apply accumulated gender-trait influence ──────────────────
+             * Read all six traits and modulate the current emotional response. */
             float ex_resp = get_mplp_exhibition_response(mob);
             float mod_resp = get_mplp_modesty_response(mob);
+            float masc_resp = get_mplp_masculinity_response(mob);
+            float fem_resp = get_mplp_femininity_response(mob);
+            float and_tol = get_mplp_androgyny_tolerance(mob);
+            float gnorm_sens = get_mplp_gender_norm_sensitivity(mob);
 
             if (is_exhibition_social && ex_resp != 0.0f) {
                 int ex_delta = (int)(fabsf(ex_resp) * (float)MPLP_EMOTION_DELTA_MAX);
@@ -10649,6 +10732,69 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                         /* Tolerant NPC: reduce disgust slightly */
                         adjust_emotion(mob, &mob->ai_data->emotion_disgust, -(int)(mod_delta * 0.4f));
                     }
+                }
+            }
+
+            if (is_masculine_social && masc_resp != 0.0f) {
+                int masc_delta = (int)(fabsf(masc_resp) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (masc_delta > 0) {
+                    if (masc_resp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* NPC admires masculine display: pride and excitement boost */
+                        adjust_emotion(mob, &mob->ai_data->emotion_pride, masc_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_excitement, (int)(masc_delta * 0.4f));
+                    } else if (masc_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* NPC dislikes masculine display: mild disgust / reduced trust */
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, masc_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_trust, -(int)(masc_delta * 0.3f));
+                    }
+                }
+            }
+
+            if (is_feminine_social && fem_resp != 0.0f) {
+                int fem_delta = (int)(fabsf(fem_resp) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (fem_delta > 0) {
+                    if (fem_resp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* NPC admires feminine display: happiness and love boost */
+                        adjust_emotion(mob, &mob->ai_data->emotion_happiness, fem_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_love, (int)(fem_delta * 0.4f));
+                    } else if (fem_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* NPC dislikes feminine display: mild anger / contempt */
+                        adjust_emotion(mob, &mob->ai_data->emotion_anger, fem_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, (int)(fem_delta * 0.3f));
+                    }
+                }
+            }
+
+            /* Androgyny tolerance modulates reactions to gender-mixed socials */
+            if (is_androgynous_social) {
+                int and_delta = (int)(fabsf(and_tol) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (and_delta > 0) {
+                    if (and_tol > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Tolerant NPC: gender-mixed expression sparks curiosity */
+                        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, and_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (int)(and_delta * 0.4f));
+                    } else if (and_tol < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Intolerant NPC: gender ambiguity causes mild confusion/unease */
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, (int)(and_delta * 0.5f));
+                        adjust_emotion(mob, &mob->ai_data->emotion_fear, (int)(and_delta * 0.3f));
+                    }
+                }
+            }
+
+            /* Gender-norm sensitivity amplifies all gender-expression reactions.
+             * High sensitivity → stronger emotional response (positive or negative).
+             * This acts as a multiplier on the largest delta already applied. */
+            if (gnorm_sens > MPLP_PERSONALITY_BIAS_THRESHOLD && (is_masculine_social || is_feminine_social)) {
+                int amplify = (int)(gnorm_sens * MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER); /* 0-2 extra points */
+                if (amplify > 0) {
+                    if (is_masculine_social && masc_resp > MPLP_PERSONALITY_BIAS_THRESHOLD)
+                        adjust_emotion(mob, &mob->ai_data->emotion_pride, amplify);
+                    else if (is_masculine_social && masc_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD)
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, amplify);
+                    if (is_feminine_social && fem_resp > MPLP_PERSONALITY_BIAS_THRESHOLD)
+                        adjust_emotion(mob, &mob->ai_data->emotion_happiness, amplify);
+                    else if (is_feminine_social && fem_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD)
+                        adjust_emotion(mob, &mob->ai_data->emotion_anger, amplify);
                 }
             }
         }

@@ -1296,11 +1296,15 @@ struct sec_baseline {
 #define MALP_PERSIST_HIGH 2   /**< High persistence: slow decay (traumatic / major events) */
 
 /* MPLP trait types (implicit behavioural modifiers) */
-#define MPLP_TRAIT_AVOIDANCE 0           /**< Approach-avoidance: avoid this cue/agent */
-#define MPLP_TRAIT_APPROACH 1            /**< Approach-avoidance: approach this cue/agent */
-#define MPLP_TRAIT_AROUSAL_BIAS 2        /**< Increase arousal when cue/agent is present */
-#define MPLP_TRAIT_EXHIBITION_RESPONSE 3 /**< Context-global: tendency to enjoy display/confidence behaviour */
-#define MPLP_TRAIT_MODESTY_RESPONSE 4    /**< Context-global: tendency to prefer reserved/modest behaviour */
+#define MPLP_TRAIT_AVOIDANCE 0               /**< Approach-avoidance: avoid this cue/agent */
+#define MPLP_TRAIT_APPROACH 1                /**< Approach-avoidance: approach this cue/agent */
+#define MPLP_TRAIT_AROUSAL_BIAS 2            /**< Increase arousal when cue/agent is present */
+#define MPLP_TRAIT_EXHIBITION_RESPONSE 3     /**< Context-global: tendency to enjoy display/confidence behaviour */
+#define MPLP_TRAIT_MODESTY_RESPONSE 4        /**< Context-global: tendency to prefer reserved/modest behaviour */
+#define MPLP_TRAIT_MASCULINITY_RESPONSE 5    /**< Context-global: reaction to masculine-coded socials */
+#define MPLP_TRAIT_FEMININITY_RESPONSE 6     /**< Context-global: reaction to feminine-coded socials */
+#define MPLP_TRAIT_ANDROGYNY_TOLERANCE 7     /**< Context-global: tolerance for mixed/androgynous gender expression */
+#define MPLP_TRAIT_GENDER_NORM_SENSITIVITY 8 /**< Context-global: sensitivity to gender-norm violations */
 
 /** Sentinel anchor for context-global MPLP traits (not tied to any single agent). */
 #define MPLP_GLOBAL_ANCHOR (-1L)

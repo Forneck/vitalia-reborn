@@ -754,13 +754,70 @@ float get_mplp_modesty_response(struct char_data *mob)
     return modifier;
 }
 
+/**
+ * Helper: retrieve the signed modifier for a single context-global trait type.
+ * Returns a value in [-1, +1] (or [0, 1] for GENDER_NORM_SENSITIVITY).
+ */
+static float get_context_trait(struct char_data *mob, int trait_type)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float result = 0.0f;
+    int i;
+
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != trait_type)
+            continue;
+        /* GENDER_NORM_SENSITIVITY is unsigned (0..1): always use positive magnitude */
+        if (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+            result += t->magnitude;
+        else
+            result += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+    }
+
+    /* Clamp: unsigned traits to [0,1], signed traits to [-1,+1] */
+    float lo = (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY) ? 0.0f : -1.0f;
+    if (result > 1.0f)
+        result = 1.0f;
+    if (result < lo)
+        result = lo;
+    return result;
+}
+
+float get_mplp_masculinity_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_MASCULINITY_RESPONSE);
+}
+
+float get_mplp_femininity_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_FEMININITY_RESPONSE);
+}
+
+float get_mplp_androgyny_tolerance(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_ANDROGYNY_TOLERANCE);
+}
+
+float get_mplp_gender_norm_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY);
+}
+
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
     if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
-    if (trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type != MPLP_TRAIT_MODESTY_RESPONSE)
+    if (trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type != MPLP_TRAIT_MODESTY_RESPONSE &&
+        trait_type != MPLP_TRAIT_MASCULINITY_RESPONSE && trait_type != MPLP_TRAIT_FEMININITY_RESPONSE &&
+        trait_type != MPLP_TRAIT_ANDROGYNY_TOLERANCE && trait_type != MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
         return;
 
     struct mob_ai_data *ai = mob->ai_data;
