@@ -9252,10 +9252,11 @@ void perform_emotional_regulation(struct char_data *mob)
     }
 
     if (regulated) {
-        /* Cooldown: high reg_strength mobs recover faster (shorter wait) */
-        mob->ai_data->regulation_timer = (int)(8.0f - 5.0f * reg_strength);
-        if (mob->ai_data->regulation_timer < 1)
-            mob->ai_data->regulation_timer = 1;
+        /* Cooldown: use MALP_REGULATION_COOLDOWN as a fixed floor to prevent
+         * rapid oscillation between high emotional states and self-reflection.
+         * The previous formula (8 - 5*reg_strength = 1..8 ticks) was too short,
+         * allowing the shame→reflection→shame loop described in issue MALP-DFL. */
+        mob->ai_data->regulation_timer = MALP_REGULATION_COOLDOWN;
     }
 }
 

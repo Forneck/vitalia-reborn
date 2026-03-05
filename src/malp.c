@@ -433,6 +433,15 @@ void malp_decay_tick(struct char_data *mob)
             /* Tick down reconsolidation window */
             if (e->recon_ticks_left > 0)
                 e->recon_ticks_left--;
+            /* Passive rehearsal decay: rate scales with current rehearsal so that
+             * strong memories erode faster in absolute terms but log-salience keeps
+             * them cognitively relevant; weak memories fade to zero quickly. */
+            if (e->rehearsal > 0) {
+                int rdecay = 1 + (e->rehearsal / MALP_REHEARSAL_DECAY_DIVISOR);
+                e->rehearsal -= rdecay;
+                if (e->rehearsal < 0)
+                    e->rehearsal = 0;
+            }
             if (e->intensity >= 0.05f)
                 alive++;
         }
@@ -526,6 +535,8 @@ void consolidator_tick(struct char_data *mob)
         float social_w =                                                                                               \
             ((mem)->entity_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;           \
         int rehearsal = count_rehearsal(mob, (mem)->entity_id, (mem)->entity_type);                                    \
+        if (rehearsal > MALP_MAX_REHEARSAL)                                                                            \
+            rehearsal = MALP_MAX_REHEARSAL;                                                                            \
         float S = compute_salience(arousal, rehearsal, social_w, age_hours);                                           \
         if (S < theta)                                                                                                 \
             break;                                                                                                     \
@@ -751,7 +762,9 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
             if (best->recon_ticks_left <= 0 || best->recon_ticks_left < window)
                 best->recon_ticks_left = window;
             best->last_retrieved = time(NULL);
-            best->rehearsal++;
+            /* Saturate rehearsal at hard cap to prevent salience lock */
+            if (best->rehearsal < MALP_MAX_REHEARSAL)
+                best->rehearsal++;
         }
     }
 
@@ -982,7 +995,7 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
     float alpha = MPLP_VALENCE_LEARNING_RATE;
     trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
 
-    if (trait->rehearsal_count < INT_MAX)
+    if (trait->rehearsal_count < MALP_MAX_REHEARSAL)
         trait->rehearsal_count++;
     trait->last_updated = now;
 
@@ -1016,8 +1029,39 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
     /* Retrieve best MALP entry (opens reconsolidation window if P_ret >= threshold) */
     struct malp_entry *malp = get_malp_by_agent(mob, agent_id, agent_type);
 
+    /* ── Per-actor social cooldown ───────────────────────────────────────────
+     * If MALP emotion effects for this actor were applied within the last
+     * MALP_SOCIAL_COOLDOWN_SECS seconds, skip ALL effects (MALP and MPLP).
+     * This prevents rapid reinforcement feedback loops when the same actor is
+     * continuously present in the room and MALP/MPLP effects accumulate faster
+     * than the homeostasis system can restore baseline emotions. */
+    if (malp && malp->last_applied > 0 && (time(NULL) - malp->last_applied) < (time_t)MALP_SOCIAL_COOLDOWN_SECS)
+        return;
+
+    /* ── Dominant-actor dampening ────────────────────────────────────────────
+     * Compute the rehearsal share of this actor across all MALP entries.
+     * If one actor holds more than MALP_DOMINANCE_THRESHOLD of total rehearsal,
+     * their effective emotion-effect intensity is multiplied by
+     * MALP_DOMINANCE_DAMPENING (0.70).  This allows strong memories to keep
+     * influencing behaviour while preventing one actor from monopolising
+     * NPC cognition (salience lock).
+     * The check requires malp_count > 1: when only one entry exists it holds
+     * 100 % by definition, which is realistic (not a dominance problem). */
+    float dominance_factor = 1.0f;
+    if (malp && mob->ai_data->malp_count > 1) {
+        int total_rehearsal = 0;
+        int di;
+        for (di = 0; di < mob->ai_data->malp_count; di++)
+            total_rehearsal += mob->ai_data->malp[di].rehearsal;
+        if (total_rehearsal > 0) {
+            float dom = (float)malp->rehearsal / (float)total_rehearsal;
+            if (dom > MALP_DOMINANCE_THRESHOLD)
+                dominance_factor = MALP_DOMINANCE_DAMPENING;
+        }
+    }
+
     if (malp) {
-        float intensity = malp->intensity;
+        float intensity = malp->intensity * dominance_factor;
         /* Scale effect by intensity */
         int delta = (int)(intensity * (float)MALP_EMOTION_DELTA_MAX);
         if (delta < MALP_EMOTION_DELTA_MIN)
@@ -1050,10 +1094,13 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
             float new_salience = compute_salience(mob_arousal, malp->rehearsal, social_w, 0.0f);
             retrieve_and_reconsolidate(mob, agent_id, agent_type, interaction_valence, new_salience);
         }
+
+        /* Stamp the application time so the per-actor cooldown can be enforced */
+        malp->last_applied = time(NULL);
     }
 
-    /* Apply MPLP approach/avoidance modifier */
-    float approach = get_mplp_approach_modifier(mob, agent_id, agent_type);
+    /* Apply MPLP approach/avoidance modifier (dampened for dominant actors) */
+    float approach = get_mplp_approach_modifier(mob, agent_id, agent_type) * dominance_factor;
     if (approach < -0.15f) {
         /* Avoidance trait: mild fear increase */
         int av_delta = (int)((-approach) * (float)MPLP_EMOTION_DELTA_MAX);
@@ -1066,8 +1113,8 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
             adjust_emotion(mob, &mob->ai_data->emotion_friendship, ap_delta);
     }
 
-    /* Apply MPLP arousal bias */
-    float arousal_bias = get_mplp_arousal_bias(mob, agent_id, agent_type);
+    /* Apply MPLP arousal bias (dampened for dominant actors) */
+    float arousal_bias = get_mplp_arousal_bias(mob, agent_id, agent_type) * dominance_factor;
     if (arousal_bias > 0.15f) {
         int arb_delta = (int)(arousal_bias * (float)MPLP_EMOTION_DELTA_MAX);
         if (arb_delta > 0)
@@ -1126,6 +1173,11 @@ void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_
         e->intensity += 0.05f * new_salience;
         if (e->intensity > 1.0f)
             e->intensity = 1.0f;
+
+        /* Reconsolidation dampening: every rewrite reduces raw rehearsal slightly,
+         * modelling the interference/rewriting cost of memory reconsolidation.
+         * Round to nearest integer to avoid abruptly zeroing small values. */
+        e->rehearsal = (int)((float)e->rehearsal * MALP_RECON_DAMPENING_FACTOR + 0.5f);
 
         e->last_retrieved = time(NULL);
         /* Consuming the update closes the window for this cycle */

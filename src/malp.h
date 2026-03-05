@@ -66,6 +66,73 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Dominant-actor feedback loop protection ────────────────────────────── */
+/**
+ * Ratio of one actor's rehearsal to total MALP rehearsal above which that actor
+ * is considered cognitively dominant.  When dominance > this threshold the
+ * actor's MALP emotion-effect intensity is multiplied by MALP_DOMINANCE_DAMPENING,
+ * preventing a single actor from monopolising the NPC's cognitive landscape.
+ */
+#define MALP_DOMINANCE_THRESHOLD 0.75f
+
+/**
+ * Intensity multiplier applied to MALP emotion effects when the triggering actor
+ * is cognitively dominant (rehearsal share > MALP_DOMINANCE_THRESHOLD).
+ * Reduces the per-call delta by 30 % while keeping the memory influence non-zero.
+ */
+#define MALP_DOMINANCE_DAMPENING 0.70f
+
+/**
+ * Minimum elapsed seconds between consecutive MALP/MPLP emotion-effect
+ * applications for the same actor.
+ *
+ * Prevents rapid re-triggering of emotional feedback loops when an actor is
+ * continuously present in the room.  During the cooldown window the NPC's
+ * natural emotion-homeostasis system (update_mob_emotion_passive) returns
+ * emotions toward their baselines without external amplification.
+ *
+ * 120 s ≈ 2 real minutes; sufficient for baseline recovery before the next
+ * MALP-driven arousal spike can occur.
+ */
+#define MALP_SOCIAL_COOLDOWN_SECS 120
+
+/**
+ * Regulation-timer value (in update ticks) set after a successful self-regulation
+ * behaviour (justify / deflect / apologize / reframe / nervous-laugh).
+ *
+ * Replaces the old formula (8 − 5 × reg_strength = 1..8 ticks) which was too
+ * short to interrupt rapid shame/fear → reflection → shame/fear loops.
+ *
+ * At CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30 % and PULSE_MOB_EMOTION = 4 s,
+ * 60 ticks ≈ 13 minutes of real time between successive self-reflection episodes.
+ */
+#define MALP_REGULATION_COOLDOWN 60
+
+/* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
+/**
+ * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
+ * Prevents unbounded linear growth (salience lock / overflow).
+ * At this value effective salience is already near-maximal via log(1+rehearsal).
+ */
+#define MALP_MAX_REHEARSAL 10000
+
+/**
+ * Divisor used to compute per-tick passive rehearsal decay rate:
+ *   decay_amount = 1 + (rehearsal / MALP_REHEARSAL_DECAY_DIVISOR)
+ * Strong memories (large rehearsal) decay faster in absolute terms, but
+ * the log-based salience ensures they remain relevant longer.
+ * At rehearsal = 10000: decay = 11/tick; at rehearsal = 100: decay = 1/tick.
+ */
+#define MALP_REHEARSAL_DECAY_DIVISOR 1000
+
+/**
+ * Multiplicative dampening applied to rehearsal during reconsolidation.
+ * Every time a memory is reconsolidated (rewritten), its raw rehearsal count
+ * is multiplied by this factor, modelling the interference/rewriting cost.
+ * 0.95 → 5 % reduction per reconsolidation event.
+ */
+#define MALP_RECON_DAMPENING_FACTOR 0.95f
+
 /* ── Peak-End Rule weights for episodic valence consolidation ────────────── */
 /**
  * Weight applied to the peak emotional moment in episodic valence (Kahneman

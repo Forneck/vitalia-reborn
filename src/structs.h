@@ -1324,6 +1324,7 @@ struct malp_entry {
     int major_event;       /**< 1 = major/traumatic event; drives HIGH persistence */
     time_t timestamp;      /**< Wall-clock creation time */
     time_t last_retrieved; /**< Last retrieval (reconsolidation check); 0 = never */
+    time_t last_applied;   /**< Last time MALP/MPLP emotion effects were applied for this actor; 0 = never */
     float valence;         /**< Emotional valence −1..+1 (negative = aversive) */
     float arousal;         /**< Arousal at encoding 0..1 */
     float salience;        /**< Computed salience S ∈ [0,1] at consolidation */
