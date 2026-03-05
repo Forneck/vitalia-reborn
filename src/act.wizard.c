@@ -69,9 +69,9 @@ bool zedit_get_levels(struct descriptor_data *d, char *buf);
 /* Shared interaction-type names for INTERACT_* constants (structs.h).
  * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_DECEIVE. */
 static const char *const interact_type_names[] = {
-    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",  "Social+",
-    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail", "Betrayal",
-    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive"};
+    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",     "Social+",
+    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail",    "Betrayal",
+    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive",       "SocialNeutral"};
 
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */

@@ -81,6 +81,20 @@
  */
 #define MALP_PEAK_END_END_WEIGHT 0.40f
 
+/* ── Social episode type classification thresholds ───────────────────────── */
+/**
+ * Consolidated valence above this threshold → INTERACT_SOCIAL_POSITIVE.
+ * Applied after Peak-End computation to reclassify social episodes so that the
+ * stored interaction_type reflects the overall interaction outcome rather than
+ * the type of the first recorded event.
+ */
+#define MALP_SOCIAL_VALENCE_POS_THRESHOLD 0.20f
+/**
+ * Consolidated valence below this threshold → INTERACT_SOCIAL_NEGATIVE.
+ * Values between NEG_THRESHOLD and POS_THRESHOLD → INTERACT_SOCIAL_NEUTRAL.
+ */
+#define MALP_SOCIAL_VALENCE_NEG_THRESHOLD -0.20f
+
 /* ── OCEAN modulation constants ──────────────────────────────────────────── */
 /**
  * Conscientiousness threshold boost: high-C mobs require higher salience
