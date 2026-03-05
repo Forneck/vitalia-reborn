@@ -10,6 +10,8 @@
  *  - Power-law forgetting (Ebbinghaus; Anderson & Schooler 1991).
  *  - Reconsolidation via retrieval window (Nader et al.; Schwabe 2012).
  *  - Hebbian-esque implicit trait formation (MPLP).
+ *  - Peak-End episodic valence weighting (Kahneman 1993): episode valence =
+ *    peak_valence × 0.6 + end_valence × 0.4.
  *  - OCEAN modulation: N ↑ → slower negative-trait decay; C ↑ → higher
  *    effective θ_cons; A ↑ → faster positive reconsolidation.
  *
@@ -183,6 +185,73 @@ static float slot_valence(const struct emotion_memory *mem)
     if (v < -1.0f)
         v = -1.0f;
     return v;
+}
+
+/**
+ * Compute Peak-End episodic valence for an agent across all episodic buffers.
+ *
+ * Implements the Kahneman (1993) Peak-End Rule: experienced episodes are
+ * remembered primarily by their most intense (peak) moment and their final
+ * (end) moment rather than by a duration-weighted average.
+ *
+ *   episode_valence = peak_valence × MALP_PEAK_END_PEAK_WEIGHT
+ *                   + end_valence  × MALP_PEAK_END_END_WEIGHT
+ *
+ * "Peak" is the slot with the highest arousal (|emotional intensity|).
+ * "End"  is the slot with the most recent timestamp.
+ *
+ * Falls back to slot_valence(fallback) when fewer than 2 slots are found for
+ * the agent (no meaningful peak/end distinction possible).
+ */
+static float compute_peak_end_valence(struct char_data *mob, long agent_id, int agent_type,
+                                      const struct emotion_memory *fallback)
+{
+    struct mob_ai_data *ai = mob->ai_data;
+    float peak_valence = 0.0f;
+    float end_valence = 0.0f;
+    float peak_arousal = -1.0f;
+    time_t end_time = 0;
+    int found = 0;
+    int i;
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        const struct emotion_memory *m = &ai->memories[i];
+        if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
+            continue;
+        float a = slot_arousal(m);
+        float v = slot_valence(m);
+        if (a > peak_arousal) {
+            peak_arousal = a;
+            peak_valence = v;
+        }
+        if (m->timestamp > end_time) {
+            end_time = m->timestamp;
+            end_valence = v;
+        }
+        found++;
+    }
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        const struct emotion_memory *m = &ai->active_memories[i];
+        if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
+            continue;
+        float a = slot_arousal(m);
+        float v = slot_valence(m);
+        if (a > peak_arousal) {
+            peak_arousal = a;
+            peak_valence = v;
+        }
+        if (m->timestamp > end_time) {
+            end_time = m->timestamp;
+            end_valence = v;
+        }
+        found++;
+    }
+
+    /* Need at least 2 slots to distinguish peak from end; with a single slot
+     * the two are identical and no weighting gain is possible. */
+    if (found < 2)
+        return slot_valence(fallback);
+    return peak_valence * MALP_PEAK_END_PEAK_WEIGHT + end_valence * MALP_PEAK_END_END_WEIGHT;
 }
 
 /**
@@ -425,7 +494,7 @@ void consolidator_tick(struct char_data *mob)
         float S = compute_salience(arousal, rehearsal, social_w, age_hours);                                           \
         if (S < theta)                                                                                                 \
             break;                                                                                                     \
-        float valence = slot_valence(mem);                                                                             \
+        float valence = compute_peak_end_valence(mob, (mem)->entity_id, (mem)->entity_type, mem);                      \
         /* Find existing MALP entry for this agent */                                                                  \
         struct malp_entry *existing = NULL;                                                                            \
         int _j;                                                                                                        \

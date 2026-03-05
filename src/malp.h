@@ -66,6 +66,21 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Peak-End Rule weights for episodic valence consolidation ────────────── */
+/**
+ * Weight applied to the peak emotional moment in episodic valence (Kahneman
+ * Peak-End Rule).  Peak is the slot with the highest arousal across all
+ * episodic slots for this agent.
+ * Invariant: MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ */
+#define MALP_PEAK_END_PEAK_WEIGHT 0.60f
+/**
+ * Weight applied to the final (most recent) event in episodic valence
+ * (Kahneman Peak-End Rule).  End is the slot with the latest timestamp.
+ * Invariant: MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ */
+#define MALP_PEAK_END_END_WEIGHT 0.40f
+
 /* ── OCEAN modulation constants ──────────────────────────────────────────── */
 /**
  * Conscientiousness threshold boost: high-C mobs require higher salience
