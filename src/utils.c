@@ -8947,7 +8947,8 @@ int classify_social_interact_type(const char *social_name, int *out_major)
     }
 
     /* Blocked sexual socials - major negative event */
-    const char *blocked[] = {"fondle", "grope", "french", "sex", "seduce", "sexy", NULL};
+    const char *blocked[] = {"fondle", "grope", "french",   "sex",          "seduce",
+                             "sexy",   "twerk", "shakeass", "dancesensual", NULL};
     for (i = 0; blocked[i]; i++) {
         if (!strcmp(social_name, blocked[i])) {
             if (out_major)
