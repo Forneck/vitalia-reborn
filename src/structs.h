@@ -1115,6 +1115,7 @@ struct mob_wishlist_item {
 #define EMOTION_MEMORY_SIZE 20
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
+#define ENTITY_TYPE_GLOBAL 2 /**< Sentinel for context-global MPLP traits (not agent-anchored) */
 
 /* Emotional profiles for mob personality initialization */
 #define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
@@ -1295,9 +1296,14 @@ struct sec_baseline {
 #define MALP_PERSIST_HIGH 2   /**< High persistence: slow decay (traumatic / major events) */
 
 /* MPLP trait types (implicit behavioural modifiers) */
-#define MPLP_TRAIT_AVOIDANCE 0    /**< Approach-avoidance: avoid this cue/agent */
-#define MPLP_TRAIT_APPROACH 1     /**< Approach-avoidance: approach this cue/agent */
-#define MPLP_TRAIT_AROUSAL_BIAS 2 /**< Increase arousal when cue/agent is present */
+#define MPLP_TRAIT_AVOIDANCE 0           /**< Approach-avoidance: avoid this cue/agent */
+#define MPLP_TRAIT_APPROACH 1            /**< Approach-avoidance: approach this cue/agent */
+#define MPLP_TRAIT_AROUSAL_BIAS 2        /**< Increase arousal when cue/agent is present */
+#define MPLP_TRAIT_EXHIBITION_RESPONSE 3 /**< Context-global: tendency to enjoy display/confidence behaviour */
+#define MPLP_TRAIT_MODESTY_RESPONSE 4    /**< Context-global: tendency to prefer reserved/modest behaviour */
+
+/** Sentinel anchor for context-global MPLP traits (not tied to any single agent). */
+#define MPLP_GLOBAL_ANCHOR (-1L)
 
 /**
  * MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002)

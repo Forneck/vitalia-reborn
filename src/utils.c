@@ -10553,6 +10553,107 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         apply_malp_emotion_effects(mob, actor, social_valence);
     }
 
+    /* ── MPLP Context-Trait Reinforcement ───────────────────────────────────
+     * Exhibition-style socials (display, confidence, gender-expression) and
+     * explicit physical-contact socials each reinforce a separate context-global
+     * implicit trait that shapes the NPC's future reactions independently of who
+     * performs the social.  Over repeated interactions the NPC can develop a
+     * "flirtatious" personality (high EXHIBITION_RESPONSE) or a "prudish" one
+     * (high MODESTY_RESPONSE) — or the inverse of each. */
+    {
+        static const char *exhibition_socials[] = {"catwalk",      "sexy",  "seduce", "shakeass",   "twerk",
+                                                   "dancesensual", "strut", "flirt",  "femininity", "masculinity",
+                                                   "wink",         "lust",  NULL};
+        static const char *explicit_socials[] = {"rub",    "grope", "fondle", "sex",      "french", "massage", "stroke",
+                                                 "caress", "touch", "twerk",  "shakeass", "lust",   NULL};
+
+        bool is_exhibition_social = FALSE;
+        bool is_explicit_social = FALSE;
+        int _i;
+        for (_i = 0; exhibition_socials[_i]; _i++)
+            if (!strcmp(social_name, exhibition_socials[_i])) {
+                is_exhibition_social = TRUE;
+                break;
+            }
+        for (_i = 0; explicit_socials[_i]; _i++)
+            if (!strcmp(social_name, explicit_socials[_i])) {
+                is_explicit_social = TRUE;
+                break;
+            }
+
+        if (is_exhibition_social || is_explicit_social) {
+            /* Salience: major or blocked events are more salient than mild ones */
+            float ctx_salience = social_major ? 0.70f : (is_blocked ? 0.60f : 0.40f);
+
+            if (is_exhibition_social) {
+                /* Valence of reinforcement: did this NPC welcome the display?
+                 * High trust/love → positive drift (enjoys exhibition).
+                 * Low trust / high disgust → negative drift (dislikes display). */
+                float ex_val;
+                if (mob->ai_data->emotion_trust >= MPLP_EXHIBITION_TRUST_THRESHOLD &&
+                    mob->ai_data->emotion_love >= MPLP_EXHIBITION_LOVE_THRESHOLD)
+                    ex_val = +0.40f;
+                else if (mob->ai_data->emotion_disgust > MPLP_EXHIBITION_DISGUST_THRESHOLD ||
+                         mob->ai_data->emotion_shame > MPLP_EXHIBITION_DISGUST_THRESHOLD)
+                    ex_val = -0.35f;
+                else
+                    ex_val = +0.15f; /* mild positive for neutral reactions */
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_EXHIBITION_RESPONSE, ex_val, ctx_salience);
+            }
+
+            if (is_explicit_social) {
+                /* Valence of reinforcement for modesty:
+                 * Non-consensual explicit contact → positive (prudish drift).
+                 * Welcomed explicit contact → negative (tolerant drift). */
+                bool is_non_consensual = is_blocked && !(mob->ai_data->emotion_trust >= MPLP_MODESTY_CONSENT_TRUST &&
+                                                         mob->ai_data->emotion_love >= MPLP_MODESTY_CONSENT_LOVE);
+                float mod_val;
+                if (is_non_consensual)
+                    mod_val = +0.40f; /* non-consensual → prudish reinforcement */
+                else if (mob->ai_data->emotion_disgust > MPLP_MODESTY_DISGUST_THRESHOLD ||
+                         mob->ai_data->emotion_shame > MPLP_MODESTY_DISGUST_THRESHOLD)
+                    mod_val = +0.30f;
+                else
+                    mod_val = -0.20f; /* welcomed → tolerant drift */
+                reinforce_mplp_context_trait(mob, MPLP_TRAIT_MODESTY_RESPONSE, mod_val, ctx_salience);
+            }
+
+            /* Apply accumulated trait influence to the current emotional response */
+            float ex_resp = get_mplp_exhibition_response(mob);
+            float mod_resp = get_mplp_modesty_response(mob);
+
+            if (is_exhibition_social && ex_resp != 0.0f) {
+                int ex_delta = (int)(fabsf(ex_resp) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (ex_delta > 0) {
+                    if (ex_resp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Flirtatious NPC: display boosts excitement and curiosity */
+                        adjust_emotion(mob, &mob->ai_data->emotion_excitement, ex_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, (int)(ex_delta * 0.5f));
+                    } else if (ex_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Conservative NPC: display increases disgust and shame */
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, ex_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(ex_delta * 0.5f));
+                    }
+                }
+            }
+
+            if (is_explicit_social && mod_resp != 0.0f) {
+                int mod_delta = (int)(fabsf(mod_resp) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (mod_delta > 0) {
+                    if (mod_resp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Prudish NPC: explicit contact increases disgust, shame, anger */
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, mod_delta);
+                        adjust_emotion(mob, &mob->ai_data->emotion_shame, (int)(mod_delta * 0.6f));
+                        adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(mod_delta * 0.4f));
+                    } else if (mod_resp < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                        /* Tolerant NPC: reduce disgust slightly */
+                        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -(int)(mod_delta * 0.4f));
+                    }
+                }
+            }
+        }
+    }
+
     /* Approach–Avoidance Conflict: evaluate after all emotion updates. */
     apply_approach_avoidance_conflict(mob);
 }

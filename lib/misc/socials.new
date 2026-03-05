@@ -2982,6 +2982,21 @@ $n olha feliz para o seu $t.
 Você olha feliz para $p.
 $n olha feliz para $p.
 
+~femininity femininity 0 5 0 0
+Você acentua sua feminilidade com um gesto gracioso e delicado.
+$n irradia uma aura de feminilidade graciosa e envolvente.
+Você exibe sua feminilidade para $M com um sorriso suave e confiante.
+$n exibe sua feminilidade para $N, irradiando graça e encanto.
+$n sorri suavemente para você, exibindo uma feminilidade radiante.
+Você exibe sua feminilidade... mas não há ninguém aqui para admirar.
+Você acentua sua feminilidade em frente a um espelho imaginário. Que autoconfiança!
+$n irradia feminilidade para si mesm$r com uma confiança tranquila.
+Você exibe sua feminilidade, direcionando um olhar suave para o $t de $S.
+$n exibe sua feminilidade, direcionando um olhar suave para o $t de $N.
+$n direciona para você um olhar suave, exibindo feminilidade em relação ao seu $t.
+Você exibe sua feminilidade ao segurar $p com delicadeza.
+$n exibe sua feminilidade ao segurar $p com delicadeza.
+
 ~hate hate 0 5 0 0
 Relaxe! Conte até dez, devagar.
 Os olhos de $n ardem de ódio.
@@ -3791,6 +3806,21 @@ $n massageia gentilmente o $t de $N.
 $n massageia gentilmente o seu $t....
 Você massageia gentilmente $p.
 $n massageia gentilmente $p.
+
+~masculinity masculinity 0 5 0 0
+Você exibe sua masculinidade com uma postura firme e segura.
+$n irradia uma presença de masculinidade firme e imponente.
+Você exibe sua masculinidade para $M com uma postura dominante e confiante.
+$n exibe sua masculinidade para $N, irradiando força e determinação.
+$n endireita a postura diante de você, exibindo uma masculinidade segura.
+Você exibe sua masculinidade... mas não há ninguém aqui para impressionar.
+Você exibe sua masculinidade em frente a um espelho imaginário. Que porte!
+$n exibe masculinidade para si mesm$r com uma confiança inabalável.
+Você exibe sua masculinidade ao pousar a mão sobre o $t de $S.
+$n exibe sua masculinidade ao pousar a mão sobre o $t de $N.
+$n pousa a mão com segurança sobre o seu $t, exibindo masculinidade.
+Você exibe sua masculinidade ao empunhar $p com firmeza.
+$n exibe sua masculinidade ao empunhar $p com firmeza.
 
 ~meds meds 0 8 8 0
 Você precisa de medicação.
