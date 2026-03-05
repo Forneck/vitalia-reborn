@@ -583,6 +583,21 @@ $n balbucia sobre nada e tudo.
 #
 #
 
+~blow blow 0 5 0 0
+Você manda um beijo para o ar com um sorriso sedutor.
+$n manda um beijo para o ar com um sorriso sedutor.
+Você manda um beijo para $N com um sorriso travesso.
+$n manda um beijo para $N com um sorriso sedutor.
+$n manda um beijo para você com um sorriso travesso.
+Você manda um beijo para ninguém. Que desperdício.
+Você manda um beijo para si mesm$r no espelho imaginário.
+$n manda um beijo para si mesm$r. Que autoestima!
+Você manda um beijo para o $t de $S.
+$n manda um beijo para o $t de $N.
+$n manda um beijo para o seu $t.
+Você manda um beijo para $p.
+$n manda um beijo para $p.
+
 ~blue blue 0 5 5 0
 Você respira fundo e prende a respiração.
 $n prende a respiração.
@@ -1331,6 +1346,21 @@ $n se acovarda longe do $t de $N.
 $n se acovarda longe de seu $t.
 Você se acovarda longe de $p.
 $n se acovarda longe de $p.
+
+~coy coy 0 5 0 0
+Você sorri timidamente, virando o rosto com um ar dengoso.
+$n sorri timidamente e vira o rosto de forma dengosa.
+Você lança um olhar de soslaio para $N, sorrindo de forma dengosa.
+$n lança um olhar de soslaio para $N com um sorriso dengoso.
+$n lança um olhar de soslaio para você, sorrindo de forma dengosa.
+Você fica dengoso(a)... mas sem alvo.
+Você se olha dengozo(a) no espelho imaginário.
+$n fica dengoso(a) para si mesm$r. Que autoestima!
+Você lança um olhar dengoso para o $t de $S.
+$n lança um olhar dengoso para o $t de $N.
+$n lança um olhar dengoso para o seu $t.
+Você fica dengoso(a) com $p.
+$n fica dengoso(a) com $p.
 
 ~cradle cradle 0 5 0 0
 Você olha ao redor desesperadamente por alguém para embalar em seus braços.
@@ -3327,6 +3357,21 @@ $n tenta ignorar o seu $t.
 Você tenta ignorar $p.
 $n tenta ignorar $p.
 
+~imposing imposing 0 5 0 0
+Você se ergue com postura dominante, projetando autoridade intimidadora.
+$n se ergue com postura dominante, projetando autoridade intimidadora.
+Você se posiciona de forma imponente diante de $N, deixando claro quem manda.
+$n se posiciona de forma imponente diante de $N.
+$n se posiciona de forma imponente diante de você. Que intimidador!
+Para quem você está tentando ser imponente?
+Você se impõe a si mesm$r no espelho imaginário. Praticando?
+$n tenta ser imponente para si mesm$r. Praticando, eh?
+Você se impõe diante do $t de $S.
+$n se impõe diante do $t de $N.
+$n se impõe diante do seu $t.
+Você se impõe diante de $p.
+$n se impõe diante de $p.
+
 ~innocent innocent 0 5 0 0
 Você faz seu melhor rosto de inocente... não acho que estão acreditando.
 $n bate cílios e sorri inocentemente.
@@ -4692,6 +4737,21 @@ $n enlouquece com o seu $t.
 Você enlouquece com $p de frustração.
 $n enlouquece com $p de frustração.
 
+~posture posture 0 5 0 0
+Você adota uma pose dominante, ombros erguidos e peito aberto.
+$n adota uma pose dominante, claramente tentando impressionar.
+Você se postura imponentemente diante de $N.
+$n se postura imponentemente diante de $N.
+$n se postura imponentemente diante de você.
+Você se postura... mas sem plateia.
+Você se postura para si mesm$r.
+$n se postura para si mesm$r. Que autoconfiança!
+Você se postura diante do $t de $S.
+$n se postura diante do $t de $N.
+$n se postura diante do seu $t.
+Você se postura diante de $p.
+$n se postura diante de $p.
+
 ~pounce pounce 0 5 0 0
 Você pula por aí.
 $n pula por aí como um gato.
@@ -5246,6 +5306,21 @@ $n repreende o $t de $N.
 $n repreende o seu $t.
 Você repreende $p.
 $n repreende $p.
+
+~scowl scowl 0 5 0 0
+Você franze o cenho com um olhar carrancudo de profundo desagrado.
+$n franze o cenho com um olhar carrancudo.
+Você franze o cenho para $N com um olhar de profundo desagrado.
+$n franze o cenho para $N com um olhar carrancudo.
+$n franze o cenho para você com um olhar de profundo desagrado.
+Carranca sem alvo. Que desperdício de expressão facial.
+Você se carranca no espelho imaginário. Parece aterrorizante.
+$n se carranca para si mesm$r. Deve estar insatisfeito consigo.
+Você franze o cenho para o $t de $S.
+$n franze o cenho para o $t de $N.
+$n franze o cenho para o seu $t.
+Você franze o cenho para $p.
+$n franze o cenho para $p.
 
 ~scout scout 0 8 8 0
 Você dá uma boa olhada ao redor.

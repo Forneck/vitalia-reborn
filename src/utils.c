@@ -10571,25 +10571,27 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             "catwalk",     "sexy",     "seduce", "shakeass", "twerk",  "dancesensual", "strut", "flirt", "femininity",
             "masculinity", "winks",    "lust",   "admire",   "behind", "boast",        "brag",  "charm", "dance",
             "ego",         "flash",    "hula",   "moan",     "model",  "moon",         "ogle",  "pose",  "pride",
-            "spank",       "tapdance", "tease",  "vampire",  "waggle", "wiggle",       NULL};
+            "spank",       "tapdance", "tease",  "vampire",  "waggle", "wiggle",       "blow",  "coy",   "imposing",
+            "posture",     NULL};
         /* Intimate physical contact that may trigger modesty/prudishness */
         static const char *explicit_socials[] = {
             "rub",      "grope",      "fondle",  "sex",    "french", "massage", "stroke",  "caress", "touch", "twerk",
             "shakeass", "lust",       "bearhug", "behind", "bite",   "cuddle",  "embrace", "goose",  "kiss",  "licks",
             "makeout",  "moan",       "nuzzle",  "pat",    "peck",   "pet",     "pinch",   "smooch", "snog",  "snuggle",
-            "spank",    "spongebath", "squeeze", "tickle", "tuck",   "tug",     "tummy",   "tweak",  NULL};
+            "spank",    "spongebath", "squeeze", "tickle", "tuck",   "tug",     "tummy",   "tweak",  "blow",  NULL};
         /* Masculine-coded: strength, dominance, assertiveness, competitive displays */
         static const char *masculine_socials[] = {
             "masculinity", "flex",      "taunt",  "glare",     "challenge", "sneer",   "smirks",  "strut",
             "threaten",    "battlecry", "boast",  "box",       "brag",      "charge",  "clobber", "ego",
             "evileye",     "growl",     "grunts", "hustle",    "jeer",      "knight",  "mace",    "mock",
             "ogle",        "pride",     "pushup", "roar",      "salute",    "scuffle", "smash",   "snarl",
-            "stomp",       "sword",     "tackle", "warscream", NULL};
+            "stomp",       "sword",     "tackle", "warscream", "imposing",  "scowl",   "posture", NULL};
         /* Feminine-coded: grace, delicacy, nurturing, flirtatious refinement */
         static const char *feminine_socials[] = {
-            "femininity", "curtsey", "catwalk", "flirt",   "winks",   "pout",   "giggle",  "sigh", "blush", "smile",
-            "aww",        "caress",  "charm",   "comfort", "console", "cradle", "dance",   "hula", "kneel", "nuzzle",
-            "pose",       "propose", "purr",    "rose",    "shy",     "smooch", "snuggle", "sob",  "tease", NULL};
+            "femininity", "curtsey", "catwalk", "flirt",  "winks", "pout",    "giggle",  "sigh",
+            "blush",      "smile",   "aww",     "caress", "charm", "comfort", "console", "cradle",
+            "dance",      "hula",    "kneel",   "nuzzle", "pose",  "propose", "purr",    "rose",
+            "shy",        "smooch",  "snuggle", "sob",    "tease", "blow",    "coy",     NULL};
         /* Androgynous: gender-mixed or neutral romantic/intimate partnership acts */
         static const char *androgynous_socials[] = {"dancesensual", "tango",  "waltz",  "embrace", "kiss",
                                                     "dance",        "sways",  "cuddle", "hug",     "makeout",
