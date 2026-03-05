@@ -90,6 +90,34 @@
 /** MPLP approach/avoidance emotion modifier cap */
 #define MPLP_EMOTION_DELTA_MAX 5
 
+/* ── Context-trait (EXHIBITION_RESPONSE / MODESTY_RESPONSE) tunables ─────── */
+/** Learning rate for the running-average valence in context-global MPLP traits. */
+#define MPLP_VALENCE_LEARNING_RATE 0.20f
+/** Trait magnitude threshold above which a personality bias is applied to emotions. */
+#define MPLP_PERSONALITY_BIAS_THRESHOLD 0.15f
+/** Trust floor for an exhibition social to be welcomed (→ positive reinforcement). */
+#define MPLP_EXHIBITION_TRUST_THRESHOLD 50
+/** Love floor for an exhibition social to be welcomed. */
+#define MPLP_EXHIBITION_LOVE_THRESHOLD 40
+/** Disgust/shame level above which a display social is considered unwelcome. */
+#define MPLP_EXHIBITION_DISGUST_THRESHOLD 50
+/** Trust floor used for explicit-contact consent check (modesty reinforcement). */
+#define MPLP_MODESTY_CONSENT_TRUST 70
+/** Love floor used for explicit-contact consent check (modesty reinforcement). */
+#define MPLP_MODESTY_CONSENT_LOVE 60
+/** Disgust/shame threshold above which non-blocked explicit contact still feels unwelcome. */
+#define MPLP_MODESTY_DISGUST_THRESHOLD 40
+
+/* ── Gender-expression trait tunables ───────────────────────────────────── */
+/** Anger/pride threshold above which a gender-norm violation is considered a provocation. */
+#define MPLP_GENDER_NORM_ANGER_THRESHOLD 45
+/** Trust threshold below which gender-expression socials raise suspicion/confusion. */
+#define MPLP_GENDER_NORM_TRUST_THRESHOLD 35
+/** Curiosity threshold above which androgynous expression triggers a positive response. */
+#define MPLP_ANDROGYNY_CURIOSITY_THRESHOLD 50
+/** Scaling multiplier for GENDER_NORM_SENSITIVITY amplification of gender-expression deltas. */
+#define MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER 2.0f
+
 /* ── Cue-score weights for P_ret computation in get_malp_by_agent() ─────── */
 /** Weight of memory intensity in cue score (primary strength factor) */
 #define MALP_CUE_WEIGHT_INTENSITY 0.60f
@@ -180,6 +208,105 @@ float get_mplp_approach_modifier(struct char_data *mob, long agent_id, int agent
  * @return           Arousal bias modifier.
  */
 float get_mplp_arousal_bias(struct char_data *mob, long agent_id, int agent_type);
+
+/**
+ * Retrieve the NPC's context-global exhibition-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to display, confidence, and attention-seeking body-language socials
+ * (catwalk, sexy, twerk, shakeass, dancesensual, femininity, masculinity, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → flirtatious / enjoys display behaviour
+ *               < 0 → conservative / dislikes attention-seeking behaviour
+ */
+float get_mplp_exhibition_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global modesty-response trait.
+ *
+ * Measures the accumulated tendency to prefer reserved behaviour (+) or to be
+ * tolerant of explicit physical contact (−).  Reinforced by grope, fondle, rub,
+ * massage, french, sex, and similar explicit-contact socials.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → prudish / offended by explicit socials
+ *               < 0 → tolerant of explicit interactions
+ */
+float get_mplp_modesty_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global masculinity-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to masculine-coded socials (masculinity, flex, taunt, strut, imposing postures).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → admires / responds positively to masculine expression
+ *               < 0 → indifferent or dislikes masculine display
+ */
+float get_mplp_masculinity_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global femininity-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to feminine-coded socials (femininity, curtsy, catwalk, flirt, wink, blow).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → admires / responds positively to feminine expression
+ *               < 0 → indifferent or dislikes feminine display
+ */
+float get_mplp_femininity_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global androgyny-tolerance trait.
+ *
+ * Measures tolerance (+) or intolerance (−) for gender-mixed or androgynous
+ * expression (e.g., a masculine NPC performing feminine gestures, or vice-versa).
+ * High androgyny_tolerance leads to curiosity/acceptance; low leads to confusion.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → accepts / curious about androgynous expression
+ *               < 0 → confused / mildly uncomfortable with mixed expression
+ */
+float get_mplp_androgyny_tolerance(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global gender-norm sensitivity trait.
+ *
+ * Measures how strongly the NPC reacts when gender-norm expectations are violated
+ * (e.g., a flirtatious/seductive social performed by the unexpected gender).
+ * High sensitivity produces stronger emotional reactions (positive or negative).
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by gender-norm context
+ *               1.0 → very strongly amplified reactions to norm violations
+ */
+float get_mplp_gender_norm_sensitivity(struct char_data *mob);
+
+/**
+ * Reinforce a context-global MPLP trait (anchor = MPLP_GLOBAL_ANCHOR).
+ *
+ * Creates the trait slot if it does not exist; otherwise applies a Hebbian
+ * magnitude increment (0.15 × salience, capped at +0.30 per call) and
+ * updates the running-average valence.  The encoded base_magnitude is
+ * updated so power-law decay restarts from this point.
+ *
+ * @param mob        The NPC whose MPLP is being updated.
+ * @param trait_type One of: MPLP_TRAIT_EXHIBITION_RESPONSE, MPLP_TRAIT_MODESTY_RESPONSE,
+ *                   MPLP_TRAIT_MASCULINITY_RESPONSE, MPLP_TRAIT_FEMININITY_RESPONSE,
+ *                   MPLP_TRAIT_ANDROGYNY_TOLERANCE, or MPLP_TRAIT_GENDER_NORM_SENSITIVITY.
+ * @param valence    Signed valence of the current experience (−1..+1).
+ * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
+ */
+void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience);
 
 /**
  * Apply MALP/MPLP-derived emotion effects through the appraisal pipeline.

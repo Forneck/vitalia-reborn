@@ -703,6 +703,190 @@ float get_mplp_arousal_bias(struct char_data *mob, long agent_id, int agent_type
     return bias;
 }
 
+float get_mplp_exhibition_response(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float modifier = 0.0f;
+    int i;
+
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE)
+            continue;
+        /* Signed contribution: valence determines direction, magnitude determines strength */
+        modifier += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+    }
+
+    if (modifier > 1.0f)
+        modifier = 1.0f;
+    if (modifier < -1.0f)
+        modifier = -1.0f;
+    return modifier;
+}
+
+float get_mplp_modesty_response(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float modifier = 0.0f;
+    int i;
+
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != MPLP_TRAIT_MODESTY_RESPONSE)
+            continue;
+        modifier += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+    }
+
+    if (modifier > 1.0f)
+        modifier = 1.0f;
+    if (modifier < -1.0f)
+        modifier = -1.0f;
+    return modifier;
+}
+
+/**
+ * Helper: retrieve the signed modifier for a single context-global trait type.
+ * Returns a value in [-1, +1] (or [0, 1] for GENDER_NORM_SENSITIVITY).
+ */
+static float get_context_trait(struct char_data *mob, int trait_type)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float result = 0.0f;
+    int i;
+
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != trait_type)
+            continue;
+        /* GENDER_NORM_SENSITIVITY is unsigned (0..1): always use positive magnitude */
+        if (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+            result += t->magnitude;
+        else
+            result += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+    }
+
+    /* Clamp: unsigned traits to [0,1], signed traits to [-1,+1] */
+    float lo = (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY) ? 0.0f : -1.0f;
+    if (result > 1.0f)
+        result = 1.0f;
+    if (result < lo)
+        result = lo;
+    return result;
+}
+
+float get_mplp_masculinity_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_MASCULINITY_RESPONSE);
+}
+
+float get_mplp_femininity_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_FEMININITY_RESPONSE);
+}
+
+float get_mplp_androgyny_tolerance(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_ANDROGYNY_TOLERANCE);
+}
+
+float get_mplp_gender_norm_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY);
+}
+
+void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+    if (trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type != MPLP_TRAIT_MODESTY_RESPONSE &&
+        trait_type != MPLP_TRAIT_MASCULINITY_RESPONSE && trait_type != MPLP_TRAIT_FEMININITY_RESPONSE &&
+        trait_type != MPLP_TRAIT_ANDROGYNY_TOLERANCE && trait_type != MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+        return;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    struct mplp_trait *trait = NULL;
+    int i;
+    time_t now = time(NULL);
+
+    /* Clamp inputs */
+    if (salience > 1.0f)
+        salience = 1.0f;
+    if (salience < 0.0f)
+        salience = 0.0f;
+    if (valence > 1.0f)
+        valence = 1.0f;
+    if (valence < -1.0f)
+        valence = -1.0f;
+
+    /* Find existing global trait slot */
+    for (i = 0; i < ai->mplp_count; i++) {
+        if (ai->mplp[i].anchor_agent_id == MPLP_GLOBAL_ANCHOR && ai->mplp[i].trait_type == trait_type) {
+            trait = &ai->mplp[i];
+            break;
+        }
+    }
+
+    if (!trait) {
+        /* Allocate a new slot */
+        if (ai->mplp_count >= MPLP_MAX_PER_MOB)
+            return;
+        if (!mplp_grow(mob))
+            return;
+        trait = &ai->mplp[ai->mplp_count];
+        memset(trait, 0, sizeof(struct mplp_trait));
+        trait->anchor_agent_id = MPLP_GLOBAL_ANCHOR;
+        trait->agent_type = ENTITY_TYPE_GLOBAL; /* not tied to any specific agent */
+        trait->trait_type = trait_type;
+        trait->magnitude = 0.0f;
+        trait->base_magnitude = 0.0f;
+        trait->valence = valence;
+        trait->rehearsal_count = 1;
+        trait->persistence = MALP_PERSIST_LOW;
+        trait->last_updated = now;
+        ai->mplp_count++;
+        /* Fall through so the first experience applies the reinforcement delta */
+    }
+
+    /* Hebbian reinforcement: bounded magnitude increment */
+    float delta = 0.15f * salience;
+    if (delta > 0.30f)
+        delta = 0.30f;
+    trait->magnitude += delta;
+    if (trait->magnitude > 1.0f)
+        trait->magnitude = 1.0f;
+    trait->base_magnitude = trait->magnitude;
+
+    /* Running-average valence update */
+    float alpha = MPLP_VALENCE_LEARNING_RATE;
+    trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
+
+    trait->rehearsal_count++;
+    trait->last_updated = now;
+
+    /* Elevate persistence as the trait strengthens */
+    if (trait->magnitude >= 0.70f && trait->persistence < MALP_PERSIST_HIGH)
+        trait->persistence = MALP_PERSIST_HIGH;
+    else if (trait->magnitude >= 0.40f && trait->persistence < MALP_PERSIST_MEDIUM)
+        trait->persistence = MALP_PERSIST_MEDIUM;
+}
+
 void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence)
 {
     if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data)

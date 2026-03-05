@@ -583,6 +583,21 @@ $n balbucia sobre nada e tudo.
 #
 #
 
+~blow blow 0 5 0 0
+Você manda um beijo para o ar com um sorriso sedutor.
+$n manda um beijo para o ar com um sorriso sedutor.
+Você manda um beijo para $N com um sorriso travesso.
+$n manda um beijo para $N com um sorriso sedutor.
+$n manda um beijo para você com um sorriso travesso.
+Você manda um beijo para ninguém. Que desperdício.
+Você manda um beijo para si mesm$r no espelho imaginário.
+$n manda um beijo para si mesm$r. Que autoestima!
+Você manda um beijo para o $t de $S.
+$n manda um beijo para o $t de $N.
+$n manda um beijo para o seu $t.
+Você manda um beijo para $p.
+$n manda um beijo para $p.
+
 ~blue blue 0 5 5 0
 Você respira fundo e prende a respiração.
 $n prende a respiração.
@@ -958,6 +973,21 @@ $n faz uma estrela sobre seu $t.
 Você faz estrelas ao redor de $p.
 $n faz estrelas ao redor de $p.
 
+~catwalk catwalk 0 5 0 0
+Você desfila com elegância e confiança, chamando todas as atenções.
+$n desfila com elegância e confiança, chamando todas as atenções.
+Você desfila sensualmente na frente de $M, exibindo todo o seu charme.
+$n desfila sensualmente na frente de $N, exibindo todo o seu charme.
+$n desfila sensualmente na sua frente, claramente tentando impressionar você.
+Você desfila elegante... mas para quem?
+Você desfila para si mesm$r no espelho imaginário. Que confiança!
+$n desfila para si mesm$r. Que autoestima invejável!
+Você desfila sensualmente, exibindo o $t de $S.
+$n desfila sensualmente, exibindo o $t de $N.
+$n desfila sensualmente na sua frente, exibindo o seu $t.
+Você desfila ao redor de $p com elegância.
+$n desfila ao redor de $p com elegância.
+
 ~challenge challenge 0 5 0 0
 Quem você deseja desafiar?
 $n está procurando alguém para desafiar.
@@ -1317,6 +1347,21 @@ $n se acovarda longe de seu $t.
 Você se acovarda longe de $p.
 $n se acovarda longe de $p.
 
+~coy coy 0 5 0 0
+Você sorri timidamente, virando o rosto com um ar dengoso.
+$n sorri timidamente e vira o rosto de forma dengosa.
+Você lança um olhar de soslaio para $N, sorrindo de forma dengosa.
+$n lança um olhar de soslaio para $N com um sorriso dengoso.
+$n lança um olhar de soslaio para você, sorrindo de forma dengosa.
+Você fica dengoso(a)... mas sem alvo.
+Você se olha dengoso(a) no espelho imaginário.
+$n fica dengoso(a) para si mesm$r. Que autoestima!
+Você lança um olhar dengoso para o $t de $S.
+$n lança um olhar dengoso para o $t de $N.
+$n lança um olhar dengoso para o seu $t.
+Você fica dengoso(a) com $p.
+$n fica dengoso(a) com $p.
+
 ~cradle cradle 0 5 0 0
 Você olha ao redor desesperadamente por alguém para embalar em seus braços.
 $n está procurando alguém para embalar em $s braços.
@@ -1586,6 +1631,21 @@ $n pega o $t de $N e começa a dançar com ele.
 $n pega seu $t e começa a dançar com ele.
 Você dança feliz com $p.
 $n pega $p e começa a dançar com ele.
+
+~dancesensual dancesensual 0 5 0 0
+Você move os quadris de forma lenta e sensual, embriagando todos ao redor.
+$n move os quadris de forma lenta e sensual, emitindo uma energia irresistível.
+Você dança sensualmente para $M, movendo o corpo de forma provocante e sedutora.
+$n dança sensualmente para $N, cada movimento calculado para seduzir.
+$n começa a dançar para você de forma sensual e provocante. Que tentação!
+Você procura alguém para dançar sensualmente... mas não há ninguém aqui.
+Você dança sensualmente para si mesm$r, curtindo cada movimento do seu próprio corpo.
+$n dança sensualmente para si mesm$r com uma confiança impressionante.
+Você dança sensualmente ao redor do $t de $S, exibindo seu charme.
+$n dança sensualmente ao redor do $t de $N, exibindo seu charme.
+$n dança sensualmente ao redor do seu $t, exibindo seu charme.
+Você dança sensualmente ao redor de $p.
+$n dança sensualmente ao redor de $p.
 
 ~dark dark 0 5 0 0
 Enquanto você se concentra, o quarto parece escurecer.
@@ -2952,6 +3012,21 @@ $n olha feliz para o seu $t.
 Você olha feliz para $p.
 $n olha feliz para $p.
 
+~femininity femininity 0 5 0 0
+Você acentua sua feminilidade com um gesto gracioso e delicado.
+$n irradia uma aura de feminilidade graciosa e envolvente.
+Você exibe sua feminilidade para $M com um sorriso suave e confiante.
+$n exibe sua feminilidade para $N, irradiando graça e encanto.
+$n sorri suavemente para você, exibindo uma feminilidade radiante.
+Você exibe sua feminilidade... mas não há ninguém aqui para admirar.
+Você acentua sua feminilidade em frente a um espelho imaginário. Que autoconfiança!
+$n irradia feminilidade para si mesm$r com uma confiança tranquila.
+Você exibe sua feminilidade, direcionando um olhar suave para o $t de $S.
+$n exibe sua feminilidade, direcionando um olhar suave para o $t de $N.
+$n direciona para você um olhar suave, exibindo feminilidade em relação ao seu $t.
+Você exibe sua feminilidade ao segurar $p com delicadeza.
+$n exibe sua feminilidade ao segurar $p com delicadeza.
+
 ~hate hate 0 5 0 0
 Relaxe! Conte até dez, devagar.
 Os olhos de $n ardem de ódio.
@@ -3282,6 +3357,21 @@ $n tenta ignorar o seu $t.
 Você tenta ignorar $p.
 $n tenta ignorar $p.
 
+~imposing imposing 0 5 0 0
+Você se ergue com postura dominante, projetando autoridade intimidadora.
+$n se ergue com postura dominante, projetando autoridade intimidadora.
+Você se posiciona de forma imponente diante de $N, deixando claro quem manda.
+$n se posiciona de forma imponente diante de $N.
+$n se posiciona de forma imponente diante de você. Que intimidador!
+Para quem você está tentando ser imponente?
+Você se impõe a si mesm$r no espelho imaginário. Praticando?
+$n tenta ser imponente para si mesm$r. Praticando, eh?
+Você se impõe diante do $t de $S.
+$n se impõe diante do $t de $N.
+$n se impõe diante do seu $t.
+Você se impõe diante de $p.
+$n se impõe diante de $p.
+
 ~innocent innocent 0 5 0 0
 Você faz seu melhor rosto de inocente... não acho que estão acreditando.
 $n bate cílios e sorri inocentemente.
@@ -3371,6 +3461,21 @@ $n caçoa do $t de $N.
 $n caçoa do seu $t.
 #
 #
+
+~jealous jealous 0 5 0 0
+Você sente uma pontada de ciúme corroendo o seu coração.
+$n parece visivelmente enciumad$r.
+Você lança um olhar enciumado para $M, sentindo uma pontada de inveja.
+$n lança um olhar enciumado para $N.
+$n lança um olhar enciumado para você. Será que é ciúme?
+Não há ninguém aqui para provocar tanto ciúme em você.
+Você sente ciúme de si mesm$r. Que paradoxo existencial!
+$n parece enciumad$r de si mesm$r. Que complexidade psicológica!
+Você lança um olhar enciumado para o $t de $S.
+$n lança um olhar enciumado para o $t de $N.
+$n lança um olhar enciumado para o seu $t.
+Você lança um olhar enciumado para $p.
+$n lança um olhar enciumado para $p.
 
 ~job job 0 8 8 0
 Esse parece um trabalho para você!
@@ -3746,6 +3851,21 @@ $n massageia gentilmente o $t de $N.
 $n massageia gentilmente o seu $t....
 Você massageia gentilmente $p.
 $n massageia gentilmente $p.
+
+~masculinity masculinity 0 5 0 0
+Você exibe sua masculinidade com uma postura firme e segura.
+$n irradia uma presença de masculinidade firme e imponente.
+Você exibe sua masculinidade para $M com uma postura dominante e confiante.
+$n exibe sua masculinidade para $N, irradiando força e determinação.
+$n endireita a postura diante de você, exibindo uma masculinidade segura.
+Você exibe sua masculinidade... mas não há ninguém aqui para impressionar.
+Você exibe sua masculinidade em frente a um espelho imaginário. Que porte!
+$n exibe masculinidade para si mesm$r com uma confiança inabalável.
+Você exibe sua masculinidade ao pousar a mão sobre o $t de $S.
+$n exibe sua masculinidade ao pousar a mão sobre o $t de $N.
+$n pousa a mão com segurança sobre o seu $t, exibindo masculinidade.
+Você exibe sua masculinidade ao empunhar $p com firmeza.
+$n exibe sua masculinidade ao empunhar $p com firmeza.
 
 ~meds meds 0 8 8 0
 Você precisa de medicação.
@@ -4617,6 +4737,21 @@ $n enlouquece com o seu $t.
 Você enlouquece com $p de frustração.
 $n enlouquece com $p de frustração.
 
+~posture posture 0 5 0 0
+Você adota uma pose dominante, ombros erguidos e peito aberto.
+$n adota uma pose dominante, claramente tentando impressionar.
+Você se postura imponentemente diante de $N.
+$n se postura imponentemente diante de $N.
+$n se postura imponentemente diante de você.
+Você se postura... mas sem plateia.
+Você se postura para si mesm$r.
+$n se postura para si mesm$r. Que autoconfiança!
+Você se postura diante do $t de $S.
+$n se postura diante do $t de $N.
+$n se postura diante do seu $t.
+Você se postura diante de $p.
+$n se postura diante de $p.
+
 ~pounce pounce 0 5 0 0
 Você pula por aí.
 $n pula por aí como um gato.
@@ -5067,6 +5202,21 @@ $n bagunça o seu $t.
 Você bagunça $p.
 $n bagunça $p.
 
+~rub rub 0 5 0 0
+Você esfrega as mãos pensativamente.
+$n esfrega as mãos pensativamente.
+Você esfrega $M com gentileza reconfortante.
+$n esfrega $N com gentileza reconfortante.
+$n esfrega você com gentileza reconfortante. Que alívio!
+Não há ninguém por perto para esfregar.
+Você esfrega os próprios ombros, aliviando a tensão acumulada.
+$n esfrega os próprios ombros, parecendo relaxad$r.
+Você esfrega o $t de $S com cuidado.
+$n esfrega o $t de $N com cuidado.
+$n esfrega o seu $t com cuidado. Que sensação boa!
+Você esfrega $p.
+$n esfrega $p.
+
 ~run run 0 8 8 0
 Você corre gritando para as colinas.
 $n corre gritando para as colinas.
@@ -5156,6 +5306,21 @@ $n repreende o $t de $N.
 $n repreende o seu $t.
 Você repreende $p.
 $n repreende $p.
+
+~scowl scowl 0 5 0 0
+Você franze o cenho com um olhar carrancudo de profundo desagrado.
+$n franze o cenho com um olhar carrancudo.
+Você franze o cenho para $N com um olhar de profundo desagrado.
+$n franze o cenho para $N com um olhar carrancudo.
+$n franze o cenho para você com um olhar de profundo desagrado.
+Carranca sem alvo. Que desperdício de expressão facial.
+Você se carranca no espelho imaginário. Parece aterrorizante.
+$n se carranca para si mesm$r. Deve estar insatisfeito consigo.
+Você franze o cenho para o $t de $S.
+$n franze o cenho para o $t de $N.
+$n franze o cenho para o seu $t.
+Você franze o cenho para $p.
+$n franze o cenho para $p.
 
 ~scout scout 0 8 8 0
 Você dá uma boa olhada ao redor.
@@ -5262,6 +5427,21 @@ $n precisa de sabão na mente.
 #
 #
 
+~sexy sexy 0 5 0 0
+Você se contorce de forma provocante, exalando sensualidade.
+$n se contorce de forma provocante, exalando sensualidade.
+Você faz um movimento lento e sedutor para $M, olhando nos olhos de $S.
+$n faz um movimento lento e sedutor para $N, olhando nos seus olhos.
+$n vira para você com um movimento lento e sedutor, olhando nos seus olhos.
+Você tenta ser sexy para alguém que não está aqui. Que desperdício!
+Você se examina no espelho imaginário e acha que está irresistível.
+$n se examina como se fosse irresistível. Que autoconfiança!
+Você faz um gesto sedutor em direção ao $t de $S.
+$n faz um gesto sedutor em direção ao $t de $N.
+$n faz um gesto sedutor em direção ao seu $t.
+Você faz uma pose sedutora com $p.
+$n faz uma pose sedutora com $p.
+
 ~shake shake 0 5 0 0
 Você balança a cabeça.
 $n balança a cabeça.
@@ -5276,6 +5456,21 @@ $n balança o $t de $N.
 $n balança o seu $t.
 Você balança a cabeça para $p.
 $n balança a cabeça para $p.
+
+~shakeass shakeass 0 5 0 0
+Você sacode o bumbum provocantemente, chamando todas as atenções da sala.
+$n sacode o bumbum de forma provocante. Impossível não olhar!
+Você vira de costas para $M e sacode o bumbum provocantemente.
+$n vira de costas para $N e sacode o bumbum de forma provocante.
+$n vira de costas para você e sacode o bumbum. Que audácia!
+Você tenta sacudir o bumbum para alguém que não está aqui.
+Você sacode o bumbum para si mesm$r na frente de um espelho imaginário.
+$n sacode o bumbum para si mesm$r. Que autoconfiança!
+Você sacode o bumbum, exibindo o $t de $S.
+$n sacode o bumbum, exibindo o $t de $N.
+$n sacode o bumbum, exibindo o seu $t.
+Você sacode o bumbum ao lado de $p.
+$n sacode o bumbum ao lado de $p.
 
 ~shame shame 0 5 0 0
 Você abaixa a cabeça envergonhado(a).
@@ -6821,6 +7016,21 @@ $n se contorce ao pensar no $i de $N.
 $n se contorce ao pensar no seu $i.
 Você se contorce ao pensar em $p.
 $n se contorce ao pensar em $p.
+
+~twerk twerk 0 5 0 0
+Você se abaixa e faz um twerk arrasador, sacudindo o bumbum no ritmo.
+$n se abaixa e faz um twerk arrasador. A sala fica boquiaberta!
+Você se posiciona na frente de $M e faz um twerk explosivo e provocante.
+$n se posiciona na frente de $N e faz um twerk explosivo e provocante.
+$n se posiciona na sua frente e faz um twerk explosivo. Que cena!
+Você se prepara para um twerk épico... mas não tem ninguém para apreciar.
+Você faz um twerk solo para si mesm$r. Autoconfiança no máximo!
+$n faz um twerk solo. Ninguém pediu, mas foi impossível ignorar.
+Você faz um twerk apontado para o $t de $S.
+$n faz um twerk apontado para o $t de $N.
+$n faz um twerk apontado para o seu $t.
+Você faz um twerk próximo a $p.
+$n faz um twerk próximo a $p.
 
 ~type type 0 5 0 0
 Você levanta as mãos em desespero com suas péssimas habilidades de digitação.
