@@ -117,7 +117,8 @@
 #define MALP_MAX_REHEARSAL 10000
 
 /**
- * Divisor used to compute per-tick passive rehearsal decay rate:
+ * Divisor used to compute per-tick passive rehearsal decay rate for both
+ * MALP entries (rehearsal field) and MPLP traits (rehearsal_count field):
  *   decay_amount = 1 + (rehearsal / MALP_REHEARSAL_DECAY_DIVISOR)
  * Strong memories (large rehearsal) decay faster in absolute terms, but
  * the log-based salience ensures they remain relevant longer.

@@ -485,6 +485,15 @@ void malp_decay_tick(struct char_data *mob)
             t->magnitude = t->base_magnitude * powerlaw_intensity(t->last_updated, hl);
             if (t->magnitude > 1.0f)
                 t->magnitude = 1.0f;
+            /* Passive rehearsal decay mirrors MALP entry decay: rate scales with
+             * current rehearsal_count so that well-rehearsed traits erode faster
+             * in absolute terms while remaining salient via log-scaling. */
+            if (t->rehearsal_count > 0) {
+                int rdecay = 1 + (t->rehearsal_count / MALP_REHEARSAL_DECAY_DIVISOR);
+                t->rehearsal_count -= rdecay;
+                if (t->rehearsal_count < 0)
+                    t->rehearsal_count = 0;
+            }
             if (t->magnitude >= 0.02f) {
                 if (w != i)
                     ai->mplp[w] = ai->mplp[i];
