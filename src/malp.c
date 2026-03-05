@@ -877,7 +877,8 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
     float alpha = MPLP_VALENCE_LEARNING_RATE;
     trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
 
-    trait->rehearsal_count++;
+    if (trait->rehearsal_count < INT_MAX)
+        trait->rehearsal_count++;
     trait->last_updated = now;
 
     /* Elevate persistence as the trait strengthens */
