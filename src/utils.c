@@ -9283,9 +9283,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: hostile expressions, aggressive actions, verbal hostility
      */
     const char *negative_socials[] = {
-        "frown",      "glare", "spit",  "accuse",  "curse",   "taunt", "snicker", "slap",     "snap",  "snarl",
-        "growl",      "fume",  "sneer", "eye",     "jeer",    "mock",  "ignore",  "threaten", "blame", "criticize",
-        "disapprove", "scold", "hate",  "grimace", "evileye", "swear", "envy",    "greed",    NULL};
+        "frown",      "glare", "spit",  "accuse",  "curse",   "taunt", "snicker", "slap",     "snap",    "snarl",
+        "growl",      "fume",  "sneer", "eye",     "jeer",    "mock",  "ignore",  "threaten", "blame",   "criticize",
+        "disapprove", "scold", "hate",  "grimace", "evileye", "swear", "envy",    "greed",    "jealous", NULL};
 
     /* Neutral/curious socials that increase curiosity
      * Emotion changes: +curiosity, slight +friendship if already friendly
@@ -9315,8 +9315,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      *   - Moderate: +curiosity, +shame, -trust
      *   - Low/none: +disgust, +horror, +anger, +shame, +humiliation, -trust, -friendship
      */
-    const char *blocked_socials[] = {"fondle", "grope", "french",   "sex",   "seduce", "despine", "shiskabob",
-                                     "vice",   "choke", "strangle", "smite", "sword",  NULL};
+    const char *blocked_socials[] = {"fondle", "grope",    "french",       "sex",     "seduce",    "sexy",
+                                     "twerk",  "shakeass", "dancesensual", "despine", "shiskabob", "vice",
+                                     "choke",  "strangle", "smite",        "sword",   NULL};
 
     /* Disgusting socials - trigger disgust and anger
      * Emotion changes: +disgust, +anger, -trust, -friendship, -happiness

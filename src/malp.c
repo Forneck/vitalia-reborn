@@ -861,7 +861,7 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
         trait->persistence = MALP_PERSIST_LOW;
         trait->last_updated = now;
         ai->mplp_count++;
-        return;
+        /* Fall through so the first experience applies the reinforcement delta */
     }
 
     /* Hebbian reinforcement: bounded magnitude increment */
