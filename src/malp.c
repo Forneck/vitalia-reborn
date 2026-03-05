@@ -1029,8 +1029,39 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
     /* Retrieve best MALP entry (opens reconsolidation window if P_ret >= threshold) */
     struct malp_entry *malp = get_malp_by_agent(mob, agent_id, agent_type);
 
+    /* ── Per-actor social cooldown ───────────────────────────────────────────
+     * If MALP emotion effects for this actor were applied within the last
+     * MALP_SOCIAL_COOLDOWN_SECS seconds, skip ALL effects (MALP and MPLP).
+     * This prevents rapid reinforcement feedback loops when the same actor is
+     * continuously present in the room and MALP/MPLP effects accumulate faster
+     * than the homeostasis system can restore baseline emotions. */
+    if (malp && malp->last_applied > 0 && (time(NULL) - malp->last_applied) < (time_t)MALP_SOCIAL_COOLDOWN_SECS)
+        return;
+
+    /* ── Dominant-actor dampening ────────────────────────────────────────────
+     * Compute the rehearsal share of this actor across all MALP entries.
+     * If one actor holds more than MALP_DOMINANCE_THRESHOLD of total rehearsal,
+     * their effective emotion-effect intensity is multiplied by
+     * MALP_DOMINANCE_DAMPENING (0.70).  This allows strong memories to keep
+     * influencing behaviour while preventing one actor from monopolising
+     * NPC cognition (salience lock).
+     * The check requires malp_count > 1: when only one entry exists it holds
+     * 100 % by definition, which is realistic (not a dominance problem). */
+    float dominance_factor = 1.0f;
+    if (malp && mob->ai_data->malp_count > 1) {
+        int total_rehearsal = 0;
+        int di;
+        for (di = 0; di < mob->ai_data->malp_count; di++)
+            total_rehearsal += mob->ai_data->malp[di].rehearsal;
+        if (total_rehearsal > 0) {
+            float dom = (float)malp->rehearsal / (float)total_rehearsal;
+            if (dom > MALP_DOMINANCE_THRESHOLD)
+                dominance_factor = MALP_DOMINANCE_DAMPENING;
+        }
+    }
+
     if (malp) {
-        float intensity = malp->intensity;
+        float intensity = malp->intensity * dominance_factor;
         /* Scale effect by intensity */
         int delta = (int)(intensity * (float)MALP_EMOTION_DELTA_MAX);
         if (delta < MALP_EMOTION_DELTA_MIN)
@@ -1063,10 +1094,13 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
             float new_salience = compute_salience(mob_arousal, malp->rehearsal, social_w, 0.0f);
             retrieve_and_reconsolidate(mob, agent_id, agent_type, interaction_valence, new_salience);
         }
+
+        /* Stamp the application time so the per-actor cooldown can be enforced */
+        malp->last_applied = time(NULL);
     }
 
-    /* Apply MPLP approach/avoidance modifier */
-    float approach = get_mplp_approach_modifier(mob, agent_id, agent_type);
+    /* Apply MPLP approach/avoidance modifier (dampened for dominant actors) */
+    float approach = get_mplp_approach_modifier(mob, agent_id, agent_type) * dominance_factor;
     if (approach < -0.15f) {
         /* Avoidance trait: mild fear increase */
         int av_delta = (int)((-approach) * (float)MPLP_EMOTION_DELTA_MAX);
@@ -1079,8 +1113,8 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
             adjust_emotion(mob, &mob->ai_data->emotion_friendship, ap_delta);
     }
 
-    /* Apply MPLP arousal bias */
-    float arousal_bias = get_mplp_arousal_bias(mob, agent_id, agent_type);
+    /* Apply MPLP arousal bias (dampened for dominant actors) */
+    float arousal_bias = get_mplp_arousal_bias(mob, agent_id, agent_type) * dominance_factor;
     if (arousal_bias > 0.15f) {
         int arb_delta = (int)(arousal_bias * (float)MPLP_EMOTION_DELTA_MAX);
         if (arb_delta > 0)

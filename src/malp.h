@@ -66,6 +66,48 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Dominant-actor feedback loop protection ────────────────────────────── */
+/**
+ * Ratio of one actor's rehearsal to total MALP rehearsal above which that actor
+ * is considered cognitively dominant.  When dominance > this threshold the
+ * actor's MALP emotion-effect intensity is multiplied by MALP_DOMINANCE_DAMPENING,
+ * preventing a single actor from monopolising the NPC's cognitive landscape.
+ */
+#define MALP_DOMINANCE_THRESHOLD 0.75f
+
+/**
+ * Intensity multiplier applied to MALP emotion effects when the triggering actor
+ * is cognitively dominant (rehearsal share > MALP_DOMINANCE_THRESHOLD).
+ * Reduces the per-call delta by 30 % while keeping the memory influence non-zero.
+ */
+#define MALP_DOMINANCE_DAMPENING 0.70f
+
+/**
+ * Minimum elapsed seconds between consecutive MALP/MPLP emotion-effect
+ * applications for the same actor.
+ *
+ * Prevents rapid re-triggering of emotional feedback loops when an actor is
+ * continuously present in the room.  During the cooldown window the NPC's
+ * natural emotion-homeostasis system (update_mob_emotion_passive) returns
+ * emotions toward their baselines without external amplification.
+ *
+ * 120 s ≈ 2 real minutes; sufficient for baseline recovery before the next
+ * MALP-driven arousal spike can occur.
+ */
+#define MALP_SOCIAL_COOLDOWN_SECS 120
+
+/**
+ * Regulation-timer value (in update ticks) set after a successful self-regulation
+ * behaviour (justify / deflect / apologize / reframe / nervous-laugh).
+ *
+ * Replaces the old formula (8 − 5 × reg_strength = 1..8 ticks) which was too
+ * short to interrupt rapid shame/fear → reflection → shame/fear loops.
+ *
+ * At CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30 % and PULSE_MOB_EMOTION = 4 s,
+ * 60 ticks ≈ 13 minutes of real time between successive self-reflection episodes.
+ */
+#define MALP_REGULATION_COOLDOWN 60
+
 /* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
 /**
  * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
