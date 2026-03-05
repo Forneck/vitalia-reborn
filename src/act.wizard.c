@@ -67,7 +67,7 @@ const char *get_spec_func_name(SPECIAL(*func));
 bool zedit_get_levels(struct descriptor_data *d, char *buf);
 
 /* Shared interaction-type names for INTERACT_* constants (structs.h).
- * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_DECEIVE. */
+ * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_SOCIAL_NEUTRAL. */
 static const char *const interact_type_names[] = {
     "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",     "Social+",
     "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail",    "Betrayal",

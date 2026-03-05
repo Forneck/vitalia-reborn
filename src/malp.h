@@ -71,15 +71,15 @@
  * Weight applied to the peak emotional moment in episodic valence (Kahneman
  * Peak-End Rule).  Peak is the slot with the highest arousal across all
  * episodic slots for this agent.
- * Invariant: MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ * Defined so that MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
  */
 #define MALP_PEAK_END_PEAK_WEIGHT 0.60f
 /**
  * Weight applied to the final (most recent) event in episodic valence
  * (Kahneman Peak-End Rule).  End is the slot with the latest timestamp.
- * Invariant: MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ * Derived from MALP_PEAK_END_PEAK_WEIGHT so the two weights always sum to 1.0f.
  */
-#define MALP_PEAK_END_END_WEIGHT 0.40f
+#define MALP_PEAK_END_END_WEIGHT (1.0f - MALP_PEAK_END_PEAK_WEIGHT)
 
 /* ── Social episode type classification thresholds ───────────────────────── */
 /**

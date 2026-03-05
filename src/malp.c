@@ -11,7 +11,8 @@
  *  - Reconsolidation via retrieval window (Nader et al.; Schwabe 2012).
  *  - Hebbian-esque implicit trait formation (MPLP).
  *  - Peak-End episodic valence weighting (Kahneman 1993): episode valence =
- *    peak_valence × 0.6 + end_valence × 0.4.
+ *    peak_valence × MALP_PEAK_END_PEAK_WEIGHT +
+ *    end_valence × MALP_PEAK_END_END_WEIGHT.
  *  - OCEAN modulation: N ↑ → slower negative-trait decay; C ↑ → higher
  *    effective θ_cons; A ↑ → faster positive reconsolidation.
  *
