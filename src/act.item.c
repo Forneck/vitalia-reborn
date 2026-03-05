@@ -835,6 +835,15 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
         return;
     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
         return;
+
+    /* Update mob emotions for receiving item — done here so it is never skipped by the
+     * early-return paths below (quest-completion safety or reputation anti-exploit).
+     * update_mob_emotion_received_item does not touch obj, so it is safe to call even
+     * when obj may have been extracted by a quest trigger above. */
+    if (IS_NPC(vict) && vict->ai_data) {
+        update_mob_emotion_received_item(vict, ch);
+    }
+
     /* Note: We cannot safely check if obj is still valid without a more complex tracking system.
      * If obj was extracted during quest completion, the following code may access freed memory.
      * To prevent crashes, we return early after quest completion, skipping reputation code. */
@@ -883,9 +892,6 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
             ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
         }
     }
-
-    /* Update mob emotions for receiving item (experimental feature) */
-    update_mob_emotion_received_item(vict, ch);
 }
 
 /* utility function for give */
