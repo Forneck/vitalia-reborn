@@ -67,11 +67,11 @@ const char *get_spec_func_name(SPECIAL(*func));
 bool zedit_get_levels(struct descriptor_data *d, char *buf);
 
 /* Shared interaction-type names for INTERACT_* constants (structs.h).
- * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_DECEIVE. */
+ * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_SOCIAL_NEUTRAL. */
 static const char *const interact_type_names[] = {
-    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",  "Social+",
-    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail", "Betrayal",
-    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive"};
+    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",     "Social+",
+    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail",    "Betrayal",
+    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive",       "SocialNeutral"};
 
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */
@@ -972,7 +972,15 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
 static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 {
     static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
-    static const char *trait_names[] = {"AVOIDANCE", "APPROACH", "AROUSAL_BIAS"};
+    static const char *trait_names[] = {"AVOIDANCE",
+                                        "APPROACH",
+                                        "AROUSAL_BIAS",
+                                        "EXHIBITION_RESPONSE",
+                                        "MODESTY_RESPONSE",
+                                        "MASCULINITY_RESPONSE",
+                                        "FEMININITY_RESPONSE",
+                                        "ANDROGYNY_TOLERANCE",
+                                        "GENDER_NORM_SENSITIVITY"};
     int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
     if (!IS_MOB(mob)) {
@@ -1046,8 +1054,13 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
             long age_m = (age_secs % 3600) / 60;
             long age_s = age_secs % 60;
 
-            send_to_char(ch, " [%d] %s#%ld  Trait:%-12s Persist:%-6s Rehearsal:%d\r\n", i + 1,
-                         (t->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", t->anchor_agent_id, tname, pname,
+            char anchor_buf[32];
+            if (t->agent_type == ENTITY_TYPE_GLOBAL)
+                snprintf(anchor_buf, sizeof(anchor_buf), "Context:global");
+            else
+                snprintf(anchor_buf, sizeof(anchor_buf), "%s#%ld",
+                         (t->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", t->anchor_agent_id);
+            send_to_char(ch, " [%d] %-18s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname, pname,
                          t->rehearsal_count);
             send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
                          (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),

@@ -10,6 +10,9 @@
  *  - Power-law forgetting (Ebbinghaus; Anderson & Schooler 1991).
  *  - Reconsolidation via retrieval window (Nader et al.; Schwabe 2012).
  *  - Hebbian-esque implicit trait formation (MPLP).
+ *  - Peak-End episodic valence weighting (Kahneman 1993): episode valence =
+ *    peak_valence × MALP_PEAK_END_PEAK_WEIGHT +
+ *    end_valence × MALP_PEAK_END_END_WEIGHT.
  *  - OCEAN modulation: N ↑ → slower negative-trait decay; C ↑ → higher
  *    effective θ_cons; A ↑ → faster positive reconsolidation.
  *
@@ -183,6 +186,107 @@ static float slot_valence(const struct emotion_memory *mem)
     if (v < -1.0f)
         v = -1.0f;
     return v;
+}
+
+/**
+ * Reclassify a social episode's interaction_type based on consolidated valence.
+ *
+ * After Peak-End consolidation the stored interaction_type should reflect the
+ * overall outcome of the episode rather than the type of the first recorded
+ * event.  Non-social types (ATTACKED, HEALED, etc.) are returned unchanged so
+ * that objective event categories are never overwritten.
+ *
+ * Only INTERACT_SOCIAL_POSITIVE, INTERACT_SOCIAL_NEGATIVE, and
+ * INTERACT_SOCIAL_NEUTRAL are reclassified; INTERACT_SOCIAL_VIOLENT is
+ * intentionally excluded because physical violence is an objective fact that
+ * should not be softened by a positive valence outcome.
+ *
+ * Classification rule (from RFC-1002 §9.3):
+ *   valence >  MALP_SOCIAL_VALENCE_POS_THRESHOLD → INTERACT_SOCIAL_POSITIVE
+ *   valence <  MALP_SOCIAL_VALENCE_NEG_THRESHOLD → INTERACT_SOCIAL_NEGATIVE
+ *   otherwise                                    → INTERACT_SOCIAL_NEUTRAL
+ */
+static int classify_social_itype(int itype, float valence)
+{
+    switch (itype) {
+        case INTERACT_SOCIAL_POSITIVE:
+        case INTERACT_SOCIAL_NEGATIVE:
+        case INTERACT_SOCIAL_NEUTRAL:
+            if (valence > MALP_SOCIAL_VALENCE_POS_THRESHOLD)
+                return INTERACT_SOCIAL_POSITIVE;
+            if (valence < MALP_SOCIAL_VALENCE_NEG_THRESHOLD)
+                return INTERACT_SOCIAL_NEGATIVE;
+            return INTERACT_SOCIAL_NEUTRAL;
+        default:
+            return itype;
+    }
+}
+
+/**
+ * Compute Peak-End episodic valence for an agent across all episodic buffers.
+ *
+ * Implements the Kahneman (1993) Peak-End Rule: experienced episodes are
+ * remembered primarily by their most intense (peak) moment and their final
+ * (end) moment rather than by a duration-weighted average.
+ *
+ *   episode_valence = peak_valence × MALP_PEAK_END_PEAK_WEIGHT
+ *                   + end_valence  × MALP_PEAK_END_END_WEIGHT
+ *
+ * "Peak" is the slot with the highest arousal (|emotional intensity|).
+ * "End"  is the slot with the most recent timestamp.
+ *
+ * Falls back to slot_valence(fallback) when fewer than 2 slots are found for
+ * the agent (no meaningful peak/end distinction possible).
+ */
+static float compute_peak_end_valence(struct char_data *mob, long agent_id, int agent_type,
+                                      const struct emotion_memory *fallback)
+{
+    struct mob_ai_data *ai = mob->ai_data;
+    float peak_valence = 0.0f;
+    float end_valence = 0.0f;
+    float peak_arousal = -1.0f;
+    time_t end_time = 0;
+    int found = 0;
+    int i;
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        const struct emotion_memory *m = &ai->memories[i];
+        if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
+            continue;
+        float a = slot_arousal(m);
+        float v = slot_valence(m);
+        if (a > peak_arousal) {
+            peak_arousal = a;
+            peak_valence = v;
+        }
+        if (m->timestamp > end_time) {
+            end_time = m->timestamp;
+            end_valence = v;
+        }
+        found++;
+    }
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        const struct emotion_memory *m = &ai->active_memories[i];
+        if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
+            continue;
+        float a = slot_arousal(m);
+        float v = slot_valence(m);
+        if (a > peak_arousal) {
+            peak_arousal = a;
+            peak_valence = v;
+        }
+        if (m->timestamp > end_time) {
+            end_time = m->timestamp;
+            end_valence = v;
+        }
+        found++;
+    }
+
+    /* Need at least 2 slots to distinguish peak from end; with a single slot
+     * the two are identical and no weighting gain is possible. */
+    if (found < 2)
+        return slot_valence(fallback);
+    return peak_valence * MALP_PEAK_END_PEAK_WEIGHT + end_valence * MALP_PEAK_END_END_WEIGHT;
 }
 
 /**
@@ -425,7 +529,7 @@ void consolidator_tick(struct char_data *mob)
         float S = compute_salience(arousal, rehearsal, social_w, age_hours);                                           \
         if (S < theta)                                                                                                 \
             break;                                                                                                     \
-        float valence = slot_valence(mem);                                                                             \
+        float valence = compute_peak_end_valence(mob, (mem)->entity_id, (mem)->entity_type, mem);                      \
         /* Find existing MALP entry for this agent */                                                                  \
         struct malp_entry *existing = NULL;                                                                            \
         int _j;                                                                                                        \
@@ -443,6 +547,7 @@ void consolidator_tick(struct char_data *mob)
             existing->arousal = (1.0f - lambda) * existing->arousal + lambda * arousal;                                \
             existing->salience = S;                                                                                    \
             existing->rehearsal = rehearsal;                                                                           \
+            existing->interaction_type = classify_social_itype(existing->interaction_type, valence);                   \
             if ((mem)->major_event || arousal >= MALP_HIGH_PERSIST_AROUSAL) {                                          \
                 existing->persistence = MALP_PERSIST_HIGH;                                                             \
                 existing->major_event = 1;                                                                             \
@@ -457,7 +562,7 @@ void consolidator_tick(struct char_data *mob)
             memset(_e, 0, sizeof(struct malp_entry));                                                                  \
             _e->agent_id = (mem)->entity_id;                                                                           \
             _e->agent_type = (mem)->entity_type;                                                                       \
-            _e->interaction_type = (mem)->interaction_type;                                                            \
+            _e->interaction_type = classify_social_itype((mem)->interaction_type, valence);                            \
             _e->major_event = (mem)->major_event;                                                                      \
             _e->timestamp = (mem)->timestamp;                                                                          \
             _e->last_retrieved = 0;                                                                                    \
@@ -877,7 +982,8 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
     float alpha = MPLP_VALENCE_LEARNING_RATE;
     trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
 
-    trait->rehearsal_count++;
+    if (trait->rehearsal_count < INT_MAX)
+        trait->rehearsal_count++;
     trait->last_updated = now;
 
     /* Elevate persistence as the trait strengthens */

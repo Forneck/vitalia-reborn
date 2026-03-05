@@ -1214,6 +1214,7 @@ struct emotion_4d_state {
 #define INTERACT_ABANDON_ALLY 16   /**< Actor fled combat while group-members remained; witness = saw ally flee */
 #define INTERACT_SACRIFICE_SELF 17 /**< Actor sacrificed itself for group (future: no execution path yet) */
 #define INTERACT_DECEIVE 18        /**< Actor deceived another entity (future: no code trigger yet) */
+#define INTERACT_SOCIAL_NEUTRAL 19 /**< Social episode with mixed/neutral consolidated valence (Peak-End result) */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */

@@ -66,6 +66,35 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Peak-End Rule weights for episodic valence consolidation ────────────── */
+/**
+ * Weight applied to the peak emotional moment in episodic valence (Kahneman
+ * Peak-End Rule).  Peak is the slot with the highest arousal across all
+ * episodic slots for this agent.
+ * Defined so that MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ */
+#define MALP_PEAK_END_PEAK_WEIGHT 0.60f
+/**
+ * Weight applied to the final (most recent) event in episodic valence
+ * (Kahneman Peak-End Rule).  End is the slot with the latest timestamp.
+ * Derived from MALP_PEAK_END_PEAK_WEIGHT so the two weights always sum to 1.0f.
+ */
+#define MALP_PEAK_END_END_WEIGHT (1.0f - MALP_PEAK_END_PEAK_WEIGHT)
+
+/* ── Social episode type classification thresholds ───────────────────────── */
+/**
+ * Consolidated valence above this threshold → INTERACT_SOCIAL_POSITIVE.
+ * Applied after Peak-End computation to reclassify social episodes so that the
+ * stored interaction_type reflects the overall interaction outcome rather than
+ * the type of the first recorded event.
+ */
+#define MALP_SOCIAL_VALENCE_POS_THRESHOLD 0.20f
+/**
+ * Consolidated valence below this threshold → INTERACT_SOCIAL_NEGATIVE.
+ * Values between NEG_THRESHOLD and POS_THRESHOLD → INTERACT_SOCIAL_NEUTRAL.
+ */
+#define MALP_SOCIAL_VALENCE_NEG_THRESHOLD -0.20f
+
 /* ── OCEAN modulation constants ──────────────────────────────────────────── */
 /**
  * Conscientiousness threshold boost: high-C mobs require higher salience
