@@ -66,6 +66,31 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
+/**
+ * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
+ * Prevents unbounded linear growth (salience lock / overflow).
+ * At this value effective salience is already near-maximal via log(1+rehearsal).
+ */
+#define MALP_MAX_REHEARSAL 10000
+
+/**
+ * Divisor used to compute per-tick passive rehearsal decay rate:
+ *   decay_amount = 1 + (rehearsal / MALP_REHEARSAL_DECAY_DIVISOR)
+ * Strong memories (large rehearsal) decay faster in absolute terms, but
+ * the log-based salience ensures they remain relevant longer.
+ * At rehearsal = 10000: decay = 11/tick; at rehearsal = 100: decay = 1/tick.
+ */
+#define MALP_REHEARSAL_DECAY_DIVISOR 1000
+
+/**
+ * Multiplicative dampening applied to rehearsal during reconsolidation.
+ * Every time a memory is reconsolidated (rewritten), its raw rehearsal count
+ * is multiplied by this factor, modelling the interference/rewriting cost.
+ * 0.95 → 5 % reduction per reconsolidation event.
+ */
+#define MALP_RECON_DAMPENING_FACTOR 0.95f
+
 /* ── Peak-End Rule weights for episodic valence consolidation ────────────── */
 /**
  * Weight applied to the peak emotional moment in episodic valence (Kahneman

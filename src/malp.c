@@ -433,6 +433,15 @@ void malp_decay_tick(struct char_data *mob)
             /* Tick down reconsolidation window */
             if (e->recon_ticks_left > 0)
                 e->recon_ticks_left--;
+            /* Passive rehearsal decay: rate scales with current rehearsal so that
+             * strong memories erode faster in absolute terms but log-salience keeps
+             * them cognitively relevant; weak memories fade to zero quickly. */
+            if (e->rehearsal > 0) {
+                int rdecay = 1 + (e->rehearsal / MALP_REHEARSAL_DECAY_DIVISOR);
+                e->rehearsal -= rdecay;
+                if (e->rehearsal < 0)
+                    e->rehearsal = 0;
+            }
             if (e->intensity >= 0.05f)
                 alive++;
         }
@@ -526,6 +535,8 @@ void consolidator_tick(struct char_data *mob)
         float social_w =                                                                                               \
             ((mem)->entity_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;           \
         int rehearsal = count_rehearsal(mob, (mem)->entity_id, (mem)->entity_type);                                    \
+        if (rehearsal > MALP_MAX_REHEARSAL)                                                                            \
+            rehearsal = MALP_MAX_REHEARSAL;                                                                            \
         float S = compute_salience(arousal, rehearsal, social_w, age_hours);                                           \
         if (S < theta)                                                                                                 \
             break;                                                                                                     \
@@ -751,7 +762,9 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
             if (best->recon_ticks_left <= 0 || best->recon_ticks_left < window)
                 best->recon_ticks_left = window;
             best->last_retrieved = time(NULL);
-            best->rehearsal++;
+            /* Saturate rehearsal at hard cap to prevent salience lock */
+            if (best->rehearsal < MALP_MAX_REHEARSAL)
+                best->rehearsal++;
         }
     }
 
@@ -982,7 +995,7 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
     float alpha = MPLP_VALENCE_LEARNING_RATE;
     trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
 
-    if (trait->rehearsal_count < INT_MAX)
+    if (trait->rehearsal_count < MALP_MAX_REHEARSAL)
         trait->rehearsal_count++;
     trait->last_updated = now;
 
@@ -1126,6 +1139,11 @@ void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_
         e->intensity += 0.05f * new_salience;
         if (e->intensity > 1.0f)
             e->intensity = 1.0f;
+
+        /* Reconsolidation dampening: every rewrite reduces raw rehearsal slightly,
+         * modelling the interference/rewriting cost of memory reconsolidation.
+         * Round to nearest integer to avoid abruptly zeroing small values. */
+        e->rehearsal = (int)((float)e->rehearsal * MALP_RECON_DAMPENING_FACTOR + 0.5f);
 
         e->last_retrieved = time(NULL);
         /* Consuming the update closes the window for this cycle */
