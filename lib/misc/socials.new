@@ -958,6 +958,21 @@ $n faz uma estrela sobre seu $t.
 Você faz estrelas ao redor de $p.
 $n faz estrelas ao redor de $p.
 
+~catwalk catwalk 0 5 0 0
+Você desfila com elegância e confiança, chamando todas as atenções.
+$n desfila com elegância e confiança, chamando todas as atenções.
+Você desfila sensualmente na frente de $M, exibindo todo o seu charme.
+$n desfila sensualmente na frente de $N, exibindo todo o seu charme.
+$n desfila sensualmente na sua frente, claramente tentando impressionar você.
+Você desfila elegante... mas para quem?
+Você desfila para si mesm$r no espelho imaginário. Que confiança!
+$n desfila para si mesm$r. Que autoestima invejável!
+Você desfila sensualmente, exibindo o $t de $S.
+$n desfila sensualmente, exibindo o $t de $N.
+$n desfila sensualmente na sua frente, exibindo o seu $t.
+Você desfila ao redor de $p com elegância.
+$n desfila ao redor de $p com elegância.
+
 ~challenge challenge 0 5 0 0
 Quem você deseja desafiar?
 $n está procurando alguém para desafiar.
@@ -3372,6 +3387,21 @@ $n caçoa do seu $t.
 #
 #
 
+~jealous jealous 0 5 0 0
+Você sente uma pontada de ciúme corroendo o seu coração.
+$n parece visivelmente enciumad$r.
+Você lança um olhar enciumado para $M, sentindo uma pontada de inveja.
+$n lança um olhar enciumado para $N.
+$n lança um olhar enciumado para você. Será que é ciúme?
+Não há ninguém aqui para provocar tanto ciúme em você.
+Você sente ciúme de si mesm$r. Que paradoxo existencial!
+$n parece enciumad$r de si mesm$r. Que complexidade psicológica!
+Você lança um olhar enciumado para o $t de $S.
+$n lança um olhar enciumado para o $t de $N.
+$n lança um olhar enciumado para o seu $t.
+Você lança um olhar enciumado para $p.
+$n lança um olhar enciumado para $p.
+
 ~job job 0 8 8 0
 Esse parece um trabalho para você!
 Esse parece um trabalho para... $n!
@@ -5067,6 +5097,21 @@ $n bagunça o seu $t.
 Você bagunça $p.
 $n bagunça $p.
 
+~rub rub 0 5 0 0
+Você esfrega as mãos pensativamente.
+$n esfrega as mãos pensativamente.
+Você esfrega $M com gentileza reconfortante.
+$n esfrega $N com gentileza reconfortante.
+$n esfrega você com gentileza reconfortante. Que alívio!
+Não há ninguém por perto para esfregar.
+Você esfrega os próprios ombros, aliviando a tensão acumulada.
+$n esfrega os próprios ombros, parecendo relaxad$r.
+Você esfrega o $t de $S com cuidado.
+$n esfrega o $t de $N com cuidado.
+$n esfrega o seu $t com cuidado. Que sensação boa!
+Você esfrega $p.
+$n esfrega $p.
+
 ~run run 0 8 8 0
 Você corre gritando para as colinas.
 $n corre gritando para as colinas.
@@ -5261,6 +5306,21 @@ $n precisa de sabão na mente.
 #
 #
 #
+
+~sexy sexy 0 5 0 0
+Você se contorce de forma provocante, exalando sensualidade.
+$n se contorce de forma provocante, exalando sensualidade.
+Você faz um movimento lento e sedutor para $M, olhando nos olhos de $S.
+$n faz um movimento lento e sedutor para $N, olhando nos seus olhos.
+$n vira para você com um movimento lento e sedutor, olhando nos seus olhos.
+Você tenta ser sexy para alguém que não está aqui. Que desperdício!
+Você se examina no espelho imaginário e acha que está irresistível.
+$n se examina como se fosse irresistível. Que autoconfiança!
+Você faz um gesto sedutor em direção ao $t de $S.
+$n faz um gesto sedutor em direção ao $t de $N.
+$n faz um gesto sedutor em direção ao seu $t.
+Você faz uma pose sedutora com $p.
+$n faz uma pose sedutora com $p.
 
 ~shake shake 0 5 0 0
 Você balança a cabeça.

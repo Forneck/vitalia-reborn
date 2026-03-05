@@ -8947,7 +8947,7 @@ int classify_social_interact_type(const char *social_name, int *out_major)
     }
 
     /* Blocked sexual socials - major negative event */
-    const char *blocked[] = {"fondle", "grope", "french", "sex", "seduce", NULL};
+    const char *blocked[] = {"fondle", "grope", "french", "sex", "seduce", "sexy", NULL};
     for (i = 0; blocked[i]; i++) {
         if (!strcmp(social_name, blocked[i])) {
             if (out_major)
@@ -8962,7 +8962,7 @@ int classify_social_interact_type(const char *social_name, int *out_major)
                               "ignore",  "threaten", "blame",  "criticize", "disapprove", "scold", "hate",    "grimace",
                               "evileye", "swear",    "envy",   "greed",     "drool",      "puke",  "burp",    "fart",
                               "licks",   "moan",     "sniff",  "earlick",   "pant",       "moon",  "booger",  "belch",
-                              "gag",     "spew",     "phlegm", NULL};
+                              "gag",     "spew",     "phlegm", "jealous",   NULL};
     for (i = 0; negative[i]; i++) {
         if (!strcmp(social_name, negative[i]))
             return INTERACT_SOCIAL_NEGATIVE;
