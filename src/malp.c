@@ -1067,79 +1067,9 @@ float get_mplp_compassion_bias(struct char_data *mob) { return get_context_trait
 
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience)
 {
-    if (!mob || !IS_NPC(mob) || !mob->ai_data)
-        return;
-    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
-        return;
-    if (!is_context_global_trait_type(trait_type))
-        return;
-
-    struct mob_ai_data *ai = mob->ai_data;
-    struct mplp_trait *trait = NULL;
-    int i;
-    time_t now = time(NULL);
-
-    /* Clamp inputs */
-    if (salience > 1.0f)
-        salience = 1.0f;
-    if (salience < 0.0f)
-        salience = 0.0f;
-    if (valence > 1.0f)
-        valence = 1.0f;
-    if (valence < -1.0f)
-        valence = -1.0f;
-
-    /* Find existing global trait slot */
-    for (i = 0; i < ai->mplp_count; i++) {
-        if (ai->mplp[i].anchor_agent_id == MPLP_GLOBAL_ANCHOR && ai->mplp[i].trait_type == trait_type) {
-            trait = &ai->mplp[i];
-            break;
-        }
-    }
-
-    if (!trait) {
-        /* Allocate a new slot */
-        if (ai->mplp_count >= MPLP_MAX_PER_MOB)
-            return;
-        if (!mplp_grow(mob))
-            return;
-        trait = &ai->mplp[ai->mplp_count];
-        memset(trait, 0, sizeof(struct mplp_trait));
-        trait->anchor_agent_id = MPLP_GLOBAL_ANCHOR;
-        trait->agent_type = ENTITY_TYPE_GLOBAL; /* not tied to any specific agent */
-        trait->trait_type = trait_type;
-        trait->magnitude = 0.0f;
-        trait->base_magnitude = 0.0f;
-        trait->valence = valence;
-        trait->rehearsal_count = 1;
-        trait->persistence = MALP_PERSIST_LOW;
-        trait->last_updated = now;
-        ai->mplp_count++;
-        /* Fall through so the first experience applies the reinforcement delta */
-    }
-
-    /* Hebbian reinforcement: bounded magnitude increment */
-    float delta = 0.15f * salience;
-    if (delta > 0.30f)
-        delta = 0.30f;
-    trait->magnitude += delta;
-    if (trait->magnitude > 1.0f)
-        trait->magnitude = 1.0f;
-    trait->base_magnitude = trait->magnitude;
-
-    /* Running-average valence update */
-    float alpha = MPLP_VALENCE_LEARNING_RATE;
-    trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
-
-    if (trait->rehearsal_count < MALP_MAX_REHEARSAL)
-        trait->rehearsal_count++;
-    trait->last_updated = now;
-
-    /* Elevate persistence as the trait strengthens */
-    if (trait->magnitude >= 0.70f && trait->persistence < MALP_PERSIST_HIGH)
-        trait->persistence = MALP_PERSIST_HIGH;
-    else if (trait->magnitude >= 0.40f && trait->persistence < MALP_PERSIST_MEDIUM)
-        trait->persistence = MALP_PERSIST_MEDIUM;
+    /* Delegate to the context-aware variant with MPLP_CTX_GLOBAL so that the
+     * full delta applies to the global magnitude (no context split). */
+    reinforce_mplp_context_trait_ctx(mob, trait_type, valence, salience, MPLP_CTX_GLOBAL);
 }
 
 int get_mplp_context_from_interact_type(int interact_type)
