@@ -387,3 +387,73 @@ recon_window_ticks = 60 (equivalente a ~1min de jogo-time)
 malp_limit_per_mob = 200
 
 mplp_decay_half_life_standard ≈ 24 horas, major_event_half_life ≈ 72 horas (ajustáveis) — coerente com half-life macro adotada no changelog.
+
+---
+
+Apêndice B — Reforço MPLP por Eventos Não-Sociais
+
+Esta seção descreve a expansão do sistema de reforço MPLP para incluir eventos além das interações sociais diretas (emotes/socials). Implementada em `src/utils.c` via a função estática `apply_mplp_nonsocial_reinforcement(mob, interact_type, is_major)`.
+
+B.1 Motivação
+
+O modelo MPLP original atualizava traços implícitos apenas em resposta a ações sociais diretas (comandos como `catwalk`, `bow`, `insult`, etc.). Isso criava uma lacuna de simulação: um NPC podia acumular dezenas de memórias de combate em MALP mas seus traços de personalidade MPLP permaneciam estáticos. Um mercador repetidamente roubado não tornava-se mais desconfiado; um guarda sobrevivente de batalhas não tornava-se mais corajoso.
+
+B.2 Arquitetura
+
+A função auxiliar é chamada imediatamente após `apply_malp_emotion_effects()` em cada função de atualização emocional não-social, seguindo o padrão:
+
+```c
+apply_malp_emotion_effects(mob, actor, valence);
+apply_mplp_nonsocial_reinforcement(mob, INTERACT_TYPE, is_major);
+```
+
+B.3 Mapeamento Evento → Traços
+
+Os pesos de salience usados seguem escala reduzida em relação aos eventos sociais (social=0.80, combat=0.60, quest=0.60, economic=0.40), respeitando o princípio de que interações sociais diretas são os principais motores da aprendizagem implícita.
+
+| Evento (INTERACT_*) | Traços Reforçados | Salience | is_major |
+|---|---|---|---|
+| ATTACKED (0) | REVENGE_TENDENCY ↑, SUBMISSION ±, BETRAYAL_SENSITIVITY ↑, DISTRESS_AVERSION ↑ | 0.60 | 0 |
+| HEALED (1) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, LOYALTY_EXPECTATION ↑, COMPASSION_BIAS ↑ | 0.50 | 0 |
+| RECEIVED_ITEM (2) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑ | 0.40 | 0 |
+| STOLEN_FROM (3) | SUSPICION_BIAS ↑, BETRAYAL_SENSITIVITY ↑, REVENGE_TENDENCY ↑, TRUST_BIAS ↓ | 0.70 | 1 |
+| RESCUED (4) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, LOYALTY_EXPECTATION ↑, COMPASSION_BIAS ↑ | 0.70 | 1 |
+| ASSISTED (5) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑, LOYALTY_EXPECTATION ↑ | 0.50 | 0 |
+| ALLY_DIED (9) | DISTRESS_AVERSION ↑, EMPATHY_RESPONSE ↑, REVENGE_TENDENCY ↑, COMPASSION_BIAS ↑ | 0.70 | 1 |
+| WITNESSED_DEATH (10) | DISTRESS_AVERSION ↑, EMPATHY_RESPONSE ↑, COMPASSION_BIAS ↑ | 0.60 | 0 |
+| QUEST_COMPLETE (11) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑, LOYALTY_EXPECTATION ↑ | 0.60 | 0 |
+| QUEST_FAIL (12) | TRUST_BIAS ↓, BETRAYAL_SENSITIVITY ↑, SUSPICION_BIAS ↑ | 0.50 | 0 |
+| BETRAYAL (13) | BETRAYAL_SENSITIVITY ↑, TRUST_BIAS ↓, SUSPICION_BIAS ↑, REVENGE_TENDENCY ↑, OUTGROUP_AVERSION ↑ | 0.70 | 1 |
+| WITNESSED_OFFENSIVE_MAGIC (14) | DISTRESS_AVERSION ↑, SUBMISSION ±, NOVEL_AGENT_INTEREST ↑ | 0.40 | 0 |
+| WITNESSED_SUPPORT_MAGIC (15) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, NOVEL_AGENT_INTEREST ↑, COMPASSION_BIAS ↑ | 0.50 | 0 |
+| ABANDON_ALLY (16) | BETRAYAL_SENSITIVITY ↑, TRUST_BIAS ↓, SUSPICION_BIAS ↑, DISTRESS_AVERSION ↑ | 0.70 | 1 |
+
+Nota: `update_mob_emotion_robbed_shopping()` (em `src/utils.c`) também chama o helper com `INTERACT_STOLEN_FROM` e `is_major=0`, pois a violação de confiança por preço injusto é conceitualmente equivalente a um roubo de magnitude menor.
+
+B.4 Feedback Traço → Emoção
+
+Após cada conjunto de reforços, os valores acumulados dos traços são lidos de volta e aplicam um pequeno ajuste secundário de emoção (máximo `MPLP_EMOTION_DELTA_MAX=5` pontos via `adjust_emotion()`). Este feedback bidimensional evita que a personalidade fique desconectada do estado emocional instantâneo, mantendo a coerência entre memória implícita e resposta emocional.
+
+B.5 Proteções Contra Desvio de Personalidade
+
+- Salience máxima por evento não-social: 0.70 (vs. 0.80 para sociais)
+- `reinforce_mplp_context_trait()` usa delta Hebbiano `= 0.15f * salience` (constante inline em `src/malp.c:reinforce_mplp_context_trait`), limitado a 0.30 por chamada
+- `MPLP_PERSONALITY_BIAS_THRESHOLD = 0.15f`: traço só influencia emoções se magnitude > 0.15
+- Decay MPLP contínuo via `malp_decay_tick()` com `MPLP_DECAY_HALFLIFE` configurável
+- Cooldown social (`MALP_SOCIAL_COOLDOWN_SECS=120s`) limita a frequência de reforços pelo mesmo actor
+
+B.6 Logging
+
+Quando `CONFIG_MOB_4D_DEBUG` está ativo, cada chamada registra:
+
+```
+MPLP-NS: mob=<name>(#<vnum>) event=<id> is_major=<0|1> sal_base=<float>
+MPLP-NS: <EVENT_NAME> sal=<float> <trait1>=<float> [<trait2>=<float> ...]
+```
+
+Exemplo para um NPC atacado:
+```
+MPLP-NS: mob=Guarda(#3001) event=0 is_major=0 sal_base=0.50
+MPLP-NS: ATTACKED sal=0.60 rev=0.23 sub=0.11
+```
+
