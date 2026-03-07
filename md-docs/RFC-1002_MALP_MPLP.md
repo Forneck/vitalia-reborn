@@ -387,3 +387,172 @@ recon_window_ticks = 60 (equivalente a ~1min de jogo-time)
 malp_limit_per_mob = 200
 
 mplp_decay_half_life_standard ≈ 24 horas, major_event_half_life ≈ 72 horas (ajustáveis) — coerente com half-life macro adotada no changelog.
+
+---
+
+Apêndice B — Reforço MPLP por Eventos Não-Sociais
+
+Esta seção descreve a expansão do sistema de reforço MPLP para incluir eventos além das interações sociais diretas (emotes/socials). Implementada em `src/utils.c` via a função estática `apply_mplp_nonsocial_reinforcement(mob, interact_type, is_major)`.
+
+B.1 Motivação
+
+O modelo MPLP original atualizava traços implícitos apenas em resposta a ações sociais diretas (comandos como `catwalk`, `bow`, `insult`, etc.). Isso criava uma lacuna de simulação: um NPC podia acumular dezenas de memórias de combate em MALP mas seus traços de personalidade MPLP permaneciam estáticos. Um mercador repetidamente roubado não tornava-se mais desconfiado; um guarda sobrevivente de batalhas não tornava-se mais corajoso.
+
+B.2 Arquitetura
+
+A função auxiliar é chamada imediatamente após `apply_malp_emotion_effects()` em cada função de atualização emocional não-social, seguindo o padrão:
+
+```c
+apply_malp_emotion_effects(mob, actor, valence);
+apply_mplp_nonsocial_reinforcement(mob, INTERACT_TYPE, is_major);
+```
+
+B.3 Mapeamento Evento → Traços
+
+Os pesos de salience usados seguem escala reduzida em relação aos eventos sociais (social=0.80, combat=0.60, quest=0.60, economic=0.40), respeitando o princípio de que interações sociais diretas são os principais motores da aprendizagem implícita.
+
+| Evento (INTERACT_*) | Traços Reforçados | Salience | is_major |
+|---|---|---|---|
+| ATTACKED (0) | REVENGE_TENDENCY ↑, SUBMISSION ±, BETRAYAL_SENSITIVITY ↑, DISTRESS_AVERSION ↑ | 0.60 | 0 |
+| HEALED (1) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, LOYALTY_EXPECTATION ↑, COMPASSION_BIAS ↑ | 0.50 | 0 |
+| RECEIVED_ITEM (2) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑ | 0.40 | 0 |
+| STOLEN_FROM (3) | SUSPICION_BIAS ↑, BETRAYAL_SENSITIVITY ↑, REVENGE_TENDENCY ↑, TRUST_BIAS ↓ | 0.70 | 1 |
+| RESCUED (4) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, LOYALTY_EXPECTATION ↑, COMPASSION_BIAS ↑ | 0.70 | 1 |
+| ASSISTED (5) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑, LOYALTY_EXPECTATION ↑ | 0.50 | 0 |
+| ALLY_DIED (9) | DISTRESS_AVERSION ↑, EMPATHY_RESPONSE ↑, REVENGE_TENDENCY ↑, COMPASSION_BIAS ↑ | 0.70 | 1 |
+| WITNESSED_DEATH (10) | DISTRESS_AVERSION ↑, EMPATHY_RESPONSE ↑, COMPASSION_BIAS ↑ | 0.70 | 1 |
+| QUEST_COMPLETE (11) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, RECIPROCITY_EXPECTATION ↑, LOYALTY_EXPECTATION ↑ | 0.60 | 0 |
+| QUEST_FAIL (12) | TRUST_BIAS ↓, BETRAYAL_SENSITIVITY ↑, SUSPICION_BIAS ↑ | 0.50 | 0 |
+| BETRAYAL (13) | BETRAYAL_SENSITIVITY ↑, TRUST_BIAS ↓, SUSPICION_BIAS ↑, REVENGE_TENDENCY ↑, OUTGROUP_AVERSION ↑ | 0.70 | 1 |
+| WITNESSED_OFFENSIVE_MAGIC (14) | DISTRESS_AVERSION ↑, SUBMISSION ±, NOVEL_AGENT_INTEREST ↑ | 0.40 | 0 |
+| WITNESSED_SUPPORT_MAGIC (15) | TRUST_BIAS ↑, GRATITUDE_RESPONSE ↑, NOVEL_AGENT_INTEREST ↑, COMPASSION_BIAS ↑ | 0.50 | 0 |
+| ABANDON_ALLY (16) | BETRAYAL_SENSITIVITY ↑, TRUST_BIAS ↓, SUSPICION_BIAS ↑, DISTRESS_AVERSION ↑ | 0.70 | 1 |
+
+Nota: `update_mob_emotion_robbed_shopping()` (em `src/utils.c`) também chama o helper com `INTERACT_STOLEN_FROM` e `is_major=0`, pois a violação de confiança por preço injusto é conceitualmente equivalente a um roubo de magnitude menor.
+
+B.4 Feedback Traço → Emoção
+
+Após cada conjunto de reforços, os valores acumulados dos traços são lidos de volta e aplicam um pequeno ajuste secundário de emoção (máximo `MPLP_EMOTION_DELTA_MAX=5` pontos via `adjust_emotion()`). Este feedback bidimensional evita que a personalidade fique desconectada do estado emocional instantâneo, mantendo a coerência entre memória implícita e resposta emocional.
+
+B.5 Proteções Contra Desvio de Personalidade
+
+- Salience máxima por evento não-social: 0.70 (vs. 0.80 para sociais)
+- `reinforce_mplp_context_trait()` usa delta Hebbiano `= 0.15f * salience` (constante inline em `src/malp.c:reinforce_mplp_context_trait`), limitado a 0.30 por chamada
+- `MPLP_PERSONALITY_BIAS_THRESHOLD = 0.15f`: traço só influencia emoções se magnitude > 0.15
+- Decay MPLP contínuo via `malp_decay_tick()` com `MPLP_DECAY_HALFLIFE` configurável
+- Cooldown social (`MALP_SOCIAL_COOLDOWN_SECS=120s`) limita a frequência de reforços pelo mesmo actor
+
+B.6 Logging
+
+Quando `CONFIG_MOB_4D_DEBUG` está ativo, cada chamada registra:
+
+```
+MPLP-NS: mob=<name>(#<vnum>) event=<id> is_major=<0|1> sal_base=<float>
+MPLP-NS: <EVENT_NAME> sal=<float> <trait1>=<float> [<trait2>=<float> ...]
+```
+
+Exemplo para um NPC atacado:
+```
+MPLP-NS: mob=Guarda(#3001) event=0 is_major=0 sal_base=0.50
+MPLP-NS: ATTACKED sal=0.60 rev=0.23 sub=0.11
+```
+
+
+---
+
+## Appendix C — MPLP Context Model (Situational Personality Modulation)
+
+### C.1 Motivation
+
+Prior to this extension, each MPLP context-global trait held a single scalar `magnitude` value that accumulated from all event types without distinction.  A mob robbed during trade and a mob betrayed on a quest would both update the same global `TRUST_BIAS` slot, preventing situational learning:  "trusting in combat, suspicious in trade" was architecturally impossible.
+
+### C.2 Architecture
+
+Each `mplp_trait` now carries a `ctx[MPLP_CTX_MAX]` float array alongside the existing `magnitude` (global value).
+
+```
+mplp_trait
+ ├─ magnitude           ← global personality baseline (persists via power-law)
+ └─ ctx[MPLP_CTX_MAX]  ← contextual modifiers per situation
+      [0] GLOBAL  = 0.0  (never written; reserved as alias for magnitude)
+      [1] SOCIAL  ← updated by social interaction events
+      [2] COMBAT  ← updated by combat / rescue / ally-death events
+      [3] TRADE   ← updated by trade / theft events
+      [4] QUEST   ← updated by quest / betrayal / deception events
+      [5] MAGIC   ← updated by witnessed magical effects
+```
+
+Effective trait value for a given situation:
+
+```
+effective = clamp(global_component + ctx[ctx_type])
+```
+
+where `global_component` = `magnitude` (unsigned traits) or `±magnitude` (signed, sign from `valence`), and `ctx[]` stores a pre-signed modifier.
+
+### C.3 Reinforcement Split
+
+`reinforce_mplp_context_trait_ctx(mob, trait_type, valence, salience, ctx_type)` splits the Hebbian delta:
+
+| Component | Weight | Target |
+|---|---|---|
+| Global personality | `MPLP_CTX_GLOBAL_WEIGHT = 0.60` | `magnitude` |
+| Contextual modifier | `MPLP_CTX_LOCAL_WEIGHT = 0.40` | `ctx[ctx_type]` |
+
+When `ctx_type == MPLP_CTX_GLOBAL` the full delta is applied to `magnitude` (equivalent to the legacy `reinforce_mplp_context_trait()` call).
+
+### C.4 Event-to-Context Mapping
+
+`get_mplp_context_from_interact_type(interact_type)` maps each `INTERACT_*` constant to the appropriate context:
+
+| INTERACT_* range | Context |
+|---|---|
+| ATTACKED, HEALED, RESCUED, ASSISTED, ALLY_DIED, WITNESSED_DEATH, ABANDON_ALLY, SACRIFICE_SELF | `MPLP_CTX_COMBAT` |
+| RECEIVED_ITEM, STOLEN_FROM | `MPLP_CTX_TRADE` |
+| QUEST_COMPLETE, QUEST_FAIL, BETRAYAL, DECEIVE | `MPLP_CTX_QUEST` |
+| WITNESSED_OFFENSIVE_MAGIC, WITNESSED_SUPPORT_MAGIC | `MPLP_CTX_MAGIC` |
+| SOCIAL_POSITIVE, SOCIAL_NEGATIVE, SOCIAL_VIOLENT, SOCIAL_NEUTRAL | `MPLP_CTX_SOCIAL` |
+
+### C.5 Context Decay
+
+Per-tick decay in `malp_decay_tick()`:
+
+```c
+ctx[c] *= MPLP_CTX_DECAY_RATE;   /* 0.995 per tick */
+```
+
+Applied only to `ctx[1..MPLP_CTX_MAX-1]` (never to `ctx[0]=GLOBAL` which stays 0).  The global `magnitude` continues to use the existing power-law half-life decay.
+
+Half-life of contextual modifiers ≈ 138 ticks at default tick rate, keeping situational learning transient while global personality persists.
+
+### C.6 Context-Aware Retrieval
+
+```c
+float get_mplp_trait_with_ctx(mob, trait_type, ctx_type)
+```
+
+Returns `clamp(global_component + ctx[ctx_type])`.  Existing `get_mplp_*()` accessor functions continue to return only the global value (backward-compatible).
+
+### C.7 Debug Logging
+
+Updated log format when `CONFIG_MOB_4D_DEBUG` is active:
+
+```
+MPLP-NS: mob=<name>(#<vnum>) event=<id> is_major=<0|1> sal_base=<float> ctx=<NAME>
+MPLP-NS: <EVENT_NAME> ctx=<NAME> sal=<float> <trait1>=<float> [...]
+```
+
+Example for a merchant robbed during trade:
+
+```
+MPLP-NS: mob=Comerciante(#1200) event=3 is_major=1 sal_base=0.70 ctx=TRADE
+MPLP-NS: STOLEN_FROM ctx=TRADE sal=0.70 rev=0.45 sus=0.23
+```
+
+The stat display (`stat mob <name>`) shows a `Ctx:` line for each MPLP trait that has at least one non-zero contextual modifier, e.g.:
+
+```
+ [3] Context:global   Trait:TRUST_BIAS          Persist:LOW    Rehearsal:4
+      Mag:0.31  BaseMag:0.31  Val:+0.28  Age:0h2m15s
+      Ctx: TRADE-0.18 QUEST+0.12
+```

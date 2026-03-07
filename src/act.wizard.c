@@ -969,6 +969,49 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
     }
 }
 
+/**
+ * resolve_entity_label() - Build a human-readable "Type:Name(#ID)[status]" label
+ * for a MALP/MPLP agent or emotion-memory entity.
+ *
+ * When the entity is currently in the game world the label is:
+ *   "Mob:Rei Welmar(#10000296)"   or   "Player:Alice(#5)"
+ * When the entity has left (mob gone / player offline):
+ *   "Mob:(#10000296)[gone]"       or   "Player:(#5)[offline]"
+ *
+ * @param buf       Output buffer of size ENTITY_LABEL_SIZE (or larger).
+ * @param bufsz     Size of buf.
+ * @param etype     ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @param eid       Entity id (player idnum or mob script_id).
+ */
+#define ENTITY_LABEL_SIZE (MAX_NAME_LENGTH + 48)
+static void resolve_entity_label(char *buf, size_t bufsz, int etype, long eid)
+{
+    const char *prefix = (etype == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:";
+    const char *suffix = (etype == ENTITY_TYPE_PLAYER) ? "[offline]" : "[gone]";
+    struct char_data *found = NULL;
+
+    for (struct char_data *c = character_list; c; c = c->next) {
+        if (etype == ENTITY_TYPE_PLAYER) {
+            if (!IS_NPC(c) && GET_IDNUM(c) == eid) {
+                found = c;
+                break;
+            }
+        } else {
+            if (IS_NPC(c) && char_script_id(c) == eid) {
+                found = c;
+                break;
+            }
+        }
+    }
+
+    if (found) {
+        const char *n = GET_NAME(found);
+        snprintf(buf, bufsz, "%s%s(#%ld)", prefix, (n && *n) ? n : "?", eid);
+    } else {
+        snprintf(buf, bufsz, "%s(#%ld)%s", prefix, eid, suffix);
+    }
+}
+
 static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 {
     static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
@@ -980,7 +1023,27 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                                         "MASCULINITY_RESPONSE",
                                         "FEMININITY_RESPONSE",
                                         "ANDROGYNY_TOLERANCE",
-                                        "GENDER_NORM_SENSITIVITY"};
+                                        "GENDER_NORM_SENSITIVITY",
+                                        "DOMINANCE",
+                                        "SUBMISSION",
+                                        "AUTHORITY_RESPONSE",
+                                        "STATUS_SENSITIVITY",
+                                        "TRUST_BIAS",
+                                        "SUSPICION_BIAS",
+                                        "BETRAYAL_SENSITIVITY",
+                                        "LOYALTY_EXPECTATION",
+                                        "POLITENESS_RESPONSE",
+                                        "RUDENESS_RESPONSE",
+                                        "INGROUP_BIAS",
+                                        "OUTGROUP_AVERSION",
+                                        "NOVEL_AGENT_INTEREST",
+                                        "RECIPROCITY_EXPECTATION",
+                                        "GRATITUDE_RESPONSE",
+                                        "REVENGE_TENDENCY",
+                                        "FORGIVENESS_RATE",
+                                        "EMPATHY_RESPONSE",
+                                        "DISTRESS_AVERSION",
+                                        "COMPASSION_BIAS"};
     int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
     if (!IS_MOB(mob)) {
@@ -1019,8 +1082,11 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
             long age_m = (age_secs % 3600) / 60;
             long age_s = age_secs % 60;
 
-            send_to_char(ch, " [%d] %s#%ld  Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1,
-                         (e->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", e->agent_id, iname, pname,
+            /* Resolve agent name for audit */
+            char agent_label[ENTITY_LABEL_SIZE];
+            resolve_entity_label(agent_label, sizeof(agent_label), e->agent_type, e->agent_id);
+
+            send_to_char(ch, " [%d] %-36s Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1, agent_label, iname, pname,
                          e->major_event ? "YES" : "no");
             send_to_char(ch,
                          "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
@@ -1054,13 +1120,12 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
             long age_m = (age_secs % 3600) / 60;
             long age_s = age_secs % 60;
 
-            char anchor_buf[32];
+            char anchor_buf[ENTITY_LABEL_SIZE];
             if (t->agent_type == ENTITY_TYPE_GLOBAL)
                 snprintf(anchor_buf, sizeof(anchor_buf), "Context:global");
             else
-                snprintf(anchor_buf, sizeof(anchor_buf), "%s#%ld",
-                         (t->agent_type == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:", t->anchor_agent_id);
-            send_to_char(ch, " [%d] %-18s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname, pname,
+                resolve_entity_label(anchor_buf, sizeof(anchor_buf), t->agent_type, t->anchor_agent_id);
+            send_to_char(ch, " [%d] %-36s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname, pname,
                          t->rehearsal_count);
             send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
                          (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
@@ -1069,6 +1134,26 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                          : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
                                                : "",
                          t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+            /* Show non-zero contextual modifiers */
+            {
+                static const char *const ctx_labels[] = {"GLOBAL", "SOCIAL", "COMBAT", "TRADE", "QUEST", "MAGIC"};
+                bool any_ctx = FALSE;
+                for (int c = 1; c < MPLP_CTX_MAX; c++) {
+                    if (t->ctx[c] != 0.0f) {
+                        if (!any_ctx) {
+                            send_to_char(ch, "      Ctx:");
+                            any_ctx = TRUE;
+                        }
+                        send_to_char(ch, " %s%s%+.2f%s", ctx_labels[c],
+                                     (t->ctx[c] < -0.1f)  ? CCRED(ch, C_NRM)
+                                     : (t->ctx[c] > 0.1f) ? CCGRN(ch, C_NRM)
+                                                          : "",
+                                     t->ctx[c], CCNRM(ch, C_NRM));
+                    }
+                }
+                if (any_ctx)
+                    send_to_char(ch, "\r\n");
+            }
         }
     }
 
@@ -1526,44 +1611,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                                 : "Unknown";
 
                         /* Try to resolve entity name */
-                        char entity_name[MAX_NAME_LENGTH + 20];
-                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
-                            /* For players, try to find them by ID */
-                            struct char_data *player = NULL;
-                            for (player = character_list; player; player = player->next) {
-                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
-                                    /* Found the player - validate and copy name safely */
-                                    const char *name = GET_NAME(player);
-                                    if (name && *name) {
-                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
-                                    } else {
-                                        snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
-                                    }
-                                    break;
-                                }
-                            }
-                            if (!player) {
-                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
-                            }
-                        } else {
-                            /* For mobs, try to find them by script_id (runtime only) */
-                            struct char_data *mob = NULL;
-                            for (mob = character_list; mob; mob = mob->next) {
-                                if (IS_NPC(mob) && char_script_id(mob) == mem->entity_id) {
-                                    /* Found the mob - validate and copy name safely */
-                                    const char *name = GET_NAME(mob);
-                                    if (name && *name) {
-                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
-                                    } else {
-                                        snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
-                                    }
-                                    break;
-                                }
-                            }
-                            if (!mob) {
-                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
-                            }
-                        }
+                        char entity_name[ENTITY_LABEL_SIZE];
+                        resolve_entity_label(entity_name, sizeof(entity_name), mem->entity_type, mem->entity_id);
 
                         /* Build emotion display - show all significant emotion values */
                         char emotion_buf[512];
@@ -1807,30 +1856,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                                 : "Unknown";
 
                         /* Resolve target name */
-                        char entity_name[MAX_NAME_LENGTH + 20];
-                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
-                            struct char_data *player = NULL;
-                            for (player = character_list; player; player = player->next) {
-                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
-                                    const char *name = GET_NAME(player);
-                                    snprintf(entity_name, sizeof(entity_name), "%s", (name && *name) ? name : "?");
-                                    break;
-                                }
-                            }
-                            if (!player)
-                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
-                        } else {
-                            struct char_data *mob_t = NULL;
-                            for (mob_t = character_list; mob_t; mob_t = mob_t->next) {
-                                if (IS_NPC(mob_t) && char_script_id(mob_t) == mem->entity_id) {
-                                    const char *name = GET_NAME(mob_t);
-                                    snprintf(entity_name, sizeof(entity_name), "%s", (name && *name) ? name : "?");
-                                    break;
-                                }
-                            }
-                            if (!mob_t)
-                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
-                        }
+                        char entity_name[ENTITY_LABEL_SIZE];
+                        resolve_entity_label(entity_name, sizeof(entity_name), mem->entity_type, mem->entity_id);
 
                         /* Build emotion string */
                         char emotion_buf[512];

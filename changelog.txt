@@ -2,6 +2,204 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 07 2026] - Vitalia Reborn Development
+  fix: Wire MPLP traits to all non-social INTERACT_ event types (src/utils.c)
+    Before this change MPLP context-global personality traits were only reinforced
+    by social/emote events (INTERACT_SOCIAL_* types 6/7/8/19).  The 14 remaining
+    non-social event types that record emotion memories had no MPLP reinforcement,
+    so personality never evolved from combat, quests, magic, or economic events.
+
+    Added static helper apply_mplp_nonsocial_reinforcement(mob, interact_type,
+    is_major) placed just before update_mob_emotion_attacked().  Called after every
+    apply_malp_emotion_effects() call in each non-social update function.
+
+    Trait-to-event mappings:
+    ─────────────────────────
+    INTERACT_ATTACKED (0) [melee & spell attack]:
+      REVENGE_TENDENCY     ← anger > 50 → +0.35, else +0.20
+      SUBMISSION           ← fear > 50 || courage < 20 → +0.30; pride ≥ 40 → −0.20
+      BETRAYAL_SENSITIVITY ← trust ≥ 40 → +0.35, else +0.15  (salience×0.7)
+      DISTRESS_AVERSION    ← +0.20  (salience×0.5)
+
+    INTERACT_HEALED (1):
+      TRUST_BIAS           ← happiness ≥ 30 → +0.40, else +0.25
+      GRATITUDE_RESPONSE   ← +0.35
+      LOYALTY_EXPECTATION  ← trust ≥ 40 → +0.30, else +0.15  (×0.6)
+      COMPASSION_BIAS      ← +0.20  (×0.5)
+
+    INTERACT_RECEIVED_ITEM (2) [gift, fair trade, valuable]:
+      TRUST_BIAS           ← friendship ≥ 40 → +0.30, else +0.15
+      GRATITUDE_RESPONSE   ← happiness ≥ 30 → +0.30, else +0.15
+      RECIPROCITY_EXPECTATION ← +0.20  (×0.5)
+
+    INTERACT_STOLEN_FROM (3) [also reused for price gouging]:
+      SUSPICION_BIAS       ← +0.40
+      BETRAYAL_SENSITIVITY ← +0.35
+      REVENGE_TENDENCY     ← anger > 30 → +0.35, else +0.20
+      TRUST_BIAS           ← −0.40
+
+    INTERACT_RESCUED (4):
+      TRUST_BIAS           ← trust ≥ 50 → +0.45, else +0.30
+      GRATITUDE_RESPONSE   ← +0.40
+      LOYALTY_EXPECTATION  ← +0.35  (×0.7)
+      COMPASSION_BIAS      ← +0.25  (×0.5)
+
+    INTERACT_ASSISTED (5):
+      TRUST_BIAS           ← trust ≥ 40 → +0.35, else +0.20
+      GRATITUDE_RESPONSE   ← +0.30
+      RECIPROCITY_EXPECTATION ← loyalty > 40 → +0.30, else +0.15  (×0.6)
+      LOYALTY_EXPECTATION  ← +0.20  (×0.5)
+
+    INTERACT_ALLY_DIED (9):
+      DISTRESS_AVERSION    ← +0.40
+      EMPATHY_RESPONSE     ← compassion ≥ 40 || sadness ≥ 30 → +0.35, else +0.15  (×0.7)
+      REVENGE_TENDENCY     ← anger > 30 → +0.35, else +0.20
+      COMPASSION_BIAS      ← +0.25  (×0.5)
+
+    INTERACT_WITNESSED_DEATH (10):
+      DISTRESS_AVERSION    ← +0.30
+      EMPATHY_RESPONSE     ← friendship ≥ 30 → +0.25, else +0.10  (×0.6)
+      COMPASSION_BIAS      ← +0.15  (×0.4)
+
+    INTERACT_QUEST_COMPLETE (11):
+      TRUST_BIAS           ← trust ≥ 40 → +0.40, else +0.25
+      GRATITUDE_RESPONSE   ← +0.30
+      RECIPROCITY_EXPECTATION ← loyalty ≥ 30 → +0.30, else +0.15  (×0.6)
+      LOYALTY_EXPECTATION  ← +0.25  (×0.5)
+
+    INTERACT_QUEST_FAIL (12):
+      TRUST_BIAS           ← anger > 30 → −0.35, else −0.20
+      BETRAYAL_SENSITIVITY ← +0.25
+      SUSPICION_BIAS       ← +0.20  (×0.7)
+
+    INTERACT_BETRAYAL (13):
+      BETRAYAL_SENSITIVITY ← +0.50
+      TRUST_BIAS           ← −0.50
+      SUSPICION_BIAS       ← +0.45
+      REVENGE_TENDENCY     ← anger > 30 → +0.50, else +0.35
+      OUTGROUP_AVERSION    ← +0.35  (×0.6)
+
+    INTERACT_WITNESSED_OFFENSIVE_MAGIC (14):
+      DISTRESS_AVERSION    ← fear > 30 → +0.25, else +0.15
+      SUBMISSION           ← fear > 40 → +0.20; courage ≥ 40 → −0.15; else +0.10  (×0.7)
+      NOVEL_AGENT_INTEREST ← curiosity ≥ 30 → +0.20, else +0.10  (×0.6)
+
+    INTERACT_WITNESSED_SUPPORT_MAGIC (15):
+      TRUST_BIAS           ← +0.35
+      GRATITUDE_RESPONSE   ← +0.30
+      NOVEL_AGENT_INTEREST ← curiosity ≥ 30 → +0.25, else +0.15  (×0.5)
+      COMPASSION_BIAS      ← +0.20  (×0.4)
+
+    INTERACT_ABANDON_ALLY (16):
+      BETRAYAL_SENSITIVITY ← loyalty > 40 → +0.40, else +0.25
+      TRUST_BIAS           ← −0.35
+      SUSPICION_BIAS       ← +0.30  (×0.8)
+      DISTRESS_AVERSION    ← +0.30  (×0.7)
+
+[Mar 07 2026] - Vitalia Reborn Development
+  fix: Wire new MPLP social cognition traits (9–28) to social reinforcement (src/utils.c, src/malp.h)
+    The 20 new MPLP trait dimensions added in the MPLP expansion were defined
+    and had getter functions, but were never reinforced by any social events.
+    This change wires all six categories to the social-category flags already
+    computed in update_mob_emotion_social().
+
+    Added MPLP_STATUS_SENSITIVITY_MULTIPLIER constant to malp.h (analogous to
+    MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER, avoids semantic confusion).
+
+    Trait-to-social mappings added:
+    ─────────────────────────────────
+    Hierarchy / Social Power (9–12):
+      DOMINANCE              ← is_performance | is_violent
+      SUBMISSION             ← is_fearful | is_humiliating
+      AUTHORITY_RESPONSE     ← is_violent | is_performance
+      STATUS_SENSITIVITY     ← is_performance | is_humiliating | is_violent (unsigned amplifier)
+
+    Social Trust System (13–16):
+      TRUST_BIAS             ← is_positive/agreeable (+) | is_negative/disgusting (−)
+      SUSPICION_BIAS         ← is_negative | is_angry_expression | is_disgusting (unsigned)
+      LOYALTY_EXPECTATION    ← is_agreeable | is_positive (unsigned)
+      BETRAYAL_SENSITIVITY   ← is_negative when existing trust >= 40 (unsigned)
+
+    Social Norm Sensitivity (17–18):
+      POLITENESS_RESPONSE    ← is_positive | is_agreeable
+      RUDENESS_RESPONSE      ← is_negative | is_disgusting | is_humiliating | is_angry_expression
+
+    Social Identity Bias (19–21):
+      INGROUP_BIAS           ← is_celebratory | is_agreeable (unsigned)
+      OUTGROUP_AVERSION      ← is_negative when trust < 35 (unsigned)
+      NOVEL_AGENT_INTEREST   ← is_confused | is_silly | is_amused | is_animal | is_exclamation
+
+    Reciprocity System (22–25):
+      GRATITUDE_RESPONSE     ← is_positive | is_food_drink
+      RECIPROCITY_EXPECTATION← is_positive | is_agreeable | is_food_drink | is_playful (unsigned)
+      REVENGE_TENDENCY       ← is_negative | is_violent | is_angry_expression (unsigned)
+      FORGIVENESS_RATE       ← is_agreeable (unsigned)
+
+    Empathy System (26–28):
+      EMPATHY_RESPONSE       ← is_self_directed | is_fearful | is_amused | is_celebratory
+      DISTRESS_AVERSION      ← is_self_directed | is_fearful (unsigned)
+      COMPASSION_BIAS        ← is_fearful (unsigned)
+
+    Each section also applies the accumulated trait value back to the NPC's
+    current emotions following the same pattern used by traits 3–8.
+
+[Mar 07 2026] - Vitalia Reborn Development
+  feat: Expand MPLP Trait System with Social Cognition Biases (src/structs.h, src/malp.h, src/malp.c, src/act.wizard.c)
+    Adds 20 new context-global MPLP trait dimensions covering six social-cognition
+    categories identified in psychological models of behaviour. All existing traits
+    (0–8) are preserved unchanged for full backward compatibility.
+
+    New trait categories and constants
+    ───────────────────────────────────
+    Category 1 – Hierarchy / Social Power:
+      MPLP_TRAIT_DOMINANCE (9)           signed [-1,+1]
+      MPLP_TRAIT_SUBMISSION (10)         signed [-1,+1]
+      MPLP_TRAIT_AUTHORITY_RESPONSE (11) signed [-1,+1]
+      MPLP_TRAIT_STATUS_SENSITIVITY (12) unsigned [0,1]
+
+    Category 2 – Social Trust System:
+      MPLP_TRAIT_TRUST_BIAS (13)           signed [-1,+1]
+      MPLP_TRAIT_SUSPICION_BIAS (14)       unsigned [0,1]
+      MPLP_TRAIT_BETRAYAL_SENSITIVITY (15) unsigned [0,1]
+      MPLP_TRAIT_LOYALTY_EXPECTATION (16)  unsigned [0,1]
+
+    Category 3 – Social Norm Sensitivity:
+      MPLP_TRAIT_POLITENESS_RESPONSE (17) signed [-1,+1]
+      MPLP_TRAIT_RUDENESS_RESPONSE (18)   signed [-1,+1]
+      (EXHIBITION_RESPONSE/MODESTY_RESPONSE already covered by traits 3–4)
+
+    Category 4 – Social Identity Bias:
+      MPLP_TRAIT_INGROUP_BIAS (19)         unsigned [0,1]
+      MPLP_TRAIT_OUTGROUP_AVERSION (20)    unsigned [0,1]
+      MPLP_TRAIT_NOVEL_AGENT_INTEREST (21) signed [-1,+1]
+
+    Category 5 – Reciprocity System:
+      MPLP_TRAIT_RECIPROCITY_EXPECTATION (22) unsigned [0,1]
+      MPLP_TRAIT_GRATITUDE_RESPONSE (23)      signed [-1,+1]
+      MPLP_TRAIT_REVENGE_TENDENCY (24)        unsigned [0,1]
+      MPLP_TRAIT_FORGIVENESS_RATE (25)        unsigned [0,1]
+
+    Category 6 – Empathy System:
+      MPLP_TRAIT_EMPATHY_RESPONSE (26)  signed [-1,+1]
+      MPLP_TRAIT_DISTRESS_AVERSION (27) unsigned [0,1]
+      MPLP_TRAIT_COMPASSION_BIAS (28)   unsigned [0,1]
+
+    Implementation details
+    ──────────────────────
+    - is_unsigned_mplp_trait() helper centralises the signed/unsigned distinction
+      used by get_context_trait(), replacing the previous GENDER_NORM_SENSITIVITY
+      hard-coded special case with a switch covering all unipolar traits.
+    - reinforce_mplp_context_trait() validation updated to accept all 26
+      context-global trait types (traits 3–28).
+    - Getter functions added for each new trait (get_mplp_dominance(), etc.),
+      all delegating to the existing get_context_trait() helper.
+    - trait_names[] in do_stat_malp() extended to display new trait names in
+      MALP/MPLP debug output (stat <mob> malp).
+    - Power-law decay, rehearsal decay, and Hebbian consolidation apply to all
+      new traits automatically through existing loops (no changes required).
+    - Default magnitude is 0.0 for all new traits; NPC behaviour is unaffected
+      until the trait is explicitly reinforced via reinforce_mplp_context_trait().
+
 [Mar 04 2026] - Vitalia Reborn Development
   feat: MALP/MPLP – Memória Ativa/Passiva de Longo Prazo – RFC-1002 Phase A/B/C (src/malp.c, src/malp.h, src/utils.c, src/structs.h, src/db.c, src/cedit.c, src/config.c, src/config.h, src/utils.h)
     Implements Active Long-Term Memory (MALP) and Passive/Implicit Long-Term Memory (MPLP)

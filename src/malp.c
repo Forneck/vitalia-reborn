@@ -495,6 +495,19 @@ void malp_decay_tick(struct char_data *mob)
                 if (t->rehearsal_count < 0)
                     t->rehearsal_count = 0;
             }
+            /* Contextual modifier decay: ctx[] values decay faster than the global
+             * magnitude so that situational biases fade without erasing the baseline
+             * personality.  ctx[0]=GLOBAL is never written so the loop skips index 0. */
+            for (int c = 1; c < MPLP_CTX_MAX; c++) {
+                float cv = t->ctx[c];
+                if (cv == 0.0f)
+                    continue;
+                if (cv > -0.01f && cv < 0.01f) {
+                    t->ctx[c] = 0.0f;
+                    continue;
+                }
+                t->ctx[c] = cv * MPLP_CTX_DECAY_RATE;
+            }
             if (t->magnitude >= 0.02f) {
                 if (w != i)
                     ai->mplp[w] = ai->mplp[i];
@@ -883,8 +896,46 @@ float get_mplp_modesty_response(struct char_data *mob)
 }
 
 /**
+ * Return non-zero if the given context-global MPLP trait is unsigned (range 0..1).
+ * Unsigned traits represent strength amplifiers or unipolar biases where a negative
+ * value carries no distinct meaning (e.g. sensitivity, aversion, expectation).
+ */
+static int is_unsigned_mplp_trait(int trait_type)
+{
+    switch (trait_type) {
+        case MPLP_TRAIT_GENDER_NORM_SENSITIVITY:
+        case MPLP_TRAIT_STATUS_SENSITIVITY:
+        case MPLP_TRAIT_SUSPICION_BIAS:
+        case MPLP_TRAIT_BETRAYAL_SENSITIVITY:
+        case MPLP_TRAIT_LOYALTY_EXPECTATION:
+        case MPLP_TRAIT_INGROUP_BIAS:
+        case MPLP_TRAIT_OUTGROUP_AVERSION:
+        case MPLP_TRAIT_RECIPROCITY_EXPECTATION:
+        case MPLP_TRAIT_REVENGE_TENDENCY:
+        case MPLP_TRAIT_FORGIVENESS_RATE:
+        case MPLP_TRAIT_DISTRESS_AVERSION:
+        case MPLP_TRAIT_COMPASSION_BIAS:
+            return 1;
+        default:
+            return 0;
+    }
+}
+
+/**
+ * Return non-zero if the given trait type is a valid context-global MPLP trait
+ * (i.e., anchored with MPLP_GLOBAL_ANCHOR and accepted by reinforce_mplp_context_trait()).
+ * Context-global traits span from MPLP_TRAIT_EXHIBITION_RESPONSE (3) through
+ * MPLP_TRAIT_COMPASSION_BIAS (28).  Agent-anchored traits (AVOIDANCE=0, APPROACH=1,
+ * AROUSAL_BIAS=2) are excluded.
+ */
+static int is_context_global_trait_type(int trait_type)
+{
+    return (trait_type >= MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type <= MPLP_TRAIT_COMPASSION_BIAS);
+}
+
+/**
  * Helper: retrieve the signed modifier for a single context-global trait type.
- * Returns a value in [-1, +1] (or [0, 1] for GENDER_NORM_SENSITIVITY).
+ * Returns a value in [-1, +1] for signed traits, or [0, 1] for unsigned traits.
  */
 static float get_context_trait(struct char_data *mob, int trait_type)
 {
@@ -894,6 +945,7 @@ static float get_context_trait(struct char_data *mob, int trait_type)
     struct mob_ai_data *ai = mob->ai_data;
     float result = 0.0f;
     int i;
+    int is_unsigned = is_unsigned_mplp_trait(trait_type);
 
     for (i = 0; i < ai->mplp_count; i++) {
         struct mplp_trait *t = &ai->mplp[i];
@@ -901,15 +953,15 @@ static float get_context_trait(struct char_data *mob, int trait_type)
             continue;
         if (t->trait_type != trait_type)
             continue;
-        /* GENDER_NORM_SENSITIVITY is unsigned (0..1): always use positive magnitude */
-        if (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+        /* Unsigned traits (0..1): always accumulate positive magnitude */
+        if (is_unsigned)
             result += t->magnitude;
         else
             result += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
     }
 
     /* Clamp: unsigned traits to [0,1], signed traits to [-1,+1] */
-    float lo = (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY) ? 0.0f : -1.0f;
+    float lo = is_unsigned ? 0.0f : -1.0f;
     if (result > 1.0f)
         result = 1.0f;
     if (result < lo)
@@ -937,16 +989,138 @@ float get_mplp_gender_norm_sensitivity(struct char_data *mob)
     return get_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY);
 }
 
+/* ── Category 1: Hierarchy / Social Power ────────────────────────────────── */
+
+float get_mplp_dominance(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_DOMINANCE); }
+
+float get_mplp_submission(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_SUBMISSION); }
+
+float get_mplp_authority_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_AUTHORITY_RESPONSE);
+}
+
+float get_mplp_status_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_STATUS_SENSITIVITY);
+}
+
+/* ── Category 2: Social Trust System ─────────────────────────────────────── */
+
+float get_mplp_trust_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_TRUST_BIAS); }
+
+float get_mplp_suspicion_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS); }
+
+float get_mplp_betrayal_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY);
+}
+
+float get_mplp_loyalty_expectation(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION);
+}
+
+/* ── Category 3: Social Norm Sensitivity ─────────────────────────────────── */
+
+float get_mplp_politeness_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_POLITENESS_RESPONSE);
+}
+
+float get_mplp_rudeness_response(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_RUDENESS_RESPONSE); }
+
+/* ── Category 4: Social Identity Bias ────────────────────────────────────── */
+
+float get_mplp_ingroup_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_INGROUP_BIAS); }
+
+float get_mplp_outgroup_aversion(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_OUTGROUP_AVERSION); }
+
+float get_mplp_novel_agent_interest(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_NOVEL_AGENT_INTEREST);
+}
+
+/* ── Category 5: Reciprocity System ──────────────────────────────────────── */
+
+float get_mplp_reciprocity_expectation(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_RECIPROCITY_EXPECTATION);
+}
+
+float get_mplp_gratitude_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE);
+}
+
+float get_mplp_revenge_tendency(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY); }
+
+float get_mplp_forgiveness_rate(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_FORGIVENESS_RATE); }
+
+/* ── Category 6: Empathy System ──────────────────────────────────────────── */
+
+float get_mplp_empathy_response(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_EMPATHY_RESPONSE); }
+
+float get_mplp_distress_aversion(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION); }
+
+float get_mplp_compassion_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS); }
+
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience)
+{
+    /* Delegate to the context-aware variant with MPLP_CTX_GLOBAL so that the
+     * full delta applies to the global magnitude (no context split). */
+    reinforce_mplp_context_trait_ctx(mob, trait_type, valence, salience, MPLP_CTX_GLOBAL);
+}
+
+int get_mplp_context_from_interact_type(int interact_type)
+{
+    switch (interact_type) {
+        case INTERACT_ATTACKED:
+        case INTERACT_HEALED:
+        case INTERACT_RESCUED:
+        case INTERACT_ASSISTED:
+        case INTERACT_ALLY_DIED:
+        case INTERACT_WITNESSED_DEATH:
+        case INTERACT_ABANDON_ALLY:
+        case INTERACT_SACRIFICE_SELF:
+            return MPLP_CTX_COMBAT;
+
+        case INTERACT_RECEIVED_ITEM:
+        case INTERACT_STOLEN_FROM:
+            return MPLP_CTX_TRADE;
+
+        case INTERACT_QUEST_COMPLETE:
+        case INTERACT_QUEST_FAIL:
+        case INTERACT_BETRAYAL:
+        case INTERACT_DECEIVE:
+            return MPLP_CTX_QUEST;
+
+        case INTERACT_WITNESSED_OFFENSIVE_MAGIC:
+        case INTERACT_WITNESSED_SUPPORT_MAGIC:
+            return MPLP_CTX_MAGIC;
+
+        case INTERACT_SOCIAL_POSITIVE:
+        case INTERACT_SOCIAL_NEGATIVE:
+        case INTERACT_SOCIAL_VIOLENT:
+        case INTERACT_SOCIAL_NEUTRAL:
+            return MPLP_CTX_SOCIAL;
+
+        default:
+            return MPLP_CTX_GLOBAL;
+    }
+}
+
+void reinforce_mplp_context_trait_ctx(struct char_data *mob, int trait_type, float valence, float salience,
+                                      int ctx_type)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
     if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
-    if (trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type != MPLP_TRAIT_MODESTY_RESPONSE &&
-        trait_type != MPLP_TRAIT_MASCULINITY_RESPONSE && trait_type != MPLP_TRAIT_FEMININITY_RESPONSE &&
-        trait_type != MPLP_TRAIT_ANDROGYNY_TOLERANCE && trait_type != MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+    if (!is_context_global_trait_type(trait_type))
         return;
+    if (ctx_type < 0 || ctx_type >= MPLP_CTX_MAX)
+        ctx_type = MPLP_CTX_GLOBAL;
 
     struct mob_ai_data *ai = mob->ai_data;
     struct mplp_trait *trait = NULL;
@@ -972,7 +1146,6 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
     }
 
     if (!trait) {
-        /* Allocate a new slot */
         if (ai->mplp_count >= MPLP_MAX_PER_MOB)
             return;
         if (!mplp_grow(mob))
@@ -980,7 +1153,7 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
         trait = &ai->mplp[ai->mplp_count];
         memset(trait, 0, sizeof(struct mplp_trait));
         trait->anchor_agent_id = MPLP_GLOBAL_ANCHOR;
-        trait->agent_type = ENTITY_TYPE_GLOBAL; /* not tied to any specific agent */
+        trait->agent_type = ENTITY_TYPE_GLOBAL;
         trait->trait_type = trait_type;
         trait->magnitude = 0.0f;
         trait->base_magnitude = 0.0f;
@@ -992,14 +1165,43 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
         /* Fall through so the first experience applies the reinforcement delta */
     }
 
-    /* Hebbian reinforcement: bounded magnitude increment */
     float delta = 0.15f * salience;
     if (delta > 0.30f)
         delta = 0.30f;
-    trait->magnitude += delta;
+
+    /* Global personality: receives the larger fraction */
+    float global_delta = delta * MPLP_CTX_GLOBAL_WEIGHT;
+    trait->magnitude += global_delta;
     if (trait->magnitude > 1.0f)
         trait->magnitude = 1.0f;
     trait->base_magnitude = trait->magnitude;
+
+    /* Contextual modifier: receives the smaller fraction when context is specific */
+    if (ctx_type != MPLP_CTX_GLOBAL) {
+        float ctx_delta = delta * MPLP_CTX_LOCAL_WEIGHT;
+        int is_unsigned = is_unsigned_mplp_trait(trait_type);
+        if (is_unsigned) {
+            trait->ctx[ctx_type] += ctx_delta;
+            if (trait->ctx[ctx_type] > 1.0f)
+                trait->ctx[ctx_type] = 1.0f;
+            if (trait->ctx[ctx_type] < 0.0f)
+                trait->ctx[ctx_type] = 0.0f;
+        } else {
+            float signed_delta = (valence >= 0.0f ? ctx_delta : -ctx_delta);
+            trait->ctx[ctx_type] += signed_delta;
+            if (trait->ctx[ctx_type] > 1.0f)
+                trait->ctx[ctx_type] = 1.0f;
+            if (trait->ctx[ctx_type] < -1.0f)
+                trait->ctx[ctx_type] = -1.0f;
+        }
+    } else {
+        /* GLOBAL context: apply full delta (no split) to magnitude */
+        float extra = delta * MPLP_CTX_LOCAL_WEIGHT;
+        trait->magnitude += extra;
+        if (trait->magnitude > 1.0f)
+            trait->magnitude = 1.0f;
+        trait->base_magnitude = trait->magnitude;
+    }
 
     /* Running-average valence update */
     float alpha = MPLP_VALENCE_LEARNING_RATE;
@@ -1014,6 +1216,41 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
         trait->persistence = MALP_PERSIST_HIGH;
     else if (trait->magnitude >= 0.40f && trait->persistence < MALP_PERSIST_MEDIUM)
         trait->persistence = MALP_PERSIST_MEDIUM;
+}
+
+float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_type)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+    if (ctx_type < 0 || ctx_type >= MPLP_CTX_MAX)
+        ctx_type = MPLP_CTX_GLOBAL;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float result = 0.0f;
+    int i;
+    int is_unsigned = is_unsigned_mplp_trait(trait_type);
+
+    /* Accumulation mirrors get_context_trait(): in normal operation at most one
+     * MPLP_GLOBAL_ANCHOR slot exists per trait_type; summing across any extras
+     * combines their contributions, consistent with the single-anchor guarantee
+     * maintained by reinforce_mplp_context_trait_ctx(). */
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != trait_type)
+            continue;
+        float global_part = is_unsigned ? t->magnitude : (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+        float ctx_part = (ctx_type != MPLP_CTX_GLOBAL) ? t->ctx[ctx_type] : 0.0f;
+        result += global_part + ctx_part;
+    }
+
+    float lo = is_unsigned ? 0.0f : -1.0f;
+    if (result > 1.0f)
+        result = 1.0f;
+    if (result < lo)
+        result = lo;
+    return result;
 }
 
 void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence)
