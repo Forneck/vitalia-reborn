@@ -51,7 +51,7 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
      - `memories[]` — passive buffer (received/witnessed interactions)
      - `active_memories[]` — active buffer (actions performed by the mob)
    - Stores entity interactions with full 20-emotion snapshots
-   - Memory decay over time (1-hour threshold)
+   - Exponential memory intensity decay (`intensity = exp(-λ·age_hours)`) via `MEMORY_DECAY_LAMBDA = 0.70` for normal events and `MEMORY_DECAY_LAMBDA_MAJOR = 0.23` for major events; slots cleared when intensity falls below threshold — no hard 1-hour cutoff
    - Code: `src/structs.h:1115`, `src/structs.h:1219-1266`
 
 3. **Planning** (Goal-Oriented AI):
@@ -479,10 +479,14 @@ is low-dominance (nothing left to do) and low-valence (bad outcome) — precisel
 
 #### Lateral Inhibition and the Arousal Budget
 
-The four SEC emotions compete for a single budget of 100 integer units enforced in `adjust_emotion()`.
-When one emotion exceeds the budget, excess is drained from the others proportionally.  Using
-`raw_arousal` rather than effective arousal keeps the budget proportional to the mob's intrinsic
-state, preventing the contextual multiplier from locking A = 1.0 in every combat tick.
+The four SEC emotions compete for a shared arousal-partition budget `A = raw_arousal / 100.0`,
+enforced and renormalized in the SEC update path (`sec_update_partitioned()` / `sec_update()`).
+When one SEC component grows, the others are inhibited so that
+`w_fear + w_sadness + w_anger + w_happy = A` remains conserved.  Using `raw_arousal` rather than
+effective arousal keeps this budget proportional to the mob's intrinsic state, preventing the
+contextual multiplier from trivially locking A = 1.0 in every combat tick.  Separately,
+`adjust_emotion()` clamps the *raw* fear/sadness/anger/happiness integer values to [0, 100] each,
+but that per-emotion tetrad cap is distinct from the SEC arousal-partition budget.
 
 #### Downstream read-only outputs
 
@@ -1015,8 +1019,10 @@ struct entity_knowledge_model {
 **MALP/MPLP Coverage:**
 - MALP maintains explicit social memories with salience-weighted consolidation
 - Positive approach biases and negative avoidance biases accumulate via MPLP Hebbian learning
-- Memories persist for up to 7 days (MPLP half-life: `mplp_decay_halflife` = 168 h default),
-  but are runtime-only (not saved across server reboots)
+- MPLP traits decay continuously with a half-life of 168 h by default
+  (`mplp_decay_halflife`, configurable via `CONFIG_MPLP_DECAY_HALFLIFE`), so they can persist
+  longer than 7 days with reduced influence; they are runtime-only (not saved across server
+  reboots)
 
 **Design Philosophy (preserved from v1.0):**
 ```c
