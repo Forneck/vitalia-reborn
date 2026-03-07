@@ -1,10 +1,17 @@
 # RFC-1001: NPC Psychology & Behavior Scientific Checklist
 # Vitalia Reborn MUD Engine
 
-**Document Version:** 1.0  
-**Date:** 2026-02-17  
-**Status:** Analysis & Design Document  
+**Document Version:** 2.0  
+**Date:** 2026-03-07  
+**Status:** Updated Analysis & Implementation Reference  
 **Purpose:** Professional evaluation of NPC psychological systems for future development planning
+
+> **Revision Note (v2.0):** This document has been updated to reflect systems implemented after
+> v1.0 (2026-02-17).  Newly active systems include: Big Five (OCEAN) all five traits, the SEC
+> Tetradic Emotion Model, the 4D modified-PAD Relational Decision Space (with Affiliation as the
+> fourth axis), the MALP/MPLP Long-Term Emotional Memory system (RFC-1002), and the Emotion
+> Contagion system.  All status markers, recommendations, and references have been revised
+> accordingly.
 
 ---
 
@@ -13,13 +20,17 @@
 This document provides a comprehensive scientific analysis of the NPC (Non-Player Character) psychology and behavior systems currently implemented in Vitalia Reborn MUD. It evaluates the engine against contemporary psychology, neuroscience, and behavioral science literature.
 
 **Key Findings:**
-- ✅ **20-dimensional emotion system** with memory-based learning
+- ✅ **20-dimensional emotion system** with hybrid mood + relationship memory
 - ✅ **Shultz & Darley (1990) moral reasoning** implementation with guilt/blame evaluation
 - ✅ **Shadow Timeline RFC-0003** cognitive future simulation system
 - ✅ **Group moral dynamics** with peer pressure and collective responsibility
 - ✅ **Genetic trait system** with 11 heritable behavioral tendencies
+- ✅ **Big Five (OCEAN) personality** — all five traits active (N, C, A, E fully; O in Shadow Timeline)
+- ✅ **SEC Tetradic Emotion Model** — four-timescale competing-emotion engine with lateral inhibition
+- ✅ **4D modified-PAD Relational Decision Space** — Valence, Arousal, Dominance + **Affiliation** (4th axis)
+- ✅ **MALP/MPLP Long-Term Emotional Memory** (RFC-1002) — episodic consolidation with salience, Hebbian trait formation, Peak-End Rule, and reconsolidation
+- ✅ **Emotion Contagion** — three-layer emotional spreading (crowd, group, leader)
 - ⚠️  **FANN neural networks** included but not integrated
-- ❌ **Big Five personality traits** not formally implemented
 - ❌ **DSM-5/ICD-11 neurodivergence** models not implemented
 
 ---
@@ -36,10 +47,12 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
    - Code: `src/structs.h:1268`, `src/shadow_timeline.h:35-149`
 
 2. **Working Memory** (Emotion Memory System):
-   - 10-slot circular buffer per mob (`EMOTION_MEMORY_SIZE`)
-   - Stores entity interactions with full emotional snapshots
+   - **Dual 20-slot circular buffers** per mob (`EMOTION_MEMORY_SIZE = 20`):
+     - `memories[]` — passive buffer (received/witnessed interactions)
+     - `active_memories[]` — active buffer (actions performed by the mob)
+   - Stores entity interactions with full 20-emotion snapshots
    - Memory decay over time (1-hour threshold)
-   - Code: `src/structs.h:1119-1166`
+   - Code: `src/structs.h:1115`, `src/structs.h:1219-1266`
 
 3. **Planning** (Goal-Oriented AI):
    - 15 goal types: `GOAL_GOTO_SHOP_TO_SELL`, `GOAL_HUNT_TARGET`, `GOAL_ACCEPT_QUEST`, etc.
@@ -55,9 +68,11 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
 
 **Example Implementation:**
 ```c
-// Working memory with emotion snapshots
-struct emotion_memory memories[EMOTION_MEMORY_SIZE];
-int memory_index;  // Circular buffer index
+// Working memory — dual 20-slot circular buffers
+struct emotion_memory memories[EMOTION_MEMORY_SIZE];      // passive (received)
+struct emotion_memory active_memories[EMOTION_MEMORY_SIZE]; // active (performed)
+int memory_index;
+int active_memory_index;
 
 // Attention and prediction error tracking
 int recent_prediction_error;  // 0-100 smoothed novelty
@@ -65,9 +80,13 @@ int attention_bias;            // -50 to +50 long-term adaptation
 ```
 
 **NOT Implemented:**
-- Executive function inhibition (no formal inhibitory control system)
 - Explicit dual-process theory (System 1 vs System 2)
 - Selective attention filtering (all stimuli processed equally)
+
+> **Partially addressed since v1.0:** Executive function inhibition is now partially modelled
+> via Conscientiousness (C) in the OCEAN system — high-C mobs slow emotional responses
+> (reduced α), require higher arousal to consolidate long-term memories, and apply a
+> deliberation bias against impulsive actions.  See the OCEAN section for details.
 
 ---
 
@@ -125,31 +144,69 @@ int paralyzed_timer;  // Paralyzed by fear
 
 ---
 
-### [❌] Are personality traits mapped using validated models (e.g., Big Five)?
+### [✅] Are personality traits mapped using validated models (e.g., Big Five)?
 
-**NOT FORMALLY IMPLEMENTED**
+**FULLY IMPLEMENTED — All Five OCEAN Traits Active**
 
-**Current State:**
-- Emotions exist but not structured as Big Five traits
-- No Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism dimensions
+> **Changed since v1.0**: This item was previously ❌.  All five traits are now implemented.
 
-**Partial Proxy via Emotional Profiles** (8 types):
-- `EMOTION_PROFILE_AGGRESSIVE` - High anger, low trust
-- `EMOTION_PROFILE_DEFENSIVE` - High fear/caution, low trust
-- `EMOTION_PROFILE_SENSITIVE` - High empathy, low aggression
-- `EMOTION_PROFILE_CONFIDENT` - High courage, low fear
-- `EMOTION_PROFILE_GREEDY` - High greed/envy, low compassion
-- `EMOTION_PROFILE_LOYAL` - High loyalty/trust, high friendship
+The engine's `struct mob_personality` (defined in `src/structs.h:1064-1079`) implements the Big Five
+(OCEAN) model.  Trait base values are Gaussian-generated at spawn, can be adjusted via the builder
+(MEDIT), and are modulated at runtime by the SEC competing-emotions layer.
 
-**Code:** `src/structs.h:1072-1080`
+**Scientific basis:** McCrae & Costa (1987); Costa & McCrae (1992) NEO-PI-R; Goldberg (1990)
+"An alternative description of personality: The Big Five factor structure."
 
-**Recommendation:**
-Map emotional profiles to Big Five using research-based correlations:
-- Neuroticism ← fear + sadness + shame
-- Extraversion ← excitement + friendship - fear
-- Openness ← curiosity + courage
-- Agreeableness ← compassion + trust + loyalty
-- Conscientiousness ← (no direct mapping - needs new traits)
+| Trait | Status | Range | Genetic Basis | Runtime Modulation |
+|-------|--------|-------|---------------|--------------------|
+| Neuroticism (N) | ✅ Phase 1 ACTIVE | 0.0–1.0 | 0.70×(1−bravery) + 0.30×(1−EI) | +SEC stress signal (fear+anger, capped ±0.05) |
+| Conscientiousness (C) | ✅ Phase 2 ACTIVE | 0.0–1.0 | Gaussian spawn + MEDIT modifier | −SEC disgust (capped ±0.05) |
+| Agreeableness (A) | ✅ Phase 3 ACTIVE | 0.0–1.0 | Gaussian spawn + MEDIT modifier | k₃×happiness − k₄×anger (capped ±0.10) |
+| Extraversion (E) | ✅ Phase 3 ACTIVE | 0.0–1.0 | Gaussian spawn + MEDIT modifier | k₁×happiness − k₂×fear (capped ±0.10) |
+| Openness (O) | ✅ Phase 4 ACTIVE | 0.0–1.0 | Gaussian spawn + MEDIT modifier | O_mod = 0 (reserved; never per-tick derived) |
+
+**Three-component model (A, E, O, C):**
+```
+Trait_final = clamp(Trait_base + Trait_builder_modifier/100 + Trait_emotional_modulation, 0, 1)
+```
+
+**Behavioral effects by trait:**
+
+*Neuroticism (N):*
+- Amplifies negative emotion responses: `E_raw *= (1 + β_N × N_final)`
+- High-N mobs hold fear and anger longer (SEC decay resistance, `SEC_N_FEAR/ANGER_DECAY_COEFF`)
+- High-N slows negative MPLP trait decay (MALP N rumination scale)
+- Code: `src/sec.h:217-243`, `src/malp.h:176-181`
+
+*Conscientiousness (C):*
+- Slows emotional reactivity (lower α = more gradual state changes)
+- Raises MALP consolidation threshold θ_eff (fewer impulsive memories)
+- Adds a decision-consistency bonus in Shadow Timeline utility scoring
+- Code: `src/sec.h:185-215`, `src/malp.h:169-174`
+
+*Agreeableness (A):*
+- Damps anger gain: `anger_gain *= (SEC_A_ANGER_DAMP_MAX − A_final)`
+- Accelerates anger forgiveness decay
+- Reduces aggressive initiation probability; raises grouping bonus
+- Code: `src/sec.h:128-183`
+
+*Extraversion (E):*
+- Scales social action probability (±20 pp around neutral)
+- Awards happiness gain after positive social bonding interactions
+- Code: `src/sec.h:142-163`
+
+*Openness (O):*
+- Drives novelty preference in Shadow Timeline MOVE scoring
+- Depth-aware anti-repetition bonus prevents "ADHD oscillation"
+- Structurally constrained: O_mod must never derive from SEC emotions
+- Code: `src/sec.h:245-295`
+
+**Code:** `src/structs.h:1034-1079`, `src/sec.h:127-295`, `src/malp.h:169-181`
+
+**References:**
+- McCrae, R.R. & Costa, P.T. (1987). Validation of the five-factor model of personality across instruments and observers. *Journal of Personality and Social Psychology*, 52(1), 81–90.
+- Costa, P.T. & McCrae, R.R. (1992). *NEO Personality Inventory–Revised (NEO-PI-R) professional manual*. Psychological Assessment Resources.
+- Goldberg, L.R. (1990). An alternative description of personality: The Big Five factor structure. *Journal of Personality and Social Psychology*, 59(6), 1216–1229.
 
 ---
 
@@ -167,11 +224,15 @@ Map emotional profiles to Big Five using research-based correlations:
 - `adventurer_tendency`, `follow_tendency`, `healing_tendency`
 - `emotional_intelligence` - volatility & stabilization
 
-**Character (Learned) - Emotion Memory System:**
-- 10-slot memory buffer tracks interactions
-- Moral learning from guilt/innocence judgments
-- Learned action biases from past outcomes
-- Regret-based avoidance learning
+**Character (Learned) - Three-Layer Memory System:**
+- **Episodic buffer (short-term):** Dual 20-slot buffers track recent interactions with full
+  emotional snapshots and moral judgments
+- **MALP (Active Long-Term Memory):** High-salience episodes are consolidated into explicit memory
+  entries retrievable for social reasoning and dialogue
+- **MPLP (Passive Long-Term Memory):** Hebbian co-occurrence builds implicit trait modifiers
+  (approach/avoidance/arousal bias) that bias behaviour without conscious access
+- Moral learning from guilt/innocence judgments, with regret driving avoidance of repeated harmful
+  actions
 
 **Code:** 
 - Genetics: `src/structs.h:1016-1031`
@@ -182,21 +243,30 @@ Map emotional profiles to Big Five using research-based correlations:
 ```c
 // Temperament: Innate genetics
 struct mob_genetics {
-    int brave_prevalence;  // Born brave or cowardly
-    int emotional_intelligence;  // Innate EI capacity
+    int brave_prevalence;       // Born brave or cowardly
+    int emotional_intelligence; // Innate EI capacity
 };
 
-// Character: Learned from experience
-struct emotion_memory memories[10];  // Shaped by interactions
+// Character Layer 1: Short-term episodic memory (runtime only)
+struct emotion_memory memories[EMOTION_MEMORY_SIZE];       // passive
+struct emotion_memory active_memories[EMOTION_MEMORY_SIZE]; // active
 sh_int moral_was_guilty;   // Learned moral patterns
 sh_int moral_regret_level; // Consequences shape behavior
+
+// Character Layer 2: Active Long-Term Memory (MALP — RFC-1002)
+struct malp_entry *malp;   // Explicit episodic/semantic entries (salience-consolidated)
+
+// Character Layer 3: Passive Long-Term Memory (MPLP — RFC-1002)
+struct mplp_trait *mplp;   // Implicit trait modifiers (Hebbian co-occurrence)
 ```
 
 ---
 
 ### [✅] How does long-term memory influence decision-making, emotional responses, and moral reasoning?
 
-**Implemented via Emotion Memory System:**
+**Implemented via Three-Layer Memory System (Short-Term Episodic + MALP + MPLP):**
+
+#### Layer 1 — Episodic Buffer (Short-Term)
 
 **1. Decision-Making Influence:**
 - **Moral Learning Bias:**
@@ -247,6 +317,95 @@ After 3 guilty attacks: Learned avoidance TRUE (refuses to attack)
 
 ---
 
+#### Layer 2 — MALP: Active Long-Term Memory (RFC-1002)
+
+> **Added since v1.0.** The MALP system provides explicit episodic and semantic long-term memory,
+> closing the gap between the short-term buffer and truly persistent social cognition.
+
+The MALP (Memória Ativa de Longo Prazo) consolidates high-salience episodic slots into named
+memory entries that can be retrieved deliberately for social reasoning and emotional responses.
+
+**Salience-driven consolidation:**
+```
+S = normalize( w_a×arousal + w_r×log(1+rehearsal) + w_s×social_weight )
+    × (1 + age_hours)^(−0.40)
+```
+Default weights: `w_a = 0.50`, `w_r = 0.25`, `w_s = 0.25`; normaliser ≈ 1.35.
+
+**Key mechanisms:**
+1. **Consolidation gate** — Only episodes with S ≥ θ_cons (default 0.65) enter MALP.
+   High-C mobs have an elevated effective threshold (θ_eff = θ_cons + 0.10 × C_final).
+2. **Reconsolidation** — Retrieving a MALP entry above P_ret ≥ θ_react (0.55) opens a
+   reconsolidation window.  Concurrent interactions can then update the stored valence and
+   intensity within bounded limits (MALP_RECON_MAX_DELTA = 0.25), modelling the
+   reconsolidation principle (Nader et al., 2000).
+3. **Power-law forgetting** — Intensity decays as `intensity × (1 + age_hours)^(−0.40)`.
+   High-N mobs show slower negative-trait decay (rumination); high-A mobs show accelerated
+   positive-valence reconsolidation.
+4. **Feedback loop protection** — Cognitive dominance dampening (MALP_DOMINANCE_THRESHOLD = 0.75)
+   prevents a single actor from monopolising the NPC's emotional landscape.
+5. **Peak-End Rule** — Episodic valence is consolidated using Kahneman's Peak-End Rule
+   (peak weight = 0.60, end weight = 0.40), matching human retrospective memory biases
+   (Kahneman et al., 1993).
+
+**Decision-making impact:**
+```c
+// apply_malp_emotion_effects() — called on interaction with actor
+// Retrieves memory, checks dominance/cooldown, applies bounded emotion delta
+void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor,
+                                float interaction_valence);
+```
+
+**Code:** `src/malp.h`, `src/malp.c`, `md-docs/RFC-1002_MALP_MPLP.md`
+
+**References:**
+- Nader, K., Schafe, G.E. & LeDoux, J.E. (2000). Fear memories require protein synthesis in the amygdala for reconsolidation after retrieval. *Nature*, 406, 722–726.
+- Kahneman, D., Fredrickson, B.L., Schreiber, C.A. & Redelmeier, D.A. (1993). When more pain is preferred to less: Adding a better end. *Psychological Science*, 4(6), 401–405.
+- Bower, G.H. (1981). Mood and memory. *American Psychologist*, 36(2), 129–148. *(state-dependent recall; P_ret cue score)*
+
+---
+
+#### Layer 3 — MPLP: Passive Long-Term Memory (RFC-1002)
+
+The MPLP (Memória Passiva de Longo Prazo) implements implicit long-term trait modifiers formed by
+Hebbian co-occurrence — when the same agent appears with consistent valence above a rehearsal
+threshold, a persistent implicit trait is crystallised.  These traits bias behaviour automatically
+without being narrated.
+
+**Hebbian rule:**
+```
+Δmagnitude = 0.15 × salience   (capped at +0.30 per call)
+```
+Running-average valence update:
+```
+valence_new = valence_old × (1 − α) + current_valence × α   (α = MPLP_VALENCE_LEARNING_RATE = 0.20)
+```
+
+**Agent-anchored trait types** (tied to a specific actor):
+| Type | Effect |
+|------|--------|
+| MPLP_TRAIT_AVOIDANCE | Mob actively avoids this agent |
+| MPLP_TRAIT_APPROACH | Mob seeks proximity to this agent |
+| MPLP_TRAIT_AROUSAL_BIAS | Arousal increases on agent presence |
+
+**Context-global trait types** (anchor = MPLP_GLOBAL_ANCHOR, not agent-specific):
+| Type | Effect |
+|------|--------|
+| MPLP_TRAIT_EXHIBITION_RESPONSE | Enjoyment/aversion to display/confidence socials |
+| MPLP_TRAIT_MODESTY_RESPONSE | Preference for reserved vs. explicit contact |
+| MPLP_TRAIT_MASCULINITY_RESPONSE | Reaction to masculine-coded socials |
+| MPLP_TRAIT_FEMININITY_RESPONSE | Reaction to feminine-coded socials |
+| MPLP_TRAIT_ANDROGYNY_TOLERANCE | Tolerance for mixed/androgynous expression |
+| MPLP_TRAIT_GENDER_NORM_SENSITIVITY | Amplified reaction to gender-norm violations |
+
+**Code:** `src/structs.h:1299-1355`, `src/malp.h`, `src/malp.c`
+
+**References:**
+- Hebb, D.O. (1949). *The Organization of Behavior: A Neuropsychological Theory*. Wiley.
+- Squire, L.R. (1992). Declarative and nondeclarative memory: Multiple brain systems supporting learning and memory. *Journal of Cognitive Neuroscience*, 4(3), 232–243.
+
+---
+
 ### [❌] Are cognitive biases and heuristics simulated?
 
 **NOT EXPLICITLY IMPLEMENTED**
@@ -259,8 +418,9 @@ After 3 guilty attacks: Learned avoidance TRUE (refuses to attack)
 
 **Partial Proxies:**
 - **In-group favoritism** (via group loyalty and peer pressure)
-- **Recency bias** (via memory decay weighting)
+- **Recency bias** (via memory decay weighting and MALP cue-score recency component)
 - **Outcome bias** (regret influenced by outcomes, not just intentions)
+- **Peak-End Bias** (implemented in MALP episodic valence via Kahneman Peak-End Rule)
 
 **Recommendation:**
 Implement cognitive biases as modifiers to Shadow Timeline projections:
@@ -272,6 +432,129 @@ struct cognitive_bias {
     int availability_weight;    // Affects memory recall
 };
 ```
+
+---
+
+### [✅] Is there a structured emotional inference layer above the raw 20-emotion system?
+
+**YES — SEC: Sistema de Emoções Concorrentes (Competing Emotions System)**
+
+> **Added since v1.0.** The SEC is a deterministic, four-timescale engine sitting on top of the
+> 20-emotion system.  It feeds post-hysteresis 4D results into a tetradic arousal partition,
+> enforces Lateral Inhibition, and drives downstream behaviour via three read-only outputs.
+
+**Scientific basis:** The SEC draws on the dimensional appraisal tradition (Russell, 1980;
+Mehrabian & Russell, 1974) and the Lateral Inhibition model of competing emotional states
+(Bower, 1981; Lang et al., 1998).
+
+#### Four-timescale model
+
+| Layer | Timescale | Rate | Purpose |
+|-------|-----------|------|---------|
+| Arousal partition | Fast | — | Active state projection from D×V quadrants |
+| Emotional smoothing | Medium | α ≈ 0.40 | Behavioural continuity (F, Sd, An, H) |
+| Passive decay | Slow | λ = 0.05 | Homeostatic convergence toward profile baseline |
+| Persistent trait | Very slow | δ = 0.01 | Structural memory (Disgust — outside partition) |
+
+#### Tetradic arousal partition
+
+```
+A = raw_arousal / 100        (pre-modulation; budget proportional to intrinsic state)
+D = (dominance  + 100) / 200 (normalised Dominance)
+V = (valence    + 100) / 200 (normalised Valence)
+
+w_fear    = A × (1−D) × V        — low dominance, high valence  (threat / uncertainty)
+w_sadness = A × (1−D) × (1−V)   — low dominance, low valence   (passive loss / grief)
+w_anger   = A × D × (1−V)       — high dominance, low valence  (active loss / fight)
+w_happy   = A × D × V           — high dominance, high valence (approach / reward)
+
+Guarantee: w_fear + w_sadness + w_anger + w_happy = A  (energy conserved)
+```
+
+The Sadness quadrant (low D, low V) models the "passive loss" appraisal — the state arising when a
+goal is unrecoverable and the mob has no coping capacity.  A concrete example: a mob that has been
+guarding a treasure witnesses a thief escape through a locked gate; the goal (protect the treasure)
+is irreversibly lost, and the mob has no remaining action that can recover it.  The resulting state
+is low-dominance (nothing left to do) and low-valence (bad outcome) — precisely the Sadness quadrant.
+
+#### Lateral Inhibition and the Arousal Budget
+
+The four SEC emotions compete for a single budget of 100 integer units enforced in `adjust_emotion()`.
+When one emotion exceeds the budget, excess is drained from the others proportionally.  Using
+`raw_arousal` rather than effective arousal keeps the budget proportional to the mob's intrinsic
+state, preventing the contextual multiplier from locking A = 1.0 in every combat tick.
+
+#### Downstream read-only outputs
+
+| Getter | Effect |
+|--------|--------|
+| `sec_get_4d_modifier()` | Behaviour intensity multiplier ∈ [0.5, 2.0] |
+| `sec_get_flee_bias()` | Flee tendency ∈ [0.0, 1.0] |
+| `sec_get_lethargy_bias()` | Suppresses social/idle pulses when Sadness dominates |
+| `sec_get_target_bias()` | Target-selection weight ∈ [0.5, 1.5] |
+| `sec_get_dominant_emotion()` | Winner-Takes-All filter for social category selection |
+| `sec_get_*_final()` | Final OCEAN trait values with emotional modulation applied |
+
+**Code:** `src/sec.h`, `src/sec.c`, `md-docs/SEC_TETRADIC_EMOTION_MODEL.md`
+
+**References:**
+- Bower, G.H. (1981). Mood and memory. *American Psychologist*, 36(2), 129–148.
+- Lang, P.J., Bradley, M.M. & Cuthbert, B.N. (1998). Emotion, motivation, and anxiety: Brain mechanisms and psychophysiology. *Biological Psychiatry*, 44(12), 1248–1263.
+
+---
+
+### [✅] Is there a structured dimensional model for emotional decision-making?
+
+**YES — 4D Modified-PAD Relational Decision Space (Valence, Arousal, Dominance, Affiliation)**
+
+> **Added since v1.0.** The engine uses a **modified PAD model** extended with a fourth axis,
+> **Affiliation**, reflecting the relational orientation toward the interaction target.
+
+**Scientific basis:** Mehrabian & Russell (1974) PAD model (Pleasure-Arousal-Dominance).  The
+Vitalia engine extends the canonical three-dimensional space with a fourth axis — Affiliation
+(approach/avoidance orientation toward the specific target) — motivated by Horowitz's (1979)
+interpersonal circumplex and social neuroscience research on affiliative motivation.
+
+**Axes:**
+
+| Axis | Range | Meaning |
+|------|-------|---------|
+| Valence | −100 to +100 | Positive vs. negative evaluation of the interaction |
+| Arousal | 0 to 100 | Calm to highly activated |
+| Dominance | −100 to +100 | Perceived control / assertiveness (subjective) |
+| **Affiliation** | **−100 to +100** | **Relational orientation: avoidance → approach** |
+
+A fifth quasi-axis, **Coping Potential** (0–100), provides the *objective* situational capacity
+modulator used to adjust the subjective Dominance axis at the Contextual Modulation Layer.  This
+separation prevents feedback-loop conflation between perceived and actual control.
+
+**Projection pipeline:**
+```
+P_base      = M_profile × E
+P_raw       = (M_profile + ΔM_personal) × E
+P_effective = ContextualMod(P_raw, mob, target, environment, memory, shadow)
+```
+
+Where `M_profile` is the profile projection matrix, `ΔM_personal` is the bounded personal drift
+(±20% of profile weight), and `E` is the current 20-emotion vector.
+
+**Contextual Modulation Layer:**
+```
+Dominance   = clamp(raw_D + (coping_potential − 50) × 0.4)
+Arousal     = clamp(raw_A × (1 + env_intensity × 0.5))
+Affiliation = clamp(raw_Af + relationship_bias)
+Valence     = clamp(raw_V + shadow_forecast_bias)
+```
+
+The result feeds into the SEC partition, the Shadow Timeline utility scorer, and hysteresis
+logic, creating a coherent pipeline from raw emotions to concrete behaviour selection.
+
+**Code:** `src/structs.h:1131-1173`, `src/emotion_projection.h`, `src/emotion_projection.c`
+
+**References:**
+- Mehrabian, A. & Russell, J.A. (1974). *An Approach to Environmental Psychology*. MIT Press.
+- Horowitz, L.M. (1979). On the cognitive structure of interpersonal problems treated in psychotherapy. *Journal of Consulting and Clinical Psychology*, 47(1), 5–15.
+- Russell, J.A. (1980). A circumplex model of affect. *Journal of Personality and Social Psychology*, 39(6), 1161–1178.
 
 ---
 
@@ -724,44 +1007,60 @@ struct entity_knowledge_model {
 
 ### [❌] Are long-term social attachments and relational memory considered?
 
-**PARTIALLY - Short-Term Only (1 hour max)**
+**PARTIALLY — Explicit Long-Term via MALP/MPLP; No Persistent Cross-Session Relationships**
 
-**Current System:**
-- Emotion memory buffer: 10 slots per mob
-- Memories decay after 1 hour (intentional design for gameplay)
-- No persistent relationship tracking across zone resets
+> **Updated since v1.0**: The MALP/MPLP system (RFC-1002) substantially addresses intra-session
+> long-term memory.  Cross-session persistence remains absent by design.
 
-**Design Philosophy (from code comments):**
+**MALP/MPLP Coverage:**
+- MALP maintains explicit social memories with salience-weighted consolidation
+- Positive approach biases and negative avoidance biases accumulate via MPLP Hebbian learning
+- Memories persist for up to 7 days (MPLP half-life: `mplp_decay_halflife` = 168 h default),
+  but are runtime-only (not saved across server reboots)
+
+**Design Philosophy (preserved from v1.0):**
 ```c
 /**
- * DESIGN PHILOSOPHY:
- * - Memories are RUNTIME-ONLY (not persisted to disk)
- * - Mob memories reset on zone reset/reboot - this is intentional
- * - Allows strategic gameplay: players can wait for zone reset to "reset" relationships
- * - Prevents stale memory corruption from extracted/dead entities
+ * Memories are RUNTIME-ONLY (not persisted to disk)
+ * Zone reset/reboot resets mob memories — this is intentional.
+ * Allows strategic gameplay: players can wait for zone reset to "reset" relationships.
  */
 ```
 
 **NOT Implemented:**
-- Long-term attachments (friendships, rivalries lasting days/weeks)
-- Persistent relationship graphs
-- Emotional bond formation over multiple sessions
-- Long-term grudges or alliances
+- Cross-session persistent relationships (disk-saved)
+- Long-term attachment styles (secure, anxious, avoidant)
 
-**Recommendation for Future:**
-Optional persistent relationship system (disabled by default):
-```c
-struct persistent_relationship {
-    long entity_id;
-    int relationship_strength;  // -100 (enemy) to +100 (close friend)
-    int interaction_count;      // Number of interactions
-    time_t first_met;           // When relationship began
-    time_t last_interaction;    // Last interaction timestamp
-};
+---
 
-// Save to disk for quest NPCs or important mobs
-// Regular mobs use runtime-only system
-```
+### [✅] Is emotional spread between NPCs modelled?
+
+**YES — Three-Layer Emotion Contagion System**
+
+> **Added since v1.0.**
+
+**Scientific basis:** Hatfield, Cacioppo & Rapson (1994) emotional contagion theory;
+Barsade (2002) ripple effect in group dynamics.
+
+The Emotion Contagion system (`update_mob_emotion_contagion()` in `src/utils.c`) simulates how
+emotions spread between mobs in the same room across three layers:
+
+| Layer | Scope | Emotions spread |
+|-------|-------|-----------------|
+| Crowd | All mobs in room | Fear (5–10%), Happiness (8–15%), Anger (3–7%), Excitement (7–12%) |
+| Group | Party/group members | Fear (12–20%), Happiness (10–15%) — stronger in-group signal |
+| Leader | Leader → followers | Fear (15–25%), Happiness (12–20%), Anger (10–18%) — 2× amplifier |
+
+**Emotional Intelligence modulation:** High-EI mobs are more resistant to contagion; the
+`adjust_emotion()` pipeline applies EI dampening to incoming contagion signals.
+
+**Performance gate:** Contagion is skipped when more than 20 NPCs share a room.
+
+**Code:** `src/utils.c:update_mob_emotion_contagion()`, `md-docs/EMOTION_CONTAGION.md`
+
+**References:**
+- Hatfield, E., Cacioppo, J.T. & Rapson, R.L. (1994). *Emotional Contagion*. Cambridge University Press.
+- Barsade, S.G. (2002). The ripple effect: Emotional contagion and its influence on group behavior. *Administrative Science Quarterly*, 47(4), 644–675.
 
 ---
 
@@ -857,21 +1156,22 @@ if (time_diff > 3600) {  // 1 hour
 
 ## Recommendations for Future Development
 
+### Completed Enhancements (v2.0)
+
+The following items from the v1.0 recommendation list have been implemented and are now ✅ active:
+
+- **Big Five Personality Mapping** — all five OCEAN traits implemented (N, C, A, E fully; O in Shadow Timeline).
+- **Long-Term Emotional Memory (MALP/MPLP)** — RFC-1002 fully implemented with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit trait formation.
+
 ### Priority 1: High Impact, Moderate Complexity
 
-1. **Big Five Personality Mapping:**
-   - Map existing emotions to Big Five traits
-   - Add Conscientiousness dimension (currently missing)
-   - Enables personality-based behavior prediction
-   - **Estimated Effort:** 2-3 weeks
-
-2. **Physiological Needs System:**
+1. **Physiological Needs System:**
    - Add hunger, thirst, fatigue, sleep deprivation
    - Integrate with moral decision-making (desperation justifies theft)
    - Enables survival-driven emergent behavior
    - **Estimated Effort:** 3-4 weeks
 
-3. **Cognitive Biases Module:**
+2. **Cognitive Biases Module:**
    - Fundamental attribution error, confirmation bias, availability heuristic
    - Apply as modifiers to Shadow Timeline projections
    - Enables more realistic (flawed) decision-making
@@ -879,39 +1179,37 @@ if (time_diff > 3600) {  // 1 hour
 
 ### Priority 2: Medium Impact, Low Complexity
 
-4. **Inhibitory Control System:**
-   - Selective attention, prepotent response inhibition
+3. **Inhibitory Control System (Enhancement):**
+   - Conscientiousness (C) provides partial inhibitory control.  Full executive-function
+     inhibition (prepotent response suppression) would extend this to non-deliberative contexts.
    - Modulated by stress, fatigue, emotional state
-   - Enables distraction and impulse control simulation
    - **Estimated Effort:** 1-2 weeks
 
-5. **Flow State & Burnout:**
+4. **Flow State & Burnout:**
    - Challenge-skill balance detection for flow
    - Chronic stress accumulation for burnout
    - Enables performance psychology simulation
    - **Estimated Effort:** 2 weeks
 
-6. **Long-Term Relationship System:**
-   - Optional persistent relationships (disabled by default)
-   - Attachment styles (secure, anxious, avoidant)
-   - Enables deeper player-NPC bonds
+5. **Persistent Cross-Session Relationships (optional, disk-saved):**
+   - Attachment styles (secure, anxious, avoidant) for key NPCs
    - **Estimated Effort:** 2-3 weeks
 
 ### Priority 3: High Impact, High Complexity
 
-7. **Theory of Mind:**
+6. **Theory of Mind:**
    - Model other entities' knowledge states
    - False belief tasks, deception based on knowledge asymmetry
    - Enables strategic social behavior
    - **Estimated Effort:** 4-6 weeks
 
-8. **FANN Neural Network Integration:**
+7. **FANN Neural Network Integration:**
    - Connect existing FANN library to mob behavior
    - Train networks on behavioral patterns
    - Enables adaptive learning beyond rules
    - **Estimated Effort:** 6-8 weeks
 
-9. **Neurodivergence Profiles (Optional, Ethical):**
+8. **Neurodivergence Profiles (Optional, Ethical):**
    - Research-based ASD, ADHD models
    - Respectful representation, educational value
    - Consult neurodivergent community for input
@@ -919,7 +1217,7 @@ if (time_diff > 3600) {  // 1 hour
 
 ### Priority 4: Low Priority, High Complexity
 
-10. **Neurochemical Simulation:**
+9. **Neurochemical Simulation:**
     - Cortisol, dopamine, serotonin, oxytocin
     - Modulate emotions and decision-making
     - High complexity for uncertain benefit
@@ -929,7 +1227,7 @@ if (time_diff > 3600) {  // 1 hour
 
 ## Conclusion
 
-**Overall Assessment: ★★★★☆ (4/5 Stars)**
+**Overall Assessment: ★★★★★ (5/5 Stars)**
 
 **Strengths:**
 1. ✅ Comprehensive 20-emotion system with quantitative modeling
@@ -938,22 +1236,34 @@ if (time_diff > 3600) {  // 1 hour
 4. ✅ Group moral dynamics with peer pressure and collective responsibility
 5. ✅ Shadow Timeline cognitive future simulation (RFC-0003)
 6. ✅ Genetic trait system differentiates temperament from character
-7. ✅ Ethical design: no stigmatization, respectful representation
-8. ✅ Transparent, documented, traceable systems
+7. ✅ Full Big Five (OCEAN) personality — all five traits implemented and active
+8. ✅ SEC Tetradic Emotion Model with Lateral Inhibition
+9. ✅ 4D modified-PAD Relational Decision Space with Affiliation axis
+10. ✅ MALP/MPLP Long-Term Emotional Memory (RFC-1002) with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit traits
+11. ✅ Emotion Contagion (three-layer: crowd, group, leader)
+12. ✅ Ethical design: no stigmatization, respectful representation
+13. ✅ Transparent, documented, traceable systems
 
-**Weaknesses:**
-1. ❌ No Big Five personality trait framework
-2. ❌ No physiological needs (hunger, fatigue, sleep)
-3. ❌ No cognitive biases (attribution error, confirmation bias)
-4. ❌ No inhibitory control or full executive functions
-5. ❌ No flow states or burnout simulation
-6. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
-7. ❌ Short-term memory only (1-hour window)
-8. ❌ No neurodivergence profiles (ASD, ADHD)
+**Remaining Weaknesses:**
+1. ❌ No physiological needs (hunger, fatigue, sleep)
+2. ❌ No cognitive biases (attribution error, confirmation bias)
+3. ❌ No flow states or burnout simulation
+4. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
+5. ❌ No cross-session persistent relationships (intentional design trade-off)
+6. ❌ No neurodivergence profiles (ASD, ADHD)
+
+**Partial Implementation:**
+- ⚠️  FANN neural networks available but not yet integrated into mob behaviour
 
 **Scientific Rigor:**
-- Strong theoretical foundations (Shultz & Darley, Asch, Simon)
+- Strong theoretical foundations (Shultz & Darley, Asch, Simon, Kahneman)
 - Research-based emotion categories (Ekman, Plutchik)
+- PAD dimensional model extended with Affiliation axis (Mehrabian & Russell; Horowitz)
+- MALP/MPLP grounded in memory consolidation and reconsolidation literature (Nader et al., 2000; Squire, 1992)
+- Hebbian implicit learning in MPLP (Hebb, 1949)
+- Peak-End Rule for episodic valence (Kahneman et al., 1993)
+- Emotion Contagion theory (Hatfield et al., 1994; Barsade, 2002)
+- Big Five OCEAN model (Costa & McCrae, 1992)
 - Ethical design principles followed
 - Clear distinction between emotions and clinical conditions
 - Comprehensive documentation with code references
@@ -963,6 +1273,9 @@ if (time_diff > 3600) {  // 1 hour
 - ✅ Performance-optimized (minimal memory/CPU overhead)
 - ✅ Modular design allows incremental enhancements
 - ✅ Open source, transparent, ethically documented
+- ✅ OCEAN personality fully integrated with no performance regression
+- ✅ MALP/MPLP memory systems with runtime-only design (no disk I/O overhead)
+- ✅ Emotion Contagion with crowd-size performance gate (>20 NPCs = skip)
 
 **Recommendation:**
 The Vitalia Reborn NPC psychology system is **production-ready** with strong foundations. Priority 1 and 2 enhancements would elevate it to cutting-edge status. The system provides realistic, adaptive mob behavior suitable for deep, immersive gameplay.
@@ -973,10 +1286,34 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
 
 **Document History:**
 - v1.0 (2026-02-17): Initial comprehensive analysis for professional evaluation
+- v2.0 (2026-03-07): Updated to reflect Big Five OCEAN (all 5 traits), SEC Tetradic Emotion Model,
+  4D modified-PAD Relational Decision Space (Affiliation as 4th axis), MALP/MPLP Long-Term Memory
+  (RFC-1002), Emotion Contagion system, and dual 20-slot memory buffers; added scientific
+  references for all new systems; updated Recommendations and Conclusion.
 
 **For Questions or Discussion:**
 - GitHub Issues: https://github.com/Forneck/vitalia-reborn/issues
 - Development Team: See CONTRIBUTORS.md
 
 **Academic References Cited:**
-See individual sections for detailed citations. Key works include Darley & Shultz (1990), Asch (1951), Simon (1956), Ekman (1992), Bandura (1977), Csikszentmihalyi (1990), DSM-5 (2013), and ICD-11 (2018).
+See individual sections for detailed citations.  Key works include:
+- Asch (1951), Cialdini (2001) — Social conformity and peer pressure
+- Barsade (2002) — Emotional contagion in group dynamics
+- Bower (1981) — Mood, memory, and state-dependent recall
+- Costa & McCrae (1992) — Big Five NEO-PI-R
+- Csikszentmihalyi (1990) — Flow theory
+- Darley & Shultz (1990) — Moral rules and blame evaluation
+- DSM-5 (2013), ICD-11 (2018) — Clinical reference (future use)
+- Ekman (1992) — Basic emotion categories
+- Goldberg (1990) — Alternative Big Five description
+- Hatfield, Cacioppo & Rapson (1994) — Emotional contagion theory
+- Hebb (1949) — Hebbian learning rule (implicit memory formation)
+- Horowitz (1979) — Interpersonal circumplex (Affiliation axis basis)
+- Kahneman et al. (1993) — Peak-End Rule for episodic memory
+- Lang, Bradley & Cuthbert (1998) — Lateral inhibition and competing emotions
+- McCrae & Costa (1987) — Big Five validation
+- Mehrabian & Russell (1974) — PAD (Pleasure-Arousal-Dominance) dimensional model
+- Nader, Schafe & LeDoux (2000) — Memory reconsolidation
+- Russell (1980) — Circumplex model of affect
+- Simon (1956) — Bounded rationality
+- Squire (1992) — Declarative and nondeclarative memory systems
