@@ -214,6 +214,8 @@
 #define MPLP_ANDROGYNY_CURIOSITY_THRESHOLD 50
 /** Scaling multiplier for GENDER_NORM_SENSITIVITY amplification of gender-expression deltas. */
 #define MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER 2.0f
+/** Scaling multiplier for STATUS_SENSITIVITY amplification of hierarchy/power-social deltas. */
+#define MPLP_STATUS_SENSITIVITY_MULTIPLIER 2.0f
 
 /* ── Cue-score weights for P_ret computation in get_malp_by_agent() ─────── */
 /** Weight of memory intensity in cue score (primary strength factor) */

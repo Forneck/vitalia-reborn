@@ -3,6 +3,53 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Mar 07 2026] - Vitalia Reborn Development
+  fix: Wire new MPLP social cognition traits (9–28) to social reinforcement (src/utils.c, src/malp.h)
+    The 20 new MPLP trait dimensions added in the MPLP expansion were defined
+    and had getter functions, but were never reinforced by any social events.
+    This change wires all six categories to the social-category flags already
+    computed in update_mob_emotion_social().
+
+    Added MPLP_STATUS_SENSITIVITY_MULTIPLIER constant to malp.h (analogous to
+    MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER, avoids semantic confusion).
+
+    Trait-to-social mappings added:
+    ─────────────────────────────────
+    Hierarchy / Social Power (9–12):
+      DOMINANCE              ← is_performance | is_violent
+      SUBMISSION             ← is_fearful | is_humiliating
+      AUTHORITY_RESPONSE     ← is_violent | is_performance
+      STATUS_SENSITIVITY     ← is_performance | is_humiliating | is_violent (unsigned amplifier)
+
+    Social Trust System (13–16):
+      TRUST_BIAS             ← is_positive/agreeable (+) | is_negative/disgusting (−)
+      SUSPICION_BIAS         ← is_negative | is_angry_expression | is_disgusting (unsigned)
+      LOYALTY_EXPECTATION    ← is_agreeable | is_positive (unsigned)
+      BETRAYAL_SENSITIVITY   ← is_negative when existing trust >= 40 (unsigned)
+
+    Social Norm Sensitivity (17–18):
+      POLITENESS_RESPONSE    ← is_positive | is_agreeable
+      RUDENESS_RESPONSE      ← is_negative | is_disgusting | is_humiliating | is_angry_expression
+
+    Social Identity Bias (19–21):
+      INGROUP_BIAS           ← is_celebratory | is_agreeable (unsigned)
+      OUTGROUP_AVERSION      ← is_negative when trust < 35 (unsigned)
+      NOVEL_AGENT_INTEREST   ← is_confused | is_silly | is_amused | is_animal | is_exclamation
+
+    Reciprocity System (22–25):
+      GRATITUDE_RESPONSE     ← is_positive | is_food_drink
+      RECIPROCITY_EXPECTATION← is_positive | is_agreeable | is_food_drink | is_playful (unsigned)
+      REVENGE_TENDENCY       ← is_negative | is_violent | is_angry_expression (unsigned)
+      FORGIVENESS_RATE       ← is_agreeable (unsigned)
+
+    Empathy System (26–28):
+      EMPATHY_RESPONSE       ← is_self_directed | is_fearful | is_amused | is_celebratory
+      DISTRESS_AVERSION      ← is_self_directed | is_fearful (unsigned)
+      COMPASSION_BIAS        ← is_fearful (unsigned)
+
+    Each section also applies the accumulated trait value back to the NPC's
+    current emotions following the same pattern used by traits 3–8.
+
+[Mar 07 2026] - Vitalia Reborn Development
   feat: Expand MPLP Trait System with Social Cognition Biases (src/structs.h, src/malp.h, src/malp.c, src/act.wizard.c)
     Adds 20 new context-global MPLP trait dimensions covering six social-cognition
     categories identified in psychological models of behaviour. All existing traits
