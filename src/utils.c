@@ -6259,6 +6259,486 @@ float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weig
     return modulated;
 }
 
+/* ── MPLP Non-Social Trait Reinforcement Helper ──────────────────────────────
+ * Called immediately after apply_malp_emotion_effects() in each non-social
+ * emotional-update function.  Reinforces the relevant context-global MPLP
+ * personality traits from the NPC's *current* emotional state, then reads the
+ * accumulated trait values back and applies a small secondary emotion adjustment.
+ *
+ * Design mirrors the social reinforcement block in update_mob_emotion_from_social(),
+ * but uses event-type semantics rather than social-keyword arrays.
+ *
+ * Salience conventions (match social block):
+ *   major event  → 0.70  (IS_MAJOR events: stolen, rescued, ally_died, betrayal, abandon_ally)
+ *   moderate     → 0.60  (combat attack, death witnessed, quest complete)
+ *   mild/regular → 0.50  (healed, assisted, magic)
+ *   economic     → 0.40  (item received, trade)
+ */
+static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int interact_type, int is_major)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float sal = is_major ? 0.70f : 0.50f; /* override below where needed */
+
+    switch (interact_type) {
+
+        /* ── INTERACT_ATTACKED (0): melee or spell attack received ─────────── */
+        case INTERACT_ATTACKED: {
+            sal = 0.60f;
+            /* REVENGE_TENDENCY: being attacked always builds retaliatory impulse */
+            float rev_val = (ai->emotion_anger > 50) ? +0.35f : +0.20f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY, rev_val, sal);
+            /* SUBMISSION: fearful / low-courage mobs drift toward submission */
+            float sub_val;
+            if (ai->emotion_fear > 50 || ai->emotion_courage < 20)
+                sub_val = +0.30f;
+            else if (ai->emotion_pride >= 40 || ai->emotion_courage >= 40)
+                sub_val = -0.20f;
+            else
+                sub_val = +0.10f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUBMISSION, sub_val, sal);
+            /* BETRAYAL_SENSITIVITY: attacked by someone previously trusted
+             * heightens future betrayal sensitivity */
+            float btr_val = (ai->emotion_trust >= 40) ? +0.35f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY, btr_val, sal * 0.7f);
+            /* DISTRESS_AVERSION: combat creates aversion to dangerous situations */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, +0.20f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float rev = get_mplp_revenge_tendency(mob);
+            float sub = get_mplp_submission(mob);
+            if (rev > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(rev * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (sub > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sub * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, d);
+            } else if (sub < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(fabsf(sub) * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_courage, d);
+            }
+            break;
+        }
+
+        /* ── INTERACT_HEALED (1): healing received ──────────────────────────── */
+        case INTERACT_HEALED: {
+            sal = 0.50f;
+            /* TRUST_BIAS: healing strongly builds general trust tendency */
+            float trb_val = (ai->emotion_happiness >= 30) ? +0.40f : +0.25f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* GRATITUDE_RESPONSE: pure gratitude event */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, +0.35f, sal);
+            /* LOYALTY_EXPECTATION: expects reciprocal loyalty from healer */
+            float loy_val = (ai->emotion_trust >= 40) ? +0.30f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION, loy_val, sal * 0.6f);
+            /* COMPASSION_BIAS: experiencing compassionate care deepens moral weight */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS, +0.20f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            float trb = get_mplp_trust_bias(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0) {
+                    adjust_emotion(mob, &ai->emotion_happiness, d);
+                    adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.4f));
+                }
+            }
+            if (trb > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(trb * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.5f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_RECEIVED_ITEM (2): gift / fair trade / valuable item ──── */
+        case INTERACT_RECEIVED_ITEM: {
+            sal = 0.40f;
+            /* TRUST_BIAS: receiving gifts / fair dealing builds trust tendency */
+            float trb_val = (ai->emotion_friendship >= 40) ? +0.30f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* GRATITUDE_RESPONSE: gift creates gratitude orientation */
+            float grat_val = (ai->emotion_happiness >= 30) ? +0.30f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, grat_val, sal);
+            /* RECIPROCITY_EXPECTATION: gift creates reciprocity social norm */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_RECIPROCITY_EXPECTATION, +0.20f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_happiness, (int)(d * 0.5f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_STOLEN_FROM (3): theft — MAJOR negative event ─────────── */
+        case INTERACT_STOLEN_FROM: {
+            /* sal stays 0.70 (is_major=1) */
+            /* SUSPICION_BIAS: theft maximally builds generalized wariness */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS, +0.40f, sal);
+            /* BETRAYAL_SENSITIVITY: theft is a betrayal of social norms */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY, +0.35f, sal);
+            /* REVENGE_TENDENCY: strong anger from theft → revenge impulse */
+            float rev_val = (ai->emotion_anger > 30) ? +0.35f : +0.20f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY, rev_val, sal);
+            /* TRUST_BIAS: theft sharply reduces trust tendency */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, -0.40f, sal);
+
+            /* Trait feedback → emotions */
+            float rev = get_mplp_revenge_tendency(mob);
+            float sus = get_mplp_suspicion_bias(mob);
+            if (rev > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(rev * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (sus > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sus * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_RESCUED (4): rescue from danger — MAJOR positive ──────── */
+        case INTERACT_RESCUED: {
+            /* sal stays 0.70 (is_major=1) */
+            /* TRUST_BIAS: rescue strongly builds general trust tendency */
+            float trb_val = (ai->emotion_trust >= 50) ? +0.45f : +0.30f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* GRATITUDE_RESPONSE: rescue generates deep gratitude */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, +0.40f, sal);
+            /* LOYALTY_EXPECTATION: rescued mob expects future loyalty from rescuer */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION, +0.35f, sal * 0.7f);
+            /* COMPASSION_BIAS: experiencing rescue deepens awareness of compassion */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS, +0.25f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            float trb = get_mplp_trust_bias(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0) {
+                    adjust_emotion(mob, &ai->emotion_happiness, d);
+                    adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.5f));
+                }
+            }
+            if (trb > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(trb * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_friendship, d);
+            }
+            break;
+        }
+
+        /* ── INTERACT_ASSISTED (5): combat assistance received ───────────────── */
+        case INTERACT_ASSISTED: {
+            sal = 0.50f;
+            /* TRUST_BIAS: assistance under threat builds trust tendency */
+            float trb_val = (ai->emotion_trust >= 40) ? +0.35f : +0.20f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* GRATITUDE_RESPONSE: assistance generates gratitude */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, +0.30f, sal);
+            /* RECIPROCITY_EXPECTATION: combat assistance creates reciprocity norm */
+            float rec_val = (ai->emotion_loyalty > 40) ? +0.30f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_RECIPROCITY_EXPECTATION, rec_val, sal * 0.6f);
+            /* LOYALTY_EXPECTATION: being helped in danger builds loyalty expectations */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION, +0.20f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            float trb = get_mplp_trust_bias(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_happiness, d);
+            }
+            if (trb > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(trb * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.3f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_ALLY_DIED (9): ally death witnessed — MAJOR ────────────── */
+        case INTERACT_ALLY_DIED: {
+            /* sal stays 0.70 (is_major=1) */
+            /* DISTRESS_AVERSION: major loss builds strong situational aversion */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, +0.40f, sal);
+            /* EMPATHY_RESPONSE: compassionate NPCs resonate more with the loss */
+            float emp_val = (ai->emotion_compassion >= 40 || ai->emotion_sadness >= 30) ? +0.35f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_EMPATHY_RESPONSE, emp_val, sal * 0.7f);
+            /* REVENGE_TENDENCY: anger from ally's death builds retaliatory impulse */
+            float rev_val = (ai->emotion_anger > 30) ? +0.35f : +0.20f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY, rev_val, sal);
+            /* COMPASSION_BIAS: loss of a fellow NPC deepens moral weight of death */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS, +0.25f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float emp = get_mplp_empathy_response(mob);
+            float rev = get_mplp_revenge_tendency(mob);
+            float da = get_mplp_distress_aversion(mob);
+            if (emp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(emp * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_sadness, d);
+            }
+            if (rev > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(rev * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (da > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(da * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_WITNESSED_DEATH (10): non-ally death observed ─────────── */
+        case INTERACT_WITNESSED_DEATH: {
+            sal = 0.60f; /* high but not major */
+            /* DISTRESS_AVERSION: witnessing death builds aversion to lethal situations */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, +0.30f, sal);
+            /* EMPATHY_RESPONSE: resonance depends on prior relationship warmth */
+            float emp_val = (ai->emotion_friendship >= 30) ? +0.25f : +0.10f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_EMPATHY_RESPONSE, emp_val, sal * 0.6f);
+            /* COMPASSION_BIAS: witnessing any death deepens moral weight */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS, +0.15f, sal * 0.4f);
+
+            /* Trait feedback → emotions */
+            float emp = get_mplp_empathy_response(mob);
+            float da = get_mplp_distress_aversion(mob);
+            if (emp > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(emp * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_sadness, d);
+            }
+            if (da > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(da * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.4f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_QUEST_COMPLETE (11): quest success ─────────────────────── */
+        case INTERACT_QUEST_COMPLETE: {
+            sal = 0.60f;
+            /* TRUST_BIAS: fulfilled commitment strongly builds trust tendency */
+            float trb_val = (ai->emotion_trust >= 40) ? +0.40f : +0.25f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* GRATITUDE_RESPONSE: task completion generates gratitude toward doer */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, +0.30f, sal);
+            /* RECIPROCITY_EXPECTATION: fulfilled tasks reinforce positive exchange norm */
+            float rec_val = (ai->emotion_loyalty >= 30) ? +0.30f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_RECIPROCITY_EXPECTATION, rec_val, sal * 0.6f);
+            /* LOYALTY_EXPECTATION: proven reliability builds loyalty expectations */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION, +0.25f, sal * 0.5f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            float trb = get_mplp_trust_bias(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0) {
+                    adjust_emotion(mob, &ai->emotion_happiness, d);
+                    adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.3f));
+                }
+            }
+            if (trb > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(trb * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.4f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_QUEST_FAIL (12): quest failure ─────────────────────────── */
+        case INTERACT_QUEST_FAIL: {
+            sal = 0.50f;
+            /* TRUST_BIAS: broken obligation reduces trust tendency */
+            float trb_val = (ai->emotion_anger > 30) ? -0.35f : -0.20f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, trb_val, sal);
+            /* BETRAYAL_SENSITIVITY: failed promise heightens betrayal awareness */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY, +0.25f, sal);
+            /* SUSPICION_BIAS: failure increases wariness about future commitments */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS, +0.20f, sal * 0.7f);
+
+            /* Trait feedback → emotions */
+            float btr = get_mplp_betrayal_sensitivity(mob);
+            float sus = get_mplp_suspicion_bias(mob);
+            if (btr > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(btr * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (sus > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sus * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_trust, -(int)(d * 0.4f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_BETRAYAL (13): quest betrayal — most negative event ──── */
+        case INTERACT_BETRAYAL: {
+            /* sal stays 0.70 (is_major=1) */
+            /* BETRAYAL_SENSITIVITY: major betrayal maximally increases sensitivity */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY, +0.50f, sal);
+            /* TRUST_BIAS: betrayal sharply reduces trust tendency */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, -0.50f, sal);
+            /* SUSPICION_BIAS: betrayal maximally increases generalized suspicion */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS, +0.45f, sal);
+            /* REVENGE_TENDENCY: betrayal generates maximal retaliatory impulse */
+            float rev_val = (ai->emotion_anger > 30) ? +0.50f : +0.35f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY, rev_val, sal);
+            /* OUTGROUP_AVERSION: betrayer is reclassified as outgroup threat */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_OUTGROUP_AVERSION, +0.35f, sal * 0.6f);
+
+            /* Trait feedback → emotions */
+            float btr = get_mplp_betrayal_sensitivity(mob);
+            float rev = get_mplp_revenge_tendency(mob);
+            float sus = get_mplp_suspicion_bias(mob);
+            if (btr > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(btr * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0) {
+                    adjust_emotion(mob, &ai->emotion_horror, d);
+                    adjust_emotion(mob, &ai->emotion_disgust, (int)(d * 0.6f));
+                }
+            }
+            if (rev > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(rev * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (sus > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sus * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_WITNESSED_OFFENSIVE_MAGIC (14): threatening magic ─────── */
+        case INTERACT_WITNESSED_OFFENSIVE_MAGIC: {
+            sal = 0.40f;
+            /* DISTRESS_AVERSION: witnessing threatening magic builds situational aversion.
+             * Threshold 30 matches the standard for meaningful fear buildup in other cases. */
+            float da_val = (ai->emotion_fear > 30) ? +0.25f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, da_val, sal);
+            /* SUBMISSION: powerful display may trigger submissive drift in fearful NPCs */
+            float sub_val;
+            if (ai->emotion_fear > 40)
+                sub_val = +0.20f;
+            else if (ai->emotion_courage >= 40)
+                sub_val = -0.15f;
+            else
+                sub_val = +0.10f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUBMISSION, sub_val, sal * 0.7f);
+            /* NOVEL_AGENT_INTEREST: magic is unusual and draws curiosity even when
+             * threatening */
+            float nov_val = (ai->emotion_curiosity >= 30) ? +0.20f : +0.10f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_NOVEL_AGENT_INTEREST, nov_val, sal * 0.6f);
+
+            /* Trait feedback → emotions */
+            float da = get_mplp_distress_aversion(mob);
+            float sub = get_mplp_submission(mob);
+            if (da > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(da * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.6f));
+            }
+            if (sub > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sub * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.4f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_WITNESSED_SUPPORT_MAGIC (15): beneficial spell ─────────── */
+        case INTERACT_WITNESSED_SUPPORT_MAGIC: {
+            sal = 0.50f;
+            /* TRUST_BIAS: receiving beneficial magic builds trust tendency */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, +0.35f, sal);
+            /* GRATITUDE_RESPONSE: magical blessing generates gratitude */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE, +0.30f, sal);
+            /* NOVEL_AGENT_INTEREST: beneficial magic is interesting and engaging */
+            float nov_val = (ai->emotion_curiosity >= 30) ? +0.25f : +0.15f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_NOVEL_AGENT_INTEREST, nov_val, sal * 0.5f);
+            /* COMPASSION_BIAS: experiencing magical compassion deepens moral weight */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS, +0.20f, sal * 0.4f);
+
+            /* Trait feedback → emotions */
+            float grat = get_mplp_gratitude_response(mob);
+            float trb = get_mplp_trust_bias(mob);
+            if (grat > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(grat * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0) {
+                    adjust_emotion(mob, &ai->emotion_happiness, d);
+                    adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.4f));
+                }
+            }
+            if (trb > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(trb * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.4f));
+            }
+            break;
+        }
+
+        /* ── INTERACT_ABANDON_ALLY (16): ally fled combat — MAJOR ───────────── */
+        case INTERACT_ABANDON_ALLY: {
+            /* sal stays 0.70 (is_major=1) */
+            /* BETRAYAL_SENSITIVITY: abandonment is a form of ally betrayal */
+            float btr_val = (ai->emotion_loyalty > 40) ? +0.40f : +0.25f;
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY, btr_val, sal);
+            /* TRUST_BIAS: ally fleeing sharply reduces general trust tendency */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_TRUST_BIAS, -0.35f, sal);
+            /* SUSPICION_BIAS: abandonment builds generalized wariness toward allies */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS, +0.30f, sal * 0.8f);
+            /* DISTRESS_AVERSION: being left behind in danger is deeply aversive */
+            reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, +0.30f, sal * 0.7f);
+
+            /* Trait feedback → emotions */
+            float btr = get_mplp_betrayal_sensitivity(mob);
+            float sus = get_mplp_suspicion_bias(mob);
+            float da = get_mplp_distress_aversion(mob);
+            if (btr > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(btr * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_anger, d);
+            }
+            if (sus > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(sus * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
+            }
+            if (da > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+                int d = (int)(da * (float)MPLP_EMOTION_DELTA_MAX);
+                if (d > 0)
+                    adjust_emotion(mob, &ai->emotion_sadness, (int)(d * 0.4f));
+            }
+            break;
+        }
+
+        default:
+            break;
+    }
+}
+
 /**
  * Update mob emotions based on being attacked
  * @param mob The mob being attacked
@@ -6315,6 +6795,7 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
         /* MALP/MPLP: surface long-term memory effects triggered by this attacker;
          * being attacked is a significant negative event (valence −0.6). */
         apply_malp_emotion_effects(mob, attacker, -0.6f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_ATTACKED, 0);
     }
 }
 
@@ -6476,6 +6957,7 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
         /* MALP/MPLP: surface long-term memory effects triggered by this healer;
          * being healed is a significant positive event (valence +0.5). */
         apply_malp_emotion_effects(mob, healer, +0.5f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_HEALED, 0);
         if (IS_NPC(healer) && healer->ai_data) {
             add_active_emotion_memory(healer, mob, INTERACT_HEALED, 0, NULL);
             /* Bidirectional feedback: healer gains compassion/happiness from helping */
@@ -6517,6 +6999,7 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
          * (Bowlby 1969, attachment and loss; grief is a high-arousal negative
          * state; valence −0.7). */
         apply_malp_emotion_effects(mob, dead_ally, -0.7f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_ALLY_DIED, 1);
     }
 }
 
@@ -6546,6 +7029,7 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
         /* MALP/MPLP: receiving a gift creates moderate positive affect (Gouldner 1960,
          * reciprocity norm; Mauss 1925, gift exchange theory; valence +0.4). */
         apply_malp_emotion_effects(mob, giver, +0.4f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_RECEIVED_ITEM, 0);
         if (IS_NPC(giver) && giver->ai_data)
             add_active_emotion_memory(giver, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
@@ -6585,6 +7069,7 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
         /* MALP/MPLP: surface long-term memory effects triggered by this thief;
          * theft is a major negative event (valence −0.8). */
         apply_malp_emotion_effects(mob, thief, -0.8f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_STOLEN_FROM, 1);
         if (IS_NPC(thief) && thief->ai_data)
             add_active_emotion_memory(thief, mob, INTERACT_STOLEN_FROM, 1, NULL);
     }
@@ -6632,6 +7117,8 @@ void update_mob_emotion_robbed_shopping(struct char_data *buyer, struct char_dat
             unfairness = 1.0f;
         float rob_valence = -(0.3f + 0.4f * unfairness);
         apply_malp_emotion_effects(buyer, keeper, rob_valence);
+        /* Unfair pricing is a trust violation: wire SUSPICION_BIAS / BETRAYAL_SENSITIVITY */
+        apply_mplp_nonsocial_reinforcement(buyer, INTERACT_STOLEN_FROM, 0);
         if (IS_NPC(keeper) && keeper->ai_data)
             add_active_emotion_memory(keeper, buyer, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
@@ -6673,6 +7160,7 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
         /* MALP/MPLP: surface long-term memory effects triggered by this rescuer;
          * rescue is a major positive event (valence +0.7). */
         apply_malp_emotion_effects(mob, rescuer, +0.7f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_RESCUED, 1);
         if (IS_NPC(rescuer) && rescuer->ai_data) {
             add_active_emotion_memory(rescuer, mob, INTERACT_RESCUED, 1, NULL);
             /* Bidirectional feedback: rescuer gains pride/compassion/happiness from saving another */
@@ -6715,6 +7203,7 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
          * (Cohen & Wills 1985, social support buffer theory; instrumental support
          * in high-stress conditions reduces distress; valence +0.5). */
         apply_malp_emotion_effects(mob, assistant, +0.5f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_ASSISTED, 0);
         if (IS_NPC(assistant) && assistant->ai_data) {
             add_active_emotion_memory(assistant, mob, INTERACT_ASSISTED, 0, NULL);
             /* Bidirectional feedback: assistant gains loyalty/compassion from supporting others */
@@ -11255,6 +11744,7 @@ void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data 
         add_emotion_memory(mob, killer, INTERACT_WITNESSED_DEATH, 1, NULL);
         float death_valence = is_friendly ? -0.5f : (is_enemy ? +0.2f : -0.3f);
         apply_malp_emotion_effects(mob, killer, death_valence);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_WITNESSED_DEATH, 0);
     }
 }
 
@@ -11352,6 +11842,7 @@ void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data 
         /* MALP/MPLP: being harmed by a spell is appraised as a deliberate attack
          * (Lazarus 1991, threat appraisal; same valence as melee attack −0.6). */
         apply_malp_emotion_effects(mob, caster, -0.6f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_ATTACKED, 0);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_ATTACKED, 0, NULL);
     }
@@ -11383,6 +11874,7 @@ void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data
         /* MALP/MPLP: a beneficial spell is appraised similarly to being healed
          * (Lazarus 1991, benefit appraisal; gratitude research; valence +0.5). */
         apply_malp_emotion_effects(mob, caster, +0.5f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_WITNESSED_SUPPORT_MAGIC, 0);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_SUPPORT_MAGIC, 0, NULL);
     }
@@ -11419,6 +11911,7 @@ void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct 
         /* MALP/MPLP: witnessing threatening magic from a distance is an indirect
          * threat (Lazarus 1991); lower intensity than direct attack; valence −0.3. */
         apply_malp_emotion_effects(mob, caster, -0.3f);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0);
         if (IS_NPC(caster) && caster->ai_data)
             add_active_emotion_memory(caster, mob, INTERACT_WITNESSED_OFFENSIVE_MAGIC, 0, NULL);
     }
@@ -11645,6 +12138,7 @@ void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data 
      * (Emmons & McCullough 2003, gratitude intervention research; Lazarus 1991,
      * goal attainment → joy; valence +0.6). */
     apply_malp_emotion_effects(mob, player, +0.6f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_QUEST_COMPLETE, 0);
 }
 
 /**
@@ -11672,6 +12166,7 @@ void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *pl
      * (Dollard et al. 1939, frustration–aggression hypothesis; Bell 1985,
      * disappointment theory; valence −0.5). */
     apply_malp_emotion_effects(mob, player, -0.5f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_QUEST_FAIL, 0);
 }
 
 /**
@@ -11704,6 +12199,7 @@ void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *
      * (Freyd 1994, betrayal trauma theory; Fitness 2001, betrayal anger;
      * moral outrage research, Rozin et al. 1999; valence −0.9). */
     apply_malp_emotion_effects(mob, killer, -0.9f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_BETRAYAL, 1);
     if (IS_NPC(killer) && killer->ai_data)
         add_active_emotion_memory(killer, mob, INTERACT_BETRAYAL, 1, NULL);
 }
@@ -11731,6 +12227,7 @@ void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trad
     /* MALP/MPLP: equitable exchange creates mild positive affect (Adams 1965,
      * equity theory; distributive justice research; valence +0.3). */
     apply_malp_emotion_effects(mob, trader, +0.3f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_RECEIVED_ITEM, 0);
     if (IS_NPC(trader) && trader->ai_data)
         add_active_emotion_memory(trader, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
@@ -11763,6 +12260,7 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
     /* MALP/MPLP: receiving high-value goods triggers goal-attainment reward
      * (positive affect from acquisition; valence +0.4). */
     apply_malp_emotion_effects(mob, seller, +0.4f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_RECEIVED_ITEM, 0);
     if (IS_NPC(seller) && seller->ai_data)
         add_active_emotion_memory(seller, mob, INTERACT_RECEIVED_ITEM, 0, NULL);
 }
@@ -11799,6 +12297,7 @@ void update_mob_emotion_ally_fled(struct char_data *mob, struct char_data *fled)
      * and fear contagion (Keltner & Haidt 1999, social functions of emotion;
      * Fitness 2001, betrayal anger; fear spreading in group contexts; valence −0.5). */
     apply_malp_emotion_effects(mob, fled, -0.5f);
+    apply_mplp_nonsocial_reinforcement(mob, INTERACT_ABANDON_ALLY, 1);
 }
 
 /**
