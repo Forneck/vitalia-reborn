@@ -6524,9 +6524,10 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
             break;
         }
 
-        /* ── INTERACT_WITNESSED_DEATH (10): non-ally death observed ─────────── */
+        /* ── INTERACT_WITNESSED_DEATH (10): non-ally death observed — MAJOR ────── */
         case INTERACT_WITNESSED_DEATH: {
-            sal = 0.60f; /* high but not major */
+            /* sal stays 0.70 (is_major=1): witnessing death is classified as a major
+             * event by add_emotion_memory(); MPLP salience matches that classification. */
             /* DISTRESS_AVERSION: witnessing death builds aversion to lethal situations */
             reinforce_mplp_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION, +0.30f, sal);
             /* EMPATHY_RESPONSE: resonance depends on prior relationship warmth */
@@ -11776,7 +11777,7 @@ void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data 
         add_emotion_memory(mob, killer, INTERACT_WITNESSED_DEATH, 1, NULL);
         float death_valence = is_friendly ? -0.5f : (is_enemy ? +0.2f : -0.3f);
         apply_malp_emotion_effects(mob, killer, death_valence);
-        apply_mplp_nonsocial_reinforcement(mob, INTERACT_WITNESSED_DEATH, 0);
+        apply_mplp_nonsocial_reinforcement(mob, INTERACT_WITNESSED_DEATH, 1);
     }
 }
 
