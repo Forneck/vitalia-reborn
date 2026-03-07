@@ -883,8 +883,46 @@ float get_mplp_modesty_response(struct char_data *mob)
 }
 
 /**
+ * Return non-zero if the given context-global MPLP trait is unsigned (range 0..1).
+ * Unsigned traits represent strength amplifiers or unipolar biases where a negative
+ * value carries no distinct meaning (e.g. sensitivity, aversion, expectation).
+ */
+static int is_unsigned_mplp_trait(int trait_type)
+{
+    switch (trait_type) {
+        case MPLP_TRAIT_GENDER_NORM_SENSITIVITY:
+        case MPLP_TRAIT_STATUS_SENSITIVITY:
+        case MPLP_TRAIT_SUSPICION_BIAS:
+        case MPLP_TRAIT_BETRAYAL_SENSITIVITY:
+        case MPLP_TRAIT_LOYALTY_EXPECTATION:
+        case MPLP_TRAIT_INGROUP_BIAS:
+        case MPLP_TRAIT_OUTGROUP_AVERSION:
+        case MPLP_TRAIT_RECIPROCITY_EXPECTATION:
+        case MPLP_TRAIT_REVENGE_TENDENCY:
+        case MPLP_TRAIT_FORGIVENESS_RATE:
+        case MPLP_TRAIT_DISTRESS_AVERSION:
+        case MPLP_TRAIT_COMPASSION_BIAS:
+            return 1;
+        default:
+            return 0;
+    }
+}
+
+/**
+ * Return non-zero if the given trait type is a valid context-global MPLP trait
+ * (i.e., anchored with MPLP_GLOBAL_ANCHOR and accepted by reinforce_mplp_context_trait()).
+ * Context-global traits span from MPLP_TRAIT_EXHIBITION_RESPONSE (3) through
+ * MPLP_TRAIT_COMPASSION_BIAS (28).  Agent-anchored traits (AVOIDANCE=0, APPROACH=1,
+ * AROUSAL_BIAS=2) are excluded.
+ */
+static int is_context_global_trait_type(int trait_type)
+{
+    return (trait_type >= MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type <= MPLP_TRAIT_COMPASSION_BIAS);
+}
+
+/**
  * Helper: retrieve the signed modifier for a single context-global trait type.
- * Returns a value in [-1, +1] (or [0, 1] for GENDER_NORM_SENSITIVITY).
+ * Returns a value in [-1, +1] for signed traits, or [0, 1] for unsigned traits.
  */
 static float get_context_trait(struct char_data *mob, int trait_type)
 {
@@ -894,6 +932,7 @@ static float get_context_trait(struct char_data *mob, int trait_type)
     struct mob_ai_data *ai = mob->ai_data;
     float result = 0.0f;
     int i;
+    int is_unsigned = is_unsigned_mplp_trait(trait_type);
 
     for (i = 0; i < ai->mplp_count; i++) {
         struct mplp_trait *t = &ai->mplp[i];
@@ -901,15 +940,15 @@ static float get_context_trait(struct char_data *mob, int trait_type)
             continue;
         if (t->trait_type != trait_type)
             continue;
-        /* GENDER_NORM_SENSITIVITY is unsigned (0..1): always use positive magnitude */
-        if (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+        /* Unsigned traits (0..1): always accumulate positive magnitude */
+        if (is_unsigned)
             result += t->magnitude;
         else
             result += (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
     }
 
     /* Clamp: unsigned traits to [0,1], signed traits to [-1,+1] */
-    float lo = (trait_type == MPLP_TRAIT_GENDER_NORM_SENSITIVITY) ? 0.0f : -1.0f;
+    float lo = is_unsigned ? 0.0f : -1.0f;
     if (result > 1.0f)
         result = 1.0f;
     if (result < lo)
@@ -937,15 +976,89 @@ float get_mplp_gender_norm_sensitivity(struct char_data *mob)
     return get_context_trait(mob, MPLP_TRAIT_GENDER_NORM_SENSITIVITY);
 }
 
+/* ── Category 1: Hierarchy / Social Power ────────────────────────────────── */
+
+float get_mplp_dominance(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_DOMINANCE); }
+
+float get_mplp_submission(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_SUBMISSION); }
+
+float get_mplp_authority_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_AUTHORITY_RESPONSE);
+}
+
+float get_mplp_status_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_STATUS_SENSITIVITY);
+}
+
+/* ── Category 2: Social Trust System ─────────────────────────────────────── */
+
+float get_mplp_trust_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_TRUST_BIAS); }
+
+float get_mplp_suspicion_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_SUSPICION_BIAS); }
+
+float get_mplp_betrayal_sensitivity(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_BETRAYAL_SENSITIVITY);
+}
+
+float get_mplp_loyalty_expectation(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_LOYALTY_EXPECTATION);
+}
+
+/* ── Category 3: Social Norm Sensitivity ─────────────────────────────────── */
+
+float get_mplp_politeness_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_POLITENESS_RESPONSE);
+}
+
+float get_mplp_rudeness_response(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_RUDENESS_RESPONSE); }
+
+/* ── Category 4: Social Identity Bias ────────────────────────────────────── */
+
+float get_mplp_ingroup_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_INGROUP_BIAS); }
+
+float get_mplp_outgroup_aversion(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_OUTGROUP_AVERSION); }
+
+float get_mplp_novel_agent_interest(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_NOVEL_AGENT_INTEREST);
+}
+
+/* ── Category 5: Reciprocity System ──────────────────────────────────────── */
+
+float get_mplp_reciprocity_expectation(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_RECIPROCITY_EXPECTATION);
+}
+
+float get_mplp_gratitude_response(struct char_data *mob)
+{
+    return get_context_trait(mob, MPLP_TRAIT_GRATITUDE_RESPONSE);
+}
+
+float get_mplp_revenge_tendency(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_REVENGE_TENDENCY); }
+
+float get_mplp_forgiveness_rate(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_FORGIVENESS_RATE); }
+
+/* ── Category 6: Empathy System ──────────────────────────────────────────── */
+
+float get_mplp_empathy_response(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_EMPATHY_RESPONSE); }
+
+float get_mplp_distress_aversion(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_DISTRESS_AVERSION); }
+
+float get_mplp_compassion_bias(struct char_data *mob) { return get_context_trait(mob, MPLP_TRAIT_COMPASSION_BIAS); }
+
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data)
         return;
     if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
-    if (trait_type != MPLP_TRAIT_EXHIBITION_RESPONSE && trait_type != MPLP_TRAIT_MODESTY_RESPONSE &&
-        trait_type != MPLP_TRAIT_MASCULINITY_RESPONSE && trait_type != MPLP_TRAIT_FEMININITY_RESPONSE &&
-        trait_type != MPLP_TRAIT_ANDROGYNY_TOLERANCE && trait_type != MPLP_TRAIT_GENDER_NORM_SENSITIVITY)
+    if (!is_context_global_trait_type(trait_type))
         return;
 
     struct mob_ai_data *ai = mob->ai_data;

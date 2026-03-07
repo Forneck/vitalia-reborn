@@ -2,6 +2,63 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 07 2026] - Vitalia Reborn Development
+  feat: Expand MPLP Trait System with Social Cognition Biases (src/structs.h, src/malp.h, src/malp.c, src/act.wizard.c)
+    Adds 20 new context-global MPLP trait dimensions covering six social-cognition
+    categories identified in psychological models of behaviour. All existing traits
+    (0–8) are preserved unchanged for full backward compatibility.
+
+    New trait categories and constants
+    ───────────────────────────────────
+    Category 1 – Hierarchy / Social Power:
+      MPLP_TRAIT_DOMINANCE (9)           signed [-1,+1]
+      MPLP_TRAIT_SUBMISSION (10)         signed [-1,+1]
+      MPLP_TRAIT_AUTHORITY_RESPONSE (11) signed [-1,+1]
+      MPLP_TRAIT_STATUS_SENSITIVITY (12) unsigned [0,1]
+
+    Category 2 – Social Trust System:
+      MPLP_TRAIT_TRUST_BIAS (13)           signed [-1,+1]
+      MPLP_TRAIT_SUSPICION_BIAS (14)       unsigned [0,1]
+      MPLP_TRAIT_BETRAYAL_SENSITIVITY (15) unsigned [0,1]
+      MPLP_TRAIT_LOYALTY_EXPECTATION (16)  unsigned [0,1]
+
+    Category 3 – Social Norm Sensitivity:
+      MPLP_TRAIT_POLITENESS_RESPONSE (17) signed [-1,+1]
+      MPLP_TRAIT_RUDENESS_RESPONSE (18)   signed [-1,+1]
+      (EXHIBITION_RESPONSE/MODESTY_RESPONSE already covered by traits 3–4)
+
+    Category 4 – Social Identity Bias:
+      MPLP_TRAIT_INGROUP_BIAS (19)         unsigned [0,1]
+      MPLP_TRAIT_OUTGROUP_AVERSION (20)    unsigned [0,1]
+      MPLP_TRAIT_NOVEL_AGENT_INTEREST (21) signed [-1,+1]
+
+    Category 5 – Reciprocity System:
+      MPLP_TRAIT_RECIPROCITY_EXPECTATION (22) unsigned [0,1]
+      MPLP_TRAIT_GRATITUDE_RESPONSE (23)      signed [-1,+1]
+      MPLP_TRAIT_REVENGE_TENDENCY (24)        unsigned [0,1]
+      MPLP_TRAIT_FORGIVENESS_RATE (25)        unsigned [0,1]
+
+    Category 6 – Empathy System:
+      MPLP_TRAIT_EMPATHY_RESPONSE (26)  signed [-1,+1]
+      MPLP_TRAIT_DISTRESS_AVERSION (27) unsigned [0,1]
+      MPLP_TRAIT_COMPASSION_BIAS (28)   unsigned [0,1]
+
+    Implementation details
+    ──────────────────────
+    - is_unsigned_mplp_trait() helper centralises the signed/unsigned distinction
+      used by get_context_trait(), replacing the previous GENDER_NORM_SENSITIVITY
+      hard-coded special case with a switch covering all unipolar traits.
+    - reinforce_mplp_context_trait() validation updated to accept all 26
+      context-global trait types (traits 3–28).
+    - Getter functions added for each new trait (get_mplp_dominance(), etc.),
+      all delegating to the existing get_context_trait() helper.
+    - trait_names[] in do_stat_malp() extended to display new trait names in
+      MALP/MPLP debug output (stat <mob> malp).
+    - Power-law decay, rehearsal decay, and Hebbian consolidation apply to all
+      new traits automatically through existing loops (no changes required).
+    - Default magnitude is 0.0 for all new traits; NPC behaviour is unaffected
+      until the trait is explicitly reinforced via reinforce_mplp_context_trait().
+
 [Mar 04 2026] - Vitalia Reborn Development
   feat: MALP/MPLP – Memória Ativa/Passiva de Longo Prazo – RFC-1002 Phase A/B/C (src/malp.c, src/malp.h, src/utils.c, src/structs.h, src/db.c, src/cedit.c, src/config.c, src/config.h, src/utils.h)
     Implements Active Long-Term Memory (MALP) and Passive/Implicit Long-Term Memory (MPLP)

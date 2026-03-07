@@ -980,7 +980,27 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                                         "MASCULINITY_RESPONSE",
                                         "FEMININITY_RESPONSE",
                                         "ANDROGYNY_TOLERANCE",
-                                        "GENDER_NORM_SENSITIVITY"};
+                                        "GENDER_NORM_SENSITIVITY",
+                                        "DOMINANCE",
+                                        "SUBMISSION",
+                                        "AUTHORITY_RESPONSE",
+                                        "STATUS_SENSITIVITY",
+                                        "TRUST_BIAS",
+                                        "SUSPICION_BIAS",
+                                        "BETRAYAL_SENSITIVITY",
+                                        "LOYALTY_EXPECTATION",
+                                        "POLITENESS_RESPONSE",
+                                        "RUDENESS_RESPONSE",
+                                        "INGROUP_BIAS",
+                                        "OUTGROUP_AVERSION",
+                                        "NOVEL_AGENT_INTEREST",
+                                        "RECIPROCITY_EXPECTATION",
+                                        "GRATITUDE_RESPONSE",
+                                        "REVENGE_TENDENCY",
+                                        "FORGIVENESS_RATE",
+                                        "EMPATHY_RESPONSE",
+                                        "DISTRESS_AVERSION",
+                                        "COMPASSION_BIAS"};
     int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
     if (!IS_MOB(mob)) {

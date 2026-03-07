@@ -1307,6 +1307,48 @@ struct sec_baseline {
 #define MPLP_TRAIT_ANDROGYNY_TOLERANCE 7     /**< Context-global: tolerance for mixed/androgynous gender expression */
 #define MPLP_TRAIT_GENDER_NORM_SENSITIVITY 8 /**< Context-global: sensitivity to gender-norm violations */
 
+/* Category 1: Hierarchy / Social Power */
+#define MPLP_TRAIT_DOMINANCE 9   /**< Context-global: tendency to assert dominance or challenge higher-status agents */
+#define MPLP_TRAIT_SUBMISSION 10 /**< Context-global: tendency to yield, obey, or defer in status conflicts */
+#define MPLP_TRAIT_AUTHORITY_RESPONSE 11 /**< Context-global: reaction to authority figures and commands */
+#define MPLP_TRAIT_STATUS_SENSITIVITY                                                                                  \
+    12 /**< Context-global: sensitivity amplifier for social-rank cues (unsigned 0..1) */
+
+/* Category 2: Social Trust System */
+#define MPLP_TRAIT_TRUST_BIAS 13 /**< Context-global: general tendency to trust (+) or distrust (−) agents */
+#define MPLP_TRAIT_SUSPICION_BIAS                                                                                      \
+    14 /**< Context-global: baseline suspicion level toward other agents (unsigned 0..1) */
+#define MPLP_TRAIT_BETRAYAL_SENSITIVITY                                                                                \
+    15 /**< Context-global: sensitivity amplifier for betrayal events (unsigned 0..1) */
+#define MPLP_TRAIT_LOYALTY_EXPECTATION                                                                                 \
+    16 /**< Context-global: strength of expected reciprocal loyalty (unsigned 0..1) */
+
+/* Category 3: Social Norm Sensitivity (EXHIBITION/MODESTY already covered by traits 3–4) */
+#define MPLP_TRAIT_POLITENESS_RESPONSE 17 /**< Context-global: reaction to polite socials (bow, thank, etc.) */
+#define MPLP_TRAIT_RUDENESS_RESPONSE 18   /**< Context-global: reaction to rude or insulting socials */
+
+/* Category 4: Social Identity Bias */
+#define MPLP_TRAIT_INGROUP_BIAS                                                                                        \
+    19 /**< Context-global: preference strength for familiar factions/ingroup (unsigned 0..1) */
+#define MPLP_TRAIT_OUTGROUP_AVERSION                                                                                   \
+    20 /**< Context-global: avoidance tendency toward unfamiliar agents (unsigned 0..1) */
+#define MPLP_TRAIT_NOVEL_AGENT_INTEREST 21 /**< Context-global: curiosity (+) or wariness (−) toward unknown agents */
+
+/* Category 5: Reciprocity System */
+#define MPLP_TRAIT_RECIPROCITY_EXPECTATION 22 /**< Context-global: strength of social exchange norms (unsigned 0..1)   \
+                                               */
+#define MPLP_TRAIT_GRATITUDE_RESPONSE                                                                                  \
+    23 /**< Context-global: tendency to feel and express gratitude for received favors */
+#define MPLP_TRAIT_REVENGE_TENDENCY                                                                                    \
+    24 /**< Context-global: strength of retaliatory impulse after harm (unsigned 0..1) */
+#define MPLP_TRAIT_FORGIVENESS_RATE 25 /**< Context-global: rate of forgiveness after harm events (unsigned 0..1) */
+
+/* Category 6: Empathy System */
+#define MPLP_TRAIT_EMPATHY_RESPONSE 26  /**< Context-global: emotional resonance with others (+) or coldness (−) */
+#define MPLP_TRAIT_DISTRESS_AVERSION 27 /**< Context-global: aversion to witnessing others' suffering (unsigned 0..1)  \
+                                         */
+#define MPLP_TRAIT_COMPASSION_BIAS 28   /**< Context-global: moral hesitation bias when causing harm (unsigned 0..1) */
+
 /** Sentinel anchor for context-global MPLP traits (not tied to any single agent). */
 #define MPLP_GLOBAL_ANCHOR (-1L)
 

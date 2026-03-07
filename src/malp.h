@@ -399,11 +399,293 @@ float get_mplp_gender_norm_sensitivity(struct char_data *mob);
  * @param mob        The NPC whose MPLP is being updated.
  * @param trait_type One of: MPLP_TRAIT_EXHIBITION_RESPONSE, MPLP_TRAIT_MODESTY_RESPONSE,
  *                   MPLP_TRAIT_MASCULINITY_RESPONSE, MPLP_TRAIT_FEMININITY_RESPONSE,
- *                   MPLP_TRAIT_ANDROGYNY_TOLERANCE, or MPLP_TRAIT_GENDER_NORM_SENSITIVITY.
+ *                   MPLP_TRAIT_ANDROGYNY_TOLERANCE, MPLP_TRAIT_GENDER_NORM_SENSITIVITY,
+ *                   MPLP_TRAIT_DOMINANCE, MPLP_TRAIT_SUBMISSION, MPLP_TRAIT_AUTHORITY_RESPONSE,
+ *                   MPLP_TRAIT_STATUS_SENSITIVITY, MPLP_TRAIT_TRUST_BIAS,
+ *                   MPLP_TRAIT_SUSPICION_BIAS, MPLP_TRAIT_BETRAYAL_SENSITIVITY,
+ *                   MPLP_TRAIT_LOYALTY_EXPECTATION, MPLP_TRAIT_POLITENESS_RESPONSE,
+ *                   MPLP_TRAIT_RUDENESS_RESPONSE, MPLP_TRAIT_INGROUP_BIAS,
+ *                   MPLP_TRAIT_OUTGROUP_AVERSION, MPLP_TRAIT_NOVEL_AGENT_INTEREST,
+ *                   MPLP_TRAIT_RECIPROCITY_EXPECTATION, MPLP_TRAIT_GRATITUDE_RESPONSE,
+ *                   MPLP_TRAIT_REVENGE_TENDENCY, MPLP_TRAIT_FORGIVENESS_RATE,
+ *                   MPLP_TRAIT_EMPATHY_RESPONSE, MPLP_TRAIT_DISTRESS_AVERSION, or
+ *                   MPLP_TRAIT_COMPASSION_BIAS.
  * @param valence    Signed valence of the current experience (−1..+1).
  * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
  */
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience);
+
+/* ── Hierarchy / Social Power getters ───────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global dominance trait.
+ *
+ * Measures the accumulated tendency to assert dominance (+) or defer (−) in
+ * social-rank conflicts (challenging higher-status NPCs, asserting leadership).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → dominant / assertive social posture
+ *               < 0 → deferential / low-status orientation
+ */
+float get_mplp_dominance(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global submission trait.
+ *
+ * Measures the accumulated tendency to yield (+) or resist (−) authority
+ * and social pressure (obeying commands, yielding in conflicts).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → submissive / obedient orientation
+ *               < 0 → resistant / rebellious orientation
+ */
+float get_mplp_submission(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global authority-response trait.
+ *
+ * Measures the accumulated tendency to respond positively (+) or negatively (−)
+ * to authority figures, commands, and institutional power.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → compliant / respects authority
+ *               < 0 → defiant / suspicious of authority
+ */
+float get_mplp_authority_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global status-sensitivity trait.
+ *
+ * Measures how strongly the NPC reacts to social rank cues and status signals.
+ * High sensitivity produces stronger behavioural reactions to dominance displays.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by status signals
+ *               1.0 → very strongly amplified reactions to rank cues
+ */
+float get_mplp_status_sensitivity(struct char_data *mob);
+
+/* ── Social Trust System getters ─────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global trust-bias trait.
+ *
+ * Measures the accumulated general tendency to trust (+) or distrust (−) agents.
+ * Grows through cooperative interactions; shrinks through betrayal or conflict.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → trusting / gives benefit of the doubt
+ *               < 0 → distrusting / assumes bad intent
+ */
+float get_mplp_trust_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global suspicion-bias trait.
+ *
+ * Measures the baseline level of suspicion toward other agents.
+ * High values lead to defensive reactions and reluctance to cooperate.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no baseline suspicion
+ *               1.0 → highly suspicious of all agents
+ */
+float get_mplp_suspicion_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global betrayal-sensitivity trait.
+ *
+ * Amplifier for the emotional impact of betrayal events (theft, deception,
+ * broken alliances).  High values cause stronger and longer-lasting reactions.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by betrayal events
+ *               1.0 → very strongly amplified betrayal reactions
+ */
+float get_mplp_betrayal_sensitivity(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global loyalty-expectation trait.
+ *
+ * Measures how strongly the NPC expects reciprocal loyalty from others.
+ * High values make disloyalty more salient and aversive.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no expectation of loyalty
+ *               1.0 → very high expectation of reciprocal loyalty
+ */
+float get_mplp_loyalty_expectation(struct char_data *mob);
+
+/* ── Social Norm Sensitivity getters ─────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global politeness-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or to be
+ * unmoved (−) by polite socials (bow, thank, compliment, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → appreciates / responds warmly to polite behaviour
+ *               < 0 → indifferent to social niceties
+ */
+float get_mplp_politeness_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global rudeness-response trait.
+ *
+ * Measures the accumulated sensitivity (+) or immunity (−) to rude or
+ * insulting socials (insult, mock, sneer, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → easily offended by rude behaviour
+ *               < 0 → thick-skinned / immune to insults
+ */
+float get_mplp_rudeness_response(struct char_data *mob);
+
+/* ── Social Identity Bias getters ────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global ingroup-bias trait.
+ *
+ * Measures how strongly the NPC favours members of familiar factions or groups.
+ * High values produce preferential treatment of known allies/faction members.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no ingroup preference
+ *               1.0 → strong favouritism toward familiar faction members
+ */
+float get_mplp_ingroup_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global outgroup-aversion trait.
+ *
+ * Measures how strongly the NPC avoids or reacts negatively to unfamiliar
+ * agents, strangers, or outgroup members.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no outgroup aversion
+ *               1.0 → strong avoidance of unknown or outgroup agents
+ */
+float get_mplp_outgroup_aversion(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global novel-agent-interest trait.
+ *
+ * Measures curiosity (+) or wariness (−) toward unknown agents.
+ * Positive values drive approach and investigation; negative values drive caution.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → curious about / drawn toward unknown characters
+ *               < 0 → wary of / avoids unknown characters
+ */
+float get_mplp_novel_agent_interest(struct char_data *mob);
+
+/* ── Reciprocity System getters ──────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global reciprocity-expectation trait.
+ *
+ * Measures the strength of the social exchange norm: how strongly the NPC
+ * expects favours to be returned and harm to be repaid.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no reciprocity expectation
+ *               1.0 → very strong expectation of social exchange
+ */
+float get_mplp_reciprocity_expectation(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global gratitude-response trait.
+ *
+ * Measures the tendency to feel and express gratitude (+) or indifference (−)
+ * after receiving help, gifts, or favours.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → responds warmly to received favours
+ *               < 0 → indifferent to help received
+ */
+float get_mplp_gratitude_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global revenge-tendency trait.
+ *
+ * Measures the strength of the retaliatory impulse following harm events
+ * (attacks, theft, deception, insults).  High values sustain grudges longer.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no retaliatory tendency
+ *               1.0 → strong, persistent desire to retaliate
+ */
+float get_mplp_revenge_tendency(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global forgiveness-rate trait.
+ *
+ * Measures the rate at which the NPC releases grudges and restores positive
+ * social attitudes after harm.  High values lead to faster forgiveness.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → does not forgive (perpetual grudge)
+ *               1.0 → very quick to forgive past harm
+ */
+float get_mplp_forgiveness_rate(struct char_data *mob);
+
+/* ── Empathy System getters ──────────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global empathy-response trait.
+ *
+ * Measures emotional resonance with others' states: helping wounded characters,
+ * reacting to distress.  Positive = empathetic; Negative = emotionally cold.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → empathetic / resonates with others' emotions
+ *               < 0 → cold / does not respond to others' emotional states
+ */
+float get_mplp_empathy_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global distress-aversion trait.
+ *
+ * Measures aversion to witnessing others' suffering.  High values cause the NPC
+ * to avoid, retreat from, or try to resolve distressing situations.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by others' suffering
+ *               1.0 → strongly averse to witnessing distress
+ */
+float get_mplp_distress_aversion(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global compassion-bias trait.
+ *
+ * Measures the moral hesitation bias when about to cause harm.  High values
+ * produce reluctance to attack or harm passive/non-threatening characters.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no moral hesitation
+ *               1.0 → strong compassion-driven hesitation before causing harm
+ */
+float get_mplp_compassion_bias(struct char_data *mob);
 
 /**
  * Apply MALP/MPLP-derived emotion effects through the appraisal pipeline.
