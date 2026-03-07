@@ -217,6 +217,26 @@
 /** Scaling multiplier for STATUS_SENSITIVITY amplification of hierarchy/power-social deltas. */
 #define MPLP_STATUS_SENSITIVITY_MULTIPLIER 2.0f
 
+/* ── Context-model reinforcement weights ────────────────────────────────── */
+/**
+ * Fraction of each reinforcement delta applied to the global (cross-context)
+ * personality value.  Keeps the NPC's overall character dominant so that
+ * strong contextual experiences don't completely override baseline tendencies.
+ */
+#define MPLP_CTX_GLOBAL_WEIGHT 0.60f
+/**
+ * Fraction of each reinforcement delta applied to the situational context slot.
+ * Combined with MPLP_CTX_GLOBAL_WEIGHT these must sum to 1.0.
+ */
+#define MPLP_CTX_LOCAL_WEIGHT 0.40f
+/**
+ * Per-tick multiplicative decay rate applied to each non-GLOBAL context slot
+ * (ctx[1..MPLP_CTX_MAX-1]).  Keeps contextual modifiers from accumulating
+ * indefinitely while letting the global trait persist via power-law decay.
+ * 0.995 → ~half-life of ~138 ticks at default tick rate.
+ */
+#define MPLP_CTX_DECAY_RATE 0.995f
+
 /* ── Cue-score weights for P_ret computation in get_malp_by_agent() ─────── */
 /** Weight of memory intensity in cue score (primary strength factor) */
 #define MALP_CUE_WEIGHT_INTENSITY 0.60f
@@ -416,6 +436,49 @@ float get_mplp_gender_norm_sensitivity(struct char_data *mob);
  * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
  */
 void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience);
+
+/**
+ * Context-aware variant of reinforce_mplp_context_trait().
+ *
+ * Splits the Hebbian reinforcement delta between the global personality value
+ * (magnitude, weighted MPLP_CTX_GLOBAL_WEIGHT = 0.60) and the situational
+ * context modifier (ctx[ctx_type], weighted MPLP_CTX_LOCAL_WEIGHT = 0.40).
+ * When ctx_type == MPLP_CTX_GLOBAL the call degrades to a plain global update
+ * (same as reinforce_mplp_context_trait).
+ *
+ * @param mob        The NPC whose MPLP is being updated.
+ * @param trait_type One of the MPLP_TRAIT_* context-global constants (3..28).
+ * @param valence    Signed valence of the current experience (−1..+1).
+ * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
+ * @param ctx_type   One of MPLP_CTX_GLOBAL..MPLP_CTX_MAGIC (0..MPLP_CTX_MAX-1).
+ */
+void reinforce_mplp_context_trait_ctx(struct char_data *mob, int trait_type, float valence, float salience,
+                                      int ctx_type);
+
+/**
+ * Map an INTERACT_* event type to the corresponding MPLP_CTX_* context.
+ *
+ * Used by apply_mplp_nonsocial_reinforcement() and the social-event path to
+ * automatically route reinforcement to the correct context slot.
+ *
+ * @param interact_type  One of the INTERACT_* constants (0..19).
+ * @return               MPLP_CTX_* value (MPLP_CTX_GLOBAL if unmapped).
+ */
+int get_mplp_context_from_interact_type(int interact_type);
+
+/**
+ * Retrieve the context-aware effective value of an MPLP trait.
+ *
+ * Computes: effective = clamp(global_component + ctx[ctx_type]).
+ * For signed traits the sign is derived from the running-average valence.
+ * For unsigned traits the result is clamped to [0, 1].
+ *
+ * @param mob        The NPC to query.
+ * @param trait_type One of the MPLP_TRAIT_* context-global constants (3..28).
+ * @param ctx_type   One of MPLP_CTX_GLOBAL..MPLP_CTX_MAGIC (0..MPLP_CTX_MAX-1).
+ * @return           Effective trait value: [−1, +1] for signed, [0, 1] for unsigned.
+ */
+float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_type);
 
 /* ── Hierarchy / Social Power getters ───────────────────────────────────── */
 

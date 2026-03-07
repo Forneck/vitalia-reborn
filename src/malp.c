@@ -495,6 +495,19 @@ void malp_decay_tick(struct char_data *mob)
                 if (t->rehearsal_count < 0)
                     t->rehearsal_count = 0;
             }
+            /* Contextual modifier decay: ctx[] values decay faster than the global
+             * magnitude so that situational biases fade without erasing the baseline
+             * personality.  ctx[0]=GLOBAL is never written so the loop skips index 0. */
+            for (int c = 1; c < MPLP_CTX_MAX; c++) {
+                float cv = t->ctx[c];
+                if (cv == 0.0f)
+                    continue;
+                if (cv > -0.01f && cv < 0.01f) {
+                    t->ctx[c] = 0.0f;
+                    continue;
+                }
+                t->ctx[c] = cv * MPLP_CTX_DECAY_RATE;
+            }
             if (t->magnitude >= 0.02f) {
                 if (w != i)
                     ai->mplp[w] = ai->mplp[i];
@@ -1127,6 +1140,187 @@ void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float v
         trait->persistence = MALP_PERSIST_HIGH;
     else if (trait->magnitude >= 0.40f && trait->persistence < MALP_PERSIST_MEDIUM)
         trait->persistence = MALP_PERSIST_MEDIUM;
+}
+
+int get_mplp_context_from_interact_type(int interact_type)
+{
+    switch (interact_type) {
+        case INTERACT_ATTACKED:
+        case INTERACT_HEALED:
+        case INTERACT_RESCUED:
+        case INTERACT_ASSISTED:
+        case INTERACT_ALLY_DIED:
+        case INTERACT_WITNESSED_DEATH:
+        case INTERACT_ABANDON_ALLY:
+        case INTERACT_SACRIFICE_SELF:
+            return MPLP_CTX_COMBAT;
+
+        case INTERACT_RECEIVED_ITEM:
+        case INTERACT_STOLEN_FROM:
+            return MPLP_CTX_TRADE;
+
+        case INTERACT_QUEST_COMPLETE:
+        case INTERACT_QUEST_FAIL:
+        case INTERACT_BETRAYAL:
+        case INTERACT_DECEIVE:
+            return MPLP_CTX_QUEST;
+
+        case INTERACT_WITNESSED_OFFENSIVE_MAGIC:
+        case INTERACT_WITNESSED_SUPPORT_MAGIC:
+            return MPLP_CTX_MAGIC;
+
+        case INTERACT_SOCIAL_POSITIVE:
+        case INTERACT_SOCIAL_NEGATIVE:
+        case INTERACT_SOCIAL_VIOLENT:
+        case INTERACT_SOCIAL_NEUTRAL:
+            return MPLP_CTX_SOCIAL;
+
+        default:
+            return MPLP_CTX_GLOBAL;
+    }
+}
+
+void reinforce_mplp_context_trait_ctx(struct char_data *mob, int trait_type, float valence, float salience,
+                                      int ctx_type)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+    if (!is_context_global_trait_type(trait_type))
+        return;
+    if (ctx_type < 0 || ctx_type >= MPLP_CTX_MAX)
+        ctx_type = MPLP_CTX_GLOBAL;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    struct mplp_trait *trait = NULL;
+    int i;
+    time_t now = time(NULL);
+
+    /* Clamp inputs */
+    if (salience > 1.0f)
+        salience = 1.0f;
+    if (salience < 0.0f)
+        salience = 0.0f;
+    if (valence > 1.0f)
+        valence = 1.0f;
+    if (valence < -1.0f)
+        valence = -1.0f;
+
+    /* Find existing global trait slot */
+    for (i = 0; i < ai->mplp_count; i++) {
+        if (ai->mplp[i].anchor_agent_id == MPLP_GLOBAL_ANCHOR && ai->mplp[i].trait_type == trait_type) {
+            trait = &ai->mplp[i];
+            break;
+        }
+    }
+
+    if (!trait) {
+        if (ai->mplp_count >= MPLP_MAX_PER_MOB)
+            return;
+        if (!mplp_grow(mob))
+            return;
+        trait = &ai->mplp[ai->mplp_count];
+        memset(trait, 0, sizeof(struct mplp_trait));
+        trait->anchor_agent_id = MPLP_GLOBAL_ANCHOR;
+        trait->agent_type = ENTITY_TYPE_GLOBAL;
+        trait->trait_type = trait_type;
+        trait->magnitude = 0.0f;
+        trait->base_magnitude = 0.0f;
+        trait->valence = valence;
+        trait->rehearsal_count = 1;
+        trait->persistence = MALP_PERSIST_LOW;
+        trait->last_updated = now;
+        ai->mplp_count++;
+        /* Fall through so the first experience applies the reinforcement delta */
+    }
+
+    float delta = 0.15f * salience;
+    if (delta > 0.30f)
+        delta = 0.30f;
+
+    /* Global personality: receives the larger fraction */
+    float global_delta = delta * MPLP_CTX_GLOBAL_WEIGHT;
+    trait->magnitude += global_delta;
+    if (trait->magnitude > 1.0f)
+        trait->magnitude = 1.0f;
+    trait->base_magnitude = trait->magnitude;
+
+    /* Contextual modifier: receives the smaller fraction when context is specific */
+    if (ctx_type != MPLP_CTX_GLOBAL) {
+        float ctx_delta = delta * MPLP_CTX_LOCAL_WEIGHT;
+        int is_unsigned = is_unsigned_mplp_trait(trait_type);
+        if (is_unsigned) {
+            trait->ctx[ctx_type] += ctx_delta;
+            if (trait->ctx[ctx_type] > 1.0f)
+                trait->ctx[ctx_type] = 1.0f;
+            if (trait->ctx[ctx_type] < 0.0f)
+                trait->ctx[ctx_type] = 0.0f;
+        } else {
+            float signed_delta = (valence >= 0.0f ? ctx_delta : -ctx_delta);
+            trait->ctx[ctx_type] += signed_delta;
+            if (trait->ctx[ctx_type] > 1.0f)
+                trait->ctx[ctx_type] = 1.0f;
+            if (trait->ctx[ctx_type] < -1.0f)
+                trait->ctx[ctx_type] = -1.0f;
+        }
+    } else {
+        /* GLOBAL context: apply full delta (no split) to magnitude */
+        float extra = delta * MPLP_CTX_LOCAL_WEIGHT;
+        trait->magnitude += extra;
+        if (trait->magnitude > 1.0f)
+            trait->magnitude = 1.0f;
+        trait->base_magnitude = trait->magnitude;
+    }
+
+    /* Running-average valence update */
+    float alpha = MPLP_VALENCE_LEARNING_RATE;
+    trait->valence = (1.0f - alpha) * trait->valence + alpha * valence;
+
+    if (trait->rehearsal_count < MALP_MAX_REHEARSAL)
+        trait->rehearsal_count++;
+    trait->last_updated = now;
+
+    /* Elevate persistence as the trait strengthens */
+    if (trait->magnitude >= 0.70f && trait->persistence < MALP_PERSIST_HIGH)
+        trait->persistence = MALP_PERSIST_HIGH;
+    else if (trait->magnitude >= 0.40f && trait->persistence < MALP_PERSIST_MEDIUM)
+        trait->persistence = MALP_PERSIST_MEDIUM;
+}
+
+float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_type)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->mplp)
+        return 0.0f;
+    if (ctx_type < 0 || ctx_type >= MPLP_CTX_MAX)
+        ctx_type = MPLP_CTX_GLOBAL;
+
+    struct mob_ai_data *ai = mob->ai_data;
+    float result = 0.0f;
+    int i;
+    int is_unsigned = is_unsigned_mplp_trait(trait_type);
+
+    /* Accumulation mirrors get_context_trait(): in normal operation at most one
+     * MPLP_GLOBAL_ANCHOR slot exists per trait_type; summing across any extras
+     * combines their contributions, consistent with the single-anchor guarantee
+     * maintained by reinforce_mplp_context_trait_ctx(). */
+    for (i = 0; i < ai->mplp_count; i++) {
+        struct mplp_trait *t = &ai->mplp[i];
+        if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+            continue;
+        if (t->trait_type != trait_type)
+            continue;
+        float global_part = is_unsigned ? t->magnitude : (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+        float ctx_part = (ctx_type != MPLP_CTX_GLOBAL) ? t->ctx[ctx_type] : 0.0f;
+        result += global_part + ctx_part;
+    }
+
+    float lo = is_unsigned ? 0.0f : -1.0f;
+    if (result > 1.0f)
+        result = 1.0f;
+    if (result < lo)
+        result = lo;
+    return result;
 }
 
 void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence)

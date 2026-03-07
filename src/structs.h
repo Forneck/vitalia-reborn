@@ -1335,8 +1335,9 @@ struct sec_baseline {
 #define MPLP_TRAIT_NOVEL_AGENT_INTEREST 21 /**< Context-global: curiosity (+) or wariness (−) toward unknown agents */
 
 /* Category 5: Reciprocity System */
-#define MPLP_TRAIT_RECIPROCITY_EXPECTATION 22 /**< Context-global: strength of social exchange norms (unsigned 0..1)   \
-                                               */
+#define MPLP_TRAIT_RECIPROCITY_EXPECTATION                                                                             \
+    22 /**< Context-global: strength of social exchange norms (unsigned 0..1)                                          \
+        */
 #define MPLP_TRAIT_GRATITUDE_RESPONSE                                                                                  \
     23 /**< Context-global: tendency to feel and express gratitude for received favors */
 #define MPLP_TRAIT_REVENGE_TENDENCY                                                                                    \
@@ -1344,13 +1345,28 @@ struct sec_baseline {
 #define MPLP_TRAIT_FORGIVENESS_RATE 25 /**< Context-global: rate of forgiveness after harm events (unsigned 0..1) */
 
 /* Category 6: Empathy System */
-#define MPLP_TRAIT_EMPATHY_RESPONSE 26  /**< Context-global: emotional resonance with others (+) or coldness (−) */
-#define MPLP_TRAIT_DISTRESS_AVERSION 27 /**< Context-global: aversion to witnessing others' suffering (unsigned 0..1)  \
-                                         */
-#define MPLP_TRAIT_COMPASSION_BIAS 28   /**< Context-global: moral hesitation bias when causing harm (unsigned 0..1) */
+#define MPLP_TRAIT_EMPATHY_RESPONSE 26 /**< Context-global: emotional resonance with others (+) or coldness (−) */
+#define MPLP_TRAIT_DISTRESS_AVERSION                                                                                   \
+    27                                /**< Context-global: aversion to witnessing others' suffering (unsigned 0..1)    \
+                                       */
+#define MPLP_TRAIT_COMPASSION_BIAS 28 /**< Context-global: moral hesitation bias when causing harm (unsigned 0..1) */
 
 /** Sentinel anchor for context-global MPLP traits (not tied to any single agent). */
 #define MPLP_GLOBAL_ANCHOR (-1L)
+
+/* MPLP situational context types for context-aware personality modulation.
+ * GLOBAL (0) is the baseline; contexts 1-5 store situational modifiers that
+ * blend with the global value via effective = global + ctx[n].
+ * Context types map to broad interaction categories so that the same trait
+ * (e.g. TRUST_BIAS) can grow in one domain while remaining neutral in another.
+ */
+#define MPLP_CTX_GLOBAL 0 /**< Baseline personality (no situational modifier) */
+#define MPLP_CTX_SOCIAL 1 /**< Social / conversational interactions */
+#define MPLP_CTX_COMBAT 2 /**< Combat, rescue, and physical conflict */
+#define MPLP_CTX_TRADE 3  /**< Trade, theft, and economic exchange */
+#define MPLP_CTX_QUEST 4  /**< Quest, mission, betrayal, and deception events */
+#define MPLP_CTX_MAGIC 5  /**< Witnessed magical effects (offensive or support) */
+#define MPLP_CTX_MAX 6    /**< Total number of context types (array bound) */
 
 /**
  * MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002)
@@ -1385,15 +1401,16 @@ struct malp_entry {
  * approach/avoidance decisions and arousal.
  */
 struct mplp_trait {
-    long anchor_agent_id; /**< Anchor agent (0 = context-global) */
-    int agent_type;       /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
-    int trait_type;       /**< MPLP_TRAIT_AVOIDANCE / APPROACH / AROUSAL_BIAS */
-    float magnitude;      /**< Current trait strength 0..1 (power-law decayed from base_magnitude) */
-    float base_magnitude; /**< Encoded strength at last reinforcement; decay reference (never mutated by decay) */
-    float valence;        /**< Running-average valence −1..+1 */
-    int rehearsal_count;  /**< Co-occurrence count (Hebbian accumulator) */
-    int persistence;      /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
-    time_t last_updated;  /**< Wall-clock time of last Hebbian reinforcement (decay origin) */
+    long anchor_agent_id;    /**< Anchor agent (0 = context-global) */
+    int agent_type;          /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int trait_type;          /**< MPLP_TRAIT_AVOIDANCE / APPROACH / AROUSAL_BIAS */
+    float magnitude;         /**< Current trait strength 0..1 (power-law decayed from base_magnitude) */
+    float base_magnitude;    /**< Encoded strength at last reinforcement; decay reference (never mutated by decay) */
+    float ctx[MPLP_CTX_MAX]; /**< Situational modifiers per MPLP_CTX_* context; ctx[0]=GLOBAL unused (always 0) */
+    float valence;           /**< Running-average valence −1..+1 */
+    int rehearsal_count;     /**< Co-occurrence count (Hebbian accumulator) */
+    int persistence;         /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
+    time_t last_updated;     /**< Wall-clock time of last Hebbian reinforcement (decay origin) */
 };
 
 struct mob_ai_data {

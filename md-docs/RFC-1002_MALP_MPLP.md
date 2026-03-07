@@ -457,3 +457,102 @@ MPLP-NS: mob=Guarda(#3001) event=0 is_major=0 sal_base=0.50
 MPLP-NS: ATTACKED sal=0.60 rev=0.23 sub=0.11
 ```
 
+
+---
+
+## Appendix C — MPLP Context Model (Situational Personality Modulation)
+
+### C.1 Motivation
+
+Prior to this extension, each MPLP context-global trait held a single scalar `magnitude` value that accumulated from all event types without distinction.  A mob robbed during trade and a mob betrayed on a quest would both update the same global `TRUST_BIAS` slot, preventing situational learning:  "trusting in combat, suspicious in trade" was architecturally impossible.
+
+### C.2 Architecture
+
+Each `mplp_trait` now carries a `ctx[MPLP_CTX_MAX]` float array alongside the existing `magnitude` (global value).
+
+```
+mplp_trait
+ ├─ magnitude           ← global personality baseline (persists via power-law)
+ └─ ctx[MPLP_CTX_MAX]  ← contextual modifiers per situation
+      [0] GLOBAL  = 0.0  (never written; reserved as alias for magnitude)
+      [1] SOCIAL  ← updated by social interaction events
+      [2] COMBAT  ← updated by combat / rescue / ally-death events
+      [3] TRADE   ← updated by trade / theft events
+      [4] QUEST   ← updated by quest / betrayal / deception events
+      [5] MAGIC   ← updated by witnessed magical effects
+```
+
+Effective trait value for a given situation:
+
+```
+effective = clamp(global_component + ctx[ctx_type])
+```
+
+where `global_component` = `magnitude` (unsigned traits) or `±magnitude` (signed, sign from `valence`), and `ctx[]` stores a pre-signed modifier.
+
+### C.3 Reinforcement Split
+
+`reinforce_mplp_context_trait_ctx(mob, trait_type, valence, salience, ctx_type)` splits the Hebbian delta:
+
+| Component | Weight | Target |
+|---|---|---|
+| Global personality | `MPLP_CTX_GLOBAL_WEIGHT = 0.60` | `magnitude` |
+| Contextual modifier | `MPLP_CTX_LOCAL_WEIGHT = 0.40` | `ctx[ctx_type]` |
+
+When `ctx_type == MPLP_CTX_GLOBAL` the full delta is applied to `magnitude` (equivalent to the legacy `reinforce_mplp_context_trait()` call).
+
+### C.4 Event-to-Context Mapping
+
+`get_mplp_context_from_interact_type(interact_type)` maps each `INTERACT_*` constant to the appropriate context:
+
+| INTERACT_* range | Context |
+|---|---|
+| ATTACKED, HEALED, RESCUED, ASSISTED, ALLY_DIED, WITNESSED_DEATH, ABANDON_ALLY, SACRIFICE_SELF | `MPLP_CTX_COMBAT` |
+| RECEIVED_ITEM, STOLEN_FROM | `MPLP_CTX_TRADE` |
+| QUEST_COMPLETE, QUEST_FAIL, BETRAYAL, DECEIVE | `MPLP_CTX_QUEST` |
+| WITNESSED_OFFENSIVE_MAGIC, WITNESSED_SUPPORT_MAGIC | `MPLP_CTX_MAGIC` |
+| SOCIAL_POSITIVE, SOCIAL_NEGATIVE, SOCIAL_VIOLENT, SOCIAL_NEUTRAL | `MPLP_CTX_SOCIAL` |
+
+### C.5 Context Decay
+
+Per-tick decay in `malp_decay_tick()`:
+
+```c
+ctx[c] *= MPLP_CTX_DECAY_RATE;   /* 0.995 per tick */
+```
+
+Applied only to `ctx[1..MPLP_CTX_MAX-1]` (never to `ctx[0]=GLOBAL` which stays 0).  The global `magnitude` continues to use the existing power-law half-life decay.
+
+Half-life of contextual modifiers ≈ 138 ticks at default tick rate, keeping situational learning transient while global personality persists.
+
+### C.6 Context-Aware Retrieval
+
+```c
+float get_mplp_trait_with_ctx(mob, trait_type, ctx_type)
+```
+
+Returns `clamp(global_component + ctx[ctx_type])`.  Existing `get_mplp_*()` accessor functions continue to return only the global value (backward-compatible).
+
+### C.7 Debug Logging
+
+Updated log format when `CONFIG_MOB_4D_DEBUG` is active:
+
+```
+MPLP-NS: mob=<name>(#<vnum>) event=<id> is_major=<0|1> sal_base=<float> ctx=<NAME>
+MPLP-NS: <EVENT_NAME> ctx=<NAME> sal=<float> <trait1>=<float> [...]
+```
+
+Example for a merchant robbed during trade:
+
+```
+MPLP-NS: mob=Comerciante(#1200) event=3 is_major=1 sal_base=0.70 ctx=TRADE
+MPLP-NS: STOLEN_FROM ctx=TRADE sal=0.70 rev=0.45 sus=0.23
+```
+
+The stat display (`stat mob <name>`) shows a `Ctx:` line for each MPLP trait that has at least one non-zero contextual modifier, e.g.:
+
+```
+ [3] Context:global   Trait:TRUST_BIAS          Persist:LOW    Rehearsal:4
+      Mag:0.31  BaseMag:0.31  Val:+0.28  Age:0h2m15s
+      Ctx: TRADE-0.18 QUEST+0.12
+```

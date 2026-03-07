@@ -1089,6 +1089,26 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                          : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
                                                : "",
                          t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+            /* Show non-zero contextual modifiers */
+            {
+                static const char *const ctx_labels[] = {"GLOBAL", "SOCIAL", "COMBAT", "TRADE", "QUEST", "MAGIC"};
+                bool any_ctx = FALSE;
+                for (int c = 1; c < MPLP_CTX_MAX; c++) {
+                    if (t->ctx[c] != 0.0f) {
+                        if (!any_ctx) {
+                            send_to_char(ch, "      Ctx:");
+                            any_ctx = TRUE;
+                        }
+                        send_to_char(ch, " %s%s%+.2f%s", ctx_labels[c],
+                                     (t->ctx[c] < -0.1f)  ? CCRED(ch, C_NRM)
+                                     : (t->ctx[c] > 0.1f) ? CCGRN(ch, C_NRM)
+                                                          : "",
+                                     t->ctx[c], CCNRM(ch, C_NRM));
+                    }
+                }
+                if (any_ctx)
+                    send_to_char(ch, "\r\n");
+            }
         }
     }
 
