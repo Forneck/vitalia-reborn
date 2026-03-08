@@ -393,6 +393,10 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     if (!IS_NPC(ch) || !ch->ai_data)
         return;
 
+    /* Visibility guard: mobs only perform socials toward targets they can see */
+    if (!CAN_SEE(ch, target))
+        return;
+
     target_reputation = GET_REPUTATION(target);
     mob_alignment = GET_ALIGNMENT(ch);
     target_pos = GET_POS(target);
@@ -1148,7 +1152,7 @@ void mobile_activity(void)
                         /* Perform social action with target */
                         if (action.target) {
                             struct char_data *target = (struct char_data *)action.target;
-                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                            if (IN_ROOM(target) == IN_ROOM(ch) && CAN_SEE(ch, target)) {
                                 /* Simple friendly social - could be expanded */
                                 act("$n parece interessado em $N.", FALSE, ch, 0, target, TO_NOTVICT);
                                 act("$n olha para você de forma interessada.", FALSE, ch, 0, target, TO_VICT);
@@ -1249,8 +1253,8 @@ void mobile_activity(void)
                         /* Follow another entity */
                         if (action.target && !ch->master) {
                             struct char_data *leader = (struct char_data *)action.target;
-                            /* Verify leader in same room and not already following */
-                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch) {
+                            /* Verify leader in same room, visible, and not already following */
+                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch && CAN_SEE(ch, leader)) {
                                 /* add_follower sends "começa a seguir" messages itself */
                                 add_follower(ch, leader);
                                 shadow_action_executed = TRUE;

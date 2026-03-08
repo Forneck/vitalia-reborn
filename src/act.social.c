@@ -44,12 +44,14 @@ ACMD(do_action)
         act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
 
         /* Witness mechanism for untargeted socials (e.g. "Venus smiles happily").
-         * AWARE/SENTINEL NPCs in the room observe the actor's emotional expression. */
+         * AWARE/SENTINEL NPCs in the room observe the actor's emotional expression.
+         * Only witnesses that can actually see the actor perceive the social. */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
             struct char_data *witness, *next_witness;
             for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
                 next_witness = witness->next_in_room;
-                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || MOB_FLAGGED(witness, MOB_NOTDEADYET))
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || MOB_FLAGGED(witness, MOB_NOTDEADYET) ||
+                    !CAN_SEE(witness, ch))
                     continue;
                 update_mob_emotion_witnessed_social(witness, ch, NULL, action->command);
             }
@@ -135,13 +137,14 @@ ACMD(do_action)
 
         /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
          * Triggers for any actor (player or mob) performing a targeted social so that
-         * observer NPCs can process the event through their SEC Tetrad appraisal. */
+         * observer NPCs can process the event through their SEC Tetrad appraisal.
+         * Only witnesses that can see both the actor and victim perceive the social. */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
             struct char_data *witness, *next_witness;
             for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
                 next_witness = witness->next_in_room;
                 if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == vict ||
-                    MOB_FLAGGED(witness, MOB_NOTDEADYET))
+                    MOB_FLAGGED(witness, MOB_NOTDEADYET) || !CAN_SEE(witness, ch) || !CAN_SEE(witness, vict))
                     continue;
                 update_mob_emotion_witnessed_social(witness, ch, vict, action->command);
             }
