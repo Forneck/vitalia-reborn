@@ -94,6 +94,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"affects", "aff", POS_DEAD, do_affects, 0, 0, CMD_NOARG},
     {"alias", "ali", POS_DEAD, do_alias, 0, 0, CMD_NOARG},
     {"areas", "are", POS_DEAD, do_areas, 0, 0, CMD_NOARG},
+    {"appear", "app", POS_RESTING, do_appear, 1, 0, CMD_NOARG},
     {"assist", "as", POS_FIGHTING, do_assist, 1, 0, CMD_ONEARG},
     {"ask", "ask", POS_RESTING, do_spec_comm, 0, SCMD_ASK, CMD_TWOARG},
     {"astat", "ast", POS_DEAD, do_astat, 0, 0, CMD_NOARG},
@@ -1319,7 +1320,7 @@ int enter_player_game(struct descriptor_data *d)
     reset_char(d->character);
 
     /* Clean up stale disguise state from previous session
-     * If player has AFF_DISGUISE but no entry in disguise_list, 
+     * If player has AFF_DISGUISE but no entry in disguise_list,
      * remove the flag to prevent issues */
     if (!IS_NPC(d->character) && AFF_FLAGGED(d->character, AFF_DISGUISE)) {
         /* Check if there's a corresponding entry in disguise_list */
@@ -1328,9 +1329,9 @@ int enter_player_game(struct descriptor_data *d)
              * Remove the disguise affect and clean up descriptions
              * Note: Cannot restore original sex field (no disguise_data to retrieve it from).
              * The character's sex will remain set to the mob's sex until manually corrected. */
-            mudlog(BRF, LVL_IMMORT, TRUE, 
-                "Cleaning up stale disguise state for %s (no disguise_data entry, sex may be incorrect)",
-                GET_NAME(d->character));
+            mudlog(BRF, LVL_IMMORT, TRUE,
+                   "Cleaning up stale disguise state for %s (no disguise_data entry, sex may be incorrect)",
+                   GET_NAME(d->character));
             affect_from_char(d->character, SKILL_DISGUISE);
             /* Clean up disguise descriptions */
             if (d->character->player.short_descr) {

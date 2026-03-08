@@ -1051,6 +1051,25 @@ ACMD(do_visible)
         send_to_char(ch, "Você já está visível.\r\n");
 }
 
+ACMD(do_appear)
+{
+    if (!AFF_FLAGGED(ch, AFF_INVISIBLE)) {
+        send_to_char(ch, "Você já está visível.\r\n");
+        return;
+    }
+
+    /* Notify only those who could already see the invisible player
+     * (i.e. those with detect invisibility) before removing the flag. */
+    act("$n aparece lentamente.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (affected_by_spell(ch, SPELL_INVISIBLE))
+        affect_from_char(ch, SPELL_INVISIBLE);
+
+    REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_INVISIBLE);
+
+    send_to_char(ch, "Você encerra a magia da invisibilidade.\r\n");
+}
+
 ACMD(do_title)
 {
     skip_spaces(&argument);
