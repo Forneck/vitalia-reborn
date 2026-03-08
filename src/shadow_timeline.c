@@ -324,6 +324,11 @@ static void generate_social_projections(struct shadow_context *ctx)
             continue; /* Skip self and players */
         }
 
+        /* Only consider targets the mob can actually see */
+        if (!CAN_SEE(ch, target)) {
+            continue;
+        }
+
         /* Project a friendly social action */
         memset(&action, 0, sizeof(struct shadow_action));
         action.type = SHADOW_ACTION_SOCIAL;
@@ -973,6 +978,11 @@ static void generate_follow_projections(struct shadow_context *ctx)
 
         if (target == ch) {
             continue; /* Skip self */
+        }
+
+        /* Only follow targets the mob can actually see */
+        if (!CAN_SEE(ch, target)) {
+            continue;
         }
 
         /* Don't follow if target is already following us */
