@@ -1,13 +1,13 @@
 ~... ... 0 5 0 0
 Você está sem palavras.
 $n está sem palavras.
-Você está sem palavras com o que $E acabou de fazer!
+Você está sem palavras com o que $L acabou de fazer!
 $n está sem palavras com o que $N acabou de fazer!
 $n está sem palavras com o que você acabou de fazer!
 Bem, eles não estão aqui, eh quem se importa? Você estava sem palavras mesmo!
 Você está sem palavras com o que acabou de fazer!
-$n está sem palavras com o que $e acabou de fazer!
-Você está sem palavras sobre $S $t.
+$n está sem palavras com o que $l acabou de fazer!
+Você está sem palavras sobre $Z $t.
 $n está sem palavras sobre o $t de $N.
 $n está sem palavras sobre seu $t.
 #
@@ -46,13 +46,13 @@ $n fala 'Abra Cadabra!'
 ~accuse accuse 0 5 0 0
 Acusar quem??
 $n acusa todo mundo.
-Você olha para $M acusando.
+Você olha para $L acusando.
 $n olha acusadoramente para $N.
 $n olha acusadoramente para você.
 Acusar alguém que não está aqui??
 Você acusa a si mesmo.
 $n parece ter consciência pesada.
-Você olha acusadoramente para o $t de $S.
+Você olha acusadoramente para o $t de $L.
 $n olha acusadoramente para o $t de $N.
 $n olha para seu $t acusadoramente.
 Você olha acusadoramente para $p.
@@ -61,13 +61,13 @@ $n olha acusadoramente para $p.
 ~ack ack 0 5 0 0
 ACK!
 $n fala ACK!!
-Você olha para $M e fala ACK!
+Você olha para $L e fala ACK!
 $n olha para $N e fala ACK!
 $n olha para você e fala ACK!
 Você procura alguém para falar ACK!
 Você olha para si mesmo e fala ACK!
 $n olha para si mesmo e fala ACK!
-Você olha para o $t de $S e fala ACK!
+Você olha para o $t de $L e fala ACK!
 $n olha para o $t de $N e fala ACK!
 $n olha para seu $t e fala ACK!
 Você olha para $p e fala ACK!
@@ -76,13 +76,13 @@ $n olha para $p e fala ACK!
 ~adieu adieu 0 5 0 0
 Você se despede do mundo.
 $n se despede deste mundo.
-Você se despede carinhosamente de $M.
+Você se despede carinhosamente de $L.
 $n se despede carinhosamente de $N.
 $n se despede carinhosamente de você.
 Eles já devem ter partido.
 Você se despede carinhosamente de si mesmo.
 $n se despede carinhosamente de si mesmo.
-Você olha para o $t de $S e diz adeus.
+Você olha para o $t de $L e diz adeus.
 $n olha para o $t de $N e se despede dele.
 $n olha para seu $t e se despede dele.
 Você olha para $p e se despede dele.
@@ -90,14 +90,14 @@ $n olha para $p e se despede dele.
 
 ~admire admire 0 5 0 0
 Quem você deseja admirar neste mundo cruel?
-$n admira o mundo cruel do qual $e se tornou parte.
-Você olha com admiração para $M.
+$n admira o mundo cruel do qual $l se tornou parte.
+Você olha com admiração para $L.
 $n olha com admiração para $N.
 $n olha para você com admiração.
 Seu ídolo parece não estar aqui...
 Você deve se amar muito, hein?
 $n se admira... arranje uma vida, hein?
-Você olha com admiração para o $t de $S.
+Você olha com admiração para o $t de $L.
 $n olha com admiração para o $t de $N.
 $n olha para seu $t com admiração.
 Você olha com admiração para $p.
@@ -121,13 +121,13 @@ Você não consegue encontrar essa pessoa! :(
 ~agree agree 0 5 0 0
 Você concorda com tudo que está sendo dito.
 $n concorda com tudo que está sendo dito.
-Você concorda com tudo que $M diz.
+Você concorda com tudo que $L diz.
 $n concorda com tudo que $N diz.
 $n concorda com tudo que você diz.
 Concorde com alguém mais próximo daqui!
 Você concorda consigo mesmo... Certo...
 $n crê piamente estar sempre certo.
-Você olha para o $t de $S e concorda com ele. Que estranho.
+Você olha para o $t de $L e concorda com ele. Que estranho.
 $n olha para o $t de $N e concorda com ele. Que estranho.
 $n olha para seu $t e acena concordando.
 Você olha para $p e acena concordando.
@@ -142,7 +142,7 @@ $n olha de nariz empinado e grunhe 'Ahem!' para você.
 Ahem! Essa pessoa não está aqui!
 Você olha de nariz empinado e grunhe 'Ahem!' para si mesm$r.
 $n olha de nariz empinado e grunhe 'Ahem!' para si mesm$r.
-Você olha de nariz empinado e grunhe 'Ahem!' para o $t de $S.
+Você olha de nariz empinado e grunhe 'Ahem!' para o $t de $L.
 $n olha de nariz empinado e grunhe 'Ahem!' para o $t de $N.
 $n olha de nariz empinado e grunhe 'Ahem!' para seu $t.
 Você olha de nariz empinado e grunhe 'Ahem!' para $p.
@@ -151,13 +151,13 @@ $n olha de nariz empinado e grunhe 'Ahem!' para $p.
 ~aim aim 0 5 0 0
 Você precisa apontar sua arma para alguém!!!
 $n olha freneticamente ao redor. $l parece estar com um humor violento.
-Você aponta sua arma para $N, mostrando a $M que vai matá-$r num piscar de olhos.
+Você aponta sua arma para $N, mostrando a $L que vai matá-$r num piscar de olhos.
 $n aponta $z arma para $N. $l parece falar sério!
 $n aponta a arma para você. $l parece bastante irritad$r!
-Como vai assustar $M com isso se $L nem está aqui???
+Como vai assustar $L com isso se nem está aqui???
 Você aponta sua arma para si mesm$r. Pronto para morrer?
 $n aponta $z arma para si mesm$r, vai se matar!
-Você aponta sua arma para o $t de $S preparando-se para golpear.
+Você aponta sua arma para o $t de $L preparando-se para golpear.
 $n aponta $z arma para o $t de $N e se prepara para golpear.
 $n aponta $z arma para seu $t e se prepara para golpear.
 Você mira com precisão em $p.
@@ -181,13 +181,13 @@ $n sorri, divertido com $p.
 ~apologize apologize 0 5 0 0
 Você se desculpa com os deuses por sua própria existência.
 $n se desculpa por sequer estar vivo.
-Você se desculpa com $M.
+Você se desculpa com $L.
 $n se desculpa com $N.
 $n se desculpa com você.
 Seu pedido de desculpas não parece ter sido bem recebido.
 Você se desculpa consigo mesmo por ser tão idiota.
-$n se desculpa consigo mesmo por tudo que $e já fez.
-Você olha para o $t de $S e se desculpa.
+$n se desculpa consigo mesmo por tudo que $l já fez.
+Você olha para o $t de $L e se desculpa.
 $n olha para o $t de $N e se desculpa.
 $n olha para seu $t e se desculpa.
 Você olha para $p e se desculpa.
@@ -196,13 +196,13 @@ $n olha para $p e se desculpa.
 ~applaud applaud 0 5 0 0
 Clap, clap, clap.
 $n bate palmas em aplauso.
-Você dá uma salva de palmas para $M.
+Você dá uma salva de palmas para $L.
 $n dá uma salva de palmas para $N.
 $n dá uma salva de palmas para você.
 Bata palmas à vontade, eles não estão aqui.
 Ninguém mais vai fazer isso, é melhor você mesmo fazer.
-$n deve estar desesperado por elogios, $e está se aplaudindo.
-Você olha para o $t de $S e aplaude.
+$n deve estar desesperado por elogios, $l está se aplaudindo.
+Você olha para o $t de $L e aplaude.
 $n olha para o $t de $N e aplaude.
 $n olha para seu $t e aplaude.
 Você olha para $p e aplaude.
@@ -216,8 +216,8 @@ $n levanta uma sobrancelha para $N.
 $n levanta uma sobrancelha para você.
 Eles parecem ter ido embora.
 Qual é o problema? O cérebro direito não está falando com o esquerdo?
-$n balança furiosamente $s sobrancelhas... Que maluco!
-Você olha para o $t de $S e levanta uma sobrancelha especulativamente.
+$n balança furiosamente $z sobrancelhas... Que maluco!
+Você olha para o $t de $L e levanta uma sobrancelha especulativamente.
 $n olha para o $t de $N e levanta uma sobrancelha especulativamente.
 $n olha para seu $t e levanta uma sobrancelha especulativamente.
 Você olha para $p e levanta uma sobrancelha especulativamente.
@@ -247,7 +247,7 @@ $n olha para você, cruzando os braços e ficando um pouco defensivo.
 Eles foram embora antes que você tivesse a chance de ficar defensivo.
 Você cruza os braços e se olha defensivamente?
 $n cruza os braços e se olha defensivamente.
-Você olha para o $t de $S e cruza os braços defensivamente.
+Você olha para o $t de $L e cruza os braços defensivamente.
 $n olha para o $t de $N e cruza os braços defensivamente.
 $n olha para seu $t e cruza os braços defensivamente.
 Você olha para $p e cruza os braços defensivamente.
@@ -257,12 +257,12 @@ $n olha para $p e cruza os braços defensivamente.
 Você lê os direitos de todos. Mas pula a parte sobre a ligação telefônica... ;)
 $n colocou vocês todos sob custódia. 'Vocês têm o direito de...blá blá blá...'
 Você lê os direitos de $N.
-$n colocou $N sob custódia. Tudo que $E disser, pode e será usado contra $M.
-$n diz, 'Você tem o direito de permanecer calado. Você tem o direito de....' $e acabou de te prender!
+$n colocou $N sob custódia. Tudo que $L disser, pode e será usado contra si.
+$n diz, 'Você tem o direito de permanecer calado. Você tem o direito de....' $l acabou de te prender!
 NÃO! Eles fugiram! Atrás deles!
 Você lê os direitos para si mesmo e espera alguém te levar para a cadeia.
 $n lê os direitos para si mesmo e se senta esperando alguém levá-lo para a cadeia.
-Você olha para o $t de $S e tenta prendê-lo.
+Você olha para o $t de $L e tenta prendê-lo.
 $n olha para o $t de $N e o coloca sob custódia.
 $n olha para seu $t e o coloca sob custódia, espero que você não precisasse disso.
 Você olha para $p e o coloca sob custódia.
@@ -301,13 +301,13 @@ $n faz AWWW para si mesmo.
 ~babble babble 0 5 0 0
 Você balbucia de forma ininteligível.
 $n está balbuciando de forma ininteligível.
-Você balbucia para $M de forma sem sentido.
+Você balbucia para $L de forma sem sentido.
 $n está balbuciando para $N de forma confusa.
 $n está balbuciando algo completamente sem sentido para você.
 Você balbucia como um riacho que só você pode ouvir.
 Você balbucia para si mesmo como o idiota completo que você é.
-$n balbucia para si mesmo como o tolo que $e realmente é.
-Você olha para o $t de $S e começa a balbuciar incoerentemente.
+$n balbucia para si mesmo como o tolo que $l realmente é.
+Você olha para o $t de $L e começa a balbuciar incoerentemente.
 $n olha para o $t de $N e balbucia incoerentemente.
 $n olha para seu $t e balbucia de forma ininteligível.
 Você olha para $p e começa a balbuciar para ele.
@@ -321,7 +321,7 @@ $n bate nas costas de $N por um trabalho bem feito!
 $n bate em suas costas, trabalho bem feito!
 Você bate no ar... onde as costas deles estariam.
 Você bate em suas próprias costas... bom trabalho!
-$n bate em suas próprias costas, $e fez um bom trabalho!
+$n bate em suas próprias costas, $l fez um bom trabalho!
 #
 #
 #
@@ -330,14 +330,14 @@ $n bate em suas próprias costas, $e fez um bom trabalho!
 
 ~bark bark 0 5 0 0
 Você late como um cachorro.
-$n late! Será que $e tomou a medicação ultimamente?
-Você late com raiva para $M.
+$n late! Será que $l tomou a medicação ultimamente?
+Você late com raiva para $L.
 $n está latindo com raiva para $N.
 $n late para você!
 Seu latido faria uma árvore se orgulhar -- pena que ninguém pode te ouvir.
 Você imita um cachorro e late para si mesmo.
-$n parece estar latindo para si mesmo. $E deve achar que é um cachorro!
-Você olha para o $t de $S e começa a latir.
+$n parece estar latindo para si mesmo. $L deve achar que é um cachorro!
+Você olha para o $t de $L e começa a latir.
 $n olha para o $t de $N e late para ele.
 $n olha para seu $t e late para ele.
 Você olha para $p e começa a latir.
@@ -346,10 +346,10 @@ $n olha para $p e late para ele.
 ~bat bat 1 5 0 0
 Você bate os cílios.
 $n bate os cílios e fica fofo.
-Você bate os cílios convincentemente para $M.
+Você bate os cílios convincentemente para $L.
 $n bate os cílios para $N.
 $n bate os cílios para você, que fofo.
-$E não está aqui para ser encantado!
+$L não está aqui para ser encantado!
 Como exatamente você pretende fazer isso?
 $n tenta bater os cílios para si mesmo. Parece estranho.
 #
@@ -360,7 +360,7 @@ $n bate os cílios para $p. Estranho.
 
 ~batman batman 0 5 0 0
 'Rápido Robin, para o BATMÓVEL!'
-$n exclama, 'Rápido Robin, para o BATMÓVEL!' enquanto $e sai correndo!
+$n exclama, 'Rápido Robin, para o BATMÓVEL!' enquanto $l sai correndo!
 Você exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
 $n exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
 $n exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
@@ -382,7 +382,7 @@ $n bate as mãos no peito bem forte, gritando de guerra loucamente para você.
 Você começa a soltar um grito de guerra, até perceber que eles não estão aqui.
 Você começa a gritar de guerra sem razão aparente. Meio estranho.
 $n começa a gritar de guerra para si mesmo sem razão aparente. Hmmm.. Bem estranho.
-Você grita um grito de guerra para o $t de $S
+Você grita um grito de guerra para o $t de $L
 $n grita um grito de guerra para o $t de $N.
 $n grita um grito de guerra para seu $t e se prepara para o ataque.
 Você começa a gritar alto num forte grito de guerra para $p.
@@ -391,13 +391,13 @@ $n começa a gritar alto num forte grito de guerra para $p.
 ~beam beam 0 5 0 0
 Você brilha como um raio dourado de sol.
 $n está brilhando como um raio dourado de sol.
-Você dá um sorriso alegre para $M.
+Você dá um sorriso alegre para $L.
 $n dá um sorriso alegre para $N.
 $n dá um sorriso alegre para você.
 Você se sente tão caloroso e ensolarado, por que não dar um sorriso para uma pessoa real?
 Você brilha internamente com calor.
 $n dá um sorriso caloroso para si mesmo.
-Você dá um sorriso alegre para o $t de $S
+Você dá um sorriso alegre para o $t de $L
 $n dá um sorriso alegre para o $t de $N.
 $n dá um sorriso alegre para seu $t.
 Você dá um sorriso alegre para $p.
@@ -406,13 +406,13 @@ $n dá um sorriso alegre para $p.
 ~bearhug bearhug 0 5 0 0
 Qual urso você deseja abraçar?
 $n está fingindo ser um urso... CORRA!
-Você dá um ENORME abraço de urso em $M e quase quebra a coluna de $S.
+Você dá um ENORME abraço de urso em $L e quase quebra $Z coluna.
 $n dá um enorme abraço de urso em $N!
 $n te dá um enorme abraço de urso que quebra os ossos!
 Talvez seja melhor você ter aulas com um urso de verdade?
 Você tenta quebrar todos os ossos do seu corpo.
 $n parece estar tentando quebrar todos os ossos do corpo!
-Você aperta o $t de $S num impressionante abraço de urso.
+Você aperta o $t de $L num impressionante abraço de urso.
 $n aperta o $t de $N num impressionante abraço de urso.
 $n dá um abraço de urso no seu $t.
 Você dá um enorme abraço de urso em $p.
@@ -421,13 +421,13 @@ $n dá um enorme abraço de urso em $p.
 ~beckon beckon 0 5 0 0
 Quem você deseja chamar?
 $n chama todos para mais perto.
-Você chama $M para onde você está.
-$n chama $N para perto de $m.
-$n chama você para perto de $m.
+Você chama $L para onde você está.
+$n chama $N para perto de $l.
+$n chama você para perto de $l.
 Você chama, mas ninguém vem.
 Você chama para si mesmo, você está vindo?
 $n chama para si mesmo, que estranho.
-Você olha para o $t de $S e o chama para mais perto.
+Você olha para o $t de $L e o chama para mais perto.
 $n olha para o $t de $N e o chama para mais perto.
 $n olha para seu $t e o chama para mais perto.
 Você olha para $p e o chama para mais perto.
@@ -442,7 +442,7 @@ $n derrama sua cerveja toda em você!
 Eles não estão aqui, você terá que beber sozinho, droga!
 Você derrama tudo em si mesmo! GAAAhhhhhh!
 $n está tão bêbado que derrama a cerveja em si mesmo.
-Você derrama cerveja no $t de $S.
+Você derrama cerveja no $t de $L.
 $n derrama cerveja no $t de $N, que bêbado desleixado.
 $n derrama cerveja no seu $t, que bêbado desleixado.
 Você derrama cerveja em $p, que desperdício.
@@ -451,13 +451,13 @@ $n derrama cerveja em $p, que bêbado desleixado.
 ~beg beg 0 5 0 0
 Você implora misericórdia aos deuses. (De jeito nenhum você vai conseguir! :-))
 Os deuses caem na gargalhada com o pedido de misericórdia de $n.
-Você tenta desesperadamente arrancar algumas moedas de $M.
+Você tenta desesperadamente arrancar algumas moedas de $L.
 $n implora a $N por algumas moedas -- ou vinte!
-$n implora por dinheiro a você. Você graciosamente deixa $m espiar sua fortuna.
+$n implora por dinheiro a você. Você graciosamente deixa $l espiar sua fortuna.
 Seu agiota parece estar fora no momento.
 Como? - implorar por dinheiro para si mesmo não ajuda.
 $n implora dinheiro para si mesmo.
-Você olha para o $t de $S e implora piedosamente.
+Você olha para o $t de $L e implora piedosamente.
 $n olha para o $t de $N e implora piedosamente.
 $n olha para seu $t e implora piedosamente.
 Você olha para $p e implora piedosamente.
@@ -481,13 +481,13 @@ $n se esconde atrás de $p.
 ~belch belch 0 5 0 0
 Um arroto ressoa do fundo do seu estômago e ecoa alto na sala!
 A sala ressoa e treme quando $n arrota!
-Você arrota na cara de $S por um longo tempo.
+Você arrota na cara de $L por um longo tempo.
 $n arrota na cara de $N.
 $n arrota na sua cara por um longo tempo.
 Arrotar na cara de alguém é bem nojento!
 Você arrota para si mesmo, isso é nojento.
 $n arrota para si mesmo, que nojento.
-Você olha para o $t de $S e arrota para ele.
+Você olha para o $t de $L e arrota para ele.
 $n olha para o $t de $N e arrota para ele.
 $n olha para seu $t e arrota para ele.
 Você olha para $p e arrota para ele.
@@ -526,13 +526,13 @@ $n pega um marcador e escreve "BLAH!" em $p.
 ~blame blame 0 5 0 0
 Você culpa todo mundo!
 $n culpa você!
-Você culpa $M.
+Você culpa $L.
 $n culpa $N.
 $n culpa VOCÊ!
 Tente colocar a culpa em alguém que você possa ver.
 Você se culpa.
 $n se culpa.
-Você culpa tudo no $t de $S.
+Você culpa tudo no $t de $L.
 $n culpa tudo no $t de $N.
 $n culpa tudo no seu $t.
 Você culpa tudo em $p.
@@ -541,13 +541,13 @@ $n culpa tudo em $p.
 ~bleed bleed 0 5 0 0
 Você sangra profusamente, fazendo uma bagunça terrível...
 $n sangra profusamente, fazendo uma bagunça terrível...
-Você sangra todo em $M.
+Você sangra todo em $L.
 $n sangra todo em $N.
 $n sangra todo em você.. NOJENTO!
 Você sangra em vão pois ninguém se importa.
 Você mexe numa casquinha velha e começa a sangrar.
 $n mexe numa casquinha velha e sangra todo em si mesmo.
-Você sangra todo no $t de $S.
+Você sangra todo no $t de $L.
 $n sangra todo no $t de $N.
 $n sangra todo no seu $t.
 Você sangra todo em $p.
@@ -556,13 +556,13 @@ $n sangra todo em $p.
 ~blink blink 0 5 0 0
 Você pisca.
 $n pisca.
-Você pisca para $M em descrença.
+Você pisca para $L em descrença.
 $n pisca para $N.
 $n pisca para você em descrença.
 Surpresa! Surpresa, eles não estão aqui.
 Você pisca o olho... Algo aí dentro?
 $n parece ter algo preso no olho.
-Você pisca para o $t de $S
+Você pisca para o $t de $L
 $n pisca para o $t de $N.
 $n pisca para seu $t.
 Você pisca para $p.
@@ -592,7 +592,7 @@ $n manda um beijo para você com um sorriso travesso.
 Você manda um beijo para ninguém. Que desperdício.
 Você manda um beijo para si mesm$r no espelho imaginário.
 $n manda um beijo para si mesm$r. Que autoestima!
-Você manda um beijo para o $t de $S.
+Você manda um beijo para o $t de $L.
 $n manda um beijo para o $t de $N.
 $n manda um beijo para o seu $t.
 Você manda um beijo para $p.
@@ -602,8 +602,8 @@ $n manda um beijo para $p.
 Você respira fundo e prende a respiração.
 $n prende a respiração.
 Você olha para $N enquanto lentamente começa a ficar azul.
-$n olha para $N enquanto $e lentamente começa a ficar azul.
-$n olha para você enquanto $e lentamente começa a ficar azul.
+$n olha para $N enquanto $l lentamente começa a ficar azul.
+$n olha para você enquanto $l lentamente começa a ficar azul.
 Não prenda a respiração, eles não estão aqui.
 Você lentamente começa a ficar azul.
 $n lentamente começa a ficar azul.
@@ -616,13 +616,13 @@ $n lentamente começa a ficar azul.
 ~blush blush 0 5 0 0
 Suas bochechas estão queimando.
 $n fica vermelho.
-Você olha para $M e fica vermelho.
+Você olha para $L e fica vermelho.
 $n olha para $N e fica vermelho.
 $n olha para você e fica vermelho profundamente.
 Você está envergonhado demais para palavras.
 Você fica vermelho só de se ver.
 $n parece estar ficando vermelho de si mesmo.
-Você olha para o $t de $S e fica vermelho.
+Você olha para o $t de $L e fica vermelho.
 $n olha para o $t de $N e fica vermelho.
 $n olha para seu $t e fica vermelho.
 Você olha para $p e fica vermelho.
@@ -631,13 +631,13 @@ $n olha para $p e fica vermelho.
 ~bounce bo 0 5 0 0
 BOIINNNNNNGG!
 $n quica pela sala.
-Você leva $M para um quique alegre.
-$n agarra $N e quica pela sala com $M.
+Você leva $L para um quique alegre.
+$n agarra $N e quica pela sala com $L.
 $n agarra você e quica com você em alegria.
 Encontre outro trampolim para quicar.
 Você sai quicando contra as paredes.
 $n quica nas paredes!
-Você agarra o $t de $S e começa a quicar com ele.
+Você agarra o $t de $L e começa a quicar com ele.
 $n agarra o $t de $N e começa a quicar com ele.
 $n agarra seu $t e começa a quicar com ele.
 Você o leva para um quique alegre.
@@ -645,14 +645,14 @@ $n agarra $p e começa a quicar com ele.
 
 ~boast boast 0 5 0 0
 Você se gaba sobre seu grande feito.
-$n se gaba em voz alta sobre $s grande feito.
-Você fala arrogantemente para $M sobre si mesmo.
+$n se gaba em voz alta sobre $z grande feito.
+Você fala arrogantemente para $L sobre si mesmo.
 $n se gaba para $N.
-$n fala arrogantemente para você sobre $mself.
+$n fala arrogantemente para você sobre si mesm$r.
 Suas vanglórias parecem ser geralmente ignoradas.
 Você se gaba para si mesmo e enche sua cabeça com pensamentos tolos.
-$n se gaba para $mself, que convencido.
-Você se gaba sobre o $t de $S.
+$n se gaba para si mesm$r, que convencido.
+Você se gaba sobre o $t de $L.
 $n se gaba sobre o $t de $N.
 $n se gaba sobre seu $t.
 Você se gaba sobre $p.
@@ -661,13 +661,13 @@ $n se gaba sobre $p.
 ~boggle boggle 0 5 0 0
 Você está completamente confuso.
 $n está completamente confuso.
-Você está confuso com $M.
+Você está confuso com $L.
 $n parece um pouco confuso com $N.
 Você parece ter confundido $n.
 Você está verdadeira e completamente confuso, parece.
 Você se confunde... evidentemente foi bem fácil.
 A mente de $n está completamente confusa.
-Você está confuso sobre o $t de $S.
+Você está confuso sobre o $t de $L.
 $n parece estar confuso sobre o $t de $N.
 $n está confuso sobre seu $t.
 Você está confuso com $p.
@@ -676,13 +676,13 @@ $n parece estar confuso com $p.
 ~boink boink 0 5 0 0
 Quem você quer cutucar?
 $n olha ao redor, confuso.
-Você cutuca $M.
+Você cutuca $L.
 $n cutuca $N com paixão suprema.
 $n cutuca você apaixonadamente.
 Quem é essa pessoa?
 Você cutuca a si mesmo na cabeça.
-*QUE NOJO* $n cutuca $mself na cabeça.
-Você cutuca o $t de $S.
+*QUE NOJO* $n cutuca si mesm$r na cabeça.
+Você cutuca o $t de $L.
 $n cutuca o $t de $N.
 $n cutuca seu $t.
 Você cutuca $p.
@@ -691,13 +691,13 @@ $n cutuca $p.
 ~bonk bonk 0 5 0 0
 Quem você deseja bater na cabeça?
 $n está procurando alguém para bater, CORRAM!
-Você bate em $M na cabeça.
+Você bate em $L na cabeça.
 $n bate em $N na cabeça.
 $n bate em você na cabeça. AI!
 O alvo parece ter fugido.
 Você bate em si mesmo na cabeça. Ei! isso doeu!
-$n bate em $mself na cabeça.
-Você bate no $t de $S.
+$n bate em si mesm$r na cabeça.
+Você bate no $t de $L.
 $n bate no $t de $N.
 $n bate em seu $t.
 Você bate em $p.
@@ -720,14 +720,14 @@ Do nada, $n faz, "BOO!"
 
 ~booger booger 0 5 0 0
 Você tira a meleca do seu dedo e a arremessa no espaço.
-$n tira a meleca de $s dedo.
-Você arremessa uma meleca viscosa em $M.
+$n tira a meleca de $z dedo.
+Você arremessa uma meleca viscosa em $L.
 $n arremessa uma meleca em $N.
 $n arremessa uma meleca em você.
 Que nojento... você não consegue achar a meleca.
 Você procura em seu nariz por melecas.
-$n procura em $s nariz por melecas.
-Você esfrega uma meleca no $t de $S.
+$n procura em $z nariz por melecas.
+Você esfrega uma meleca no $t de $L.
 $n esfrega uma meleca no $t de $N.
 $n esfrega uma meleca em seu $t.
 Você arremessa melecas em $p.
@@ -736,13 +736,13 @@ $n arremessa melecas em $p.
 ~bop bop 0 5 0 0
 Quem você quer dar uma pancadinha?
 $n está procurando alguém para dar pancadinhas.
-Você dá uma pancadinha em $M.
+Você dá uma pancadinha em $L.
 $n dá uma pancadinha em $N.
 $n dá uma pancadinha em você.
 Eles não estão aqui.
 Você dá uma pancadinha em si mesmo.
-$n dá uma pancadinha em $mself.
-Você dá uma pancadinha no $t de $S.
+$n dá uma pancadinha em si mesm$r.
+Você dá uma pancadinha no $t de $L.
 $n dá uma pancadinha no $t de $N.
 $n dá uma pancadinha em seu $t.
 Você dá uma pancadinha em $p.
@@ -751,13 +751,13 @@ $n dá uma pancadinha em $p.
 ~bored bored 0 5 0 0
 Você boceja de tédio.
 $n boceja de tédio.
-Você olha para $M e boceja de tédio.
+Você olha para $L e boceja de tédio.
 $n olha para $N e boceja de tédio.
 $n olha para você e boceja de tédio.
 Você boceja de tédio com a falta da presença deles.
 Você se entedia até mesmo consigo mesmo.
 $n está entediado até mesmo consigo próprio.
-Você se entedia com o $t de $S.
+Você se entedia com o $t de $L.
 $n se entedia com o $t de $N.
 $n se entedia com seu $t.
 Você se entedia com $p.
@@ -766,13 +766,13 @@ $n se entedia com $p.
 ~bow bow 0 5 0 0
 Você se curva perante o mundo.
 $n se curva graciosamente.
-Você se curva perante $M.
+Você se curva perante $L.
 $n se curva perante $N.
 $n se curva perante você.
 Você se curva para o vazio.
 Você se curva perante si mesmo.
-$n se curva perante $mself - que humilde!
-Você se curva perante o $t de $S.
+$n se curva perante si mesm$r - que humilde!
+Você se curva perante o $t de $L.
 $n se curva perante o $t de $N.
 $n se curva perante seu $t.
 Você se curva perante $p.
@@ -780,7 +780,7 @@ $n se curva perante $p.
 
 ~box box 0 8 8 0
 Você soca o ar, treinando seus golpes.
-$n soca o ar, treinando $s golpes.
+$n soca o ar, treinando $z golpes.
 #
 #
 #
@@ -795,14 +795,14 @@ $n soca o ar, treinando $s golpes.
 
 ~brag brag 0 5 0 0
 Você se vangloria sobre seus grandes feitos.
-$n se vangloria sobre $s grandes feitos.
-Você se vangloria para $M sobre si mesmo.
+$n se vangloria sobre $z grandes feitos.
+Você se vangloria para $L sobre si mesmo.
 $n se vangloria para $N.
-$n se vangloria para você sobre $mself.
+$n se vangloria para você sobre si mesm$r.
 Suas fanfarronadas parecem ser ignoradas.
 Você se vangloria para si mesmo. Que ego!
-$n se vangloria para $mself. Que ego!
-Você se vangloria sobre o $t de $S.
+$n se vangloria para si mesm$r. Que ego!
+Você se vangloria sobre o $t de $L.
 $n se vangloria sobre o $t de $N.
 $n se vangloria sobre seu $t.
 Você se vangloria sobre $p.
@@ -811,13 +811,13 @@ $n se vangloria sobre $p.
 ~brb brb 0 5 0 0
 Você diz: 'Já volto!'
 $n diz: 'Já volto!'
-Você diz para $M: 'Já volto!'
+Você diz para $L: 'Já volto!'
 $n diz para $N: 'Já volto!'
 $n diz para você: 'Já volto!'
 Você grita: 'Já volto!' para o vazio.
 Você murmura para si mesmo: 'Já volto!'
-$n murmura para $mself: 'Já volto!'
-Você diz para o $t de $S: 'Já volto!'
+$n murmura para si mesm$r: 'Já volto!'
+Você diz para o $t de $L: 'Já volto!'
 $n diz para o $t de $N: 'Já volto!'
 $n diz para seu $t: 'Já volto!'
 Você diz para $p: 'Já volto!'
@@ -826,13 +826,13 @@ $n diz para $p: 'Já volto!'
 ~breathe breathe 0 5 0 0
 Você respira fundo.
 $n respira fundo.
-Você respira fundo ao olhar para $M.
+Você respira fundo ao olhar para $L.
 $n respira fundo ao olhar para $N.
 $n respira fundo ao olhar para você.
 Você respira fundo, imaginando onde eles poderiam estar.
 Você respira fundo e relaxa.
 $n respira fundo e relaxa.
-Você inala o aroma do $t de $S.
+Você inala o aroma do $t de $L.
 $n inala o aroma do $t de $N.
 $n inala o aroma de seu $t.
 Você respira fundo próximo a $p.
@@ -856,13 +856,13 @@ $n parece estar queimando por dentro.
 ~burp burp 0 5 0 0
 Você arrota alto.
 $n arrota alto.
-Você arrota alto e ri para $M.
+Você arrota alto e ri para $L.
 $n arrota alto e ri para $N.
 $n arrota alto e ri para você.
 Você arrota alto para o vazio.
 Você arrota e se desculpa.
 $n arrota e parece envergonhado.
-Você arrota perto do $t de $S.
+Você arrota perto do $t de $L.
 $n arrota perto do $t de $N.
 $n arrota perto de seu $t.
 Você arrota perto de $p.
@@ -871,13 +871,13 @@ $n arrota perto de $p.
 ~buzz buzz 0 5 0 0
 Você faz um zumbido como uma abelha.
 $n faz um zumbido como uma abelha.
-Você zumbe ao redor de $M como uma abelha irritante.
+Você zumbe ao redor de $L como uma abelha irritante.
 $n zumbe ao redor de $N como uma abelha irritante.
 $n zumbe ao redor de você como uma abelha irritante.
 Você zumbe sozinho pelo ar.
 Você zumbe para si mesmo.
-$n zumbe para $mself.
-Você zumbe perto do $t de $S.
+$n zumbe para si mesm$r.
+Você zumbe perto do $t de $L.
 $n zumbe perto do $t de $N.
 $n zumbe perto de seu $t.
 Você zumbe perto de $p.
@@ -886,13 +886,13 @@ $n zumbe perto de $p.
 ~cackle cackle 0 5 0 0
 Você gargalha maldosamente.
 $n gargalha maldosamente.
-Você gargalha maldosamente para $M.
+Você gargalha maldosamente para $L.
 $n gargalha maldosamente para $N.
 $n gargalha maldosamente para você.
 Você gargalha maldosamente sozinho.
 Você gargalha maldosamente para si mesmo.
-$n gargalha maldosamente para $mself.
-Você gargalha maldosamente sobre o $t de $S.
+$n gargalha maldosamente para si mesm$r.
+Você gargalha maldosamente sobre o $t de $L.
 $n gargalha maldosamente sobre o $t de $N.
 $n gargalha maldosamente sobre seu $t.
 Você gargalha maldosamente sobre $p.
@@ -901,13 +901,13 @@ $n gargalha maldosamente sobre $p.
 ~cake cake 0 5 0 0
 Você deseja um bolo delicioso.
 $n parece estar desejando um bolo.
-Você oferece um pedaço de bolo imaginário para $M.
+Você oferece um pedaço de bolo imaginário para $L.
 $n oferece um pedaço de bolo imaginário para $N.
 $n oferece um pedaço de bolo imaginário para você.
 Você come bolo imaginário sozinho.
 Você come bolo imaginário e sorri.
 $n come bolo imaginário e sorri.
-Você coloca bolo imaginário no $t de $S.
+Você coloca bolo imaginário no $t de $L.
 $n coloca bolo imaginário no $t de $N.
 $n coloca bolo imaginário em seu $t.
 Você joga bolo imaginário em $p.
@@ -916,13 +916,13 @@ $n joga bolo imaginário em $p.
 ~calm calm 0 5 0 0
 Você se acalma e relaxa.
 $n se acalma e relaxa.
-Você tenta acalmar $M.
+Você tenta acalmar $L.
 $n tenta acalmar $N.
 $n tenta acalmar você.
 Você se acalma sozinho.
 Você respira fundo e se acalma.
 $n respira fundo e se acalma.
-Você se acalma com o $t de $S.
+Você se acalma com o $t de $L.
 $n se acalma com o $t de $N.
 $n se acalma com seu $t.
 Você se sente calmo perto de $p.
@@ -931,13 +931,13 @@ $n se sente calmo perto de $p.
 ~caress caress 0 5 0 0
 Quem você deseja acariciar?
 $n procura alguém para acariciar.
-Você acaricia $M gentilmente.
+Você acaricia $L gentilmente.
 $n acaricia $N gentilmente.
 $n acaricia você gentilmente.
 Você acaricia o ar vazio.
 Você se acaricia.
 $n se acaricia.
-Você acaricia o $t de $S.
+Você acaricia o $t de $L.
 $n acaricia o $t de $N.
 $n acaricia seu $t.
 Você acaricia $p gentilmente.
@@ -961,13 +961,13 @@ $n masca algo que parece ser uma cenoura.
 ~cartwheel cartwheel 0 5 0 0
 Você faz uma estrela perfeita!
 $n faz uma estrela perfeita!
-Você faz uma estrela na frente de $M.
+Você faz uma estrela na frente de $L.
 $n faz uma estrela na frente de $N.
 $n faz uma estrela na frente de você.
 Você faz uma estrela sozinho.
 Você tenta fazer uma estrela mas cai.
 $n tenta fazer uma estrela mas cai.
-Você faz uma estrela sobre o $t de $S.
+Você faz uma estrela sobre o $t de $L.
 $n faz uma estrela sobre o $t de $N.
 $n faz uma estrela sobre seu $t.
 Você faz estrelas ao redor de $p.
@@ -976,13 +976,13 @@ $n faz estrelas ao redor de $p.
 ~catwalk catwalk 0 5 0 0
 Você desfila com elegância e confiança, chamando todas as atenções.
 $n desfila com elegância e confiança, chamando todas as atenções.
-Você desfila sensualmente na frente de $M, exibindo todo o seu charme.
+Você desfila sensualmente na frente de $L, exibindo todo o seu charme.
 $n desfila sensualmente na frente de $N, exibindo todo o seu charme.
 $n desfila sensualmente na sua frente, claramente tentando impressionar você.
 Você desfila elegante... mas para quem?
 Você desfila para si mesm$r no espelho imaginário. Que confiança!
 $n desfila para si mesm$r. Que autoestima invejável!
-Você desfila sensualmente, exibindo o $t de $S.
+Você desfila sensualmente, exibindo o $t de $L.
 $n desfila sensualmente, exibindo o $t de $N.
 $n desfila sensualmente na sua frente, exibindo o seu $t.
 Você desfila ao redor de $p com elegância.
@@ -991,13 +991,13 @@ $n desfila ao redor de $p com elegância.
 ~challenge challenge 0 5 0 0
 Quem você deseja desafiar?
 $n está procurando alguém para desafiar.
-Você desafia $M para um duelo.
+Você desafia $L para um duelo.
 $n desafia $N para um duelo.
 $n desafia você para um duelo.
 Você desafia as sombras para um duelo.
 Você se desafia a melhorar.
 $n se desafia a melhorar.
-Você desafia o $t de $S para um duelo.
+Você desafia o $t de $L para um duelo.
 $n desafia o $t de $N para um duelo.
 $n desafia seu $t para um duelo.
 Você desafia $p para um duelo.
@@ -1010,7 +1010,7 @@ $n dá a $N o prêmio "Eu não sei como falar no canal certo".
 $n dá a você o prêmio "Eu não sei como falar no canal certo".
 Eles saíram antes que você pudesse apresentar o prêmio.
 Você se premia por suas conquistas.
-$n dá a $e mesmo(a) o prêmio "Eu não sei como falar no canal certo".
+$n dá a $l mesm$r o prêmio "Eu não sei como falar no canal certo".
 #
 #
 #
@@ -1020,13 +1020,13 @@ $n dá a $e mesmo(a) o prêmio "Eu não sei como falar no canal certo".
 ~charge charge 0 5 0 0
 CARGA! Para a batalha!
 $n ataca para a batalha!
-Você ataca de cabeça contra $M!
+Você ataca de cabeça contra $L!
 $n ataca de cabeça contra $N.
 $n ataca direto em você!
 Será VISA, MasterCard ou AmEx?
 Atacar você mesmo? Como?
-$n parece muito idiota, tentando atacar a $e mesmo(a)!
-Você ataca o $t de $S.
+$n parece muito idiota, tentando atacar a $l mesm$r!
+Você ataca o $t de $L.
 $n ataca o $t de $N.
 $n ataca seu $t.
 Você ataca $p.
@@ -1035,13 +1035,13 @@ $n ataca $p.
 ~charm charm 0 5 0 0
 Você parece charmoso(a).
 $n parece charmoso(a).
-Você está encantado(a) com $M.
+Você está encantado(a) com $L.
 $n está encantado(a) com $N.
 $n está encantado(a) com você.
 Charmoso, não é?
 Você parece estar encantado(a) com seu próprio reflexo.
 $n está encantado(a) com seu próprio reflexo.
-Você está encantado(a) com o $t de $S.
+Você está encantado(a) com o $t de $L.
 $n está encantado(a) com o $t de $N.
 $n está encantado(a) com seu $t.
 Você está encantado(a) com $p.
@@ -1050,13 +1050,13 @@ $n está encantado(a) com $p.
 ~cheers cheers 0 5 0 0
 Hurra!
 $n dá uma alegria ressonante.
-Você comemora $M.
+Você comemora $L.
 $n comemora o excelente trabalho de $N.
 $n dá a você uma calorosa comemoração.
 Hmm, onde será que eles foram?
 Você se parabeniza.
 $n parece estar muito impressionado(a) consigo mesmo(a).
-Você comemora o $t de $S.
+Você comemora o $t de $L.
 $n comemora o $t de $N.
 $n comemora seu $t.
 Você comemora $p.
@@ -1065,13 +1065,13 @@ $n comemora $p.
 ~chitter chitter 0 5 0 0
 Você tagarelar como um esquilo.
 $n tagarelar alto.
-Você tagarelar para $M como um esquilo.
+Você tagarelar para $L como um esquilo.
 $n tagarelar para $N.
 $n tagarelar para você.
 Você tagarelar como um esquilo raivoso para ninguém em particular.
-Você tagarelar para si mesmo(a) como um esquilo fora da $s noz.
-$n tagarelar alto para $e mesmo(a).
-Você tagarelar para o $t de $S.
+Você tagarelar para si mesmo(a) como um esquilo fora da $z noz.
+$n tagarelar alto para $l mesm$r.
+Você tagarelar para o $t de $L.
 $n tagarelar para o $t de $N.
 $n tagarelar para seu $t.
 Você tagarelar para $p.
@@ -1081,8 +1081,8 @@ $n tagarelar para $p.
 Você se engasga e luta por ar.
 $n se engasga e luta por ar.
 Você olha suplicante para $N enquanto se engasga e luta por ar.
-$n olha suplicante para $N enquanto $e se engasga e luta por ar.
-$n olha suplicante para você enquanto $e se engasga e luta por ar.
+$n olha suplicante para $N enquanto $l se engasga e luta por ar.
+$n olha suplicante para você enquanto $l se engasga e luta por ar.
 Não consigo vê-los, me desculpe.
 Você está lentamente se sufocando até a morte. Socorro!
 $n está lentamente se sufocando até a morte. Socorro!
@@ -1115,7 +1115,7 @@ $n deseja a $N um Feliz Natal!!!
 $n deseja a você um Feliz Natal!!!
 Primeiro sinal de insanidade...
 Você deseja a si mesmo(a) um Feliz Natal.
-$n deseja a $e mesmo(a) um Feliz Natal.
+$n deseja a $l mesm$r um Feliz Natal.
 #
 #
 #
@@ -1130,8 +1130,8 @@ $n ri para $N.
 $n ri para você.
 Hmm... Ninguém assim parece estar por perto.
 Você ri baixinho para si mesmo(a).
-$n ri baixinho para $e mesmo(a), obviamente alguma piada particular.
-Você ri do $t de $S.
+$n ri baixinho para $l mesm$r, obviamente alguma piada particular.
+Você ri do $t de $L.
 $n ri do $t de $N.
 $n ri do seu $t.
 Você ri de $p.
@@ -1139,14 +1139,14 @@ $n ri de $p.
 
 ~clap clap 0 5 0 0
 Você bate suas pequenas mãos juntas.
-$n mostra $s aprovação batendo $s mãos juntas.
+$n mostra $z aprovação batendo $z mãos juntas.
 Você bate palmas de todo o coração para a conquista de $N!
 $n bate palmas de todo o coração para a conquista de $N!
 $n bate palmas de todo o coração para sua conquista!
 Você faz o som de uma mão batendo palmas.
 Você bate suas mãos sobre seus ouvidos.
-$n bate $s mãos sobre $s ouvidos.
-Você bate palmas para o $t de $S.
+$n bate $z mãos sobre $z ouvidos.
+Você bate palmas para o $t de $L.
 $n bate palmas para o $t de $N.
 $n bate palmas para seu $t.
 Você bate palmas para $p.
@@ -1155,13 +1155,13 @@ $n bate palmas para $p.
 ~clobber clobber 0 5 0 0
 Espancar o ar? Claro, vá em frente, não tem problema para mim...
 $n começa a lutar boxe sombra.
-Você espanca $M bem no rosto! Que nojo, o SANGUE!
+Você espanca $L bem no rosto! Que nojo, o SANGUE!
 $n balança fracamente para $N, errando por quilômetros.
 $n tenta te espancar mas erra por uns bons quatrocentos metros...
 Espancar quem?
 Você se espanca no rosto resultando em seu próprio nariz sangrando.
 $n se espanca no rosto, parecendo meio idiota.
-Você espanca $M no $t!
+Você espanca $L no $t!
 $n espanca $N no $t!
 $n espanca você no $t!
 Você espanca $p.
@@ -1170,12 +1170,12 @@ $n espanca $p.
 ~coffee coffee 0 8 8 0
 Você serve café para todos, oferecendo colar as pálpebras abertas conforme necessário.
 $n serve café para todos, oferecendo colar as pálpebras abertas conforme necessário.
-Você cola duas tiras de fita nas pálpebras de $N e serve café para $M.
-$n cola duas tiras de fita nas pálpebras de $N e serve café para $M.
+Você cola duas tiras de fita nas pálpebras de $N e serve café para $L.
+$n cola duas tiras de fita nas pálpebras de $N e serve café para $L.
 $n cola duas tiras de fita em suas pálpebras e serve café para você.
 Servindo café para amigos imaginários?
 Você cola duas tiras de fita em suas pálpebras e serve café para si mesmo(a).
-$n cola duas tiras de fita em $s pálpebras e serve café para $e mesmo(a).
+$n cola duas tiras de fita em $z pálpebras e serve café para $l mesm$r.
 #
 #
 #
@@ -1200,13 +1200,13 @@ Os dentes de $n começam a bater do tempo extremamente frio
 ~collapse collapse 0 5 0 0
 Você desmorona numa pilha de ossos cansados.
 $n desmorona numa pilha.
-Você desmorona em cima de $M.
+Você desmorona em cima de $L.
 $n desmorona em cima de $N.
 $n desmorona em cima de você.
 Você está realmente no ponto de colapso total?
 Você desmorona totalmente.
 $n desmorona totalmente.
-Você desmorona no $t de $S.
+Você desmorona no $t de $L.
 $n desmorona no $t de $N.
 $n desmorona no seu $t.
 Você desmorona em $p.
@@ -1215,13 +1215,13 @@ $n desmorona em $p.
 ~comfort com 0 5 0 0
 Você se sente desconfortável?
 $n procura alguém para consolar.
-Você consola $M.
+Você consola $L.
 $n consola $N.
 $n consola você.
 Consolar quem?
 Você faz uma tentativa vã de se consolar.
 $n tenta se consolar.
-Você consola o $t de $S.
+Você consola o $t de $L.
 $n consola o $t de $N.
 $n consola seu $t.
 Você consola $p.
@@ -1229,14 +1229,14 @@ $n consola $p.
 
 ~comb comb 0 5 0 0
 Você penteia seu cabelo -- perfeito.
-$n penteia $s cabelo, que espécime deslumbrante!
+$n penteia $z cabelo, que espécime deslumbrante!
 Você pacientemente desembaraça o cabelo de $N -- que bagunça!
 $n tenta pacientemente desembaraçar o cabelo de $N.
 $n puxa seu cabelo numa tentativa de penteá-lo.
 Essa pessoa não está aqui.
 Você puxa seu cabelo, mas ele não será penteado.
-$n tenta pentear $s cabelo embaraçado.
-Você penteia o $t de $S.
+$n tenta pentear $z cabelo embaraçado.
+Você penteia o $t de $L.
 $n penteia o $t de $N.
 $n penteia seu $t.
 Você penteia $p.
@@ -1245,12 +1245,12 @@ $n penteia $p.
 ~confuse confuse 0 5 0 0
 Você se sente muito confuso(a).
 $n se sente muito confuso(a).
-Você tenta confundir $M.
+Você tenta confundir $L.
 $n tenta confundir $N.
 $n tenta confundir você.
 Você está confuso(a)? Eu também! Para quem isso deveria ser direcionado?
 Muito bem, você foi e se confundiu!
-$n confundiu a $e mesmo(a) agora.
+$n confundiu a $l mesm$r agora.
 Você olha para o $i de $N confuso(a).
 $n olha para o $i de $N confuso(a).
 $n olha para seu $i confuso(a).
@@ -1259,7 +1259,7 @@ $n olha para seu $i confuso(a).
 
 ~conga conga 0 8 8 0
 @YVocê inicia uma linha de conga! Conga conga conga!!@n
-@Y$n começa a dançar criando uma linha de conga! (digite CONGA <pessoa> para se juntar a $m)@n
+@Y$n começa a dançar criando uma linha de conga! (digite CONGA <pessoa> para se juntar a $l)@n
 @YVocê coloca suas mãos nos quadris de $N e se junta à linha de conga!@n
 @Y$n coloca suas mãos nos quadris de $N e se junta à linha de conga!@n
 @Y$n coloca suas mãos em seus quadris e se junta à linha de conga! Uhu, divertido!@n
@@ -1290,13 +1290,13 @@ Você deve dançar conga com outra pessoa!
 ~console conso 0 5 0 0
 Você se sente inconsolável.
 $n procura alguém para consolá-lo(a).
-Você consola $M.
+Você consola $L.
 $n consola $N.
 $n consola você.
 Consolar quem?
 Você faz uma tentativa vã de se consolar.
 $n tenta se consolar.
-Você consola o $t de $S.
+Você consola o $t de $L.
 $n consola o $t de $N.
 $n consola seu $t.
 Você consola $p.
@@ -1305,12 +1305,12 @@ $n consola $p.
 ~contemplate contemplate 0 5 5 0
 Você contempla teologia, o conceito de céu e inferno e realidades etéreas.
 $n contempla teologia, o conceito de céu e inferno e realidades etéreas.
-Você contempla $N, e a razão pela qual $E existe.
-$n contempla $N, e a razão pela qual $E existe.
+Você contempla $N, e a razão pela qual $L existe.
+$n contempla $N, e a razão pela qual $L existe.
 $n contempla você, e a razão pela qual você existe.
 Você contempla o nada, principalmente porque essa pessoa nem está lá!
 Você contempla a si mesmo(a) e a razão pela qual você existe.
-$n contempla a $e mesmo(a) e a razão pela qual $e existe.
+$n contempla a $l mesm$r e a razão pela qual $l existe.
 Você contempla o significado do $t de $N.
 $n contempla o significado do $t de $N.
 $n contempla o significado de seu $t.
@@ -1320,13 +1320,13 @@ $n contempla o significado de seu $t.
 ~cough cough 0 5 0 0
 Você tosse.
 $n tosse.
-Você tosse para $M tentando chamar atenção.
+Você tosse para $L tentando chamar atenção.
 $n tosse por toda parte em $N.
 $n tosse por toda parte em você.
 Você tosse, mas eles não parecem se importar.
 Algo faz cócegas em sua garganta e você começa a tossir.
-$n tosse por toda parte em $e mesmo(a).
-Você tosse no $t de $S.
+$n tosse por toda parte em $l mesm$r.
+Você tosse no $t de $L.
 $n tosse no $t de $N.
 $n tosse no seu $t.
 Você tosse em $p.
@@ -1335,13 +1335,13 @@ $n tosse em $p.
 ~cower cower 0 5 0 0
 Você se acovarda com medo.
 $n se acovarda com medo.
-Você se acovarda longe de $M com medo!
+Você se acovarda longe de $L com medo!
 $n se acovarda longe de $N.
 $n se acovarda longe de você com medo!
 Quem te assustou ao ponto de se acovardar?
 Você se acovarda longe de sua própria sombra.
 $n se acovarda longe de sua própria sombra!
-Você se acovarda longe do $t de $S.
+Você se acovarda longe do $t de $L.
 $n se acovarda longe do $t de $N.
 $n se acovarda longe de seu $t.
 Você se acovarda longe de $p.
@@ -1356,7 +1356,7 @@ $n lança um olhar de soslaio para você, sorrindo de forma dengosa.
 Você fica dengoso(a)... mas sem alvo.
 Você se olha dengoso(a) no espelho imaginário.
 $n fica dengoso(a) para si mesm$r. Que autoestima!
-Você lança um olhar dengoso para o $t de $S.
+Você lança um olhar dengoso para o $t de $L.
 $n lança um olhar dengoso para o $t de $N.
 $n lança um olhar dengoso para o seu $t.
 Você fica dengoso(a) com $p.
@@ -1364,14 +1364,14 @@ $n fica dengoso(a) com $p.
 
 ~cradle cradle 0 5 0 0
 Você olha ao redor desesperadamente por alguém para embalar em seus braços.
-$n está procurando alguém para embalar em $s braços.
-Você envolve seus braços ao redor de $N, embalando $M perto de você.
-$n envolve $s braços ao redor de $N, embalando $M perto de $m.
-$n envolve $s braços gentilmente ao redor de você, embalando você perto de $m.
+$n está procurando alguém para embalar em $z braços.
+Você envolve seus braços ao redor de $N, embalando $L perto de você.
+$n envolve $z braços ao redor de $N, embalando $L perto de $l.
+$n envolve $z braços gentilmente ao redor de você, embalando você perto de $l.
 Desculpe, eles não estão aqui.... talvez um gato seja melhor para você?
 Você envolve seus braços ao redor de si mesmo(a) e finge que é seu ente querido.
-$n envolve $s braços ao redor de $e mesmo(a) enquanto $e balança de um lado para o outro.
-Você embala o $t de $S.
+$n envolve $z braços ao redor de $l mesm$r enquanto $l balança de um lado para o outro.
+Você embala o $t de $L.
 $n embala o $t de $N.
 $n embala seu $t.
 Você embala $p.
@@ -1379,18 +1379,18 @@ $n embala $p.
 
 ~crazed crazed 0 8 8 0
 Você tem um olhar enlouquecido em seus olhos.
-$n tem um olhar enlouquecido em $s olhos.
+$n tem um olhar enlouquecido em $z olhos.
 Você olha para $N com um olhar enlouquecido em seus olhos.
-$n olha para $N com um olhar enlouquecido em $s olhos.
-$n olha para você com um olhar enlouquecido em $s olhos.
+$n olha para $N com um olhar enlouquecido em $z olhos.
+$n olha para você com um olhar enlouquecido em $z olhos.
 Você está louco(a), eles não estão aqui.
 Você se dá um olhar enlouquecido.
 $n se dá um olhar enlouquecido.
 Você olha para o $t de $N com um olhar enlouquecido em seus olhos.
-$n olha para o $t de $N com um olhar enlouquecido em $s olhos.
-$n olha para seu $t com um olhar enlouquecido em $s olhos.
+$n olha para o $t de $N com um olhar enlouquecido em $z olhos.
+$n olha para seu $t com um olhar enlouquecido em $z olhos.
 Você olha para $p com um olhar enlouquecido em seus olhos.
-$n olha para $p com um olhar enlouquecido em $s olhos.
+$n olha para $p com um olhar enlouquecido em $z olhos.
 
 ~crazy crazy 0 8 8 0
 Você olha ao redor. "Louco, fui louco uma vez... me colocaram num quarto forrado de borracha com ratos de borracha." As memórias voltam.
@@ -1416,7 +1416,7 @@ $n se esgueira em direção a você.
 Desculpe, eles não estão aqui, covarde.
 Você se esgueira em direção a si mesm$r.
 $n se esgueira em direção a si mesm$r, que estranho.
-Você se esgueira em direção ao $t de $S.
+Você se esgueira em direção ao $t de $L.
 $n se esgueira em direção ao $t de $N.
 $n se esgueira em direção ao seu $t.
 Você se esgueira em direção a $p.
@@ -1425,13 +1425,13 @@ $n se esgueira em direção a $p.
 ~cringe cringe 0 5 0 0
 Você estremece de terror.
 $n estremece de terror!
-Você recua de $M.
+Você recua de $L.
 $n recua de $N em terror mortal.
 $n recua de você.
 Não vejo ninguém com esse nome aqui... do que você tem medo?
 Você estremece diante de si mesm$r, do que você tem medo?
 $n estremece diante de si mesm$r, que estranho.
-Você estremece diante do $t de $S.
+Você estremece diante do $t de $L.
 $n estremece diante do $t de $N.
 $n estremece diante do seu $t.
 Você estremece diante de $p.
@@ -1440,13 +1440,13 @@ $n estremece diante de $p.
 ~criticize criticize 0 5 0 0
 Você critica o mundo inteiro.
 $n critica tudo e todos.
-Você critica $M duramente.
+Você critica $L duramente.
 $n critica $N duramente.
 $n te critica duramente, $l devia se olhar no espelho!
 A quem você deseja criticar?
 Não seja tão duro(a) consigo mesm$r!
 $n se critica duramente.
-Você critica o $t de $S.
+Você critica o $t de $L.
 $n critica o $t de $N.
 $n critica seu $t.
 Você critica $p.
@@ -1455,13 +1455,13 @@ $n critica $p.
 ~croon croon 0 5 0 0
 Você cantarola uma melodia suave e reconfortante.
 $n cantarola uma melodia emocionante.
-Você cantarola uma melodia suave para $M.
+Você cantarola uma melodia suave para $L.
 $n cantarola uma canção para $N com voz suave.
 $n cantarola emocionadamente uma canção para você.
 Você cantarola... perdido(a) no espaço...
 Velho Olhos Azuis, hein?
 $n acha que cantarola como Frank Sinatra.
-Você cantarola para o $t de $S.
+Você cantarola para o $t de $L.
 $n cantarola para o $t de $N.
 $n cantarola para seu $t.
 Você cantarola para $p.
@@ -1500,13 +1500,13 @@ $n desmorona em pedaços no chão - ESMAGAD$r por $p!
 ~cry cry 0 5 0 0
 Buuuuaaaaaaa!!!
 $n desata a chorar.
-Você chora no ombro de $S.
+Você chora no ombro de $L.
 $n chora no ombro de $N.
 $n chora em seu ombro.
 Quem é este?
 Você chora pra si mesmo.
 $n chora quietamente consigo.
-Você chora no $t de $S.
+Você chora no $t de $L.
 $n chora no $t de $N.
 $n chora em seu $t.
 Você chora em $p.
@@ -1530,13 +1530,13 @@ $n enxuga uma lágrima do olho enquanto $l ri gostosamente de $p.
 ~cuddle cuddle 0 5 0 0
 Com quem você quer se aconchegar hoje?
 $n quer se aconchegar com alguém.
-Você se aconchega em $M.
+Você se aconchega em $L.
 $n se aconchega em $N.
 $n se aconchega em você.
 Eles não estão aqui.
 Você deve se sentir muito aconchegante mesmo... :)
 $n se aconchega em si mesm$r.
-Você se aconchega no $t de $S.
+Você se aconchega no $t de $L.
 $n se aconchega no $t de $N.
 $n se aconchega no seu $t.
 Você se aconchega em $p.
@@ -1575,13 +1575,13 @@ $n se enrola e adormece.
 ~curse curse 0 5 0 0
 Você xinga alto por muito tempo.
 $n xinga: @*"*&^$$%@*&!!!!!!
-Você amaldiçoa $M e todos os $Z antepassados e descendentes.
+Você amaldiçoa $L e todos os $Z antepassados e descendentes.
 $n questiona a filiação de $N.
 $n te amaldiçoa, que imbecil!
 Suas maldições ecoam no vazio.
 Você faz uma promessa solene a si mesm$r.
 $n xinga em surdina.
-Você amaldiçoa o $t de $S.
+Você amaldiçoa o $t de $L.
 $n amaldiçoa o $t de $N.
 $n amaldiçoa seu $t.
 Você amaldiçoa $p.
@@ -1590,13 +1590,13 @@ $n amaldiçoa $p.
 ~curtsey curtsey 0 5 0 0
 Você faz uma reverência para o seu público.
 $n faz uma graciosa reverência.
-Você faz uma reverência para $M.
+Você faz uma reverência para $L.
 $n faz uma graciosa reverência para $N.
 $n faz uma reverência para você.
 Mas não há ninguém com esse nome aqui.
 Você tenta fazer uma reverência para si mesm$r e cai.
 $n cai de bunda no chão.
-Você faz uma reverência diante do $t de $S.
+Você faz uma reverência diante do $t de $L.
 $n faz uma reverência diante do $t de $N.
 $n faz uma reverência diante do seu $t.
 Você faz uma reverência diante de $p.
@@ -1611,7 +1611,7 @@ $n esmaga uma torta de creme na sua cara, criando um amassado permanente na sua 
 Não dá para jogar uma torta em alguém que não está aqui. *volta à realidade*
 Você pega uma torta de creme e a esmaga na própria cara. QUE DELÍCIA.
 $n pega uma torta de creme e a esmaga na própria cara. QUE DELÍCIA.
-Você arremessa uma torta diretamente no $t de $S.
+Você arremessa uma torta diretamente no $t de $L.
 $n joga uma torta de creme diretamente no $t de $N, que bagunça.
 $n joga uma torta de creme diretamente no seu $t, que bagunça.
 Você joga uma torta de creme em $p.
@@ -1620,13 +1620,13 @@ $n joga uma torta de creme em $p.
 ~dance dance 0 5 8 0
 Você dança feliz.
 $n faz uma pequena dança.
-Você dança feliz com $M.
+Você dança feliz com $L.
 $n dança feliz com $N.
 $n dança feliz com você.
 Ei, QUEM?
 Você dança feliz sozinho(a).
 $n dança uma dança ligeira.
-Você pega o $t de $S e começa a dançar com ele.
+Você pega o $t de $L e começa a dançar com ele.
 $n pega o $t de $N e começa a dançar com ele.
 $n pega seu $t e começa a dançar com ele.
 Você dança feliz com $p.
@@ -1635,13 +1635,13 @@ $n pega $p e começa a dançar com ele.
 ~dancesensual dancesensual 0 5 0 0
 Você move os quadris de forma lenta e sensual, embriagando todos ao redor.
 $n move os quadris de forma lenta e sensual, emitindo uma energia irresistível.
-Você dança sensualmente para $M, movendo o corpo de forma provocante e sedutora.
+Você dança sensualmente para $L, movendo o corpo de forma provocante e sedutora.
 $n dança sensualmente para $N, cada movimento calculado para seduzir.
 $n começa a dançar para você de forma sensual e provocante. Que tentação!
 Você procura alguém para dançar sensualmente... mas não há ninguém aqui.
 Você dança sensualmente para si mesm$r, curtindo cada movimento do seu próprio corpo.
 $n dança sensualmente para si mesm$r com uma confiança impressionante.
-Você dança sensualmente ao redor do $t de $S, exibindo seu charme.
+Você dança sensualmente ao redor do $t de $L, exibindo seu charme.
 $n dança sensualmente ao redor do $t de $N, exibindo seu charme.
 $n dança sensualmente ao redor do seu $t, exibindo seu charme.
 Você dança sensualmente ao redor de $p.
@@ -1656,7 +1656,7 @@ $n ergue a mão, com a palma aberta para você, e uma onda de escuridão passa p
 Você ergue a mão e se concentra, mas nada acontece.
 Você coloca sua própria mão sobre o coração e uma onda de escuridão passa por você.
 $n coloca a mão sobre o próprio coração e vacila.
-Você pega o $t de $S e manda uma onda de escuridão através dele.
+Você pega o $t de $L e manda uma onda de escuridão através dele.
 $n pega o $t de $N e manda uma onda de escuridão através dele.
 $n pega seu $t e manda uma onda de escuridão através dele.
 Você pega $p e manda uma onda de escuridão através dele.
@@ -1665,13 +1665,13 @@ $n pega $p e manda uma onda de escuridão através dele.
 ~daydream daydream 0 5 0 0
 Você sonha com tempos melhores.
 $n parece distrait$r, com os olhos fixos no nada.
-Você olha para $M de forma sonhadora.
+Você olha para $L de forma sonhadora.
 $n olha para $N de forma sonhadora.
 $n olha para você de forma sonhadora.
 Seu ídolo parece não estar aqui...
 Você deve se amar muito, hein?
 $n sonha consigo mesm$r... arranje uma vida, hein?
-Você olha para o $t de $S de forma sonhadora.
+Você olha para o $t de $L de forma sonhadora.
 $n olha para o $t de $N de forma sonhadora.
 $n olha para seu $t de forma sonhadora.
 Você olha sonhadoramente para $p.
@@ -1725,8 +1725,8 @@ $n tapa os próprios ouvidos e grita porque não sabe como parar de falar. Isso 
 ~defib defib 0 8 8 0
 Você carrega o desfibrilador e grita 'Limpo.'
 $n carrega o desfibrilador e grita 'limpo.'
-Você coloca as pás do desfibrilador no peito de $N e dá um choque em $M.
-$n coloca as pás do desfibrilador no peito de $N e dá um choque em $M.
+Você coloca as pás do desfibrilador no peito de $N e dá um choque em $L.
+$n coloca as pás do desfibrilador no peito de $N e dá um choque em $L.
 $n coloca as pás do desfibrilador no seu peito e quase te mata de choque.
 Você procura alguém para dar um choque.
 Você coloca as pás em si mesm$r. Você é louc$r?
@@ -1746,7 +1746,7 @@ $n pensa em você e levanta as mãos em desespero.
 Se quer mostrar desespero, encontre alguém para mostrar.
 Você está farto(a) de si mesm$r.
 $n está farto(a) de si mesm$r.
-Você olha para o $t de $S com desespero.
+Você olha para o $t de $L com desespero.
 $n olha com desespero para o $t de $N.
 $n olha com desespero para seu $t.
 Você olha com desespero para $p.
@@ -1761,7 +1761,7 @@ $n acabou de arrancar sua espinha dorsal! Caramba, isso *DOEU!*
 A quem você quer arrancar a espinha?
 Você arranca sua própria espinha... Ai.
 $n arranca a própria espinha. Caramba, isso *DEVE* ter doído...
-Você tenta arrancar o $t de $S.
+Você tenta arrancar o $t de $L.
 $n tenta arrancar o $t de $N.
 $n tenta arrancar seu $t.
 Você tenta arrancar a espinha de $p, então percebe... objetos inanimados não têm espinha.
@@ -1776,7 +1776,7 @@ $n pede licença para discordar do que você acabou de dizer.
 Você discorda de quem?
 Você está discordando de si mesm$r?
 $n está discordando de si mesm$r, DE NOVO!
-Você discorda do $t de $S.
+Você discorda do $t de $L.
 $n discorda do $t de $N.
 $n discorda do seu $t.
 Você discorda de $p.
@@ -1800,13 +1800,13 @@ $n olha com desaprovação para $p.
 ~discombob discombob 0 5 0 0
 Você se sente desorientado(a).
 $n se sente desorientado(a).
-Você acha $M desorientad$r.
+Você acha $L desorientad$r.
 $n acha $N desorientad$r.
 $n acha que você está desorientad$r.
 Você acha alguém desorientado? Você está certo(a).
 Você fica totalmente desorientad$r.
 $n fica totalmente desorientad$r.
-Você olha para o $t de $S e o declara desorientado.
+Você olha para o $t de $L e o declara desorientado.
 $n olha para o $t de $N e o declara desorientado.
 $n olha para o seu $t e o declara desorientado.
 Você olha para $p e o declara desorientado.
@@ -1845,13 +1845,13 @@ $n se esconde atrás de $p.
 ~doh doh 0 5 0 0
 Doh!
 $n grunhe 'doh'!
-Você olha para $M e exclama 'doh!'
+Você olha para $L e exclama 'doh!'
 $n olha para $N e exclama 'doh!'
 $n olha para você e exclama 'doh!'
 Doh ré mi... uma cerva uma cerva...
 Você bate na própria testa e exclama 'doh!'
 $n bate na própria testa e exclama 'doh!'
-Você olha para o $t de $S e exclama 'doh!'
+Você olha para o $t de $L e exclama 'doh!'
 $n olha para o $t de $N e exclama 'doh!'
 $n olha para o seu $t e exclama 'doh!'
 Você olha para $p e exclama 'doh!'
@@ -1896,7 +1896,7 @@ $n baba em cima de você.
 Com licença??
 Claro, pode babar... iféeeee!
 $n baba em si mesm$r. Que espetáculo.
-Você baba no $t de $S.
+Você baba no $t de $L.
 $n baba no $t de $N.
 $n baba no seu $t.
 Você baba em $p.
@@ -1905,13 +1905,13 @@ $n baba em $p.
 ~drumroll drumroll 0 8 8 0
 Você faz uma rufada de tambor.
 $n faz uma rufada de tambor.
-Você faz uma rufada de tambor para $M.
+Você faz uma rufada de tambor para $L.
 $n faz uma rufada de tambor para $N.
 $n faz uma rufada de tambor para você.
 Você faz uma rufada de tambor para alguém que não está aqui.
 Você faz uma rufada de tambor para si mesm$r.
 $n faz uma rufada de tambor para si mesm$r.
-Você faz uma rufada de tambor no $t de $S.
+Você faz uma rufada de tambor no $t de $L.
 $n faz uma rufada de tambor no $t de $N.
 $n faz uma rufada de tambor no seu $t.
 Você faz uma rufada de tambor em $p.
@@ -1920,13 +1920,13 @@ $n faz uma rufada de tambor em $p.
 ~duck duck 0 5 0 0
 Você se abaixa para se esquivar.
 $n se abaixa para se esquivar.
-Você passa por baixo de $M.
+Você passa por baixo de $L.
 $n passa por baixo de $N.
 $n passa por baixo de você.
 Quack?
 Você começa a grasnar e andar como um pato.
 $n começa a grasnar e andar como um pato.
-Você se abaixa sob o $t de $S.
+Você se abaixa sob o $t de $L.
 $n se abaixa sob o $t de $N.
 $n se abaixa sob o seu $t.
 Você se abaixa sob $p.
@@ -1971,7 +1971,7 @@ $n pula em cima de uma mesa e grita 'Eeeeeeeeek!' ao ver você.
 Ofegante você percebe que a criatura asquerosa foi embora. Ufa...
 Você aponta para si mesm$r e grita, 'Eeeeeeeeek!'
 $n aponta para si mesm$r e grita, 'Eeeeeeeeek!'
-Você aponta para o $t de $S e grita, 'Eeeeeeeeek!'.
+Você aponta para o $t de $L e grita, 'Eeeeeeeeek!'.
 $n aponta para o $t de $N e grita, 'Eeeeeeeeek!'.
 $n aponta para o seu $t e grita, 'Eeeeeeeeek!'.
 Você aponta para $p e grita, 'Eeeeeeeeek!'.
@@ -1980,13 +1980,13 @@ $n aponta para $p e grita, 'Eeeeeeeeek!'.
 ~eep eep 0 5 0 0
 Eeeeep!
 $n parece um pouco envergonhado(a) e faz 'eep'.
-Você olha para $M e faz 'eep'.
+Você olha para $L e faz 'eep'.
 $n olha para $N e faz 'eep'.
 $n olha para você e faz 'eep'.
 Encontre outra pessoa para fazer 'eep'.
 Você olha para baixo e faz 'eep'.
 $n olha para baixo e faz 'eep'.
-Você olha para o $i de $S e faz 'eep'.
+Você olha para o $i de $L e faz 'eep'.
 $n olha para o $i de $N e faz 'eep'.
 $n olha para o seu $i e faz 'eep'.
 Você olha para $p e faz 'eep'.
@@ -2010,7 +2010,7 @@ $n infla o próprio ego como um balão gigante!
 ~egrin egrin 0 5 5 0
 Você sorri de forma muito perversa.
 $n sorri de forma muito perversa.
-Você sorri perversamente, tentando assustar $M.
+Você sorri perversamente, tentando assustar $L.
 $n sorri perversamente, tentando assustar $N.
 $n sorri perversamente, tentando assustar você.
 Qual a razão de tentar intimidar o vazio?
@@ -2040,13 +2040,13 @@ $n com a cara grotesca grita, 'EU NÃO SOU UM ANIMAL!!'
 ~embrace embrace 0 5 0 0
 Você estende os braços mas não abraça nada. :(
 $n estende os braços para um abraço, mas não há ninguém lá.
-Você abraça $M calorosamente.
+Você abraça $L calorosamente.
 $n abraça $N calorosamente.
 $n abraça você calorosamente.
 Infelizmente, quem você quer abraçar não está aqui.
 Você abraça a si mesm$r??
 $n envolve os próprios braços em si mesm$r num caloroso auto-abraço.
-Você abraça o $t de $S calorosamente.
+Você abraça o $t de $L calorosamente.
 $n abraça o $t de $N calorosamente.
 $n abraça o seu $t calorosamente.
 Você abraça $p calorosamente.
@@ -2061,7 +2061,7 @@ $n coloca os braços em torno de você e te abraça com entusiasmo!
 Não está aqui para entusiasmar.
 Você se abraça com entusiasmo, tomado(a) pelo momento!
 $n se abraça com entusiasmo, tomad$r pelo momento!
-Você olha entusiasmadament para o $t de $S.
+Você olha entusiasmadament para o $t de $L.
 $n parece muito entusiasmad$r com o $t de $N.
 $n parece muito entusiasmad$r com o seu $t.
 Você abre os braços e abraça $p com entusiasmo!
@@ -2085,13 +2085,13 @@ $n fica de uma bela cor verde enquanto inveja $p.
 ~evileye evileye 0 5 0 0
 A quem você quer lançar o olho gordo?
 $n procura alguém para lançar o olho gordo.
-Você lança o olho gordo em $M.
-$n lança o olho gordo em $M.
+Você lança o olho gordo em $L.
+$n lança o olho gordo em $L.
 $n te lança o olho gordo... assustador!
 É melhor verificar esse olho gordo.
 Você lança o olho gordo em si mesm$r?
 $n lança o olho gordo em si mesm$r.
-Você lança o olho gordo no $t de $S.
+Você lança o olho gordo no $t de $L.
 $n lança o olho gordo no $t de $N.
 $n lança o olho gordo no seu $t.
 Você lança o olho gordo em $p.
@@ -2115,13 +2115,13 @@ $n faz careta de horror para $p e grita Ewwwww!
 ~excuse excuse 0 5 0 0
 Você diz 'com licença'
 $n exclama 'Com licença!'
-Você pede licença a $M.
+Você pede licença a $L.
 $n pede licença a $N.
 $n pede licença a você.
 Bem, COM LICENÇA!
 Você pede licença a si mesm$r.
 $n pede licença a si mesm$r.
-Você pede licença ao $t de $S.
+Você pede licença ao $t de $L.
 $n pede licença ao $t de $N.
 $n pede licença ao seu $t.
 Você pede licença a $p.
@@ -2151,7 +2151,7 @@ $n levanta uma sobrancelha para você.
 Para quem você quer levantar as sobrancelhas?
 Você levanta uma sobrancelha para si mesm$r, muito questionável.
 $n levanta uma sobrancelha para si mesm$r.
-Você olha para o $t de $S e levanta as sobrancelhas!
+Você olha para o $t de $L e levanta as sobrancelhas!
 $n olha para o $t de $N e levanta as sobrancelhas!
 $n olha para o seu $t e levanta as sobrancelhas!
 Você olha para $p e levanta as sobrancelhas!
@@ -2160,13 +2160,13 @@ $n olha para $p e levanta as sobrancelhas!
 ~eyeroll eyer 0 5 0 0
 Você revira os olhos.
 $n revira os olhos.
-Você olha para $M e revira os olhos.
+Você olha para $L e revira os olhos.
 $n revira os olhos para $N.
 $n te fita e revira os olhos.
 Hum... quem?
 Você revira os olhos, enojado(a) com a própria incompetência.
 $n revira os olhos, enojado(a) consigo mesm$r.
-Você revira os olhos para o $t de $S.
+Você revira os olhos para o $t de $L.
 $n revira os olhos para o $t de $N.
 $n revira os olhos para o seu $t.
 Você revira os olhos para $p!
@@ -2181,7 +2181,7 @@ $n agarra firmemente a sua cara!
 Eles não estão aqui.
 Você agarra o próprio rosto em incredulidade.
 $n agarra o próprio rosto em incredulidade.
-Você olha para o $t de $S e contempla agarrá-lo.
+Você olha para o $t de $L e contempla agarrá-lo.
 $n olha para o $t de $N e contempla agarrá-lo.
 $n olha para o seu $t e contempla agarrá-lo.
 Você olha para $p e contempla agarrá-lo.
@@ -2226,7 +2226,7 @@ Sentindo-se heróic$r, você pega $n enquanto $l desmaia nos seus braços.
 Essa pessoa não está aqui para te pegar e você cai no chão.
 Você desmaia ao ver a si mesm$r.
 $n desmaia ao ver a si mesm$r.
-Você olha para o $t de $S e desmaia.
+Você olha para o $t de $L e desmaia.
 $n olha para o $t de $N e desmaia.
 $n olha para o seu $t e desmaia.
 Você desmaia ao ver $p.
@@ -2235,13 +2235,13 @@ $n desmaia ao ver $p.
 ~fall fall 0 5 0 0
 Você cai de cara no chão!
 $n cai de cara no chão, que desajeitad$r!
-Você cai em cima de $M!
+Você cai em cima de $L!
 $n cai em cima de $N, que desajeitad$r!
 $n cai em cima de você!
 Em quem você queria cair?
 É bem difícil cair em cima de si mesm$r.
 $n tenta cair em cima de si mesm$r e falha miseravelmente.
-Você cai no $t de $S.
+Você cai no $t de $L.
 $n cai no $t de $N.
 $n cai no seu $t.
 Você cai em $p.
@@ -2265,13 +2265,13 @@ $n se refresca com um leque de papel.
 ~fart fart 0 5 0 0
 Onde estão suas maneiras?
 $n solta uma real espetacular!
-Você solta um pum na direção geral de $M.
+Você solta um pum na direção geral de $L.
 $n solta um pum na direção geral de $N.
 $n solta um pum na sua direção geral.
 Você solta uma nuvem fedorenta que só você consegue cheirar.
 Você solta um pum e fica tontinhad$r com o fedor.
 $n solta um pum e quase desmaia com o cheiro.
-Você solta um pum no $t de $S.
+Você solta um pum no $t de $L.
 $n solta um pum no $t de $N.
 $n solta um pum no seu $t.
 Você solta um pum em $p.
@@ -2280,7 +2280,7 @@ $n solta um pum em $p.
 ~fish fish 0 5 0 0
 Você pega seu peixe fedorento. Quem quer um pouco??
 $n pega um peixe fedorento e sorri um sorriso diabólico.
-Você pega seu peixe fedorento e dá uma surra em $M.
+Você pega seu peixe fedorento e dá uma surra em $L.
 $n entra numa frenética surra com um peixe fedorento em $N.
 $n começa a te surrar descontroladamente com um peixe fedorento.
 Você bate bate bate... espera... eles não estão aqui.
@@ -2301,7 +2301,7 @@ $n acena uma mão na frente do seu rosto, oi... olá?
 Eles foram embora antes que você pudesse agitar os braços.
 Você acena as mãos na frente do próprio rosto.
 $n acena as mãos na frente do próprio rosto.
-Você agita os braços no $t de $S.
+Você agita os braços no $t de $L.
 $n agita os braços no $t de $N.
 $n agita os braços no seu $t.
 Você agita os braços em $p.
@@ -2310,13 +2310,13 @@ $n agita os braços em $p.
 ~flame flame 0 5 0 0
 Crianças, não tentem fazer isso em casa...
 $n usa um lança-chamas para acender pequenas fogueiras nos cantos.
-Você pega seu confiável lança-chamas ACME e faz um churrasco de $M, com $M mesmo.
+Você pega seu confiável lança-chamas ACME e faz um churrasco de $L, com $L mesmo.
 $n tira um lança-chamas ACME da mochila e transforma $N em cinzas.
 $n tira um lança-chamas ACME da mochila e te transforma em cinzas.
 Talvez sua vítima tenha se desintegrado... Ou talvez nunca estivesse aqui.
 Você aponta o lança-chamas para si mesm$r e vira pilha de ossos e cinzas.
 $n toasta a si mesm$r. $n não existe mais. $n é cinzas, só cinzas, e as cinzas voam ao vento. Tchau $n...
-Você aponta o lança-chamas para o $t de $S e começa o churrasco.
+Você aponta o lança-chamas para o $t de $L e começa o churrasco.
 $n aponta o lança-chamas para o $t de $N e começa o churrasco.
 $n aponta o lança-chamas para o seu $t e começa o churrasco.
 Você aponta o lança-chamas para $p e começa o churrasco.
@@ -2325,13 +2325,13 @@ $n aponta o lança-chamas para $p e começa o churrasco.
 ~flare flare 0 5 0 0
 Você dilata as narinas.
 $n dilata as narinas.
-Você dilata as narinas para $M.
+Você dilata as narinas para $L.
 $n dilata as narinas para $N.
 $n dilata as narinas para você.
 Você dispara um sinalizador, mas ninguém percebe.
 Você parece ter um certo charme.
 $n parece ter um certo charme em si mesm$r.
-Você dilata as narinas para o $t de $S.
+Você dilata as narinas para o $t de $L.
 $n dilata as narinas para o $t de $N.
 $n dilata as narinas para o seu $t.
 Você dilata as narinas para $p.
@@ -2340,13 +2340,13 @@ $n dilata as narinas para $p.
 ~flash flash 0 5 0 0
 Você se exibe para o quarto.
 $n se exibe para você.
-Você se exibe para $M.
+Você se exibe para $L.
 $n se exibe para $N.
 $n se exibe para você.
 Ninguém parece te notar, seu pervertido(a)!
 Você se exibe para si mesm$r, impressionado(a)?
 $n se exibe para si mesm$r.
-Você se exibe para o $t de $S.
+Você se exibe para o $t de $L.
 $n se exibe para o $t de $N.
 $n se exibe para o seu $t.
 Você se exibe para $p.
@@ -2355,13 +2355,13 @@ $n se exibe para $p.
 ~flex flex 0 5 0 0
 Você faz pose.
 $n exibe seu corpo impressionante.
-Você flexiona os músculos para $M.
+Você flexiona os músculos para $L.
 $n flexiona os músculos para $N.
 $n flexiona os músculos para você.
 Oooo... Ahhhrnold!
 Você flexiona para si mesm$r.
 $n exibe o corpão.
-Você flexiona o $t de $S.
+Você flexiona o $t de $L.
 $n flexiona o $t de $N.
 $n flexiona o seu $t.
 Você flexiona $p.
@@ -2385,13 +2385,13 @@ $n dá um peteleco no seu $t.
 ~flinch flinch 0 5 0 0
 Você se contrai.
 $n se contrai.
-$M te faz se contrair.
+$L te faz se contrair.
 $N faz $n se contrair.
 Você faz $n se contrair.
 Alguém te fez se contrair?
 Você faz a si mesm$r se contrair.
 $n faz a si mesm$r se contrair.
-Você recua do $t de $S.
+Você recua do $t de $L.
 $n recua do $t de $N.
 $n recua do seu $t.
 Você recua de $p.
@@ -2400,13 +2400,13 @@ $n recua de $p.
 ~flip flip 0 5 0 0
 Você dá uma cambalhota.
 $n dá uma cambalhota.
-Você pula sobre a cabeça de $S.
+Você pula sobre a cabeça de $L.
 $n pula sobre a cabeça de $N.
 $n pula sobre a sua cabeça.
 Você tenta pular sobre alguém que não está aqui e cai de cara no chão.
 Você perde a cabeça!
 $n perde a cabeça!
-Você pula sobre o $t de $S.
+Você pula sobre o $t de $L.
 $n pula sobre o $t de $N.
 $n pula sobre o seu $t.
 Você pula sobre $p.
@@ -2421,7 +2421,7 @@ $n se aproxima e diz, 'Ei querido(a), posso te pagar uma bebida?'
 Desculpe, seu(sua) amad$r não está por aí.
 Você flerta consigo mesm$r. Deve parecer idiota.
 $n acha que é a pessoa mais maravilhosa do mundo.
-Você flerta com o $t de $S.
+Você flerta com o $t de $L.
 $n flerta com o $t de $N.
 $n flerta com o seu $t.
 Você flerta com $p.
@@ -2466,7 +2466,7 @@ $n agita as mãos na frente do seu rosto, oi... olá?
 Eles foram embora antes que você pudesse esvoaçar para eles.
 Você agita as mãos na frente do próprio rosto.
 $n agita as mãos na frente do próprio rosto.
-Você agita as mãos para o $t de $S.
+Você agita as mãos para o $t de $L.
 $n agita as mãos para o $t de $N.
 $n agita as mãos para o seu $t.
 Você agita as mãos para $p.
@@ -2475,13 +2475,13 @@ $n agita as mãos para $p.
 ~foam foam 0 5 0 0
 Você espuma pela boca.
 $n espuma pela boca!
-Você espuma pela boca ao ver $M!
+Você espuma pela boca ao ver $L!
 $n espuma pela boca ao ver $N.
 $n espuma pela boca ao ver você!
 Você parece um pouco espumoso(a) hoje.
 CÃO DANADO!
 $n espuma pela boca como um cão raivoso! Corra!
-Sua boca espuma ao ver o $t de $S.
+Sua boca espuma ao ver o $t de $L.
 A boca de $n espuma ao ver o $t de $N.
 A boca de $n espuma ao ver o seu $t.
 Sua boca espuma ao ver $p.
@@ -2505,8 +2505,8 @@ $n está sendo um(a) pervertido(a).
 ~foot foot 0 5 8 0
 Muito bem, espertão(espertona).
 $n mastiga o próprio pé. Que inteligente, hein?
-Você ajuda $N a enfiar o $S pé na própria boca.
-$n ajuda $N a enfiar o $S pé na própria boca.
+Você ajuda $N a enfiar o $Z pé na própria boca.
+$n ajuda $N a enfiar o $Z pé na própria boca.
 $n te ajuda a enfiar o pé na própria boca.
 Eles devem não ter querido que você enfie o pé na boca deles.
 Você enfia o próprio pé na boca e começa a morder.
@@ -2520,13 +2520,13 @@ $n enfia o próprio pé na boca e começa a morder.
 ~forgive forgive 0 5 0 0
 Quem precisa ser perdoado(a)?
 $n está procurando alguém para perdoar???
-Você perdoa $M.
+Você perdoa $L.
 $n perdoa $N.
 $n te perdoa.
 Você tenta perdoar alguém que não está na sala, mas quem se importa.
 Você se perdoa, se sente melhor?
 $n se perdoa!
-Você perdoa o $t de $S.
+Você perdoa o $t de $L.
 $n perdoa o $t de $N.
 $n perdoa seu $t.
 Você perdoa $p.
@@ -2541,7 +2541,7 @@ $n te dá um beijo longo e apaixonado, parece uma eternidade...
 Seu coração está cheio de desespero pois essa pessoa não está aqui.
 Você se reúne nos próprios braços e tenta se beijar.
 $n tenta se beijar.
-Você beija o $t de $S apaixonadamente.
+Você beija o $t de $L apaixonadamente.
 $n beija o $t de $N apaixonadamente.
 $n beija o seu $t apaixonadamente.
 Você beija $p apaixonadamente.
@@ -2550,13 +2550,13 @@ $n beija $p apaixonadamente.
 ~froth froth 0 5 0 0
 Você espuma pela boca.
 $n espuma pela boca!
-Você espuma pela boca ao ver $M!
+Você espuma pela boca ao ver $L!
 $n espuma pela boca ao ver $N.
 $n espuma pela boca ao ver você!
 Você parece um pouco espumoso(a) hoje.
 CÃO DANADO!
 $n espuma pela boca como um cão raivoso! Corra!
-Sua boca espuma ao ver o $t de $S.
+Sua boca espuma ao ver o $t de $L.
 A boca de $n espuma ao ver o $t de $N.
 A boca de $n espuma ao ver o seu $t.
 Sua boca espuma ao ver $p.
@@ -2565,13 +2565,13 @@ A boca de $n espuma ao ver $p.
 ~frown frown 0 5 0 0
 O que está te incomodando?
 $n faz uma careta.
-Você faz uma careta para $M.
+Você faz uma careta para $L.
 $n faz uma careta para $N.
 $n faz uma careta para você.
 Você faz uma careta, mas quem se importa.
 Você faz uma careta para si mesm$r, não é seu melhor amigo(a) hoje?
 $n faz uma careta para si mesm$r.
-Você faz uma careta para o $t de $S.
+Você faz uma careta para o $t de $L.
 $n faz uma careta para o $t de $N.
 $n faz uma careta para o seu $t.
 Você faz uma careta para $p.
@@ -2580,13 +2580,13 @@ $n faz uma careta para $p.
 ~fume fume 0 5 0 0
 Relaxe! Conte até dez, devagar.
 $n range os dentes e ferve de raiva.
-Você olha para $M, furioso(a).
+Você olha para $L, furioso(a).
 $n olha para $N, fervendo de raiva.
 $n olha para você, fervendo de raiva!
 Ferva... eles não estão aqui.
 Certo - odeie a si mesm$r!
 $n aperta os punhos e bate os pés, furioso(a) consigo mesm$r.
-Você olha para o $t de $S, furioso(a).
+Você olha para o $t de $L, furioso(a).
 $n olha para o $t de $N, furioso(a).
 $n olha para o seu $t, furioso(a).
 Você olha para $p, furioso(a).
@@ -2595,13 +2595,13 @@ $n olha para $p, furioso(a).
 ~furrow furrow 0 5 0 0
 Você franze o cenho pensativo.
 $n franze o cenho pensativo.
-Você franze o cenho para $M.
+Você franze o cenho para $L.
 $n franze o cenho para $N.
 $n franze o cenho para você.
 Com sulcos tão profundos, duvido que alguém possa te ver.
 Você franze o cenho para si mesm$r.
 $n franze o cenho pensativo e para si mesm$r.
-Você franze o cenho para o $t de $S.
+Você franze o cenho para o $t de $L.
 $n franze o cenho para o $t de $N.
 $n franze o cenho para o seu $t.
 Você franze o cenho para $p.
@@ -2610,13 +2610,13 @@ $n franze o cenho para $p.
 ~fuss fuss 0 5 0 0
 Você faz alarde.
 $n faz alarde.
-Você faz alarde sobre $M.
+Você faz alarde sobre $L.
 $n faz alarde sobre $N.
 $n faz alarde sobre você.
 Que alarde, que alarde!
 Você faz alarde sobre si mesm$r.
 $n faz alarde sobre si mesm$r.
-Você faz alarde sobre o $t de $S.
+Você faz alarde sobre o $t de $L.
 $n faz alarde sobre o $t de $N.
 $n faz alarde sobre o seu $t.
 Você faz alarde sobre $p.
@@ -2655,13 +2655,13 @@ $n se amordaça com uma de $z meias mais fedorentas.
 ~gasp gasp 0 5 0 0
 Você suspira de espanto.
 $n suspira de espanto.
-Você suspira de total espanto com $M.
+Você suspira de total espanto com $L.
 $n suspira de espanto com $N.
 $n suspira de puro espanto com você.
 Você suspira desesperadamente por ar.
 Você suspira com a própria má sorte.
 $n parece suspirar de puro espanto consigo mesm$r.
-Você suspira de espanto com o $t de $S.
+Você suspira de espanto com o $t de $L.
 $n suspira de espanto com o $t de $N.
 $n suspira de espanto com o seu $t.
 Você suspira de espanto com $p.
@@ -2670,13 +2670,13 @@ $n suspira de espanto com $p.
 ~gaze gaze 0 5 0 0
 Você olha no vazio sem pensar em nada.
 $n olha no vazio sem pensar em nada.
-Você olha profundamente nos olhos de $S, completamente perdido(a).
+Você olha profundamente nos olhos de $L, completamente perdido(a).
 $n olha profundamente nos olhos de $N, completamente perdido(a).
 $n olha profundamente nos seus olhos, completamente perdido(a).
 Para onde você quer olhar?
 Você fica vesgo(a) tentando se olhar.
 $n fica muito vesgo(a).
-Você olha para o $i de $S por um longo tempo.
+Você olha para o $i de $L por um longo tempo.
 $n olha para o $i de $N por um longo tempo.
 $n olha para o seu $i por um longo tempo.
 #
@@ -2706,7 +2706,7 @@ $n te observa e está tagarelando loucamente.
 Você tagarela em vão, eles não podem te ver nem ouvir.
 Você se olha e começa a tagarelar como um maníaco.
 $n se olha e começa a tagarelar como um maníaco.
-Você tagarela loucamente para o $t de $S.
+Você tagarela loucamente para o $t de $L.
 $n tagarela loucamente para o $t de $N.
 $n tagarela loucamente para o seu $t.
 Você tagarela loucamente para $p.
@@ -2721,7 +2721,7 @@ $n te olha e ri, imaginando o que $l acha tão engraçado.
 Você pode estar vendo algo engraçado, mas eu não estou.
 Você parece se achar muito engraçado(a).
 $n ri de si mesm$r.
-Você ri do $t de $S.
+Você ri do $t de $L.
 $n ri do $t de $N.
 $n ri do seu $t.
 Você ri de $p.
@@ -2730,13 +2730,13 @@ $n ri de $p.
 ~glare glare 0 5 0 0
 Você fulmina com o olhar sem foco.
 $n lança olhares ao redor.
-Você olha friamente para $M.
+Você olha friamente para $L.
 $n olha fixamente para $N.
 $n te olha friamente, você sente um frio na espinha.
 Você tenta fulminar com o olhar alguém que não está presente.
 Você olha friamente para seus próprios pés, eles de repente estão muito frios.
 $n olha para os próprios pés, o que está incomodando $l?
-Você fulmina com o olhar o $t de $S.
+Você fulmina com o olhar o $t de $L.
 $n fulmina com o olhar o $t de $N.
 $n fulmina com o olhar o seu $t.
 Você fulmina com o olhar $p.
@@ -2766,7 +2766,7 @@ $n acena adeus para você. Boa viagem.
 Eles não esperaram você acenar adeus.
 Você também vai em aventuras??
 $n acena adeus para si mesm$r.
-Você acena adeus para o $t de $S.
+Você acena adeus para o $t de $L.
 $n acena adeus para o $t de $N.
 $n acena adeus para o seu $t.
 Você acena adeus para $p.
@@ -2775,13 +2775,13 @@ $n acena adeus para $p.
 ~goose goose 0 5 0 0
 A quem você quer beliscar? Escolha com cuidado.
 $n está procurando uma bunda para beliscar!!!
-Você belisca a bunda de $S!
+Você belisca a bunda de $L!
 $n belisca a bunda de $N.
 $n belisca a sua bunda!
 Beliscar? Mamãe Ganso?
 Você belisca a própria bunda!
 $n belisca a própria bunda.
-Você belisca o $t de $S.
+Você belisca o $t de $L.
 $n belisca o $t de $N.
 $n belisca o seu $t.
 Você belisca $p.
@@ -2790,13 +2790,13 @@ $n belisca $p.
 ~greed greed 0 5 0 0
 Você olha ao redor com ganância.
 $n olha ao redor com ganância.
-Você olha para a bolsa de $S com ganância.
+Você olha para a bolsa de $L com ganância.
 $n olha para a bolsa de $N com ganância.
 $n olha para a sua bolsa com ganância.
 Seu credor parece estar fora no momento.
 Você se olha com ganância.
 $n se olha com ganância?
-Você olha para o $t de $S com ganância.
+Você olha para o $t de $L com ganância.
 $n olha para o $t de $N com ganância.
 $n olha para o seu $t com ganância.
 Você olha para $p com ganância.
@@ -2805,13 +2805,13 @@ $n olha para $p com ganância.
 ~greet greet 0 5 0 0
 Você cumprimenta todo mundo.
 $n cumprimenta todo mundo.
-Você ergue a mão e cumprimenta $M.
+Você ergue a mão e cumprimenta $L.
 $n ergue a mão e cumprimenta $N.
 $n ergue a mão e te cumprimenta.
 Por favor -- tente alguém que está aqui?
 Então, você finalmente se descobriu!
 $n se cumprimenta... $l sempre foi esquisito(a).
-Você cumprimenta o $t de $S.
+Você cumprimenta o $t de $L.
 $n cumprimenta o $t de $N.
 $n cumprimenta o seu $t.
 Você cumprimenta $p.
@@ -2820,13 +2820,13 @@ $n cumprimenta $p.
 ~grimace grimace 0 5 0 0
 Você faz uma careta de dor.
 $n faz uma careta de dor.
-Você olha para $M e faz uma careta de dor.
+Você olha para $L e faz uma careta de dor.
 $n faz uma careta para $N.
 $n te olha e faz uma careta de dor.
 A vida está tão ruim assim, hein?
 Você faz uma careta de dor para si mesm$r... a vida está tão ruim assim?
 $n faz uma careta para si mesm$r... $l sempre foi esquisito(a).
-Você faz uma careta para o $t de $S.
+Você faz uma careta para o $t de $L.
 $n faz uma careta para o $t de $N.
 $n faz uma careta para o seu $t.
 Você faz uma careta para $p.
@@ -2835,13 +2835,13 @@ $n faz uma careta para $p.
 ~grin grin 0 5 0 0
 Você sorri.
 $n sorri.
-Você sorri para $M.
+Você sorri para $L.
 $n sorri para $N.
 $n sorri para você.
 Que pena, eles não estão aqui para você sorrir.
 Você sorri para si mesm$r.
 $n sorri para si mesm$r... deve ser uma piada interna.
-Você sorri maliciosamente para o $t de $S.
+Você sorri maliciosamente para o $t de $L.
 $n sorri maliciosamente para o $t de $N.
 $n sorri maliciosamente para o seu $t.
 Você sorri maliciosamente para $p.
@@ -2850,13 +2850,13 @@ $n sorri maliciosamente para $p.
 ~groan groan 0 5 0 0
 Você geme alto.
 $n geme alto.
-Você geme de agonia para $M.
+Você geme de agonia para $L.
 $n geme para $N.
 $n geme de agonia para você.
 Você geme ao vento.
 Você geme com o que acabou de dizer.
 $n geme com o que $l acabou de dizer.
-Você geme para o $t de $S.
+Você geme para o $t de $L.
 $n geme para o $t de $N.
 $n geme para o seu $t.
 Você geme para $p.
@@ -2871,7 +2871,7 @@ $n te apalpa.
 Tente alguém que está aqui.
 Você se apalpa -- IIIII.
 $n se apalpa -- IIIII.
-Você apalpa o $t de $S.
+Você apalpa o $t de $L.
 $n apalpa o $t de $N.
 $n apalpa o seu $t.
 Você apalpa $p.
@@ -2880,13 +2880,13 @@ $n apalpa $p.
 ~grovel grovel 0 5 0 0
 Você se arrasta na lama.
 $n se arrasta na lama.
-Você se prostra diante de $M.
+Você se prostra diante de $L.
 $n se arrasta na lama diante de $N.
 $n se arrasta na lama diante de você.
 Para quem você quer se rastejar?
 Isso parece um pouco estúpido para mim... Mas, tudo bem!
 $n se rasteja na lama diante de si mesm$r.
-Você se rasteja na lama diante do $t de $S.
+Você se rasteja na lama diante do $t de $L.
 $n se rasteja na lama diante do $t de $N.
 $n se rasteja na lama diante do seu $t.
 Você se rasteja na lama diante de $p.
@@ -2895,13 +2895,13 @@ $n se rasteja na lama diante de $p.
 ~growl growl 0 5 0 0
 Grrrrrrrrrr...
 $n rosna.
-Você rosna para $M.
+Você rosna para $L.
 $n rosna ameaçadoramente para $N.
 $n rosna ameaçadoramente para você.
 Seu estômago rosna, mas ninguém percebe além de você.
 Grrrrrrrrr...
 $n rosna baixinho para si mesm$r.
-Você rosna para o $t de $S.
+Você rosna para o $t de $L.
 $n rosna para o $t de $N.
 $n rosna para o seu $t.
 Você rosna para $p.
@@ -2910,13 +2910,13 @@ $n rosna para $p.
 ~grumbles grumbles 0 5 0 0
 Você reclama infeliz.
 $n reclama infeliz.
-Você reclama para $M.
+Você reclama para $L.
 $n reclama para $N.
 $n reclama para você.
 Você deveria pelo menos reclamar para alguém por perto.
 Você reclama infeliz para si mesm$r.
 $n reclama infeliz para si mesm$r.
-Você reclama infeliz para o $t de $S.
+Você reclama infeliz para o $t de $L.
 $n reclama infeliz para o $t de $N.
 $n reclama infeliz para o seu $t.
 Você reclama infeliz de $p.
@@ -2925,13 +2925,13 @@ $n reclama infeliz de $p.
 ~grunts grunt 0 5 0 0
 Você grunhe alto.
 $n grunhe vigorosamente para você!
-Você grunhe vigorosamente para $M!
+Você grunhe vigorosamente para $L!
 $n grunhe vigorosamente para $N!
 $n grunhe vigorosamente para você!
 Tente grunhir para uma pessoa de verdade.
 Você grunhe para si mesm$r, talvez devesse considerar ajuda profissional...
 Você cai de rir enquanto $n grunhe para si mesm$r.
-Você grunhe para o $t de $S.
+Você grunhe para o $t de $L.
 $n grunhe para o $t de $N.
 $n grunhe para o seu $t.
 Você grunhe para $p.
@@ -2946,7 +2946,7 @@ $n corta algumas mechas do seu cabelo.
 Você não pode cortar o cabelo deles, pois eles não estão aqui!
 Você quase corta os dedos tentando cortar o próprio cabelo.
 $n tenta cortar o próprio cabelo, mas quase corta o dedo.
-Você olha para o $t de $S e acha que $L poderia aparar um pouquinho.
+Você olha para o $t de $L e acha que $L poderia aparar um pouquinho.
 $n olha para o $t de $N e parece achar que poderia aparar um pouco.
 $n olha para o seu $t e parece achar que poderia aparar um pouco.
 Você olha para $p e acha que poderia aparar um pouco.
@@ -2961,7 +2961,7 @@ $n te dá um halo. Aparentemente você não parece angelical o suficiente.
 Tarde demais, essa pessoa já escapou.
 Você coloca um halo na própria cabeça.
 $n coloca um halo na própria cabeça.
-Você coloca um halo no $t de $S.
+Você coloca um halo no $t de $L.
 $n coloca um halo no $t de $N.
 $n coloca um halo no seu $t.
 Você coloca um halo em $p.
@@ -2991,7 +2991,7 @@ $n aperta a sua mão.
 Eles foram embora antes que você pudesse apertar a mão deles.
 Você aperta vigorosamente a própria mão.
 $n aperta vigorosamente a própria mão.
-$n aperta o $t de $S.
+$n aperta o $t de $L.
 $n aperta o $t de $N.
 $n aperta o seu $t.
 Você aperta $p.
@@ -3000,13 +3000,13 @@ $n aperta $p.
 ~feliz feliz 0 5 0 0
 Você parece feliz.
 $n parece feliz.
-Você olha feliz para $M.
+Você olha feliz para $L.
 $n olha feliz para $N.
 $n olha feliz na sua direção.
 Você precisa de alguém para parecer feliz?
 Você está tão feliz consigo mesm$r.
 $n olha feliz para si mesm$r.
-Você olha feliz para o $t de $S.
+Você olha feliz para o $t de $L.
 $n olha feliz para o $t de $N.
 $n olha feliz para o seu $t.
 Você olha feliz para $p.
@@ -3015,13 +3015,13 @@ $n olha feliz para $p.
 ~femininity femininity 0 5 0 0
 Você acentua sua feminilidade com um gesto gracioso e delicado.
 $n irradia uma aura de feminilidade graciosa e envolvente.
-Você exibe sua feminilidade para $M com um sorriso suave e confiante.
+Você exibe sua feminilidade para $L com um sorriso suave e confiante.
 $n exibe sua feminilidade para $N, irradiando graça e encanto.
 $n sorri suavemente para você, exibindo uma feminilidade radiante.
 Você exibe sua feminilidade... mas não há ninguém aqui para admirar.
 Você acentua sua feminilidade em frente a um espelho imaginário. Que autoconfiança!
 $n irradia feminilidade para si mesm$r com uma confiança tranquila.
-Você exibe sua feminilidade, direcionando um olhar suave para o $t de $S.
+Você exibe sua feminilidade, direcionando um olhar suave para o $t de $L.
 $n exibe sua feminilidade, direcionando um olhar suave para o $t de $N.
 $n direciona para você um olhar suave, exibindo feminilidade em relação ao seu $t.
 Você exibe sua feminilidade ao segurar $p com delicadeza.
@@ -3030,13 +3030,13 @@ $n exibe sua feminilidade ao segurar $p com delicadeza.
 ~hate hate 0 5 0 0
 Relaxe! Conte até dez, devagar.
 Os olhos de $n ardem de ódio.
-Você olha para $M, seus olhos tentando penetrar o crânio de $S.
+Você olha para $L, seus olhos tentando penetrar o crânio de $L.
 $n olha para $N, seus olhos ardendo de ódio.
 $n olha para você, seus olhos ardendo de ódio.
 Odeie... eles não estão aqui.
 Certo - odeie a si mesm$r!
 $n aperta os punhos e bate os pés, odiando a si mesm$r.
-Você olha para o $t de $S com ódio.
+Você olha para o $t de $L com ódio.
 $n olha para o $t de $N com ódio.
 $n olha para o seu $t com ódio.
 Você olha para $p com ódio.
@@ -3060,13 +3060,13 @@ $n esfrega as têmporas doloridas, indicando que $p está dando dor de cabeça e
 ~heh heh 0 5 0 0
 Você heee. Heh, heh, heh.
 $n dá risadinhas. Heh, heh, heh!
-Você heee para $M. Heh, heh, heh.
+Você heee para $L. Heh, heh, heh.
 $n dá risadinhas para $N. Heh, heh, heh.
 $n dá risadinhas para você. Heh heh!
 Você dá risadinhas para alguém que não está mais aqui.
 Você dá risadinhas para si mesm$r. Que bobão(a)!
 $n dá risadinhas para si mesm$r. Tão bobo(a)!
-Você dá risadinhas para o $t de $S. Heh, heh, heh.
+Você dá risadinhas para o $t de $L. Heh, heh, heh.
 $n dá risadinhas para o $t de $N. Heh, heh!
 $n dá risadinhas para o seu $t. Heh heh!
 Você dá risadinhas para $p. Heh, heh!
@@ -3075,13 +3075,13 @@ $n dá risadinhas para $p. Heh, heh!
 ~hiccup hiccup 0 5 0 0
 *SLU*
 $n soluça.
-Você soluça na cara de $S.
+Você soluça na cara de $L.
 $n soluça na cara de $N.
 $n soluça na sua cara.
 Soluçar na cara de alguém não é educado.
 Você tenta segurar alguns soluços.
 $n soluça incontrolavelmente.
-Você olha para o $t de $S e soluça.
+Você olha para o $t de $L e soluça.
 $n olha para o $t de $N e soluça.
 $n olha para o seu $t e soluça.
 Você olha para $p e soluça.
@@ -3090,13 +3090,13 @@ $n olha para $p e soluça.
 ~highfive highfive 0 5 0 0
 A quem você quer dar um toca-aqui?
 $n está procurando alguém para dar um toca-aqui.
-Você pula e dá um toca-aqui em $M.
+Você pula e dá um toca-aqui em $L.
 $n pula e dá um toca-aqui em $N.
 $n pula e te dá um toca-aqui.
 Me passa aqui, meu bem!
 Você tenta se dar um toca-aqui.
 $n tenta se dar um toca-aqui.
-Você tenta dar um toca-aqui no $t de $S.
+Você tenta dar um toca-aqui no $t de $L.
 $n tenta dar um toca-aqui no $t de $N.
 $n tenta dar um toca-aqui no seu $t.
 Você tenta dar um toca-aqui em $p.
@@ -3111,7 +3111,7 @@ $n sibila para você! Talvez $l queira uma briga?
 Para quem você está sibilando?
 Você cruza os olhos e sibila para si mesm$r, ficando ainda mais irritado(a)!
 $n cruza os olhos e sibila para si mesm$r!
-Você sibila para o $t de $S.
+Você sibila para o $t de $L.
 $n sibila para o $t de $N.
 $n sibila para o seu $t.
 Você sibila para $p.
@@ -3126,7 +3126,7 @@ $n vai hmmmmm sobre suas palavras.
 Eles foram embora!
 Você vai hmmm.
 $n vai hmmmm.
-Você olha para o $t de $S e vai hmmmmmm.
+Você olha para o $t de $L e vai hmmmmmm.
 $n olha para o $t de $N e vai hmmmmmm.
 $n olha para o seu $t e vai hmmmmmm.
 Você olha para $p e vai hmmmmmm.
@@ -3150,13 +3150,13 @@ $n pega um grande pote de mel e enfia as patinhas para provar.
 ~hop hop 0 5 0 0
 Você pula em um pé só.
 $n pula por aí parecendo ansioso(a).
-Você pula alegremente com $M.
+Você pula alegremente com $L.
 $n pula alegremente com $N.
 $n pula alegremente com você.
 Difícil jogar 'pular sapo' quando não há ninguém por perto.
 Você pula ao redor de si mesm$r. O que você é? Um sapo, é?
 $n pula ao redor de si mesm$r.
-Você pula sobre o $t de $S.
+Você pula sobre o $t de $L.
 $n pula sobre o $t de $N.
 $n pula sobre o seu $t.
 Você pula sobre $p.
@@ -3165,13 +3165,13 @@ $n pula sobre $p.
 ~hotfoot hotfoot 0 5 0 0
 A quem você quer dar uma brasa no pé?
 $n está procurando alguém para dar uma brasa no pé.
-Você risca um fósforo e dá uma brasa no pé de $M!
+Você risca um fósforo e dá uma brasa no pé de $L!
 $n risca um fósforo e dá uma brasa no pé de $N!
 $n risca um fósforo e dá uma brasa no seu pé!
 Eles já foram na brasa de você.
 Você risca um fósforo e se dá uma brasa no próprio pé!
 $n risca um fósforo e se dá uma brasa no próprio pé!
-Você dá uma brasa no $t de $S?
+Você dá uma brasa no $t de $L?
 $n dá uma brasa no $t de $N?
 $n dá uma brasa no seu $t?
 Você dá uma brasa em $p?
@@ -3180,13 +3180,13 @@ $n dá uma brasa em $p?
 ~howl howl 0 5 0 0
 AUUUUUUU!
 $n uiva para a lua.
-Você uiva para $M.
+Você uiva para $L.
 $n uiva para $N.
 $n uiva para você.
 Lua cheia esta noite, hein?
 Você uiva para si mesm$r.
 $n uiva para si mesm$r!
-Você uiva para o $t de $S.
+Você uiva para o $t de $L.
 $n uiva para o $t de $N.
 $n uiva para o seu $t.
 Você uiva para $p.
@@ -3201,7 +3201,7 @@ $n faz hrmph sobre suas palavras.
 Eles foram embora antes que você pudesse fazer hrmph para eles.
 Você faz hrmph para si mesm$r.
 $n faz hrmph para si mesm$r.
-Você olha para o $t de $S e faz hrmph.
+Você olha para o $t de $L e faz hrmph.
 $n olha para o $t de $N e faz hrmph.
 $n olha para o seu $t e faz hrmph.
 Você olha para $p e faz hrmph.
@@ -3210,13 +3210,13 @@ $n olha para $p e faz hrmph.
 ~hug hug 0 5 0 0
 Abraçar quem?
 $n está procurando alguém para abraçar.
-Você abraça $M.
+Você abraça $L.
 $n abraça $N.
 $n abraça você.
 Desculpe, amigo, eu não vejo essa pessoa aqui.
 Você se abraça.
 $n se abraça.
-Você abraça o $t de $S.
+Você abraça o $t de $L.
 $n abraça o $t de $N.
 $n abraça seu $t.
 Você abraça $p.
@@ -3225,14 +3225,14 @@ $n abraça $p.
 ~huggle huggle 0 8 5 0
 Quem você quer abraçar?
 #
-Você abraça $M e os derruba no chão.
+Você abraça $L e os derruba no chão.
 $n abraça $N no chão.
 $n te abraça e te derruba!
 Você não pode abraçar alguém que não existe, sabia.
 Você se abraça, ninguém te ama!
 $n abraça a si mesm$r, ninguém ama $l!
-Você envolve os braços em $M e abraça o $t de $S.
-$n envolve os braços em $N e abraça o $t de $S.
+Você envolve os braços em $L e abraça o $t de $L.
+$n envolve os braços em $N e abraça o $t de $L.
 $n envolve os braços em você e abraça o seu $t.
 #
 #
@@ -3240,13 +3240,13 @@ $n envolve os braços em você e abraça o seu $t.
 ~hula hula 0 8 8 0
 Você coloca uma saia de palha e começa a dançar hula.
 $n coloca uma saia de palha e começa a dançar hula.
-Você coloca uma saia de palha e dança hula com $M.
+Você coloca uma saia de palha e dança hula com $L.
 $n coloca uma saia de palha e dança hula com $N.
 $n coloca uma saia de palha e dança hula com você.
 Com quem você quer dançar hula?
 Você coloca uma saia de palha e começa a dançar hula.
 $n coloca uma saia de palha e começa a dançar hula.
-Você coloca uma saia de palha e começa a dançar hula com o $t de $S.
+Você coloca uma saia de palha e começa a dançar hula com o $t de $L.
 $n coloca uma saia de palha e dança hula com o $t de $N.
 $n coloca uma saia de palha e dança hula com o seu $t.
 Você coloca uma saia de palha e dança hula com $p.
@@ -3255,13 +3255,13 @@ $n coloca uma saia de palha e dança hula com $p.
 ~hum hum 0 5 0 0
 Você cantarola.
 $n cantarola.
-Você cantarola uma musiquinha irritante no ouvido de $M.
+Você cantarola uma musiquinha irritante no ouvido de $L.
 $n cantarola no ouvido de $N.
 $n cantarola uma musiquinha irritante no seu ouvido.
 Cantarolar é muito divertido, não é?
 Você cantarola para si mesm$r.
 $n cantarola para si mesm$r.
-Você cantarola para o $t de $S.
+Você cantarola para o $t de $L.
 $n cantarola para o $t de $N.
 $n cantarola para o seu $t.
 Você cantarola para $p.
@@ -3285,13 +3285,13 @@ Você não os vê aqui.
 ~hush hush 0 5 0 0
 Você fica em silêncio.
 $n fica em silêncio.
-Você tenta calar $M.
+Você tenta calar $L.
 $n tenta calar $N.
 $n tenta te calar.
 A quem você quer calar?
 Você se cala.
 $n se cala.
-Você cala o $t de $S.
+Você cala o $t de $L.
 $n cala o $t de $N.
 $n cala o seu $t.
 Você cala $p.
@@ -3300,13 +3300,13 @@ $n cala $p.
 ~hustle hustle 0 5 0 0
 Você se apressa.
 $n se apressa.
-Você passa apressado(a) por $M.
+Você passa apressado(a) por $L.
 $n passa apressado(a) por $N.
 $n passa apressado(a) por você.
 Faça o Hustle!
 Você faz o Hustle!
 $n faz o Hustle!
-Você manda o $t de $S se apressar.
+Você manda o $t de $L se apressar.
 $n manda o $t de $N se apressar.
 $n manda o seu $t se apressar.
 Você manda $p se apressar.
@@ -3315,13 +3315,13 @@ $n manda $p se apressar.
 ~huzzah huzzah 0 5 0 0
 Você solta um retumbante, VIVAAAA!
 $n grita Vivaaaa!
-Você viva $M!
+Você viva $L!
 $n viva $N.
 $n te viva!
 Hmmm?
 Você solta um retumbante, VIVAAAA! para si mesm$r.
 $n solta um retumbante, VIVAAAA! para si mesm$r.
-Você grita VIVA! para o $t de $S.
+Você grita VIVA! para o $t de $L.
 $n grita VIVA! para o $t de $N.
 $n grita VIVA! para o seu $t.
 Você grita VIVA! para $p.
@@ -3345,13 +3345,13 @@ $n se dobra de rir de $p.
 ~ignore ignore 0 5 0 0
 Você ignora todo mundo.
 $n ignora todo mundo, que grosseria!
-Você ignora $M.
+Você ignora $L.
 $n ignora $N.
 $n vira as costas para você.
 Quem você queria ignorar?
 Você não pode se ignorar!
 Você observa $n ignorar a si mesm$r.
-Você tenta ignorar o $t de $S.
+Você tenta ignorar o $t de $L.
 $n tenta ignorar o $t de $N.
 $n tenta ignorar o seu $t.
 Você tenta ignorar $p.
@@ -3366,7 +3366,7 @@ $n se posiciona de forma imponente diante de você. Que intimidador!
 Para quem você está tentando ser imponente?
 Você se impõe a si mesm$r no espelho imaginário. Praticando?
 $n tenta ser imponente para si mesm$r. Praticando, eh?
-Você se impõe diante do $t de $S.
+Você se impõe diante do $t de $L.
 $n se impõe diante do $t de $N.
 $n se impõe diante do seu $t.
 Você se impõe diante de $p.
@@ -3381,7 +3381,7 @@ $n te lança um olhar inocente... o que $l poderia estar aprontando?
 Você não parece tão inocente para mim.
 Você se olha inocentemente.
 $n se olha inocentemente.
-Você olha inocentemente para o $t de $S.
+Você olha inocentemente para o $t de $L.
 $n olha inocentemente para o $t de $N.
 $n olha inocentemente para o seu $t.
 Você olha inocentemente para $p.
@@ -3396,7 +3396,7 @@ $n acha que você está insano(a).
 Você acha alguém insano? Você tem razão.
 Você fica ainda mais insano(a) do que já era.
 $n está perdendo a razão.
-Você olha para o $t de $S e o declara insano.
+Você olha para o $t de $L e o declara insano.
 $n olha para o $t de $N e o declara insano.
 $n olha para o seu $t e o declara insano.
 Você olha para $p e o declara insano.
@@ -3435,13 +3435,13 @@ $n's jaw drops to the ground in disbelief.
 ~jeer jeer 0 5 0 0
 Você vaia o mundo em geral.
 $n parece incomodado(a) com o mundo.
-Você vaia $M.
+Você vaia $L.
 $n vaia $N, que crueldade.
 $n vaia você de forma insultante e dolorosa.
 Hmm, será que foi embora?
 Você ri das próprias deficiências.
 $n consegue fazer um papel de idiota.
-Você vaia o $t de $S.
+Você vaia o $t de $L.
 $n vaia o $t de $N.
 $n vaia o seu $t.
 Você vaia $p.
@@ -3450,7 +3450,7 @@ $n vaia $p.
 ~jest jest 1 5 5 0
 Você está só brincando!
 $n está só brincando!
-Você brinca com $M.
+Você brinca com $L.
 $n brinca com $N.
 $n brinca com você.
 Tolo(a)! Essa pessoa não está aqui.
@@ -3465,13 +3465,13 @@ $n caçoa do seu $t.
 ~jealous jealous 0 5 0 0
 Você sente uma pontada de ciúme corroendo o seu coração.
 $n parece visivelmente enciumad$r.
-Você lança um olhar enciumado para $M, sentindo uma pontada de inveja.
+Você lança um olhar enciumado para $L, sentindo uma pontada de inveja.
 $n lança um olhar enciumado para $N.
 $n lança um olhar enciumado para você. Será que é ciúme?
 Não há ninguém aqui para provocar tanto ciúme em você.
 Você sente ciúme de si mesm$r. Que paradoxo existencial!
 $n parece enciumad$r de si mesm$r. Que complexidade psicológica!
-Você lança um olhar enciumado para o $t de $S.
+Você lança um olhar enciumado para o $t de $L.
 $n lança um olhar enciumado para o $t de $N.
 $n lança um olhar enciumado para o seu $t.
 Você lança um olhar enciumado para $p.
@@ -3555,14 +3555,14 @@ $n faz malabarismo com uma faca, uma tocha em chamas, uma bola de boliche e $p.
 ~kiss ki 0 5 0 0
 Não há alguém que você queira beijar?
 $n está procurando alguém para beijar.
-Você beija $M.
+Você beija $L.
 $n beija $N.
 $n beija você.
 Nunca por perto quando necessário.
 Todas as pessoas solitárias :(
 Três bizarro! $n se beija por todo o corpo.
-Você beija $M no $t de $S.
-$n beija $N no $t de $S.
+Você beija $L no $t de $L.
+$n beija $N no $t de $L.
 $n beija você no seu $t.
 Você beija $p.
 $n beija $p.
@@ -3570,13 +3570,13 @@ $n beija $p.
 ~kneel kneel 0 5 0 0
 Você ajoelha.
 $n ajoelha.
-Você ajoelha diante de $M.
+Você ajoelha diante de $L.
 $n ajoelha diante de $N.
 $n ajoelha diante de você.
 Você cai e machuca o joelho.
 Você ajoelha diante de si mesm$r.
 $n parece bastante tolo(a) tentando ajoelhar diante de si mesm$r.
-Você ajoelha ao $t de $S.
+Você ajoelha ao $t de $L.
 $n ajoelha ao $t de $N.
 $n ajoelha ao seu $t.
 Você ajoelha ao $p.
@@ -3591,7 +3591,7 @@ $n toca uma espada mágica no seu ombro e te arma cavaleiro!
 Você quer armar alguém cavaleiro?
 Você se arma cavaleiro, sua mãe ficaria orgulhosa.
 $n se arma cavaleiro, a mãe de $l deve estar orgulhosa.
-Você arma o $t de $S cavaleiro.
+Você arma o $t de $L cavaleiro.
 $n arma o $t de $N cavaleiro.
 $n arma o seu $t cavaleiro.
 Você arma $p cavaleiro.
@@ -3606,7 +3606,7 @@ $n te dá um soco! Vai ficar assim?
 Você não pode fazer isso, eles não estão aqui!
 Você estala os nós dos dedos numa explosão estrepitosa de articulações.
 $n estala os nós dos dedos. Que barulho de articulações.
-Você da um soco no $t de $S.
+Você da um soco no $t de $L.
 $n dá um soco no $t de $N.
 $n dá um soco no seu $t.
 Você dá um soco em $p.
@@ -3645,13 +3645,13 @@ $n acha que $p é idiota.
 ~laughs lau 0 5 0 0
 Você ri.
 $n ri.
-Você ri de coração com $M.
+Você ri de coração com $L.
 $n ri de coração com $N.
 $n ri de coração com você!
 Você pode estar vendo algo engraçado, mas eu não estou.
 Você parece se achar muito engraçado(a).
 $n começa a rir da própria piada.
-Você ri do $t de $S.
+Você ri do $t de $L.
 $n ri do $t de $N.
 $n ri do seu $t.
 Você ri de $p.
@@ -3666,7 +3666,7 @@ $n se apoia em você, pressionando o corpo.
 Você tenta se apoiar em alguém mas acaba sentado(a) no chão.
 Isso não é nem possível!
 #
-Você se apoia no $i de $S, pressionando o corpo.
+Você se apoia no $i de $L, pressionando o corpo.
 $n se apoia no $i de $N, pressionando o corpo.
 $n se apoia no seu $i, pressionando o corpo.
 #
@@ -3675,13 +3675,13 @@ $n se apoia no seu $i, pressionando o corpo.
 ~licks lic 0 5 0 0
 Você passa a língua nos lábios e sorri.
 $n passa a língua nos lábios e sorri.
-Você passa a língua nos lábios e olha para $M.
+Você passa a língua nos lábios e olha para $L.
 $n passa a língua nos lábios e olha para $N.
 $n passa a língua nos lábios e olha para você.
 Lamba à vontade, ninguém com esse nome está aqui.
 Você passa a língua nos lábios.
 $n passa a língua nos lábios.
-Você lambe o $t de $S.
+Você lambe o $t de $L.
 $n lambe o $t de $N.
 $n lambe o seu $t.
 Você lambe $p.
@@ -3696,7 +3696,7 @@ $n ouve o que você tem a dizer.
 A quem você está tentando ouvir? Ao ar?
 Você se ouve falar e começa a se questionar...
 $n se ouve falar.
-Você ouve o $t de $S.
+Você ouve o $t de $L.
 $n ouve o $t de $N.
 $n ouve o seu $t.
 Você ouve $p.
@@ -3705,7 +3705,7 @@ $n ouve $p.
 ~lofr lofr 0 5 5 0
 Você ri rolando no chão.
 $n ri rolando no chão.
-Você ri rolando no chão de $M.
+Você ri rolando no chão de $L.
 $n ri rolando no chão de $N.
 $n ri rolando no chão de você.
 Você não pode rir de alguém que não está aqui, seria bobo.
@@ -3720,7 +3720,7 @@ $n ri rolando no chão porque $l sabe que é bobo(a).
 ~lol lol 0 5 5 0
 Você ri às gargalhadas.
 $n ri às gargalhadas.
-Você ri às gargalhadas de $M.
+Você ri às gargalhadas de $L.
 $n ri às gargalhadas de $N.
 $n ri às gargalhadas de você.
 Você não pode rir de alguém que nem está aqui!
@@ -3741,7 +3741,7 @@ $n olha fixamente para você, completamente perdido(a).
 Você olha fixamente mas ainda está completamente perdido(a).
 Você se olha - mas ainda está completamente perdido(a).
 $n se olha - $l está completamente perdido(a).
-Você olha fixamente para o $t de $S, completamente perdido(a).
+Você olha fixamente para o $t de $L, completamente perdido(a).
 $n olha fixamente para o $t de $N, $l está completamente perdido(a).
 $n olha fixamente para o seu $t, $l está completamente perdido(a).
 Você olha fixamente para $p, completamente perdido(a).
@@ -3756,7 +3756,7 @@ $n sussurra para você palavras doces de amor.
 Infelizmente, seu(sua) amad$r não está aqui...
 Bem, já sabemos que você se ama (que bom que alguém te ama!)
 $n se ama, você pode acreditar?
-Você ama o $t de $S.
+Você ama o $t de $L.
 $n ama o $t de $N.
 $n ama o seu $t.
 Você ama $p.
@@ -3765,13 +3765,13 @@ $n ama $p.
 ~lust lust 0 5 0 0
 Você, diab$r luxurioso(a).
 $n está com um apetite luxurioso.
-Você cobiça $M!
+Você cobiça $L!
 $n cobiça $N.
 $n te cobiça!
 É Maio! É Maio! O mês luxurioso de Maio!
 Você cobiça a si mesm$r.
 $n cobiça a si mesm$r, você pode acreditar?
-Você cobiça o $t de $S.
+Você cobiça o $t de $L.
 $n cobiça o $t de $N.
 $n cobiça o seu $t.
 Você cobiça $p.
@@ -3780,13 +3780,13 @@ $n cobiça $p.
 ~lag lz 0 5 0 0
 Você está sofrendo de lag.
 $n está laggando.
-Você lagga atrás de $M.
+Você lagga atrás de $L.
 $n lagga atrás de $N.
 $n lagga atrás de você.
 O lag não parece tão ruim para eles.
 Você está muito laggado(a).
 $n está muito laggado(a).
-Você faz o $t de $S laggar.
+Você faz o $t de $L laggar.
 $n faz o $t de $N laggar.
 $n faz o seu $t laggar.
 Você faz $p laggar.
@@ -3801,7 +3801,7 @@ $n puxa um spray de pimenta e borrifa sua cara.
 Eles fugiram antes que você pudesse lacrimogejar.
 Você borrifa o spray de pimenta em si mesm$r e queima os próprios olhos!
 $n borrifa a si mesm$r com um spray de pimenta. $l imediatamente cai no choro.
-Você lacrimogeja o $t de $S.
+Você lacrimogeja o $t de $L.
 $n lacrimogeja o $t de $N.
 $n lacrimogeja o seu $t.
 Você lacrimogeja $p.
@@ -3831,7 +3831,7 @@ $n tem um olhar selvagem. $l parece desesperado(a) por ação.
 Desculpe, parece que você tem que se pegar consigo mesm$r desta vez.
 Ficar com si mesm$r!?!? Que solidão...
 $n começa a passar as mãos pelo próprio corpo, o que $l tem?
-Você fica com o $t de $S.
+Você fica com o $t de $L.
 $n fica com o $t de $N.
 $n fica com o seu $t.
 Você fica com $p.
@@ -3846,7 +3846,7 @@ $n massageia gentilmente seus ombros... ahhhhhhhhh...
 Você só pode massagear alguém na mesma sala que você.
 Você pratica yoga enquanto tenta se massagear.
 $n dá uma aula de posições de yoga, tentando se massagear.
-Você massageia gentilmente o $t de $S.
+Você massageia gentilmente o $t de $L.
 $n massageia gentilmente o $t de $N.
 $n massageia gentilmente o seu $t....
 Você massageia gentilmente $p.
@@ -3855,13 +3855,13 @@ $n massageia gentilmente $p.
 ~masculinity masculinity 0 5 0 0
 Você exibe sua masculinidade com uma postura firme e segura.
 $n irradia uma presença de masculinidade firme e imponente.
-Você exibe sua masculinidade para $M com uma postura dominante e confiante.
+Você exibe sua masculinidade para $L com uma postura dominante e confiante.
 $n exibe sua masculinidade para $N, irradiando força e determinação.
 $n endireita a postura diante de você, exibindo uma masculinidade segura.
 Você exibe sua masculinidade... mas não há ninguém aqui para impressionar.
 Você exibe sua masculinidade em frente a um espelho imaginário. Que porte!
 $n exibe masculinidade para si mesm$r com uma confiança inabalável.
-Você exibe sua masculinidade ao pousar a mão sobre o $t de $S.
+Você exibe sua masculinidade ao pousar a mão sobre o $t de $L.
 $n exibe sua masculinidade ao pousar a mão sobre o $t de $N.
 $n pousa a mão com segurança sobre o seu $t, exibindo masculinidade.
 Você exibe sua masculinidade ao empunhar $p com firmeza.
@@ -3900,13 +3900,13 @@ $n faz meep para $p!
 ~meow meow 0 5 0 0
 Miaaaaau!
 $n mia.
-Você mia para $M.
+Você mia para $L.
 $n mia para $N.
 $n mia para você.
 Lua cheia esta noite, hein?
 Você mia para si mesm$r.
 $n mia para si mesm$r!
-Você mia para o $t de $S.
+Você mia para o $t de $L.
 $n mia para o $t de $N.
 $n mia para o seu $t.
 Você mia para $p.
@@ -3930,13 +3930,13 @@ $n bate no Microfone e diz 'Está funcionando?'
 ~moan moan 0 5 0 0
 Você começa a gemer.
 $n começa a gemer.
-Você geme apaixonadamente para $M.
+Você geme apaixonadamente para $L.
 $n geme para $N.
 $n geme apaixonadamente para você.
 Você geme para a lua.
 Você geme como se fosse seu próprio fantasma.
 $n geme para si mesm$r.
-Você geme para o $t de $S.
+Você geme para o $t de $L.
 $n geme para o $t de $N.
 $n geme para o seu $t.
 Você geme para $p.
@@ -3945,13 +3945,13 @@ $n geme para $p.
 ~mock mock 0 5 0 0
 Você imita o Mundo inteiro.
 $n imita o Mundo inteiro.
-Você imita $M.
+Você imita $L.
 $n imita $N.
 $n te imita!
 Você pode estar vendo algo digno de imitação, mas eu não estou.
 Você se imita.
 $n começa a se imitar.
-Você imita o $t de $S.
+Você imita o $t de $L.
 $n imita o $t de $N.
 $n imita o seu $t.
 Você imita $p.
@@ -3960,14 +3960,14 @@ $n imita $p.
 ~model model 0 5 0 0
 Você posa! 'Eu quero ser uma supermodelo!'
 $n posa atraentemente e desfila com suas roupas fabulosas.
-Você faz sua melhor pose para $M. Eles parecem manter a neutralidade.
+Você faz sua melhor pose para $L. Eles parecem manter a neutralidade.
 $n está posando para $N. Acho que alguém quer entrar!
 $n parece estar posando para você. $l fará qualquer coisa para chamar sua atenção!
 Modelando para a parede de novo? Você realmente precisa de amigos.
 Você posa e se observa. 'Graçoso(a)! Lindo(a) e gracioso(a)!'
 $n está modelando para si mesm$r de novo. QUE surpresa!
-Você pega o $t de $S e o desfila para $M.
-$n pega o $t de $N e o desfila para $M.
+Você pega o $t de $L e o desfila para $L.
+$n pega o $t de $N e o desfila para $L.
 $n pega o seu $t e o desfila para você.
 Você posa atraentemente e desfila $p. Definitivamente combina com seu visual.
 $n posa atraentemente e desfila $p. Não ficam deslumbrantes!
@@ -3990,13 +3990,13 @@ $n não acha $p nada de especial.
 ~moo moo 0 5 0 0
 Muuuuuuuuu.
 $n muge como uma vaca.
-Você muge para $M como uma vaca.
+Você muge para $L como uma vaca.
 $n muge para $N como uma vaca.
 $n muge para você como uma vaca.
 Lua cheia esta noite, hein?
 Você muge para si mesm$r.
 $n muge para si mesm$r!
-Você muge para o $t de $S como uma vaca.
+Você muge para o $t de $L como uma vaca.
 $n muge para o $t de $N como uma vaca.
 $n muge para o seu $t como uma vaca.
 Você muge para $p como uma vaca.
@@ -4005,13 +4005,13 @@ $n muge para $p como uma vaca.
 ~mooch mooch 0 5 0 0
 De quem você quer moochar?
 $n está procurando alguém para moochar.
-Você tenta moochar de $M.
+Você tenta moochar de $L.
 $n tenta moochar de $N.
 $n está tentando moochar de você!
 Tente moochar de alguém.
 Como? - moochar de si mesm$r raramente funciona.
 $n moocha de si mesm$r.
-Você tenta moochar do $t de $S.
+Você tenta moochar do $t de $L.
 $n tenta moochar do $t de $N.
 $n tenta moochar do seu $t.
 Você tenta moochar de $p.
@@ -4020,13 +4020,13 @@ $n tenta moochar de $p.
 ~moon moon 0 5 0 0
 Você mostra a bunda para o mundo inteiro.
 $n mostra a bunda para todo mundo à vista.
-Você abaixa as calças e mostra a bunda para $M!
+Você abaixa as calças e mostra a bunda para $L!
 $n abaixa as calças e mostra a bunda para $N.
 $n abaixa as calças e mostra a bunda para você!
 Lua Azul... te vi parado(a) sozinho(a)...
 Você mostra a bunda para si mesm$r, impressionado(a)?
 $n mostra a bunda para si mesm$r, $l tem problemas.
-Você mostra a bunda para o $t de $S.
+Você mostra a bunda para o $t de $L.
 $n mostra a bunda para o $t de $N.
 $n mostra a bunda para o seu $t.
 Você mostra a bunda para $p.
@@ -4056,7 +4056,7 @@ $n se joga em você enquanto $l slam-dança pelo quarto!
 Ei, quem? Não, ninguém assim aqui.
 Você dança com si mesm$r.
 $n dança com si mesm$r.
-Você dança com o $t de $S.
+Você dança com o $t de $L.
 $n dança com o $t de $N.
 $n dança com o seu $t.
 Você dança com $p.
@@ -4065,13 +4065,13 @@ $n dança com $p.
 ~muahaha muahaha 0 5 0 0
 Muahahaha!
 $n cacareja demonicamente, 'Muahahaha!'
-Muahahaha! Você cacarejas demonicamente para $M.
+Muahahaha! Você cacarejas demonicamente para $L.
 Muahahaha! $n cacareja demonicamente para $N.
 Muahahaha! $n cacareja demonicamente para você.
 Você parece um pouco insano(a), mas nada mais.
 Você joga a cabeça para trás e cacareja loucamente, 'Muahahaha!'
 $n joga a cabeça para trás e cacareja loucamente, 'Muahahaha!'
-Você cacareja demonicamente para o $t de $S 'Muahahaha!'
+Você cacareja demonicamente para o $t de $L 'Muahahaha!'
 $n cacareja demonicamente para o $t de $N 'Muahahaha!'
 $n cacareja demonicamente para o seu $t 'Muahahaha!'
 Você cacareja demonicamente para $p 'Muahahaha!'
@@ -4095,7 +4095,7 @@ $n faz sons abafados para si mesm$r.
 ~mumble mumble 0 5 0 0
 Você murmura baixinho.
 $n murmura baixinho.
-Você murmura para $M.
+Você murmura para $L.
 $n murmura para $N.
 $n murmura para você.
 Essa pessoa não está aqui para murmurar.
@@ -4110,13 +4110,13 @@ $n murmura para $p.
 ~muss muss 0 5 0 0
 O cabelo de quem você quer despentecar?
 $n está procurando o cabelo de alguém para despentecar.
-Você vai até $N e despenteia o $S cabelo.
-$n vai até $N e despenteia o $S cabelo até ficar embaraçado.
+Você vai até $N e despenteia o $Z cabelo.
+$n vai até $N e despenteia o $Z cabelo até ficar embaraçado.
 $n vai até você e despenteia seu cabelo, você nunca vai desembaraçar esses nós!
 Desculpe, eles não estão aqui.
 Você puxa o próprio cabelo frustrado(a).
 $n puxa o próprio cabelo frustrado(a).
-Você despenteia o $t de $S.
+Você despenteia o $t de $L.
 $n despenteia o $t de $N.
 $n despenteia o seu $t.
 Você despenteia $p.
@@ -4125,13 +4125,13 @@ $n despenteia $p.
 ~mutter mutter 0 5 0 0
 Você resmungou baixinho.
 $n resmungou baixinho.
-Você resmungou algo para $M.
+Você resmungou algo para $L.
 $n resmungou algo para $N.
 $n resmungou algo para você.
 Se você resmungar, como alguém vai ouvir?
 Você resmungou baixinho para si mesm$r.
 $n resmungou baixinho para si mesm$r.
-Você resmungou para o $t de $S.
+Você resmungou para o $t de $L.
 $n resmungou para o $t de $N.
 $n resmungou para o seu $t.
 Você resmungou para $p.
@@ -4191,7 +4191,7 @@ $n morde a sua orelha.
 Desculpe, não está aqui, é melhor continuar sonhando.
 Você morde a PRÓPRIA orelha???????????????????
 $n morde a PRÓPRIA orelha (fico me perguntando como se faz isso!).
-Você morde levemente o $t de $S.
+Você morde levemente o $t de $L.
 $n morde levemente o $t de $N.
 $n morde levemente o seu $t.
 Você morde $p.
@@ -4200,13 +4200,13 @@ $n morde $p.
 ~night night 0 5 0 0
 Você deseja uma boa noite a todos.
 $n deseja uma boa noite a todos.
-Você deseja uma boa noite a $M.
+Você deseja uma boa noite a $L.
 $n deseja uma boa noite a $N.
 $n te deseja uma boa noite, durma bem!
 Eles já foram dormir antes de você!
 Você se deseja uma boa noite, ninguém mais parece se importar!
 $n se deseja uma boa noite, que solidão!
-Você se curva e deseja uma boa noite ao $t de $S.
+Você se curva e deseja uma boa noite ao $t de $L.
 $n se curva e deseja uma boa noite ao $t de $N.
 $n se curva e deseja uma boa noite ao seu $t.
 #
@@ -4221,7 +4221,7 @@ $n acena para você.
 Eles não estão aqui.
 Você acena reassurantemente para si mesm$r.
 $n acena reassurantemente para si mesm$r.
-Você acena para o $t de $M.
+Você acena para o $t de $L.
 $n acena para o $t de $N.
 $n acena para o seu $t.
 Você acena para $p.
@@ -4260,13 +4260,13 @@ $n se lembra de dizer não às drogas.
 ~noogie noogie 0 5 0 0
 A quem você quer dar um cocorote?
 Corra! $n está procurando alguém para dar cocorote.
-Você dá um cocorote em $M!
+Você dá um cocorote em $L!
 $n dá um cocorote em $N.
 $n te dá um cocorote!
 Que comportamento infantil e sem ninguém real para brincar.
 Você se dá um grande cocorote. Ai!
 $n se dá um grande cocorote!
-Você dá um cocorote no $t de $M.
+Você dá um cocorote no $t de $L.
 $n dá um cocorote no $t de $N.
 $n dá um cocorote no seu $t.
 Você dá um cocorote em $p.
@@ -4275,13 +4275,13 @@ $n dá um cocorote em $p.
 ~nudge nudge 0 5 0 0
 Cutuco? Cutuco??? Que negócio é esse!!!!
 $n cutuca todo mundo no quarto sugestivamente.
-Você cutuca $M com o cotovelo.
+Você cutuca $L com o cotovelo.
 $n cutuca $N sugestivamente com o cotovelo.
 $n te cutuca sugestivamente. Vocês dois se entendem.
 Ei? Essa pessoa não está aqui, sabia.
 Bem, basta se cutucar, mas como você coloca o cotovelo nessa posição?
 $n se cutuca com os cotovelos, parecendo uma galinha.
-Você dá uma cotovelada no $t de $M.
+Você dá uma cotovelada no $t de $L.
 $n dá uma cotovelada no $t de $N.
 $n dá uma cotovelada no seu $t.
 Você dá uma cotovelada em $p.
@@ -4290,7 +4290,7 @@ $n dá uma cotovelada em $p.
 ~nuzzle nuzzle 0 5 0 0
 Esfregar o nariz em quem??
 $n está procurando alguém para esfregar o nariz.
-Você esfrega o nariz no pescoço de $S suavemente.
+Você esfrega o nariz no pescoço de $L suavemente.
 $n esfrega suavemente o nariz no pescoço de $N.
 $n esfrega suavemente o nariz no seu pescoço.
 Não... eles não estão aqui...
@@ -4305,13 +4305,13 @@ $n esfrega o nariz em $p.
 ~nyuk nyuk 0 5 0 0
 Nyuk, nyuk, nyuk!
 $n faz 'Nyuk, nyuk, nyuk!'
-Você cutucar os olhos de $S e faz 'nyuk, nyuk, nyuk!'
+Você cutucar os olhos de $L e faz 'nyuk, nyuk, nyuk!'
 $n cutuca os olhos de $N e faz 'nyuk, nyuk, nyuk!
 $n cutuca seus olhos e faz 'nyuk, nyuk, nyuk!
 Oh? Um sabidinho(a), hein?
 Você se olha e faz 'Nyuk, nyuk, nyuk!'
 $n se olha e faz 'Nyuk, nyuk, nyuk!'
-Você olha para o $t de $S e faz 'Nyuk, nyuk, nyuk!'
+Você olha para o $t de $L e faz 'Nyuk, nyuk, nyuk!'
 $n olha para o $t de $N e faz 'Nyuk, nyuk, nyuk!'
 $n olha para o seu $t e faz 'Nyuk, nyuk, nyuk!'
 Você olha para $p e faz 'Nyuk, nyuk, nyuk!'
@@ -4320,13 +4320,13 @@ $n olha para $p e faz 'Nyuk, nyuk, nyuk!'
 ~ogle ogle 0 5 0 0
 A quem você deseja fitar com admiração?
 $n está procurando alguém para fitar com admiração.
-Você fita $M amorosamente.
+Você fita $L amorosamente.
 $n fita $N amorosamente.
 $n te fita amorosamente.
 Quem você ama?
 Você se fita amorosamente.
 $n se fita, que vaidoso(a)?
-Você fita o $t de $M amorosamente.
+Você fita o $t de $L amorosamente.
 $n fita o $t de $N amorosamente.
 $n fita o seu $t amorosamente.
 Você fita $p amorosamente.
@@ -4380,13 +4380,13 @@ Você não os encontra para patronizar.
 ~ouch ouch 0 5 0 0
 Você diz ai.
 $n diz ai.
-Você olha para $M e diz ai.
+Você olha para $L e diz ai.
 $n olha para $N e diz ai.
 $n olha para você e diz ai.
 Não vejo ninguém com esse nome aqui..?
 Você se olha e diz ai.
 $n se olha e diz ai, que estranho.
-Você olha para o $t de $S e diz ai.
+Você olha para o $t de $L e diz ai.
 $n olha para o $t de $N e diz ai.
 $n olha para o seu $t e diz ai.
 Você olha para $p e diz ai.
@@ -4395,14 +4395,14 @@ $n olha para $p e diz ai.
 ~pat pa 0 5 0 0
 Afagar quem??
 $n está procurando alguém para afagar.
-Você afaga $N na $S cabeça.
-$n afaga $N na $S cabeça.
+Você afaga $N na $Z cabeça.
+$n afaga $N na $Z cabeça.
 $n te afaga na cabeça.
 Quem, onde, o quê??
 Você se afaga na própria cabeça, muito reconfortante.
 $n se afaga na própria cabeça.
-Você afaga $M no $t de $S.
-$n afaga $N no $t de $S.
+Você afaga $L no $t de $L.
+$n afaga $N no $t de $L.
 $n te afaga no seu $t.
 Você afaga $p.
 $n afaga $p.
@@ -4416,7 +4416,7 @@ $n passa de um lado para o outro diante de você.
 Eles foram embora antes que você pudesse passar diante deles.
 Você passa impaciente de um lado para o outro pelo quarto.
 $n passa impaciente de um lado para o outro pelo quarto.
-Você passa diante do $t de $S.
+Você passa diante do $t de $L.
 $n passa diante do $t de $N.
 $n passa diante do seu $t.
 Você passa diante de $p.
@@ -4425,13 +4425,13 @@ $n passa diante de $p.
 ~panic panic 0 5 0 0
 O céu está caindo! Estamos todos condenados! Eles estão por toda parte! Não entre em pânico, NÃO ENTRE EM PÂNICO!!!
 $n começa a entrar em pânico, com os olhos bem abertos de medo.
-Você dá uma olhada em $M e começa a entrar em pânico!
+Você dá uma olhada em $L e começa a entrar em pânico!
 $n dá uma olhada em $N e começa a entrar em pânico!
 $n dá uma olhada em você e começa a entrar em pânico!
 Boa ideia, entre em pânico por nada!
 Você dá uma olhada em si mesm$r e começa a entrar em pânico!
 $n dá uma olhada em si mesm$r e começa a entrar em pânico!
-Você dá uma olhada no $t de $S e começa a entrar em pânico.
+Você dá uma olhada no $t de $L e começa a entrar em pânico.
 $n dá uma olhada no $t de $N e começa a entrar em pânico.
 $n dá uma olhada no seu $t e começa a entrar em pânico.
 Você dá uma olhada em $p e começa a entrar em pânico.
@@ -4446,7 +4446,7 @@ $n ofega para você, mostrando que está sem fôlego.
 Eles obviamente não estão aqui.
 Você ofega para si mesm$r, não querendo mostrar o quanto está cansado(a).
 $n ofega quietinho para si mesm$r, tentando disfarçar o cansaço.
-Você ofega no $t de $S, babando por tudo.
+Você ofega no $t de $L, babando por tudo.
 $n ofega no $t de $N, babando por tudo.
 $n ofega no seu $t, babando por tudo.
 Você ofega em $p, babando por tudo.
@@ -4461,8 +4461,8 @@ $n te dá um beijo gentil na bochecha.
 Não, essa pessoa não está aqui.
 Isso não é muito possível, sabia?
 $n tenta se dar um beijo na bochecha. Falhou miseravelmente.
-Você dá em $N um beijo gentil no $t de $S.
-$n dá em $N um beijo gentil no $t de $S.
+Você dá em $N um beijo gentil no $t de $L.
+$n dá em $N um beijo gentil no $t de $L.
 $n te dá um beijo gentil no seu $t.
 #
 #
@@ -4476,7 +4476,7 @@ $n te observa atentamente, o que $l está procurando?
 Desculpe amigo(a), ninguém assim aqui.
 Você se observa, não é fácil.
 $n se observa... não é fácil.
-Você observa atentamente o $t de $S.
+Você observa atentamente o $t de $L.
 $n observa atentamente o $t de $N.
 $n observa atentamente o seu $t.
 Você observa atentamente $p.
@@ -4485,13 +4485,13 @@ $n observa atentamente $p.
 ~perspire perspire 0 5 0 0
 Esfrie?
 $n sua muito!
-Você olha para $S e começa a transpirar.
+Você olha para $L e começa a transpirar.
 $n olha para $N e começa a transpirar.
 $n te olha e começa a suar.
 Você começa a transpirar.
 Você sua como um porco e começa a cheirar como um.
 $n está suando muito e começando a cheirar mal.
-Você suou no $t de $S.
+Você suou no $t de $L.
 $n suou no $t de $N.
 $n suou no seu $t.
 Você suou em $p.
@@ -4500,13 +4500,13 @@ $n suou em $p.
 ~pet pet 0 5 0 0
 O que você quer afagar?
 $n tenta afagar o ar.
-Você afaga $M.
+Você afaga $L.
 $n afaga $N.
 $n te afaga.
 Você não está em Kansas mais, afague alguém que esteja perto de você.
 Você se afaga, hmmm privacidade não seria uma boa ideia?
 Você vê $n se afagar -- não é uma visão bonita.
-Você afaga o $t de $S.
+Você afaga o $t de $L.
 $n afaga o $t de $N.
 $n afaga o seu $t.
 Você afaga $p.
@@ -4515,13 +4515,13 @@ $n afaga $p.
 ~phew phew 0 5 0 0
 Você solta um alto ufa!
 $n limpa o suor da testa e exclama, Ufa!
-Você limpa o suor da testa e exclama, Ufa! para $M!
+Você limpa o suor da testa e exclama, Ufa! para $L!
 $n limpa o suor da testa e exclama, Ufa! para $N.
 $n limpa o suor da testa e exclama, Ufa! para você.
 Você não pode exclamar ufa para eles, não estão aqui.
 Você exclama ufa para si mesm$r.
 $n exclama ufa para si mesm$r.
-Você olha para o $t de $S e exclama, Ufa!
+Você olha para o $t de $L e exclama, Ufa!
 $n olha para o $t de $N e exclama, Ufa!
 $n olha para o seu $t e exclama, Ufa!
 Você relaxa ao ver $p e exclama, Ufa!
@@ -4530,13 +4530,13 @@ $n relaxa ao ver $p e exclama, Ufa!
 ~phlegm phlegm 0 5 0 0
 Você escarrou.
 $n escarrou por todo lado, que nojo.
-Você escarrou em $S.
+Você escarrou em $L.
 $n escarrou em $N.
 $n escarrou em você.
 Escarrar em alguém não é educado.
 Você tenta escarrar em si mesm$r.
 $n escarrou em si mesm$r.
-Você escarrou no $t de $S, que nojo.
+Você escarrou no $t de $L, que nojo.
 $n escarrou no $t de $N, que nojo.
 $n escarrou no seu $t, todo verde e viscoso.
 Você escarrou em $p.
@@ -4561,12 +4561,12 @@ $n catou o nariz, olhando ao redor para garantir que ninguém percebesse.
 Você pega uma torta nova e fresca e olha ao redor procurando alguém com fome...
 $n pega uma torta nova e fresca e olha ao redor procurando alguém com fome...
 Você joga uma torta bem na cara de $N, Bwahahaha!!
-$n joga uma torta bem na cara de $N, que nojo, lama por toda a $S cara.
+$n joga uma torta bem na cara de $N, que nojo, lama por toda a $Z cara.
 Você chegou tarde demais para ver $n jogar uma torta bem na sua cara. Você tenta se desviar, mas, não... Recheio de cereja por toda a sua cara!
 Você não vê essa pessoa aqui, desculpe. Mire de novo. :)
 Você enfia uma torta na própria cara, se esforçando ao máximo para se sujar, afinal você gosta de cereja...
 $n olha para uma torta e de repente a enfia na própria cara, girando-a até ela cair em pedaços...
-Você joga uma torta diretamente no $t de $S.
+Você joga uma torta diretamente no $t de $L.
 $n joga uma torta diretamente no $t de $N, que bagunça.
 $n joga uma torta diretamente no seu $t, que bagunça, cereja acredito.
 Você joga uma torta em $p.
@@ -4605,13 +4605,13 @@ $n derruba um alfinete. @RTWAAAAAAAANNNGGGG!@n
 ~pinch pinch 0 5 0 0
 A quem você quer beliscar? Escolha com cuidado.
 $n está procurando uma bunda para beliscar!!!
-Você belisca a bunda de $S!
+Você belisca a bunda de $L!
 $n belisca a bunda de $N.
 $n belisca a sua bunda!
 Eles fugiram antes que você pudesse beliscá-los.
 Você belisca a própria bunda!
 $n belisca a própria bunda.
-Você belisca o $t de $S.
+Você belisca o $t de $L.
 $n belisca o $t de $N.
 $n belisca o seu $t.
 Você belisca $p.
@@ -4620,13 +4620,13 @@ $n belisca $p.
 ~pity pity 0 5 0 0
 Você tem pena do mundo.
 $n está procurando algo para ter pena.
-Você tem pena de $M, $L é tão patético(a).
+Você tem pena de $L, $L é tão patético(a).
 $n tem pena de $N e de tudo que $L representa.
 $n tem pena de você e de tudo que você representa.
 Hmmmmmmm..... não, ninguém com esse nome aqui.
 Você tem pena de si mesm$r.
 $n tem pena de si mesm$r até as lágrimas.
-Você tem pena do $t de $S.
+Você tem pena do $t de $L.
 $n tem pena do $t de $N.
 $n tem pena do seu $t.
 Você tem pena de $p.
@@ -4635,13 +4635,13 @@ $n tem pena de $p.
 ~point point 0 5 0 0
 Para quem você quer apontar?
 $n aponta em todas as direções, parecendo confuso(a).
-Você aponta para $M.
+Você aponta para $L.
 $n aponta para $N.
 $n aponta para você.
 Você deve ter um indicador muito comprido...
 Você aponta para si mesm$r. Insinuando algo?
 $n aponta para si mesm$r, sugerindo que $l é o centro das atenções.
-Você aponta para o $t de $S.
+Você aponta para o $t de $L.
 $n aponta para o $t de $N.
 $n aponta para o seu $t.
 Você aponta para $p.
@@ -4650,14 +4650,14 @@ $n aponta para $p.
 ~poke poke 0 5 0 0
 Cutucar quem??
 $n parece estar cutucando por aí.
-Você cutuca $M.
+Você cutuca $L.
 $n cutuca $N.
 $n te cutuca.
 Você não pode cutucar alguém que não está aqui!
 Você se cutuca nas costelas, sentindo-se muito bobo(a).
 $n se cutuca nas costelas, parecendo muito envergonhado(a).
-Você cutuca $M no $t de $S.
-$n cutuca $N no $t de $S.
+Você cutuca $L no $t de $L.
+$n cutuca $N no $t de $L.
 $n te cutuca no seu $t.
 Você cutuca $p.
 $n cutuca $p.
@@ -4671,7 +4671,7 @@ $n pondera sobre suas palavras.
 Você pondera.
 Você pondera sobre a própria existência.
 $n parece estar ponderando por que $l está aqui.
-Você pondera sobre o $t de $S.
+Você pondera sobre o $t de $L.
 $n pondera sobre o $t de $N.
 $n pondera sobre o seu $t.
 Você pondera sobre $p.
@@ -4731,7 +4731,7 @@ $n enlouquece com você!
 Você QUER enlouquecer com eles, mas não estão aqui.
 Você enlouquece consigo mesm$r de frustração.
 $n acabou de enlouquecer consigo mesm$r.
-Você enlouquece com o $t de $S.
+Você enlouquece com o $t de $L.
 $n enlouquece com o $t de $N.
 $n enlouquece com o seu $t.
 Você enlouquece com $p de frustração.
@@ -4746,7 +4746,7 @@ $n se postura imponentemente diante de você.
 Você se postura... mas sem plateia.
 Você se postura para si mesm$r.
 $n se postura para si mesm$r. Que autoconfiança!
-Você se postura diante do $t de $S.
+Você se postura diante do $t de $L.
 $n se postura diante do $t de $N.
 $n se postura diante do seu $t.
 Você se postura diante de $p.
@@ -4755,13 +4755,13 @@ $n se postura diante de $p.
 ~pounce pounce 0 5 0 0
 Você pula por aí.
 $n pula por aí como um gato.
-Você pula em cima de $M.
-$n pula em cima de $N, prendendo $M no chão.
+Você pula em cima de $L.
+$n pula em cima de $N, prendendo $L no chão.
 $n pula em cima de você, te derrubando.
 Eles não estão aqui.
 Você pula em cima de si mesm$r.
 $n pula em cima de si mesm$r.
-Você pula no $t de $S.
+Você pula no $t de $L.
 $n pula no $t de $N.
 $n pula no seu $t.
 Você pula em $p.
@@ -4776,7 +4776,7 @@ $n te soca no chão! Vai ficar assim?
 Você balança o punho enquanto soca o ar.
 Você se soca.
 Você assiste $N se socar na cara.
-Você soca no $t de $S.
+Você soca no $t de $L.
 $n soca no $t de $N.
 $n soca no seu $t.
 Você soca em $p.
@@ -4791,7 +4791,7 @@ $n faz beiço para você.
 Você faz beiço, mas ninguém percebe.
 Você faz beiço.
 $n faz beiço de forma lamentável para si mesm$r.
-Você faz beiço para o $t de $S.
+Você faz beiço para o $t de $L.
 $n faz beiço para o $t de $N.
 $n faz beiço para o seu $t.
 Você faz beiço para $p.
@@ -4800,13 +4800,13 @@ $n faz beiço para $p.
 ~pray pray 0 5 0 0
 Você se sente virtuoso(a), e talvez um pouco tolo(a).
 $n implora e se prostra diante dos poderes supremos.
-Você se rasteja na poeira diante de $M.
+Você se rasteja na poeira diante de $L.
 $n cai no chão e se prostra na lama diante de $N.
 $n beija a lama a seus pés.
 Ninguém assim por aqui, suas orações desaparecem nos vazios sem fim.
 Fale em narcisismo...
 $n faz alguns estranhos exercícios de yoga e murmura uma oração para si mesm$r.
-Você reza para o $t de $S.
+Você reza para o $t de $L.
 $n reza para o $t de $N.
 $n reza para o seu $t.
 Você reza para $p.
@@ -4815,13 +4815,13 @@ $n reza para $p.
 ~pride pride 0 5 0 0
 Você está orgulhoso(a) e mostra isso.
 $n só quer deixar a mãe orgulhosa.
-Você mostra seu orgulho de coração a $M.
+Você mostra seu orgulho de coração a $L.
 $n irradia orgulho pelas conquistas de $N.
 $n irradia orgulho pelas suas conquistas.
 Ninguém assim por aqui, seu orgulho desaparece nos vazios sem fim.
 Você tem orgulho de si mesm$r por todas as suas conquistas.
 $n está cheio(a) de si mesm$r, de novo.
-Você tem orgulho do $t de $S.
+Você tem orgulho do $t de $L.
 $n tem orgulho do $t de $N.
 $n tem orgulho do seu $t.
 Você tem orgulho de $p.
@@ -4830,13 +4830,13 @@ $n tem orgulho de $p.
 ~propose propose 0 5 0 0
 Ainda procurando a pessoa especial, hein?
 $n olha ao redor procurando pelo amor perdido.
-Você ajoelha diante de $N jurando seu amor e pedindo a $S mão em casamento.
+Você ajoelha diante de $N jurando seu amor e pedindo a $Z mão em casamento.
 $n ajoelha diante de $N jurando amor eterno e devoção.
 $n ajoelha diante de você proclamando seu amor, dizendo, 'Você quer casar comigo?'
 Para quem você está pedindo em casamento?
 Pedindo casamento para si mesm$r? Está um pouco desesperado(a)?
 $n ajoelha, faz uma expressão estranha enquanto proclama amor próprio!
-Você pede o $t de $S em casamento.
+Você pede o $t de $L em casamento.
 $n pede o $t de $N em casamento, espero que $L não precise disso.
 $n pede o seu $t em casamento, espero que você não precise disso.
 Você pede $p em casamento.
@@ -4851,8 +4851,8 @@ $n te entrega um prozac.....alívio. Ahhh...
 Ninguém aqui para tomar o seu prozac barato.
 AAAAAAAAAAAAAAA*suspiro*
 Aparentemente, o prozac deixa $n animado(a).
-Você olha para o $t de $S, e oferece a $M um prozac por compaixão.
-$n olha para o $t de $N, e oferece a $M um prozac por compaixão.
+Você olha para o $t de $L, e oferece a $L um prozac por compaixão.
+$n olha para o $t de $N, e oferece a $L um prozac por compaixão.
 $n olha para o seu $t, e oferece a você um prozac por compaixão.
 Você olha para $p, e oferece um prozac por compaixão.
 $n olha para $p, e oferece um prozac por compaixão.
@@ -4860,13 +4860,13 @@ $n olha para $p, e oferece um prozac por compaixão.
 ~puke puke 0 5 0 0
 Você vomita por todo lado.
 $n vomita.
-Você vomita em $M.
+Você vomita em $L.
 $n vomita em $N.
 $n vomita nas suas roupas!
 De novo?
 Você vomita em si mesm$r.
 $n vomita nas próprias roupas.
-Você vomita no $t de $S.
+Você vomita no $t de $L.
 $n vomita no $t de $N.
 $n vomita no seu $t.
 Você vomita em $p.
@@ -4875,13 +4875,13 @@ $n vomita em $p.
 ~pull pull 0 5 0 0
 Na perna de quem você quer puxar?
 #
-Você puxa a perna de $S.
+Você puxa a perna de $L.
 $n puxa a perna de $N.
 $n puxa a sua perna.
 Eles não estão aqui!
 Você puxa a própria perna.
 $n puxa a própria perna.
-Você puxa o $i de $S.
+Você puxa o $i de $L.
 $n puxa o $i de $N.
 $n puxa o seu $i.
 Você puxa $p.
@@ -4890,7 +4890,7 @@ $n puxa $p.
 ~pulse pulse 0 8 8 0
 Em quem você quer verificar o pulso?
 $n está procurando alguém para verificar o pulso.
-Você verifica o pulso de $M.
+Você verifica o pulso de $L.
 $n verifica o pulso de $N.
 $n verifica o seu pulso.
 Eles devem ter te visto chegando.
@@ -4905,7 +4905,7 @@ $n verifica o próprio pulso.
 ~puppyeyes puppyeyes 0 8 8 0
 Seus olhos se enchem de lágrimas enquanto você faz seu olhar mais triste de cachorrinho.
 Os olhos de $n se enchem de lágrimas enquanto $l faz o olhar mais triste de cachorrinho.
-Seus olhos se enchem de lágrimas enquanto você olha para $N, dando a $M seu olhar mais triste de cachorrinho.
+Seus olhos se enchem de lágrimas enquanto você olha para $N, dando a $L seu olhar mais triste de cachorrinho.
 $n olha para $N tristemente, com grandes olhos lacrimejantes de cachorrinho.
 Os olhos de $n se enchem de lágrimas enquanto $l te olha com o olhar mais triste de cachorrinho.
 Seus olhos de cachorrinho são esforço desperdiçado pois essa pessoa não está aqui.
@@ -4920,13 +4920,13 @@ $n olha para $p tristemente, com grandes olhos lacrimejantes de cachorrinho.
 ~purr pur 0 5 0 0
 Rrrrronnnn..............
 $n ronrona contentemente.
-Você ronrona contentemente para $M.
+Você ronrona contentemente para $L.
 $n ronrona para $N.
 $n ronrona contentemente para você.
 Você ronrona, mas ninguém percebe.
 Você faz ronronados para si mesm$r.
 $n ronrona para si mesm$r.
-Você ronrona para o $t de $S.
+Você ronrona para o $t de $L.
 $n ronrona para o $t de $N.
 $n ronrona para o seu $t.
 Você ronrona para $p.
@@ -4956,7 +4956,7 @@ $n te lança um olhar confuso.
 Hmm, onde eles foram?
 Você tenta se confundir e consegue!!
 $n consegue se confundir.
-Você fica confuso(a) com o $t de $S.
+Você fica confuso(a) com o $t de $L.
 $n fica confuso(a) com o $t de $N.
 $n fica confuso(a) com o seu $t.
 Você fica confuso(a) com $p.
@@ -5031,7 +5031,7 @@ $n te bate na cabeça, gritando 'Abóbora demoníaca, eu te repreendo!'
 Os espíritos demoníacos dessa pessoa devem ter ido para outro lugar.
 Você repreende seus próprios demônios interiores!
 $n acena as mãos para si mesm$r e grita 'Fora, fora, Passas Demoníacas, eu os repreendo!'
-Você repreende o $t de $S.
+Você repreende o $t de $L.
 $n repreende o $t de $N.
 $n repreende o $t.
 Você repreende $p.
@@ -5061,7 +5061,7 @@ $n relaxa nos seus braços.
 Você não consegue relaxar, eles não estão em lugar algum.
 Você relaxa todos os músculos do corpo.
 $n relaxa todos os músculos do corpo.
-Você olha para o $t de $S e relaxa.
+Você olha para o $t de $L e relaxa.
 $n olha para o $t de $N e relaxa.
 $n olha para o seu $t e relaxa.
 Você relaxa ao ver $p.
@@ -5070,13 +5070,13 @@ $n relaxa ao ver $p.
 ~relief relief 0 5 0 0
 Você suspira de alívio.
 $n suspira de alívio.
-Você olha para $M e suspira de alívio.
+Você olha para $L e suspira de alívio.
 $n suspira de alívio ao ver $N.
 $n suspira de alívio ao te ver.
 Você suspira de alívio para si mesm$r.
 Você suspira de alívio para si mesm$r.
 $n suspira de alívio para si mesm$r.
-Você suspira de alívio ao ver o $t de $S.
+Você suspira de alívio ao ver o $t de $L.
 $n suspira de alívio ao ver o $t de $N.
 $n suspira de alívio ao ver o seu $t.
 Você suspira de alívio ao ver $p.
@@ -5085,7 +5085,7 @@ $n suspira de alívio ao ver $p.
 ~ren ren 0 5 0 0
 Oh! Feliz Feliz, Alegria Alegria!
 $n pula e grita: 'Oh, Feliz Feliz, Alegria Alegria!!'
-Você se vira para $M e grita: 'Você idiota!!'
+Você se vira para $L e grita: 'Você idiota!!'
 $n se vira para $N e grita: 'Você idiota!!'
 $n se vira para você e grita: 'Você idiota!!'
 Você idiota!!!
@@ -5136,7 +5136,7 @@ $n rola pelo chão de rir das suas palhaçadas.
 Você não consegue... você está rolando pelo chão de rir da ausência deles.
 Você começa a rolar pelo chão de rir das próprias palhaçadas.
 $n rola pelo chão de rir das próprias palhaçadas. Interessante, hein?
-Você cai no chão de rir do $t de $S.
+Você cai no chão de rir do $t de $L.
 $n cai no chão de rir do $t de $N.
 $n cai no chão de rir do seu $t.
 Você cai no chão de rir de $p.
@@ -5145,13 +5145,13 @@ $n cai no chão de rir de $p.
 ~roll roll 0 5 0 0
 Você revira os olhos com nojo.
 $n revira os olhos com nojo.
-Você olha para $M e revira os olhos com nojo.
+Você olha para $L e revira os olhos com nojo.
 $n olha para $N com desprezo e revira os olhos.
 $n te olha e revira os olhos com nojo.
 Hum... quem?
 Você revira os olhos, enojado(a) com a própria incompetência.
 $n revira os olhos, enojado(a) consigo mesm$r.
-Você revira os olhos para o $t de $S com nojo.
+Você revira os olhos para o $t de $L com nojo.
 $n revira os olhos para o $t de $N com nojo.
 $n revira os olhos para o seu $t com nojo.
 Você revira os olhos para $p com nojo.
@@ -5196,7 +5196,7 @@ $n bagunça o seu cabelo brincalhonamente.
 Seria um pouco difícil.
 Você bagunça o próprio cabelo, imaginando até onde pode ir antes que os outros pensem que você é louco(a).
 $n bagunça o próprio cabelo -- esquisitão(a)!
-Você bagunça o $t de $S.
+Você bagunça o $t de $L.
 $n bagunça o $t de $N.
 $n bagunça o seu $t.
 Você bagunça $p.
@@ -5205,13 +5205,13 @@ $n bagunça $p.
 ~rub rub 0 5 0 0
 Você esfrega as mãos pensativamente.
 $n esfrega as mãos pensativamente.
-Você esfrega $M com gentileza reconfortante.
+Você esfrega $L com gentileza reconfortante.
 $n esfrega $N com gentileza reconfortante.
 $n esfrega você com gentileza reconfortante. Que alívio!
 Não há ninguém por perto para esfregar.
 Você esfrega os próprios ombros, aliviando a tensão acumulada.
 $n esfrega os próprios ombros, parecendo relaxad$r.
-Você esfrega o $t de $S com cuidado.
+Você esfrega o $t de $L com cuidado.
 $n esfrega o $t de $N com cuidado.
 $n esfrega o seu $t com cuidado. Que sensação boa!
 Você esfrega $p.
@@ -5271,7 +5271,7 @@ $n te saúda.
 Hmm. Fico imaginando a quem você está tentando saudar?
 Você consegue torcer o pulso tentando se saudar.
 $n dobra a mão para trás e se saúda!
-Você saúda o $t de $S.
+Você saúda o $t de $L.
 $n saúda o $t de $N.
 $n saúda o seu $t.
 Você saúda $p.
@@ -5295,13 +5295,13 @@ $n coça uma de $z crostas.
 ~scold scold 0 5 0 0
 Você começa a repreender este Mundo Cruel em que vivemos.
 $n começa a repreender o Mundo Cruel em que vivemos.
-Você repreende $M até quase acabar com a $Z vida.
+Você repreende $L até quase acabar com a $Z vida.
 $n repreende $N até quase acabar com a $Z vida.
 $n te repreende até quase acabar com a sua vida.
 Claro, mas quem seria?
 Você se repreende, pronto está feito, você disse para si mesm$r.
 $n se repreende furiosamente.
-Você repreende o $t de $S.
+Você repreende o $t de $L.
 $n repreende o $t de $N.
 $n repreende o seu $t.
 Você repreende $p.
@@ -5316,7 +5316,7 @@ $n franze o cenho para você com um olhar de profundo desagrado.
 Carranca sem alvo. Que desperdício de expressão facial.
 Você se carranca no espelho imaginário. Parece aterrorizante.
 $n se carranca para si mesm$r. Deve estar insatisfeito consigo.
-Você franze o cenho para o $t de $S.
+Você franze o cenho para o $t de $L.
 $n franze o cenho para o $t de $N.
 $n franze o cenho para o seu $t.
 Você franze o cenho para $p.
@@ -5340,13 +5340,13 @@ $n parece ter perdido algo por perto.
 ~scratch scratch 0 5 0 0
 Você coça a cabeça.
 $n coça a cabeça confuso(a).
-Você arranha o rosto de $S com as unhas.
+Você arranha o rosto de $L com as unhas.
 $n tenta arrancar os olhos de $N.
 $n se lança em você sibilando como um gato de rua.
 Ah, você os assustou! Bom.
 Ahhhhhh que bom!
 $n coça a cabeça pensativo(a).
-Você arranha o $t de $S.
+Você arranha o $t de $L.
 $n arranha o $t de $N.
 $n arranha o seu $t.
 Você arranha $p.
@@ -5355,13 +5355,13 @@ $n arranha $p.
 ~scream scream 0 5 0 0
 ARRRRRRRRRRRGH!!!!!
 $n grita alto!
-Você grita para $M.
+Você grita para $L.
 $n grita no ouvido de $N.
 $n grita no seu ouvido! AAAARRRRGGG!!!!!
 Ninguém pode ouvir seus gritos.
 Você está tão bravo(a) consigo mesm$r, que poderia gritar!
 $n abre a boca numa expressão silenciosa de dor.
-Você grita para o $t de $S.
+Você grita para o $t de $L.
 $n grita para o $t de $N.
 $n grita para o seu $t.
 Você grita para $p.
@@ -5376,7 +5376,7 @@ $n arrasta os pés diante de você.
 Eles foram embora antes que você pudesse arrastar os pés diante deles.
 Você arrasta os pés impaciente de um lado para o outro pelo quarto.
 $n arrasta os pés impaciente de um lado para o outro pelo quarto.
-Você arrasta os pés diante do $t de $S.
+Você arrasta os pés diante do $t de $L.
 $n arrasta os pés diante do $t de $N.
 $n arrasta os pés diante do seu $t.
 Você arrasta os pés diante de $p.
@@ -5391,7 +5391,7 @@ $n te dá o aperto de mão secreto.
 Eles não são legais o suficiente para conhecer o aperto de mão secreto.
 Você se dá o aperto de mão secreto.
 $n se dá o aperto de mão secreto.
-$n aperta o $t de $S.
+$n aperta o $t de $L.
 $n aperta o $t de $N.
 $n aperta o seu $t.
 Você dá a $p o aperto de mão secreto.
@@ -5400,8 +5400,8 @@ $n dá a $p o aperto de mão secreto.
 ~seduce seduce 0 8 8 0
 @yVocê @Dp@Ci@Dsc@ya um olho e joga @Rbeijos@y para todos no quarto, tentando seduzir tod@Mz@y.@n
 @y$n parece estar tentando @Mseduzir @ytodo o quarto!@n
-@yVocê escorrega pelo lado de $S e sussurra coisas @rpicantes@y no ouvido de $S.@n
-@y$n escorrega pelo lado de $N e sussurra coisas @rpicantes@y no ouvido de $S.@n
+@yVocê escorrega pelo lado de $L e sussurra coisas @rpicantes@y no $Z ouvido.@n
+@y$n escorrega pelo lado de $N e sussurra coisas @rpicantes@y no ouvido de $L.@n
 @y$n escorrega pelo seu lado e sussurra coisas @rpicantes@y no seu ouvido. @RQue tentação!@n
 @yA quem você está tentando @Mseduzir@y?
 @yVocê pega um espelho e joga @Rbeijos@y para ele, tentando @Mse seduzir@y.@n
@@ -5430,13 +5430,13 @@ $n precisa de sabão na mente.
 ~sexy sexy 0 5 0 0
 Você se contorce de forma provocante, exalando sensualidade.
 $n se contorce de forma provocante, exalando sensualidade.
-Você faz um movimento lento e sedutor para $M, olhando nos olhos de $S.
+Você faz um movimento lento e sedutor para $L, olhando nos olhos de $L.
 $n faz um movimento lento e sedutor para $N, olhando nos seus olhos.
 $n vira para você com um movimento lento e sedutor, olhando nos seus olhos.
 Você tenta ser sexy para alguém que não está aqui. Que desperdício!
 Você se examina no espelho imaginário e acha que está irresistível.
 $n se examina como se fosse irresistível. Que autoconfiança!
-Você faz um gesto sedutor em direção ao $t de $S.
+Você faz um gesto sedutor em direção ao $t de $L.
 $n faz um gesto sedutor em direção ao $t de $N.
 $n faz um gesto sedutor em direção ao seu $t.
 Você faz uma pose sedutora com $p.
@@ -5460,13 +5460,13 @@ $n balança a cabeça para $p.
 ~shakeass shakeass 0 5 0 0
 Você sacode o bumbum provocantemente, chamando todas as atenções da sala.
 $n sacode o bumbum de forma provocante. Impossível não olhar!
-Você vira de costas para $M e sacode o bumbum provocantemente.
+Você vira de costas para $L e sacode o bumbum provocantemente.
 $n vira de costas para $N e sacode o bumbum de forma provocante.
 $n vira de costas para você e sacode o bumbum. Que audácia!
 Você tenta sacudir o bumbum para alguém que não está aqui.
 Você sacode o bumbum para si mesm$r na frente de um espelho imaginário.
 $n sacode o bumbum para si mesm$r. Que autoconfiança!
-Você sacode o bumbum, exibindo o $t de $S.
+Você sacode o bumbum, exibindo o $t de $L.
 $n sacode o bumbum, exibindo o $t de $N.
 $n sacode o bumbum, exibindo o seu $t.
 Você sacode o bumbum ao lado de $p.
@@ -5475,13 +5475,13 @@ $n sacode o bumbum ao lado de $p.
 ~shame shame 0 5 0 0
 Você abaixa a cabeça envergonhado(a).
 $n abaixa a cabeça envergonhado(a).
-Você olha para $M, vergonha nos olhos.
+Você olha para $L, vergonha nos olhos.
 $n olha para $N, vergonha nos olhos.
 $n olha para você, vergonha nos olhos.
 Desculpe, mas essa pessoa não parece estar aqui.
 Você se envergonha.
 $n se envergonha.
-Você se envergonha do $t de $S.
+Você se envergonha do $t de $L.
 $n se envergonha do $t de $N.
 $n se envergonha do seu $t.
 Você se envergonha de $p.
@@ -5490,7 +5490,7 @@ $n se envergonha de $p.
 ~sheathe sheathe 0 5 0 0
 Você embanha a arma.
 $n embanha a arma.
-Você embanha a arma encarando $M.
+Você embanha a arma encarando $L.
 $n embanha a arma encarando $N.
 $n embanha a arma encarando você.
 Diante de quem?
@@ -5505,7 +5505,7 @@ $n não consegue tirar $z própria vida, então a arma é embanhada e $n parece 
 ~shh shh 0 5 5 0
 Você sussurra, 'Shhh!'
 $n sussurra, 'Shhh!'
-Você olha para $m e sussurra, 'Shhh!'
+Você olha para $l e sussurra, 'Shhh!'
 $n olha para $N e sussurra, 'Shhh!'
 $n olha para você e sussurra, 'Shhh!'
 Eles estão apenas na sua mente, meu amigo.
@@ -5520,7 +5520,7 @@ $n olha para o seu $t e sussurra, 'Shhh!'
 ~shiskabob shiskabob 0 5 0 0
 Você saca suas ferramentas de espetinho.
 $n saca $z ferramentas de espetinho e prepara o almoço.
-Você espeta $M direto no coração.
+Você espeta $L direto no coração.
 $n espeta $N direto no coração.
 $n te espeta direto no coração.
 Desculpe, mas essa pessoa não parece estar aqui.
@@ -5535,13 +5535,13 @@ $n se espeta no braço... QUE NOJO!!!
 ~shivers shiver 0 5 0 0
 Brrrrrrrrr.
 $n treme desconfortavelmente.
-Você treme ao ver $M.
+Você treme ao ver $L.
 $n treme ao ver $N de medo.
 Você faz $n tremer de medo.
 Brrrrr, muito frio aqui.
 Você treme, sentindo a pele coberta de arrepios.
 $n treme ao ver o próprio reflexo.
-Você olha para o $t de $S e treme incontrolavelmente.
+Você olha para o $t de $L e treme incontrolavelmente.
 $n olha para o $t de $N e treme incontrolavelmente.
 $n olha para o seu $t e treme incontrolavelmente.
 Você olha para $p e treme incontrolavelmente.
@@ -5580,13 +5580,13 @@ $n olha $p e se prepara para sacar as armas.
 ~shrugs shrugs 0 5 0 0
 Você dá de ombros.
 $n dá de ombros sem jeito.
-Você olha para $M e dá de ombros.
+Você olha para $L e dá de ombros.
 $n olha para $N e dá de ombros.
 $n te olha e dá de ombros.
 Seria um pouco difícil.
 Você dá de ombros.
 $n dá de ombros totalmente confuso(a).
-Você dá de ombros para o $t de $S.
+Você dá de ombros para o $t de $L.
 $n dá de ombros para o $t de $N.
 $n dá de ombros para o seu $t.
 Você dá de ombros para $p.
@@ -5595,13 +5595,13 @@ $n dá de ombros para $p.
 ~shudder shudder 0 5 0 0
 Urrrgghhh! Alguém andou sobre o seu túmulo.
 $n estremece.
-Você estremece ao ver $M.
+Você estremece ao ver $L.
 $n estremece ao ver $N como se tivesse visto um fantasma.
 $n estremece à sua simples vista.
 Uma sensação assustadora percorre sua espinha.
 Você estremece de medo, como se tivesse visto o próprio fantasma.
 $n estremece, assustado(a) com a própria sombra.
-Você estremece ao ver o $t de $S.
+Você estremece ao ver o $t de $L.
 $n estremece ao ver o $t de $N.
 $n estremece ao ver o seu $t.
 Você estremece ao ver $p.
@@ -5646,7 +5646,7 @@ $n suspira para você.
 Você suspira de forma desanimada.
 Você suspira para si mesm$r em surdina.
 $n olha ao redor perplexo(a) e dá um grande suspiro.
-Você suspira para o $t de $S.
+Você suspira para o $t de $L.
 $n suspira para o $t de $N.
 $n suspira para o seu $t.
 Você suspira para $p.
@@ -5655,13 +5655,13 @@ $n suspira para $p.
 ~sing sing 0 5 0 0
 Você eleva sua voz clara (?) para o céu.
 PROCURE ABRIGO IMEDIATAMENTE! $n começou a cantar.
-Você serenata $M.
+Você serenata $L.
 $n canta suavemente para $N.
 $n te canta uma canção de amor.
 Cante à vontade, ninguém vai ouvir.
 Você eleva sua voz clara (?) para o céu, serenando a si mesm$r.
 PROCURE ABRIGO IMEDIATAMENTE! $n começou a serena a si mesm$r.
-Você canta para o $t de $S.
+Você canta para o $t de $L.
 $n canta para o $t de $N.
 $n canta para o seu $t.
 Você canta para $p.
@@ -5691,7 +5691,7 @@ $n te tapa! Idiota!
 Que tal tapar alguém na mesma sala que você??
 Você se tapa, seu(sua) bobo(a).
 $n se tapa? Que estranho...
-Você tapa no $t de $S.
+Você tapa no $t de $L.
 $n tapa no $t de $N.
 $n tapa no seu $t.
 Você tapa em $p.
@@ -5730,13 +5730,13 @@ Isso não é possível, sinto muito.
 ~slump slump 0 5 5 0
 Sentindo-se extremamente cansado(a), você desaba no chão.
 $n desaba cansado(a) no chão.
-Você desaba cansado(a) no ombro de $S.
+Você desaba cansado(a) no ombro de $L.
 $n desaba cansado(a) no ombro de $N.
 $n desaba cansado(a) no seu ombro.
 Você não pode desabar sobre alguém que existe apenas na sua mente.
 Seja razoável!
 #
-Você desaba cansado(a) no $t de $S.
+Você desaba cansado(a) no $t de $L.
 $n desaba cansado(a) no $t de $N.
 $n desaba cansado(a) no seu $t.
 #
@@ -5745,13 +5745,13 @@ $n desaba cansado(a) no seu $t.
 ~smile sm 0 5 0 0
 Você sorri feliz.
 $n sorri feliz.
-Você sorri para $M.
+Você sorri para $L.
 $n sorri brilhantemente para $N.
 $n sorri para você.
 Não há ninguém com esse nome por aqui.
 Você sorri para si mesm$r.
 $n sorri para si mesm$r.
-Você sorri para o $t de $S.
+Você sorri para o $t de $L.
 $n sorri para o $t de $N.
 $n sorri para o seu $t.
 Você sorri para $p.
@@ -5790,13 +5790,13 @@ $n murmura 'funcione de uma vez FUNCIONE' enquanto $l ESMAGA $p.
 ~smirks smir 0 5 0 0
 Você sorri de canto.
 $n sorri de canto.
-Você sorri de canto para $M.
+Você sorri de canto para $L.
 $n sorri de canto para $N.
 $n sorri de canto para você.
 Tente de novo quando eles estiverem aqui.
 Você sorri de canto para si mesm$r.
 $n sorri de canto para si mesm$r, muito estranho...
-Você sorri de canto para o $t de $S.
+Você sorri de canto para o $t de $L.
 $n sorri de canto para o $t de $N.
 $n sorri de canto para o seu $t.
 Você sorri de canto para $p.
@@ -5820,13 +5820,13 @@ $n invoca um raio sobre si mesm$r. Destruindo a si mesm$r.
 ~smoke smoke 0 5 0 0
 Você tira um cigarro e começa a fumar.
 $n tira um cigarro e começa a fumar, cravando mais um prego no próprio caixão.
-Você acende um cigarro e dá para $N, cravando mais um prego no caixão de $S.
-$n acende um cigarro e dá para $N, cravando mais um prego no caixão de $S.
+Você acende um cigarro e dá para $N, cravando mais um prego no caixão de $L.
+$n acende um cigarro e dá para $N, cravando mais um prego no caixão de $L.
 $n acende um cigarro e te dá, cravando mais um prego no seu caixão.
 Você acendeu um cigarro para eles e eles saíram?
 Você acende um cigarro e crava mais um prego no próprio caixão.
 $n acende um cigarro para si mesm$r.
-Você tenta oferecer o $t de $S um cigarro.
+Você tenta oferecer o $t de $L um cigarro.
 $n oferece ao $t de $N um cigarro.
 $n oferece ao seu $t um cigarro.
 Você oferece a $p um cigarro.
@@ -5841,7 +5841,7 @@ $n te dá beijos barulhentos pelo rosto todo.
 Para onde eles foram?
 Você quer se beijar barulhosamente!?!?
 $n se beija barulhosamente, muito estranho...
-Você beija barulhosamente o $t de $S.
+Você beija barulhosamente o $t de $L.
 $n beija barulhosamente o $t de $N.
 $n beija barulhosamente o seu $t.
 Você beija barulhosamente $p.
@@ -5865,13 +5865,13 @@ $n começa a parecer presunçoso(a).
 ~snap snap 0 5 0 0
 PRONTO! Você estala os dedos.
 $n estala os dedos.
-Você estala os dedos para $M.
+Você estala os dedos para $L.
 $n estala os dedos para $N.
 $n estala os dedos para você. Apresse-se!
 Você estala os dedos para ninguém em particular.
 Você estala os dedos. Droga.
 $n estala os dedos para si mesm$r.
-Você estala os dedos para o $t de $S.
+Você estala os dedos para o $t de $L.
 $n estala os dedos para o $t de $N.
 $n estala os dedos para o seu $t.
 Você estala os dedos para $p.
@@ -5880,13 +5880,13 @@ $n estala os dedos para $p.
 ~snarl snarl 0 5 0 0
 Você rosna como um animal feroz.
 $n rosna como um animal acuado.
-Você rosna com raiva para $M. Controle-se!
+Você rosna com raiva para $L. Controle-se!
 $n rosna com raiva para $N. $l parece incapaz de se controlar.
 $n rosna ferozmente para você. O autocontrole de $l parece ter ido à lona.
 Ei? Quem? Não está aqui, meu amigo.
 Você rosna para si mesm$r, obviamente sofrendo de esquizofrenia.
 $n rosna para si mesm$r, e de repente parece muito assustado(a).
-Você rosna para o $t de $S.
+Você rosna para o $t de $L.
 $n rosna para o $t de $N.
 $n rosna para o seu $t.
 Você rosna para $p.
@@ -5895,13 +5895,13 @@ $n rosna para $p.
 ~sneer sneer 0 5 0 0
 Você faz uma careta de desdém para ninguém em particular.
 $n desdenha de todos!
-Você desdenha de $M.
+Você desdenha de $L.
 $n desdenha de $N!
 $n desdenha de você!
 Você queria desdenhair de uma pessoa de verdade?
 Você tenta desdenhair de si mesm$r.
 $n parece um idiota tentando desdenhair de si mesm$r.
-Você desdenha do $t de $S.
+Você desdenha do $t de $L.
 $n desdenha do $t de $N.
 $n desdenha do seu $t.
 Você desdenha de $p.
@@ -5910,13 +5910,13 @@ $n desdenha de $p.
 ~sneeze sneeze 0 5 0 0
 Saúde!
 $n espirra.
-Você espirra em $M.
+Você espirra em $L.
 $n espirra em cima de $N.
 $n espirra em cima de você.
 Atchim!
 Algo faz seu nariz coçar e você espirra.
 $n espirra catarro por toda si mesm$r.
-Você espirra em cima do $t de $S.
+Você espirra em cima do $t de $L.
 $n espirra em cima do $t de $N.
 $n espirra em cima do seu $t.
 Você espirra em cima de $p.
@@ -5925,13 +5925,13 @@ $n espirra em cima de $p.
 ~snicker snicker 0 5 0 0
 Você ri baixinho.
 $n ri baixinho.
-Você ri baixinho de $M.
+Você ri baixinho de $L.
 $n ri baixinho de $N.
 $n ri baixinho de você.
 Hmm, ninguém assim para ser visto.
 Você ri baixinho para si mesm$r.
 $n ri baixinho para si mesm$r, obviamente alguma piada interna.
-Você ri baixinho do $t de $S.
+Você ri baixinho do $t de $L.
 $n ri baixinho do $t de $N.
 $n ri baixinho do seu $t.
 Você ri baixinho de $p.
@@ -5940,13 +5940,13 @@ $n ri baixinho de $p.
 ~sniff sniff 0 5 0 0
 Você funfa tristemente. *FUNFA*
 $n funfa tristemente.
-Você funfa em $M.
+Você funfa em $L.
 $n funfa em $N.
 $n funfa embaixo do seu braço. Espero que você tenha tomado banho!
 Você funfa por aí - Hmm, não está em lugar algum.
 Você funfa embaixo do próprio braço e quase desmaia com o fedor.
 $n funfa embaixo do próprio sovaco e quase desmaia.
-Você funfa no $t de $S.
+Você funfa no $t de $L.
 $n funfa no $t de $N.
 $n funfa no seu $t.
 Você funfa em $p.
@@ -6000,13 +6000,13 @@ $n pula no piano de Linus e faz a dança do Snoopy.
 ~snore snore 0 4 0 0
 Zzzzzzzzzzzzzzzz.
 $n ronca alto.
-Você acusa $M de roncar.
+Você acusa $L de roncar.
 $n acusa $N de roncar.
 $n te acusa de roncar como um porco.
 Você ouve ronco?
 Você ronca alto o suficiente para se acordar.
 $n ronca tão alto que acorda a si mesm$r.
-Você ronca entediante para o $t de $S.
+Você ronca entediante para o $t de $L.
 $n ronca entediante para o $t de $N.
 $n ronca entediante para o seu $t.
 Você ronca entediante para $p.
@@ -6015,13 +6015,13 @@ $n ronca entediante para $p.
 ~snort snort 0 5 0 0
 Você resmunga em descontentamento.
 $n resmunga em descontentamento.
-Você resmunga em descontentamento para $M.
+Você resmunga em descontentamento para $L.
 $n resmunga em descontentamento para $N.
 $n resmunga em descontentamento para você.
 Resmunga à vontade, eles não estão aqui para ouvir seu descontentamento.
 Você resmunga em descontentamento para si mesm$r.
 $n resmunga em descontentamento para si mesm$r.
-Você resmunga em descontentamento para o $t de $S.
+Você resmunga em descontentamento para o $t de $L.
 $n resmunga em descontentamento para o $t de $N.
 $n resmunga em descontentamento para o seu $t.
 Você resmunga em descontentamento para $p.
@@ -6036,7 +6036,7 @@ $n conjura uma bola de neve do nada e a joga em você.
 Você fica com a bola de neve na mão pois a vítima não está aqui.
 Você conjura uma bola de neve do nada e a joga em si mesm$r.
 $n conjura uma bola de neve do nada e a joga em si mesm$r.
-Você conjura uma bola de neve do nada e a joga no $t de $S.
+Você conjura uma bola de neve do nada e a joga no $t de $L.
 $n conjura uma bola de neve do nada e a joga no $t de $N.
 $n conjura uma bola de neve do nada e a joga no seu $t.
 Você conjura uma bola de neve do nada e a joga em $p.
@@ -6045,7 +6045,7 @@ $n conjura uma bola de neve do nada e a joga em $p.
 ~snuggle snuggle 0 5 0 0
 Você quer fazer uma lavagem?
 $n quer se aninhar.
-Você se aninha com $M.
+Você se aninha com $L.
 $n se aninha com $N.
 $n se aninha com você.
 Eles não estão aqui.
@@ -6066,7 +6066,7 @@ $n se apoia no seu ombro e chora de coração partido, te encharcando.
 Sozinho(a) de novo hein?
 Você desmorona chorando, lágrimas por todo lado.
 $n desmorona chorando, lágrimas por todo lado.
-Você chora no $t de $S.
+Você chora no $t de $L.
 $n chora no $t de $N.
 $n chora no seu $t.
 Você chora em $p.
@@ -6090,13 +6090,13 @@ Você não os vê aqui.
 ~spank spank 0 5 0 0
 Você bate em QUEM? Ei? Como? Nãão, você nunca faria isso.
 $n bate no ar com a mão aberta.
-Você bate em $M vigorosamente, por muito tempo. Sua mão dói.
+Você bate em $L vigorosamente, por muito tempo. Sua mão dói.
 $n bate em $N sobre o $z joelho. Dói só de ver.
 $n bate em você por muito tempo. Você se sente como uma criança travessa.
 Tem certeza disso? Quer dizer, essa pessoa nem está aqui!
 Você bate em si mesm$r, que pessoa travessa.
 $n bate em si mesm$r, $l parece gostar demais disso.
-Você bate no $t de $M.
+Você bate no $t de $L.
 $n bate no $t de $N.
 $n bate no seu $t.
 Você bate em $p.
@@ -6105,7 +6105,7 @@ $n bate em $p.
 ~spew spew 0 5 0 0
 VOMITAR!!!!!
 IIIII!!! $n vomita por todo lado.
-IIIII!!! Você vomita em cima de $M.
+IIIII!!! Você vomita em cima de $L.
 CARAMBA!!! $n vomita em cima de $N.
 CARAMBA!!! $n vomita em cima de você!
 De novo?
@@ -6135,13 +6135,13 @@ $n faz você girar e te puxa para $z caloroso abraço.
 ~spit spit 0 5 0 0
 Você cospe no chão.
 $n cospe no chão.
-Você cospe em $M.
+Você cospe em $L.
 $n cospe em $N.
 $n cospe em você.
 Você consegue cuspir tão longe?
 Você baba pela frente.
 $n baba pela frente.
-Você cospe no $t de $S.
+Você cospe no $t de $L.
 $n cospe no $t de $N.
 $n cospe no seu $t.
 Você cospe em $p.
@@ -6150,8 +6150,8 @@ $n cospe em $p.
 ~splash splash 0 5 0 0
 Você joga água no rosto.
 $n joga água no rosto.
-Você joga água em $N encharcando $M.... que falta de educação.
-$n joga água em $N encharcando $M.... corra, você pode ser o próximo.
+Você joga água em $N encharcando $L.... que falta de educação.
+$n joga água em $N encharcando $L.... corra, você pode ser o próximo.
 $n joga água em você... você está encharcado(a)... VINGANÇA!
 Em quem você quer jogar água de novo?
 Você joga água em si mesm$r..... TOLO(A) você está encharcado(a).....
@@ -6195,7 +6195,7 @@ $n se espeta com o garfo-colher, parece doloroso.
 ~squeak squeak 0 5 0 0
 Você solta um piado lamentável.
 $n solta um piado lamentável.
-Você olha para $M e pía de medo.
+Você olha para $L e pía de medo.
 $n olha para $N e pía de medo.
 $n olha para você e pía de medo.
 Seu piado fica sem resposta.
@@ -6225,7 +6225,7 @@ $n te olha e grita de alegria!
 ~squeeze squeeze 0 5 0 0
 Onde, o quê, como, QUEM???
 $n está procurando alguém para apertar.
-Você aperta $M carinhosamente.
+Você aperta $L carinhosamente.
 $n aperta $N carinhosamente.
 $n te aperta carinhosamente.
 Onde, o quê, como, QUEM???
@@ -6240,13 +6240,13 @@ $n aperta $p.
 ~stare stare 0 5 0 0
 Você contempla o céu.
 $n contempla o céu.
-Você olha sonhadoramente para $N, completamente perdido(a) nos $S olhos..
+Você olha sonhadoramente para $N, completamente perdido(a) nos $Z olhos..
 $n olha sonhadoramente para $N.
 $n te olha sonhadoramente, completamente perdido(a) nos seus olhos.
 Você olha e olha mas não consegue ver essa pessoa em lugar algum...
 Você olha sonhadoramente para si mesm$r - basta de narcisismo por agora.
 $n olha sonhadoramente para si mesm$r - NARCISISTA!
-Você olha para o $t de $S.
+Você olha para o $t de $L.
 $n olha para o $t de $N.
 $n olha para o seu $t.
 Você olha para $p.
@@ -6255,13 +6255,13 @@ $n olha para $p.
 ~steam steam 0 5 0 0
 Você descarrega um pouco de vapor, para alívio dos outros (e do seu também!)
 $n descarrega muito vapor, para seu alívio.
-Você bufa e ralha com $M.
+Você bufa e ralha com $L.
 $n começa a ralhar com $N, $z rosto roxo de raiva.
 $n começa a gritar com você, $l deveria se acalmar.
 Claro, mas quem poderia ser?
 Você se repreende, pronto está melhor, você se disse.
 $n parece furioso(a) com algo ou outro.
-Você bufa e ralha com o $t de $S.
+Você bufa e ralha com o $t de $L.
 $n bufa e ralha com o $t de $N.
 $n bufa e ralha com o seu $t.
 Você bufa e ralha com $p.
@@ -6276,7 +6276,7 @@ $n pisa no seu pé! CRAC!
 Você vai pisando neles mas para no susto, percebendo que não estão aqui.
 Você pisa no próprio pé, que jeito, palhaço(a)!
 $n pisa no próprio pé, que idiota hein?
-Você pisa no $t de $S.
+Você pisa no $t de $L.
 $n pisa no $t de $N.
 $n pisa no seu $t.
 Você pisa em $p, quebrando em mil pedaços.
@@ -6306,7 +6306,7 @@ $n se lança em direção à sua garganta, você tenta se defender.
 AARGH! Eles devem ter saído... #&%?@!
 Você coloca as próprias mãos em volta da garganta e para de respirar.
 $n tenta se estrangular, fazendo um barulho muito estranho e ficando azul.
-Você estrangula o $t de $M.
+Você estrangula o $t de $L.
 $n estrangula o $t de $N.
 $n estrangula o seu $t.
 Você estrangula $p.
@@ -6321,7 +6321,7 @@ $n te estica.
 Espero que você conheça essa pessoa!
 Você se estica.
 $n se estica, $l deve estar se preparando para algum exercício.
-Você estica o $t de $S.
+Você estica o $t de $L.
 $n estica o $t de $N.
 $n estica o seu $t, que bom.
 Você estica $p.
@@ -6330,13 +6330,13 @@ $n estica $p.
 ~stroke stroke 0 5 0 0
 Quem você gostaria de acariciar?
 $n está procurando algo para acariciar?!?
-Você acaricia gentilmente a coxa interna de $S.
+Você acaricia gentilmente a coxa interna de $L.
 $n acaricia gentilmente a coxa interna de $N... hrm...
 $n acaricia gentilmente a sua coxa interna...
 Essa pessoa não está ao alcance.
 Você está prestes a fazer algo que preferiria não ser pego(a) fazendo.
 $n começa a fazer algo nojento e então para.
-Você acaricia gentilmente o $t de $S.
+Você acaricia gentilmente o $t de $L.
 $n acaricia gentilmente o $t de $N... hrm...
 $n acaricia gentilmente o seu $t...
 Você acaricia gentilmente $p...
@@ -6351,7 +6351,7 @@ $n desfila orgulhoso(a) diante de $N.
 Eles foram embora antes que você pudesse desfilar diante deles.
 Você desfila orgulhoso(a), se admirando.
 $n desfila orgulhoso(a), se admirando.
-Você desfila orgulhoso(a) diante do $t de $S.
+Você desfila orgulhoso(a) diante do $t de $L.
 $n desfila orgulhoso(a) diante do $t de $N.
 $n desfila orgulhoso(a) diante do seu $t.
 Você desfila orgulhoso(a) diante de $p.
@@ -6366,7 +6366,7 @@ $n te dá um 'engole o choro'.
 Para quem você quer dizer para engolir o choro?
 Você diz a si mesm$r para engolir o choro.
 $n se dá um 'engole o choro'.
-Você dá ao $t de $S um 'engole o choro'.
+Você dá ao $t de $L um 'engole o choro'.
 $n dá ao $t de $N um 'engole o choro'.
 $n dá ao seu $t um 'engole o choro'.
 Você dá a $p um 'engole o choro'.
@@ -6381,8 +6381,8 @@ $n te processa por tudo que você vale!!!
 Você os processa por... não estar aqui?
 Você processa a si mesm$r por tudo que vale!!!
 $n processa a si mesm$r por tudo que $l vale!!!
-Você processa $N pelo estado do $t de $S.
-$n processa $N pelo estado do $t de $S.
+Você processa $N pelo estado do $t de $L.
+$n processa $N pelo estado do $t de $L.
 $n te processa pelo estado do seu $t.
 Você dá uma olhada em $p e decide processar!!!
 $n dá uma olhada em $p e decide processar!!!
@@ -6390,13 +6390,13 @@ $n dá uma olhada em $p e decide processar!!!
 ~sulk sulk 0 5 0 0
 Você fica emburrado(a).
 $n fica emburrad$r num canto. $l parece tão miserável que você não pode deixar de sentir um pouco de pena.
-Você olha para $M e fica emburrado(a).
+Você olha para $L e fica emburrado(a).
 $n olha para $N e vai ficcar emburrad$r num canto.
 $N te olha e vai ficar emburrad$r num canto.
 Sem preocupação, eles não estão aqui.
 Você olha para o seu equipamento miserável e fica emburrado(a).
 $n olha para $z equipamento miserável e fica emburrad$r num canto.
-Você olha para o $t de $S e fica emburrado(a).
+Você olha para o $t de $L e fica emburrado(a).
 $n olha para o $t de $N e vai ficar emburrad$r num canto.
 $n olha para o seu $t e vai ficar emburrad$r num canto. Deve estar com ciúmes...
 Você olha para $p, e então vai ficar emburrad$r num canto.
@@ -6405,13 +6405,13 @@ $n olha para $p, e então vai ficar emburrad$r num canto.
 ~sundance sundance 0 5 0 0
 BONGA BONGA!! Você não acredita em previsões do tempo?
 $n dança tentando invocar o sol para sair das nuvens.
-Você dança loucamente ao redor de $M tentando invocar o sol para sair das nuvens.
+Você dança loucamente ao redor de $L tentando invocar o sol para sair das nuvens.
 $n dança loucamente ao redor de $N tentando invocar o sol para sair das nuvens.
 $n dança loucamente ao redor de você tentando invocar o sol para sair das nuvens.
 Um poste de totem é bom para uma coisa, você entende agora. Eles não se movem!
 Você dança BONGAWONGA ao redor de si mesm$r, cada vez mais rápido!
 $n tenta dançar o sundance ao redor de si mesm$r.
-Você faz um sundance ao redor do $t de $S.
+Você faz um sundance ao redor do $t de $L.
 $n faz um sundance ao redor do $t de $N.
 $n faz um sundance ao redor do seu $t.
 Você faz um sundance ao redor de $p.
@@ -6480,13 +6480,13 @@ $n balança com o ritmo.
 ~swear swear 0 5 0 0
 Você xinga alto por muito tempo.
 $n xinga: @*"*&^$$%@*&!!!!!!
-Você xinga $M e todos os $S antepassados e descendentes.
+Você xinga $L e todos os $Z antepassados e descendentes.
 $n xinga $N de forma profana.
 $n te xinga de forma profana, que imbecil!
 Seus xingamentos ecoam no vazio.
 Você se xinga de forma profana.
 $n xinga em surdina.
-Você xinga o $t de $S.
+Você xinga o $t de $L.
 $n xinga o $t de $N.
 $n xinga o seu $t.
 Você xinga $p.
@@ -6495,13 +6495,13 @@ $n xinga $p.
 ~sweat sweat 0 5 0 0
 Esfrie?
 $n sua um rio!
-Você olha para $S e começa a suar.
+Você olha para $L e começa a suar.
 $n olha para $N e começa a suar.
 $n te olha e começa a suar.
 Você começa a suar.
 Você sua como um porco e começa a cheirar como um.
 $n está suando muito e começando a cheirar mal.
-Você suou no $t de $S.
+Você suou no $t de $L.
 $n suou no $t de $N.
 $n suou no seu $t.
 Você suou em $p.
@@ -6510,12 +6510,12 @@ $n suou em $p.
 ~sweetsmile sweetsmile 0 8 8 0
 Você sorri docemente.
 $n sorri docemente.
-Você sorri docemente para $M.
+Você sorri docemente para $L.
 $n sorri docemente para $N.
 $n sorri docemente para você. Hmm...
 Você sorri docemente para...alguém que não está mais aqui...
 Você sorri docemente para...si mesm$r.
-$n sorri docemente para...$mself?
+$n sorri docemente para...si mesm$r?
 #
 #
 #
@@ -6525,7 +6525,7 @@ $n sorri docemente para...$mself?
 ~swoon swoon 0 8 8 0
 Você desmaia!
 $n desmaia!
-Você desmaia nos braços de $S.
+Você desmaia nos braços de $L.
 $n desmaia nos braços de $N.
 $n desmaia nos seus braços.
 Essa pessoa não está aqui para te pegar.
@@ -6555,13 +6555,13 @@ $n saca $z espada da bainha e começa a se ameaçar.
 ~tackle tackle 0 5 0 0
 Você derruba o ar. Ele não tinha chance.
 $n começa a correr ao redor de si mesm$r numa tentativa desesperada de derrubar o ar.
-Você derruba $M sem piedade no chão.
-$n derruba $N sem piedade, prendendo $M no chão.
+Você derruba $L sem piedade no chão.
+$n derruba $N sem piedade, prendendo $L no chão.
 $n de repente se lança em você e te derruba no chão!
 Essa pessoa não está aqui (sorte para eles, aparentemente...)
 Derrubar a si mesm$r? É, com certeza....
 $n faz um movimento ágil e chuta a própria perna esquerda com a direita.
-Você derruba o $t de $S.
+Você derruba o $t de $L.
 $n derruba o $t de $N.
 $n derruba o seu $t.
 Você derruba $p.
@@ -6585,13 +6585,13 @@ $n solta um grande 'TADA!' enquanto $l agita as mãos!
 ~tag tag 0 5 0 0
 Você realmente deveria marcar alguém específico.
 $n parece querer jogar pique!
-Você marca $M e grita 'VOCÊ ESTÁ!'
+Você marca $L e grita 'VOCÊ ESTÁ!'
 $n marca $N e grita, 'VOCÊ ESTÁ!'
 $n te marca! VOCÊ ESTÁ!!!!
 Errou.. falhou.. caramba, devem ter corrido.
 Você se marca e diz, 'ESTOU!'
 $n se marca e diz, 'ESTOU!'
-Você marca o $t de $S.
+Você marca o $t de $L.
 $n marca o $t de $N.
 $n marca o seu $t.
 Você marca $p.
@@ -6600,13 +6600,13 @@ $n marca $p.
 ~tango tango 0 5 0 0
 Com quem você gostaria de dançar o tango?
 $n coloca uma rosa entre os dentes, mas a tira pois ninguém se junta a $l.
-Você coloca uma rosa entre os dentes e dança o tango com $M sedutoramente.
+Você coloca uma rosa entre os dentes e dança o tango com $L sedutoramente.
 $n coloca uma rosa entre os dentes e dança o tango com $N sedutoramente.
 $n coloca uma rosa entre os dentes e dança o tango com você sedutoramente.
 Essa pessoa não está por aqui. É melhor sentar esse fora.
 É meio idiota, não é?
 $n coloca uma rosa entre os dentes e tenta dançar o tango consigo mesm$r.
-Você dança o tango com o $t de $S.
+Você dança o tango com o $t de $L.
 $n dança o tango com o $t de $N.
 $n dança o tango com o seu $t.
 Você dança o tango com $p.
@@ -6630,13 +6630,13 @@ $n cai no chão, sacudindo os braços em birra para $p.
 ~tap tap 0 5 0 0
 Você bate o pé impaciente.
 $n começa a bater o pé.
-Você bate em $M no ombro.
+Você bate em $L no ombro.
 $n bate em $N no ombro.
 $n bate em você no ombro.
 Você se prepara para bater neles -- mas eles foram embora.
 Você bate no próprio lado da cabeça de forma sabida.
 $n bate no próprio lado da cabeça de forma sabida.
-Você bate no $t de $S.
+Você bate no $t de $L.
 $n bate no $t de $N.
 $n bate no seu $t.
 Você bate em $p.
@@ -6666,7 +6666,7 @@ $n mira em você para atacar. Espera que $l erre!
 Você não pode mirar em alguém que não está aqui, idiota!
 Você aponta sua arma para si mesm$r, tentando se suicidar.
 $n aponta $z arma para si mesm$r, preparando-se para se suicidar!
-Você mira no $t de $S.
+Você mira no $t de $L.
 $n mira no $t de $N!
 $n mira no seu $t, cuidado!!!
 Você mira em $p.
@@ -6675,13 +6675,13 @@ $n mira em $p.
 ~taunt taunt 0 5 0 0
 Você provoca o nada à sua frente.
 $n provoca algo que parece estar bem à frente de $l.
-Você provoca $M, para sua própria diversão.
+Você provoca $L, para sua própria diversão.
 $n provoca $N de forma bastante insultante. $n parece gostar muito.
 $n te provoca. Dói muito seus sentimentos.
 Hmmmm.....não, ninguém com esse nome aqui.
 Você se provoca, quase te fazendo chorar...:(
 $n se provoca até as lágrimas.
-Você provoca o $t de $S.
+Você provoca o $t de $L.
 $n provoca o $t de $N.
 $n provoca o seu $t.
 Você provoca $p.
@@ -6690,13 +6690,13 @@ $n provoca $p.
 ~tease tease 0 5 0 0
 Por favor, não jogue esses jogos comigo, seu(sua) sedutor(a)!
 $n é um(a) sedutor(a).
-Você seduz $M.
+Você seduz $L.
 $n seduz $N. Tee Hee Hee Hee...
 $n te seduz suavemente.
 Hmmmm.....não, ninguém com esse nome aqui.
 Você se seduz, que divertido!
 $n se seduz. Que pessoa peculiar.
-Você seduz o $t de $S.
+Você seduz o $t de $L.
 $n seduz o $t de $N.
 $n seduz o seu $t.
 Você seduz $p.
@@ -6726,7 +6726,7 @@ $n agradece cordialmente a você.
 Ninguém com esse nome responde aqui.
 Você se agradece já que ninguém mais quer!
 $n se agradece já que você não o fará.
-Você agradece ao $t de $S.
+Você agradece ao $t de $L.
 $n agradece ao $t de $N.
 $n agradece ao seu $t.
 Você agradece a $p.
@@ -6741,7 +6741,7 @@ Suas orelhas queimam enquanto $n pensa em você.. você se pergunta sobre o quê
 É melhor pensar mais, se espera fazer contato!
 Você pensa em si mesm$r (por uma vez).
 $n pensa em si mesm$r por uma vez.....(?).
-Você pensa no $t de $S.
+Você pensa no $t de $L.
 $n pensa no $t de $N.
 $n pensa no seu $t.
 Você passa um tempo pensando em $p.
@@ -6750,13 +6750,13 @@ $n parece estar passando muito tempo pensando em $p.
 ~threaten threaten 0 5 0 0
 Você ameaça todos e tudo, você é simplesmente o melhor.
 $n ameaça todos e tudo.
-Você ameaça $M.
+Você ameaça $L.
 $n ameaça $N.
 $n te ameaça.
 Eles fugiram de medo antes que você pudesse ameaçá-los.
 Você se ameaça, isso é exagero.
 $n se ameaça. É claro!
-Você ameaça o $t de $S.
+Você ameaça o $t de $L.
 $n ameaça o $t de $N.
 $n ameaça o seu $t.
 Você ameaça $p.
@@ -6801,7 +6801,7 @@ $n faz cócegas em você - hee hee hee.
 Quem é esse??
 Você faz cócegas em si mesm$r, que engraçado!
 $n faz cócegas em si mesm$r.
-Você faz cócegas no $t de $S.
+Você faz cócegas no $t de $L.
 $n faz cócegas no $t de $N.
 $n faz cócegas no seu $t.
 Você faz cócegas em $p.
@@ -6810,7 +6810,7 @@ $n faz cócegas em $p.
 ~tie tie 0 8 0 0
 A quem você deseja amarrar?
 #
-Você amarra $M com toda a velocidade possível!
+Você amarra $L com toda a velocidade possível!
 $n amarra $N!
 Você se vê sendo amarrado(a) por $n!
 Essa pessoa não está aqui!
@@ -6825,13 +6825,13 @@ Você não pode se amarrar!
 ~tip tip 0 5 0 0
 Você inclina o chapéu galantemente.
 $n inclina o chapéu galantemente.
-Você inclina o chapéu para $M.
+Você inclina o chapéu para $L.
 $n inclina galantemente o chapéu para $N.
 $n inclina galantemente o chapéu para você.
 Quem?
 Que bobo(a). Você inclina o chapéu para si mesm$r.
 $n inclina o chapéu para si mesm$r.
-Você inclina o chapéu para o $t de $S.
+Você inclina o chapéu para o $t de $L.
 $n inclina o chapéu para o $t de $N.
 $n inclina o chapéu para o seu $t.
 Você inclina o chapéu para $p.
@@ -6870,7 +6870,7 @@ $n tira um dragão de bolso e aperta-o em $p. $p estoura em chamas. $p está tor
 ~tongue tongue 0 5 5 0
 Você mostra a língua.
 $n mostra a língua.
-Você mostra a língua para $M.
+Você mostra a língua para $L.
 $n mostra a língua para $N.
 $n mostra a língua para você.
 É um pouco difícil fazer isso, sem ninguém estar aqui.
@@ -6885,13 +6885,13 @@ $n mostra a língua para si mesm$r... De alguma forma.
 ~touch touch 0 5 0 0
 Você é muito sensível!
 $n é muito sensível!
-Você toca $M.
+Você toca $L.
 Por alguma razão, $n acabou de tocar $N.
 Por alguma razão, $n acabou de te tocar.
 Você não pode tocar essa pessoa, ela não existe.
 Você se toca, ixi!
 $n faz algo um pouco nojento.
-Você toca curioso(a) o $t de $S.
+Você toca curioso(a) o $t de $L.
 $n toca curioso(a) o $t de $N.
 $n toca curioso(a) o seu $t.
 Você toca curioso(a) $p.
@@ -6906,7 +6906,7 @@ $n tenta te colocar em transe.
 Você olha e olha mas não encontra ninguém para colocar em transe.
 Você se coloca em transe profundo, para nunca acordar de novo.
 $n se coloca em transe profundo.
-Você tenta colocar o $t de $S em transe profundo.
+Você tenta colocar o $t de $L em transe profundo.
 $n tenta colocar o $t de $N em transe.
 $n tenta colocar o seu $t em transe profundo.
 Você tenta colocar $p em transe profundo.
@@ -6945,13 +6945,13 @@ $n pega um cobertor grande e aconchegante e se aconchega.
 ~tug tug 0 5 0 0
 Você puxa nas próprias roupas um pouco.
 $n puxa nas $z roupas um pouco.
-Você puxa em $N tentando chamar $S atenção.
-$n puxa em $N tentando chamar $S atenção.
+Você puxa em $N tentando chamar $Z atenção.
+$n puxa em $N tentando chamar $Z atenção.
 $n puxa em você tentando chamar sua atenção.
 O que você está tentando puxar? Ar?
 Que bobo(a). Você puxa em si mesm$r.
 $n puxa em si mesm$r.
-Você puxa no $t de $S.
+Você puxa no $t de $L.
 $n puxa no $t de $N.
 $n puxa no seu $t.
 $n puxa em $p.
@@ -6960,13 +6960,13 @@ $n puxa em $p.
 ~tummy tummy 0 5 0 0
 Você esfrega a barriga, desejando ter comprado aquele bagel antes.
 $n esfrega a barriga, $l parece faminto(a)!
-Você esfrega $M na barriga vigorosamente!
+Você esfrega $L na barriga vigorosamente!
 $n esfrega a barriga de $N vigorosamente!
 $n esfrega sua barriga vigorosamente!
 Na barriga de quem você quer esfregar?
 Você esfrega a barriga, desejando ter comprado aquele bagel antes.
 $n esfrega a barriga, $l parece faminto(a)!
-Você olha para o $t de $S e esfrega a barriga famint$r.
+Você olha para o $t de $L e esfrega a barriga famint$r.
 $n olha para o $t de $N e esfrega a barriga famint$r.
 $n olha para o seu $t e esfrega a barriga famint$r.
 Você olha para $p e esfrega a barriga famint$r.
@@ -6975,13 +6975,13 @@ $n olha para $p e esfrega a barriga famint$r.
 ~tweak tweak 0 5 0 0
 Você procura uma bochecha para beliscar.
 $n começa a escanear os arredores, flexionando os dedos.
-Você belisca a bochecha de $S.
+Você belisca a bochecha de $L.
 $n belisca a bochecha de $N.
 $n belisca a sua bochecha.
 Ah, nenhuma bochecha para encontrar!
 Você belisca a própria bochecha... Que rubor bonito!
 $n belisca a própria bochecha... Olha aquele rubor!
-Você belisca o $t de $S
+Você belisca o $t de $L
 $n belisca o $t de $N
 $n belisca o seu $t
 Você belisca $p
@@ -6996,7 +6996,7 @@ $n gira os polegares, pacientemente esperando por você.
 Eles foram embora antes que você pudesse girar os polegares para eles.
 Você gira os polegares impaciente.
 $n gira os polegares impaciente.
-Você gira os polegares para o $t de $S.
+Você gira os polegares para o $t de $L.
 $n gira os polegares para o $t de $N.
 $n gira os polegares para o seu $t.
 Você gira os polegares para $p.
@@ -7011,7 +7011,7 @@ O tique facial de $n treme ao pensar em você.
 Cadáver ruim! Eles não estão lá.
 Seu corpo sem vida se contorce levemente.
 O corpo sem vida de $n se contorce levemente.
-Você se contorce ao pensar no $i de $S.
+Você se contorce ao pensar no $i de $L.
 $n se contorce ao pensar no $i de $N.
 $n se contorce ao pensar no seu $i.
 Você se contorce ao pensar em $p.
@@ -7020,13 +7020,13 @@ $n se contorce ao pensar em $p.
 ~twerk twerk 0 5 0 0
 Você se abaixa e faz um twerk arrasador, sacudindo o bumbum no ritmo.
 $n se abaixa e faz um twerk arrasador. A sala fica boquiaberta!
-Você se posiciona na frente de $M e faz um twerk explosivo e provocante.
+Você se posiciona na frente de $L e faz um twerk explosivo e provocante.
 $n se posiciona na frente de $N e faz um twerk explosivo e provocante.
 $n se posiciona na sua frente e faz um twerk explosivo. Que cena!
 Você se prepara para um twerk épico... mas não tem ninguém para apreciar.
 Você faz um twerk solo para si mesm$r. Autoconfiança no máximo!
 $n faz um twerk solo. Ninguém pediu, mas foi impossível ignorar.
-Você faz um twerk apontado para o $t de $S.
+Você faz um twerk apontado para o $t de $L.
 $n faz um twerk apontado para o $t de $N.
 $n faz um twerk apontado para o seu $t.
 Você faz um twerk próximo a $p.
@@ -7041,7 +7041,7 @@ $n te declara inepto(a) em digitar.
 Eles foram embora antes que você pudesse comentar sobre as habilidades de digitação deles.
 Você se declara inepto(a) em digitar.
 $n se declara inepto(a) em digitar.
-Você declara o $t de $S inepto em digitar.
+Você declara o $t de $L inepto em digitar.
 $n declara que o $t de $N é inepto em digitar.
 $n declara seu $t inepto em digitar.
 Você culpa $p por todos os seus erros de digitação.
@@ -7050,13 +7050,13 @@ $n culpa $p por todos os $z erros de digitação.
 ~understand understand 0 8 8 0
 Você acena em sinal de compreensão.
 $n acena em sinal de compreensão.
-Você acena em sinal de compreensão com $M.
+Você acena em sinal de compreensão com $L.
 $n acena em sinal de compreensão com $N.
 $n acena em sinal de compreensão com você.
 Entender a eles - você nem consegue encontrá-los.
 Você finalmente se entende.
 $n finalmente se entende depois de todos esses anos.
-Você acena para o $t de $S em total compreensão.
+Você acena para o $t de $L em total compreensão.
 $n acena para o $t de $N em total compreensão.
 $n acena para o seu $t em total compreensão.
 Você olha para $p e acena em sinal de compreensão.
@@ -7065,7 +7065,7 @@ $n olha para $p e acena em total compreensão.
 ~unsheathe unsheathe 0 5 0 0
 Você desembanha a arma, preparando-se para lutar.
 $n desembanha $z arma, preparando-se para lutar.
-Você desembanha a arma e a aponta para $M.
+Você desembanha a arma e a aponta para $L.
 $n desembanha $z arma e a aponta para $N.
 $n desembanha $z arma e a aponta para você.
 Você decide deixar embainhada, afinal você não vê essa pessoa aqui.
@@ -7080,8 +7080,8 @@ $n desembanha $z arma e a coloca na própria garganta.
 ~vampire vampire 0 8 8 0
 'Bla.. Eu quero chupar seu sangue!'
 $n levanta as mãos e diz, 'Bla.. Eu quero chupar seu sangue!'
-Você se vira para $N e diz a $M, 'Bla.. Eu quero chupar seu sangue!'
-$n se vira para $N e diz a $M, 'Bla.. Eu quero chupar seu sangue!'
+Você se vira para $N e diz a $L, 'Bla.. Eu quero chupar seu sangue!'
+$n se vira para $N e diz a $L, 'Bla.. Eu quero chupar seu sangue!'
 $n se vira para você e diz, 'Bla.. Eu quero chupar seu sangue!'
 Você não os vê aqui.
 #
@@ -7095,14 +7095,14 @@ Você não os vê aqui.
 ~vice vice 0 8 8 0
 Você faz uma manutenção cuidadosa no vice e encaixa a extensão de manivela de um metro e vinte.
 $n desmonta expertamente o vice e lubrifica cuidadosamente as peças de aço. Satisfeito(a), $n remonta o vice e encaixa a extensão de um metro e vinte na manivela.
-Você coloca a cabeça de $S nas garras do vice e as aperta o suficiente para impedir o movimento. Lentamente, você vai apertando o vice, desfrutando da amplitude crescente dos gritos até o clímax estilhaçante quando o crânio se parte. $N está quieto(a) agora.
-$n atordoa $N com um soco rápido e força $S cabeça para dentro do vice. $N grita e se debate inutilmente mas as garras de aço o seguram. Sorrindo sadisticamente, $n gira lentamente a manivela até o crânio rachar com um estalo perturbador. $N foi silenciado(a).
+Você coloca a cabeça de $L nas garras do vice e as aperta o suficiente para impedir o movimento. Lentamente, você vai apertando o vice, desfrutando da amplitude crescente dos gritos até o clímax estilhaçante quando o crânio se parte. $N está quieto(a) agora.
+$n atordoa $N com um soco rápido e força $Z cabeça para dentro do vice. $N grita e se debate inutilmente mas as garras de aço o seguram. Sorrindo sadisticamente, $n gira lentamente a manivela até o crânio rachar com um estalo perturbador. $N foi silenciado(a).
 $n força sua cabeça para dentro do vice e aperta as garras de aço impedindo qualquer movimento. Sorrindo sadisticamente, $l gira a manivela enquanto a sua dor de cabeça se torna tudo. Então há nada além de paz.
 Seu vice está vazio.
 Você coloca a própria cabeça num vice e gira a manivela até a consciência desaparecer.
 $n coloca a própria cabeça num vice e gira a manivela até ouvir um forte estalo.
-Você coloca o $t de $S nas garras do vice e os aperta o suficiente para impedir o movimento. Lentamente, você vai apertando o vice, até o $t rachar. $N está quieto(a) agora.
-$n atordoa $N com um soco rápido e força o $t de $S para dentro do vice. $N grita mas as garras de aço o seguram. $n gira lentamente a manivela até o $t rachar. $N foi silenciado(a).
+Você coloca o $t de $L nas garras do vice e os aperta o suficiente para impedir o movimento. Lentamente, você vai apertando o vice, até o $t rachar. $N está quieto(a) agora.
+$n atordoa $N com um soco rápido e força o $t de $L para dentro do vice. $N grita mas as garras de aço o seguram. $n gira lentamente a manivela até o $t rachar. $N foi silenciado(a).
 $n força o seu $t para dentro do vice e aperta as garras de aço. $l gira a manivela enquanto a sua dor no $t se torna tudo. Então há nada além de paz.
 #
 #
@@ -7110,13 +7110,13 @@ $n força o seu $t para dentro do vice e aperta as garras de aço. $l gira a man
 ~waggle waggle 0 5 0 0
 Você mexe as sobrancelhas impressionantemente. Vamos lá, lagartas, vamos!
 $n mexe as sobrancelhas. Uau, olha essas lagartas andando!
-Você dá a $M um bom e sólido mexidão!
+Você dá a $L um bom e sólido mexidão!
 $n pega as sobrancelhas de $N e as mexe bem. Que espetáculo!
 $n pega as suas sobrancelhas e as mexe! Oi!
 Você olha ao redor por sobrancelhas para mexer mas, tristemente, não encontra nenhuma. Droga!
 Você firma bem as sobrancelhas e as mexe. Elas estão se comportando mal?
 $n firma bem as sobrancelhas e começa a mexê-las com fervor. Elas ficarão paradas??
-Você mexe para o $t de $S. Olha só!
+Você mexe para o $t de $L. Olha só!
 $n mexe as sobrancelhas para o $t de $N. Oohyah!
 $n mexe as sobrancelhas para o seu $t. Oi oi!
 Você mexe $p. Uau!
@@ -7131,7 +7131,7 @@ $n te diz para esperar um minuto.
 Quem?
 Por que você gostaria de fazer isso?
 $n diz a si mesm$r para esperar um minuto.
-Você diz ao $t de $S para esperar um minuto.
+Você diz ao $t de $L para esperar um minuto.
 $n diz ao $t de $N para esperar um minuto.
 $n diz ao seu $t para esperar um minuto.
 Você diz a $p para esperar um minuto.
@@ -7170,13 +7170,13 @@ Você precisa dançar valsa com alguém real, não com seu amigo imaginário!
 ~warscream warscream 0 5 0 0
 Você grita seu grito de guerra favorito.
 $n grita $z grito de guerra mais feroz, 'MAMAAAÃEEEEE!'
-Você grita um grito de guerra para $M.
+Você grita um grito de guerra para $L.
 $n grita um grito de guerra para $N.
 $n grita um grito de guerra no seu ouvido!
 Ninguém pode ouvir seu grito de guerra.
 Você está tão bravo(a) consigo mesm$r?
 $n grita um grito de guerra para si mesm$r.
-Você grita um grito de guerra para o $t de $S.
+Você grita um grito de guerra para o $t de $L.
 $n grita um grito de guerra para o $t de $N.
 $n grita um grito de guerra para o seu $t.
 Você grita um grito de guerra para $p.
@@ -7191,7 +7191,7 @@ $n acena para você. Boa viagem.
 Eles não esperaram você acenar.
 Você também vai em aventuras??
 $n acena para si mesm$r.
-Você acena para o $t de $S.
+Você acena para o $t de $L.
 $n acena para o $t de $N.
 $n acena para o seu $t.
 Você acena para $p.
@@ -7200,13 +7200,13 @@ $n acena para $p.
 ~wb wb 0 8 0 0
 Você dá boas-vindas de volta a todos.
 $n dá boas-vindas de volta a todos.
-Você dá boas-vindas de volta a $M.
+Você dá boas-vindas de volta a $L.
 $n dá boas-vindas de volta a $N.
 $n te dá boas-vindas de volta.
 Eles foram embora antes que você pudesse dar boas-vindas de volta.
 Você se dá boas-vindas de volta ao mundo real.
 $n se dá boas-vindas de volta. Estranho, muito estranho.
-Você dá boas-vindas de volta ao $t de $S.
+Você dá boas-vindas de volta ao $t de $L.
 $n dá boas-vindas de volta ao $t de $N.
 $n dá boas-vindas de volta ao seu $t.
 Você dá boas-vindas de volta a $p.
@@ -7215,13 +7215,13 @@ $n dá boas-vindas de volta a $p.
 ~wedgie wedgie 0 8 8 0
 Em quem você quer dar uma cuequada?
 $n está procurando alguém para dar uma cuequada.
-Você pega a cueca de $N e a puxa bem para cima da $S bunda, isso vai mostrar a eles!
+Você pega a cueca de $N e a puxa bem para cima da $Z bunda, isso vai mostrar a eles!
 $n dá em $N uma cuequada enorme, você pode ser o próximo...CORRA!
 $n te dá uma cuequada enorme, parece que foi até as amígdalas...VINGANÇA!
 Desculpe, eles não estão aqui.
 Você tenta alcançar a própria cueca e puxá-la, VOCÊ É DOENT$r!!
 $n alcança $z própria cueca por trás e a puxa... IIIII que nojo!!
-Você quer dar uma cuequada no $t de $S, mas não sabe como.
+Você quer dar uma cuequada no $t de $L, mas não sabe como.
 $n quer dar uma cuequada no $t de $N, mas não sabe como.
 $n quer dar uma cuequada no seu $t, mas não sabe como.
 Você quer dar uma cuequada em $p, mas pensa melhor nisso.
@@ -7230,13 +7230,13 @@ $n quer dar uma cuequada em $p, mas pensa melhor nisso.
 ~weep weep 0 5 0 0
 Você derrama lágrimas por todo lado, que bagunça!
 $n chora alto te encharcando!
-Você chora no ombro de $N, efetivamente encharcando $M!
-$n chora em cima de $N, encharcando $M!
+Você chora no ombro de $N, efetivamente encharcando $L!
+$n chora em cima de $N, encharcando $L!
 $n te encharcar com $z lágrimas!
 Como aquele jogador não está prontamente disponível você chora em si mesm$r.
 Você chora em si mesm$r!
 $n derrama várias lágrimas encharcando $z roupas e rosto.
-Você chora no $t de $S.
+Você chora no $t de $L.
 $n chora no $t de $N.
 $n chora no seu $t.
 Você chora em $p.
@@ -7245,13 +7245,13 @@ $n chora em $p.
 ~welcome welcome 0 5 0 0
 Você dá boas-vindas a todos.
 $n dá boas-vindas a todos.
-Você dá boas-vindas a $M.
+Você dá boas-vindas a $L.
 $n dá boas-vindas a $N.
 $n te dá boas-vindas.
 Por favor -- tente alguém que está aqui?
 Então, você finalmente se descobriu!
 $n se dá boas-vindas.. $l sempre foi estranho(a).
-Você dá boas-vindas ao $t de $S.
+Você dá boas-vindas ao $t de $L.
 $n dá boas-vindas ao $t de $N.
 $n dá boas-vindas ao seu $t.
 Você dá boas-vindas a $p.
@@ -7260,7 +7260,7 @@ $n dá boas-vindas a $p.
 ~whack whack 0 5 0 0
 Você tira seu bastão de espuma. Quem quer um gostinho??
 $n tira um bastão enorme de espuma e sorri um sorriso diabólico.
-Você tira seu bastão de espuma e dá uma surra em $M.
+Você tira seu bastão de espuma e dá uma surra em $L.
 $n entra em frenética surra com o bastão de espuma em $N.
 $n começa a te surrar descontrolavelmente com um bastão enorme de espuma.
 Você bate bate bate....espera...eles não estão aqui. idiota.
@@ -7290,13 +7290,13 @@ $n choraminga lamentavelmente pela perda do seu $t.
 ~whine whine 0 5 0 0
 Você choraminga lamentavelmente.
 $n choraminga lamentavelmente sobre a situação toda.
-Você choraminga para $M.
+Você choraminga para $L.
 $n começa a choramingar para $N.
 $n choraminga para você. Que patético.
 Você pode choramingar, mas ninguém vai se importar.
 Você choraminga para si mesm$r -- pobre de você.
 $n choraminga pitifully sobre a situação toda.
-Você choraminga para o $t de $S.
+Você choraminga para o $t de $L.
 $n choraminga para o $t de $N.
 $n choraminga para o seu $t.
 Você choraminga para $p.
@@ -7311,7 +7311,7 @@ $n estala $z chicote em você, por pouco!
 Ah, eles devem ter visto esse chicote e corrido....
 Você esfrega o chicote e seus olhos tomam um olhar ousado.
 $n esfrega $z chicote e tem um olhar ousado nos olhos.
-Você estala o chicote no $t de $S, por pouco!
+Você estala o chicote no $t de $L, por pouco!
 $n estala $z chicote no $t de $N, por pouco!
 $n estala $z chicote no seu $t, por pouco!
 Você estala o chicote em $p, por pouco!
@@ -7335,13 +7335,13 @@ $n assobia com apreciação para $p.
 ~whoo whoo 0 5 0 0
 Você faz, 'Uhu-hoo!'
 $n faz, 'Uhu-hoo!'
-Você dá a $M um 'Uhu-hoo!'
+Você dá a $L um 'Uhu-hoo!'
 $n dá a $N um 'Uhu-hoo!'
 $n te dá um 'Uhu-hoo!'
 'Uhu-hoo!' à vontade, eles não estão aqui.
 Ninguém mais vai fazer, então você pode mesmo. 'Uhu-hoo!'
 $n deve estar desesperado(a) por atenção, $l está gritando 'Uhu-hoo!'
-Você olha para o $t de $S e grita no topo dos pulmões 'Uhu-hoo!'
+Você olha para o $t de $L e grita no topo dos pulmões 'Uhu-hoo!'
 $n olha para o $t de $N e grita 'Uhu-hoo!'
 $n olha para o seu $t e grita 'Uhu-hoo!'
 Você olha para $p e grita 'Uhu-hoo!'
@@ -7350,13 +7350,13 @@ $n olha para $p e grita 'Uhu-hoo!'
 ~wiggle wiggle 0 5 0 0
 Você balança a bunda.
 $n balança a bunda.
-Você balança a bunda para $M.
+Você balança a bunda para $L.
 $n balança a bunda para $N.
 $n balança a bunda para você -- você conhece $l?
 Você balança como uma minhoca, mas ninguém percebe.
 Você se balança!
 $n balança a bunda para si mesm$r, $l nunca foi o mais brilhante da turma.
-Você balança a bunda para o $t de $S.
+Você balança a bunda para o $t de $L.
 $n balança a bunda para o $t de $N.
 $n balança a bunda para o seu $t.
 Você balança a bunda para $p.
@@ -7371,7 +7371,7 @@ $n se contrai com o que você acabou de fazer.
 Não dá para se contrair de alguém que não está aqui, hein?
 Você se contrai consigo mesm$r.
 $n se contrai consigo mesm$r.
-Você olha para o $t de $S e se contrai.
+Você olha para o $t de $L e se contrai.
 $n olha para o $t de $N e se contrai.
 $n olha para o seu $t e se contrai.
 Você se contrai com o dano feito a $p.
@@ -7386,7 +7386,7 @@ $n pisca para você.
 Ninguém com esse nome está presente.
 Você pisca para si mesm$r?? -- o que você está aprontando?
 $n pisca para si mesm$r -- algo estranho está acontecendo...
-Você pisca para o $t de $S.
+Você pisca para o $t de $L.
 $n pisca para o $t de $N.
 $n pisca para o seu $t.
 Você pisca para $p.
@@ -7401,7 +7401,7 @@ $n limpa o seu nariz.
 Essa pessoa não está aqui.
 Você limpa o nariz.
 $n tenta limpar o próprio nariz.
-Você limpa o $t de $S.
+Você limpa o $t de $L.
 $n limpa o $t de $N.
 $n limpa o seu $t.
 Você limpa $p.
@@ -7455,13 +7455,13 @@ $n acha $p muito preocupante de fato.
 ~worship worship 0 5 0 0
 Você se encontra de cabeça no chão, adorando.
 $n começa a adorar o nada.
-Você cai de joelhos e adora $M profundamente.
+Você cai de joelhos e adora $L profundamente.
 $n cai de joelhos, adorando $N com dedicação incrível.
 $n se ajoelha diante de você em solene adoração.
 Eh.. quem? Eles não estão aqui, meu(minha) amigo(a).
 Você parece ter encontrado uma verdadeira divindade.....
 $n cai de joelhos e humildemente adora a si mesm$r.
-Você cai de joelhos e adora o $t de $S.
+Você cai de joelhos e adora o $t de $L.
 $n cai de joelhos e adora o $t de $N.
 $n cai de joelhos e adora o seu $t.
 Você cai de joelhos e adora $p.
@@ -7491,7 +7491,7 @@ $n boceja sonolento(a) para você. Você é mesmo tão chato(a)?
 Ninguém com esse nome está presente.
 Você faz com que você mesmo boceje! Você é realmente uma pessoa entediante.
 $n boceja para si mesm$r. Fala sobre tédio!
-Você boceja sugestivamente para o $t de $S.
+Você boceja sugestivamente para o $t de $L.
 $n boceja sonolento(a) para o $t de $N.
 $n boceja sonolento(a) para o seu $t.
 Você boceja para $p sonolento(a).
@@ -7536,7 +7536,7 @@ $n iodla no seu ouvido -- Iodlaladiihooo!
 Heh heh, sua vítima parece ter fugido -- muito sábio.
 Iodlaladiihooo!
 $n iodla quietamente para si mesm$r.
-Você iodla para o $t de $S.
+Você iodla para o $t de $L.
 $n iodla para o $t de $N.
 $n iodla para o seu $t.
 Você iodla para $p.
@@ -7551,7 +7551,7 @@ $n invoca zeke e te choca completamente! Você se sente frito(a).
 Chocar quem?
 Isso DOEU! Sua mãe não te ensinou nada?
 $n grita de dor enquanto $l se choca.
-Você choca o $t de $S.
+Você choca o $t de $L.
 $n choca o $t de $N.
 $n choca o seu $t.
 Num acesso de frustração, você invoca zeke sobre $p, tentando machucá-lo.
