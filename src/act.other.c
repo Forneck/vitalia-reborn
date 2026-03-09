@@ -1058,16 +1058,21 @@ ACMD(do_appear)
         return;
     }
 
-    /* Notify only those who could already see the invisible player
-     * (i.e. those with detect invisibility) before removing the flag. */
-    act("$n aparece lentamente.", TRUE, ch, 0, 0, TO_ROOM);
+    if (AFF_FLAGGED(ch, AFF_APPEARED)) {
+        send_to_char(ch, "Você já está visível nesta sala.\r\n");
+        return;
+    }
 
-    if (affected_by_spell(ch, SPELL_INVISIBLE))
-        affect_from_char(ch, SPELL_INVISIBLE);
+    /* Grant room-local visibility: everyone in the room can now see the player,
+     * but the global AFF_INVISIBLE flag stays — so who/scan from other rooms
+     * still show the player as invisible. */
+    SET_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED);
 
-    REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_INVISIBLE);
+    /* Now that AFF_APPEARED is set, INVIS_OK passes for same-room viewers,
+     * so $n resolves to the player's name for everyone in the room. */
+    act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
 
-    send_to_char(ch, "Você encerra a magia da invisibilidade.\r\n");
+    send_to_char(ch, "Você se torna visível nesta sala.\r\n");
 }
 
 ACMD(do_title)

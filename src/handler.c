@@ -483,6 +483,10 @@ void char_from_room(struct char_data *ch)
     REMOVE_FROM_LIST(ch, world[IN_ROOM(ch)].people, next_in_room);
     IN_ROOM(ch) = NOWHERE;
     ch->next_in_room = NULL;
+
+    /* Room-local visibility ends when the character leaves the room. */
+    if (AFF_FLAGGED(ch, AFF_APPEARED))
+        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED);
 }
 
 /* place a character in a room */

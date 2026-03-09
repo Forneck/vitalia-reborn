@@ -377,9 +377,10 @@
 #define AFF_CONFUSED 48  /**< Mentally confused - reduced wisdom */
 #define AFF_STAGGERED 49 /**< Knocked off balance - reduced movement */
 #define AFF_DISGUISE 50  /**< Thief disguise - mimicking a mob */
+#define AFF_APPEARED 51  /**< Room-local visibility from appear command */
 
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS 51
+#define NUM_AFF_FLAGS 52
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING 0       /**< Playing - Nominal state 		*/

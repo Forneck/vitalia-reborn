@@ -153,7 +153,7 @@ const char *affected_bits[] = {
     "THISTLECOAT", "SOUNDBARRIER", "ADAGIO",       "ALLEGRO",         "GLOOMSHIELD", "PROT-SPELL", "WINDWALL",
     "WATERSHIELD", "ROCKSHIELD",   "POISONSHIELD", "LIGHTNINGSHIELD", "ICESHIELD",   "ACIDSHIELD", "MINDSHIELD",
     "FORCESHIELD", "BURNING",      "SOAKED",       "CHILLED",         "CORRODED",    "CONFUSED",   "STAGGERED",
-    "DISGUISE",    "\n",
+    "DISGUISE",    "APPEARED",     "\n",
 };
 
 /** Connection type descriptions.

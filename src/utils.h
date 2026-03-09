@@ -1069,7 +1069,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 
 /** Defines if sub character can see the invisible obj character. */
 #define INVIS_OK(sub, obj)                                                                                             \
-    ((!AFF_FLAGGED((obj), AFF_INVISIBLE) || AFF_FLAGGED(sub, AFF_DETECT_INVIS)) &&                                     \
+    ((!AFF_FLAGGED((obj), AFF_INVISIBLE) || AFF_FLAGGED(sub, AFF_DETECT_INVIS) ||                                      \
+      (AFF_FLAGGED((obj), AFF_APPEARED) && IN_ROOM(sub) == IN_ROOM(obj))) &&                                           \
      (!AFF_FLAGGED((obj), AFF_HIDE) || AFF_FLAGGED(sub, AFF_SENSE_LIFE)))
 
 /** Defines if sub character can see obj character, assuming mortal only
