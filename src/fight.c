@@ -990,7 +990,9 @@ void appear(struct char_data *ch)
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_INVISIBLE);
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
-    REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED);
+
+    if (!IS_NPC(ch))
+        ch->player_specials->appeared_room = NOWHERE;
 
     if (GET_LEVEL(ch) < LVL_IMMORT)
         act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);

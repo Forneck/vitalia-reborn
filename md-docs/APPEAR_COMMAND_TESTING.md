@@ -4,7 +4,7 @@ The `appear` command makes an invisible player visible **only within their curre
 room**. Unlike `visible`, it does **not** remove the global `AFF_INVISIBLE` flag.
 Players in other rooms still cannot see the character in the `who` list.
 
-When the player moves to a different room the room-local state (`AFF_APPEARED`) is
+When the player moves to a different room the room-local state (`appeared_room`) is
 automatically cleared, turning them globally invisible again.
 
 ## Prerequisites
@@ -81,7 +81,7 @@ at 3008 cast 'invisible' PlayerA
   (`AFF_INVISIBLE` was NOT removed; `CAN_SEE(B, A)` is FALSE because B is in a
   different room and does not have detect_invis)
 - ✅ Player B receives **no room message** about Player A appearing
-- ✅ `stat char PlayerA` shows **both** `AFF_INVISIBLE` and `AFF_APPEARED`
+- ✅ `stat char PlayerA` shows `AFF_INVISIBLE` (appeared_room set in player_specials)
 
 ### Failure Indicators
 
@@ -107,7 +107,7 @@ at 3008 cast 'invisible' PlayerA
 
 1. Confirm Player A is invisible and Player C has no detect_invis:
    ```
-   at 3008 stat char PlayerA     # must have AFF_INVISIBLE, no AFF_APPEARED
+   at 3008 stat char PlayerA     # must have AFF_INVISIBLE; appeared_room should be NOWHERE
    at 3008 stat char PlayerC     # must NOT have AFF_DETECT_INVIS
    ```
 2. As **Player C** (room 3008), keep the terminal open to see arriving messages.
@@ -127,10 +127,10 @@ at 3008 cast 'invisible' PlayerA
 ### Expected Results
 
 - ✅ Player C **receives** `"<PlayerA> aparece lentamente."` with the correct name
-  (because `AFF_APPEARED` was set before `act()` was called, so `INVIS_OK` passes
+  (because `appeared_room` was set before `act()` was called, so `INVIS_OK` passes
   for same-room viewers and `PERS` resolves to the player's name)
 - ✅ Player A **appears** in Player C's `who` list
-  (`CAN_SEE(C, A)` is TRUE: `AFF_APPEARED` set AND `IN_ROOM(C) == IN_ROOM(A)`)
+  (`CAN_SEE(C, A)` is TRUE: `appeared_room` set AND `IN_ROOM(C) == IN_ROOM(A)`)
 
 ### Failure Indicators
 
@@ -169,13 +169,13 @@ at 3008 cast 'detect invisibility' PlayerD
 
 ## Test Scenario 4: Room-Local State Cleared on Movement
 
-**Objective:** Verify that `AFF_APPEARED` is removed when Player A moves to another
+**Objective:** Verify that `appeared_room` is reset to NOWHERE when Player A moves to another
 room, restoring full invisibility.
 
 ### Setup
 
 ```
-# Continue from Scenario 2 — Player A has AFF_INVISIBLE + AFF_APPEARED in room 3008
+# Continue from Scenario 2 — Player A has AFF_INVISIBLE; appeared_room set to room 3008
 # Ensure room 3008 has an exit (e.g. north to another room)
 ```
 
@@ -196,7 +196,7 @@ room, restoring full invisibility.
 
 ### Expected Results
 
-- ✅ `AFF_APPEARED` is **cleared** from Player A (only `AFF_INVISIBLE` remains)
+- ✅ `appeared_room` is reset to `NOWHERE` on Player A
 - ✅ Player A **no longer appears** in Player C's `who` list
 - ✅ Players in the new room see the normal departure/arrival messages but cannot
   see Player A in `who` (still invisible)
@@ -204,7 +204,7 @@ room, restoring full invisibility.
 ### Failure Indicators
 
 - ❌ Player A still appears in Player C's `who` after moving to another room
-- ❌ `AFF_APPEARED` still set after movement
+- ❌ `appeared_room` != NOWHERE after movement
 
 ---
 
@@ -231,7 +231,7 @@ at 3008 cast 'invisible' PlayerA
 
 ### Expected Results
 
-- ✅ `AFF_INVISIBLE` and `AFF_APPEARED` are both cleared from Player A
+- ✅ `AFF_INVISIBLE`, `AFF_HIDE`, and `appeared_room` are all cleared from Player A
 - ✅ Player B **does** see Player A in `who` (global invisibility removed)
 
 ---
@@ -266,28 +266,29 @@ at 3008 cast 'invisible' PlayerA
 
 ```
 do_appear (act.other.c)
-  ├─ SET_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED)  ← room-local flag set FIRST
+  ├─ ch->player_specials->appeared_room = IN_ROOM(ch)  ← room stored FIRST
   ├─ act("$n aparece lentamente.", FALSE, ..., TO_ROOM)
   │    └─ For each 'to' in same room:
   │         PERS(ch, to) → CAN_SEE(to, ch) → INVIS_OK(to, ch)
-  │           → AFF_INVISIBLE set BUT AFF_APPEARED set AND IN_ROOM(to)==IN_ROOM(ch)
+  │           → AFF_INVISIBLE set BUT appeared_room==IN_ROOM(ch)==IN_ROOM(to)
   │           → TRUE → shows player's real name ✅
   │         hide_invisible=FALSE → no CAN_SEE filter, all same-room players get msg ✅
   └─ AFF_INVISIBLE stays set → CAN_SEE from different rooms = FALSE → not in who ✅
 
 char_from_room (handler.c)
-  └─ REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED)  ← cleared on room change ✅
+  └─ ch->player_specials->appeared_room = NOWHERE  ← cleared on room change ✅
 
 do_visible (act.other.c)
   └─ appear(ch)  [fight.c:986]
        ├─ REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_INVISIBLE)   ← global flag removed
-       ├─ REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED)    ← room-local flag also cleared
+       ├─ ch->player_specials->appeared_room = NOWHERE  ← room-local state cleared
        └─ act("$n aparece lentamente.", FALSE, ..., TO_ROOM)  ← everyone sees it
 
 INVIS_OK(sub, obj) [utils.h]
   Old: (!AFF_INVISIBLE(obj) || AFF_DETECT_INVIS(sub)) && ...
   New: (!AFF_INVISIBLE(obj) || AFF_DETECT_INVIS(sub)
-        || (AFF_APPEARED(obj) && IN_ROOM(sub)==IN_ROOM(obj))) && ...
+        || (!IS_NPC(obj) && appeared_room != NOWHERE
+            && IN_ROOM(sub)==appeared_room)) && ...
 ```
 
 ---
@@ -298,7 +299,7 @@ INVIS_OK(sub, obj) [utils.h]
 - ✅ Scenario 2: Player C (same room, no detect_invis) sees the appearance message
   and sees Player A in `who`
 - ✅ Scenario 3: Player D (same room, detect_invis) sees the appearance message
-- ✅ Scenario 4: Moving clears `AFF_APPEARED`, restoring global invisibility
+- ✅ Scenario 4: Moving resets `appeared_room` to NOWHERE, restoring global invisibility
 - ✅ Scenario 5: `visible` still removes invisibility globally
 - ✅ Scenario 6: Running `appear` twice is idempotent
 

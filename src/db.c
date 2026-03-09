@@ -4156,6 +4156,8 @@ void init_char(struct char_data *ch)
     if (ch->player_specials == NULL)
         CREATE(ch->player_specials, struct player_special_data, 1);
 
+    ch->player_specials->appeared_room = NOWHERE;
+
     /* Initialize class history array */
     for (int i = 0; i < 100; i++) {
         ch->player_specials->saved.class_history[i] = -1;

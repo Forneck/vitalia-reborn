@@ -1058,18 +1058,19 @@ ACMD(do_appear)
         return;
     }
 
-    if (AFF_FLAGGED(ch, AFF_APPEARED)) {
+    if (ch->player_specials->appeared_room != NOWHERE) {
         send_to_char(ch, "Você já está visível nesta sala.\r\n");
         return;
     }
 
-    /* Grant room-local visibility: everyone in the room can now see the player,
-     * but the global AFF_INVISIBLE flag stays — so who/scan from other rooms
-     * still show the player as invisible. */
-    SET_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED);
+    /* Grant room-local visibility: store the current room in appeared_room.
+     * AFF_INVISIBLE stays set, so players outside this room cannot see the
+     * character in 'who' or any other context.  INVIS_OK allows visibility
+     * only when the viewer is in the same room (appeared_room). */
+    ch->player_specials->appeared_room = IN_ROOM(ch);
 
-    /* Now that AFF_APPEARED is set, INVIS_OK passes for same-room viewers,
-     * so $n resolves to the player's name for everyone in the room. */
+    /* appeared_room is set before act() so PERS() resolves to the player's
+     * real name for all same-room viewers. */
     act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
 
     send_to_char(ch, "Você se torna visível nesta sala.\r\n");

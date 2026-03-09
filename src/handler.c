@@ -485,8 +485,8 @@ void char_from_room(struct char_data *ch)
     ch->next_in_room = NULL;
 
     /* Room-local visibility ends when the character leaves the room. */
-    if (AFF_FLAGGED(ch, AFF_APPEARED))
-        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_APPEARED);
+    if (!IS_NPC(ch) && ch->player_specials->appeared_room != NOWHERE)
+        ch->player_specials->appeared_room = NOWHERE;
 }
 
 /* place a character in a room */

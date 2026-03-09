@@ -377,10 +377,9 @@
 #define AFF_CONFUSED 48  /**< Mentally confused - reduced wisdom */
 #define AFF_STAGGERED 49 /**< Knocked off balance - reduced movement */
 #define AFF_DISGUISE 50  /**< Thief disguise - mimicking a mob */
-#define AFF_APPEARED 51  /**< Room-local visibility from appear command */
 
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS 52
+#define NUM_AFF_FLAGS 51
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING 0       /**< Playing - Nominal state 		*/
@@ -1746,6 +1745,7 @@ struct player_special_data {
     int last_olc_mode;          /**< ? Currently Unused ? */
     char *host;                 /**< Resolved hostname, or ip, for player. */
     int buildwalk_sector;       /**< Default sector type for buildwalk */
+    room_rnum appeared_room;    /**< Room where player used appear; NOWHERE if not appeared. */
 };
 
 /** Special data used by NPCs, not PCs */
