@@ -3,7 +3,152 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Mar 14 2026] - Vitalia Reborn Development
-  feat: Social gossip — MALP/MPLP transfer between entities (src/malp.c, src/malp.h, src/mobact.c)
+  feat: Cognitive Bias Module — Shadow Timeline projection distortion (src/shadow_timeline.c, src/shadow_timeline.h, src/structs.h, src/quest.c)
+    Adds systematic psychological distortions to NPC future-state projections
+    BEFORE moral evaluation, modelling the human-observed pipeline:
+      Perception → MALP/MPLP → Shadow Timeline → Cognitive Bias → Moral → Action
+
+    Four biases implemented (all stored as float 0.0-1.0+ per NPC in ai_data.biases):
+
+    1. Confirmation Bias (confirmation_bias):
+       NPCs favour projected outcomes matching existing MPLP trust/suspicion and
+       MALP episodic valence.  Positive priors boost positive projections; negative
+       priors amplify negative ones.  Produces grudge persistence and loyalty lock-in.
+
+    2. Availability Heuristic (availability_bias):
+       Recent or emotionally intense MALP episodes inflate all projected scores.
+       Recency factor uses 1/(1+age_hours/24) decay; emotional intensity amplifies.
+       Produces trauma loops, fixation, revenge behaviour, and fear persistence.
+
+    3. Fundamental Attribution Error (attribution_bias):
+       Danger from others is attributed to their hostile personality (holding grudges);
+       the NPC's own risky behaviour is excused as situational (self-serving bias).
+       Produces misread intentions, deeper grudges, and self-justification.
+
+    4. Negativity Bias (negativity_bias):
+       Negative projected scores are amplified by (1 + negativity_bias);
+       positive scores are dampened by (1 - negativity_bias * 0.5).  Danger level
+       also receives a proportional boost (20% of danger × bias).
+       Produces harder trust-building
+       and easier trust-loss, persistent hostility, and realistic conflict.
+
+    New struct: cognitive_biases { confirmation, availability, attribution, negativity }
+      Added to mob_ai_data; initialised to COGBIAS_HUMAN_DEFAULT (0.5) in
+      init_mob_ai_data() (quest.c) for all NPCs.
+
+    New public API (shadow_timeline.c):
+      void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj)
+        Applies all four biases in order: availability → confirmation → attribution → negativity.
+        Called from shadow_score_projections() before score_projection_for_entity().
+
+    New constants (shadow_timeline.h):
+      COGBIAS_CONFIRMATION_MAX (20)     — max score delta from confirmation bias
+      COGBIAS_AVAILABILITY_MAX (0.4f)   — max availability multiplier on outcome score
+      COGBIAS_ATTRIBUTION_MAX (15)      — max score delta from attribution bias
+      COGBIAS_NEGATIVITY_MAX (0.2f)     — danger-level amplification scale for negative outcomes
+      COGBIAS_HUMAN_DEFAULT (0.5f)      — default initialization value
+
+    Debug logging: gated by CONFIG_MOB_4D_DEBUG; prefixes COGBIAS-CONF / AVAIL / ATTR / NEG.
+    Help file: HELP COGNITIVE BIAS added (lib/text/help/help.hlp, level 105).
+
+    Invariants preserved:
+      - No crash when bias struct has zero values (all functions guard bias <= 0.0f).
+      - Works with existing MALP/MPLP (uses get_malp_by_agent, mplp_get_effective_trait).
+      - Works with existing moral reasoning (biases applied before moral_evaluate_action_cost).
+      - Works with emotion system (no direct writes to emotion_* fields).
+      - No regression in combat AI (score clamped to OUTCOME_SCORE_MIN/MAX throughout).
+
+  feat: Anchoring Bias — fifth and final cognitive bias; Cognitive Bias Module now complete
+    (src/structs.h, src/malp.c, src/shadow_timeline.c, src/shadow_timeline.h, src/quest.c)
+
+    Anchoring bias models the documented human tendency to anchor on first impressions even
+    when subsequent evidence contradicts the initial assessment (Tversky & Kahneman, 1974).
+    Unlike confirmation bias (favours current belief) or availability (favours recent events),
+    anchoring pulls NPC decisions toward the FIRST recorded interaction valence.
+
+    Storage:
+      malp_entry.first_valence — set ONCE on MALP entry creation, never updated.
+      This is the meta-memory anchor point.  Stored in struct malp_entry (structs.h).
+
+    Formula applied in Shadow Timeline projection scoring:
+      anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × 25
+      where:
+        resistance      = (suspicion_bias + (1 − forgiveness_rate)) / 2  [0..1]
+        intensity_floor = max(0.3, malp_entry.intensity)  (anchors outlast memory decay)
+
+    Application order (per specification: last in pipeline, distorts final score):
+      availability → confirmation → attribution → negativity → ANCHORING
+
+    New field: cognitive_biases.anchoring_bias (float 0.0–1.0+)
+      Initialised to COGBIAS_HUMAN_DEFAULT (0.5) in init_mob_ai_data() (quest.c).
+
+    New constant: COGBIAS_ANCHORING_MAX (25) — largest of all five bias deltas, reflecting
+      anchoring's documented dominance in human belief revision.
+
+    Emergent NPC archetypes enabled:
+      - Grateful ally: first help → positive anchor; still favours actor even after insults
+      - Unforgiving enemy: first attack → remains suspicious even after subsequent aid
+      - Stubborn grudge-holder: high suspicion + low forgiveness = near-permanent anchoring
+      - Naive loyalist: low suspicion + high forgiveness = anchoring fades quickly
+      - Traumatised: major-event first impression → very strong, long-lived anchor
+
+    Debug logging: COGBIAS-ANCH: prefix; shows first_val, resistance, intensity, delta, score.
+
+  feat: Cognitive Bias effects on Gossip — Social transmission distortion (src/malp.c, src/malp.h)
+    Psychological research (Tversky & Kahneman 1973; Baumeister et al. 2001; Ross 1977;
+    Echterhoff & Higgins 2009; Rozin & Royzman 2001) confirms that cognitive biases
+    systematically distort social transmission of information at three stages:
+    topic selection, narration/encoding, and reception.  Biases are now applied inside
+    try_social_gossip() to model these effects.
+
+    Invariants (from design requirement):
+      - Raw MALP/MPLP data is never fabricated or overwritten.
+      - Bias affects weighting, interpretation, and sharing probability only.
+      - Bias acts during gossip selection and narration, not during memory storage.
+      - lambda is always capped at MALP_GOSSIP_WEIGHT_CAP regardless of bias.
+
+    Phase 1 — Topic Selection (source biases):
+      Availability bias: selection score boosted by recency factor (1/(1+age/24h))
+        × MALP_GOSSIP_AVAILABILITY_SELECT_SCALE × intensity.  NPCs gossip more
+        about what just happened to them.
+      Negativity bias: selection score boosted for negative-valence entries by
+        MALP_GOSSIP_NEGATIVITY_SELECT_SCALE.  NPCs talk more about threats.
+      Confirmation bias: entries matching source's general social lean (TRUST_BIAS)
+        get MALP_GOSSIP_CONFIRMATION_SELECT_SCALE bonus.  Stories self-reinforce.
+
+    Phase 2 — Narration / Encoding (source biases):
+      Attribution bias: negative gossip_valence amplified by
+        (1 + attribution_bias × MALP_GOSSIP_ATTRIBUTION_ENC_SCALE).
+        Source frames target as "bad by nature", making stories more extreme.
+      Negativity bias: negative valence further amplified by
+        (1 + negativity_bias × MALP_GOSSIP_NEGATIVITY_ENC_SCALE).
+        Negative emotional intensity is also boosted by 10% × bias.
+
+    Phase 3 — Reception (listener biases):
+      Confirmation bias: lambda_scale boosted by MALP_GOSSIP_CONFIRMATION_REC_SCALE
+        when gossip confirms existing belief; dampened by half that when contradicting.
+      Negativity bias: lambda_scale boosted by MALP_GOSSIP_NEGATIVITY_REC_SCALE for
+        negative incoming gossip.  lambda_scale also applied to gossip_salience for
+        MPLP personality reinforcement.
+
+    New constants (malp.h):
+      MALP_GOSSIP_AVAILABILITY_SELECT_SCALE  (0.30f)
+      MALP_GOSSIP_NEGATIVITY_SELECT_SCALE    (0.20f)
+      MALP_GOSSIP_CONFIRMATION_SELECT_SCALE  (0.15f)
+      MALP_GOSSIP_ATTRIBUTION_ENC_SCALE      (0.25f)
+      MALP_GOSSIP_NEGATIVITY_ENC_SCALE       (0.15f)
+      MALP_GOSSIP_CONFIRMATION_REC_SCALE     (0.40f)
+      MALP_GOSSIP_NEGATIVITY_REC_SCALE       (0.25f)
+
+    time(NULL) now computed once at start of try_social_gossip() and reused
+    for both cooldown check and timestamp assignments.
+
+    Debug logging extended: GOSSIP log now shows raw_valence, enc_valence,
+    and lambda_scale for full bias-chain visibility.
+
+    Help file: COGNITIVE BIAS extended with gossip section (lib/text/help/help.hlp).
+
+
     Implements indirect knowledge propagation: mobs can now share emotional memories
     about third entities (gossip), spreading reputation, fear, and affection through
     social proximity without direct interaction.

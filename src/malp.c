@@ -420,6 +420,12 @@ void malp_decay_tick(struct char_data *mob)
         if (half_major < 1)
             half_major = 72;
 
+        /* Shared timestamp for availability-factor computation (avoids one time()
+         * call per entry; powerlaw_intensity() still uses its own internal time()
+         * which will agree to within a fraction of a second). */
+        time_t now = time(0);
+        float best_avail = 0.0f;
+
         int alive = 0;
         for (i = 0; i < ai->malp_count; i++) {
             struct malp_entry *e = &ai->malp[i];
@@ -444,7 +450,24 @@ void malp_decay_tick(struct char_data *mob)
             }
             if (e->intensity >= 0.05f)
                 alive++;
+
+            /* Availability-heuristic cache: track max (recency × intensity × arousal_amp)
+             * across all entries so shadow_score_projections() can read O(1) instead of
+             * rescanning the whole MALP array on every scoring call. */
+            if (e->timestamp) {
+                float age_hours = (float)(now - e->timestamp) / 3600.0f;
+                if (age_hours < 0.0f)
+                    age_hours = 0.0f;
+                float recency = 1.0f / (1.0f + age_hours / 24.0f);
+                float contrib = recency * e->intensity * (1.0f + e->arousal);
+                if (contrib > best_avail)
+                    best_avail = contrib;
+            }
         }
+
+        if (best_avail > 1.0f)
+            best_avail = 1.0f;
+        ai->cached_avail_factor = best_avail;
 
         /* Compact array: remove dead entries (intensity < 0.05) */
         int w = 0;
@@ -457,6 +480,8 @@ void malp_decay_tick(struct char_data *mob)
         }
         ai->malp_count = w;
         (void)alive; /* used for logging if needed */
+    } else {
+        ai->cached_avail_factor = 0.0f;
     }
 
     /* Decay MPLP traits — high-N slows negative-trait decay (rumination) */
@@ -601,6 +626,7 @@ void consolidator_tick(struct char_data *mob)
             _e->timestamp = (mem)->timestamp;                                                                          \
             _e->last_retrieved = 0;                                                                                    \
             _e->valence = valence;                                                                                     \
+            _e->first_valence = valence; /* Anchoring: capture first impression once; never updated */                 \
             _e->arousal = arousal;                                                                                     \
             _e->salience = S;                                                                                          \
             _e->intensity = S;                                                                                         \
@@ -1573,20 +1599,78 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
      * We exclude:
      *  - empty slots (agent_id == 0)
      *  - entries about the listener itself (would be a self-referential loop)
-     *  - entries below the minimum intensity threshold */
+     *  - entries below the minimum intensity threshold
+     *
+     * Cognitive biases shape topic selection (Phase 1):
+     *  – Availability bias: recency factor boosts selection score for recent entries.
+     *  – Negativity bias: negative-valence entries get an extra selection bonus.
+     *  – Confirmation bias: entries matching the source's prior belief direction
+     *    receive a small preference boost.
+     * The base score remains the MALP intensity, so bias only tilts selection —
+     * it cannot select a memory that is below MALP_GOSSIP_MIN_INTENSITY. */
     long listener_id = char_script_id(listener);
     struct malp_entry *best = NULL;
-    float best_intensity = MALP_GOSSIP_MIN_INTENSITY; /* lower bound */
+    float best_score = MALP_GOSSIP_MIN_INTENSITY; /* lower bound */
     int i;
+    time_t now = time(NULL); /* used for recency calc and timestamps */
 
+    /* Source's dominant prior belief toward the gossip target is needed for
+     * confirmation-bias topic selection.  We compute it lazily after selecting
+     * the best entry (see confirmation-bias encoding below), but for selection
+     * we use a simpler per-entry valence-sign alignment test. */
     for (i = 0; i < source->ai_data->malp_count; i++) {
         struct malp_entry *e = &source->ai_data->malp[i];
+        float score;
+
         if (e->agent_id == 0)
             continue;
         if (e->agent_id == listener_id && e->agent_type == ENTITY_TYPE_MOB)
             continue; /* don't gossip about the person you're talking to */
-        if (e->intensity > best_intensity) {
-            best_intensity = e->intensity;
+
+        score = e->intensity;
+
+        /* ── Availability Bias (Tversky & Kahneman 1973; Rosnow & Fine 1976):
+         * Mobs with higher availability_bias preferentially recall and share
+         * recent / emotionally vivid memories.  Uses the same 24-hour recency
+         * decay function as the Shadow Timeline module. */
+        if (source->ai_data->biases.availability_bias > 0.0f && e->timestamp > 0) {
+            float age_hours = (float)(now - e->timestamp) / 3600.0f;
+            if (age_hours < 0.0f)
+                age_hours = 0.0f;
+            float recency = 1.0f / (1.0f + age_hours / 24.0f);
+            score += source->ai_data->biases.availability_bias * recency * MALP_GOSSIP_AVAILABILITY_SELECT_SCALE *
+                     e->intensity;
+        }
+
+        /* ── Negativity Bias — selection (Baumeister et al. 2001):
+         * Negative memories feel more urgent to share; they occupy more
+         * cognitive space and are retrieved preferentially. */
+        if (source->ai_data->biases.negativity_bias > 0.0f && e->valence < 0.0f) {
+            score += source->ai_data->biases.negativity_bias * (-e->valence) * MALP_GOSSIP_NEGATIVITY_SELECT_SCALE *
+                     e->intensity;
+        }
+
+        /* ── Confirmation Bias — selection (Echterhoff & Higgins 2009):
+         * Sources prefer sharing stories that reinforce their dominant attitude
+         * about the target (audience-tuning / shared-reality effect).
+         * We approximate this by checking whether the entry's valence aligns
+         * with the source's overall MPLP disposition toward this entity.
+         * The bonus is small — it only tips the scales when scores are close. */
+        if (source->ai_data->biases.confirmation_bias > 0.0f) {
+            /* TRUST_BIAS is a signed trait in [-1,+1]: positive = trusting,
+             * negative = distrustful.  Compare against 0.0 (the neutral point),
+             * not 0.5, to avoid misclassifying most mobs as "negative". */
+            float src_trust = mplp_get_effective_trait(source, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+            bool src_positive = (src_trust >= 0.0f); /* source's general social lean */
+            bool entry_positive = (e->valence >= 0.0f);
+            if (src_positive == entry_positive) {
+                score +=
+                    source->ai_data->biases.confirmation_bias * MALP_GOSSIP_CONFIRMATION_SELECT_SCALE * e->intensity;
+            }
+        }
+
+        if (score > best_score) {
+            best_score = score;
             best = e;
         }
     }
@@ -1642,21 +1726,87 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         }
     }
 
-    if (existing && existing->last_applied > 0 &&
-        (time(NULL) - existing->last_applied) < (time_t)CONFIG_MOB_GOSSIP_COOLDOWN)
+    if (existing && existing->last_applied > 0 && (now - existing->last_applied) < (time_t)CONFIG_MOB_GOSSIP_COOLDOWN)
         return FALSE; /* cooldown not elapsed for this listener–target pair */
 
     /* ── Update listener's MALP entry about the target (C) ──────────────────
      * Gossip attenuates both intensity and valence.  The update uses lambda =
-     * transfer_weight so that highly trusted sources cause larger shifts.
+     * transfer_weight (× listener receptivity scale) so that highly trusted
+     * sources with belief-confirming content cause larger shifts.
      * When no entry exists for C, a new LOW-persistence entry is created with
      * reduced intensity (MALP_GOSSIP_INTENSITY_SCALE × transfer_weight). */
     float gossip_valence = best->valence;
     float gossip_intensity = best->intensity * MALP_GOSSIP_INTENSITY_SCALE * transfer_weight;
-    time_t now = time(NULL);
+
+    /* ── Source Cognitive Biases: gossip ENCODING (Phase 2) ─────────────────
+     *
+     * The source distorts the transmitted valence through its cognitive biases
+     * BEFORE delivery.  Raw MALP data is never modified — only the local
+     * gossip_valence copy used for this transmission is adjusted.
+     *
+     * Attribution Bias (Ross 1977; Jones & Harris 1967):
+     *   Mobs attribute others' bad behaviour to character, not circumstance.
+     *   When retelling negative events the story becomes more extreme because
+     *   the source frames the target as "just a bad entity by nature."
+     *   Only negative valence is amplified (positive attributions are neutral). */
+    if (source->ai_data->biases.attribution_bias > 0.0f && gossip_valence < 0.0f) {
+        gossip_valence *= (1.0f + source->ai_data->biases.attribution_bias * MALP_GOSSIP_ATTRIBUTION_ENC_SCALE);
+        if (gossip_valence < -1.0f)
+            gossip_valence = -1.0f;
+    }
+
+    /* Negativity Bias — encoding (Baumeister et al. 2001):
+     * Sources emphasise the negative emotional charge of bad memories when
+     * retelling them, amplifying the negative valence in transmission. */
+    if (source->ai_data->biases.negativity_bias > 0.0f && gossip_valence < 0.0f) {
+        gossip_valence *= (1.0f + source->ai_data->biases.negativity_bias * MALP_GOSSIP_NEGATIVITY_ENC_SCALE);
+        if (gossip_valence < -1.0f)
+            gossip_valence = -1.0f;
+
+        /* Negative gossip is also shared with slightly more emotional intensity. */
+        gossip_intensity *= 1.0f + source->ai_data->biases.negativity_bias * MALP_GOSSIP_NEGATIVITY_INTENSITY_BOOST;
+        if (gossip_intensity > 1.0f)
+            gossip_intensity = 1.0f;
+    }
+
+    /* ── Listener Cognitive Biases: gossip RECEPTION (Phase 3) ──────────────
+     *
+     * lambda_scale multiplies transfer_weight inside each MALP/MPLP update
+     * step.  It is always capped so that lambda never exceeds MALP_GOSSIP_WEIGHT_CAP,
+     * preserving the "no overwrite of first-hand memory" invariant.
+     *
+     * Confirmation Bias (Echterhoff & Higgins 2009; Fiedler et al. 2004):
+     *   Gossip that confirms the listener's existing belief about the target
+     *   is accepted more readily (higher lambda); contradicting gossip is
+     *   discounted (lower lambda).  Applies only when a prior entry exists. */
+    float lambda_scale = 1.0f;
+
+    if (listener->ai_data->biases.confirmation_bias > 0.0f && existing) {
+        bool gossip_negative = (gossip_valence < 0.0f);
+        bool prior_negative = (existing->valence < 0.0f);
+        if (gossip_negative == prior_negative) {
+            /* Confirms existing belief → boost receptivity */
+            lambda_scale += listener->ai_data->biases.confirmation_bias * MALP_GOSSIP_CONFIRMATION_REC_SCALE;
+        } else {
+            /* Contradicts existing belief → dampen receptivity */
+            float damp = listener->ai_data->biases.confirmation_bias * MALP_GOSSIP_CONFIRMATION_REC_SCALE * 0.5f;
+            lambda_scale -= damp;
+            if (lambda_scale < 0.1f)
+                lambda_scale = 0.1f;
+        }
+    }
+
+    /* Negativity Bias — reception (Baumeister et al. 2001; Rozin & Royzman 2001):
+     * Listeners process negative information more deeply and assign it greater
+     * evidential weight regardless of the source's credibility. */
+    if (listener->ai_data->biases.negativity_bias > 0.0f && gossip_valence < 0.0f) {
+        lambda_scale += listener->ai_data->biases.negativity_bias * MALP_GOSSIP_NEGATIVITY_REC_SCALE;
+    }
 
     if (existing) {
-        float lambda = transfer_weight; /* [0, MALP_GOSSIP_WEIGHT_CAP] */
+        float lambda = transfer_weight * lambda_scale;
+        if (lambda > MALP_GOSSIP_WEIGHT_CAP)
+            lambda = MALP_GOSSIP_WEIGHT_CAP;
         existing->valence = (1.0f - lambda) * existing->valence + lambda * gossip_valence;
         if (existing->valence > 1.0f)
             existing->valence = 1.0f;
@@ -1683,6 +1833,10 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         gossip_entry->timestamp = now;
         gossip_entry->last_retrieved = 0;
         gossip_entry->valence = gossip_valence;
+        /* Store the initial gossip valence as the first-impression anchor.
+         * This is the listener's very first "knowledge" of the target; it
+         * must never be overwritten by later gossip updates (anchoring bias). */
+        gossip_entry->first_valence = gossip_valence;
         gossip_entry->arousal = best->arousal * transfer_weight;
         gossip_entry->salience = best->salience * transfer_weight;
         gossip_entry->intensity = gossip_intensity;
@@ -1740,8 +1894,12 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
      * Positive gossip strengthens TRUST_BIAS and NOVEL_AGENT_INTEREST.
      * Negative gossip strengthens SUSPICION_BIAS and OUTGROUP_AVERSION.
      * All increments use the context-aware variant (MPLP_CTX_SOCIAL) so the
-     * effect is anchored in the social context without polluting other contexts. */
-    float gossip_salience = best->salience * transfer_weight;
+     * effect is anchored in the social context without polluting other contexts.
+     * lambda_scale is applied so that cognitively receptive listeners are also
+     * shaped more by the gossip at the personality level. */
+    float gossip_salience = best->salience * transfer_weight * lambda_scale;
+    if (gossip_salience > 1.0f)
+        gossip_salience = 1.0f;
     if (gossip_valence >= 0.0f) {
         reinforce_mplp_context_trait_ctx(listener, MPLP_TRAIT_TRUST_BIAS, gossip_valence, gossip_salience,
                                          MPLP_CTX_SOCIAL);
@@ -1755,9 +1913,11 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("GOSSIP: source=%s listener=%s target_id=%ld target_type=%d valence=%.2f weight=%.2f intensity=%.2f",
-             GET_NAME(source), GET_NAME(listener), target_id, target_type, gossip_valence, transfer_weight,
-             gossip_intensity);
+        log1(
+            "GOSSIP: source=%s listener=%s target_id=%ld target_type=%d "
+            "raw_valence=%.2f enc_valence=%.2f weight=%.2f lambda_scale=%.2f intensity=%.2f",
+            GET_NAME(source), GET_NAME(listener), target_id, target_type, best->valence, gossip_valence,
+            transfer_weight, lambda_scale, gossip_intensity);
 
     return TRUE;
 }

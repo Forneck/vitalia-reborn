@@ -1384,6 +1384,8 @@ struct malp_entry {
     time_t last_retrieved; /**< Last retrieval (reconsolidation check); 0 = never */
     time_t last_applied;   /**< Last time MALP/MPLP emotion effects were applied for this actor; 0 = never */
     float valence;         /**< Emotional valence −1..+1 (negative = aversive) */
+    float first_valence;   /**< First-impression valence: set once on entry creation; never updated
+                                (used by anchoring bias to pull projections toward original reaction) */
     float arousal;         /**< Arousal at encoding 0..1 */
     float salience;        /**< Computed salience S ∈ [0,1] at consolidation */
     float intensity;       /**< Current intensity (power-law decayed from salience) */
@@ -1411,6 +1413,24 @@ struct mplp_trait {
     int rehearsal_count;     /**< Co-occurrence count (Hebbian accumulator) */
     int persistence;         /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
     time_t last_updated;     /**< Wall-clock time of last Hebbian reinforcement (decay origin) */
+};
+
+/**
+ * Cognitive Bias parameters for Shadow Timeline projection distortion.
+ *
+ * These values shape how an NPC distorts projected future events before
+ * moral evaluation — modelling systematic psychological biases found in
+ * human cognition.
+ *
+ * Range: 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological.
+ * Stored per NPC in mob_ai_data.
+ */
+struct cognitive_biases {
+    float confirmation_bias; /**< Favour outcomes matching existing beliefs (MPLP/MALP) */
+    float availability_bias; /**< Inflate recent/intense memory projections */
+    float attribution_bias;  /**< Blame others' behaviour on personality; excuse self */
+    float negativity_bias;   /**< Amplify negative outcomes; dampen positive ones */
+    float anchoring_bias;    /**< Persist first-impression distortion regardless of later evidence */
 };
 
 struct mob_ai_data {
@@ -1549,6 +1569,14 @@ struct mob_ai_data {
     int malp_count;          /**< Number of active MALP entries */
     struct mplp_trait *mplp; /**< Dynamic array of implicit trait entries */
     int mplp_count;          /**< Number of active MPLP traits */
+
+    /* Cognitive Bias Module – Shadow Timeline projection distortion parameters */
+    struct cognitive_biases biases; /**< Per-NPC cognitive bias strengths (0.0–1.0+) */
+
+    /* Availability-bias cache – updated by malp_decay_tick(); read O(1) by shadow scoring.
+     * Stores the highest (recency × intensity × arousal_amp) across all MALP entries so
+     * that shadow_score_projections() never needs to scan the MALP array for this value. */
+    float cached_avail_factor; /**< Pre-computed availability heuristic factor [0, 1] */
 };
 
 /**

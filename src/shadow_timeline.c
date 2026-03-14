@@ -28,7 +28,9 @@
 #include "handler.h"
 #include "db.h"
 #include "shadow_timeline.h"
+#include <math.h>
 #include "moral_reasoner.h"
+#include "malp.h"
 #include "act.h"
 #include "fight.h"
 #include "graph.h"
@@ -54,6 +56,13 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
 static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
 static bool check_invariant_action(struct char_data *ch, enum shadow_action_type type);
+/* Cognitive Bias Module helpers (static; public entry is shadow_apply_cognitive_biases) */
+static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor);
+static float compute_availability_factor(struct char_data *ch);
+static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj);
 
 /**
  * Initialize a shadow context for an entity
@@ -1575,7 +1584,24 @@ void shadow_score_projections(struct shadow_context *ctx)
     }
 
     int i;
+    /* Compute the availability heuristic factor ONCE for this scoring round.
+     * The MALP scan is O(malp_count); doing it per-projection would be
+     * O(malp_count × num_projections).  The result is identical for all
+     * projections in the same tick, so a single scan suffices. */
+    float avail_factor = compute_availability_factor(ctx->entity);
+
     for (i = 0; i < ctx->num_projections; i++) {
+        /* Apply cognitive biases BEFORE moral evaluation (issue requirement:
+         * "Humans bias first, rationalize later.")
+         * Availability is passed pre-computed to avoid the repeated MALP scan.
+         * Each bias function guards against NULL ch / ai_data internally. */
+        struct shadow_projection *proj = &ctx->projections[i];
+        apply_availability_bias(ctx->entity, proj, avail_factor);
+        apply_confirmation_bias(ctx->entity, proj);
+        apply_attribution_bias(ctx->entity, proj);
+        apply_negativity_bias(ctx->entity, proj);
+        apply_anchoring_bias(ctx->entity, proj);
+
         ctx->projections[i].outcome.score = score_projection_for_entity(ctx->entity, &ctx->projections[i]);
     }
 }
@@ -2000,10 +2026,380 @@ void shadow_apply_subjectivity(struct char_data *ch, struct shadow_outcome *outc
     }
 }
 
+/* ── Cognitive Bias Module ─────────────────────────────────────────────────
+ *
+ * Implements systematic psychological distortions applied to Shadow Timeline
+ * projections BEFORE moral evaluation, mirroring the human cognitive pipeline:
+ *   Perception → MALP/MPLP → Shadow Timeline → Cognitive Bias → Moral → Action
+ *
+ * "Humans bias first, rationalize later." — Issue specification
+ * ──────────────────────────────────────────────────────────────────────────*/
+
 /**
- * Check entity existence invariant
- * Ensures entity exists and has valid prototype
+ * Apply confirmation bias to a shadow projection.
+ *
+ * NPCs favour outcomes that match existing beliefs encoded in MPLP (trust,
+ * suspicion) and MALP (episodic valence toward the target entity).  A
+ * positive prior belief boosts projected probability of positive outcomes
+ * and reduces negative ones; negative beliefs do the reverse.
+ *
+ * Rule (from issue):
+ *   if event matches MPLP trust/emotion → probability += bias
+ *   else                                → probability -= bias
+ *
+ * Effects: grudges persist, trust persists, paranoia / loyalty possible.
  */
+static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    float prior_valence;
+    struct char_data *target;
+    struct malp_entry *malp_e;
+    float mplp_trust;
+    float mplp_suspicion;
+    int delta;
+    int target_type;
+    long target_id;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.confirmation_bias;
+    if (bias <= 0.0f)
+        return;
+
+    prior_valence = 0.0f;
+
+    /* Gather prior belief from MPLP trust/suspicion toward target */
+    target = (struct char_data *)proj->action.target;
+    if (target) {
+        mplp_trust = mplp_get_effective_trait(ch, target, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+        mplp_suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+        /* Trust raises prior valence; suspicion lowers it */
+        prior_valence += mplp_trust - mplp_suspicion;
+
+        /* Also consult episodic MALP if available */
+        target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+        target_id = IS_NPC(target) ? GET_MOB_VNUM(target) : GET_IDNUM(target);
+        malp_e = get_malp_by_agent(ch, target_id, target_type);
+        if (malp_e) {
+            prior_valence += malp_e->valence * malp_e->intensity;
+        }
+        /* Clamp to [-1, +1] */
+        if (prior_valence > 1.0f)
+            prior_valence = 1.0f;
+        if (prior_valence < -1.0f)
+            prior_valence = -1.0f;
+    } else {
+        /* No specific target — use the NPC's general trust level directly.
+         * TRUST_BIAS is a signed trait in [-1,+1]; positive = trusting,
+         * negative = distrustful.  No offset is required. */
+        prior_valence = mplp_get_effective_trait(ch, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL);
+    }
+
+    /* Confirmation: project scored outcome agrees/disagrees with prior belief.
+     * "Agrees" means the outcome valence (score sign) aligns with prior_valence.
+     *
+     * When beliefs match outcome direction, the NPC amplifies the projection in
+     * that direction (positive belief+outcome → push score up; negative
+     * belief+outcome → push score further negative, confirming feared outcomes).
+     * When beliefs contradict outcome, the NPC discounts the projection. */
+    bool outcome_positive = (proj->outcome.score >= 0);
+    bool belief_positive = (prior_valence >= 0.0f);
+
+    if (outcome_positive == belief_positive) {
+        /* Beliefs match outcome direction → amplify in the outcome's direction */
+        float magnitude = fabsf(prior_valence);
+        delta = outcome_positive ? (int)(bias * magnitude * (float)COGBIAS_CONFIRMATION_MAX)
+                                 : -(int)(bias * magnitude * (float)COGBIAS_CONFIRMATION_MAX);
+    } else {
+        /* Contradicting belief → dampen the projection */
+        delta = -(int)(bias * (float)COGBIAS_CONFIRMATION_MAX / 2.0f);
+    }
+
+    proj->outcome.score += delta;
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-CONF: mob %s prior_valence=%.2f delta=%d new_score=%d", GET_NAME(ch), prior_valence, delta,
+             proj->outcome.score);
+}
+
+/**
+ * Apply availability heuristic bias to a shadow projection.
+ *
+ * Recent or emotionally intense MALP memories make projected events feel
+ * more likely.  The NPC over-weights vivid/recent episodes when assessing
+ * future probabilities, regardless of actual base rates.
+ *
+ * Rule (from issue):
+ *   recent events → weight ↑; old events → weight ↓; high emotion → weight ↑
+ *   prob *= (1 + availability_bias * recency_factor)
+ *
+ * Effects: trauma, fixation, revenge behaviour, fear loops.
+ */
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor)
+{
+    float bias;
+    int delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.availability_bias;
+    if (bias <= 0.0f || avail_factor <= 0.0f)
+        return;
+
+    /* Apply: score * (1 + bias * recency_factor * COGBIAS_AVAILABILITY_MAX)
+     * Amplifies both positive and negative projections proportionally,
+     * simulating over-estimation of salient events. */
+    float multiplier = bias * avail_factor * COGBIAS_AVAILABILITY_MAX;
+    delta = (int)((float)proj->outcome.score * multiplier);
+    proj->outcome.score += delta;
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch), avail_factor,
+             multiplier, delta, proj->outcome.score);
+}
+
+/**
+ * Return the per-mob availability heuristic recency factor.
+ *
+ * The value is maintained by malp_decay_tick() which piggybacks the
+ * max(recency × intensity × arousal_amp) computation inside its existing
+ * MALP loop at zero additional loop overhead.  This function therefore
+ * runs in O(1) — no MALP scan — making it safe to call from the hot path
+ * inside shadow_score_projections() for all mobs every tick.
+ */
+static float compute_availability_factor(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data)
+        return 0.0f;
+
+    return ch->ai_data->cached_avail_factor;
+}
+
+/**
+ * Apply fundamental attribution error bias to a shadow projection.
+ *
+ * The NPC attributes bad outcomes caused by others to their personality
+ * (holding grudges, misreading intentions) while excusing its own bad
+ * outcomes as situational (self-serving bias).
+ *
+ * Rule (from issue):
+ *   others bad → personality blame: utility -= attribution_bias
+ *   self bad   → situation blame:   utility += attribution_bias * 0.5
+ *
+ * Effects: NPCs hold grudges, justify themselves, misread intentions.
+ */
+static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    int self_delta;
+    int other_delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.attribution_bias;
+    if (bias <= 0.0f)
+        return;
+
+    /* Self-serving bias: the NPC excuses its own actions as situational.
+     * Slightly boosts utility for actions the NPC itself performs. */
+    self_delta = (int)(bias * 0.5f * (float)COGBIAS_ATTRIBUTION_MAX);
+    proj->outcome.score += self_delta;
+
+    /* Attribution error for others: if the projection involves a target
+     * who is expected to retaliate (high danger_level), the NPC attributes
+     * this danger to the enemy's inherent hostile personality, not the
+     * situation.  This amplifies grudge-holding. */
+    if (proj->action.target && proj->outcome.danger_level > 30) {
+        other_delta = (int)(bias * (float)COGBIAS_ATTRIBUTION_MAX * ((float)proj->outcome.danger_level / 100.0f));
+        proj->outcome.score -= other_delta;
+
+        if (CONFIG_MOB_4D_DEBUG)
+            log1("COGBIAS-ATTR: mob %s self_delta=+%d enemy_delta=-%d new_score=%d", GET_NAME(ch), self_delta,
+                 other_delta, proj->outcome.score);
+    } else {
+        if (CONFIG_MOB_4D_DEBUG)
+            log1("COGBIAS-ATTR: mob %s self_delta=+%d new_score=%d", GET_NAME(ch), self_delta, proj->outcome.score);
+    }
+}
+
+/**
+ * Apply negativity bias to a shadow projection.
+ *
+ * Negative events carry more psychological weight than equivalent positive
+ * events.  This makes it harder to gain trust and easier to lose it, and
+ * produces persistent hostility and realistic social conflict.
+ *
+ * Rule (from issue):
+ *   negative utility *= (1 + negativity_bias)
+ *   positive utility *= (1 - negativity_bias * 0.5)
+ *
+ * Effects: harder to gain trust, easier to lose trust, persistent hostility.
+ */
+static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.negativity_bias;
+    if (bias <= 0.0f)
+        return;
+
+    if (proj->outcome.score < 0) {
+        /* Negative outcome: amplify.
+         * Formula (issue spec): negative *= (1 + negativity_bias) */
+        float scale = 1.0f + bias;
+        proj->outcome.score = (int)((float)proj->outcome.score * scale);
+    } else if (proj->outcome.score > 0) {
+        /* Positive outcome: dampen slightly.
+         * Formula (issue spec): positive *= (1 - negativity_bias * 0.5) */
+        float scale = 1.0f - (bias * 0.5f);
+        if (scale < 0.5f)
+            scale = 0.5f; /* Floor: never more than 50% reduction */
+        proj->outcome.score = (int)((float)proj->outcome.score * scale);
+    }
+
+    /* Also amplify perceived danger for negative outcomes */
+    if (proj->outcome.danger_level > 0) {
+        int danger_boost = (int)(bias * (float)proj->outcome.danger_level * COGBIAS_NEGATIVITY_MAX);
+        proj->outcome.danger_level = MIN(100, proj->outcome.danger_level + danger_boost);
+    }
+
+    /* Clamp to valid range */
+    proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-NEG: mob %s bias=%.2f new_score=%d danger=%d", GET_NAME(ch), bias, proj->outcome.score,
+             proj->outcome.danger_level);
+}
+
+/**
+ * Apply anchoring bias to a shadow projection.
+ *
+ * The first impression of a target entity — stored as `first_valence` in
+ * the NPC's MALP entry — acts as a persistent residual pull on the projected
+ * score, regardless of later contradicting evidence.  This models the
+ * psychological phenomenon that humans (and now NPCs) anchor on initial
+ * information even when new data should rationally revise the belief.
+ *
+ * Mechanism:
+ *   anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × MAX
+ *
+ * Where resistance combines MPLP suspicion (slow to trust) and inverse
+ * forgiveness (slow to forgive), both of which make beliefs harder to revise.
+ * intensity_floor ensures the anchor retains at least 30% potency even as
+ * the episodic memory naturally fades — anchors outlast normal memory decay.
+ *
+ * Effects:
+ *   - NPC that was helped first still favours that actor even after insults
+ *   - NPC that was attacked first stays suspicious even after subsequent help
+ *   - Stubborn NPCs are nearly immune to belief revision
+ *   - Forgiving NPCs show weaker anchoring (resistance approaches 0)
+ *
+ * Applied last in the pipeline because it distorts the final score
+ * (not the intermediate simulation), per the issue specification.
+ */
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    float first_valence;
+    float suspicion;
+    float forgiveness;
+    float resistance;
+    float intensity_floor;
+    struct char_data *target;
+    struct malp_entry *malp_e;
+    int target_type;
+    long target_id;
+    int delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.anchoring_bias;
+    if (bias <= 0.0f)
+        return;
+
+    target = (struct char_data *)proj->action.target;
+    if (!target)
+        return; /* Anchoring requires a specific entity target */
+
+    target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+    target_id = IS_NPC(target) ? (long)GET_MOB_VNUM(target) : GET_IDNUM(target);
+
+    malp_e = get_malp_by_agent(ch, target_id, target_type);
+    if (!malp_e || (malp_e->first_valence > -0.01f && malp_e->first_valence < 0.01f))
+        return; /* No prior history or near-neutral first impression — negligible anchor */
+
+    first_valence = malp_e->first_valence;
+
+    /* Resistance to belief revision: composite of suspicion and low forgiveness.
+     * suspicion_bias ∈ [0,1]: distrustful NPCs re-anchor harder on bad impressions.
+     * forgiveness_rate ∈ [0,1]: (1 - forgiveness) means stubborn, unforgiving NPCs
+     * hold onto their first impression for longer.
+     * Average gives a symmetric resistance measure in [0,1]. */
+    suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+    forgiveness = mplp_get_effective_trait(ch, target, MPLP_TRAIT_FORGIVENESS_RATE, MPLP_CTX_SOCIAL);
+    resistance = (suspicion + (1.0f - forgiveness)) * 0.5f;
+    if (resistance < 0.0f)
+        resistance = 0.0f;
+    if (resistance > 1.0f)
+        resistance = 1.0f;
+
+    /* Intensity floor: anchors outlast normal episodic memory decay.
+     * Even when the MALP entry has faded (intensity < 0.3), the first
+     * impression still exerts at least 30% of its original pull. */
+    intensity_floor = malp_e->intensity;
+    if (intensity_floor < 0.3f)
+        intensity_floor = 0.3f;
+
+    delta = (int)(first_valence * bias * resistance * intensity_floor * (float)COGBIAS_ANCHORING_MAX);
+
+    proj->outcome.score += delta;
+    proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-ANCH: mob %s first_val=%.2f resist=%.2f intens=%.2f delta=%d score=%d", GET_NAME(ch),
+             first_valence, resistance, intensity_floor, delta, proj->outcome.score);
+}
+
+/**
+ * Apply all cognitive biases to a shadow projection.
+ *
+ * Called after shadow_execute_projection() and before moral_evaluate().
+ * Pipeline: Shadow Timeline → Cognitive Bias Module → Moral reasoning → Action.
+ *
+ * Order of application (from issue):
+ *   1. Availability  (memory salience / recency)
+ *   2. Confirmation  (belief persistence)
+ *   3. Attribution   (self vs. other)
+ *   4. Negativity    (asymmetric loss aversion)
+ *   5. Anchoring     (first-impression residual — applied last, distorts final score)
+ *
+ * @param ch   The NPC entity applying biases.
+ * @param proj The projection to distort.
+ */
+void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj)
+{
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    /* Compute availability factor on demand (for external / one-shot callers).
+     * The hot path in shadow_score_projections() pre-computes this once per
+     * scoring round and calls the individual bias functions directly. */
+    float avail_factor = compute_availability_factor(ch);
+    apply_availability_bias(ch, proj, avail_factor);
+    apply_confirmation_bias(ch, proj);
+    apply_attribution_bias(ch, proj);
+    apply_negativity_bias(ch, proj);
+    apply_anchoring_bias(ch, proj);
+}
+
 static bool check_invariant_existence(void *entity, int entity_type)
 {
     if (!entity) {

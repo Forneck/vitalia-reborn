@@ -160,6 +160,71 @@
  */
 #define MALP_GOSSIP_VALENCE_BLEND_RATE 0.10f
 
+/* ── Cognitive Bias modifiers for gossip (RFC-1003 §Bias) ─────────────────
+ *
+ * Psychological research shows that cognitive biases affect social
+ * transmission of information at three stages:
+ *
+ *  1. TOPIC SELECTION (source): what the mob chooses to gossip about.
+ *     – Availability heuristic (Tversky & Kahneman 1973): recent / intense
+ *       memories are more cognitively available → selection bonus.
+ *     – Negativity bias (Baumeister et al. 2001): negative memories feel
+ *       more urgent to share → selection bonus for negative valence entries.
+ *     – Confirmation bias (Echterhoff & Higgins 2009): source prefers topics
+ *       that confirm its dominant belief about the target.
+ *
+ *  2. NARRATION / ENCODING (source): how the gossip content is framed.
+ *     – Attribution bias (Ross 1977; Jones & Harris 1967): others' bad
+ *       behaviour is attributed to character, making negative gossip more
+ *       extreme in the telling.
+ *     – Negativity bias: source amplifies the emotional negativity of the
+ *       transmitted valence.
+ *
+ *  3. RECEPTION (listener): how much weight the listener gives incoming gossip.
+ *     – Confirmation bias: gossip that confirms existing belief is accepted
+ *       more readily; contradicting gossip is discounted.
+ *     – Negativity bias: negative gossip is processed more deeply and
+ *       weighted more heavily by listeners.
+ *
+ *  Invariants (from design requirement):
+ *   - Raw MALP/MPLP data is never fabricated or overwritten.
+ *   - Bias affects weighting, interpretation, and sharing probability only.
+ *   - Bias acts during selection and narration, not during memory storage.
+ */
+
+/** Max selection-score bonus (as fraction of intensity) that availability
+ *  bias can add to a MALP entry in the topic-selection loop. */
+#define MALP_GOSSIP_AVAILABILITY_SELECT_SCALE 0.30f
+
+/** Max selection-score bonus (as fraction of intensity × |valence|) that
+ *  negativity bias can add for entries with negative valence. */
+#define MALP_GOSSIP_NEGATIVITY_SELECT_SCALE 0.20f
+
+/** Max selection-score bonus (as fraction of intensity) that confirmation
+ *  bias can add for entries whose valence matches the source's prior belief. */
+#define MALP_GOSSIP_CONFIRMATION_SELECT_SCALE 0.15f
+
+/** Max amplification of transmitted negative valence by the source's
+ *  attribution bias (character-blame framing).  Applied multiplicatively. */
+#define MALP_GOSSIP_ATTRIBUTION_ENC_SCALE 0.25f
+
+/** Max amplification of transmitted negative valence by the source's
+ *  negativity bias during encoding.  Applied multiplicatively. */
+#define MALP_GOSSIP_NEGATIVITY_ENC_SCALE 0.15f
+
+/** Max lambda (transfer_weight) scaling adjustment for the listener's
+ *  confirmation bias.  Confirming gossip boosts by this fraction;
+ *  contradicting gossip is dampened by half this fraction. */
+#define MALP_GOSSIP_CONFIRMATION_REC_SCALE 0.40f
+
+/** Max lambda scaling boost for the listener's negativity bias when
+ *  incoming gossip has negative valence. */
+#define MALP_GOSSIP_NEGATIVITY_REC_SCALE 0.25f
+
+/** Fractional boost applied to gossip_intensity for negative memories when
+ *  the source has non-zero negativity_bias (emotional transmission emphasis). */
+#define MALP_GOSSIP_NEGATIVITY_INTENSITY_BOOST 0.10f
+
 /* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
 /**
  * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
@@ -905,6 +970,23 @@ void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_
  *  reputation_factor(A)= source's global reputation / 100
  *  intensity(A,C)      = source's MALP intensity for the target entity
  *  suspicion(B)        = listener's SUSPICION_BIAS (unsigned [0,1])
+ *
+ * Cognitive bias modifiers are applied at three stages (see malp.h constants):
+ *
+ *  1. TOPIC SELECTION — source's availability_bias and negativity_bias weight the
+ *     selection scoring toward recent / emotionally intense / negative memories;
+ *     confirmation_bias prefers entries that match source's prior belief direction.
+ *     (Tversky & Kahneman 1973; Baumeister et al. 2001; Echterhoff & Higgins 2009)
+ *
+ *  2. ENCODING — source's attribution_bias and negativity_bias amplify negative
+ *     gossip_valence before transmission, modelling character-blame framing and
+ *     emotional emphasis.  (Ross 1977; Baumeister et al. 2001)
+ *     Raw MALP/MPLP data is never modified.
+ *
+ *  3. RECEPTION — listener's confirmation_bias scales lambda up (confirming gossip)
+ *     or down (contradicting gossip); negativity_bias boosts lambda for negative
+ *     incoming gossip.  (Echterhoff & Higgins 2009; Rozin & Royzman 2001)
+ *     lambda is always capped at MALP_GOSSIP_WEIGHT_CAP.
  *
  * After weighting the function:
  *  - Updates or creates listener's MALP entry for C (clamped intensity/valence).

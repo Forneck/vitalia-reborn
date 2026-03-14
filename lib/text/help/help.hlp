@@ -19067,4 +19067,106 @@ Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
 
 @rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
 #105
+COGNITIVE BIAS COGBIAS MOB-COGBIAS NPC-COGBIAS
+
+@cCOGNITIVE BIAS MODULE — Shadow Timeline & Gossip Distortion@n
+
+  The Cognitive Bias Module introduces systematic psychological distortions
+  into NPC decision-making.  It applies BEFORE moral evaluation, modelling the
+  human-observed principle "bias first, rationalize later."
+
+  @yPipeline:@n
+    Perception → MALP/MPLP → Shadow Timeline → @YCOGNITIVE BIAS@n → Moral → Action
+
+  @yBiases (stored per NPC in ai_data.biases):@n
+
+  @gConfirmation Bias (confirmation_bias)@n
+    NPCs favour projected outcomes that match their existing beliefs (MPLP
+    trust, MALP valence).  A trusted entity's positive outcomes feel more
+    likely; feared entities' negative outcomes feel inevitable.
+    Effects: grudges persist, loyalty locks in, paranoia possible.
+
+  @gAvailability Heuristic (availability_bias)@n
+    Recent or emotionally intense MALP memories inflate all projections.
+    The more salient the memory, the larger the amplification.
+    Effects: trauma loops, fixation, revenge behaviour, fear persistence.
+
+  @gFundamental Attribution Error (attribution_bias)@n
+    Others' dangerous behaviour is blamed on their personality (not the
+    situation), deepening grudges.  The NPC's own risky actions are
+    excused as situational (self-serving bias).
+    Effects: NPCs hold grudges longer, justify themselves, misread intent.
+
+  @gNegativity Bias (negativity_bias)@n
+    Negative projected outcomes are amplified; positive ones are dampened.
+    Rule: negative *= (1 + bias),  positive *= (1 - bias*0.5).
+    Effects: harder to gain trust, easier to lose it, persistent hostility.
+
+  @gAnchoring Bias (anchoring_bias)@n
+    Applied LAST in the pipeline.  The NPC's very first emotional reaction to
+    an entity (stored as first_valence in its MALP entry) acts as a permanent
+    residual pull on projected scores, even when later evidence contradicts it.
+    Formula: residual = first_valence * bias * resistance * intensity_floor * 25
+      resistance    = (suspicion_bias + (1 - forgiveness_rate)) / 2
+      intensity_floor = max(0.30, malp.intensity)  — anchors outlast memory decay
+    Effects: NPCs never forget first impressions.  Suspicious, unforgiving NPCs
+    anchor the hardest; forgiving NPCs can eventually overcome their anchor.
+    Emergent archetypes: grateful ally, unforgiving enemy, stubborn grudge-holder,
+    naive loyalist.
+
+  @yBias Range:@n
+    0.0 = no bias
+    0.5 = human normal (default for all NPCs)
+    1.0 = strong bias
+    >1.0 = extreme / pathological
+
+  @yDebug Logging:@n
+    Enable CONFIG_MOB_4D_DEBUG (CEDIT → Experimental → mob_4d_debug) to see
+    per-projection COGBIAS-CONF / COGBIAS-AVAIL / COGBIAS-ATTR / COGBIAS-NEG /
+    COGBIAS-ANCH log lines, and per-gossip-event GOSSIP lines with raw_valence
+    vs enc_valence and lambda_scale.
+
+  @yData Sources Used:@n
+    Confirmation: MPLP TRUST_BIAS, SUSPICION_BIAS, MALP episodic valence
+    Availability: MALP timestamp, intensity, arousal
+    Attribution:  shadow_projection.action.target, danger_level
+    Negativity:   shadow_projection.outcome.score, danger_level
+    Anchoring:    malp_entry.first_valence, MPLP SUSPICION_BIAS, FORGIVENESS_RATE
+
+  @cBias Effects on Gossip (try_social_gossip)@n
+
+  Cognitive biases also modulate NPC gossip in three phases:
+
+  @yPhase 1 — Topic Selection (source biases):@n
+    Availability bias: recent memories score higher in selection, making
+      NPCs with this bias gossip more about what just happened to them.
+    Negativity bias: negative-valence MALP entries score higher, so these
+      NPCs talk more about threats, betrayals, and bad actors.
+    Confirmation bias: entries matching the source's general social lean
+      receive a small bonus — the source gravitates toward belief-consistent
+      stories to share.
+
+  @yPhase 2 — Narration / Encoding (source biases):@n
+    Attribution bias: when retelling negative events, the source amplifies
+      the negative valence ("that person is just evil") by up to
+      MALP_GOSSIP_ATTRIBUTION_ENC_SCALE × attribution_bias.
+    Negativity bias: the source additionally emphasises the negative charge;
+      transmitted intensity is also slightly increased for negative memories.
+    Raw MALP/MPLP data is never modified — only the local gossip copy.
+
+  @yPhase 3 — Reception (listener biases):@n
+    Confirmation bias: gossip confirming the listener's prior belief about
+      the target boosts lambda (more memory shift); contradicting gossip
+      is discounted (dampened lambda).
+    Negativity bias: negative incoming gossip is processed more deeply;
+      lambda and gossip_salience are boosted for negative content.
+
+  @yInvariants (preserved by design):@n
+    - Factual MALP/MPLP data is never fabricated or overwritten.
+    - Bias affects weighting, interpretation, sharing probability only.
+    - Bias acts during selection and narration, not during memory storage.
+    - lambda is always capped at MALP_GOSSIP_WEIGHT_CAP regardless of bias.
+
+Veja tambem: SHADOW TIMELINE, MALP, MPLP, EMOTION, OCEAN, CEDIT
+#105
 $~
