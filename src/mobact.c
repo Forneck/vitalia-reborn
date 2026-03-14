@@ -3804,13 +3804,18 @@ bool mob_try_stealth_follow(struct char_data *ch)
 
                 if (CAN_SEE(target, ch)) {
                     act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    /* Safety check: act() can trigger DG scripts which may cause extraction.
+                     * Guard with ch->master before stop_follower() — a DG script fired by
+                     * act() may have already cleared ch->master (stop_follower core_dumps
+                     * on NULL master). */
                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                        stop_follower(ch);
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
                     }
                     if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
-                        stop_follower(ch);
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
                     }
                 }
