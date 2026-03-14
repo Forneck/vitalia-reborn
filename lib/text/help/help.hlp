@@ -19102,6 +19102,18 @@ COGNITIVE BIAS COGBIAS MOB-COGBIAS NPC-COGBIAS
     Rule: negative *= (1 + bias),  positive *= (1 - bias*0.5).
     Effects: harder to gain trust, easier to lose it, persistent hostility.
 
+  @gAnchoring Bias (anchoring_bias)@n
+    Applied LAST in the pipeline.  The NPC's very first emotional reaction to
+    an entity (stored as first_valence in its MALP entry) acts as a permanent
+    residual pull on projected scores, even when later evidence contradicts it.
+    Formula: residual = first_valence * bias * resistance * intensity_floor * 25
+      resistance    = (suspicion_bias + (1 - forgiveness_rate)) / 2
+      intensity_floor = max(0.30, malp.intensity)  — anchors outlast memory decay
+    Effects: NPCs never forget first impressions.  Suspicious, unforgiving NPCs
+    anchor the hardest; forgiving NPCs can eventually overcome their anchor.
+    Emergent archetypes: grateful ally, unforgiving enemy, stubborn grudge-holder,
+    naive loyalist.
+
   @yBias Range:@n
     0.0 = no bias
     0.5 = human normal (default for all NPCs)
@@ -19110,15 +19122,16 @@ COGNITIVE BIAS COGBIAS MOB-COGBIAS NPC-COGBIAS
 
   @yDebug Logging:@n
     Enable CONFIG_MOB_4D_DEBUG (CEDIT → Experimental → mob_4d_debug) to see
-    per-projection COGBIAS-CONF / COGBIAS-AVAIL / COGBIAS-ATTR / COGBIAS-NEG
-    log lines, and per-gossip-event GOSSIP lines with raw_valence vs
-    enc_valence and lambda_scale.
+    per-projection COGBIAS-CONF / COGBIAS-AVAIL / COGBIAS-ATTR / COGBIAS-NEG /
+    COGBIAS-ANCH log lines, and per-gossip-event GOSSIP lines with raw_valence
+    vs enc_valence and lambda_scale.
 
   @yData Sources Used:@n
     Confirmation: MPLP TRUST_BIAS, SUSPICION_BIAS, MALP episodic valence
     Availability: MALP timestamp, intensity, arousal
     Attribution:  shadow_projection.action.target, danger_level
     Negativity:   shadow_projection.outcome.score, danger_level
+    Anchoring:    malp_entry.first_valence, MPLP SUSPICION_BIAS, FORGIVENESS_RATE
 
   @cBias Effects on Gossip (try_social_gossip)@n
 

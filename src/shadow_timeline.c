@@ -28,6 +28,7 @@
 #include "handler.h"
 #include "db.h"
 #include "shadow_timeline.h"
+#include <math.h>
 #include "moral_reasoner.h"
 #include "malp.h"
 #include "act.h"
@@ -57,7 +58,8 @@ static bool check_invariant_location(struct char_data *ch, room_rnum room);
 static bool check_invariant_action(struct char_data *ch, enum shadow_action_type type);
 /* Cognitive Bias Module helpers (static; public entry is shadow_apply_cognitive_biases) */
 static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj);
-static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor);
+static float compute_availability_factor(struct char_data *ch);
 static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj);
 static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj);
 static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj);
@@ -1582,10 +1584,23 @@ void shadow_score_projections(struct shadow_context *ctx)
     }
 
     int i;
+    /* Compute the availability heuristic factor ONCE for this scoring round.
+     * The MALP scan is O(malp_count); doing it per-projection would be
+     * O(malp_count × num_projections).  The result is identical for all
+     * projections in the same tick, so a single scan suffices. */
+    float avail_factor = compute_availability_factor(ctx->entity);
+
     for (i = 0; i < ctx->num_projections; i++) {
         /* Apply cognitive biases BEFORE moral evaluation (issue requirement:
-         * "Humans bias first, rationalize later.") */
-        shadow_apply_cognitive_biases(ctx->entity, &ctx->projections[i]);
+         * "Humans bias first, rationalize later.")
+         * Availability is passed pre-computed to avoid the repeated MALP scan.
+         * Each bias function guards against NULL ch / ai_data internally. */
+        struct shadow_projection *proj = &ctx->projections[i];
+        apply_availability_bias(ctx->entity, proj, avail_factor);
+        apply_confirmation_bias(ctx->entity, proj);
+        apply_attribution_bias(ctx->entity, proj);
+        apply_negativity_bias(ctx->entity, proj);
+        apply_anchoring_bias(ctx->entity, proj);
 
         ctx->projections[i].outcome.score = score_projection_for_entity(ctx->entity, &ctx->projections[i]);
     }
@@ -2076,8 +2091,10 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
         if (prior_valence < -1.0f)
             prior_valence = -1.0f;
     } else {
-        /* No specific target — use the NPC's general trust level */
-        prior_valence = mplp_get_effective_trait(ch, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL) - 0.5f;
+        /* No specific target — use the NPC's general trust level directly.
+         * TRUST_BIAS is a signed trait in [-1,+1]; positive = trusting,
+         * negative = distrustful.  No offset is required. */
+        prior_valence = mplp_get_effective_trait(ch, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL);
     }
 
     /* Confirmation: project scored outcome agrees/disagrees with prior belief.
@@ -2120,26 +2137,48 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
  *
  * Effects: trauma, fixation, revenge behaviour, fear loops.
  */
-static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj)
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor)
 {
     float bias;
-    float recency_factor;
-    time_t now;
-    int i;
-    float contribution;
     int delta;
 
     if (!ch || !proj || !ch->ai_data)
         return;
 
     bias = ch->ai_data->biases.availability_bias;
-    if (bias <= 0.0f || ch->ai_data->malp_count == 0)
+    if (bias <= 0.0f || avail_factor <= 0.0f)
         return;
 
-    recency_factor = 0.0f;
+    /* Apply: score * (1 + bias * recency_factor * COGBIAS_AVAILABILITY_MAX)
+     * Amplifies both positive and negative projections proportionally,
+     * simulating over-estimation of salient events. */
+    float multiplier = bias * avail_factor * COGBIAS_AVAILABILITY_MAX;
+    delta = (int)((float)proj->outcome.score * multiplier);
+    proj->outcome.score += delta;
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch), avail_factor,
+             multiplier, delta, proj->outcome.score);
+}
+
+/**
+ * Compute the availability heuristic recency factor for a mob.
+ *
+ * Scans all MALP episodes once and returns the max(recency × intensity)
+ * value.  This is called once per shadow_score_projections() call so that
+ * the O(malp_count) scan is not repeated for every projection.
+ */
+static float compute_availability_factor(struct char_data *ch)
+{
+    float availability_factor = 0.0f;
+    time_t now;
+    int i;
+
+    if (!ch || !ch->ai_data || ch->ai_data->malp_count == 0)
+        return 0.0f;
+
     now = time(0);
 
-    /* Scan all MALP episodes for the most salient recent memory */
     for (i = 0; i < ch->ai_data->malp_count; i++) {
         struct malp_entry *e = &ch->ai_data->malp[i];
         if (!e->timestamp)
@@ -2156,25 +2195,16 @@ static void apply_availability_bias(struct char_data *ch, struct shadow_projecti
         /* Emotional intensity amplifies availability */
         float intensity_amp = e->intensity * (1.0f + e->arousal);
 
-        contribution = recency * intensity_amp;
-        if (contribution > recency_factor)
-            recency_factor = contribution;
+        float contribution = recency * intensity_amp;
+        if (contribution > availability_factor)
+            availability_factor = contribution;
     }
 
-    /* Cap recency factor at 1.0 */
-    if (recency_factor > 1.0f)
-        recency_factor = 1.0f;
+    /* Cap at 1.0 */
+    if (availability_factor > 1.0f)
+        availability_factor = 1.0f;
 
-    /* Apply: score * (1 + bias * recency_factor * COGBIAS_AVAILABILITY_MAX)
-     * Amplifies both positive and negative projections proportionally,
-     * simulating over-estimation of salient events. */
-    float multiplier = bias * recency_factor * COGBIAS_AVAILABILITY_MAX;
-    delta = (int)((float)proj->outcome.score * multiplier);
-    proj->outcome.score += delta;
-
-    if (CONFIG_MOB_4D_DEBUG)
-        log1("COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch), recency_factor,
-             multiplier, delta, proj->outcome.score);
+    return availability_factor;
 }
 
 /**
@@ -2388,7 +2418,11 @@ void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projectio
     if (!ch || !proj || !ch->ai_data)
         return;
 
-    apply_availability_bias(ch, proj);
+    /* Compute availability factor on demand (for external / one-shot callers).
+     * The hot path in shadow_score_projections() pre-computes this once per
+     * scoring round and calls the individual bias functions directly. */
+    float avail_factor = compute_availability_factor(ch);
+    apply_availability_bias(ch, proj, avail_factor);
     apply_confirmation_bias(ch, proj);
     apply_attribution_bias(ch, proj);
     apply_negativity_bias(ch, proj);

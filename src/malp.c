@@ -1632,8 +1632,11 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
          * with the source's overall MPLP disposition toward this entity.
          * The bonus is small — it only tips the scales when scores are close. */
         if (source->ai_data->biases.confirmation_bias > 0.0f) {
+            /* TRUST_BIAS is a signed trait in [-1,+1]: positive = trusting,
+             * negative = distrustful.  Compare against 0.0 (the neutral point),
+             * not 0.5, to avoid misclassifying most mobs as "negative". */
             float src_trust = mplp_get_effective_trait(source, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
-            bool src_positive = (src_trust >= 0.5f); /* source's general social lean */
+            bool src_positive = (src_trust >= 0.0f); /* source's general social lean */
             bool entry_positive = (e->valence >= 0.0f);
             if (src_positive == entry_positive) {
                 score +=
@@ -1805,6 +1808,10 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         gossip_entry->timestamp = now;
         gossip_entry->last_retrieved = 0;
         gossip_entry->valence = gossip_valence;
+        /* Store the initial gossip valence as the first-impression anchor.
+         * This is the listener's very first "knowledge" of the target; it
+         * must never be overwritten by later gossip updates (anchoring bias). */
+        gossip_entry->first_valence = gossip_valence;
         gossip_entry->arousal = best->arousal * transfer_weight;
         gossip_entry->salience = best->salience * transfer_weight;
         gossip_entry->intensity = gossip_intensity;
