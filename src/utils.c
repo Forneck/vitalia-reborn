@@ -608,15 +608,36 @@ struct time_info_data *age(struct char_data *ch)
 /** Check if making ch follow victim will create an illegal follow loop. In
  * essence, this prevents someone from following a character in a group that
  * is already being lead by the character.
+ *
+ * This function also guards against pre-existing circular master chains: if
+ * the chain starting at victim already contains a cycle (which should never
+ * happen but can occur due to data corruption), the depth counter will cause
+ * the function to terminate and return TRUE rather than looping forever and
+ * triggering the checkpointing SIGABRT.
+ *
  * @param ch The character trying to follow.
  * @param victim The character being followed. */
+/* Maximum length of a legitimate master chain; used to detect pre-existing
+ * cycles so circle_follow() never loops indefinitely. */
+#define MAX_FOLLOW_CHAIN_DEPTH 1000
 bool circle_follow(struct char_data *ch, struct char_data *victim)
 {
     struct char_data *k;
+    int depth = 0;
 
     for (k = victim; k; k = k->master) {
         if (k == ch)
             return (TRUE);
+        /* Guard against a pre-existing circular master chain.  The maximum
+         * legitimate chain length is bounded by the total number of characters
+         * in the game; MAX_FOLLOW_CHAIN_DEPTH is a safe upper bound. */
+        if (++depth > MAX_FOLLOW_CHAIN_DEPTH) {
+            log1(
+                "SYSERR: circle_follow() detected a pre-existing circular master chain! "
+                "ch=%s victim=%s",
+                GET_NAME(ch), GET_NAME(victim));
+            return (TRUE);
+        }
     }
 
     return (FALSE);

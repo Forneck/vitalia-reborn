@@ -1110,7 +1110,6 @@ ACMD(do_mfollow)
 {
     char buf[MAX_INPUT_LENGTH];
     struct char_data *leader;
-    struct follow_type *j, *k;
 
     if (!MOB_OR_IMPL(ch)) {
         send_to_char(ch, "%s", CONFIG_HUH);
@@ -1144,21 +1143,8 @@ ACMD(do_mfollow)
         return;
 
     /* stop following someone else first */
-    if (ch->master) {
-        if (ch->master->followers->follower == ch) { /* Head of follower-list? */
-            k = ch->master->followers;
-            ch->master->followers = k->next;
-            free(k);
-        } else { /* locate follower who is not head of list */
-            for (k = ch->master->followers; k->next->follower != ch; k = k->next)
-                ;
-
-            j = k->next;
-            k->next = j->next;
-            free(j);
-        }
-        ch->master = NULL;
-    }
+    if (ch->master)
+        stop_follower(ch);
 
     if (ch == leader)
         return;
@@ -1168,13 +1154,7 @@ ACMD(do_mfollow)
         return;
     }
 
-    ch->master = leader;
-
-    CREATE(k, struct follow_type, 1);
-
-    k->follower = ch;
-    k->next = leader->followers;
-    leader->followers = k;
+    add_follower(ch, leader);
 }
 
 /* Prints the message to everyone in the range of numbers. Thanks to Jamie
