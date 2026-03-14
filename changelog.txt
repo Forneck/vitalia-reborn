@@ -45,7 +45,7 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
       COGBIAS_CONFIRMATION_MAX (20)     — max score delta from confirmation bias
       COGBIAS_AVAILABILITY_MAX (0.4f)   — max availability multiplier on outcome score
       COGBIAS_ATTRIBUTION_MAX (15)      — max score delta from attribution bias
-      COGBIAS_NEGATIVITY_MAX (0.5f)     — max scaling factor for negative outcomes
+      COGBIAS_NEGATIVITY_MAX (0.2f)     — danger-level amplification scale for negative outcomes
       COGBIAS_HUMAN_DEFAULT (0.5f)      — default initialization value
 
     Debug logging: gated by CONFIG_MOB_4D_DEBUG; prefixes COGBIAS-CONF / AVAIL / ATTR / NEG.
@@ -57,6 +57,60 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
       - Works with existing moral reasoning (biases applied before moral_evaluate_action_cost).
       - Works with emotion system (no direct writes to emotion_* fields).
       - No regression in combat AI (score clamped to OUTCOME_SCORE_MIN/MAX throughout).
+
+  feat: Cognitive Bias effects on Gossip — Social transmission distortion (src/malp.c, src/malp.h)
+    Psychological research (Tversky & Kahneman 1973; Baumeister et al. 2001; Ross 1977;
+    Echterhoff & Higgins 2009; Rozin & Royzman 2001) confirms that cognitive biases
+    systematically distort social transmission of information at three stages:
+    topic selection, narration/encoding, and reception.  Biases are now applied inside
+    try_social_gossip() to model these effects.
+
+    Invariants (from design requirement):
+      - Raw MALP/MPLP data is never fabricated or overwritten.
+      - Bias affects weighting, interpretation, and sharing probability only.
+      - Bias acts during gossip selection and narration, not during memory storage.
+      - lambda is always capped at MALP_GOSSIP_WEIGHT_CAP regardless of bias.
+
+    Phase 1 — Topic Selection (source biases):
+      Availability bias: selection score boosted by recency factor (1/(1+age/24h))
+        × MALP_GOSSIP_AVAILABILITY_SELECT_SCALE × intensity.  NPCs gossip more
+        about what just happened to them.
+      Negativity bias: selection score boosted for negative-valence entries by
+        MALP_GOSSIP_NEGATIVITY_SELECT_SCALE.  NPCs talk more about threats.
+      Confirmation bias: entries matching source's general social lean (TRUST_BIAS)
+        get MALP_GOSSIP_CONFIRMATION_SELECT_SCALE bonus.  Stories self-reinforce.
+
+    Phase 2 — Narration / Encoding (source biases):
+      Attribution bias: negative gossip_valence amplified by
+        (1 + attribution_bias × MALP_GOSSIP_ATTRIBUTION_ENC_SCALE).
+        Source frames target as "bad by nature", making stories more extreme.
+      Negativity bias: negative valence further amplified by
+        (1 + negativity_bias × MALP_GOSSIP_NEGATIVITY_ENC_SCALE).
+        Negative emotional intensity is also boosted by 10% × bias.
+
+    Phase 3 — Reception (listener biases):
+      Confirmation bias: lambda_scale boosted by MALP_GOSSIP_CONFIRMATION_REC_SCALE
+        when gossip confirms existing belief; dampened by half that when contradicting.
+      Negativity bias: lambda_scale boosted by MALP_GOSSIP_NEGATIVITY_REC_SCALE for
+        negative incoming gossip.  lambda_scale also applied to gossip_salience for
+        MPLP personality reinforcement.
+
+    New constants (malp.h):
+      MALP_GOSSIP_AVAILABILITY_SELECT_SCALE  (0.30f)
+      MALP_GOSSIP_NEGATIVITY_SELECT_SCALE    (0.20f)
+      MALP_GOSSIP_CONFIRMATION_SELECT_SCALE  (0.15f)
+      MALP_GOSSIP_ATTRIBUTION_ENC_SCALE      (0.25f)
+      MALP_GOSSIP_NEGATIVITY_ENC_SCALE       (0.15f)
+      MALP_GOSSIP_CONFIRMATION_REC_SCALE     (0.40f)
+      MALP_GOSSIP_NEGATIVITY_REC_SCALE       (0.25f)
+
+    time(NULL) now computed once at start of try_social_gossip() and reused
+    for both cooldown check and timestamp assignments.
+
+    Debug logging extended: GOSSIP log now shows raw_valence, enc_valence,
+    and lambda_scale for full bias-chain visibility.
+
+    Help file: COGNITIVE BIAS extended with gossip section (lib/text/help/help.hlp).
 
 
     Implements indirect knowledge propagation: mobs can now share emotional memories
