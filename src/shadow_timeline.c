@@ -2162,49 +2162,20 @@ static void apply_availability_bias(struct char_data *ch, struct shadow_projecti
 }
 
 /**
- * Compute the availability heuristic recency factor for a mob.
+ * Return the per-mob availability heuristic recency factor.
  *
- * Scans all MALP episodes once and returns the max(recency × intensity)
- * value.  This is called once per shadow_score_projections() call so that
- * the O(malp_count) scan is not repeated for every projection.
+ * The value is maintained by malp_decay_tick() which piggybacks the
+ * max(recency × intensity × arousal_amp) computation inside its existing
+ * MALP loop at zero additional loop overhead.  This function therefore
+ * runs in O(1) — no MALP scan — making it safe to call from the hot path
+ * inside shadow_score_projections() for all mobs every tick.
  */
 static float compute_availability_factor(struct char_data *ch)
 {
-    float availability_factor = 0.0f;
-    time_t now;
-    int i;
-
-    if (!ch || !ch->ai_data || ch->ai_data->malp_count == 0)
+    if (!ch || !ch->ai_data)
         return 0.0f;
 
-    now = time(0);
-
-    for (i = 0; i < ch->ai_data->malp_count; i++) {
-        struct malp_entry *e = &ch->ai_data->malp[i];
-        if (!e->timestamp)
-            continue;
-
-        /* Age in hours; use power-law decay to model memory vividness */
-        float age_hours = (float)(now - e->timestamp) / 3600.0f;
-        if (age_hours < 0.0f)
-            age_hours = 0.0f;
-
-        /* Recency: 1.0 when fresh (age=0), decays with a ~24-hour half-life */
-        float recency = 1.0f / (1.0f + age_hours / 24.0f);
-
-        /* Emotional intensity amplifies availability */
-        float intensity_amp = e->intensity * (1.0f + e->arousal);
-
-        float contribution = recency * intensity_amp;
-        if (contribution > availability_factor)
-            availability_factor = contribution;
-    }
-
-    /* Cap at 1.0 */
-    if (availability_factor > 1.0f)
-        availability_factor = 1.0f;
-
-    return availability_factor;
+    return ch->ai_data->cached_avail_factor;
 }
 
 /**

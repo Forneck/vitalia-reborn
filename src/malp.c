@@ -420,6 +420,12 @@ void malp_decay_tick(struct char_data *mob)
         if (half_major < 1)
             half_major = 72;
 
+        /* Shared timestamp for availability-factor computation (avoids one time()
+         * call per entry; powerlaw_intensity() still uses its own internal time()
+         * which will agree to within a fraction of a second). */
+        time_t now = time(0);
+        float best_avail = 0.0f;
+
         int alive = 0;
         for (i = 0; i < ai->malp_count; i++) {
             struct malp_entry *e = &ai->malp[i];
@@ -444,7 +450,24 @@ void malp_decay_tick(struct char_data *mob)
             }
             if (e->intensity >= 0.05f)
                 alive++;
+
+            /* Availability-heuristic cache: track max (recency × intensity × arousal_amp)
+             * across all entries so shadow_score_projections() can read O(1) instead of
+             * rescanning the whole MALP array on every scoring call. */
+            if (e->timestamp) {
+                float age_hours = (float)(now - e->timestamp) / 3600.0f;
+                if (age_hours < 0.0f)
+                    age_hours = 0.0f;
+                float recency = 1.0f / (1.0f + age_hours / 24.0f);
+                float contrib = recency * e->intensity * (1.0f + e->arousal);
+                if (contrib > best_avail)
+                    best_avail = contrib;
+            }
         }
+
+        if (best_avail > 1.0f)
+            best_avail = 1.0f;
+        ai->cached_avail_factor = best_avail;
 
         /* Compact array: remove dead entries (intensity < 0.05) */
         int w = 0;
@@ -457,6 +480,8 @@ void malp_decay_tick(struct char_data *mob)
         }
         ai->malp_count = w;
         (void)alive; /* used for logging if needed */
+    } else {
+        ai->cached_avail_factor = 0.0f;
     }
 
     /* Decay MPLP traits — high-N slows negative-trait decay (rumination) */

@@ -1572,6 +1572,11 @@ struct mob_ai_data {
 
     /* Cognitive Bias Module – Shadow Timeline projection distortion parameters */
     struct cognitive_biases biases; /**< Per-NPC cognitive bias strengths (0.0–1.0+) */
+
+    /* Availability-bias cache – updated by malp_decay_tick(); read O(1) by shadow scoring.
+     * Stores the highest (recency × intensity × arousal_amp) across all MALP entries so
+     * that shadow_score_projections() never needs to scan the MALP array for this value. */
+    float cached_avail_factor; /**< Pre-computed availability heuristic factor [0, 1] */
 };
 
 /**
