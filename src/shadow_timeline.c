@@ -57,6 +57,7 @@ static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
 static bool check_invariant_action(struct char_data *ch, enum shadow_action_type type);
 /* Cognitive Bias Module helpers (static; public entry is shadow_apply_cognitive_biases) */
+static bool shadow_action_target_is_char(enum shadow_action_type type);
 static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj);
 static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor);
 static float compute_availability_factor(struct char_data *ch);
@@ -2036,6 +2037,30 @@ void shadow_apply_subjectivity(struct char_data *ch, struct shadow_outcome *outc
  * ──────────────────────────────────────────────────────────────────────────*/
 
 /**
+ * Returns TRUE when the action type stores a char_data* in action.target.
+ *
+ * SHADOW_ACTION_USE_ITEM stores an obj_data* instead.
+ * SHADOW_ACTION_MOVE, FLEE, WAIT, and GUARD store NULL.
+ * Callers that cast action.target to char_data* MUST check this first to
+ * avoid type-confusion crashes (SIGSEGV).
+ */
+static bool shadow_action_target_is_char(enum shadow_action_type type)
+{
+    switch (type) {
+        case SHADOW_ACTION_ATTACK:
+        case SHADOW_ACTION_CAST_SPELL:
+        case SHADOW_ACTION_SOCIAL:
+        case SHADOW_ACTION_TRADE:
+        case SHADOW_ACTION_QUEST:
+        case SHADOW_ACTION_FOLLOW:
+        case SHADOW_ACTION_GROUP:
+            return TRUE;
+        default:
+            return FALSE;
+    }
+}
+
+/**
  * Apply confirmation bias to a shadow projection.
  *
  * NPCs favour outcomes that match existing beliefs encoded in MPLP (trust,
@@ -2070,8 +2095,10 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
 
     prior_valence = 0.0f;
 
-    /* Gather prior belief from MPLP trust/suspicion toward target */
-    target = (struct char_data *)proj->action.target;
+    /* Gather prior belief from MPLP trust/suspicion toward target.
+     * Only cast to char_data* when the action type uses a character target;
+     * SHADOW_ACTION_USE_ITEM stores an obj_data* which would cause a SIGSEGV. */
+    target = shadow_action_target_is_char(proj->action.type) ? (struct char_data *)proj->action.target : NULL;
     if (target) {
         mplp_trust = mplp_get_effective_trait(ch, target, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
         mplp_suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
@@ -2325,9 +2352,13 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
     if (bias <= 0.0f)
         return;
 
-    target = (struct char_data *)proj->action.target;
+    /* Only treat action.target as char_data* when the action type uses a
+     * character target.  SHADOW_ACTION_USE_ITEM stores an obj_data* which
+     * would cause a SIGSEGV when IS_NPC() reads char_specials from the wrong
+     * memory layout. */
+    target = shadow_action_target_is_char(proj->action.type) ? (struct char_data *)proj->action.target : NULL;
     if (!target)
-        return; /* Anchoring requires a specific entity target */
+        return; /* Anchoring requires a specific character target */
 
     target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
     target_id = IS_NPC(target) ? (long)GET_MOB_VNUM(target) : GET_IDNUM(target);
