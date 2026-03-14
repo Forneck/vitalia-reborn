@@ -1413,6 +1413,23 @@ struct mplp_trait {
     time_t last_updated;     /**< Wall-clock time of last Hebbian reinforcement (decay origin) */
 };
 
+/**
+ * Cognitive Bias parameters for Shadow Timeline projection distortion.
+ *
+ * These values shape how an NPC distorts projected future events before
+ * moral evaluation — modelling systematic psychological biases found in
+ * human cognition.
+ *
+ * Range: 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological.
+ * Stored per NPC in mob_ai_data.
+ */
+struct cognitive_biases {
+    float confirmation_bias; /**< Favour outcomes matching existing beliefs (MPLP/MALP) */
+    float availability_bias; /**< Inflate recent/intense memory projections */
+    float attribution_bias;  /**< Blame others' behaviour on personality; excuse self */
+    float negativity_bias;   /**< Amplify negative outcomes; dampen positive ones */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics;       /* Contém todos os genes. */
     struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
@@ -1549,6 +1566,9 @@ struct mob_ai_data {
     int malp_count;          /**< Number of active MALP entries */
     struct mplp_trait *mplp; /**< Dynamic array of implicit trait entries */
     int mplp_count;          /**< Number of active MPLP traits */
+
+    /* Cognitive Bias Module – Shadow Timeline projection distortion parameters */
+    struct cognitive_biases biases; /**< Per-NPC cognitive bias strengths (0.0–1.0+) */
 };
 
 /**

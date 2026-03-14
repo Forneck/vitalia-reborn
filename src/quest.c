@@ -3500,6 +3500,14 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->last_chosen_action_type = -1;
     mob->ai_data->action_repetition_count = 0;
 
+    /* Cognitive Bias Module: initialise to human-normal defaults (0.5).
+     * Builders can override these via the mob file / OLC in future phases.
+     * 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological. */
+    mob->ai_data->biases.confirmation_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.availability_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.attribution_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.negativity_bias = COGBIAS_HUMAN_DEFAULT;
+
     /* Initialize goal fields to sentinel values to prevent SIGSEGV.
      * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.
      * Setting them to 0 (from memset) would cause incorrect behavior. */

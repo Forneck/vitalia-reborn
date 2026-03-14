@@ -164,6 +164,13 @@ struct shadow_context {
     (IS_COGNITIVE_ENTITY(ch) && IS_NPC(ch) && (ch)->ai_data ? (ch)->ai_data->cognitive_capacity                        \
                                                             : COGNITIVE_CAPACITY_MAX)
 
+/* Cognitive Bias Module constants */
+#define COGBIAS_CONFIRMATION_MAX 20   /**< Max score delta (points) from confirmation bias */
+#define COGBIAS_AVAILABILITY_MAX 0.4f /**< Max availability multiplier applied to outcome score */
+#define COGBIAS_ATTRIBUTION_MAX 15    /**< Max score delta (points) from attribution bias */
+#define COGBIAS_NEGATIVITY_MAX 0.2f   /**< Danger-level amplification scale in negativity bias */
+#define COGBIAS_HUMAN_DEFAULT 0.5f    /**< Default human-normal bias strength */
+
 /* Core Shadow Timeline functions */
 
 /**
@@ -308,5 +315,14 @@ int shadow_evaluate_real_outcome(struct char_data *ch);
  * @param obvious Whether the outcome was obvious/predictable
  */
 void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious);
+
+/**
+ * Apply cognitive biases to a shadow projection
+ * Called after shadow_execute_projection(), before moral evaluation.
+ * Implements Cognitive Bias Module per issue specification.
+ * @param ch The NPC entity
+ * @param proj The projection to distort
+ */
+void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj);
 
 #endif /* _SHADOW_TIMELINE_H_ */

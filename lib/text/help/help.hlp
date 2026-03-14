@@ -19067,4 +19067,58 @@ Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
 
 @rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
 #105
+COGNITIVE BIAS COGBIAS MOB-COGBIAS NPC-COGBIAS
+
+@cCOGNITIVE BIAS MODULE — Shadow Timeline Projection Distortion@n
+
+  The Cognitive Bias Module introduces systematic psychological distortions
+  into NPC decision-making.  It applies BEFORE moral evaluation, modelling the
+  human-observed principle "bias first, rationalize later."
+
+  @yPipeline:@n
+    Perception → MALP/MPLP → Shadow Timeline → @YCOGNITIVE BIAS@n → Moral → Action
+
+  @yBiases (stored per NPC in ai_data.biases):@n
+
+  @gConfirmation Bias (confirmation_bias)@n
+    NPCs favour projected outcomes that match their existing beliefs (MPLP
+    trust, MALP valence).  A trusted entity's positive outcomes feel more
+    likely; feared entities' negative outcomes feel inevitable.
+    Effects: grudges persist, loyalty locks in, paranoia possible.
+
+  @gAvailability Heuristic (availability_bias)@n
+    Recent or emotionally intense MALP memories inflate all projections.
+    The more salient the memory, the larger the amplification.
+    Effects: trauma loops, fixation, revenge behaviour, fear persistence.
+
+  @gFundamental Attribution Error (attribution_bias)@n
+    Others' dangerous behaviour is blamed on their personality (not the
+    situation), deepening grudges.  The NPC's own risky actions are
+    excused as situational (self-serving bias).
+    Effects: NPCs hold grudges longer, justify themselves, misread intent.
+
+  @gNegativity Bias (negativity_bias)@n
+    Negative projected outcomes are amplified; positive ones are dampened.
+    Rule: negative *= (1 + bias),  positive *= (1 - bias*0.5).
+    Effects: harder to gain trust, easier to lose it, persistent hostility.
+
+  @yBias Range:@n
+    0.0 = no bias
+    0.5 = human normal (default for all NPCs)
+    1.0 = strong bias
+    >1.0 = extreme / pathological
+
+  @yDebug Logging:@n
+    Enable CONFIG_MOB_4D_DEBUG (CEDIT → Experimental → mob_4d_debug) to see
+    per-projection COGBIAS-CONF / COGBIAS-AVAIL / COGBIAS-ATTR / COGBIAS-NEG
+    log lines.
+
+  @yData Sources Used:@n
+    Confirmation: MPLP TRUST_BIAS, SUSPICION_BIAS, MALP episodic valence
+    Availability: MALP timestamp, intensity, arousal
+    Attribution:  shadow_projection.action.target, danger_level
+    Negativity:   shadow_projection.outcome.score, danger_level
+
+Veja tambem: SHADOW TIMELINE, MALP, MPLP, EMOTION, OCEAN, CEDIT
+#105
 $~

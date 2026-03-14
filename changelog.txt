@@ -3,7 +3,62 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Mar 14 2026] - Vitalia Reborn Development
-  feat: Social gossip — MALP/MPLP transfer between entities (src/malp.c, src/malp.h, src/mobact.c)
+  feat: Cognitive Bias Module — Shadow Timeline projection distortion (src/shadow_timeline.c, src/shadow_timeline.h, src/structs.h, src/quest.c)
+    Adds systematic psychological distortions to NPC future-state projections
+    BEFORE moral evaluation, modelling the human-observed pipeline:
+      Perception → MALP/MPLP → Shadow Timeline → Cognitive Bias → Moral → Action
+
+    Four biases implemented (all stored as float 0.0-1.0+ per NPC in ai_data.biases):
+
+    1. Confirmation Bias (confirmation_bias):
+       NPCs favour projected outcomes matching existing MPLP trust/suspicion and
+       MALP episodic valence.  Positive priors boost positive projections; negative
+       priors amplify negative ones.  Produces grudge persistence and loyalty lock-in.
+
+    2. Availability Heuristic (availability_bias):
+       Recent or emotionally intense MALP episodes inflate all projected scores.
+       Recency factor uses 1/(1+age_hours/24) decay; emotional intensity amplifies.
+       Produces trauma loops, fixation, revenge behaviour, and fear persistence.
+
+    3. Fundamental Attribution Error (attribution_bias):
+       Danger from others is attributed to their hostile personality (holding grudges);
+       the NPC's own risky behaviour is excused as situational (self-serving bias).
+       Produces misread intentions, deeper grudges, and self-justification.
+
+    4. Negativity Bias (negativity_bias):
+       Negative projected scores are amplified by (1 + negativity_bias);
+       positive scores are dampened by (1 - negativity_bias * 0.5).  Danger level
+       also receives a proportional boost (20% of danger × bias).
+       Produces harder trust-building
+       and easier trust-loss, persistent hostility, and realistic conflict.
+
+    New struct: cognitive_biases { confirmation, availability, attribution, negativity }
+      Added to mob_ai_data; initialised to COGBIAS_HUMAN_DEFAULT (0.5) in
+      init_mob_ai_data() (quest.c) for all NPCs.
+
+    New public API (shadow_timeline.c):
+      void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj)
+        Applies all four biases in order: availability → confirmation → attribution → negativity.
+        Called from shadow_score_projections() before score_projection_for_entity().
+
+    New constants (shadow_timeline.h):
+      COGBIAS_CONFIRMATION_MAX (20)     — max score delta from confirmation bias
+      COGBIAS_AVAILABILITY_MAX (0.4f)   — max availability multiplier on outcome score
+      COGBIAS_ATTRIBUTION_MAX (15)      — max score delta from attribution bias
+      COGBIAS_NEGATIVITY_MAX (0.5f)     — max scaling factor for negative outcomes
+      COGBIAS_HUMAN_DEFAULT (0.5f)      — default initialization value
+
+    Debug logging: gated by CONFIG_MOB_4D_DEBUG; prefixes COGBIAS-CONF / AVAIL / ATTR / NEG.
+    Help file: HELP COGNITIVE BIAS added (lib/text/help/help.hlp, level 105).
+
+    Invariants preserved:
+      - No crash when bias struct has zero values (all functions guard bias <= 0.0f).
+      - Works with existing MALP/MPLP (uses get_malp_by_agent, mplp_get_effective_trait).
+      - Works with existing moral reasoning (biases applied before moral_evaluate_action_cost).
+      - Works with emotion system (no direct writes to emotion_* fields).
+      - No regression in combat AI (score clamped to OUTCOME_SCORE_MIN/MAX throughout).
+
+
     Implements indirect knowledge propagation: mobs can now share emotional memories
     about third entities (gossip), spreading reputation, fear, and affection through
     social proximity without direct interaction.
