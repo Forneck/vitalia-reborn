@@ -1253,6 +1253,81 @@ float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_typ
     return result;
 }
 
+float mplp_get_effective_trait(struct char_data *mob, struct char_data *actor, int trait_type, int ctx_type)
+{
+    /* Base trait value (0.0 when mob has no MPLP or trait is absent) */
+    float base = get_mplp_trait_with_ctx(mob, trait_type, ctx_type);
+
+    /* Without a valid NPC mob or actor we cannot compute a reputation modifier.
+     * Non-NPC mobs have no MPLP and no ai_data, so return base (0.0) directly. */
+    if (!mob || !IS_NPC(mob) || !actor)
+        return base;
+
+    /* Get actor reputation, clamped defensively to the valid 0–100 range */
+    int rep = GET_REPUTATION(actor);
+    if (rep < 0)
+        rep = 0;
+    if (rep > 100)
+        rep = 100;
+
+    /* Normalize reputation to [−1.0, +1.0] using MPLP_REP_POSITIVE_THRESHOLD as
+     * the neutral midpoint: rep == MPLP_REP_POSITIVE_THRESHOLD → 0 (no bias). */
+    float rep_norm = ((float)rep - (float)MPLP_REP_POSITIVE_THRESHOLD) / (float)MPLP_REP_POSITIVE_THRESHOLD;
+
+    /* Trait-specific reputation delta.
+     * Positive rep_norm (high reputation) raises prosocial traits and lowers
+     * adversarial ones; negative rep_norm does the opposite.
+     * Traits not listed here are returned unmodified (rep-neutral). */
+    float rep_delta = 0.0f;
+    switch (trait_type) {
+        case MPLP_TRAIT_TRUST_BIAS:
+            rep_delta = rep_norm * MPLP_REP_BIAS_SCALE;
+            break;
+        case MPLP_TRAIT_SUSPICION_BIAS:
+            /* High rep reduces baseline suspicion */
+            rep_delta = -rep_norm * MPLP_REP_BIAS_SCALE;
+            break;
+        case MPLP_TRAIT_FORGIVENESS_RATE:
+            rep_delta = rep_norm * (MPLP_REP_BIAS_SCALE * 0.5f);
+            break;
+        case MPLP_TRAIT_REVENGE_TENDENCY:
+            /* High rep dampens revenge impulse */
+            rep_delta = -rep_norm * (MPLP_REP_BIAS_SCALE * 0.5f);
+            break;
+        case MPLP_TRAIT_COMPASSION_BIAS:
+            rep_delta = rep_norm * (MPLP_REP_BIAS_SCALE * 0.4f);
+            break;
+        case MPLP_TRAIT_GRATITUDE_RESPONSE:
+            rep_delta = rep_norm * (MPLP_REP_BIAS_SCALE * 0.4f);
+            break;
+        case MPLP_TRAIT_EMPATHY_RESPONSE:
+            rep_delta = rep_norm * (MPLP_REP_BIAS_SCALE * 0.3f);
+            break;
+        case MPLP_TRAIT_OUTGROUP_AVERSION:
+            /* High rep reduces outgroup aversion toward this actor */
+            rep_delta = -rep_norm * (MPLP_REP_BIAS_SCALE * 0.4f);
+            break;
+        case MPLP_TRAIT_BETRAYAL_SENSITIVITY:
+            /* Negative rep heightens betrayal sensitivity */
+            rep_delta = -rep_norm * (MPLP_REP_BIAS_SCALE * 0.3f);
+            break;
+        default:
+            return base;
+    }
+
+    float effective = base + rep_delta;
+
+    /* Clamp to valid range: [0, 1] for unsigned traits, [−1, 1] for signed */
+    int is_unsigned = is_unsigned_mplp_trait(trait_type);
+    float lo = is_unsigned ? 0.0f : -1.0f;
+    if (effective > 1.0f)
+        effective = 1.0f;
+    if (effective < lo)
+        effective = lo;
+
+    return effective;
+}
+
 void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence)
 {
     if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data)
@@ -1367,6 +1442,51 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
         if (arb_delta > 0)
             adjust_emotion(mob, &mob->ai_data->emotion_excitement, arb_delta);
     }
+
+    /* ── Reputation-biased context-global trait effects ──────────────────────
+     * Evaluate the NPC's prosocial and adversarial personality traits with a
+     * temporary reputation-based overlay (via mplp_get_effective_trait) and
+     * apply corresponding emotion impulses.  Base traits are NOT modified. */
+    float eff_trust = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL) * dominance_factor;
+    float eff_suspicion =
+        mplp_get_effective_trait(mob, actor, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_GLOBAL) * dominance_factor;
+    float eff_forgiveness =
+        mplp_get_effective_trait(mob, actor, MPLP_TRAIT_FORGIVENESS_RATE, MPLP_CTX_GLOBAL) * dominance_factor;
+    float eff_revenge =
+        mplp_get_effective_trait(mob, actor, MPLP_TRAIT_REVENGE_TENDENCY, MPLP_CTX_GLOBAL) * dominance_factor;
+
+    if (eff_trust > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+        int d = (int)(eff_trust * (float)MPLP_EMOTION_DELTA_MAX);
+        if (d > 0) {
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, d);
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, (int)(d * 0.5f));
+        }
+    } else if (eff_trust < -MPLP_PERSONALITY_BIAS_THRESHOLD) {
+        int d = (int)((-eff_trust) * (float)MPLP_EMOTION_DELTA_MAX);
+        if (d > 0) {
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (int)(d * 0.5f));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(d * 0.3f));
+        }
+    }
+    if (eff_suspicion > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+        int d = (int)(eff_suspicion * (float)MPLP_EMOTION_DELTA_MAX);
+        if (d > 0)
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (int)(d * 0.4f));
+    }
+    if (eff_forgiveness > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+        int d = (int)(eff_forgiveness * (float)MPLP_EMOTION_DELTA_MAX);
+        if (d > 0)
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, (int)(d * 0.3f));
+    }
+    if (eff_revenge > MPLP_PERSONALITY_BIAS_THRESHOLD) {
+        int d = (int)(eff_revenge * (float)MPLP_EMOTION_DELTA_MAX);
+        if (d > 0)
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, (int)(d * 0.4f));
+    }
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("MPLP-REP: mob=%s actor=%s rep=%d trust_eff=%.2f sus_eff=%.2f forg_eff=%.2f rev_eff=%.2f", GET_NAME(mob),
+             GET_NAME(actor), GET_REPUTATION(actor), eff_trust, eff_suspicion, eff_forgiveness, eff_revenge);
 }
 
 void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_type, float delta_valence,

@@ -11486,8 +11486,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
 
         /* Apply trust-system trait influence to emotions */
-        float trust_bias = get_mplp_trust_bias(mob);
-        float suspicion = get_mplp_suspicion_bias(mob);
+        float trust_bias = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL);
+        float suspicion = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_GLOBAL);
 
         if (trust_bias != 0.0f && (is_positive || is_negative)) {
             int tb_delta = (int)(fabsf(trust_bias) * (float)MPLP_EMOTION_DELTA_MAX);
@@ -11651,9 +11651,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
 
         /* Apply reciprocity trait influence to emotions */
-        float grat_resp = get_mplp_gratitude_response(mob);
-        float rev_tend = get_mplp_revenge_tendency(mob);
-        float forg_rate = get_mplp_forgiveness_rate(mob);
+        float grat_resp = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_GRATITUDE_RESPONSE, MPLP_CTX_GLOBAL);
+        float rev_tend = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_REVENGE_TENDENCY, MPLP_CTX_GLOBAL);
+        float forg_rate = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_FORGIVENESS_RATE, MPLP_CTX_GLOBAL);
 
         if (grat_resp > MPLP_PERSONALITY_BIAS_THRESHOLD && (is_positive || is_food_drink)) {
             int gr_delta = (int)(grat_resp * (float)MPLP_EMOTION_DELTA_MAX);
@@ -11715,9 +11715,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
 
         /* Apply empathy trait influence to emotions */
-        float emp_resp = get_mplp_empathy_response(mob);
+        float emp_resp = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_EMPATHY_RESPONSE, MPLP_CTX_GLOBAL);
         float dist_av = get_mplp_distress_aversion(mob);
-        float comp_bias = get_mplp_compassion_bias(mob);
+        float comp_bias = mplp_get_effective_trait(mob, actor, MPLP_TRAIT_COMPASSION_BIAS, MPLP_CTX_GLOBAL);
 
         if (emp_resp != 0.0f && (is_self_directed || is_fearful || is_celebratory)) {
             int em_delta = (int)(fabsf(emp_resp) * (float)MPLP_EMOTION_DELTA_MAX);

@@ -245,6 +245,26 @@
 /** Weight of retrieval recency in cue score (within-hour accessibility bonus) */
 #define MALP_CUE_WEIGHT_RECENCY 0.15f
 
+/* ── Reputation–MPLP trait modulation (RFC-1002 §10) ────────────────────── */
+/**
+ * Neutral reputation threshold (rep 0–100) used as the midpoint in the
+ * reputation normalisation formula:
+ *   rep_norm = (reputation − MPLP_REP_POSITIVE_THRESHOLD) / MPLP_REP_POSITIVE_THRESHOLD
+ * At this value rep_norm == 0 (no bias); above it trait benefit scales linearly
+ * to +MPLP_REP_BIAS_SCALE at reputation == 100; below it scales to
+ * −MPLP_REP_BIAS_SCALE at reputation == 0.
+ */
+#define MPLP_REP_POSITIVE_THRESHOLD 50
+/**
+ * Maximum absolute reputation contribution to an MPLP effective-trait value.
+ * Applied as a fraction of this constant depending on rep distance from
+ * MPLP_REP_POSITIVE_THRESHOLD:
+ *   rep_norm = (reputation − MPLP_REP_POSITIVE_THRESHOLD) / MPLP_REP_POSITIVE_THRESHOLD
+ *   delta    = rep_norm × MPLP_REP_BIAS_SCALE × per-trait weight
+ * Trait result is subsequently clamped to [0,1] or [−1,1].
+ */
+#define MPLP_REP_BIAS_SCALE 0.50f
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 /**
@@ -479,6 +499,38 @@ int get_mplp_context_from_interact_type(int interact_type);
  * @return           Effective trait value: [−1, +1] for signed, [0, 1] for unsigned.
  */
 float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_type);
+
+/**
+ * Compute the effective MPLP trait value for a mob interacting with a specific
+ * actor, incorporating a temporary reputation-based bias.
+ *
+ * The base trait value is read from get_mplp_trait_with_ctx(); the result is
+ * never written back — no permanent trait mutation occurs.
+ *
+ * effective_trait = base_trait + reputation_modifier
+ *
+ * The reputation modifier is trait-specific (rep_norm = (rep − 50) / 50):
+ *  TRUST_BIAS:           +rep_norm × MPLP_REP_BIAS_SCALE
+ *  SUSPICION_BIAS:       −rep_norm × MPLP_REP_BIAS_SCALE
+ *  FORGIVENESS_RATE:     +rep_norm × MPLP_REP_BIAS_SCALE × 0.5
+ *  REVENGE_TENDENCY:     −rep_norm × MPLP_REP_BIAS_SCALE × 0.5
+ *  COMPASSION_BIAS:      +rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  GRATITUDE_RESPONSE:   +rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  EMPATHY_RESPONSE:     +rep_norm × MPLP_REP_BIAS_SCALE × 0.3
+ *  OUTGROUP_AVERSION:    −rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  BETRAYAL_SENSITIVITY: −rep_norm × MPLP_REP_BIAS_SCALE × 0.3
+ * All other traits fall back to get_mplp_trait_with_ctx() with no modification.
+ *
+ * Safe to call when mob has no MPLP (returns 0.0 + reputation delta) and when
+ * actor has no reputation entry (returns unmodified base trait).
+ *
+ * @param mob        The NPC being evaluated.
+ * @param actor      The entity whose reputation influences the trait (may be NULL).
+ * @param trait_type MPLP_TRAIT_* constant.
+ * @param ctx_type   MPLP_CTX_* context (MPLP_CTX_GLOBAL for the baseline).
+ * @return           Effective trait value clamped to [0,1] or [−1,1].
+ */
+float mplp_get_effective_trait(struct char_data *mob, struct char_data *actor, int trait_type, int ctx_type);
 
 /* ── Hierarchy / Social Power getters ───────────────────────────────────── */
 
