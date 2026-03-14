@@ -1,10 +1,17 @@
 # RFC-1001: NPC Psychology & Behavior Scientific Checklist
 # Vitalia Reborn MUD Engine
 
-**Document Version:** 2.0  
-**Date:** 2026-03-07  
+**Document Version:** 3.0  
+**Date:** 2026-03-14  
 **Status:** Updated Analysis & Implementation Reference  
 **Purpose:** Professional evaluation of NPC psychological systems for future development planning
+
+> **Revision Note (v3.0):** This document has been updated to reflect the Cognitive Bias Gossip
+> module implemented after v2.0 (2026-03-07).  Confirmation bias, availability heuristic,
+> negativity bias, and attribution bias now modulate social information transmission
+> (`try_social_gossip()` in `src/malp.c`) across three stages: topic selection, narrative
+> encoding, and reception.  Raw MALP/MPLP data is never mutated by gossip.  All status markers,
+> recommendations, and references have been revised accordingly.
 
 > **Revision Note (v2.0):** This document has been updated to reflect systems implemented after
 > v1.0 (2026-02-17).  Newly active systems include: Big Five (OCEAN) all five traits, the SEC
@@ -30,6 +37,7 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
 - ✅ **4D modified-PAD Relational Decision Space** — Valence, Arousal, Dominance + **Affiliation** (4th axis)
 - ✅ **MALP/MPLP Long-Term Emotional Memory** (RFC-1002) — episodic consolidation with salience, Hebbian trait formation, Peak-End Rule, and reconsolidation
 - ✅ **Emotion Contagion** — three-layer emotional spreading (crowd, group, leader)
+- ✅ **Cognitive Bias Gossip Module** — availability, negativity, confirmation, and attribution biases applied to NPC social information transmission across three stages
 - ⚠️  **FANN neural networks** included but not integrated
 - ❌ **DSM-5/ICD-11 neurodivergence** models not implemented
 
@@ -406,32 +414,74 @@ valence_new = valence_old × (1 − α) + current_valence × α   (α = MPLP_VAL
 
 ---
 
-### [❌] Are cognitive biases and heuristics simulated?
+### [✅] Are cognitive biases and heuristics simulated?
 
-**NOT EXPLICITLY IMPLEMENTED**
+> **Added since v2.0.** Four cognitive biases from `mob_ai_data.biases` are now applied to
+> NPC gossip (`try_social_gossip()` in `src/malp.c`) across three psychologically-grounded
+> stages.  Raw MALP/MPLP entries are never mutated; bias acts only on the locally-copied
+> transmission values, satisfying the "no fabrication of base memory" invariant.
 
-**No Direct Implementation:**
-- Fundamental attribution error (not modeled)
-- Confirmation bias (not modeled)
-- Availability heuristic (not modeled)
-- Anchoring bias (not modeled)
+**Implemented in gossip social transmission (Phase 1 / 2 / 3):**
 
-**Partial Proxies:**
+#### Phase 1 — Topic Selection (source chooses what to gossip about)
+
+| Bias | Effect | Constant |
+|------|--------|----------|
+| **Availability heuristic** (Tversky & Kahneman 1973; Rosnow & Fine 1976) | Recency factor `1/(1+age_h/24)` × `availability_bias` × intensity added to the MALP selection score — recent and emotionally vivid memories are preferred. | `MALP_GOSSIP_AVAILABILITY_SELECT_SCALE = 0.30f` |
+| **Negativity bias** (Baumeister et al. 2001) | Negative-valence entries (`valence < 0`) receive a selection bonus proportional to `negativity_bias × |valence| × intensity`. | `MALP_GOSSIP_NEGATIVITY_SELECT_SCALE = 0.20f` |
+| **Confirmation bias** (Echterhoff & Higgins 2009) | Entries whose sign matches the source's dominant social lean (`MPLP_TRAIT_TRUST_BIAS`) receive a small preference boost — audience-tuning / shared-reality effect. | `MALP_GOSSIP_CONFIRMATION_SELECT_SCALE = 0.15f` |
+
+#### Phase 2 — Encoding (source distorts a local copy of `gossip_valence` — raw MALP untouched)
+
+| Bias | Effect | Constant |
+|------|--------|----------|
+| **Attribution bias** (Ross 1977; Jones & Harris 1967) | Negative valence amplified by `(1 + attribution_bias × scale)` — "bad entity by nature" framing. Only negative valence is affected. | `MALP_GOSSIP_ATTRIBUTION_ENC_SCALE = 0.25f` |
+| **Negativity bias** (Baumeister et al. 2001) | Further amplifies negative `gossip_valence` in transmission; also boosts `gossip_intensity` by up to `negativity_bias × 10%`. | `MALP_GOSSIP_NEGATIVITY_ENC_SCALE = 0.15f`, `MALP_GOSSIP_NEGATIVITY_INTENSITY_BOOST = 0.10f` |
+
+#### Phase 3 — Reception (`lambda_scale` multiplier applied to `transfer_weight` and `gossip_salience`)
+
+| Bias | Effect | Constant |
+|------|--------|----------|
+| **Confirmation bias** (Echterhoff & Higgins 2009; Fiedler et al. 2004) | `lambda_scale` boosted when gossip confirms existing belief (same valence sign as prior MALP entry); dampened to ≥ 0.1 when it contradicts. | `MALP_GOSSIP_CONFIRMATION_REC_SCALE = 0.40f` |
+| **Negativity bias** (Baumeister et al. 2001; Rozin & Royzman 2001) | `lambda_scale` boosted for negative incoming gossip — listeners assign greater evidential weight to threat-related information. | `MALP_GOSSIP_NEGATIVITY_REC_SCALE = 0.25f` |
+
+**Safety invariants preserved:**
+- `lambda` (= `transfer_weight × lambda_scale`) is always capped at `MALP_GOSSIP_WEIGHT_CAP = 0.35f`.
+- Raw MALP valence/intensity are never written by gossip encoding.
+- Gossip can never raise listener's memory above MALP_GOSSIP_WEIGHT_CAP regardless of bias strength.
+
+**Example implementation:**
+```c
+/* Phase 1 – availability heuristic: recent memories score higher */
+if (source->ai_data->biases.availability_bias > 0.0f && e->timestamp > 0) {
+    float age_hours = (float)(now - e->timestamp) / 3600.0f;
+    float recency   = 1.0f / (1.0f + age_hours / 24.0f);
+    score += source->ai_data->biases.availability_bias * recency
+             * MALP_GOSSIP_AVAILABILITY_SELECT_SCALE * e->intensity;
+}
+
+/* Phase 2 – attribution bias: negative events framed as character flaws */
+if (source->ai_data->biases.attribution_bias > 0.0f && gossip_valence < 0.0f)
+    gossip_valence *= (1.0f + source->ai_data->biases.attribution_bias
+                       * MALP_GOSSIP_ATTRIBUTION_ENC_SCALE);
+
+/* Phase 3 – confirmation bias: confirming gossip accepted more readily */
+if (gossip_negative == prior_negative)
+    lambda_scale += listener->ai_data->biases.confirmation_bias
+                    * MALP_GOSSIP_CONFIRMATION_REC_SCALE;
+```
+
+**Code:** `src/malp.c:1578–1889` (`try_social_gossip()`), `src/malp.h:197–226` (constants)
+
+**NOT YET implemented (remaining gaps):**
+- Cognitive biases as modifiers to **Shadow Timeline projections** (decision-making heuristics)
+- Anchoring bias (not modeled anywhere)
+
+**Still-active partial proxies (from v1.0):**
 - **In-group favoritism** (via group loyalty and peer pressure)
 - **Recency bias** (via memory decay weighting and MALP cue-score recency component)
 - **Outcome bias** (regret influenced by outcomes, not just intentions)
 - **Peak-End Bias** (implemented in MALP episodic valence via Kahneman Peak-End Rule)
-
-**Recommendation:**
-Implement cognitive biases as modifiers to Shadow Timeline projections:
-```c
-// Proposed structure
-struct cognitive_bias {
-    int confirmation_strength;  // 0-100
-    int attribution_error;      // 0-100
-    int availability_weight;    // Affects memory recall
-};
-```
 
 ---
 
@@ -1169,6 +1219,15 @@ The following items from the v1.0 recommendation list have been implemented and 
 - **Big Five Personality Mapping** — all five OCEAN traits implemented (N, C, A, E fully; O in Shadow Timeline).
 - **Long-Term Emotional Memory (MALP/MPLP)** — RFC-1002 fully implemented with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit trait formation.
 
+### Completed Enhancements (v3.0)
+
+The following items from the v2.0 recommendation list have been implemented and are now ✅ active:
+
+- **Cognitive Biases in Gossip (Partial)** — confirmation bias, availability heuristic, negativity
+  bias, and attribution bias modulate `try_social_gossip()` across three stages (topic selection,
+  encoding, reception).  Gossip-domain biases are fully implemented.  Remaining gap: biases as
+  modifiers to Shadow Timeline decision projections.
+
 ### Priority 1: High Impact, Moderate Complexity
 
 1. **Physiological Needs System:**
@@ -1177,11 +1236,11 @@ The following items from the v1.0 recommendation list have been implemented and 
    - Enables survival-driven emergent behavior
    - **Estimated Effort:** 3-4 weeks
 
-2. **Cognitive Biases Module:**
-   - Fundamental attribution error, confirmation bias, availability heuristic
-   - Apply as modifiers to Shadow Timeline projections
-   - Enables more realistic (flawed) decision-making
-   - **Estimated Effort:** 2-3 weeks
+2. **Cognitive Biases in Shadow Timeline Projections (Remaining):**
+   - Apply confirmation, availability, and anchoring biases as modifiers to Shadow Timeline action
+     evaluation scores — enabling more realistic (flawed) decision-making beyond gossip
+   - Anchoring bias not yet modeled anywhere
+   - **Estimated Effort:** 1-2 weeks (gossip infrastructure already in place)
 
 ### Priority 2: Medium Impact, Low Complexity
 
@@ -1247,12 +1306,13 @@ The following items from the v1.0 recommendation list have been implemented and 
 9. ✅ 4D modified-PAD Relational Decision Space with Affiliation axis
 10. ✅ MALP/MPLP Long-Term Emotional Memory (RFC-1002) with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit traits
 11. ✅ Emotion Contagion (three-layer: crowd, group, leader)
-12. ✅ Ethical design: no stigmatization, respectful representation
-13. ✅ Transparent, documented, traceable systems
+12. ✅ Cognitive Bias Gossip Module — availability, negativity, confirmation, and attribution biases applied to NPC social information transmission (three-phase: selection → encoding → reception; raw MALP never mutated)
+13. ✅ Ethical design: no stigmatization, respectful representation
+14. ✅ Transparent, documented, traceable systems
 
 **Remaining Weaknesses:**
 1. ❌ No physiological needs (hunger, fatigue, sleep)
-2. ❌ No cognitive biases (attribution error, confirmation bias)
+2. ⚠️ Cognitive biases not yet applied to Shadow Timeline decision projections (gossip domain complete; decision domain pending)
 3. ❌ No flow states or burnout simulation
 4. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
 5. ❌ No cross-session persistent relationships (intentional design trade-off)
@@ -1270,6 +1330,7 @@ The following items from the v1.0 recommendation list have been implemented and 
 - Peak-End Rule for episodic valence (Kahneman et al., 1993)
 - Emotion Contagion theory (Hatfield et al., 1994; Barsade, 2002)
 - Big Five OCEAN model (Costa & McCrae, 1992)
+- Cognitive Bias Gossip Module grounded in social cognition literature (Tversky & Kahneman, 1973; Baumeister et al., 2001; Ross, 1977; Echterhoff & Higgins, 2009; Rozin & Royzman, 2001)
 - Ethical design principles followed
 - Clear distinction between emotions and clinical conditions
 - Comprehensive documentation with code references
@@ -1282,6 +1343,7 @@ The following items from the v1.0 recommendation list have been implemented and 
 - ✅ OCEAN personality fully integrated with no performance regression
 - ✅ MALP/MPLP memory systems with runtime-only design (no disk I/O overhead)
 - ✅ Emotion Contagion with crowd-size performance gate (>20 NPCs = skip)
+- ✅ Cognitive Bias Gossip Module zero-cost when biases are 0.0f (all scale paths branch-free skipped)
 
 **Recommendation:**
 The Vitalia Reborn NPC psychology system is **production-ready** with strong foundations. Priority 1 and 2 enhancements would elevate it to cutting-edge status. The system provides realistic, adaptive mob behavior suitable for deep, immersive gameplay.
@@ -1296,6 +1358,13 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
   4D modified-PAD Relational Decision Space (Affiliation as 4th axis), MALP/MPLP Long-Term Memory
   (RFC-1002), Emotion Contagion system, and dual 20-slot memory buffers; added scientific
   references for all new systems; updated Recommendations and Conclusion.
+- v3.0 (2026-03-14): Updated to reflect Cognitive Bias Gossip Module — confirmation bias,
+  availability heuristic, negativity bias, and attribution bias now modulate `try_social_gossip()`
+  across three stages (topic selection, encoding, reception); raw MALP/MPLP data invariants
+  preserved; added scientific references (Tversky & Kahneman 1973, Baumeister et al. 2001,
+  Ross 1977, Echterhoff & Higgins 2009, Rozin & Royzman 2001, Fiedler et al. 2004, Jones &
+  Harris 1967, Rosnow & Fine 1976); updated Recommendations (Cognitive Biases partially done),
+  Conclusion Strengths, and Remaining Weaknesses accordingly.
 
 **For Questions or Discussion:**
 - GitHub Issues: https://github.com/Forneck/vitalia-reborn/issues
@@ -1305,21 +1374,29 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
 See individual sections for detailed citations.  Key works include:
 - Asch (1951), Cialdini (2001) — Social conformity and peer pressure
 - Barsade (2002) — Emotional contagion in group dynamics
+- Baumeister, Bratslavsky, Finkenauer & Vohs (2001) — Bad is stronger than good (negativity bias)
 - Bower (1981) — Mood, memory, and state-dependent recall
 - Costa & McCrae (1992) — Big Five NEO-PI-R
 - Csikszentmihalyi (1990) — Flow theory
 - Darley & Shultz (1990) — Moral rules and blame evaluation
 - DSM-5 (2013), ICD-11 (2018) — Clinical reference (future use)
+- Echterhoff & Higgins (2009) — Shared reality and audience-tuning in social communication (confirmation bias in gossip)
 - Ekman (1992) — Basic emotion categories
+- Fiedler, Walther, Armbruster, Fay & Naumann (2004) — The calibration of information in epistemic contexts (confirmation receptivity)
 - Goldberg (1990) — Alternative Big Five description
 - Hatfield, Cacioppo & Rapson (1994) — Emotional contagion theory
 - Hebb (1949) — Hebbian learning rule (implicit memory formation)
 - Horowitz (1979) — Interpersonal circumplex (Affiliation axis basis)
+- Jones & Harris (1967) — The attribution of attitudes (correspondent inference / fundamental attribution error)
 - Kahneman et al. (1993) — Peak-End Rule for episodic memory
 - Lang, Bradley & Cuthbert (1998) — Lateral inhibition and competing emotions
 - McCrae & Costa (1987) — Big Five validation
 - Mehrabian & Russell (1974) — PAD (Pleasure-Arousal-Dominance) dimensional model
 - Nader, Schafe & LeDoux (2000) — Memory reconsolidation
+- Rosnow & Fine (1976) — Rumor and gossip: The social psychology of hearsay (availability heuristic in gossip)
+- Ross (1977) — The intuitive psychologist and his shortcomings: Distortions in the attribution process
+- Rozin & Royzman (2001) — Negativity bias, negativity dominance, and contagion
 - Russell (1980) — Circumplex model of affect
 - Simon (1956) — Bounded rationality
 - Squire (1992) — Declarative and nondeclarative memory systems
+- Tversky & Kahneman (1973) — Availability: A heuristic for judging frequency and probability
