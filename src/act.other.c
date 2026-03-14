@@ -1051,6 +1051,36 @@ ACMD(do_visible)
         send_to_char(ch, "Você já está visível.\r\n");
 }
 
+ACMD(do_appear)
+{
+    room_rnum cur_appeared = IS_NPC(ch) ? ch->mob_specials.appeared_room : ch->player_specials->appeared_room;
+
+    if (!AFF_FLAGGED(ch, AFF_INVISIBLE)) {
+        send_to_char(ch, "Você já está visível.\r\n");
+        return;
+    }
+
+    if (cur_appeared != NOWHERE) {
+        send_to_char(ch, "Você já está visível nesta sala.\r\n");
+        return;
+    }
+
+    /* Grant room-local visibility: store the current room in appeared_room.
+     * AFF_INVISIBLE stays set, so characters outside this room cannot see
+     * this character in 'who' or any other context.  INVIS_OK allows
+     * visibility only when the viewer is in the same room (appeared_room). */
+    if (IS_NPC(ch))
+        ch->mob_specials.appeared_room = IN_ROOM(ch);
+    else
+        ch->player_specials->appeared_room = IN_ROOM(ch);
+
+    /* appeared_room is set before act() so PERS() resolves to the real
+     * name for all same-room viewers. */
+    act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
+
+    send_to_char(ch, "Você se torna visível nesta sala.\r\n");
+}
+
 ACMD(do_title)
 {
     skip_spaces(&argument);

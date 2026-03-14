@@ -483,6 +483,12 @@ void char_from_room(struct char_data *ch)
     REMOVE_FROM_LIST(ch, world[IN_ROOM(ch)].people, next_in_room);
     IN_ROOM(ch) = NOWHERE;
     ch->next_in_room = NULL;
+
+    /* Room-local visibility ends when the character leaves the room. */
+    if (IS_NPC(ch))
+        ch->mob_specials.appeared_room = NOWHERE;
+    else if (ch->player_specials->appeared_room != NOWHERE)
+        ch->player_specials->appeared_room = NOWHERE;
 }
 
 /* place a character in a room */
