@@ -993,6 +993,8 @@ void appear(struct char_data *ch)
 
     if (!IS_NPC(ch))
         ch->player_specials->appeared_room = NOWHERE;
+    else
+        ch->mob_specials.appeared_room = NOWHERE;
 
     if (GET_LEVEL(ch) < LVL_IMMORT)
         act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);

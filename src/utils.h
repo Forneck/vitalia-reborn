@@ -1067,11 +1067,13 @@ int get_mob_skill(struct char_data *ch, int skill_num);
     (!AFF_FLAGGED(sub, AFF_BLIND) &&                                                                                   \
      (IS_LIGHT(IN_ROOM(sub)) || AFF_FLAGGED((sub), AFF_INFRAVISION) || GET_LEVEL(sub) >= LVL_IMMORT))
 
+/** Room where ch has locally appeared via 'appear'; works for PCs and NPCs. */
+#define CHAR_APPEARED_ROOM(ch) (IS_NPC(ch) ? (ch)->mob_specials.appeared_room : (ch)->player_specials->appeared_room)
+
 /** Defines if sub character can see the invisible obj character. */
 #define INVIS_OK(sub, obj)                                                                                             \
     ((!AFF_FLAGGED((obj), AFF_INVISIBLE) || AFF_FLAGGED(sub, AFF_DETECT_INVIS) ||                                      \
-      (!IS_NPC(obj) && (obj)->player_specials->appeared_room != NOWHERE &&                                             \
-       IN_ROOM(sub) == (obj)->player_specials->appeared_room)) &&                                                      \
+      (CHAR_APPEARED_ROOM(obj) != NOWHERE && IN_ROOM(sub) == CHAR_APPEARED_ROOM(obj))) &&                              \
      (!AFF_FLAGGED((obj), AFF_HIDE) || AFF_FLAGGED(sub, AFF_SENSE_LIFE)))
 
 /** Defines if sub character can see obj character, assuming mortal only
@@ -1597,18 +1599,18 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 
 /* MALP/MPLP long-term memory parameters (RFC-1002) */
 /** Consolidation threshold θ_cons * 100 (default: 65 = 0.65) */
-#define CONFIG_MALP_THETA_CONS            config_info.emotion_config.malp_theta_cons
+#define CONFIG_MALP_THETA_CONS config_info.emotion_config.malp_theta_cons
 /** Reconsolidation window in ticks (default: 60) */
-#define CONFIG_MALP_RECON_WINDOW_TICKS    config_info.emotion_config.malp_recon_window_ticks
+#define CONFIG_MALP_RECON_WINDOW_TICKS config_info.emotion_config.malp_recon_window_ticks
 /** Rehearsal count threshold for MPLP trait formation (default: 3) */
-#define CONFIG_MALP_REHEARSAL_THRESHOLD   config_info.emotion_config.malp_rehearsal_threshold
+#define CONFIG_MALP_REHEARSAL_THRESHOLD config_info.emotion_config.malp_rehearsal_threshold
 /** Maximum MALP entries per mob (default: 200) */
-#define CONFIG_MALP_LIMIT_PER_MOB         config_info.emotion_config.malp_limit_per_mob
+#define CONFIG_MALP_LIMIT_PER_MOB config_info.emotion_config.malp_limit_per_mob
 /** Standard MALP intensity half-life in hours (default: 24) */
-#define CONFIG_MALP_DECAY_HALFLIFE_STD    config_info.emotion_config.malp_decay_halflife_std
+#define CONFIG_MALP_DECAY_HALFLIFE_STD config_info.emotion_config.malp_decay_halflife_std
 /** Major-event MALP intensity half-life in hours (default: 72) */
-#define CONFIG_MALP_DECAY_HALFLIFE_MAJOR  config_info.emotion_config.malp_decay_halflife_major
+#define CONFIG_MALP_DECAY_HALFLIFE_MAJOR config_info.emotion_config.malp_decay_halflife_major
 /** MPLP trait half-life in hours (default: 168 = 7 days) */
-#define CONFIG_MPLP_DECAY_HALFLIFE        config_info.emotion_config.mplp_decay_halflife
+#define CONFIG_MPLP_DECAY_HALFLIFE config_info.emotion_config.mplp_decay_halflife
 
 #endif /* _UTILS_H_ */

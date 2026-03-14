@@ -485,7 +485,9 @@ void char_from_room(struct char_data *ch)
     ch->next_in_room = NULL;
 
     /* Room-local visibility ends when the character leaves the room. */
-    if (!IS_NPC(ch) && ch->player_specials->appeared_room != NOWHERE)
+    if (IS_NPC(ch))
+        ch->mob_specials.appeared_room = NOWHERE;
+    else if (ch->player_specials->appeared_room != NOWHERE)
         ch->player_specials->appeared_room = NOWHERE;
 }
 

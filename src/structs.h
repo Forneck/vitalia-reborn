@@ -1750,11 +1750,12 @@ struct player_special_data {
 
 /** Special data used by NPCs, not PCs */
 struct mob_special_data {
-    memory_rec *memory; /**< List of PCs to remember */
-    byte attack_type;   /**< The primary attack type (bite, sting, hit, etc.) */
-    byte default_pos;   /**< Default position (standing, sleeping, etc.) */
-    byte damnodice;     /**< The number of dice to roll for damage */
-    byte damsizedice;   /**< The size of each die rolled for damage. */
+    memory_rec *memory;      /**< List of PCs to remember */
+    byte attack_type;        /**< The primary attack type (bite, sting, hit, etc.) */
+    byte default_pos;        /**< Default position (standing, sleeping, etc.) */
+    byte damnodice;          /**< The number of dice to roll for damage */
+    byte damsizedice;        /**< The size of each die rolled for damage. */
+    room_rnum appeared_room; /**< Room where NPC used appear; NOWHERE if not appeared (transient). */
 };
 
 /** An affect structure. */

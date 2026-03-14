@@ -4128,6 +4128,7 @@ void clear_char(struct char_data *ch)
     GET_WAS_IN(ch) = NOWHERE;
     GET_POS(ch) = POS_STANDING;
     ch->mob_specials.default_pos = POS_STANDING;
+    ch->mob_specials.appeared_room = NOWHERE;
     ch->events = NULL;
     ch->listening_to = NOWHERE;
     ch->next_listener = NULL;
