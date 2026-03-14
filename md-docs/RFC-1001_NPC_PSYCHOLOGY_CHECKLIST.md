@@ -1,10 +1,17 @@
 # RFC-1001: NPC Psychology & Behavior Scientific Checklist
 # Vitalia Reborn MUD Engine
 
-**Document Version:** 4.0  
+**Document Version:** 5.0  
 **Date:** 2026-03-14  
 **Status:** Updated Analysis & Implementation Reference  
 **Purpose:** Professional evaluation of NPC psychological systems for future development planning
+
+> **Revision Note (v5.0):** This document has been updated to reflect the Anchoring Bias
+> implementation.  `first_valence` is now stored in every `malp_entry` (set once on creation,
+> never updated).  `apply_anchoring_bias()` in `shadow_timeline.c` reads this field and pulls
+> Shadow Timeline projections toward the NPC's original reaction, scaled by MPLP
+> `SUSPICION_BIAS` and inverse `FORGIVENESS_RATE`.  All five cognitive biases are now fully
+> implemented; the Cognitive Bias Module is complete.
 
 > **Revision Note (v4.0):** This document has been updated to reflect the Shadow Timeline
 > Cognitive Bias Module implemented as part of the same work cycle.  All four cognitive biases
@@ -46,7 +53,7 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
 - ✅ **4D modified-PAD Relational Decision Space** — Valence, Arousal, Dominance + **Affiliation** (4th axis)
 - ✅ **MALP/MPLP Long-Term Emotional Memory** (RFC-1002) — episodic consolidation with salience, Hebbian trait formation, Peak-End Rule, and reconsolidation
 - ✅ **Emotion Contagion** — three-layer emotional spreading (crowd, group, leader)
-- ✅ **Cognitive Bias Module** — availability heuristic, negativity bias, confirmation bias, and attribution bias applied to both NPC social information transmission (gossip) and Shadow Timeline decision projections across all scoring stages
+- ✅ **Cognitive Bias Module** — availability heuristic, negativity bias, confirmation bias, attribution bias, and anchoring bias (first-impression persistence) applied to both NPC social information transmission (gossip) and Shadow Timeline decision projections across all scoring stages
 - ⚠️  **FANN neural networks** included but not integrated
 - ❌ **DSM-5/ICD-11 neurodivergence** models not implemented
 
@@ -502,10 +509,48 @@ Application order (per issue spec — "Humans bias first, rationalize later"):
 All score mutations are clamped to `[OUTCOME_SCORE_MIN, OUTCOME_SCORE_MAX]` = `[-100, 100]`.
 `CONFIG_MOB_4D_DEBUG` logs `COGBIAS-AVAIL:`, `COGBIAS-CONF:`, `COGBIAS-ATTR:`, `COGBIAS-NEG:`.
 
-**Code:** `src/shadow_timeline.c:2013–2303` (Cognitive Bias Module), `src/shadow_timeline.h:167–172` (constants)
+**Code:** `src/shadow_timeline.c:2013–2395` (Cognitive Bias Module), `src/shadow_timeline.h:167–173` (constants)
 
-**Remaining gap (anchoring bias):**
-- Anchoring bias is not modeled in either domain.
+#### Anchoring Bias — First-Impression Persistence
+
+The fifth and final cognitive bias.  Unlike confirmation bias (which favours the *current*
+belief) or availability (which favours *recent* memories), anchoring favours what came
+**first**.  The NPC's brain locks onto the very first interaction valence with an entity and
+uses it as a reference point that resists revision regardless of subsequent evidence.
+
+**Storage**: `malp_entry.first_valence` (in `src/structs.h`) is set once on MALP entry
+creation and never updated.  This is the meta-memory that holds the first impression.
+
+**Formula**:
+```
+anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × ANCHORING_MAX
+```
+
+Where:
+- `first_valence` = MALP `first_valence` (−1..+1) for the projection target
+- `resistance` = `(suspicion_bias + (1 − forgiveness_rate)) / 2` — measures how stubborn the
+  NPC is; high suspicion and low forgiveness produce the strongest anchoring
+- `intensity_floor` = `max(0.3, malp_intensity)` — anchor retains ≥ 30% potency even as the
+  episodic memory fades (anchors outlast normal decay)
+- `COGBIAS_ANCHORING_MAX = 25` pts — largest of all bias deltas, reflecting anchoring's
+  documented dominance in human belief revision
+
+**Application order** (applied last per specification):
+1. Availability → 2. Confirmation → 3. Attribution → 4. Negativity → **5. Anchoring**
+
+**Emergent NPC archetypes**:
+- *Grateful ally*: first help → positive anchor; still favours actor even after insults
+- *Unforgiving enemy*: first attack → negative anchor; remains suspicious even after aid
+- *Stubborn grudge-holder*: high suspicion + low forgiveness = near-permanent anchoring
+- *Naive loyalist*: low suspicion + high forgiveness = anchoring fades quickly
+- *Traumatised*: major-event first impression → very strong, long-lived anchor
+
+`CONFIG_MOB_4D_DEBUG` logs `COGBIAS-ANCH:` with first_val, resistance, intensity, delta.
+
+**Code:** `src/shadow_timeline.c:2283–2395` (`apply_anchoring_bias()` + updated pipeline),
+`src/shadow_timeline.h:172` (`COGBIAS_ANCHORING_MAX`),
+`src/structs.h:1387` (`malp_entry.first_valence`), `src/malp.c:604` (first_valence set on entry creation),
+`src/quest.c:3510` (`biases.anchoring_bias` default initialisation)
 
 ---
 
@@ -1257,9 +1302,18 @@ The following items from the v3.0 recommendation list have been implemented and 
 
 - **Cognitive Biases in Shadow Timeline Projections** — the same four biases (confirmation,
   availability, attribution, negativity) are applied to every Shadow Timeline action-score
-  projection in `shadow_apply_cognitive_biases()` before moral evaluation.  The Cognitive Bias
-  system is **fully complete** across both social and decision domains.  Anchoring bias is the
-  only major cognitive bias not yet modeled.
+  projection in `shadow_apply_cognitive_biases()` before moral evaluation.
+
+### Completed Enhancements (v5.0)
+
+The following items from the v4.0 recommendation list have been implemented and are now ✅ active:
+
+- **Anchoring Bias** — first-impression valence (`malp_entry.first_valence`) is captured once on
+  MALP entry creation and used by `apply_anchoring_bias()` to pull Shadow Timeline projections
+  toward the NPC's original reaction.  Resistance is modulated by MPLP `SUSPICION_BIAS` and
+  inverse `FORGIVENESS_RATE`.  The Cognitive Bias Module is now **fully complete** — all five
+  biases (confirmation, availability, attribution, negativity, anchoring) are implemented across
+  both the social (gossip) domain and the Shadow Timeline decision domain.
 
 ### Priority 1: High Impact, Moderate Complexity
 
@@ -1268,11 +1322,6 @@ The following items from the v3.0 recommendation list have been implemented and 
    - Integrate with moral decision-making (desperation justifies theft)
    - Enables survival-driven emergent behavior
    - **Estimated Effort:** 3-4 weeks
-
-2. **Anchoring Bias:**
-   - Model first-impression anchoring as a residual distortion on projected scores
-   - NPCs should resist revising initial beliefs when faced with contradicting data
-   - **Estimated Effort:** 1 week (infrastructure in place)
 
 ### Priority 2: Medium Impact, Low Complexity
 
@@ -1338,17 +1387,22 @@ The following items from the v3.0 recommendation list have been implemented and 
 9. ✅ 4D modified-PAD Relational Decision Space with Affiliation axis
 10. ✅ MALP/MPLP Long-Term Emotional Memory (RFC-1002) with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit traits
 11. ✅ Emotion Contagion (three-layer: crowd, group, leader)
-12. ✅ **Cognitive Bias Module** — availability, negativity, confirmation, and attribution biases applied to both social information transmission (gossip three-phase pipeline) and Shadow Timeline decision projections (pre-moral scoring); raw MALP/MPLP never mutated
+12. ✅ **Cognitive Bias Module** — all five biases fully implemented across both domains:
+    - *Availability*, *Negativity*, *Confirmation*, *Attribution*: applied to gossip (three-phase
+      pipeline: topic selection, encoding, reception) and to Shadow Timeline projection scoring
+    - *Anchoring*: first-impression `first_valence` stored in MALP meta-memory; pulls projections
+      toward original reaction scaled by MPLP suspicion and inverse forgiveness; outlasts normal
+      memory decay via 30% intensity floor
+    - Raw MALP/MPLP data invariants preserved throughout — biases affect scoring only
 13. ✅ Ethical design: no stigmatization, respectful representation
 14. ✅ Transparent, documented, traceable systems
 
 **Remaining Weaknesses:**
 1. ❌ No physiological needs (hunger, fatigue, sleep)
-2. ❌ Anchoring bias not modeled (remaining cognitive bias gap)
-3. ❌ No flow states or burnout simulation
-4. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
-5. ❌ No cross-session persistent relationships (intentional design trade-off)
-6. ❌ No neurodivergence profiles (ASD, ADHD)
+2. ❌ No flow states or burnout simulation
+3. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
+4. ❌ No cross-session persistent relationships (intentional design trade-off)
+5. ❌ No neurodivergence profiles (ASD, ADHD)
 
 **Partial Implementation:**
 - ⚠️  FANN neural networks available but not yet integrated into mob behaviour
@@ -1362,7 +1416,7 @@ The following items from the v3.0 recommendation list have been implemented and 
 - Peak-End Rule for episodic valence (Kahneman et al., 1993)
 - Emotion Contagion theory (Hatfield et al., 1994; Barsade, 2002)
 - Big Five OCEAN model (Costa & McCrae, 1992)
-- Cognitive Bias Module (gossip + Shadow Timeline projections) grounded in social cognition literature (Tversky & Kahneman, 1973; Baumeister et al., 2001; Ross, 1977; Echterhoff & Higgins, 2009; Rozin & Royzman, 2001)
+- Cognitive Bias Module (gossip + Shadow Timeline projections) grounded in social cognition literature (Tversky & Kahneman, 1973; Baumeister et al., 2001; Ross, 1977; Echterhoff & Higgins, 2009; Rozin & Royzman, 2001); Anchoring bias grounded in Tversky & Kahneman (1974) "Judgment under Uncertainty: Heuristics and Biases"
 - Ethical design principles followed
 - Clear distinction between emotions and clinical conditions
 - Comprehensive documentation with code references
@@ -1390,13 +1444,6 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
   4D modified-PAD Relational Decision Space (Affiliation as 4th axis), MALP/MPLP Long-Term Memory
   (RFC-1002), Emotion Contagion system, and dual 20-slot memory buffers; added scientific
   references for all new systems; updated Recommendations and Conclusion.
-- v4.0 (2026-03-14): Updated to reflect Shadow Timeline Cognitive Bias Module — all four biases
-  (confirmation, availability, attribution, negativity) now also applied to Shadow Timeline
-  action-score projections in `shadow_apply_cognitive_biases()` (src/shadow_timeline.c:2294)
-  called inside `shadow_score_projections()` before moral evaluation; Cognitive Bias system
-  now fully complete; removed "NOT YET implemented" Shadow Timeline note; removed ⚠️ item from
-  Remaining Weaknesses; added "Anchoring Bias" as new Priority 1 item 2; updated Completed
-  Enhancements (v4.0), Conclusion Strengths, Production Readiness, and Scientific Rigor.
 - v3.0 (2026-03-14): Updated to reflect Cognitive Bias Gossip Module — confirmation bias,
   availability heuristic, negativity bias, and attribution bias now modulate `try_social_gossip()`
   across three stages (topic selection, encoding, reception); raw MALP/MPLP data invariants
@@ -1404,6 +1451,20 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
   Ross 1977, Echterhoff & Higgins 2009, Rozin & Royzman 2001, Fiedler et al. 2004, Jones &
   Harris 1967, Rosnow & Fine 1976); updated Recommendations (Cognitive Biases partially done),
   Conclusion Strengths, and Remaining Weaknesses accordingly.
+- v4.0 (2026-03-14): Updated to reflect Shadow Timeline Cognitive Bias Module — all four biases
+  (confirmation, availability, attribution, negativity) now also applied to Shadow Timeline
+  action-score projections in `shadow_apply_cognitive_biases()` (src/shadow_timeline.c:2294)
+  called inside `shadow_score_projections()` before moral evaluation; removed "NOT YET
+  implemented" Shadow Timeline note; added "Anchoring Bias" as new Priority 1 item 2; updated
+  Completed Enhancements (v4.0), Conclusion Strengths, Production Readiness, and Scientific Rigor.
+- v5.0 (2026-03-14): Implemented Anchoring Bias — fifth and final cognitive bias.  Added
+  `first_valence` field to `malp_entry` (set once on creation, never updated); added
+  `anchoring_bias` field to `cognitive_biases` struct; implemented `apply_anchoring_bias()` in
+  `shadow_timeline.c` (applied last in pipeline, scales by MPLP SUSPICION_BIAS and inverse
+  FORGIVENESS_RATE, with 30% intensity floor); added `COGBIAS_ANCHORING_MAX=25`;
+  initialised `biases.anchoring_bias` in `init_mob_ai_data()`.  Cognitive Bias Module is now
+  **fully complete**; removed anchoring from Remaining Weaknesses and Priority 1;
+  added Completed Enhancements (v5.0); updated scientific references (Tversky & Kahneman 1974).
 
 **For Questions or Discussion:**
 - GitHub Issues: https://github.com/Forneck/vitalia-reborn/issues

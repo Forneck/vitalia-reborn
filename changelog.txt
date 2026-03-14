@@ -58,6 +58,42 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
       - Works with emotion system (no direct writes to emotion_* fields).
       - No regression in combat AI (score clamped to OUTCOME_SCORE_MIN/MAX throughout).
 
+  feat: Anchoring Bias — fifth and final cognitive bias; Cognitive Bias Module now complete
+    (src/structs.h, src/malp.c, src/shadow_timeline.c, src/shadow_timeline.h, src/quest.c)
+
+    Anchoring bias models the documented human tendency to anchor on first impressions even
+    when subsequent evidence contradicts the initial assessment (Tversky & Kahneman, 1974).
+    Unlike confirmation bias (favours current belief) or availability (favours recent events),
+    anchoring pulls NPC decisions toward the FIRST recorded interaction valence.
+
+    Storage:
+      malp_entry.first_valence — set ONCE on MALP entry creation, never updated.
+      This is the meta-memory anchor point.  Stored in struct malp_entry (structs.h).
+
+    Formula applied in Shadow Timeline projection scoring:
+      anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × 25
+      where:
+        resistance      = (suspicion_bias + (1 − forgiveness_rate)) / 2  [0..1]
+        intensity_floor = max(0.3, malp_entry.intensity)  (anchors outlast memory decay)
+
+    Application order (per specification: last in pipeline, distorts final score):
+      availability → confirmation → attribution → negativity → ANCHORING
+
+    New field: cognitive_biases.anchoring_bias (float 0.0–1.0+)
+      Initialised to COGBIAS_HUMAN_DEFAULT (0.5) in init_mob_ai_data() (quest.c).
+
+    New constant: COGBIAS_ANCHORING_MAX (25) — largest of all five bias deltas, reflecting
+      anchoring's documented dominance in human belief revision.
+
+    Emergent NPC archetypes enabled:
+      - Grateful ally: first help → positive anchor; still favours actor even after insults
+      - Unforgiving enemy: first attack → remains suspicious even after subsequent aid
+      - Stubborn grudge-holder: high suspicion + low forgiveness = near-permanent anchoring
+      - Naive loyalist: low suspicion + high forgiveness = anchoring fades quickly
+      - Traumatised: major-event first impression → very strong, long-lived anchor
+
+    Debug logging: COGBIAS-ANCH: prefix; shows first_val, resistance, intensity, delta, score.
+
   feat: Cognitive Bias effects on Gossip — Social transmission distortion (src/malp.c, src/malp.h)
     Psychological research (Tversky & Kahneman 1973; Baumeister et al. 2001; Ross 1977;
     Echterhoff & Higgins 2009; Rozin & Royzman 2001) confirms that cognitive biases

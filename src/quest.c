@@ -3507,6 +3507,7 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->biases.availability_bias = COGBIAS_HUMAN_DEFAULT;
     mob->ai_data->biases.attribution_bias = COGBIAS_HUMAN_DEFAULT;
     mob->ai_data->biases.negativity_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.anchoring_bias = COGBIAS_HUMAN_DEFAULT;
 
     /* Initialize goal fields to sentinel values to prevent SIGSEGV.
      * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.

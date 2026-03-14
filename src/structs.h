@@ -1384,6 +1384,8 @@ struct malp_entry {
     time_t last_retrieved; /**< Last retrieval (reconsolidation check); 0 = never */
     time_t last_applied;   /**< Last time MALP/MPLP emotion effects were applied for this actor; 0 = never */
     float valence;         /**< Emotional valence −1..+1 (negative = aversive) */
+    float first_valence;   /**< First-impression valence: set once on entry creation; never updated
+                                (used by anchoring bias to pull projections toward original reaction) */
     float arousal;         /**< Arousal at encoding 0..1 */
     float salience;        /**< Computed salience S ∈ [0,1] at consolidation */
     float intensity;       /**< Current intensity (power-law decayed from salience) */
@@ -1428,6 +1430,7 @@ struct cognitive_biases {
     float availability_bias; /**< Inflate recent/intense memory projections */
     float attribution_bias;  /**< Blame others' behaviour on personality; excuse self */
     float negativity_bias;   /**< Amplify negative outcomes; dampen positive ones */
+    float anchoring_bias;    /**< Persist first-impression distortion regardless of later evidence */
 };
 
 struct mob_ai_data {

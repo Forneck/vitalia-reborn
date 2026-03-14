@@ -601,6 +601,7 @@ void consolidator_tick(struct char_data *mob)
             _e->timestamp = (mem)->timestamp;                                                                          \
             _e->last_retrieved = 0;                                                                                    \
             _e->valence = valence;                                                                                     \
+            _e->first_valence = valence; /* Anchoring: capture first impression once; never updated */                 \
             _e->arousal = arousal;                                                                                     \
             _e->salience = S;                                                                                          \
             _e->intensity = S;                                                                                         \

@@ -60,6 +60,7 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
 static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj);
 static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj);
 static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj);
 
 /**
  * Initialize a shadow context for an entity
@@ -2277,6 +2278,96 @@ static void apply_negativity_bias(struct char_data *ch, struct shadow_projection
 }
 
 /**
+ * Apply anchoring bias to a shadow projection.
+ *
+ * The first impression of a target entity — stored as `first_valence` in
+ * the NPC's MALP entry — acts as a persistent residual pull on the projected
+ * score, regardless of later contradicting evidence.  This models the
+ * psychological phenomenon that humans (and now NPCs) anchor on initial
+ * information even when new data should rationally revise the belief.
+ *
+ * Mechanism:
+ *   anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × MAX
+ *
+ * Where resistance combines MPLP suspicion (slow to trust) and inverse
+ * forgiveness (slow to forgive), both of which make beliefs harder to revise.
+ * intensity_floor ensures the anchor retains at least 30% potency even as
+ * the episodic memory naturally fades — anchors outlast normal memory decay.
+ *
+ * Effects:
+ *   - NPC that was helped first still favours that actor even after insults
+ *   - NPC that was attacked first stays suspicious even after subsequent help
+ *   - Stubborn NPCs are nearly immune to belief revision
+ *   - Forgiving NPCs show weaker anchoring (resistance approaches 0)
+ *
+ * Applied last in the pipeline because it distorts the final score
+ * (not the intermediate simulation), per the issue specification.
+ */
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    float first_valence;
+    float suspicion;
+    float forgiveness;
+    float resistance;
+    float intensity_floor;
+    struct char_data *target;
+    struct malp_entry *malp_e;
+    int target_type;
+    long target_id;
+    int delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.anchoring_bias;
+    if (bias <= 0.0f)
+        return;
+
+    target = (struct char_data *)proj->action.target;
+    if (!target)
+        return; /* Anchoring requires a specific entity target */
+
+    target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+    target_id = IS_NPC(target) ? (long)GET_MOB_VNUM(target) : GET_IDNUM(target);
+
+    malp_e = get_malp_by_agent(ch, target_id, target_type);
+    if (!malp_e || (malp_e->first_valence > -0.01f && malp_e->first_valence < 0.01f))
+        return; /* No prior history or near-neutral first impression — negligible anchor */
+
+    first_valence = malp_e->first_valence;
+
+    /* Resistance to belief revision: composite of suspicion and low forgiveness.
+     * suspicion_bias ∈ [0,1]: distrustful NPCs re-anchor harder on bad impressions.
+     * forgiveness_rate ∈ [0,1]: (1 - forgiveness) means stubborn, unforgiving NPCs
+     * hold onto their first impression for longer.
+     * Average gives a symmetric resistance measure in [0,1]. */
+    suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+    forgiveness = mplp_get_effective_trait(ch, target, MPLP_TRAIT_FORGIVENESS_RATE, MPLP_CTX_SOCIAL);
+    resistance = (suspicion + (1.0f - forgiveness)) * 0.5f;
+    if (resistance < 0.0f)
+        resistance = 0.0f;
+    if (resistance > 1.0f)
+        resistance = 1.0f;
+
+    /* Intensity floor: anchors outlast normal episodic memory decay.
+     * Even when the MALP entry has faded (intensity < 0.3), the first
+     * impression still exerts at least 30% of its original pull. */
+    intensity_floor = malp_e->intensity;
+    if (intensity_floor < 0.3f)
+        intensity_floor = 0.3f;
+
+    delta = (int)(first_valence * bias * resistance * intensity_floor * (float)COGBIAS_ANCHORING_MAX);
+
+    proj->outcome.score += delta;
+    proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("COGBIAS-ANCH: mob %s first_val=%.2f resist=%.2f intens=%.2f delta=%d score=%d", GET_NAME(ch),
+             first_valence, resistance, intensity_floor, delta, proj->outcome.score);
+}
+
+/**
  * Apply all cognitive biases to a shadow projection.
  *
  * Called after shadow_execute_projection() and before moral_evaluate().
@@ -2287,6 +2378,7 @@ static void apply_negativity_bias(struct char_data *ch, struct shadow_projection
  *   2. Confirmation  (belief persistence)
  *   3. Attribution   (self vs. other)
  *   4. Negativity    (asymmetric loss aversion)
+ *   5. Anchoring     (first-impression residual — applied last, distorts final score)
  *
  * @param ch   The NPC entity applying biases.
  * @param proj The projection to distort.
@@ -2300,6 +2392,7 @@ void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projectio
     apply_confirmation_bias(ch, proj);
     apply_attribution_bias(ch, proj);
     apply_negativity_bias(ch, proj);
+    apply_anchoring_bias(ch, proj);
 }
 
 static bool check_invariant_existence(void *entity, int entity_type)

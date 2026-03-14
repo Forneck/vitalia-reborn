@@ -169,6 +169,7 @@ struct shadow_context {
 #define COGBIAS_AVAILABILITY_MAX 0.4f /**< Max availability multiplier applied to outcome score */
 #define COGBIAS_ATTRIBUTION_MAX 15    /**< Max score delta (points) from attribution bias */
 #define COGBIAS_NEGATIVITY_MAX 0.2f   /**< Danger-level amplification scale in negativity bias */
+#define COGBIAS_ANCHORING_MAX 25      /**< Max score delta (points) from anchoring bias (first-impression pull) */
 #define COGBIAS_HUMAN_DEFAULT 0.5f    /**< Default human-normal bias strength */
 
 /* Core Shadow Timeline functions */
