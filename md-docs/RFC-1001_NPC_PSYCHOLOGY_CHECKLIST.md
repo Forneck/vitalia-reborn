@@ -1,10 +1,19 @@
 # RFC-1001: NPC Psychology & Behavior Scientific Checklist
 # Vitalia Reborn MUD Engine
 
-**Document Version:** 3.0  
+**Document Version:** 4.0  
 **Date:** 2026-03-14  
 **Status:** Updated Analysis & Implementation Reference  
 **Purpose:** Professional evaluation of NPC psychological systems for future development planning
+
+> **Revision Note (v4.0):** This document has been updated to reflect the Shadow Timeline
+> Cognitive Bias Module implemented as part of the same work cycle.  All four cognitive biases
+> (confirmation, availability heuristic, attribution, negativity) now also distort Shadow
+> Timeline action-score projections in `shadow_apply_cognitive_biases()` in
+> `src/shadow_timeline.c`, called inside `shadow_score_projections()` before moral evaluation.
+> The Cognitive Bias system is now **fully complete** across both social (gossip) and cognitive
+> (decision-projection) domains.  All status markers, recommendations, and references have been
+> updated accordingly.
 
 > **Revision Note (v3.0):** This document has been updated to reflect the Cognitive Bias Gossip
 > module implemented after v2.0 (2026-03-07).  Confirmation bias, availability heuristic,
@@ -37,7 +46,7 @@ This document provides a comprehensive scientific analysis of the NPC (Non-Playe
 - ✅ **4D modified-PAD Relational Decision Space** — Valence, Arousal, Dominance + **Affiliation** (4th axis)
 - ✅ **MALP/MPLP Long-Term Emotional Memory** (RFC-1002) — episodic consolidation with salience, Hebbian trait formation, Peak-End Rule, and reconsolidation
 - ✅ **Emotion Contagion** — three-layer emotional spreading (crowd, group, leader)
-- ✅ **Cognitive Bias Gossip Module** — availability, negativity, confirmation, and attribution biases applied to NPC social information transmission across three stages
+- ✅ **Cognitive Bias Module** — availability heuristic, negativity bias, confirmation bias, and attribution bias applied to both NPC social information transmission (gossip) and Shadow Timeline decision projections across all scoring stages
 - ⚠️  **FANN neural networks** included but not integrated
 - ❌ **DSM-5/ICD-11 neurodivergence** models not implemented
 
@@ -473,15 +482,30 @@ if (gossip_negative == prior_negative)
 
 **Code:** `src/malp.c:1578–1889` (`try_social_gossip()`), `src/malp.h:197–226` (constants)
 
-**NOT YET implemented (remaining gaps):**
-- Cognitive biases as modifiers to **Shadow Timeline projections** (decision-making heuristics)
-- Anchoring bias (not modeled anywhere)
+#### Shadow Timeline — Decision Projection Biases
 
-**Still-active partial proxies (from v1.0):**
-- **In-group favoritism** (via group loyalty and peer pressure)
-- **Recency bias** (via memory decay weighting and MALP cue-score recency component)
-- **Outcome bias** (regret influenced by outcomes, not just intentions)
-- **Peak-End Bias** (implemented in MALP episodic valence via Kahneman Peak-End Rule)
+The same four biases are applied a second time, during **action-score projection**, inside
+`shadow_apply_cognitive_biases()` (`src/shadow_timeline.c:2294–2303`), which is called
+within `shadow_score_projections()` — *before* moral evaluation — implementing the cognitive
+pipeline: **Shadow Timeline → Cognitive Bias → Moral reasoning → Action**.
+
+| Bias | Effect on projection score | Constant |
+|------|---------------------------|----------|
+| **Availability heuristic** | Scans all MALP episodes; most salient `recency × intensity_amp` drives a proportional score multiplier, inflating projections when vivid memories are fresh. | `COGBIAS_AVAILABILITY_MAX = 0.4f` |
+| **Confirmation bias** | Reads MPLP `TRUST_BIAS` / `SUSPICION_BIAS` toward the target plus MALP episodic valence to form `prior_valence ∈ [−1,+1]`; matching outcome direction → score boosted; contradicting → score dampened. | `COGBIAS_CONFIRMATION_MAX = 20` pts |
+| **Attribution bias (fundamental attribution error)** | Self-serving: NPC always adds `bias × 0.5 × MAX` to its own action scores; when target danger > 30 the NPC attributes danger to the enemy's inherent personality and subtracts a danger-proportional penalty. | `COGBIAS_ATTRIBUTION_MAX = 15` pts |
+| **Negativity bias** | `score < 0 → × (1 + bias)`; `score > 0 → × (1 − bias × 0.5)` (floor 0.5×); additionally inflates `danger_level` for negative projections. | `COGBIAS_NEGATIVITY_MAX = 0.2f` (danger amplifier) |
+
+Application order (per issue spec — "Humans bias first, rationalize later"):
+1. Availability → 2. Confirmation → 3. Attribution → 4. Negativity
+
+All score mutations are clamped to `[OUTCOME_SCORE_MIN, OUTCOME_SCORE_MAX]` = `[-100, 100]`.
+`CONFIG_MOB_4D_DEBUG` logs `COGBIAS-AVAIL:`, `COGBIAS-CONF:`, `COGBIAS-ATTR:`, `COGBIAS-NEG:`.
+
+**Code:** `src/shadow_timeline.c:2013–2303` (Cognitive Bias Module), `src/shadow_timeline.h:167–172` (constants)
+
+**Remaining gap (anchoring bias):**
+- Anchoring bias is not modeled in either domain.
 
 ---
 
@@ -1223,10 +1247,19 @@ The following items from the v1.0 recommendation list have been implemented and 
 
 The following items from the v2.0 recommendation list have been implemented and are now ✅ active:
 
-- **Cognitive Biases in Gossip (Partial)** — confirmation bias, availability heuristic, negativity
-  bias, and attribution bias modulate `try_social_gossip()` across three stages (topic selection,
-  encoding, reception).  Gossip-domain biases are fully implemented.  Remaining gap: biases as
-  modifiers to Shadow Timeline decision projections.
+- **Cognitive Biases in Gossip (Social Domain)** — confirmation bias, availability heuristic,
+  negativity bias, and attribution bias modulate `try_social_gossip()` across three stages
+  (topic selection, encoding, reception).
+
+### Completed Enhancements (v4.0)
+
+The following items from the v3.0 recommendation list have been implemented and are now ✅ active:
+
+- **Cognitive Biases in Shadow Timeline Projections** — the same four biases (confirmation,
+  availability, attribution, negativity) are applied to every Shadow Timeline action-score
+  projection in `shadow_apply_cognitive_biases()` before moral evaluation.  The Cognitive Bias
+  system is **fully complete** across both social and decision domains.  Anchoring bias is the
+  only major cognitive bias not yet modeled.
 
 ### Priority 1: High Impact, Moderate Complexity
 
@@ -1236,11 +1269,10 @@ The following items from the v2.0 recommendation list have been implemented and 
    - Enables survival-driven emergent behavior
    - **Estimated Effort:** 3-4 weeks
 
-2. **Cognitive Biases in Shadow Timeline Projections (Remaining):**
-   - Apply confirmation, availability, and anchoring biases as modifiers to Shadow Timeline action
-     evaluation scores — enabling more realistic (flawed) decision-making beyond gossip
-   - Anchoring bias not yet modeled anywhere
-   - **Estimated Effort:** 1-2 weeks (gossip infrastructure already in place)
+2. **Anchoring Bias:**
+   - Model first-impression anchoring as a residual distortion on projected scores
+   - NPCs should resist revising initial beliefs when faced with contradicting data
+   - **Estimated Effort:** 1 week (infrastructure in place)
 
 ### Priority 2: Medium Impact, Low Complexity
 
@@ -1306,13 +1338,13 @@ The following items from the v2.0 recommendation list have been implemented and 
 9. ✅ 4D modified-PAD Relational Decision Space with Affiliation axis
 10. ✅ MALP/MPLP Long-Term Emotional Memory (RFC-1002) with salience consolidation, Peak-End Rule, reconsolidation, and Hebbian implicit traits
 11. ✅ Emotion Contagion (three-layer: crowd, group, leader)
-12. ✅ Cognitive Bias Gossip Module — availability, negativity, confirmation, and attribution biases applied to NPC social information transmission (three-phase: selection → encoding → reception; raw MALP never mutated)
+12. ✅ **Cognitive Bias Module** — availability, negativity, confirmation, and attribution biases applied to both social information transmission (gossip three-phase pipeline) and Shadow Timeline decision projections (pre-moral scoring); raw MALP/MPLP never mutated
 13. ✅ Ethical design: no stigmatization, respectful representation
 14. ✅ Transparent, documented, traceable systems
 
 **Remaining Weaknesses:**
 1. ❌ No physiological needs (hunger, fatigue, sleep)
-2. ⚠️ Cognitive biases not yet applied to Shadow Timeline decision projections (gossip domain complete; decision domain pending)
+2. ❌ Anchoring bias not modeled (remaining cognitive bias gap)
 3. ❌ No flow states or burnout simulation
 4. ❌ No neurochemical modeling (cortisol, dopamine, etc.)
 5. ❌ No cross-session persistent relationships (intentional design trade-off)
@@ -1330,7 +1362,7 @@ The following items from the v2.0 recommendation list have been implemented and 
 - Peak-End Rule for episodic valence (Kahneman et al., 1993)
 - Emotion Contagion theory (Hatfield et al., 1994; Barsade, 2002)
 - Big Five OCEAN model (Costa & McCrae, 1992)
-- Cognitive Bias Gossip Module grounded in social cognition literature (Tversky & Kahneman, 1973; Baumeister et al., 2001; Ross, 1977; Echterhoff & Higgins, 2009; Rozin & Royzman, 2001)
+- Cognitive Bias Module (gossip + Shadow Timeline projections) grounded in social cognition literature (Tversky & Kahneman, 1973; Baumeister et al., 2001; Ross, 1977; Echterhoff & Higgins, 2009; Rozin & Royzman, 2001)
 - Ethical design principles followed
 - Clear distinction between emotions and clinical conditions
 - Comprehensive documentation with code references
@@ -1343,7 +1375,7 @@ The following items from the v2.0 recommendation list have been implemented and 
 - ✅ OCEAN personality fully integrated with no performance regression
 - ✅ MALP/MPLP memory systems with runtime-only design (no disk I/O overhead)
 - ✅ Emotion Contagion with crowd-size performance gate (>20 NPCs = skip)
-- ✅ Cognitive Bias Gossip Module zero-cost when biases are 0.0f (all scale paths branch-free skipped)
+- ✅ Cognitive Bias Module zero-cost when biases are 0.0f (all scale paths branch-free skipped); applies to both gossip (malp.c) and Shadow Timeline (shadow_timeline.c)
 
 **Recommendation:**
 The Vitalia Reborn NPC psychology system is **production-ready** with strong foundations. Priority 1 and 2 enhancements would elevate it to cutting-edge status. The system provides realistic, adaptive mob behavior suitable for deep, immersive gameplay.
@@ -1358,6 +1390,13 @@ The Vitalia Reborn NPC psychology system is **production-ready** with strong fou
   4D modified-PAD Relational Decision Space (Affiliation as 4th axis), MALP/MPLP Long-Term Memory
   (RFC-1002), Emotion Contagion system, and dual 20-slot memory buffers; added scientific
   references for all new systems; updated Recommendations and Conclusion.
+- v4.0 (2026-03-14): Updated to reflect Shadow Timeline Cognitive Bias Module — all four biases
+  (confirmation, availability, attribution, negativity) now also applied to Shadow Timeline
+  action-score projections in `shadow_apply_cognitive_biases()` (src/shadow_timeline.c:2294)
+  called inside `shadow_score_projections()` before moral evaluation; Cognitive Bias system
+  now fully complete; removed "NOT YET implemented" Shadow Timeline note; removed ⚠️ item from
+  Remaining Weaknesses; added "Anchoring Bias" as new Priority 1 item 2; updated Completed
+  Enhancements (v4.0), Conclusion Strengths, Production Readiness, and Scientific Rigor.
 - v3.0 (2026-03-14): Updated to reflect Cognitive Bias Gossip Module — confirmation bias,
   availability heuristic, negativity bias, and attribution bias now modulate `try_social_gossip()`
   across three stages (topic selection, encoding, reception); raw MALP/MPLP data invariants
