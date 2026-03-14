@@ -2360,6 +2360,8 @@ struct experimental_data {
     int max_mob_posted_quests;     /**< Maximum number of mob-posted autoquests (default: 450) */
     int emotion_alignment_shifts;  /**< Emotions influence alignment over time? (default: NO) */
     int mob_4d_debug;              /**< Log 4D decision-space raw and effective values for debugging (default: NO) */
+    int mob_gossip_chance;         /**< Probability (%) of mob gossiping per emotion tick (default: 10) */
+    int mob_gossip_cooldown; /**< Seconds between gossip updates for the same listener-target pair (default: 300) */
 };
 
 /**

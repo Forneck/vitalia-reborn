@@ -3,6 +3,57 @@ help, find any bugs, or have ideas for improvement please stop by TBA at
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
 [Mar 14 2026] - Vitalia Reborn Development
+  feat: Social gossip — MALP/MPLP transfer between entities (src/malp.c, src/malp.h, src/mobact.c)
+    Implements indirect knowledge propagation: mobs can now share emotional memories
+    about third entities (gossip), spreading reputation, fear, and affection through
+    social proximity without direct interaction.
+
+    New public API:
+      bool try_social_gossip(source, listener)
+        source (A) gossips to listener (B) about entity C (A's strongest MALP topic).
+        Transfer is weighted by:
+          transfer_weight = trust(B,A) * reputation_factor(A)
+                            * intensity(A,C) * (1 − suspicion(B))
+        where:
+          trust(B,A)           = listener's effective TRUST_BIAS toward source [0,1]
+          reputation_factor(A) = GET_REPUTATION(source) / 100
+          intensity(A,C)       = source's MALP intensity for the topic entity
+          suspicion(B)         = listener's SUSPICION_BIAS [0,1]
+        transfer_weight is capped at MALP_GOSSIP_WEIGHT_CAP (0.35) and short-circuits
+        at MALP_GOSSIP_WEIGHT_MIN (0.05).
+
+    Effects on listener (B) about target (C):
+      - Updates or creates B's MALP entry for C with attenuated valence/intensity.
+        Intensity = source_intensity × MALP_GOSSIP_INTENSITY_SCALE × transfer_weight.
+        New entries use MALP_PERSIST_LOW; existing entries update via lambda blend.
+      - Updates or creates B's agent-anchored MPLP approach/avoidance toward C.
+        Magnitude delta = transfer_weight × 0.10; running-average valence updated.
+      - Reinforces B's context-global MPLP in MPLP_CTX_SOCIAL:
+          Positive gossip → TRUST_BIAS + NOVEL_AGENT_INTEREST (× 0.5)
+          Negative gossip → SUSPICION_BIAS + OUTGROUP_AVERSION (× 0.5)
+
+    Cooldown: MALP_GOSSIP_COOLDOWN_SECS (300 s) per listener–target pair reuses
+    the MALP last_applied field to prevent flood.
+
+    Integration (mobact.c — mob_emotion_activity):
+      Fires at MALP_GOSSIP_CHANCE (10 %) when passive emotion updates run,
+      targeting one awake NPC in the same room.  Protected by MOB_NOTDEADYET
+      safety check after the gossip call.  Gated by CONFIG_MOB_CONTEXTUAL_SOCIALS.
+
+    New constants (malp.h):
+      MALP_GOSSIP_CHANCE (10), MALP_GOSSIP_MIN_INTENSITY (0.20),
+      MALP_GOSSIP_WEIGHT_CAP (0.35), MALP_GOSSIP_WEIGHT_MIN (0.05),
+      MALP_GOSSIP_INTENSITY_SCALE (0.40), MALP_GOSSIP_COOLDOWN_SECS (300),
+      MALP_GOSSIP_VALENCE_BLEND_RATE (0.10)
+
+    Invariants preserved:
+      - No overwrite of base personality (Hebbian increments, not assignment).
+      - No crash if source MALP is missing (early return FALSE).
+      - Works mob↔mob; target C may be a player or a mob.
+      - Values clamped to valid ranges after each transfer step.
+      - Debug output via CONFIG_MOB_4D_DEBUG (GOSSIP: prefix).
+
+[Mar 14 2026] - Vitalia Reborn Development
   feat: Reputation influences MPLP traits on interaction (src/malp.c, src/malp.h, src/utils.c)
     Added mplp_get_effective_trait(mob, actor, trait_type, ctx_type) that computes a
     temporary reputation-biased effective MPLP trait value without permanently modifying

@@ -4622,12 +4622,14 @@ static void load_default_config(void)
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
     CONFIG_DYNAMIC_REPUTATION = NO;
-    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;  /* Default: 20% chance per emotion tick (4 seconds) */
-    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
-    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
-    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
-    CONFIG_MAX_MOB_POSTED_QUESTS = 450;     /* Default: 450 max mob-posted quests */
-    CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;   /* Default: NO - Emotions don't affect alignment (experimental) */
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;         /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;         /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;         /* Enabled by default (requires mob_contextual_socials) */
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100;        /* Default: 100% (range 0-200) */
+    CONFIG_MAX_MOB_POSTED_QUESTS = 450;            /* Default: 450 max mob-posted quests */
+    CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;          /* Default: NO - Emotions don't affect alignment (experimental) */
+    CONFIG_MOB_GOSSIP_CHANCE = MALP_GOSSIP_CHANCE; /* Default: 10% chance per tick */
+    CONFIG_MOB_GOSSIP_COOLDOWN = MALP_GOSSIP_COOLDOWN_SECS; /* Default: 300 s per listener–target pair */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -5222,6 +5224,10 @@ void load_config(void)
                     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = num;
                 else if (!str_cmp(tag, "mob_emotion_update_chance"))
                     CONFIG_MOB_EMOTION_UPDATE_CHANCE = num;
+                else if (!str_cmp(tag, "mob_gossip_chance"))
+                    CONFIG_MOB_GOSSIP_CHANCE = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "mob_gossip_cooldown"))
+                    CONFIG_MOB_GOSSIP_COOLDOWN = LIMIT(num, 0, 3600);
                 /* MALP/MPLP long-term memory parameters (RFC-1002) */
                 else if (!str_cmp(tag, "malp_theta_cons"))
                     CONFIG_MALP_THETA_CONS = LIMIT(num, 30, 95);

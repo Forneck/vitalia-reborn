@@ -1552,3 +1552,212 @@ void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_
         break;
     }
 }
+
+bool try_social_gossip(struct char_data *source, struct char_data *listener)
+{
+    /* ── Guard conditions ────────────────────────────────────────────────────
+     * Both entities must be valid awake mobs with initialised AI data.
+     * We require source to have at least one MALP entry to gossip about. */
+    if (!source || !listener)
+        return FALSE;
+    if (!IS_NPC(source) || !IS_NPC(listener))
+        return FALSE;
+    if (!source->ai_data || !listener->ai_data)
+        return FALSE;
+    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return FALSE;
+    if (!source->ai_data->malp || source->ai_data->malp_count == 0)
+        return FALSE;
+
+    /* ── Find source's strongest eligible MALP entry (the gossip "topic") ───
+     * We exclude:
+     *  - empty slots (agent_id == 0)
+     *  - entries about the listener itself (would be a self-referential loop)
+     *  - entries below the minimum intensity threshold */
+    long listener_id = char_script_id(listener);
+    struct malp_entry *best = NULL;
+    float best_intensity = MALP_GOSSIP_MIN_INTENSITY; /* lower bound */
+    int i;
+
+    for (i = 0; i < source->ai_data->malp_count; i++) {
+        struct malp_entry *e = &source->ai_data->malp[i];
+        if (e->agent_id == 0)
+            continue;
+        if (e->agent_id == listener_id && e->agent_type == ENTITY_TYPE_MOB)
+            continue; /* don't gossip about the person you're talking to */
+        if (e->intensity > best_intensity) {
+            best_intensity = e->intensity;
+            best = e;
+        }
+    }
+
+    if (!best)
+        return FALSE; /* no eligible topic */
+
+    long target_id = best->agent_id;
+    int target_type = best->agent_type;
+
+    /* ── Compute transfer weight ─────────────────────────────────────────────
+     *
+     *   transfer_weight = trust(B,A) * reputation_factor(A)
+     *                     * intensity(A,C) * (1 − suspicion(B))
+     *
+     * trust(B,A):          listener's effective TRUST_BIAS toward source,
+     *                      mapped from [−1,+1] → [0,1].
+     * reputation_factor(A): source's global reputation / 100 ∈ [0,1].
+     * intensity(A,C):       source MALP intensity for the topic entity.
+     * suspicion(B):         listener's baseline SUSPICION_BIAS ∈ [0,1].
+     */
+    float eff_trust = mplp_get_effective_trait(listener, source, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+    float trust_factor = (eff_trust + 1.0f) / 2.0f; /* [−1,+1] → [0,1] */
+
+    float rep_factor = (float)GET_REPUTATION(source) / 100.0f;
+
+    float emotional_intensity = best->intensity;
+
+    float suspicion = mplp_get_effective_trait(listener, NULL, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+    if (suspicion < 0.0f)
+        suspicion = 0.0f;
+    if (suspicion > 1.0f)
+        suspicion = 1.0f;
+
+    float transfer_weight = trust_factor * rep_factor * emotional_intensity * (1.0f - suspicion);
+
+    if (transfer_weight > MALP_GOSSIP_WEIGHT_CAP)
+        transfer_weight = MALP_GOSSIP_WEIGHT_CAP;
+    if (transfer_weight < MALP_GOSSIP_WEIGHT_MIN)
+        return FALSE; /* insufficient credibility / too suspicious */
+
+    /* ── Gossip cooldown per listener–target pair ────────────────────────────
+     * Reuse the MALP last_applied timestamp on the listener's existing entry
+     * for the target.  This prevents the same gossip from flooding the
+     * listener repeatedly before the memory can decay naturally. */
+    struct mob_ai_data *lai = listener->ai_data;
+    struct malp_entry *existing = NULL;
+    for (i = 0; i < lai->malp_count; i++) {
+        struct malp_entry *e = &lai->malp[i];
+        if (e->agent_id == target_id && e->agent_type == target_type) {
+            existing = e;
+            break;
+        }
+    }
+
+    if (existing && existing->last_applied > 0 &&
+        (time(NULL) - existing->last_applied) < (time_t)CONFIG_MOB_GOSSIP_COOLDOWN)
+        return FALSE; /* cooldown not elapsed for this listener–target pair */
+
+    /* ── Update listener's MALP entry about the target (C) ──────────────────
+     * Gossip attenuates both intensity and valence.  The update uses lambda =
+     * transfer_weight so that highly trusted sources cause larger shifts.
+     * When no entry exists for C, a new LOW-persistence entry is created with
+     * reduced intensity (MALP_GOSSIP_INTENSITY_SCALE × transfer_weight). */
+    float gossip_valence = best->valence;
+    float gossip_intensity = best->intensity * MALP_GOSSIP_INTENSITY_SCALE * transfer_weight;
+    time_t now = time(NULL);
+
+    if (existing) {
+        float lambda = transfer_weight; /* [0, MALP_GOSSIP_WEIGHT_CAP] */
+        existing->valence = (1.0f - lambda) * existing->valence + lambda * gossip_valence;
+        if (existing->valence > 1.0f)
+            existing->valence = 1.0f;
+        if (existing->valence < -1.0f)
+            existing->valence = -1.0f;
+        existing->intensity += gossip_intensity;
+        if (existing->intensity > 1.0f)
+            existing->intensity = 1.0f;
+        if (existing->rehearsal < MALP_MAX_REHEARSAL)
+            existing->rehearsal++;
+        existing->last_applied = now;
+    } else {
+        /* Create a new second-hand MALP entry for the listener about C */
+        if (!malp_grow(listener)) {
+            log1("GOSSIP: MALP allocation failure for listener %s — skipping gossip transfer", GET_NAME(listener));
+            return FALSE;
+        }
+        struct malp_entry *gossip_entry = &lai->malp[lai->malp_count];
+        memset(gossip_entry, 0, sizeof(struct malp_entry));
+        gossip_entry->agent_id = target_id;
+        gossip_entry->agent_type = target_type;
+        gossip_entry->interaction_type = best->interaction_type;
+        gossip_entry->major_event = 0; /* second-hand knowledge is never a major event */
+        gossip_entry->timestamp = now;
+        gossip_entry->last_retrieved = 0;
+        gossip_entry->valence = gossip_valence;
+        gossip_entry->arousal = best->arousal * transfer_weight;
+        gossip_entry->salience = best->salience * transfer_weight;
+        gossip_entry->intensity = gossip_intensity;
+        gossip_entry->rehearsal = 1;
+        gossip_entry->recon_ticks_left = 0;
+        gossip_entry->persistence = MALP_PERSIST_LOW;
+        gossip_entry->last_applied = now;
+        lai->malp_count++;
+        existing = gossip_entry; /* point to freshly created entry for MPLP step */
+    }
+
+    /* ── Update listener's agent-anchored MPLP toward the target (C) ────────
+     * Gossip nudges the listener's approach/avoidance bias toward C.
+     * Positive gossip → approach; negative gossip → avoidance.
+     * Magnitude delta is small (transfer_weight × 0.10) to keep the
+     * "no overwrite of base personality" invariant. */
+    struct mplp_trait *approach_trait = NULL;
+    for (i = 0; i < lai->mplp_count; i++) {
+        struct mplp_trait *t = &lai->mplp[i];
+        if (t->anchor_agent_id == target_id && t->agent_type == target_type &&
+            (t->trait_type == MPLP_TRAIT_APPROACH || t->trait_type == MPLP_TRAIT_AVOIDANCE)) {
+            approach_trait = t;
+            break;
+        }
+    }
+
+    float approach_delta = transfer_weight * 0.10f;
+
+    if (approach_trait) {
+        approach_trait->magnitude += approach_delta;
+        if (approach_trait->magnitude > 1.0f)
+            approach_trait->magnitude = 1.0f;
+        approach_trait->base_magnitude = approach_trait->magnitude;
+        approach_trait->valence = (1.0f - MALP_GOSSIP_VALENCE_BLEND_RATE) * approach_trait->valence +
+                                  MALP_GOSSIP_VALENCE_BLEND_RATE * gossip_valence;
+        approach_trait->trait_type = (approach_trait->valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;
+        approach_trait->last_updated = now;
+    } else if (lai->mplp_count < MPLP_MAX_PER_MOB && mplp_grow(listener)) {
+        struct mplp_trait *gossip_trait = &lai->mplp[lai->mplp_count];
+        memset(gossip_trait, 0, sizeof(struct mplp_trait));
+        gossip_trait->anchor_agent_id = target_id;
+        gossip_trait->agent_type = target_type;
+        gossip_trait->trait_type = (gossip_valence >= 0.0f) ? MPLP_TRAIT_APPROACH : MPLP_TRAIT_AVOIDANCE;
+        gossip_trait->magnitude = approach_delta;
+        gossip_trait->base_magnitude = approach_delta;
+        gossip_trait->valence = gossip_valence;
+        gossip_trait->rehearsal_count = 1;
+        gossip_trait->persistence = MALP_PERSIST_LOW;
+        gossip_trait->last_updated = now;
+        lai->mplp_count++;
+    }
+
+    /* ── Reinforce listener's context-global MPLP traits ────────────────────
+     * Gossip shapes the listener's general social personality over time.
+     * Positive gossip strengthens TRUST_BIAS and NOVEL_AGENT_INTEREST.
+     * Negative gossip strengthens SUSPICION_BIAS and OUTGROUP_AVERSION.
+     * All increments use the context-aware variant (MPLP_CTX_SOCIAL) so the
+     * effect is anchored in the social context without polluting other contexts. */
+    float gossip_salience = best->salience * transfer_weight;
+    if (gossip_valence >= 0.0f) {
+        reinforce_mplp_context_trait_ctx(listener, MPLP_TRAIT_TRUST_BIAS, gossip_valence, gossip_salience,
+                                         MPLP_CTX_SOCIAL);
+        reinforce_mplp_context_trait_ctx(listener, MPLP_TRAIT_NOVEL_AGENT_INTEREST, gossip_valence,
+                                         gossip_salience * 0.5f, MPLP_CTX_SOCIAL);
+    } else {
+        reinforce_mplp_context_trait_ctx(listener, MPLP_TRAIT_SUSPICION_BIAS, -gossip_valence, gossip_salience,
+                                         MPLP_CTX_SOCIAL);
+        reinforce_mplp_context_trait_ctx(listener, MPLP_TRAIT_OUTGROUP_AVERSION, -gossip_valence,
+                                         gossip_salience * 0.5f, MPLP_CTX_SOCIAL);
+    }
+
+    if (CONFIG_MOB_4D_DEBUG)
+        log1("GOSSIP: source=%s listener=%s target_id=%ld target_type=%d valence=%.2f weight=%.2f intensity=%.2f",
+             GET_NAME(source), GET_NAME(listener), target_id, target_type, gossip_valence, transfer_weight,
+             gossip_intensity);
+
+    return TRUE;
+}
