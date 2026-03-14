@@ -1643,7 +1643,7 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     }
 
     if (existing && existing->last_applied > 0 &&
-        (time(NULL) - existing->last_applied) < (time_t)MALP_GOSSIP_COOLDOWN_SECS)
+        (time(NULL) - existing->last_applied) < (time_t)CONFIG_MOB_GOSSIP_COOLDOWN)
         return FALSE; /* cooldown not elapsed for this listener–target pair */
 
     /* ── Update listener's MALP entry about the target (C) ──────────────────

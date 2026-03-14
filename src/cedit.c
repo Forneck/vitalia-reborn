@@ -177,6 +177,8 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
     OLC_CONFIG(d)->experimental.emotion_alignment_shifts = CONFIG_EMOTION_ALIGNMENT_SHIFTS;
     OLC_CONFIG(d)->experimental.mob_4d_debug = CONFIG_MOB_4D_DEBUG;
+    OLC_CONFIG(d)->experimental.mob_gossip_chance = CONFIG_MOB_GOSSIP_CHANCE;
+    OLC_CONFIG(d)->experimental.mob_gossip_cooldown = CONFIG_MOB_GOSSIP_COOLDOWN;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -461,6 +463,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
     CONFIG_EMOTION_ALIGNMENT_SHIFTS = OLC_CONFIG(d)->experimental.emotion_alignment_shifts;
     CONFIG_MOB_4D_DEBUG = OLC_CONFIG(d)->experimental.mob_4d_debug;
+    CONFIG_MOB_GOSSIP_CHANCE = OLC_CONFIG(d)->experimental.mob_gossip_chance;
+    CONFIG_MOB_GOSSIP_COOLDOWN = OLC_CONFIG(d)->experimental.mob_gossip_cooldown;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -1145,6 +1149,16 @@ int save_config(IDXTYPE nowhere)
             "mob_4d_debug = %d\n\n",
             CONFIG_MOB_4D_DEBUG);
 
+    fprintf(fl,
+            "* Probability (%%) of mob gossiping per emotion tick (0-100, default 10)\n"
+            "mob_gossip_chance = %d\n\n",
+            CONFIG_MOB_GOSSIP_CHANCE);
+
+    fprintf(fl,
+            "* Seconds between gossip updates for the same listener-target pair (0-3600, default 300)\n"
+            "mob_gossip_cooldown = %d\n\n",
+            CONFIG_MOB_GOSSIP_COOLDOWN);
+
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
     fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
@@ -1607,10 +1621,14 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
     write_to_output(d,
                     "%s9%s) Max Mob-Posted Quests (Previne Lag) : %s%d\r\n"
                     "%sA%s) Emoções Influenciam Alinhamento (Experimental) : %s%s\r\n"
+                    "%sB%s) Chance de Fofoca de Mob (%%) : %s%d\r\n"
+                    "%sC%s) Cooldown de Fofoca (segundos) : %s%d\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
                     grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm, cyn,
-                    CHECK_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts), grn, nrm);
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts), grn, nrm, cyn,
+                    OLC_CONFIG(d)->experimental.mob_gossip_chance, grn, nrm, cyn,
+                    OLC_CONFIG(d)->experimental.mob_gossip_cooldown, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1885,51 +1903,50 @@ static void cedit_disp_malp_submenu(struct descriptor_data *d)
     get_char_colors(d->character);
     clear_screen(d);
 
-    write_to_output(
-        d,
-        "MALP/MPLP – Long-Term Emotional Memory Configuration (RFC-1002)\r\n"
-        "---\r\n"
-        "MALP = Memória Ativa de Longo Prazo (explicit episodic/semantic memory).\r\n"
-        "MPLP = Memória Passiva de Longo Prazo (implicit approach/avoid trait).\r\n"
-        "\r\n"
-        "%s1%s) Consolidation Threshold θ_cons (*100): %s%d%s (default: 65=0.65)\r\n"
-        "   Minimum salience S to consolidate an episodic slot into MALP.\r\n"
-        "   Range: 30-95. High-C mobs add +0.10 automatically.\r\n"
-        "\r\n"
-        "%s2%s) Reconsolidation Window (ticks):        %s%d%s (default: 60)\r\n"
-        "   Ticks the MALP entry is mutable after retrieval (≈1 game-minute).\r\n"
-        "   Range: 1-600.\r\n"
-        "\r\n"
-        "%s3%s) MPLP Rehearsal Threshold:              %s%d%s (default: 3)\r\n"
-        "   Co-occurrences with consistent valence before MPLP trait forms.\r\n"
-        "   Range: 1-20.\r\n"
-        "\r\n"
-        "%s4%s) Max MALP Entries per Mob:              %s%d%s (default: 200)\r\n"
-        "   Least-salient entries pruned when limit is reached.\r\n"
-        "   Range: 10-500.\r\n"
-        "\r\n"
-        "%s5%s) MALP Standard Half-Life (hours):       %s%d%s (default: 24)\r\n"
-        "   Power-law intensity half-life for normal MALP entries.\r\n"
-        "   Range: 1-720.\r\n"
-        "\r\n"
-        "%s6%s) MALP Major-Event Half-Life (hours):    %s%d%s (default: 72)\r\n"
-        "   Power-law intensity half-life for traumatic/major MALP entries.\r\n"
-        "   Range: 1-2160.\r\n"
-        "\r\n"
-        "%s7%s) MPLP Trait Half-Life (hours):          %s%d%s (default: 168 = 7 days)\r\n"
-        "   Power-law magnitude half-life for MPLP implicit traits.\r\n"
-        "   High-N mobs: negative traits decay slower (rumination).\r\n"
-        "   Range: 1-8760.\r\n"
-        "\r\n"
-        "%sQ%s) Return to Emotion Menu\r\n"
-        "Enter your choice : ",
-        grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.malp_theta_cons, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.malp_limit_per_mob, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major, nrm, grn, nrm, cyn,
-        OLC_CONFIG(d)->emotion_config.mplp_decay_halflife, nrm, grn, nrm);
+    write_to_output(d,
+                    "MALP/MPLP – Long-Term Emotional Memory Configuration (RFC-1002)\r\n"
+                    "---\r\n"
+                    "MALP = Memória Ativa de Longo Prazo (explicit episodic/semantic memory).\r\n"
+                    "MPLP = Memória Passiva de Longo Prazo (implicit approach/avoid trait).\r\n"
+                    "\r\n"
+                    "%s1%s) Consolidation Threshold θ_cons (*100): %s%d%s (default: 65=0.65)\r\n"
+                    "   Minimum salience S to consolidate an episodic slot into MALP.\r\n"
+                    "   Range: 30-95. High-C mobs add +0.10 automatically.\r\n"
+                    "\r\n"
+                    "%s2%s) Reconsolidation Window (ticks):        %s%d%s (default: 60)\r\n"
+                    "   Ticks the MALP entry is mutable after retrieval (≈1 game-minute).\r\n"
+                    "   Range: 1-600.\r\n"
+                    "\r\n"
+                    "%s3%s) MPLP Rehearsal Threshold:              %s%d%s (default: 3)\r\n"
+                    "   Co-occurrences with consistent valence before MPLP trait forms.\r\n"
+                    "   Range: 1-20.\r\n"
+                    "\r\n"
+                    "%s4%s) Max MALP Entries per Mob:              %s%d%s (default: 200)\r\n"
+                    "   Least-salient entries pruned when limit is reached.\r\n"
+                    "   Range: 10-500.\r\n"
+                    "\r\n"
+                    "%s5%s) MALP Standard Half-Life (hours):       %s%d%s (default: 24)\r\n"
+                    "   Power-law intensity half-life for normal MALP entries.\r\n"
+                    "   Range: 1-720.\r\n"
+                    "\r\n"
+                    "%s6%s) MALP Major-Event Half-Life (hours):    %s%d%s (default: 72)\r\n"
+                    "   Power-law intensity half-life for traumatic/major MALP entries.\r\n"
+                    "   Range: 1-2160.\r\n"
+                    "\r\n"
+                    "%s7%s) MPLP Trait Half-Life (hours):          %s%d%s (default: 168 = 7 days)\r\n"
+                    "   Power-law magnitude half-life for MPLP implicit traits.\r\n"
+                    "   High-N mobs: negative traits decay slower (rumination).\r\n"
+                    "   Range: 1-8760.\r\n"
+                    "\r\n"
+                    "%sQ%s) Return to Emotion Menu\r\n"
+                    "Enter your choice : ",
+                    grn, nrm, cyn, OLC_CONFIG(d)->emotion_config.malp_theta_cons, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.malp_recon_window_ticks, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.malp_rehearsal_threshold, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.malp_limit_per_mob, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.malp_decay_halflife_std, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.malp_decay_halflife_major, nrm, grn, nrm, cyn,
+                    OLC_CONFIG(d)->emotion_config.mplp_decay_halflife, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_MALP_SUBMENU;
 }
@@ -3362,6 +3379,30 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     }
                     break;
 
+                case 'b':
+                case 'B':
+                    /* Only allow setting if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        write_to_output(d, "\r\nEnter mob gossip chance (0-100%%, default 10) : ");
+                        OLC_MODE(d) = CEDIT_MOB_GOSSIP_CHANCE;
+                        return;
+                    } else {
+                        write_to_output(d, "\r\nGossip requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
+
+                case 'c':
+                case 'C':
+                    /* Only allow setting if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        write_to_output(d, "\r\nEnter gossip cooldown in seconds (0-3600, default 300) : ");
+                        OLC_MODE(d) = CEDIT_MOB_GOSSIP_COOLDOWN;
+                        return;
+                    } else {
+                        write_to_output(d, "\r\nGossip requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
+
                 case '0':
                 case 'q':
                 case 'Q':
@@ -3415,6 +3456,28 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter max mob-posted quests (100-1000, default 450) : ");
             } else {
                 OLC_CONFIG(d)->experimental.max_mob_posted_quests = LIMIT(atoi(arg), 100, 1000);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_MOB_GOSSIP_CHANCE:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the mob gossip chance (%%) per emotion tick (0-100, default 10) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.mob_gossip_chance = LIMIT(atoi(arg), 0, 100);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_MOB_GOSSIP_COOLDOWN:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter gossip cooldown in seconds (0-3600, default 300) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.mob_gossip_cooldown = LIMIT(atoi(arg), 0, 3600);
                 cedit_disp_experimental_options(d);
             }
             break;
@@ -4277,38 +4340,31 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         case CEDIT_MALP_SUBMENU:
             switch (*arg) {
                 case '1':
-                    write_to_output(d,
-                                    "\r\nEnter malp_theta_cons *100 (30-95, default 65 = 0.65) : ");
+                    write_to_output(d, "\r\nEnter malp_theta_cons *100 (30-95, default 65 = 0.65) : ");
                     OLC_MODE(d) = CEDIT_MALP_THETA_CONS;
                     return;
                 case '2':
-                    write_to_output(d,
-                                    "\r\nEnter malp_recon_window_ticks (1-600, default 60) : ");
+                    write_to_output(d, "\r\nEnter malp_recon_window_ticks (1-600, default 60) : ");
                     OLC_MODE(d) = CEDIT_MALP_RECON_WINDOW_TICKS;
                     return;
                 case '3':
-                    write_to_output(d,
-                                    "\r\nEnter malp_rehearsal_threshold (1-20, default 3) : ");
+                    write_to_output(d, "\r\nEnter malp_rehearsal_threshold (1-20, default 3) : ");
                     OLC_MODE(d) = CEDIT_MALP_REHEARSAL_THRESHOLD;
                     return;
                 case '4':
-                    write_to_output(d,
-                                    "\r\nEnter malp_limit_per_mob (10-500, default 200) : ");
+                    write_to_output(d, "\r\nEnter malp_limit_per_mob (10-500, default 200) : ");
                     OLC_MODE(d) = CEDIT_MALP_LIMIT_PER_MOB;
                     return;
                 case '5':
-                    write_to_output(d,
-                                    "\r\nEnter malp_decay_halflife_std in hours (1-720, default 24) : ");
+                    write_to_output(d, "\r\nEnter malp_decay_halflife_std in hours (1-720, default 24) : ");
                     OLC_MODE(d) = CEDIT_MALP_DECAY_HALFLIFE_STD;
                     return;
                 case '6':
-                    write_to_output(d,
-                                    "\r\nEnter malp_decay_halflife_major in hours (1-2160, default 72) : ");
+                    write_to_output(d, "\r\nEnter malp_decay_halflife_major in hours (1-2160, default 72) : ");
                     OLC_MODE(d) = CEDIT_MALP_DECAY_HALFLIFE_MAJOR;
                     return;
                 case '7':
-                    write_to_output(d,
-                                    "\r\nEnter mplp_decay_halflife in hours (1-8760, default 168) : ");
+                    write_to_output(d, "\r\nEnter mplp_decay_halflife in hours (1-8760, default 168) : ");
                     OLC_MODE(d) = CEDIT_MPLP_DECAY_HALFLIFE;
                     return;
                 case 'q':

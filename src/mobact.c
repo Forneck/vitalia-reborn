@@ -868,8 +868,8 @@ void mob_emotion_activity(void)
             }
 
             /* Social gossip - mob transfers emotional memory about a third entity to a
-             * nearby mob.  Runs at MALP_GOSSIP_CHANCE% when passive updates fire. */
-            if (rand_number(1, 100) <= MALP_GOSSIP_CHANCE) {
+             * nearby mob.  Runs at CONFIG_MOB_GOSSIP_CHANCE% when passive updates fire. */
+            if (rand_number(1, 100) <= CONFIG_MOB_GOSSIP_CHANCE) {
                 struct char_data *gossip_recipient;
                 for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
                      gossip_recipient = gossip_recipient->next_in_room) {

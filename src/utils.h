@@ -1428,6 +1428,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_ALIGNMENT_SHIFTS config_info.experimental.emotion_alignment_shifts
 /** Log 4D decision-space raw and effective values for debugging */
 #define CONFIG_MOB_4D_DEBUG config_info.experimental.mob_4d_debug
+/** Probability (%) of mob gossiping per emotion tick (default: 10) */
+#define CONFIG_MOB_GOSSIP_CHANCE config_info.experimental.mob_gossip_chance
+/** Seconds between gossip updates for the same listener-target pair (default: 300) */
+#define CONFIG_MOB_GOSSIP_COOLDOWN config_info.experimental.mob_gossip_cooldown
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */
