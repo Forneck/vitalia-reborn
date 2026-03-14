@@ -108,6 +108,58 @@
  */
 #define MALP_REGULATION_COOLDOWN 60
 
+/* ── Social gossip transfer constants (RFC-1003) ─────────────────────────── */
+/**
+ * Base percentage chance (per emotion tick) that a mob will attempt to
+ * gossip to another mob in the same room.  Applied inside mob_emotion_activity()
+ * when CONFIG_MOB_CONTEXTUAL_SOCIALS is enabled.
+ *
+ * At PULSE_MOB_EMOTION = 4 s and CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30 %:
+ *   effective rate ≈ 30 % × 10 % = 3 % per tick ≈ one gossip event per ~133 s per mob.
+ */
+#define MALP_GOSSIP_CHANCE 10
+
+/**
+ * Minimum MALP intensity a source entry must have before gossip is attempted.
+ * Prevents idle chatter about nearly-forgotten or negligible memories.
+ */
+#define MALP_GOSSIP_MIN_INTENSITY 0.20f
+
+/**
+ * Hard cap on the computed transfer_weight for gossip.
+ * Prevents second-hand information from replacing or dominating first-hand memories
+ * even when the source is highly trusted and reputable.
+ */
+#define MALP_GOSSIP_WEIGHT_CAP 0.35f
+
+/**
+ * Minimum transfer_weight below which the gossip event has no effect.
+ * Filters out gossip from mistrusted or highly suspicious listeners.
+ */
+#define MALP_GOSSIP_WEIGHT_MIN 0.05f
+
+/**
+ * Fraction of source MALP intensity conveyed to the listener's gossip-derived
+ * MALP entry before transfer_weight scaling.  Ensures second-hand memories
+ * always start weaker than first-hand ones.
+ */
+#define MALP_GOSSIP_INTENSITY_SCALE 0.40f
+
+/**
+ * Minimum elapsed seconds between two gossip updates that affect the same
+ * listener–target pair.  Reuses the listener's MALP last_applied timestamp
+ * for the target entity to prevent gossip flooding.
+ * 300 s ≈ 5 real minutes.
+ */
+#define MALP_GOSSIP_COOLDOWN_SECS 300
+
+/**
+ * Running-average blend rate used when updating the approach/avoidance trait
+ * valence during a gossip event.  New valence = (1 − rate) × old + rate × gossip.
+ * Small value (0.10) ensures gossip nudges rather than overwrites personality.
+ */
+#define MALP_GOSSIP_VALENCE_BLEND_RATE 0.10f
+
 /* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
 /**
  * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
@@ -838,5 +890,37 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
  */
 void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_type, float delta_valence,
                                 float new_salience);
+
+/**
+ * Attempt to transfer emotional memory about a third entity from source to listener.
+ *
+ * source (A) gossips to listener (B) about the entity (C) stored in source's
+ * strongest MALP entry.  The transfer is weighted by:
+ *
+ *   transfer_weight = trust(B,A) * reputation_factor(A) * intensity(A,C)
+ *                     * (1 − suspicion(B))
+ *
+ * where:
+ *  trust(B,A)          = listener's effective TRUST_BIAS toward source, mapped [0,1]
+ *  reputation_factor(A)= source's global reputation / 100
+ *  intensity(A,C)      = source's MALP intensity for the target entity
+ *  suspicion(B)        = listener's SUSPICION_BIAS (unsigned [0,1])
+ *
+ * After weighting the function:
+ *  - Updates or creates listener's MALP entry for C (clamped intensity/valence).
+ *  - Updates or creates listener's agent-anchored MPLP approach/avoidance for C.
+ *  - Reinforces listener's context-global MPLP traits (TRUST_BIAS or SUSPICION_BIAS /
+ *    OUTGROUP_AVERSION) based on gossip valence.
+ *
+ * No overwrite of listener's base personality occurs (context-global traits use
+ * weighted Hebbian increments, not direct assignment).
+ * Safe to call when source has no MALP entries — returns FALSE immediately.
+ * Values are clamped to valid ranges after each transfer step.
+ *
+ * @param source    The NPC sharing its emotional memory (A).
+ * @param listener  The NPC receiving the gossip (B).  Must be an NPC with ai_data.
+ * @return          TRUE if gossip transfer occurred; FALSE otherwise.
+ */
+bool try_social_gossip(struct char_data *source, struct char_data *listener);
 
 #endif /* _MALP_H_ */

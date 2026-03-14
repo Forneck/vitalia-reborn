@@ -35,6 +35,7 @@
 #include "emotion_projection.h"
 #include "dg_scripts.h"
 #include "sec.h"
+#include "malp.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -864,6 +865,29 @@ void mob_emotion_activity(void)
             /* Run less frequently than passive updates (50% chance when passive runs) */
             if (rand_number(1, 100) <= 50) {
                 update_mob_emotion_contagion(ch);
+            }
+
+            /* Social gossip - mob transfers emotional memory about a third entity to a
+             * nearby mob.  Runs at MALP_GOSSIP_CHANCE% when passive updates fire. */
+            if (rand_number(1, 100) <= MALP_GOSSIP_CHANCE) {
+                struct char_data *gossip_recipient;
+                for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
+                     gossip_recipient = gossip_recipient->next_in_room) {
+                    if (gossip_recipient == ch)
+                        continue;
+                    if (!IS_NPC(gossip_recipient) || !gossip_recipient->ai_data)
+                        continue;
+                    if (FIGHTING(gossip_recipient) || !AWAKE(gossip_recipient))
+                        continue;
+                    if (!CAN_SEE(ch, gossip_recipient))
+                        continue;
+                    try_social_gossip(ch, gossip_recipient);
+                    break; /* one gossip recipient per tick */
+                }
+                /* Safety check: DG scripts triggered inside try_social_gossip
+                 * could mark this mob for extraction. */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
 
             /* Mood system - update overall mood less frequently (25% chance when passive runs) */
