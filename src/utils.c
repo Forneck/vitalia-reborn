@@ -608,14 +608,38 @@ struct time_info_data *age(struct char_data *ch)
 /** Check if making ch follow victim will create an illegal follow loop. In
  * essence, this prevents someone from following a character in a group that
  * is already being lead by the character.
+ *
+ * Uses a two-phase approach to avoid infinite loops on corrupted cyclic chains:
+ *   Phase 1 -- Floyd's tortoise-and-hare detects any pre-existing cycle in the
+ *             master chain without an arbitrary depth limit, so a legitimately
+ *             long-but-acyclic chain is never misclassified.
+ *   Phase 2 -- A simple linear scan checks whether ch appears in the (now
+ *             proven acyclic) chain.  If a cycle was found in Phase 1 we
+ *             return TRUE immediately and never reach Phase 2.
+ *
  * @param ch The character trying to follow.
  * @param victim The character being followed. */
 bool circle_follow(struct char_data *ch, struct char_data *victim)
 {
-    struct char_data *k;
+    struct char_data *slow = victim;
+    struct char_data *fast = victim;
 
-    for (k = victim; k; k = k->master) {
-        if (k == ch)
+    /* Phase 1: Floyd's tortoise-and-hare -- detect pre-existing cycles. */
+    while (fast != NULL && fast->master != NULL) {
+        slow = slow->master;
+        fast = fast->master->master;
+        if (slow == fast) {
+            log1(
+                "SYSERR: circle_follow() detected a pre-existing circular master chain! "
+                "ch=%s victim=%s",
+                GET_NAME(ch), GET_NAME(victim));
+            return (TRUE);
+        }
+    }
+
+    /* Phase 2: chain is acyclic -- linear scan to check if ch is already in it. */
+    for (slow = victim; slow; slow = slow->master) {
+        if (slow == ch)
             return (TRUE);
     }
 

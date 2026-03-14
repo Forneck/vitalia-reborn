@@ -833,7 +833,7 @@ void mob_emotion_activity(void)
                 }
 
                 /* Follow the most loved player if found */
-                if (best_love_target) {
+                if (best_love_target && !circle_follow(ch, best_love_target)) {
                     add_follower(ch, best_love_target);
 
                     /* Announce the following with a loving social or message */
@@ -1277,8 +1277,10 @@ void mobile_activity(void)
                         /* Follow another entity */
                         if (action.target && !ch->master) {
                             struct char_data *leader = (struct char_data *)action.target;
-                            /* Verify leader in same room, visible, and not already following */
-                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch && CAN_SEE(ch, leader)) {
+                            /* Verify leader in same room, visible, not already following, and
+                             * that adding the follow won't create a circular chain. */
+                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch && CAN_SEE(ch, leader) &&
+                                !circle_follow(ch, leader)) {
                                 /* add_follower sends "começa a seguir" messages itself */
                                 add_follower(ch, leader);
                                 shadow_action_executed = TRUE;
@@ -3772,52 +3774,50 @@ bool mob_try_stealth_follow(struct char_data *ch)
         /* Stealth-aware following: Check if mob has sneak/hide affects */
         bool is_stealthy = AFF_FLAGGED(ch, AFF_SNEAK) || AFF_FLAGGED(ch, AFF_HIDE);
 
-        /* Manually set up following relationship (like add_follower but with conditional messages) */
+        /* Set up following relationship with messages appropriate for stealth */
         if (!ch->master) {
-            struct follow_type *k;
-            ch->master = target;
-            CREATE(k, struct follow_type, 1);
-            k->follower = ch;
-            k->next = target->followers;
-            target->followers = k;
-
-            /* Messages are conditional based on stealth */
             if (!is_stealthy) {
-                /* Normal visible following */
-                if (IS_NPC(ch)) {
-                    /* NPCs don't get the "You will now follow" message */
-                } else {
-                    act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
-                        return FALSE;
-                }
-                if (CAN_SEE(target, ch)) {
-                    act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
-                        return FALSE;
-                }
-                act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
-                /* Safety check: act() can trigger DG scripts which may cause extraction */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                /* Non-stealthy: use canonical add_follower which manages data structures safely */
+                add_follower(ch, target);
+                /* Safety check: add_follower calls act() which can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                    if (ch->master)
+                        stop_follower(ch);
                     return FALSE;
-                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                }
+                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                    if (ch->master)
+                        stop_follower(ch);
                     return FALSE;
+                }
             } else {
-                /* Stealthy following - only notify if target can see through stealth */
+                /* Stealthy: set up the relationship manually and send a silent message
+                 * only when the target can see through the stealth.  Any early exit due
+                 * to extraction must undo the relationship via stop_follower() so that
+                 * ch->master is never left dangling. */
+                struct follow_type *k;
+                ch->master = target;
+                CREATE(k, struct follow_type, 1);
+                k->follower = ch;
+                k->next = target->followers;
+                target->followers = k;
+
                 if (CAN_SEE(target, ch)) {
-                    /* Target can see through the stealth */
                     act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    /* Safety check: act() can trigger DG scripts which may cause extraction.
+                     * Guard with ch->master before stop_follower() — a DG script fired by
+                     * act() may have already cleared ch->master (stop_follower core_dumps
+                     * on NULL master). */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                    }
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
+                    }
                 }
                 /* No message to room when sneaking/hiding */
             }
