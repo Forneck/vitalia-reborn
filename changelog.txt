@@ -2,6 +2,21 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 14 2026] - Vitalia Reborn Development
+  feat: Reputation influences MPLP traits on interaction (src/malp.c, src/malp.h, src/utils.c)
+    Added mplp_get_effective_trait(mob, actor, trait_type, ctx_type) that computes a
+    temporary reputation-biased effective MPLP trait value without permanently modifying
+    the stored trait.  effective_trait = base_trait + reputation_modifier, where
+    rep_norm = (reputation − 50) / 50 and per-trait weights apply to TRUST_BIAS,
+    SUSPICION_BIAS, FORGIVENESS_RATE, REVENGE_TENDENCY, COMPASSION_BIAS,
+    GRATITUDE_RESPONSE, EMPATHY_RESPONSE, OUTGROUP_AVERSION, and BETRAYAL_SENSITIVITY.
+    Applied in apply_malp_emotion_effects() (new context-global trait block) and in
+    update_mob_emotion_from_social() replacing actor-unaware get_mplp_* calls.
+    Controlled by CONFIG_MOB_CONTEXTUAL_SOCIALS; safe for mobs without MPLP.
+    Debug output via CONFIG_MOB_4D_DEBUG (MPLP-REP: prefix).
+    Acceptance: base traits not modified; works for player↔mob and mob↔mob;
+    no crash on missing reputation entry; values clamped to valid range.
+
 [Mar 07 2026] - Vitalia Reborn Development
   fix: Wire MPLP traits to all non-social INTERACT_ event types (src/utils.c)
     Before this change MPLP context-global personality traits were only reinforced
