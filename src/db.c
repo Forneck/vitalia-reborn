@@ -4103,6 +4103,13 @@ void reset_char(struct char_data *ch)
         GET_MANA(ch) = 1;
 
     GET_LAST_TELL(ch) = NOBODY;
+
+    /* Clear room-local visibility state on every PC login (both new chars and
+     * loaded chars).  player_specials is calloc'd elsewhere so appeared_room
+     * is 0, not NOWHERE — set it explicitly here.  NPCs are handled by
+     * clear_char() which runs on every mob allocation. */
+    if (ch->player_specials && ch->player_specials != &dummy_mob)
+        ch->player_specials->appeared_room = NOWHERE;
 }
 
 /* clear ALL the working variables of a char; do NOT free any space
