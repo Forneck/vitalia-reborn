@@ -448,6 +448,7 @@ static const struct mob_script_command_t mob_script_commands[] = {
     {"mzoneecho", do_mzoneecho, 0},
     {"mfollow", do_mfollow, 0},
     {"mlog", do_mlog, 0},
+    {"mappear", do_mappear, 0},
     {"\n", do_not_here, 0}};
 
 int script_command_interpreter(struct char_data *ch, char *arg)

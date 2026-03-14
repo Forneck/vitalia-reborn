@@ -130,6 +130,36 @@ ACMD(do_mkill)
     return;
 }
 
+/* Makes the mobile locally visible to all characters in the same room without
+ * removing AFF_INVISIBLE.  Characters in other rooms still see the mob as
+ * invisible.  Visibility ends automatically when the mob leaves the room or
+ * enters combat (appear() is called by the combat system). */
+ACMD(do_mappear)
+{
+    if (!MOB_OR_IMPL(ch)) {
+        send_to_char(ch, "%s", CONFIG_HUH);
+        return;
+    }
+
+    /* Prevent player exploitation: a charmed mob controlled by a player
+     * should not be able to use privileged mob-script commands. */
+    if (AFF_FLAGGED(ch, AFF_CHARM))
+        return;
+
+    if (!AFF_FLAGGED(ch, AFF_INVISIBLE)) {
+        mob_log(ch, "mappear: mob is not invisible");
+        return;
+    }
+
+    if (ch->mob_specials.appeared_room != NOWHERE) {
+        mob_log(ch, "mappear: mob already appeared in this room");
+        return;
+    }
+
+    ch->mob_specials.appeared_room = IN_ROOM(ch);
+    act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
+}
+
 /* Lets the mobile destroy an object in its inventory it can also destroy a
  * worn object and it can destroy items using all.xxxxx or just plain all of
  * them. */
