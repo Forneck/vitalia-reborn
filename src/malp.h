@@ -521,8 +521,11 @@ float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_typ
  *  BETRAYAL_SENSITIVITY: −rep_norm × MPLP_REP_BIAS_SCALE × 0.3
  * All other traits fall back to get_mplp_trait_with_ctx() with no modification.
  *
- * Safe to call when mob has no MPLP (returns 0.0 + reputation delta) and when
- * actor has no reputation entry (returns unmodified base trait).
+ * Safe to call when mob has no MPLP (returns 0.0 + reputation delta).
+ * When actor is NULL no bias is applied and the unmodified base trait is
+ * returned.  There is no concept of a "missing" reputation entry: GET_REPUTATION()
+ * always returns a numeric value (players default 50, NPCs default ~40), so a
+ * reputation-based bias is always computed for non-NULL actors.
  *
  * @param mob        The NPC being evaluated.
  * @param actor      The entity whose reputation influences the trait (may be NULL).
