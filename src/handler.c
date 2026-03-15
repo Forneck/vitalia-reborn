@@ -1992,8 +1992,11 @@ void join_group(struct char_data *ch, struct group_data *group)
         group->leader = ch;
         send_to_group(NULL, group, "%s criou o grupo.\r\n", GET_NAME(ch));
     } else {
-        /* 2. Se um JOGADOR entrar num grupo que já tem um líder, o jogador assume. */
-        if (!IS_NPC(ch)) {
+        /* 2. Se um JOGADOR entrar num grupo que já tem um líder, o jogador assume —
+         *    mas personagens enfeitiçados não podem liderar: stop_follower() removeria
+         *    AFF_CHARM como efeito colateral, e semanticamente um personagem sob controle
+         *    externo não deve comandar um grupo. */
+        if (!IS_NPC(ch) && !AFF_FLAGGED(ch, AFF_CHARM)) {
             send_to_group(NULL, group, "%s é agora o novo líder do grupo.\r\n", GET_NAME(ch));
             group->leader = ch;
             /* Um líder de grupo não deve estar seguindo ninguém; limpa a relação de seguidor. */
