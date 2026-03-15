@@ -382,6 +382,23 @@ int main(int argc, char **argv)
         save_auctions();
         log1("Saving temporary quest assignments before shutdown.");
         save_temp_quest_assignments();
+
+        /* Free all groups BEFORE destroy_db() so that char_data pointers
+         * stored in group member lists are still valid when free_group()
+         * clears tch->group references.  Doing this after destroy_db()
+         * causes a use-after-free SIGSEGV inside free_group(). */
+        cleanup_all_pending_groups();
+
+        if (group_list) {
+            struct group_data *group;
+            while (group_list->iSize > 0) {
+                group = (struct group_data *)simple_list(group_list);
+                if (group)
+                    free_group(group);
+            }
+            free_list(group_list);
+            group_list = NULL;
+        }
     }
 
     destroy_db();
@@ -403,20 +420,6 @@ int main(int argc, char **argv)
         free_ibt_lists();                      /* ibt.c */
         free_recent_players();                 /* act.informative.c */
         free_list(world_events);               /* free up our global lists */
-
-        /* Free all groups before freeing the group_list */
-        /* First process any pending deferred cleanups */
-        cleanup_all_pending_groups();
-
-        if (group_list) {
-            struct group_data *group;
-            while (group_list->iSize > 0) {
-                group = (struct group_data *)simple_list(group_list);
-                if (group)
-                    free_group(group);
-            }
-            free_list(group_list);
-        }
 
         free_list(global_lists);
         free_armweap();
