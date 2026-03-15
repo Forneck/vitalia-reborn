@@ -1595,6 +1595,16 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     if (!source->ai_data->malp || source->ai_data->malp_count == 0)
         return FALSE;
 
+    /* ── Source gossip rate limiter (O(1)) ──────────────────────────────────
+     * Prevent a single mob from gossiping more often than
+     * MALP_GOSSIP_SOURCE_COOLDOWN_SECS regardless of how often the RNG fires.
+     * This cheap check runs before the O(malp_count) topic-selection scan,
+     * so frequently-triggered mobs exit immediately without scanning MALP. */
+    time_t now = time(NULL);
+    if (source->ai_data->last_gossiped > 0 &&
+        (now - source->ai_data->last_gossiped) < (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS)
+        return FALSE;
+
     /* ── Find source's strongest eligible MALP entry (the gossip "topic") ───
      * We exclude:
      *  - empty slots (agent_id == 0)
@@ -1612,7 +1622,7 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     struct malp_entry *best = NULL;
     float best_score = MALP_GOSSIP_MIN_INTENSITY; /* lower bound */
     int i;
-    time_t now = time(NULL); /* used for recency calc and timestamps */
+    /* note: now was computed above for the source cooldown check */
 
     /* Source's dominant prior belief toward the gossip target is needed for
      * confirmation-bias topic selection.  We compute it lazily after selecting
@@ -1918,6 +1928,11 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
             "raw_valence=%.2f enc_valence=%.2f weight=%.2f lambda_scale=%.2f intensity=%.2f",
             GET_NAME(source), GET_NAME(listener), target_id, target_type, best->valence, gossip_valence,
             transfer_weight, lambda_scale, gossip_intensity);
+
+    /* Record when this mob last gossiped (as source) so the O(1) rate-limiter
+     * at the top of try_social_gossip() can short-circuit future attempts that
+     * arrive before MALP_GOSSIP_SOURCE_COOLDOWN_SECS has elapsed. */
+    source->ai_data->last_gossiped = now;
 
     return TRUE;
 }

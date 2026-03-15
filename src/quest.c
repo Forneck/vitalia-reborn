@@ -3500,6 +3500,11 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->last_chosen_action_type = -1;
     mob->ai_data->action_repetition_count = 0;
 
+    /* Gossip rate limiter: 0 means "never gossiped" (also the memset default).
+     * Explicit assignment here documents the invariant and guards any future
+     * allocation path that might not use memset. */
+    mob->ai_data->last_gossiped = 0;
+
     /* Cognitive Bias Module: initialise to human-normal defaults (0.5).
      * Builders can override these via the mob file / OLC in future phases.
      * 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological. */
