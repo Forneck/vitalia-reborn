@@ -1577,6 +1577,11 @@ struct mob_ai_data {
      * Stores the highest (recency × intensity × arousal_amp) across all MALP entries so
      * that shadow_score_projections() never needs to scan the MALP array for this value. */
     float cached_avail_factor; /**< Pre-computed availability heuristic factor [0, 1] */
+
+    /* Gossip rate limiter: timestamp of the last time this mob gossiped (as source).
+     * try_social_gossip() checks this O(1) before the expensive O(malp_count)
+     * topic-selection scan to prevent a single mob from gossiping every tick. */
+    time_t last_gossiped; /**< Wall-clock time of last outgoing gossip event (0 = never) */
 };
 
 /**

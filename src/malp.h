@@ -154,6 +154,28 @@
 #define MALP_GOSSIP_COOLDOWN_SECS 300
 
 /**
+ * Minimum elapsed seconds before the same source mob may gossip again (as
+ * the speaker).  This O(1) per-mob cooldown is checked at the very top of
+ * try_social_gossip() — before the O(malp_count) topic-selection scan — so
+ * it short-circuits the expensive path for mobs that gossip too eagerly.
+ * 60 s keeps narrative plausibility while capping the per-mob gossip rate
+ * to at most once per minute regardless of tick frequency.
+ */
+#define MALP_GOSSIP_SOURCE_COOLDOWN_SECS 60
+
+/**
+ * Maximum number of successful gossip events processed in a single
+ * mob_emotion_activity() call (one call every PULSE_MOB_EMOTION = 4 s).
+ * Without this cap, a large population of mobs with high emotion-update
+ * and gossip chances could all roll the gossip dice on the same tick,
+ * producing an O(N × malp_count) spike.  The cap bounds per-tick gossip
+ * work to at most BUDGET × (two O(malp_count) scans + MPLP updates).
+ * Value 8 permits ~120 gossip events/minute at 4-s ticks, which is more
+ * than sufficient for emergent social dynamics.
+ */
+#define MALP_GOSSIP_BUDGET_PER_TICK 8
+
+/**
  * Running-average blend rate used when updating the approach/avoidance trait
  * valence during a gossip event.  New valence = (1 − rate) × old + rate × gossip.
  * Small value (0.10) ensures gossip nudges rather than overwrites personality.

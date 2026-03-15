@@ -710,6 +710,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 void mob_emotion_activity(void)
 {
     struct char_data *ch, *next_ch;
+    int gossip_this_tick = 0; /* per-tick gossip event budget */
 
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
@@ -868,8 +869,10 @@ void mob_emotion_activity(void)
             }
 
             /* Social gossip - mob transfers emotional memory about a third entity to a
-             * nearby mob.  Runs at CONFIG_MOB_GOSSIP_CHANCE% when passive updates fire. */
-            if (rand_number(1, 100) <= CONFIG_MOB_GOSSIP_CHANCE) {
+             * nearby mob.  Runs at CONFIG_MOB_GOSSIP_CHANCE% when passive updates fire.
+             * The per-tick budget cap (MALP_GOSSIP_BUDGET_PER_TICK) prevents CPU spikes
+             * when many mobs roll the gossip chance on the same tick. */
+            if (gossip_this_tick < MALP_GOSSIP_BUDGET_PER_TICK && rand_number(1, 100) <= CONFIG_MOB_GOSSIP_CHANCE) {
                 struct char_data *gossip_recipient;
                 for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
                      gossip_recipient = gossip_recipient->next_in_room) {
@@ -881,7 +884,8 @@ void mob_emotion_activity(void)
                         continue;
                     if (!CAN_SEE(ch, gossip_recipient))
                         continue;
-                    try_social_gossip(ch, gossip_recipient);
+                    if (try_social_gossip(ch, gossip_recipient))
+                        gossip_this_tick++;
                     break; /* one gossip recipient per tick */
                 }
                 /* Safety check: DG scripts triggered inside try_social_gossip
