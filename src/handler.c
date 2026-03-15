@@ -1996,6 +1996,9 @@ void join_group(struct char_data *ch, struct group_data *group)
         if (!IS_NPC(ch)) {
             send_to_group(NULL, group, "%s é agora o novo líder do grupo.\r\n", GET_NAME(ch));
             group->leader = ch;
+            /* Um líder de grupo não deve estar seguindo ninguém; limpa a relação de seguidor. */
+            if (ch->master)
+                stop_follower(ch);
         }
         send_to_group(NULL, group, "%s juntou-se ao grupo.\r\n", GET_NAME(ch));
     }

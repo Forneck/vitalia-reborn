@@ -1229,6 +1229,7 @@ ACMD(do_group)
                 /* ACEITOU */
                 act("$N acena com a cabeça, te aceitando no seu bando.", FALSE, ch, 0, vict, TO_CHAR);
                 join_group(ch, GROUP(vict));
+                return;
             } else {
                 /* RECUSOU */
                 act("$N olha para você com desconfiança e rejeita a sua companhia.", FALSE, ch, 0, vict, TO_CHAR);
