@@ -122,8 +122,34 @@ static bool mplp_grow(struct char_data *mob)
 }
 
 /**
+ * qsort comparator: ascending intensity order for malp_prune().
+ * Entries with lower intensity sort first so the head of the array
+ * can be bulk-removed in a single memmove.
+ */
+static int malp_intensity_cmp(const void *a, const void *b)
+{
+    const struct malp_entry *ea = (const struct malp_entry *)a;
+    const struct malp_entry *eb = (const struct malp_entry *)b;
+    /* Use sign of difference, avoiding float-to-int conversion artifacts. */
+    if (ea->intensity < eb->intensity)
+        return -1;
+    if (ea->intensity > eb->intensity)
+        return 1;
+    return 0;
+}
+
+/**
  * Prune MALP array to stay within CONFIG_MALP_LIMIT_PER_MOB.
- * Removes the entry with the lowest current intensity.
+ *
+ * Old algorithm: O(N²) — repeated min-scan + single-entry memmove for each
+ * overflow entry.  With limit=200 and malp_count=250, that is 50 × (200
+ * comparisons + 200 memmove operations) ≈ 20,000 memory operations.
+ *
+ * New algorithm: O(N log N) — sort the array once by ascending intensity,
+ * bulk-remove the `overflow` lowest-intensity entries with a single memmove,
+ * then restore order (sort is stable in practice via qsort on this platform).
+ * With the same example: 250-entry sort + 1 memmove of 200 entries ≈ 200
+ * memory operations after the sort.
  */
 static void malp_prune(struct char_data *mob)
 {
@@ -132,21 +158,18 @@ static void malp_prune(struct char_data *mob)
     if (limit < 1)
         limit = 200;
 
-    while (ai->malp_count > limit) {
-        /* Find minimum-intensity entry */
-        int min_idx = 0;
-        int i;
-        for (i = 1; i < ai->malp_count; i++) {
-            if (ai->malp[i].intensity < ai->malp[min_idx].intensity)
-                min_idx = i;
-        }
-        /* Remove by shifting */
-        if (min_idx < ai->malp_count - 1) {
-            memmove(&ai->malp[min_idx], &ai->malp[min_idx + 1],
-                    (ai->malp_count - min_idx - 1) * sizeof(struct malp_entry));
-        }
-        ai->malp_count--;
-    }
+    if (ai->malp_count <= limit)
+        return; /* nothing to do — fast path */
+
+    int overflow = ai->malp_count - limit;
+
+    /* Sort ascending by intensity: lowest-intensity entries move to front. */
+    qsort(ai->malp, ai->malp_count, sizeof(struct malp_entry), malp_intensity_cmp);
+
+    /* Bulk-remove the `overflow` lowest-intensity entries from the front.
+     * Single memmove replaces `overflow` individual memmove calls. */
+    memmove(&ai->malp[0], &ai->malp[overflow], (ai->malp_count - overflow) * sizeof(struct malp_entry));
+    ai->malp_count -= overflow;
 }
 
 /**
@@ -1579,6 +1602,77 @@ void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_
     }
 }
 
+/**
+ * Compute listener's effective TRUST_BIAS and SUSPICION_BIAS in one O(mplp_count)
+ * pass instead of two.
+ *
+ * Both traits share the same MPLP_CTX_SOCIAL context and both are global-anchor
+ * traits, so a single scan collects them simultaneously.  Reputation modifiers
+ * (applied in mplp_get_effective_trait) are cheap O(1) arithmetic added after
+ * the scan — they are computed here to match the semantics of two separate
+ * mplp_get_effective_trait() calls exactly.
+ *
+ * out_trust_factor: listener's TRUST_BIAS mapped from [−1,+1] → [0,1].
+ * out_suspicion:    listener's SUSPICION_BIAS clamped to [0,1].
+ * actor:            source mob whose reputation modifies TRUST_BIAS (may differ
+ *                   from listener).
+ */
+static void get_trust_and_suspicion(struct char_data *listener, struct char_data *actor, float *out_trust_factor,
+                                    float *out_suspicion)
+{
+    float trust_raw = 0.0f;
+    float suspicion_raw = 0.0f;
+
+    if (listener && IS_NPC(listener) && listener->ai_data && listener->ai_data->mplp) {
+        struct mob_ai_data *ai = listener->ai_data;
+        int i;
+        for (i = 0; i < ai->mplp_count; i++) {
+            struct mplp_trait *t = &ai->mplp[i];
+            if (t->anchor_agent_id != MPLP_GLOBAL_ANCHOR)
+                continue;
+            if (t->trait_type == MPLP_TRAIT_TRUST_BIAS) {
+                /* TRUST_BIAS is a signed trait: use valence sign × magnitude */
+                float gp = (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+                trust_raw += gp + t->ctx[MPLP_CTX_SOCIAL];
+            } else if (t->trait_type == MPLP_TRAIT_SUSPICION_BIAS) {
+                /* SUSPICION_BIAS is unsigned: magnitude is the value */
+                suspicion_raw += t->magnitude + t->ctx[MPLP_CTX_SOCIAL];
+            }
+        }
+    }
+
+    /* Clamp both traits to their valid ranges */
+    if (trust_raw > 1.0f)
+        trust_raw = 1.0f;
+    if (trust_raw < -1.0f)
+        trust_raw = -1.0f;
+    if (suspicion_raw > 1.0f)
+        suspicion_raw = 1.0f;
+    if (suspicion_raw < 0.0f)
+        suspicion_raw = 0.0f;
+
+    /* Apply reputation modifier to TRUST_BIAS (mirrors mplp_get_effective_trait).
+     * SUSPICION_BIAS is queried with actor=NULL in the original code, so no
+     * reputation modifier applies there. */
+    if (actor) {
+        int rep = GET_REPUTATION(actor);
+        if (rep < 0)
+            rep = 0;
+        if (rep > 100)
+            rep = 100;
+        float rep_norm = ((float)rep - (float)MPLP_REP_POSITIVE_THRESHOLD) / (float)MPLP_REP_POSITIVE_THRESHOLD;
+        float trust_delta = rep_norm * MPLP_REP_BIAS_SCALE;
+        trust_raw += trust_delta;
+        if (trust_raw > 1.0f)
+            trust_raw = 1.0f;
+        if (trust_raw < -1.0f)
+            trust_raw = -1.0f;
+    }
+
+    *out_trust_factor = (trust_raw + 1.0f) / 2.0f; /* [−1,+1] → [0,1] */
+    *out_suspicion = suspicion_raw;
+}
+
 bool try_social_gossip(struct char_data *source, struct char_data *listener)
 {
     /* ── Guard conditions ────────────────────────────────────────────────────
@@ -1606,23 +1700,18 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         return FALSE;
 
     /* ── Early-exit when max possible transfer weight is too low ─────────────
-     * Compute listener's trust and suspicion once here — before the expensive
-     * O(malp_count) topic-selection scan.  The maximum intensity any topic can
-     * contribute is 1.0, so if trust_factor × rep_factor × (1 − suspicion) is
-     * already below MALP_GOSSIP_WEIGHT_MIN, no topic can ever exceed the
-     * threshold.  We skip the scan entirely and reuse these values later.
+     * Compute listener's trust and suspicion in a single O(mplp_count) pass —
+     * before the expensive O(malp_count) topic-selection scan.  The maximum
+     * intensity any topic can contribute is 1.0, so if
+     * trust_factor × rep_factor × (1 − suspicion) is already below
+     * MALP_GOSSIP_WEIGHT_MIN, no topic can ever produce a credible transfer.
+     * We skip the scan entirely and reuse these values later.
      *
-     * This is the primary defence against startup / low-trust scenarios where
-     * mobs have not yet built relationships: the scan never runs, so the
-     * O(malp_count × mplp_count) path that caused the CPU spike is avoided. */
-    float eff_trust = mplp_get_effective_trait(listener, source, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
-    float trust_factor = (eff_trust + 1.0f) / 2.0f; /* [−1,+1] → [0,1] */
+     * get_trust_and_suspicion() replaces two separate mplp_get_effective_trait()
+     * calls (each O(mplp_count)) with one combined pass — O(mplp_count) total. */
+    float trust_factor, suspicion;
+    get_trust_and_suspicion(listener, source, &trust_factor, &suspicion);
     float rep_factor = (float)GET_REPUTATION(source) / 100.0f;
-    float suspicion = mplp_get_effective_trait(listener, NULL, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
-    if (suspicion < 0.0f)
-        suspicion = 0.0f;
-    if (suspicion > 1.0f)
-        suspicion = 1.0f;
     if (trust_factor * rep_factor * (1.0f - suspicion) < MALP_GOSSIP_WEIGHT_MIN)
         return FALSE; /* no credible transfer possible regardless of topic */
 

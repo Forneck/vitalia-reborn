@@ -711,6 +711,9 @@ void mob_emotion_activity(void)
 {
     struct char_data *ch, *next_ch;
     int gossip_this_tick = 0; /* per-tick gossip event budget */
+    /* Batch time() to one syscall for the whole tick — avoids a per-mob
+     * gettimeofday() call that otherwise fires once per mob in the loop. */
+    time_t tick_now = time(NULL);
 
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
@@ -884,11 +887,10 @@ void mob_emotion_activity(void)
                 /* Pre-check source cooldown (O(1)) before consuming a budget slot.
                  * try_social_gossip() will repeat this check internally for safety,
                  * but doing it here lets us avoid wasting a budget slot on a mob
-                 * that cannot gossip yet. */
-                time_t gossip_time_now = time(NULL);
+                 * that cannot gossip yet.  tick_now is batched once before the loop. */
                 bool source_on_cooldown =
                     (ch->ai_data->last_gossiped > 0 &&
-                     (gossip_time_now - ch->ai_data->last_gossiped) < (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS);
+                     (tick_now - ch->ai_data->last_gossiped) < (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS);
                 if (!source_on_cooldown) {
                     /* Consume the budget slot before the expensive path. */
                     gossip_this_tick++;
