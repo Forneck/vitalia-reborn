@@ -36,7 +36,132 @@
 #include "comm.h"
 #include "dg_scripts.h"
 
-/* ── Internal helpers ────────────────────────────────────────────────────── */
+/* ── MALP index cache helpers ─────────────────────────────────────────────── */
+/*
+ * The cache maps (agent_id, agent_type) → index in mob_ai_data.malp[].
+ *
+ * Design:
+ *   Open-addressing hash table with linear probing.
+ *   Empty slot sentinel: agent_id == 0 (same convention as the MALP array itself).
+ *   Capacity is always a power of 2; max load factor ≤ 0.5 (enforced at ensure_cap).
+ *   Invalidation: memset the whole table to 0.  Called only when entries shift
+ *   (compaction in malp_decay_tick, or sort-and-truncate in malp_prune).
+ *   A cache MISS always falls back to linear scan which is authoritative; on
+ *   finding the entry the caller warms the cache via malp_cache_insert().
+ *   A cache HIT is validated against the actual malp[] entry (safety check).
+ *
+ * Memory cost (default CONFIG_MALP_LIMIT_PER_MOB = 200):
+ *   cap = 512 slots × 16 bytes = 8 KB per mob.
+ *   Only allocated on first insert; mobs with no MALP data pay zero overhead.
+ */
+
+/**
+ * Return the smallest power of 2 that is >= n, with a minimum of 16.
+ */
+static int malp_cache_next_pow2(int n)
+{
+    int p = 16;
+    while (p < n)
+        p *= 2;
+    return p;
+}
+
+/**
+ * Compute the hash bucket for (agent_id, agent_type) within a table of given capacity.
+ * Capacity must be a power of 2.
+ */
+static int malp_cache_hash(int cap, long agent_id, int agent_type)
+{
+    /* Knuth multiplicative hash blended with a secondary mix for agent_type. */
+    unsigned int h = (unsigned int)((unsigned long)agent_id * 2654435761UL) ^ (unsigned int)(agent_type * 2246822519U);
+    return (int)(h & (unsigned int)(cap - 1));
+}
+
+/**
+ * Ensure the hash table is allocated.  Allocates at first call with capacity
+ * large enough that the load factor stays ≤ 0.5 when all CONFIG_MALP_LIMIT_PER_MOB
+ * entries are in the table.
+ *
+ * Returns TRUE on success, FALSE on allocation failure (caller should treat as a cache
+ * miss and fall back to linear scan; correctness is never compromised).
+ */
+static bool malp_cache_ensure_cap(struct mob_ai_data *ai)
+{
+    if (ai->malp_cache)
+        return TRUE; /* already allocated */
+    int limit = CONFIG_MALP_LIMIT_PER_MOB;
+    if (limit < 1)
+        limit = 200;
+    /* For load ≤ 0.5 at maximum occupancy, cap must be ≥ limit * 2. */
+    int cap = malp_cache_next_pow2(limit * 2);
+    ai->malp_cache = calloc(cap, sizeof(struct malp_cache_slot));
+    if (!ai->malp_cache)
+        return FALSE;
+    ai->malp_cache_cap = cap;
+    return TRUE;
+}
+
+/**
+ * Invalidate the entire cache by zeroing it.
+ * Called whenever malp[] entries shift position (compaction or prune).
+ * Cost: O(cap) — 512 × 16 = 8 KB memset; much cheaper than the O(N²) scans
+ * it prevents.  Only fires when entries are actually removed/reordered.
+ */
+static void malp_cache_invalidate(struct mob_ai_data *ai)
+{
+    if (ai->malp_cache && ai->malp_cache_cap > 0)
+        memset(ai->malp_cache, 0, ai->malp_cache_cap * sizeof(struct malp_cache_slot));
+}
+
+/**
+ * Look up (agent_id, agent_type) in the cache.
+ * Returns the malp[] index on a validated hit, or -1 on a miss.
+ *
+ * The caller MUST fall back to a linear scan on -1 and then call
+ * malp_cache_insert() to warm the cache for subsequent lookups.
+ */
+static int malp_cache_lookup(const struct mob_ai_data *ai, long agent_id, int agent_type)
+{
+    if (!ai->malp_cache || ai->malp_cache_cap == 0 || agent_id == 0)
+        return -1;
+    int cap = ai->malp_cache_cap;
+    int b = malp_cache_hash(cap, agent_id, agent_type);
+    for (int probe = 0; probe < cap; probe++) {
+        const struct malp_cache_slot *s = &ai->malp_cache[(b + probe) & (cap - 1)];
+        if (s->agent_id == 0)
+            return -1; /* empty slot — definitive miss */
+        if (s->agent_id == agent_id && s->agent_type == agent_type)
+            return s->malp_idx; /* hit */
+    }
+    return -1; /* table full (shouldn't happen at ≤ 0.5 load) */
+}
+
+/**
+ * Insert (agent_id, agent_type) → malp_idx into the cache.
+ * Silently no-ops on allocation failure or full table.
+ * Overwrites an existing slot for the same key (update on re-insertion).
+ */
+static void malp_cache_insert(struct mob_ai_data *ai, long agent_id, int agent_type, int malp_idx)
+{
+    if (agent_id == 0)
+        return;
+    if (!malp_cache_ensure_cap(ai))
+        return;
+    int cap = ai->malp_cache_cap;
+    int b = malp_cache_hash(cap, agent_id, agent_type);
+    for (int probe = 0; probe < cap; probe++) {
+        struct malp_cache_slot *s = &ai->malp_cache[(b + probe) & (cap - 1)];
+        if (s->agent_id == 0 || (s->agent_id == agent_id && s->agent_type == agent_type)) {
+            s->agent_id = agent_id;
+            s->agent_type = agent_type;
+            s->malp_idx = malp_idx;
+            return;
+        }
+    }
+    /* Table full — this should not happen at ≤ 0.5 load, but is safe to ignore. */
+}
+
+/* ── End of MALP index cache helpers ─────────────────────────────────────── */
 
 /**
  * Return mob's current peak arousal as a normalised float in [0, 1].
@@ -146,8 +271,9 @@ static int malp_intensity_cmp(const void *a, const void *b)
  * comparisons + 200 memmove operations) ≈ 20,000 memory operations.
  *
  * New algorithm: O(N log N) — sort the array once by ascending intensity,
- * bulk-remove the `overflow` lowest-intensity entries with a single memmove,
- * then restore order (sort is stable in practice via qsort on this platform).
+ * bulk-remove the `overflow` lowest-intensity entries with a single memmove.
+ * Entry order within the surviving set is not preserved (qsort is not required
+ * to be stable), which is acceptable: MALP lookup is by key, not by position.
  * With the same example: 250-entry sort + 1 memmove of 200 entries ≈ 200
  * memory operations after the sort.
  */
@@ -170,6 +296,9 @@ static void malp_prune(struct char_data *mob)
      * Single memmove replaces `overflow` individual memmove calls. */
     memmove(&ai->malp[0], &ai->malp[overflow], (ai->malp_count - overflow) * sizeof(struct malp_entry));
     ai->malp_count -= overflow;
+
+    /* Sort and truncation both reorder entries — all cached indices are stale. */
+    malp_cache_invalidate(ai);
 }
 
 /**
@@ -389,6 +518,11 @@ void malp_free(struct char_data *mob)
         mob->ai_data->mplp = NULL;
         mob->ai_data->mplp_count = 0;
     }
+    if (mob->ai_data->malp_cache) {
+        free(mob->ai_data->malp_cache);
+        mob->ai_data->malp_cache = NULL;
+        mob->ai_data->malp_cache_cap = 0;
+    }
 }
 
 float compute_salience(float arousal, int rehearsal, float social_weight, float age_hours)
@@ -492,17 +626,31 @@ void malp_decay_tick(struct char_data *mob)
             best_avail = 1.0f;
         ai->cached_avail_factor = best_avail;
 
-        /* Compact array: remove dead entries (intensity < 0.05) */
+        /* Compact array: remove dead entries (intensity < 0.05).
+         * Track whether any entry was removed or shifted so we only invalidate
+         * the index cache when necessary — avoids an 8 KB memset on ticks where
+         * nothing decayed to zero.
+         * All slots in malp[0..malp_count-1] have agent_id != 0 (the array is
+         * always dense); the agent_id guard on the first branch is defensive only. */
         int w = 0;
+        bool cache_stale = FALSE;
         for (i = 0; i < ai->malp_count; i++) {
             if (ai->malp[i].agent_id != 0 && ai->malp[i].intensity >= 0.05f) {
-                if (w != i)
+                if (w != i) {
                     ai->malp[w] = ai->malp[i];
+                    cache_stale = TRUE; /* entry shifted to a lower index */
+                }
                 w++;
+            } else {
+                /* Entry either dead (intensity < 0.05) or unexpectedly empty —
+                 * either way it is being dropped, so cached indices are stale. */
+                cache_stale = TRUE;
             }
         }
         ai->malp_count = w;
-        (void)alive; /* used for logging if needed */
+        if (cache_stale)
+            malp_cache_invalidate(ai); /* cached indices are no longer valid */
+        (void)alive;                   /* used for logging if needed */
     } else {
         ai->cached_avail_factor = 0.0f;
     }
@@ -612,13 +760,25 @@ void consolidator_tick(struct char_data *mob)
         if (S < theta)                                                                                                 \
             break;                                                                                                     \
         float valence = compute_peak_end_valence(mob, (mem)->entity_id, (mem)->entity_type, mem);                      \
-        /* Find existing MALP entry for this agent */                                                                  \
+        /* Find existing MALP entry for this agent.                                                                    \
+         * Cache-first lookup (O(1) expected); falls back to O(malp_count) linear                                      \
+         * scan on miss and warms the cache for the next tick. */                                                      \
         struct malp_entry *existing = NULL;                                                                            \
         int _j;                                                                                                        \
-        for (_j = 0; _j < ai->malp_count; _j++) {                                                                      \
-            if (ai->malp[_j].agent_id == (mem)->entity_id && ai->malp[_j].agent_type == (mem)->entity_type) {          \
-                existing = &ai->malp[_j];                                                                              \
-                break;                                                                                                 \
+        {                                                                                                              \
+            int _cidx = malp_cache_lookup(ai, (mem)->entity_id, (mem)->entity_type);                                   \
+            if (_cidx >= 0 && _cidx < ai->malp_count && ai->malp[_cidx].agent_id == (mem)->entity_id &&                \
+                ai->malp[_cidx].agent_type == (mem)->entity_type) {                                                    \
+                existing = &ai->malp[_cidx]; /* cache hit */                                                           \
+            } else {                                                                                                   \
+                /* cache miss — linear scan + warm cache */                                                          \
+                for (_j = 0; _j < ai->malp_count; _j++) {                                                              \
+                    if (ai->malp[_j].agent_id == (mem)->entity_id && ai->malp[_j].agent_type == (mem)->entity_type) {  \
+                        existing = &ai->malp[_j];                                                                      \
+                        malp_cache_insert(ai, (mem)->entity_id, (mem)->entity_type, _j);                               \
+                        break;                                                                                         \
+                    }                                                                                                  \
+                }                                                                                                      \
             }                                                                                                          \
         }                                                                                                              \
         if (existing) {                                                                                                \
@@ -662,6 +822,8 @@ void consolidator_tick(struct char_data *mob)
             else                                                                                                       \
                 _e->persistence = MALP_PERSIST_LOW;                                                                    \
             ai->malp_count++;                                                                                          \
+            /* Warm the cache so the next consolidation for this agent is O(1). */                                     \
+            malp_cache_insert(ai, (mem)->entity_id, (mem)->entity_type, ai->malp_count - 1);                           \
         }                                                                                                              \
         /* Hebbian MPLP trait formation */                                                                             \
         if (rehearsal >= rehearsal_threshold) {                                                                        \
@@ -1632,8 +1794,8 @@ static void get_trust_and_suspicion(struct char_data *listener, struct char_data
                 continue;
             if (t->trait_type == MPLP_TRAIT_TRUST_BIAS) {
                 /* TRUST_BIAS is a signed trait: use valence sign × magnitude */
-                float gp = (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
-                trust_raw += gp + t->ctx[MPLP_CTX_SOCIAL];
+                float signed_magnitude = (t->valence >= 0.0f ? 1.0f : -1.0f) * t->magnitude;
+                trust_raw += signed_magnitude + t->ctx[MPLP_CTX_SOCIAL];
             } else if (t->trait_type == MPLP_TRAIT_SUSPICION_BIAS) {
                 /* SUSPICION_BIAS is unsigned: magnitude is the value */
                 suspicion_raw += t->magnitude + t->ctx[MPLP_CTX_SOCIAL];
@@ -1829,14 +1991,26 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     /* ── Gossip cooldown per listener–target pair ────────────────────────────
      * Reuse the MALP last_applied timestamp on the listener's existing entry
      * for the target.  This prevents the same gossip from flooding the
-     * listener repeatedly before the memory can decay naturally. */
+     * listener repeatedly before the memory can decay naturally.
+     * Cache-first O(1) lookup; falls back to O(malp_count) linear scan on miss
+     * and warms the cache so subsequent gossip attempts for the same pair are O(1). */
     struct mob_ai_data *lai = listener->ai_data;
     struct malp_entry *existing = NULL;
-    for (i = 0; i < lai->malp_count; i++) {
-        struct malp_entry *e = &lai->malp[i];
-        if (e->agent_id == target_id && e->agent_type == target_type) {
-            existing = e;
-            break;
+    {
+        int _cidx = malp_cache_lookup(lai, target_id, target_type);
+        if (_cidx >= 0 && _cidx < lai->malp_count && lai->malp[_cidx].agent_id == target_id &&
+            lai->malp[_cidx].agent_type == target_type) {
+            existing = &lai->malp[_cidx]; /* cache hit */
+        } else {
+            /* cache miss — linear scan + warm cache */
+            for (i = 0; i < lai->malp_count; i++) {
+                struct malp_entry *e = &lai->malp[i];
+                if (e->agent_id == target_id && e->agent_type == target_type) {
+                    existing = e;
+                    malp_cache_insert(lai, target_id, target_type, i);
+                    break;
+                }
+            }
         }
     }
 
@@ -1959,6 +2133,9 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         gossip_entry->persistence = MALP_PERSIST_LOW;
         gossip_entry->last_applied = now;
         lai->malp_count++;
+        /* Warm listener's cache so the next gossip cooldown check for this
+         * target is O(1) instead of O(malp_count). */
+        malp_cache_insert(lai, target_id, target_type, lai->malp_count - 1);
         existing = gossip_entry; /* point to freshly created entry for MPLP step */
     }
 
