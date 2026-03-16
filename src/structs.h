@@ -1368,9 +1368,22 @@ struct sec_baseline {
 #define MPLP_CTX_MAGIC 5  /**< Witnessed magical effects (offensive or support) */
 #define MPLP_CTX_MAX 6    /**< Total number of context types (array bound) */
 
+/** MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002) */
+
 /**
- * MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002)
+ * Single slot in the MALP index cache.
  *
+ * The cache maps (agent_id, agent_type) → array index in mob_ai_data.malp[].
+ * Using an index (not a pointer) ensures correctness across malp_grow() realloc
+ * calls, which may relocate the array.  Empty slots are identified by agent_id == 0.
+ */
+struct malp_cache_slot {
+    long agent_id;  /**< 0 = empty slot (sentinel); same type as malp_entry.agent_id */
+    int agent_type; /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int malp_idx;   /**< Index into mob_ai_data.malp[] */
+};
+
+/**
  * Explicit episodic/semantic memory entry consolidated from high-salience
  * episodes (S >= θ_cons).  Accessible for dialogue and social reasoning.
  * Runtime-only (not saved across reboots), same as episodic buffer.
@@ -1569,6 +1582,14 @@ struct mob_ai_data {
     int malp_count;          /**< Number of active MALP entries */
     struct mplp_trait *mplp; /**< Dynamic array of implicit trait entries */
     int mplp_count;          /**< Number of active MPLP traits */
+
+    /* MALP index cache — maps (agent_id, agent_type) → malp[] index for O(1) lookups.
+     * Eliminates the O(malp_count) linear scans in consolidator_tick (hot path, runs
+     * 40 times per consolidation) and in the gossip cooldown check.
+     * Uses open-addressing with linear probing; capacity is always a power of 2.
+     * The cache is invalidated (cleared) whenever entries shift (compaction or prune). */
+    struct malp_cache_slot *malp_cache; /**< Open-addressing hash table; NULL until first use */
+    int malp_cache_cap;                 /**< Capacity in slots (power of 2); 0 = not allocated */
 
     /* Cognitive Bias Module – Shadow Timeline projection distortion parameters */
     struct cognitive_biases biases; /**< Per-NPC cognitive bias strengths (0.0–1.0+) */

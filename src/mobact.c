@@ -711,6 +711,9 @@ void mob_emotion_activity(void)
 {
     struct char_data *ch, *next_ch;
     int gossip_this_tick = 0; /* per-tick gossip event budget */
+    /* Batch time() to one syscall for the whole tick — avoids a per-mob
+     * gettimeofday() call that otherwise fires once per mob in the loop. */
+    time_t tick_now = time(NULL);
 
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
@@ -870,28 +873,47 @@ void mob_emotion_activity(void)
 
             /* Social gossip - mob transfers emotional memory about a third entity to a
              * nearby mob.  Runs at CONFIG_MOB_GOSSIP_CHANCE% when passive updates fire.
-             * The per-tick budget cap (MALP_GOSSIP_BUDGET_PER_TICK) prevents CPU spikes
-             * when many mobs roll the gossip chance on the same tick. */
+             *
+             * Budget semantics (MALP_GOSSIP_BUDGET_PER_TICK):
+             *   A slot is consumed for every attempt that passes the O(1) source
+             *   cooldown pre-check, regardless of whether try_social_gossip()
+             *   succeeds.  This is intentional: the topic-selection scan inside
+             *   try_social_gossip() is O(malp_count) whether it succeeds or fails,
+             *   so counting only successes allows a crowd of low-trust mobs to
+             *   saturate the CPU when their transfer weight always fails the minimum
+             *   threshold.  Mobs that are still on source cooldown are skipped for
+             *   free (O(1)) without touching the budget. */
             if (gossip_this_tick < MALP_GOSSIP_BUDGET_PER_TICK && rand_number(1, 100) <= CONFIG_MOB_GOSSIP_CHANCE) {
-                struct char_data *gossip_recipient;
-                for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
-                     gossip_recipient = gossip_recipient->next_in_room) {
-                    if (gossip_recipient == ch)
+                /* Pre-check source cooldown (O(1)) before consuming a budget slot.
+                 * try_social_gossip() will repeat this check internally for safety,
+                 * but doing it here lets us avoid wasting a budget slot on a mob
+                 * that cannot gossip yet.  tick_now is batched once before the loop.
+                 * Guard ai_data: mobs without it cannot gossip (treat as on cooldown). */
+                bool source_on_cooldown =
+                    (!ch->ai_data || (ch->ai_data->last_gossiped > 0 && (tick_now - ch->ai_data->last_gossiped) <
+                                                                            (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS));
+                if (!source_on_cooldown) {
+                    /* Consume the budget slot before the expensive path. */
+                    gossip_this_tick++;
+                    struct char_data *gossip_recipient;
+                    for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
+                         gossip_recipient = gossip_recipient->next_in_room) {
+                        if (gossip_recipient == ch)
+                            continue;
+                        if (!IS_NPC(gossip_recipient) || !gossip_recipient->ai_data)
+                            continue;
+                        if (FIGHTING(gossip_recipient) || !AWAKE(gossip_recipient))
+                            continue;
+                        if (!CAN_SEE(ch, gossip_recipient))
+                            continue;
+                        try_social_gossip(ch, gossip_recipient);
+                        break; /* one gossip recipient per tick */
+                    }
+                    /* Safety check: DG scripts triggered inside try_social_gossip
+                     * could mark this mob for extraction. */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                         continue;
-                    if (!IS_NPC(gossip_recipient) || !gossip_recipient->ai_data)
-                        continue;
-                    if (FIGHTING(gossip_recipient) || !AWAKE(gossip_recipient))
-                        continue;
-                    if (!CAN_SEE(ch, gossip_recipient))
-                        continue;
-                    if (try_social_gossip(ch, gossip_recipient))
-                        gossip_this_tick++;
-                    break; /* one gossip recipient per tick */
                 }
-                /* Safety check: DG scripts triggered inside try_social_gossip
-                 * could mark this mob for extraction. */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                    continue;
             }
 
             /* Mood system - update overall mood less frequently (25% chance when passive runs) */

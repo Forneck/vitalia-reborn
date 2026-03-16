@@ -164,16 +164,27 @@
 #define MALP_GOSSIP_SOURCE_COOLDOWN_SECS 60
 
 /**
- * Maximum number of successful gossip events processed in a single
- * mob_emotion_activity() call (one call every PULSE_MOB_EMOTION = 4 s).
- * Without this cap, a large population of mobs with high emotion-update
- * and gossip chances could all roll the gossip dice on the same tick,
- * producing an O(N × malp_count) spike.  The cap bounds per-tick gossip
- * work to at most BUDGET × (two O(malp_count) scans + MPLP updates).
- * Value 8 permits ~120 gossip events/minute at 4-s ticks, which is more
- * than sufficient for emergent social dynamics.
+ * Maximum number of gossip *attempts* (not just successes) processed in a
+ * single mob_emotion_activity() call (one call every PULSE_MOB_EMOTION = 4 s).
+ *
+ * The budget is consumed for every attempt that passes the O(1) source-
+ * cooldown pre-check in mob_emotion_activity(), regardless of whether
+ * try_social_gossip() ultimately succeeds.  Counting attempts (rather than
+ * only successes) prevents the CPU spike that occurs in low-trust environments
+ * where transfer weights always fall below MALP_GOSSIP_WEIGHT_MIN: without
+ * this fix the budget never fills and all eligible mobs do expensive
+ * O(malp_count) scans on every tick.
+ *
+ * Value is set to 16 (double the original 8) to compensate for attempt-based
+ * counting: at a typical 50–70 % success rate this yields 8–11 successful
+ * gossip events per tick (120–165 events/minute at 4-s ticks), matching the
+ * original throughput in well-established trust environments, while capping
+ * worst-case CPU at 16 × O(malp_count) scans per tick regardless of success.
+ *
+ * Mobs still on source cooldown are skipped for free (O(1)) and do NOT
+ * consume a budget slot.
  */
-#define MALP_GOSSIP_BUDGET_PER_TICK 8
+#define MALP_GOSSIP_BUDGET_PER_TICK 16
 
 /**
  * Running-average blend rate used when updating the approach/avoidance trait
