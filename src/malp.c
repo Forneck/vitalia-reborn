@@ -1605,6 +1605,27 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         (now - source->ai_data->last_gossiped) < (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS)
         return FALSE;
 
+    /* ── Early-exit when max possible transfer weight is too low ─────────────
+     * Compute listener's trust and suspicion once here — before the expensive
+     * O(malp_count) topic-selection scan.  The maximum intensity any topic can
+     * contribute is 1.0, so if trust_factor × rep_factor × (1 − suspicion) is
+     * already below MALP_GOSSIP_WEIGHT_MIN, no topic can ever exceed the
+     * threshold.  We skip the scan entirely and reuse these values later.
+     *
+     * This is the primary defence against startup / low-trust scenarios where
+     * mobs have not yet built relationships: the scan never runs, so the
+     * O(malp_count × mplp_count) path that caused the CPU spike is avoided. */
+    float eff_trust = mplp_get_effective_trait(listener, source, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+    float trust_factor = (eff_trust + 1.0f) / 2.0f; /* [−1,+1] → [0,1] */
+    float rep_factor = (float)GET_REPUTATION(source) / 100.0f;
+    float suspicion = mplp_get_effective_trait(listener, NULL, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+    if (suspicion < 0.0f)
+        suspicion = 0.0f;
+    if (suspicion > 1.0f)
+        suspicion = 1.0f;
+    if (trust_factor * rep_factor * (1.0f - suspicion) < MALP_GOSSIP_WEIGHT_MIN)
+        return FALSE; /* no credible transfer possible regardless of topic */
+
     /* ── Find source's strongest eligible MALP entry (the gossip "topic") ───
      * We exclude:
      *  - empty slots (agent_id == 0)
@@ -1624,10 +1645,16 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     int i;
     /* note: now was computed above for the source cooldown check */
 
-    /* Source's dominant prior belief toward the gossip target is needed for
-     * confirmation-bias topic selection.  We compute it lazily after selecting
-     * the best entry (see confirmation-bias encoding below), but for selection
-     * we use a simpler per-entry valence-sign alignment test. */
+    /* Pre-compute source's general social lean for confirmation-bias topic
+     * selection.  The result is the same for every MALP entry (it depends only
+     * on source's global TRUST_BIAS, not on the candidate entry), so computing
+     * it once here avoids an O(malp_count × mplp_count) cost inside the loop. */
+    bool src_positive = TRUE; /* default when confirmation_bias is zero */
+    if (source->ai_data->biases.confirmation_bias > 0.0f) {
+        float src_trust = mplp_get_effective_trait(source, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+        src_positive = (src_trust >= 0.0f);
+    }
+
     for (i = 0; i < source->ai_data->malp_count; i++) {
         struct malp_entry *e = &source->ai_data->malp[i];
         float score;
@@ -1665,13 +1692,9 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
          * about the target (audience-tuning / shared-reality effect).
          * We approximate this by checking whether the entry's valence aligns
          * with the source's overall MPLP disposition toward this entity.
-         * The bonus is small — it only tips the scales when scores are close. */
+         * The bonus is small — it only tips the scales when scores are close.
+         * src_positive is pre-computed before the loop (O(1) per gossip call). */
         if (source->ai_data->biases.confirmation_bias > 0.0f) {
-            /* TRUST_BIAS is a signed trait in [-1,+1]: positive = trusting,
-             * negative = distrustful.  Compare against 0.0 (the neutral point),
-             * not 0.5, to avoid misclassifying most mobs as "negative". */
-            float src_trust = mplp_get_effective_trait(source, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
-            bool src_positive = (src_trust >= 0.0f); /* source's general social lean */
             bool entry_positive = (e->valence >= 0.0f);
             if (src_positive == entry_positive) {
                 score +=
@@ -1701,19 +1724,11 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
      * reputation_factor(A): source's global reputation / 100 ∈ [0,1].
      * intensity(A,C):       source MALP intensity for the topic entity.
      * suspicion(B):         listener's baseline SUSPICION_BIAS ∈ [0,1].
-     */
-    float eff_trust = mplp_get_effective_trait(listener, source, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
-    float trust_factor = (eff_trust + 1.0f) / 2.0f; /* [−1,+1] → [0,1] */
-
-    float rep_factor = (float)GET_REPUTATION(source) / 100.0f;
-
+     *
+     * trust_factor, rep_factor, and suspicion were pre-computed before the
+     * topic scan (see early-exit block above) and are reused here at no
+     * additional cost. */
     float emotional_intensity = best->intensity;
-
-    float suspicion = mplp_get_effective_trait(listener, NULL, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
-    if (suspicion < 0.0f)
-        suspicion = 0.0f;
-    if (suspicion > 1.0f)
-        suspicion = 1.0f;
 
     float transfer_weight = trust_factor * rep_factor * emotional_intensity * (1.0f - suspicion);
 
