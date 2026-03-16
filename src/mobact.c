@@ -887,10 +887,11 @@ void mob_emotion_activity(void)
                 /* Pre-check source cooldown (O(1)) before consuming a budget slot.
                  * try_social_gossip() will repeat this check internally for safety,
                  * but doing it here lets us avoid wasting a budget slot on a mob
-                 * that cannot gossip yet.  tick_now is batched once before the loop. */
+                 * that cannot gossip yet.  tick_now is batched once before the loop.
+                 * Guard ai_data: mobs without it cannot gossip (treat as on cooldown). */
                 bool source_on_cooldown =
-                    (ch->ai_data->last_gossiped > 0 &&
-                     (tick_now - ch->ai_data->last_gossiped) < (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS);
+                    (!ch->ai_data || (ch->ai_data->last_gossiped > 0 && (tick_now - ch->ai_data->last_gossiped) <
+                                                                            (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS));
                 if (!source_on_cooldown) {
                     /* Consume the budget slot before the expensive path. */
                     gossip_this_tick++;

@@ -1368,9 +1368,8 @@ struct sec_baseline {
 #define MPLP_CTX_MAGIC 5  /**< Witnessed magical effects (offensive or support) */
 #define MPLP_CTX_MAX 6    /**< Total number of context types (array bound) */
 
-/**
- * MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002)
- *
+/** MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002) */
+
 /**
  * Single slot in the MALP index cache.
  *
