@@ -3181,6 +3181,7 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
             case TYPE_BROACH:
             case TYPE_MOW:
                 type = SKILL_WEAPON_POLEARMS;
+                break;
             default:
                 type = -1;
                 break;
