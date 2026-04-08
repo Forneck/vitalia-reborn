@@ -1278,7 +1278,8 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
         if (k->character == NULL)
             continue;
         /* Do the player names match? */
-        if (!strcmp(GET_NAME(k->character), GET_NAME(d->character))) {
+        if (GET_NAME(k->character) && GET_NAME(d->character) &&
+            !strcmp(GET_NAME(k->character), GET_NAME(d->character))) {
             /* Check the other character is still in creation? */
             if ((STATE(k) > CON_PLAYING) && (STATE(k) < CON_QCLASS)) {
                 /* Boot the older one */
@@ -1305,6 +1306,7 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
                 STATE(d) = CON_CLOSE;
                 mudlog(NRM, LVL_GOD, TRUE, "SYSERR: Multiple logins with 1st in-game and the 2nd in char creation.");
                 found = TRUE;
+                break;
             }
         }
     }
@@ -1625,7 +1627,11 @@ void nanny(struct descriptor_data *d, char *arg)
             if (!*arg)
                 STATE(d) = CON_CLOSE;
             else {
-                if (strncmp(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
+                const char *crypted_pw = CRYPT(arg, GET_PASSWD(d->character));
+                if (!crypted_pw)
+                    mudlog(BRF, LVL_GOD, TRUE, "SYSERR: crypt() returned NULL for %s [%s] (corrupted password?)",
+                           GET_NAME(d->character), d->host);
+                if (!crypted_pw || strncmp(crypted_pw, GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
                     mudlog(BRF, LVL_GOD, TRUE, "Bad PW: %s [%s]", GET_NAME(d->character), d->host);
                     GET_BAD_PWS(d->character)++;
                     save_char(d->character);
@@ -1710,8 +1716,12 @@ void nanny(struct descriptor_data *d, char *arg)
                 STATE(d) = CON_CHPWD_VRFY;
             break;
         case CON_CNFPASSWD:
-        case CON_CHPWD_VRFY:
-            if (strncmp(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
+        case CON_CHPWD_VRFY: {
+            const char *crypted_pw = CRYPT(arg, GET_PASSWD(d->character));
+            if (!crypted_pw)
+                mudlog(BRF, LVL_GOD, TRUE, "SYSERR: crypt() returned NULL for %s [%s] (corrupted password?)",
+                       GET_NAME(d->character), d->host);
+            if (!crypted_pw || strncmp(crypted_pw, GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
                 write_to_output(d, "As senhas nao combinaram... vamos comecar denovo.\r\n");
                 if (STATE(d) == CON_CNFPASSWD)
                     STATE(d) = CON_NEWPASSWD;
@@ -1730,6 +1740,7 @@ void nanny(struct descriptor_data *d, char *arg)
                 STATE(d) = CON_MENU;
             }
             break;
+        }
         case CON_QSEX: /* query sex of new user */
             switch (*arg) {
                 case 'm':
@@ -1901,8 +1912,12 @@ void nanny(struct descriptor_data *d, char *arg)
             break;
         }
 
-        case CON_CHPWD_GETOLD:
-            if (strncmp(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
+        case CON_CHPWD_GETOLD: {
+            const char *crypted_pw = CRYPT(arg, GET_PASSWD(d->character));
+            if (!crypted_pw)
+                mudlog(BRF, LVL_GOD, TRUE, "SYSERR: crypt() returned NULL for %s [%s] (corrupted password?)",
+                       GET_NAME(d->character), d->host);
+            if (!crypted_pw || strncmp(crypted_pw, GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
                 echo_on(d);
                 write_to_output(d, "\r\nSenha incorreta.\r\n");
                 show_menu_with_options(d);
@@ -1912,9 +1927,14 @@ void nanny(struct descriptor_data *d, char *arg)
                 STATE(d) = CON_CHPWD_GETNEW;
             }
             return;
-        case CON_DELCNF1:
+        }
+        case CON_DELCNF1: {
+            const char *crypted_pw = CRYPT(arg, GET_PASSWD(d->character));
+            if (!crypted_pw)
+                mudlog(BRF, LVL_GOD, TRUE, "SYSERR: crypt() returned NULL for %s [%s] (corrupted password?)",
+                       GET_NAME(d->character), d->host);
             echo_on(d);
-            if (strncmp(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
+            if (!crypted_pw || strncmp(crypted_pw, GET_PASSWD(d->character), MAX_PWD_LENGTH)) {
                 write_to_output(d, "\r\n.Seu personagem NÃO foi apagado: senha incorreta.\r\n%s", CONFIG_MENU);
                 STATE(d) = CON_MENU;
             } else {
@@ -1925,6 +1945,7 @@ void nanny(struct descriptor_data *d, char *arg)
                 STATE(d) = CON_DELCNF2;
             }
             break;
+        }
         case CON_DELCNF2:
             if (!strcmp(arg, "sim") || !strcmp(arg, "SIM")) {
                 if (PLR_FLAGGED(d->character, PLR_FROZEN)) {
