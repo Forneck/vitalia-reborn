@@ -1306,6 +1306,7 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
                 STATE(d) = CON_CLOSE;
                 mudlog(NRM, LVL_GOD, TRUE, "SYSERR: Multiple logins with 1st in-game and the 2nd in char creation.");
                 found = TRUE;
+                break;
             }
         }
     }
