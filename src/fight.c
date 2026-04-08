@@ -3335,6 +3335,8 @@ void transcend(struct char_data *ch)
 
     /* Reset other variables */
     GET_PRACTICES(ch) = 0;
+    GET_HITROLL(ch) = 0;
+    GET_DAMROLL(ch) = 0;
 
     /* Explain what happened */
     send_to_char(ch,
