@@ -4190,7 +4190,7 @@ bool mob_try_and_upgrade(struct char_data *ch)
         }
     } /* Fim do loop 'while' */
 
-    /* Surface iteration-limit diagnostics only to online implementors when debug is enabled. */
+    /* Surface iteration-limit diagnostics only to online implementers when debug is enabled. */
     if (CONFIG_MOB_4D_DEBUG && iteration_count >= max_iterations) {
         mudlog(CMP, LVL_IMPL, FALSE, "mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", GET_NAME(ch),
                GET_MOB_VNUM(ch));
