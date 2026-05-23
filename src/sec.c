@@ -97,8 +97,10 @@ static void sec_update_partitioned(struct mob_ai_data *ai, float A, float t_fear
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f sad=%.4f anger=%.4f happy=%.4f alpha=%.3f C=%.2f",
-             W_total, A, scale, new_fear, new_sad, new_anger, new_happy, a, C_final);
+        mudlog(
+            CMP, LVL_IMPL, FALSE,
+            "SEC-PARTITION: W_total=%.4f A=%.4f scale=%.4f fear=%.4f sad=%.4f anger=%.4f happy=%.4f alpha=%.3f C=%.2f",
+            W_total, A, scale, new_fear, new_sad, new_anger, new_happy, a, C_final);
 
     ai->sec.fear = sec_clamp(new_fear, 0.0f, 1.0f);
     ai->sec.sadness = sec_clamp(new_sad, 0.0f, 1.0f);

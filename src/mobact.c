@@ -695,8 +695,8 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
             if (e_reward > 0) {
                 adjust_emotion(ch, &ch->ai_data->emotion_happiness, e_reward);
                 if (CONFIG_MOB_4D_DEBUG)
-                    log1("OCEAN-E: social reward +%d happiness for %s(#%d) E_final=%.2f", e_reward, GET_NAME(ch),
-                         GET_MOB_VNUM(ch), E_final);
+                    mudlog(CMP, LVL_IMPL, FALSE, "OCEAN-E: social reward +%d happiness for %s(#%d) E_final=%.2f",
+                           e_reward, GET_NAME(ch), GET_MOB_VNUM(ch), E_final);
             }
         }
     }
@@ -1059,9 +1059,9 @@ void mobile_activity(void)
                 ch->ai_data->last_4d_state.dominance *= h_factor_d;
                 ch->ai_data->last_4d_state.arousal *= h_factor_a;
                 if (CONFIG_MOB_4D_DEBUG)
-                    log1("4D-HELPLESSNESS: mob=%s(#%d) H=%.1f D_deformed=%.1f A_deformed=%.1f", GET_NAME(ch),
-                         GET_MOB_VNUM(ch), ch->ai_data->helplessness, ch->ai_data->last_4d_state.dominance,
-                         ch->ai_data->last_4d_state.arousal);
+                    mudlog(CMP, LVL_IMPL, FALSE, "4D-HELPLESSNESS: mob=%s(#%d) H=%.1f D_deformed=%.1f A_deformed=%.1f",
+                           GET_NAME(ch), GET_MOB_VNUM(ch), ch->ai_data->helplessness,
+                           ch->ai_data->last_4d_state.dominance, ch->ai_data->last_4d_state.arousal);
             }
 
             if (CONFIG_MOB_4D_DEBUG)
@@ -2450,8 +2450,8 @@ void mobile_activity(void)
                         int a_aggr_mod = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_AGGR_SCALE / 10.0f));
                         impulse_threshold = MAX(0, MIN(100, impulse_threshold - a_aggr_mod));
                         if (CONFIG_MOB_4D_DEBUG)
-                            log1("OCEAN-A: aggr mod %+d (A=%.2f) threshold=%d for %s(#%d)", -a_aggr_mod, A_final,
-                                 impulse_threshold, GET_NAME(ch), GET_MOB_VNUM(ch));
+                            mudlog(CMP, LVL_IMPL, FALSE, "OCEAN-A: aggr mod %+d (A=%.2f) threshold=%d for %s(#%d)",
+                                   -a_aggr_mod, A_final, impulse_threshold, GET_NAME(ch), GET_MOB_VNUM(ch));
                     }
 
                     if (rand_number(0, 100) > impulse_threshold) {

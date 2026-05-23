@@ -6313,8 +6313,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
     const char *ctx_name = (ctx_type >= 0 && ctx_type < MPLP_CTX_MAX) ? ctx_names[ctx_type] : "?";
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("MPLP-NS: mob=%s(#%d) event=%d is_major=%d sal_base=%.2f ctx=%s", GET_NAME(mob), GET_MOB_VNUM(mob),
-             interact_type, is_major, sal, ctx_name);
+        mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: mob=%s(#%d) event=%d is_major=%d sal_base=%.2f ctx=%s", GET_NAME(mob),
+               GET_MOB_VNUM(mob), interact_type, is_major, sal, ctx_name);
 
     switch (interact_type) {
 
@@ -6358,7 +6358,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_courage, d);
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: ATTACKED ctx=%s sal=%.2f rev=%.2f sub=%.2f", ctx_name, sal, rev, sub);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: ATTACKED ctx=%s sal=%.2f rev=%.2f sub=%.2f", ctx_name, sal, rev,
+                       sub);
             break;
         }
 
@@ -6392,7 +6393,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.5f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: HEALED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat, trb);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: HEALED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat,
+                       trb);
             break;
         }
 
@@ -6416,7 +6418,7 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_happiness, (int)(d * 0.5f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: RECEIVED_ITEM ctx=%s sal=%.2f grat=%.2f", ctx_name, sal, grat);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: RECEIVED_ITEM ctx=%s sal=%.2f grat=%.2f", ctx_name, sal, grat);
             break;
         }
 
@@ -6447,7 +6449,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: STOLEN_FROM ctx=%s sal=%.2f rev=%.2f sus=%.2f", ctx_name, sal, rev, sus);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: STOLEN_FROM ctx=%s sal=%.2f rev=%.2f sus=%.2f", ctx_name, sal,
+                       rev, sus);
             break;
         }
 
@@ -6480,7 +6483,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_friendship, d);
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: RESCUED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat, trb);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: RESCUED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat,
+                       trb);
             break;
         }
 
@@ -6512,7 +6516,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_trust, (int)(d * 0.3f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: ASSISTED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat, trb);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: ASSISTED ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal,
+                       grat, trb);
             break;
         }
 
@@ -6550,7 +6555,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: ALLY_DIED ctx=%s sal=%.2f emp=%.2f rev=%.2f da=%.2f", ctx_name, sal, emp, rev, da);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: ALLY_DIED ctx=%s sal=%.2f emp=%.2f rev=%.2f da=%.2f", ctx_name,
+                       sal, emp, rev, da);
             break;
         }
 
@@ -6580,7 +6586,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: WITNESSED_DEATH ctx=%s sal=%.2f emp=%.2f da=%.2f", ctx_name, sal, emp, da);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: WITNESSED_DEATH ctx=%s sal=%.2f emp=%.2f da=%.2f", ctx_name, sal,
+                       emp, da);
             break;
         }
 
@@ -6614,7 +6621,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: QUEST_COMPLETE ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat, trb);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: QUEST_COMPLETE ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name,
+                       sal, grat, trb);
             break;
         }
 
@@ -6643,7 +6651,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_trust, -(int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: QUEST_FAIL ctx=%s sal=%.2f btr=%.2f sus=%.2f", ctx_name, sal, btr, sus);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: QUEST_FAIL ctx=%s sal=%.2f btr=%.2f sus=%.2f", ctx_name, sal,
+                       btr, sus);
             break;
         }
 
@@ -6684,7 +6693,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.5f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: BETRAYAL ctx=%s sal=%.2f btr=%.2f rev=%.2f sus=%.2f", ctx_name, sal, btr, rev, sus);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: BETRAYAL ctx=%s sal=%.2f btr=%.2f rev=%.2f sus=%.2f", ctx_name,
+                       sal, btr, rev, sus);
             break;
         }
 
@@ -6723,7 +6733,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_fear, (int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: OFF_MAGIC ctx=%s sal=%.2f da=%.2f sub=%.2f", ctx_name, sal, da, sub);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: OFF_MAGIC ctx=%s sal=%.2f da=%.2f sub=%.2f", ctx_name, sal, da,
+                       sub);
             break;
         }
 
@@ -6756,7 +6767,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_friendship, (int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: SUP_MAGIC ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal, grat, trb);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: SUP_MAGIC ctx=%s sal=%.2f grat=%.2f trb=%.2f", ctx_name, sal,
+                       grat, trb);
             break;
         }
 
@@ -6793,7 +6805,8 @@ static void apply_mplp_nonsocial_reinforcement(struct char_data *mob, int intera
                     adjust_emotion(mob, &ai->emotion_sadness, (int)(d * 0.4f));
             }
             if (CONFIG_MOB_4D_DEBUG)
-                log1("MPLP-NS: ABANDON_ALLY ctx=%s sal=%.2f btr=%.2f sus=%.2f da=%.2f", ctx_name, sal, btr, sus, da);
+                mudlog(CMP, LVL_IMPL, FALSE, "MPLP-NS: ABANDON_ALLY ctx=%s sal=%.2f btr=%.2f sus=%.2f da=%.2f",
+                       ctx_name, sal, btr, sus, da);
             break;
         }
 
@@ -6834,8 +6847,8 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
     adjust_emotion(mob, &mob->ai_data->emotion_anger, scaled_anger_gain);
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("OCEAN-A: mob=%s(#%d) A_final=%.2f anger_factor=%.2f raw_anger=%d scaled=%d", GET_NAME(mob),
-             GET_MOB_VNUM(mob), A_final, anger_factor, raw_anger_gain, scaled_anger_gain);
+        mudlog(CMP, LVL_IMPL, FALSE, "OCEAN-A: mob=%s(#%d) A_final=%.2f anger_factor=%.2f raw_anger=%d scaled=%d",
+               GET_NAME(mob), GET_MOB_VNUM(mob), A_final, anger_factor, raw_anger_gain, scaled_anger_gain);
 
     /* Decreases happiness and trust */
     adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 15));
