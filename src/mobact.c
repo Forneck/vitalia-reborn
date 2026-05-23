@@ -4190,9 +4190,10 @@ bool mob_try_and_upgrade(struct char_data *ch)
         }
     } /* Fim do loop 'while' */
 
-    /* Log if we hit the iteration limit to help debug infinite loops */
-    if (iteration_count >= max_iterations) {
-        log1("SYSERR: mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", GET_NAME(ch), GET_MOB_VNUM(ch));
+    /* Surface iteration-limit diagnostics only to online implementors when debug is enabled. */
+    if (CONFIG_MOB_4D_DEBUG && iteration_count >= max_iterations) {
+        mudlog(CMP, LVL_IMPL, FALSE, "mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", GET_NAME(ch),
+               GET_MOB_VNUM(ch));
     }
 
     /* A aprendizagem acontece uma vez no final da sessão. */

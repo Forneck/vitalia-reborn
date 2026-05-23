@@ -6216,8 +6216,9 @@ float apply_conscientiousness_impulse_modulation(struct char_data *ch, float bas
     float modulated = base_impulse_prob * (1.0f - (gamma * C));
 
     if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_impulse_prob) {
-        log1("CONSCIENTIOUSNESS: Mob %s (#%d) impulse modulation: base=%.2f, C=%.2f, γ=%.2f -> result=%.2f",
-             GET_NAME(ch), GET_MOB_VNUM(ch), base_impulse_prob, C, gamma, modulated);
+        mudlog(CMP, LVL_IMPL, FALSE,
+               "CONSCIENTIOUSNESS: Mob %s (#%d) impulse modulation: base=%.2f, C=%.2f, γ=%.2f -> result=%.2f",
+               GET_NAME(ch), GET_MOB_VNUM(ch), base_impulse_prob, C, gamma, modulated);
     }
 
     return URANGE(0.0f, modulated, 1.0f);
@@ -6247,8 +6248,9 @@ float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_de
     float modulated = base_delay * (1.0f + (beta * C * arousal));
 
     if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_delay) {
-        log1("CONSCIENTIOUSNESS: Mob %s (#%d) reaction delay: base=%.2f, C=%.2f, β=%.2f, arousal=%.2f -> result=%.2f",
-             GET_NAME(ch), GET_MOB_VNUM(ch), base_delay, C, beta, arousal, modulated);
+        mudlog(CMP, LVL_IMPL, FALSE,
+               "CONSCIENTIOUSNESS: Mob %s (#%d) reaction delay: base=%.2f, C=%.2f, β=%.2f, arousal=%.2f -> result=%.2f",
+               GET_NAME(ch), GET_MOB_VNUM(ch), base_delay, C, beta, arousal, modulated);
     }
 
     return modulated;
@@ -6276,8 +6278,9 @@ float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weig
     float modulated = base_weight * (1.0f + (factor * C));
 
     if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_weight) {
-        log1("CONSCIENTIOUSNESS: Mob %s (#%d) moral weight: base=%.2f, C=%.2f, factor=%.2f -> result=%.2f",
-             GET_NAME(ch), GET_MOB_VNUM(ch), base_weight, C, factor, modulated);
+        mudlog(CMP, LVL_IMPL, FALSE,
+               "CONSCIENTIOUSNESS: Mob %s (#%d) moral weight: base=%.2f, C=%.2f, factor=%.2f -> result=%.2f",
+               GET_NAME(ch), GET_MOB_VNUM(ch), base_weight, C, factor, modulated);
     }
 
     return modulated;
