@@ -550,12 +550,12 @@ void log_4d_state(struct char_data *mob, struct char_data *target, const struct 
     /* PROJ = drift-adjusted projection (M_profile + ΔM_personal)*E, pre-context
      * COPING = objective situational capacity (separate from Dominance axis)
      * EFF  = final state after Contextual Modulation Layer */
-    log1(
-        "4D-SPACE: mob=%s(#%d) profile=%s target=%s "
-        "PROJ[V=%.1f A=%.1f D=%.1f Af=%.1f] "
-        "COPING=%.1f "
-        "EFF[V=%.1f A=%.1f D=%.1f Af=%.1f]",
-        GET_NAME(mob), GET_MOB_VNUM(mob), profile_name, target_name, state->raw_valence, state->raw_arousal,
-        state->raw_dominance, state->raw_affiliation, state->coping_potential, state->valence, state->arousal,
-        state->dominance, state->affiliation);
+    mudlog(CMP, LVL_IMPL, FALSE,
+           "4D-SPACE: mob=%s(#%d) profile=%s target=%s "
+           "PROJ[V=%.1f A=%.1f D=%.1f Af=%.1f] "
+           "COPING=%.1f "
+           "EFF[V=%.1f A=%.1f D=%.1f Af=%.1f]",
+           GET_NAME(mob), GET_MOB_VNUM(mob), profile_name, target_name, state->raw_valence, state->raw_arousal,
+           state->raw_dominance, state->raw_affiliation, state->coping_potential, state->valence, state->arousal,
+           state->dominance, state->affiliation);
 }

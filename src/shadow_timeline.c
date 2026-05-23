@@ -2147,8 +2147,8 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
     proj->outcome.score += delta;
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("COGBIAS-CONF: mob %s prior_valence=%.2f delta=%d new_score=%d", GET_NAME(ch), prior_valence, delta,
-             proj->outcome.score);
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-CONF: mob %s prior_valence=%.2f delta=%d new_score=%d", GET_NAME(ch),
+               prior_valence, delta, proj->outcome.score);
 }
 
 /**
@@ -2184,8 +2184,8 @@ static void apply_availability_bias(struct char_data *ch, struct shadow_projecti
     proj->outcome.score += delta;
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch), avail_factor,
-             multiplier, delta, proj->outcome.score);
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch),
+               avail_factor, multiplier, delta, proj->outcome.score);
 }
 
 /**
@@ -2245,11 +2245,12 @@ static void apply_attribution_bias(struct char_data *ch, struct shadow_projectio
         proj->outcome.score -= other_delta;
 
         if (CONFIG_MOB_4D_DEBUG)
-            log1("COGBIAS-ATTR: mob %s self_delta=+%d enemy_delta=-%d new_score=%d", GET_NAME(ch), self_delta,
-                 other_delta, proj->outcome.score);
+            mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ATTR: mob %s self_delta=+%d enemy_delta=-%d new_score=%d",
+                   GET_NAME(ch), self_delta, other_delta, proj->outcome.score);
     } else {
         if (CONFIG_MOB_4D_DEBUG)
-            log1("COGBIAS-ATTR: mob %s self_delta=+%d new_score=%d", GET_NAME(ch), self_delta, proj->outcome.score);
+            mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ATTR: mob %s self_delta=+%d new_score=%d", GET_NAME(ch), self_delta,
+                   proj->outcome.score);
     }
 }
 
@@ -2301,8 +2302,8 @@ static void apply_negativity_bias(struct char_data *ch, struct shadow_projection
     proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("COGBIAS-NEG: mob %s bias=%.2f new_score=%d danger=%d", GET_NAME(ch), bias, proj->outcome.score,
-             proj->outcome.danger_level);
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-NEG: mob %s bias=%.2f new_score=%d danger=%d", GET_NAME(ch), bias,
+               proj->outcome.score, proj->outcome.danger_level);
 }
 
 /**
@@ -2395,8 +2396,8 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
     proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("COGBIAS-ANCH: mob %s first_val=%.2f resist=%.2f intens=%.2f delta=%d score=%d", GET_NAME(ch),
-             first_valence, resistance, intensity_floor, delta, proj->outcome.score);
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ANCH: mob %s first_val=%.2f resist=%.2f intens=%.2f delta=%d score=%d",
+               GET_NAME(ch), first_valence, resistance, intensity_floor, delta, proj->outcome.score);
 }
 
 /**

@@ -1696,8 +1696,9 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1("MPLP-REP: mob=%s actor=%s rep=%d trust_eff=%.2f sus_eff=%.2f forg_eff=%.2f rev_eff=%.2f", GET_NAME(mob),
-             GET_NAME(actor), GET_REPUTATION(actor), eff_trust, eff_suspicion, eff_forgiveness, eff_revenge);
+        mudlog(CMP, LVL_IMPL, FALSE,
+               "MPLP-REP: mob=%s actor=%s rep=%d trust_eff=%.2f sus_eff=%.2f forg_eff=%.2f rev_eff=%.2f", GET_NAME(mob),
+               GET_NAME(actor), GET_REPUTATION(actor), eff_trust, eff_suspicion, eff_forgiveness, eff_revenge);
 }
 
 void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_type, float delta_valence,
@@ -2204,11 +2205,11 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
     }
 
     if (CONFIG_MOB_4D_DEBUG)
-        log1(
-            "GOSSIP: source=%s listener=%s target_id=%ld target_type=%d "
-            "raw_valence=%.2f enc_valence=%.2f weight=%.2f lambda_scale=%.2f intensity=%.2f",
-            GET_NAME(source), GET_NAME(listener), target_id, target_type, best->valence, gossip_valence,
-            transfer_weight, lambda_scale, gossip_intensity);
+        mudlog(CMP, LVL_IMPL, FALSE,
+               "GOSSIP: source=%s listener=%s target_id=%ld target_type=%d "
+               "raw_valence=%.2f enc_valence=%.2f weight=%.2f lambda_scale=%.2f intensity=%.2f",
+               GET_NAME(source), GET_NAME(listener), target_id, target_type, best->valence, gossip_valence,
+               transfer_weight, lambda_scale, gossip_intensity);
 
     /* Record when this mob last gossiped (as source) so the O(1) rate-limiter
      * at the top of try_social_gossip() can short-circuit future attempts that
