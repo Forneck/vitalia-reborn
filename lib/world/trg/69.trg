@@ -27,188 +27,136 @@ else
 end
 ~
 #6902
-Magik Zone 69 - Unlock Down BUFONIDAE~
+Magik Zone 69 - Unlock and Open Down BUFONIDAE~
 2 d 100
 *bufonidae*~
-* Magik trigger - Unlocks down exit when player says "BUFONIDAE"
-* Original: OX magik "*BUFONIDAE*" unlock down
+* Magik trigger - Unlocks then opens down exit when player says "BUFONIDAE"
+* Original: OX magik "*BUFONIDAE*" unlock down; OX magik "*BUFONIDAE*" open down
+* Note: merged into single trigger because speech_wtrigger only fires one trigger per say
 if %speech.contains(BUFONIDAE)% || %speech.contains(bufonidae)%
-  * Check if door exists
   if %self.down(room)%
-    * Remove locked flag (keep closed flag)
-    %door% %self.vnum% down flags ab
+    * Step 1: unlock (EX_ISDOOR + EX_CLOSED, removes EX_LOCKED)
+    %door% %self.vnum% down flags ao
     %echo% Você escuta um ruído vindo do alçapão.
-    * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
-    %door% %otherroom% up flags ab
+    %door% %otherroom% up flags ao
+    wait 1s
+    * Step 2: open (EX_ISDOOR only, removes EX_CLOSED)
+    %door% %self.vnum% down flags a
+    %echo% O alçapão se abre.
+    %at% %otherroom% %echo% O alçapão se abre.
+    %door% %otherroom% up flags a
   end
 end
 ~
 #6903
-Magik Zone 69 - Open Down BUFONIDAE~
+Magik Zone 69 - Open Down BUFONIDAE (merged into 6902)~
 2 d 100
-*bufonidae*~
-* Magik trigger - Opens down exit when player says "BUFONIDAE"
-* Original: OX magik "*BUFONIDAE*" open down
-if %speech.contains(BUFONIDAE)% || %speech.contains(bufonidae)%
-  * Check if door exists
-  if %self.down(room)%
-    * Remove closed flag (open the door)
-    %door% %self.vnum% down flags a
-    %echo% O alçapão se abre.
-    * Open the other side if it exists
-    eval otherroom %self.down(vnum)%
-    %at% %otherroom% %echo% O alçapão se abre.
-    %door% %otherroom% up flags a
-  end
-end
+*UNUSED*~
+* Merged into trigger 6902 — speech_wtrigger only fires one trigger per say event
 ~
 #6904
-Magik Zone 69 - Unlock Down OPISTHOCOELA~
+Magik Zone 69 - Unlock and Open Down OPISTHOCOELA~
 2 d 100
 *opisthocoela*~
-* Magik trigger - Unlocks down exit when player says "OPISTHOCOELA"
-* Original: OX magik "*OPISTHOCOELA*" unlock down
+* Magik trigger - Unlocks then opens down exit when player says "OPISTHOCOELA"
+* Original: OX magik "*OPISTHOCOELA*" unlock down; OX magik "*OPISTHOCOELA*" open down
 if %speech.contains(OPISTHOCOELA)% || %speech.contains(opisthocoela)%
-  * Check if door exists
   if %self.down(room)%
-    * Remove locked flag (keep closed flag)
-    %door% %self.vnum% down flags ab
+    %door% %self.vnum% down flags ao
     %echo% Você escuta um ruído vindo do alçapão.
-    * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
-    %door% %otherroom% up flags ab
+    %door% %otherroom% up flags ao
+    wait 1s
+    %door% %self.vnum% down flags a
+    %echo% O alçapão se abre.
+    %at% %otherroom% %echo% O alçapão se abre.
+    %door% %otherroom% up flags a
   end
 end
 ~
 #6905
-Magik Zone 69 - Open Down OPISTHOCOELA~
+Magik Zone 69 - Open Down OPISTHOCOELA (merged into 6904)~
 2 d 100
-*opisthocoela*~
-* Magik trigger - Opens down exit when player says "OPISTHOCOELA"
-* Original: OX magik "*OPISTHOCOELA*" open down
-if %speech.contains(OPISTHOCOELA)% || %speech.contains(opisthocoela)%
-  * Check if door exists
-  if %self.down(room)%
-    * Remove closed flag (open the door)
-    %door% %self.vnum% down flags a
-    %echo% O alçapão se abre.
-    * Open the other side if it exists
-    eval otherroom %self.down(vnum)%
-    %at% %otherroom% %echo% O alçapão se abre.
-    %door% %otherroom% up flags a
-  end
-end
+*UNUSED*~
+* Merged into trigger 6904
 ~
 #6906
-Magik Zone 69 - Unlock Down PIPIDAE~
+Magik Zone 69 - Unlock and Open Down PIPIDAE~
 2 d 100
 *pipidae*~
-* Magik trigger - Unlocks down exit when player says "PIPIDAE"
-* Original: OX magik "*PIPIDAE*" unlock down
+* Magik trigger - Unlocks then opens down exit when player says "PIPIDAE"
+* Original: OX magik "*PIPIDAE*" unlock down; OX magik "*PIPIDAE*" open down
 if %speech.contains(PIPIDAE)% || %speech.contains(pipidae)%
-  * Check if door exists
   if %self.down(room)%
-    * Remove locked flag (keep closed flag)
-    %door% %self.vnum% down flags ab
+    %door% %self.vnum% down flags ao
     %echo% Você escuta um ruído vindo do alçapão.
-    * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
-    %door% %otherroom% up flags ab
+    %door% %otherroom% up flags ao
+    wait 1s
+    %door% %self.vnum% down flags a
+    %echo% O alçapão se abre.
+    %at% %otherroom% %echo% O alçapão se abre.
+    %door% %otherroom% up flags a
   end
 end
 ~
 #6907
-Magik Zone 69 - Open Down PIPIDAE~
+Magik Zone 69 - Open Down PIPIDAE (merged into 6906)~
 2 d 100
-*pipidae*~
-* Magik trigger - Opens down exit when player says "PIPIDAE"
-* Original: OX magik "*PIPIDAE*" open down
-if %speech.contains(PIPIDAE)% || %speech.contains(pipidae)%
-  * Check if door exists
-  if %self.down(room)%
-    * Remove closed flag (open the door)
-    %door% %self.vnum% down flags a
-    %echo% O alçapão se abre.
-    * Open the other side if it exists
-    eval otherroom %self.down(vnum)%
-    %at% %otherroom% %echo% O alçapão se abre.
-    %door% %otherroom% up flags a
-  end
-end
+*UNUSED*~
+* Merged into trigger 6906
 ~
 #6908
-Magik Zone 69 - Unlock Down BREVICIPITIDAE~
+Magik Zone 69 - Unlock and Open Down BREVICIPITIDAE~
 2 d 100
 *brevicipitidae*~
-* Magik trigger - Unlocks down exit when player says "BREVICIPITIDAE"
-* Original: OX magik "*BREVICIPITIDAE*" unlock down
+* Magik trigger - Unlocks then opens down exit when player says "BREVICIPITIDAE"
+* Original: OX magik "*BREVICIPITIDAE*" unlock down; OX magik "*BREVICIPITIDAE*" open down
 if %speech.contains(BREVICIPITIDAE)% || %speech.contains(brevicipitidae)%
-  * Check if door exists
   if %self.down(room)%
-    * Remove locked flag (keep closed flag)
-    %door% %self.vnum% down flags ab
+    %door% %self.vnum% down flags ao
     %echo% Você escuta um ruído vindo do alçapão.
-    * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
-    %door% %otherroom% up flags ab
+    %door% %otherroom% up flags ao
+    wait 1s
+    %door% %self.vnum% down flags a
+    %echo% O alçapão se abre.
+    %at% %otherroom% %echo% O alçapão se abre.
+    %door% %otherroom% up flags a
   end
 end
 ~
 #6909
-Magik Zone 69 - Open Down BREVICIPITIDAE~
+Magik Zone 69 - Open Down BREVICIPITIDAE (merged into 6908)~
 2 d 100
-*brevicipitidae*~
-* Magik trigger - Opens down exit when player says "BREVICIPITIDAE"
-* Original: OX magik "*BREVICIPITIDAE*" open down
-if %speech.contains(BREVICIPITIDAE)% || %speech.contains(brevicipitidae)%
-  * Check if door exists
-  if %self.down(room)%
-    * Remove closed flag (open the door)
-    %door% %self.vnum% down flags a
-    %echo% O alçapão se abre.
-    * Open the other side if it exists
-    eval otherroom %self.down(vnum)%
-    %at% %otherroom% %echo% O alçapão se abre.
-    %door% %otherroom% up flags a
-  end
-end
+*UNUSED*~
+* Merged into trigger 6908
 ~
 #6910
-Magik Zone 69 - Unlock Down SALIENTIA~
+Magik Zone 69 - Unlock and Open Down SALIENTIA~
 2 d 100
 *salientia*~
-* Magik trigger - Unlocks down exit when player says "SALIENTIA"
-* Original: OX magik "*SALIENTIA*" unlock down
+* Magik trigger - Unlocks then opens down exit when player says "SALIENTIA"
+* Original: OX magik "*SALIENTIA*" unlock down; OX magik "*SALIENTIA*" open down
 if %speech.contains(SALIENTIA)% || %speech.contains(salientia)%
-  * Check if door exists
   if %self.down(room)%
-    * Remove locked flag (keep closed flag)
-    %door% %self.vnum% down flags ab
+    %door% %self.vnum% down flags ao
     %echo% Você escuta um ruído vindo do alçapão.
-    * Unlock the other side if it exists
     eval otherroom %self.down(vnum)%
-    %door% %otherroom% up flags ab
+    %door% %otherroom% up flags ao
+    wait 1s
+    %door% %self.vnum% down flags a
+    %echo% O alçapão se abre.
+    %at% %otherroom% %echo% O alçapão se abre.
+    %door% %otherroom% up flags a
   end
 end
 ~
 #6911
-Magik Zone 69 - Open Down SALIENTIA~
+Magik Zone 69 - Open Down SALIENTIA (merged into 6910)~
 2 d 100
-*salientia*~
-* Magik trigger - Opens down exit when player says "SALIENTIA"
-* Original: OX magik "*SALIENTIA*" open down
-if %speech.contains(SALIENTIA)% || %speech.contains(salientia)%
-  * Check if door exists
-  if %self.down(room)%
-    * Remove closed flag (open the door)
-    %door% %self.vnum% down flags a
-    %echo% O alçapão se abre.
-    * Open the other side if it exists
-    eval otherroom %self.down(vnum)%
-    %at% %otherroom% %echo% O alçapão se abre.
-    %door% %otherroom% up flags a
-  end
-end
+*UNUSED*~
+* Merged into trigger 6910
 ~
 $~

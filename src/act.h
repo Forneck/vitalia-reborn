@@ -310,6 +310,7 @@ void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_
 ACMD(do_title);
 ACMD(do_autotitle);
 ACMD(do_visible);
+ACMD(do_appear);
 ACMD(do_recall);
 ACMD(do_rebegin);
 ACMD(do_elevate);

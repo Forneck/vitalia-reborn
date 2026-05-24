@@ -1031,6 +1031,54 @@ struct mob_genetics {
 };
 
 /**
+ * Big Five (OCEAN) Personality Model Structure
+ * Phase 1: Neuroticism (N) - ACTIVE
+ * Phase 2: Conscientiousness (C) - ACTIVE
+ * Phase 3: Agreeableness (A) and Extraversion (E) - ACTIVE
+ * Phase 4: Openness (O) - Future use
+ *
+ * All trait base values normalized to range [0.0 - 1.0]
+ * - 0.0 = minimum trait expression
+ * - 0.5 = average/neutral
+ * - 1.0 = maximum trait expression
+ *
+ * For A and E the three-component model applies:
+ *   Trait_final = clamp(Trait_base + Trait_builder_modifier/100 + Trait_emotional_modulation, 0, 1)
+ *   - Trait_base: Gaussian-generated at spawn (persistent)
+ *   - Trait_builder_modifier: MEDIT-set integer delta -50..+50 (stored in prototype)
+ *   - Trait_emotional_modulation: runtime-only SEC modulation, |mod| <= 0.10
+ *
+ * NEUROTICISM (N) - Emotional Stability vs. Sensitivity
+ * - Low N (0.0): Emotionally stable, calm, not easily upset
+ * - High N (1.0): Emotionally reactive, anxious, threat-sensitive
+ * - Functions as emotional gain amplifier for aversive emotions only
+ *
+ * AGREEABLENESS (A) - Compassion vs. Antagonism
+ * - Low A (0.0): Hostile, retaliatory, uncooperative
+ * - High A (1.0): Cooperative, forgiving, socially warm
+ *
+ * EXTRAVERSION (E) - Social Engagement vs. Introversion
+ * - Low E (0.0): Solitary, avoids interaction, low social initiative
+ * - High E (1.0): Sociable, initiates contact, high social payoff weighting
+ */
+struct mob_personality {
+    float openness;                     /* (O) Cognitive flexibility - Trait_base, ACTIVE Phase 4 */
+    float conscientiousness;            /* (C) Self-discipline/control - ACTIVE Phase 2 */
+    float extraversion;                 /* (E) Social engagement - Trait_base, ACTIVE Phase 3 */
+    float agreeableness;                /* (A) Compassion/cooperation - Trait_base, ACTIVE Phase 3 */
+    float neuroticism;                  /* (N) Emotional sensitivity - ACTIVE Phase 1 */
+    byte openness_initialized;          /* Flag: 1 if O set (file/random), 0 if uninitialized */
+    byte conscientiousness_initialized; /* Flag: 1 if C set (file/random), 0 if uninitialized */
+    byte agreeableness_initialized;     /* Flag: 1 if A base set (file/random), 0 if uninitialized */
+    byte extraversion_initialized;      /* Flag: 1 if E base set (file/random), 0 if uninitialized */
+    int openness_modifier;              /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int agreeableness_modifier;         /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int extraversion_modifier;          /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int conscientiousness_modifier;     /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+    int neuroticism_modifier;           /* Builder modifier Trait_builder_modifier: -50..+50 (0 = neutral) */
+};
+
+/**
  * Estrutura para um item desejado na wishlist de um mob
  */
 struct mob_wishlist_item {
@@ -1064,9 +1112,10 @@ struct mob_wishlist_item {
  * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
  * - Memories older than 1 hour have minimal influence
  */
-#define EMOTION_MEMORY_SIZE 10
+#define EMOTION_MEMORY_SIZE 20
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
+#define ENTITY_TYPE_GLOBAL 2 /**< Sentinel for context-global MPLP traits (not agent-anchored) */
 
 /* Emotional profiles for mob personality initialization */
 #define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
@@ -1077,6 +1126,51 @@ struct mob_wishlist_item {
 #define EMOTION_PROFILE_CONFIDENT 5  /**< Confident profile - high courage, low fear */
 #define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
 #define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
+#define EMOTION_PROFILE_NUM 8        /**< Total number of emotional profile types */
+
+/* 4D Relational Decision Space dimensions */
+#define DECISION_SPACE_DIMS 4       /**< Number of axes: Valence, Arousal, Dominance, Affiliation */
+#define DECISION_AXIS_VALENCE 0     /**< Positive vs. negative evaluation of current interaction */
+#define DECISION_AXIS_AROUSAL 1     /**< Activation / urgency level */
+#define DECISION_AXIS_DOMINANCE 2   /**< Perceived control / assertiveness bias */
+#define DECISION_AXIS_AFFILIATION 3 /**< Relational orientation toward target */
+
+/* Personal drift bound (±% from profile baseline per axis/emotion weight) */
+#define PERSONAL_DRIFT_MAX_PCT 20 /**< Maximum personal drift: ±20% of profile baseline weight */
+
+/**
+ * 4D Relational Decision State
+ *
+ * Represents the projected emotional state of a mob in the 4D relational space.
+ * Computed per interaction via the Emotional Profile projection matrix.
+ *
+ * Axes:
+ *  - Valence     : positive (+100) vs. negative (-100) evaluation of interaction
+ *  - Arousal     : calm (0) to highly activated (100)
+ *  - Dominance   : perceived control / assertiveness bias (-100 to +100)
+ *  - Affiliation : relational orientation toward target (-100=avoidance, +100=approach)
+ *
+ * Note: Dominance is the subjective projected state (perceived control).
+ *       Coping Potential is the separate objective situational capacity modifier.
+ */
+struct emotion_4d_state {
+    float valence;     /**< Effective valence after contextual modulation (-100 to +100) */
+    float arousal;     /**< Effective arousal after contextual modulation (0 to 100) */
+    float dominance;   /**< Effective dominance: perceived control / assertiveness bias (-100 to +100) */
+    float affiliation; /**< Effective affiliation toward target (-100 to +100) */
+
+    float coping_potential; /**< Objective situational capacity modulator (0 to 100); separate from Dominance */
+
+    /* Raw values before contextual modulation – used for debugging and auditing.
+     * These represent (M_profile + ΔM_personal) * E: the drift-adjusted projection
+     * BEFORE the Contextual Modulation Layer is applied. */
+    float raw_valence;
+    float raw_arousal;
+    float raw_dominance;
+    float raw_affiliation;
+
+    bool valid; /**< TRUE if state has been computed for the current tick */
+};
 
 /* Emotion type constants for hybrid emotion system */
 #define EMOTION_TYPE_FEAR 0
@@ -1115,6 +1209,12 @@ struct mob_wishlist_item {
 #define INTERACT_QUEST_COMPLETE 11
 #define INTERACT_QUEST_FAIL 12
 #define INTERACT_BETRAYAL 13
+#define INTERACT_WITNESSED_OFFENSIVE_MAGIC 14 /**< Witnessed harmful/debuff spell cast by this entity */
+#define INTERACT_WITNESSED_SUPPORT_MAGIC 15   /**< Witnessed healing/buff spell cast by this entity */
+#define INTERACT_ABANDON_ALLY 16   /**< Actor fled combat while group-members remained; witness = saw ally flee */
+#define INTERACT_SACRIFICE_SELF 17 /**< Actor sacrificed itself for group (future: no execution path yet) */
+#define INTERACT_DECEIVE 18        /**< Actor deceived another entity (future: no code trigger yet) */
+#define INTERACT_SOCIAL_NEUTRAL 19 /**< Social episode with mixed/neutral consolidated valence (Peak-End result) */
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
@@ -1123,6 +1223,7 @@ struct emotion_memory {
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
     char social_name[20]; /* Name of the social command if interaction was social (empty string otherwise) */
+    float intensity;      /* Exponentially-decaying importance weight [0.0, 1.0]; 1.0 = fresh */
 
     /* Complete emotion snapshot - track all 20 emotions to see how each interaction affected them */
     /* Basic emotions */
@@ -1156,11 +1257,199 @@ struct emotion_memory {
     sh_int pain_level;        /* Pain at time of interaction (0-100) */
     sh_int horror_level;      /* Horror at time of interaction (0-100) */
     sh_int humiliation_level; /* Humiliation at time of interaction (0-100) */
+
+    /* Moral judgment tracking - for memory-based moral learning */
+    sh_int moral_action_type;      /* Type of moral action (MORAL_ACTION_*) or -1 if none */
+    sh_int moral_was_guilty;       /* 1 if judged guilty, 0 if innocent, -1 if not evaluated */
+    sh_int moral_blameworthiness;  /* Blameworthiness score (0-100) or -1 if not evaluated */
+    sh_int moral_outcome_severity; /* Actual outcome severity (0-100) or -1 if unknown */
+    sh_int moral_regret_level;     /* How much regret after action (0-100) computed from emotion changes */
+};
+
+/**
+ * SEC – Sistema de Emoções Concorrentes
+ * Internal emotional state derived from the 4D Arousal partition.
+ * All values ∈ [0.0, 1.0].  Only sec.c may write these fields.
+ */
+struct sec_state {
+    float fear;         /**< Projected fear intensity from Arousal partition */
+    float anger;        /**< Projected anger intensity from Arousal partition */
+    float happiness;    /**< Projected happiness intensity from Arousal partition */
+    float sadness;      /**< Projected sadness intensity: low valence + low dominance (passive loss) */
+    float helplessness; /**< Smoothed helplessness: (1 − Dominance_normalised) */
+    float disgust;      /**< Persistent disgust trait (mirrors emotion_disgust) */
+};
+
+/**
+ * SEC personality baseline: passive-decay convergence target.
+ * Initialised from the mob's emotional profile.
+ */
+struct sec_baseline {
+    float fear_base;      /**< Resting fear level ∈ [0.0, 1.0] */
+    float anger_base;     /**< Resting anger level ∈ [0.0, 1.0] */
+    float happiness_base; /**< Resting happiness level ∈ [0.0, 1.0] */
+    float sadness_base;   /**< Resting sadness level ∈ [0.0, 1.0] */
+};
+
+/* ── MALP/MPLP persistence levels (RFC-1002) ─────────────────────────────── */
+#define MALP_PERSIST_LOW 0    /**< Low persistence: standard decay rate */
+#define MALP_PERSIST_MEDIUM 1 /**< Medium persistence: moderate decay rate */
+#define MALP_PERSIST_HIGH 2   /**< High persistence: slow decay (traumatic / major events) */
+
+/* MPLP trait types (implicit behavioural modifiers) */
+#define MPLP_TRAIT_AVOIDANCE 0               /**< Approach-avoidance: avoid this cue/agent */
+#define MPLP_TRAIT_APPROACH 1                /**< Approach-avoidance: approach this cue/agent */
+#define MPLP_TRAIT_AROUSAL_BIAS 2            /**< Increase arousal when cue/agent is present */
+#define MPLP_TRAIT_EXHIBITION_RESPONSE 3     /**< Context-global: tendency to enjoy display/confidence behaviour */
+#define MPLP_TRAIT_MODESTY_RESPONSE 4        /**< Context-global: tendency to prefer reserved/modest behaviour */
+#define MPLP_TRAIT_MASCULINITY_RESPONSE 5    /**< Context-global: reaction to masculine-coded socials */
+#define MPLP_TRAIT_FEMININITY_RESPONSE 6     /**< Context-global: reaction to feminine-coded socials */
+#define MPLP_TRAIT_ANDROGYNY_TOLERANCE 7     /**< Context-global: tolerance for mixed/androgynous gender expression */
+#define MPLP_TRAIT_GENDER_NORM_SENSITIVITY 8 /**< Context-global: sensitivity to gender-norm violations */
+
+/* Category 1: Hierarchy / Social Power */
+#define MPLP_TRAIT_DOMINANCE 9   /**< Context-global: tendency to assert dominance or challenge higher-status agents */
+#define MPLP_TRAIT_SUBMISSION 10 /**< Context-global: tendency to yield, obey, or defer in status conflicts */
+#define MPLP_TRAIT_AUTHORITY_RESPONSE 11 /**< Context-global: reaction to authority figures and commands */
+#define MPLP_TRAIT_STATUS_SENSITIVITY                                                                                  \
+    12 /**< Context-global: sensitivity amplifier for social-rank cues (unsigned 0..1) */
+
+/* Category 2: Social Trust System */
+#define MPLP_TRAIT_TRUST_BIAS 13 /**< Context-global: general tendency to trust (+) or distrust (−) agents */
+#define MPLP_TRAIT_SUSPICION_BIAS                                                                                      \
+    14 /**< Context-global: baseline suspicion level toward other agents (unsigned 0..1) */
+#define MPLP_TRAIT_BETRAYAL_SENSITIVITY                                                                                \
+    15 /**< Context-global: sensitivity amplifier for betrayal events (unsigned 0..1) */
+#define MPLP_TRAIT_LOYALTY_EXPECTATION                                                                                 \
+    16 /**< Context-global: strength of expected reciprocal loyalty (unsigned 0..1) */
+
+/* Category 3: Social Norm Sensitivity (EXHIBITION/MODESTY already covered by traits 3–4) */
+#define MPLP_TRAIT_POLITENESS_RESPONSE 17 /**< Context-global: reaction to polite socials (bow, thank, etc.) */
+#define MPLP_TRAIT_RUDENESS_RESPONSE 18   /**< Context-global: reaction to rude or insulting socials */
+
+/* Category 4: Social Identity Bias */
+#define MPLP_TRAIT_INGROUP_BIAS                                                                                        \
+    19 /**< Context-global: preference strength for familiar factions/ingroup (unsigned 0..1) */
+#define MPLP_TRAIT_OUTGROUP_AVERSION                                                                                   \
+    20 /**< Context-global: avoidance tendency toward unfamiliar agents (unsigned 0..1) */
+#define MPLP_TRAIT_NOVEL_AGENT_INTEREST 21 /**< Context-global: curiosity (+) or wariness (−) toward unknown agents */
+
+/* Category 5: Reciprocity System */
+#define MPLP_TRAIT_RECIPROCITY_EXPECTATION                                                                             \
+    22 /**< Context-global: strength of social exchange norms (unsigned 0..1)                                          \
+        */
+#define MPLP_TRAIT_GRATITUDE_RESPONSE                                                                                  \
+    23 /**< Context-global: tendency to feel and express gratitude for received favors */
+#define MPLP_TRAIT_REVENGE_TENDENCY                                                                                    \
+    24 /**< Context-global: strength of retaliatory impulse after harm (unsigned 0..1) */
+#define MPLP_TRAIT_FORGIVENESS_RATE 25 /**< Context-global: rate of forgiveness after harm events (unsigned 0..1) */
+
+/* Category 6: Empathy System */
+#define MPLP_TRAIT_EMPATHY_RESPONSE 26 /**< Context-global: emotional resonance with others (+) or coldness (−) */
+#define MPLP_TRAIT_DISTRESS_AVERSION                                                                                   \
+    27                                /**< Context-global: aversion to witnessing others' suffering (unsigned 0..1)    \
+                                       */
+#define MPLP_TRAIT_COMPASSION_BIAS 28 /**< Context-global: moral hesitation bias when causing harm (unsigned 0..1) */
+
+/** Sentinel anchor for context-global MPLP traits (not tied to any single agent). */
+#define MPLP_GLOBAL_ANCHOR (-1L)
+
+/* MPLP situational context types for context-aware personality modulation.
+ * GLOBAL (0) is the baseline; contexts 1-5 store situational modifiers that
+ * blend with the global value via effective = global + ctx[n].
+ * Context types map to broad interaction categories so that the same trait
+ * (e.g. TRUST_BIAS) can grow in one domain while remaining neutral in another.
+ */
+#define MPLP_CTX_GLOBAL 0 /**< Baseline personality (no situational modifier) */
+#define MPLP_CTX_SOCIAL 1 /**< Social / conversational interactions */
+#define MPLP_CTX_COMBAT 2 /**< Combat, rescue, and physical conflict */
+#define MPLP_CTX_TRADE 3  /**< Trade, theft, and economic exchange */
+#define MPLP_CTX_QUEST 4  /**< Quest, mission, betrayal, and deception events */
+#define MPLP_CTX_MAGIC 5  /**< Witnessed magical effects (offensive or support) */
+#define MPLP_CTX_MAX 6    /**< Total number of context types (array bound) */
+
+/** MALP – Memória Ativa de Longo Prazo (Active Long-Term Memory, RFC-1002) */
+
+/**
+ * Single slot in the MALP index cache.
+ *
+ * The cache maps (agent_id, agent_type) → array index in mob_ai_data.malp[].
+ * Using an index (not a pointer) ensures correctness across malp_grow() realloc
+ * calls, which may relocate the array.  Empty slots are identified by agent_id == 0.
+ */
+struct malp_cache_slot {
+    long agent_id;  /**< 0 = empty slot (sentinel); same type as malp_entry.agent_id */
+    int agent_type; /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int malp_idx;   /**< Index into mob_ai_data.malp[] */
+};
+
+/**
+ * Explicit episodic/semantic memory entry consolidated from high-salience
+ * episodes (S >= θ_cons).  Accessible for dialogue and social reasoning.
+ * Runtime-only (not saved across reboots), same as episodic buffer.
+ */
+struct malp_entry {
+    long agent_id;         /**< Entity ID (GET_IDNUM for players, char_script_id for mobs; 0=unused) */
+    int agent_type;        /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int interaction_type;  /**< INTERACT_* category at consolidation time */
+    int major_event;       /**< 1 = major/traumatic event; drives HIGH persistence */
+    time_t timestamp;      /**< Wall-clock creation time */
+    time_t last_retrieved; /**< Last retrieval (reconsolidation check); 0 = never */
+    time_t last_applied;   /**< Last time MALP/MPLP emotion effects were applied for this actor; 0 = never */
+    float valence;         /**< Emotional valence −1..+1 (negative = aversive) */
+    float first_valence;   /**< First-impression valence: set once on entry creation; never updated
+                                (used by anchoring bias to pull projections toward original reaction) */
+    float arousal;         /**< Arousal at encoding 0..1 */
+    float salience;        /**< Computed salience S ∈ [0,1] at consolidation */
+    float intensity;       /**< Current intensity (power-law decayed from salience) */
+    int rehearsal;         /**< Re-activation / co-occurrence count */
+    int recon_ticks_left;  /**< Reconsolidation window remaining in ticks (0 = closed) */
+    int persistence;       /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
+};
+
+/**
+ * MPLP – Memória Passiva de Longo Prazo (Passive Long-Term Memory, RFC-1002)
+ *
+ * Implicit trait modifier formed by Hebbian co-occurrence: when the same
+ * agent appears rehearsal_threshold times with consistent valence, an MPLP
+ * trait is created or incremented.  Never narrated directly; biases
+ * approach/avoidance decisions and arousal.
+ */
+struct mplp_trait {
+    long anchor_agent_id;    /**< Anchor agent (0 = context-global) */
+    int agent_type;          /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int trait_type;          /**< MPLP_TRAIT_AVOIDANCE / APPROACH / AROUSAL_BIAS */
+    float magnitude;         /**< Current trait strength 0..1 (power-law decayed from base_magnitude) */
+    float base_magnitude;    /**< Encoded strength at last reinforcement; decay reference (never mutated by decay) */
+    float ctx[MPLP_CTX_MAX]; /**< Situational modifiers per MPLP_CTX_* context; ctx[0]=GLOBAL unused (always 0) */
+    float valence;           /**< Running-average valence −1..+1 */
+    int rehearsal_count;     /**< Co-occurrence count (Hebbian accumulator) */
+    int persistence;         /**< MALP_PERSIST_LOW / MEDIUM / HIGH */
+    time_t last_updated;     /**< Wall-clock time of last Hebbian reinforcement (decay origin) */
+};
+
+/**
+ * Cognitive Bias parameters for Shadow Timeline projection distortion.
+ *
+ * These values shape how an NPC distorts projected future events before
+ * moral evaluation — modelling systematic psychological biases found in
+ * human cognition.
+ *
+ * Range: 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological.
+ * Stored per NPC in mob_ai_data.
+ */
+struct cognitive_biases {
+    float confirmation_bias; /**< Favour outcomes matching existing beliefs (MPLP/MALP) */
+    float availability_bias; /**< Inflate recent/intense memory projections */
+    float attribution_bias;  /**< Blame others' behaviour on personality; excuse self */
+    float negativity_bias;   /**< Amplify negative outcomes; dampen positive ones */
+    float anchoring_bias;    /**< Persist first-impression distortion regardless of later evidence */
 };
 
 struct mob_ai_data {
-    struct mob_genetics genetics; /* Contém todos os genes. */
-    room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
+    struct mob_genetics genetics;       /* Contém todos os genes. */
+    struct mob_personality personality; /* Big Five (OCEAN) personality traits - Phase 1: Neuroticism active */
+    room_vnum guard_post;               /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     int quest_posting_frustration_timer; /* Prevents quest posting after fleeing */
     struct mob_wishlist_item *wishlist;  /* Lista de itens desejados */
@@ -1226,8 +1515,9 @@ struct mob_ai_data {
     int mood_timer;   /* Timer for periodic mood updates (updated every few ticks) */
 
     /* Extreme emotional state timers - for temporary affects */
-    int berserk_timer;   /* Berserk rage state timer (extra attack, +damage, -accuracy) */
-    int paralyzed_timer; /* Paralyzed by fear timer */
+    int berserk_timer;    /* Berserk rage state timer (extra attack, +damage, -accuracy) */
+    int paralyzed_timer;  /* Paralyzed by fear timer */
+    int regulation_timer; /* Cooldown between emotional self-regulation behaviors (ticks) */
 
     /* Weather adaptation system - for advanced weather effects */
     int weather_exposure_hours;      /* Hours exposed to current weather type (for adaptation) */
@@ -1246,11 +1536,73 @@ struct mob_ai_data {
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
 
     /* Emotion memory system - tracks recent interactions for persistent relationships */
-    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
-    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of passive memories (received/witnessed) */
+    int memory_index; /* Current position in passive circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
+
+    /* Active emotion memory - records actions performed by this mob (actor perspective) */
+    struct emotion_memory
+        active_memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of active memories (performed actions) */
+    int active_memory_index; /* Current position in active circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 
     /* Shadow Timeline - Cognitive capacity for future simulation (RFC-0001) */
     int cognitive_capacity; /* Available cognitive capacity for projections (0-1000) */
+
+    /* Shadow Timeline - Adaptive Feedback System */
+    int last_predicted_score;    /* Score predicted for chosen action (-100 to 100) */
+    int last_hp_snapshot;        /* HP before action execution */
+    int last_real_score;         /* Last evaluated real outcome (-100 to 100) */
+    bool last_outcome_obvious;   /* Whether the last outcome was obvious/predictable */
+    int recent_prediction_error; /* 0–100 smoothed novelty */
+    int attention_bias;          /* -50 to +50 long-term adaptation */
+    int last_chosen_action_type; /* Type of last Shadow Timeline action (SHADOW_ACTION_* or -1) */
+    int action_repetition_count; /* Consecutive ticks the same action type was chosen (0 = unknown) */
+
+    /* 4D Relational Decision Space - Emotional Profile projection layer */
+    /* personal_drift[axis][emotion]: bounded deviation from profile baseline (±PERSONAL_DRIFT_MAX_PCT%) */
+    float personal_drift[DECISION_SPACE_DIMS][20]; /* [axis 0..3][EMOTION_TYPE_* 0..19] */
+    struct emotion_4d_state last_4d_state;         /* Most recently computed 4D projection */
+
+    /* 4D target hysteresis: persist the idle fallback target across ticks to prevent
+     * oscillation when multiple valid candidates share the same room.
+     * The combat target (FIGHTING) always takes priority and resets these fields. */
+    long last_4d_target_id;  /* Entity ID of the last idle fallback target (0 = none) */
+    int last_4d_target_type; /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+
+    /* Helplessness accumulator - combat futility detection (not an emotion, not player-facing) */
+    float helplessness;         /* 0.0-100.0: accumulated combat ineffectiveness */
+    int combat_damage_dealt;    /* damage dealt this combat round (reset each round) */
+    int combat_damage_received; /* damage received this combat round (reset each round) */
+
+    /* SEC – Sistema de Emoções Concorrentes */
+    struct sec_state sec;         /* Current SEC emotional state (written only by sec.c) */
+    struct sec_baseline sec_base; /* Personality baseline for passive decay */
+
+    /* MALP/MPLP – Long-term emotional memory (RFC-1002) */
+    struct malp_entry *malp; /**< Dynamic array of explicit long-term memory entries */
+    int malp_count;          /**< Number of active MALP entries */
+    struct mplp_trait *mplp; /**< Dynamic array of implicit trait entries */
+    int mplp_count;          /**< Number of active MPLP traits */
+
+    /* MALP index cache — maps (agent_id, agent_type) → malp[] index for O(1) lookups.
+     * Eliminates the O(malp_count) linear scans in consolidator_tick (hot path, runs
+     * 40 times per consolidation) and in the gossip cooldown check.
+     * Uses open-addressing with linear probing; capacity is always a power of 2.
+     * The cache is invalidated (cleared) whenever entries shift (compaction or prune). */
+    struct malp_cache_slot *malp_cache; /**< Open-addressing hash table; NULL until first use */
+    int malp_cache_cap;                 /**< Capacity in slots (power of 2); 0 = not allocated */
+
+    /* Cognitive Bias Module – Shadow Timeline projection distortion parameters */
+    struct cognitive_biases biases; /**< Per-NPC cognitive bias strengths (0.0–1.0+) */
+
+    /* Availability-bias cache – updated by malp_decay_tick(); read O(1) by shadow scoring.
+     * Stores the highest (recency × intensity × arousal_amp) across all MALP entries so
+     * that shadow_score_projections() never needs to scan the MALP array for this value. */
+    float cached_avail_factor; /**< Pre-computed availability heuristic factor [0, 1] */
+
+    /* Gossip rate limiter: timestamp of the last time this mob gossiped (as source).
+     * try_social_gossip() checks this O(1) before the expensive O(malp_count)
+     * topic-selection scan to prevent a single mob from gossiping every tick. */
+    time_t last_gossiped; /**< Wall-clock time of last outgoing gossip event (0 = never) */
 };
 
 /**
@@ -1294,6 +1646,12 @@ struct group_data {
     struct char_data *leader;
     struct list_data *members;
     int group_flags;
+
+    /* Group moral dynamics tracking */
+    int moral_reputation;       /* Group moral reputation (0-100) affects inter-group interactions */
+    int collective_guilt_count; /* Number of collective guilty actions */
+    int collective_good_count;  /* Number of collective moral actions */
+    time_t last_moral_action;   /* Timestamp of last group moral action */
 };
 
 /** The pclean_criteria_data is set up in config.c and used in db.c to determine
@@ -1441,15 +1799,17 @@ struct player_special_data {
     int last_olc_mode;          /**< ? Currently Unused ? */
     char *host;                 /**< Resolved hostname, or ip, for player. */
     int buildwalk_sector;       /**< Default sector type for buildwalk */
+    room_rnum appeared_room;    /**< Room where player used appear; NOWHERE if not appeared. */
 };
 
 /** Special data used by NPCs, not PCs */
 struct mob_special_data {
-    memory_rec *memory; /**< List of PCs to remember */
-    byte attack_type;   /**< The primary attack type (bite, sting, hit, etc.) */
-    byte default_pos;   /**< Default position (standing, sleeping, etc.) */
-    byte damnodice;     /**< The number of dice to roll for damage */
-    byte damsizedice;   /**< The size of each die rolled for damage. */
+    memory_rec *memory;      /**< List of PCs to remember */
+    byte attack_type;        /**< The primary attack type (bite, sting, hit, etc.) */
+    byte default_pos;        /**< Default position (standing, sleeping, etc.) */
+    byte damnodice;          /**< The number of dice to roll for damage */
+    byte damsizedice;        /**< The size of each die rolled for damage. */
+    room_rnum appeared_room; /**< Room where NPC used appear; NOWHERE if not appeared (transient). */
 };
 
 /** An affect structure. */
@@ -1965,6 +2325,7 @@ struct emotion_config_data {
     int decay_rate_multiplier;     /**< Global decay rate multiplier 50-200% (default: 100) */
     int extreme_emotion_threshold; /**< Threshold for extreme emotions that decay faster (default: 80) */
     int extreme_decay_multiplier;  /**< Multiplier for extreme emotion decay 100-300% (default: 150) */
+    int emotion_max_delta;         /**< Maximum per-call change in adjust_emotion() 1-100 (default: 20) */
 
     /* Individual emotion decay rates (base values, 0-10 scale) */
     int decay_rate_fear;        /**< Fear decay rate (default: 2) */
@@ -1976,6 +2337,68 @@ struct emotion_config_data {
     int decay_rate_disgust;     /**< Disgust decay rate (default: 2) */
     int decay_rate_shame;       /**< Shame decay rate - slower (default: 1) */
     int decay_rate_humiliation; /**< Humiliation decay rate - slower (default: 1) */
+    int decay_rate_envy;        /**< Envy decay rate - slower (default: 1) */
+
+    /* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+    /* Neuroticism gain coefficients (β values) - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    int neuroticism_gain_fear;        /**< Fear gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_sadness;     /**< Sadness gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_shame;       /**< Shame gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_humiliation; /**< Humiliation gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_pain;        /**< Pain gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_horror;      /**< Horror gain coefficient β * 100 (default: 40 = 0.40) */
+    int neuroticism_gain_disgust;     /**< Disgust gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_envy;        /**< Envy gain coefficient β * 100 (default: 25 = 0.25) */
+    int neuroticism_gain_anger;       /**< Anger gain coefficient β * 100 (default: 20 = 0.20) */
+    int neuroticism_soft_clamp_k;     /**< Soft saturation constant k (default: 50) */
+
+    /* Big Five (OCEAN) Personality System - Phase 2: Conscientiousness */
+    /* Executive control parameters - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    int conscientiousness_impulse_control; /**< Impulse control strength γ * 100 (default: 100 = 1.0) */
+    int conscientiousness_reaction_delay;  /**< Reaction delay sensitivity β * 100 (default: 100 = 1.0) */
+    int conscientiousness_moral_weight;    /**< Moral amplification factor * 100 (default: 100 = 1.0) */
+    int conscientiousness_debug;           /**< Debug flag: show executive calculations (default: 0 = OFF) */
+
+    /* Big Five (OCEAN) Personality System - Phase 3: Agreeableness (A) and Extraversion (E) */
+    /* SEC emotional modulation coefficients - multiplied by 100 for integer storage */
+    /* Actual float value = stored_value / 100.0 */
+    /* E_mod = k1*happiness - k2*fear  (capped ±0.10) */
+    /* A_mod = k3*happiness - k4*anger (capped ±0.10) */
+    int ocean_ae_k1; /**< E modulation: happiness coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k2; /**< E modulation: fear coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k3; /**< A modulation: happiness coefficient * 100 (default: 10 = 0.10) */
+    int ocean_ae_k4; /**< A modulation: anger coefficient * 100 (default: 10 = 0.10) */
+
+    /* Big Five (OCEAN) Personality System - Phase 3: behavioral scale factors */
+    /* Stored * 10 (actual float = value / 10.0). Range: 0-500. */
+    int ocean_e_social_reward; /**< E social reward gain scale * 10 (default: 100 = 10.0) */
+    int ocean_a_aggr_scale;    /**< A aggression initiation resistance scale * 10 (default: 200 = 20.0) */
+    int ocean_a_group_scale;   /**< A group cooperation bonus scale * 10 (default: 200 = 20.0) */
+
+    /* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
+    /* Shadow Timeline novelty and exploration coefficients */
+    int sec_o_novelty_move_scale;  /**< MOVE score bonus per O unit * 10 (default: 140 = 14.0) */
+    int sec_o_novelty_depth_scale; /**< Novelty score pts per repetition step at O=1 (default: 6) */
+    int sec_o_novelty_bonus_cap;   /**< Hard cap on novelty bonus in pts (default: 30 = 0.3×MAX) */
+    int sec_o_repetition_cap;      /**< Depth at which novelty bonus plateaus (default: 5) */
+    int sec_o_repetition_bonus;    /**< Routine-preference bonus at O=0 (default: 15) */
+    int sec_o_exploration_base;    /**< Max exploration % chance (% × O_final; default: 20) */
+    int sec_o_threat_bias;         /**< O threat-amplification reduction * 100 (default: 40 = 0.40) */
+
+    /* SEC Core tuning parameters */
+    int sec_emotion_alpha; /**< Base α-smoothing rate * 100 (default: 40 = 0.40) */
+    int sec_wta_threshold; /**< Winner-Takes-All ratio * 100 (default: 60 = 0.60) */
+
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    int malp_theta_cons;           /**< Consolidation threshold θ_cons * 100 (default: 65 = 0.65) */
+    int malp_recon_window_ticks;   /**< Reconsolidation window in ticks (default: 60) */
+    int malp_rehearsal_threshold;  /**< Rehearsal count for MPLP trait formation (default: 3) */
+    int malp_limit_per_mob;        /**< Max MALP entries per mob (default: 200) */
+    int malp_decay_halflife_std;   /**< Standard MALP intensity half-life in hours (default: 24) */
+    int malp_decay_halflife_major; /**< Major-event MALP half-life in hours (default: 72) */
+    int mplp_decay_halflife;       /**< MPLP trait half-life in hours (default: 168 = 7 days) */
 };
 
 /** Experimental Features configuration. */
@@ -1990,6 +2413,9 @@ struct experimental_data {
     int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
     int max_mob_posted_quests;     /**< Maximum number of mob-posted autoquests (default: 450) */
     int emotion_alignment_shifts;  /**< Emotions influence alignment over time? (default: NO) */
+    int mob_4d_debug;              /**< Log 4D decision-space raw and effective values for debugging (default: NO) */
+    int mob_gossip_chance;         /**< Probability (%) of mob gossiping per emotion tick (default: 10) */
+    int mob_gossip_cooldown; /**< Seconds between gossip updates for the same listener-target pair (default: 300) */
 };
 
 /**

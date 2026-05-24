@@ -121,7 +121,8 @@ ASPELL(spell_recall)
     if (victim == NULL || IS_NPC(victim))
         return;
 
-    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
+    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL) ||
+        ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NORECALL)) {
         send_to_char(ch, "Uma estranha força não lhe deixa sair daqui.\r\n");
         return;
     }
@@ -216,19 +217,20 @@ ASPELL(spell_summon)
                 FALSE, ch, 0, victim, TO_CHAR);
             return;
         }
-        if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE) && !PLR_FLAGGED(victim, PLR_KILLER)) {
-            send_to_char(victim,
-                         "%s acabou de tentar te invocar para: %s.\r\n"
-                         "%s falhou porquê você está com a proteção ligada.\r\n"
-                         "Digite NOSUMMON para permitir que outros jogadores lhe\r\n"
-                         "convoquem para outros lugares.\r\n",
-                         GET_NAME(ch), world[IN_ROOM(ch)].name, ELEAUpper(ch));
+    }
 
-            send_to_char(ch, "Voce falhou porquê %s está com a protecao ligada.\r\n", GET_NAME(victim));
-            mudlog(BRF, MAX(LVL_IMMORT, MAX(GET_INVIS_LEV(ch), GET_INVIS_LEV(victim))), TRUE,
-                   "%s falhou invocar %s para %s.", GET_NAME(ch), GET_NAME(victim), world[IN_ROOM(ch)].name);
-            return;
-        }
+    if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE) && !PLR_FLAGGED(victim, PLR_KILLER)) {
+        send_to_char(victim,
+                     "%s acabou de tentar te invocar para: %s.\r\n"
+                     "%s falhou porquê você está com a proteção ligada.\r\n"
+                     "Digite NOSUMMON para permitir que outros jogadores lhe\r\n"
+                     "convoquem para outros lugares.\r\n",
+                     GET_NAME(ch), world[IN_ROOM(ch)].name, ELEAUpper(ch));
+
+        send_to_char(ch, "Voce falhou porquê %s está com a protecao ligada.\r\n", GET_NAME(victim));
+        mudlog(BRF, MAX(LVL_IMMORT, MAX(GET_INVIS_LEV(ch), GET_INVIS_LEV(victim))), TRUE,
+               "%s falhou invocar %s para %s.", GET_NAME(ch), GET_NAME(victim), world[IN_ROOM(ch)].name);
+        return;
     }
 
     if (MOB_FLAGGED(victim, MOB_NOSUMMON) || (IS_NPC(victim) && mag_savingthrow(victim, SAVING_SPELL, 0))) {
@@ -979,6 +981,25 @@ ASPELL(spell_control_weather)
                  month_name[expire_time.month]);
 }
 
+ASPELL(spell_disintegrate)
+{
+    if (obj == NULL)
+        return; /* Character target is handled by MAG_DAMAGE special case */
+
+    if (GET_OBJ_TYPE(obj) != ITEM_CORPSE) {
+        act("A magia não tem efeito sobre $p.", FALSE, ch, obj, 0, TO_CHAR);
+        return;
+    }
+
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p se dissolve em um flash de luz cegante!", FALSE, ch, obj, 0, TO_ROOM);
+
+    /* Destroy all items inside the corpse, then the corpse itself */
+    while (obj->contains)
+        extract_obj(obj->contains);
+    extract_obj(obj);
+}
+
 ASPELL(spell_transport_via_plants)
 {
     obj_vnum obj_num = NOTHING;
@@ -1085,6 +1106,13 @@ ASPELL(spell_portal)
         return;
     }
 
+    if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(ch)), ZONE_NOASTRAL) ||
+        ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
+        send_to_char(ch, "Uma estranha força impede a criação do portal.\r\n");
+        extract_obj(portal_obj);
+        return;
+    }
+
     if (MOB_FLAGGED(victim, MOB_NOSUMMON) || (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))) {
         send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
         extract_obj(portal_obj);
@@ -1187,13 +1215,10 @@ ASPELL(spell_fury_air)
         return;
     }
 
-    if (GET_POS(victim) == POS_SITTING) {
-        act("Um vento forte levanta $N.", FALSE, ch, NULL, victim, TO_CHAR);
-        GET_POS(victim) = POS_STANDING;
-        return;
-    }
+    /* F-2.32: sitting/resting targets receive 1.5x damage (3 hp) instead of being stood up */
+    int fury_dam = (GET_POS(victim) < POS_FIGHTING) ? 3 : 2;
 
-    if (damage(ch, victim, 2, SPELL_FURY_OF_AIR) > 0) {
+    if (damage(ch, victim, fury_dam, SPELL_FURY_OF_AIR) > 0) {
         if (GET_LEVEL(victim) < LVL_GOD)
             GET_WAIT_STATE(victim) += 2 * PULSE_VIOLENCE;
         if (IN_ROOM(ch) == IN_ROOM(victim))

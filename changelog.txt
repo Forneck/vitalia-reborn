@@ -2,6 +2,790 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Mar 14 2026] - Vitalia Reborn Development
+  feat: Cognitive Bias Module — Shadow Timeline projection distortion (src/shadow_timeline.c, src/shadow_timeline.h, src/structs.h, src/quest.c)
+    Adds systematic psychological distortions to NPC future-state projections
+    BEFORE moral evaluation, modelling the human-observed pipeline:
+      Perception → MALP/MPLP → Shadow Timeline → Cognitive Bias → Moral → Action
+
+    Four biases implemented (all stored as float 0.0-1.0+ per NPC in ai_data.biases):
+
+    1. Confirmation Bias (confirmation_bias):
+       NPCs favour projected outcomes matching existing MPLP trust/suspicion and
+       MALP episodic valence.  Positive priors boost positive projections; negative
+       priors amplify negative ones.  Produces grudge persistence and loyalty lock-in.
+
+    2. Availability Heuristic (availability_bias):
+       Recent or emotionally intense MALP episodes inflate all projected scores.
+       Recency factor uses 1/(1+age_hours/24) decay; emotional intensity amplifies.
+       Produces trauma loops, fixation, revenge behaviour, and fear persistence.
+
+    3. Fundamental Attribution Error (attribution_bias):
+       Danger from others is attributed to their hostile personality (holding grudges);
+       the NPC's own risky behaviour is excused as situational (self-serving bias).
+       Produces misread intentions, deeper grudges, and self-justification.
+
+    4. Negativity Bias (negativity_bias):
+       Negative projected scores are amplified by (1 + negativity_bias);
+       positive scores are dampened by (1 - negativity_bias * 0.5).  Danger level
+       also receives a proportional boost (20% of danger × bias).
+       Produces harder trust-building
+       and easier trust-loss, persistent hostility, and realistic conflict.
+
+    New struct: cognitive_biases { confirmation, availability, attribution, negativity }
+      Added to mob_ai_data; initialised to COGBIAS_HUMAN_DEFAULT (0.5) in
+      init_mob_ai_data() (quest.c) for all NPCs.
+
+    New public API (shadow_timeline.c):
+      void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj)
+        Applies all four biases in order: availability → confirmation → attribution → negativity.
+        Called from shadow_score_projections() before score_projection_for_entity().
+
+    New constants (shadow_timeline.h):
+      COGBIAS_CONFIRMATION_MAX (20)     — max score delta from confirmation bias
+      COGBIAS_AVAILABILITY_MAX (0.4f)   — max availability multiplier on outcome score
+      COGBIAS_ATTRIBUTION_MAX (15)      — max score delta from attribution bias
+      COGBIAS_NEGATIVITY_MAX (0.2f)     — danger-level amplification scale for negative outcomes
+      COGBIAS_HUMAN_DEFAULT (0.5f)      — default initialization value
+
+    Debug logging: gated by CONFIG_MOB_4D_DEBUG; prefixes COGBIAS-CONF / AVAIL / ATTR / NEG.
+    Help file: HELP COGNITIVE BIAS added (lib/text/help/help.hlp, level 105).
+
+    Invariants preserved:
+      - No crash when bias struct has zero values (all functions guard bias <= 0.0f).
+      - Works with existing MALP/MPLP (uses get_malp_by_agent, mplp_get_effective_trait).
+      - Works with existing moral reasoning (biases applied before moral_evaluate_action_cost).
+      - Works with emotion system (no direct writes to emotion_* fields).
+      - No regression in combat AI (score clamped to OUTCOME_SCORE_MIN/MAX throughout).
+
+  feat: Anchoring Bias — fifth and final cognitive bias; Cognitive Bias Module now complete
+    (src/structs.h, src/malp.c, src/shadow_timeline.c, src/shadow_timeline.h, src/quest.c)
+
+    Anchoring bias models the documented human tendency to anchor on first impressions even
+    when subsequent evidence contradicts the initial assessment (Tversky & Kahneman, 1974).
+    Unlike confirmation bias (favours current belief) or availability (favours recent events),
+    anchoring pulls NPC decisions toward the FIRST recorded interaction valence.
+
+    Storage:
+      malp_entry.first_valence — set ONCE on MALP entry creation, never updated.
+      This is the meta-memory anchor point.  Stored in struct malp_entry (structs.h).
+
+    Formula applied in Shadow Timeline projection scoring:
+      anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × 25
+      where:
+        resistance      = (suspicion_bias + (1 − forgiveness_rate)) / 2  [0..1]
+        intensity_floor = max(0.3, malp_entry.intensity)  (anchors outlast memory decay)
+
+    Application order (per specification: last in pipeline, distorts final score):
+      availability → confirmation → attribution → negativity → ANCHORING
+
+    New field: cognitive_biases.anchoring_bias (float 0.0–1.0+)
+      Initialised to COGBIAS_HUMAN_DEFAULT (0.5) in init_mob_ai_data() (quest.c).
+
+    New constant: COGBIAS_ANCHORING_MAX (25) — largest of all five bias deltas, reflecting
+      anchoring's documented dominance in human belief revision.
+
+    Emergent NPC archetypes enabled:
+      - Grateful ally: first help → positive anchor; still favours actor even after insults
+      - Unforgiving enemy: first attack → remains suspicious even after subsequent aid
+      - Stubborn grudge-holder: high suspicion + low forgiveness = near-permanent anchoring
+      - Naive loyalist: low suspicion + high forgiveness = anchoring fades quickly
+      - Traumatised: major-event first impression → very strong, long-lived anchor
+
+    Debug logging: COGBIAS-ANCH: prefix; shows first_val, resistance, intensity, delta, score.
+
+  feat: Cognitive Bias effects on Gossip — Social transmission distortion (src/malp.c, src/malp.h)
+    Psychological research (Tversky & Kahneman 1973; Baumeister et al. 2001; Ross 1977;
+    Echterhoff & Higgins 2009; Rozin & Royzman 2001) confirms that cognitive biases
+    systematically distort social transmission of information at three stages:
+    topic selection, narration/encoding, and reception.  Biases are now applied inside
+    try_social_gossip() to model these effects.
+
+    Invariants (from design requirement):
+      - Raw MALP/MPLP data is never fabricated or overwritten.
+      - Bias affects weighting, interpretation, and sharing probability only.
+      - Bias acts during gossip selection and narration, not during memory storage.
+      - lambda is always capped at MALP_GOSSIP_WEIGHT_CAP regardless of bias.
+
+    Phase 1 — Topic Selection (source biases):
+      Availability bias: selection score boosted by recency factor (1/(1+age/24h))
+        × MALP_GOSSIP_AVAILABILITY_SELECT_SCALE × intensity.  NPCs gossip more
+        about what just happened to them.
+      Negativity bias: selection score boosted for negative-valence entries by
+        MALP_GOSSIP_NEGATIVITY_SELECT_SCALE.  NPCs talk more about threats.
+      Confirmation bias: entries matching source's general social lean (TRUST_BIAS)
+        get MALP_GOSSIP_CONFIRMATION_SELECT_SCALE bonus.  Stories self-reinforce.
+
+    Phase 2 — Narration / Encoding (source biases):
+      Attribution bias: negative gossip_valence amplified by
+        (1 + attribution_bias × MALP_GOSSIP_ATTRIBUTION_ENC_SCALE).
+        Source frames target as "bad by nature", making stories more extreme.
+      Negativity bias: negative valence further amplified by
+        (1 + negativity_bias × MALP_GOSSIP_NEGATIVITY_ENC_SCALE).
+        Negative emotional intensity is also boosted by 10% × bias.
+
+    Phase 3 — Reception (listener biases):
+      Confirmation bias: lambda_scale boosted by MALP_GOSSIP_CONFIRMATION_REC_SCALE
+        when gossip confirms existing belief; dampened by half that when contradicting.
+      Negativity bias: lambda_scale boosted by MALP_GOSSIP_NEGATIVITY_REC_SCALE for
+        negative incoming gossip.  lambda_scale also applied to gossip_salience for
+        MPLP personality reinforcement.
+
+    New constants (malp.h):
+      MALP_GOSSIP_AVAILABILITY_SELECT_SCALE  (0.30f)
+      MALP_GOSSIP_NEGATIVITY_SELECT_SCALE    (0.20f)
+      MALP_GOSSIP_CONFIRMATION_SELECT_SCALE  (0.15f)
+      MALP_GOSSIP_ATTRIBUTION_ENC_SCALE      (0.25f)
+      MALP_GOSSIP_NEGATIVITY_ENC_SCALE       (0.15f)
+      MALP_GOSSIP_CONFIRMATION_REC_SCALE     (0.40f)
+      MALP_GOSSIP_NEGATIVITY_REC_SCALE       (0.25f)
+
+    time(NULL) now computed once at start of try_social_gossip() and reused
+    for both cooldown check and timestamp assignments.
+
+    Debug logging extended: GOSSIP log now shows raw_valence, enc_valence,
+    and lambda_scale for full bias-chain visibility.
+
+    Help file: COGNITIVE BIAS extended with gossip section (lib/text/help/help.hlp).
+
+
+    Implements indirect knowledge propagation: mobs can now share emotional memories
+    about third entities (gossip), spreading reputation, fear, and affection through
+    social proximity without direct interaction.
+
+    New public API:
+      bool try_social_gossip(source, listener)
+        source (A) gossips to listener (B) about entity C (A's strongest MALP topic).
+        Transfer is weighted by:
+          transfer_weight = trust(B,A) * reputation_factor(A)
+                            * intensity(A,C) * (1 − suspicion(B))
+        where:
+          trust(B,A)           = listener's effective TRUST_BIAS toward source [0,1]
+          reputation_factor(A) = GET_REPUTATION(source) / 100
+          intensity(A,C)       = source's MALP intensity for the topic entity
+          suspicion(B)         = listener's SUSPICION_BIAS [0,1]
+        transfer_weight is capped at MALP_GOSSIP_WEIGHT_CAP (0.35) and short-circuits
+        at MALP_GOSSIP_WEIGHT_MIN (0.05).
+
+    Effects on listener (B) about target (C):
+      - Updates or creates B's MALP entry for C with attenuated valence/intensity.
+        Intensity = source_intensity × MALP_GOSSIP_INTENSITY_SCALE × transfer_weight.
+        New entries use MALP_PERSIST_LOW; existing entries update via lambda blend.
+      - Updates or creates B's agent-anchored MPLP approach/avoidance toward C.
+        Magnitude delta = transfer_weight × 0.10; running-average valence updated.
+      - Reinforces B's context-global MPLP in MPLP_CTX_SOCIAL:
+          Positive gossip → TRUST_BIAS + NOVEL_AGENT_INTEREST (× 0.5)
+          Negative gossip → SUSPICION_BIAS + OUTGROUP_AVERSION (× 0.5)
+
+    Cooldown: MALP_GOSSIP_COOLDOWN_SECS (300 s) per listener–target pair reuses
+    the MALP last_applied field to prevent flood.
+
+    Integration (mobact.c — mob_emotion_activity):
+      Fires at MALP_GOSSIP_CHANCE (10 %) when passive emotion updates run,
+      targeting one awake NPC in the same room.  Protected by MOB_NOTDEADYET
+      safety check after the gossip call.  Gated by CONFIG_MOB_CONTEXTUAL_SOCIALS.
+
+    New constants (malp.h):
+      MALP_GOSSIP_CHANCE (10), MALP_GOSSIP_MIN_INTENSITY (0.20),
+      MALP_GOSSIP_WEIGHT_CAP (0.35), MALP_GOSSIP_WEIGHT_MIN (0.05),
+      MALP_GOSSIP_INTENSITY_SCALE (0.40), MALP_GOSSIP_COOLDOWN_SECS (300),
+      MALP_GOSSIP_VALENCE_BLEND_RATE (0.10)
+
+    Invariants preserved:
+      - No overwrite of base personality (Hebbian increments, not assignment).
+      - No crash if source MALP is missing (early return FALSE).
+      - Works mob↔mob; target C may be a player or a mob.
+      - Values clamped to valid ranges after each transfer step.
+      - Debug output via CONFIG_MOB_4D_DEBUG (GOSSIP: prefix).
+
+[Mar 14 2026] - Vitalia Reborn Development
+  feat: Reputation influences MPLP traits on interaction (src/malp.c, src/malp.h, src/utils.c)
+    Added mplp_get_effective_trait(mob, actor, trait_type, ctx_type) that computes a
+    temporary reputation-biased effective MPLP trait value without permanently modifying
+    the stored trait.  effective_trait = base_trait + reputation_modifier, where
+    rep_norm = (reputation − 50) / 50 and per-trait weights apply to TRUST_BIAS,
+    SUSPICION_BIAS, FORGIVENESS_RATE, REVENGE_TENDENCY, COMPASSION_BIAS,
+    GRATITUDE_RESPONSE, EMPATHY_RESPONSE, OUTGROUP_AVERSION, and BETRAYAL_SENSITIVITY.
+    Applied in apply_malp_emotion_effects() (new context-global trait block) and in
+    update_mob_emotion_from_social() replacing actor-unaware get_mplp_* calls.
+    Controlled by CONFIG_MOB_CONTEXTUAL_SOCIALS; safe for mobs without MPLP.
+    Debug output via CONFIG_MOB_4D_DEBUG (MPLP-REP: prefix).
+    Acceptance: base traits not modified; works for player↔mob and mob↔mob;
+    no crash on missing reputation entry; values clamped to valid range.
+
+[Mar 07 2026] - Vitalia Reborn Development
+  fix: Wire MPLP traits to all non-social INTERACT_ event types (src/utils.c)
+    Before this change MPLP context-global personality traits were only reinforced
+    by social/emote events (INTERACT_SOCIAL_* types 6/7/8/19).  The 14 remaining
+    non-social event types that record emotion memories had no MPLP reinforcement,
+    so personality never evolved from combat, quests, magic, or economic events.
+
+    Added static helper apply_mplp_nonsocial_reinforcement(mob, interact_type,
+    is_major) placed just before update_mob_emotion_attacked().  Called after every
+    apply_malp_emotion_effects() call in each non-social update function.
+
+    Trait-to-event mappings:
+    ─────────────────────────
+    INTERACT_ATTACKED (0) [melee & spell attack]:
+      REVENGE_TENDENCY     ← anger > 50 → +0.35, else +0.20
+      SUBMISSION           ← fear > 50 || courage < 20 → +0.30; pride ≥ 40 → −0.20
+      BETRAYAL_SENSITIVITY ← trust ≥ 40 → +0.35, else +0.15  (salience×0.7)
+      DISTRESS_AVERSION    ← +0.20  (salience×0.5)
+
+    INTERACT_HEALED (1):
+      TRUST_BIAS           ← happiness ≥ 30 → +0.40, else +0.25
+      GRATITUDE_RESPONSE   ← +0.35
+      LOYALTY_EXPECTATION  ← trust ≥ 40 → +0.30, else +0.15  (×0.6)
+      COMPASSION_BIAS      ← +0.20  (×0.5)
+
+    INTERACT_RECEIVED_ITEM (2) [gift, fair trade, valuable]:
+      TRUST_BIAS           ← friendship ≥ 40 → +0.30, else +0.15
+      GRATITUDE_RESPONSE   ← happiness ≥ 30 → +0.30, else +0.15
+      RECIPROCITY_EXPECTATION ← +0.20  (×0.5)
+
+    INTERACT_STOLEN_FROM (3) [also reused for price gouging]:
+      SUSPICION_BIAS       ← +0.40
+      BETRAYAL_SENSITIVITY ← +0.35
+      REVENGE_TENDENCY     ← anger > 30 → +0.35, else +0.20
+      TRUST_BIAS           ← −0.40
+
+    INTERACT_RESCUED (4):
+      TRUST_BIAS           ← trust ≥ 50 → +0.45, else +0.30
+      GRATITUDE_RESPONSE   ← +0.40
+      LOYALTY_EXPECTATION  ← +0.35  (×0.7)
+      COMPASSION_BIAS      ← +0.25  (×0.5)
+
+    INTERACT_ASSISTED (5):
+      TRUST_BIAS           ← trust ≥ 40 → +0.35, else +0.20
+      GRATITUDE_RESPONSE   ← +0.30
+      RECIPROCITY_EXPECTATION ← loyalty > 40 → +0.30, else +0.15  (×0.6)
+      LOYALTY_EXPECTATION  ← +0.20  (×0.5)
+
+    INTERACT_ALLY_DIED (9):
+      DISTRESS_AVERSION    ← +0.40
+      EMPATHY_RESPONSE     ← compassion ≥ 40 || sadness ≥ 30 → +0.35, else +0.15  (×0.7)
+      REVENGE_TENDENCY     ← anger > 30 → +0.35, else +0.20
+      COMPASSION_BIAS      ← +0.25  (×0.5)
+
+    INTERACT_WITNESSED_DEATH (10):
+      DISTRESS_AVERSION    ← +0.30
+      EMPATHY_RESPONSE     ← friendship ≥ 30 → +0.25, else +0.10  (×0.6)
+      COMPASSION_BIAS      ← +0.15  (×0.4)
+
+    INTERACT_QUEST_COMPLETE (11):
+      TRUST_BIAS           ← trust ≥ 40 → +0.40, else +0.25
+      GRATITUDE_RESPONSE   ← +0.30
+      RECIPROCITY_EXPECTATION ← loyalty ≥ 30 → +0.30, else +0.15  (×0.6)
+      LOYALTY_EXPECTATION  ← +0.25  (×0.5)
+
+    INTERACT_QUEST_FAIL (12):
+      TRUST_BIAS           ← anger > 30 → −0.35, else −0.20
+      BETRAYAL_SENSITIVITY ← +0.25
+      SUSPICION_BIAS       ← +0.20  (×0.7)
+
+    INTERACT_BETRAYAL (13):
+      BETRAYAL_SENSITIVITY ← +0.50
+      TRUST_BIAS           ← −0.50
+      SUSPICION_BIAS       ← +0.45
+      REVENGE_TENDENCY     ← anger > 30 → +0.50, else +0.35
+      OUTGROUP_AVERSION    ← +0.35  (×0.6)
+
+    INTERACT_WITNESSED_OFFENSIVE_MAGIC (14):
+      DISTRESS_AVERSION    ← fear > 30 → +0.25, else +0.15
+      SUBMISSION           ← fear > 40 → +0.20; courage ≥ 40 → −0.15; else +0.10  (×0.7)
+      NOVEL_AGENT_INTEREST ← curiosity ≥ 30 → +0.20, else +0.10  (×0.6)
+
+    INTERACT_WITNESSED_SUPPORT_MAGIC (15):
+      TRUST_BIAS           ← +0.35
+      GRATITUDE_RESPONSE   ← +0.30
+      NOVEL_AGENT_INTEREST ← curiosity ≥ 30 → +0.25, else +0.15  (×0.5)
+      COMPASSION_BIAS      ← +0.20  (×0.4)
+
+    INTERACT_ABANDON_ALLY (16):
+      BETRAYAL_SENSITIVITY ← loyalty > 40 → +0.40, else +0.25
+      TRUST_BIAS           ← −0.35
+      SUSPICION_BIAS       ← +0.30  (×0.8)
+      DISTRESS_AVERSION    ← +0.30  (×0.7)
+
+[Mar 07 2026] - Vitalia Reborn Development
+  fix: Wire new MPLP social cognition traits (9–28) to social reinforcement (src/utils.c, src/malp.h)
+    The 20 new MPLP trait dimensions added in the MPLP expansion were defined
+    and had getter functions, but were never reinforced by any social events.
+    This change wires all six categories to the social-category flags already
+    computed in update_mob_emotion_social().
+
+    Added MPLP_STATUS_SENSITIVITY_MULTIPLIER constant to malp.h (analogous to
+    MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER, avoids semantic confusion).
+
+    Trait-to-social mappings added:
+    ─────────────────────────────────
+    Hierarchy / Social Power (9–12):
+      DOMINANCE              ← is_performance | is_violent
+      SUBMISSION             ← is_fearful | is_humiliating
+      AUTHORITY_RESPONSE     ← is_violent | is_performance
+      STATUS_SENSITIVITY     ← is_performance | is_humiliating | is_violent (unsigned amplifier)
+
+    Social Trust System (13–16):
+      TRUST_BIAS             ← is_positive/agreeable (+) | is_negative/disgusting (−)
+      SUSPICION_BIAS         ← is_negative | is_angry_expression | is_disgusting (unsigned)
+      LOYALTY_EXPECTATION    ← is_agreeable | is_positive (unsigned)
+      BETRAYAL_SENSITIVITY   ← is_negative when existing trust >= 40 (unsigned)
+
+    Social Norm Sensitivity (17–18):
+      POLITENESS_RESPONSE    ← is_positive | is_agreeable
+      RUDENESS_RESPONSE      ← is_negative | is_disgusting | is_humiliating | is_angry_expression
+
+    Social Identity Bias (19–21):
+      INGROUP_BIAS           ← is_celebratory | is_agreeable (unsigned)
+      OUTGROUP_AVERSION      ← is_negative when trust < 35 (unsigned)
+      NOVEL_AGENT_INTEREST   ← is_confused | is_silly | is_amused | is_animal | is_exclamation
+
+    Reciprocity System (22–25):
+      GRATITUDE_RESPONSE     ← is_positive | is_food_drink
+      RECIPROCITY_EXPECTATION← is_positive | is_agreeable | is_food_drink | is_playful (unsigned)
+      REVENGE_TENDENCY       ← is_negative | is_violent | is_angry_expression (unsigned)
+      FORGIVENESS_RATE       ← is_agreeable (unsigned)
+
+    Empathy System (26–28):
+      EMPATHY_RESPONSE       ← is_self_directed | is_fearful | is_amused | is_celebratory
+      DISTRESS_AVERSION      ← is_self_directed | is_fearful (unsigned)
+      COMPASSION_BIAS        ← is_fearful (unsigned)
+
+    Each section also applies the accumulated trait value back to the NPC's
+    current emotions following the same pattern used by traits 3–8.
+
+[Mar 07 2026] - Vitalia Reborn Development
+  feat: Expand MPLP Trait System with Social Cognition Biases (src/structs.h, src/malp.h, src/malp.c, src/act.wizard.c)
+    Adds 20 new context-global MPLP trait dimensions covering six social-cognition
+    categories identified in psychological models of behaviour. All existing traits
+    (0–8) are preserved unchanged for full backward compatibility.
+
+    New trait categories and constants
+    ───────────────────────────────────
+    Category 1 – Hierarchy / Social Power:
+      MPLP_TRAIT_DOMINANCE (9)           signed [-1,+1]
+      MPLP_TRAIT_SUBMISSION (10)         signed [-1,+1]
+      MPLP_TRAIT_AUTHORITY_RESPONSE (11) signed [-1,+1]
+      MPLP_TRAIT_STATUS_SENSITIVITY (12) unsigned [0,1]
+
+    Category 2 – Social Trust System:
+      MPLP_TRAIT_TRUST_BIAS (13)           signed [-1,+1]
+      MPLP_TRAIT_SUSPICION_BIAS (14)       unsigned [0,1]
+      MPLP_TRAIT_BETRAYAL_SENSITIVITY (15) unsigned [0,1]
+      MPLP_TRAIT_LOYALTY_EXPECTATION (16)  unsigned [0,1]
+
+    Category 3 – Social Norm Sensitivity:
+      MPLP_TRAIT_POLITENESS_RESPONSE (17) signed [-1,+1]
+      MPLP_TRAIT_RUDENESS_RESPONSE (18)   signed [-1,+1]
+      (EXHIBITION_RESPONSE/MODESTY_RESPONSE already covered by traits 3–4)
+
+    Category 4 – Social Identity Bias:
+      MPLP_TRAIT_INGROUP_BIAS (19)         unsigned [0,1]
+      MPLP_TRAIT_OUTGROUP_AVERSION (20)    unsigned [0,1]
+      MPLP_TRAIT_NOVEL_AGENT_INTEREST (21) signed [-1,+1]
+
+    Category 5 – Reciprocity System:
+      MPLP_TRAIT_RECIPROCITY_EXPECTATION (22) unsigned [0,1]
+      MPLP_TRAIT_GRATITUDE_RESPONSE (23)      signed [-1,+1]
+      MPLP_TRAIT_REVENGE_TENDENCY (24)        unsigned [0,1]
+      MPLP_TRAIT_FORGIVENESS_RATE (25)        unsigned [0,1]
+
+    Category 6 – Empathy System:
+      MPLP_TRAIT_EMPATHY_RESPONSE (26)  signed [-1,+1]
+      MPLP_TRAIT_DISTRESS_AVERSION (27) unsigned [0,1]
+      MPLP_TRAIT_COMPASSION_BIAS (28)   unsigned [0,1]
+
+    Implementation details
+    ──────────────────────
+    - is_unsigned_mplp_trait() helper centralises the signed/unsigned distinction
+      used by get_context_trait(), replacing the previous GENDER_NORM_SENSITIVITY
+      hard-coded special case with a switch covering all unipolar traits.
+    - reinforce_mplp_context_trait() validation updated to accept all 26
+      context-global trait types (traits 3–28).
+    - Getter functions added for each new trait (get_mplp_dominance(), etc.),
+      all delegating to the existing get_context_trait() helper.
+    - trait_names[] in do_stat_malp() extended to display new trait names in
+      MALP/MPLP debug output (stat <mob> malp).
+    - Power-law decay, rehearsal decay, and Hebbian consolidation apply to all
+      new traits automatically through existing loops (no changes required).
+    - Default magnitude is 0.0 for all new traits; NPC behaviour is unaffected
+      until the trait is explicitly reinforced via reinforce_mplp_context_trait().
+
+[Mar 04 2026] - Vitalia Reborn Development
+  feat: MALP/MPLP – Memória Ativa/Passiva de Longo Prazo – RFC-1002 Phase A/B/C (src/malp.c, src/malp.h, src/utils.c, src/structs.h, src/db.c, src/cedit.c, src/config.c, src/config.h, src/utils.h)
+    Implements Active Long-Term Memory (MALP) and Passive/Implicit Long-Term Memory (MPLP)
+    per RFC-1002, covering Phases A (storage + API), B (consolidation + retrieval), and
+    C (reconsolidation + wiring). Phase D (observability/metrics) and advanced features
+    (narrative tags, persistent storage, admin utilities) are deferred to future sprints.
+
+    RFC-1002 compliance status
+    ──────────────────────────
+    FULLY IMPLEMENTED (§5, §7.1–7.6, §8, §9, §11, §12 Phases A–C):
+
+    1. Salience formula (§7.1) — exact RFC weights:
+         S = normalize(0.50*arousal + 0.25*log(1+rehearsal) + 0.25*social_weight)
+             × pow(1 + age_hours, -0.40)
+       Constants: MALP_W_AROUSAL=0.50, MALP_W_REHEARSAL=0.25, MALP_W_SOCIAL=0.25,
+       MALP_AGE_DECAY_EXPONENT=0.40, MALP_SALIENCE_NORM=1.35.
+
+    2. Consolidation criterion (§7.2) — consolidator_tick() evaluates both passive
+       and active episodic buffers. Consolidates when S >= θ_cons (default 0.65,
+       cedit-configurable via CONFIG_MALP_THETA_CONS). High-C mobs get an effective
+       threshold boost: θ_eff = θ_cons + 0.10 × C_final (MALP_C_THETA_BOOST).
+       Events with arousal >= 0.85 are set to HIGH persistence (MALP_HIGH_PERSIST_AROUSAL).
+
+    3. Hebbian trait generation (§7.3) — MPLP trait created/updated when rehearsal
+       count >= CONFIG_MALP_REHEARSAL_THRESHOLD (default 3). Trait magnitude grows
+       proportionally to averaged salience. High Neuroticism extends negative-trait
+       half-life via MALP_N_RUMINATION_SCALE (N=1 → half-life doubles), modelling
+       rumination. MPLP hard cap: MPLP_MAX_PER_MOB=50 traits.
+
+    4. Retrieval probability (§7.4) — get_malp_by_agent() uses a 3-factor weighted
+       cue score replacing the prior single-factor intensity proxy:
+         cue_score = 0.60 * intensity      (MALP_CUE_WEIGHT_INTENSITY)
+                   + 0.25 * arousal_match  (MALP_CUE_WEIGHT_AROUSAL — Bower 1981
+                                            state-dependent recall)
+                   + 0.15 * recency        (MALP_CUE_WEIGHT_RECENCY — within-hour
+                                            accessibility bonus)
+       P_ret = sigmoid(MALP_PRET_K × (cue_score − 0.50)).
+       Clock-skew guard: recency bonus only when hours_since >= 0.0.
+
+    5. Reconsolidation (§7.5) — get_malp_by_agent() opens AND extends the
+       reconsolidation window on every qualifying retrieval (P_ret >= MALP_THETA_REACT):
+       window = max(current_ticks, CONFIG_MALP_RECON_WINDOW_TICKS).
+       retrieve_and_reconsolidate() applies bounded λ update:
+         new_valence = (1 − λ) × old_valence + λ × delta
+       where λ = MALP_RECON_LAMBDA_BASE × salience × rehearsal_factor,
+       clamped to MALP_RECON_MAX_DELTA=0.25 per window to prevent instant inversions.
+
+    6. Decay (§7.6):
+       MALP: intensity = salience × powerlaw(timestamp, hl)  — decay anchored to
+             encoded strength (salience), not to 1.0, so newly consolidated entries
+             do not jump to full intensity.
+       MPLP: magnitude = base_magnitude × powerlaw(last_updated, hl) — base_magnitude
+             is the encoded strength at last Hebbian reinforcement, mirroring the
+             salience/intensity split in MALP. Fixes compounding-decay bug where
+             repeated tick multiplication drove traits to ~0 within 48 h even with a
+             168 h half-life (should retain ~47%). Half-lives configurable via cedit:
+             CONFIG_MALP_DECAY_HALF_LIFE_STD / CONFIG_MALP_DECAY_HALF_LIFE_MAJOR.
+       portability: powerlaw_intensity() uses logf(2.0f) instead of M_LN2 (MSVC safe).
+
+    7. SEC/OCEAN/appraisal integration (§8) — all MALP/MPLP emotion deltas go through
+       adjust_emotion() (no pipeline bypass). MALP-driven fear/anger (negative) and
+       happiness/excitement (positive) are capped at MALP_EMOTION_DELTA_MAX=8 /
+       MALP_EMOTION_DELTA_MIN=2; MPLP approach-avoidance capped at MPLP_EMOTION_DELTA_MAX=5.
+
+    8. Public API (§9):
+         consolidator_tick(mob)                         — called every passive tick
+         get_malp_by_agent(mob, agent_id, agent_type)   — retrieval + recon window
+         get_mplp_approach_modifier(mob, id, type)      — approach/avoidance float
+         get_mplp_arousal_bias(mob, id, type)           — arousal bias float
+         retrieve_and_reconsolidate(mob, id, type,      — bounded valence update
+                                     delta_valence, new_salience)
+         apply_malp_emotion_effects(mob, actor, val)    — single wiring call site
+         malp_free(mob)                                 — free stores on char free
+
+    9. Interaction valence wiring — all 14 update_mob_emotion_*() call sites now pass
+       psychologically-grounded valences to apply_malp_emotion_effects(), including
+       reconsolidation when the MALP entry is in its labile window:
+         gift received       +0.4  (Gouldner 1960 reciprocity)
+         ally died           −0.7  (Bowlby 1969 attachment)
+         assisted in combat  +0.5  (Cohen & Wills 1985 social support)
+         robbed              −0.3..−0.7 scaled (Fehr & Gächter 2002 equity)
+         harmed by spell     −0.6  (Lazarus 1991 threat appraisal)
+         blessed by spell    +0.5  (Lazarus 1991 benefit appraisal)
+         witnessed death     −0.5/−0.3/+0.2 by relationship (TMT; van Dijk 2002)
+         quest completed     +0.6  (Emmons & McCullough 2003 gratitude)
+         quest failed        −0.5  (Bell 1985 disappointment)
+         quest betrayal      −0.9  (Freyd 1994 betrayal trauma)
+         fair trade          +0.3  (Adams 1965 equity theory)
+         received valuable   +0.4  (goal-attainment reward)
+         ally fled           −0.5  (Fitness 2001 betrayal anger)
+         witnessed off. magic −0.3 (Lazarus 1991 indirect threat)
+
+    10. CEDIT configuration keys (all in game.cfg, editable at runtime):
+          malp_theta_cons, malp_recon_window_ticks, malp_rehearsal_threshold,
+          malp_decay_half_life_std, malp_decay_half_life_major.
+
+    DEFERRED to future sprints (Phase D and beyond):
+    - Persistent storage of MALP/MPLP in pfile/worldfile/db (§5, §12 Phase D).
+    - Narrative/context/sensory tags per §6 JSON schema (simplified to agent_id+type).
+    - MALP per-mob cap enforcement at malp_limit_per_mob=200 (§11).
+    - Admin utilities forget_malp() / anonymize_malp() (§15).
+    - Observability metrics and dashboard (§10.3, §16).
+
+[Mar 03 2026] - Vitalia Reborn Development
+  fix: Add Envy to Emotion Decay System (src/structs.h, src/utils.h, src/utils.c, src/db.c, src/cedit.c, src/oasis.h)
+    Envy was missing from the emotion decay loop, causing it to persist indefinitely.
+    Changes:
+    - Added decay_rate_envy field to emotion_config_data struct (default: 1, slow decay like Shame).
+    - Added CONFIG_EMOTION_DECAY_RATE_ENVY macro.
+    - Envy now decays in update_mob_emotion_passive() with global multiplier, extreme threshold
+      logic, and Neuroticism modulation (high-N mobs ruminate on envy longer).
+    - Envy decay rate is configurable via cedit Emotion Decay Rates submenu (option D).
+    - Config file key: emotion_decay_rate_envy.
+
+  feat: Emotional Smoothing and Contextual Evaluation (src/utils.c, src/utils.h, src/structs.h, src/db.c, src/cedit.c)
+    Implements layered improvements to the NPC emotional AI system:
+
+    1. Emotional Smoothing / Tau Rate-Limiting (adjust_emotion)
+       - Per-call delta is now capped to ±CONFIG_EMOTION_MAX_DELTA (default 20) AFTER
+         EI and Neuroticism personality scaling.  Pipeline order: raw_delta → EI scaling
+         → Neuroticism gain → rate limit → soft saturation clamp → lateral inhibition.
+       - Prevents instant spikes such as Fear jumping from 1 → 96 in a single interaction.
+       - Configurable: add "emotion_max_delta = N" (1–100) to game.cfg; editable via cedit.
+
+    2. Appraisal Module (appraise_social_context)
+       - Evaluates intent (VIOLENT / NEGATIVE / INTIMATE / POSITIVE), relationship
+         status (trust + friendship + love), consent flag (trust≥70 + love≥60),
+         observability (witnesses in room), and power_differential (level gap).
+       - Returns a float weight [0.1, 2.0] that scales all emotional deltas before
+         they enter adjust_emotion().  Called from update_mob_emotion_from_social().
+       - OCEAN personality calibration: Neuroticism → more reactive (weight +N*0.20);
+         Agreeableness → reduces hostile reactivity (−A*0.10); Openness → clips
+         extreme amplification (−O*0.20 when weight > 1.5).
+
+    3. Approach–Avoidance Conflict Score (apply_approach_avoidance_conflict)
+       - Computed dynamically: positive_valence = (excitement+happiness+love)/3;
+         negative_valence = (fear+disgust+shame)/3; conflict_score = min(pos, neg).
+       - When conflict_score > 30 the mob's paralyzed_timer is bumped proportionally,
+         modelling the freeze / mixed-response described in the issue.
+       - High Openness provides conflict tolerance (reduces freeze severity).
+       - Not stored as an emotion; evaluated after each social interaction.
+
+    4. Memory Trace Decay (decay_emotion_memories)
+       - Exponential decay: intensity *= e^(-λ * age_hours) per memory slot.
+       - Standard λ = 0.70 (half-life ≈ 1 real hour); major events decay 3× slower
+         (λ_major = 0.23) to model traumatic / salient event persistence.
+       - When intensity < 0.05 the slot is cleared, preventing saturation from
+         historical stacking.
+       - New `intensity` field (float) added to emotion_memory struct (both passive
+         and active buffers); initialised to 1.0 on creation.
+       - Called every emotion tick from update_mob_emotion_passive().
+
+    5. Emotional Regulation Behaviors (perform_emotional_regulation)
+       - Fires when shame ≥ 55, fear ≥ 60, or anger ≥ 65 (base thresholds).
+       - Regulation behaviors: justify (shame), deflect (shame/fear), nervous laugh
+         (fear), reframe (shame), conciliatory gesture (anger) — all emit room-visible
+         strings and reduce the triggering emotion.
+       - Regulation capacity = (Conscientiousness + Agreeableness) / 2 → determines
+         activation probability (10–40%) and emotion reduction magnitude.
+       - regulation_timer field added to mob_ai_data to control cooldown between
+         regulation events (high C/A → shorter cooldown).
+
+    6. Personality Calibration
+       - Conscientiousness and Agreeableness control regulation strength and cooldown.
+       - Neuroticism amplifies emotional reactivity via the appraisal weight.
+       - Openness provides conflict tolerance in the approach–avoidance system.
+       - Existing Neuroticism gain in adjust_emotion() is now correctly applied
+         BEFORE the rate limit, not after.
+
+
+  fix: disintegrate saving-throw damage formula (src/magic.c, src/spells_assign.c, lib/misc/spells)
+    - max_dam was set to 0 for SPELL_DISINTEGRATE; the switch case in mag_damage() already
+      overrides dam, so max_dam=0 did not block damage but caused wrong save-path output.
+    - Old save path: dam /= 2 on 100 → 50, regardless of victim HP.
+    - New save path: handled inside switch via special_save=1 flag to prevent double-apply:
+        saved + victim HP ≥ 100 → MIN(100, MAX(1, GET_HIT(victim)/2))  (half current HP, cap 100)
+        saved + victim HP  < 100 → MIN(100, MAX(1, GET_HIT(victim)/2))  (same formula)
+        not saved + HP < 100    → GET_HIT(victim)  (lethal)
+        not saved + HP ≥ 100    → 100
+    - max_dam corrected from 0 to 100 in spells_assign.c and lib/misc/spells (field 8).
+    - Help text MAGIA-DISINTEGRATE: "total de pontos de vida" → "pontos de vida atuais";
+      save clause moved to its own paragraph for clarity.
+  fix: SPELL_DISINTEGRATE corpse destruction (src/spells.c, src/spells_assign.c, lib/misc/spells)
+    - TAR_OBJ_ROOM | MAG_MANUAL added to targ_flags/mag_flags; ASPELL(spell_disintegrate)
+      extracts and destroys corpse object + all contained objects via obj_from_obj/extract_obj.
+    - lib/misc/spells DB targ_flags field updated accordingly.
+  fix: SPELL_HARM damage formula (src/magic.c)
+    - switch case added: dam = MIN(100, MAX(0, GET_HIT(victim) - dice(1,4)))
+    - No-kill clamp added after save: dam = MIN(dam, GET_HIT(victim) - 1)
+    - Fixes base and minus variants which were computing ~20 damage via the generic formula.
+  fix: voice explosion messages missing (lib/misc/messages)
+    - Spell vnum 89 entry (acerto/falha/morte/deus) inserted in numeric order between 82 and 96.
+    - lib/misc/bugs entry marked resolved (Flags 1 0 0 0).
+  fix: windwall/aura shield reflection from equipped objects (src/fight.c)
+    - get_aura_shield_spell() only scanned ch->affected list; object-granted auras only set
+      the AFF bitvector, not an affect_data entry.
+    - AFF_FLAGGED() fallback added for SPELL_STONESKIN, SPELL_FIRESHIELD, SPELL_WINDWALL,
+      SPELL_MIRROR_IMAGE after the affected-list scan fails.
+    - lib/misc/bugs entry (bug #91) marked resolved.
+  fix: transport via plants not practicable for CLASS_MAGIC_USER (src/spells_assign.c, lib/misc/spells)
+    - CLASS_MAGIC_USER level-5 assignment added to the spell_transport_via_plants init block.
+    - lib/misc/spells DB assign row added for mage class.
+    - lib/misc/bugs entries for F-2.15 and F-2.41 marked resolved.
+  fix: polearms skill not assigned to any class (lib/misc/spells)
+    - DB already contained CLASS_WARRIOR level-40 assignment; lib/misc/bugs marked resolved (F-2.21).
+  fix: AID via voice cast (lib/misc/spells, src/spell_parser.c)
+    - syls[] entry {"aid","auxilium"} (8 chars) passes the ≥5-char voice-cast guard; confirmed working.
+    - lib/misc/bugs F-2.36 marked resolved.
+  fix: O Grito da Morte bard song damage (src/spells_assign.c, lib/misc/spells)
+    - Song deals (9d9)+20 damage as designed; player expected insta-kill which is not the design.
+    - lib/misc/bugs F-2.37 marked resolved.
+  confirmed: F-1 legacy bugs all resolved (lib/misc/bugs, md-docs/todo_audit.md)
+    - All 10 F-1 entries marked Flags 1 0 0 0 in lib/misc/bugs:
+        away vazado         — colour-bleed in away status (Cansian)
+        stoneskin           — infinite stoneskin overflow (Laguna)
+        Paralyze + Wimp     — paralysed mobs could still flee (Cansian)
+        fly                 — fly command not lifting off (Cansian)
+        mensagem de ress    — gender/colour-bleed in resurrection message (Anyte)
+        remort e transcender— combat allowed during transcendence state (Laguna)
+        habilidades de remorts — wrong skills after remort port (Astus/Yazid)
+        pocao de Cura       — potion casting invigorate instead of cure (Roscoe)
+        word of recall      — sending to Puff's room instead of recall room (Anyte)
+        sem cor após título colorido — colour lost after coloured title (Yazid)
+    - md-docs/todo_audit.md F-1 section retitled "Confirmed Fixed"; item 12 marked complete.
+@
+[Mar 01 2026] - Vitalia Reborn Development
+  config: Phase 3 A/E behavioral scale factors made cedit-configurable (cedit.c, db.c, structs.h, utils.h, oasis.h, config.c, config.h, mobact.c, sec.h)
+    - Three Phase 3 compile-time constants promoted to runtime CEDIT parameters:
+        SEC_E_SOCIAL_REWARD_SCALE=10.0f  →  CONFIG_OCEAN_E_SOCIAL_REWARD (stored *10, default 100)
+        SEC_A_AGGR_SCALE=20.0f          →  CONFIG_OCEAN_A_AGGR_SCALE    (stored *10, default 200)
+        SEC_A_GROUP_SCALE=20.0f         →  CONFIG_OCEAN_A_GROUP_SCALE   (stored *10, default 200)
+    - Storage convention: int * 10, matching existing sec_o_novelty_move_scale pattern; range 0-500
+    - New struct fields in emotion_config_data (structs.h): ocean_e_social_reward, ocean_a_aggr_scale,
+      ocean_a_group_scale
+    - New CONFIG macros (utils.h): CONFIG_OCEAN_E_SOCIAL_REWARD, CONFIG_OCEAN_A_AGGR_SCALE,
+      CONFIG_OCEAN_A_GROUP_SCALE
+    - New extern declarations (config.h) and default variable definitions (config.c)
+    - New CEDIT mode constants (oasis.h): CEDIT_OCEAN_E_SOCIAL_REWARD=200,
+      CEDIT_OCEAN_A_AGGR_SCALE=201, CEDIT_OCEAN_A_GROUP_SCALE=202
+    - Full config pipeline in db.c and cedit.c: load_default_config() assignments,
+      load_config() tag parsing (case 'o': ocean_e_social_reward, ocean_a_aggr_scale,
+      ocean_a_group_scale), cedit_setup_internally(), cedit_save_internally(),
+      save_config() disk fprintf, preset reset
+    - Phase 3 A/E cedit submenu (cedit_disp_bigfive_ocean_ae_submenu) extended with
+      menu items 5/6/7; navigation switch and input-parse cases added accordingly
+    - mobact.c: mob_contextual_social(), mobile_activity(), mob_handle_grouping() updated
+      to use CONFIG_OCEAN_* / 10.0f replacing the SEC_* hardcoded compile-time constants
+    - sec.h: SEC_E_SOCIAL_REWARD_SCALE, SEC_A_AGGR_SCALE, SEC_A_GROUP_SCALE comments
+      updated to document them as compile-time defaults; runtime values come from cedit
+@
+[Feb 28 2026] - Vitalia Reborn Development
+  feature: Big Five (OCEAN) Personality System - Phase 2: Conscientiousness (initial, utils.c)
+    - Implemented Conscientiousness (C) as inhibitory control layer for mobs
+    - Conscientiousness reduces impulsive action probability: base * (1 - γC)
+    - Reaction delay scaling under arousal: base * (1 + βC * arousal)
+    - Moral weight amplification: stronger adherence to moral evaluation for high-C mobs
+    - All γ/β/factor parameters configurable at runtime via CEDIT without recompilation
+    - Debug logging controlled by CONFIG_CONSCIENTIOUSNESS_DEBUG flag
+    - stat mob extended to display Conscientiousness (C) value alongside Neuroticism (N)
+    - Initialized from personality struct (same genetic/drift system as Neuroticism)
+    - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
+@
+[Jan-Feb 2026] - Vitalia Reborn Development
+  fix: ALLY_DIED vs UNRELATED_DIED differentiation (utils.c, fight.c, act.movement.c)
+    - mob_mourn_death() used global emotion levels (friendship/love/loyalty) to determine
+      is_close_relationship, causing any friendly mob to record INTERACT_ALLY_DIED for
+      strangers and emit "era tudo para mim" lines
+    - Added static mob_has_positive_memory_of() helper (utils.c): scans emotion memory
+      for positive interaction types with the specific entity (INTERACT_HEALED,
+      INTERACT_RECEIVED_ITEM, INTERACT_RESCUED, INTERACT_ASSISTED,
+      INTERACT_SOCIAL_POSITIVE)
+    - is_close_relationship is now TRUE only for same-group members or mobs with recorded
+      positive memories of the deceased
+    - update_mob_emotion_ally_died() is only called for true allies; non-ally witnesses
+      receive mild fear/horror (rand 3-8 / 2-6) instead
+    - Removed duplicate update_mob_emotion_ally_died() calls in fight.c and act.movement.c
+      that double-counted the ally emotion update for group members already handled inside
+      mob_mourn_death()
+  fix: Duplicate follow message in SHADOW_ACTION_FOLLOW (mobact.c)
+    - SHADOW_ACTION_FOLLOW manually sent "comeca a seguir" act() messages before calling
+      add_follower(), which already sends those same messages
+    - Removed redundant act() calls and the dead stop_follower() guard (unreachable: outer
+      !ch->master check guarantees master is NULL there)
+  fix: Emotion memory buffer stat display (act.wizard.c)
+    - stat mob "Emotion Memory" header hardcoded "10" as max slots; changed to
+      EMOTION_MEMORY_SIZE (20)
+    - interaction_names[] array only covered types 0-9; extended to cover all 16 defined
+      INTERACT_* constants (0-15), including INTERACT_WITNESSED_DEATH (10),
+      INTERACT_QUEST_COMPLETE (11), INTERACT_QUEST_FAIL (12), INTERACT_BETRAYAL (13),
+      INTERACT_WITNESSED_OFFENSIVE_MAGIC (14), INTERACT_WITNESSED_SUPPORT_MAGIC (15)
+    - Bounds check updated from <= 9 to <= 15
+  feature: OCEAN Openness (O) - cognitive flexibility depth model (shadow_timeline.c)
+    - Extended OCEAN Openness with depth-aware novelty model to prevent oscillation in
+      high-O mobs: bonus = min(O * depth * 6, 30) where depth = consecutive repetitions
+    - No pressure at depth=0; gentle at depth=1 (+6 pts); hard cap at depth=5 (+30 pts)
+    - High-O mobs need sustained repetition before novelty pressure outweighs survival
+      utility, eliminating "ADHD flip-flop" while preserving behavioral variety
+    - Added action_repetition_count to mob_ai_data: incremented each tick the same action
+      type is chosen, reset to 1 on type change
+    - Repetition dampening: low-O mobs gain +(1-O)*15 pts for same-type repetition
+    - Exploration probability gate in shadow_select_best_action(): with probability
+      (O*20)% a random non-negative sub-dominant action is selected
+    - Ambiguity tolerance in prediction-error feedback: threat amplification scales with
+      (1 - 0.4*O), range 18-30%
+    - All O mechanisms act at decision/interpretation layer only; no emotional gain,
+      decay, or SEC partition is affected
+  feature: OCEAN Openness (O) - initial implementation (sec.c, shadow_timeline.c)
+    - O_base generated via Gaussian distribution (mu=0.5, sigma=0.15) at spawn; replaces
+      the hardcoded 0.5f placeholder
+    - O_builder applied as delta (never replaces base); +/-50 range
+    - O_mod = 0 by design: Openness must NEVER derive from SEC emotional state to avoid
+      SEC <-> utility feedback loops
+    - O_final influences Shadow Timeline MOVE novelty weighting:
+      score += (O_final - 0.5) * 14.0 (range -7 to +7 pts on MOVE)
+    - High-O mobs explore more freely; low-O mobs prefer familiar territory
+    - Added OpennessModifier builder field with save/load support
+    - Stat command now shows O base/builder/sec_mod/final breakdown
+  feature: OCEAN Neuroticism (N) - SEC layer integration (sec.c)
+    - N amplifies negative emotion gain via sec_get_neuroticism_final(): existing
+      apply_neuroticism_gain() pipeline now uses N_final instead of raw base
+    - N adds decay resistance to fear/anger: high-N mobs ruminate longer
+      (fear_decay *= 1.2 - 0.6*N, anger_decay *= 1.2 - 0.5*N; clamped to prevent
+      sign inversion or zeroing of decay)
+    - N_final = N_base + builder_modifier/100 + N_mod (capped +/-0.05)
+      N_mod = clamp(0.05 * (sec.fear + sec.anger), -0.05, +0.05) -- prevents recursive
+      amplification loops (fear escalates N, N amplifies fear)
+    - Added NeuroticismModifier builder field with save/load support
+    - Stat command now shows N base/builder/sec_mod/final breakdown
+  feature: OCEAN Conscientiousness (C) - SEC layer extension (sec.c, shadow_timeline.c)
+    - C regulates SEC alpha smoothing: high-C mobs resist sudden emotional spikes
+      (alpha_eff = alpha_base * (1.2 - 0.5*C), clamped [0.05, 0.95])
+    - C adds emotional persistence: high-C mobs hold dominant emotional states longer
+      (decay *= 1.2 - 0.6*C applied to fear/anger/happiness)
+    - C adds decision consistency bias in Shadow Timeline: score bonus for actions
+      matching the prior commitment (0 to +12 based on C_final)
+    - C_final = C_base + builder_modifier/100 + sec_mod (capped +/-0.05)
+    - Added ConscientiousnessModifier builder field with save/load support
+    - Stat command now shows C base/builder/sec_mod/final breakdown
+  feature: OCEAN Agreeableness (A) and Extraversion (E) (sec.c)
+    - Agreeableness damps anger gain when attacked: high-A mobs absorb conflict without
+      escalating (Anger_gain *= 1.2 - A)
+    - Agreeableness accelerates anger decay (forgiveness): high-A mobs release anger
+      faster toward baseline
+    - Extraversion modulates social action probability: high-E mobs interact more
+      frequently; low-E mobs are more reserved
+    - Traits never inject emotional values; they only adjust gain/decay rates, preserving
+      SEC energy conservation
+  feature: SEC energy partitioning (sec.c, sec.h)
+    - Fixed emotional state leakage and implemented SEC energy partitioning
+    - SEC (Competing Emotions System) now normalises fear, anger, and happiness so that
+      their sum never exceeds the 4D Arousal value
+    - Winner-Takes-All (WTA) filter added to social-action selector: prevents
+      contradictory behaviours (e.g., biting and praising in the same tick) by requiring
+      any chosen social category to carry at least 60% of the dominant SEC emotional weight
+@
+[Feb 17 2026] - Vitalia Reborn Development
+  feature: Big Five (OCEAN) Personality System - Phase 1: Neuroticism
+    - Implemented structural personality layer for mobs using Big Five model
+    - Phase 1 introduces Neuroticism (N) as emotional gain amplifier
+    - Neuroticism amplifies negative emotions only (fear, sadness, shame, horror, pain, etc.)
+    - Positive emotions (happiness, pride, friendship, etc.) remain unaffected
+    - Different gain coefficients (β) for different emotion types:
+      * β=0.4 for primary threat emotions (fear, sadness, shame, horror, pain, humiliation)
+      * β=0.25 for secondary aversive emotions (disgust, envy)
+      * β=0.2 for arousal-based negative emotions (anger)
+    - Soft saturation clamp prevents hard 100 cap while preserving gradient:
+      * Linear pass-through for values 0-80
+      * Smooth compression above 80, asymptotically approaching 100
+    - Neuroticism initialized from genetics: N = 0.7*(1-brave/100) + 0.3*low_EI_factor
+    - Integration through existing adjust_emotion() pipeline (EI → N gain → soft clamp)
+    - All other OCEAN traits (O, C, E, A) reserved for future phases
+    - Zero performance impact, stable runtime behavior
+    - See md-docs/BIG_FIVE_PERSONALITY_SYSTEM.md for complete documentation
+    - Foundation for future personality phases: Conscientiousness, Extraversion, Agreeableness, Openness
+@
 [Dec 10 2024] - Vitalia Reborn Development
   feature: Parnassus Zone Integration (Zone 211)
     - Translated Parnassus Tarot zone from English to Portuguese

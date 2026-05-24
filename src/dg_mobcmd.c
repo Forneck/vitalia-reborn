@@ -130,6 +130,36 @@ ACMD(do_mkill)
     return;
 }
 
+/* Makes the mobile locally visible to all characters in the same room without
+ * removing AFF_INVISIBLE.  Characters in other rooms still see the mob as
+ * invisible.  Visibility ends automatically when the mob leaves the room or
+ * enters combat (appear() is called by the combat system). */
+ACMD(do_mappear)
+{
+    if (!MOB_OR_IMPL(ch)) {
+        send_to_char(ch, "%s", CONFIG_HUH);
+        return;
+    }
+
+    /* Prevent player exploitation: a charmed mob controlled by a player
+     * should not be able to use privileged mob-script commands. */
+    if (AFF_FLAGGED(ch, AFF_CHARM))
+        return;
+
+    if (!AFF_FLAGGED(ch, AFF_INVISIBLE)) {
+        mob_log(ch, "mappear: mob is not invisible");
+        return;
+    }
+
+    if (ch->mob_specials.appeared_room != NOWHERE) {
+        mob_log(ch, "mappear: mob already appeared in this room");
+        return;
+    }
+
+    ch->mob_specials.appeared_room = IN_ROOM(ch);
+    act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
+}
+
 /* Lets the mobile destroy an object in its inventory it can also destroy a
  * worn object and it can destroy items using all.xxxxx or just plain all of
  * them. */
@@ -1080,7 +1110,6 @@ ACMD(do_mfollow)
 {
     char buf[MAX_INPUT_LENGTH];
     struct char_data *leader;
-    struct follow_type *j, *k;
 
     if (!MOB_OR_IMPL(ch)) {
         send_to_char(ch, "%s", CONFIG_HUH);
@@ -1114,21 +1143,8 @@ ACMD(do_mfollow)
         return;
 
     /* stop following someone else first */
-    if (ch->master) {
-        if (ch->master->followers->follower == ch) { /* Head of follower-list? */
-            k = ch->master->followers;
-            ch->master->followers = k->next;
-            free(k);
-        } else { /* locate follower who is not head of list */
-            for (k = ch->master->followers; k->next->follower != ch; k = k->next)
-                ;
-
-            j = k->next;
-            k->next = j->next;
-            free(j);
-        }
-        ch->master = NULL;
-    }
+    if (ch->master)
+        stop_follower(ch);
 
     if (ch == leader)
         return;
@@ -1138,13 +1154,7 @@ ACMD(do_mfollow)
         return;
     }
 
-    ch->master = leader;
-
-    CREATE(k, struct follow_type, 1);
-
-    k->follower = ch;
-    k->next = leader->followers;
-    leader->followers = k;
+    add_follower(ch, leader);
 }
 
 /* Prints the message to everyone in the range of numbers. Thanks to Jamie

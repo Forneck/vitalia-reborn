@@ -254,6 +254,9 @@ int free_mobile(struct char_data *mob)
         free_mobile_strings(mob);
         /* free script proto list */
         free_proto_script(mob, MOB_TRIGGER);
+        /* free ai_data for new mobiles */
+        if (mob->ai_data)
+            free(mob->ai_data);
     } else { /* Prototyped mobile. */
         if (mob->player.name && mob->player.name != mob_proto[i].player.name)
             free(mob->player.name);
@@ -268,6 +271,9 @@ int free_mobile(struct char_data *mob)
         /* free script proto list if it's not the prototype */
         if (mob->proto_script && mob->proto_script != mob_proto[i].proto_script)
             free_proto_script(mob, MOB_TRIGGER);
+        /* free ai_data if it's not the prototype (e.g., deep-copied in OLC) */
+        if (mob->ai_data && mob->ai_data != mob_proto[i].ai_data)
+            free(mob->ai_data);
     }
     while (mob->affected)
         affect_remove(mob, mob->affected);
@@ -388,6 +394,51 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             fprintf(fd, "GenEmotionalIQ: %d\n", GET_GENEMOTIONAL_IQ(mob));
         if (mob->ai_data && mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL)
             fprintf(fd, "EmotionProfile: %d\n", mob->ai_data->emotional_profile);
+
+        /* Big Five Phase 4: Openness - save base if initialized, and modifier if non-zero.
+         * Same pattern as C/A/E: uninitialized flag means Gaussian generation at spawn. */
+        if (mob->ai_data->personality.openness_initialized) {
+            int o_value = (int)(mob->ai_data->personality.openness * 100.0f);
+            fprintf(fd, "Openness: %d\n", o_value);
+        }
+        if (mob->ai_data->personality.openness_modifier != 0)
+            fprintf(fd, "OpennessModifier: %d\n", mob->ai_data->personality.openness_modifier);
+
+        /* Big Five Phase 2: Conscientiousness - Only save if explicitly initialized.
+         * Uninitialized mobs (flag=0) must NOT write "Conscientiousness: 0" to disk;
+         * doing so would cause db.c to mark them as initialized=1 on next load,
+         * permanently preventing the Gaussian random generation in quest.c. */
+        if (mob->ai_data->personality.conscientiousness_initialized) {
+            int c_value = (int)(mob->ai_data->personality.conscientiousness * 100.0f);
+            fprintf(fd, "Conscientiousness: %d\n", c_value);
+        }
+        if (mob->ai_data->personality.conscientiousness_modifier != 0)
+            fprintf(fd, "ConscientiousnessModifier: %d\n", mob->ai_data->personality.conscientiousness_modifier);
+
+        /* Big Five Phase 3: Agreeableness - save base if initialized, and modifier if non-zero.
+         * Uninitialized base (flag=0) is not written; Gaussian generation occurs at spawn.
+         * Save the value unconditionally when initialized (Gaussian uses min=1, so base >= 0.01
+         * in practice, but we follow the same pattern as Conscientiousness for correctness). */
+        if (mob->ai_data->personality.agreeableness_initialized) {
+            int a_value = (int)(mob->ai_data->personality.agreeableness * 100.0f);
+            fprintf(fd, "Agreeableness: %d\n", a_value);
+        }
+        if (mob->ai_data->personality.agreeableness_modifier != 0)
+            fprintf(fd, "AgreeablenessModifier: %d\n", mob->ai_data->personality.agreeableness_modifier);
+
+        /* Big Five Phase 3: Extraversion - save base if initialized, and modifier if non-zero. */
+        if (mob->ai_data->personality.extraversion_initialized) {
+            int e_value = (int)(mob->ai_data->personality.extraversion * 100.0f);
+            fprintf(fd, "Extraversion: %d\n", e_value);
+        }
+        if (mob->ai_data->personality.extraversion_modifier != 0)
+            fprintf(fd, "ExtraversionModifier: %d\n", mob->ai_data->personality.extraversion_modifier);
+
+        /* Big Five Phase 1: Neuroticism - only save builder modifier if non-zero.
+         * N_base is derived from genetics at spawn; it is not stored in mob files.
+         * The modifier lets builders adjust per-archetype volatility. */
+        if (mob->ai_data->personality.neuroticism_modifier != 0)
+            fprintf(fd, "NeuroticismModifier: %d\n", mob->ai_data->personality.neuroticism_modifier);
     }
 
     fputs("E\n", fd);

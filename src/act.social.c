@@ -42,6 +42,20 @@ ACMD(do_action)
     if (!argument || !*argument) {
         send_to_char(ch, "%s\r\n", action->char_no_arg);
         act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
+
+        /* Witness mechanism for untargeted socials (e.g. "Venus smiles happily").
+         * AWARE/SENTINEL NPCs in the room observe the actor's emotional expression.
+         * Only witnesses that can actually see the actor perceive the social. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || MOB_FLAGGED(witness, MOB_NOTDEADYET) ||
+                    !CAN_SEE(witness, ch))
+                    continue;
+                update_mob_emotion_witnessed_social(witness, ch, NULL, action->command);
+            }
+        }
         return;
     }
 
@@ -55,7 +69,7 @@ ACMD(do_action)
     if (!action->char_found)
         *arg = '\0';
 
-    if (action->char_found && argument)
+    if (action->char_found)
         one_argument(argument, arg);
     else
         *arg = '\0';
@@ -101,9 +115,39 @@ ACMD(do_action)
             act(action->vict_found, action->hide, ch, 0, vict, TO_VICT);
         }
 
-        /* Update mob emotions when player performs social on them (experimental feature) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(vict) && !IS_NPC(ch) && vict->ai_data) {
+        /* Update mob emotions when a social is performed on them (player or mob actor) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(vict) && vict->ai_data) {
             update_mob_emotion_from_social(vict, ch, action->command);
+        }
+
+        /* Active memory: record in the actor's memory when a mob performs a social on a player.
+         * When the victim is also a mob, update_mob_emotion_from_social() handles this already.
+         * We only need to cover the NPC-actor -> player-victim path here. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data && !IS_NPC(vict)) {
+            int social_major = 0;
+            int social_type = classify_social_interact_type(action->command, &social_major);
+            add_active_emotion_memory(ch, vict, social_type, social_major, action->command);
+        }
+
+        /* Bidirectional feedback: actor's own emotions change after performing a social.
+         * Covers both NPC->mob and NPC->player cases. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            update_mob_actor_emotion_from_social(ch, vict, action->command);
+        }
+
+        /* Witness Mechanism: broadcast social event to AWARE/SENTINEL NPCs in the room.
+         * Triggers for any actor (player or mob) performing a targeted social so that
+         * observer NPCs can process the event through their SEC Tetrad appraisal.
+         * Only witnesses that can see both the actor and victim perceive the social. */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == vict ||
+                    MOB_FLAGGED(witness, MOB_NOTDEADYET) || !CAN_SEE(witness, ch) || !CAN_SEE(witness, vict))
+                    continue;
+                update_mob_emotion_witnessed_social(witness, ch, vict, action->command);
+            }
         }
     }
 }

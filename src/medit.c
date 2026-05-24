@@ -197,11 +197,22 @@ static void medit_setup_new(struct descriptor_data *d)
 void medit_setup_existing(struct descriptor_data *d, int rmob_num)
 {
     struct char_data *mob;
+    struct mob_ai_data *original_ai;
 
     /* Allocate a scratch mobile structure. */
     CREATE(mob, struct char_data, 1);
 
     copy_mobile(mob, mob_proto + rmob_num);
+
+    /* Deep copy ai_data to prevent OLC edits from affecting the prototype.
+     * copy_mobile does a shallow copy (*to = *from), so ai_data pointer
+     * is shared between the OLC copy and the prototype. We need a separate
+     * copy for editing. */
+    if (mob->ai_data) {
+        original_ai = mob->ai_data;
+        CREATE(mob->ai_data, struct mob_ai_data, 1);
+        *mob->ai_data = *original_ai;
+    }
 
     OLC_MOB(d) = mob;
     OLC_ITEM_TYPE(d) = MOB_TRIGGER;
@@ -456,38 +467,44 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
         init_mob_ai_data(mob);
     }
 
-    write_to_output(d,
-                    "-- Genetics Menu for Mob [%s%d%s] --\r\n"
-                    "%s1%s) Wimpy Tendency         : %s%d%s\r\n"
-                    "%s2%s) Loot Tendency          : %s%d%s\r\n"
-                    "%s3%s) Equip Tendency         : %s%d%s\r\n"
-                    "%s4%s) Roam Tendency          : %s%d%s\r\n"
-                    "%s5%s) Brave Prevalence       : %s%d%s\r\n"
-                    "%s6%s) Group Tendency         : %s%d%s\r\n"
-                    "%s7%s) Use Tendency           : %s%d%s\r\n"
-                    "%s8%s) Trade Tendency         : %s%d%s\r\n"
-                    "%s9%s) Quest Tendency         : %s%d%s\r\n"
-                    "%sA%s) Adventurer Tendency    : %s%d%s\r\n"
-                    "%sB%s) Follow Tendency        : %s%d%s\r\n"
-                    "%sC%s) Healing Tendency       : %s%d%s\r\n"
-                    "%sD%s) Emotional Intelligence : %s%d%s\r\n"
-                    "%sE%s) Emotion Profile        : %s%s%s\r\n"
-                    "%sQ%s) Return to main menu\r\n"
-                    "Enter choice : ",
+    write_to_output(
+        d,
+        "-- Genetics Menu for Mob [%s%d%s] --\r\n"
+        "%s1%s) Wimpy Tendency         : %s%d%s\r\n"
+        "%s2%s) Loot Tendency          : %s%d%s\r\n"
+        "%s3%s) Equip Tendency         : %s%d%s\r\n"
+        "%s4%s) Roam Tendency          : %s%d%s\r\n"
+        "%s5%s) Brave Prevalence       : %s%d%s\r\n"
+        "%s6%s) Group Tendency         : %s%d%s\r\n"
+        "%s7%s) Use Tendency           : %s%d%s\r\n"
+        "%s8%s) Trade Tendency         : %s%d%s\r\n"
+        "%s9%s) Quest Tendency         : %s%d%s\r\n"
+        "%sA%s) Adventurer Tendency    : %s%d%s\r\n"
+        "%sB%s) Follow Tendency        : %s%d%s\r\n"
+        "%sC%s) Healing Tendency       : %s%d%s\r\n"
+        "%sD%s) Emotional Intelligence : %s%d%s\r\n"
+        "%sE%s) Emotion Profile        : %s%s%s\r\n"
+        "%sF%s) Conscientiousness      : %s%d%s (Big Five C)\r\n"
+        "%sG%s) Agreeableness Modifier : %s%+d%s (Big Five A, base=%d)\r\n"
+        "%sH%s) Extraversion Modifier  : %s%+d%s (Big Five E, base=%d)\r\n"
+        "%sQ%s) Return to main menu\r\n"
+        "Enter choice : ",
 
-                    cyn, OLC_NUM(d), nrm, grn, nrm, yel, mob->ai_data->genetics.wimpy_tendency, nrm, grn, nrm, yel,
-                    mob->ai_data->genetics.loot_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.equip_tendency,
-                    nrm, grn, nrm, yel, mob->ai_data->genetics.roam_tendency, nrm, grn, nrm, yel,
-                    mob->ai_data->genetics.brave_prevalence, nrm, grn, nrm, yel, mob->ai_data->genetics.group_tendency,
-                    nrm, grn, nrm, yel, mob->ai_data->genetics.use_tendency, nrm, grn, nrm, yel,
-                    mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.quest_tendency,
-                    nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn, nrm, yel,
-                    mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
-                    nrm, grn, nrm, yel, mob->ai_data->genetics.emotional_intelligence, nrm, grn, nrm, yel,
-                    (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
-                         ? emotion_profile_types[mob->ai_data->emotional_profile]
-                         : "Unknown"),
-                    nrm, grn, nrm);
+        cyn, OLC_NUM(d), nrm, grn, nrm, yel, mob->ai_data->genetics.wimpy_tendency, nrm, grn, nrm, yel,
+        mob->ai_data->genetics.loot_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.equip_tendency, nrm, grn, nrm,
+        yel, mob->ai_data->genetics.roam_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.brave_prevalence, nrm,
+        grn, nrm, yel, mob->ai_data->genetics.group_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.use_tendency,
+        nrm, grn, nrm, yel, mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel,
+        mob->ai_data->genetics.quest_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn,
+        nrm, yel, mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
+        nrm, grn, nrm, yel, mob->ai_data->genetics.emotional_intelligence, nrm, grn, nrm, yel,
+        (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
+             ? emotion_profile_types[mob->ai_data->emotional_profile]
+             : "Unknown"),
+        nrm, grn, nrm, yel, (int)(mob->ai_data->personality.conscientiousness * 100), nrm, grn, nrm, yel,
+        mob->ai_data->personality.agreeableness_modifier, nrm, (int)(mob->ai_data->personality.agreeableness * 100),
+        grn, nrm, yel, mob->ai_data->personality.extraversion_modifier, nrm,
+        (int)(mob->ai_data->personality.extraversion * 100), grn, nrm);
 
     OLC_MODE(d) = MEDIT_GENETICS_MENU;
 }
@@ -952,6 +969,21 @@ void medit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = MEDIT_EMOTION_PROFILE;
                     i = 2; /* Special handling for emotion profile */
                     break;
+                case 'f':
+                case 'F':
+                    OLC_MODE(d) = MEDIT_GEN_CONSCIENTIOUSNESS;
+                    i++;
+                    break;
+                case 'g':
+                case 'G':
+                    OLC_MODE(d) = MEDIT_GEN_AGREEABLENESS;
+                    i = 3; /* Special prompt: -50 to +50 */
+                    break;
+                case 'h':
+                case 'H':
+                    OLC_MODE(d) = MEDIT_GEN_EXTRAVERSION;
+                    i = 3; /* Special prompt: -50 to +50 */
+                    break;
                 default:
                     medit_disp_genetics_menu(d);
                     return;
@@ -972,6 +1004,8 @@ void medit_parse(struct descriptor_data *d, char *arg)
                                 "6) Greedy      - Acquisitive, envious, selfish\r\n"
                                 "7) Loyal       - Faithful, trustworthy, friendly\r\n"
                                 "Enter profile (0-7): ");
+            else if (i == 3)
+                write_to_output(d, "\r\nEnter builder modifier (-50 to +50, 0=neutral): ");
             else
                 write_to_output(d, "Oops...\r\n");
             return;
@@ -1225,6 +1259,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.wimpy_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1235,6 +1270,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.loot_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1245,6 +1281,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.equip_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1255,6 +1292,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.roam_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1265,6 +1303,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.brave_prevalence = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1275,6 +1314,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.group_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1285,6 +1325,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.use_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1295,6 +1336,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.trade_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1305,6 +1347,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.quest_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1315,6 +1358,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.adventurer_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1325,6 +1369,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.follow_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1335,6 +1380,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1345,6 +1391,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.emotional_intelligence = LIMIT(i, 10, 95);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 
@@ -1355,6 +1402,51 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->emotional_profile = LIMIT(i, 0, 7);
+            OLC_VAL(d) = TRUE;
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_CONSCIENTIOUSNESS:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
+            }
+            /* Big Five Phase 2: Conscientiousness (1-100, normalized to 0.01-1.0).
+             * Minimum is 1, not 0, so that C=0 in saved files always means
+             * "uninitialized" (legacy bug) and never an intentional builder choice.
+             * This makes the db.c num_arg>0 guard unambiguous. */
+            OLC_MOB(d)->ai_data->personality.conscientiousness = (float)LIMIT(i, 1, 100) / 100.0f;
+            OLC_MOB(d)->ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized */
+            OLC_VAL(d) = TRUE;
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_AGREEABLENESS:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
+            }
+            /* Big Five Phase 3: Agreeableness builder modifier (-50 to +50).
+             * Stored as integer delta; combined with genetic base and SEC modulation
+             * at runtime via sec_get_agreeableness_final(). */
+            OLC_MOB(d)->ai_data->personality.agreeableness_modifier = LIMIT(i, -50, 50);
+            OLC_VAL(d) = TRUE;
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_EXTRAVERSION:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
+            }
+            /* Big Five Phase 3: Extraversion builder modifier (-50 to +50).
+             * Stored as integer delta; combined with genetic base and SEC modulation
+             * at runtime via sec_get_extraversion_final(). */
+            OLC_MOB(d)->ai_data->personality.extraversion_modifier = LIMIT(i, -50, 50);
+            OLC_VAL(d) = TRUE;
             medit_disp_genetics_menu(d);
             return;
 

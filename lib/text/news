@@ -6,9 +6,86 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
+@C-@G=@Y>@W Março de 2026 @C@Y<@G=@C-@n
+
+   @MEstado Emocional dos Mobs visivel com Look@n
+   Ao usar @Ylook <mob>@n agora e possivel ver uma pista narrativa do estado
+   emocional do habitante. Se o mob tiver alguma emocao intensa o suficiente
+   (calculada pelo sistema hibrido de humor e relacionamento com voce), uma
+   linha colorida e exibida abaixo da descricao:
+   - @rFerve de raiva.@n  @bParece abatido.@n  @cClaramente curioso.@n  (entre outras)
+   O sistema usa as emocoes efetivas em relacao ao seu personagem, nao apenas
+   o humor global — o que significa que o mesmo mob pode exibir pistas
+   diferentes para jogadores diferentes, de acordo com o historico de
+   interacoes. Nenhuma configuracao extra e necessaria.
+
+   @RCorreções de Magias e Habilidades@n
+   - @YDisintegrate@n: ao resistir ao teste de salvação, a vítima perde metade dos
+     seus PV atuais (máx. 100) em vez de um valor fixo. A magia também destrói
+     cadáveres no chão junto com seu conteúdo.
+   - @YHarm@n: versões normal e minus corrigidas — dano agora calculado corretamente.
+   - @YVoice Explosion@n: mensagens de dano e efeito agora aparecem normalmente.
+   - @YWindwall@n: reflexão de dano agora funciona quando a aura vem de equipamentos.
+   - @YTransport via Plants@n: Magos podem agora praticar a magia normalmente.
+   - @YO Grito da Morte@n: canção de bardo funcionando corretamente.
+   - @YPolearms@n: habilidade agora disponível para Guerreiros.
+
+   @MSistema de Personalidade - Escalas de Comportamento Configuráveis@n
+   Os parâmetros que definem como os traços de @YExtraversão@n e @YAmabilidade@n
+   dos mobs se expressam em Vitália agora podem ser ajustados pelos
+   administradores em tempo real, sem reiniciar o servidor:
+   - Mobs @Yextrovertidos@n ganham mais felicidade ao interagir socialmente —
+     a intensidade dessa recompensa é agora configurável via @YCEDIT@n.
+   - Mobs @Yamáveis@n resistem com mais ou menos força a iniciar ataques não
+     provocados e se aproximam de grupos com maior ou menor disposição —
+     ambas as escalas são configuráveis individualmente.
+   Essas configurações ficam no menu @YPhase 3: A/E@n dentro de @YCEDIT > Emoções@n
+   e permitem afinar o comportamento dos habitantes de Vitália de forma
+   dinâmica para a melhor experiência de jogo.
+
 @C-@G=@Y>@W Janeiro e Fevereiro de 2026 @C@Y<@G=@C-@n
 
-   Correções de estabilidade e de bugs.
+   @MMemorias Emocionais dos Mobs@n
+   Os mobs agora possuem dois registros separados de memoria emocional:
+   - @YMemoria Passiva@n: registra o que aconteceu @Ycom@n o mob.
+   - @YMemoria Ativa@n: registra o que o mob @Yfez@n (ataques, curas, sociais).
+   As acoes dos mobs agora afetam suas proprias emocoes: um mob que abraca
+   alguem fica mais feliz; um mob que resgata um aliado ganha orgulho e
+   coragem. O sistema de decisao usa esse historico para escolher acoes
+   com base no que funcionou emocionalmente no passado.
+
+
+   @MSistema de Personalidade dos Mobs@n
+   Os habitantes de Vitália agora possuem @Ytraços de personalidade@n únicos
+   que moldam seu comportamento de forma consistente:
+   - Criaturas @Yamáveis@n absorvem conflitos sem escalar a raiva e perdoam
+     ofensas com mais facilidade.
+   - Criaturas @Yextrovertidas@n interagem socialmente com mais frequência —
+     fique atento, elas podem surpreender você!
+   - Criaturas @Yconscienciosas@n mantêm comportamentos previsíveis e resistem
+     a mudanças emocionais súbitas.
+   - Criaturas @Yneuróticas@n são mais voláteis: reagem com mais intensidade
+     ao medo e à raiva, e levam mais tempo para se acalmar.
+   - Criaturas @Yabertas@n exploram o mundo com curiosidade e variam
+     constantemente suas ações.
+
+   @YReações Emocionais Mais Coerentes@n
+   As emoções dos mobs agora funcionam de forma mais natural: uma criatura
+   não pode expressar sentimentos contraditórios ao mesmo tempo — não espere
+   ver um mob te abraçar e te morder no mesmo instante. Cada reação emocional
+   é proporcional à situação e à personalidade do mob.
+
+   @BSistema de Luto e Memória Emocional@n
+   Mobs agora distinguem corretamente entre @Yaliados verdadeiros@n e meros
+   @Yestranhos@n ao presenciar mortes. Somente criaturas que tiveram
+   interações positivas reais com o falecido demonstrarão luto profundo.
+   Um mob de boa índole que nunca conheceu a vítima pode se assustar, mas
+   não chorará como se tivesse perdido um amigo.
+
+   @RCorreções@n
+   Exibição da memória emocional no comando @Ystat mob@n corrigida.
+   Identificação de interações com @Ymagias de aura@n corrigida.
+   Corrigida mensagem duplicada ao mobs começarem a seguir alguém.
 
 @C-@G=@Y>@W Dezembro de 2025 @C@Y<@G=@C-@n
 
@@ -342,3 +419,12 @@
      *regroup/regrupar
      *option
      
+
+   Sistema de emocoes dos NPCs melhorado (mob e jogador):
+     * Transicoes emocionais agora sao graduais - sem picos abruptos de Medo ou Vergonha.
+     * Reacoes dependem do contexto: relacionamento, consentimento, testemunhas e poder relativo.
+     * Mobs e jogadores sao avaliados igualmente: acoes de mob para mob tambem sao processadas.
+     * NPCs com simultaneidade emocional (ex: Empolgacao + Medo) podem hesitar brevemente.
+     * Memorias emocionais desvanecem com o tempo (eventos marcantes duram mais).
+     * NPCs podem reagir a propria emocao: justificar, desviar, rir nervosamente ou se recompor.
+     * Tracos de personalidade (OCEAN) calibram a intensidade e a regulacao emocional de cada NPC.

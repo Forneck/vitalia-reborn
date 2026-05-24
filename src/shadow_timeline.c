@@ -28,9 +28,14 @@
 #include "handler.h"
 #include "db.h"
 #include "shadow_timeline.h"
+#include <math.h>
+#include "moral_reasoner.h"
+#include "malp.h"
 #include "act.h"
 #include "fight.h"
 #include "graph.h"
+#include "quest.h"
+#include "sec.h"
 
 /* External variables */
 extern struct room_data *world;
@@ -41,10 +46,24 @@ static void generate_combat_projections(struct shadow_context *ctx);
 static void generate_social_projections(struct shadow_context *ctx);
 static void generate_item_projections(struct shadow_context *ctx);
 static void generate_guard_projection(struct shadow_context *ctx);
+static void generate_quest_projections(struct shadow_context *ctx);
+static void generate_spell_projections(struct shadow_context *ctx);
+static void generate_trade_projections(struct shadow_context *ctx);
+static void generate_wait_projection(struct shadow_context *ctx);
+static void generate_follow_projections(struct shadow_context *ctx);
+static void generate_group_projections(struct shadow_context *ctx);
 static int score_projection_for_entity(struct char_data *ch, struct shadow_projection *proj);
 static bool check_invariant_existence(void *entity, int entity_type);
 static bool check_invariant_location(struct char_data *ch, room_rnum room);
 static bool check_invariant_action(struct char_data *ch, enum shadow_action_type type);
+/* Cognitive Bias Module helpers (static; public entry is shadow_apply_cognitive_biases) */
+static bool shadow_action_target_is_char(enum shadow_action_type type);
+static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor);
+static float compute_availability_factor(struct char_data *ch);
+static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj);
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj);
 
 /**
  * Initialize a shadow context for an entity
@@ -143,15 +162,24 @@ int shadow_generate_projections(struct shadow_context *ctx)
     if (FIGHTING(ch)) {
         /* In combat - focus on combat projections */
         generate_combat_projections(ctx);
+        generate_spell_projections(ctx); /* Consider spell casting in combat */
     } else if (ch->ai_data && ch->ai_data->current_goal != 0) {
         /* Has active goal - focus on goal-relevant actions */
         generate_movement_projections(ctx);
         generate_item_projections(ctx);
+        generate_quest_projections(ctx); /* Consider quest-related actions */
+        generate_wait_projection(ctx);   /* Consider strategic waiting */
     } else {
         /* Exploring - generate diverse projections */
         generate_movement_projections(ctx);
         generate_social_projections(ctx);
         generate_item_projections(ctx);
+        generate_quest_projections(ctx);  /* Consider quest opportunities */
+        generate_spell_projections(ctx);  /* Consider helpful spells */
+        generate_trade_projections(ctx);  /* Consider trading opportunities */
+        generate_follow_projections(ctx); /* Consider following others */
+        generate_group_projections(ctx);  /* Consider group formation */
+        generate_wait_projection(ctx);    /* Consider doing nothing */
     }
 
     /* Score and rank projections based on entity's subjective evaluation */
@@ -306,6 +334,11 @@ static void generate_social_projections(struct shadow_context *ctx)
             continue; /* Skip self and players */
         }
 
+        /* Only consider targets the mob can actually see */
+        if (!CAN_SEE(ch, target)) {
+            continue;
+        }
+
         /* Project a friendly social action */
         memset(&action, 0, sizeof(struct shadow_action));
         action.type = SHADOW_ACTION_SOCIAL;
@@ -448,6 +481,658 @@ static void generate_guard_projection(struct shadow_context *ctx)
 }
 
 /**
+ * Generate quest-related action projections
+ * Projects quest acceptance and completion opportunities
+ * RFC-0003 §6.1: Only autonomous entities with goals project quest actions
+ */
+static void generate_quest_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Generate quest completion projection if mob has active quest */
+    if (ch->ai_data->current_quest != NOTHING) {
+        /* Set up quest completion action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_QUEST;
+        action.target = NULL; /* Quest completion doesn't need a target */
+        action.cost = SHADOW_BASE_COST;
+
+        /* Validate action */
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            return;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            return;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Quest completion is highly rewarding */
+            outcome.score = 60;
+            outcome.reward_level = 80;
+            outcome.achieves_goal = (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST);
+            outcome.obvious = FALSE; /* Quest outcomes can be complex */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+        }
+        return; /* Don't generate quest acceptance if already has quest */
+    }
+
+    /* Generate quest acceptance projection if mob doesn't have quest and is interested */
+    /* Only consider quest acceptance if:
+     * 1. No active goal (exploring) OR goal is quest-related
+     * 2. Has sufficient curiosity or quest tendency
+     * 3. Cognitive capacity allows expensive questmaster search */
+
+    bool should_consider_quest = FALSE;
+
+    if (ch->ai_data->current_goal == GOAL_NONE || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+        ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
+        /* Calculate interest in quests based on emotions and genetics
+         * Curiosity emotion is primary driver (0-50), genetics provides baseline (0-20)
+         * More curious mobs will actively seek and pursue quests */
+        int quest_interest = ch->ai_data->emotion_curiosity / 2; /* 0-50 from curiosity (primary) */
+        quest_interest += GET_GENQUEST(ch) / 5;                  /* 0-20 from quest_tendency (secondary) */
+
+        /* Random check with interest-based threshold */
+        if (rand_number(0, 100) < quest_interest) {
+            should_consider_quest = TRUE;
+        }
+    }
+
+    if (!should_consider_quest) {
+        return;
+    }
+
+    /* Safety check: Validate room before world array access */
+    if (ch->in_room == NOWHERE || ch->in_room < 0 || ch->in_room > top_of_world) {
+        return;
+    }
+
+    /* Performance optimization: Early exit to prevent expensive questmaster search
+     * Similar to mob_try_to_accept_quest() load-shedding to avoid lag.
+     * When close to max quests, the expensive pathfinding in
+     * find_accessible_questmaster_in_zone() causes severe lag. */
+    if (count_mob_posted_quests() >= (CONFIG_MAX_MOB_POSTED_QUESTS * 9 / 10)) { /* 90% of max */
+        return;
+    }
+
+    /* Look for accessible questmaster in mob's zone
+     * NOTE: This is an expensive operation with repeated pathfinding.
+     * The above load-shedding check and the random interest check (line 547)
+     * help limit how often this runs. Shadow Timeline's cognitive capacity
+     * budgeting also provides natural rate limiting. */
+    zone_rnum mob_zone = world[ch->in_room].zone;
+    struct char_data *questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
+
+    if (!questmaster || questmaster == ch) {
+        return; /* No accessible questmaster found */
+    }
+
+    /* Find available quest from this questmaster */
+    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+    if (available_quest == NOTHING) {
+        return; /* No quests available */
+    }
+
+    qst_rnum quest_rnum = real_quest(available_quest);
+    if (quest_rnum == NOTHING || !mob_should_accept_quest(ch, quest_rnum)) {
+        return; /* Quest not suitable or mob doesn't want it */
+    }
+
+    /* Set up quest acceptance action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_QUEST;
+    action.target = questmaster; /* Target is the questmaster to talk to */
+    action.cost = SHADOW_BASE_COST;
+
+    /* Validate action */
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Quest acceptance is moderately rewarding - represents new opportunities */
+        outcome.score = 30;
+        outcome.reward_level = 50;
+        outcome.achieves_goal =
+            (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER);
+        outcome.obvious = TRUE; /* Accepting a quest is straightforward */
+
+        /* Increase happiness (new opportunity) and curiosity satisfaction */
+        outcome.happiness_change = 10;
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
+ * Generate spell casting projections
+ * Projects healing allies or harming enemies with spells
+ * RFC-0003 §4.2: Only projects if entity has mana and spell knowledge
+ */
+static void generate_spell_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *target;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Only generate spell projections if mob has spellcasting items.
+     * Mana alone is not sufficient — the mob must actually possess a wand,
+     * staff, scroll, or potion to use.  Without items the execution stub
+     * cannot cast a real spell, so skip projection entirely to avoid
+     * showing misleading "conjura uma magia" messages. */
+    {
+        bool has_spell_item = FALSE;
+        struct obj_data *obj;
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            int t = GET_OBJ_TYPE(obj);
+            if (t == ITEM_WAND || t == ITEM_STAFF || t == ITEM_SCROLL || t == ITEM_POTION) {
+                has_spell_item = TRUE;
+                break;
+            }
+        }
+        if (!has_spell_item)
+            return;
+    }
+
+    /* Only generate spell projections if mob has sufficient mana */
+    if (GET_MANA(ch) < 15) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Find potential spell targets in room */
+    for (target = world[ch->in_room].people; target && ctx->num_projections < ctx->max_projections;
+         target = target->next_in_room) {
+
+        if (target == ch) {
+            continue; /* Skip self */
+        }
+
+        /* Determine if target is ally or enemy */
+        /* Allies: following same master, in same group, or not aggressive to each other */
+        bool is_ally = FALSE;
+
+        if (ch->master == target || target->master == ch) {
+            is_ally = TRUE; /* Following relationship indicates alliance */
+        } else if (IS_NPC(ch) && IS_NPC(target)) {
+            /* Two NPCs - check if they're in combat or have aggro flags */
+            if (FIGHTING(ch) == target || FIGHTING(target) == ch) {
+                is_ally = FALSE; /* Currently fighting = not allies */
+            } else {
+                /* Default to neutral/ally unless explicitly hostile */
+                is_ally = TRUE;
+            }
+        }
+
+        /* Set up spell action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_CAST_SPELL;
+        action.target = target;
+        action.cost = SHADOW_BASE_COST * 2; /* Spells are more expensive to project */
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Evaluate outcome based on whether it's healing or harming */
+            if (is_ally && GET_HIT(target) < GET_MAX_HIT(target)) {
+                /* Healing projection */
+                outcome.score = 40;
+                outcome.reward_level = 50;
+                outcome.hp_delta = 30; /* Estimated healing */
+                outcome.happiness_change = 5;
+            } else if (!is_ally) {
+                /* Offensive spell projection */
+                outcome.score = FIGHTING(ch) ? 50 : 20;
+                outcome.reward_level = 40;
+                outcome.danger_level = 30; /* May provoke retaliation */
+                outcome.leads_to_combat = !FIGHTING(ch);
+            } else {
+                /* No good target, skip */
+                continue;
+            }
+
+            outcome.obvious = FALSE; /* Spell effects can be unpredictable */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Limit to one spell projection per call to manage projection count.
+             * In combat scenarios, one spell decision per tick is sufficient.
+             * This prevents projection array overflow while still allowing spell choices. */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate trade/shopping projections
+ * Projects visiting shopkeepers and trading
+ */
+static void generate_trade_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *shopkeeper;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Look for shopkeepers in current room */
+    for (shopkeeper = world[ch->in_room].people; shopkeeper && ctx->num_projections < ctx->max_projections;
+         shopkeeper = shopkeeper->next_in_room) {
+
+        if (shopkeeper == ch || !IS_NPC(shopkeeper)) {
+            continue;
+        }
+
+        /* Use is_shopkeeper() function to properly detect shopkeepers */
+        if (!is_shopkeeper(shopkeeper)) {
+            continue; /* Skip non-shopkeepers to avoid false projections */
+        }
+
+        /* Set up trade action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_TRADE;
+        action.target = shopkeeper;
+        action.cost = SHADOW_BASE_COST;
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Trade is moderately rewarding - represents economic opportunity */
+            outcome.score = 25;
+            outcome.reward_level = 30;
+            outcome.achieves_goal = (ch->ai_data && (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
+                                                     ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY));
+            outcome.obvious = TRUE;       /* Trading is straightforward */
+            outcome.happiness_change = 5; /* Small satisfaction from commerce */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Only project one trade to avoid spam */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate wait/do-nothing projection
+ * Projects intentionally waiting for better circumstances
+ * ST-3: Bounded Cognition - sometimes best action is to wait
+ */
+static void generate_wait_projection(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Waiting is more valuable in certain situations */
+    bool should_consider_waiting = FALSE;
+
+    if (FIGHTING(ch)) {
+        /* Don't project waiting in combat - already have flee */
+        return;
+    }
+
+    /* Consider waiting if: */
+    if (ch->ai_data) {
+        /* 1. Low energy/mana - wait to regenerate */
+        if (GET_HIT(ch) < GET_MAX_HIT(ch) / 2 || GET_MANA(ch) < GET_MAX_MANA(ch) / 2) {
+            should_consider_waiting = TRUE;
+        }
+        /* 2. High fear - wait for danger to pass */
+        if (ch->ai_data->emotion_fear > 70) {
+            should_consider_waiting = TRUE;
+        }
+        /* 3. Cognitive capacity low - wait to recover */
+        if (ch->ai_data->cognitive_capacity < COGNITIVE_CAPACITY_MIN * 2) {
+            should_consider_waiting = TRUE; /* Twice minimum ensures meaningful cognitive function */
+        }
+    }
+
+    if (!should_consider_waiting) {
+        return;
+    }
+
+    /* Set up wait action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_WAIT;
+    action.target = NULL;
+    action.cost = SHADOW_BASE_COST / 3; /* Waiting is cheap cognitively */
+
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Waiting score depends on why we're waiting */
+        outcome.score = 15; /* Generally low priority unless situation demands it */
+
+        if (GET_HIT(ch) < GET_MAX_HIT(ch) / 3) {
+            outcome.score = 35;    /* Higher when injured */
+            outcome.hp_delta = 10; /* Expect some regeneration */
+        }
+
+        if (ch->ai_data && ch->ai_data->emotion_fear > 80) {
+            outcome.score = 40;       /* Even higher when afraid */
+            outcome.fear_change = -5; /* Waiting reduces fear */
+        }
+
+        outcome.reward_level = 20;
+        outcome.obvious = TRUE; /* Waiting outcomes are predictable */
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
+ * Generate follow projections
+ * Projects following other entities for various reasons
+ */
+static void generate_follow_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct char_data *target;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Don't generate follow projections if already following someone */
+    if (ch->master) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Find potential leaders in room */
+    for (target = world[ch->in_room].people; target && ctx->num_projections < ctx->max_projections;
+         target = target->next_in_room) {
+
+        if (target == ch) {
+            continue; /* Skip self */
+        }
+
+        /* Only follow targets the mob can actually see */
+        if (!CAN_SEE(ch, target)) {
+            continue;
+        }
+
+        /* Don't follow if target is already following us */
+        if (target->master == ch) {
+            continue;
+        }
+
+        /* Set up follow action */
+        memset(&action, 0, sizeof(struct shadow_action));
+        action.type = SHADOW_ACTION_FOLLOW;
+        action.target = target;
+        action.cost = SHADOW_BASE_COST / 2; /* Following is relatively cheap */
+
+        if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+            continue;
+        }
+
+        /* Calculate cognitive cost */
+        int cost = shadow_calculate_cost(ch, &action, 1);
+
+        /* Check if we have capacity */
+        if (ctx->cognitive_budget < cost) {
+            continue;
+        }
+
+        /* Execute projection */
+        memset(&outcome, 0, sizeof(struct shadow_outcome));
+        if (shadow_execute_projection(ctx, &action, &outcome)) {
+            /* Following score depends on target's strength and mob's traits */
+            outcome.score = 20; /* Base score */
+
+            /* Higher score if target is stronger (safety in numbers) */
+            if (GET_LEVEL(target) > GET_LEVEL(ch)) {
+                outcome.score += 15;
+            }
+
+            /* Higher score if mob has high loyalty trait */
+            if (ch->ai_data && ch->ai_data->emotion_loyalty > 60) {
+                outcome.score += 10;
+            }
+
+            /* Higher score if afraid and target looks protective */
+            if (ch->ai_data && ch->ai_data->emotion_fear > 50) {
+                outcome.score += 10;
+                outcome.fear_change = -10; /* Following reduces fear */
+            }
+
+            outcome.reward_level = 30;
+            outcome.achieves_goal = (ch->ai_data && ch->ai_data->current_goal == GOAL_FOLLOW);
+            outcome.obvious = TRUE;       /* Following is straightforward */
+            outcome.happiness_change = 5; /* Social bonding */
+
+            /* Store projection */
+            ctx->projections[ctx->num_projections].action = action;
+            ctx->projections[ctx->num_projections].outcome = outcome;
+            ctx->projections[ctx->num_projections].horizon = 1;
+            ctx->projections[ctx->num_projections].total_cost = cost;
+            ctx->projections[ctx->num_projections].timestamp = time(0);
+            ctx->num_projections++;
+
+            /* Consume capacity */
+            shadow_consume_capacity(ctx, cost);
+
+            /* Only project one follow to avoid spam */
+            break;
+        }
+    }
+}
+
+/**
+ * Generate group formation projections
+ * Projects strengthening bonds with master/leader
+ */
+static void generate_group_projections(struct shadow_context *ctx)
+{
+    struct char_data *ch = ctx->entity;
+    struct shadow_action action;
+    struct shadow_outcome outcome;
+
+    if (!ch || !IS_NPC(ch) || ch->in_room == NOWHERE) {
+        return;
+    }
+
+    /* Only generate group projection if mob is following someone */
+    if (!ch->master || ch->master->in_room != ch->in_room) {
+        return;
+    }
+
+    /* If we're at capacity, skip */
+    if (ctx->num_projections >= ctx->max_projections) {
+        return;
+    }
+
+    /* Set up group action */
+    memset(&action, 0, sizeof(struct shadow_action));
+    action.type = SHADOW_ACTION_GROUP;
+    action.target = ch->master;
+    action.cost = SHADOW_BASE_COST / 2; /* Group bonding is cheap */
+
+    if (shadow_validate_action(ch, &action) != ACTION_FEASIBLE) {
+        return;
+    }
+
+    /* Calculate cognitive cost */
+    int cost = shadow_calculate_cost(ch, &action, 1);
+
+    /* Check if we have capacity */
+    if (ctx->cognitive_budget < cost) {
+        return;
+    }
+
+    /* Execute projection */
+    memset(&outcome, 0, sizeof(struct shadow_outcome));
+    if (shadow_execute_projection(ctx, &action, &outcome)) {
+        /* Group bonding is moderately valuable for social cohesion */
+        outcome.score = 25;
+        outcome.reward_level = 35;
+
+        /* Higher value if mob has high loyalty */
+        if (ch->ai_data && ch->ai_data->emotion_loyalty > 70) {
+            outcome.score += 15;
+        }
+
+        outcome.obvious = TRUE;        /* Social bonding is straightforward */
+        outcome.happiness_change = 10; /* Strengthening bonds increases happiness */
+
+        /* Store projection */
+        ctx->projections[ctx->num_projections].action = action;
+        ctx->projections[ctx->num_projections].outcome = outcome;
+        ctx->projections[ctx->num_projections].horizon = 1;
+        ctx->projections[ctx->num_projections].total_cost = cost;
+        ctx->projections[ctx->num_projections].timestamp = time(0);
+        ctx->num_projections++;
+
+        /* Consume capacity */
+        shadow_consume_capacity(ctx, cost);
+    }
+}
+
+/**
  * Validate that an action is feasible and doesn't violate invariants
  * RFC-0003 §5.3: Invariant Enforcement - MUST discard actions violating invariants
  * Implements ST-2 (Invariant Preservation)
@@ -538,6 +1223,66 @@ int shadow_validate_action(struct char_data *ch, struct shadow_action *action)
                 if (guard_post == NOWHERE || ch->in_room != guard_post) {
                     return ACTION_INVALID_STATE;
                 }
+            }
+            break;
+
+        case SHADOW_ACTION_QUEST:
+            /* Quest actions are feasible for mobs with AI data */
+            if (!IS_NPC(ch) || !ch->ai_data) {
+                return ACTION_INVALID_STATE;
+            }
+            /* If target is provided (questmaster), validate it exists */
+            if (action->target && !check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            break;
+
+        case SHADOW_ACTION_CAST_SPELL:
+            /* Check if target exists and mob has mana */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (GET_MANA(ch) < 15) {
+                return ACTION_INVALID_STATE; /* Not enough mana */
+            }
+            break;
+
+        case SHADOW_ACTION_TRADE:
+            /* Check if target (shopkeeper) exists */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            break;
+
+        case SHADOW_ACTION_FOLLOW:
+            /* Check if target exists and mob is not already following */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (ch->master) {
+                return ACTION_INVALID_STATE; /* Already following someone */
+            }
+            break;
+
+        case SHADOW_ACTION_GROUP:
+            /* Check if target exists and mob is following them */
+            if (!action->target) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!check_invariant_existence(action->target, ENTITY_TYPE_MOB)) {
+                return ACTION_INVALID_TARGET;
+            }
+            if (!ch->master) {
+                return ACTION_INVALID_STATE; /* Not following anyone */
             }
             break;
 
@@ -713,6 +1458,17 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             outcome->leads_to_combat = FALSE;
             outcome->score = 20;
             outcome->obvious = TRUE;
+
+            /* Probability-of-being-abandoned: if the mob has passive memories of
+             * allies fleeing (INTERACT_ABANDON_ALLY), it has already experienced
+             * abandonment and will weight fleeing more favorably when under threat. */
+            if (ch && IS_NPC(ch) && ch->ai_data) {
+                int abandon_bias = get_passive_memory_hysteresis(ch, INTERACT_ABANDON_ALLY);
+                /* abandon_bias is negative when memories are emotionally painful (high fear/
+                 * anger, low happiness); subtracting a negative value raises the flee score,
+                 * making a mob that has been abandoned more likely to flee pre-emptively. */
+                outcome->score -= abandon_bias;
+            }
             break;
         }
 
@@ -758,6 +1514,53 @@ bool shadow_execute_projection(struct shadow_context *ctx, struct shadow_action 
             break;
         }
 
+        case SHADOW_ACTION_QUEST: {
+            /* Quest-related action - acceptance or completion */
+            /* Default heuristic: quests are rewarding but outcomes vary */
+            outcome->score = 40; /* Moderate-high reward */
+            outcome->reward_level = 60;
+            outcome->danger_level = 20; /* Some quests involve danger */
+            outcome->obvious = FALSE;   /* Quest outcomes are complex */
+            break;
+        }
+
+        case SHADOW_ACTION_CAST_SPELL: {
+            /* Spell casting - varies by target type */
+            outcome->score = 35;
+            outcome->reward_level = 45;
+            outcome->danger_level = 15; /* May provoke retaliation */
+            outcome->obvious = FALSE;   /* Spell effects are unpredictable */
+            break;
+        }
+
+        case SHADOW_ACTION_TRADE: {
+            /* Trading with shopkeeper */
+            outcome->score = 20;
+            outcome->reward_level = 30;
+            outcome->danger_level = 5;
+            outcome->obvious = TRUE; /* Trading is straightforward */
+            break;
+        }
+
+        case SHADOW_ACTION_FOLLOW: {
+            /* Following another entity */
+            outcome->score = 25;
+            outcome->reward_level = 30;
+            outcome->danger_level = 10; /* Safety in numbers */
+            outcome->obvious = TRUE;
+            break;
+        }
+
+        case SHADOW_ACTION_GROUP: {
+            /* Group bonding with master */
+            outcome->score = 20;
+            outcome->reward_level = 35;
+            outcome->danger_level = 5;
+            outcome->happiness_change = 10;
+            outcome->obvious = TRUE;
+            break;
+        }
+
         default:
             return FALSE;
     }
@@ -782,7 +1585,24 @@ void shadow_score_projections(struct shadow_context *ctx)
     }
 
     int i;
+    /* Compute the availability heuristic factor ONCE for this scoring round.
+     * The MALP scan is O(malp_count); doing it per-projection would be
+     * O(malp_count × num_projections).  The result is identical for all
+     * projections in the same tick, so a single scan suffices. */
+    float avail_factor = compute_availability_factor(ctx->entity);
+
     for (i = 0; i < ctx->num_projections; i++) {
+        /* Apply cognitive biases BEFORE moral evaluation (issue requirement:
+         * "Humans bias first, rationalize later.")
+         * Availability is passed pre-computed to avoid the repeated MALP scan.
+         * Each bias function guards against NULL ch / ai_data internally. */
+        struct shadow_projection *proj = &ctx->projections[i];
+        apply_availability_bias(ctx->entity, proj, avail_factor);
+        apply_confirmation_bias(ctx->entity, proj);
+        apply_attribution_bias(ctx->entity, proj);
+        apply_negativity_bias(ctx->entity, proj);
+        apply_anchoring_bias(ctx->entity, proj);
+
         ctx->projections[i].outcome.score = score_projection_for_entity(ctx->entity, &ctx->projections[i]);
     }
 }
@@ -797,6 +1617,43 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
     }
 
     int score = proj->outcome.score;
+    int moral_cost = 0;
+
+    /* Apply moral reasoning to action evaluation */
+    if (IS_NPC(ch) && proj->action.target) {
+        struct char_data *target = (struct char_data *)proj->action.target;
+        int action_type = MORAL_ACTION_ATTACK; /* Default */
+
+        /* Map shadow action types to moral action types */
+        switch (proj->action.type) {
+            case SHADOW_ACTION_ATTACK:
+                action_type = MORAL_ACTION_ATTACK;
+                break;
+            case SHADOW_ACTION_TRADE:
+                action_type = MORAL_ACTION_TRADE;
+                break;
+            case SHADOW_ACTION_SOCIAL:
+                action_type = MORAL_ACTION_HELP;
+                break;
+            case SHADOW_ACTION_FLEE:
+                /* Fleeing could be abandoning allies */
+                if (ch->master || ch->followers) {
+                    action_type = MORAL_ACTION_ABANDON_ALLY;
+                } else {
+                    action_type = MORAL_ACTION_DEFEND;
+                }
+                break;
+            default:
+                action_type = -1; /* No moral evaluation */
+                break;
+        }
+
+        /* Evaluate moral cost if applicable */
+        if (action_type >= 0) {
+            moral_cost = moral_evaluate_action_cost(ch, target, action_type);
+            score += moral_cost;
+        }
+    }
 
     /* Adjust based on entity's emotional state */
     if (ch->ai_data) {
@@ -818,6 +1675,140 @@ static int score_projection_for_entity(struct char_data *ch, struct shadow_proje
         /* Goal-oriented bonus */
         if (proj->outcome.achieves_goal) {
             score += 50;
+        }
+
+        /* Compassion influences helping behavior */
+        if (ch->ai_data->emotion_compassion > 60 && proj->action.type == SHADOW_ACTION_SOCIAL) {
+            score += 15;
+        }
+
+        /* OCEAN Phase 3: Agreeableness (A) influences attack retaliation and social weight.
+         * High A → dampens aggression, boosts social utility.
+         * Low A → amplifies aggression, reduces social preference.
+         * Score adjustment is in range [-20, +20] to keep within ±OUTCOME_SCORE_MAX bounds. */
+        float A_final = sec_get_agreeableness_final(ch);
+
+        /* OCEAN Phase 3: Extraversion (E) influences social initiation and group payoff.
+         * High E → higher expected utility from social/group actions.
+         * Low E → prefers solitary actions (lower social penalty when alone).
+         * Individual trait modifiers are each in range [-15, +15]; combined social
+         * score adjustment from A+E terms ranges from -30 to +30. */
+        float E_final = sec_get_extraversion_final(ch);
+
+        if (proj->action.type == SHADOW_ACTION_ATTACK) {
+            /* Low A amplifies attack utility; high A dampens it */
+            score += (int)((0.5f - A_final) * 40.0f); /* -20 to +20 */
+        } else if (proj->action.type == SHADOW_ACTION_SOCIAL) {
+            /* High A and high E both amplify social utility */
+            score += (int)((A_final - 0.5f) * 30.0f); /* A: -15 to +15 */
+            score += (int)((E_final - 0.5f) * 30.0f); /* E: -15 to +15 */
+        } else if (proj->action.type == SHADOW_ACTION_FOLLOW || proj->action.type == SHADOW_ACTION_GROUP) {
+            score += (int)((E_final - 0.5f) * 20.0f); /* E group bias: -10 to +10 */
+        }
+
+        /* OCEAN Phase 2: Conscientiousness (C) decision consistency bias.
+         * High C → rewards actions that match the prior commitment (last chosen type).
+         * This reduces flip-flopping without hard-clamping or suppressing options.
+         * Score bonus ∈ [0, SEC_C_CONSISTENCY_SCALE] points; low C = near zero bonus.
+         * last_chosen_action_type is an int with -1 as "no prior commitment" sentinel;
+         * comparison uses a local int variable to avoid enum/int cast. */
+        int prior_type = ch->ai_data->last_chosen_action_type;
+        if (prior_type >= 0 && (int)proj->action.type == prior_type) {
+            float C_final = sec_get_conscientiousness_final(ch);
+            score += (int)(C_final * SEC_C_CONSISTENCY_SCALE); /* 0 to +SEC_C_CONSISTENCY_SCALE */
+        }
+
+        /* OCEAN Phase 4: Openness (O) cognitive flexibility modifiers.
+         *
+         * Pipeline order (after emotional/A/E/C weighting above):
+         *   1. MOVE exploration weighting (±7 pts based on O vs 0.5 baseline)
+         *   2. Depth-aware novelty bonus for non-repeated action types
+         *   3. Routine preference bonus for low-O repeated actions
+         *
+         * Depth-aware novelty prevents "ADHD oscillation" in high-O mobs:
+         *   bonus = clamp(O × depth × SEC_O_NOVELTY_DEPTH_SCALE, 0, SEC_O_NOVELTY_BONUS_CAP)
+         * Because 'depth' (consecutive same-type repetitions) starts at 0 and builds
+         * slowly, a high-O mob needs sustained repetition before novelty pressure
+         * outweighs the action's survival utility.  First repetition = 6 pts (low
+         * pressure); at 5 consecutive repeats the cap of 30 pts is reached.
+         *
+         * Repetition dampening for low O:
+         *   Bonus = (1 - O) × SEC_O_REPETITION_BONUS  (0 to +15 pts for O ∈ [0,1]).
+         *   Low-O mobs get a routine preference reward that disappears as O→1.
+         *
+         * Hard cap: SEC_O_NOVELTY_BONUS_CAP = 30 = 0.3 × OUTCOME_SCORE_MAX.
+         * Neither novelty nor repetition bonuses modify emotional gain/decay
+         * or SEC energy partition.
+         * O_final must not be derived from SEC state (see sec_get_openness_final()). */
+        {
+            float O_final = sec_get_openness_final(ch);
+
+            /* 1. MOVE exploration weighting */
+            if (proj->action.type == SHADOW_ACTION_MOVE) {
+                score += (int)((O_final - SEC_O_NOVELTY_CENTER) * ((float)CONFIG_SEC_O_NOVELTY_MOVE_SCALE / 10.0f));
+            }
+
+            /* 2 & 3. Action-history novelty vs. routine using repetition depth */
+            int prior_type_o = ch->ai_data->last_chosen_action_type;
+            if (prior_type_o >= 0) {
+                if ((int)proj->action.type != prior_type_o) {
+                    /* Novel action type: depth-aware bonus (builds over consecutive repeats).
+                     * prior_depth = how many ticks the mob was stuck doing the prior action type.
+                     * action_repetition_count reflects prior ticks because it is updated in
+                     * mobact.c *after* action selection, so during scoring it still holds the
+                     * count for the previous action type — this is semantically correct.
+                     * At prior_depth=0 (no tracked repetition yet) bonus is 0 — no instant flip. */
+                    int prior_depth = MIN(ch->ai_data->action_repetition_count, CONFIG_SEC_O_REPETITION_CAP);
+                    int novel_bonus = MIN((int)(O_final * (float)prior_depth * (float)CONFIG_SEC_O_NOVELTY_DEPTH_SCALE),
+                                          CONFIG_SEC_O_NOVELTY_BONUS_CAP);
+                    score += novel_bonus; /* 0 to cap pts */
+                } else {
+                    /* Repeated action type: routine-preference for low O.
+                     * Dampening interpretation: (1-O) scales the bonus to 0 as O→1. */
+                    score += (int)((1.0f - O_final) * (float)CONFIG_SEC_O_REPETITION_BONUS);
+                }
+            }
+        }
+
+        /* Active memory hysteresis: bias prediction toward actions with positive
+         * prior emotional outcomes from the mob's own action history.
+         * Maps shadow action type → INTERACT_* and queries the active memory
+         * buffer for a time-weighted valence modifier in [-20, +20].
+         * This prevents oscillatory action selection by anchoring predictions
+         * in remembered self-actions. */
+        {
+            int interact_type = -1;
+            switch (proj->action.type) {
+                case SHADOW_ACTION_ATTACK:
+                    interact_type = INTERACT_ATTACKED;
+                    break;
+                case SHADOW_ACTION_SOCIAL:
+                    /* Combine remembered valence from all social subtypes so that
+                     * past negative/violent socials also influence future choices. */
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_POSITIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_NEGATIVE);
+                    score += get_active_memory_hysteresis(ch, INTERACT_SOCIAL_VIOLENT);
+                    break;
+                case SHADOW_ACTION_TRADE:
+                    interact_type = INTERACT_RECEIVED_ITEM;
+                    break;
+                case SHADOW_ACTION_QUEST:
+                    interact_type = INTERACT_QUEST_COMPLETE;
+                    break;
+                case SHADOW_ACTION_CAST_SPELL:
+                    interact_type = INTERACT_WITNESSED_SUPPORT_MAGIC;
+                    break;
+                case SHADOW_ACTION_FOLLOW:
+                    interact_type = INTERACT_ASSISTED;
+                    break;
+                case SHADOW_ACTION_FLEE:
+                    interact_type = INTERACT_ABANDON_ALLY;
+                    break;
+                default:
+                    break;
+            }
+            if (interact_type >= 0)
+                score += get_active_memory_hysteresis(ch, interact_type);
         }
     }
 
@@ -847,6 +1838,33 @@ struct shadow_projection *shadow_select_best_action(struct shadow_context *ctx)
     /* Don't return actions that are clearly bad */
     if (best_score < -50) {
         return NULL;
+    }
+
+    /* OCEAN Phase 4: Openness (O) exploration probability gate.
+     * With probability (SEC_O_EXPLORATION_BASE * O_final)%, occasionally deviate from the
+     * top-ranked action to a random non-negative sub-dominant alternative.
+     * This prevents deterministic behavioral loops without bypassing WTA energy gating:
+     * - Only non-negative-score alternatives are considered (safety floor retained).
+     * - Exploration is gated by O_final [0,1], so low-O mobs never explore randomly.
+     * - Range: 0% (O=0) to SEC_O_EXPLORATION_BASE% (O=1). */
+    struct char_data *ent = ctx->entity;
+    if (ent && IS_NPC(ent) && ent->ai_data && ctx->num_projections > 1) {
+        float O_final = sec_get_openness_final(ent);
+        int explore_chance = (int)(O_final * (float)CONFIG_SEC_O_EXPLORATION_BASE); /* 0..max */
+        if (rand_number(1, 100) <= explore_chance) {
+            /* Build a candidate list of non-best, non-negative-score projections */
+            int candidates[SHADOW_MAX_PROJECTIONS];
+            int ncand = 0;
+            for (i = 0; i < ctx->num_projections; i++) {
+                if (i != best_idx && ctx->projections[i].outcome.score >= 0) {
+                    candidates[ncand++] = i;
+                }
+            }
+            if (ncand > 0) {
+                int chosen = candidates[rand_number(0, ncand - 1)];
+                return &ctx->projections[chosen];
+            }
+        }
     }
 
     return &ctx->projections[best_idx];
@@ -1009,10 +2027,411 @@ void shadow_apply_subjectivity(struct char_data *ch, struct shadow_outcome *outc
     }
 }
 
+/* ── Cognitive Bias Module ─────────────────────────────────────────────────
+ *
+ * Implements systematic psychological distortions applied to Shadow Timeline
+ * projections BEFORE moral evaluation, mirroring the human cognitive pipeline:
+ *   Perception → MALP/MPLP → Shadow Timeline → Cognitive Bias → Moral → Action
+ *
+ * "Humans bias first, rationalize later." — Issue specification
+ * ──────────────────────────────────────────────────────────────────────────*/
+
 /**
- * Check entity existence invariant
- * Ensures entity exists and has valid prototype
+ * Returns TRUE when the action type stores a char_data* in action.target.
+ *
+ * SHADOW_ACTION_USE_ITEM stores an obj_data* instead.
+ * SHADOW_ACTION_MOVE, FLEE, WAIT, and GUARD store NULL.
+ * Callers that cast action.target to char_data* MUST check this first to
+ * avoid type-confusion crashes (SIGSEGV).
  */
+static bool shadow_action_target_is_char(enum shadow_action_type type)
+{
+    switch (type) {
+        case SHADOW_ACTION_ATTACK:
+        case SHADOW_ACTION_CAST_SPELL:
+        case SHADOW_ACTION_SOCIAL:
+        case SHADOW_ACTION_TRADE:
+        case SHADOW_ACTION_QUEST:
+        case SHADOW_ACTION_FOLLOW:
+        case SHADOW_ACTION_GROUP:
+            return TRUE;
+        default:
+            return FALSE;
+    }
+}
+
+/**
+ * Apply confirmation bias to a shadow projection.
+ *
+ * NPCs favour outcomes that match existing beliefs encoded in MPLP (trust,
+ * suspicion) and MALP (episodic valence toward the target entity).  A
+ * positive prior belief boosts projected probability of positive outcomes
+ * and reduces negative ones; negative beliefs do the reverse.
+ *
+ * Rule (from issue):
+ *   if event matches MPLP trust/emotion → probability += bias
+ *   else                                → probability -= bias
+ *
+ * Effects: grudges persist, trust persists, paranoia / loyalty possible.
+ */
+static void apply_confirmation_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    float prior_valence;
+    struct char_data *target;
+    struct malp_entry *malp_e;
+    float mplp_trust;
+    float mplp_suspicion;
+    int delta;
+    int target_type;
+    long target_id;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.confirmation_bias;
+    if (bias <= 0.0f)
+        return;
+
+    prior_valence = 0.0f;
+
+    /* Gather prior belief from MPLP trust/suspicion toward target.
+     * Only cast to char_data* when the action type uses a character target;
+     * SHADOW_ACTION_USE_ITEM stores an obj_data* which would cause a SIGSEGV. */
+    target = shadow_action_target_is_char(proj->action.type) ? (struct char_data *)proj->action.target : NULL;
+    if (target) {
+        mplp_trust = mplp_get_effective_trait(ch, target, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_SOCIAL);
+        mplp_suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+        /* Trust raises prior valence; suspicion lowers it */
+        prior_valence += mplp_trust - mplp_suspicion;
+
+        /* Also consult episodic MALP if available */
+        target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+        target_id = IS_NPC(target) ? GET_MOB_VNUM(target) : GET_IDNUM(target);
+        malp_e = get_malp_by_agent(ch, target_id, target_type);
+        if (malp_e) {
+            prior_valence += malp_e->valence * malp_e->intensity;
+        }
+        /* Clamp to [-1, +1] */
+        if (prior_valence > 1.0f)
+            prior_valence = 1.0f;
+        if (prior_valence < -1.0f)
+            prior_valence = -1.0f;
+    } else {
+        /* No specific target — use the NPC's general trust level directly.
+         * TRUST_BIAS is a signed trait in [-1,+1]; positive = trusting,
+         * negative = distrustful.  No offset is required. */
+        prior_valence = mplp_get_effective_trait(ch, NULL, MPLP_TRAIT_TRUST_BIAS, MPLP_CTX_GLOBAL);
+    }
+
+    /* Confirmation: project scored outcome agrees/disagrees with prior belief.
+     * "Agrees" means the outcome valence (score sign) aligns with prior_valence.
+     *
+     * When beliefs match outcome direction, the NPC amplifies the projection in
+     * that direction (positive belief+outcome → push score up; negative
+     * belief+outcome → push score further negative, confirming feared outcomes).
+     * When beliefs contradict outcome, the NPC discounts the projection. */
+    bool outcome_positive = (proj->outcome.score >= 0);
+    bool belief_positive = (prior_valence >= 0.0f);
+
+    if (outcome_positive == belief_positive) {
+        /* Beliefs match outcome direction → amplify in the outcome's direction */
+        float magnitude = fabsf(prior_valence);
+        delta = outcome_positive ? (int)(bias * magnitude * (float)COGBIAS_CONFIRMATION_MAX)
+                                 : -(int)(bias * magnitude * (float)COGBIAS_CONFIRMATION_MAX);
+    } else {
+        /* Contradicting belief → dampen the projection */
+        delta = -(int)(bias * (float)COGBIAS_CONFIRMATION_MAX / 2.0f);
+    }
+
+    proj->outcome.score += delta;
+
+    if (CONFIG_MOB_4D_DEBUG)
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-CONF: mob %s prior_valence=%.2f delta=%d new_score=%d", GET_NAME(ch),
+               prior_valence, delta, proj->outcome.score);
+}
+
+/**
+ * Apply availability heuristic bias to a shadow projection.
+ *
+ * Recent or emotionally intense MALP memories make projected events feel
+ * more likely.  The NPC over-weights vivid/recent episodes when assessing
+ * future probabilities, regardless of actual base rates.
+ *
+ * Rule (from issue):
+ *   recent events → weight ↑; old events → weight ↓; high emotion → weight ↑
+ *   prob *= (1 + availability_bias * recency_factor)
+ *
+ * Effects: trauma, fixation, revenge behaviour, fear loops.
+ */
+static void apply_availability_bias(struct char_data *ch, struct shadow_projection *proj, float avail_factor)
+{
+    float bias;
+    int delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.availability_bias;
+    if (bias <= 0.0f || avail_factor <= 0.0f)
+        return;
+
+    /* Apply: score * (1 + bias * recency_factor * COGBIAS_AVAILABILITY_MAX)
+     * Amplifies both positive and negative projections proportionally,
+     * simulating over-estimation of salient events. */
+    float multiplier = bias * avail_factor * COGBIAS_AVAILABILITY_MAX;
+    delta = (int)((float)proj->outcome.score * multiplier);
+    proj->outcome.score += delta;
+
+    if (CONFIG_MOB_4D_DEBUG)
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-AVAIL: mob %s recency=%.2f mult=%.3f delta=%d new_score=%d", GET_NAME(ch),
+               avail_factor, multiplier, delta, proj->outcome.score);
+}
+
+/**
+ * Return the per-mob availability heuristic recency factor.
+ *
+ * The value is maintained by malp_decay_tick() which piggybacks the
+ * max(recency × intensity × arousal_amp) computation inside its existing
+ * MALP loop at zero additional loop overhead.  This function therefore
+ * runs in O(1) — no MALP scan — making it safe to call from the hot path
+ * inside shadow_score_projections() for all mobs every tick.
+ */
+static float compute_availability_factor(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data)
+        return 0.0f;
+
+    return ch->ai_data->cached_avail_factor;
+}
+
+/**
+ * Apply fundamental attribution error bias to a shadow projection.
+ *
+ * The NPC attributes bad outcomes caused by others to their personality
+ * (holding grudges, misreading intentions) while excusing its own bad
+ * outcomes as situational (self-serving bias).
+ *
+ * Rule (from issue):
+ *   others bad → personality blame: utility -= attribution_bias
+ *   self bad   → situation blame:   utility += attribution_bias * 0.5
+ *
+ * Effects: NPCs hold grudges, justify themselves, misread intentions.
+ */
+static void apply_attribution_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    int self_delta;
+    int other_delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.attribution_bias;
+    if (bias <= 0.0f)
+        return;
+
+    /* Self-serving bias: the NPC excuses its own actions as situational.
+     * Slightly boosts utility for actions the NPC itself performs. */
+    self_delta = (int)(bias * 0.5f * (float)COGBIAS_ATTRIBUTION_MAX);
+    proj->outcome.score += self_delta;
+
+    /* Attribution error for others: if the projection involves a target
+     * who is expected to retaliate (high danger_level), the NPC attributes
+     * this danger to the enemy's inherent hostile personality, not the
+     * situation.  This amplifies grudge-holding. */
+    if (proj->action.target && proj->outcome.danger_level > 30) {
+        other_delta = (int)(bias * (float)COGBIAS_ATTRIBUTION_MAX * ((float)proj->outcome.danger_level / 100.0f));
+        proj->outcome.score -= other_delta;
+
+        if (CONFIG_MOB_4D_DEBUG)
+            mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ATTR: mob %s self_delta=+%d enemy_delta=-%d new_score=%d",
+                   GET_NAME(ch), self_delta, other_delta, proj->outcome.score);
+    } else {
+        if (CONFIG_MOB_4D_DEBUG)
+            mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ATTR: mob %s self_delta=+%d new_score=%d", GET_NAME(ch), self_delta,
+                   proj->outcome.score);
+    }
+}
+
+/**
+ * Apply negativity bias to a shadow projection.
+ *
+ * Negative events carry more psychological weight than equivalent positive
+ * events.  This makes it harder to gain trust and easier to lose it, and
+ * produces persistent hostility and realistic social conflict.
+ *
+ * Rule (from issue):
+ *   negative utility *= (1 + negativity_bias)
+ *   positive utility *= (1 - negativity_bias * 0.5)
+ *
+ * Effects: harder to gain trust, easier to lose trust, persistent hostility.
+ */
+static void apply_negativity_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.negativity_bias;
+    if (bias <= 0.0f)
+        return;
+
+    if (proj->outcome.score < 0) {
+        /* Negative outcome: amplify.
+         * Formula (issue spec): negative *= (1 + negativity_bias) */
+        float scale = 1.0f + bias;
+        proj->outcome.score = (int)((float)proj->outcome.score * scale);
+    } else if (proj->outcome.score > 0) {
+        /* Positive outcome: dampen slightly.
+         * Formula (issue spec): positive *= (1 - negativity_bias * 0.5) */
+        float scale = 1.0f - (bias * 0.5f);
+        if (scale < 0.5f)
+            scale = 0.5f; /* Floor: never more than 50% reduction */
+        proj->outcome.score = (int)((float)proj->outcome.score * scale);
+    }
+
+    /* Also amplify perceived danger for negative outcomes */
+    if (proj->outcome.danger_level > 0) {
+        int danger_boost = (int)(bias * (float)proj->outcome.danger_level * COGBIAS_NEGATIVITY_MAX);
+        proj->outcome.danger_level = MIN(100, proj->outcome.danger_level + danger_boost);
+    }
+
+    /* Clamp to valid range */
+    proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-NEG: mob %s bias=%.2f new_score=%d danger=%d", GET_NAME(ch), bias,
+               proj->outcome.score, proj->outcome.danger_level);
+}
+
+/**
+ * Apply anchoring bias to a shadow projection.
+ *
+ * The first impression of a target entity — stored as `first_valence` in
+ * the NPC's MALP entry — acts as a persistent residual pull on the projected
+ * score, regardless of later contradicting evidence.  This models the
+ * psychological phenomenon that humans (and now NPCs) anchor on initial
+ * information even when new data should rationally revise the belief.
+ *
+ * Mechanism:
+ *   anchor_residual = first_valence × anchoring_bias × resistance × intensity_floor × MAX
+ *
+ * Where resistance combines MPLP suspicion (slow to trust) and inverse
+ * forgiveness (slow to forgive), both of which make beliefs harder to revise.
+ * intensity_floor ensures the anchor retains at least 30% potency even as
+ * the episodic memory naturally fades — anchors outlast normal memory decay.
+ *
+ * Effects:
+ *   - NPC that was helped first still favours that actor even after insults
+ *   - NPC that was attacked first stays suspicious even after subsequent help
+ *   - Stubborn NPCs are nearly immune to belief revision
+ *   - Forgiving NPCs show weaker anchoring (resistance approaches 0)
+ *
+ * Applied last in the pipeline because it distorts the final score
+ * (not the intermediate simulation), per the issue specification.
+ */
+static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection *proj)
+{
+    float bias;
+    float first_valence;
+    float suspicion;
+    float forgiveness;
+    float resistance;
+    float intensity_floor;
+    struct char_data *target;
+    struct malp_entry *malp_e;
+    int target_type;
+    long target_id;
+    int delta;
+
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    bias = ch->ai_data->biases.anchoring_bias;
+    if (bias <= 0.0f)
+        return;
+
+    /* Only treat action.target as char_data* when the action type uses a
+     * character target.  SHADOW_ACTION_USE_ITEM stores an obj_data* which
+     * would cause a SIGSEGV when IS_NPC() reads char_specials from the wrong
+     * memory layout. */
+    target = shadow_action_target_is_char(proj->action.type) ? (struct char_data *)proj->action.target : NULL;
+    if (!target)
+        return; /* Anchoring requires a specific character target */
+
+    target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+    target_id = IS_NPC(target) ? (long)GET_MOB_VNUM(target) : GET_IDNUM(target);
+
+    malp_e = get_malp_by_agent(ch, target_id, target_type);
+    if (!malp_e || (malp_e->first_valence > -0.01f && malp_e->first_valence < 0.01f))
+        return; /* No prior history or near-neutral first impression — negligible anchor */
+
+    first_valence = malp_e->first_valence;
+
+    /* Resistance to belief revision: composite of suspicion and low forgiveness.
+     * suspicion_bias ∈ [0,1]: distrustful NPCs re-anchor harder on bad impressions.
+     * forgiveness_rate ∈ [0,1]: (1 - forgiveness) means stubborn, unforgiving NPCs
+     * hold onto their first impression for longer.
+     * Average gives a symmetric resistance measure in [0,1]. */
+    suspicion = mplp_get_effective_trait(ch, target, MPLP_TRAIT_SUSPICION_BIAS, MPLP_CTX_SOCIAL);
+    forgiveness = mplp_get_effective_trait(ch, target, MPLP_TRAIT_FORGIVENESS_RATE, MPLP_CTX_SOCIAL);
+    resistance = (suspicion + (1.0f - forgiveness)) * 0.5f;
+    if (resistance < 0.0f)
+        resistance = 0.0f;
+    if (resistance > 1.0f)
+        resistance = 1.0f;
+
+    /* Intensity floor: anchors outlast normal episodic memory decay.
+     * Even when the MALP entry has faded (intensity < 0.3), the first
+     * impression still exerts at least 30% of its original pull. */
+    intensity_floor = malp_e->intensity;
+    if (intensity_floor < 0.3f)
+        intensity_floor = 0.3f;
+
+    delta = (int)(first_valence * bias * resistance * intensity_floor * (float)COGBIAS_ANCHORING_MAX);
+
+    proj->outcome.score += delta;
+    proj->outcome.score = URANGE(OUTCOME_SCORE_MIN, proj->outcome.score, OUTCOME_SCORE_MAX);
+
+    if (CONFIG_MOB_4D_DEBUG)
+        mudlog(CMP, LVL_IMPL, FALSE, "COGBIAS-ANCH: mob %s first_val=%.2f resist=%.2f intens=%.2f delta=%d score=%d",
+               GET_NAME(ch), first_valence, resistance, intensity_floor, delta, proj->outcome.score);
+}
+
+/**
+ * Apply all cognitive biases to a shadow projection.
+ *
+ * Called after shadow_execute_projection() and before moral_evaluate().
+ * Pipeline: Shadow Timeline → Cognitive Bias Module → Moral reasoning → Action.
+ *
+ * Order of application (from issue):
+ *   1. Availability  (memory salience / recency)
+ *   2. Confirmation  (belief persistence)
+ *   3. Attribution   (self vs. other)
+ *   4. Negativity    (asymmetric loss aversion)
+ *   5. Anchoring     (first-impression residual — applied last, distorts final score)
+ *
+ * @param ch   The NPC entity applying biases.
+ * @param proj The projection to distort.
+ */
+void shadow_apply_cognitive_biases(struct char_data *ch, struct shadow_projection *proj)
+{
+    if (!ch || !proj || !ch->ai_data)
+        return;
+
+    /* Compute availability factor on demand (for external / one-shot callers).
+     * The hot path in shadow_score_projections() pre-computes this once per
+     * scoring round and calls the individual bias functions directly. */
+    float avail_factor = compute_availability_factor(ch);
+    apply_availability_bias(ch, proj, avail_factor);
+    apply_confirmation_bias(ch, proj);
+    apply_attribution_bias(ch, proj);
+    apply_negativity_bias(ch, proj);
+    apply_anchoring_bias(ch, proj);
+}
+
 static bool check_invariant_existence(void *entity, int entity_type)
 {
     if (!entity) {
@@ -1144,8 +2563,140 @@ bool mob_shadow_choose_action(struct char_data *ch, struct shadow_action *out_ac
     /* Copy selected action to caller-provided storage */
     *out_action = best->action;
 
+    /* Store predicted score and outcome flags for feedback system */
+    if (ch->ai_data) {
+        ch->ai_data->last_predicted_score = best->outcome.score;
+        ch->ai_data->last_outcome_obvious = best->outcome.obvious;
+    }
+
     /* Free context */
     shadow_free_context(ctx);
 
     return TRUE;
+}
+
+/**
+ * Evaluate real outcome after action execution
+ * Computes a score based on actual state changes
+ * @param ch The entity that executed the action
+ * @return Real outcome score (-100 to 100)
+ */
+int shadow_evaluate_real_outcome(struct char_data *ch)
+{
+    int real_score;
+    int hp_delta;
+
+    if (!ch || !ch->ai_data) {
+        return 0;
+    }
+
+    /* Compute HP delta */
+    hp_delta = GET_HIT(ch) - ch->ai_data->last_hp_snapshot;
+
+    /* Base score is HP delta */
+    real_score = hp_delta;
+
+    /* Apply penalties for negative situations */
+    if (FIGHTING(ch)) {
+        real_score -= 10;
+    }
+
+    /* Penalty for being at low HP (< 25% max) */
+    if (GET_HIT(ch) < GET_MAX_HIT(ch) / 4) {
+        real_score -= 20;
+    }
+
+    /* Clamp result to [-100, 100] */
+    if (real_score > 100) {
+        real_score = 100;
+    }
+    if (real_score < -100) {
+        real_score = -100;
+    }
+
+    /* Store in ai_data */
+    ch->ai_data->last_real_score = real_score;
+
+    return real_score;
+}
+
+/**
+ * Update prediction error feedback with precision weighting and valence-specific adaptation
+ * Implements adaptive learning through prediction-error signals with asymmetric learning
+ * @param ch The entity
+ * @param real_score The actual outcome score
+ * @param obvious Whether the outcome was obvious/predictable
+ */
+void shadow_update_feedback(struct char_data *ch, int real_score, bool obvious)
+{
+    int predicted;
+    int signed_error;
+    int novelty;
+    int delta_bias;
+
+    if (!ch || !ch->ai_data) {
+        return;
+    }
+
+    /* Step 1: Calculate signed prediction error (valence-specific) */
+    predicted = ch->ai_data->last_predicted_score;
+    signed_error = real_score - predicted;
+
+    /* Step 2: Base novelty from absolute error */
+    novelty = MIN(abs(signed_error), 100);
+
+    /* Step 3: Apply valence-specific weighting (asymmetric learning) */
+    /* Negative surprises (threats) are amplified - models loss aversion.
+     * OCEAN Phase 4: Openness (O) ambiguity tolerance reduces this amplification.
+     * ThreatAmpPct = round(30.0 * (1.0 - SEC_O_THREAT_BIAS * O_final)) ∈ [18, 30].
+     * High O interprets ambiguous/negative surprises less catastrophically;
+     * low O applies full 30% threat amplification (loss aversion preserved).
+     * O_final must not be derived from SEC state (see sec_get_openness_final()). */
+    if (signed_error < 0) {
+        float O_final_threat = sec_get_openness_final(ch);
+        float threat_bias = (float)CONFIG_SEC_O_THREAT_BIAS / 100.0f;
+        int amp_pct = (int)(30.0f * (1.0f - threat_bias * O_final_threat));
+        novelty = (novelty * (100 + amp_pct)) / 100;
+    }
+    /* Positive surprises (rewards) are slightly dampened */
+    else if (signed_error > 0) {
+        novelty = (novelty * 90) / 100; /* 10% reduction for rewards */
+    }
+
+    /* Step 4: Apply precision weighting (predictability modulation) */
+    if (obvious) {
+        /* 30% reduction for obvious outcomes */
+        novelty = (novelty * 70) / 100;
+    }
+
+    /* Clamp novelty to [0, 100] after all modifications */
+    if (novelty > 100) {
+        novelty = 100;
+    }
+    if (novelty < 0) {
+        novelty = 0;
+    }
+
+    /* Step 5: Update smoothed prediction error (70% memory, 30% new signal) */
+    ch->ai_data->recent_prediction_error = (ch->ai_data->recent_prediction_error * 7 + novelty * 3) / 10;
+
+    /* Ensure bounded [0, 100] */
+    if (ch->ai_data->recent_prediction_error > 100) {
+        ch->ai_data->recent_prediction_error = 100;
+    }
+    if (ch->ai_data->recent_prediction_error < 0) {
+        ch->ai_data->recent_prediction_error = 0;
+    }
+
+    /* Step 6: Update attention bias (long-term adaptation) */
+    delta_bias = (novelty - 50) / 15;
+    ch->ai_data->attention_bias += delta_bias;
+
+    /* Clamp attention bias to [-50, 50] */
+    if (ch->ai_data->attention_bias > 50) {
+        ch->ai_data->attention_bias = 50;
+    }
+    if (ch->ai_data->attention_bias < -50) {
+        ch->ai_data->attention_bias = -50;
+    }
 }

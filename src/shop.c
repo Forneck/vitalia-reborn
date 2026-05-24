@@ -479,7 +479,7 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
         }
     }
 
-    return (int)(GET_OBJ_COST(obj) * SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
+    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
                  emotion_modifier);
 }
 
@@ -1296,8 +1296,9 @@ static int end_read_list(struct shop_buy_data *list, int len, int error)
 static void read_line(FILE *shop_f, const char *string, void *data)
 {
     char buf[READ_SIZE];
+    int items_read;
 
-    if (!get_line(shop_f, buf) || !sscanf(buf, string, data)) {
+    if (!get_line(shop_f, buf) || (items_read = sscanf(buf, string, data)) != 1) {
         log1("SYSERR: Error in shop #%d, near '%s' with '%s'", SHOP_NUM(top_shop), buf, string);
         exit(1);
     }

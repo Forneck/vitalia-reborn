@@ -1,0 +1,10 @@
+Vitalia Reborn - Technical Changelog
+=====================================
+NOTE: Developer-facing changelog entries are maintained in changelog.txt
+      (the root changelog.txt of the repository).
+
+      This file previously contained duplicate entries that have been moved
+      there.  Please add all future technical changelog entries to
+      changelog.txt, not to this file.
+
+      Player-readable summaries continue to be maintained in lib/text/news.

@@ -39,6 +39,7 @@
 #include "mud_event.h"
 #include "msgedit.h"
 #include "screen.h"
+#include "malp.h"
 #include <sys/stat.h>
 
 #include "spedit.h"
@@ -1896,11 +1897,6 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     {
         if (mob_proto[i].ai_data) {
             mob_proto[i].ai_data->genetics.wimpy_tendency = num_arg;
-            /* MENSAGEM DE SUCESSO - TEMPORÁRIA */
-            log1("DEBUG: Mob vnum #%d, GenWimpy carregado com sucesso: %d", nr, num_arg);
-        } else {
-            /* MENSAGEM DE ERRO - TEMPORÁRIA */
-            log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics é NULL)", nr);
         }
     }
     CASE("GenLoot")
@@ -1981,6 +1977,111 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             /* Valid emotion profile values: 0-7 (EMOTION_PROFILE_*) */
             RANGE(0, 7);
             mob_proto[i].ai_data->emotional_profile = num_arg;
+        }
+    }
+    CASE("Openness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness personality trait (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn.
+             * O_base is structural/genetic; it must never be derived from SEC state. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.openness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.openness_initialized = 1;
+            }
+        }
+    }
+    CASE("OpennessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 4: Openness builder modifier (-50..+50).
+             * Applied as delta on top of Gaussian base; never replaces it. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.openness_modifier = num_arg;
+        }
+    }
+    CASE("Conscientiousness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness personality trait.
+             * File format range: 0-100, normalized to 0.0-1.0 internally.
+             * Value 0 is treated as "uninitialized" sentinel: files written by
+             * the pre-fix genmob.c contained "Conscientiousness: 0" for every mob
+             * that had never been explicitly set. Loading such a value with
+             * initialized=1 would permanently prevent Gaussian generation in quest.c.
+             * Values 1-100 represent actual conscientiousness levels (medit clamps
+             * builder input to this range as well). */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.conscientiousness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.conscientiousness_initialized = 1; /* Mark as initialized from file */
+            }
+            /* num_arg == 0: leave conscientiousness at 0.0 and initialized=0 so
+             * init_mob_ai_data() will generate a proper Gaussian value on spawn. */
+        }
+    }
+    CASE("ConscientiousnessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 2: Conscientiousness builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.conscientiousness_modifier = num_arg;
+        }
+    }
+    CASE("Agreeableness")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Agreeableness base (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.agreeableness = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.agreeableness_initialized = 1;
+            }
+        }
+    }
+    CASE("AgreeablenessModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Agreeableness builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.agreeableness_modifier = num_arg;
+        }
+    }
+    CASE("Extraversion")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Extraversion base (Trait_base).
+             * File format range: 1-100, normalized to 0.01-1.0 internally.
+             * Value 0 means uninitialized — Gaussian generation occurs at spawn. */
+            RANGE(0, 100);
+            if (num_arg > 0) {
+                mob_proto[i].ai_data->personality.extraversion = (float)num_arg / 100.0f;
+                mob_proto[i].ai_data->personality.extraversion_initialized = 1;
+            }
+        }
+    }
+    CASE("ExtraversionModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 3: Extraversion builder modifier (-50..+50). */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.extraversion_modifier = num_arg;
+        }
+    }
+    CASE("NeuroticismModifier")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Big Five Phase 1: Neuroticism builder modifier (-50..+50).
+             * Positive values heighten volatility; negative values dampen it.
+             * N_base is always generated from genetics at spawn; this modifier
+             * allows builders to tune archetype-level volatility without
+             * overriding the genetic foundation. */
+            RANGE(-50, 50);
+            mob_proto[i].ai_data->personality.neuroticism_modifier = num_arg;
         }
     }
     CASE("PreferredWeather")
@@ -3845,6 +3946,8 @@ void free_char(struct char_data *ch)
         clear_wishlist(ch);
         /* Clear temporary quest master data */
         clear_temp_questmaster(ch);
+        /* Free MALP/MPLP long-term memory (RFC-1002) */
+        malp_free(ch);
         free(ch->ai_data);
     }
 
@@ -3995,6 +4098,13 @@ void reset_char(struct char_data *ch)
         GET_MANA(ch) = 1;
 
     GET_LAST_TELL(ch) = NOBODY;
+
+    /* Clear room-local visibility state on every PC login (both new chars and
+     * loaded chars).  player_specials is calloc'd elsewhere so appeared_room
+     * is 0, not NOWHERE — set it explicitly here.  NPCs are handled by
+     * clear_char() which runs on every mob allocation. */
+    if (ch->player_specials && ch->player_specials != &dummy_mob)
+        ch->player_specials->appeared_room = NOWHERE;
 }
 
 /* clear ALL the working variables of a char; do NOT free any space
@@ -4020,6 +4130,7 @@ void clear_char(struct char_data *ch)
     GET_WAS_IN(ch) = NOWHERE;
     GET_POS(ch) = POS_STANDING;
     ch->mob_specials.default_pos = POS_STANDING;
+    ch->mob_specials.appeared_room = NOWHERE;
     ch->events = NULL;
     ch->listening_to = NOWHERE;
     ch->next_listener = NULL;
@@ -4047,6 +4158,8 @@ void init_char(struct char_data *ch)
     /* create a player_special structure */
     if (ch->player_specials == NULL)
         CREATE(ch->player_specials, struct player_special_data, 1);
+
+    ch->player_specials->appeared_room = NOWHERE;
 
     /* Initialize class history array */
     for (int i = 0; i < 100; i++) {
@@ -4504,12 +4617,14 @@ static void load_default_config(void)
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
     CONFIG_DYNAMIC_REPUTATION = NO;
-    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;  /* Default: 20% chance per emotion tick (4 seconds) */
-    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
-    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
-    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
-    CONFIG_MAX_MOB_POSTED_QUESTS = 450;     /* Default: 450 max mob-posted quests */
-    CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;   /* Default: NO - Emotions don't affect alignment (experimental) */
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;         /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;         /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;         /* Enabled by default (requires mob_contextual_socials) */
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100;        /* Default: 100% (range 0-200) */
+    CONFIG_MAX_MOB_POSTED_QUESTS = 450;            /* Default: 450 max mob-posted quests */
+    CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;          /* Default: NO - Emotions don't affect alignment (experimental) */
+    CONFIG_MOB_GOSSIP_CHANCE = MALP_GOSSIP_CHANCE; /* Default: 10% chance per tick */
+    CONFIG_MOB_GOSSIP_COOLDOWN = MALP_GOSSIP_COOLDOWN_SECS; /* Default: 300 s per listener–target pair */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -4619,6 +4734,7 @@ static void load_default_config(void)
     CONFIG_EMOTION_DECAY_RATE_MULTIPLIER = 100;    /* 100% = normal speed */
     CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = 80; /* Above this, emotions decay faster */
     CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = 150; /* 150% = 1.5x faster for extreme emotions */
+    CONFIG_EMOTION_MAX_DELTA = 20;                 /* Max per-call change: prevents instant spikes */
 
     /* Individual emotion base decay rates (0-10 scale) */
     CONFIG_EMOTION_DECAY_RATE_FEAR = 2;        /* Standard decay */
@@ -4630,6 +4746,56 @@ static void load_default_config(void)
     CONFIG_EMOTION_DECAY_RATE_DISGUST = 2;     /* Standard decay */
     CONFIG_EMOTION_DECAY_RATE_SHAME = 1;       /* Slower - shame lingers */
     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = 1; /* Slower - humiliation lingers */
+    CONFIG_EMOTION_DECAY_RATE_ENVY = 1;        /* Slower - envy lingers */
+
+    /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+    CONFIG_NEUROTICISM_GAIN_FEAR = neuroticism_gain_fear;
+    CONFIG_NEUROTICISM_GAIN_SADNESS = neuroticism_gain_sadness;
+    CONFIG_NEUROTICISM_GAIN_SHAME = neuroticism_gain_shame;
+    CONFIG_NEUROTICISM_GAIN_HUMILIATION = neuroticism_gain_humiliation;
+    CONFIG_NEUROTICISM_GAIN_PAIN = neuroticism_gain_pain;
+    CONFIG_NEUROTICISM_GAIN_HORROR = neuroticism_gain_horror;
+    CONFIG_NEUROTICISM_GAIN_DISGUST = neuroticism_gain_disgust;
+    CONFIG_NEUROTICISM_GAIN_ENVY = neuroticism_gain_envy;
+    CONFIG_NEUROTICISM_GAIN_ANGER = neuroticism_gain_anger;
+    CONFIG_NEUROTICISM_SOFT_CLAMP_K = neuroticism_soft_clamp_k;
+
+    /* Big Five (OCEAN) Personality - Phase 2: Conscientiousness */
+    CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL = conscientiousness_impulse_control;
+    CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = conscientiousness_reaction_delay;
+    CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = conscientiousness_moral_weight;
+    CONFIG_CONSCIENTIOUSNESS_DEBUG = conscientiousness_debug;
+
+    /* Big Five (OCEAN) Personality - Phase 3: Agreeableness (A) and Extraversion (E) */
+    CONFIG_OCEAN_AE_K1 = ocean_ae_k1;
+    CONFIG_OCEAN_AE_K2 = ocean_ae_k2;
+    CONFIG_OCEAN_AE_K3 = ocean_ae_k3;
+    CONFIG_OCEAN_AE_K4 = ocean_ae_k4;
+    CONFIG_OCEAN_E_SOCIAL_REWARD = ocean_e_social_reward;
+    CONFIG_OCEAN_A_AGGR_SCALE = ocean_a_aggr_scale;
+    CONFIG_OCEAN_A_GROUP_SCALE = ocean_a_group_scale;
+
+    /* Big Five (OCEAN) Personality - Phase 4: Openness (O) Shadow Timeline */
+    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = sec_o_novelty_move_scale;
+    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = sec_o_novelty_depth_scale;
+    CONFIG_SEC_O_NOVELTY_BONUS_CAP = sec_o_novelty_bonus_cap;
+    CONFIG_SEC_O_REPETITION_CAP = sec_o_repetition_cap;
+    CONFIG_SEC_O_REPETITION_BONUS = sec_o_repetition_bonus;
+    CONFIG_SEC_O_EXPLORATION_BASE = sec_o_exploration_base;
+    CONFIG_SEC_O_THREAT_BIAS = sec_o_threat_bias;
+
+    /* SEC Core tuning parameters */
+    CONFIG_SEC_EMOTION_ALPHA = sec_emotion_alpha;
+    CONFIG_SEC_WTA_THRESHOLD = sec_wta_threshold;
+
+    /* MALP/MPLP long-term memory parameters (RFC-1002) */
+    CONFIG_MALP_THETA_CONS = malp_theta_cons;
+    CONFIG_MALP_RECON_WINDOW_TICKS = malp_recon_window_ticks;
+    CONFIG_MALP_REHEARSAL_THRESHOLD = malp_rehearsal_threshold;
+    CONFIG_MALP_LIMIT_PER_MOB = malp_limit_per_mob;
+    CONFIG_MALP_DECAY_HALFLIFE_STD = malp_decay_halflife_std;
+    CONFIG_MALP_DECAY_HALFLIFE_MAJOR = malp_decay_halflife_major;
+    CONFIG_MPLP_DECAY_HALFLIFE = mplp_decay_halflife;
 }
 
 void load_config(void)
@@ -4668,6 +4834,15 @@ void load_config(void)
             case 'c':
                 if (!str_cmp(tag, "crash_file_timeout"))
                     CONFIG_CRASH_TIMEOUT = num;
+                /* Big Five Phase 2: Conscientiousness */
+                else if (!str_cmp(tag, "conscientiousness_impulse_control"))
+                    CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_reaction_delay"))
+                    CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_moral_weight"))
+                    CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "conscientiousness_debug"))
+                    CONFIG_CONSCIENTIOUSNESS_DEBUG = LIMIT(num, 0, 1);
                 break;
 
             case 'd':
@@ -4909,6 +5084,8 @@ void load_config(void)
                     CONFIG_EMOTION_EXTREME_EMOTION_THRESHOLD = num;
                 else if (!str_cmp(tag, "emotion_extreme_decay_multiplier"))
                     CONFIG_EMOTION_EXTREME_DECAY_MULTIPLIER = num;
+                else if (!str_cmp(tag, "emotion_max_delta"))
+                    CONFIG_EMOTION_MAX_DELTA = LIMIT(num, 1, 100);
                 else if (!str_cmp(tag, "emotion_decay_rate_fear"))
                     CONFIG_EMOTION_DECAY_RATE_FEAR = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_anger"))
@@ -4927,6 +5104,8 @@ void load_config(void)
                     CONFIG_EMOTION_DECAY_RATE_SHAME = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_humiliation"))
                     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = num;
+                else if (!str_cmp(tag, "emotion_decay_rate_envy"))
+                    CONFIG_EMOTION_DECAY_RATE_ENVY = num;
                 break;
 
             case 'f':
@@ -5040,6 +5219,25 @@ void load_config(void)
                     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = num;
                 else if (!str_cmp(tag, "mob_emotion_update_chance"))
                     CONFIG_MOB_EMOTION_UPDATE_CHANCE = num;
+                else if (!str_cmp(tag, "mob_gossip_chance"))
+                    CONFIG_MOB_GOSSIP_CHANCE = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "mob_gossip_cooldown"))
+                    CONFIG_MOB_GOSSIP_COOLDOWN = LIMIT(num, 0, 3600);
+                /* MALP/MPLP long-term memory parameters (RFC-1002) */
+                else if (!str_cmp(tag, "malp_theta_cons"))
+                    CONFIG_MALP_THETA_CONS = LIMIT(num, 30, 95);
+                else if (!str_cmp(tag, "malp_recon_window_ticks"))
+                    CONFIG_MALP_RECON_WINDOW_TICKS = LIMIT(num, 1, 600);
+                else if (!str_cmp(tag, "malp_rehearsal_threshold"))
+                    CONFIG_MALP_REHEARSAL_THRESHOLD = LIMIT(num, 1, 20);
+                else if (!str_cmp(tag, "malp_limit_per_mob"))
+                    CONFIG_MALP_LIMIT_PER_MOB = LIMIT(num, 10, 500);
+                else if (!str_cmp(tag, "malp_decay_halflife_std"))
+                    CONFIG_MALP_DECAY_HALFLIFE_STD = LIMIT(num, 1, 720);
+                else if (!str_cmp(tag, "malp_decay_halflife_major"))
+                    CONFIG_MALP_DECAY_HALFLIFE_MAJOR = LIMIT(num, 1, 2160);
+                else if (!str_cmp(tag, "mplp_decay_halflife"))
+                    CONFIG_MPLP_DECAY_HALFLIFE = LIMIT(num, 1, 8760);
 
                 break;
 
@@ -5054,6 +5252,27 @@ void load_config(void)
                     CONFIG_NEWBIE_START = num;
                 else if (!str_cmp(tag, "new_auction_system"))
                     CONFIG_NEW_AUCTION_SYSTEM = num;
+                /* Big Five (OCEAN) Personality - Phase 1: Neuroticism */
+                else if (!str_cmp(tag, "neuroticism_gain_fear"))
+                    CONFIG_NEUROTICISM_GAIN_FEAR = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_sadness"))
+                    CONFIG_NEUROTICISM_GAIN_SADNESS = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_shame"))
+                    CONFIG_NEUROTICISM_GAIN_SHAME = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_humiliation"))
+                    CONFIG_NEUROTICISM_GAIN_HUMILIATION = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_pain"))
+                    CONFIG_NEUROTICISM_GAIN_PAIN = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_horror"))
+                    CONFIG_NEUROTICISM_GAIN_HORROR = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_disgust"))
+                    CONFIG_NEUROTICISM_GAIN_DISGUST = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_envy"))
+                    CONFIG_NEUROTICISM_GAIN_ENVY = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_gain_anger"))
+                    CONFIG_NEUROTICISM_GAIN_ANGER = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "neuroticism_soft_clamp_k"))
+                    CONFIG_NEUROTICISM_SOFT_CLAMP_K = LIMIT(num, 10, 200);
                 else if (!str_cmp(tag, "noperson")) {
                     char tmp[READ_SIZE];
                     if (CONFIG_NOPERSON)
@@ -5077,6 +5296,22 @@ void load_config(void)
                     snprintf(tmp, sizeof(tmp), "%s\r\n", line);
                     CONFIG_OK = strdup(tmp);
                 }
+                /* Big Five Phase 3: OCEAN A/E SEC modulation coefficients */
+                else if (!str_cmp(tag, "ocean_ae_k1"))
+                    CONFIG_OCEAN_AE_K1 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k2"))
+                    CONFIG_OCEAN_AE_K2 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k3"))
+                    CONFIG_OCEAN_AE_K3 = LIMIT(num, 0, 100);
+                else if (!str_cmp(tag, "ocean_ae_k4"))
+                    CONFIG_OCEAN_AE_K4 = LIMIT(num, 0, 100);
+                /* Big Five Phase 3: behavioral scale factors */
+                else if (!str_cmp(tag, "ocean_e_social_reward"))
+                    CONFIG_OCEAN_E_SOCIAL_REWARD = LIMIT(num, 0, 500);
+                else if (!str_cmp(tag, "ocean_a_aggr_scale"))
+                    CONFIG_OCEAN_A_AGGR_SCALE = LIMIT(num, 0, 500);
+                else if (!str_cmp(tag, "ocean_a_group_scale"))
+                    CONFIG_OCEAN_A_GROUP_SCALE = LIMIT(num, 0, 500);
                 break;
 
             case 'p':
@@ -5122,6 +5357,26 @@ void load_config(void)
                     CONFIG_SPECIAL_IN_COMM = num;
                 else if (!str_cmp(tag, "school_weather_affects"))
                     CONFIG_SCHOOL_WEATHER_AFFECTS = num;
+                /* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+                else if (!str_cmp(tag, "sec_o_novelty_move_scale"))
+                    CONFIG_SEC_O_NOVELTY_MOVE_SCALE = LIMIT(num, 0, 200);
+                else if (!str_cmp(tag, "sec_o_novelty_depth_scale"))
+                    CONFIG_SEC_O_NOVELTY_DEPTH_SCALE = LIMIT(num, 1, 20);
+                else if (!str_cmp(tag, "sec_o_novelty_bonus_cap"))
+                    CONFIG_SEC_O_NOVELTY_BONUS_CAP = LIMIT(num, 10, 50);
+                else if (!str_cmp(tag, "sec_o_repetition_cap"))
+                    CONFIG_SEC_O_REPETITION_CAP = LIMIT(num, 1, 10);
+                else if (!str_cmp(tag, "sec_o_repetition_bonus"))
+                    CONFIG_SEC_O_REPETITION_BONUS = LIMIT(num, 0, 30);
+                else if (!str_cmp(tag, "sec_o_exploration_base"))
+                    CONFIG_SEC_O_EXPLORATION_BASE = LIMIT(num, 0, 40);
+                else if (!str_cmp(tag, "sec_o_threat_bias"))
+                    CONFIG_SEC_O_THREAT_BIAS = LIMIT(num, 0, 100);
+                /* SEC Core tuning parameters */
+                else if (!str_cmp(tag, "sec_emotion_alpha"))
+                    CONFIG_SEC_EMOTION_ALPHA = LIMIT(num, 10, 80);
+                else if (!str_cmp(tag, "sec_wta_threshold"))
+                    CONFIG_SEC_WTA_THRESHOLD = LIMIT(num, 30, 90);
                 else if (!str_cmp(tag, "start_messg")) {
                     strncpy(buf, "Reading start message in load_config()", sizeof(buf));
                     if (CONFIG_START_MESSG)
@@ -5161,6 +5416,8 @@ void load_config(void)
                     CONFIG_MAX_MOB_POSTED_QUESTS = num;
                 else if (!str_cmp(tag, "emotion_alignment_shifts"))
                     CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
+                else if (!str_cmp(tag, "mob_4d_debug"))
+                    CONFIG_MOB_4D_DEBUG = num;
                 break;
 
             default:

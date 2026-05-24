@@ -41,6 +41,7 @@ int touch(const char *path);
 void mudlog(int type, int level, int file, const char *str, ...) __attribute__((format(printf, 4, 5)));
 int rand_number(int from, int to);
 int dice(int number, int size);
+int rand_gaussian(int mean, int std_dev, int min, int max);
 size_t sprintbit(bitvector_t vektor, const char *names[], char *result, size_t reslen);
 size_t sprinttype(int type, const char *names[], char *result, size_t reslen);
 void sprintbitarray(int bitvector[], const char *names[], int maxar, char *result);
@@ -156,8 +157,18 @@ int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
 /* Mob emotion system functions */
+float apply_soft_saturation_clamp(float raw_value);
+float apply_neuroticism_gain(struct char_data *mob, int emotion_type, int base_value);
+int get_emotion_type_from_pointer(struct char_data *mob, int *emotion_ptr);
 void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
 void adjust_emotional_intelligence(struct char_data *mob, int change);
+
+/* Big Five Phase 2: Conscientiousness functions */
+float calculate_emotional_arousal(struct char_data *ch);
+float apply_conscientiousness_impulse_modulation(struct char_data *ch, float base_impulse_prob);
+float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_delay, float arousal);
+float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weight);
+
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
 void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
 void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
@@ -169,6 +180,8 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
 void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_contagion(struct char_data *mob);
+void decay_emotion_memories(struct char_data *mob);
+void perform_emotional_regulation(struct char_data *mob);
 int calculate_mob_mood(struct char_data *mob);
 void update_mob_mood(struct char_data *mob);
 void check_extreme_mood_effects(struct char_data *mob);
@@ -177,6 +190,7 @@ void check_extreme_emotional_states(struct char_data *mob);
 void check_conflicting_emotions(struct char_data *mob);
 void check_emotional_breakdown(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
+void update_mob_actor_emotion_from_social(struct char_data *actor, struct char_data *target, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
 void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);
@@ -185,17 +199,31 @@ void update_mob_emotion_entered_safe_area(struct char_data *mob);
 void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster);
 void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster);
 void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_witnessed_social(struct char_data *witness, struct char_data *actor, struct char_data *target,
+                                         const char *social_name);
 void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player);
 void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player);
 void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);
 void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader);
 void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value);
+void update_mob_emotion_ally_fled(struct char_data *mob, struct char_data *fled);
 
 /* Emotion memory system functions */
 void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
                         const char *social_name);
+void add_active_emotion_memory(struct char_data *mob, struct char_data *target, int interaction_type, int major_event,
+                               const char *social_name);
+int classify_social_interact_type(const char *social_name, int *out_major);
+int get_active_memory_hysteresis(struct char_data *mob, int interact_type);
+int get_passive_memory_hysteresis(struct char_data *mob, int interact_type);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
+
+/* 4D Relational Decision Space - Emotional Profile projection system */
+struct emotion_4d_state compute_emotion_4d_state(struct char_data *mob, struct char_data *target);
+float compute_coping_potential(struct char_data *mob);
+void update_personal_drift(struct char_data *mob, int axis, int emotion_type, float event_weight);
+void log_4d_state(struct char_data *mob, struct char_data *target, const struct emotion_4d_state *state);
 
 /* Hybrid emotion system - combines mood (global) with relationship (per-entity) emotions */
 int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
@@ -1039,9 +1067,13 @@ int get_mob_skill(struct char_data *ch, int skill_num);
     (!AFF_FLAGGED(sub, AFF_BLIND) &&                                                                                   \
      (IS_LIGHT(IN_ROOM(sub)) || AFF_FLAGGED((sub), AFF_INFRAVISION) || GET_LEVEL(sub) >= LVL_IMMORT))
 
+/** Room where ch has locally appeared via 'appear'; works for PCs and NPCs. */
+#define CHAR_APPEARED_ROOM(ch) (IS_NPC(ch) ? (ch)->mob_specials.appeared_room : (ch)->player_specials->appeared_room)
+
 /** Defines if sub character can see the invisible obj character. */
 #define INVIS_OK(sub, obj)                                                                                             \
-    ((!AFF_FLAGGED((obj), AFF_INVISIBLE) || AFF_FLAGGED(sub, AFF_DETECT_INVIS)) &&                                     \
+    ((!AFF_FLAGGED((obj), AFF_INVISIBLE) || AFF_FLAGGED(sub, AFF_DETECT_INVIS) ||                                      \
+      (CHAR_APPEARED_ROOM(obj) != NOWHERE && IN_ROOM(sub) == CHAR_APPEARED_ROOM(obj))) &&                              \
      (!AFF_FLAGGED((obj), AFF_HIDE) || AFF_FLAGGED(sub, AFF_SENSE_LIFE)))
 
 /** Defines if sub character can see obj character, assuming mortal only
@@ -1394,6 +1426,12 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MAX_MOB_POSTED_QUESTS config_info.experimental.max_mob_posted_quests
 /** Emotions influence alignment over time? */
 #define CONFIG_EMOTION_ALIGNMENT_SHIFTS config_info.experimental.emotion_alignment_shifts
+/** Log 4D decision-space raw and effective values for debugging */
+#define CONFIG_MOB_4D_DEBUG config_info.experimental.mob_4d_debug
+/** Probability (%) of mob gossiping per emotion tick (default: 10) */
+#define CONFIG_MOB_GOSSIP_CHANCE config_info.experimental.mob_gossip_chance
+/** Seconds between gossip updates for the same listener-target pair (default: 300) */
+#define CONFIG_MOB_GOSSIP_COOLDOWN config_info.experimental.mob_gossip_cooldown
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */
@@ -1516,5 +1554,67 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_DECAY_RATE_DISGUST config_info.emotion_config.decay_rate_disgust
 #define CONFIG_EMOTION_DECAY_RATE_SHAME config_info.emotion_config.decay_rate_shame
 #define CONFIG_EMOTION_DECAY_RATE_HUMILIATION config_info.emotion_config.decay_rate_humiliation
+#define CONFIG_EMOTION_DECAY_RATE_ENVY config_info.emotion_config.decay_rate_envy
+
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+#define CONFIG_NEUROTICISM_GAIN_FEAR config_info.emotion_config.neuroticism_gain_fear
+#define CONFIG_NEUROTICISM_GAIN_SADNESS config_info.emotion_config.neuroticism_gain_sadness
+#define CONFIG_NEUROTICISM_GAIN_SHAME config_info.emotion_config.neuroticism_gain_shame
+#define CONFIG_NEUROTICISM_GAIN_HUMILIATION config_info.emotion_config.neuroticism_gain_humiliation
+#define CONFIG_NEUROTICISM_GAIN_PAIN config_info.emotion_config.neuroticism_gain_pain
+#define CONFIG_NEUROTICISM_GAIN_HORROR config_info.emotion_config.neuroticism_gain_horror
+#define CONFIG_NEUROTICISM_GAIN_DISGUST config_info.emotion_config.neuroticism_gain_disgust
+#define CONFIG_NEUROTICISM_GAIN_ENVY config_info.emotion_config.neuroticism_gain_envy
+#define CONFIG_NEUROTICISM_GAIN_ANGER config_info.emotion_config.neuroticism_gain_anger
+#define CONFIG_NEUROTICISM_SOFT_CLAMP_K config_info.emotion_config.neuroticism_soft_clamp_k
+
+/* Big Five Phase 2: Conscientiousness configuration macros */
+#define CONFIG_CONSCIENTIOUSNESS_IMPULSE_CONTROL config_info.emotion_config.conscientiousness_impulse_control
+#define CONFIG_CONSCIENTIOUSNESS_REACTION_DELAY config_info.emotion_config.conscientiousness_reaction_delay
+#define CONFIG_CONSCIENTIOUSNESS_MORAL_WEIGHT config_info.emotion_config.conscientiousness_moral_weight
+#define CONFIG_CONSCIENTIOUSNESS_DEBUG config_info.emotion_config.conscientiousness_debug
+
+/* Big Five Phase 3: Agreeableness (A) and Extraversion (E) SEC modulation coefficients */
+#define CONFIG_OCEAN_AE_K1 config_info.emotion_config.ocean_ae_k1
+#define CONFIG_OCEAN_AE_K2 config_info.emotion_config.ocean_ae_k2
+#define CONFIG_OCEAN_AE_K3 config_info.emotion_config.ocean_ae_k3
+#define CONFIG_OCEAN_AE_K4 config_info.emotion_config.ocean_ae_k4
+
+/* Big Five Phase 3: behavioral scale factors (stored * 10; actual = value / 10.0) */
+#define CONFIG_OCEAN_E_SOCIAL_REWARD config_info.emotion_config.ocean_e_social_reward
+#define CONFIG_OCEAN_A_AGGR_SCALE config_info.emotion_config.ocean_a_aggr_scale
+#define CONFIG_OCEAN_A_GROUP_SCALE config_info.emotion_config.ocean_a_group_scale
+
+/* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+#define CONFIG_SEC_O_NOVELTY_MOVE_SCALE config_info.emotion_config.sec_o_novelty_move_scale
+#define CONFIG_SEC_O_NOVELTY_DEPTH_SCALE config_info.emotion_config.sec_o_novelty_depth_scale
+#define CONFIG_SEC_O_NOVELTY_BONUS_CAP config_info.emotion_config.sec_o_novelty_bonus_cap
+#define CONFIG_SEC_O_REPETITION_CAP config_info.emotion_config.sec_o_repetition_cap
+#define CONFIG_SEC_O_REPETITION_BONUS config_info.emotion_config.sec_o_repetition_bonus
+#define CONFIG_SEC_O_EXPLORATION_BASE config_info.emotion_config.sec_o_exploration_base
+#define CONFIG_SEC_O_THREAT_BIAS config_info.emotion_config.sec_o_threat_bias
+
+/* SEC Core tuning parameters */
+#define CONFIG_SEC_EMOTION_ALPHA config_info.emotion_config.sec_emotion_alpha
+#define CONFIG_SEC_WTA_THRESHOLD config_info.emotion_config.sec_wta_threshold
+
+/** Maximum per-call emotion delta (rate limiting): clamps adjust_emotion() change (default: 20) */
+#define CONFIG_EMOTION_MAX_DELTA config_info.emotion_config.emotion_max_delta
+
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+/** Consolidation threshold θ_cons * 100 (default: 65 = 0.65) */
+#define CONFIG_MALP_THETA_CONS config_info.emotion_config.malp_theta_cons
+/** Reconsolidation window in ticks (default: 60) */
+#define CONFIG_MALP_RECON_WINDOW_TICKS config_info.emotion_config.malp_recon_window_ticks
+/** Rehearsal count threshold for MPLP trait formation (default: 3) */
+#define CONFIG_MALP_REHEARSAL_THRESHOLD config_info.emotion_config.malp_rehearsal_threshold
+/** Maximum MALP entries per mob (default: 200) */
+#define CONFIG_MALP_LIMIT_PER_MOB config_info.emotion_config.malp_limit_per_mob
+/** Standard MALP intensity half-life in hours (default: 24) */
+#define CONFIG_MALP_DECAY_HALFLIFE_STD config_info.emotion_config.malp_decay_halflife_std
+/** Major-event MALP intensity half-life in hours (default: 72) */
+#define CONFIG_MALP_DECAY_HALFLIFE_MAJOR config_info.emotion_config.malp_decay_halflife_major
+/** MPLP trait half-life in hours (default: 168 = 7 days) */
+#define CONFIG_MPLP_DECAY_HALFLIFE config_info.emotion_config.mplp_decay_halflife
 
 #endif /* _UTILS_H_ */

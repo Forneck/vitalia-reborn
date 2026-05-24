@@ -7,7 +7,7 @@ IdNum     25
 Dated     1604934779
 Level     36
 Room      12051
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      skill cooking~
 Body      Misturar alimentos tipo comida e aumentar a saciedade.
@@ -59,16 +59,6 @@ Level     96
 Room      12043
 Flags     0 0 0 0
 End
-Text      affects~
-Body      Para os affects mostrar os efeitos fixos, ex. Magico dando santuario, colocar uma linha como santuario [item]
-~
-Name      Roscoe~
-IdNum     293
-Dated     1761574552
-Level     80
-Room      1525
-Flags     0 0 0 0
-End
 Text      Criar a magia Emaranhar (Entangle) para druida. Efeito similar ao paralyse de magos e clerigos :). Raizes prendem os ps do alvo no chao.~
 Body      Criar a magia Emaranhar (Entangle) para druida. Efeito similar ao paralyse de magos e clerigos :). Raizes prendem os ps do alvo no chao.
 ~
@@ -77,16 +67,6 @@ IdNum     507
 Dated     1761746180
 Level     38
 Room      3063
-Flags     0 0 0 0
-End
-Text      Seria legal a opcao de auto-flecha para ja equipar as flechas que temos na mao em luta.~
-Body      Seria legal a opcao de auto-flecha para ja equipar as flechas que temos na mao em luta.
-~
-Name      Panoramix~
-IdNum     46
-Dated     1761911049
-Level     39
-Room      1508
 Flags     0 0 0 0
 End
 Text      Melhoria no Locate Object~
@@ -157,19 +137,6 @@ IdNum     175
 Dated     1762176280
 Level     100
 Room      9839
-Flags     0 0 0 0
-End
-Text      rskills - listar skills/spells de remort~
-Body      Ter um comando chamado 'rskills' onde ele listaria as habilidades e magias levadas por remort, por exemplo:
-
-[ swords ] -------- [ guerreiro ] ---- [ 1a enc. ]
-[ fireshield ] ---- [ mago ] --------- [ 2a enc. ]
-~
-Name      Laguna~
-IdNum     50
-Dated     1762347941
-Level     100
-Room      1000
 Flags     0 0 0 0
 End
 Text      skill de ranger~
@@ -309,17 +276,132 @@ Level     68
 Room      9548
 Flags     0 0 0 0
 End
-Text       Sugestao para poder usar o item a Flecha de Sagitario na aljava~
-Body      Sugestao para poder usar o item a Flecha de Sagitario na aljava
+Text      ferreiro balanceamento~
+Body      Laguna disse, 'de repente, nao teria como limitar os stats de acordo com o nivel
+de quem ta criando?'
+< 472Hp 4000Mn 1000Mv >
+[Auto zone reset: New Zone (Zone 652)]
+[ a serpente marinha hit death trap #2207 (O Redemoinho de Água) ]
+< 472Hp 4000Mn 1000Mv >
+Laguna disse, 'dai pra ter o maximo so vc sendo msm lvl 90-100'
+< 472Hp 4000Mn 1000Mv > sa boa ideia
+Você disse, 'boa ideia'
+< 472Hp 4000Mn 1000Mv >
+Laguna disse, 'e dai o item seguiria esse range'
+Laguna disse, 'ou ate colocar remort na jogada'
+~
+Name      Cansian~
+IdNum     1
+Dated     1764735343
+Level     110
+Room      2304
+Flags     0 0 0 0
+End
+Text      vitaliabet - a loteria de vitalia~
+Body      Uma loteria periodica (semanal/mensal?) onde uma porcentagem de todo o gold e qp's gastos por todos os players seriam acumulados num montante que seria sorteado a todos os players online em uma data / hora marcada.
+~
+Name      Laguna~
+IdNum     50
+Dated     1764735979
+Level     48
+Room      2304
+Flags     0 0 0 0
+End
+Text      kick~
+Body      A habilidade KICK esta muito ruim e ultrapassada. O dano baseado no nivel e muito baixo e o stun demasiadamente longo para uma habilidade tao ruim. 
+Para torna-la usavel, poderia atualizar o dano para nivel+damroll e reduzir o stun para 1 turno apenas
+~
+Name      Henzo~
+IdNum     562
+Dated     1765053307
+Level     64
+Room      5116
+Flags     0 0 0 0
+End
+Text      Sugestao DIminuir um pouco o tempo de reset de Troia, Ghenna, caminhos da virtude~
+Body      Sugestao DIminuir um pouco o tempo de reset de Troia, Ghenna, caminhos da virtude
 
-possibilidade de usar essa flecha como se fosse um item na aljava e nao como uma flecha para ser atirada, dando mais uma opcao pro jogador equipar
+para melhorar XP alto
 
-e se a sugestao for aceita, definir atrubutos para essa flecha
+obrigado
 ~
 Name      Lupulis~
 IdNum     175
-Dated     1764019398
-Level     100
-Room      1104
+Dated     1765373510
+Level     98
+Room      3001
+Flags     0 0 0 0
+End
+Text      player desativar skills auras e skillspassivas~
+Body      player desativar skills auras e skillspassivas
+
+permitir desativar magias, skills, auras, habilidades, que foram lancadas e estao afetando em horas
+~
+Name      Tiamat~
+IdNum     175
+Dated     1765387517
+Level     61
+Room      1016
+Flags     0 0 0 0
+End
+Text      Magia de clerigo para controlar e definir alinhamento~
+Body      Magia de clerigo para controlar e definir alinhamento
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765393084
+Level     67
+Room      3026
+Flags     0 0 0 0
+End
+Text      Mudar a posicao da mensagem DANGEr SENSE para acima das saidas na descricao da sala~
+Body      Mudar a posicao da mensagem DANGEr SENSE para acima das saidas na descricao da sala
+
+l
+~
+Name      Lupulis~
+IdNum     175
+Dated     1765393460
+Level     68
+Room      9933
+Flags     0 0 0 0
+End
+Text      Permitir repetir classe no remorte aps passar por todas a primeira vez~
+Body      Permitir repetir classe no remorte aps passar por todas a primeira vez
+
+eu estava de ladrao, iria repetir mas esta bloqueando. poderia liberar repetir apos remorte mais alto
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766065371
+Level     84
+Room      13909
+Flags     0 0 0 0
+End
+Text      Incluir o lvl como opcional na hitbar < 1315Hp 4379Mn 421Mv > ~
+Body      Incluir o lvl do plkayer como opcional na hitbar < Lvl80 1315Hp 4379Mn 421Mv > 
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766151679
+Level     87
+Room      17885
+Flags     0 0 0 0
+End
+Text       Identify expandido~
+Body      
+possibilidade de criar um identify expandido 
+
+onde mostra o score completo do mob, igual o do player
+
+possibilitando ver os saves, e todos os detalhes adicionais, talvez ate emocoes
+
+~
+Name      Lupulis~
+IdNum     175
+Dated     1766411800
+Level     81
+Room      9941
 Flags     0 0 0 0
 End

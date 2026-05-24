@@ -8,11 +8,11 @@ if %speech.contains(baohe lin tsung lee-dah)%
   * Check if door exists
   if %self.east(room)%
     * Remove locked flag (keep closed flag)
-    %door% %self.vnum% east flags ab
+    %door% %self.vnum% east flags ao
     %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.east(vnum)%
-    %door% %otherroom% west flags ab
+    %door% %otherroom% west flags ao
   end
 end
 ~

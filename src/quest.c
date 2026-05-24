@@ -27,6 +27,7 @@
 #include "dg_scripts.h"      /* for char_script_id */
 #include "modify.h"          /* for page_string */
 #include "shadow_timeline.h" /* for cognitive capacity constants */
+#include "sec.h"             /* for sec_init */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -836,6 +837,56 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
     return TRUE;
 }
 
+/** Helper to find the questmaster mob present in the same room as the entity.
+ *  This centralizes the lookup logic so it can be reused by multiple quest paths.
+ *
+ * @param entity The character whose room we search (player or mob)
+ * @param rnum   The quest rnum whose questmaster we are looking for
+ * @return Pointer to the questmaster in the room, or NULL if not found/invalid
+ */
+static struct char_data *find_questmaster_in_room(struct char_data *entity, qst_rnum rnum)
+{
+    mob_rnum questmaster_rnum;
+    struct char_data *temp_char;
+
+    if (!entity || IN_ROOM(entity) == NOWHERE || rnum == NOTHING)
+        return NULL;
+
+    questmaster_rnum = real_mobile(QST_MASTER(rnum));
+    if (questmaster_rnum == NOBODY)
+        return NULL;
+
+    /* Look for questmaster in current room */
+    for (temp_char = world[IN_ROOM(entity)].people; temp_char; temp_char = temp_char->next_in_room) {
+        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+            /* For mob quests, skip if questmaster is the mob itself */
+            if (IS_NPC(entity) && temp_char == entity)
+                continue;
+            return temp_char;
+        }
+    }
+
+    return NULL;
+}
+
+/** Trigger quest failure emotion memory for questmaster
+ * @param entity The character who failed the quest (player or mob)
+ * @param rnum The quest rnum that was failed
+ */
+static void trigger_quest_failure_emotion(struct char_data *entity, qst_rnum rnum)
+{
+    struct char_data *questmaster;
+
+    if (!entity || !CONFIG_MOB_CONTEXTUAL_SOCIALS || IN_ROOM(entity) == NOWHERE || rnum == NOTHING)
+        return;
+
+    /* Find the questmaster mob and update their emotions */
+    questmaster = find_questmaster_in_room(entity, rnum);
+    if (questmaster && questmaster->ai_data) {
+        update_mob_emotion_quest_failed(questmaster, entity);
+    }
+}
+
 /** Called when an escort mob dies - fails the escort quest.
  * @param escort_mob The escort mob that died.
  * @param killer The character who killed the mob (can be NULL). */
@@ -869,6 +920,9 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
             } else {
                 send_to_char(ch, "\r\n");
             }
+
+            /* Emotion trigger: Quest failure (Quest-Related 2.4) */
+            trigger_quest_failure_emotion(ch, rnum);
 
             /* Clear the quest */
             clear_quest(ch);
@@ -927,6 +981,9 @@ void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer)
             } else {
                 send_to_char(ch, "\r\n");
             }
+
+            /* Emotion trigger: Quest failure (Quest-Related 2.4) */
+            trigger_quest_failure_emotion(ch, rnum);
 
             /* Clear the quest */
             clear_quest(ch);
@@ -1042,21 +1099,9 @@ void generic_complete_quest(struct char_data *ch)
         /* Emotion trigger: Quest completion (Quest-Related 2.4) */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
             /* Find the questmaster mob and update their emotions */
-            mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
-            if (questmaster_rnum != NOBODY) {
-                /* Look for questmaster in current room */
-                struct char_data *questmaster = NULL;
-                struct char_data *temp_char;
-                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                    if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
-                        questmaster = temp_char;
-                        break;
-                    }
-                }
-                /* Update questmaster emotions if found */
-                if (questmaster && questmaster->ai_data) {
-                    update_mob_emotion_quest_completed(questmaster, ch);
-                }
+            struct char_data *questmaster = find_questmaster_in_room(ch, rnum);
+            if (questmaster && questmaster->ai_data) {
+                update_mob_emotion_quest_completed(questmaster, ch);
             }
         }
 
@@ -1670,6 +1715,9 @@ static void quest_quit(struct char_data *ch)
         send_to_char(ch, "Você não faz mais parte desta busca.\r\n");
         save_char(ch);
     } else {
+        /* Emotion trigger: Quest failure (Quest-Related 2.4) - abandonment */
+        trigger_quest_failure_emotion(ch, rnum);
+
         clear_quest(ch);
         if (QST_QUIT(rnum) && (str_cmp(QST_QUIT(rnum), "undefined") != 0))
             send_to_char(ch, "%s", QST_QUIT(rnum));
@@ -2580,6 +2628,9 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
     /* Log the failure */
     log1("QUEST FAILURE: %s failed quest %d (%s)", GET_NAME(mob), vnum, reason);
 
+    /* Emotion trigger: Quest failure (Quest-Related 2.4) - mob failing their quest */
+    trigger_quest_failure_emotion(mob, rnum);
+
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
@@ -2678,19 +2729,9 @@ void mob_complete_quest(struct char_data *mob)
 
     /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
-        mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
-        if (questmaster_rnum != NOBODY) {
-            struct char_data *questmaster = NULL;
-            struct char_data *temp_char;
-            for (temp_char = world[IN_ROOM(mob)].people; temp_char; temp_char = temp_char->next_in_room) {
-                if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
-                    questmaster = temp_char;
-                    break;
-                }
-            }
-            if (questmaster && questmaster->ai_data) {
-                update_mob_emotion_quest_completed(questmaster, mob);
-            }
+        struct char_data *questmaster = find_questmaster_in_room(mob, rnum);
+        if (questmaster && questmaster->ai_data) {
+            update_mob_emotion_quest_completed(questmaster, mob);
         }
     }
 
@@ -2964,7 +3005,8 @@ bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum)
 
     /* Check if we have space */
     if (GET_NUM_TEMP_QUESTS(mob) >= GET_MAX_TEMP_QUESTS(mob)) {
-        log1("QUEST: Mob %s cannot accept more temporary quests (max %d)", GET_NAME(mob), GET_MAX_TEMP_QUESTS(mob));
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s cannot accept more temporary quests (max %d)", GET_NAME(mob),
+               GET_MAX_TEMP_QUESTS(mob));
         return FALSE;
     }
 
@@ -2984,7 +3026,7 @@ bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum)
     mob->ai_data->temp_quests[mob->ai_data->num_temp_quests] = quest_vnum;
     mob->ai_data->num_temp_quests++;
 
-    log1("QUEST: Added temporary quest %d to mob %s", quest_vnum, GET_NAME(mob));
+    mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Added temporary quest %d to mob %s", quest_vnum, GET_NAME(mob));
     return TRUE;
 }
 
@@ -3010,7 +3052,7 @@ bool remove_temp_quest_from_mob(struct char_data *mob, qst_vnum quest_vnum)
                 clear_temp_questmaster(mob);
             }
 
-            log1("QUEST: Removed temporary quest %d from mob %s", quest_vnum, GET_NAME(mob));
+            mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Removed temporary quest %d from mob %s", quest_vnum, GET_NAME(mob));
             return TRUE;
         }
     }
@@ -3100,7 +3142,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
      * In this case, we should NOT make it a temporary questmaster.
      */
     if (mob->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
-        log1("QUEST: Mob %s successfully posted quest %d with questmaster via GOAL system", GET_NAME(mob), quest_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s successfully posted quest %d with questmaster via GOAL system",
+               GET_NAME(mob), quest_vnum);
         return;
     }
 
@@ -3114,8 +3157,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
         add_temp_quest_to_mob(mob, quest_vnum);
 
         act("$n parece ter algo importante para dizer.", TRUE, mob, 0, 0, TO_ROOM);
-        log1("QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)", GET_NAME(mob), quest_vnum,
-             qm_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)",
+               GET_NAME(mob), quest_vnum, qm_vnum);
     } else {
         /*
          * Mob can reach questmaster - the quest should be available through the permanent questmaster.
@@ -3131,7 +3174,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
             /* Ensure the questmaster prototype has the correct special procedure */
             if (mob_index[qm_rnum].func != questmaster) {
                 mob_index[qm_rnum].func = questmaster;
-                log1("QUEST: Fixed questmaster special procedure for mob prototype %d", qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Fixed questmaster special procedure for mob prototype %d",
+                       qm_vnum);
             }
 
             /* Find the questmaster in the world and ensure instance also has correct procedure */
@@ -3140,21 +3184,23 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
                     /* Double-check that this specific instance has the questmaster function */
                     if (mob_index[GET_MOB_RNUM(qm)].func != questmaster) {
                         mob_index[GET_MOB_RNUM(qm)].func = questmaster;
-                        log1("QUEST: Fixed questmaster special procedure for mob instance %s (%d)", GET_NAME(qm),
-                             qm_vnum);
+                        mudlog(CMP, LVL_GRGOD, FALSE,
+                               "QUEST: Fixed questmaster special procedure for mob instance %s (%d)", GET_NAME(qm),
+                               qm_vnum);
                     }
                     break;
                 }
             }
 
             if (qm) {
-                log1("QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available",
-                     GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE,
+                       "QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available",
+                       GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
             } else {
-                log1(
-                    "QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to "
-                    "prototype",
-                    GET_NAME(mob), quest_vnum, qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE,
+                       "QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to "
+                       "prototype",
+                       GET_NAME(mob), quest_vnum, qm_vnum);
             }
         } else {
             log1("QUEST: WARNING - Mob %s posted quest %d to invalid questmaster %d", GET_NAME(mob), quest_vnum,
@@ -3454,6 +3500,25 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
 
+    /* Initialize last_chosen_action_type to -1 (no prior commitment).
+     * Used by Conscientiousness consistency bias in Shadow Timeline scoring. */
+    mob->ai_data->last_chosen_action_type = -1;
+    mob->ai_data->action_repetition_count = 0;
+
+    /* Gossip rate limiter: 0 means "never gossiped" (also the memset default).
+     * Explicit assignment here documents the invariant and guards any future
+     * allocation path that might not use memset. */
+    mob->ai_data->last_gossiped = 0;
+
+    /* Cognitive Bias Module: initialise to human-normal defaults (0.5).
+     * Builders can override these via the mob file / OLC in future phases.
+     * 0.0 = no bias, 0.5 = normal human, 1.0 = strong, >1.0 = pathological. */
+    mob->ai_data->biases.confirmation_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.availability_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.attribution_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.negativity_bias = COGBIAS_HUMAN_DEFAULT;
+    mob->ai_data->biases.anchoring_bias = COGBIAS_HUMAN_DEFAULT;
+
     /* Initialize goal fields to sentinel values to prevent SIGSEGV.
      * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.
      * Setting them to 0 (from memset) would cause incorrect behavior. */
@@ -3470,6 +3535,16 @@ void init_mob_ai_data(struct char_data *mob)
      * This value is at the threshold where quest reward penalties no longer apply (< 40 gets penalty),
      * placing mobs in the "average" reputation tier (40-59) with no modifiers. */
     mob->ai_data->reputation = 40;
+
+    /* Big Five Phase 2: Initialize Conscientiousness.
+     * Use an explicit flag to track initialization state instead of sentinel values.
+     * This prevents confusion between "uninitialized" and "explicitly set to 0.0 (very low C)".
+     *
+     * The flag is checked later (during emotion initialization) to determine if we need
+     * to generate a random value or preserve an existing one (from file or prototype copy). */
+    if (!mob->ai_data->personality.conscientiousness_initialized) {
+        mob->ai_data->personality.conscientiousness_initialized = 0; /* Mark as uninitialized */
+    }
 
     /* Set default values for genetics if not already set from mob files.
      * This ensures mobs have reasonable default behavior even without explicit genetics.
@@ -3495,6 +3570,99 @@ void init_mob_ai_data(struct char_data *mob)
         int base_ei = 30 + (GET_LEVEL(mob) * 2); /* Base grows with level */
         int variation = rand_number(-10, 10);    /* Random variation */
         mob->ai_data->genetics.emotional_intelligence = URANGE(10, base_ei + variation, 90);
+    }
+
+    /* Initialize Big Five (OCEAN) Personality traits
+     * Phase 1: Only Neuroticism (N) is implemented
+     * Other traits (O, C, E, A) reserved for future phases
+     *
+     * NEUROTICISM INITIALIZATION:
+     * N is derived from genetic traits that indicate emotional sensitivity:
+     * - Low brave_prevalence → Higher N (less brave = more threat-sensitive)
+     * - Low emotional_intelligence → Higher N (less emotional control = more reactive)
+     *
+     * Formula: N = weighted_inverse_bravery + weighted_low_ei
+     * Components:
+     * - Inverse bravery: (100 - brave_prevalence) / 100 → [0, 1]
+     * - Low EI factor: (50 - min(ei, 50)) / 50 → [0, 1] when EI < 50, else 0
+     *
+     * Weight distribution:
+     * - Bravery: 70% weight (primary determinant of threat sensitivity)
+     * - EI: 30% weight (secondary determinant of emotional volatility)
+     *
+     * NOTE: This initialization must happen before the emotional profile early return
+     * to ensure all mobs (including those with profiles) get proper personality values.
+     */
+    {
+        int brave = mob->ai_data->genetics.brave_prevalence;
+        int ei = mob->ai_data->genetics.emotional_intelligence;
+
+        /* Calculate inverse bravery component (0.0 to 1.0) */
+        float inverse_bravery = (100.0f - (float)brave) / 100.0f;
+
+        /* Calculate low EI component (0.0 to 1.0, only if EI < 50) */
+        float low_ei_factor = 0.0f;
+        if (ei < 50) {
+            low_ei_factor = (50.0f - (float)ei) / 50.0f;
+        }
+
+        /* Weighted combination: 70% bravery, 30% EI */
+        float neuroticism = (inverse_bravery * 0.7f) + (low_ei_factor * 0.3f);
+
+        /* Clamp to valid range [0.0, 1.0] */
+        mob->ai_data->personality.neuroticism = URANGE(0.0f, neuroticism, 1.0f);
+
+        /* Initialize other OCEAN traits:
+         * Phase 2: Conscientiousness (C) - Generate if not explicitly set
+         * Phase 3+: Other traits remain at neutral baseline (0.5) for now
+         *
+         * CONSCIENTIOUSNESS INITIALIZATION:
+         * C represents self-discipline, organization, and goal-directed behavior.
+         *
+         * Strategy: Use explicit initialization flag instead of sentinel values.
+         * This avoids confusion between "uninitialized" and "explicitly set to 0.0".
+         *
+         * Storage: 0-100 in files/UI, normalized to 0.0-1.0 in personality struct.
+         * Note: 0.0 is a valid value (very low conscientiousness) and can now be
+         * properly distinguished from "not initialized" via the flag.
+         */
+        if (!mob->ai_data->personality.conscientiousness_initialized) {
+            /* Uninitialized: generate a new conscientiousness value.
+             * Use min=1 so that C=0 remains an unambiguous "uninitialized"
+             * sentinel in saved files, consistent with db.c and medit.c. */
+            int c_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.conscientiousness = (float)c_value / 100.0f;
+            mob->ai_data->personality.conscientiousness_initialized = 1;
+        }
+        /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
+
+        /* Big Five Phase 4: Openness (O) - Gaussian Trait_base generation.
+         * μ=50 (int), σ=15, clamped [1, 100]; normalized to [0.01, 1.0] float.
+         * Value 0 remains "uninitialized" sentinel consistent with other traits.
+         * IMPORTANT: O_base is structural (genetic); it must never be derived from
+         * SEC emotional state.  O_mod is reserved for slow long-term adaptation only
+         * (±SEC_O_MOD_CAP = ±0.05); it must not be recalculated per tick. */
+        if (!mob->ai_data->personality.openness_initialized) {
+            int o_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.openness = (float)o_value / 100.0f;
+            mob->ai_data->personality.openness_initialized = 1;
+        }
+        /* If already initialized, it was explicitly set (file/prototype); keep it as-is. */
+
+        /* Big Five Phase 3: Agreeableness (A) - Gaussian Trait_base generation.
+         * μ=0.5, σ=0.15, clamped 1-100. Value 0 remains "uninitialized" sentinel. */
+        if (!mob->ai_data->personality.agreeableness_initialized) {
+            int a_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.agreeableness = (float)a_value / 100.0f;
+            mob->ai_data->personality.agreeableness_initialized = 1;
+        }
+
+        /* Big Five Phase 3: Extraversion (E) - Gaussian Trait_base generation. */
+        if (!mob->ai_data->personality.extraversion_initialized) {
+            int e_value = rand_gaussian(50, 15, 1, 100);
+            mob->ai_data->personality.extraversion = (float)e_value / 100.0f;
+            mob->ai_data->personality.extraversion_initialized = 1;
+        }
     }
 
     /* If a specific emotional profile is set, apply it first
@@ -3616,6 +3784,16 @@ void init_mob_ai_data(struct char_data *mob)
             mob->ai_data->memories[i].anger_level = 0;
         }
         mob->ai_data->memory_index = 0; /* Start at beginning of circular buffer */
+
+        /* Initialize active emotion memory - zero out all slots */
+        for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+            mob->ai_data->active_memories[i].timestamp = 0; /* Mark as unused */
+            mob->ai_data->active_memories[i].entity_id = 0;
+            mob->ai_data->active_memories[i].entity_type = 0;
+            mob->ai_data->active_memories[i].interaction_type = 0;
+            mob->ai_data->active_memories[i].major_event = 0;
+        }
+        mob->ai_data->active_memory_index = 0; /* Start at beginning of circular buffer */
     }
 
     /* Initialize climate preferences - these will be set to appropriate values
@@ -3653,6 +3831,9 @@ void init_mob_ai_data(struct char_data *mob)
         COGNITIVE_CAPACITY_BASE + (mob->ai_data->genetics.emotional_intelligence * COGNITIVE_CAPACITY_EI_MULT);
     mob->ai_data->cognitive_capacity =
         URANGE(COGNITIVE_CAPACITY_LOWER_BOUND, mob->ai_data->cognitive_capacity, COGNITIVE_CAPACITY_MAX);
+
+    /* SEC: initialise internal emotional state and personality baseline. */
+    sec_init(mob);
 }
 
 /* Initialize mob climate preferences based on spawn room conditions.

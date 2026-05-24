@@ -97,6 +97,59 @@ extern int default_minimap_size;
 
 extern int medit_advanced_stats;
 extern int ibt_autosave;
+
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+/* Big Five Phase 1: Neuroticism configuration variables */
+extern int neuroticism_gain_fear;
+extern int neuroticism_gain_sadness;
+extern int neuroticism_gain_shame;
+extern int neuroticism_gain_humiliation;
+extern int neuroticism_gain_pain;
+extern int neuroticism_gain_horror;
+extern int neuroticism_gain_disgust;
+extern int neuroticism_gain_envy;
+extern int neuroticism_gain_anger;
+extern int neuroticism_soft_clamp_k;
+
+/* Big Five Phase 2: Conscientiousness configuration variables */
+extern int conscientiousness_impulse_control;
+extern int conscientiousness_reaction_delay;
+extern int conscientiousness_moral_weight;
+extern int conscientiousness_debug;
+
+/* Big Five Phase 3: Agreeableness (A) and Extraversion (E) SEC modulation coefficients */
+extern int ocean_ae_k1;
+extern int ocean_ae_k2;
+extern int ocean_ae_k3;
+extern int ocean_ae_k4;
+
+/* Big Five Phase 3: behavioral scale factors (stored *10; actual = value/10.0) */
+extern int ocean_e_social_reward;
+extern int ocean_a_aggr_scale;
+extern int ocean_a_group_scale;
+
+/* Big Five Phase 4: Openness (O) Shadow Timeline parameters */
+extern int sec_o_novelty_move_scale;
+extern int sec_o_novelty_depth_scale;
+extern int sec_o_novelty_bonus_cap;
+extern int sec_o_repetition_cap;
+extern int sec_o_repetition_bonus;
+extern int sec_o_exploration_base;
+extern int sec_o_threat_bias;
+
+/* SEC Core tuning parameters */
+extern int sec_emotion_alpha;
+extern int sec_wta_threshold;
+
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+extern int malp_theta_cons;
+extern int malp_recon_window_ticks;
+extern int malp_rehearsal_threshold;
+extern int malp_limit_per_mob;
+extern int malp_decay_halflife_std;
+extern int malp_decay_halflife_major;
+extern int mplp_decay_halflife;
+
 /*
  * Variables not controlled by cedit
  */

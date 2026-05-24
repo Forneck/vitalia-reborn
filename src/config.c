@@ -359,3 +359,62 @@ int special_in_comm = YES;
 
 /* Current Debug Mode */
 int debug_mode = YES;
+
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism
+ * Beta values stored as int * 100 (e.g., 0.40 = 40, 0.25 = 25, 0.20 = 20)
+ * These control how much Neuroticism amplifies negative emotions
+ * Formula: E_raw = E_base * (1.0 + (beta * N)) */
+/* Big Five (OCEAN) Personality System - Phase 1: Neuroticism */
+int neuroticism_gain_fear = 40;        /* 0.40 - Primary threat */
+int neuroticism_gain_sadness = 40;     /* 0.40 - Loss/withdrawal */
+int neuroticism_gain_shame = 40;       /* 0.40 - Self-directed negative */
+int neuroticism_gain_humiliation = 40; /* 0.40 - Social degradation */
+int neuroticism_gain_pain = 40;        /* 0.40 - Physical suffering */
+int neuroticism_gain_horror = 40;      /* 0.40 - Extreme aversion */
+int neuroticism_gain_disgust = 25;     /* 0.25 - Moderate aversion */
+int neuroticism_gain_envy = 25;        /* 0.25 - Comparison-based negative */
+int neuroticism_gain_anger = 20;       /* 0.20 - Approach-oriented negative */
+int neuroticism_soft_clamp_k = 50;     /* Soft saturation constant */
+
+/* Big Five (OCEAN) Personality System - Phase 2: Conscientiousness */
+int conscientiousness_impulse_control = 100; /* 1.0 - Impulse control strength γ */
+int conscientiousness_reaction_delay = 100;  /* 1.0 - Reaction delay sensitivity β */
+int conscientiousness_moral_weight = 100;    /* 1.0 - Moral amplification factor */
+int conscientiousness_debug = 0;             /* 0 = OFF, 1 = ON - Debug logging */
+
+/* Big Five (OCEAN) Personality System - Phase 3: Agreeableness (A) and Extraversion (E) */
+/* SEC emotional modulation coefficients (stored *100; actual = value/100.0) */
+/* E_mod = k1*happiness - k2*fear,  A_mod = k3*happiness - k4*anger */
+int ocean_ae_k1 = 10; /* 0.10 - E modulation: happiness coefficient */
+int ocean_ae_k2 = 10; /* 0.10 - E modulation: fear coefficient       */
+int ocean_ae_k3 = 10; /* 0.10 - A modulation: happiness coefficient  */
+int ocean_ae_k4 = 10; /* 0.10 - A modulation: anger coefficient      */
+
+/* Big Five (OCEAN) Personality System - Phase 3: behavioral scale factors */
+/* Stored *10 (actual float = value / 10.0) */
+int ocean_e_social_reward = 100; /* 10.0 - E social reward gain scale (max +5 happiness at E=1.0) */
+int ocean_a_aggr_scale = 200;    /* 20.0 - A aggression initiation resistance (+-10 pts at A=0/1) */
+int ocean_a_group_scale = 200;   /* 20.0 - A group cooperation bonus (+-10 pts at A=0/1) */
+
+/* Big Five (OCEAN) Personality System - Phase 4: Openness (O) */
+/* Shadow Timeline novelty and exploration coefficients */
+int sec_o_novelty_move_scale = 140; /* 14.0 - MOVE score bonus per O unit (*10) */
+int sec_o_novelty_depth_scale = 6;  /* pts per repetition step at O=1 */
+int sec_o_novelty_bonus_cap = 30;   /* hard cap on novelty bonus (0.3 * OUTCOME_SCORE_MAX) */
+int sec_o_repetition_cap = 5;       /* depth at which novelty bonus plateaus */
+int sec_o_repetition_bonus = 15;    /* routine-preference bonus at O=0 */
+int sec_o_exploration_base = 20;    /* max exploration % chance (% * O_final) */
+int sec_o_threat_bias = 40;         /* 0.40 - O threat-amplification reduction (*100) */
+
+/* SEC Core tuning parameters */
+int sec_emotion_alpha = 40; /* 0.40 - base alpha-smoothing rate (*100) */
+int sec_wta_threshold = 60; /* 0.60 - Winner-Takes-All ratio (*100) */
+
+/* MALP/MPLP long-term memory parameters (RFC-1002) */
+int malp_theta_cons = 65;            /* 0.65 - consolidation threshold (*100) */
+int malp_recon_window_ticks = 60;    /* reconsolidation window in ticks (~1 game-minute) */
+int malp_rehearsal_threshold = 3;    /* co-occurrences needed for MPLP trait formation */
+int malp_limit_per_mob = 200;        /* max MALP entries per mob */
+int malp_decay_halflife_std = 24;    /* standard MALP half-life in hours */
+int malp_decay_halflife_major = 72;  /* major-event MALP half-life in hours */
+int mplp_decay_halflife = 168;       /* MPLP trait half-life in hours (7 days) */

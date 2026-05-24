@@ -25,6 +25,7 @@
 #include "quest.h"
 #include "mud_event.h"
 #include "lists.h"
+#include "moral_reasoner.h"
 
 /* local file scope variables */
 static int extractions_pending = 0;
@@ -482,6 +483,12 @@ void char_from_room(struct char_data *ch)
     REMOVE_FROM_LIST(ch, world[IN_ROOM(ch)].people, next_in_room);
     IN_ROOM(ch) = NOWHERE;
     ch->next_in_room = NULL;
+
+    /* Room-local visibility ends when the character leaves the room. */
+    if (IS_NPC(ch))
+        ch->mob_specials.appeared_room = NOWHERE;
+    else if (ch->player_specials->appeared_room != NOWHERE)
+        ch->player_specials->appeared_room = NOWHERE;
 }
 
 /* place a character in a room */
@@ -1679,6 +1686,9 @@ struct group_data *create_group(struct char_data *leader)
 
     join_group(leader, new_group);
 
+    /* Initialize group moral reputation */
+    moral_init_group_reputation(new_group);
+
     return (new_group);
 }
 
@@ -1982,10 +1992,16 @@ void join_group(struct char_data *ch, struct group_data *group)
         group->leader = ch;
         send_to_group(NULL, group, "%s criou o grupo.\r\n", GET_NAME(ch));
     } else {
-        /* 2. Se um JOGADOR entrar num grupo que já tem um líder, o jogador assume. */
-        if (!IS_NPC(ch)) {
+        /* 2. Se um JOGADOR entrar num grupo que já tem um líder, o jogador assume —
+         *    mas personagens enfeitiçados não podem liderar: stop_follower() removeria
+         *    AFF_CHARM como efeito colateral, e semanticamente um personagem sob controle
+         *    externo não deve comandar um grupo. */
+        if (!IS_NPC(ch) && !AFF_FLAGGED(ch, AFF_CHARM)) {
             send_to_group(NULL, group, "%s é agora o novo líder do grupo.\r\n", GET_NAME(ch));
             group->leader = ch;
+            /* Um líder de grupo não deve estar seguindo ninguém; limpa a relação de seguidor. */
+            if (ch->master)
+                stop_follower(ch);
         }
         send_to_group(NULL, group, "%s juntou-se ao grupo.\r\n", GET_NAME(ch));
     }

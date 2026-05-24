@@ -364,6 +364,7 @@ ACMD(do_mdoor);
 ACMD(do_mecho);
 ACMD(do_mechoaround);
 ACMD(do_mfollow);
+ACMD(do_mappear);
 ACMD(do_mforce);
 ACMD(do_mforget);
 ACMD(do_mgoto);

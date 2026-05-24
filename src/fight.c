@@ -75,10 +75,18 @@ int attacks_per_round(struct char_data *ch);
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
 
+/* Percentage of max HP that counts as non-trivial damage for helplessness tracking */
+#define HELPLESSNESS_GRACE_PCT 10
+
 /* Check if a spell has the MAG_AURA flag */
 static int is_aura_spell(int spellnum)
 {
+    /* Reject non-spell values early to avoid invalid lookups and SYSERRs. */
     if (spellnum <= 0)
+        return 0;
+    if (spellnum > TOP_SPELL_DEFINE)
+        return 0;
+    if (IS_WEAPON(spellnum))
         return 0;
     return IS_SET(get_spell_mag_flags(spellnum), MAG_AURA);
 }
@@ -149,6 +157,33 @@ static int get_aura_shield_spell(struct char_data *ch)
                 return af->spell;
         }
     }
+
+    /* Fallback: detect auras granted by equipped objects — those only set the AFF
+     * bit directly via affect_modify_ar without adding to ch->affected. */
+    if (AFF_FLAGGED(ch, AFF_FIRESHIELD))
+        return SPELL_FIRESHIELD;
+    if (AFF_FLAGGED(ch, AFF_THISTLECOAT))
+        return SPELL_THISTLECOAT;
+    if (AFF_FLAGGED(ch, AFF_WINDWALL))
+        return SPELL_WINDWALL;
+    if (AFF_FLAGGED(ch, AFF_WATERSHIELD))
+        return SPELL_WATERSHIELD;
+    if (AFF_FLAGGED(ch, AFF_ROCKSHIELD))
+        return SPELL_ROCKSHIELD;
+    if (AFF_FLAGGED(ch, AFF_POISONSHIELD))
+        return SPELL_POISONSHIELD;
+    if (AFF_FLAGGED(ch, AFF_LIGHTNINGSHIELD))
+        return SPELL_LIGHTNINGSHIELD;
+    if (AFF_FLAGGED(ch, AFF_ICESHIELD))
+        return SPELL_ICESHIELD;
+    if (AFF_FLAGGED(ch, AFF_ACIDSHIELD))
+        return SPELL_ACIDSHIELD;
+    if (AFF_FLAGGED(ch, AFF_MINDSHIELD))
+        return SPELL_MINDSHIELD;
+    if (AFF_FLAGGED(ch, AFF_FORCESHIELD))
+        return SPELL_FORCESHIELD;
+    if (AFF_FLAGGED(ch, AFF_SOUNDBARRIER))
+        return SPELL_SOUNDBARRIER;
     return 0;
 }
 
@@ -956,6 +991,11 @@ void appear(struct char_data *ch)
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_INVISIBLE);
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
+    if (!IS_NPC(ch))
+        ch->player_specials->appeared_room = NOWHERE;
+    else
+        ch->mob_specials.appeared_room = NOWHERE;
+
     if (GET_LEVEL(ch) < LVL_IMMORT)
         act("$n aparece lentamente.", FALSE, ch, 0, 0, TO_ROOM);
     else
@@ -1469,11 +1509,9 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
             /* Update witness emotions based on the death */
             if (IS_NPC(ch) && witness->ai_data) {
-                /* Witnessing mob death */
-                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
-                    /* Ally died */
-                    update_mob_emotion_ally_died(witness, ch);
-                } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
+                /* Witnessing mob death: ally case is already handled inside mob_mourn_death above.
+                 * Only handle the enemy-died satisfaction case here. */
+                if (IS_GOOD(witness) && IS_EVIL(ch)) {
                     /* Enemy died - good witness might feel satisfaction */
                     if (witness->ai_data) {
                         witness->ai_data->emotion_happiness =
@@ -2002,6 +2040,16 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     if (is_aura_spell(attacktype) && (dam > GET_HIT(victim)))
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
+
+    /* HELPLESSNESS: Track per-round combat damage for futility detection.
+     * Only count when attacker and victim are actively fighting each other
+     * to avoid leaking non-combat or cross-fight damage into the accumulator. */
+    if (dam > 0 && ch != victim) {
+        if (IS_NPC(ch) && ch->ai_data && FIGHTING(ch) == victim)
+            ch->ai_data->combat_damage_dealt += dam;
+        if (IS_NPC(victim) && victim->ai_data && FIGHTING(victim) == ch)
+            victim->ai_data->combat_damage_received += dam;
+    }
 
     /* EMOTION SYSTEM: Update pain based on damage taken (experimental feature) */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim) && victim->ai_data && dam > 0) {
@@ -2918,6 +2966,26 @@ void perform_violence(void)
         if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
             continue;
 
+        /* HELPLESSNESS: Update accumulator after each combat round for NPCs.
+         * Always reset per-round counters so they don't leak into the next fight. */
+        if (IS_NPC(ch) && ch->ai_data) {
+            if (FIGHTING(ch)) {
+                /* non-trivial = HELPLESSNESS_GRACE_PCT% of max HP (ceiling), at least 1 */
+                int grace_threshold = MAX(1, (GET_MAX_HIT(ch) * HELPLESSNESS_GRACE_PCT + 99) / 100);
+                if (ch->ai_data->combat_damage_received >= grace_threshold) {
+                    float eff = (float)ch->ai_data->combat_damage_dealt / (float)ch->ai_data->combat_damage_received;
+                    if (eff < 1.0f)
+                        ch->ai_data->helplessness += 5.0f * (1.0f - eff);
+                    else
+                        ch->ai_data->helplessness -= 3.0f;
+                    ch->ai_data->helplessness = MIN(MAX(ch->ai_data->helplessness, 0.0f), 100.0f);
+                }
+            }
+            /* Reset per-round counters regardless of combat state */
+            ch->ai_data->combat_damage_dealt = 0;
+            ch->ai_data->combat_damage_received = 0;
+        }
+
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";
             (GET_MOB_SPEC(ch))(ch, ch, 0, actbuf);
@@ -3113,6 +3181,7 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
             case TYPE_BROACH:
             case TYPE_MOW:
                 type = SKILL_WEAPON_POLEARMS;
+                break;
             default:
                 type = -1;
                 break;
@@ -3266,6 +3335,8 @@ void transcend(struct char_data *ch)
 
     /* Reset other variables */
     GET_PRACTICES(ch) = 0;
+    GET_HITROLL(ch) = 0;
+    GET_DAMROLL(ch) = 0;
 
     /* Explain what happened */
     send_to_char(ch,

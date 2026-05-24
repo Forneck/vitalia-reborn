@@ -32,6 +32,10 @@
 #include "quest.h"
 #include "spec_procs.h"
 #include "shadow_timeline.h"
+#include "emotion_projection.h"
+#include "dg_scripts.h"
+#include "sec.h"
+#include "malp.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -48,6 +52,39 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
+
+/**
+ * Big Five Phase 2B: Conscientiousness Executive Control Helper
+ *
+ * Apply conscientiousness modulation to a deliberative decision.
+ * This should be called ONCE per decision cycle, not for reflexive actions.
+ *
+ * @param ch The mob making a decision
+ * @param base_impulse_prob Base probability of impulsive action [0.0, 1.0]
+ * @param needs_delay Whether this decision should have reaction delay
+ * @param delay_ptr Pointer to delay value to modify (can be NULL if !needs_delay)
+ * @return Modified impulse probability after conscientiousness filtering
+ */
+static float apply_executive_control(struct char_data *ch, float base_impulse_prob, bool needs_delay, float *delay_ptr)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data)
+        return base_impulse_prob;
+
+    /* Calculate emotional arousal for this decision cycle */
+    float arousal = calculate_emotional_arousal(ch);
+
+    /* Apply impulse modulation (high C reduces impulsive actions) */
+    float modulated_impulse = apply_conscientiousness_impulse_modulation(ch, base_impulse_prob);
+
+    /* Apply reaction delay if needed (high C increases deliberation under arousal)
+     * Remove the > 0.0f check to allow delay calculation even when starting from 0 */
+    if (needs_delay && delay_ptr) {
+        *delay_ptr = apply_conscientiousness_reaction_delay(ch, *delay_ptr, arousal);
+    }
+
+    return modulated_impulse;
+}
+
 bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
 bool mob_try_heal_ally(struct char_data *ch);
@@ -77,6 +114,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
 bool validate_goal_obj(struct char_data *ch);
+bool shadow_should_activate(struct char_data *ch);
 
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
@@ -173,38 +211,167 @@ bool validate_goal_obj(struct char_data *ch)
  */
 static void mob_contextual_social(struct char_data *ch, struct char_data *target)
 {
-    /* Expanded social lists with more variety for mob usage */
-    const char *positive_socials[] = {"bow",     "smile", "nods",     "waves",      "applaud", "agree",
-                                      "beam",    "clap",  "grin",     "greet",      "thanks",  "thumbsup",
-                                      "welcome", "winks", "backclap", "sweetsmile", "happy",   NULL};
-    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", "growl", "snarl",
-                                      "curse", "mock",  "hate", "steam", "swear",  NULL};
-    const char *neutral_socials[] = {"ponder", "shrugs",  "peer", "blink",   "wonder", "think",
-                                     "wait",   "scratch", "yawn", "stretch", NULL};
-    const char *resting_socials[] = {"comfort", "pat", "calm", "console", "cradle", "tuck", NULL};
-    const char *fearful_socials[] = {"cower", "whimper", "cringe", "flinch",  "gasp",
-                                     "panic", "shake",   "worry",  "shivers", NULL};
-    const char *loving_socials[] = {"hug",   "cuddle", "kiss",  "bearhug", "blush",  "caress", "embrace",
-                                    "flirt", "love",   "swoon", "charm",   "huggle", "ghug",   NULL};
-    const char *proud_socials[] = {"strut", "flex", "boast", "brag", "pose", NULL};
+    /* Social lists for mob autonomous behaviour.
+     * Every social in lib/misc/socials.new (except extreme-violence ones that are
+     * only appropriate as targeted reactions, not as autonomous expressions) is
+     * reachable from at least one list below.
+     *
+     * Intentionally excluded (never used autonomously – always hostile):
+     *   choke, strangle, smite, sword, despine, shiskabob, vice
+     */
+
+    /* ── Positive / warm ─────────────────────────────────────────────── */
+    const char *positive_socials[] = {
+        "bow",        "smile",     "nods",     "nod",     "waves",  "wink",     "applaud", "agree",     "beam",
+        "clap",       "grin",      "greet",    "thanks",  "thank",  "thumbsup", "welcome", "winks",     "backclap",
+        "sweetsmile", "feliz",     "admire",   "adoring", "cackle", "chitter",  "croon",   "enthuse",   "gleam",
+        "halo",       "handshake", "highfive", "hum",     "nuzzle", "snuggle",  "squeeze", "stroke",    "tango",
+        "whistle",    "worship",   "yodel",    "lol",     "yes",    "ok",       "ack",     "apologize", "forgive",
+        "handraise",  "lau",       "nudge",    "beckon",  "sorry",  "touch",    "rainbow", NULL};
+
+    /* ── Negative / hostile expressions ──────────────────────────────── */
+    const char *negative_socials[] = {"frown",      "glare",   "spit",   "sneer",     "accuse", "growl", "snarl",
+                                      "curse",      "mock",    "hate",   "steam",     "swear",  "blame", "criticize",
+                                      "disapprove", "evileye", "fume",   "grimace",   "ignore", "scold", "snap",
+                                      "rebuke",     "wrong",   "nono",   "raspberry", "pooh",   "stomp", "swat",
+                                      "sue",        "lame",    "tongue", "smir",      NULL};
+
+    /* ── Neutral / observational ──────────────────────────────────────── */
+    const char *neutral_socials[] = {"ponder",  "shrugs",    "peer",    "blink",  "wonder",      "think",    "wait",
+                                     "scratch", "yawn",      "stretch", "comb",   "contemplate", "cough",    "daydream",
+                                     "hiccup",  "hush",      "listen",  "mumble", "mutter",      "nailfile", "pace",
+                                     "point",   "sage",      "shh",     "sneeze", "snore",       "type",     "wipe",
+                                     "slump",   "slouch",    "lean",    "roll",   "jog",         "sidle",    "scout",
+                                     "sheathe", "unsheathe", "modest",  "raise",  "tip",         "revolve",  "dark",
+                                     "bored",   "flip",      "pity",    "furrow", "fade",        "nodrugs",  "night",
+                                     "run",     "tap",       "curl",    "pin",    "job",         "mooch",    NULL};
+
+    /* ── Resting / caring / comforting ───────────────────────────────── */
+    const char *resting_socials[] = {"comfort", "pat",     "calm",       "console", "cradle",
+                                     "tuck",    "massage", "haircut",    "relax",   "breathe",
+                                     "relief",  "phew",    "spongebath", "conso",   NULL};
+
+    /* ── Fearful / submissive / sad ───────────────────────────────────── */
+    const char *fearful_socials[] = {"cower",  "whimper", "cringe",   "flinch", "gasp",    "panic",    "shake",
+                                     "worry",  "shivers", "beg",      "blue",   "crushed", "crylaugh", "dread",
+                                     "eek",    "eep",     "quiver",   "shy",    "sigh",    "whine",    "puppyeyes",
+                                     "squeak", "meep",    "insomnia", NULL};
+
+    /* ── Loving / romantic ────────────────────────────────────────────── */
+    const char *loving_socials[] = {"hug",    "cuddle", "kiss",   "bearhug", "blush",  "caress", "embrace",
+                                    "flirt",  "love",   "swoon",  "charm",   "huggle", "ghug",   "rose",
+                                    "honey",  "lust",   "nibble", "ogle",    "peck",   "pet",    "propose",
+                                    "smooch", "snog",   "sways",  "chu",     NULL};
+
+    /* ── Very intimate (sexual) – requires very high relationship ─────── */
+    const char *very_intimate_socials[] = {"sex", "french", "fondle", "grope", "seduce", "makeout", NULL};
+
+    /* ── Proud / boastful ─────────────────────────────────────────────── */
+    const char *proud_socials[] = {"strut", "flex",  "boast",    "brag", "pose",   "ego",  "juggle",
+                                   "model", "pride", "drumroll", "mic",  "pushup", "smug", NULL};
+
+    /* ── Envious / greedy ─────────────────────────────────────────────── */
     const char *envious_socials[] = {"envy", "eye", "greed", NULL};
-    /* New social categories for more emotional variety */
-    const char *playful_socials[] = {"tickle", "poke", "tease", "bounce", "giggle",
-                                     "dance",  "skip", "joke",  "sing",   NULL};
-    const char *aggressive_socials[] = {"threaten", "challenge", "growl",     "snarl", "bite",
-                                        "slap",     "battlecry", "warscream", NULL};
+
+    /* ── Playful / teasing ────────────────────────────────────────────── */
+    const char *playful_socials[] = {
+        "tickle",  "poke",     "tease",  "bounce",    "giggle",  "dance",    "skip",   "joke",   "sing",
+        "knuckle", "snowball", "tackle", "spank",     "vampire", "boink",    "bonk",   "bop",    "cartwheel",
+        "hop",     "hustle",   "jest",   "madgiggle", "mosh",    "nyuk",     "pillow", "pop",    "pounce",
+        "pout",    "pur",      "rofl",   "squeal",    "tag",     "tapdance", "tug",    "tummy",  "tweak",
+        "twiddle", "waggle",   "waltz",  "wiggle",    "goose",   "noogie",   "pinch",  "ruffle", "suckit-up",
+        "wedgie",  "zaps",     "spin",   "hotfoot",   "hula",    "splash",   "flail",  NULL};
+
+    /* ── Aggressive / combat-flavoured ───────────────────────────────── */
+    const char *aggressive_socials[] = {"threaten",  "challenge", "growl",  "snarl",   "bite",  "slap",     "battlecry",
+                                        "warscream", "smash",     "smack",  "charge",  "burn",  "pound",    "whack",
+                                        "whip",      "shock",     "needle", "clobber", "thwap", "shootout", "mace",
+                                        "flame",     "fwap",      "arrest", NULL};
+
+    /* ── Disgusting ───────────────────────────────────────────────────── */
+    const char *disgusting_socials[] = {"belch",  "booger",   "burp", "drool", "earlick", "fart", "gag",  "moan",
+                                        "phlegm", "picknose", "puke", "snort", "spew",    "moon", "pant", NULL};
+
+    /* ── Sad / mourning ───────────────────────────────────────────────── */
     const char *sad_socials[] = {"cry", "sob", "weep", "sulk", "sad", NULL};
-    const char *confused_socials[] = {"boggle", "blink", "puzzle", "wonder", "scratch", "think", NULL};
-    const char *excited_socials[] = {"bounce", "whoo", "cheers", NULL};
+
+    /* ── Confused / puzzled ───────────────────────────────────────────── */
+    const char *confused_socials[] = {"boggle",    "blink",     "puzzle",  "wonder", "scratch", "think",  "confuse",
+                                      "discombob", "disturbed", "doh",     "duh",    "eww",     "gibber", "hmmmmm",
+                                      "hrmph",     "lost",      "newidea", "jaw",    "...",     NULL};
+
+    /* ── Excited / celebratory ────────────────────────────────────────── */
+    const char *excited_socials[] = {"bounce", "whoo", "cheers",   "huzzah", "tada",
+                                     "yayfor", "romp", "sundance", "toast",  NULL};
+
+    /* ── Respectful ───────────────────────────────────────────────────── */
     const char *respectful_socials[] = {"salute", "curtsey", "kneel", NULL};
-    /* Additional emotional categories for richer mob behavior */
+
+    /* ── Grateful ─────────────────────────────────────────────────────── */
     const char *grateful_socials[] = {"thanks", "bow", "applaud", "backclap", "beam", "salute", NULL};
+
+    /* ── Mocking ──────────────────────────────────────────────────────── */
     const char *mocking_socials[] = {"mock", "sneer", "snicker", "jeer", "taunt", NULL};
-    const char *submissive_socials[] = {"cower", "grovel", "bow", "kneel", "whimper", "cringe", "flinch", NULL};
-    const char *curious_socials[] = {"peer", "ponder", "wonder", "sniff", "gaze", "stare", NULL};
+
+    /* ── Submissive ───────────────────────────────────────────────────── */
+    const char *submissive_socials[] = {"cower",  "grovel", "bow",       "kneel", "whimper",
+                                        "cringe", "flinch", "puppyeyes", "shy",   NULL};
+
+    /* ── Curious ──────────────────────────────────────────────────────── */
+    const char *curious_socials[] = {"peer", "ponder",  "wonder", "sniff", "gaze", "stare",
+                                     "lean", "curious", "creep",  "scout", NULL};
+
+    /* ── Triumphant ───────────────────────────────────────────────────── */
     const char *triumphant_socials[] = {"cheers", "flex", "roar", "battlecry", "strut", NULL};
+
+    /* ── Protective / comforting ──────────────────────────────────────── */
     const char *protective_socials[] = {"embrace", "pat", "comfort", "console", NULL};
+
+    /* ── Mourning ─────────────────────────────────────────────────────── */
     const char *mourning_socials[] = {"cry", "sob", "weep", "sulk", "despair", NULL};
+
+    /* ── Angry expression (frustration/outrage) ──────────────────────── */
+    const char *angry_expression_socials[] = {"argh", "grumbles", "grunt", "hysterical", "postal", "tantrum",
+                                              "fuss", "stomp",    "fume",  "snap",       "steam",  NULL};
+
+    /* ── Amused ───────────────────────────────────────────────────────── */
+    const char *amused_socials[] = {"amused", "chortle", "egrin", "snigger", "titter", "cackle", "lol", "rofl", NULL};
+
+    /* ── Animal sounds ────────────────────────────────────────────────── */
+    const char *animal_socials[] = {"bark", "hiss", "howl", "meow", "moo", "pur", NULL};
+
+    /* ── Silly / absurd ───────────────────────────────────────────────── */
+    const char *silly_socials[] = {
+        "abc",        "abrac",   "babble",  "batman", "bloob",  "christmas", "crazed", "crazy",      "defib",  "doodle",
+        "elephantma", "fish",    "insane",  "meds",   "prozac", "snoopy",    "spork",  "testsocial", "wakka",  "zip",
+        "lala",       "muahaha", "lofr",    "dbc",    "bo",     "pa",        "sal",    "sm",         "ki",     "ren",
+        "orcs",       "humans",  "mortals", "joint",  "lz",     "com",       "dead",   "deaf",       "gibber", NULL};
+
+    /* ── Communication / meta ─────────────────────────────────────────── */
+    const char *communication_socials[] = {"adieu", "brb", "channel", "goodbye", "reconnect", "wb", "night", NULL};
+
+    /* ── Food / drink ─────────────────────────────────────────────────── */
+    const char *food_drink_socials[] = {"beer", "cake", "carrot", "coffee", "custard", "pie", NULL};
+
+    /* ── Gesture ──────────────────────────────────────────────────────── */
+    const char *gesture_socials[] = {"arch",     "armcross", "behind", "crossfinger", "eyebrow", "eyer",
+                                     "facegrab", "facepalm", "fan",    "foot",        NULL};
+
+    /* ── Exclamation ──────────────────────────────────────────────────── */
+    const char *exclamation_socials[] = {"ahem", "aww", "blah", "boo", "heh", "oh", "ouch", "tsk", NULL};
+
+    /* ── Self-directed / physical expression ─────────────────────────── */
+    const char *self_directed_socials[] = {"bleed", "collapse", "faint",  "fall",    "groan", "headache", "perspire",
+                                           "pray",  "scream",   "shiver", "shudder", "sweat", "twitch",   "wince",
+                                           "shame", "froth",    "foam",   "curl",    "flail", "blush",    NULL};
+
+    /* ── Miscellaneous neutral (catch-all for remaining socials) ──────── */
+    const char *misc_socials[] = {
+        "aim",        "avsalute", "bat",    "box",      "buzz",  "cold",    "conga",    "conga2",  "creep", "curious",
+        "scab",       "scuf",     "secret", "slippers", "stone", "sunset",  "sunshade", "target",  "tie",   "trance",
+        "understand", "wipe",     "women",  "pull",     "pulse", "lic",     "mooch",    "muffle",  "muss",  "knight",
+        "flare",      "flash",    "flick",  "floor",    "flop",  "flutter", "innocent", "smoke",   "dive",  "duck",
+        "excuse",     "sidle",    "differ", "rainbow",  "pin",   "lame",    "pity",     "hotfoot", NULL};
 
     const char **social_list = NULL;
     int target_reputation;
@@ -225,6 +392,10 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 
     /* Only mobs with ai_data can use emotions */
     if (!IS_NPC(ch) || !ch->ai_data)
+        return;
+
+    /* Visibility guard: mobs only perform socials toward targets they can see */
+    if (!CAN_SEE(ch, target))
         return;
 
     target_reputation = GET_REPUTATION(target);
@@ -254,43 +425,49 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     if (FIGHTING(ch) || FIGHTING(target) || target_pos <= POS_STUNNED)
         return;
 
-    /* Determine which social category to use based on multiple factors */
-    /* Priority order: extreme emotions > moderate emotions > reputation > alignment > position */
+    /* ── Emotion-based social selection (priority order) ─────────────────
+     * Extreme states are checked first; moderate states and context-based
+     * selections follow.  The default is misc_socials (catch-all). */
 
-    /* Very high fear (80+) and very low courage (20-) - show submissive behavior */
+    /* Very high fear (80+) and very low courage (20-) - submissive behaviour */
     if (mob_fear >= 80 && mob_courage <= 20) {
         social_list = submissive_socials;
     }
-    /* High fear (70+) and low courage - show fearful behavior */
+    /* High fear (70+) and low courage - fearful behaviour */
     else if (mob_fear >= 70 && mob_courage < 40) {
         social_list = fearful_socials;
     }
-    /* Very high pride (85+) with high courage after victory - triumphant behavior */
+    /* Very high pride (85+) with high courage after victory - triumphant */
     else if (mob_pride >= 85 && mob_courage >= 70 && mob_excitement >= 60) {
         social_list = triumphant_socials;
     }
-    /* High pride (75+) - show proud behavior */
+    /* High pride (75+) - proud / boastful */
     else if (mob_pride >= 75) {
         social_list = proud_socials;
     }
-    /* High compassion (70+) with loyalty towards injured/weak target - protective behavior */
+    /* High compassion (70+) with loyalty towards injured/weak target - protective */
     else if (mob_compassion >= 70 && mob_loyalty >= 60 &&
              (target_pos <= POS_RESTING || GET_HIT(target) < GET_MAX_HIT(target) / 2)) {
         social_list = protective_socials;
     }
-    /* High sadness (75+) with low excitement - mourning behavior (for death responses) */
+    /* High sadness (75+) with low excitement - mourning */
     else if (mob_sadness >= 75 && mob_excitement < 30) {
         social_list = mourning_socials;
     }
-    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful behavior */
+    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful */
     else if (mob_happiness >= 60 && mob_friendship >= 70 && mob_trust >= 60) {
         social_list = grateful_socials;
     }
-    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking behavior */
+    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking */
     else if (mob_anger >= 60 && mob_pride >= 60 && mob_courage >= 50 && !FIGHTING(ch)) {
         social_list = mocking_socials;
     }
-    /* High curiosity (75+) with moderate excitement - curious/investigating behavior */
+    /* Very high love (85+) AND trust (75+) AND friendship (75+) - very intimate.
+     * Placed before envy/curiosity so deep intimacy takes priority. */
+    else if (mob_love >= 85 && mob_trust >= 75 && mob_friendship >= 75) {
+        social_list = very_intimate_socials;
+    }
+    /* High curiosity (75+) with moderate excitement - curious/investigating */
     else if (mob_curiosity >= 75 && mob_excitement >= 40 && mob_excitement < 70) {
         social_list = curious_socials;
     }
@@ -302,83 +479,193 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     else if (mob_love >= 70 || (mob_friendship >= 80 && mob_trust >= 60)) {
         social_list = loving_socials;
     }
-    /* High anger (70+) or high anger with low loyalty to good targets - be aggressive */
+    /* High anger (70+) or high anger with low loyalty to good targets - aggressive */
     else if (mob_anger >= 70 || (mob_anger >= 50 && mob_loyalty < 30 && IS_GOOD(target))) {
         social_list = aggressive_socials;
     }
-    /* Moderate anger with low courage - show negative but not aggressive behavior */
+    /* Moderate anger (40-69) expressing frustration - angry expression */
+    else if (mob_anger >= 40 && mob_anger < 70 && mob_courage >= 30) {
+        social_list = angry_expression_socials;
+    }
+    /* Moderate anger with low courage - negative behaviour */
     else if (mob_anger >= 50 && mob_courage < 50) {
         social_list = negative_socials;
     }
-    /* High sadness (70+) - show sad behavior */
+    /* Low happiness (<40) with moderate anger (30+) and low pride (<50) – mob
+     * performs gross or distasteful acts out of apathy or resentment */
+    else if (mob_happiness < 40 && mob_anger >= 30 && mob_pride < 50) {
+        social_list = disgusting_socials;
+    }
+    /* High sadness (70+) - sad behaviour */
     else if (mob_sadness >= 70) {
         social_list = sad_socials;
     }
-    /* High happiness (70+) with very high excitement (75+) - show excited behavior */
+    /* High happiness (70+) with very high excitement (75+) - excited */
     else if (mob_happiness >= 70 && mob_excitement >= 75) {
         social_list = excited_socials;
     }
-    /* High happiness (70+) with high excitement (60-74) - show playful behavior */
+    /* High happiness (70+) with high excitement (60-74) and high curiosity - amused */
+    else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_curiosity >= 60) {
+        social_list = amused_socials;
+    }
+    /* High happiness (70+) with high excitement (60-74) - playful */
     else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_excitement < 75) {
         social_list = playful_socials;
     }
-    /* High curiosity (70+) with moderate happiness (30-69) - show confused/wondering behavior */
+    /* High happiness (70+) with high curiosity (70+) but moderate excitement - silly */
+    else if (mob_happiness >= 70 && mob_curiosity >= 70 && mob_excitement < 60) {
+        social_list = silly_socials;
+    }
+    /* High curiosity (70+) with moderate happiness (30-69) - confused/wondering */
     else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
         social_list = confused_socials;
     }
-    /* High happiness (70+) shows positive behavior */
+    /* High happiness (70+) shows positive behaviour */
     else if (mob_happiness >= 70) {
         social_list = positive_socials;
     }
-    /* Moderate emotions combined with other factors */
-    /* High reputation target (60+) gets positive socials from happy/friendly mobs */
+    /* High reputation target (60+) - positive from happy/friendly mobs */
     else if (target_reputation >= 60 && (mob_happiness >= 40 || mob_friendship >= 50 || mob_alignment >= -350)) {
         social_list = positive_socials;
     }
-    /* Low reputation target (<20) triggers anger/negative response */
+    /* Low reputation target (<20) - negative response */
     else if (target_reputation < 20 || mob_anger >= 40) {
         social_list = negative_socials;
     }
-    /* Alignment-based social selection modified by emotions */
+    /* Alignment-based selection */
     else if (IS_GOOD(ch) && IS_EVIL(target) && mob_anger >= 20) {
-        social_list = negative_socials; /* Good doesn't like evil, especially if angry */
+        social_list = negative_socials;
     } else if (IS_EVIL(ch) && IS_GOOD(target) && mob_sadness < 50) {
-        social_list = negative_socials; /* Evil doesn't like good unless sad/remorseful */
+        social_list = negative_socials;
     } else if (IS_GOOD(ch) && IS_GOOD(target) && mob_friendship >= 30) {
-        social_list = positive_socials; /* Good likes good, especially if friendly */
+        social_list = positive_socials;
     } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
-        /* Evil respects reputable evil - show respect */
         social_list = respectful_socials;
     } else if (IS_GOOD(ch) && target_reputation >= 80) {
-        /* Good mobs respect highly reputable targets */
         social_list = respectful_socials;
     }
-    /* Target is resting/sitting - use comforting socials if mob has compassion (low anger, high compassion/friendship)
-     */
+    /* Target is resting/sitting - comforting socials (low anger, high compassion/friendship) */
     else if ((target_pos == POS_RESTING || target_pos == POS_SITTING) && mob_anger < 30 &&
              (mob_compassion >= 50 || mob_friendship >= 40)) {
         social_list = resting_socials;
     }
-    /* High sadness with low excitement leads to withdrawn/neutral behavior */
+    /* High sadness with low excitement - withdrawn/neutral */
     else if (mob_sadness >= 60 && mob_excitement < 40) {
         social_list = neutral_socials;
     }
+    /* Moderate curiosity (40+) with moderate but not high excitement (30-49) –
+     * mob makes instinctive animal sounds while alert/observing but not fully engaged */
+    else if (mob_curiosity >= 40 && mob_excitement >= 30 && mob_excitement < 50) {
+        social_list = animal_socials;
+    }
+    /* Moderate happiness + any state - food/drink sharing */
+    else if (mob_happiness >= 50 && mob_friendship >= 40 && mob_curiosity >= 30) {
+        social_list = food_drink_socials;
+    }
+    /* Moderate happiness + moderate curiosity - gesture/communication */
+    else if (mob_happiness >= 40 && mob_curiosity >= 50) {
+        social_list = gesture_socials;
+    }
+    /* Low excitement with low curiosity - exclamation */
+    else if (mob_excitement < 30 && mob_curiosity < 40 && mob_happiness >= 30) {
+        social_list = exclamation_socials;
+    }
     /* High curiosity with high excitement - show interest */
     else if (mob_curiosity >= 60 && mob_excitement >= 50) {
-        social_list = neutral_socials; /* Curious/observing behavior */
-    }
-    /* Default to neutral socials */
-    else {
         social_list = neutral_socials;
+    }
+    /* Low emotional arousal - self-directed physical expression */
+    else if (mob_happiness < 40 && mob_anger < 30 && mob_fear >= 20) {
+        social_list = self_directed_socials;
+    }
+    /* Communication meta (very low arousal, no strong emotion) */
+    else if (mob_happiness < 50 && mob_anger < 30 && mob_excitement < 30) {
+        social_list = communication_socials;
+    }
+    /* Default - miscellaneous / catch-all */
+    else {
+        social_list = misc_socials;
+    }
+
+    /* ── Winner-Takes-All: SEC dominant-emotion filter ────────────────────
+     * Prevents contradictory actions when opposing emotions are simultaneously
+     * high by suppressing socials whose driving emotion is weaker than
+     * SEC_WTA_THRESHOLD % of the dominant SEC axis weight. */
+    if (ch->ai_data) {
+        const struct sec_state *sec_s = &ch->ai_data->sec;
+
+        /* Map chosen social category to its primary SEC emotion.
+         *
+         * HAPPINESS : positive/grateful/loving/very_intimate/playful/excited/
+         *             triumphant/proud/protective/amused/food_drink
+         * ANGER     : aggressive/negative/mocking/envious/angry_expression/disgusting
+         * FEAR      : fearful/submissive
+         * SADNESS   : sad/mourning
+         * NONE      : neutral/mixed, resting, respectful, curious, confused,
+         *             silly, animal, gesture, exclamation, self_directed,
+         *             communication, misc — contextual/cognitive, not restricted
+         */
+        int social_emotion;
+        if (social_list == positive_socials || social_list == grateful_socials || social_list == loving_socials ||
+            social_list == very_intimate_socials || social_list == playful_socials || social_list == excited_socials ||
+            social_list == triumphant_socials || social_list == proud_socials || social_list == protective_socials ||
+            social_list == amused_socials || social_list == food_drink_socials) {
+            social_emotion = SEC_DOMINANT_HAPPINESS;
+        } else if (social_list == aggressive_socials || social_list == negative_socials ||
+                   social_list == mocking_socials || social_list == envious_socials ||
+                   social_list == angry_expression_socials || social_list == disgusting_socials) {
+            social_emotion = SEC_DOMINANT_ANGER;
+        } else if (social_list == fearful_socials || social_list == submissive_socials) {
+            social_emotion = SEC_DOMINANT_FEAR;
+        } else if (social_list == sad_socials || social_list == mourning_socials) {
+            social_emotion = SEC_DOMINANT_SADNESS;
+        } else {
+            social_emotion = SEC_DOMINANT_NONE;
+        }
+
+        if (social_emotion != SEC_DOMINANT_NONE) {
+            int dom_type = sec_get_dominant_emotion(ch);
+
+            float dom_val;
+            switch (dom_type) {
+                case SEC_DOMINANT_FEAR:
+                    dom_val = sec_s->fear;
+                    break;
+                case SEC_DOMINANT_SADNESS:
+                    dom_val = sec_s->sadness;
+                    break;
+                case SEC_DOMINANT_ANGER:
+                    dom_val = sec_s->anger;
+                    break;
+                case SEC_DOMINANT_HAPPINESS:
+                    dom_val = sec_s->happiness;
+                    break;
+                default:
+                    dom_val = 0.0f;
+                    break;
+            }
+
+            float chosen_val;
+            if (social_emotion == SEC_DOMINANT_HAPPINESS)
+                chosen_val = sec_s->happiness;
+            else if (social_emotion == SEC_DOMINANT_ANGER)
+                chosen_val = sec_s->anger;
+            else if (social_emotion == SEC_DOMINANT_SADNESS)
+                chosen_val = sec_s->sadness;
+            else
+                chosen_val = sec_s->fear;
+
+            if (dom_val > SEC_AROUSAL_EPSILON && chosen_val < dom_val * ((float)CONFIG_SEC_WTA_THRESHOLD / 100.0f))
+                social_list = neutral_socials;
+        }
     }
 
     /* Select a random social from the chosen category */
-    /* Count number of non-NULL elements in the social list */
     for (social_index = 0; social_list[social_index] != NULL; social_index++)
         ;
 
     if (social_index == 0)
-        return; /* No socials in this category */
+        return;
 
     social_index = rand_number(0, social_index - 1);
 
@@ -390,7 +677,28 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 
     if (*complete_cmd_info[cmd_num].command != '\n') {
         /* Execute the social */
-        do_action(ch, GET_NAME(target), cmd_num, 0);
+        do_action(ch, fname(GET_NAME(target)), cmd_num, 0);
+
+        /* Big Five Phase 3: Extraversion social reward gain.
+         * Extroverted mobs receive a small happiness boost from successful positive
+         * social interactions — modelling the social bonding reward that drives
+         * high-E individuals to seek out interaction.  The reward is proportional
+         * to (E_final − 0.5), capped so it never exceeds +5 happiness per social.
+         * Only applies to warm/positive categories; aggressive or fearful socials
+         * do not generate a bonding reward. */
+        if (ch->ai_data &&
+            (social_list == positive_socials || social_list == loving_socials || social_list == grateful_socials ||
+             social_list == excited_socials || social_list == playful_socials || social_list == resting_socials ||
+             social_list == protective_socials)) {
+            float E_final = sec_get_extraversion_final(ch);
+            int e_reward = (int)((E_final - SEC_E_SOCIAL_CENTER) * (CONFIG_OCEAN_E_SOCIAL_REWARD / 10.0f));
+            if (e_reward > 0) {
+                adjust_emotion(ch, &ch->ai_data->emotion_happiness, e_reward);
+                if (CONFIG_MOB_4D_DEBUG)
+                    mudlog(CMP, LVL_IMPL, FALSE, "OCEAN-E: social reward +%d happiness for %s(#%d) E_final=%.2f",
+                           e_reward, GET_NAME(ch), GET_MOB_VNUM(ch), E_final);
+            }
+        }
     }
 }
 
@@ -402,6 +710,10 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 void mob_emotion_activity(void)
 {
     struct char_data *ch, *next_ch;
+    int gossip_this_tick = 0; /* per-tick gossip event budget */
+    /* Batch time() to one syscall for the whole tick — avoids a per-mob
+     * gettimeofday() call that otherwise fires once per mob in the loop. */
+    time_t tick_now = time(NULL);
 
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
@@ -429,6 +741,17 @@ void mob_emotion_activity(void)
         int social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
 
         if (ch->ai_data) {
+            /* Lethargy Buffer: high SEC sadness strongly suppresses all social activity.
+             * A lethargic mob (sadness-dominant) withdraws from interaction — it will
+             * not perform socials unless the lethargy bias is low enough to allow it.
+             * Skip directly when lethargy_bias >= SEC_LETHARGY_SUPPRESS_THRESHOLD (strongly lethargic). */
+            float lethargy = sec_get_lethargy_bias(ch);
+            if (lethargy >= SEC_LETHARGY_SUPPRESS_THRESHOLD)
+                continue;
+            /* Moderate lethargy scales down the social chance proportionally. */
+            if (lethargy > 0.0f)
+                social_chance = (int)(social_chance * (1.0f - lethargy));
+
             /* High happiness increases social probability */
             if (ch->ai_data->emotion_happiness >= CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD) {
                 social_chance += 15; /* +15% for high happiness */
@@ -441,6 +764,13 @@ void mob_emotion_activity(void)
             if (ch->ai_data->emotion_sadness >= CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD) {
                 social_chance -= 15; /* -15% for high sadness (withdrawn) */
             }
+            /* Extraversion (E) modulates social action probability.
+             * High E (sociable) increases the chance; low E (introverted) reduces it.
+             * Formula: E_final ∈ [0,1] → modifier = (E_final - 0.5) * 20 ∈ [-10, +10].
+             * This is a gain-rate modulation, not an emotion injection. */
+            float E_final = sec_get_extraversion_final(ch);
+            int e_mod = (int)((E_final - SEC_E_SOCIAL_CENTER) * SEC_E_SOCIAL_SCALE);
+            social_chance += e_mod;
             /* Ensure social_chance stays within reasonable bounds */
             social_chance = MAX(1, MIN(social_chance, 95));
         }
@@ -507,7 +837,7 @@ void mob_emotion_activity(void)
                 }
 
                 /* Follow the most loved player if found */
-                if (best_love_target) {
+                if (best_love_target && !circle_follow(ch, best_love_target)) {
                     add_follower(ch, best_love_target);
 
                     /* Announce the following with a loving social or message */
@@ -539,6 +869,51 @@ void mob_emotion_activity(void)
             /* Run less frequently than passive updates (50% chance when passive runs) */
             if (rand_number(1, 100) <= 50) {
                 update_mob_emotion_contagion(ch);
+            }
+
+            /* Social gossip - mob transfers emotional memory about a third entity to a
+             * nearby mob.  Runs at CONFIG_MOB_GOSSIP_CHANCE% when passive updates fire.
+             *
+             * Budget semantics (MALP_GOSSIP_BUDGET_PER_TICK):
+             *   A slot is consumed for every attempt that passes the O(1) source
+             *   cooldown pre-check, regardless of whether try_social_gossip()
+             *   succeeds.  This is intentional: the topic-selection scan inside
+             *   try_social_gossip() is O(malp_count) whether it succeeds or fails,
+             *   so counting only successes allows a crowd of low-trust mobs to
+             *   saturate the CPU when their transfer weight always fails the minimum
+             *   threshold.  Mobs that are still on source cooldown are skipped for
+             *   free (O(1)) without touching the budget. */
+            if (gossip_this_tick < MALP_GOSSIP_BUDGET_PER_TICK && rand_number(1, 100) <= CONFIG_MOB_GOSSIP_CHANCE) {
+                /* Pre-check source cooldown (O(1)) before consuming a budget slot.
+                 * try_social_gossip() will repeat this check internally for safety,
+                 * but doing it here lets us avoid wasting a budget slot on a mob
+                 * that cannot gossip yet.  tick_now is batched once before the loop.
+                 * Guard ai_data: mobs without it cannot gossip (treat as on cooldown). */
+                bool source_on_cooldown =
+                    (!ch->ai_data || (ch->ai_data->last_gossiped > 0 && (tick_now - ch->ai_data->last_gossiped) <
+                                                                            (time_t)MALP_GOSSIP_SOURCE_COOLDOWN_SECS));
+                if (!source_on_cooldown) {
+                    /* Consume the budget slot before the expensive path. */
+                    gossip_this_tick++;
+                    struct char_data *gossip_recipient;
+                    for (gossip_recipient = world[IN_ROOM(ch)].people; gossip_recipient;
+                         gossip_recipient = gossip_recipient->next_in_room) {
+                        if (gossip_recipient == ch)
+                            continue;
+                        if (!IS_NPC(gossip_recipient) || !gossip_recipient->ai_data)
+                            continue;
+                        if (FIGHTING(gossip_recipient) || !AWAKE(gossip_recipient))
+                            continue;
+                        if (!CAN_SEE(ch, gossip_recipient))
+                            continue;
+                        try_social_gossip(ch, gossip_recipient);
+                        break; /* one gossip recipient per tick */
+                    }
+                    /* Safety check: DG scripts triggered inside try_social_gossip
+                     * could mark this mob for extraction. */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
+                }
             }
 
             /* Mood system - update overall mood less frequently (25% chance when passive runs) */
@@ -599,6 +974,123 @@ void mobile_activity(void)
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
+        /* 4D Relational Decision Space: compute projection state once per AI tick.
+         * This runs for both fighting and non-fighting mobs so the 4D state is
+         * always current when downstream systems (Shadow Timeline, combat, social)
+         * consume it.
+         *
+         * Target priority:
+         *  1. Current fight target (always authoritative; overrides hysteresis).
+         *  2. Previous idle-fallback target if still valid in this room (hysteresis:
+         *     prevents oscillation when multiple candidates share the same room).
+         *  3. First visible, awake, non-extracting character in the room.
+         *  4. NULL.
+         *
+         * Hysteresis strategy: the entity ID/type of the last idle target is stored
+         * in mob_ai_data and reused as long as the character remains a valid target.
+         * A new scan is only run when the stored target is gone or no longer eligible.
+         *
+         * We allow NPC targets because:
+         *  - get_relationship_emotion() fully supports mob-to-mob memories.
+         *  - FIGHTING(ch) can already be a mob; the idle fallback should be consistent.
+         *  - Mob-to-mob Affiliation/Dominance drives group dynamics and loyalty. */
+        if (ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            struct char_data *target_4d = FIGHTING(ch);
+
+            if (target_4d) {
+                /* Combat target always wins; clear stored idle target to avoid stale
+                 * hysteresis resuming after combat ends. */
+                ch->ai_data->last_4d_target_id = 0;
+            } else if (IN_ROOM(ch) != NOWHERE) {
+                /* Check whether the stored hysteresis target is still valid. */
+                struct char_data *sticky = NULL;
+                if (ch->ai_data->last_4d_target_id != 0) {
+                    struct char_data *scan;
+                    long want_id = ch->ai_data->last_4d_target_id;
+                    int want_type = ch->ai_data->last_4d_target_type;
+                    for (scan = world[IN_ROOM(ch)].people; scan; scan = scan->next_in_room) {
+                        if (scan == ch)
+                            continue;
+                        bool type_match =
+                            IS_NPC(scan) ? (want_type == ENTITY_TYPE_MOB) : (want_type == ENTITY_TYPE_PLAYER);
+                        if (!type_match)
+                            continue;
+                        long scan_id = IS_NPC(scan) ? char_script_id(scan) : GET_IDNUM(scan);
+                        if (scan_id != want_id)
+                            continue;
+                        /* Found – validate eligibility */
+                        if (CAN_SEE(ch, scan) && AWAKE(scan) && (!IS_NPC(scan) || !MOB_FLAGGED(scan, MOB_NOTDEADYET))) {
+                            sticky = scan;
+                        }
+                        break; /* ID is unique in room */
+                    }
+                }
+
+                if (sticky) {
+                    target_4d = sticky;
+                } else {
+                    /* Scan for a new target and store it for hysteresis. */
+                    struct char_data *nearby;
+                    for (nearby = world[IN_ROOM(ch)].people; nearby; nearby = nearby->next_in_room) {
+                        if (nearby != ch && CAN_SEE(ch, nearby) && AWAKE(nearby) &&
+                            (!IS_NPC(nearby) || !MOB_FLAGGED(nearby, MOB_NOTDEADYET))) {
+                            target_4d = nearby;
+                            ch->ai_data->last_4d_target_id =
+                                IS_NPC(nearby) ? char_script_id(nearby) : GET_IDNUM(nearby);
+                            ch->ai_data->last_4d_target_type = IS_NPC(nearby) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
+                            break;
+                        }
+                    }
+                    if (!target_4d)
+                        ch->ai_data->last_4d_target_id = 0;
+                }
+            }
+
+            ch->ai_data->last_4d_state = compute_emotion_4d_state(ch, target_4d);
+
+            /* HELPLESSNESS: post-4D deformation of Dominance and Arousal axes.
+             * D_final = D_base * (1 - H/100)  → Helplessness erodes perceived control.
+             * A_final = A_base * (1 - H/150)  → Helplessness slightly dampens urgency.
+             * Behavior naturally shifts toward disengagement as the 4D region changes.
+             * Only affects the effective axes; raw values are preserved for auditing. */
+            if (ch->ai_data->helplessness > 0.0f && ch->ai_data->last_4d_state.valid) {
+                float h_factor_d = MAX(0.0f, 1.0f - (ch->ai_data->helplessness / 100.0f));
+                float h_factor_a = MAX(0.0f, 1.0f - (ch->ai_data->helplessness / 150.0f));
+                ch->ai_data->last_4d_state.dominance *= h_factor_d;
+                ch->ai_data->last_4d_state.arousal *= h_factor_a;
+                if (CONFIG_MOB_4D_DEBUG)
+                    mudlog(CMP, LVL_IMPL, FALSE, "4D-HELPLESSNESS: mob=%s(#%d) H=%.1f D_deformed=%.1f A_deformed=%.1f",
+                           GET_NAME(ch), GET_MOB_VNUM(ch), ch->ai_data->helplessness,
+                           ch->ai_data->last_4d_state.dominance, ch->ai_data->last_4d_state.arousal);
+            }
+
+            if (CONFIG_MOB_4D_DEBUG)
+                log_4d_state(ch, target_4d, &ch->ai_data->last_4d_state);
+
+            /* SEC: update internal emotional projections from post-hysteresis 4D result. */
+            sec_update(ch, &ch->ai_data->last_4d_state);
+        }
+
+        if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
+            ch->ai_data->duty_frustration_timer--;
+        }
+
+        if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
+            ch->ai_data->quest_posting_frustration_timer--;
+        }
+
+        /* HELPLESSNESS: decay faster out of combat, slower in combat.
+         * Placed before the FIGHTING/AWAKE continue so fighting mobs also decay. */
+        if (ch->ai_data && ch->ai_data->helplessness > 0.0f) {
+            ch->ai_data->helplessness -= FIGHTING(ch) ? 1.0f : 5.0f;
+            if (ch->ai_data->helplessness < 0.0f)
+                ch->ai_data->helplessness = 0.0f;
+        }
+
+        /* SEC: passive decay toward emotional baseline when arousal is low. */
+        if (ch->ai_data)
+            sec_passive_decay(ch);
+
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;
 
@@ -608,14 +1100,6 @@ void mobile_activity(void)
 
         /* Check if mob can level up from gained experience */
         check_mob_level_up(ch);
-
-        if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
-            ch->ai_data->duty_frustration_timer--;
-        }
-
-        if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
-            ch->ai_data->quest_posting_frustration_timer--;
-        }
 
         /* RFC-0003 §7.2: Regenerate Shadow Timeline cognitive capacity */
         /* Cognitive cost regenerates naturally over time */
@@ -628,21 +1112,36 @@ void mobile_activity(void)
         /* RFC-0003 §6.2: Entity must have internal decision logic and action selection */
         /* Only for mobs with SHADOWTIMELINE flag and sufficient cognitive capacity */
         if (MOB_FLAGGED(ch, MOB_SHADOWTIMELINE) && ch->ai_data &&
-            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN) {
+            ch->ai_data->cognitive_capacity >= COGNITIVE_CAPACITY_MIN && shadow_should_activate(ch)) {
             struct shadow_action action;
+            bool shadow_action_executed = FALSE;
 
             /* RFC-0003 §5.1: Shadow Timeline proposes possibilities, never asserts facts */
             /* Use Shadow Timeline to choose next action based on non-authoritative projection */
             if (mob_shadow_choose_action(ch, &action)) {
+                /* Capture pre-execution HP snapshot for feedback system */
+                ch->ai_data->last_hp_snapshot = GET_HIT(ch);
+                /* Record chosen action type for consistency and novelty tracking.
+                 * action_repetition_count builds when the same type is chosen consecutively,
+                 * giving the depth-aware O novelty bonus time to grow before a switch occurs. */
+                if (ch->ai_data->last_chosen_action_type == (int)action.type) {
+                    ch->ai_data->action_repetition_count++;
+                } else {
+                    ch->ai_data->action_repetition_count = 1;
+                }
+                ch->ai_data->last_chosen_action_type = (int)action.type;
+
                 /* RFC-0003 §4.2: Execute action in live world (Shadow Timeline never mutates) */
                 /* RFC-0003 §5.2: Action chosen from hypothetical, probabilistic projections */
+
                 /* Execute the chosen action based on type */
                 switch (action.type) {
                     case SHADOW_ACTION_MOVE:
                         /* Attempt movement in projected direction */
                         if (action.direction >= 0 && action.direction < NUM_OF_DIRS) {
                             perform_move(ch, action.direction, 1);
-                            continue; /* Skip rest of mob_activity for this mob */
+                            shadow_action_executed = TRUE;
+                            goto shadow_feedback_and_continue;
                         }
                         break;
 
@@ -652,8 +1151,37 @@ void mobile_activity(void)
                             struct char_data *target = (struct char_data *)action.target;
                             /* Verify target still exists and is in same room */
                             if (IN_ROOM(target) == IN_ROOM(ch)) {
-                                hit(ch, target, TYPE_UNDEFINED);
-                                continue; /* Skip rest of mob_activity */
+                                /* Big Five Phase 2B: Apply Conscientiousness to Shadow Timeline Attack Decision
+                                 * This is a DELIBERATIVE choice from projected futures.
+                                 * High C reduces impulsive attack execution, adds reaction delay under arousal.
+                                 * Base impulse = 0.8 (shadow projections are inherently somewhat impulsive)
+                                 * Base delay = 1.0 tick (unit baseline for executive modulation) */
+                                float base_impulse = 0.8f;
+                                float base_delay = 1.0f; /* Unit baseline for delay modulation */
+                                float modulated_impulse = apply_executive_control(ch, base_impulse, TRUE, &base_delay);
+
+                                /* Check if impulse succeeds (probabilistic execution) */
+                                if (rand_number(0, 100) <= (int)(modulated_impulse * 100.0f)) {
+                                    /* Apply reaction delay if high C under arousal */
+                                    if (base_delay > 0.5f) {
+                                        /* Delay implemented as probability of postponing action
+                                         * Higher delay = higher chance to skip this tick */
+                                        int delay_chance = (int)(base_delay * 20.0f); /* Scale to percentage */
+                                        if (rand_number(0, 100) < delay_chance) {
+                                            /* Deliberation causes hesitation - skip action this tick */
+                                            shadow_action_executed = FALSE;
+                                            break;
+                                        }
+                                    }
+
+                                    /* Execute attack */
+                                    hit(ch, target, TYPE_UNDEFINED);
+                                    shadow_action_executed = TRUE;
+                                    goto shadow_feedback_and_continue;
+                                } else {
+                                    /* Impulse suppressed by high C - don't attack */
+                                    shadow_action_executed = FALSE;
+                                }
                             }
                         }
                         break;
@@ -661,8 +1189,12 @@ void mobile_activity(void)
                     case SHADOW_ACTION_FLEE:
                         /* Flee if we're actually in combat */
                         if (FIGHTING(ch)) {
+                            /* If mob has a master or followers it is abandoning them */
+                            if (IS_NPC(ch) && ch->ai_data && (ch->master || ch->followers))
+                                add_active_emotion_memory(ch, FIGHTING(ch), INTERACT_ABANDON_ALLY, 1, "flee");
                             do_flee(ch, "", 0, 0);
-                            continue;
+                            shadow_action_executed = TRUE;
+                            goto shadow_feedback_and_continue;
                         }
                         break;
 
@@ -670,7 +1202,7 @@ void mobile_activity(void)
                         /* Perform social action with target */
                         if (action.target) {
                             struct char_data *target = (struct char_data *)action.target;
-                            if (IN_ROOM(target) == IN_ROOM(ch)) {
+                            if (IN_ROOM(target) == IN_ROOM(ch) && CAN_SEE(ch, target)) {
                                 /* Simple friendly social - could be expanded */
                                 act("$n parece interessado em $N.", FALSE, ch, 0, target, TO_NOTVICT);
                                 act("$n olha para você de forma interessada.", FALSE, ch, 0, target, TO_VICT);
@@ -690,48 +1222,29 @@ void mobile_activity(void)
                                     act("$n bebe $p.", TRUE, ch, obj, 0, TO_ROOM);
                                     /* Apply potion effects would go here */
                                     extract_obj(obj);
-                                    continue;
+                                    shadow_action_executed = TRUE;
+                                    goto shadow_feedback_and_continue;
                                 } else if (GET_OBJ_TYPE(obj) == ITEM_FOOD) {
                                     /* Eat food */
                                     act("$n come $p.", TRUE, ch, obj, 0, TO_ROOM);
                                     extract_obj(obj);
-                                    continue;
+                                    shadow_action_executed = TRUE;
+                                    goto shadow_feedback_and_continue;
                                 }
                             }
                         }
                         break;
 
                     case SHADOW_ACTION_CAST_SPELL:
-                        /* Cast spell on target (requires mob to know spell) */
-                        if (action.target && GET_LEVEL(ch) >= 1) {
-                            struct char_data *target = (struct char_data *)action.target;
-                            /* Verify target in same room */
-                            if (IN_ROOM(target) == IN_ROOM(ch)) {
-                                /* Simple healing spell for allies, or harm for enemies */
-                                /* Note: This is a placeholder - proper spell selection
-                                 * would be based on mob's spell list and situation */
-                                bool is_ally = (ch->master == target || target->master == ch);
-
-                                if (!is_ally && !IS_NPC(target)) {
-                                    /* Try to harm enemy player */
-                                    if (GET_MANA(ch) >= 20) {
-                                        act("$n conjura uma magia contra $N!", TRUE, ch, 0, target, TO_NOTVICT);
-                                        act("$n conjura uma magia contra você!", TRUE, ch, 0, target, TO_VICT);
-                                        /* Spell damage would go here */
-                                        GET_MANA(ch) -= 20;
-                                        continue;
-                                    }
-                                } else if (is_ally) {
-                                    /* Try to heal ally */
-                                    if (GET_MANA(ch) >= 15 && GET_HIT(target) < GET_MAX_HIT(target)) {
-                                        act("$n conjura uma magia de cura em $N!", TRUE, ch, 0, target, TO_NOTVICT);
-                                        act("$n conjura uma magia de cura em você!", TRUE, ch, 0, target, TO_VICT);
-                                        GET_HIT(target) = MIN(GET_MAX_HIT(target), GET_HIT(target) + 30);
-                                        GET_MANA(ch) -= 15;
-                                        continue;
-                                    }
-                                }
-                            }
+                        /* Delegate to the real mob spell/item system.
+                         * The old placeholder emitted "conjura uma magia" messages
+                         * without casting a real spell.  mob_handle_item_usage()
+                         * finds the best item+spell combination in the mob's
+                         * inventory, calls cast_spell(), and handles all messages
+                         * through the normal spell system. */
+                        if (mob_handle_item_usage(ch)) {
+                            shadow_action_executed = TRUE;
+                            goto shadow_feedback_and_continue;
                         }
                         break;
 
@@ -756,10 +1269,33 @@ void mobile_activity(void)
                             /* Try to complete quest if mob has active quest */
                             if (ch->ai_data->current_quest != NOTHING) {
                                 mob_complete_quest(ch);
-                                continue;
+                                shadow_action_executed = TRUE;
+                                goto shadow_feedback_and_continue;
                             }
-                            /* Otherwise, look for available quest to accept */
-                            /* Quest acceptance logic would check nearby questmasters */
+                            /* Try to accept quest if target is a questmaster */
+                            else if (action.target) {
+                                struct char_data *questmaster = (struct char_data *)action.target;
+                                /* Verify questmaster still exists and is in same room */
+                                if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
+                                    /* Find available quest from this questmaster */
+                                    qst_vnum available_quest =
+                                        find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                                    if (available_quest != NOTHING) {
+                                        qst_rnum quest_rnum = real_quest(available_quest);
+                                        if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
+                                            set_mob_quest(ch, quest_rnum);
+                                            act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster,
+                                                TO_ROOM);
+                                            shadow_action_executed = TRUE;
+                                            /* Note: Don't goto feedback here, let it fall through to execute feedback
+                                             */
+                                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                                goto shadow_feedback_and_continue;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         break;
 
@@ -767,17 +1303,14 @@ void mobile_activity(void)
                         /* Follow another entity */
                         if (action.target && !ch->master) {
                             struct char_data *leader = (struct char_data *)action.target;
-                            /* Verify leader in same room and not already following */
-                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch) {
-                                /* Simple follow logic - mob decides to follow */
-                                act("$n começa a seguir $N.", FALSE, ch, 0, leader, TO_NOTVICT);
-                                act("$n começa a seguir você.", FALSE, ch, 0, leader, TO_VICT);
-                                /* Set up follow relationship */
-                                if (ch->master) {
-                                    stop_follower(ch);
-                                }
+                            /* Verify leader in same room, visible, not already following, and
+                             * that adding the follow won't create a circular chain. */
+                            if (IN_ROOM(leader) == IN_ROOM(ch) && leader != ch && CAN_SEE(ch, leader) &&
+                                !circle_follow(ch, leader)) {
+                                /* add_follower sends "começa a seguir" messages itself */
                                 add_follower(ch, leader);
-                                continue;
+                                shadow_action_executed = TRUE;
+                                goto shadow_feedback_and_continue;
                             }
                         }
                         break;
@@ -798,7 +1331,8 @@ void mobile_activity(void)
                                     if (IS_NPC(potential_member) && ch->ai_data) {
                                         ch->ai_data->emotion_loyalty = MIN(100, ch->ai_data->emotion_loyalty + 5);
                                     }
-                                    continue;
+                                    shadow_action_executed = TRUE;
+                                    goto shadow_feedback_and_continue;
                                 }
                             }
                         }
@@ -806,20 +1340,48 @@ void mobile_activity(void)
 
                     case SHADOW_ACTION_WAIT:
                         /* Intentionally wait/do nothing this tick */
-                        continue;
+                        shadow_action_executed = TRUE;
+                        goto shadow_feedback_and_continue;
 
                     case SHADOW_ACTION_GUARD:
                         /* Stand guard at post - sentinel duty fulfilled */
                         /* No action needed, just maintain vigilance */
-                        continue;
+                        shadow_action_executed = TRUE;
+                        goto shadow_feedback_and_continue;
 
                     default:
                         /* Other action types not yet implemented in mob_activity */
                         break;
                 }
+
+                /* For actions that didn't execute via goto, evaluate feedback if needed */
+                if (shadow_action_executed) {
+                    int real_score = shadow_evaluate_real_outcome(ch);
+                    shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);
+                }
             }
+
             /* RFC-0003 §10.1: Shadow Timeline projections are ephemeral and non-persistent */
             /* Projection context has been freed by mob_shadow_choose_action */
+
+            /* Only skip normal goal processing if Shadow Timeline successfully executed an action.
+             * If ST didn't handle the action (shadow_action_executed == FALSE), fall through to
+             * normal goal processing. This allows mobs with active goals (like GOAL_COMPLETE_QUEST)
+             * to continue processing their goals even when Shadow Timeline is enabled but doesn't
+             * provide an appropriate action. This prevents mobs from getting stuck when they accept
+             * a quest but Shadow Timeline doesn't handle quest processing. */
+            if (shadow_action_executed) {
+                continue; /* Skip rest of mob_activity for this mob */
+            }
+            /* Otherwise, fall through to normal goal processing below */
+
+        shadow_feedback_and_continue:
+            /* Evaluate feedback for actions that successfully executed */
+            {
+                int real_score = shadow_evaluate_real_outcome(ch);
+                shadow_update_feedback(ch, real_score, ch->ai_data->last_outcome_obvious);
+            }
+            continue; /* Skip rest of mob_activity for this mob */
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
@@ -1857,7 +2419,43 @@ void mobile_activity(void)
                     // if (IS_NPC(vict))
                     // continue;
 
-                    if (rand_number(0, 20) <= GET_CHA(vict)) {
+                    /* Big Five Phase 2B: Apply Conscientiousness to Aggressive Targeting
+                     * This is a DELIBERATIVE decision point: mob chooses to attack or not.
+                     * High C reduces impulsive aggression, low C increases it.
+                     * Charisma provides base resistance, C modulates the impulse. */
+
+                    /* Base impulse probability: 1.0 - (charisma_resistance / 20.0)
+                     * CHA 0  = 100% impulse, CHA 20 = 0% impulse
+                     * This represents victim's ability to diffuse aggression */
+                    float base_impulse = 1.0f - (MIN(GET_CHA(vict), 20) / 20.0f);
+
+                    /* Apply executive control (C modulation of impulse) */
+                    float modulated_impulse = apply_executive_control(ch, base_impulse, FALSE, NULL);
+
+                    /* Convert back to threshold for rand_number check
+                     * Original: if (rand_number(0, 20) <= GET_CHA(vict))
+                     * New: if (rand_number(0, 100) > modulated_impulse * 100) */
+                    int impulse_threshold = (int)(modulated_impulse * 100.0f);
+
+                    /* Big Five Phase 3: Agreeableness aggression modulation.
+                     * High A reduces willingness to initiate unprovoked attacks;
+                     * low A increases it.  Applied after C modulation so both traits
+                     * contribute independently to the final aggression probability.
+                     * Formula: impulse_threshold -= (A_final - 0.5) * (CONFIG_OCEAN_A_AGGR_SCALE/10)
+                     * At A=1.0: -10 pts (less aggressive).
+                     * At A=0.0: +10 pts (more aggressive).
+                     * At A=0.5: no change (neutral). */
+                    if (ch->ai_data) {
+                        float A_final = sec_get_agreeableness_final(ch);
+                        int a_aggr_mod = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_AGGR_SCALE / 10.0f));
+                        impulse_threshold = MAX(0, MIN(100, impulse_threshold - a_aggr_mod));
+                        if (CONFIG_MOB_4D_DEBUG)
+                            mudlog(CMP, LVL_IMPL, FALSE, "OCEAN-A: aggr mod %+d (A=%.2f) threshold=%d for %s(#%d)",
+                                   -a_aggr_mod, A_final, impulse_threshold, GET_NAME(ch), GET_MOB_VNUM(ch));
+                    }
+
+                    if (rand_number(0, 100) > impulse_threshold) {
+                        /* Resisted impulse - intimidate instead of attack */
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
                         /* Safety check: act() can trigger DG scripts which may extract ch or vict */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -1875,6 +2473,7 @@ void mobile_activity(void)
                             continue;
                         }
                     } else {
+                        /* Impulse succeeded - attack */
                         hit(ch, vict, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -2378,7 +2977,17 @@ bool mob_handle_grouping(struct char_data *ch)
 
     /* Verifica a chance de tentar agrupar-se. */
     const int CURIOSIDADE_MINIMA_GRUPO = 5;
-    if (rand_number(1, 100) > MAX(GET_GENGROUP(ch), CURIOSIDADE_MINIMA_GRUPO))
+    int grouping_chance = MAX(GET_GENGROUP(ch), CURIOSIDADE_MINIMA_GRUPO);
+
+    /* Big Five Phase 3: Agreeableness group cooperation bonus.
+     * High A → cooperative disposition, higher grouping initiative.
+     * Low A  → solitary/territorial, lower grouping initiative.
+     * Formula: bonus = (A_final - 0.5) * (CONFIG_OCEAN_A_GROUP_SCALE/10) ∈ [-10, +10]. */
+    float A_final = sec_get_agreeableness_final(ch);
+    int a_group_bonus = (int)((A_final - 0.5f) * (CONFIG_OCEAN_A_GROUP_SCALE / 10.0f));
+    grouping_chance = MAX(CURIOSIDADE_MINIMA_GRUPO, MIN(100, grouping_chance + a_group_bonus));
+
+    if (rand_number(1, 100) > grouping_chance)
         return FALSE;
 
     struct char_data *vict, *best_target_leader = NULL;
@@ -2505,18 +3114,12 @@ bool mob_handle_grouping(struct char_data *ch)
 
             if (leader_to_be != NULL && leader_to_be == ch) {
                 /* O próprio mob 'ch' é o melhor candidato a líder, então ele cria o grupo. */
-                struct group_data *new_group;
-                CREATE(new_group, struct group_data, 1);
-                add_to_list(new_group, group_list);
-                new_group->leader = NULL;
-                new_group->members = create_list();
-                SET_BIT(new_group->group_flags, GROUP_ANON);
-                SET_BIT(new_group->group_flags, GROUP_OPEN);
-                SET_BIT(new_group->group_flags, GROUP_NPC); /* Marca como um grupo de mobs */
-
-                join_group(ch, new_group);
-                act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
-                return TRUE;
+                struct group_data *new_group = create_group(ch);
+                if (new_group) {
+                    SET_BIT(new_group->group_flags, GROUP_ANON);
+                    act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
+                    return TRUE;
+                }
             }
         }
     }
@@ -3197,52 +3800,50 @@ bool mob_try_stealth_follow(struct char_data *ch)
         /* Stealth-aware following: Check if mob has sneak/hide affects */
         bool is_stealthy = AFF_FLAGGED(ch, AFF_SNEAK) || AFF_FLAGGED(ch, AFF_HIDE);
 
-        /* Manually set up following relationship (like add_follower but with conditional messages) */
+        /* Set up following relationship with messages appropriate for stealth */
         if (!ch->master) {
-            struct follow_type *k;
-            ch->master = target;
-            CREATE(k, struct follow_type, 1);
-            k->follower = ch;
-            k->next = target->followers;
-            target->followers = k;
-
-            /* Messages are conditional based on stealth */
             if (!is_stealthy) {
-                /* Normal visible following */
-                if (IS_NPC(ch)) {
-                    /* NPCs don't get the "You will now follow" message */
-                } else {
-                    act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
-                        return FALSE;
-                }
-                if (CAN_SEE(target, ch)) {
-                    act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
-                        return FALSE;
-                }
-                act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
-                /* Safety check: act() can trigger DG scripts which may cause extraction */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                /* Non-stealthy: use canonical add_follower which manages data structures safely */
+                add_follower(ch, target);
+                /* Safety check: add_follower calls act() which can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                    if (ch->master)
+                        stop_follower(ch);
                     return FALSE;
-                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                }
+                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                    if (ch->master)
+                        stop_follower(ch);
                     return FALSE;
+                }
             } else {
-                /* Stealthy following - only notify if target can see through stealth */
+                /* Stealthy: set up the relationship manually and send a silent message
+                 * only when the target can see through the stealth.  Any early exit due
+                 * to extraction must undo the relationship via stop_follower() so that
+                 * ch->master is never left dangling. */
+                struct follow_type *k;
+                ch->master = target;
+                CREATE(k, struct follow_type, 1);
+                k->follower = ch;
+                k->next = target->followers;
+                target->followers = k;
+
                 if (CAN_SEE(target, ch)) {
-                    /* Target can see through the stealth */
                     act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
-                    /* Safety check: act() can trigger DG scripts which may cause extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    /* Safety check: act() can trigger DG scripts which may cause extraction.
+                     * Guard with ch->master before stop_follower() — a DG script fired by
+                     * act() may have already cleared ch->master (stop_follower core_dumps
+                     * on NULL master). */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
-                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                    }
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                        if (ch->master)
+                            stop_follower(ch);
                         return FALSE;
+                    }
                 }
                 /* No message to room when sneaking/hiding */
             }
@@ -3589,9 +4190,10 @@ bool mob_try_and_upgrade(struct char_data *ch)
         }
     } /* Fim do loop 'while' */
 
-    /* Log if we hit the iteration limit to help debug infinite loops */
-    if (iteration_count >= max_iterations) {
-        log1("SYSERR: mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", GET_NAME(ch), GET_MOB_VNUM(ch));
+    /* Surface iteration-limit diagnostics only to online implementers when debug is enabled. */
+    if (CONFIG_MOB_4D_DEBUG && iteration_count >= max_iterations) {
+        mudlog(CMP, LVL_IMPL, FALSE, "mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", GET_NAME(ch),
+               GET_MOB_VNUM(ch));
     }
 
     /* A aprendizagem acontece uma vez no final da sessão. */
@@ -4988,7 +5590,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Found target, perform positive social interaction
                  * We only decrement quest_counter if target is visible and interaction is possible */
                 if (CAN_SEE(ch, target_mob) && GET_POS(ch) >= POS_RESTING) {
-                    do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
+                    do_action(ch, fname(GET_NAME(target_mob)), find_command("nod"), 0);
                     /* Decrement counter only after successful interaction attempt */
                     if (--ch->ai_data->quest_counter <= 0) {
                         mob_complete_quest(ch);
@@ -5753,4 +6355,49 @@ bool mob_use_bank(struct char_data *ch)
     }
 
     return FALSE; /* No banking action taken */
+}
+
+bool shadow_should_activate(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data)
+        return FALSE;
+
+    int cap = ch->ai_data->cognitive_capacity;
+    if (cap < 50)
+        return FALSE;
+
+    int curiosity = ch->ai_data->emotion_curiosity;
+    int fear = ch->ai_data->emotion_fear;
+    int greed = ch->ai_data->emotion_greed;
+
+    /* --- Base motivational drive --- */
+    int base_drive = (curiosity * 5) / 10 + /* 0.5 */
+                     (fear * 7) / 10 +      /* 0.7 */
+                     (greed * 4) / 10;      /* 0.4 */
+
+    /* --- Context multiplier --- */
+    int multiplier = 100; /* 1.0 */
+
+    if (FIGHTING(ch))
+        multiplier += 60;
+
+    if (GET_HIT(ch) < GET_MAX_HIT(ch) / 3)
+        multiplier += 30;
+
+    int interest = (base_drive * multiplier) / 100;
+
+    /* --- Fatigue scaling --- */
+    interest = (interest * cap) / 1000;
+
+    /* --- Novelty immediate boost --- */
+    int novelty = ch->ai_data->recent_prediction_error;
+    interest += novelty / 3;
+
+    /* --- Attention bias (long-term adaptation) --- */
+    interest += ch->ai_data->attention_bias;
+
+    /* --- Dynamic threshold --- */
+    int threshold = rand_number(60, 120);
+
+    return interest > threshold;
 }

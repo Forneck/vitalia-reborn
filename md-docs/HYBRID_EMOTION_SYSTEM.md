@@ -617,6 +617,86 @@ if (trust > 60) {
 
 The hybrid system is designed to be lightweight and efficient.
 
+## 4D Emotion Projection Component
+
+### Overview
+
+The **4D Emotion Projection** layer (`emotion_projection.c` / `emotion_projection.h`) converts a mob's 20-component emotion vector into a compact **4-dimensional decision space** used by the mob AI pipeline when choosing actions.
+
+The four axes are:
+
+| Axis | Range | Meaning |
+|------|-------|---------|
+| **Valence** | −100 to +100 | Positive vs. negative evaluation of the current interaction |
+| **Arousal** | 0 to 100 | Calm (0) to highly activated (100) |
+| **Dominance** | −100 to +100 | Perceived control / assertiveness bias |
+| **Affiliation** | −100 to +100 | Avoidance (−100) to approach (+100) toward target |
+
+### Core Formula
+
+```
+P_base      = M_profile × E
+P_raw       = (M_profile + ΔM_personal) × E
+P_effective = ContextualMod(P_raw, mob, target, environment, memory, shadow)
+```
+
+Where:
+- `M_profile` — Fixed 4×20 projection matrix for the mob's emotional profile (NEUTRAL, AGGRESSIVE, etc.)
+- `ΔM_personal` — Personal drift matrix, bounded within ±`PERSONAL_DRIFT_MAX_PCT`%
+- `E` — Current 20-component emotion vector (each value 0–100)
+- `P_base` — Profile-only projection, no drift, no context
+- `P_raw` — Drift-adjusted projection before contextual modulation
+- `P_effective` — Final 4D state after contextual modulation
+
+### Contextual Modulation Layer
+
+After computing `P_raw`, four adjustments are applied:
+
+```
+Dominance   = clamp(raw_D  + (coping_potential − 50) × 0.4)
+Arousal     = clamp(raw_A  × (1 + env_intensity × 0.5))
+Affiliation = clamp(raw_Af + relationship_bias)
+Valence     = clamp(raw_V  + shadow_forecast_bias)   // only if Shadow Timeline active
+```
+
+**Coping Potential** (`emotion_compute_coping_potential()`) is an objective measure of the mob's situational capacity (HP ratio, mana ratio, status effects, group numbers), distinct from the subjective Dominance axis it modulates.
+
+### Relationship to Mood and Relationship Layers
+
+| Component | Source | Influence on Projection |
+|-----------|--------|------------------------|
+| Mood layer | `mob->ai_data->emotion_*` | Primary input emotion vector `E` |
+| Relationship layer | `mob->ai_data->memories[]` | Contributes `relationship_bias` to Affiliation axis |
+| Shadow Timeline | `mob->ai_data->attention_bias` | Contributes `shadow_forecast_bias` to Valence axis |
+| Emotional Profile | `mob->ai_data->emotional_profile` | Selects the fixed projection matrix `M_profile` |
+
+The projection is **read-only** with respect to the emotion state: it maps emotions to a decision coordinate but never writes back to the emotion fields directly. This preserves the separation between the reactive emotion pipeline and the strategic decision layer.
+
+### API
+
+```c
+// Get the fixed profile projection matrix for a given emotional profile
+const float (*emotion_get_profile_matrix(int profile))[20];
+
+// Compute P_raw for a mob
+void emotion_compute_raw_projection(struct char_data *mob, float raw_out[DECISION_SPACE_DIMS]);
+
+// Compute objective coping potential (0–100)
+float emotion_compute_coping_potential(struct char_data *mob);
+
+// Apply contextual modulation to produce P_effective
+void emotion_apply_contextual_modulation(struct char_data *mob, struct char_data *target,
+                                         const float raw[DECISION_SPACE_DIMS], float coping_pot,
+                                         float effective_out[DECISION_SPACE_DIMS]);
+```
+
+### Files
+
+- `src/emotion_projection.h` — API documentation and type definitions
+- `src/emotion_projection.c` — Matrix definitions and modulation logic
+- `src/mobact.c` — Integration point (reads `P_effective` for mob action scoring)
+- `src/act.wizard.c` — `stat mob` display of projected OCEAN values
+
 ## Conclusion
 
 The hybrid emotion system provides realistic, long-term relationship building while maintaining simple, performant code. Always use `get_effective_emotion_toward()` for per-entity decisions, and let the system handle the complexity of combining mood and relationship layers.

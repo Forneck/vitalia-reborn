@@ -1,0 +1,1041 @@
+/**
+ * @file malp.h
+ * MALP/MPLP – Memória Ativa/Passiva de Longo Prazo (RFC-1002)
+ *
+ * Implements Active Long-Term Memory (MALP) and Passive/Implicit Long-Term
+ * Memory (MPLP) for NPC believability and emergent social mechanics.
+ *
+ * Key design points (from RFC-1002):
+ *  - Salience-driven consolidation: S = w_a*arousal + w_r*log(1+rehearsal)
+ *    + w_s*social_weight, multiplied by power-law age decay.
+ *  - Separate explicit (MALP) and implicit (MPLP) stores.
+ *  - Trait generation via Hebbian co-occurrence (rehearsal >= threshold).
+ *  - Reconsolidation window opened on MALP retrieval above θ_react.
+ *  - All emotion deltas go through adjust_emotion() (no pipeline bypass).
+ *  - OCEAN modulation: high-N slows negative-trait decay (rumination);
+ *    high-C raises effective consolidation threshold; high-A accelerates
+ *    positive reconsolidation updates.
+ *
+ * Part of Vitalia Reborn MUD engine.
+ * Copyright (C) 2026 Vitalia Reborn Design
+ */
+
+#ifndef _MALP_H_
+#define _MALP_H_
+
+#include "structs.h"
+
+/* ── Salience weights (RFC-1002 §7.1 defaults) ───────────────────────────── */
+/** Arousal contribution weight in salience formula (default: 0.50) */
+#define MALP_W_AROUSAL 0.50f
+/** Rehearsal (log) contribution weight in salience formula (default: 0.25) */
+#define MALP_W_REHEARSAL 0.25f
+/** Social weight contribution in salience formula (default: 0.25) */
+#define MALP_W_SOCIAL 0.25f
+
+/** Normalisation denominator: max raw salience ≈ w_a + w_r*log(11) + w_s ≈ 1.35 */
+#define MALP_SALIENCE_NORM 1.35f
+
+/** Social weight for PLAYER interactions (higher; players are more salient) */
+#define MALP_SOCIAL_WEIGHT_PLAYER 1.0f
+/** Social weight for MOB-to-mob interactions */
+#define MALP_SOCIAL_WEIGHT_MOB 0.5f
+
+/** Power-law age-decay exponent for salience (lower → slower forgetting) */
+#define MALP_AGE_DECAY_EXPONENT 0.40f
+
+/* ── Reconsolidation ─────────────────────────────────────────────────────── */
+/** Retrieval probability threshold above which reconsolidation window opens */
+#define MALP_THETA_REACT 0.55f
+/** Sigmoid steepness k for P_ret computation */
+#define MALP_PRET_K 5.0f
+/** Reconsolidation λ scaling base (λ = base * salience * rehearsal_factor) */
+#define MALP_RECON_LAMBDA_BASE 0.30f
+/** Maximum valence change per reconsolidation window (prevents instant flips) */
+#define MALP_RECON_MAX_DELTA 0.25f
+
+/* ── Pruning / growth ────────────────────────────────────────────────────── */
+/** Initial dynamic-array capacity for new mobs (grows as needed) */
+#define MALP_INITIAL_CAPACITY 8
+/** Growth factor when MALP array needs to expand */
+#define MALP_GROWTH_FACTOR 2
+/** Initial dynamic-array capacity for MPLP traits */
+#define MPLP_INITIAL_CAPACITY 4
+/** Maximum MPLP traits per mob (hard cap) */
+#define MPLP_MAX_PER_MOB 50
+/** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
+#define MALP_HIGH_PERSIST_AROUSAL 0.85f
+
+/* ── Dominant-actor feedback loop protection ────────────────────────────── */
+/**
+ * Ratio of one actor's rehearsal to total MALP rehearsal above which that actor
+ * is considered cognitively dominant.  When dominance > this threshold the
+ * actor's MALP emotion-effect intensity is multiplied by MALP_DOMINANCE_DAMPENING,
+ * preventing a single actor from monopolising the NPC's cognitive landscape.
+ */
+#define MALP_DOMINANCE_THRESHOLD 0.75f
+
+/**
+ * Intensity multiplier applied to MALP emotion effects when the triggering actor
+ * is cognitively dominant (rehearsal share > MALP_DOMINANCE_THRESHOLD).
+ * Reduces the per-call delta by 30 % while keeping the memory influence non-zero.
+ */
+#define MALP_DOMINANCE_DAMPENING 0.70f
+
+/**
+ * Minimum elapsed seconds between consecutive MALP/MPLP emotion-effect
+ * applications for the same actor.
+ *
+ * Prevents rapid re-triggering of emotional feedback loops when an actor is
+ * continuously present in the room.  During the cooldown window the NPC's
+ * natural emotion-homeostasis system (update_mob_emotion_passive) returns
+ * emotions toward their baselines without external amplification.
+ *
+ * 120 s ≈ 2 real minutes; sufficient for baseline recovery before the next
+ * MALP-driven arousal spike can occur.
+ */
+#define MALP_SOCIAL_COOLDOWN_SECS 120
+
+/**
+ * Regulation-timer value (in update ticks) set after a successful self-regulation
+ * behaviour (justify / deflect / apologize / reframe / nervous-laugh).
+ *
+ * Replaces the old formula (8 − 5 × reg_strength = 1..8 ticks) which was too
+ * short to interrupt rapid shame/fear → reflection → shame/fear loops.
+ *
+ * At CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30 % and PULSE_MOB_EMOTION = 4 s,
+ * 60 ticks ≈ 13 minutes of real time between successive self-reflection episodes.
+ */
+#define MALP_REGULATION_COOLDOWN 60
+
+/* ── Social gossip transfer constants (RFC-1003) ─────────────────────────── */
+/**
+ * Base percentage chance (per emotion tick) that a mob will attempt to
+ * gossip to another mob in the same room.  Applied inside mob_emotion_activity()
+ * when CONFIG_MOB_CONTEXTUAL_SOCIALS is enabled.
+ *
+ * At PULSE_MOB_EMOTION = 4 s and CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30 %:
+ *   effective rate ≈ 30 % × 10 % = 3 % per tick ≈ one gossip event per ~133 s per mob.
+ */
+#define MALP_GOSSIP_CHANCE 10
+
+/**
+ * Minimum MALP intensity a source entry must have before gossip is attempted.
+ * Prevents idle chatter about nearly-forgotten or negligible memories.
+ */
+#define MALP_GOSSIP_MIN_INTENSITY 0.20f
+
+/**
+ * Hard cap on the computed transfer_weight for gossip.
+ * Prevents second-hand information from replacing or dominating first-hand memories
+ * even when the source is highly trusted and reputable.
+ */
+#define MALP_GOSSIP_WEIGHT_CAP 0.35f
+
+/**
+ * Minimum transfer_weight below which the gossip event has no effect.
+ * Filters out gossip from mistrusted or highly suspicious listeners.
+ */
+#define MALP_GOSSIP_WEIGHT_MIN 0.05f
+
+/**
+ * Fraction of source MALP intensity conveyed to the listener's gossip-derived
+ * MALP entry before transfer_weight scaling.  Ensures second-hand memories
+ * always start weaker than first-hand ones.
+ */
+#define MALP_GOSSIP_INTENSITY_SCALE 0.40f
+
+/**
+ * Minimum elapsed seconds between two gossip updates that affect the same
+ * listener–target pair.  Reuses the listener's MALP last_applied timestamp
+ * for the target entity to prevent gossip flooding.
+ * 300 s ≈ 5 real minutes.
+ */
+#define MALP_GOSSIP_COOLDOWN_SECS 300
+
+/**
+ * Minimum elapsed seconds before the same source mob may gossip again (as
+ * the speaker).  This O(1) per-mob cooldown is checked at the very top of
+ * try_social_gossip() — before the O(malp_count) topic-selection scan — so
+ * it short-circuits the expensive path for mobs that gossip too eagerly.
+ * 60 s keeps narrative plausibility while capping the per-mob gossip rate
+ * to at most once per minute regardless of tick frequency.
+ */
+#define MALP_GOSSIP_SOURCE_COOLDOWN_SECS 60
+
+/**
+ * Maximum number of gossip *attempts* (not just successes) processed in a
+ * single mob_emotion_activity() call (one call every PULSE_MOB_EMOTION = 4 s).
+ *
+ * The budget is consumed for every attempt that passes the O(1) source-
+ * cooldown pre-check in mob_emotion_activity(), regardless of whether
+ * try_social_gossip() ultimately succeeds.  Counting attempts (rather than
+ * only successes) prevents the CPU spike that occurs in low-trust environments
+ * where transfer weights always fall below MALP_GOSSIP_WEIGHT_MIN: without
+ * this fix the budget never fills and all eligible mobs do expensive
+ * O(malp_count) scans on every tick.
+ *
+ * Value is set to 16 (double the original 8) to compensate for attempt-based
+ * counting: at a typical 50–70 % success rate this yields 8–11 successful
+ * gossip events per tick (120–165 events/minute at 4-s ticks), matching the
+ * original throughput in well-established trust environments, while capping
+ * worst-case CPU at 16 × O(malp_count) scans per tick regardless of success.
+ *
+ * Mobs still on source cooldown are skipped for free (O(1)) and do NOT
+ * consume a budget slot.
+ */
+#define MALP_GOSSIP_BUDGET_PER_TICK 16
+
+/**
+ * Running-average blend rate used when updating the approach/avoidance trait
+ * valence during a gossip event.  New valence = (1 − rate) × old + rate × gossip.
+ * Small value (0.10) ensures gossip nudges rather than overwrites personality.
+ */
+#define MALP_GOSSIP_VALENCE_BLEND_RATE 0.10f
+
+/* ── Cognitive Bias modifiers for gossip (RFC-1003 §Bias) ─────────────────
+ *
+ * Psychological research shows that cognitive biases affect social
+ * transmission of information at three stages:
+ *
+ *  1. TOPIC SELECTION (source): what the mob chooses to gossip about.
+ *     – Availability heuristic (Tversky & Kahneman 1973): recent / intense
+ *       memories are more cognitively available → selection bonus.
+ *     – Negativity bias (Baumeister et al. 2001): negative memories feel
+ *       more urgent to share → selection bonus for negative valence entries.
+ *     – Confirmation bias (Echterhoff & Higgins 2009): source prefers topics
+ *       that confirm its dominant belief about the target.
+ *
+ *  2. NARRATION / ENCODING (source): how the gossip content is framed.
+ *     – Attribution bias (Ross 1977; Jones & Harris 1967): others' bad
+ *       behaviour is attributed to character, making negative gossip more
+ *       extreme in the telling.
+ *     – Negativity bias: source amplifies the emotional negativity of the
+ *       transmitted valence.
+ *
+ *  3. RECEPTION (listener): how much weight the listener gives incoming gossip.
+ *     – Confirmation bias: gossip that confirms existing belief is accepted
+ *       more readily; contradicting gossip is discounted.
+ *     – Negativity bias: negative gossip is processed more deeply and
+ *       weighted more heavily by listeners.
+ *
+ *  Invariants (from design requirement):
+ *   - Raw MALP/MPLP data is never fabricated or overwritten.
+ *   - Bias affects weighting, interpretation, and sharing probability only.
+ *   - Bias acts during selection and narration, not during memory storage.
+ */
+
+/** Max selection-score bonus (as fraction of intensity) that availability
+ *  bias can add to a MALP entry in the topic-selection loop. */
+#define MALP_GOSSIP_AVAILABILITY_SELECT_SCALE 0.30f
+
+/** Max selection-score bonus (as fraction of intensity × |valence|) that
+ *  negativity bias can add for entries with negative valence. */
+#define MALP_GOSSIP_NEGATIVITY_SELECT_SCALE 0.20f
+
+/** Max selection-score bonus (as fraction of intensity) that confirmation
+ *  bias can add for entries whose valence matches the source's prior belief. */
+#define MALP_GOSSIP_CONFIRMATION_SELECT_SCALE 0.15f
+
+/** Max amplification of transmitted negative valence by the source's
+ *  attribution bias (character-blame framing).  Applied multiplicatively. */
+#define MALP_GOSSIP_ATTRIBUTION_ENC_SCALE 0.25f
+
+/** Max amplification of transmitted negative valence by the source's
+ *  negativity bias during encoding.  Applied multiplicatively. */
+#define MALP_GOSSIP_NEGATIVITY_ENC_SCALE 0.15f
+
+/** Max lambda (transfer_weight) scaling adjustment for the listener's
+ *  confirmation bias.  Confirming gossip boosts by this fraction;
+ *  contradicting gossip is dampened by half this fraction. */
+#define MALP_GOSSIP_CONFIRMATION_REC_SCALE 0.40f
+
+/** Max lambda scaling boost for the listener's negativity bias when
+ *  incoming gossip has negative valence. */
+#define MALP_GOSSIP_NEGATIVITY_REC_SCALE 0.25f
+
+/** Fractional boost applied to gossip_intensity for negative memories when
+ *  the source has non-zero negativity_bias (emotional transmission emphasis). */
+#define MALP_GOSSIP_NEGATIVITY_INTENSITY_BOOST 0.10f
+
+/* ── Rehearsal saturation, decay & dampening ─────────────────────────────── */
+/**
+ * Hard cap on raw rehearsal count (MALP entries and MPLP rehearsal_count).
+ * Prevents unbounded linear growth (salience lock / overflow).
+ * At this value effective salience is already near-maximal via log(1+rehearsal).
+ */
+#define MALP_MAX_REHEARSAL 10000
+
+/**
+ * Divisor used to compute per-tick passive rehearsal decay rate for both
+ * MALP entries (rehearsal field) and MPLP traits (rehearsal_count field):
+ *   decay_amount = 1 + (rehearsal / MALP_REHEARSAL_DECAY_DIVISOR)
+ * Strong memories (large rehearsal) decay faster in absolute terms, but
+ * the log-based salience ensures they remain relevant longer.
+ * At rehearsal = 10000: decay = 11/tick; at rehearsal = 100: decay = 1/tick.
+ */
+#define MALP_REHEARSAL_DECAY_DIVISOR 1000
+
+/**
+ * Multiplicative dampening applied to rehearsal during reconsolidation.
+ * Every time a memory is reconsolidated (rewritten), its raw rehearsal count
+ * is multiplied by this factor, modelling the interference/rewriting cost.
+ * 0.95 → 5 % reduction per reconsolidation event.
+ */
+#define MALP_RECON_DAMPENING_FACTOR 0.95f
+
+/* ── Peak-End Rule weights for episodic valence consolidation ────────────── */
+/**
+ * Weight applied to the peak emotional moment in episodic valence (Kahneman
+ * Peak-End Rule).  Peak is the slot with the highest arousal across all
+ * episodic slots for this agent.
+ * Defined so that MALP_PEAK_END_PEAK_WEIGHT + MALP_PEAK_END_END_WEIGHT == 1.0f.
+ */
+#define MALP_PEAK_END_PEAK_WEIGHT 0.60f
+/**
+ * Weight applied to the final (most recent) event in episodic valence
+ * (Kahneman Peak-End Rule).  End is the slot with the latest timestamp.
+ * Derived from MALP_PEAK_END_PEAK_WEIGHT so the two weights always sum to 1.0f.
+ */
+#define MALP_PEAK_END_END_WEIGHT (1.0f - MALP_PEAK_END_PEAK_WEIGHT)
+
+/* ── Social episode type classification thresholds ───────────────────────── */
+/**
+ * Consolidated valence above this threshold → INTERACT_SOCIAL_POSITIVE.
+ * Applied after Peak-End computation to reclassify social episodes so that the
+ * stored interaction_type reflects the overall interaction outcome rather than
+ * the type of the first recorded event.
+ */
+#define MALP_SOCIAL_VALENCE_POS_THRESHOLD 0.20f
+/**
+ * Consolidated valence below this threshold → INTERACT_SOCIAL_NEGATIVE.
+ * Values between NEG_THRESHOLD and POS_THRESHOLD → INTERACT_SOCIAL_NEUTRAL.
+ */
+#define MALP_SOCIAL_VALENCE_NEG_THRESHOLD -0.20f
+
+/* ── OCEAN modulation constants ──────────────────────────────────────────── */
+/**
+ * Conscientiousness threshold boost: high-C mobs require higher salience
+ * before consolidating memories (fewer impulsive memories).
+ * θ_eff = θ_cons + MALP_C_THETA_BOOST × C_final   (C_final ∈ [0,1])
+ * At C=1: threshold rises by +0.10, preventing overly quick long-term judgements.
+ */
+#define MALP_C_THETA_BOOST 0.10f
+
+/**
+ * Neuroticism rumination scale: negative MPLP half-life is multiplied by
+ * (1 + MALP_N_RUMINATION_SCALE × N_final).
+ * At N=1: half-life doubles; traumatic avoidance traits persist much longer.
+ */
+#define MALP_N_RUMINATION_SCALE 1.0f
+
+/* ── Emotion-delta limits applied via adjust_emotion() ───────────────────── */
+/** Maximum single-tick emotion boost from a negative MALP retrieval */
+#define MALP_EMOTION_DELTA_MAX 8
+/** Minimum emotion boost applied from MALP-driven effect (floor) */
+#define MALP_EMOTION_DELTA_MIN 2
+/** MPLP approach/avoidance emotion modifier cap */
+#define MPLP_EMOTION_DELTA_MAX 5
+
+/* ── Context-trait (EXHIBITION_RESPONSE / MODESTY_RESPONSE) tunables ─────── */
+/** Learning rate for the running-average valence in context-global MPLP traits. */
+#define MPLP_VALENCE_LEARNING_RATE 0.20f
+/** Trait magnitude threshold above which a personality bias is applied to emotions. */
+#define MPLP_PERSONALITY_BIAS_THRESHOLD 0.15f
+/** Trust floor for an exhibition social to be welcomed (→ positive reinforcement). */
+#define MPLP_EXHIBITION_TRUST_THRESHOLD 50
+/** Love floor for an exhibition social to be welcomed. */
+#define MPLP_EXHIBITION_LOVE_THRESHOLD 40
+/** Disgust/shame level above which a display social is considered unwelcome. */
+#define MPLP_EXHIBITION_DISGUST_THRESHOLD 50
+/** Trust floor used for explicit-contact consent check (modesty reinforcement). */
+#define MPLP_MODESTY_CONSENT_TRUST 70
+/** Love floor used for explicit-contact consent check (modesty reinforcement). */
+#define MPLP_MODESTY_CONSENT_LOVE 60
+/** Disgust/shame threshold above which non-blocked explicit contact still feels unwelcome. */
+#define MPLP_MODESTY_DISGUST_THRESHOLD 40
+
+/* ── Gender-expression trait tunables ───────────────────────────────────── */
+/** Anger/pride threshold above which a gender-norm violation is considered a provocation. */
+#define MPLP_GENDER_NORM_ANGER_THRESHOLD 45
+/** Trust threshold below which gender-expression socials raise suspicion/confusion. */
+#define MPLP_GENDER_NORM_TRUST_THRESHOLD 35
+/** Curiosity threshold above which androgynous expression triggers a positive response. */
+#define MPLP_ANDROGYNY_CURIOSITY_THRESHOLD 50
+/** Scaling multiplier for GENDER_NORM_SENSITIVITY amplification of gender-expression deltas. */
+#define MPLP_GENDER_NORM_AMPLIFY_MULTIPLIER 2.0f
+/** Scaling multiplier for STATUS_SENSITIVITY amplification of hierarchy/power-social deltas. */
+#define MPLP_STATUS_SENSITIVITY_MULTIPLIER 2.0f
+
+/* ── Context-model reinforcement weights ────────────────────────────────── */
+/**
+ * Fraction of each reinforcement delta applied to the global (cross-context)
+ * personality value.  Keeps the NPC's overall character dominant so that
+ * strong contextual experiences don't completely override baseline tendencies.
+ */
+#define MPLP_CTX_GLOBAL_WEIGHT 0.60f
+/**
+ * Fraction of each reinforcement delta applied to the situational context slot.
+ * Combined with MPLP_CTX_GLOBAL_WEIGHT these must sum to 1.0.
+ */
+#define MPLP_CTX_LOCAL_WEIGHT 0.40f
+/**
+ * Per-tick multiplicative decay rate applied to each non-GLOBAL context slot
+ * (ctx[1..MPLP_CTX_MAX-1]).  Keeps contextual modifiers from accumulating
+ * indefinitely while letting the global trait persist via power-law decay.
+ * 0.995 → ~half-life of ~138 ticks at default tick rate.
+ */
+#define MPLP_CTX_DECAY_RATE 0.995f
+
+/* ── Cue-score weights for P_ret computation in get_malp_by_agent() ─────── */
+/** Weight of memory intensity in cue score (primary strength factor) */
+#define MALP_CUE_WEIGHT_INTENSITY 0.60f
+/** Weight of arousal state-match in cue score (state-dependent recall; Bower 1981) */
+#define MALP_CUE_WEIGHT_AROUSAL 0.25f
+/** Weight of retrieval recency in cue score (within-hour accessibility bonus) */
+#define MALP_CUE_WEIGHT_RECENCY 0.15f
+
+/* ── Reputation–MPLP trait modulation (RFC-1002 §10) ────────────────────── */
+/**
+ * Neutral reputation threshold (rep 0–100) used as the midpoint in the
+ * reputation normalisation formula:
+ *   rep_norm = (reputation − MPLP_REP_POSITIVE_THRESHOLD) / MPLP_REP_POSITIVE_THRESHOLD
+ * At this value rep_norm == 0 (no bias); above it trait benefit scales linearly
+ * to +MPLP_REP_BIAS_SCALE at reputation == 100; below it scales to
+ * −MPLP_REP_BIAS_SCALE at reputation == 0.
+ */
+#define MPLP_REP_POSITIVE_THRESHOLD 50
+/**
+ * Maximum absolute reputation contribution to an MPLP effective-trait value.
+ * Applied as a fraction of this constant depending on rep distance from
+ * MPLP_REP_POSITIVE_THRESHOLD:
+ *   rep_norm = (reputation − MPLP_REP_POSITIVE_THRESHOLD) / MPLP_REP_POSITIVE_THRESHOLD
+ *   delta    = rep_norm × MPLP_REP_BIAS_SCALE × per-trait weight
+ * Trait result is subsequently clamped to [0,1] or [−1,1].
+ */
+#define MPLP_REP_BIAS_SCALE 0.50f
+
+/* ── Public API ──────────────────────────────────────────────────────────── */
+
+/**
+ * Free MALP/MPLP dynamic arrays for a mob.
+ * Call from free_char() before freeing ai_data.
+ *
+ * @param mob  The NPC whose MALP/MPLP stores to free.
+ */
+void malp_free(struct char_data *mob);
+
+/**
+ * Compute salience score S ∈ [0,1] for an episodic memory slot.
+ *
+ * S = normalize(w_a*arousal + w_r*log(1+rehearsal) + w_s*social_weight)
+ *     × pow(1 + age_hours, −MALP_AGE_DECAY_EXPONENT)
+ *
+ * @param arousal      Normalised arousal 0..1
+ * @param rehearsal    Co-occurrence / re-activation count
+ * @param social_weight Social-agent salience weight (MALP_SOCIAL_WEIGHT_*)
+ * @param age_hours    Age of the episodic slot in fractional hours
+ * @return             Salience S ∈ [0,1]
+ */
+float compute_salience(float arousal, int rehearsal, float social_weight, float age_hours);
+
+/**
+ * Consolidation tick: evaluate passive/active episodic slots and consolidate
+ * high-salience entries into MALP; generate MPLP traits via Hebbian rule.
+ *
+ * Call periodically from update_mob_emotion_passive().
+ *
+ * @param mob  The NPC to consolidate memories for.
+ */
+void consolidator_tick(struct char_data *mob);
+
+/**
+ * Decay MALP intensities and MPLP magnitudes using power-law forgetting.
+ * OCEAN N modulates negative-trait MPLP decay (high-N → slower).
+ *
+ * Automatically called from consolidator_tick().
+ *
+ * @param mob  The NPC whose long-term memories to decay.
+ */
+void malp_decay_tick(struct char_data *mob);
+
+/**
+ * Return the first MALP entry matching agent_id/agent_type, or NULL.
+ *
+ * Also opens/extends the reconsolidation window if retrieval probability
+ * P_ret >= MALP_THETA_REACT.
+ *
+ * @param mob        The NPC owner.
+ * @param agent_id   Entity ID to look up.
+ * @param agent_type ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @return           Pointer into mob->ai_data->malp (do NOT free), or NULL.
+ */
+struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int agent_type);
+
+/**
+ * Return the approach/avoidance modifier for an agent from MPLP.
+ *
+ * Positive = approach bias; Negative = avoidance bias.
+ * Range: [−1.0, +1.0].
+ *
+ * @param mob        The NPC owner.
+ * @param agent_id   Entity ID.
+ * @param agent_type ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @return           Net approach-avoidance modifier.
+ */
+float get_mplp_approach_modifier(struct char_data *mob, long agent_id, int agent_type);
+
+/**
+ * Return the arousal bias from MPLP for an agent.
+ *
+ * Positive = arousal increase when agent is present; 0 = no bias.
+ * Range: [0.0, 1.0].
+ *
+ * @param mob        The NPC owner.
+ * @param agent_id   Entity ID.
+ * @param agent_type ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @return           Arousal bias modifier.
+ */
+float get_mplp_arousal_bias(struct char_data *mob, long agent_id, int agent_type);
+
+/**
+ * Retrieve the NPC's context-global exhibition-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to display, confidence, and attention-seeking body-language socials
+ * (catwalk, sexy, twerk, shakeass, dancesensual, femininity, masculinity, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → flirtatious / enjoys display behaviour
+ *               < 0 → conservative / dislikes attention-seeking behaviour
+ */
+float get_mplp_exhibition_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global modesty-response trait.
+ *
+ * Measures the accumulated tendency to prefer reserved behaviour (+) or to be
+ * tolerant of explicit physical contact (−).  Reinforced by grope, fondle, rub,
+ * massage, french, sex, and similar explicit-contact socials.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → prudish / offended by explicit socials
+ *               < 0 → tolerant of explicit interactions
+ */
+float get_mplp_modesty_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global masculinity-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to masculine-coded socials (masculinity, flex, taunt, strut, imposing postures).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → admires / responds positively to masculine expression
+ *               < 0 → indifferent or dislikes masculine display
+ */
+float get_mplp_masculinity_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global femininity-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or negatively (−)
+ * to feminine-coded socials (femininity, curtsy, catwalk, flirt, wink, blow).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → admires / responds positively to feminine expression
+ *               < 0 → indifferent or dislikes feminine display
+ */
+float get_mplp_femininity_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global androgyny-tolerance trait.
+ *
+ * Measures tolerance (+) or intolerance (−) for gender-mixed or androgynous
+ * expression (e.g., a masculine NPC performing feminine gestures, or vice-versa).
+ * High androgyny_tolerance leads to curiosity/acceptance; low leads to confusion.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → accepts / curious about androgynous expression
+ *               < 0 → confused / mildly uncomfortable with mixed expression
+ */
+float get_mplp_androgyny_tolerance(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global gender-norm sensitivity trait.
+ *
+ * Measures how strongly the NPC reacts when gender-norm expectations are violated
+ * (e.g., a flirtatious/seductive social performed by the unexpected gender).
+ * High sensitivity produces stronger emotional reactions (positive or negative).
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by gender-norm context
+ *               1.0 → very strongly amplified reactions to norm violations
+ */
+float get_mplp_gender_norm_sensitivity(struct char_data *mob);
+
+/**
+ * Reinforce a context-global MPLP trait (anchor = MPLP_GLOBAL_ANCHOR).
+ *
+ * Creates the trait slot if it does not exist; otherwise applies a Hebbian
+ * magnitude increment (0.15 × salience, capped at +0.30 per call) and
+ * updates the running-average valence.  The encoded base_magnitude is
+ * updated so power-law decay restarts from this point.
+ *
+ * @param mob        The NPC whose MPLP is being updated.
+ * @param trait_type One of: MPLP_TRAIT_EXHIBITION_RESPONSE, MPLP_TRAIT_MODESTY_RESPONSE,
+ *                   MPLP_TRAIT_MASCULINITY_RESPONSE, MPLP_TRAIT_FEMININITY_RESPONSE,
+ *                   MPLP_TRAIT_ANDROGYNY_TOLERANCE, MPLP_TRAIT_GENDER_NORM_SENSITIVITY,
+ *                   MPLP_TRAIT_DOMINANCE, MPLP_TRAIT_SUBMISSION, MPLP_TRAIT_AUTHORITY_RESPONSE,
+ *                   MPLP_TRAIT_STATUS_SENSITIVITY, MPLP_TRAIT_TRUST_BIAS,
+ *                   MPLP_TRAIT_SUSPICION_BIAS, MPLP_TRAIT_BETRAYAL_SENSITIVITY,
+ *                   MPLP_TRAIT_LOYALTY_EXPECTATION, MPLP_TRAIT_POLITENESS_RESPONSE,
+ *                   MPLP_TRAIT_RUDENESS_RESPONSE, MPLP_TRAIT_INGROUP_BIAS,
+ *                   MPLP_TRAIT_OUTGROUP_AVERSION, MPLP_TRAIT_NOVEL_AGENT_INTEREST,
+ *                   MPLP_TRAIT_RECIPROCITY_EXPECTATION, MPLP_TRAIT_GRATITUDE_RESPONSE,
+ *                   MPLP_TRAIT_REVENGE_TENDENCY, MPLP_TRAIT_FORGIVENESS_RATE,
+ *                   MPLP_TRAIT_EMPATHY_RESPONSE, MPLP_TRAIT_DISTRESS_AVERSION, or
+ *                   MPLP_TRAIT_COMPASSION_BIAS.
+ * @param valence    Signed valence of the current experience (−1..+1).
+ * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
+ */
+void reinforce_mplp_context_trait(struct char_data *mob, int trait_type, float valence, float salience);
+
+/**
+ * Context-aware variant of reinforce_mplp_context_trait().
+ *
+ * Splits the Hebbian reinforcement delta between the global personality value
+ * (magnitude, weighted MPLP_CTX_GLOBAL_WEIGHT = 0.60) and the situational
+ * context modifier (ctx[ctx_type], weighted MPLP_CTX_LOCAL_WEIGHT = 0.40).
+ * When ctx_type == MPLP_CTX_GLOBAL the call degrades to a plain global update
+ * (same as reinforce_mplp_context_trait).
+ *
+ * @param mob        The NPC whose MPLP is being updated.
+ * @param trait_type One of the MPLP_TRAIT_* context-global constants (3..28).
+ * @param valence    Signed valence of the current experience (−1..+1).
+ * @param salience   Salience weight of the event (0..1); scales the magnitude delta.
+ * @param ctx_type   One of MPLP_CTX_GLOBAL..MPLP_CTX_MAGIC (0..MPLP_CTX_MAX-1).
+ */
+void reinforce_mplp_context_trait_ctx(struct char_data *mob, int trait_type, float valence, float salience,
+                                      int ctx_type);
+
+/**
+ * Map an INTERACT_* event type to the corresponding MPLP_CTX_* context.
+ *
+ * Used by apply_mplp_nonsocial_reinforcement() and the social-event path to
+ * automatically route reinforcement to the correct context slot.
+ *
+ * @param interact_type  One of the INTERACT_* constants (0..19).
+ * @return               MPLP_CTX_* value (MPLP_CTX_GLOBAL if unmapped).
+ */
+int get_mplp_context_from_interact_type(int interact_type);
+
+/**
+ * Retrieve the context-aware effective value of an MPLP trait.
+ *
+ * Computes: effective = clamp(global_component + ctx[ctx_type]).
+ * For signed traits the sign is derived from the running-average valence.
+ * For unsigned traits the result is clamped to [0, 1].
+ *
+ * @param mob        The NPC to query.
+ * @param trait_type One of the MPLP_TRAIT_* context-global constants (3..28).
+ * @param ctx_type   One of MPLP_CTX_GLOBAL..MPLP_CTX_MAGIC (0..MPLP_CTX_MAX-1).
+ * @return           Effective trait value: [−1, +1] for signed, [0, 1] for unsigned.
+ */
+float get_mplp_trait_with_ctx(struct char_data *mob, int trait_type, int ctx_type);
+
+/**
+ * Compute the effective MPLP trait value for a mob interacting with a specific
+ * actor, incorporating a temporary reputation-based bias.
+ *
+ * The base trait value is read from get_mplp_trait_with_ctx(); the result is
+ * never written back — no permanent trait mutation occurs.
+ *
+ * effective_trait = base_trait + reputation_modifier
+ *
+ * The reputation modifier is trait-specific (rep_norm = (rep − 50) / 50):
+ *  TRUST_BIAS:           +rep_norm × MPLP_REP_BIAS_SCALE
+ *  SUSPICION_BIAS:       −rep_norm × MPLP_REP_BIAS_SCALE
+ *  FORGIVENESS_RATE:     +rep_norm × MPLP_REP_BIAS_SCALE × 0.5
+ *  REVENGE_TENDENCY:     −rep_norm × MPLP_REP_BIAS_SCALE × 0.5
+ *  COMPASSION_BIAS:      +rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  GRATITUDE_RESPONSE:   +rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  EMPATHY_RESPONSE:     +rep_norm × MPLP_REP_BIAS_SCALE × 0.3
+ *  OUTGROUP_AVERSION:    −rep_norm × MPLP_REP_BIAS_SCALE × 0.4
+ *  BETRAYAL_SENSITIVITY: −rep_norm × MPLP_REP_BIAS_SCALE × 0.3
+ * All other traits fall back to get_mplp_trait_with_ctx() with no modification.
+ *
+ * Safe to call when mob has no MPLP (returns 0.0 + reputation delta).
+ * When actor is NULL no bias is applied and the unmodified base trait is
+ * returned.  There is no concept of a "missing" reputation entry: GET_REPUTATION()
+ * always returns a numeric value (players default 50, NPCs default ~40), so a
+ * reputation-based bias is always computed for non-NULL actors.
+ *
+ * @param mob        The NPC being evaluated.
+ * @param actor      The entity whose reputation influences the trait (may be NULL).
+ * @param trait_type MPLP_TRAIT_* constant.
+ * @param ctx_type   MPLP_CTX_* context (MPLP_CTX_GLOBAL for the baseline).
+ * @return           Effective trait value clamped to [0,1] or [−1,1].
+ */
+float mplp_get_effective_trait(struct char_data *mob, struct char_data *actor, int trait_type, int ctx_type);
+
+/* ── Hierarchy / Social Power getters ───────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global dominance trait.
+ *
+ * Measures the accumulated tendency to assert dominance (+) or defer (−) in
+ * social-rank conflicts (challenging higher-status NPCs, asserting leadership).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → dominant / assertive social posture
+ *               < 0 → deferential / low-status orientation
+ */
+float get_mplp_dominance(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global submission trait.
+ *
+ * Measures the accumulated tendency to yield (+) or resist (−) authority
+ * and social pressure (obeying commands, yielding in conflicts).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → submissive / obedient orientation
+ *               < 0 → resistant / rebellious orientation
+ */
+float get_mplp_submission(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global authority-response trait.
+ *
+ * Measures the accumulated tendency to respond positively (+) or negatively (−)
+ * to authority figures, commands, and institutional power.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → compliant / respects authority
+ *               < 0 → defiant / suspicious of authority
+ */
+float get_mplp_authority_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global status-sensitivity trait.
+ *
+ * Measures how strongly the NPC reacts to social rank cues and status signals.
+ * High sensitivity produces stronger behavioural reactions to dominance displays.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by status signals
+ *               1.0 → very strongly amplified reactions to rank cues
+ */
+float get_mplp_status_sensitivity(struct char_data *mob);
+
+/* ── Social Trust System getters ─────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global trust-bias trait.
+ *
+ * Measures the accumulated general tendency to trust (+) or distrust (−) agents.
+ * Grows through cooperative interactions; shrinks through betrayal or conflict.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → trusting / gives benefit of the doubt
+ *               < 0 → distrusting / assumes bad intent
+ */
+float get_mplp_trust_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global suspicion-bias trait.
+ *
+ * Measures the baseline level of suspicion toward other agents.
+ * High values lead to defensive reactions and reluctance to cooperate.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no baseline suspicion
+ *               1.0 → highly suspicious of all agents
+ */
+float get_mplp_suspicion_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global betrayal-sensitivity trait.
+ *
+ * Amplifier for the emotional impact of betrayal events (theft, deception,
+ * broken alliances).  High values cause stronger and longer-lasting reactions.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by betrayal events
+ *               1.0 → very strongly amplified betrayal reactions
+ */
+float get_mplp_betrayal_sensitivity(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global loyalty-expectation trait.
+ *
+ * Measures how strongly the NPC expects reciprocal loyalty from others.
+ * High values make disloyalty more salient and aversive.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no expectation of loyalty
+ *               1.0 → very high expectation of reciprocal loyalty
+ */
+float get_mplp_loyalty_expectation(struct char_data *mob);
+
+/* ── Social Norm Sensitivity getters ─────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global politeness-response trait.
+ *
+ * Measures the accumulated tendency to react positively (+) or to be
+ * unmoved (−) by polite socials (bow, thank, compliment, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → appreciates / responds warmly to polite behaviour
+ *               < 0 → indifferent to social niceties
+ */
+float get_mplp_politeness_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global rudeness-response trait.
+ *
+ * Measures the accumulated sensitivity (+) or immunity (−) to rude or
+ * insulting socials (insult, mock, sneer, etc.).
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → easily offended by rude behaviour
+ *               < 0 → thick-skinned / immune to insults
+ */
+float get_mplp_rudeness_response(struct char_data *mob);
+
+/* ── Social Identity Bias getters ────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global ingroup-bias trait.
+ *
+ * Measures how strongly the NPC favours members of familiar factions or groups.
+ * High values produce preferential treatment of known allies/faction members.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no ingroup preference
+ *               1.0 → strong favouritism toward familiar faction members
+ */
+float get_mplp_ingroup_bias(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global outgroup-aversion trait.
+ *
+ * Measures how strongly the NPC avoids or reacts negatively to unfamiliar
+ * agents, strangers, or outgroup members.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no outgroup aversion
+ *               1.0 → strong avoidance of unknown or outgroup agents
+ */
+float get_mplp_outgroup_aversion(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global novel-agent-interest trait.
+ *
+ * Measures curiosity (+) or wariness (−) toward unknown agents.
+ * Positive values drive approach and investigation; negative values drive caution.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → curious about / drawn toward unknown characters
+ *               < 0 → wary of / avoids unknown characters
+ */
+float get_mplp_novel_agent_interest(struct char_data *mob);
+
+/* ── Reciprocity System getters ──────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global reciprocity-expectation trait.
+ *
+ * Measures the strength of the social exchange norm: how strongly the NPC
+ * expects favours to be returned and harm to be repaid.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no reciprocity expectation
+ *               1.0 → very strong expectation of social exchange
+ */
+float get_mplp_reciprocity_expectation(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global gratitude-response trait.
+ *
+ * Measures the tendency to feel and express gratitude (+) or indifference (−)
+ * after receiving help, gifts, or favours.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → responds warmly to received favours
+ *               < 0 → indifferent to help received
+ */
+float get_mplp_gratitude_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global revenge-tendency trait.
+ *
+ * Measures the strength of the retaliatory impulse following harm events
+ * (attacks, theft, deception, insults).  High values sustain grudges longer.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no retaliatory tendency
+ *               1.0 → strong, persistent desire to retaliate
+ */
+float get_mplp_revenge_tendency(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global forgiveness-rate trait.
+ *
+ * Measures the rate at which the NPC releases grudges and restores positive
+ * social attitudes after harm.  High values lead to faster forgiveness.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → does not forgive (perpetual grudge)
+ *               1.0 → very quick to forgive past harm
+ */
+float get_mplp_forgiveness_rate(struct char_data *mob);
+
+/* ── Empathy System getters ──────────────────────────────────────────────── */
+
+/**
+ * Retrieve the NPC's context-global empathy-response trait.
+ *
+ * Measures emotional resonance with others' states: helping wounded characters,
+ * reacting to distress.  Positive = empathetic; Negative = emotionally cold.
+ *
+ * @param mob  The NPC to query.
+ * @return     Signed float in [−1.0, +1.0]:
+ *               > 0 → empathetic / resonates with others' emotions
+ *               < 0 → cold / does not respond to others' emotional states
+ */
+float get_mplp_empathy_response(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global distress-aversion trait.
+ *
+ * Measures aversion to witnessing others' suffering.  High values cause the NPC
+ * to avoid, retreat from, or try to resolve distressing situations.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → unaffected by others' suffering
+ *               1.0 → strongly averse to witnessing distress
+ */
+float get_mplp_distress_aversion(struct char_data *mob);
+
+/**
+ * Retrieve the NPC's context-global compassion-bias trait.
+ *
+ * Measures the moral hesitation bias when about to cause harm.  High values
+ * produce reluctance to attack or harm passive/non-threatening characters.
+ *
+ * @param mob  The NPC to query.
+ * @return     Unsigned float in [0.0, 1.0]:
+ *               0.0 → no moral hesitation
+ *               1.0 → strong compassion-driven hesitation before causing harm
+ */
+float get_mplp_compassion_bias(struct char_data *mob);
+
+/**
+ * Apply MALP/MPLP-derived emotion effects through the appraisal pipeline.
+ *
+ * Called when 'actor' interacts with 'mob'.  All emotion deltas go through
+ * adjust_emotion() (no pipeline bypass).
+ *
+ * If 'interaction_valence' is non-zero AND the relevant MALP entry has an open
+ * reconsolidation window, retrieve_and_reconsolidate() is called automatically
+ * to apply a bounded valence update — wiring all reconsolidation semantics into
+ * a single call site.  Pass 0.0f to suppress reconsolidation for neutral events.
+ *
+ * @param mob                 The NPC experiencing the memory effect.
+ * @param actor               The character whose presence triggers the memory.
+ * @param interaction_valence Signed valence of the current interaction (−1..+1).
+ *                            Negative for aversive events, positive for beneficial,
+ *                            0.0f for neutral/no reconsolidation update.
+ */
+void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, float interaction_valence);
+
+/**
+ * Perform safe reconsolidation: update a MALP entry's valence/intensity
+ * within the reconsolidation window, bounded to prevent instant inversions.
+ *
+ * @param mob            The NPC owner.
+ * @param agent_id       Agent the MALP entry is about.
+ * @param agent_type     ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @param delta_valence  Signed valence change (clamped internally).
+ * @param new_salience   New salience score driving the λ update weight.
+ */
+void retrieve_and_reconsolidate(struct char_data *mob, long agent_id, int agent_type, float delta_valence,
+                                float new_salience);
+
+/**
+ * Attempt to transfer emotional memory about a third entity from source to listener.
+ *
+ * source (A) gossips to listener (B) about the entity (C) stored in source's
+ * strongest MALP entry.  The transfer is weighted by:
+ *
+ *   transfer_weight = trust(B,A) * reputation_factor(A) * intensity(A,C)
+ *                     * (1 − suspicion(B))
+ *
+ * where:
+ *  trust(B,A)          = listener's effective TRUST_BIAS toward source, mapped [0,1]
+ *  reputation_factor(A)= source's global reputation / 100
+ *  intensity(A,C)      = source's MALP intensity for the target entity
+ *  suspicion(B)        = listener's SUSPICION_BIAS (unsigned [0,1])
+ *
+ * Cognitive bias modifiers are applied at three stages (see malp.h constants):
+ *
+ *  1. TOPIC SELECTION — source's availability_bias and negativity_bias weight the
+ *     selection scoring toward recent / emotionally intense / negative memories;
+ *     confirmation_bias prefers entries that match source's prior belief direction.
+ *     (Tversky & Kahneman 1973; Baumeister et al. 2001; Echterhoff & Higgins 2009)
+ *
+ *  2. ENCODING — source's attribution_bias and negativity_bias amplify negative
+ *     gossip_valence before transmission, modelling character-blame framing and
+ *     emotional emphasis.  (Ross 1977; Baumeister et al. 2001)
+ *     Raw MALP/MPLP data is never modified.
+ *
+ *  3. RECEPTION — listener's confirmation_bias scales lambda up (confirming gossip)
+ *     or down (contradicting gossip); negativity_bias boosts lambda for negative
+ *     incoming gossip.  (Echterhoff & Higgins 2009; Rozin & Royzman 2001)
+ *     lambda is always capped at MALP_GOSSIP_WEIGHT_CAP.
+ *
+ * After weighting the function:
+ *  - Updates or creates listener's MALP entry for C (clamped intensity/valence).
+ *  - Updates or creates listener's agent-anchored MPLP approach/avoidance for C.
+ *  - Reinforces listener's context-global MPLP traits (TRUST_BIAS or SUSPICION_BIAS /
+ *    OUTGROUP_AVERSION) based on gossip valence.
+ *
+ * No overwrite of listener's base personality occurs (context-global traits use
+ * weighted Hebbian increments, not direct assignment).
+ * Safe to call when source has no MALP entries — returns FALSE immediately.
+ * Values are clamped to valid ranges after each transfer step.
+ *
+ * @param source    The NPC sharing its emotional memory (A).
+ * @param listener  The NPC receiving the gossip (B).  Must be an NPC with ai_data.
+ * @return          TRUE if gossip transfer occurred; FALSE otherwise.
+ */
+bool try_social_gossip(struct char_data *source, struct char_data *listener);
+
+#endif /* _MALP_H_ */

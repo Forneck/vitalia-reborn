@@ -1,0 +1,34 @@
+Moral Reasoning Domain Dataset
+Based on Shultz & Daley's moral reasoning model
+
+This file contains test scenarios for the moral reasoning system.
+Each scenario represents a harm-doing situation with various predicates
+that determine moral guilt or innocence.
+
+Format:
+guilty(caseID) or not(guilty(caseID))
+followed by predicate values for that case
+
+Total cases: 202
+- Guilty cases (p0-p101): 102 cases  
+- Innocent cases (n0-n99): 100 cases
+
+Note: This is a reference dataset. The C implementation in moral_reasoner.c
+evaluates scenarios programmatically rather than loading this file.
+
+The predicates used are:
+- sufficient_for_harm, produce_harm, necessary_for_harm
+- plan_known, plan_include_harm, harm_caused_as_planned
+- mental_state (neither, negligent, reckless, intend)
+- external_cause, external_force, control_perpetrator, careful
+- foreseeability (n, low, high)
+- foresee_intervention, intervening_contribution
+- someone_else_cause_harm, outrank_perpetrator
+- severity_harm, benefit_victim, benefit_protagonist
+- achieve_goal, goal_outweigh_harm, goal_achieveable_less_harmful
+- monitor
+
+For implementation details, see:
+- src/moral_reasoner.h - Function declarations and structures
+- src/moral_reasoner.c - Moral reasoning rule implementation
+- docs/MORAL_REASONING.md - Complete documentation

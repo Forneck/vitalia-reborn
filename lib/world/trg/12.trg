@@ -1,8 +1,8 @@
 #1290
-Sala de Experiencias 1~
+Sala de Experiencias 1 (obsoleto)~
 2 d 100
-abra~
-%echo% This trigger commandlist is not complete!
+*UNUSED*~
+* Placeholder — functionality replaced by triggers 1200-1203
 ~
 #1200
 Magik Zone 12 - Open North~
@@ -33,12 +33,12 @@ if %speech.contains(fecha)%
   * Check if door exists
   if %self.north(room)%
     * Set closed flag
-    %door% %self.vnum% north flags ab
+    %door% %self.vnum% north flags ao
     %echo% A porta se fecha.
     * Close the other side if it exists
     eval otherroom %self.north(vnum)%
     %at% %otherroom% %echo% A porta se fecha.
-    %door% %otherroom% south flags ab
+    %door% %otherroom% south flags ao
   end
 end
 ~
@@ -52,11 +52,11 @@ if %speech.contains(tranca)%
   * Check if door exists
   if %self.north(room)%
     * Set closed and locked flags
-    %door% %self.vnum% north flags abc
+    %door% %self.vnum% north flags aop
     %echo% Você escuta um ruído vindo da porta.
     * Lock the other side if it exists
     eval otherroom %self.north(vnum)%
-    %door% %otherroom% south flags abc
+    %door% %otherroom% south flags aop
   end
 end
 ~
@@ -70,11 +70,11 @@ if %speech.contains(destranca)%
   * Check if door exists
   if %self.north(room)%
     * Remove locked flag (keep closed flag)
-    %door% %self.vnum% north flags ab
+    %door% %self.vnum% north flags ao
     %echo% Você escuta um ruído vindo da porta.
     * Unlock the other side if it exists
     eval otherroom %self.north(vnum)%
-    %door% %otherroom% south flags ab
+    %door% %otherroom% south flags ao
   end
 end
 ~

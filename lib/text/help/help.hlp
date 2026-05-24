@@ -6223,18 +6223,25 @@ Permite a voce ver se uma pessoa, alimento ou bebida estao envenenados.
 #1
 MAGIA-DISINTEGRATE
 
-Uso        : cast 'disintegrate' <alvo>
+Uso        : cast 'disintegrate' <alvo | cadaver>
 Acumulativa: -
 Duracao    : Instantanea
 Nivel      : Mago Nivel 85
+Resistencia: Especial (veja descricao)
 
 Esta e a magia mais poderosa que um mago pode usar. Se o alvo possuir
 menos que 100 pontos de vida e falhar em um teste de resistencia,
 sera desintegrado, perdendo todos os bens que carregava ou vestia.
 Se o alvo possuir mais que 100, um maximo de 100 pontos de vida serao
-desintegrados para cada vez que a magia for lancada. Se o alvo passar
-em um teste de resistencia, a vitima perde apenas metade do seu total
-de pontos de vida, para um maximo de 100.
+desintegrados para cada vez que a magia for lancada.
+
+Se o alvo passar em um teste de resistencia, a vitima perde apenas
+metade de seus pontos de vida atuais, para um maximo de 100.
+
+Os valores de dano acima nao consideram o teste de resistencia.
+
+Tambem pode ser usada sobre um cadaver no chao para desintegra-lo
+junto com todos os itens que ele contem.
 #1
 MAGIA-DISPEL-EVIL
 
@@ -6410,7 +6417,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
 #1
 MAGIA-FLY
 
@@ -6434,6 +6441,9 @@ Nivel      : Druida Nivel 50
 Essa magia provoca uma fortissima lufada de vento que derruba o adversario,
 impossibilitando-o de jogar por 2 turnos. O uso dessa magia requere muita
 energia por parte de quem a lanca, portanto deve ser usada com sabedoria.
+
+   Note que acertando uma pessoa que esteja descansando/sentado ira
+inflingir 1.5 vezes o dano.
 
 Veja tambem: BASH
 #1
@@ -6468,8 +6478,8 @@ Nivel      : Clerigo Nivel 28
 Resistencia: Contra magia para metade do dano
 
 Essa magia retira todos menos 1d4 pontos de vida do alvo.
-O numero maximo que pode ser retirado e 100.  Nao e possivel
-matar usando essa magia.
+O numero maximo que pode ser retirado e 100 (sem considerar resistencia).
+Nao e possivel matar usando essa magia.
 #1
 MAGIA-HEAL
 
@@ -6963,7 +6973,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD
+Veja tambem: MAGIA-FIRESHIELD, AURAS-INTERACOES
 #1
 MAGIA-VAMPIRIC-TOUCH
 
@@ -6996,9 +7006,10 @@ Uso        : cast 'voice explosion'
 Acumulativa: -
 Duracao    : Instantanea
 Nivel      : Bardo Nivel 23
+Resistencia: Contra magia para metade do dano
 
 O som emitido por essa magia atinge a todos da sala, menos aquele que a lanca,
-causando um dano de (3d6)+nivel.
+causando um dano de (3d6)+nivel (sem considerar resistencia).
 #1
 MAGIA-WATERWALK
 
@@ -16420,7 +16431,7 @@ um efeito adicional de protecao.
 IMPORTANTE: Esta magia cancela e e cancelada por Sanctuary.
 Nao e possivel ter ambas as protecoes ativas simultaneamente.
 
-Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY
+Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY, AURAS-INTERACOES
 
 #1
 GASSIST
@@ -16639,8 +16650,8 @@ efeitos melhores.
    As quatro estacoes do ano combinam-se com diferentes biomas, criando
    condicoes unicas que afetam sobrevivencia e eficacia magica.
 
-Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS, 
-ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER
+Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS,
+ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER, AURAS-INTERACOES
 
 #1
 ESTACOES SEASONS
@@ -16742,7 +16753,7 @@ SINERGIA: Atacantes com Fireshield, Thistlecoat ou Windwall ativo
 nao sofrem contra-ataques de vitimas com essas mesmas protecoes,
 evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT, AURAS-INTERACOES
 #1
 MAGIA-WATERSHIELD
 
@@ -16764,7 +16775,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa (Fireshield, Thistlecoat
 Windwall, ou outras auras elementais) nao sofrem contra-ataques de vitimas com
 essas mesmas protecoes, evitando loops infinitos de dano.
 
-Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
 #1
 MAGIA-ROCKSHIELD
 
@@ -16786,7 +16797,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-WATERSHIELD, AURAS-INTERACOES
 #1
 MAGIA-POISONSHIELD
 
@@ -16808,7 +16819,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON
+Veja tambem: MAGIA-THISTLECOAT, MAGIA-POISON, AURAS-INTERACOES
 #1
 MAGIA-LIGHTNINGSHIELD
 
@@ -16830,7 +16841,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT
+Veja tambem: MAGIA-WINDWALL, MAGIA-LIGHTNING-BOLT, AURAS-INTERACOES
 #1
 MAGIA-ICESHIELD
 
@@ -16852,7 +16863,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH
+Veja tambem: MAGIA-WATERSHIELD, MAGIA-CHILL-TOUCH, AURAS-INTERACOES
 #1
 MAGIA-ACIDSHIELD
 
@@ -16874,7 +16885,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD
+Veja tambem: MAGIA-POISONSHIELD, MAGIA-ROCKSHIELD, AURAS-INTERACOES
 #1
 MAGIA-MINDSHIELD
 
@@ -16896,7 +16907,7 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP
+Veja tambem: MAGIA-SOUNDBARRIER, MAGIA-SLEEP, AURAS-INTERACOES
 #1
 MAGIA-FORCESHIELD
 
@@ -16919,7 +16930,176 @@ SINERGIA: Atacantes com qualquer aura de protecao ativa nao sofrem
 contra-ataques de vitimas com essas mesmas protecoes, evitando loops
 infinitos de dano.
 
-Veja tambem: MAGIA-SHIELD, MAGIA-ARMOR, MAGIA-SANCTUARY
+Veja tambem: MAGIA-SHIELD, MAGIA-ARMOR, MAGIA-SANCTUARY, AURAS-INTERACOES
+#1
+AURAS-INTERACOES INTERACOES-AURA INTERACAO-AURA AURA-INTERACOES ESCUDOS-ELEMENTAIS
+
+   INTERACOES ENTRE MAGIAS DE AURA
+
+   Magias de aura (flag MAG_AURA) criam um campo elemental ao redor do
+conjurador. Quando dois combatentes possuem auras ativas, seus elementos
+podem interagir ao se atacarem, com tres resultados possiveis:
+
+   ANULACAO   : Ambas as auras sao removidas simultaneamente.
+   DOMINIO    : A aura do defensor e' removida (atacante prevalece).
+   AMPLIFICADO: Como DOMINIO, porem com dano extra causado ao defensor.
+
+   Se a interacao for NEUTRA nessa direcao, o sistema verifica se o
+elemento do defensor possui vantagem sobre o do atacante - nesse caso
+o escudo do atacante e' removido. Se nenhum dos dois tiver vantagem,
+ambos os escudos permanecem intactos (sem interacao).
+
+   AURAS DISPONIVEIS E SEUS ELEMENTOS:
+
+   Fireshield     → Fogo       (Mago Niv 31)
+   Thistlecoat    → Terra      (Druida Niv 8)
+   Windwall       → Ar         (Guardiao Niv 15)
+   Soundbarrier   → (nenhum)   (Bardo Niv 15 - sem interacoes elementais)
+   Sanctuary      → Sagrado    (Clerigo Niv 21)
+   Gloomshield    → Profano    (Clerigo Niv 21)
+   Shield         → Fisico     (base; Forceshield e' sua variante descobrivel)
+   Forceshield    → Fisico     (descobrivel: Shield)
+   Watershield    → Agua       (descobrivel: Fireshield)
+   Rockshield     → Terra      (descobrivel: Thistlecoat)
+   Poisonshield   → Veneno     (descobrivel: Thistlecoat)
+   Lightningshield → Relampago (descobrivel: Windwall)
+   Iceshield      → Gelo       (descobrivel: Watershield)
+   Acidshield     → Acido      (descobrivel: Poisonshield)
+   Mindshield     → Mental     (descobrivel: Soundbarrier)
+
+   INTERACOES POR ELEMENTO DO ATACANTE:
+
+   FOGO (Fireshield):
+     vs Agua  (Watershield)           → ANULACAO  (nuvem de vapor)
+     vs Terra (Thistlecoat/Rockshield)→ DOMINIO   (fogo queima a terra)
+     vs Gelo  (Iceshield)             → AMPLIFICADO (fogo derrete o gelo)
+     vs Ar    (Windwall)              → AMPLIFICADO (ar alimenta o fogo)
+     vs Fogo  (outro Fireshield)      → ANULACAO  (mesmo elemento)
+
+   AGUA (Watershield):
+     vs Fogo  (Fireshield)            → ANULACAO  (nuvem de vapor)
+     vs Relampago (Lightningshield)   → ANULACAO  (agua conduz e dispersa)
+     vs Acido (Acidshield)            → DOMINIO   (agua dilui o acido)
+     vs Terra (Thistlecoat/Rockshield)→ sem efeito (ambos escudos permanecem)
+     vs Agua  (outro Watershield)     → ANULACAO  (mesmo elemento)
+
+   TERRA (Thistlecoat / Rockshield):
+     vs Ar    (Windwall)              → DOMINIO   (terra bloqueia o ar)
+     vs Relampago (Lightningshield)   → DOMINIO   (terra aterra os raios)
+     vs Veneno (Poisonshield)         → DOMINIO   (terra absorve o veneno)
+     vs Agua  (Watershield)           → ANULACAO  (agua erode a terra)
+     vs Fogo  (Fireshield)            → DOMINIO do FOGO (terra perde)
+     vs Acido (Acidshield)            → AMPLIFICADO do ACIDO (terra perde)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (mesmo elemento)
+
+   AR (Windwall):
+     vs Fogo  (Fireshield)            → AMPLIFICADO (ar alimenta o fogo)
+     vs Veneno (Poisonshield)         → DOMINIO   (ar dispersa o veneno)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (terra bloqueia o ar)
+     vs Gelo  (Iceshield)             → DOMINIO do GELO (ar perde)
+     vs Ar    (outro Windwall)        → ANULACAO  (mesmo elemento)
+
+   RELAMPAGO (Lightningshield):
+     vs Agua  (Watershield)           → AMPLIFICADO (raios conduzem pela agua)
+     vs Terra (Thistlecoat/Rockshield)→ ANULACAO  (terra aterra os raios)
+     vs Fisico (Forceshield)          → AMPLIFICADO (raios conduzem pelo metal)
+     vs Gelo  (Iceshield)             → DOMINIO do GELO (relampago perde)
+     vs Relampago (outro Lightningshield) → ANULACAO (mesmo elemento)
+
+   GELO (Iceshield):
+     vs Fogo  (Fireshield)            → DOMINIO   (gelo domina o fogo)
+     vs Agua  (Watershield)           → AMPLIFICADO (gelo congela a agua)
+     vs Relampago (Lightningshield)   → DOMINIO   (gelo desacelera o raio)
+     vs Ar    (Windwall)              → DOMINIO   (gelo congela o ar)
+     vs Gelo  (outro Iceshield)       → ANULACAO  (mesmo elemento)
+
+   VENENO (Poisonshield):
+     vs Agua  (Watershield)           → AMPLIFICADO (veneno se espalha na agua)
+     vs Ar    (Windwall)              → ANULACAO  (ar dispersa o veneno)
+     vs Terra (Thistlecoat/Rockshield)→ DOMINIO da TERRA (veneno perde)
+     vs Veneno (outro Poisonshield)   → ANULACAO  (mesmo elemento)
+
+   ACIDO (Acidshield):
+     vs Terra (Thistlecoat/Rockshield)→ AMPLIFICADO (acido dissolve a pedra)
+     vs Fisico (Forceshield)          → AMPLIFICADO (acido corroi a armadura)
+     vs Agua  (Watershield)           → ANULACAO  (agua dilui o acido)
+     vs Acido (outro Acidshield)      → ANULACAO  (mesmo elemento)
+
+   MENTAL (Mindshield):
+     vs Fisico (Forceshield)          → DOMINIO   (mente domina a materia)
+     vs Mental (outro Mindshield)     → ANULACAO  (mesmo elemento)
+
+   FISICO (Forceshield / Shield):
+     vs Mental (Mindshield)           → DOMINIO   (fisico perturba a mente)
+     vs Relampago (Lightningshield)   → AMPLIFICADO do RELAMPAGO (fisico perde)
+     vs Acido (Acidshield)            → AMPLIFICADO do ACIDO (fisico perde)
+     vs Fisico (outro Forceshield)    → ANULACAO  (mesmo elemento)
+
+   SAGRADO (Sanctuary):
+     vs Profano (Gloomshield)         → AMPLIFICADO mutuamente
+
+   PROFANO (Gloomshield):
+     vs Sagrado (Sanctuary)           → AMPLIFICADO mutuamente
+     vs Profano (outro Gloomshield)   → ANULACAO  (mesmo elemento)
+
+   SEM ELEMENTO (Soundbarrier):
+     Nao sofre nem causa interacoes elementais com nenhuma outra aura.
+
+   INTERACOES ASSIMETRICAS (resultado depende de quem ataca):
+
+   Certas combinacoes produzem resultados diferentes conforme o atacante:
+
+   AGUA ataca TERRA:  sem efeito    (ambos escudos permanecem)
+   TERRA ataca AGUA:  ANULACAO      (ambos escudos removidos)
+
+   AR ataca VENENO:   DOMINIO do AR (veneno removido)
+   VENENO ataca AR:   ANULACAO      (ambos escudos removidos)
+
+   AGUA ataca ACIDO:  DOMINIO da AGUA  (acido removido)
+   ACIDO ataca AGUA:  ANULACAO         (ambos removidos)
+
+   RELAMPAGO ataca TERRA:  ANULACAO     (ambos removidos)
+   TERRA ataca RELAMPAGO:  DOMINIO da TERRA (relampago removido)
+
+   FOGO ataca GELO:   AMPLIFICADO  (gelo removido com dano extra)
+   GELO ataca FOGO:   DOMINIO do GELO (fogo removido, sem amplificacao)
+
+   AR ataca FOGO:     AMPLIFICADO  (fogo alimentado, fogo removido com extra)
+   FOGO ataca AR:     AMPLIFICADO  (ar alimenta fogo, ar removido com extra)
+   [ambas as direcoes: a aura do defensor e' removida com dano amplificado]
+
+   NOTA SOBRE MESMOS ELEMENTOS: Thistlecoat e Rockshield sao ambos TERRA.
+   Se dois combatentes usarem um de cada (ou dois iguais), suas auras se
+   anulam mutuamente ao se atacarem, pois compartilham o mesmo elemento.
+
+   SINERGIA "CEBOLA MAGICA": Voce pode empilhar Fireshield + Thistlecoat
+   + Windwall ao mesmo tempo. Nas interacoes elementais, o sistema usa
+   apenas a primeira aura ativa da lista de efeitos (a mais recentemente
+   aplicada). Se essa aura for removida por uma interacao, a proxima da
+   pilha passa a ser usada nas interacoes seguintes.
+
+   EXEMPLOS PRATICOS:
+
+   Voce usa Fireshield e ataca inimigo com Thistlecoat:
+     "Sua barreira de fogo queima os espinhos de <inimigo>!"
+     [Escudo de terra do inimigo e' removido; seu Fireshield permanece]
+
+   Voce usa Watershield e ataca inimigo com Fireshield:
+     "Sua agua e o fogo de <inimigo> se anulam em uma nuvem de vapor!"
+     [Ambos os escudos sao removidos]
+
+   Voce usa Lightningshield e ataca inimigo com Watershield:
+     "Seus raios eletrocutam a agua de <inimigo> com condutividade amplificada!"
+     [Escudo de agua do inimigo e' removido com dano extra]
+
+   Voce usa Iceshield e ataca inimigo com Lightningshield:
+     "Sua barreira de gelo desacelera os raios de <inimigo>!"
+     [Escudo de relampago do inimigo e' removido]
+
+Veja tambem: SINERGIAS, MAGIA-FIRESHIELD, MAGIA-WATERSHIELD, MAGIA-THISTLECOAT,
+MAGIA-WINDWALL, MAGIA-ICESHIELD, MAGIA-ROCKSHIELD, MAGIA-POISONSHIELD,
+MAGIA-LIGHTNINGSHIELD, MAGIA-ACIDSHIELD, MAGIA-MINDSHIELD, MAGIA-FORCESHIELD,
+MAGIA-GLOOMSHIELD, MAGIA-SOUNDBARRIER, ELEMENTOS-MAGICOS
 #1
 MAGIA-CLONE
 
@@ -18886,5 +19066,107 @@ Um mob com alta curiosity e baixa friendship poderia postar:
 Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
 
 @rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
+COGNITIVE BIAS COGBIAS MOB-COGBIAS NPC-COGBIAS
+
+@cCOGNITIVE BIAS MODULE — Shadow Timeline & Gossip Distortion@n
+
+  The Cognitive Bias Module introduces systematic psychological distortions
+  into NPC decision-making.  It applies BEFORE moral evaluation, modelling the
+  human-observed principle "bias first, rationalize later."
+
+  @yPipeline:@n
+    Perception → MALP/MPLP → Shadow Timeline → @YCOGNITIVE BIAS@n → Moral → Action
+
+  @yBiases (stored per NPC in ai_data.biases):@n
+
+  @gConfirmation Bias (confirmation_bias)@n
+    NPCs favour projected outcomes that match their existing beliefs (MPLP
+    trust, MALP valence).  A trusted entity's positive outcomes feel more
+    likely; feared entities' negative outcomes feel inevitable.
+    Effects: grudges persist, loyalty locks in, paranoia possible.
+
+  @gAvailability Heuristic (availability_bias)@n
+    Recent or emotionally intense MALP memories inflate all projections.
+    The more salient the memory, the larger the amplification.
+    Effects: trauma loops, fixation, revenge behaviour, fear persistence.
+
+  @gFundamental Attribution Error (attribution_bias)@n
+    Others' dangerous behaviour is blamed on their personality (not the
+    situation), deepening grudges.  The NPC's own risky actions are
+    excused as situational (self-serving bias).
+    Effects: NPCs hold grudges longer, justify themselves, misread intent.
+
+  @gNegativity Bias (negativity_bias)@n
+    Negative projected outcomes are amplified; positive ones are dampened.
+    Rule: negative *= (1 + bias),  positive *= (1 - bias*0.5).
+    Effects: harder to gain trust, easier to lose it, persistent hostility.
+
+  @gAnchoring Bias (anchoring_bias)@n
+    Applied LAST in the pipeline.  The NPC's very first emotional reaction to
+    an entity (stored as first_valence in its MALP entry) acts as a permanent
+    residual pull on projected scores, even when later evidence contradicts it.
+    Formula: residual = first_valence * bias * resistance * intensity_floor * 25
+      resistance    = (suspicion_bias + (1 - forgiveness_rate)) / 2
+      intensity_floor = max(0.30, malp.intensity)  — anchors outlast memory decay
+    Effects: NPCs never forget first impressions.  Suspicious, unforgiving NPCs
+    anchor the hardest; forgiving NPCs can eventually overcome their anchor.
+    Emergent archetypes: grateful ally, unforgiving enemy, stubborn grudge-holder,
+    naive loyalist.
+
+  @yBias Range:@n
+    0.0 = no bias
+    0.5 = human normal (default for all NPCs)
+    1.0 = strong bias
+    >1.0 = extreme / pathological
+
+  @yDebug Logging:@n
+    Enable CONFIG_MOB_4D_DEBUG (CEDIT → Experimental → mob_4d_debug) to see
+    per-projection COGBIAS-CONF / COGBIAS-AVAIL / COGBIAS-ATTR / COGBIAS-NEG /
+    COGBIAS-ANCH log lines, and per-gossip-event GOSSIP lines with raw_valence
+    vs enc_valence and lambda_scale.
+
+  @yData Sources Used:@n
+    Confirmation: MPLP TRUST_BIAS, SUSPICION_BIAS, MALP episodic valence
+    Availability: MALP timestamp, intensity, arousal
+    Attribution:  shadow_projection.action.target, danger_level
+    Negativity:   shadow_projection.outcome.score, danger_level
+    Anchoring:    malp_entry.first_valence, MPLP SUSPICION_BIAS, FORGIVENESS_RATE
+
+  @cBias Effects on Gossip (try_social_gossip)@n
+
+  Cognitive biases also modulate NPC gossip in three phases:
+
+  @yPhase 1 — Topic Selection (source biases):@n
+    Availability bias: recent memories score higher in selection, making
+      NPCs with this bias gossip more about what just happened to them.
+    Negativity bias: negative-valence MALP entries score higher, so these
+      NPCs talk more about threats, betrayals, and bad actors.
+    Confirmation bias: entries matching the source's general social lean
+      receive a small bonus — the source gravitates toward belief-consistent
+      stories to share.
+
+  @yPhase 2 — Narration / Encoding (source biases):@n
+    Attribution bias: when retelling negative events, the source amplifies
+      the negative valence ("that person is just evil") by up to
+      MALP_GOSSIP_ATTRIBUTION_ENC_SCALE × attribution_bias.
+    Negativity bias: the source additionally emphasises the negative charge;
+      transmitted intensity is also slightly increased for negative memories.
+    Raw MALP/MPLP data is never modified — only the local gossip copy.
+
+  @yPhase 3 — Reception (listener biases):@n
+    Confirmation bias: gossip confirming the listener's prior belief about
+      the target boosts lambda (more memory shift); contradicting gossip
+      is discounted (dampened lambda).
+    Negativity bias: negative incoming gossip is processed more deeply;
+      lambda and gossip_salience are boosted for negative content.
+
+  @yInvariants (preserved by design):@n
+    - Factual MALP/MPLP data is never fabricated or overwritten.
+    - Bias affects weighting, interpretation, sharing probability only.
+    - Bias acts during selection and narration, not during memory storage.
+    - lambda is always capped at MALP_GOSSIP_WEIGHT_CAP regardless of bias.
+
+Veja tambem: SHADOW TIMELINE, MALP, MPLP, EMOTION, OCEAN, CEDIT
 #105
 $~

@@ -37,6 +37,8 @@
 #include "spedit.h"
 #include "spirits.h"
 #include "graph.h"
+#include "emotion_projection.h"
+#include "sec.h"
 #include <math.h>
 
 /* external functions*/
@@ -50,6 +52,7 @@ static void list_zone_commands_room(struct char_data *ch, room_vnum rvnum);
 static void do_stat_room(struct char_data *ch, struct room_data *rm);
 static void do_stat_object(struct char_data *ch, struct obj_data *j);
 static void do_stat_character(struct char_data *ch, struct char_data *k);
+static void do_stat_malp(struct char_data *ch, struct char_data *mob);
 static void stop_snooping(struct char_data *ch);
 static size_t print_zone_to_buf(char *bufptr, size_t left, zone_rnum zone, int listall);
 static struct char_data *is_in_game(long idnum);
@@ -62,6 +65,13 @@ static void clear_recent(struct recent_player *this);
 static struct recent_player *create_recent(void);
 const char *get_spec_func_name(SPECIAL(*func));
 bool zedit_get_levels(struct descriptor_data *d, char *buf);
+
+/* Shared interaction-type names for INTERACT_* constants (structs.h).
+ * Kept in one place to stay in sync with INTERACT_ATTACKED … INTERACT_SOCIAL_NEUTRAL. */
+static const char *const interact_type_names[] = {
+    "Attacked",       "Healed",       "ReceivedItem",  "StolenFrom",     "Rescued",       "Assisted",     "Social+",
+    "Social-",        "SocialViol",   "AllyDied",      "WitnessedDeath", "QuestComplete", "QuestFail",    "Betrayal",
+    "OffensiveMagic", "SupportMagic", "AbandonedAlly", "Sacrifice",      "Deceive",       "SocialNeutral"};
 
 /* Local Globals */
 static struct recent_player *recent_list = NULL; /** Global list of recent players */
@@ -924,6 +934,230 @@ static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, st
                  CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
     send_to_char(ch, "%sRelationships:%s Increase/decrease based on interaction memories with this target.\r\n",
                  CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    /* 4D Relational Decision Space display */
+    send_to_char(ch, "\r\n%s=== 4D Relational Decision Space ===%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    struct emotion_4d_state state4d = compute_emotion_4d_state(mob, target);
+    if (state4d.valid) {
+        float coping = state4d.coping_potential;
+        const char *profile_name =
+            (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile < EMOTION_PROFILE_NUM)
+                ? emotion_profile_types[mob->ai_data->emotional_profile]
+                : "Unknown";
+        send_to_char(ch, "Profile: %s%s%s   Coping Potential: %s%.1f%s\r\n", CCYEL(ch, C_NRM), profile_name,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), coping, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  %sDrift-adjusted projection%s   (M_profile + ΔM_personal) * E, pre-context:\r\n",
+                     CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Valence:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_valence, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Arousal:     %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_arousal, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (perceived control / assertiveness bias)\r\n", CCCYN(ch, C_NRM),
+                     state4d.raw_dominance, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Affiliation: %s%+7.1f%s\r\n", CCCYN(ch, C_NRM), state4d.raw_affiliation,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "  %sEffective state%s (after contextual modulation):\r\n", CCGRN(ch, C_NRM),
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Valence:     %s%+7.1f%s  (shadow forecast bias applied)\r\n", CCYEL(ch, C_NRM),
+                     state4d.valence, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Arousal:     %s%+7.1f%s  (env intensity applied)\r\n", CCYEL(ch, C_NRM), state4d.arousal,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Dominance:   %s%+7.1f%s  (coping potential additively blended)\r\n", CCYEL(ch, C_NRM),
+                     state4d.dominance, CCNRM(ch, C_NRM));
+        send_to_char(ch, "    Affiliation: %s%+7.1f%s  (relationship memory applied)\r\n", CCYEL(ch, C_NRM),
+                     state4d.affiliation, CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "  (4D state not available for this mob)\r\n");
+    }
+}
+
+/**
+ * resolve_entity_label() - Build a human-readable "Type:Name(#ID)[status]" label
+ * for a MALP/MPLP agent or emotion-memory entity.
+ *
+ * When the entity is currently in the game world the label is:
+ *   "Mob:Rei Welmar(#10000296)"   or   "Player:Alice(#5)"
+ * When the entity has left (mob gone / player offline):
+ *   "Mob:(#10000296)[gone]"       or   "Player:(#5)[offline]"
+ *
+ * @param buf       Output buffer of size ENTITY_LABEL_SIZE (or larger).
+ * @param bufsz     Size of buf.
+ * @param etype     ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB.
+ * @param eid       Entity id (player idnum or mob script_id).
+ */
+#define ENTITY_LABEL_SIZE (MAX_NAME_LENGTH + 48)
+static void resolve_entity_label(char *buf, size_t bufsz, int etype, long eid)
+{
+    const char *prefix = (etype == ENTITY_TYPE_PLAYER) ? "Player:" : "Mob:";
+    const char *suffix = (etype == ENTITY_TYPE_PLAYER) ? "[offline]" : "[gone]";
+    struct char_data *found = NULL;
+
+    for (struct char_data *c = character_list; c; c = c->next) {
+        if (etype == ENTITY_TYPE_PLAYER) {
+            if (!IS_NPC(c) && GET_IDNUM(c) == eid) {
+                found = c;
+                break;
+            }
+        } else {
+            if (IS_NPC(c) && char_script_id(c) == eid) {
+                found = c;
+                break;
+            }
+        }
+    }
+
+    if (found) {
+        const char *n = GET_NAME(found);
+        snprintf(buf, bufsz, "%s%s(#%ld)", prefix, (n && *n) ? n : "?", eid);
+    } else {
+        snprintf(buf, bufsz, "%s(#%ld)%s", prefix, eid, suffix);
+    }
+}
+
+static void do_stat_malp(struct char_data *ch, struct char_data *mob)
+{
+    static const char *persist_names[] = {"LOW", "MEDIUM", "HIGH"};
+    static const char *trait_names[] = {"AVOIDANCE",
+                                        "APPROACH",
+                                        "AROUSAL_BIAS",
+                                        "EXHIBITION_RESPONSE",
+                                        "MODESTY_RESPONSE",
+                                        "MASCULINITY_RESPONSE",
+                                        "FEMININITY_RESPONSE",
+                                        "ANDROGYNY_TOLERANCE",
+                                        "GENDER_NORM_SENSITIVITY",
+                                        "DOMINANCE",
+                                        "SUBMISSION",
+                                        "AUTHORITY_RESPONSE",
+                                        "STATUS_SENSITIVITY",
+                                        "TRUST_BIAS",
+                                        "SUSPICION_BIAS",
+                                        "BETRAYAL_SENSITIVITY",
+                                        "LOYALTY_EXPECTATION",
+                                        "POLITENESS_RESPONSE",
+                                        "RUDENESS_RESPONSE",
+                                        "INGROUP_BIAS",
+                                        "OUTGROUP_AVERSION",
+                                        "NOVEL_AGENT_INTEREST",
+                                        "RECIPROCITY_EXPECTATION",
+                                        "GRATITUDE_RESPONSE",
+                                        "REVENGE_TENDENCY",
+                                        "FORGIVENESS_RATE",
+                                        "EMPATHY_RESPONSE",
+                                        "DISTRESS_AVERSION",
+                                        "COMPASSION_BIAS"};
+    int num_interact = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
+
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "MALP data is only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    time_t now = time(NULL);
+
+    send_to_char(ch, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 CCNRM(ch, C_NRM));
+    send_to_char(ch, "MALP entries: %s%d%s   MPLP traits: %s%d%s\r\n", CCCYN(ch, C_NRM), mob->ai_data->malp_count,
+                 CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), mob->ai_data->mplp_count, CCNRM(ch, C_NRM));
+
+    /* ── MALP (explicit episodic memories) ── */
+    if (mob->ai_data->malp_count == 0) {
+        send_to_char(ch, "\r\n%sMALP:%s (no explicit memories)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->malp_count; i++) {
+            struct malp_entry *e = &mob->ai_data->malp[i];
+            const char *iname = (e->interaction_type >= 0 && e->interaction_type < num_interact)
+                                    ? interact_type_names[e->interaction_type]
+                                    : "UNKNOWN";
+            const char *pname =
+                (e->persistence >= 0 && e->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[e->persistence]
+                    : "?";
+            long age_secs = (long)(now - e->timestamp);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            /* Resolve agent name for audit */
+            char agent_label[ENTITY_LABEL_SIZE];
+            resolve_entity_label(agent_label, sizeof(agent_label), e->agent_type, e->agent_id);
+
+            send_to_char(ch, " [%d] %-36s Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1, agent_label, iname, pname,
+                         e->major_event ? "YES" : "no");
+            send_to_char(ch,
+                         "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
+                         "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
+                         (e->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (e->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         e->valence, CCNRM(ch, C_NRM), (e->intensity > 0.6f) ? CCYEL(ch, C_NRM) : "", e->intensity,
+                         CCNRM(ch, C_NRM), e->salience, e->arousal, e->rehearsal, e->recon_ticks_left, age_h, age_m,
+                         age_s);
+        }
+    }
+
+    /* ── MPLP (implicit trait memories) ── */
+    if (mob->ai_data->mplp_count == 0) {
+        send_to_char(ch, "\r\n%sMPLP:%s (no implicit traits)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    } else {
+        send_to_char(ch, "\r\n%sMPLP – Implicit Trait Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        for (int i = 0; i < mob->ai_data->mplp_count; i++) {
+            struct mplp_trait *t = &mob->ai_data->mplp[i];
+            const char *tname =
+                (t->trait_type >= 0 && t->trait_type < (int)(sizeof(trait_names) / sizeof(trait_names[0])))
+                    ? trait_names[t->trait_type]
+                    : "UNKNOWN";
+            const char *pname =
+                (t->persistence >= 0 && t->persistence < (int)(sizeof(persist_names) / sizeof(persist_names[0])))
+                    ? persist_names[t->persistence]
+                    : "?";
+            long age_secs = (long)(now - t->last_updated);
+            long age_h = age_secs / 3600;
+            long age_m = (age_secs % 3600) / 60;
+            long age_s = age_secs % 60;
+
+            char anchor_buf[ENTITY_LABEL_SIZE];
+            if (t->agent_type == ENTITY_TYPE_GLOBAL)
+                snprintf(anchor_buf, sizeof(anchor_buf), "Context:global");
+            else
+                resolve_entity_label(anchor_buf, sizeof(anchor_buf), t->agent_type, t->anchor_agent_id);
+            send_to_char(ch, " [%d] %-36s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname, pname,
+                         t->rehearsal_count);
+            send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
+                         (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
+                         t->base_magnitude,
+                         (t->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                         : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                               : "",
+                         t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+            /* Show non-zero contextual modifiers */
+            {
+                static const char *const ctx_labels[] = {"GLOBAL", "SOCIAL", "COMBAT", "TRADE", "QUEST", "MAGIC"};
+                bool any_ctx = FALSE;
+                for (int c = 1; c < MPLP_CTX_MAX; c++) {
+                    if (t->ctx[c] != 0.0f) {
+                        if (!any_ctx) {
+                            send_to_char(ch, "      Ctx:");
+                            any_ctx = TRUE;
+                        }
+                        send_to_char(ch, " %s%s%+.2f%s", ctx_labels[c],
+                                     (t->ctx[c] < -0.1f)  ? CCRED(ch, C_NRM)
+                                     : (t->ctx[c] > 0.1f) ? CCGRN(ch, C_NRM)
+                                                          : "",
+                                     t->ctx[c], CCNRM(ch, C_NRM));
+                    }
+                }
+                if (any_ctx)
+                    send_to_char(ch, "\r\n");
+            }
+        }
+    }
+
+    send_to_char(ch, "\r\n");
 }
 
 static void do_stat_character(struct char_data *ch, struct char_data *k)
@@ -1017,6 +1251,67 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Inteligência Emocional (Genética): [%s%d%s]\r\n", CCYEL(ch, C_NRM), GET_GENEMOTIONAL_IQ(k),
                      CCNRM(ch, C_NRM));
+
+        /* Display Big Five (OCEAN) Personality Traits */
+        if (k->ai_data) {
+            send_to_char(ch, "%sBig Five (OCEAN) Personality:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+            /* Openness (O) - show Base / Builder / Mod / Final */
+            {
+                float o_base = k->ai_data->personality.openness;
+                int o_bmod = k->ai_data->personality.openness_modifier;
+                float o_final = sec_get_openness_final(k);
+                float o_mod = o_final - o_base - (float)o_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Openness      (O): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), o_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), o_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), o_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), o_final, CCNRM(ch, C_NRM));
+            }
+            /* Neuroticism (N) - show Base / Builder / SEC Mod / Final */
+            {
+                float n_base = k->ai_data->personality.neuroticism;
+                int n_bmod = k->ai_data->personality.neuroticism_modifier;
+                float n_final = sec_get_neuroticism_final(k);
+                float n_mod = n_final - n_base - (float)n_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Neuroticism   (N): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), n_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), n_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), n_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), n_final, CCNRM(ch, C_NRM));
+            }
+            /* Conscientiousness (C) - show Base / Builder / SEC Mod / Final */
+            {
+                float c_base = k->ai_data->personality.conscientiousness;
+                int c_bmod = k->ai_data->personality.conscientiousness_modifier;
+                float c_final = sec_get_conscientiousness_final(k);
+                float c_mod = c_final - c_base - (float)c_bmod / 100.0f;
+                send_to_char(
+                    ch, "  Conscientiousness (C): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                    CCCYN(ch, C_NRM), c_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), c_bmod, CCNRM(ch, C_NRM),
+                    CCGRN(ch, C_NRM), c_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), c_final, CCNRM(ch, C_NRM));
+            }
+            /* Agreeableness (A) - show Base / Builder / SEC Mod / Final */
+            {
+                float a_base = k->ai_data->personality.agreeableness;
+                int a_bmod = k->ai_data->personality.agreeableness_modifier;
+                float a_final = sec_get_agreeableness_final(k);
+                float a_mod = a_final - a_base - (float)a_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Agreeableness (A): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), a_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), a_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), a_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), a_final, CCNRM(ch, C_NRM));
+            }
+            /* Extraversion (E) - show Base / Builder / SEC Mod / Final */
+            {
+                float e_base = k->ai_data->personality.extraversion;
+                int e_bmod = k->ai_data->personality.extraversion_modifier;
+                float e_final = sec_get_extraversion_final(k);
+                float e_mod = e_final - e_base - (float)e_bmod / 100.0f;
+                send_to_char(ch,
+                             "  Extraversion  (E): base=%s%.2f%s builder=%s%+d%s sec_mod=%s%+.2f%s final=%s%.2f%s\r\n",
+                             CCCYN(ch, C_NRM), e_base, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), e_bmod, CCNRM(ch, C_NRM),
+                             CCGRN(ch, C_NRM), e_mod, CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), e_final, CCNRM(ch, C_NRM));
+            }
+        }
+
         /* Display Overall Mood */
         if (k->ai_data) {
             int mood = GET_MOB_MOOD(k);
@@ -1053,7 +1348,6 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             send_to_char(ch, "Perfil Emocional: [%s%s%s]\r\n", CCYEL(ch, C_NRM),
                          emotion_profile_types[k->ai_data->emotional_profile], CCNRM(ch, C_NRM));
         }
-
         /* Display extreme emotional state timers */
         if (k->ai_data) {
             if (k->ai_data->berserk_timer > 0) {
@@ -1184,6 +1478,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             send_to_char(ch, "\r\n");
     }
 
+    /* Display group moral reputation if in a group */
+    if (k->group && k->group->leader) {
+        send_to_char(ch, "%sGroup Moral Reputation:%s %d/100 (Guilty:%d Good:%d)%s\r\n", CCYEL(ch, C_NRM),
+                     CCNRM(ch, C_NRM), k->group->moral_reputation, k->group->collective_guilt_count,
+                     k->group->collective_good_count, k->group->leader == k ? " [LEADER]" : "");
+    }
+
     /* Showing the bitvector */
     sprintbitarray(AFF_FLAGS(k), affected_bits, AF_ARRAY_MAX, buf);
     send_to_char(ch, "AFF: %s%s%s\r\n", CCYEL(ch, C_NRM), buf, CCNRM(ch, C_NRM));
@@ -1253,6 +1554,18 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "  Arousal: Courage[%s%d%s] Excitement[%s%d%s]\r\n", CCCYN(ch, C_NRM),
                      k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
                      CCNRM(ch, C_NRM));
+
+        /* Display 4D arousal (contextually deformed) — consistent with SEC */
+        {
+            float arousal4d = k->ai_data->last_4d_state.valid ? k->ai_data->last_4d_state.arousal / 100.0f : 0.0f;
+            send_to_char(ch,
+                         "  %s4D Arousal: [%s%.2f%s]%s (contextually deformed; raw emotions: Fear:%d Anger:%d "
+                         "Horror:%d Pain:%d Happiness:%d Excitement:%d Courage:%d)\r\n",
+                         CCYEL(ch, C_NRM), CCCYN(ch, C_NRM), arousal4d, CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                         k->ai_data->emotion_fear, k->ai_data->emotion_anger, k->ai_data->emotion_horror,
+                         k->ai_data->emotion_pain, k->ai_data->emotion_happiness, k->ai_data->emotion_excitement,
+                         k->ai_data->emotion_courage);
+        }
         send_to_char(
             ch,
             "  Negative/aversive: Disgust[%s%d%s] Shame[%s%d%s] Pain[%s%d%s] Horror[%s%d%s] Humiliation[%s%d%s]\r\n",
@@ -1265,8 +1578,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         {
             int i, memory_count = 0;
             time_t current_time = time(0);
-            const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
-                                               "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
 
             /* Safety check: ensure memory_index is within valid range */
             if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
@@ -1281,8 +1593,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             }
 
             if (memory_count > 0) {
-                send_to_char(ch, "%sEmotion Memory:%s (%d/10 slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
-                             memory_count);
+                send_to_char(ch, "%sEmotion Memory:%s (%d/%d slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                             memory_count, EMOTION_MEMORY_SIZE);
 
                 /* Display memories in chronological order (oldest to newest) */
                 for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
@@ -1293,50 +1605,14 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                     if (mem->timestamp > 0) {
                         int age_seconds = current_time - mem->timestamp;
                         int age_minutes = age_seconds / 60;
-                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 9)
-                                                           ? interaction_names[mem->interaction_type]
-                                                           : "Unknown";
+                        const char *interaction_name =
+                            (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
+                                ? interact_type_names[mem->interaction_type]
+                                : "Unknown";
 
                         /* Try to resolve entity name */
-                        char entity_name[MAX_NAME_LENGTH + 20];
-                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
-                            /* For players, try to find them by ID */
-                            struct char_data *player = NULL;
-                            /* Search through character_list for player with matching IDNUM */
-                            for (player = character_list; player; player = player->next) {
-                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
-                                    /* Found the player - validate and copy name safely */
-                                    const char *name = GET_NAME(player);
-                                    if (name && *name) {
-                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
-                                    } else {
-                                        snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
-                                    }
-                                    break;
-                                }
-                            }
-                            if (!player) {
-                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
-                            }
-                        } else {
-                            /* For mobs, try to find them by script_id (runtime only) */
-                            struct char_data *mob = NULL;
-                            for (mob = character_list; mob; mob = mob->next) {
-                                if (IS_NPC(mob) && char_script_id(mob) == mem->entity_id) {
-                                    /* Found the mob - validate and copy name safely */
-                                    const char *name = GET_NAME(mob);
-                                    if (name && *name) {
-                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
-                                    } else {
-                                        snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
-                                    }
-                                    break;
-                                }
-                            }
-                            if (!mob) {
-                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
-                            }
-                        }
+                        char entity_name[ENTITY_LABEL_SIZE];
+                        resolve_entity_label(entity_name, sizeof(entity_name), mem->entity_type, mem->entity_id);
 
                         /* Build emotion display - show all significant emotion values */
                         char emotion_buf[512];
@@ -1524,11 +1800,131 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                             send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM),
                                          emotion_buf);
                         }
+
+                        /* Display moral judgment information if present */
+                        if (mem->moral_action_type >= 0 && mem->moral_was_guilty >= 0) {
+                            const char *action_names[] = {"None",    "Attack", "Steal",   "Help",
+                                                          "Heal",    "Trade",  "Deceive", "Sacrifice",
+                                                          "Abandon", "Betray", "Defend",  "Unknown"};
+                            int action_idx = (mem->moral_action_type >= 0 && mem->moral_action_type <= 10)
+                                                 ? mem->moral_action_type
+                                                 : 11;
+                            const char *guilt_str = mem->moral_was_guilty ? "Guilty" : "Innocent";
+
+                            send_to_char(ch, "      %sMoral:%s %s, %s, Blame:%d, Severity:%d, Regret:%d\r\n",
+                                         CCMAG(ch, C_NRM), CCNRM(ch, C_NRM), action_names[action_idx], guilt_str,
+                                         mem->moral_blameworthiness, mem->moral_outcome_severity,
+                                         mem->moral_regret_level);
+                        }
                     }
                 }
             } else {
                 send_to_char(ch, "%sEmotion Memory:%s No interactions recorded yet\r\n", CCYEL(ch, C_NRM),
                              CCNRM(ch, C_NRM));
+            }
+        }
+
+        /* Display active emotion memory (actions performed by this mob) */
+        {
+            int i, active_count = 0;
+            time_t current_time = time(0);
+            int num_interactions = (int)(sizeof(interact_type_names) / sizeof(interact_type_names[0]));
+
+            /* Safety check */
+            if (k->ai_data->active_memory_index < 0 || k->ai_data->active_memory_index >= EMOTION_MEMORY_SIZE)
+                k->ai_data->active_memory_index = 0;
+
+            for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                if (k->ai_data->active_memories[i].timestamp > 0)
+                    active_count++;
+            }
+
+            if (active_count > 0) {
+                send_to_char(ch, "%sActive Memory:%s (%d/%d slots used)\r\n", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM),
+                             active_count, EMOTION_MEMORY_SIZE);
+
+                for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                    int idx = (k->ai_data->active_memory_index + i) % EMOTION_MEMORY_SIZE;
+                    struct emotion_memory *mem = &k->ai_data->active_memories[idx];
+
+                    if (mem->timestamp > 0) {
+                        int age_seconds = current_time - mem->timestamp;
+                        int age_minutes = age_seconds / 60;
+                        const char *interaction_name =
+                            (mem->interaction_type >= 0 && mem->interaction_type < num_interactions)
+                                ? interact_type_names[mem->interaction_type]
+                                : "Unknown";
+
+                        /* Resolve target name */
+                        char entity_name[ENTITY_LABEL_SIZE];
+                        resolve_entity_label(entity_name, sizeof(entity_name), mem->entity_type, mem->entity_id);
+
+                        /* Build emotion string */
+                        char emotion_buf[512];
+                        size_t offset = 0;
+                        int has_emotions = 0;
+#define AME(field, label)                                                                                              \
+    if (mem->field > 0) {                                                                                              \
+        int _n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " " label ":%d", mem->field);            \
+        if (_n > 0 && offset + _n < sizeof(emotion_buf)) {                                                             \
+            offset += _n;                                                                                              \
+            has_emotions = 1;                                                                                          \
+        }                                                                                                              \
+    }
+                        AME(fear_level, "Fear")
+                        AME(anger_level, "Anger")
+                        AME(happiness_level, "Happy")
+                        AME(sadness_level, "Sad")
+                        AME(friendship_level, "Friend")
+                        AME(love_level, "Love")
+                        AME(trust_level, "Trust")
+                        AME(loyalty_level, "Loyal")
+                        AME(curiosity_level, "Curious")
+                        AME(greed_level, "Greed")
+                        AME(pride_level, "Pride")
+                        AME(compassion_level, "Compassion")
+                        AME(envy_level, "Envy")
+                        AME(courage_level, "Courage")
+                        AME(excitement_level, "Excited")
+                        AME(disgust_level, "Disgust")
+                        AME(shame_level, "Shame")
+                        AME(pain_level, "Pain")
+                        AME(horror_level, "Horror")
+                        AME(humiliation_level, "Humiliated")
+#undef AME
+                        /* Build interaction label */
+                        char interaction_details[128];
+                        if (mem->social_name[0] != '\0') {
+                            mem->social_name[sizeof(mem->social_name) - 1] = '\0';
+                            snprintf(interaction_details, sizeof(interaction_details), "%s(%s)", interaction_name,
+                                     mem->social_name);
+                        } else {
+                            snprintf(interaction_details, sizeof(interaction_details), "%s", interaction_name);
+                        }
+
+                        send_to_char(ch, "  [%s%2d min ago%s] actor->%s %s%-18s%s%s\r\n", CCGRN(ch, C_NRM), age_minutes,
+                                     CCNRM(ch, C_NRM), entity_name, CCMAG(ch, C_NRM), interaction_details,
+                                     CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "");
+                        if (has_emotions)
+                            send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                                         emotion_buf);
+
+                        if (mem->moral_action_type >= 0 && mem->moral_was_guilty >= 0) {
+                            const char *action_names[] = {"None",    "Attack", "Steal",   "Help",
+                                                          "Heal",    "Trade",  "Deceive", "Sacrifice",
+                                                          "Abandon", "Betray", "Defend",  "Unknown"};
+                            int action_idx = (mem->moral_action_type >= 0 && mem->moral_action_type <= 10)
+                                                 ? mem->moral_action_type
+                                                 : 11;
+                            send_to_char(ch, "      %sMoral:%s %s, %s, Blame:%d, Severity:%d, Regret:%d\r\n",
+                                         CCMAG(ch, C_NRM), CCNRM(ch, C_NRM), action_names[action_idx],
+                                         mem->moral_was_guilty ? "Guilty" : "Innocent", mem->moral_blameworthiness,
+                                         mem->moral_outcome_severity, mem->moral_regret_level);
+                        }
+                    }
+                }
+            } else {
+                send_to_char(ch, "%sActive Memory:%s No actions recorded yet\r\n", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM));
             }
         }
     }
@@ -1651,6 +2047,15 @@ ACMD(do_stat)
         } else {
             print_zone(ch, atoi(buf2));
             return;
+        }
+    } else if (is_abbrev(buf1, "malp")) {
+        if (!*buf2)
+            send_to_char(ch, "Estatísticas de MALP de qual mobile?\r\n");
+        else {
+            if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
+                do_stat_malp(ch, victim);
+            else
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
         }
     } else {
         char *name = buf1;
