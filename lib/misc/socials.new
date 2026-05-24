@@ -1251,9 +1251,9 @@ $n tenta confundir você.
 Você está confuso(a)? Eu também! Para quem isso deveria ser direcionado?
 Muito bem, você foi e se confundiu!
 $n confundiu a $l mesm$r agora.
-Você olha para o $i de $N confuso(a).
-$n olha para o $i de $N confuso(a).
-$n olha para seu $i confuso(a).
+Você olha para o $t de $N confuso(a).
+$n olha para o $t de $N confuso(a).
+$n olha para seu $t confuso(a).
 #
 #
 
@@ -1986,9 +1986,9 @@ $n olha para você e faz 'eep'.
 Encontre outra pessoa para fazer 'eep'.
 Você olha para baixo e faz 'eep'.
 $n olha para baixo e faz 'eep'.
-Você olha para o $i de $L e faz 'eep'.
-$n olha para o $i de $N e faz 'eep'.
-$n olha para o seu $i e faz 'eep'.
+Você olha para o $t de $L e faz 'eep'.
+$n olha para o $t de $N e faz 'eep'.
+$n olha para o seu $t e faz 'eep'.
 Você olha para $p e faz 'eep'.
 $n olha para $p e faz 'eep'.
 
@@ -2676,9 +2676,9 @@ $n olha profundamente nos seus olhos, completamente perdido(a).
 Para onde você quer olhar?
 Você fica vesgo(a) tentando se olhar.
 $n fica muito vesgo(a).
-Você olha para o $i de $L por um longo tempo.
-$n olha para o $i de $N por um longo tempo.
-$n olha para o seu $i por um longo tempo.
+Você olha para o $t de $L por um longo tempo.
+$n olha para o $t de $N por um longo tempo.
+$n olha para o seu $t por um longo tempo.
 #
 #
 
@@ -3666,9 +3666,9 @@ $n se apoia em você, pressionando o corpo.
 Você tenta se apoiar em alguém mas acaba sentado(a) no chão.
 Isso não é nem possível!
 #
-Você se apoia no $i de $L, pressionando o corpo.
-$n se apoia no $i de $N, pressionando o corpo.
-$n se apoia no seu $i, pressionando o corpo.
+Você se apoia no $t de $L, pressionando o corpo.
+$n se apoia no $t de $N, pressionando o corpo.
+$n se apoia no seu $t, pressionando o corpo.
 #
 #
 
@@ -4881,9 +4881,9 @@ $n puxa a sua perna.
 Eles não estão aqui!
 Você puxa a própria perna.
 $n puxa a própria perna.
-Você puxa o $i de $L.
-$n puxa o $i de $N.
-$n puxa o seu $i.
+Você puxa o $t de $L.
+$n puxa o $t de $N.
+$n puxa o seu $t.
 Você puxa $p.
 $n puxa $p.
 
@@ -7011,9 +7011,9 @@ O tique facial de $n treme ao pensar em você.
 Cadáver ruim! Eles não estão lá.
 Seu corpo sem vida se contorce levemente.
 O corpo sem vida de $n se contorce levemente.
-Você se contorce ao pensar no $i de $L.
-$n se contorce ao pensar no $i de $N.
-$n se contorce ao pensar no seu $i.
+Você se contorce ao pensar no $t de $L.
+$n se contorce ao pensar no $t de $N.
+$n se contorce ao pensar no seu $t.
 Você se contorce ao pensar em $p.
 $n se contorce ao pensar em $p.
 
