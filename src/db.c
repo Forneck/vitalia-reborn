@@ -1897,11 +1897,6 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     {
         if (mob_proto[i].ai_data) {
             mob_proto[i].ai_data->genetics.wimpy_tendency = num_arg;
-            /* MENSAGEM DE SUCESSO - TEMPORÁRIA */
-            log1("DEBUG: Mob vnum #%d, GenWimpy carregado com sucesso: %d", nr, num_arg);
-        } else {
-            /* MENSAGEM DE ERRO - TEMPORÁRIA */
-            log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics é NULL)", nr);
         }
     }
     CASE("GenLoot")

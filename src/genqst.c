@@ -208,8 +208,8 @@ int save_quests(zone_rnum zone_num)
         return FALSE;
     }
 
-    log1("GenOLC: save_quests: Saving quests in zone #%d (%d-%d).", zone_table[zone_num].number,
-         genolc_zone_bottom(zone_num), zone_table[zone_num].top);
+    mudlog(CMP, LVL_GRGOD, FALSE, "GenOLC: save_quests: Saving quests in zone #%d (%d-%d).",
+           zone_table[zone_num].number, genolc_zone_bottom(zone_num), zone_table[zone_num].top);
 
     snprintf(filename, sizeof(filename), "%s/%d.new", QST_PREFIX, zone_table[zone_num].number);
     if (!(sf = fopen(filename, "w"))) {
