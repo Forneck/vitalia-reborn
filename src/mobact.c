@@ -677,7 +677,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
 
     if (*complete_cmd_info[cmd_num].command != '\n') {
         /* Execute the social */
-        do_action(ch, GET_NAME(target), cmd_num, 0);
+        do_action(ch, fname(GET_NAME(target)), cmd_num, 0);
 
         /* Big Five Phase 3: Extraversion social reward gain.
          * Extroverted mobs receive a small happiness boost from successful positive
@@ -5590,7 +5590,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Found target, perform positive social interaction
                  * We only decrement quest_counter if target is visible and interaction is possible */
                 if (CAN_SEE(ch, target_mob) && GET_POS(ch) >= POS_RESTING) {
-                    do_action(ch, GET_NAME(target_mob), find_command("nod"), 0);
+                    do_action(ch, fname(GET_NAME(target_mob)), find_command("nod"), 0);
                     /* Decrement counter only after successful interaction attempt */
                     if (--ch->ai_data->quest_counter <= 0) {
                         mob_complete_quest(ch);
