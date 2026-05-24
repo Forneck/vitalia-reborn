@@ -607,6 +607,15 @@ void point_update(void)
                     send_to_char(i, "Você sonha com terríveis criaturas.\r\n");
                 else
                     send_to_char(i, "Um antigo pesadelo atormenta seu sono.\r\n");
+            } else if (GET_POS(i) == POS_MEDITING) {
+                if (GET_MANA(i) >= GET_MAX_MANA(i))
+                    send_to_char(i, "Em seu transe, sente uma paz profunda envolver seu ser.\r\n");
+                else if (GET_MANA(i) >= GET_MAX_MANA(i) / 2)
+                    send_to_char(i, "Visões de batalhas passadas surgem em sua meditação.\r\n");
+                else if (GET_MANA(i) >= GET_MAX_MANA(i) / 5)
+                    send_to_char(i, "Sombras perturbam seu transe meditativo.\r\n");
+                else
+                    send_to_char(i, "Sua mente fragmentada luta para manter o foco na meditação.\r\n");
             }
         }
     }
