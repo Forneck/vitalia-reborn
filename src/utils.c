@@ -3088,16 +3088,16 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
             /* Não posta quest para itens que não podem ser pegos */
             if (!CAN_WEAR(&obj_proto[target_obj_rnum], ITEM_WEAR_TAKE)) {
-                log1("EXPLORATION QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), target_vnum,
-                     target_name);
+                mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: %s tried to post quest for untakeable item %d (%s)",
+                       GET_NAME(ch), target_vnum, target_name);
                 act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
 
             /* Não posta quest para itens do tipo KEY (chaves) */
             if (GET_OBJ_TYPE(&obj_proto[target_obj_rnum]) == ITEM_KEY) {
-                log1("EXPLORATION QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), target_vnum,
-                     target_name);
+                mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: %s tried to post quest for key item %d (%s)",
+                       GET_NAME(ch), target_vnum, target_name);
                 act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
@@ -3114,8 +3114,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
             /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
             if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
-                log1("EXPLORATION QUEST: %s tried to post quest for restricted room %d (%s)", GET_NAME(ch), target_vnum,
-                     target_name);
+                mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: %s tried to post quest for restricted room %d (%s)",
+                       GET_NAME(ch), target_vnum, target_name);
                 act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
@@ -3133,7 +3133,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         questmaster_vnum = find_questmaster_for_zone(mob_zone);
     }
     if (questmaster_vnum == NOBODY) {
-        log1("EXPLORATION QUEST: No questmaster found for %s in zone %d", GET_NAME(ch), mob_zone);
+        mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: No questmaster found for %s in zone %d", GET_NAME(ch),
+               mob_zone);
         act("$n procura por alguém para ajudar, mas não encontra ninguém.", FALSE, ch, 0, 0, TO_ROOM);
         return;
     }
@@ -3176,7 +3177,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
-        log1("EXPLORATION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
+        mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3288,16 +3289,17 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     act("$n desenha um mapa e escreve uma nota, enviando-a para o questmaster.", FALSE, ch, 0, 0, TO_ROOM);
 
     /* Log da ação */
-    log1("EXPLORATION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
-         GET_ROOM_VNUM(IN_ROOM(ch)),
-         (quest_type == AQ_OBJ_RETURN)  ? "object return"
-         : (quest_type == AQ_ROOM_FIND) ? "room find"
-                                        : "mob find",
-         new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
+    mudlog(CMP, LVL_GRGOD, FALSE,
+           "EXPLORATION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
+           GET_ROOM_VNUM(IN_ROOM(ch)),
+           (quest_type == AQ_OBJ_RETURN)  ? "object return"
+           : (quest_type == AQ_ROOM_FIND) ? "room find"
+                                          : "mob find",
+           new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
 
     /* Salva quest para persistência */
     if (save_quests(mob_zone)) {
-        log1("EXPLORATION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save exploration quest %d to disk", new_quest_vnum);
     }
@@ -3365,16 +3367,18 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
                     if (IN_ROOM(mob_instance) != NOWHERE && IN_ROOM(mob_instance) >= 0 &&
                         IN_ROOM(mob_instance) <= top_of_world) {
                         if (is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
-                            log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
-                                 GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                            mudlog(CMP, LVL_GRGOD, FALSE,
+                                   "PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
+                                   GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
                             act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0,
                                 TO_ROOM);
                             return;
                         }
                         /* Don't post MOB_SAVE quest for mobs in peaceful rooms - violence not allowed */
                         if (ROOM_FLAGGED(IN_ROOM(mob_instance), ROOM_PEACEFUL)) {
-                            log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in peaceful room %d",
-                                 GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                            mudlog(CMP, LVL_GRGOD, FALSE,
+                                   "PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in peaceful room %d",
+                                   GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
                             act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0,
                                 TO_ROOM);
                             return;
@@ -3389,7 +3393,8 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
             /* Não posta quest para salas GODROOM, player houses, shop rooms ou peaceful rooms */
             if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE) ||
                 ROOM_FLAGGED(target_room_rnum, ROOM_PEACEFUL) || is_shop_room(target_vnum)) {
-                log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE, "PROTECTION QUEST: %s tried to post quest for restricted room %d",
+                       GET_NAME(ch), target_vnum);
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
@@ -3408,7 +3413,8 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         questmaster_vnum = find_questmaster_for_zone(mob_zone);
     }
     if (questmaster_vnum == NOBODY) {
-        log1("PROTECTION QUEST: No questmaster found for %s in zone %d", GET_NAME(ch), mob_zone);
+        mudlog(CMP, LVL_GRGOD, FALSE, "PROTECTION QUEST: No questmaster found for %s in zone %d", GET_NAME(ch),
+               mob_zone);
         act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
         return;
     }
@@ -3442,7 +3448,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     /* Gera VNUM único para a nova quest */
     new_quest_vnum = find_free_quest_vnum(mob_zone);
     if (new_quest_vnum == NOTHING) {
-        log1("PROTECTION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
+        mudlog(CMP, LVL_GRGOD, FALSE, "PROTECTION QUEST: No free VNUM in zone %d for %s", mob_zone, GET_NAME(ch));
         free(new_quest);
         return;
     }
@@ -3547,13 +3553,14 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     }
 
     /* Log da ação */
-    log1("PROTECTION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
-         GET_ROOM_VNUM(IN_ROOM(ch)), (quest_type == AQ_MOB_SAVE) ? "mob save" : "room clear", new_quest_vnum,
-         target_vnum, questmaster_vnum, calculated_reward);
+    mudlog(CMP, LVL_GRGOD, FALSE,
+           "PROTECTION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
+           GET_ROOM_VNUM(IN_ROOM(ch)), (quest_type == AQ_MOB_SAVE) ? "mob save" : "room clear", new_quest_vnum,
+           target_vnum, questmaster_vnum, calculated_reward);
 
     /* Salva quest para persistência */
     if (save_quests(mob_zone)) {
-        log1("PROTECTION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "PROTECTION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save protection quest %d to disk", new_quest_vnum);
     }
@@ -6215,12 +6222,6 @@ float apply_conscientiousness_impulse_modulation(struct char_data *ch, float bas
     /* Apply formula: base * (1 - γC) */
     float modulated = base_impulse_prob * (1.0f - (gamma * C));
 
-    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_impulse_prob) {
-        mudlog(CMP, LVL_IMPL, FALSE,
-               "CONSCIENTIOUSNESS: Mob %s (#%d) impulse modulation: base=%.2f, C=%.2f, γ=%.2f -> result=%.2f",
-               GET_NAME(ch), GET_MOB_VNUM(ch), base_impulse_prob, C, gamma, modulated);
-    }
-
     return URANGE(0.0f, modulated, 1.0f);
 }
 
@@ -6247,12 +6248,6 @@ float apply_conscientiousness_reaction_delay(struct char_data *ch, float base_de
     /* Apply formula: base * (1 + βC * arousal) */
     float modulated = base_delay * (1.0f + (beta * C * arousal));
 
-    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_delay) {
-        mudlog(CMP, LVL_IMPL, FALSE,
-               "CONSCIENTIOUSNESS: Mob %s (#%d) reaction delay: base=%.2f, C=%.2f, β=%.2f, arousal=%.2f -> result=%.2f",
-               GET_NAME(ch), GET_MOB_VNUM(ch), base_delay, C, beta, arousal, modulated);
-    }
-
     return modulated;
 }
 
@@ -6276,12 +6271,6 @@ float apply_conscientiousness_moral_weight(struct char_data *ch, float base_weig
 
     /* Apply formula: base * (1 + factor * C) */
     float modulated = base_weight * (1.0f + (factor * C));
-
-    if (CONFIG_CONSCIENTIOUSNESS_DEBUG && modulated != base_weight) {
-        mudlog(CMP, LVL_IMPL, FALSE,
-               "CONSCIENTIOUSNESS: Mob %s (#%d) moral weight: base=%.2f, C=%.2f, factor=%.2f -> result=%.2f",
-               GET_NAME(ch), GET_MOB_VNUM(ch), base_weight, C, factor, modulated);
-    }
 
     return modulated;
 }

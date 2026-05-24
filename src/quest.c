@@ -3005,7 +3005,8 @@ bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum)
 
     /* Check if we have space */
     if (GET_NUM_TEMP_QUESTS(mob) >= GET_MAX_TEMP_QUESTS(mob)) {
-        log1("QUEST: Mob %s cannot accept more temporary quests (max %d)", GET_NAME(mob), GET_MAX_TEMP_QUESTS(mob));
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s cannot accept more temporary quests (max %d)", GET_NAME(mob),
+               GET_MAX_TEMP_QUESTS(mob));
         return FALSE;
     }
 
@@ -3025,7 +3026,7 @@ bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum)
     mob->ai_data->temp_quests[mob->ai_data->num_temp_quests] = quest_vnum;
     mob->ai_data->num_temp_quests++;
 
-    log1("QUEST: Added temporary quest %d to mob %s", quest_vnum, GET_NAME(mob));
+    mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Added temporary quest %d to mob %s", quest_vnum, GET_NAME(mob));
     return TRUE;
 }
 
@@ -3051,7 +3052,7 @@ bool remove_temp_quest_from_mob(struct char_data *mob, qst_vnum quest_vnum)
                 clear_temp_questmaster(mob);
             }
 
-            log1("QUEST: Removed temporary quest %d from mob %s", quest_vnum, GET_NAME(mob));
+            mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Removed temporary quest %d from mob %s", quest_vnum, GET_NAME(mob));
             return TRUE;
         }
     }
@@ -3141,7 +3142,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
      * In this case, we should NOT make it a temporary questmaster.
      */
     if (mob->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
-        log1("QUEST: Mob %s successfully posted quest %d with questmaster via GOAL system", GET_NAME(mob), quest_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s successfully posted quest %d with questmaster via GOAL system",
+               GET_NAME(mob), quest_vnum);
         return;
     }
 
@@ -3155,8 +3157,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
         add_temp_quest_to_mob(mob, quest_vnum);
 
         act("$n parece ter algo importante para dizer.", TRUE, mob, 0, 0, TO_ROOM);
-        log1("QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)", GET_NAME(mob), quest_vnum,
-             qm_vnum);
+        mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)",
+               GET_NAME(mob), quest_vnum, qm_vnum);
     } else {
         /*
          * Mob can reach questmaster - the quest should be available through the permanent questmaster.
@@ -3172,7 +3174,8 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
             /* Ensure the questmaster prototype has the correct special procedure */
             if (mob_index[qm_rnum].func != questmaster) {
                 mob_index[qm_rnum].func = questmaster;
-                log1("QUEST: Fixed questmaster special procedure for mob prototype %d", qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE, "QUEST: Fixed questmaster special procedure for mob prototype %d",
+                       qm_vnum);
             }
 
             /* Find the questmaster in the world and ensure instance also has correct procedure */
@@ -3181,21 +3184,23 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
                     /* Double-check that this specific instance has the questmaster function */
                     if (mob_index[GET_MOB_RNUM(qm)].func != questmaster) {
                         mob_index[GET_MOB_RNUM(qm)].func = questmaster;
-                        log1("QUEST: Fixed questmaster special procedure for mob instance %s (%d)", GET_NAME(qm),
-                             qm_vnum);
+                        mudlog(CMP, LVL_GRGOD, FALSE,
+                               "QUEST: Fixed questmaster special procedure for mob instance %s (%d)", GET_NAME(qm),
+                               qm_vnum);
                     }
                     break;
                 }
             }
 
             if (qm) {
-                log1("QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available",
-                     GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE,
+                       "QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available",
+                       GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
             } else {
-                log1(
-                    "QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to "
-                    "prototype",
-                    GET_NAME(mob), quest_vnum, qm_vnum);
+                mudlog(CMP, LVL_GRGOD, FALSE,
+                       "QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to "
+                       "prototype",
+                       GET_NAME(mob), quest_vnum, qm_vnum);
             }
         } else {
             log1("QUEST: WARNING - Mob %s posted quest %d to invalid questmaster %d", GET_NAME(mob), quest_vnum,
