@@ -1,55 +1,157 @@
-This is a C-based MUD (Multi-User Dungeon) game engine called Vitalia Reborn - a revival of the Brazilian VitaliaMUD from the early 2000s, originally based on CircleMUD and enhanced with tbaMUD improvements. The project focuses on stability, bug fixes, and maintaining the classic MUD experience. Please follow these guidelines when contributing:
+# Vitalia Reborn — Copilot Instructions
 
-## Code Standards
+Revival do VitaliaMUD brasileiro dos anos 2000, baseado em CircleMUD com
+melhorias do tbaMUD. Foco em estabilidade, correção de bugs e manutenção
+da experiência clássica de MUD.
 
-### Required Before Each Commit
-- Run `clang-format -i src/*.c src/*.h` to format C source files according to project style
-- Build successfully with both build systems to ensure compatibility
-- Test memory management when using dynamic allocation (consider using zmalloc functions)
+---
 
-### Development Flow
-- **Autotools build**: `./configure && cd src && make`
-- **CMake build**: `cmake -B build -S . && cmake --build build`  
-- **Format code**: `clang-format -i src/*.c src/*.h`
-- **Static analysis**: Enable with `cmake -B build -S . -DSTATIC_ANALYSIS=ON`
-- **Memory debugging**: `cmake -B build -S . -DMEMORY_DEBUG=ON && cmake --build build`
+## Comportamento Geral do Agente
 
-## Repository Structure
-- `src/`: Core MUD engine source code and main executable
-- `src/util/`: Utility programs (asciipasswd, autowiz, shopconv, rebuildIndex, etc.)
-- `lib/`: Game world data, player files, configuration, and text files
-- `lib/world/`: World files (rooms, objects, NPCs, zones)
-- `lib/text/`: Help files, news, and in-game text content
-- `bin/`: Built executables (ignored by git)
-- `tbadoc/`: Technical documentation and platform-specific build instructions
-- `docs/`: Project documentation and guides
-- `CMakeLists.txt`: Modern CMake build configuration
-- `configure` + `Makefile.in`: Traditional autotools build system
+### Pense antes de codificar
 
-## Key Guidelines
-1. **Follow C99 standard** and existing code patterns in the MUD engine
-2. **Maintain backward compatibility** with traditional MUD data formats and protocols
-3. **Use existing memory management** patterns (prefer zmalloc family functions for debugging)
-4. **Preserve game balance** - be cautious with changes affecting gameplay mechanics
-5. **Test with sample data** - use existing world files in `lib/world/` to validate changes
-6. **Document gameplay changes** in `lib/text/news` when modifying game mechanics
-7. **Respect legacy code structure** - this is a revival project maintaining classic MUD architecture
-8. **Handle Portuguese content appropriately** - many strings and comments are in Portuguese reflecting the Brazilian origin
-9. **References** - Always consult `tbadoc/` and `doc` folder reference for documentation, along the help files.
-10. **Self-regulating system** - The systems and mechanics must try to be self-regulating to maintaing the minimum intervencionism while using as few resources as possible
+**Não assuma. Não esconda confusão. Explicite tradeoffs.**
 
-## Platform Considerations
-- Primary target is Linux/Unix systems
-- Primary environment may use sudo for permissions and access, possible interacting with fewer restrictions
-- Windows support via CMake (see `tbadoc/README.CMAKE.md`)
-- Multiple legacy platform support documented in `tbadoc/README.*` files
-- Both 32-bit and 64-bit architecture support
+Antes de implementar qualquer coisa:
+- Declare suas premissas explicitamente. Se incerto, pergunte.
+- Se múltiplas interpretações existem, apresente-as — não escolha silenciosamente.
+- Se uma abordagem mais simples existe, diga. Questione quando justificado.
+- Se algo está obscuro, pare. Nomeie o que está confuso. Pergunte.
 
-## MUD-Specific Development Notes
-- **World Building**: Changes to world files require understanding of CircleMUD/tbaMUD formats
-- **Player Data**: Be extremely careful with changes affecting player file compatibility
-- **Networking**: MUD uses traditional telnet-based protocols
-- **Real-time Constraints**: Server must handle multiple concurrent players efficiently
-- **Game Balance**: Combat, magic, and economic systems require careful consideration of game balance
-- **Safety**: New features and modifying existingbones must be throughfull tested to aboid crashhes, and unintended behaviors
-- **Immersion**: Try to keep the maximum possible of immersion while maintaining realism and fund.
+### Simplicidade primeiro
+
+**Mínimo de código que resolve o problema. Nada especulativo.**
+
+- Sem features além do que foi pedido.
+- Sem abstrações para código de uso único.
+- Sem "flexibilidade" ou "configurabilidade" que não foi solicitada.
+- Sem tratamento de erros para cenários impossíveis.
+- Se você escrever 200 linhas e poderiam ser 50, reescreva.
+
+Teste: "Um engenheiro sênior diria que isso é overcomplicated?" Se sim, simplifique.
+
+### Mudanças cirúrgicas
+
+**Toque apenas o que é necessário. Limpe apenas sua própria bagunça.**
+
+Ao editar código existente:
+- Não "melhore" código adjacente, comentários ou formatação.
+- Não refatore o que não está quebrado.
+- Respeite o estilo existente, mesmo que você faria diferente.
+- Se notar código morto não relacionado, mencione — não delete.
+
+Quando suas mudanças criarem órfãos:
+- Remova imports/variáveis/funções que SUAS mudanças tornaram inutilizados.
+- Não remova código morto pré-existente a menos que solicitado.
+
+Teste: cada linha alterada deve rastrear diretamente à solicitação do usuário.
+
+**Específico para Vitalia Reborn:** "Mudanças cirúrgicas" significa também não
+tocar em sistemas adaptativos adjacentes (emoções, genética, Shadow Timeline,
+Causal Ledger) sem entender os loops de feedback. Mudanças locais têm efeitos
+globais — o `emergence-watchdog` existe por essa razão.
+
+### Execução orientada a objetivos
+
+**Defina critérios de sucesso. Itere até verificado.**
+
+Transforme tarefas em objetivos verificáveis:
+- "Adicione validação" → "Escreva testes para inputs inválidos, depois faça-os passar"
+- "Corrija o bug" → "Escreva um teste que reproduz, depois faça-o passar"
+- "Refatore X" → "Garanta que os testes passem antes e depois"
+
+Para tarefas multi-passo, declare um plano breve:
+```
+1. [Passo] → verificar: [checagem]
+2. [Passo] → verificar: [checagem]
+3. [Passo] → verificar: [checagem]
+```
+
+---
+
+## Padrões de Código
+
+### Requisitos antes de cada commit
+- Execute `clang-format -i src/*.c src/*.h` para formatar arquivos C
+- Build bem-sucedido em ambos os sistemas de build para garantir compatibilidade
+- Teste gerenciamento de memória ao usar alocação dinâmica (use funções zmalloc)
+
+### Fluxo de desenvolvimento
+- **Autotools:** `./configure && cd src && make`
+- **CMake:** `cmake -B build -S . && cmake --build build`
+- **Formatar código:** `clang-format -i src/*.c src/*.h`
+- **Análise estática:** `cmake -B build -S . -DSTATIC_ANALYSIS=ON`
+- **Debug de memória:** `cmake -B build -S . -DMEMORY_DEBUG=ON && cmake --build build`
+
+---
+
+## Estrutura do Repositório
+
+- `src/` — código-fonte do engine principal e executável
+- `src/util/` — utilitários (asciipasswd, autowiz, shopconv, rebuildIndex, etc.)
+- `lib/` — dados do mundo do jogo, arquivos de jogadores, configuração e textos
+- `lib/world/` — arquivos de mundo (salas, objetos, NPCs, zonas)
+- `lib/text/` — arquivos de ajuda, notícias e conteúdo textual do jogo
+- `bin/` — executáveis compilados (ignorados pelo git)
+- `tbadoc/` — documentação técnica e instruções de build por plataforma
+- `docs/` — documentação do projeto e guias
+- `CMakeLists.txt` — configuração CMake moderna
+- `configure` + `Makefile.in` — sistema autotools tradicional
+
+---
+
+## Diretrizes Principais
+
+1. **Siga o padrão C99** e os padrões de código existentes no engine
+2. **Mantenha compatibilidade retroativa** com formatos de dados e protocolos MUD tradicionais
+3. **Use os padrões de memória existentes** (prefira família zmalloc para debugging)
+4. **Preserve o balanço do jogo** — seja cauteloso com mudanças que afetam mecânicas de gameplay
+5. **Teste com dados de exemplo** — use os world files em `lib/world/` para validar mudanças
+6. **Documente mudanças de gameplay** em `lib/text/news` ao modificar mecânicas
+7. **Respeite a estrutura legada** — este é um projeto de revival mantendo a arquitetura clássica de MUD
+8. **Trate conteúdo em português adequadamente** — strings e comentários em português refletem a origem brasileira
+9. **Consulte as referências** — sempre consulte `tbadoc/` e `docs/` para documentação, junto com os arquivos de ajuda
+10. **Sistema autorregulatório** — sistemas e mecânicas devem tentar ser autorregulatórios, mantendo intervencionismo mínimo com o menor uso de recursos possível
+
+---
+
+## Sistemas Adaptativos — Atenção Especial
+
+O Vitalia Reborn possui quatro sistemas interconectados com contratos explícitos
+definidos em RFCs. Mudanças nesses sistemas requerem compreensão dos loops de
+feedback antes de qualquer implementação:
+
+- **Genética** (12 traits, 0–100) → inicializa emoções, evolui por quests
+- **Emoções** (20 tipos, 2 camadas: MOOD global + RELATIONSHIP por entidade) → decay em direção ao baseline genético é o mecanismo central de autorregulação
+- **Raciocínio Moral** (modelo Shultz & Daley) → feedback bidirecional com emoções
+- **Shadow Timeline** (RFC-0003) → não-autoritativo, não-persistente, cognitivamente bounded
+
+**RFC-0003 é normativo.** Todo código de Shadow Timeline DEVE incluir um dos marcadores:
+- `/* RFC-0003 COMPLIANT */`
+- `/* RFC-0003 PARTIAL */`
+- `/* RFC-0003 NON-COMPLIANT */`
+
+Documentação normativa ativa: `RFC_0003_DEFINITION.md`, `docs/MORAL_REASONING.md`,
+`HYBRID_EMOTION_SYSTEM.md`, `md-docs/GENETICS_EMOTIONS_REPUTATION_INTERACTIONS.md`.
+
+---
+
+## Considerações de Plataforma
+
+- Alvo principal: sistemas Linux/Unix
+- Ambiente primário pode usar sudo para permissões
+- Suporte a Windows via CMake (ver `tbadoc/README.CMAKE.md`)
+- Suporte a múltiplas plataformas legadas documentado em `tbadoc/README.*`
+- Suporte a arquiteturas 32-bit e 64-bit
+
+---
+
+## Notas de Desenvolvimento Específicas de MUD
+
+- **World Building:** mudanças em world files requerem entendimento dos formatos CircleMUD/tbaMUD
+- **Player Data:** seja extremamente cuidadoso com mudanças que afetam compatibilidade de player files
+- **Networking:** MUD usa protocolos tradicionais baseados em telnet
+- **Restrições de tempo real:** o servidor deve lidar com múltiplos jogadores concorrentes eficientemente
+- **Balanço de jogo:** sistemas de combate, magia e economia requerem consideração cuidadosa
+- **Segurança:** novas features e modificações em existentes devem ser testadas para evitar crashes e comportamentos não intencionais
+- **Imersão:** mantenha o máximo possível de imersão mantendo realismo e diversão
