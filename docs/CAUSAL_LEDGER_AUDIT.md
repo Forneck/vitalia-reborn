@@ -1,9 +1,9 @@
 # Preliminary Causal Ledger Audit
 ## Vitalia Reborn MUD Engine
 
-**Date:** 2026-02-09 (Initial), 2026-02-11 (Second Pass), 2026-03-01 (Third Pass)  
-**Version:** 3.0  
-**Status:** Complete with OCT Reclassification and Architecture Refinements
+**Date:** 2026-02-09 (Initial), 2026-02-11 (Second Pass), 2026-03-01 (Third Pass), 2026-05-24 (Fourth Pass)  
+**Version:** 4.0  
+**Status:** Complete with Critical Implementation Questions Resolved
 
 ---
 
@@ -23,7 +23,14 @@ This document presents a conceptual audit of events in the Vitalia Reborn MUD en
 - Identified World-Altering Events for Phase 2
 - Explored narrative/experiential applications
 
-**Final Result:** **9 true Causal Ledger events** (consolidated from 11), **7 derived state events**, and **1 shadow-only constraint**.
+**Fourth Pass (v4.0):** Resolved critical implementation blockers:
+- **Storage Policy:** Hybrid retention with snapshots (~250 MB/year)
+- **MALP Integration:** Clear separation—Ledger records events, MALP records responses
+- **Time Travel:** Single ledger with branch_id metadata and timeline meta-events
+- **Event Consolidation:** Removed House Purchase and Item Rent (derived from Value Transfer)
+- **Error Governance:** Formal compensatory events model with strict authorization
+
+**Final Result:** **7 core gameplay events + 2 timeline meta-events = 9 total Causal Ledger events** (consolidated from 11 in v3.0).
 
 ---
 
@@ -1829,6 +1836,574 @@ Without these distinctions and refinements, the Causal Ledger risks becoming a h
 
 ---
 
+## Critical Implementation Questions (Fourth Pass Analysis)
+
+This section addresses five critical architectural questions that block implementation, RFC-1002 integration, and the time-travel feature. These questions were raised after v3.0 review and require formal resolution before proceeding.
+
+---
+
+### Question 1: Storage and Retention Policy
+
+**Problem Statement:**  
+The Causal Ledger is append-only by definition. Without a retention policy, it becomes an unbounded syslog that grows indefinitely with server age. The v3.0 audit mentions "snapshots and caching" but doesn't specify implementation details.
+
+**Sub-Questions:**
+1. What is the expected ledger size for a 1-year active server?
+2. Do snapshots replace old entries or are they additional?
+3. Who decides when to create snapshots—automatic process or explicit event?
+
+#### Answer: Hybrid Retention with Snapshot Compression
+
+**Storage Model:**
+
+```
+Genesis Event (t=0)
+    ↓
+[Ledger Events: t=0 to t=snapshot₁]
+    ↓
+Snapshot₁ (compressed derived state at t=snapshot₁)
+    ↓
+[Ledger Events: t=snapshot₁ to t=snapshot₂]
+    ↓
+Snapshot₂ (compressed derived state at t=snapshot₂)
+    ↓
+[Current Ledger Events: t=snapshot₂ to t=now]
+```
+
+**Retention Policy:**
+
+1. **Full Ledger Retention:** All 9 core events are retained permanently, never deleted
+2. **Snapshot Creation:** Automatic, triggered by:
+   - Event count threshold (every 10,000 events)
+   - Time threshold (every 30 days)
+   - Manual trigger (admin command for maintenance)
+3. **Snapshot Purpose:** Snapshots are **additional**, not replacements
+   - Store compressed derived state (level, balance, reputation, etc.)
+   - Enable O(delta) recomputation from snapshot instead of O(history)
+   - Do NOT replace or delete ledger events
+
+**Size Estimation (1-year server):**
+
+Assumptions:
+- 100 active players
+- Average 50 events per player per day
+- 9 event types, average 200 bytes per event
+
+```
+Daily events: 100 players × 50 events = 5,000 events
+Daily storage: 5,000 × 200 bytes = 1 MB/day
+Annual storage: 1 MB × 365 = 365 MB/year
+```
+
+With compression and efficient encoding: **~150-200 MB/year** for full ledger.
+
+Snapshots (every 30 days):
+- 12 snapshots/year
+- ~5 MB per snapshot (compressed derived state for 100 players)
+- Annual snapshot storage: 60 MB/year
+
+**Total: ~250 MB/year** (manageable for modern systems)
+
+**Archival Strategy (Optional, Phase 2):**
+- After 5 years, archive ledger events older than 3 years to cold storage
+- Keep snapshots and recent 3 years in hot storage
+- Archived events remain queryable but with higher latency
+
+**Decision:** Snapshots are **performance optimization**, not retention policy. All events retained permanently.
+
+---
+
+### Question 2: Separation of Responsibilities (MALP Integration)
+
+**Problem Statement:**  
+Event 4.3 (Reputation/Emotion Changes) overlaps directly with MALP (Memory-Augmented Long-term Planning). The same ontological event—an NPC witnessing a death—generates:
+1. Causal Ledger entry (Event 4.3)
+2. MALP entry (high salience)
+3. Potentially MPLP entry (if cue repeats)
+
+**Three representations of the same fact.**
+
+**Sub-Questions:**
+1. What is the boundary between Causal Ledger and MALP for emotional changes?
+2. Does the ledger record the emotional change itself or the event that caused it?
+3. Which system is authoritative in case of inconsistency?
+
+#### Answer: Causal Ledger Records Events, MALP Records Responses
+
+**Architectural Separation:**
+
+```
+Causal Ledger (What Happened)
+    ↓ (triggers)
+MALP/SEC (How NPCs Responded)
+    ↓ (influences)
+Future Behavior (What Might Happen)
+```
+
+**Formal Boundary:**
+
+| System | Records | Example | Authoritative For |
+|--------|---------|---------|-------------------|
+| **Causal Ledger** | Objective events that occurred | "Player A killed King B at time T" | Historical facts |
+| **MALP** | Subjective NPC responses to events | "NPC C witnessed death, salience=0.9, emotion=grief" | NPC internal state |
+| **SEC** | Emotional state changes over time | "NPC C grief decays from 0.9 to 0.3 over 7 days" | Current emotional state |
+
+**Resolution of Event 4.3:**
+
+**Event 4.3 is REMOVED from Causal Ledger** and reclassified as **Derived State**.
+
+**Rationale:**
+- Reputation/emotion changes are **responses** to events, not events themselves
+- The ontological fact is "Player killed King" (CharacterDeath event)
+- NPC emotional response is **derived** from witnessing that event
+- MALP is authoritative for NPC memory and emotional state
+
+**Revised 9 Core Events → 8 Core Events:**
+
+1. Character Creation
+2. Character Death (with optional killer_id and witness_ids)
+3. Class Change/Reincarnation
+4. Value Transfer
+5. Item Rent/Storage Contracts
+6. Quest Completion
+7. Item Creation
+8. Item Destruction
+9. ~~House Purchase~~ (see Question 3 analysis)
+
+**Integration Protocol:**
+
+When CharacterDeath event is logged:
+1. Causal Ledger records: `{event: "CharacterDeath", victim_id, killer_id, timestamp, location, witness_ids[]}`
+2. Event triggers MALP update for each witness_id
+3. MALP creates high-salience memory referencing ledger event_id
+4. SEC updates emotional state based on MALP memory
+
+**Consistency Rule:**
+- MALP memories MUST reference Causal Ledger event_id
+- If ledger event doesn't exist, MALP memory is invalid
+- Ledger is source of truth; MALP is interpretation layer
+
+**Authority in Conflict:**
+- For "did this event happen?" → Causal Ledger is authoritative
+- For "how did NPC respond?" → MALP is authoritative
+- For "what is NPC's current emotion?" → SEC is authoritative
+
+---
+
+### Question 3: Time Travel and Timeline Branching
+
+**Problem Statement:**  
+The ledger defines "what really happened"—but with temporal branches, different timelines have different causal histories. Is the ledger shared across timelines or does each branch have its own?
+
+**Sub-Questions:**
+1. If timeline prevents a death, does Event 1.2 exist in original ledger but not alternate?
+2. How do we query "what happened in timeline X"?
+3. Can events from alternate timelines affect the prime timeline?
+4. What happens to ledger when timeline merges back?
+
+#### Answer: Multi-Timeline Ledger with Branch Metadata
+
+**Architectural Model: Single Ledger with Timeline Annotations**
+
+```
+Causal Ledger (Unified)
+    ├─ Prime Timeline (branch_id: 0, parent: null)
+    │   ├─ Event 1: CharacterCreation (player_id=A, t=100, branch=0)
+    │   ├─ Event 2: CharacterDeath (victim_id=B, t=500, branch=0)
+    │   └─ Event 3: TimelineCreation (branch_id=1, parent=0, divergence_t=450)
+    │
+    └─ Alternate Timeline (branch_id: 1, parent: 0, divergence_t=450)
+        ├─ Event 4: ValueTransfer (from=A, to=C, t=460, branch=1)
+        └─ Event 5: CharacterDeath (victim_id=B, t=600, branch=1, prevented=true)
+```
+
+**Event Schema Extension:**
+
+Every Causal Ledger event includes:
+```
+{
+  event_id: UUID,
+  event_type: "CharacterDeath" | "ValueTransfer" | ...,
+  timestamp: int64,
+  branch_id: int,           // Which timeline this event occurred in
+  branch_parent: int,       // Parent timeline (null for prime)
+  divergence_point: int64,  // When this branch diverged (null for prime)
+  ...event-specific fields
+}
+```
+
+**Timeline Lifecycle Events (New Category):**
+
+Two new meta-events for timeline management:
+
+**Event 10: Timeline Creation**
+```
+{
+  event_type: "TimelineCreation",
+  branch_id: int,
+  parent_branch: int,
+  divergence_timestamp: int64,
+  creator_id: player_id,
+  reason: "time_travel" | "shadow_simulation" | "admin_test"
+}
+```
+
+**Event 11: Timeline Merge/Collapse**
+```
+{
+  event_type: "TimelineMerge",
+  source_branch: int,
+  target_branch: int,
+  merge_timestamp: int64,
+  resolution_strategy: "prime_wins" | "alternate_wins" | "manual_resolution",
+  conflicting_events: [event_id, ...]
+}
+```
+
+**Query Semantics:**
+
+1. **"What happened in timeline X?"**
+   ```sql
+   SELECT * FROM causal_ledger 
+   WHERE branch_id = X 
+   OR (branch_id = parent_of(X) AND timestamp < divergence_point_of(X))
+   ```
+
+2. **"Did event E happen in prime timeline?"**
+   ```sql
+   SELECT * FROM causal_ledger 
+   WHERE event_id = E AND branch_id = 0
+   ```
+
+3. **"What's different between timeline X and prime?"**
+   ```sql
+   SELECT * FROM causal_ledger 
+   WHERE branch_id = X AND timestamp >= divergence_point_of(X)
+   ```
+
+**Novikov Self-Consistency Enforcement:**
+
+When timeline merges back to prime:
+1. Check for causal paradoxes (e.g., player exists in alternate but died in prime before divergence)
+2. If paradox detected, merge fails with error
+3. If consistent, alternate events are marked as `branch_collapsed=true` but retained for historical record
+4. Prime timeline events remain authoritative
+
+**Example: Death Prevention Scenario**
+
+Prime Timeline:
+```
+t=100: Player A created (branch=0)
+t=200: Player B created (branch=0)
+t=500: Player B killed by mob (branch=0, event_id=E1)
+```
+
+Player A time-travels to t=450:
+```
+t=450: Timeline branch created (branch=1, parent=0, divergence=450)
+t=460: Player A warns Player B (branch=1)
+t=500: Player B survives (branch=1, no death event)
+t=600: Timeline merge attempted
+```
+
+Merge analysis:
+- Prime: Player B is dead at t=500
+- Alternate: Player B is alive at t=500
+- **Paradox detected:** Cannot merge—Player B cannot be both dead and alive
+- **Resolution:** Alternate timeline remains separate OR prime timeline is overwritten (Novikov violation, requires admin approval)
+
+**Cross-Timeline Effects:**
+
+**Rule:** Events in alternate timelines CANNOT affect prime timeline unless explicitly merged.
+
+**Exception:** Shadow Timeline predictions can inform prime timeline decisions, but this is not a causal effect—it's information flow, not event propagation.
+
+**Storage Implications:**
+
+- Single ledger table with branch_id column
+- Index on (branch_id, timestamp) for efficient timeline queries
+- Alternate timelines are typically short-lived (hours to days)
+- Collapsed timelines marked but not deleted (historical record)
+
+**Revised Core Events: 8 → 10 (with timeline meta-events)**
+
+---
+
+### Question 4: House Purchase as Ontological Event
+
+**Problem Statement:**  
+Event 9 (House Purchase) was included in v3.0 as an ontological fact. But is it truly irreversible, or is it just a special case of Value Transfer + Ownership Record?
+
+**Analysis:**
+
+House Purchase decomposes into:
+1. **Value Transfer:** Player pays gold to system/NPC
+2. **Ownership Record:** Player gains property rights
+
+**Ontological Question:** Is "ownership" an event or a derived state?
+
+**Answer:** Ownership is **derived state**, not an event.
+
+**Rationale:**
+- Ownership is a **relationship** between player and property
+- The event is the **transaction** that established ownership
+- Ownership can be queried from transaction history: "Who last purchased this house?"
+
+**Revised Model:**
+
+**House Purchase is NOT a separate event type.**
+
+Instead, it's a special case of **Value Transfer** with metadata:
+```
+{
+  event_type: "ValueTransfer",
+  from: player_id,
+  to: "SYSTEM",
+  amount: 50000,
+  reason: "house_purchase",
+  property_id: house_vnum,
+  timestamp: t
+}
+```
+
+Current house owner is **derived** by querying:
+```sql
+SELECT from AS owner 
+FROM causal_ledger 
+WHERE event_type = 'ValueTransfer' 
+  AND reason = 'house_purchase' 
+  AND property_id = X 
+ORDER BY timestamp DESC 
+LIMIT 1
+```
+
+**Revised Core Events: 10 → 9 (House Purchase removed, Timeline events added)**
+
+**Final 9 Core Events:**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Value Transfer (includes house purchases)
+5. Item Rent/Storage Contracts
+6. Quest Completion
+7. Item Creation
+8. Item Destruction
+9. Timeline Creation
+10. Timeline Merge/Collapse
+
+Wait—that's 10 events. Let me reconsider...
+
+**Item Rent/Storage Contracts** - Is this also derived?
+
+**Analysis:**
+- Rent payment is a Value Transfer
+- Storage access is a derived permission based on payment history
+
+**Revised:** Item Rent/Storage is also **derived state**, not a separate event.
+
+**Final 8 Core Events:**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Value Transfer
+5. Quest Completion
+6. Item Creation
+7. Item Destruction
+8. Timeline Creation
+9. Timeline Merge/Collapse
+
+That's 9 events (8 gameplay + 2 timeline meta-events = 10 total, but Timeline events are Phase 2).
+
+**Phase 1 (Current): 7 Core Events**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Value Transfer
+5. Quest Completion
+6. Item Creation
+7. Item Destruction
+
+**Phase 2 (Time Travel): +2 Meta-Events**
+8. Timeline Creation
+9. Timeline Merge/Collapse
+
+---
+
+### Question 5: Compensatory Events and Immutability
+
+**Problem Statement:**  
+The v3.0 audit mentions "compensatory events for error correction" but doesn't specify how this maintains immutability. If a bug causes incorrect ledger entry, how do we fix it without violating append-only constraint?
+
+**Sub-Questions:**
+1. What qualifies as a "bug" vs. legitimate game event?
+2. Who has authority to create compensatory events?
+3. How do we prevent abuse of compensatory events?
+4. How do queries handle compensatory events?
+
+#### Answer: Compensatory Events with Strict Governance
+
+**Model: Corrections are New Events, Not Edits**
+
+```
+Original (Incorrect) Event:
+{
+  event_id: E1,
+  event_type: "ValueTransfer",
+  from: player_A,
+  to: player_B,
+  amount: 1000000,  // Bug: should be 1000
+  timestamp: t1,
+  corrected_by: null
+}
+
+Compensatory Event:
+{
+  event_id: E2,
+  event_type: "CompensatoryCorrection",
+  corrects_event: E1,
+  reason: "Bug #1234: gold duplication exploit",
+  correction_type: "reverse_and_replace",
+  authorized_by: admin_id,
+  authorization_level: "LVL_GRGOD",
+  timestamp: t2,
+  audit_trail: "https://github.com/Forneck/vitalia-reborn/issues/1234"
+}
+
+Replacement Event:
+{
+  event_id: E3,
+  event_type: "ValueTransfer",
+  from: player_A,
+  to: player_B,
+  amount: 1000,  // Corrected amount
+  timestamp: t1,  // Original timestamp preserved
+  replaces_event: E1,
+  authorized_by: admin_id,
+  timestamp_logged: t2
+}
+
+Update to Original:
+{
+  event_id: E1,
+  ...original fields,
+  corrected_by: E2,  // Marked as corrected
+  correction_timestamp: t2
+}
+```
+
+**Governance Rules:**
+
+1. **Authorization Levels:**
+   - LVL_GRGOD (Greater God): Can create compensatory events
+   - LVL_IMPL (Implementor): Can create compensatory events with co-signer
+   - All others: Cannot create compensatory events
+
+2. **Audit Requirements:**
+   - Every compensatory event MUST reference external issue/ticket
+   - Reason must be documented
+   - Affected players must be notified
+   - Correction logged in public audit log
+
+3. **Correction Types:**
+   - **Reverse:** Nullify incorrect event (e.g., duped gold removed)
+   - **Replace:** Substitute correct values (e.g., fix amount)
+   - **Annotate:** Mark event as incorrect but don't change (e.g., historical record)
+
+4. **Query Semantics:**
+
+**Default Query (Corrected View):**
+```sql
+SELECT * FROM causal_ledger 
+WHERE corrected_by IS NULL 
+   OR correction_type = 'annotate'
+```
+
+**Historical Query (All Events):**
+```sql
+SELECT * FROM causal_ledger 
+-- Returns all events including corrected ones
+```
+
+**Audit Query (Corrections Only):**
+```sql
+SELECT * FROM causal_ledger 
+WHERE event_type = 'CompensatoryCorrection'
+```
+
+**Abuse Prevention:**
+
+1. **Rate Limiting:** Max 10 compensatory events per day per admin
+2. **Peer Review:** Corrections affecting >100k gold or >10 players require co-signer
+3. **Public Log:** All corrections visible in public audit log
+4. **Immutability:** Original events never deleted, only marked as corrected
+
+**Example: Gold Duplication Bug**
+
+Bug discovered: Players exploited bank withdrawal to duplicate gold.
+
+Correction process:
+1. Identify affected transactions (50 events)
+2. Create compensatory event for each:
+   ```
+   {
+     event_type: "CompensatoryCorrection",
+     corrects_event: E_duped,
+     reason: "Gold duplication exploit (Issue #1234)",
+     correction_type: "reverse",
+     authorized_by: admin_forneck,
+     authorization_level: "LVL_GRGOD"
+   }
+   ```
+3. Create reverse Value Transfer events to remove duped gold
+4. Notify affected players
+5. Update player balances (derived state recomputed)
+
+**Immutability Preserved:**
+- Original events remain in ledger
+- Corrections are new events
+- Historical queries show full history including mistakes
+- Default queries show corrected view
+
+---
+
+## Summary of Fourth Pass Resolutions
+
+| Question | Resolution | Impact |
+|----------|-----------|--------|
+| **1. Storage** | Hybrid retention: full ledger + snapshots. ~250 MB/year. | Unblocks implementation |
+| **2. MALP Separation** | Ledger records events, MALP records responses. Event 4.3 removed. | Unblocks RFC-1002 |
+| **3. Time Travel** | Single ledger with branch_id. Timeline meta-events added. | Unblocks time travel |
+| **4. House Purchase** | Removed as separate event (derived from Value Transfer). | Simplifies model |
+| **5. Compensatory Events** | Strict governance with audit trail. Corrections are new events. | Maintains immutability |
+
+**Revised Final Event Count:**
+
+**Phase 1 (Current Implementation): 7 Core Events**
+1. Character Creation
+2. Character Death
+3. Class Change/Reincarnation
+4. Value Transfer
+5. Quest Completion
+6. Item Creation
+7. Item Destruction
+
+**Phase 2 (Time Travel): +2 Meta-Events**
+8. Timeline Creation
+9. Timeline Merge/Collapse
+
+**Total: 9 Core Events** (7 gameplay + 2 timeline)
+
+**Removed from v3.0:**
+- Event 4.3: Reputation/Emotion Changes (now derived state, handled by MALP)
+- Event 9: House Purchase (now special case of Value Transfer)
+- Event 5: Item Rent/Storage (now derived from Value Transfer)
+
+**Added in v4.0:**
+- Timeline Creation (meta-event for time travel)
+- Timeline Merge/Collapse (meta-event for time travel)
+
+---
+
 ## Appendix A: Key Source Files
 
 - `src/fight.c` - Combat and death mechanics (lines 1-3000+)
@@ -1854,14 +2429,15 @@ Key persistent data structures:
 
 ---
 
-**Document Status:** Complete v3.0 with OCT Reclassification and Architecture Refinements  
+**Document Status:** Complete v4.0 - Critical Implementation Questions Resolved  
 **Initial Audit:** 2026-02-09  
 **Second Pass (OCT):** 2026-02-11  
 **Third Pass (Refinements):** 2026-03-01  
+**Fourth Pass (Implementation Blockers):** 2026-05-24  
 **Author:** GitHub Copilot (Automated Code Analysis)  
 **Audited Codebase:** Vitalia Reborn (tbaMUD/CircleMUD derivative)  
 **Total Events Audited:** 23 events across 7 domains  
-**True Causal Ledger Events:** 9 ontologically irreversible facts (consolidated from 11)  
+**Final Core Events:** 7 gameplay events + 2 timeline meta-events = 9 total  
 **Derived State Events:** 7 recomputable statistics  
 **Shadow-Only Constraints:** 1 unrealized possibility  
-**Key Refinements:** Event consolidation, performance optimization, error governance, narrative applications
+**Key Refinements v4.0:** Storage policy, MALP integration, time travel architecture, event consolidation, error governance
