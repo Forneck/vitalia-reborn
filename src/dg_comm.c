@@ -185,7 +185,7 @@ void sub_write(char *arg, char_data *ch, byte find_invis, int targets)
 
     if (IS_SET(targets, TO_ROOM))
         for (to = world[IN_ROOM(ch)].people; to; to = to->next_in_room)
-            if (to != ch && SENDOK(to))
+            if (to != ch && AWAKE(to) && SENDOK(to))
                 sub_write_to_char(to, tokens, otokens, type);
 }
 
