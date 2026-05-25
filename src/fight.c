@@ -28,6 +28,7 @@
 #include "genolc.h"
 #include "genzon.h"
 #include "mud_event.h"
+#include "ledger_metrics.h"
 
 /* locally defined global variables, used externally */
 /* head of l-list of fighting chars */
@@ -1317,6 +1318,7 @@ void death_cry(struct char_data *ch)
 void raw_kill(struct char_data *ch, struct char_data *killer)
 {
     struct char_data *i;
+    ledger_metrics_record_event(LEDGER_SUBSYSTEM_COMBAT, LEDGER_EVENT_CHARACTER_DEATH, 192);
     if (FIGHTING(ch))
         stop_fighting(ch);
     while (ch->affected)
