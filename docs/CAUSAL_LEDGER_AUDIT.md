@@ -351,7 +351,11 @@ Yes. Skill learning permanently expands the character's action space and affects
 ### Event 4.1: Significant Damage Dealt/Received
 
 **Description:**  
-A character deals or receives significant damage in combat. For the purposes of this audit, a *proposed* ledger policy is to treat "significant" as damage exceeding approximately 100 HP in a single hit or 500 HP over an encounter; these values are heuristic examples for future scoping and do not reflect current engine invariants or implemented thresholds.
+A character deals or receives significant damage in combat.
+
+For the purposes of this audit, a *proposed* ledger policy is to treat "significant" as damage exceeding approximately 100 HP in a single hit or 500 HP over an encounter.
+
+These values are heuristic examples for future scoping and do not reflect current engine invariants or implemented thresholds.
 
 **Why Erasure Would Break Causality:**  
 - Damage affects hit point totals, which are persistent
