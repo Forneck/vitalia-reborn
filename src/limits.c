@@ -326,7 +326,7 @@ void gain_exp(struct char_data *ch, int gain)
         return;
     }
     if (gain != 0)
-        ledger_metrics_record_event(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_EXP_DELTA, 64);
+        ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_EXP_DELTA, 64, IN_ROOM(ch));
     if (gain > 0) {
         if ((IS_HAPPYHOUR) && (IS_HAPPYEXP))
             gain += (int)((float)gain * ((float)HAPPY_EXP / (float)(100)));

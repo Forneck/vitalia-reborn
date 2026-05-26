@@ -799,8 +799,8 @@ void Crash_rentsave(struct char_data *ch, int cost)
     fclose(fp);
 
     Crash_extract_objs(ch->carrying);
-    ledger_metrics_record_event(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE,
-                                LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES);
+    ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE,
+                                        LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES, IN_ROOM(ch));
 }
 
 static int objsave_write_rentcode(FILE *fl, int rentcode, int cost_per_day, struct char_data *ch)

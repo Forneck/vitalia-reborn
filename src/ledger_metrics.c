@@ -9,6 +9,8 @@
 #define LEDGER_METRICS_FLUSH_SECONDS (15 * 60)
 #define LEDGER_METRICS_FLUSH_PULSES (LEDGER_METRICS_FLUSH_SECONDS * PASSES_PER_SEC)
 #define LEDGER_METRICS_SIZE_BUCKETS 6
+#define LEDGER_METRICS_HOURS 24
+#define LEDGER_METRICS_TOP_ZONES 8
 
 struct ledger_metrics_subsystem_data {
     unsigned long long events;
@@ -19,6 +21,7 @@ struct ledger_metrics_subsystem_data {
 struct ledger_metrics_data {
     unsigned long long event_counts[LEDGER_EVENT_MAX];
     unsigned long long event_size_buckets[LEDGER_EVENT_MAX][LEDGER_METRICS_SIZE_BUCKETS];
+    unsigned long long event_hour_counts[LEDGER_METRICS_HOURS];
     struct ledger_metrics_subsystem_data subsystem[LEDGER_SUBSYSTEM_MAX];
     unsigned long interval_pulses;
     unsigned long interval_mud_ticks;
@@ -29,6 +32,11 @@ static struct ledger_metrics_data total_data;
 static FILE *metrics_file = NULL;
 static bool metrics_enabled = FALSE;
 static bool open_failure_logged = FALSE;
+static unsigned long long *interval_zone_events = NULL;
+static unsigned long long *interval_zone_bytes = NULL;
+static unsigned long long *total_zone_events = NULL;
+static unsigned long long *total_zone_bytes = NULL;
+static size_t zone_metrics_count = 0;
 
 static const char *subsystem_names[LEDGER_SUBSYSTEM_MAX] = {"combat", "economy", "quest", "lifecycle"};
 static const char *event_names[LEDGER_EVENT_MAX] = {"character_death", "exp_delta", "quest_complete",
@@ -45,6 +53,29 @@ static int get_size_bucket(unsigned int estimated_size_bytes)
     return (LEDGER_METRICS_SIZE_BUCKETS - 1);
 }
 
+static zone_rnum get_zone_from_room(room_rnum room)
+{
+    zone_rnum zone;
+
+    if (room == NOWHERE || room < 0 || room > top_of_world)
+        return NOWHERE;
+
+    zone = world[room].zone;
+    if (zone < 0 || zone > top_of_zone_table)
+        return NOWHERE;
+
+    return zone;
+}
+
+static void reset_interval_data(void)
+{
+    memset(&interval_data, 0, sizeof(interval_data));
+    if (interval_zone_events && zone_metrics_count > 0)
+        memset(interval_zone_events, 0, zone_metrics_count * sizeof(*interval_zone_events));
+    if (interval_zone_bytes && zone_metrics_count > 0)
+        memset(interval_zone_bytes, 0, zone_metrics_count * sizeof(*interval_zone_bytes));
+}
+
 static bool has_interval_data(void)
 {
     int i;
@@ -54,11 +85,12 @@ static bool has_interval_data(void)
                 interval_data.subsystem[i].rng_calls)
                 return TRUE;
         }
+        for (i = 0; i < LEDGER_METRICS_HOURS; i++)
+            if (interval_data.event_hour_counts[i] > 0)
+                return TRUE;
     }
     return FALSE;
 }
-
-static void reset_interval_data(void) { memset(&interval_data, 0, sizeof(interval_data)); }
 
 static void flush_interval_data(unsigned long pulse, bool force)
 {
@@ -93,6 +125,50 @@ static void flush_interval_data(unsigned long pulse, bool force)
         }
     }
 
+    for (i = 0; i < LEDGER_METRICS_HOURS; i++)
+        if (interval_data.event_hour_counts[i] > 0)
+            fprintf(metrics_file, " hour_%d=%llu", i, interval_data.event_hour_counts[i]);
+
+    if (interval_zone_events && interval_zone_bytes && zone_metrics_count > 0) {
+        zone_rnum top_zone_index[LEDGER_METRICS_TOP_ZONES];
+        unsigned long long top_zone_events[LEDGER_METRICS_TOP_ZONES];
+        unsigned long long top_zone_bytes[LEDGER_METRICS_TOP_ZONES];
+
+        memset(top_zone_index, 0, sizeof(top_zone_index));
+        memset(top_zone_events, 0, sizeof(top_zone_events));
+        memset(top_zone_bytes, 0, sizeof(top_zone_bytes));
+
+        for (i = 0; i < (int)zone_metrics_count; i++) {
+            unsigned long long current_events = interval_zone_events[i];
+            unsigned long long current_bytes;
+            int pos;
+
+            if (current_events == 0)
+                continue;
+
+            current_bytes = interval_zone_bytes[i];
+            for (pos = 0; pos < LEDGER_METRICS_TOP_ZONES; pos++) {
+                int shift;
+                if (current_events <= top_zone_events[pos])
+                    continue;
+                for (shift = LEDGER_METRICS_TOP_ZONES - 1; shift > pos; shift--) {
+                    top_zone_events[shift] = top_zone_events[shift - 1];
+                    top_zone_bytes[shift] = top_zone_bytes[shift - 1];
+                    top_zone_index[shift] = top_zone_index[shift - 1];
+                }
+                top_zone_events[pos] = current_events;
+                top_zone_bytes[pos] = current_bytes;
+                top_zone_index[pos] = i;
+                break;
+            }
+        }
+
+        for (i = 0; i < LEDGER_METRICS_TOP_ZONES; i++)
+            if (top_zone_events[i] > 0)
+                fprintf(metrics_file, " zone_hot%d=%d:%llu:%llu", i, zone_table[top_zone_index[i]].number,
+                        top_zone_events[i], top_zone_bytes[i]);
+    }
+
     fprintf(metrics_file, "\n");
     fflush(metrics_file);
     reset_interval_data();
@@ -116,6 +192,28 @@ void ledger_metrics_init(void)
     setvbuf(metrics_file, NULL, _IOLBF, 0);
     memset(&interval_data, 0, sizeof(interval_data));
     memset(&total_data, 0, sizeof(total_data));
+
+    zone_metrics_count = (top_of_zone_table >= 0) ? ((size_t)top_of_zone_table + 1) : 0;
+    if (zone_metrics_count > 0) {
+        interval_zone_events = calloc(zone_metrics_count, sizeof(*interval_zone_events));
+        interval_zone_bytes = calloc(zone_metrics_count, sizeof(*interval_zone_bytes));
+        total_zone_events = calloc(zone_metrics_count, sizeof(*total_zone_events));
+        total_zone_bytes = calloc(zone_metrics_count, sizeof(*total_zone_bytes));
+
+        if (!interval_zone_events || !interval_zone_bytes || !total_zone_events || !total_zone_bytes) {
+            free(interval_zone_events);
+            free(interval_zone_bytes);
+            free(total_zone_events);
+            free(total_zone_bytes);
+            interval_zone_events = NULL;
+            interval_zone_bytes = NULL;
+            total_zone_events = NULL;
+            total_zone_bytes = NULL;
+            zone_metrics_count = 0;
+            log1("WARN: ledger metrics zone hotspots disabled (allocation failed).");
+        }
+    }
+
     metrics_enabled = TRUE;
 }
 
@@ -130,6 +228,15 @@ void ledger_metrics_shutdown(void)
         fclose(metrics_file);
         metrics_file = NULL;
     }
+    free(interval_zone_events);
+    free(interval_zone_bytes);
+    free(total_zone_events);
+    free(total_zone_bytes);
+    interval_zone_events = NULL;
+    interval_zone_bytes = NULL;
+    total_zone_events = NULL;
+    total_zone_bytes = NULL;
+    zone_metrics_count = 0;
     metrics_enabled = FALSE;
 }
 
@@ -153,7 +260,16 @@ void ledger_metrics_on_pulse(unsigned long heart_pulse)
 void ledger_metrics_record_event(enum ledger_metrics_subsystem subsystem, enum ledger_metrics_event_type event_type,
                                  unsigned int estimated_size_bytes)
 {
+    ledger_metrics_record_event_in_room(subsystem, event_type, estimated_size_bytes, NOWHERE);
+}
+
+void ledger_metrics_record_event_in_room(enum ledger_metrics_subsystem subsystem,
+                                         enum ledger_metrics_event_type event_type, unsigned int estimated_size_bytes,
+                                         room_rnum room)
+{
     int bucket;
+    zone_rnum zone;
+    int hour;
 
     if (!metrics_enabled)
         return;
@@ -168,11 +284,26 @@ void ledger_metrics_record_event(enum ledger_metrics_subsystem subsystem, enum l
     interval_data.subsystem[subsystem].estimated_bytes += estimated_size_bytes;
     interval_data.event_counts[event_type]++;
     interval_data.event_size_buckets[event_type][bucket]++;
+    hour = time_info.hours;
+    if (hour < 0)
+        hour = 0;
+    hour %= LEDGER_METRICS_HOURS;
+    interval_data.event_hour_counts[hour]++;
+    zone = get_zone_from_room(room);
+    if (zone >= 0 && (size_t)zone < zone_metrics_count && interval_zone_events && interval_zone_bytes) {
+        interval_zone_events[zone]++;
+        interval_zone_bytes[zone] += estimated_size_bytes;
+    }
 
     total_data.subsystem[subsystem].events++;
     total_data.subsystem[subsystem].estimated_bytes += estimated_size_bytes;
     total_data.event_counts[event_type]++;
     total_data.event_size_buckets[event_type][bucket]++;
+    total_data.event_hour_counts[hour]++;
+    if (zone >= 0 && (size_t)zone < zone_metrics_count && total_zone_events && total_zone_bytes) {
+        total_zone_events[zone]++;
+        total_zone_bytes[zone] += estimated_size_bytes;
+    }
 }
 
 void ledger_metrics_record_rng(enum ledger_metrics_subsystem subsystem, unsigned int calls)

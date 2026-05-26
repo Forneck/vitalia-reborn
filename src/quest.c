@@ -1096,7 +1096,7 @@ void generic_complete_quest(struct char_data *ch)
 
         /* Notify the room that the character completed a quest */
         act("$n completou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
-        ledger_metrics_record_event(LEDGER_SUBSYSTEM_QUEST, LEDGER_EVENT_QUEST_COMPLETE, 224);
+        ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_QUEST, LEDGER_EVENT_QUEST_COMPLETE, 224, IN_ROOM(ch));
 
         /* Emotion trigger: Quest completion (Quest-Related 2.4) */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
