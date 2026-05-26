@@ -32,7 +32,7 @@ static bool open_failure_logged = FALSE;
 
 static const char *subsystem_names[LEDGER_SUBSYSTEM_MAX] = {"combat", "economy", "quest", "lifecycle"};
 static const char *event_names[LEDGER_EVENT_MAX] = {"character_death", "exp_delta", "quest_complete",
-                                                     "shop_buy", "shop_sell", "rent_save"};
+                                                    "shop_buy",        "shop_sell", "rent_save"};
 static const unsigned int size_bucket_limits[LEDGER_METRICS_SIZE_BUCKETS - 1] = {64, 128, 256, 512, 1024};
 
 static int get_size_bucket(unsigned int estimated_size_bytes)
@@ -58,10 +58,7 @@ static bool has_interval_data(void)
     return FALSE;
 }
 
-static void reset_interval_data(void)
-{
-    memset(&interval_data, 0, sizeof(interval_data));
-}
+static void reset_interval_data(void) { memset(&interval_data, 0, sizeof(interval_data)); }
 
 static void flush_interval_data(unsigned long pulse, bool force)
 {

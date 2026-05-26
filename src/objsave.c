@@ -23,6 +23,7 @@
 #include "modify.h"
 #include "genolc.h" /* for strip_cr and sprintascii */
 #include "quest.h"  /* for check_and_fail_quest_with_magic_stone */
+#include "ledger_metrics.h"
 
 /* these factors should be unique integers */
 #define RENT_FACTOR 1
@@ -513,11 +514,8 @@ void Crash_listrent(struct char_data *ch, char *name)
             size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
             if (remaining <= 1)
                 break;
-            nlen = snprintf(buf + len, remaining,
-                            "[%5d] (%5dau) %-20s\r\n",
-                            GET_OBJ_VNUM(current->obj),
-                            GET_OBJ_RENT(current->obj),
-                            current->obj->short_description);
+            nlen = snprintf(buf + len, remaining, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
+                            GET_OBJ_RENT(current->obj), current->obj->short_description);
             if (nlen < 0 || (size_t)nlen >= remaining)
                 break;
             len += nlen;
@@ -800,6 +798,7 @@ void Crash_rentsave(struct char_data *ch, int cost)
     fclose(fp);
 
     Crash_extract_objs(ch->carrying);
+    ledger_metrics_record_event(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE, 512);
 }
 
 static int objsave_write_rentcode(FILE *fl, int rentcode, int cost_per_day, struct char_data *ch)

@@ -29,6 +29,7 @@
 #include <sys/stat.h> /* for mkdir() */
 #include "graph.h"
 #include "quest.h" /* for autoquest triggers */
+#include "ledger_metrics.h"
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
@@ -755,6 +756,8 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && bought > 0) {
         update_mob_emotion_fair_trade(keeper, ch);
     }
+    if (bought > 0)
+        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_BUY, 96 + (unsigned int)(bought * 32));
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);
@@ -1011,6 +1014,8 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
             update_mob_emotion_received_valuable(keeper, ch, goldamt);
         }
     }
+    if (sold > 0)
+        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_SELL, 96 + (unsigned int)(sold * 32));
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);

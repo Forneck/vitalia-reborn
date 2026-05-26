@@ -1,7 +1,8 @@
 #ifndef _LEDGER_METRICS_H_
 #define _LEDGER_METRICS_H_
 
-enum ledger_metrics_subsystem {
+enum ledger_metrics_subsystem
+{
     LEDGER_SUBSYSTEM_COMBAT = 0,
     LEDGER_SUBSYSTEM_ECONOMY,
     LEDGER_SUBSYSTEM_QUEST,
@@ -9,7 +10,8 @@ enum ledger_metrics_subsystem {
     LEDGER_SUBSYSTEM_MAX
 };
 
-enum ledger_metrics_event_type {
+enum ledger_metrics_event_type
+{
     LEDGER_EVENT_CHARACTER_DEATH = 0,
     LEDGER_EVENT_EXP_DELTA,
     LEDGER_EVENT_QUEST_COMPLETE,
