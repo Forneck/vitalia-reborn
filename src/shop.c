@@ -31,6 +31,9 @@
 #include "quest.h" /* for autoquest triggers */
 #include "ledger_metrics.h"
 
+#define LEDGER_SHOP_EVENT_BASE_BYTES 96U
+#define LEDGER_SHOP_EVENT_PER_ITEM_BYTES 32U
+
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
 const char *trade_letters[] = {"Good",                            /* First, the alignment based ones */
@@ -757,7 +760,9 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
         update_mob_emotion_fair_trade(keeper, ch);
     }
     if (bought > 0)
-        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_BUY, 96 + (unsigned int)(bought * 32));
+        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_BUY,
+                                    LEDGER_SHOP_EVENT_BASE_BYTES +
+                                        (unsigned int)(bought * LEDGER_SHOP_EVENT_PER_ITEM_BYTES));
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);
@@ -1015,7 +1020,9 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
         }
     }
     if (sold > 0)
-        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_SELL, 96 + (unsigned int)(sold * 32));
+        ledger_metrics_record_event(LEDGER_SUBSYSTEM_ECONOMY, LEDGER_EVENT_SHOP_SELL,
+                                    LEDGER_SHOP_EVENT_BASE_BYTES +
+                                        (unsigned int)(sold * LEDGER_SHOP_EVENT_PER_ITEM_BYTES));
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);

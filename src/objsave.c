@@ -28,6 +28,7 @@
 /* these factors should be unique integers */
 #define RENT_FACTOR 1
 #define CRYO_FACTOR 4
+#define LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES 512U
 
 #define LOC_INVENTORY 0
 #define MAX_BAG_ROWS 5
@@ -798,7 +799,8 @@ void Crash_rentsave(struct char_data *ch, int cost)
     fclose(fp);
 
     Crash_extract_objs(ch->carrying);
-    ledger_metrics_record_event(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE, 512);
+    ledger_metrics_record_event(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE,
+                                LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES);
 }
 
 static int objsave_write_rentcode(FILE *fl, int rentcode, int cost_per_day, struct char_data *ch)

@@ -27,6 +27,7 @@ void ledger_metrics_on_pulse(unsigned long heart_pulse);
 void ledger_metrics_record_event(enum ledger_metrics_subsystem subsystem, enum ledger_metrics_event_type event_type,
                                  unsigned int estimated_size_bytes);
 void ledger_metrics_record_rng(enum ledger_metrics_subsystem subsystem, unsigned int calls);
+/* Wrapper de rand_number() para contabilizar uso de RNG por subsistema sem alterar o resultado do sorteio. */
 int ledger_rand_number(enum ledger_metrics_subsystem subsystem, int from, int to);
 
 #endif
