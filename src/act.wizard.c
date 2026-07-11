@@ -1156,7 +1156,6 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                 if (any_ctx)
                     send_to_char(ch, "\r\n");
             }
-
         }
     }
 
@@ -1165,8 +1164,8 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 
 static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
 {
-    static const char *const action_names[] = {"MOVE", "ATTACK", "FLEE",      "USE_ITEM", "CAST_SPELL", "SOCIAL",
-                                               "TRADE", "QUEST",  "WAIT",      "FOLLOW",   "GROUP",      "GUARD"};
+    static const char *const action_names[] = {"MOVE",  "ATTACK", "FLEE", "USE_ITEM", "CAST_SPELL", "SOCIAL",
+                                               "TRADE", "QUEST",  "WAIT", "FOLLOW",   "GROUP",      "GUARD"};
     int old_capacity, top_n, used[SHADOW_MAX_PROJECTIONS];
     struct shadow_context *ctx;
 
@@ -1193,8 +1192,8 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
     send_to_char(ch, "\r\n%s=== Shadow Timeline Projections: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
                  CCNRM(ch, C_NRM));
     send_to_char(ch, "Generated: %s%d%s  Budget(start): %s%d%s  Budget(end): %s%d%s\r\n", CCCYN(ch, C_NRM),
-                 ctx->num_projections, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), old_capacity, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
-                 ctx->cognitive_budget, CCNRM(ch, C_NRM));
+                 ctx->num_projections, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), old_capacity, CCNRM(ch, C_NRM),
+                 CCCYN(ch, C_NRM), ctx->cognitive_budget, CCNRM(ch, C_NRM));
 
     if (ctx->num_projections <= 0) {
         send_to_char(ch, "No projections generated.\r\n\r\n");
@@ -1225,7 +1224,8 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
 
         used[best_idx] = 1;
         p = &ctx->projections[best_idx];
-        action_name = (p->action.type >= 0 && p->action.type < SHADOW_ACTION_MAX) ? action_names[p->action.type] : "UNKNOWN";
+        action_name =
+            (p->action.type >= 0 && p->action.type < SHADOW_ACTION_MAX) ? action_names[p->action.type] : "UNKNOWN";
         if (p->action.target && (p->action.type == SHADOW_ACTION_ATTACK || p->action.type == SHADOW_ACTION_SOCIAL ||
                                  p->action.type == SHADOW_ACTION_FOLLOW || p->action.type == SHADOW_ACTION_GROUP)) {
             struct char_data *target = (struct char_data *)p->action.target;
@@ -1234,8 +1234,8 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
         }
 
         send_to_char(ch,
-                     "  #%d [%2d] %-10s target:%-16s score:%4d danger:%3d reward:%3d horizon:%d cost:%d obvious:%s\r\n", rank + 1,
-                     best_idx + 1, action_name, target_name, p->outcome.score, p->outcome.danger_level,
+                     "  #%d [%2d] %-10s target:%-16s score:%4d danger:%3d reward:%3d horizon:%d cost:%d obvious:%s\r\n",
+                     rank + 1, best_idx + 1, action_name, target_name, p->outcome.score, p->outcome.danger_level,
                      p->outcome.reward_level, p->horizon, p->total_cost, p->outcome.obvious ? "yes" : "no");
     }
 
