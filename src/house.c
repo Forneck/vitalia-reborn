@@ -306,10 +306,8 @@ static void House_listrent(struct char_data *ch, room_vnum vnum)
             break;
 
         remaining = sizeof(buf) - (size_t)len;
-        nlen = snprintf(buf + len, remaining, " [%5d] (%5dau) %s\r\n",
-                        GET_OBJ_VNUM(current->obj),
-                        GET_OBJ_RENT(current->obj),
-                        current->obj->short_description);
+        nlen = snprintf(buf + len, remaining, " [%5d] (%5dau) %s\r\n", GET_OBJ_VNUM(current->obj),
+                        GET_OBJ_RENT(current->obj), current->obj->short_description);
         if (nlen < 0 || (size_t)nlen >= remaining)
             break;
         len += nlen;
