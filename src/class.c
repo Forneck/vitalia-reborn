@@ -310,7 +310,7 @@ static byte calc_save(int level, int start_value)
 }
 
 /* Starting saving throw values at level 1 for each class.
- * Order: PARA, ROD, PETRI, BREATH, SPELL 
+ * Order: PARA, ROD, PETRI, BREATH, SPELL
  * PARA changed to oldvalue + 10: MAG was 70, now 80*/
 static const int save_starts[NUM_CLASSES][5] = {
     /* CLASS_MAGIC_USER */ {80, 55, 65, 75, 60},

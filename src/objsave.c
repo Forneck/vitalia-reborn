@@ -513,11 +513,8 @@ void Crash_listrent(struct char_data *ch, char *name)
             size_t remaining = (len >= 0 && (size_t)len < sizeof(buf)) ? sizeof(buf) - (size_t)len : 0;
             if (remaining <= 1)
                 break;
-            nlen = snprintf(buf + len, remaining,
-                            "[%5d] (%5dau) %-20s\r\n",
-                            GET_OBJ_VNUM(current->obj),
-                            GET_OBJ_RENT(current->obj),
-                            current->obj->short_description);
+            nlen = snprintf(buf + len, remaining, "[%5d] (%5dau) %-20s\r\n", GET_OBJ_VNUM(current->obj),
+                            GET_OBJ_RENT(current->obj), current->obj->short_description);
             if (nlen < 0 || (size_t)nlen >= remaining)
                 break;
             len += nlen;

@@ -266,7 +266,7 @@ void entry_memory_mtrigger(char_data *ch)
 
     for (actor = world[IN_ROOM(ch)].people; actor && SCRIPT_MEM(ch); actor = actor->next_in_room) {
         if (actor != ch && SCRIPT_MEM(ch)) {
-            for (mem = SCRIPT_MEM(ch); mem && SCRIPT_MEM(ch); ) {
+            for (mem = SCRIPT_MEM(ch); mem && SCRIPT_MEM(ch);) {
                 struct script_memory *next_mem = mem->next;
 
                 if (char_script_id(actor) == mem->id) {

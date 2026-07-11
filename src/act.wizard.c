@@ -1179,6 +1179,11 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
         return;
     }
 
+    if (!MOB_FLAGGED(mob, MOB_SHADOWTIMELINE)) {
+        send_to_char(ch, "%s does not use active deliberation (Shadow Timeline disabled).\r\n", GET_NAME(mob));
+        return;
+    }
+
     old_capacity = mob->ai_data->cognitive_capacity;
     ctx = shadow_init_context(mob);
     if (!ctx) {
