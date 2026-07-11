@@ -39,6 +39,7 @@
 #include "graph.h"
 #include "emotion_projection.h"
 #include "sec.h"
+#include "shadow_timeline.h"
 #include <math.h>
 
 /* external functions*/
@@ -53,6 +54,7 @@ static void do_stat_room(struct char_data *ch, struct room_data *rm);
 static void do_stat_object(struct char_data *ch, struct obj_data *j);
 static void do_stat_character(struct char_data *ch, struct char_data *k);
 static void do_stat_malp(struct char_data *ch, struct char_data *mob);
+static void do_stat_shadow(struct char_data *ch, struct char_data *mob);
 static void stop_snooping(struct char_data *ch);
 static size_t print_zone_to_buf(char *bufptr, size_t left, zone_rnum zone, int listall);
 static struct char_data *is_in_game(long idnum);
@@ -1154,10 +1156,91 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                 if (any_ctx)
                     send_to_char(ch, "\r\n");
             }
+
         }
     }
 
     send_to_char(ch, "\r\n");
+}
+
+static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
+{
+    static const char *const action_names[] = {"MOVE", "ATTACK", "FLEE",      "USE_ITEM", "CAST_SPELL", "SOCIAL",
+                                               "TRADE", "QUEST",  "WAIT",      "FOLLOW",   "GROUP",      "GUARD"};
+    int old_capacity, top_n, used[SHADOW_MAX_PROJECTIONS];
+    struct shadow_context *ctx;
+
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "Shadow Timeline data is only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    old_capacity = mob->ai_data->cognitive_capacity;
+    ctx = shadow_init_context(mob);
+    if (!ctx) {
+        send_to_char(ch, "Failed to initialize Shadow Timeline context.\r\n");
+        return;
+    }
+
+    (void)shadow_generate_projections(ctx);
+    mob->ai_data->cognitive_capacity = old_capacity;
+
+    send_to_char(ch, "\r\n%s=== Shadow Timeline Projections: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 CCNRM(ch, C_NRM));
+    send_to_char(ch, "Generated: %s%d%s  Budget(start): %s%d%s  Budget(end): %s%d%s\r\n", CCCYN(ch, C_NRM),
+                 ctx->num_projections, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), old_capacity, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                 ctx->cognitive_budget, CCNRM(ch, C_NRM));
+
+    if (ctx->num_projections <= 0) {
+        send_to_char(ch, "No projections generated.\r\n\r\n");
+        shadow_free_context(ctx);
+        return;
+    }
+
+    memset(used, 0, sizeof(used));
+    top_n = MIN(5, ctx->num_projections);
+    send_to_char(ch, "Top %d scored projections:\r\n", top_n);
+
+    for (int rank = 0; rank < top_n; rank++) {
+        int best_idx = -1;
+        int best_score = -1000000;
+        struct shadow_projection *p;
+        const char *action_name;
+        const char *target_name = "none";
+
+        for (int i = 0; i < ctx->num_projections && i < SHADOW_MAX_PROJECTIONS; i++) {
+            if (!used[i] && ctx->projections[i].outcome.score > best_score) {
+                best_score = ctx->projections[i].outcome.score;
+                best_idx = i;
+            }
+        }
+
+        if (best_idx < 0)
+            break;
+
+        used[best_idx] = 1;
+        p = &ctx->projections[best_idx];
+        action_name = (p->action.type >= 0 && p->action.type < SHADOW_ACTION_MAX) ? action_names[p->action.type] : "UNKNOWN";
+        if (p->action.target && (p->action.type == SHADOW_ACTION_ATTACK || p->action.type == SHADOW_ACTION_SOCIAL ||
+                                 p->action.type == SHADOW_ACTION_FOLLOW || p->action.type == SHADOW_ACTION_GROUP)) {
+            struct char_data *target = (struct char_data *)p->action.target;
+            if (target && GET_NAME(target))
+                target_name = GET_NAME(target);
+        }
+
+        send_to_char(ch,
+                     "  #%d [%2d] %-10s target:%-16s score:%4d danger:%3d reward:%3d horizon:%d cost:%d obvious:%s\r\n", rank + 1,
+                     best_idx + 1, action_name, target_name, p->outcome.score, p->outcome.danger_level,
+                     p->outcome.reward_level, p->horizon, p->total_cost, p->outcome.obvious ? "yes" : "no");
+    }
+
+    send_to_char(ch, "\r\n");
+    shadow_free_context(ctx);
 }
 
 static void do_stat_character(struct char_data *ch, struct char_data *k)
@@ -2054,6 +2137,15 @@ ACMD(do_stat)
         else {
             if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
                 do_stat_malp(ch, victim);
+            else
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
+        }
+    } else if (is_abbrev(buf1, "shadow")) {
+        if (!*buf2)
+            send_to_char(ch, "Estatísticas de Shadow Timeline de qual mobile?\r\n");
+        else {
+            if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
+                do_stat_shadow(ch, victim);
             else
                 send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
         }
