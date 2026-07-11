@@ -1191,7 +1191,7 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
 
     send_to_char(ch, "\r\n%s=== Shadow Timeline Projections: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
                  CCNRM(ch, C_NRM));
-    send_to_char(ch, "Generated: %s%d%s  Budget(start): %s%d%s  Budget(end): %s%d%s\r\n", CCCYN(ch, C_NRM),
+    send_to_char(ch, "Generated: %s%d%s  Budget(start): %s%d%s  SimBudget(end): %s%d%s\r\n", CCCYN(ch, C_NRM),
                  ctx->num_projections, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), old_capacity, CCNRM(ch, C_NRM),
                  CCCYN(ch, C_NRM), ctx->cognitive_budget, CCNRM(ch, C_NRM));
 
@@ -1226,11 +1226,19 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
         p = &ctx->projections[best_idx];
         action_name =
             (p->action.type >= 0 && p->action.type < SHADOW_ACTION_MAX) ? action_names[p->action.type] : "UNKNOWN";
-        if (p->action.target && (p->action.type == SHADOW_ACTION_ATTACK || p->action.type == SHADOW_ACTION_SOCIAL ||
-                                 p->action.type == SHADOW_ACTION_FOLLOW || p->action.type == SHADOW_ACTION_GROUP)) {
-            struct char_data *target = (struct char_data *)p->action.target;
-            if (target && GET_NAME(target))
-                target_name = GET_NAME(target);
+        if (p->action.target) {
+            if (p->action.type == SHADOW_ACTION_USE_ITEM) {
+                struct obj_data *target_obj = (struct obj_data *)p->action.target;
+                if (target_obj && target_obj->short_description)
+                    target_name = target_obj->short_description;
+            } else if (p->action.type == SHADOW_ACTION_ATTACK || p->action.type == SHADOW_ACTION_CAST_SPELL ||
+                       p->action.type == SHADOW_ACTION_SOCIAL || p->action.type == SHADOW_ACTION_TRADE ||
+                       p->action.type == SHADOW_ACTION_QUEST || p->action.type == SHADOW_ACTION_FOLLOW ||
+                       p->action.type == SHADOW_ACTION_GROUP) {
+                struct char_data *target = (struct char_data *)p->action.target;
+                if (target && GET_NAME(target))
+                    target_name = GET_NAME(target);
+            }
         }
 
         send_to_char(ch,
