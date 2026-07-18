@@ -1,1 +1,21 @@
+#10804
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (O Final da Trilha). Vá até lá para receber 267 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 1106 -1 -1 -1
+12 53 7 32 -1 3015 1
+267 534 65535
+S
+#10874
+Buscar um martelo de túmulo~
+Buscar e trazer um martelo de túmulo~
+um batelão avermelhado está procurando por um martelo de túmulo. Se você encontrar este item, traga-o para mim ou diretamente para um batelão avermelhado para receber 389 moedas de ouro, 778 pontos de experiência e uma cimitarra como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 1720 -1 -1 -1
+10 0 11 36 -1 1713 1
+389 778 1700
+S
 $~

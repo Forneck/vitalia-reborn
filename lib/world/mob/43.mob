@@ -54,8 +54,9 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 8 12 1 5d3+115 3d4+10
 2853 6578
 9 9 1
-GenWimpy: 14
+GenWimpy: 19
 GenRoam: 89
+GenFollow: 14
 E
 #4321
 menino cantor coral~
@@ -70,8 +71,9 @@ qualquer música por algum dinheiro.
 10 14 3 5d2+155 3d3+5
 1200 4800
 9 9 1
-GenWimpy: 8
-GenRoam: 86
+GenWimpy: 12
+GenRoam: 89
+GenFollow: 13
 E
 #4322
 crente~
@@ -114,8 +116,9 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 22
-GenRoam: 67
+GenWimpy: 31
+GenRoam: 86
+GenFollow: 4
 E
 #4326
 homem corcunda~
@@ -130,6 +133,8 @@ roupas coloridas.
 33 4 -3 3d20+1576 9d6+18
 2500 45753
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #4330
 Monge Jean~
@@ -145,8 +150,9 @@ Ele está vestido com uma túnica marrom.
 8 17 5 3d4+75 4d2+2
 3825 2567
 9 9 1
-GenWimpy: 49
-GenRoam: 47
+GenWimpy: 78
+GenRoam: 88
+GenFollow: 9
 E
 #4334
 estatua gargula pedra~
@@ -162,7 +168,9 @@ maldades e tristezas do mundo. Este monstro horrível parece ser perigoso.
 18653 33656
 9 9 0
 BareHandAttack: 10
-GenWimpy: 5
+GenWimpy: 7
+GenLoot: 4
+GenFollow: 14
 E
 #4337
 Dartagnan~
@@ -191,8 +199,9 @@ um grande lutador.
 8 15 1 3d4+75 3d3+8
 1000 1200
 9 9 1
-GenWimpy: 3
-GenRoam: 70
+GenWimpy: 10
+GenRoam: 88
+GenFollow: 9
 E
 #4341
 poodle~
@@ -291,6 +300,9 @@ em seu bolso.
 150 3275
 9 9 1
 BareHandAttack: 13
+GenWimpy: 3
+GenRoam: 71
+GenFollow: 9
 E
 #4355
 esquilo marrom~
@@ -304,8 +316,9 @@ Um esquilo marrom está aqui, a procura de nozes.
 0 85
 9 9 1
 BareHandAttack: 4
-GenWimpy: 1
-GenRoam: 14
+GenWimpy: 6
+GenRoam: 69
+GenFollow: 4
 E
 #4357
 cigana misteriosa linda Esmeralda~
@@ -335,8 +348,9 @@ de insegurança que todos na França estão vivendo neste momento.
 1250 1873
 9 9 1
 BareHandAttack: 13
-GenWimpy: 2
-GenRoam: 45
+GenWimpy: 6
+GenRoam: 78
+GenFollow: 10
 E
 #4367
 Revolucionario Robespierre~
@@ -368,6 +382,8 @@ se torne Mosqueteiro.
 500 8500
 4 9 1
 BareHandAttack: 3
+GenWimpy: 3
+GenFollow: 12
 E
 #4371
 Monet~

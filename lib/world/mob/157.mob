@@ -10,6 +10,9 @@ se irritar facilmente.
 40 10 -2 3d10+700 4d5+10
 2000 6000
 9 9 1
+GenWimpy: 5
+GenRoam: 66
+GenFollow: 14
 E
 #15702
 guarda~
@@ -38,6 +41,8 @@ muito o que fazer.
 50 10 -9 3d10+700 4d5+10
 6000 50000
 9 6 2
+GenWimpy: 2
+GenFollow: 7
 E
 #15704
 chefe cozinheiro~
@@ -125,6 +130,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 16
 E
 T 3009
 #15710
@@ -157,6 +164,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 14
 E
 T 3009
 #15712
@@ -176,6 +185,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 14
 E
 T 3009
 #15713
@@ -219,6 +230,8 @@ prisão.
 80 0 -29 6d9+2800 6d7+18
 3000 70000
 9 6 1
+GenWimpy: 7
+GenFollow: 17
 E
 #15716
 teleques esqueleto~
@@ -231,6 +244,8 @@ Um esqueleto está aqui.
 50 10 -9 4d9+1600 5d6+30
 10000 60000
 9 9 1
+GenWimpy: 5
+GenFollow: 14
 E
 #15717
 ponei cavalo~

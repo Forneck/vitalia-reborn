@@ -19,6 +19,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 8
+GenLoot: 4
+GenFollow: 14
 E
 #9301
 dragao anciao prateado~
@@ -29,7 +32,7 @@ O Dragão Prateado possui uma aparência magnífica.  Suas escamas prateadas
 brilham como se espalhassem bondade e fraternidade para todos os lados.
 Cinco chifres formam uma imponente coroa prateada em torno de sua cabeça.
 ~
-2881810 0 0 0 83954008 0 0 0 1000 E
+2881810 0 0 0 1157957720 0 0 0 1000 E
 106 -30 -80 10d5+20000 10d9+50
 180000 7000000
 9 9 1
@@ -63,6 +66,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 15
 E
 #9303
 dragao tiamat~
@@ -90,6 +95,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenLoot: 2
+GenFollow: 15
 E
 #9304
 dragao anciao branco~
@@ -204,6 +212,9 @@ Int: 20
 Wis: 20
 Con: 25
 Cha: 25
+GenWimpy: 7
+GenLoot: 88
+GenFollow: 16
 E
 #9309
 dragao anciao amarelo~
@@ -227,6 +238,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 25
+GenWimpy: 5
+GenFollow: 15
 E
 #9310
 anciao dracolich~
@@ -275,6 +288,9 @@ Dex: 25
 Int: 20
 Wis: 20
 Con: 20
+GenWimpy: 10
+GenLoot: 19
+GenFollow: 16
 E
 #9312
 dragoneza fada rainha~
@@ -338,6 +354,9 @@ Dex: 18
 Int: 15
 Wis: 15
 Cha: 20
+GenWimpy: 5
+GenRoam: 63
+GenFollow: 14
 E
 #9315
 dragoneza fada~
@@ -379,6 +398,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenLoot: 21
+GenFollow: 15
 E
 #9317
 guardiao paz~
@@ -438,9 +460,10 @@ ele mesmo e pintadas com vários tons de tinta.
 Str: 8
 Dex: 15
 Con: 8
-GenWimpy: 23
+GenWimpy: 28
 GenLoot: 1
 GenRoam: 88
+GenFollow: 9
 E
 #9320
 duende~
@@ -459,8 +482,10 @@ ela mesma e pintadas com vários tons de tinta.
 Str: 8
 Con: 8
 Cha: 15
-GenWimpy: 14
+GenWimpy: 24
+GenLoot: 4
 GenRoam: 89
+GenFollow: 10
 E
 #9322
 fada~
@@ -481,8 +506,10 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 23
+GenWimpy: 35
+GenLoot: 2
 GenRoam: 89
+GenFollow: 8
 E
 #9323
 filhote dragao verde~
@@ -503,7 +530,8 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 35
+GenWimpy: 39
+GenFollow: 12
 E
 #9324
 aranha fogo~
@@ -523,6 +551,8 @@ A Aranha-de-fogo é do mesmo tamanho de um cão-de-guarda.
 BareHandAttack: 1
 Str: 12
 Con: 13
+GenWimpy: 5
+GenFollow: 14
 E
 #9325
 dromedario~
@@ -540,9 +570,10 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 98
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 3
+GenRoam: 89
+GenFollow: 13
 E
 #9326
 serpente negra~
@@ -603,7 +634,9 @@ Int: 7
 Wis: 7
 Con: 8
 Cha: 18
-GenWimpy: 1
+GenWimpy: 3
+GenLoot: 1
+GenFollow: 7
 E
 #9329
 mensageiro paz~

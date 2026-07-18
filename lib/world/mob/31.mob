@@ -25,6 +25,7 @@ cavar mais uma sepultura.
 13 300
 6 6 1
 GenWimpy: 1
+GenFollow: 3
 E
 #3102
 chefe sentinela~
@@ -37,8 +38,9 @@ Um chefe muito bravo.
 17 3 1 1d12+210 1d8+18
 0 28000
 9 9 1
-GenWimpy: 18
-GenLoot: 30
+GenWimpy: 14
+GenLoot: 45
+GenFollow: 11
 E
 #3103
 sentinela guarda~
@@ -51,8 +53,9 @@ Um grande, forte e bravo sentinela.
 10 10 2 1d12+123 1d8+3
 0 9000
 9 9 1
-GenWimpy: 24
-GenLoot: 2
+GenWimpy: 69
+GenLoot: 8
+GenFollow: 18
 E
 #3104
 secretaria~
@@ -68,7 +71,8 @@ A Secretária diz 'Por favor, sente-se enquanto espera.'
 12 9 2 1d12+148 2d7+1
 100 13000
 9 9 2
-GenWimpy: 2
+GenWimpy: 7
+GenFollow: 4
 E
 #3105
 prefeito~
@@ -84,6 +88,9 @@ Ele é um homem atarracado, de meia-idade, com cabelos ralos e acinzentados.
 Dex: 25
 Int: 16
 Con: 20
+GenWimpy: 16
+GenLoot: 2
+GenFollow: 13
 E
 #3106
 chorao~
@@ -96,8 +103,9 @@ Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 13
-GenRoam: 76
+GenWimpy: 17
+GenRoam: 82
+GenFollow: 4
 E
 #3120
 cisne~
@@ -112,6 +120,7 @@ O cisne branco é muito elegante.
 9 9 1
 GenWimpy: 1
 GenLoot: 4
+GenFollow: 3
 E
 #3121
 patinho~
@@ -124,6 +133,7 @@ O patinho é adorável, ele se parece mais com um floquinho de plumas pequenino.
 0 20 10 1d1+0 1d1+0
 0 1
 9 9 1
+GenFollow: 3
 E
 #3122
 pardal~
@@ -136,9 +146,10 @@ Parece que o pardal está aproveitando a vida.
 0 20 10 2d6+0 1d3+0
 0 25
 9 9 1
-GenWimpy: 16
+GenWimpy: 31
 GenLoot: 1
-GenRoam: 82
+GenRoam: 87
+GenFollow: 4
 E
 #3123
 pato~
@@ -151,8 +162,10 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 35
+GenWimpy: 55
+GenLoot: 1
 GenRoam: 87
+GenFollow: 6
 E
 #3124
 guarda-costas~

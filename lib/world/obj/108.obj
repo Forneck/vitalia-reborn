@@ -85,9 +85,9 @@ colar apolo~
 o colar de Apolo~
 O misterioso colar de Apolo foi esquecido aqui.~
 ~
-11 begikq 0 0 0 ac 0 0 0 c 0 0 0
-0 0 0 0
-5 510000 51000 30 0
+9 begkq 0 0 0 ac 0 0 0 c 0 0 0
+5 0 0 0
+5 510000 51000 90 0
 E
 colar apolo~
 Você observa um belo colar de prata preso a uma esfera de cristal azulada.
@@ -95,11 +95,13 @@ Cassandra de Tróia recebeu este presente do deus da música, Apolo, quando
 fora amada por ele.
 ~
 A
-5 1
+5 2
 A
-6 2
+6 4
 A
-19 2
+19 3
+A
+18 1
 #10805
 armadura aquiles~
 a armadura de Aquiles~
@@ -449,9 +451,9 @@ bracelete rubi afrodite~
 o bracelete de Afrodite~
 Um belo bracelete de rubi foi esquecido aqui.~
 ~
-11 aegikq 0 0 0 am 0 0 0 c 0 0 0
+11 aegikq 0 0 0 am 0 0 0 d 0 0 0
 0 0 0 0
-5 350000 35000 30 0
+5 350000 35000 0 0
 E
 bracelete rubi afrodite~
 Você observa um lindo e majestoso bracelete de rubi.  Vermelho sangue, ele
@@ -507,8 +509,8 @@ a armadura de Páris~
 Uma magnífica armadura negra foi esquecida aqui.~
 ~
 9 aegiq 0 0 0 ad 0 0 0 c 0 0 0
-10 0 0 0
-20 650000 65000 35 0
+15 0 0 0
+20 650000 65000 30 0
 E
 armadura magnifica paris~
 Você observa uma imponente armadura negra com o brasão troiano talhado na
@@ -736,9 +738,9 @@ tridente poseidon azul~
 o imponente tridente de Poseidon~
 Um magnífico tridente azul foi esquecido aqui.~
 ~
-5 aegiq 0 0 0 an 0 0 0 c 0 0 0
-0 4 7 11
-10 1500000 150000 80 0
+5 aegiq 0 0 0 an 0 0 0 y 0 0 0
+10 6 6 11
+10 1500000 150000 70 0
 E
 tridente poseidon azul~
 Você observa o poderoso tridente do deus dos mares, Poseidon.  O belo
@@ -747,9 +749,9 @@ de cristal na sua extremidade inferior e três espigões na sua extremidade
 superior.
 ~
 A
-18 4
+18 9
 A
-19 5
+19 8
 #10841
 arco belo madeira amazonas~
 o arco das amazonas~
@@ -927,15 +929,17 @@ bracelete branco-acinzentado branco acinzentado zinco~
 um bracelete de zinco~
 Um belo bracelete branco-acinzentado foi esquecido aqui.~
 ~
-11 aekq 0 0 0 am 0 0 0 c 0 0 0
-0 0 0 0
-6 55000 5500 10 0
+9 aekq 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
+6 55000 5500 90 0
 E
 bracelete branco-acinzentado branco acinzentado zinco~
 Você observa um belo bracelete de zinco com detalhes em ouro.
 ~
 A
-19 1
+18 2
+A
+19 3
 #10852
 bracelete esverdeado pomerania~
 um bracelete da Pomerânia~
@@ -1018,9 +1022,9 @@ brinco jade esverdeado~
 um brinco esverdeado~
 Um brinco esverdeado foi deixado aqui.~
 ~
-11 aegq 0 0 0 aq 0 0 0 c 0 0 0
-0 0 0 0
-3 65000 6500 12 0
+9 aegq 0 0 0 aq 0 0 0 0 0 0 0
+3 0 0 0
+3 65000 6500 0 0
 E
 brinco jade esverdeado~
 Você observa um belo brinco esverdeado, feito com a belíssima pedra jade.
@@ -1878,16 +1882,16 @@ Uma bela maçã de ouro foi jogada aqui.~
 0 0 0 0
 5 2000000 200000 0 0
 E
-inscricoes~
-                              <=-À Mais Bela -=>
-~
-E
 maca ouro pomo discordia~
 Você observa o fruto que deu origem a guerra de Tróia.  O pomo da discórdia,
 incorporada por uma bela maçã de ouro, que foi jogada por Éris, a deusa da
 discórdia, entre as deusas Atena, Hera e Afrodite.  E que gerou uma disputa
 entre as três para se saber quem era "à mais bela".  Você observa a bela
 maçã de ouro e percebe algumas inscrições esculpidas no ouro.
+~
+E
+inscricoes~
+                              <=-À Mais Bela -=>
 ~
 #10917
 portal magico pegaso~
@@ -2081,4 +2085,50 @@ A
 1 1
 A
 3 1
+#10931
+caveira humana~
+uma caveira humana~
+Uma caveira humana esta aqui.~
+~
+15 q 0 0 0 ao 0 0 0 0 0 0 0
+350 5 -1 0
+3 2500 0 0 0
+#10932
+botas ferro cracas~
+um par de botas de ferro~
+Um par de botas de ferro coberdo de cracas foi deixada aqui.~
+~
+9 q 0 0 0 ag 0 0 0 0 0 0 0
+8 0 0 0
+7 100 10 70 0
+A
+2 -2
+A
+18 1
+A
+19 2
+#10933
+arco apolo~
+um arco com simbolos do Deus Apolo~
+Um simples arco de madeira ordando com pequenos simbolos se encontra aqui,~
+~
+29 aqs 0 0 0 an 0 0 0 0 0 0 0
+30 0 0 0
+5 10000 100 0 0
+A
+18 3
+A
+19 3
+A
+14 50
+#10934
+flecha troiana apolo~
+algumas flechas abencoadas por Apolo~
+Algumas felechas troianas foram largadas aqui.~
+~
+7 gpqs 0 0 0 au 0 0 0 0 0 0 0
+20 4 4 1
+5 500 0 0 0
+A
+14 50
 $~

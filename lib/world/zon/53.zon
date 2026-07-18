@@ -2,6 +2,9 @@
 Vitalia~
 A Grande Pirâmide~
 5300 5399 80 2 j 0 0 0 5 50 4
+M 0 5309 1 5311 	(o Efreeti)
+E 1 5307 5 0 	(uma pequena bola quente de fogo)
+E 1 3824 10 21 	(o Card Bracelete do Verão)
 M 0 5300 6 5302 	(a horrível cobra)
 M 0 5300 6 5305 	(a horrível cobra)
 M 0 5300 6 5313 	(a horrível cobra)
@@ -53,9 +56,6 @@ M 0 5308 4 5354 	(o homem de areia)
 M 0 5308 4 5355 	(o homem de areia)
 M 0 5308 4 5356 	(o homem de areia)
 M 0 5308 4 5357 	(o homem de areia)
-M 0 5309 1 5311 	(o Efreeti)
-E 1 5307 5 0 	(uma pequena bola quente de fogo)
-E 1 3824 1 17 	(o Card Bracelete do Verão)
 M 0 5310 2 5345 	(a cariátide)
 E 1 5308 3 16 	(uma cimitarra de pedra)
 M 0 5310 2 5345 	(a cariátide)

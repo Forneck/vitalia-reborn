@@ -22,6 +22,7 @@ void destroy_shops(void);
 void save_shop_nonnative(shop_vnum shop_num, struct char_data *keeper);
 void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper);
 int ok_shop_room(int shop_nr, room_vnum room);
+int is_shop_room(room_vnum room);
 /* Adicione estas linhas em src/shop.h */
 shop_rnum find_shop_by_keeper(mob_rnum rnum);
 bool is_shop_open(shop_rnum snum);

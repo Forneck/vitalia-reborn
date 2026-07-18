@@ -83,6 +83,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 14
 E
 #13704
 Orophin elfo~
@@ -227,6 +229,10 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
+GenWimpy: 10
+GenLoot: 4
+GenRoam: 87
+GenFollow: 4
 E
 #13711
 esquilo dourado~
@@ -245,7 +251,8 @@ Str: 7
 Wis: 8
 Con: 8
 Cha: 18
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 6
+GenRoam: 83
+GenFollow: 5
 E
 $

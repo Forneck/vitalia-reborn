@@ -50,14 +50,18 @@ extern room_vnum frozen_start_room;
 extern room_vnum donation_room_1;
 extern room_vnum donation_room_2;
 extern room_vnum donation_room_3;
+extern room_vnum donation_room_4;
 
 extern room_vnum dead_start_room;
 extern room_vnum hometown_1;
 extern room_vnum hometown_2;
 extern room_vnum hometown_3;
+extern room_vnum hometown_4;
 extern room_vnum ress_room_1;
 extern room_vnum ress_room_2;
 extern room_vnum ress_room_3;
+extern room_vnum ress_room_4;
+extern room_vnum dt_warehouse_room;
 
 /* Game Operation settings */
 extern ush_int DFLT_PORT;
@@ -85,6 +89,7 @@ extern int weather_affects_spells;
 extern int school_weather_affects;
 extern int max_pathfind_iterations;
 extern int max_zone_path;
+extern int max_house_objs;
 /* Automap and map options */
 extern int map_option;
 extern int default_map_size;

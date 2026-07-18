@@ -24,6 +24,7 @@
 #include "fight.h"
 #include "oasis.h" /* for buildwalk */
 #include "ann.h"
+#include "quest.h"
 
 /* local only functions */
 /* do_simple_move utility functions */
@@ -151,7 +152,15 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     /* The room the character is currently in and will move from... */
     room_rnum was_in = IN_ROOM(ch);
     /* ... and the room the character will move into. */
-    room_rnum going_to = EXIT(ch, dir)->to_room;
+    room_rnum going_to;
+
+    /* Validate exit before accessing to_room to prevent segfault */
+    if (!EXIT(ch, dir) || EXIT(ch, dir)->to_room == NOWHERE) {
+        log1("SYSERR: do_simple_move: ch=%s attempting invalid move to dir=%d", GET_NAME(ch), dir);
+        return 0;
+    }
+
+    going_to = EXIT(ch, dir)->to_room;
     /* How many movement points are required to travel from was_in to
        going_to. We redefine this later when we need it. */
     int need_movement = 0;
@@ -355,12 +364,100 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     if (ch->desc != NULL)
         look_at_room(ch, 0);
 
+    /* Autoquest trigger checks: Must be after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(ch)) {
+        autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+    }
+
+    /* Emotion trigger: Entering dangerous or safe areas (Environmental 2.2) */
+    if (IS_NPC(ch) && ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Check for dangerous areas - death traps, dangerous sectors, high-level zones */
+        if (ROOM_FLAGGED(going_to, ROOM_DEATH) || SECT(going_to) == SECT_LAVA || SECT(going_to) == SECT_QUICKSAND ||
+            SECT(going_to) == SECT_UNDERWATER) {
+            update_mob_emotion_entered_dangerous_area(ch);
+        }
+        /* Check for safe areas - peaceful rooms, cities, indoors */
+        else if (ROOM_FLAGGED(going_to, ROOM_PEACEFUL) || ROOM_FLAGGED(going_to, ROOM_HEAL) ||
+                 SECT(going_to) == SECT_CITY || SECT(going_to) == SECT_INSIDE) {
+            /* Only trigger if coming from a dangerous area */
+            if (!ROOM_FLAGGED(was_in, ROOM_PEACEFUL) && !ROOM_FLAGGED(was_in, ROOM_HEAL) && SECT(was_in) != SECT_CITY &&
+                SECT(was_in) != SECT_INSIDE) {
+                update_mob_emotion_entered_safe_area(ch);
+            }
+        }
+    }
+
     /* ... and Kill the player if the room is a death trap. */
     if (ROOM_FLAGGED(going_to, ROOM_DEATH) && GET_LEVEL(ch) < LVL_IMMORT) {
         mudlog(BRF, LVL_IMMORT, TRUE, "%s hit death trap #%d (%s)", GET_NAME(ch), GET_ROOM_VNUM(going_to),
                world[going_to].name);
         GET_DTS(ch)++;
         death_cry(ch);
+
+        /* Mob emotion updates and mourning for death trap deaths (experimental feature) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            /* Notify mobs in the room about the death trap death */
+            struct char_data *witness, *next_witness;
+            bool should_mourn;
+
+            /* Use safe iteration pattern since act() and socials can trigger extraction */
+            for (witness = world[going_to].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch)
+                    continue;
+
+                /* Check if witness should mourn */
+                should_mourn = FALSE;
+
+                /* Group members mourn */
+                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                    should_mourn = TRUE;
+                }
+                /* Same alignment with decent relationship */
+                else if (IS_NPC(ch) && GET_ALIGNMENT(witness) * GET_ALIGNMENT(ch) > 0 &&
+                         witness->ai_data->emotion_friendship >= 40) {
+                    should_mourn = TRUE;
+                }
+                /* High compassion mobs mourn anyone non-evil */
+                else if (witness->ai_data->emotion_compassion >= 70 && !IS_EVIL(ch)) {
+                    should_mourn = TRUE;
+                }
+
+                if (should_mourn) {
+                    mob_mourn_death(witness, ch);
+
+                    /* Safety check: mob_mourn_death can trigger extraction via socials/scripts */
+                    if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Revalidate ai_data after potential extraction */
+                    if (!witness->ai_data)
+                        continue;
+                }
+
+                /* Update witness emotions based on the death */
+                if (IS_NPC(ch) && witness->ai_data) {
+                    /* Witnessing mob death in trap */
+                    if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                        /* Ally died in trap */
+                        update_mob_emotion_ally_died(witness, ch);
+
+                        /* Safety check: emotion update shouldn't cause extraction, but verify */
+                        if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Extra fear from death trap */
+                        if (witness->ai_data) {
+                            witness->ai_data->emotion_fear =
+                                URANGE(0, witness->ai_data->emotion_fear + rand_number(10, 20), 100);
+                        }
+                    }
+                }
+            }
+        }
+
         extract_char(ch);
         return (0);
     }
@@ -743,6 +840,11 @@ ACMD(do_enter)
                 char_to_room(ch, target_room_rnum);
                 act("$n aparece saindo de $p.", TRUE, ch, obj, 0, TO_ROOM);
                 look_at_room(ch, 1);
+                /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+                if (!IS_NPC(ch)) {
+                    autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+                    autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+                }
                 return;
             }
         }
@@ -1134,9 +1236,21 @@ int stop_flying(struct char_data *ch)
         send_to_char(ch, "Você tenta parar de voar, mas algo lhe mantêm no ar.\r\n");
         return 0;
     } else {
+        /* Remove the fly spell affect so player must cast fly again */
+        if (affected_by_spell(ch, SPELL_FLY))
+            affect_from_char(ch, SPELL_FLY);
+
+        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+
+        /* Check if player can still fly after removing spell (e.g., via items) */
+        if (has_flight(ch)) {
+            SET_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+            send_to_char(ch, "Você tenta aterrisar, mas seus itens mágicos mantêm você no ar.\r\n");
+            return (0);
+        }
+
         send_to_char(ch, "Você aterrisa.\r\n");
         act("$n aterrissa.", TRUE, ch, 0, 0, TO_ROOM);
-        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
     }
     return (1);
 }

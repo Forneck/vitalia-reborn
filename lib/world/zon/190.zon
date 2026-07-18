@@ -2,6 +2,11 @@
 Vitalia~
 Os Bosques dos Elfos~
 19000 19099 60 2 j 0 0 0 -1 50 0
+M 0 19031 1 19019 	(o Campeão)
+E 1 19003 10 8 	(uma cota de malha de Mithril)
+E 1 19008 5 16 	(um par de grevas élficas)
+E 1 19001 10 20 	(uma linda espada longa)
+E 1 3820 10 21 	(o Card Chave de Nabaqila)
 D 0 19001 3 1 	(Entrada para a Floresta dos Elfos)
 M 0 19001 2 19001 	(o Guardião Elfo)
 E 1 19003 10 5 	(uma cota de malha de Mithril)
@@ -142,11 +147,6 @@ E 1 19022 20 1 	(um pequenino anel com uma opala de fogo)
 M 0 19029 4 19062 	(o urso crescido)
 M 0 19030 3 19067 	(o enorme tigre)
 M 0 19032 2 19082 	(um enorme corvo negro)
-M 0 19031 1 19019 	(o Campeão)
-E 1 3820 1 17 	(o Card Chave de Nabaqila)
-E 1 19001 10 16 	(uma linda espada longa)
-E 1 19003 10 5 	(uma cota de malha de Mithril)
-E 1 19008 4 7 	(um par de grevas élficas)
 M 0 19012 1 19035 	(o elfo jardineiro)
 E 1 19047 10 17 	(uma tesoura de poda)
 E 1 19048 10 5 	(um macacão de jardineiro)

@@ -40,4 +40,19 @@ else
 end
 open north
 ~
+#1803
+Luz para Cabana~
+1 c 7
+en~
+* By Rumble of The Builder Academy    tbamud.com 9091
+if %cmd.mudcommand% == enter && %arg% == luz
+  %send% %actor% Você passa através da luz.
+  %echoaround% %actor% %actor.name% bravamente entra na luz.
+  %teleport% %actor% 1803
+  %force% %actor% look
+  %echoaround% %actor% %actor.name% acabou de sair da estátua.
+else
+  %send% %actor% %cmd% oquê?!
+end
+~
 $~

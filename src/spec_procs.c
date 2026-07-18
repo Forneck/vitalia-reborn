@@ -184,6 +184,9 @@ SPECIAL(guild)
 
     SET_SKILL(ch, skill_num, MIN(LEARNED(ch), percent));
 
+    /* Update any variant skills that depend on this skill as a prerequisite */
+    update_variant_skills(ch, skill_num, GET_SKILL(ch, skill_num));
+
     if (GET_SKILL(ch, skill_num) >= LEARNED(ch))
         send_to_char(ch, "Voce agora conhece o suficiente!\r\n");
 

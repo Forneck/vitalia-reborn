@@ -1,0 +1,71 @@
+VITALIA REBORN - DEATH_CRY SEGFAULT FIX
+========================================
+
+ISSUE: Program received signal SIGSEGV in death_cry()
+       Stack trace: death_cry() -> raw_kill() -> die() -> damage() -> mag_damage() -> 
+                    call_magic() -> do_dg_cast() -> script_driver() -> fight_mtrigger() -> 
+                    hit() -> perform_violence() -> heartbeat() -> game_loop() -> init_game() -> main()
+
+ROOT CAUSE: Missing room validation before accessing world array
+
+PROBLEM CODE (line 284 in src/fight.c):
+  void death_cry(struct char_data *ch)
+  {
+      int door;
+      act("Você se arrepia ao escutar o grito de morte de $n.", FALSE, ch, 0, 0, TO_ROOM);
+      for (door = 0; door < DIR_COUNT; door++)
+          if (CAN_GO(ch, door))
+              send_to_room(world[IN_ROOM(ch)].dir_option[door]->to_room,  // ← CRASH HERE
+                           "Você se arrepia ao escutar o grito de morte de alguém.\r\n");
+  }
+
+WHY IT CRASHES:
+  - If IN_ROOM(ch) is NOWHERE (invalid room marker)
+  - If IN_ROOM(ch) is negative (invalid index)
+  - If IN_ROOM(ch) is beyond top_of_world (out of bounds)
+  - Then world[IN_ROOM(ch)] accesses invalid memory → SEGFAULT
+
+THE FIX (added lines 282-284):
+  void death_cry(struct char_data *ch)
+  {
+      int door;
+      
+      /* Safety check: validate room before accessing world array */
+      if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+          return;
+      
+      act("Você se arrepia ao escutar o grito de morte de $n.", FALSE, ch, 0, 0, TO_ROOM);
+      for (door = 0; door < DIR_COUNT; door++)
+          if (CAN_GO(ch, door))
+              send_to_room(world[IN_ROOM(ch)].dir_option[door]->to_room,
+                           "Você se arrepia ao escutar o grito de morte de alguém.\r\n");
+  }
+
+PATTERN FOLLOWED:
+  This fix follows the existing safety pattern used elsewhere in the codebase.
+  Example from line 1580 in fight.c:
+    if (IN_ROOM(victim) == NOWHERE || IN_ROOM(victim) < 0 || IN_ROOM(victim) > top_of_world)
+        continue;
+    zona_vitima = world[IN_ROOM(victim)].zone;
+
+WHY WAS IT OCCURRING?
+  - Character extraction during combat/spell sequences
+  - Script triggers (do_dg_cast) executing during character death
+  - Race condition where character room becomes invalid before death_cry executes
+  - Specific combat sequences involving magic damage and mob triggers
+
+TESTING PERFORMED:
+  ✓ Code compiles without warnings or errors
+  ✓ Formatted with clang-format
+  ✓ Code review: 0 comments (approved)
+  ✓ CodeQL security scan: 0 alerts
+  ✓ Full clean rebuild successful
+  ✓ Pattern matches safe existing code elsewhere in codebase
+
+IMPACT:
+  - Prevents segmentation fault when character dies in invalid room
+  - No change to gameplay when rooms are valid
+  - Gracefully handles edge case by silently returning
+  - Minimal code change (3 lines added)
+
+SEE ALSO: SEGFAULT_FIX_SUMMARY.txt for similar pattern fixes in mobile_activity

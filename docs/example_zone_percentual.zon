@@ -1,0 +1,33 @@
+#999
+Example Builder~
+Example Zone - Demonstrating Percentual Load~
+9990 9999 15 2 0 0 0 0 -1 -1 0
+* Example zone demonstrating the percentual load feature
+* This zone shows both traditional (positive values) and percentual (negative values) loading
+
+* Traditional loading - mob always appears (until max count reached)
+M 0 3000 1 9990	(a shopkeeper - traditional: max 1)
+G 1 3050 -100 -1	(basic item - percentual: 100% chance, always loads)
+G 1 3051 -50 -1	(rare potion - percentual: 50% chance)
+E 1 3052 -25 16	(magical dagger - percentual: 25% chance to equip)
+
+* Percentual loading - mobs may or may not appear
+M 0 3001 -75 9991	(a guard - percentual: 75% chance)
+M 0 3002 -25 9991	(a rare mob - percentual: 25% chance)
+
+* Percentual object loading in rooms
+O 0 3060 -10 9992	(treasure chest - percentual: 10% chance)
+O 0 3061 -50 9992	(common item - percentual: 50% chance)
+
+* Mixed example - traditional mob with percentual equipment
+M 0 3003 1 9993	(another mob - traditional: max 1)
+G 1 3070 99 -1	(basic weapon - traditional: max 99 instances)
+G 1 3071 -30 -1	(magic ring - percentual: 30% chance)
+E 1 3072 -60 5	(magic armor - percentual: 60% chance at position 5)
+
+* Container with percentual items
+O 0 3080 1 9994	(a container - traditional: max 1)
+P 1 3081 -40 3080	(item in container - percentual: 40% chance)
+
+S
+$~

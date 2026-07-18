@@ -11,8 +11,10 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 10 1000
 9 9 0
 GenWimpy: 100
-GenLoot: 2
-GenRoam: 73
+GenLoot: 15
+GenEquip: 1
+GenRoam: 85
+GenFollow: 3
 E
 T 3008
 #5301
@@ -31,7 +33,10 @@ vítimas antes do bote.
 25 2000
 9 9 0
 GenWimpy: 100
-GenRoam: 88
+GenLoot: 8
+GenEquip: 2
+GenRoam: 87
+GenFollow: 3
 E
 T 3008
 #5302
@@ -48,9 +53,10 @@ mãos.
 100 10000
 9 9 2
 GenWimpy: 100
-GenLoot: 10
-GenEquip: 1
+GenLoot: 99
+GenEquip: 27
 GenRoam: 89
+GenFollow: 5
 E
 #5303
 guardiao piramide~
@@ -65,10 +71,11 @@ roupas cor de areia.
 8 12 5 8d8+80 2d6+2
 200 3750
 9 9 1
-GenWimpy: 99
-GenLoot: 20
-GenEquip: 3
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 78
+GenEquip: 9
+GenRoam: 77
+GenFollow: 14
 E
 #5304
 ladrao tumba~
@@ -81,10 +88,11 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 100
-GenLoot: 20
-GenEquip: 6
+GenWimpy: 97
+GenLoot: 99
+GenEquip: 27
 GenRoam: 89
+GenFollow: 2
 E
 T 3007
 #5305
@@ -101,11 +109,12 @@ não hoje...
 18 2 0 18d18+180 3d8+2
 1000 30000
 9 9 1
-GenWimpy: 74
-GenLoot: 11
-GenEquip: 2
+GenWimpy: 97
+GenLoot: 86
+GenEquip: 15
 GenRoam: 89
-GenGroup: 15
+GenGroup: 23
+GenFollow: 14
 E
 T 3007
 #5306
@@ -134,10 +143,11 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 100
-GenLoot: 33
-GenEquip: 5
+GenWimpy: 97
+GenLoot: 99
+GenEquip: 32
 GenRoam: 89
+GenFollow: 2
 E
 #5308
 homem areia~
@@ -153,9 +163,10 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
-GenLoot: 12
-GenEquip: 1
-GenRoam: 89
+GenLoot: 99
+GenEquip: 12
+GenRoam: 88
+GenFollow: 4
 E
 #5309
 efreeti~
@@ -169,6 +180,8 @@ desprezo, com os braços cruzados sobre seu poderoso peito.
 20 0 -10 20d20+700 4d6+20
 11000 40000
 9 9 1
+GenWimpy: 4
+GenFollow: 13
 E
 T 3009
 #5310
@@ -215,10 +228,12 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 15
-GenLoot: 34
-GenEquip: 3
-GenRoam: 81
+GenWimpy: 72
+GenLoot: 99
+GenEquip: 24
+GenRoam: 89
+GenGroup: 90
+GenFollow: 17
 E
 #5313
 ginoesfinge esfinge~
@@ -235,6 +250,9 @@ enigma de sua prima crioesfinge.
 19 -12 -30 19d19+590 3d10+29
 10000 35000
 9 9 2
+GenWimpy: 5
+GenLoot: 15
+GenFollow: 17
 E
 T 3009
 #5314
@@ -251,6 +269,10 @@ confundidos.
 23 -13 -32 23d23+930 6d10+25
 25000 80000
 9 9 2
+GenWimpy: 4
+GenLoot: 32
+GenEquip: 4
+GenFollow: 17
 E
 T 3009
 #5315
@@ -267,6 +289,10 @@ ouvir o poderoso rugido desta esfinge.
 27 -10 -36 27d27+970 4d10+27
 50000 200000
 9 9 2
+GenWimpy: 9
+GenLoot: 79
+GenEquip: 4
+GenFollow: 14
 E
 T 3009
 #5316
@@ -283,6 +309,10 @@ muitas regras.
 80 -21 -40 41d41+1410 6d10+37
 125000 2900000
 9 9 2
+GenWimpy: 5
+GenLoot: 95
+GenEquip: 4
+GenFollow: 15
 E
 T 3009
 #5317

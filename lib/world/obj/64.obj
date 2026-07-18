@@ -60,7 +60,7 @@ um amuleto~
 Alguém jogou fora um excêntrico amuleto neste local.~
 ~
 9 ag 0 0 0 ac 0 0 0 0 0 0 0
-0 0 0 0
+15 0 0 0
 3 20000 3000 0 0
 A
 2 3
@@ -145,13 +145,17 @@ cajado rand~
 o Cajado de Rand~
 Há um cajado de metal aqui.~
 ~
-9 agnopt 0 0 0 ao 0 0 0 0 0 0 0
+9 agnopu 0 0 0 ao 0 0 0 0 0 0 0
 8 0 0 0
-7 100000 25000 30 0
+7 100000 25000 70 0
 A
-12 5
+12 100
 A
 17 -5
+A
+18 10
+A
+19 8
 #6416
 bau madeira~
 um baú de madeira~

@@ -32,6 +32,8 @@ velha que as vidas de vários anciões unidas, sabendo muito bem se defender.
 54 -2 -12 10d10+900 4d4+20
 1000 90020
 9 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #11602
 rouxinol espiao pequena ave~
@@ -107,6 +109,7 @@ de sua ajuda. Afinal, ela é paga para isso...
 GenWimpy: 100
 GenLoot: 2
 GenEquip: 1
+GenFollow: 17
 E
 #11608
 marut menino belo azulada~
@@ -176,6 +179,8 @@ assume sua impassível posição, de olhos cerrados.
 59 -7 -14 10d10+1000 5d5+25
 1000 95020
 9 9 1
+GenWimpy: 7
+GenFollow: 14
 E
 #11612
 adrksa marut guarda~
@@ -191,6 +196,9 @@ muito a atenção dele: não será nada bom se você for escolhido para
 59 -7 -14 10d10+1000 5d5+25
 1000 95020
 9 9 1
+GenWimpy: 12
+GenLoot: 3
+GenFollow: 14
 E
 #11613
 menina estatua jyoti marut~
@@ -401,9 +409,10 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 63
+GenWimpy: 72
 GenLoot: 1
 GenEquip: 1
+GenFollow: 17
 E
 #11628
 convidado nobre homem arrogante~
@@ -417,7 +426,8 @@ e como os "plebeus" são desagradáveis. Você conclui que não gosta dele...
 45 3 -4 10d10+700 4d3+15
 8000 34020
 9 9 1
-GenWimpy: 13
+GenWimpy: 16
+GenFollow: 15
 E
 #11629
 convidado sacerdote~
@@ -447,7 +457,8 @@ sacerdote.
 40 4 -3 10d10+500 4d3+14
 8000 24020
 9 9 2
-GenWimpy: 9
+GenWimpy: 14
+GenFollow: 14
 E
 #11631
 senhora convidada bem-vestida~
@@ -495,7 +506,8 @@ que fez com que Lorde Indra saísse imediatamente do salão...
 67 -4 -8 10d10+970 4d5+23
 10000 104020
 9 9 1
-GenWimpy: 30
+GenWimpy: 32
+GenFollow: 15
 E
 T 3008
 #11634
@@ -538,7 +550,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 15
+GenWimpy: 30
+GenLoot: 4
+GenEquip: 1
+GenFollow: 15
 E
 T 3009
 #11636
@@ -555,7 +570,8 @@ palácio, sendo que você já pode considerá-los "velhos conhecidos"...
 77 -11 -12 10d10+1270 7d5+29
 5000 124020
 9 9 2
-GenWimpy: 7
+GenWimpy: 9
+GenFollow: 15
 E
 T 3009
 #11637
@@ -592,7 +608,8 @@ palácio...
 97 -25 -33 10d10+8670 12d6+42
 18000 744020
 9 9 1
-GenWimpy: 1
+GenWimpy: 43
+GenFollow: 15
 E
 T 3009
 #11639
@@ -654,8 +671,9 @@ Não a perturbe.
 48 2 -5 10d10+770 4d4+19
 1000 54020
 9 9 2
-GenWimpy: 9
+GenWimpy: 14
 GenLoot: 3
+GenFollow: 14
 E
 #11643
 guarda~
@@ -670,7 +688,9 @@ realmente exija sua interferência.
 55 0 -10 10d10+870 4d3+23
 1000 54020
 9 9 1
-GenWimpy: 56
+GenWimpy: 70
+GenLoot: 1
+GenFollow: 14
 E
 #11644
 guarda velho treinador~

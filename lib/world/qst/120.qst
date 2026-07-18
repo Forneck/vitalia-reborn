@@ -1,1 +1,51 @@
+#12000
+Eliminar um Svern~
+o caçador de aventuras quer eliminar um Svern~
+o caçador de aventuras está incomodado com um Svern e quer vê-lo eliminado. Encontre e elimine esta criatura para receber 543 moedas de ouro e 1629 pontos de experiência.~
+Excelente trabalho! A ameaça foi eliminada!~
+Entendo. É uma tarefa perigosa mesmo.~
+3 3012 b 3917 -1 -1 -1
+15 135 12 37 -1 3015 1
+543 1629 65535
+S
+#12011
+Eliminar um Svern~
+o caçador de aventuras quer eliminar um Svern~
+o caçador de aventuras está incomodado com um Svern e quer vê-lo eliminado. Encontre e elimine esta criatura para receber 543 moedas de ouro e 1629 pontos de experiência.~
+Excelente trabalho! A ameaça foi eliminada!~
+Entendo. É uma tarefa perigosa mesmo.~
+3 3012 b 3917 -1 -1 -1
+15 135 12 37 -1 3015 1
+543 1629 65535
+S
+#12013
+Encontrar o zelador~
+Encontrar e falar com o zelador~
+o caçador de aventuras está procurando por o zelador. Encontre esta pessoa para receber 154 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3061 -1 -1 -1
+8 30 7 32 -1 3015 1
+154 308 65535
+S
+#12053
+Encontrar o zelador~
+Encontrar e falar com o zelador~
+o caçador de aventuras está procurando por o zelador. Encontre esta pessoa para receber 154 moedas de ouro.~
+Maravilhoso! Você encontrou quem eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+2 3012 b 3061 -1 -1 -1
+8 30 7 32 -1 3015 1
+154 308 65535
+S
+#12083
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (O Final Leste do Beco). Vá até lá para receber 261 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 3046 -1 -1 -1
+12 52 7 32 -1 3015 1
+261 522 65535
+S
 $~

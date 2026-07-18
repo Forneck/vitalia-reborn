@@ -36,7 +36,7 @@ A
 19 1
 #10702
 linda petalas flor colorida~
-Uma linda flor colorida~
+uma linda flor colorida~
 Uma linda flor com pétalas coloridas foi deixada aqui.~
 ~
 28 ck 0 0 0 aeo 0 0 0 0 0 0 0
@@ -56,7 +56,7 @@ A
 13 5
 #10703
 espada fogo chamas~
-Uma espada de fogo~
+uma espada de fogo~
 Uma espada em chamas foi esquecida aqui.~
 ~
 5 abgnq 0 0 0 an 0 0 0 0 0 0 0
@@ -76,7 +76,7 @@ A
 19 2
 #10704
 anel armiliano~
-Um anel armiliano~
+um anel armiliano~
 Um anel armiliano foi esquecido aqui.~
 ~
 9 ab 0 0 0 ab 0 0 0 h 0 0 0
@@ -97,7 +97,7 @@ A
 19 1
 #10705
 anel diomiriano~
-Um anel diomiriano~
+um anel diomiriano~
 Um anel diomiriano foi esquecido aqui.~
 ~
 9 ab 0 0 0 ab 0 0 0 h 0 0 0
@@ -302,9 +302,9 @@ redoma ar~
 uma redoma de ar~
 Uma misteriosa redoma de ar foi deixada aqui.~
 ~
-11 acegikmnopqtu 0 0 0 ak 0 0 0 yA 0 0 0
+11 aegikq 0 0 0 ak 0 0 0 yA 0 0 0
 0 0 0 0
-3 800000 80000 110 0
+3 800000 80000 0 0
 E
 redoma ar~
 Você observa uma enorme redoma de ar.  A redoma poderia sem problemas 
@@ -405,9 +405,9 @@ redoma fogo~
 uma redoma de fogo~
 Uma misteriosa redoma de fogo foi deixada aqui.~
 ~
-11 acegikmnopqtu 0 0 0 ak 0 0 0 s 0 0 0
+11 aegikq 0 0 0 ad 0 0 0 sA 0 0 0
 0 0 0 0
-12 800000 80000 110 0
+12 800000 80000 90 0
 E
 redoma fogo~
 Você observa uma enorme redoma de fogo.  A redoma poderia sem problemas 
@@ -415,18 +415,20 @@ envolver o mais alto guerreiro de Vitália.  A redoma é uma das armas
 lendárias dos cavaleiros diomirianos.
 ~
 A
-14 15
+17 -50
 A
-17 -5
+18 3
 A
-24 -2
+19 3
+A
+14 100
 #10722
 besta otaviana~
 uma besta otaviana~
 Uma magnífica besta otaviana foi esquecida aqui.~
 ~
-5 cegkmn 0 0 0 an 0 0 0 0 0 0 0
-0 4 3 12
+29 egkmn 0 0 0 an 0 0 0 0 0 0 0
+0 0 0 0
 8 250000 25000 15 0
 E
 besta otaviana~

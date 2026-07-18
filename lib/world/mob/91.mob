@@ -14,6 +14,7 @@ Dex: 13
 Int: 13
 Wis: 13
 GenWimpy: 5
+GenFollow: 13
 E
 #9101
 galo insano~
@@ -64,7 +65,8 @@ BareHandAttack: 7
 Dex: 13
 Int: 13
 Wis: 13
-GenWimpy: 19
+GenWimpy: 17
+GenFollow: 13
 E
 #9104
 touro alienado~

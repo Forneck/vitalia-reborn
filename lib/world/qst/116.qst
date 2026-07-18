@@ -1,1 +1,41 @@
+#11664
+Explorar local~
+Explorar um local específico~
+o caçador de aventuras precisa que alguém explore um local específico (Um Túnel). Vá até lá para receber 239 moedas de ouro.~
+Excelente! Você chegou ao local que eu precisava explorar!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+1 3012 b 2202 -1 -1 -1
+12 47 7 32 -1 3015 1
+239 478 65535
+S
+#11685
+Buscar uma linda aliança de noivado~
+Buscar e trazer uma linda aliança de noivado~
+a gelatina ocre está procurando por uma linda aliança de noivado. Se você encontrar este item, traga-o para mim ou diretamente para a gelatina ocre para receber 788 moedas de ouro, 1576 pontos de experiência e uma linda aliança de noivado como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 1041 -1 -1 -1
+10 0 7 32 -1 1714 1
+788 1576 1041
+S
+#11695
+Buscar um martelo de túmulo~
+Buscar e trazer um martelo de túmulo~
+a gelatina ocre está procurando por um martelo de túmulo. Se você encontrar este item, traga-o para mim ou diretamente para a gelatina ocre para receber 394 moedas de ouro, 788 pontos de experiência e uma adaga enferrujada como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 1720 -1 -1 -1
+10 0 7 32 -1 1714 1
+394 788 1721
+S
+#11715
+Buscar uma coroa de ouro~
+Encontrar e trazer uma coroa de ouro~
+o caçador de aventuras perdeu uma coroa de ouro e precisa desesperadamente recuperá-lo. Encontre e traga este item para receber 222 moedas de ouro.~
+Perfeito! Você encontrou o que eu estava procurando!~
+Tudo bem. Talvez outro aventureiro possa ajudar.~
+5 3012 b 2200 -1 -1 -1
+12 44 7 32 -1 3015 1
+222 444 65535
+S
 $~

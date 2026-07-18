@@ -5,7 +5,7 @@ Um amuleto foi deixado aqui.~
 ~
 11 aiq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 10000 0 54 0
+1 10000 0 0 0
 E
 amuleto sapo~
 Você vê um amuleto dourado com um sapo verde brilhando 
@@ -31,7 +31,7 @@ Um machado está jogado aqui.~
 ~
 5 agq 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 3
-4 25000 0 63 0
+4 25000 0 0 0
 E
 machado anura~
 Você vê um grande machado dourado aqui, com alguns desenhos esculpidos
@@ -76,7 +76,7 @@ Você vê uma longa e afiada espada.
 ~
 #6909
 girino cauda~
-Uma cauda de girino~
+uma cauda de girino~
 Uma suculenta cauda de girino se encontra no chão.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0

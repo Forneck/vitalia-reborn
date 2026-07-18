@@ -19,9 +19,9 @@ mascara anubis~
 a máscara de Anúbis~
 Algo semelhante à cabeça de um chacal foi deixada no chão, atraindo a sua atenção.~
 ~
-9 agl 0 0 0 ae 0 0 0 0 0 0 0
-8 0 0 0
-25 800000 80000 78 0
+9 agk 0 0 0 ar 0 0 0 0 0 0 0
+10 0 0 0
+25 800000 80000 70 0
 E
 mascara anubis~
 Você tem em mãos a assustadora e inexpressiva face de um chacal.
@@ -146,9 +146,9 @@ amuleto horus~
 o amuleto de Hórus~
 Um misterioso amuleto parece magicamente atrair a sua atenção.~
 ~
-11 bgjn 0 0 0 ac 0 0 0 defl 0 0 0
-0 0 0 0
-15 900000 150000 70 0
+9 abg 0 0 0 ac 0 0 0 defl 0 0 0
+4 0 0 0
+15 900000 150000 0 0
 E
 amuleto horus~
 O poder que emana do amuleto lhe dá uma sensação de força...
@@ -164,7 +164,7 @@ lanca Sekmet~
 a lança de Sekmet~
 Uma grande e bela lança foi esquecida aqui.~
 ~
-5 bgjl 0 0 0 an 0 0 0 0 0 0 0
+5 bgj 0 0 0 an 0 0 0 0 0 0 0
 0 5 7 11
 20 500000 60000 70 0
 E
@@ -603,17 +603,23 @@ mascara prata~
 uma máscara de prata~
 Uma brilhante máscara de prata foi jogada aqui.~
 ~
-9 aklm 0 0 0 ae 0 0 0 0 0 0 0
+9 ak 0 0 0 ar 0 0 0 0 0 0 0
 9 0 0 0
-3 500 50 30 0
+3 500 50 0 0
+A
+4 2
+A
+5 2
 #8159
 bracelete prata~
 um bracelete de prata~
 Um belo bracelete de prata está aqui.~
 ~
-9 ajlm 0 0 0 am 0 0 0 0 0 0 0
+9 a 0 0 0 am 0 0 0 0 0 0 0
 5 0 0 0
 3 500 50 0 0
+A
+19 1
 #8160
 escaravelho coleoptero~
 um escaravelho-coleóptero~
@@ -754,7 +760,7 @@ laco isis~
 o laço de Ísis~
 Um belo laço foi deixado aqui.~
 ~
-11 bjl 0 0 0 al 0 0 0 0 0 0 0
+11 bj 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
 1 30000 300 60 0
 A
@@ -787,4 +793,16 @@ Um chave enferrujada foi esquecida aqui.~
 18 a 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 100 10 0 0
+#8174
+selo osiris~
+o selo de Osiris~
+Um selo de marfim cravejado esta aqui, flutuando sobre o chao.~
+~
+9 bg 0 0 0 ab 0 0 0 0 0 0 0
+5 0 0 0
+3 400 0 75 0
+A
+19 3
+A
+18 1
 $~

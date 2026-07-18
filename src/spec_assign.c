@@ -142,11 +142,14 @@ void assign_mobiles(void)
 
       ASSIGNMOB(1200, receptionist);
       ASSIGNMOB(3005, receptionist);*/
-    ASSIGNMOB(5404, receptionist);
+    // ASSIGNMOB(5404, receptionist);
     // ASSIGNMOB(27713, receptionist);
     // ASSIGNMOB(27730, receptionist);
 
     ASSIGNMOB(3012, questmaster);
+    ASSIGNMOB(5404, questmaster);
+    ASSIGNMOB(11312, questmaster);
+    ASSIGNMOB(13424, questmaster);
 
     ASSIGNMOB(1270, armorer);
     ASSIGNMOB(1271, blacksmith);

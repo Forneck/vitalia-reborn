@@ -1,0 +1,141 @@
+VITALIA REBORN - DO_FLEE SEGFAULT FIX
+======================================
+
+ISSUE: Program received signal SIGSEGV in do_flee()
+       Stack trace: do_flee() -> damage() -> mag_damage() -> call_magic() -> 
+                    do_dg_cast() -> script_driver() -> fight_mtrigger() -> 
+                    hit() -> perform_violence() -> heartbeat() -> game_loop() -> 
+                    init_game() -> main()
+
+ROOT CAUSE: Multiple unsafe pointer dereferences and missing room validation
+
+PROBLEM CODE (lines 473-518 in src/act.offensive.c):
+  ACMD(do_flee)
+  {
+      int i, attempt, loss;
+      struct char_data *was_fighting;
+
+      if (GET_POS(ch) < POS_FIGHTING) {           // ← No room validation!
+          send_to_char(ch, "...");
+          return;
+      }
+
+      for (i = 0; i < 6; i++) {
+          attempt = rand_number(0, DIR_COUNT - 1);
+          if (CAN_GO(ch, attempt) && ...) {        // ← CAN_GO accesses world[IN_ROOM(ch)]
+              ...
+              was_fighting = FIGHTING(ch);
+              
+              if (do_simple_move(ch, attempt, TRUE)) {
+                  send_to_char(ch, "...");         // ← ch might be extracted!
+                  
+                  if (was_fighting && !IS_NPC(ch)) {
+                      loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);  // ← CRASH HERE
+                      ...
+                  }
+                  
+                  if (was_fighting && ch == FIGHTING(was_fighting))
+                      stop_fighting(was_fighting);  // ← CRASH HERE TOO
+              }
+          }
+      }
+  }
+
+WHY IT CRASHES:
+  1. If IN_ROOM(ch) is NOWHERE or out of bounds, CAN_GO macro accesses invalid memory
+  2. do_simple_move() can extract ch (e.g., death trap), making subsequent send_to_char() unsafe
+  3. was_fighting pointer can become invalid if that character is extracted during move
+  4. Accessing was_fighting->hit or other fields causes SEGFAULT
+
+THE FIX (added lines 476-478, 499-501, 516-518, 527-528):
+  ACMD(do_flee)
+  {
+      int i, attempt, loss;
+      struct char_data *was_fighting;
+
+      /* Safety check: validate room before accessing world array */
+      if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+          return;
+
+      if (GET_POS(ch) < POS_FIGHTING) {
+          send_to_char(ch, "...");
+          return;
+      }
+
+      for (i = 0; i < 6; i++) {
+          attempt = rand_number(0, DIR_COUNT - 1);
+          if (CAN_GO(ch, attempt) && ...) {
+              ...
+              was_fighting = FIGHTING(ch);
+              
+              if (do_simple_move(ch, attempt, TRUE)) {
+                  /* Safety check: character might have been extracted (e.g., death trap) */
+                  if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || MOB_FLAGGED(ch, MOB_NOTDEADYET))
+                      return;
+
+                  send_to_char(ch, "...");
+                  
+                  /* Safety check: was_fighting might have been extracted or become invalid */
+                  if (was_fighting && !IS_NPC(ch) && 
+                      !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                      !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET)) {
+                      loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
+                      ...
+                  }
+                  
+                  if (FIGHTING(ch))
+                      stop_fighting(ch);
+                  if (was_fighting && ch == FIGHTING(was_fighting) && 
+                      !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                      !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
+                      stop_fighting(was_fighting);
+              }
+          }
+      }
+  }
+
+PATTERN FOLLOWED:
+  This fix follows existing safety patterns used elsewhere in the codebase.
+  
+  Example 1 - Room validation (from death_cry in fight.c, line 386):
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+  
+  Example 2 - Character extraction check (from perform_violence in fight.c, line 1560):
+    if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+        continue;
+  
+  Example 3 - Safe iteration pattern (from act.movement.c, line 398):
+    for (witness = world[going_to].people; witness; witness = next_witness) {
+        next_witness = witness->next_in_room;
+        
+        if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+            continue;
+    }
+
+WHY WAS IT OCCURRING?
+  - Combat sequences involving magic damage from mob triggers (do_dg_cast)
+  - Character extraction during flee operation (death traps)
+  - Script triggers executing during combat
+  - Race condition where character or opponent becomes invalid during flee sequence
+  - Specific combat sequences: perform_violence -> hit -> fight_mtrigger -> 
+    script_driver -> do_dg_cast -> call_magic -> mag_damage -> damage -> do_flee
+
+TESTING PERFORMED:
+  ✓ Code compiles without warnings or errors
+  ✓ Formatted with clang-format
+  ✓ CodeQL security scan: 0 alerts
+  ✓ Full clean rebuild successful
+  ✓ Pattern matches safe existing code elsewhere in codebase
+
+IMPACT:
+  - Prevents segmentation fault when character flees with invalid room
+  - Prevents crash when character is extracted during flee (death trap)
+  - Prevents crash when opponent is extracted during flee operation
+  - No change to gameplay when all pointers are valid
+  - Gracefully handles edge cases by checking extraction flags
+  - Minimal code change (13 lines added, 2 lines modified)
+
+SEE ALSO:
+  - SEGFAULT_FIX_SUMMARY.txt for similar pattern fixes in mobile_activity
+  - DEATH_CRY_SEGFAULT_FIX.txt for similar room validation fix

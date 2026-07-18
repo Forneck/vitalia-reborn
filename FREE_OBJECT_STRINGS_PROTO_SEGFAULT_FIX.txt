@@ -1,0 +1,127 @@
+VITALIA REBORN - FREE_OBJECT_STRINGS_PROTO SEGFAULT FIX
+========================================================
+
+ISSUE: Program received signal SIGSEGV in free_object_strings_proto()
+       Stack trace: free_object_strings_proto() -> free_obj() -> extract_obj() ->
+                    get_check_money() -> perform_get_from_room() ->
+                    mob_try_and_loot() -> mobile_activity() -> heartbeat() ->
+                    game_loop() -> init_game() -> main()
+
+ROOT CAUSE: Array out-of-bounds access - invalid rnum used to index obj_proto[] array
+
+SCENARIO:
+  1. Mob tries to loot an item from the room
+  2. perform_get_from_room() picks up the item successfully
+  3. get_check_money() checks if it's money and needs extraction
+  4. extract_obj() is called to remove the money object
+  5. extract_obj() calls free_obj() to free object memory
+  6. free_obj() calls free_object_strings_proto() to free string fields
+  7. free_object_strings_proto() gets rnum = GET_OBJ_RNUM(obj)
+  8. rnum is invalid (NOTHING=-1 or out of bounds)
+  9. Code accesses obj_proto[rnum] without validation
+  10. Segmentation fault occurs from array out-of-bounds access
+
+THE REAL PROBLEM:
+  The code was accessing obj_proto[] array with an invalid index without validation.
+  The rnum could be NOTHING (-1) or an out-of-bounds value, causing memory access
+  violations.
+  
+  PROBLEM CODE (src/genobj.c line 311-315):
+    void free_object_strings_proto(struct obj_data *obj)
+    {
+        int robj_num = GET_OBJ_RNUM(obj);
+        
+        if (obj->name && obj->name != obj_proto[robj_num].name)  // ← CRASH HERE
+            free(obj->name);
+        ...
+    }
+  
+  PROBLEM CODE (src/db.c line 3775):
+    void free_obj(struct obj_data *obj)
+    {
+        ...
+        if (obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)  // ← CRASH HERE
+            free_proto_script(obj, OBJ_TRIGGER);
+        ...
+    }
+
+THE FIX:
+  Added VALID_OBJ_RNUM validation before accessing obj_proto[] array.
+  If rnum is invalid, fall back to free_object_strings() which safely frees
+  all strings unconditionally without prototype comparison.
+  
+  FIXED CODE (src/genobj.c lines 311-320):
+    void free_object_strings_proto(struct obj_data *obj)
+    {
+        int robj_num = GET_OBJ_RNUM(obj);
+        
+        /* Safety check: Validate robj_num before accessing obj_proto array.
+         * If invalid, fall back to freeing all strings unconditionally. */
+        if (!VALID_OBJ_RNUM(obj)) {
+            /* Invalid rnum - free all strings without prototype comparison */
+            free_object_strings(obj);
+            return;
+        }
+        
+        if (obj->name && obj->name != obj_proto[robj_num].name)
+            free(obj->name);
+        ...
+    }
+  
+  FIXED CODE (src/db.c line 3775):
+    /* Safety check: Validate rnum before accessing obj_proto array */
+    if (VALID_OBJ_RNUM(obj) && obj->proto_script != obj_proto[GET_OBJ_RNUM(obj)].proto_script)
+        free_proto_script(obj, OBJ_TRIGGER);
+
+WHY THIS FIX IS CORRECT:
+  - VALID_OBJ_RNUM macro checks both NOTHING and array bounds
+  - Definition: (GET_OBJ_RNUM(obj) <= top_of_objt && GET_OBJ_RNUM(obj) != NOTHING)
+  - Prevents negative array indices (NOTHING = -1)
+  - Prevents out-of-bounds array access (rnum > top_of_objt)
+  - Falls back to safe unconditional free if rnum invalid
+  - No memory leaks: all strings are freed either way
+  - Maintains performance: fast path unchanged for valid rnums
+
+FALLBACK BEHAVIOR:
+  free_object_strings() unconditionally frees all object strings:
+    - obj->name
+    - obj->description
+    - obj->short_description
+    - obj->action_description
+    - obj->ex_description
+  
+  This is safe because:
+    - If strings are NULL, free(NULL) is a no-op
+    - If strings are allocated, they are properly freed
+    - No prototype comparison needed for invalid objects
+
+WHY WAS IT OCCURRING?
+  - Object extraction during mob looting sequences
+  - Invalid rnum values (NOTHING or out of bounds)
+  - Array indexing without bounds checking
+  - Accessing obj_proto[] with invalid index
+  - Memory corruption or uninitialized object data
+
+TESTING PERFORMED:
+  ✓ Code compiles without warnings or errors
+  ✓ Formatted with clang-format
+  ✓ CodeQL security scan: 0 alerts
+  ✓ Full clean rebuild successful
+  ✓ Prevents array out-of-bounds access
+
+IMPACT:
+  - Prevents segmentation fault from invalid array access
+  - Prevents potential memory corruption
+  - No change to gameplay when objects have valid rnums
+  - Gracefully handles edge case with fallback behavior
+  - Minimal code change: 2 files, 10 insertions, 1 deletion
+
+LOCATIONS FIXED:
+  1. src/genobj.c line 311: free_object_strings_proto() - added VALID_OBJ_RNUM check
+  2. src/db.c line 3775: free_obj() - added VALID_OBJ_RNUM check
+
+RELATED FIXES:
+  - EXTRACT_OBJ_SEGFAULT_FIX.txt: Double extraction prevention
+  - SEGFAULT_FIX_SUMMARY.txt: Room and NPC validation
+  - DEATH_CRY_SEGFAULT_FIX.txt: Room validation before accessing world array
+  - This fix addresses array bounds validation in object memory management

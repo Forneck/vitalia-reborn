@@ -85,6 +85,7 @@
 #include "mud_event.h"
 #include "ann.h"
 #include "protocol.h" /* for ProtocolNAWSAutoConfig */
+#include "auction.h"  /* for update_auctions */
 
 #ifndef INVALID_SOCKET
 #    define INVALID_SOCKET (-1)
@@ -147,6 +148,7 @@ static void timeadd(struct timeval *sum, struct timeval *a, struct timeval *b);
 static void flush_queues(struct descriptor_data *d);
 static void nonblock(socket_t s);
 static int perform_subst(struct descriptor_data *t, char *orig, char *subst);
+static int is_valid_utf8_byte(struct descriptor_data *t, unsigned char byte, const char *next_bytes, int remaining);
 static void record_usage(void);
 static char *make_prompt(struct descriptor_data *point);
 static void check_idle_passwords(void);
@@ -202,8 +204,24 @@ int main(int argc, char **argv)
     const char *dir;
 
     printf("Default System Locale  %s \n", setlocale(LC_ALL, ""));
-    setlocale(LC_ALL, "pt_BR_utf8");
-    printf("Locale alterado\r\n");
+
+    /* Try to set Portuguese locale, fall back to en_US.UTF-8 or C if not available */
+    if (setlocale(LC_ALL, "pt_BR.UTF-8") == NULL) {
+        if (setlocale(LC_ALL, "en_US.UTF-8") == NULL) {
+            setlocale(LC_ALL, "C");
+            printf("Locale set to C (pt_BR.UTF-8 and en_US.UTF-8 not available)\r\n");
+        } else {
+            printf("Locale set to en_US.UTF-8 (pt_BR.UTF-8 not available)\r\n");
+        }
+    } else {
+        printf("Locale alterado para pt_BR.UTF-8\r\n");
+    }
+
+    /* Always set LC_NUMERIC to C to ensure consistent float parsing/formatting
+     * This prevents issues with comma vs period as decimal separator in shop files
+     * and other numeric data files while keeping other locale features for text */
+    setlocale(LC_NUMERIC, "C");
+    printf("LC_NUMERIC set to C for consistent numeric data handling\r\n");
 
 #ifdef MEMORY_DEBUG
     zmalloc_init();
@@ -359,6 +377,8 @@ int main(int argc, char **argv)
     log1("Clearing game world.");
 
     if (!scheck) {
+        log1("Saving auctions before shutdown.");
+        save_auctions();
         log1("Saving temporary quest assignments before shutdown.");
         save_temp_quest_assignments();
     }
@@ -1033,11 +1053,24 @@ void heartbeat(int heart_pulse)
     {
         check_idle_passwords();
     }
+
+    if (!(heart_pulse % PULSE_MOB_EMOTION)) /* 4 seconds */
+        mob_emotion_activity();
+
     if (!(heart_pulse % PULSE_MOBILE))
         mobile_activity();
 
     if (!(heart_pulse % PULSE_VIOLENCE))
         perform_violence();
+
+    if (CONFIG_NEW_AUCTION_SYSTEM && !(heart_pulse % (30 * PASSES_PER_SEC))) { /* Every 30 seconds */
+        update_auctions();
+
+        /* Save auctions every 5 minutes */
+        if (!(heart_pulse % (300 * PASSES_PER_SEC))) {
+            save_auctions();
+        }
+    }
 
     if (!(heart_pulse % (SECS_PER_MUD_HOUR / 3))) {
         beware_lightning();
@@ -1291,8 +1324,8 @@ static char *make_prompt(struct descriptor_data *d)
         }
 
         if (PRF_FLAGGED(d->character, PRF_AFK) && len < sizeof(prompt)) {
-            count = snprintf(prompt + len, sizeof(prompt) - len, "%s(%saway%s)%s", CCGRN(d->character, C_NRM),
-                             CCCYN(d->character, C_CMP), CCGRN(d->character, C_NRM), CCNRM(d->character, C_NRM));
+            count = snprintf(prompt + len, sizeof(prompt) - len, "%s(away)%s", CCGRN(d->character, C_NRM),
+                             CCNRM(d->character, C_NRM));
             if (count >= 0)
                 len += count;
         }
@@ -1395,7 +1428,7 @@ size_t write_to_output(struct descriptor_data *t, const char *txt, ...)
 size_t vwrite_to_output(struct descriptor_data *t, const char *format, va_list args)
 {
     const char *text_overflow = "\r\nOVERFLOW\r\n";
-    static char txt[MAX_STRING_LENGTH];
+    char txt[MAX_STRING_LENGTH];
     size_t wantsize;
     int size;
 
@@ -1578,6 +1611,10 @@ static void init_descriptor(struct descriptor_data *newd, int desc)
     newd->desc_num = last_desc;
     newd->pProtocol = ProtocolCreate(); /* KaVir's plugin */
     newd->events = create_list();
+
+    /* Initialize quest confirmation fields */
+    newd->pending_quest_vnum = NOTHING;
+    newd->pending_questmaster = NULL;
 }
 
 static int new_descriptor(socket_t s)
@@ -2054,7 +2091,7 @@ static int process_input(struct descriptor_data *t)
                     } else
                         space_left++;
                 }
-            } else if (isascii(*ptr) && isprint(*ptr)) {
+            } else if (is_valid_utf8_byte(t, (unsigned char)*ptr, ptr + 1, nl_pos - ptr - 1)) {
                 if ((*(write_point++) = *ptr) == '$') { /* copy one character */
                     *(write_point++) = '$';             /* if it's a $, double it */
                     space_left -= 2;
@@ -2139,6 +2176,45 @@ static int process_input(struct descriptor_data *t)
     *write_point = '\0';
 
     return (1);
+}
+
+/* Helper function to check if UTF-8 is enabled for a descriptor and validate UTF-8 byte sequences */
+static int is_valid_utf8_byte(struct descriptor_data *t, unsigned char byte, const char *next_bytes, int remaining)
+{
+    /* If UTF-8 is not enabled or no protocol, use ASCII-only validation */
+    if (!t || !t->pProtocol || !t->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt) {
+        return (isascii(byte) && isprint(byte));
+    }
+
+    /* ASCII printable characters are always valid */
+    if (byte < 0x80) {
+        return (isascii(byte) && isprint(byte));
+    }
+
+    /* Check for valid UTF-8 multi-byte sequence start */
+    if ((byte & 0xE0) == 0xC0) {
+        /* 2-byte sequence (110xxxxx) */
+        if (remaining >= 1 && (next_bytes[0] & 0xC0) == 0x80) {
+            return 1; /* Valid 2-byte sequence start */
+        }
+    } else if ((byte & 0xF0) == 0xE0) {
+        /* 3-byte sequence (1110xxxx) */
+        if (remaining >= 2 && (next_bytes[0] & 0xC0) == 0x80 && (next_bytes[1] & 0xC0) == 0x80) {
+            return 1; /* Valid 3-byte sequence start */
+        }
+    } else if ((byte & 0xF8) == 0xF0) {
+        /* 4-byte sequence (11110xxx) */
+        if (remaining >= 3 && (next_bytes[0] & 0xC0) == 0x80 && (next_bytes[1] & 0xC0) == 0x80 &&
+            (next_bytes[2] & 0xC0) == 0x80) {
+            return 1; /* Valid 4-byte sequence start */
+        }
+    } else if ((byte & 0xC0) == 0x80) {
+        /* Continuation byte (10xxxxxx) - should not appear as first byte */
+        return 1; /* Accept continuation bytes within a sequence */
+    }
+
+    /* Invalid UTF-8 byte */
+    return 0;
 }
 
 /* Perform substitution for the '^..^' csh-esque syntax orig is the orig
@@ -2384,7 +2460,11 @@ void nonblock(socket_t s)
 
 /* signal-handling functions (formerly signals.c).  UNIX only. */
 #if defined(CIRCLE_UNIX) || defined(CIRCLE_MACINTOSH)
-static RETSIGTYPE reread_wizlists(int sig) { reread_wizlist = TRUE; }
+static RETSIGTYPE reread_wizlists(int sig)
+{
+    reread_wizlist = TRUE;
+    my_signal(SIGUSR1, reread_wizlists);
+}
 
 /* Orphaned right now in place of emergency unban ... static RETSIGTYPE
    unrestrict_game(int sig) { emergency_unban = TRUE; } */
@@ -2769,7 +2849,52 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                 case 'R':
                     CHECK_NULL(vict_obj, OA((const struct char_data *)vict_obj));
                     break;
-                    /* uppercase previous word */
+                case 'z': /* -- jr - portuguese language: seu/sua */
+                    i = SEUSUA(ch);
+                    break;
+                case 'Z':
+                    CHECK_NULL(vict_obj, SEUSUA((const struct char_data *)vict_obj));
+                    break;
+                case 'd': /* -- jr - portuguese language: dele/dela */
+                    i = DELA(ch);
+                    break;
+                case 'D':
+                    CHECK_NULL(vict_obj, DELA((const struct char_data *)vict_obj));
+                    break;
+                case 'w': /* -- jr - portuguese language: teu/tua */
+                    i = TEUTUA(ch);
+                    break;
+                case 'W':
+                    CHECK_NULL(vict_obj, TEUTUA((const struct char_data *)vict_obj));
+                    break;
+                case 'y': /* -- jr - portuguese language: um/uma */
+                    i = UMUMA(ch);
+                    break;
+                case 'Y':
+                    CHECK_NULL(vict_obj, UMUMA((const struct char_data *)vict_obj));
+                    break;
+                case 'q': /* -- portuguese language: meu/minha for object */
+                    CHECK_NULL(obj, MEUMINHA(obj));
+                    break;
+                case 'Q':
+                    CHECK_NULL(vict_obj, MEUMINHA((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
+                case 'v': /* -- portuguese language: teu/tua for object */
+                    CHECK_NULL(obj, TEUTUA_OBJ(obj));
+                    break;
+                case 'V':
+                    CHECK_NULL(vict_obj, TEUTUA_OBJ((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
+                case 'j': /* -- portuguese language: seu/sua for object */
+                    CHECK_NULL(obj, SEUSUA_OBJ(obj));
+                    break;
+                case 'J':
+                    CHECK_NULL(vict_obj, SEUSUA_OBJ((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
+                /* uppercase previous word */
                 case 'u':
                     for (j = buf; j > lbuf && !isspace((int)*(j - 1)); j--)
                         ;
@@ -2784,6 +2909,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     break;
                 case 'x':
                     i = "";
+                    s = buf;
                     if (*(++orig) != '(') {
                         log1("Illegal $x(...) code to act(): %s", origback);
                         break;
@@ -2798,6 +2924,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     }
                     for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
                         *s++ = *orig;
+                    buf = s;
                     if (!*orig) {
                         log1("Unclosed $x(...) code to act(): %s", origback);
                         break;
@@ -2810,6 +2937,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     break;
                 case 'X':
                     i = "";
+                    s = buf;
                     if (*(++orig) != '(') {
                         log1("Illegal $X(...) code to act(): %s", origback);
                         break;
@@ -2824,6 +2952,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     }
                     for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
                         *s++ = *orig;
+                    buf = s;
                     if (!*orig) {
                         log1("Unclosed $X(...) code to act(): %s", origback);
                         break;

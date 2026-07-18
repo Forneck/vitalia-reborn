@@ -9,9 +9,11 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 48
-GenLoot: 2
+GenWimpy: 65
+GenLoot: 11
 GenRoam: 89
+GenGroup: 1
+GenFollow: 7
 E
 #13601
 dragao negro pequeno~
@@ -24,9 +26,13 @@ Algo lhe diz que sua vida não será muito longa..
 25 -5 0 1d1+2000 11d1+25
 0 40074
 9 9 1
-GenWimpy: 41
-GenRoam: 81
-GenGroup: 21
+GenWimpy: 45
+GenLoot: 73
+GenEquip: 2
+GenRoam: 89
+GenGroup: 88
+GenQuest: 1
+GenFollow: 11
 E
 #13602
 pequeno corcunda~
@@ -39,9 +45,11 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 31
-GenLoot: 3
+GenWimpy: 55
+GenLoot: 11
 GenRoam: 89
+GenGroup: 1
+GenFollow: 18
 E
 #13603
 cervo corca~
@@ -54,8 +62,10 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 41
-GenRoam: 88
+GenWimpy: 57
+GenLoot: 3
+GenRoam: 89
+GenFollow: 6
 E
 #13604
 veado~
@@ -68,9 +78,10 @@ Um veado, um cervo fêmea...    Ah Chega!!
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 22
-GenLoot: 1
+GenWimpy: 43
+GenLoot: 7
 GenRoam: 89
+GenFollow: 8
 E
 #13605
 duende floresta~
@@ -83,8 +94,10 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 37
+GenWimpy: 62
+GenLoot: 11
 GenRoam: 89
+GenFollow: 16
 E
 #13606
 agil raposa~
@@ -97,8 +110,10 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 48
-GenRoam: 87
+GenWimpy: 69
+GenLoot: 14
+GenRoam: 89
+GenFollow: 7
 E
 #13607
 multicolorida borboleta~
@@ -111,9 +126,10 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 0
-GenWimpy: 44
-GenLoot: 2
-GenRoam: 88
+GenWimpy: 65
+GenLoot: 17
+GenRoam: 89
+GenFollow: 14
 E
 #13608
 girassol grande~
@@ -126,8 +142,10 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 46
+GenWimpy: 61
+GenLoot: 5
 GenRoam: 89
+GenFollow: 10
 E
 #13609
 arvore nirin odiosa~
@@ -140,8 +158,10 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 20
-GenRoam: 79
+GenWimpy: 27
+GenLoot: 1
+GenRoam: 86
+GenFollow: 9
 E
 #13610
 inseto pedra inseto-pedra~
@@ -155,7 +175,8 @@ An undefined string.
 0 12937
 9 9 1
 GenWimpy: 100
-GenLoot: 8
+GenLoot: 34
 GenRoam: 89
+GenFollow: 10
 E
 $

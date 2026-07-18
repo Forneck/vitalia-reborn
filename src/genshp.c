@@ -384,8 +384,8 @@ int save_shops(zone_rnum zone_num)
 
             /* Save the rates. */
             fprintf(shop_file,
-                    "%1.2f\n"
-                    "%1.2f\n",
+                    "%.2f\n"
+                    "%.2f\n",
                     S_BUYPROFIT(shop), S_SELLPROFIT(shop));
 
             /* Save the buy types and namelists. */

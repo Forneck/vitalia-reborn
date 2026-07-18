@@ -171,7 +171,17 @@ static void aff_apply_modify(struct char_data *ch, byte loc, sbyte mod, char *ms
             break;
 
         case APPLY_AC:
-            GET_AC(ch) += mod;
+            /* Prevent AC overflow by clamping to reasonable limits
+             * AC ranges from -200 (best possible) to +100 (worst) */
+            {
+                long new_ac = (long)GET_AC(ch) + (long)mod;
+                if (new_ac > 100)
+                    GET_AC(ch) = 100;
+                else if (new_ac < -200)
+                    GET_AC(ch) = -200;
+                else
+                    GET_AC(ch) = (sh_int)new_ac;
+            }
             break;
 
         case APPLY_HITROLL:
@@ -291,6 +301,10 @@ void affect_total(struct char_data *ch)
     GET_CHA(ch) = MAX(0, MIN(GET_CHA(ch), i));
     GET_STR(ch) = MAX(0, GET_STR(ch));
 
+    /* Clamp AC to reasonable limits to prevent overflow
+     * AC ranges from -200 (best possible) to +100 (worst) */
+    GET_AC(ch) = MAX(-200, MIN(GET_AC(ch), 100));
+
     if (IS_NPC(ch) || GET_LEVEL(ch) >= LVL_GRGOD) {
         GET_STR(ch) = MIN(GET_STR(ch), i);
     } else {
@@ -348,6 +362,33 @@ void affect_from_char(struct char_data *ch, int type)
     }
 }
 
+/* Remove all affects from a character efficiently (O(n) instead of O(n²))
+ * This is optimized for bulk removal by calling affect_total only once
+ * at the end instead of after each individual affect removal. */
+void affect_remove_all(struct char_data *ch)
+{
+    struct affected_type *af, *next_af;
+
+    if (!ch)
+        return;
+
+    if (ch->affected == NULL)
+        return;
+
+    /* Remove each affect's modifications and free memory */
+    for (af = ch->affected; af; af = next_af) {
+        next_af = af->next;
+        affect_modify_ar(ch, af->location, af->modifier, af->bitvector, FALSE);
+        free(af);
+    }
+
+    /* Clear the affect list */
+    ch->affected = NULL;
+
+    /* Recalculate totals once after all affects are removed */
+    affect_total(ch);
+}
+
 /* Return TRUE if a char is affected by a spell (SPELL_XXX), FALSE indicates
  * not affected. */
 bool affected_by_spell(struct char_data *ch, int type)
@@ -370,14 +411,32 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
         next = hjp->next;
 
         if ((hjp->spell == af->spell) && (hjp->location == af->location)) {
-            if (add_dur)
-                af->duration += hjp->duration;
-            else if (avg_dur)
-                af->duration = (af->duration + hjp->duration) / 2;
-            if (add_mod)
-                af->modifier += hjp->modifier;
-            else if (avg_mod)
-                af->modifier = (af->modifier + hjp->modifier) / 2;
+            if (add_dur) {
+                /* Prevent duration overflow (sh_int range: SHRT_MIN to SHRT_MAX) */
+                long new_duration = (long)af->duration + (long)hjp->duration;
+                if (new_duration > SHRT_MAX)
+                    af->duration = SHRT_MAX;
+                else if (new_duration < SHRT_MIN)
+                    af->duration = SHRT_MIN;
+                else
+                    af->duration = (sh_int)new_duration;
+            } else if (avg_dur) {
+                /* Prevent overflow in average calculation */
+                af->duration = (sh_int)(((long)af->duration + (long)hjp->duration) / 2);
+            }
+            if (add_mod) {
+                /* Prevent modifier overflow (sbyte range: SCHAR_MIN to SCHAR_MAX) */
+                int new_modifier = (int)af->modifier + (int)hjp->modifier;
+                if (new_modifier > SCHAR_MAX)
+                    af->modifier = SCHAR_MAX;
+                else if (new_modifier < SCHAR_MIN)
+                    af->modifier = SCHAR_MIN;
+                else
+                    af->modifier = (sbyte)new_modifier;
+            } else if (avg_mod) {
+                /* Prevent overflow in average calculation */
+                af->modifier = (sbyte)(((int)af->modifier + (int)hjp->modifier) / 2);
+            }
 
             affect_remove(ch, hjp);
             affect_to_char(ch, af);
@@ -430,6 +489,9 @@ void char_to_room(struct char_data *ch, room_rnum room)
                 case 3:
                     room = r_hometown_3;
                     break;
+                case 4:
+                    room = r_hometown_4;
+                    break;
                 default:
                     room = r_hometown_1;
                     break;
@@ -439,8 +501,13 @@ void char_to_room(struct char_data *ch, room_rnum room)
         world[room].people = ch;
         IN_ROOM(ch) = room;
 
-        autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
-        autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+        /* Check for escort quest completion */
+        if (!IS_NPC(ch) && GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT) {
+            qst_rnum rnum = real_quest(GET_QUEST(ch));
+            if (rnum != NOTHING) {
+                check_escort_quest_completion(ch, rnum);
+            }
+        }
 
         if (GET_EQ(ch, WEAR_LIGHT))
             if (GET_OBJ_TYPE(GET_EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT)
@@ -668,6 +735,30 @@ struct obj_data *get_obj_num(obj_rnum nr)
     return (NULL);
 }
 
+/* Check if a character already has an object with the specified vnum in inventory or equipment */
+bool char_has_obj_vnum(struct char_data *ch, obj_vnum vnum)
+{
+    struct obj_data *obj;
+    int i;
+
+    if (!ch)
+        return FALSE;
+
+    /* Check inventory */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_VNUM(obj) == vnum)
+            return TRUE;
+    }
+
+    /* Check equipment */
+    for (i = 0; i < NUM_WEARS; i++) {
+        if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == vnum)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 /* search a room for a char, and return a pointer if found..  */
 struct char_data *get_char_room(char *name, int *number, room_rnum room)
 {
@@ -702,6 +793,22 @@ struct char_data *get_char_num(mob_rnum nr)
     return (NULL);
 }
 
+/* Recursively adjust object counters for house objects and their contents.
+ * This handles both the object's contents and any sibling objects in the same container. */
+static void adjust_obj_counters_recursive(struct obj_data *obj, int delta)
+{
+    if (!obj)
+        return;
+
+    /* Adjust counter for this object */
+    if (GET_OBJ_RNUM(obj) != NOTHING)
+        obj_index[GET_OBJ_RNUM(obj)].number += delta;
+
+    /* Recursively adjust counters for contents and siblings */
+    adjust_obj_counters_recursive(obj->contains, delta);
+    adjust_obj_counters_recursive(obj->next_content, delta);
+}
+
 /* put an object in a room */
 void obj_to_room(struct obj_data *object, room_rnum room)
 {
@@ -713,8 +820,12 @@ void obj_to_room(struct obj_data *object, room_rnum room)
         world[room].contents = object;
         IN_ROOM(object) = room;
         object->carried_by = NULL;
-        if (ROOM_FLAGGED(room, ROOM_HOUSE))
+        if (ROOM_FLAGGED(room, ROOM_HOUSE)) {
             SET_BIT_AR(ROOM_FLAGS(room), ROOM_HOUSE_CRASH);
+            /* Decrement counters for house objects and their contents
+             * so they don't count towards zone reset limits */
+            adjust_obj_counters_recursive(object, -1);
+        }
     }
 }
 
@@ -741,8 +852,12 @@ void obj_from_room(struct obj_data *object)
 
     REMOVE_FROM_LIST(object, world[IN_ROOM(object)].contents, next_content);
 
-    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE))
+    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE)) {
         SET_BIT_AR(ROOM_FLAGS(IN_ROOM(object)), ROOM_HOUSE_CRASH);
+        /* Re-increment counters for house objects and their contents when they leave,
+         * so they start counting towards zone reset limits again */
+        adjust_obj_counters_recursive(object, 1);
+    }
     IN_ROOM(object) = NOWHERE;
     object->next_content = NULL;
 }
@@ -772,6 +887,15 @@ void obj_to_obj(struct obj_data *obj, struct obj_data *obj_to)
         if (tmp_obj->carried_by)
             IS_CARRYING_W(tmp_obj->carried_by) += GET_OBJ_WEIGHT(obj);
     }
+
+    /* If the top-level container is in a house room, decrement counters for nested object
+     * and its contents so they don't count towards zone reset limits */
+    for (tmp_obj = obj_to; tmp_obj->in_obj; tmp_obj = tmp_obj->in_obj)
+        ; /* Find top-level object */
+
+    if (IN_ROOM(tmp_obj) != NOWHERE && ROOM_FLAGGED(IN_ROOM(tmp_obj), ROOM_HOUSE)) {
+        adjust_obj_counters_recursive(obj, -1);
+    }
 }
 
 /* remove an object from an object */
@@ -784,6 +908,16 @@ void obj_from_obj(struct obj_data *obj)
         return;
     }
     obj_from = obj->in_obj;
+
+    /* If the top-level container is in a house room, re-increment counters for nested object
+     * and its contents so they start counting towards zone reset limits again */
+    for (temp = obj_from; temp->in_obj; temp = temp->in_obj)
+        ; /* Find top-level object */
+
+    if (IN_ROOM(temp) != NOWHERE && ROOM_FLAGGED(IN_ROOM(temp), ROOM_HOUSE)) {
+        adjust_obj_counters_recursive(obj, 1);
+    }
+
     REMOVE_FROM_LIST(obj, obj_from->contains, next_content);
 
     /* Subtract weight from containers container unless unlimited. */
@@ -815,6 +949,12 @@ void extract_obj(struct obj_data *obj)
 {
     struct char_data *ch, *next = NULL;
     struct obj_data *temp;
+
+    /* Safety check: prevent segfault if obj is NULL */
+    if (obj == NULL) {
+        log1("SYSERR: extract_obj called with NULL object pointer!");
+        return;
+    }
 
     if (obj->worn_by != NULL)
         if (unequip_char(obj->worn_by, obj->worn_on) != obj)
@@ -965,6 +1105,11 @@ void extract_char_final(struct char_data *ch)
         }
     }
 
+    /* Check if this is an escort mob and fail the quest if so */
+    if (IS_NPC(ch)) {
+        fail_escort_quest(ch, NULL);
+    }
+
     /* On with the character's assets... */
     if (ch->followers || ch->master)
         die_follower(ch);
@@ -973,17 +1118,27 @@ void extract_char_final(struct char_data *ch)
     if (GROUP(ch))
         leave_group(ch);
 
+    /* Determine target room for objects.
+     * If DTs are not dumps and character is in a death trap,
+     * send objects to warehouse instead of death trap room. */
+    room_rnum target_room = IN_ROOM(ch);
+    if (!CONFIG_DTS_ARE_DUMPS && ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH)) {
+        room_rnum warehouse = real_room(CONFIG_DT_WAREHOUSE);
+        if (warehouse != NOWHERE)
+            target_room = warehouse;
+    }
+
     /* transfer objects to room, if any */
     while (ch->carrying) {
         obj = ch->carrying;
         obj_from_char(obj);
-        obj_to_room(obj, IN_ROOM(ch));
+        obj_to_room(obj, target_room);
     }
 
     /* transfer equipment to room, if any */
     for (i = 0; i < NUM_WEARS; i++)
         if (GET_EQ(ch, i))
-            obj_to_room(unequip_char(ch, i), IN_ROOM(ch));
+            obj_to_room(unequip_char(ch, i), target_room);
 
     if (FIGHTING(ch))
         stop_fighting(ch);

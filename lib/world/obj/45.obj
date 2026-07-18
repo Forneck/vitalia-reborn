@@ -164,8 +164,8 @@ flecha ouro~
 uma flecha de ouro~
 Uma flecha dourada está largada no chão.~
 ~
-7 abmnopu 0 0 0 aou 0 0 0 0 0 0 0
-1 4 4 12
+7 ab 0 0 0 aou 0 0 0 0 0 0 0
+10 4 4 12
 5 30000 3000 45 0
 A
 18 1
@@ -234,7 +234,7 @@ cisne elmo~
 o elmo dos cisnes~
 Um belo elmo com sete penas foi largado no chão.~
 ~
-9 egk 0 0 0 ae 0 0 0 0 0 0 0
+9 egk 0 0 0 ae 0 0 0 n 0 0 0
 7 0 0 0
 7 50000 5000 85 0
 E
@@ -253,8 +253,8 @@ manto cinzento~
 o manto cinzento do Senhor das Águas~
 Um pedaço de pano cinzento foi deixado para trás por alguém.~
 ~
-11 g 0 0 0 ak 0 0 0 0 0 0 0
-0 0 0 0
+9 g 0 0 0 ak 0 0 0 n 0 0 0
+8 0 0 0
 8 50000 5000 90 0
 E
 manto cinzento~
@@ -338,7 +338,7 @@ elessar joia~
 a jóia Elessar~
 Uma belíssima jóia verde foi perdida por alguém e repousa aqui.~
 ~
-8 adgikq 0 0 0 ac 0 0 0 0 0 0 0
+8 adgikq 0 0 0 ac 0 0 0 i 0 0 0
 0 0 0 0
 3 1000000 1000 90 0
 E
@@ -355,6 +355,10 @@ A
 3 1
 A
 4 1
+A
+18 2
+A
+19 2
 #4526
 cetro justica~
 o cetro de justiça~

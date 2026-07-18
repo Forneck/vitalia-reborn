@@ -12,7 +12,7 @@ A
 19 2
 #17302
 maca clava cavaleiro~
-Uma maça de cavaleiro~
+uma maça de cavaleiro~
 Uma arma semelhante a uma maça com uma das extremidades cheia de espinhos
 foi deixada aqui.~
 ~
@@ -49,14 +49,14 @@ aqui!~
 8 0 0 0
 7 100000 10000 35 0
 E
+brasao hautdesert~
+O brasão representa um gamo em um vasto campo verdejante.
+~
+E
 cota verde~
 Você examina o belíssimo trabalho que é essa cota: feita de um material
 resistente, possui bela cor esverdeada, lembrando-lhe o brilho de uma 
 legítima esmeralda. O brasão de Hautdesert lhe dá um ar de respeito e honra.
-~
-E
-brasao hautdesert~
-O brasão representa um gamo em um vasto campo verdejante.
 ~
 A
 13 10
@@ -136,8 +136,8 @@ a Excalibur~
 Uma magnífica espada com cabo em forma de dragão foi aqui deixada!~
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
-0 5 8 1
-22 170000 17000 101 0
+0 5 8 3
+22 170000 17000 90 0
 E
 espada excalibur~
 Você corre seus dedos por toda a extensão do aço azul esverdeado de
@@ -151,9 +151,9 @@ deixando apenas em você uma sensação de paz.
 A
 4 1
 A
-18 5
+18 10
 A
-19 5
+19 8
 A
 1 3
 A
@@ -165,7 +165,7 @@ Uma bela bainha dourada foi deixada aqui!~
 ~
 15 ab 0 0 0 al 0 0 0 0 0 0 0
 30 0 -1 0
-10 12000 1200 101 0
+10 12000 1200 90 0
 A
 19 2
 A
@@ -254,15 +254,15 @@ Um par de grevas de aço enegrecido estão aqui.~
 4 0 0 0
 9 30000 3000 50 0
 E
+grevas enegrecido aco~
+Você examina o material com que as grevas foram forjadas: um resistente aço
+enegrecido, com uma curiosa inscrição na altura dos tornozelos.
+~
+E
 inscricao~
 Você examina a inscrição.  Está escrito "eu juro, por meio desta, não
 revelar meu sinal até ter impedido todos de entrar em Camelot por um período
 de 5 anos, como prometi a Morgana em troca do favor de Eveline"
-~
-E
-grevas enegrecido aco~
-Você examina o material com que as grevas foram forjadas: um resistente aço
-enegrecido, com uma curiosa inscrição na altura dos tornozelos.
 ~
 A
 14 -50
@@ -294,12 +294,6 @@ um de seus cantos.~
 500 13 17321 0
 7 40000 4000 50 0
 E
-trouxa mala mochila pellinore~
-Feita de um macio, porém extremamente resistente, couro, essa mochila parece
-ser perfeita tanto para longas viagens quanto visitas à cidade. Em um dos 
-cantos, uma inscrição lhe chama a atenção.
-~
-E
 inscricao~
 Você lê o texto na mala.  Ele diz "Para meu querido amigo Pellinore, faça
 com que essa mala torne suas jornadas mais curtas e permitir-lhe que
@@ -308,6 +302,12 @@ o peso e número dos itens que você carrega irão aumentar, tornando possível
 que você viaje por muito tempo e por longas distâncias sem se cansar.  Eu
 coloquei uma fechadura nessa mala (use a chave com a letra P).  Que você
 tenha sucesso em sua busca!  -Merlin".
+~
+E
+trouxa mala mochila pellinore~
+Feita de um macio, porém extremamente resistente, couro, essa mochila parece
+ser perfeita tanto para longas viagens quanto visitas à cidade. Em um dos 
+cantos, uma inscrição lhe chama a atenção.
 ~
 #17321
 chave p letra~
@@ -369,15 +369,15 @@ Uma pequena pedra preta foi deixada aqui.~
 2 0 0 0
 3 0 0 0 0
 E
+pedra preta pequena~
+Você examina a pedra.  Nela você percebe, mas não entende, estranhos
+símbolos rúnicos incrustrados.  A pedra está manchada de sangue.
+~
+E
 runa simbolos runicos~
 Persistente, hein?  Bem, sim, parece que aquele seu amigo mago disse uma vez
 algo sobre bolachas rúnicas que podem ser comidas e que poderiam ter efeitos
 mágicos.  Essa parece uma daquelas.
-~
-E
-pedra preta pequena~
-Você examina a pedra.  Nela você percebe, mas não entende, estranhos
-símbolos rúnicos incrustrados.  A pedra está manchada de sangue.
 ~
 #17327
 carta amor~
@@ -387,6 +387,10 @@ Uma carta de amor destinada a Tristão está enrolada e selada com um emblema de
 2 b 0 0 0 ao 0 0 0 p 0 0 0
 40 29 19 -1
 1 12000 1200 0 0
+E
+selo emblema cera~
+O selo ostenta o brasão da casa do Rei Mark.
+~
 E
 carta~
 Você quebra o selo e examina a carta. Ela diz:
@@ -401,10 +405,6 @@ mais!
 Eternamente e totalmente sua,
 
 Isolda
-~
-E
-selo emblema cera~
-O selo ostenta o brasão da casa do Rei Mark.
 ~
 #17328
 couraca dourada~

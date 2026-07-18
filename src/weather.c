@@ -241,8 +241,9 @@ void weather_change(int zone)
     int humidity_factor =
         (time_info.month >= 5 && time_info.month <= 8) || (time_info.month >= 9 && time_info.month <= 12) ? 2 : 1;
     weather->humidity += ((diff * dice(1, 3) + dice(1, 6) - dice(1, 6)) / 100.0) * humidity_factor;
+    /* Garante que a umidade nunca seja zero ou negativa - mínimo de 1% */
     weather->humidity =
-        URANGE(climate->humidity - 0.2, weather->humidity, climate->humidity + 0.3);   // Maior estabilidade
+        URANGE(FMAX(0.01, climate->humidity - 0.2), weather->humidity, climate->humidity + 0.3);   // Maior estabilidade
 
     /* 6. Atualiza o vento */
     diff = (weather->press_diff > 6 ? 1 : (weather->press_diff < -6 ? -1 : 0));
@@ -387,4 +388,13 @@ void weather_change(int zone)
         }
     }
     zone_table[zone].weather = weather;
+
+    /* Apply weather effects to mob emotions in this zone */
+    struct char_data *ch;
+    for (ch = character_list; ch; ch = ch->next) {
+        /* Only affect NPCs that are in this zone and outdoors */
+        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone && OUTSIDE(ch)) {
+            apply_weather_to_mood(ch, weather, weather_info.sunlight);
+        }
+    }
 }

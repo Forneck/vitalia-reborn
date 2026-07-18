@@ -1,0 +1,116 @@
+CircleMUD v3.0 Shop File~
+#15200~
+15282
+-1
+2.00
+0.01
+28
+-1
+%s Oh, meu bem! Lamento tanto, mas as chaleiras da minha sala repousam vazias neste momento. Minhas flores secas encontraram outros corações necessitados.~
+%s Procuro com carinho em seus pertences, mas não encontro esse chazinho especial que você buscava.~
+%s Esse preparado não veio de meu jardim sagrado, doce viajante. Talvez você procure em outro pousio mais agradável.~
+%s Oh, meu bem! Vejo que sua bolsinha não se encheu tanto assim nesta jornada, verdade?~
+%s Oh, meu bem! Lamento profundamente, mas nem mesmo meu cofre possui recursos para adquirir isso desta vez. A vida de uma vendedora de chás é modesta.~
+%s Este chá aromático, colhido sob luz da lua cheia e secado com amor, custará %d moedas, meu bem. Um investimento no seu repouso.~
+%s Que obra linda você me traz! Com muito carinho, honrarei com %d moedas. Que traga alegria a quem o receba, querido.~
+0
+2
+15224
+2
+15257
+-1
+0
+28
+0
+0
+#15201~
+-1
+1.00
+0.01
+10
+-1
+%s Vazio? VAZIO?! Isso porque ontem um bardo usou minha loja como banheiro químico!~
+%s Você não tem nada. Nem poção, nem bom senso, nem higiene aparente.~
+%s Essa coisa cheira a VENENO de verdade. Não, obrigado. Já tenho problema demais com a lei.~
+%s Não tenho nem metade do valor disso.~
+%s Sua bolsa é tão vazia quanto sua inteligência. Belo combo, diga-se de passagem.~
+%s Isto custa %d moedas de ouro. Ou sua alma. Tô aceitando as duas ultimamente.~
+%s Hmm, pago %d moedas. E ainda estou sendo generoso!~
+0
+2
+15225
+2
+15259
+-1
+0
+28
+0
+0
+#15202~
+-1
+1.00
+0.01
+10
+-1
+%s Perdoe-me, erudito viajante. Os conhecimentos que preservei foram consultados por tantos que as prateleiras aguardam novas páginas.~
+%s Observo atentamente suas posses, mas tal pergaminho não repousa em seu acervo pessoal, amigo.~
+%s Esse conhecimento não reside nas obras que carrega. A sabedoria verdadeira deve ser buscada em outras bibliotecas.~
+%s Vejo que a fortuna não acompanha vosso percurso de estudioso neste momento.~
+%s A riqueza do conhecimento transcende o ouro, mas infelizmente, as telas requerem compensação material. Talvez outra oportunidade vos aguarde.~
+%s Este pergaminho, repleto de sabedoria ancestral, custará %d moedas. Um investimento no aprimoramento da mente eterna.~
+%s Essa obra que tragéis possui valor inestimável de conhecimento. Remunerarei tal presente com %d moedas, honrando seu conteúdo.~
+0
+2
+15228
+2
+15263
+-1
+0
+28
+0
+0
+#15203~
+-1
+1.00
+0.01
+-1
+%s Perdoe-me, viajante. Os sonhos que entalhei fugiram para habitar corações mais leves neste momento.~
+%s Procuro em meus sentidos, mas tal criação não repousa em seu inventário, amigo.~
+%s Essa obra não emana da inspiração que carregar nos dedos. Procure outros sonhos em outro lugar.~
+%s Não possuo dinheiro suficiente para comprar essa obra.~
+%s Compreendo que seu tesouro é menor do que meu ofício requer. Talvez outro dia, quando a sorte lhe sorrir.~
+%s Este trabalho das mãos de um sonhador custará %d moedas. Cada moeda alimenta meu ateliê de magia carpintaria.~
+%s Sua obra tem alma, meu amigo. Honro-a com %d moedas. Que ela inspire outros sonhos onde quer que chegue.~
+0
+2
+15223
+2
+15256
+-1
+0
+28
+0
+0
+#15204~
+-1
+1.00
+0.01
+-1
+%s As engrenagens da providência nem sempre giram em nosso favor. Os escudos que forjo encontraram guarida em mentes prestes a precisar deles.~
+%s Vasculho os registros da vossa jornada, mas o amuleto de proteção não repousa em vosso caminhar atual, viajante.~
+%s A defesa que buscais deve ser encontrada dentro de vós antes de manifestar-se na armadura. Procure primeiro em vossa alma.~
+%s Vosso cofre revela verdade humana: nem todos os dias trazem abundância. Isso não vos torna menos digno de proteção.~
+%s A riqueza verdadeira não é só de ouro. Retorne quando o tempo me abençoar com recursos materiais para esta aquisição.~
+%s Este bem luminoso, consagrado sob luz das estrelas e reforçado por virtude, custará %d moedas. Uma investida na vossa jornada de herói.~
+%s Vejo em vosso presente grande mérito e caráter. Honro tal dádiva com %d moedas, conhecendo que toda defesa de inocentes merece recompensa.~
+0
+2
+15222
+2
+15255
+-1
+0
+28
+0
+0
+$~

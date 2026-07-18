@@ -248,6 +248,8 @@ ACMD(do_steal)
                 send_to_char(ch, "Opa..\r\n");
                 act("$n tentou roubar algo de você!", FALSE, ch, 0, vict, TO_VICT);
                 act("$n tentou roubar algo de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+                /* Update mob emotions for failed steal attempt (experimental feature) */
+                update_mob_emotion_stolen_from(vict, ch);
             } else { /* Steal the item */
                 if (IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch)) {
                     if (!give_otrigger(obj, vict, ch) || !receive_mtrigger(ch, vict, obj)) {
@@ -269,6 +271,8 @@ ACMD(do_steal)
             send_to_char(ch, "Opa..\r\n");
             act("Você descobre que $n estava com as mãos em sua carteira.", FALSE, ch, 0, vict, TO_VICT);
             act("$n tentou roubar dinheiro de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+            /* Update mob emotions for failed steal attempt (experimental feature) */
+            update_mob_emotion_stolen_from(vict, ch);
         } else {
             /* Steal some gold coins */
             gold = (GET_GOLD(vict) * rand_number(1, 10)) / 100;
@@ -288,6 +292,32 @@ ACMD(do_steal)
 
     if (ohoh && IS_NPC(vict) && AWAKE(vict))
         hit(vict, ch, TYPE_UNDEFINED);
+
+    /* Reputation changes for stealing - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && !ohoh) {
+        /* Successful stealing */
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain reputation (infamy) for successful theft */
+            if (IS_GOOD(vict)) {
+                /* Stealing from good targets increases evil reputation */
+                modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+            } else {
+                /* Any successful theft for evil characters */
+                modify_player_reputation(ch, 1 + class_bonus);
+            }
+        } else {
+            /* Good/Neutral characters LOSE reputation for stealing */
+            modify_player_reputation(ch, -rand_number(2, 4));
+            /* Extra penalty for stealing from good targets */
+            if (IS_GOOD(vict)) {
+                modify_player_reputation(ch, -rand_number(1, 3));
+            }
+        }
+    } else if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && ohoh) {
+        /* Getting caught stealing always damages reputation */
+        modify_player_reputation(ch, -rand_number(3, 6));
+    }
 
     if (!IS_NPC(ch) && !IS_NPC(vict))
         SET_BIT_AR(PLR_FLAGS(ch), PLR_HTHIEF);
@@ -312,6 +342,177 @@ void check_thief(struct char_data *ch, struct char_data *vict)
     }
 }
 
+ACMD(do_peek)
+{
+    struct char_data *vict;
+    struct obj_data *obj;
+    char vict_name[MAX_INPUT_LENGTH];
+    int percent, success_percent, items_shown, total_items;
+    int move_cost = 5; /* Movement cost for using peek */
+
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_PEEK)) {
+        send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+        return;
+    }
+
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
+        send_to_char(ch, "Você sente muita paz neste lugar para bisbilhotar...\r\n");
+        return;
+    }
+
+    /* Check if enough movement points */
+    if (GET_MOVE(ch) < move_cost) {
+        send_to_char(ch, "Você está cansad%s demais para isso.\r\n", OA(ch));
+        return;
+    }
+
+    one_argument(argument, vict_name);
+
+    if (!(vict = get_char_vis(ch, vict_name, NULL, FIND_CHAR_ROOM))) {
+        send_to_char(ch, "Bisbilhotar quem?\r\n");
+        return;
+    } else if (vict == ch) {
+        send_to_char(ch, "Você olha para seu próprio inventário...\r\n");
+        do_inventory(ch, "", 0, 0);
+        return;
+    }
+
+    if (IS_DEAD(ch)) {
+        act("Você não pode bisbilhotar $L, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    } else if (IS_DEAD(vict)) {
+        act("Suas mãos passam por $N... $L é apenas um espírito...", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    }
+
+    /* Consume movement points */
+    GET_MOVE(ch) -= move_cost;
+
+    /* Calculate success chance - 101% is a complete failure */
+    percent = rand_number(1, 101) - dex_app_skill[GET_DEX(ch)].p_pocket;
+
+    if (GET_POS(vict) < POS_SLEEPING)
+        percent = -1; /* ALWAYS SUCCESS */
+
+    if (!AWAKE(vict)) /* Easier to peek at sleeping people */
+        percent -= 30;
+
+    /* Immortals and shopkeepers are harder to peek at */
+    if (GET_LEVEL(vict) >= LVL_IMMORT || GET_MOB_SPEC(vict) == shop_keeper)
+        percent += 50;
+
+    /* Check if peek was successful */
+    if (percent > GET_SKILL(ch, SKILL_PEEK)) {
+        /* Failed - victim notices */
+        send_to_char(ch, "Opa... Você foi peg%s!\r\n", OA(ch));
+        act("$n tentou bisbilhotar seus pertences!", FALSE, ch, 0, vict, TO_VICT);
+        act("$n tentou bisbilhotar os pertences de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+
+        /* Reputation changes for being caught */
+        if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+            modify_player_reputation(ch, -rand_number(2, 4));
+        }
+
+        if (IS_NPC(vict) && AWAKE(vict))
+            hit(vict, ch, TYPE_UNDEFINED);
+
+        return;
+    }
+
+    /* Success! Show items based on skill level */
+    success_percent = GET_SKILL(ch, SKILL_PEEK);
+
+    /* Count total items */
+    total_items = 0;
+    for (obj = vict->carrying; obj; obj = obj->next_content) {
+        if (CAN_SEE_OBJ(ch, obj))
+            total_items++;
+    }
+
+    if (total_items == 0) {
+        act("Você consegue ver que $N não está carregando nada.", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    }
+
+    /* Calculate how many items to show based on skill level */
+    /* At 50% skill, show 50% of items. At 100% skill, show all items */
+    items_shown = (total_items * success_percent) / 100;
+    if (items_shown < 1)
+        items_shown = 1; /* Always show at least one item */
+
+    act("\r\nVocê consegue ver no inventário $D:", FALSE, vict, 0, ch, TO_VICT);
+
+    /* Show items - loop through and show random items */
+    if (items_shown >= total_items) {
+        /* Show all items */
+        for (obj = vict->carrying; obj; obj = obj->next_content) {
+            if (CAN_SEE_OBJ(ch, obj)) {
+                send_to_char(ch, "  ");
+                show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+            }
+        }
+    } else {
+/* Show only a portion of items */
+/* Use a reasonable max size for stack allocation */
+#define MAX_PEEK_ITEMS 100
+        int shown_indices[MAX_PEEK_ITEMS];
+        int all_indices[MAX_PEEK_ITEMS];
+        int i, idx;
+
+        /* Safety check */
+        if (total_items > MAX_PEEK_ITEMS)
+            total_items = MAX_PEEK_ITEMS;
+
+        /* Create array of all indices */
+        for (i = 0; i < total_items; i++)
+            all_indices[i] = i;
+
+        /* Fisher-Yates shuffle to select random items */
+        for (i = 0; i < items_shown; i++) {
+            idx = rand_number(i, total_items - 1);
+            /* Swap */
+            int temp = all_indices[i];
+            all_indices[i] = all_indices[idx];
+            all_indices[idx] = temp;
+            shown_indices[i] = all_indices[i];
+        }
+
+        /* Display the selected items */
+        for (i = 0; i < items_shown; i++) {
+            int current_idx = 0;
+            for (obj = vict->carrying; obj; obj = obj->next_content) {
+                if (CAN_SEE_OBJ(ch, obj)) {
+                    if (current_idx == shown_indices[i]) {
+                        send_to_char(ch, "  ");
+                        show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+                        break;
+                    }
+                    current_idx++;
+                }
+            }
+        }
+
+        if (items_shown < total_items) {
+            send_to_char(ch, "\r\nVocê não consegue ver tudo que %s está carregando.\r\n", ELEA(vict));
+        }
+#undef MAX_PEEK_ITEMS
+    }
+
+    /* Small chance of being detected even on success (5% base) */
+    if (AWAKE(vict) && rand_number(1, 100) <= 5) {
+        act("$n parece estar olhando para você de forma estranha.", FALSE, ch, 0, vict, TO_VICT);
+    }
+
+    /* Reputation changes for successful peeking */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain small reputation for sneaky actions */
+            modify_player_reputation(ch, 1 + class_bonus);
+        }
+    }
+}
+
 ACMD(do_practice)
 {
     char arg[MAX_INPUT_LENGTH];
@@ -325,6 +526,440 @@ ACMD(do_practice)
         send_to_char(ch, "Você só pode praticar na presença de seu mestre.\r\n");
     else
         list_skills(ch);
+}
+
+/* Structure for sorting spells/skills by level */
+struct spell_level_entry {
+    char *name;
+    int level;
+    int element;
+};
+
+/* Comparison function for qsort */
+static int compare_spell_levels(const void *a, const void *b)
+{
+    const struct spell_level_entry *entry_a = (const struct spell_level_entry *)a;
+    const struct spell_level_entry *entry_b = (const struct spell_level_entry *)b;
+    return entry_a->level - entry_b->level;
+}
+
+/* Get color code for element display */
+static const char *get_element_color_code(struct char_data *ch, int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return CBRED(ch, C_CMP); /* Bright Red for Fire */
+        case ELEMENT_WATER:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Water */
+        case ELEMENT_AIR:
+            return CBWHT(ch, C_CMP); /* Bright White for Air */
+        case ELEMENT_EARTH:
+            return CCYEL(ch, C_CMP); /* Yellow for Earth */
+        case ELEMENT_LIGHTNING:
+            return CBCYN(ch, C_CMP); /* Bright Cyan for Lightning */
+        case ELEMENT_ICE:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Ice */
+        case ELEMENT_ACID:
+            return CBGRN(ch, C_CMP); /* Bright Green for Acid */
+        case ELEMENT_POISON:
+            return CCGRN(ch, C_CMP); /* Green for Poison */
+        case ELEMENT_HOLY:
+            return CBYEL(ch, C_CMP); /* Bright Yellow for Holy */
+        case ELEMENT_UNHOLY:
+            return CBMAG(ch, C_CMP); /* Bright Magenta for Unholy */
+        case ELEMENT_MENTAL:
+            return CCMAG(ch, C_CMP); /* Magenta for Mental */
+        case ELEMENT_PHYSICAL:
+            return CCWHT(ch, C_CMP); /* White for Physical */
+        default:
+            return CCNRM(ch, C_CMP); /* Normal for Undefined */
+    }
+}
+
+/* Helper function to list spells/skills/chansons for a class */
+static void list_spells_by_type(struct char_data *ch, int class_num, char type, bool is_current_class)
+{
+    struct str_spells *ptr;
+    struct spell_level_entry *entries = NULL;
+    int count = 0, i;
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
+
+    /* Count how many entries we have */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == type) {
+            int level = get_spell_level(ptr->vnum, class_num);
+            if (level >= 0)
+                count++;
+        }
+    }
+
+    if (count == 0) {
+        if (is_current_class) {
+            send_to_char(ch, "Nenhuma %s disponível para a sua classe atual.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção");
+        } else {
+            send_to_char(ch, "Nenhuma %s disponível para a classe %s.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção",
+                         pc_class_types[class_num]);
+        }
+        return;
+    }
+
+    /* Allocate array for sorting */
+    CREATE(entries, struct spell_level_entry, count);
+
+    /* Fill the array */
+    i = 0;
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == type) {
+            int level = get_spell_level(ptr->vnum, class_num);
+            if (level >= 0) {
+                entries[i].name = ptr->name;
+                entries[i].level = level;
+                entries[i].element = ptr->element;
+                i++;
+            }
+        }
+    }
+
+    /* Sort by level */
+    qsort(entries, count, sizeof(struct spell_level_entry), compare_spell_levels);
+
+    /* Build output message */
+    if (is_current_class) {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a sua classe atual:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções");
+    } else {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a classe %s:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções",
+                       pc_class_types[class_num]);
+    }
+
+    for (i = 0; i < count && len < sizeof(buf) - 80; i++) {
+        const char *element_color = get_element_color_code(ch, entries[i].element);
+        const char *color_normal = CCNRM(ch, C_CMP);
+        const char *element_name = get_spell_element_name(entries[i].element);
+
+        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s]\r\n", entries[i].name,
+                        entries[i].level, element_color, element_name, color_normal);
+    }
+
+    page_string(ch->desc, buf, TRUE);
+
+    /* Free the array */
+    free(entries);
+}
+
+/* Parse class name from argument */
+static int parse_class_arg(char *arg)
+{
+    if (!*arg)
+        return CLASS_UNDEFINED;
+
+    if (is_abbrev(arg, "mago") || is_abbrev(arg, "mu"))
+        return CLASS_MAGIC_USER;
+    else if (is_abbrev(arg, "clerigo") || is_abbrev(arg, "cl"))
+        return CLASS_CLERIC;
+    else if (is_abbrev(arg, "ladrao") || is_abbrev(arg, "th"))
+        return CLASS_THIEF;
+    else if (is_abbrev(arg, "guerreiro") || is_abbrev(arg, "wa"))
+        return CLASS_WARRIOR;
+    else if (is_abbrev(arg, "druida") || is_abbrev(arg, "dru"))
+        return CLASS_DRUID;
+    else if (is_abbrev(arg, "bardo") || is_abbrev(arg, "ba"))
+        return CLASS_BARD;
+    else if (is_abbrev(arg, "ranger") || is_abbrev(arg, "ra"))
+        return CLASS_RANGER;
+
+    return CLASS_UNDEFINED;
+}
+
+ACMD(do_skills)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, SKILL, is_current_class);
+}
+
+ACMD(do_spells)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, SPELL, is_current_class);
+}
+
+ACMD(do_chansons)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, CHANSON, is_current_class);
+}
+
+ACMD(do_syllables)
+{
+    struct str_spells *ptr;
+    char syllables[256];
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
+    int count = 0;
+    bool has_spells = FALSE;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    /* Header */
+    len = snprintf(buf, sizeof(buf),
+                   "Sílabas Místicas das Magias que Você Conhece:\r\n"
+                   "==============================================\r\n\r\n"
+                   "Ao estudar suas magias, você aprende as palavras de poder que as invocam.\r\n"
+                   "Você pode falar essas sílabas em voz alta para conjurar magias usando o comando 'say'.\r\n\r\n");
+
+    /* List all spells the character knows */
+    for (ptr = list_spells; ptr && len < sizeof(buf) - 200; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == SPELL && GET_SKILL(ch, ptr->vnum) > 0) {
+            has_spells = TRUE;
+            spell_to_syllables_public(ptr->name, syllables, sizeof(syllables));
+
+            len += snprintf(buf + len, sizeof(buf) - len, "%-30s -> %s\r\n", ptr->name, syllables);
+            count++;
+        }
+    }
+
+    if (!has_spells) {
+        send_to_char(ch, "Você ainda não conhece nenhuma magia.\r\n");
+        return;
+    }
+
+    len += snprintf(buf + len, sizeof(buf) - len,
+                    "\r\n==============================================\r\n"
+                    "Total de magias conhecidas: %d\r\n\r\n"
+                    "Dica: Você pode dizer as sílabas místicas em voz alta para conjurar.\r\n"
+                    "Exemplo: say %s\r\n"
+                    "Você também pode incluir um alvo após as sílabas.\r\n"
+                    "Exemplo: say %s <nome do alvo>\r\n",
+                    count, count > 0 ? syllables : "ignisaegis", count > 0 ? syllables : "ignisaegis");
+
+    page_string(ch->desc, buf, TRUE);
+}
+
+ACMD(do_experiment)
+{
+    struct str_spells *ptr;
+    char syllables[256];
+    char spoken_lower[256];
+    int i;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem experimentar com sílabas.\r\n");
+        return;
+    }
+
+    skip_spaces(&argument);
+
+    if (!*argument) {
+        send_to_char(ch,
+                     "Uso: experiment <silabas misticas>\r\n\r\n"
+                     "Experimente combinar sílabas místicas que você aprendeu para descobrir\r\n"
+                     "variantes de magias que você já conhece.\r\n\r\n"
+                     "Exemplo: experiment aquaaegis\r\n"
+                     "         (pode descobrir uma variante de watershield se você conhece fireshield)\r\n\r\n"
+                     "Use o comando 'syllables' para ver as sílabas das magias que você conhece.\r\n");
+        return;
+    }
+
+    /* Convert spoken text to lowercase for comparison */
+    strlcpy(spoken_lower, argument, sizeof(spoken_lower));
+    for (i = 0; spoken_lower[i]; i++)
+        spoken_lower[i] = LOWER(spoken_lower[i]);
+
+    /* Check all spells to see if the syllables match a discoverable variant */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Only check discoverable spell variants */
+        if (ptr->status != available || ptr->type != SPELL || !ptr->discoverable)
+            continue;
+
+        /* Validate spell vnum is within valid bounds */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate prerequisite vnum if present */
+        if (ptr->prerequisite_spell > 0 && ptr->prerequisite_spell > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists */
+        if (!ptr->name)
+            continue;
+
+        /* Check if player already knows this spell */
+        if (GET_SKILL(ch, ptr->vnum) > 0)
+            continue;
+
+        /* Check if player knows the prerequisite spell */
+        if (ptr->prerequisite_spell > 0 && GET_SKILL(ch, ptr->prerequisite_spell) == 0)
+            continue;
+
+        /* Convert this spell's name to syllables */
+        spell_to_syllables_public(ptr->name, syllables, sizeof(syllables));
+
+        /* Check if spoken syllables match */
+        if (!strcmp(syllables, spoken_lower)) {
+            /* Found a match! Teach the spell to the player at the same level as prerequisite */
+            int learned_level = (ptr->prerequisite_spell > 0) ? GET_SKILL(ch, ptr->prerequisite_spell) : 15;
+
+            SET_SKILL(ch, ptr->vnum, learned_level);
+
+            send_to_char(ch,
+                         "@GÊxito na experimentação!@n\r\n\r\n"
+                         "As sílabas místicas ressoam com poder conhecido... Você sente uma conexão\r\n"
+                         "com magias que já domina e percebe como adaptá-las!\r\n\r\n"
+                         "Você descobriu a magia: @Y%s@n\r\n\r\n"
+                         "Use 'syllables' para ver suas novas sílabas místicas.\r\n",
+                         ptr->name);
+
+            /* Log the discovery */
+            mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE,
+                   "%s discovered spell variant '%s' through experimentation", GET_NAME(ch), ptr->name);
+
+            return;
+        }
+    }
+
+    /* No match found */
+    send_to_char(ch,
+                 "Você tenta combinar as sílabas místicas, mas elas não ressoam com nenhum\r\n"
+                 "conhecimento que você possui. Talvez você precise aprender magias relacionadas\r\n"
+                 "primeiro, ou essas sílabas não correspondem a nenhuma variante descobrível.\r\n");
+}
+
+/**
+ * Update variant skill levels when a prerequisite skill levels up.
+ * When a skill is improved, all known variant skills that depend on it
+ * should be updated to match the prerequisite skill level.
+ * This function recursively updates chains (A -> B -> C).
+ *
+ * @param ch The character whose skills are being updated
+ * @param prerequisite_vnum The vnum of the prerequisite skill that was leveled up
+ * @param new_level The new level of the prerequisite skill
+ */
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level)
+{
+    struct str_spells *ptr;
+
+    /* Validate ch pointer */
+    if (!ch)
+        return;
+
+    if (IS_NPC(ch))
+        return;
+
+    /* Validate prerequisite_vnum is within valid bounds */
+    if (prerequisite_vnum <= 0 || prerequisite_vnum > MAX_SKILLS)
+        return;
+
+    /* Iterate through all spells to find variants with this prerequisite */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Check if this spell has the specified prerequisite */
+        if (ptr->prerequisite_spell != prerequisite_vnum)
+            continue;
+
+        /* Validate variant vnum is within valid bounds before accessing skill array */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists before using it */
+        if (!ptr->name)
+            continue;
+
+        /* Check if player knows this variant */
+        if (GET_SKILL(ch, ptr->vnum) == 0)
+            continue;
+
+        /* Update variant skill level to match prerequisite if it's lower */
+        if (GET_SKILL(ch, ptr->vnum) < new_level) {
+            SET_SKILL(ch, ptr->vnum, new_level);
+            send_to_char(ch,
+                         "@GVariante atualizada:@n Sua proficiência em @Y%s@n aumentou para %d "
+                         "para corresponder à habilidade pré-requisito.\r\n",
+                         ptr->name, new_level);
+
+            /* Recursively update any variants that depend on this variant (chain update) */
+            update_variant_skills(ch, ptr->vnum, new_level);
+        }
+    }
 }
 
 ACMD(do_visible)
@@ -798,7 +1433,7 @@ ACMD(do_gen_tog)
          "Agora será possível rastrear através de portas.\r\n"},
         {"A tela não vai ser limpa no OLC.\r\n", "A tela vai ser limpa no OLC.\r\n"},
         {"Modo 'Construtor' desligado.\r\n", "Modo 'Construtor' ligado.\r\n"},
-        {"AWAY desligado.\r\n", "AWAY ligado"},
+        {"AWAY desligado.\r\n", "AWAY ligado.\r\n"},
         {"Autoloot desligado.\r\n", "Autoloot ligado.\r\n"},
         {"Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
@@ -813,7 +1448,15 @@ ACMD(do_gen_tog)
         {"Você não verá mais a saúde do oponente durante a luta.\r\n",
          "Agora você verá a saúde do oponente durante a luta.\r\n"},
         {"Seu título não será mais alterado automaticamente.\r\n",
-         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}};
+         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"},
+        {"", ""}, /* 31: Placeholder (SCMD_PAGELENGTH not used in do_gen_tog) */
+        {"", ""}, /* 32: Placeholder (SCMD_SCREENWIDTH not used in do_gen_tog) */
+        {"", ""}, /* 33: Placeholder (SCMD_COLOR not used in do_gen_tog) */
+        {"Você não verá mais a saúde do oponente durante a luta.\r\n",
+         "Agora você verá a saúde do oponente durante a luta.\r\n"}, /* 34: SCMD_HITBAR */
+        {"Seu título não será mais alterado automaticamente.\r\n",
+         "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}, /* 35: SCMD_AUTOTITLE */
+        {"Auto-exame desligado.\r\n", "Auto-exame ligado.\r\n"}};                      /* 36: SCMD_AUTOEXAM */
 
     if (IS_NPC(ch))
         return;
@@ -932,6 +1575,9 @@ ACMD(do_gen_tog)
         case SCMD_AUTOTITLE:
             result = PRF_TOG_CHK(ch, PRF_AUTOTITLE);
             break;
+        case SCMD_AUTOEXAM:
+            result = PRF_TOG_CHK(ch, PRF_AUTOEXAM);
+            break;
         default:
             log1("SYSERR: Unknown subcmd %d in do_gen_toggle.", subcmd);
             return;
@@ -1027,14 +1673,15 @@ ACMD(do_happyhour)
                      "       %shappyhour qp <num>     %s- set qp percentage gain\r\n"
                      "       %shappyhour exp <num>    %s- set exp percentage gain\r\n"
                      "       %shappyhour gold <num>   %s- set gold percentage gain\r\n"
-                     "       \tyhappyhour default      \tw- sets a default setting for happyhour\r\n\r\n"
+                     "       %shappyhour default      %s- sets a default setting for happyhour\r\n\r\n"
                      "Configure the happyhour settings and start a happyhour.\r\n"
                      "Currently 1 hour IRL = %d ticks\r\n"
                      "If no number is specified, 0 (off) is assumed.\r\nThe command \tyhappyhour time\tn will "
                      "therefore stop the happyhour timer.\r\n",
                      CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM),
                      CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
-                     CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), (3600 / SECS_PER_MUD_HOUR));
+                     CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                     (3600 / SECS_PER_MUD_HOUR));
     }
 }
 
@@ -1136,7 +1783,7 @@ int can_elevate(struct char_data *ch)
 
     /* Must have experienced all classes at least once */
     for (i = 0; i < NUM_CLASSES; i++) {
-        if (ch->player_specials->saved.was_class[i] || GET_CLASS(ch) == i)
+        if (WAS_FLAGGED(ch, i) || GET_CLASS(ch) == i)
             classes_experienced++;
     }
     if (classes_experienced < NUM_CLASSES)
@@ -1197,6 +1844,9 @@ ACMD(do_recall)
             break;
         case 3:
             char_to_room(ch, r_hometown_3);
+            break;
+        case 4:
+            char_to_room(ch, r_hometown_4);
             break;
         default:
             char_to_room(ch, r_hometown_1);
@@ -1348,20 +1998,15 @@ ACMD(do_mine)
 
         // If we found something, create the object
         if (vnum != NOTHING) {
-            obj = read_object(vnum, VIRTUAL);
-            if (obj) {
-                obj_to_char(obj, ch);
-                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
-            }
-        }
-
-        // Very small chance to attract a traveling dwarf who might trade
-        if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
-            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
-            if (dwarf_mob) {
-                char_to_room(dwarf_mob, IN_ROOM(ch));
-                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
-                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
+            /* For mobs, check if they already have this object to prevent resource overflow */
+            if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
+                /* Mob already has this item, skip creation to prevent overflow */
+            } else {
+                obj = read_object(vnum, VIRTUAL);
+                if (obj) {
+                    obj_to_char(obj, ch);
+                    send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+                }
             }
         }
 
@@ -1457,29 +2102,14 @@ ACMD(do_fishing)
         }
 
         if (vnum != NOTHING) {
-            obj = read_object(vnum, VIRTUAL);
-            if (obj) {
-                obj_to_char(obj, ch);
-                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
-            }
-        }
-
-        // Small chance to attract a school of fish or fisherman
-        if (percent <= prob && rand_number(1, 100) <= 5) {
-            int fish_spawn = rand_number(1, 100);
-            if (fish_spawn <= 70) {
-                struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
-                if (fish_mob) {
-                    char_to_room(fish_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
-                    act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
-                }
+            /* For mobs, check if they already have this object to prevent resource overflow */
+            if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
+                /* Mob already has this item, skip creation to prevent overflow */
             } else {
-                struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
-                if (fisherman_mob) {
-                    char_to_room(fisherman_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
-                    act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
+                obj = read_object(vnum, VIRTUAL);
+                if (obj) {
+                    obj_to_char(obj, ch);
+                    send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
                 }
             }
         }
@@ -1546,20 +2176,15 @@ ACMD(do_forage)
         }
 
         if (vnum != NOTHING) {
-            obj = read_object(vnum, VIRTUAL);
-            if (obj) {
-                obj_to_char(obj, ch);
-                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
-            }
-        }
-
-        // Small chance to attract a curious squirrel
-        if (percent <= prob && rand_number(1, 100) <= 8) {
-            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
-            if (squirrel_mob) {
-                char_to_room(squirrel_mob, IN_ROOM(ch));
-                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
-                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
+            /* For mobs, check if they already have this object to prevent resource overflow */
+            if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
+                /* Mob already has this item, skip creation to prevent overflow */
+            } else {
+                obj = read_object(vnum, VIRTUAL);
+                if (obj) {
+                    obj_to_char(obj, ch);
+                    send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+                }
             }
         }
 
@@ -1630,13 +2255,15 @@ ACMD(do_eavesdrop)
         if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) && EXIT(ch, dir)->keyword) {
             sprintf(buf, "A %s está fechada.\r\n", fname(EXIT(ch, dir)->keyword));
             send_to_char(ch, "%s", buf);
-        } else {
+        } else if (EXIT(ch, dir)->to_room != NOWHERE) {
             target_room = EXIT(ch, dir)->to_room;
             ch->next_listener = world[target_room].listeners;
             world[target_room].listeners = ch;
             ch->listening_to = target_room;
             send_to_char(ch, "Você começa a espionar conversas nessa direção.\r\n");
             WAIT_STATE(ch, PULSE_VIOLENCE);
+        } else {
+            send_to_char(ch, "Não há uma sala nessa direção...\r\n");
         }
     } else {
         send_to_char(ch, "Não há uma sala nessa direção...\r\n");

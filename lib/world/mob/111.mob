@@ -19,6 +19,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 12
 E
 #11102
 monstro pedra~
@@ -60,9 +62,6 @@ StrAdd: 25
 Dex: 25
 Con: 25
 E
-T 11100
-T 11101
-T 11102
 #11104
 horrivel gargula~
 o Gárgula~
@@ -84,5 +83,29 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+E
+#11105
+mimico pedra pedregulho~
+.um pedregulho estranho~
+.um mimico fingindo ser um pedregulho esta escondigo aqui.
+~
+It looks unfinished.
+~
+2334784 0 0 0 131072 0 0 0 0 E
+50 4 -20 10d10+500 8d8+8
+500 250000
+9 9 0
+BareHandAttack: 7
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 12
+SavingRod: 12
+SavingPetri: 12
+SavingBreath: 12
+SavingSpell: 12
 E
 $

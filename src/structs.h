@@ -142,8 +142,10 @@
 #define SECT_QUICKSAND 12   /**< Areia Movedica			*/
 #define SECT_LAVA 13        /**< lava			*/
 #define SECT_ICE 14         /**< gelo			*/
+#define SECT_DESERT 15      /**< deserto		*/
+#define SECT_ROAD 16        /**< estrada		*/
 /** The total number of room Sector Types */
-#define NUM_ROOM_SECTORS 15
+#define NUM_ROOM_SECTORS 17
 
 /* char and mob-related defines */
 
@@ -305,13 +307,17 @@
 #define PRF_ZONERESETS 34
 #define PRF_HITBAR 35
 #define PRF_AUTOTITLE 36
-#define PRF_NOCLAN 37   /**< Can't hear gossip channel */
-#define PRF_MCCP 38     /**< Auto MCCP compression (MCCP3 > MCCP2) */
-#define PRF_AUTOSIZE 39 /**< Auto NAWS terminal size configuration */
-#define PRF_VERBOSE 40  /**< Listings like where are more verbose */
+#define PRF_NOCLAN 37     /**< Can't hear gossip channel */
+#define PRF_MCCP 38       /**< Auto MCCP compression (MCCP3 > MCCP2) */
+#define PRF_AUTOSIZE 39   /**< Auto NAWS terminal size configuration */
+#define PRF_VERBOSE 40    /**< Listings like where are more verbose */
+#define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
+#define PRF_DISPEMOTE 42  /**< Display mob emotion indicators in room descriptions */
+#define PRF_AUTOEXAM 43   /**< Automatically examine corpses after killing */
+#define PRF_HOUSE_ALTINV 44 /**< Alternate house inventory display */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 41
+#define NUM_PRF_FLAGS 45
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
@@ -396,10 +402,12 @@
 #define CON_RB_SKILL 37
 #define CON_RB_NEW_CLASS 38
 #define CON_RB_REROLL 39
-#define CON_RB_QHOME 40
+#define CON_RB_QATTRS 40
 #define CON_ELEVATE_CONF 41
 #define CON_IMM_CONF 42
 #define CON_REMOTE 43
+#define CON_RB_QHOMETOWN 44
+#define CON_QACCEPT 45 /**< Quest accept confirmation */
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT /**< The first CON_ state that is an OLC */
@@ -410,32 +418,32 @@
  which control the valid places you can wear a piece of equipment.
  For example, there are two neck positions on the player, and items
  only get the generic neck type. */
-#define WEAR_LIGHT 0    /**< Equipment Location Light */
-#define WEAR_FINGER_R 1 /**< Equipment Location Right Finger */
-#define WEAR_FINGER_L 2 /**< Equipment Location Left Finger */
-#define WEAR_NECK_1 3   /**< Equipment Location Neck #1 */
-#define WEAR_NECK_2 4   /**< Equipment Location Neck #2 */
-#define WEAR_BODY 5     /**< Equipment Location Body */
-#define WEAR_HEAD 6     /**< Equipment Location Head */
-#define WEAR_LEGS 7     /**< Equipment Location Legs */
-#define WEAR_FEET 8     /**< Equipment Location Feet */
-#define WEAR_HANDS 9    /**< Equipment Location Hands */
-#define WEAR_ARMS 10    /**< Equipment Location Arms */
-#define WEAR_SHIELD 11  /**< Equipment Location Shield */
-#define WEAR_ABOUT 12   /**< Equipment Location about body (like a cape)*/
-#define WEAR_WAIST 13   /**< Equipment Location Waist */
-#define WEAR_WRIST_R 14 /**< Equipment Location Right Wrist */
-#define WEAR_WRIST_L 15 /**< Equipment Location Left Wrist */
-#define WEAR_WIELD 16   /**< Equipment Location Weapon */
-#define WEAR_HOLD 17    /**< Equipment Location held in offhand */
-#define WEAR_WINGS 18
-#define WEAR_EAR_R 19
-#define WEAR_EAR_L 20
-#define WEAR_FACE 21
-#define WEAR_NOSE 22
+#define WEAR_LIGHT 0 /**< Equipment Location Light */
+#define WEAR_HEAD 1  /**< Equipment Location Head */
+#define WEAR_EAR_R 2
+#define WEAR_EAR_L 3
+#define WEAR_FACE 4
+#define WEAR_NOSE 5
+#define WEAR_NECK_1 6    /**< Equipment Location Neck #1 */
+#define WEAR_NECK_2 7    /**< Equipment Location Neck #2 */
+#define WEAR_BODY 8      /**< Equipment Location Body */
+#define WEAR_ARMS 9      /**< Equipment Location Arms */
+#define WEAR_HANDS 10    /**< Equipment Location Hands */
+#define WEAR_WRIST_R 11  /**< Equipment Location Right Wrist */
+#define WEAR_WRIST_L 12  /**< Equipment Location Left Wrist */
+#define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
+#define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
+#define WEAR_WAIST 15    /**< Equipment Location Waist */
+#define WEAR_LEGS 16     /**< Equipment Location Legs */
+#define WEAR_FEET 17     /**< Equipment Location Feet */
+#define WEAR_ABOUT 18    /**< Equipment Location about body (like a cape)*/
+#define WEAR_SHIELD 19   /**< Equipment Location Shield */
+#define WEAR_WIELD 20    /**< Equipment Location Weapon */
+#define WEAR_HOLD 21     /**< Equipment Location held in offhand */
+#define WEAR_WINGS 22
 #define WEAR_INSIGNE 23
 #define WEAR_QUIVER 24
-/** Total number of available equipment lcoations */
+/** Total number of available equipment locations */
 #define NUM_WEARS 25
 
 /* object-related defines */
@@ -469,8 +477,10 @@
 #define ITEM_BOOK 27
 #define ITEM_PLANT 28 /**< Item is a plant       */
 #define ITEM_FIREWEAPON 29
+#define ITEM_MAGIC_STONE 30 /**< Item is a magic stone for quest completion */
+#define ITEM_CARDS 31       /**< Item is a card deck or cards */
 /** Total number of item types.*/
-#define NUM_ITEM_TYPES 30
+#define NUM_ITEM_TYPES 32
 
 /* Take/Wear flags: used by obj_data.obj_flags.wear_flags */
 #define ITEM_WEAR_TAKE 0   /**< Item can be taken */
@@ -521,8 +531,9 @@
 #define ITEM_ANTI_BARD 20
 #define ITEM_QUEST 21 /**< Item is a quest item         */
 #define ITEM_ANTI_RANGER 22
+#define ITEM_NOLOCATE 23 /**< Item cannot be found by locate object spell */
 /** Total number of item flags */
-#define NUM_ITEM_FLAGS 23
+#define NUM_ITEM_FLAGS 24
 
 /* Modifier constants used with obj affects ('A' fields) */
 #define APPLY_NONE 0           /**< No effect			*/
@@ -714,6 +725,8 @@
 #define PULSE_ZONE (10 RL_SEC)
 /** Controls when mobile (NPC) actions and updates will occur. */
 #define PULSE_MOBILE (10 RL_SEC)
+/** Controls when mobile emotion and emote updates will occur. */
+#define PULSE_MOB_EMOTION (4 RL_SEC)
 /** Controls the time between turns of combat. */
 #define PULSE_VIOLENCE (2 RL_SEC)
 /** Controls when characters and houses (if implemented) will be autosaved.
@@ -962,6 +975,7 @@ struct room_data {
 #define GOAL_FORAGE 12
 #define GOAL_EAVESDROP 13
 #define GOAL_COLLECT_KEY 14
+#define GOAL_FOLLOW 15
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -978,6 +992,8 @@ struct mob_genetics {
     int trade_tendency;
     int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
     int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
+    int healing_tendency;    /* Tendência de curar aliados. Varia de 0 a 100. */
 };
 
 /**
@@ -988,6 +1004,124 @@ struct mob_wishlist_item {
     int priority;                   /* Prioridade do item (score do evaluate_item_for_mob) */
     time_t added_time;              /* Quando foi adicionado à wishlist */
     struct mob_wishlist_item *next; /* Próximo item na lista */
+};
+
+/**
+ * Emotion memory system - tracks recent interactions with entities for persistent emotional responses
+ *
+ * DESIGN PHILOSOPHY:
+ * - Memories are RUNTIME-ONLY (not persisted to disk)
+ * - Mob memories reset on zone reset/reboot - this is intentional
+ * - Allows strategic gameplay: players can wait for zone reset to "reset" mob relationships
+ * - Prevents stale memory corruption from extracted/dead entities
+ * - Simple implementation with no disk I/O overhead
+ *
+ * ENTITY IDENTIFICATION:
+ * - Players: GET_IDNUM (persistent unique ID, but memories themselves aren't saved)
+ * - Mobs: char_script_id (runtime-only unique instance ID per boot session)
+ *
+ * MEMORY SIZE: 10 slots per mob using circular buffer
+ * - Oldest memory automatically overwritten when buffer is full
+ * - ~240 bytes per mob (negligible memory footprint)
+ * - ~240KB for 1000 active mobs
+ *
+ * MEMORY WEIGHTING:
+ * - Recent interactions have more weight (decay over time)
+ * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
+ * - Memories older than 1 hour have minimal influence
+ */
+#define EMOTION_MEMORY_SIZE 10
+#define ENTITY_TYPE_PLAYER 0
+#define ENTITY_TYPE_MOB 1
+
+/* Emotional profiles for mob personality initialization */
+#define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
+#define EMOTION_PROFILE_AGGRESSIVE 1 /**< Aggressive profile - high anger, low trust/friendship */
+#define EMOTION_PROFILE_DEFENSIVE 2  /**< Defensive profile - high fear/caution, low trust */
+#define EMOTION_PROFILE_BALANCED 3   /**< Balanced profile - moderate all emotions */
+#define EMOTION_PROFILE_SENSITIVE 4  /**< Sensitive profile - high empathy, low aggression */
+#define EMOTION_PROFILE_CONFIDENT 5  /**< Confident profile - high courage, low fear */
+#define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
+#define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
+
+/* Emotion type constants for hybrid emotion system */
+#define EMOTION_TYPE_FEAR 0
+#define EMOTION_TYPE_ANGER 1
+#define EMOTION_TYPE_HAPPINESS 2
+#define EMOTION_TYPE_SADNESS 3
+#define EMOTION_TYPE_FRIENDSHIP 4
+#define EMOTION_TYPE_LOVE 5
+#define EMOTION_TYPE_TRUST 6
+#define EMOTION_TYPE_LOYALTY 7
+#define EMOTION_TYPE_CURIOSITY 8
+#define EMOTION_TYPE_GREED 9
+#define EMOTION_TYPE_PRIDE 10
+#define EMOTION_TYPE_COMPASSION 11
+#define EMOTION_TYPE_ENVY 12
+#define EMOTION_TYPE_COURAGE 13
+#define EMOTION_TYPE_EXCITEMENT 14
+#define EMOTION_TYPE_DISGUST 15
+#define EMOTION_TYPE_SHAME 16
+#define EMOTION_TYPE_PAIN 17
+#define EMOTION_TYPE_HORROR 18
+#define EMOTION_TYPE_HUMILIATION 19
+
+/* Interaction types for emotion memory */
+#define INTERACT_ATTACKED 0
+#define INTERACT_HEALED 1
+#define INTERACT_RECEIVED_ITEM 2
+#define INTERACT_STOLEN_FROM 3
+#define INTERACT_RESCUED 4
+#define INTERACT_ASSISTED 5
+#define INTERACT_SOCIAL_POSITIVE 6
+#define INTERACT_SOCIAL_NEGATIVE 7
+#define INTERACT_SOCIAL_VIOLENT 8
+#define INTERACT_ALLY_DIED 9
+#define INTERACT_WITNESSED_DEATH 10
+#define INTERACT_QUEST_COMPLETE 11
+#define INTERACT_QUEST_FAIL 12
+#define INTERACT_BETRAYAL 13
+
+struct emotion_memory {
+    int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
+    int interaction_type; /* Type of interaction (INTERACT_*) */
+    int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
+    time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
+    char social_name[20]; /* Name of the social command if interaction was social (empty string otherwise) */
+
+    /* Complete emotion snapshot - track all 20 emotions to see how each interaction affected them */
+    /* Basic emotions */
+    sh_int fear_level;      /* Fear at time of interaction (0-100) */
+    sh_int anger_level;     /* Anger at time of interaction (0-100) */
+    sh_int happiness_level; /* Happiness at time of interaction (0-100) */
+    sh_int sadness_level;   /* Sadness at time of interaction (0-100) */
+
+    /* Social emotions */
+    sh_int friendship_level; /* Friendship at time of interaction (0-100) */
+    sh_int love_level;       /* Love at time of interaction (0-100) */
+    sh_int trust_level;      /* Trust at time of interaction (0-100) */
+    sh_int loyalty_level;    /* Loyalty at time of interaction (0-100) */
+
+    /* Motivational emotions */
+    sh_int curiosity_level; /* Curiosity at time of interaction (0-100) */
+    sh_int greed_level;     /* Greed at time of interaction (0-100) */
+    sh_int pride_level;     /* Pride at time of interaction (0-100) */
+
+    /* Empathic emotions */
+    sh_int compassion_level; /* Compassion at time of interaction (0-100) */
+    sh_int envy_level;       /* Envy at time of interaction (0-100) */
+
+    /* Arousal emotions */
+    sh_int courage_level;    /* Courage at time of interaction (0-100) */
+    sh_int excitement_level; /* Excitement at time of interaction (0-100) */
+
+    /* Negative/aversive emotions */
+    sh_int disgust_level;     /* Disgust at time of interaction (0-100) */
+    sh_int shame_level;       /* Shame at time of interaction (0-100) */
+    sh_int pain_level;        /* Pain at time of interaction (0-100) */
+    sh_int horror_level;      /* Horror at time of interaction (0-100) */
+    sh_int humiliation_level; /* Humiliation at time of interaction (0-100) */
 };
 
 struct mob_ai_data {
@@ -1016,11 +1150,52 @@ struct mob_ai_data {
     int quest_timer;        /* Timer para a quest atual */
     int quest_counter;      /* Contador de progresso da quest */
 
+    /* Emotion system for contextual behavior (0-100 scale) */
+    /* Basic emotions */
+    int emotion_fear;      /* Fear level - affects fleeing, cautious behavior (relates to wimpy_tendency) */
+    int emotion_anger;     /* Anger level - affects aggressive socials, attacking */
+    int emotion_happiness; /* Happiness level - affects positive socials */
+    int emotion_sadness;   /* Sadness level - affects withdrawn behavior */
+
+    /* Social emotions */
+    int emotion_friendship; /* Friendship level towards nearby entities (relates to group_tendency) */
+    int emotion_love;       /* Love/affection level - affects protective behavior */
+    int emotion_trust;      /* Trust level - affects trade, following (relates to trade_tendency, follow_tendency) */
+    int emotion_loyalty;    /* Loyalty to group/master - affects group cohesion */
+
+    /* Motivational emotions */
+    int emotion_curiosity; /* Curiosity level - affects exploration, quest acceptance (relates to adventurer_tendency,
+                              quest_tendency) */
+    int emotion_greed;     /* Greed/desire - affects looting, hoarding (relates to loot_tendency) */
+    int emotion_pride;     /* Pride level - affects reputation-based behavior, refusal to flee */
+
+    /* Empathic emotions */
+    int emotion_compassion; /* Compassion/empathy - affects healing, helping (relates to healing_tendency) */
+    int emotion_envy;       /* Envy level - affects desire for others' possessions */
+
+    /* Arousal emotions */
+    int emotion_courage;    /* Courage level - opposite of fear (relates to brave_prevalence) */
+    int emotion_excitement; /* Excitement/restlessness - affects roaming, activity (relates to roam_tendency) */
+
+    /* Negative/aversive emotions */
+    int emotion_disgust;     /* Disgust level - reactions to inappropriate/repulsive actions */
+    int emotion_shame;       /* Shame/embarrassment level - for unwanted/degrading situations */
+    int emotion_pain;        /* Pain level - physical suffering from violent actions */
+    int emotion_horror;      /* Horror level - extreme fear/revulsion to disturbing acts */
+    int emotion_humiliation; /* Humiliation level - degradation and loss of dignity */
+
+    /* Emotional profile type for personality consistency */
+    int emotional_profile; /* Emotional profile type (EMOTION_PROFILE_*) - affects baseline emotions */
+
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */
     int num_temp_quests;      /* Number of temporary quests managed */
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
+
+    /* Emotion memory system - tracks recent interactions for persistent relationships */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
+    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 };
 
 /**
@@ -1178,6 +1353,8 @@ struct player_special_data_saved {
     int current_quest;                     /**< vnum of current quest         */
     int quest_time;                        /**< time left on current quest    */
     int quest_counter;                     /**< Count of targets left to get  */
+    long escort_mob_id;                    /**< ID of mob being escorted      */
+    long bounty_target_id;                 /**< ID of specific mob for bounty quest */
     time_t lastmotd;                       /**< Last time player read motd */
     time_t lastnews;                       /**< Last time player read news */
 
@@ -1186,10 +1363,13 @@ struct player_special_data_saved {
     int num_incarnations; /* Number of incarnations		 */
 
     int karma;
-    int reputation;                      /**< Player reputation (0-100) for quest system */
-    int was_class[RM_ARRAY_MAX];         /**< array of remorted classes */
-    int class_history[100];              /**< chronological sequence of classes (class numbers) */
-    int retained_skills[MAX_SKILLS + 1]; /**< skills retained from previous incarnations */
+    int reputation;                                 /**< Player reputation (0-100) for quest system */
+    time_t last_reputation_gain;                    /**< Last time reputation was gained (anti-exploit) */
+    long last_give_recipient_id;                    /**< ID of last character given to (anti-exploit) */
+    int was_class[RM_ARRAY_MAX];                    /**< array of remorted classes */
+    int class_history[100];                         /**< chronological sequence of classes (class numbers) */
+    int retained_skills[MAX_SKILLS + 1];            /**< skills retained from previous incarnations */
+    int retained_skill_incarnation[MAX_SKILLS + 1]; /**< which incarnation each retained skill came from */
 };
 
 /** Specials needed only by PCs, not NPCs.  Space for this structure is
@@ -1332,6 +1512,10 @@ struct descriptor_data {
     protocol_t *pProtocol;             /**< Kavir plugin */
 
     struct list_data *events;
+
+    /* Pending quest acceptance */
+    qst_vnum pending_quest_vnum;           /**< Quest vnum waiting for confirmation */
+    struct char_data *pending_questmaster; /**< Questmaster for pending quest */
 };
 
 /* other miscellaneous structures */
@@ -1457,15 +1641,17 @@ struct nighthammer_data {
 /** Stores, and used to deliver, the current weather information
  * in the mud world. */
 struct weather_data {
-    int temperature; /* Temperatura atual (°C) */
-    int temp_diff;   /* Variação de temperatura */
-    int pressure;    /* Pressão atmosférica (hPa - Mb) */
-    int press_diff;  /* Variação da pressão */
-    float humidity;  /* Umidade relativa (%) */
-    float winds;     /* Velocidade do vento (m/s) */
-    int sky;         /* Estado do céu (claro, nublado, chovendo, etc.) */
-    int before;      /* Estado anterior do céu */
-    int sunlight;    /* Intensidade da luz solar */
+    int temperature;                  /* Temperatura atual (°C) */
+    int temp_diff;                    /* Variação de temperatura */
+    int pressure;                     /* Pressão atmosférica (hPa - Mb) */
+    int press_diff;                   /* Variação da pressão */
+    float humidity;                   /* Umidade relativa (%) */
+    float winds;                      /* Velocidade do vento (m/s) */
+    int sky;                          /* Estado do céu (claro, nublado, chovendo, etc.) */
+    int before;                       /* Estado anterior do céu */
+    int sunlight;                     /* Intensidade da luz solar */
+    float mana_density_boost;         /* Boost temporário de densidade mágica (Control Weather) */
+    time_t mana_density_boost_expire; /* Quando o boost expira */
 };
 
 /** Element in monster and object index-tables.
@@ -1545,6 +1731,7 @@ struct game_data {
     int school_weather_affects;  /**< Does weather affect spells based on school? */
     int max_pathfind_iterations; /**< Maximum iterations for advanced pathfinding */
     int max_zone_path;           /**< Maximum zones in a pathfinding path */
+    int max_house_objs;          /**< Maximum objects allowed in player houses */
 
     char *OK;       /**< When player receives 'Okay.' text.    */
     char *HUH;      /**< 'Huh!?!'                              */
@@ -1572,13 +1759,17 @@ struct room_numbers {
     room_vnum donation_room_1;   /**< vnum of donation room #1.            */
     room_vnum donation_room_2;   /**< vnum of donation room #2.            */
     room_vnum donation_room_3;   /**< vnum of donation room #3.            */
+    room_vnum donation_room_4;   /**< vnum of donation room #4.            */
     room_vnum dead_start_room;
     room_vnum hometown_1;
     room_vnum hometown_2;
     room_vnum hometown_3;
+    room_vnum hometown_4;
     room_vnum ress_room_1;
     room_vnum ress_room_2;
     room_vnum ress_room_3;
+    room_vnum ress_room_4;
+    room_vnum dt_warehouse_room; /**< vnum of death trap object warehouse. */
 };
 
 /** Operational game variables. */
@@ -1610,10 +1801,122 @@ struct autowiz_data {
     int min_wizlist_lev; /**< Minimun level to show on wizlist.  */
 };
 
+/** Emotion system configuration. */
+struct emotion_config_data {
+    /* Visual indicator thresholds */
+    int display_fear_threshold;        /**< Min fear level to show (amedrontado) indicator (default: 70) */
+    int display_anger_threshold;       /**< Min anger level to show (furioso) indicator (default: 70) */
+    int display_happiness_threshold;   /**< Min happiness level to show (feliz) indicator (default: 80) */
+    int display_sadness_threshold;     /**< Min sadness level to show (triste) indicator (default: 70) */
+    int display_horror_threshold;      /**< Min horror level to show (aterrorizado) indicator (default: 80) */
+    int display_pain_threshold;        /**< Min pain level to show (sofrendo) indicator (default: 70) */
+    int display_compassion_threshold;  /**< Min compassion level to show (compassivo) indicator (default: 70) */
+    int display_courage_threshold;     /**< Min courage level to show (corajoso) indicator (default: 70) */
+    int display_curiosity_threshold;   /**< Min curiosity level to show (curioso) indicator (default: 70) */
+    int display_disgust_threshold;     /**< Min disgust level to show (enojado) indicator (default: 70) */
+    int display_envy_threshold;        /**< Min envy level to show (invejoso) indicator (default: 70) */
+    int display_excitement_threshold;  /**< Min excitement level to show (animado) indicator (default: 70) */
+    int display_friendship_threshold;  /**< Min friendship level to show (amigavel) indicator (default: 70) */
+    int display_greed_threshold;       /**< Min greed level to show (ganancioso) indicator (default: 70) */
+    int display_humiliation_threshold; /**< Min humiliation level to show (humilhado) indicator (default: 70) */
+    int display_love_threshold;        /**< Min love level to show (apaixonado) indicator (default: 70) */
+    int display_loyalty_threshold;     /**< Min loyalty level to show (leal) indicator (default: 70) */
+    int display_pride_threshold;       /**< Min pride level to show (orgulhoso) indicator (default: 70) */
+    int display_shame_threshold;       /**< Min shame level to show (envergonhado) indicator (default: 70) */
+    int display_trust_threshold;       /**< Min trust level to show (confiante) indicator (default: 70) */
+
+    /* Combat flee behavior thresholds */
+    int flee_fear_low_threshold;     /**< Low fear threshold for flee modifier (default: 50) */
+    int flee_fear_high_threshold;    /**< High fear threshold for flee modifier (default: 70) */
+    int flee_courage_low_threshold;  /**< Low courage threshold for flee modifier (default: 50) */
+    int flee_courage_high_threshold; /**< High courage threshold for flee modifier (default: 70) */
+    int flee_horror_threshold;       /**< Horror threshold for panic flee (default: 80) */
+
+    /* Flee modifier values */
+    int flee_fear_low_modifier;     /**< HP% modifier for low fear (default: 10) */
+    int flee_fear_high_modifier;    /**< HP% modifier for high fear (default: 15) */
+    int flee_courage_low_modifier;  /**< HP% modifier for low courage (default: -10) */
+    int flee_courage_high_modifier; /**< HP% modifier for high courage (default: -15) */
+    int flee_horror_modifier;       /**< HP% modifier for horror panic (default: 25) */
+
+    /* Pain system thresholds and values */
+    int pain_damage_minor_threshold;    /**< Damage % for minor pain (default: 5) */
+    int pain_damage_moderate_threshold; /**< Damage % for moderate pain (default: 10) */
+    int pain_damage_heavy_threshold;    /**< Damage % for heavy pain (default: 25) */
+    int pain_damage_massive_threshold;  /**< Damage % for massive pain (default: 50) */
+
+    int pain_minor_min;    /**< Min pain from minor damage (default: 1) */
+    int pain_minor_max;    /**< Max pain from minor damage (default: 5) */
+    int pain_moderate_min; /**< Min pain from moderate damage (default: 5) */
+    int pain_moderate_max; /**< Max pain from moderate damage (default: 15) */
+    int pain_heavy_min;    /**< Min pain from heavy damage (default: 15) */
+    int pain_heavy_max;    /**< Max pain from heavy damage (default: 30) */
+    int pain_massive_min;  /**< Min pain from massive damage (default: 30) */
+    int pain_massive_max;  /**< Max pain from massive damage (default: 50) */
+
+    /* Memory system weights and thresholds */
+    int memory_weight_recent;   /**< Weight for very recent memories <5min (default: 10) */
+    int memory_weight_fresh;    /**< Weight for fresh memories 5-10min (default: 7) */
+    int memory_weight_moderate; /**< Weight for moderate memories 10-30min (default: 5) */
+    int memory_weight_old;      /**< Weight for old memories 30-60min (default: 3) */
+    int memory_weight_ancient;  /**< Weight for ancient memories >60min (default: 1) */
+
+    int memory_age_recent;   /**< Seconds for recent threshold (default: 300 = 5min) */
+    int memory_age_fresh;    /**< Seconds for fresh threshold (default: 600 = 10min) */
+    int memory_age_moderate; /**< Seconds for moderate threshold (default: 1800 = 30min) */
+    int memory_age_old;      /**< Seconds for old threshold (default: 3600 = 60min) */
+
+    int memory_baseline_offset; /**< Offset for emotion level conversion (default: 50) */
+
+    /* Trading behavior thresholds */
+    int trade_trust_high_threshold;      /**< High trust for better shop prices (default: 60) */
+    int trade_trust_low_threshold;       /**< Low trust for service refusal (default: 30) */
+    int trade_greed_high_threshold;      /**< High greed increases prices (default: 70) */
+    int trade_friendship_high_threshold; /**< High friendship gives discounts (default: 70) */
+
+    /* Quest behavior thresholds */
+    int quest_curiosity_high_threshold; /**< High curiosity for quest offers (default: 70) */
+    int quest_loyalty_high_threshold;   /**< High loyalty for remembering helpers (default: 70) */
+    int quest_trust_high_threshold;     /**< High trust for better rewards (default: 60) */
+    int quest_trust_low_threshold;      /**< Low trust for quest refusal (default: 30) */
+
+    /* Social initiation thresholds */
+    int social_happiness_high_threshold; /**< High happiness for positive socials (default: 70) */
+    int social_anger_high_threshold;     /**< High anger for negative socials (default: 70) */
+    int social_sadness_high_threshold;   /**< High sadness for withdrawal (default: 70) */
+    int social_love_follow_threshold;    /**< Love level for following players (default: 80) */
+
+    /* Group behavior thresholds */
+    int group_loyalty_high_threshold;    /**< High loyalty stays in group when hurt (default: 70) */
+    int group_loyalty_low_threshold;     /**< Low loyalty abandons when scared (default: 30) */
+    int group_friendship_high_threshold; /**< High friendship for joining groups (default: 70) */
+    int group_envy_high_threshold;       /**< High envy refuses better-equipped players (default: 70) */
+
+    /* Combat behavior thresholds and modifiers */
+    int combat_anger_high_threshold;       /**< High anger for increased attack frequency (default: 70) */
+    int combat_anger_damage_bonus;         /**< Damage bonus % from high anger (default: 15) */
+    int combat_anger_attack_bonus;         /**< Extra attack chance % from high anger (default: 25) */
+    int combat_pain_low_threshold;         /**< Low pain for minor penalties (default: 30) */
+    int combat_pain_moderate_threshold;    /**< Moderate pain for significant penalties (default: 50) */
+    int combat_pain_high_threshold;        /**< High pain for severe penalties (default: 70) */
+    int combat_pain_accuracy_penalty_low;  /**< THAC0 penalty from low pain (default: 1) */
+    int combat_pain_accuracy_penalty_mod;  /**< THAC0 penalty from moderate pain (default: 2) */
+    int combat_pain_accuracy_penalty_high; /**< THAC0 penalty from high pain (default: 4) */
+    int combat_pain_damage_penalty_low;    /**< Damage reduction % from low pain (default: 5) */
+    int combat_pain_damage_penalty_mod;    /**< Damage reduction % from moderate pain (default: 10) */
+    int combat_pain_damage_penalty_high;   /**< Damage reduction % from high pain (default: 20) */
+};
+
 /** Experimental Features configuration. */
 struct experimental_data {
-    int new_auction_system;       /**< New Auction System enabled?   */
-    int experimental_bank_system; /**< Experimental Bank System enabled?  */
+    int new_auction_system;        /**< New Auction System enabled?   */
+    int experimental_bank_system;  /**< Experimental Bank System enabled?  */
+    int mob_contextual_socials;    /**< Mobs perform socials based on reputation/alignment/position? */
+    int dynamic_reputation;        /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
+    int mob_emotion_social_chance; /**< Probability (%) of mob performing social per emotion tick */
+    int mob_emotion_update_chance; /**< Probability (%) of mob updating emotions per emotion tick */
+    int weather_affects_emotions;  /**< Weather affects mob emotions? (default: YES) */
+    int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
 };
 
 /**
@@ -1640,6 +1943,8 @@ struct config_data {
     struct autowiz_data autowiz;
     /** Experimental features settings */
     struct experimental_data experimental;
+    /** Emotion system configuration */
+    struct emotion_config_data emotion_config;
 };
 
 #ifdef MEMORY_DEBUG

@@ -9,8 +9,9 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 26
-GenLoot: 1
+GenWimpy: 37
+GenLoot: 20
+GenFollow: 9
 E
 #17002
 ciclope~
@@ -23,10 +24,11 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 98
-GenLoot: 44
-GenEquip: 1
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 99
+GenEquip: 3
+GenRoam: 59
+GenFollow: 13
 E
 #17003
 elemental~
@@ -40,7 +42,8 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 1100 6000
 9 9 1
 GenWimpy: 100
-GenLoot: 11
+GenLoot: 25
+GenFollow: 17
 E
 #17004
 elemental guardiao~
@@ -67,9 +70,10 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 61
-GenLoot: 4
+GenWimpy: 100
+GenLoot: 27
 GenRoam: 89
+GenFollow: 10
 E
 #17006
 elemental~
@@ -82,9 +86,10 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 53
-GenLoot: 6
+GenWimpy: 91
+GenLoot: 32
 GenRoam: 89
+GenFollow: 11
 E
 #17007
 elemental grande~
@@ -97,9 +102,12 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 87
-GenLoot: 6
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 48
+GenEquip: 1
+GenRoam: 87
+GenGroup: 2
+GenFollow: 14
 E
 #17008
 lider elemental terra~
@@ -176,9 +184,10 @@ Ela percorre o chão em sua direção.
 8 2 0 1d5+200 1d10+3
 980 5000
 9 9 2
-GenWimpy: 50
-GenLoot: 1
+GenWimpy: 100
+GenLoot: 33
 GenRoam: 89
+GenFollow: 12
 E
 #17015
 chama elemental fogo~
@@ -191,9 +200,11 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 98
-GenLoot: 7
-GenRoam: 52
+GenWimpy: 100
+GenLoot: 59
+GenEquip: 1
+GenRoam: 79
+GenFollow: 11
 E
 #17016
 elemental neve humanoide cristal~
@@ -206,8 +217,9 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 38
-GenLoot: 1
+GenWimpy: 74
+GenLoot: 23
+GenFollow: 4
 E
 #17017
 elemental rocha humanoide~
@@ -233,8 +245,9 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 52
-GenLoot: 1
+GenWimpy: 92
+GenLoot: 18
+GenFollow: 12
 E
 #17019
 elemental acido liquido humanoide~
@@ -247,8 +260,9 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 100
-GenLoot: 1
+GenWimpy: 99
+GenLoot: 5
+GenFollow: 4
 E
 #17020
 besta lava elemental~
@@ -262,9 +276,11 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 90
-GenLoot: 9
-GenRoam: 39
+GenWimpy: 100
+GenLoot: 54
+GenEquip: 1
+GenRoam: 87
+GenFollow: 12
 E
 #17021
 lama monstro elemental~
@@ -277,9 +293,11 @@ O que há de interessante nisso?  Terra, água... garras??
 7 12 -2 1d5+250 3d5+6
 1000 4000
 9 9 1
-GenWimpy: 28
-GenLoot: 2
+GenWimpy: 62
+GenLoot: 38
 GenRoam: 89
+GenGroup: 7
+GenFollow: 15
 E
 #17022
 tufao elemental~
@@ -292,9 +310,11 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 42
-GenLoot: 5
+GenWimpy: 70
+GenLoot: 8
 GenRoam: 89
+GenGroup: 1
+GenFollow: 12
 E
 #17023
 particula elemental coisa~
@@ -307,9 +327,11 @@ Uma intrigante manifestação de energia.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 15
-GenLoot: 1
+GenWimpy: 40
+GenLoot: 9
 GenRoam: 89
+GenGroup: 2
+GenFollow: 11
 E
 #17024
 nuvem poeira elemental~
@@ -322,8 +344,10 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 26
+GenWimpy: 49
+GenLoot: 4
 GenRoam: 89
+GenFollow: 11
 E
 #17025
 redemoinho tornado elemental~
@@ -336,9 +360,10 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 99
-GenLoot: 2
-GenRoam: 86
+GenWimpy: 100
+GenLoot: 36
+GenRoam: 88
+GenFollow: 9
 E
 #17026
 chama elemental azul humanoide~
@@ -352,10 +377,13 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 97
-GenLoot: 11
-GenRoam: 89
-GenGroup: 49
+GenWimpy: 90
+GenLoot: 67
+GenEquip: 1
+GenRoam: 87
+GenGroup: 33
+GenQuest: 4
+GenFollow: 14
 E
 #17027
 magneto elemental humanoide~
@@ -368,8 +396,12 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 100
-GenRoam: 81
+GenWimpy: 90
+GenLoot: 97
+GenEquip: 3
+GenRoam: 89
+GenGroup: 31
+GenFollow: 14
 E
 #17028
 neve bandido~
@@ -383,10 +415,12 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 100
-GenLoot: 12
-GenRoam: 89
-GenGroup: 10
+GenWimpy: 95
+GenLoot: 92
+GenEquip: 1
+GenRoam: 87
+GenGroup: 89
+GenFollow: 14
 E
 #17029
 rochas monstro~
@@ -400,9 +434,12 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 97
-GenLoot: 6
-GenRoam: 89
+GenWimpy: 100
+GenLoot: 39
+GenRoam: 82
+GenGroup: 4
+GenQuest: 1
+GenFollow: 13
 E
 #17030
 furacao~
@@ -417,9 +454,12 @@ tempo até que ela lhe atinja.
 3000 30000
 9 9 1
 GenWimpy: 100
-GenLoot: 9
-GenRoam: 86
-GenGroup: 10
+GenLoot: 98
+GenEquip: 1
+GenRoam: 77
+GenGroup: 67
+GenQuest: 1
+GenFollow: 13
 E
 #17031
 anciao mago elemental~
@@ -463,8 +503,12 @@ enquanto cria outra bola negra nas mãos.
 20 -4 -9 2d10+900 10d4+19
 9000 45000
 9 9 1
-GenWimpy: 5
-GenRoam: 79
+GenWimpy: 8
+GenLoot: 18
+GenEquip: 1
+GenRoam: 89
+GenGroup: 35
+GenFollow: 14
 E
 #17034
 alquimista~
@@ -477,9 +521,10 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 67
-GenLoot: 2
-GenRoam: 19
+GenWimpy: 90
+GenLoot: 33
+GenRoam: 37
+GenFollow: 13
 E
 #17035
 bebe dragao~
@@ -493,7 +538,10 @@ todos os elementos da natureza.
 16 0 -5 1d5+1090 3d15+12
 2400 30000
 9 9 1
-GenWimpy: 3
+GenWimpy: 18
+GenLoot: 36
+GenRoam: 1
+GenFollow: 13
 E
 #17036
 escravo~
@@ -507,8 +555,9 @@ Ele se assemelha bastante a um desagradável inseto.
 800 1000
 9 9 1
 GenWimpy: 100
-GenLoot: 1
+GenLoot: 41
 GenRoam: 88
+GenFollow: 6
 E
 #17037
 gigantesco elemental~
@@ -521,9 +570,10 @@ GIGANTESCO, é preciso mais??
 20 -6 -8 1d5+1970 5d6+19
 3000 68000
 9 9 1
-GenWimpy: 3
-GenLoot: 1
-GenRoam: 9
+GenWimpy: 6
+GenLoot: 30
+GenRoam: 68
+GenFollow: 14
 E
 #17038
 vendedor~

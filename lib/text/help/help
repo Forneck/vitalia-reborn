@@ -1,4 +1,4 @@
-@B                 __   __   _    ________   ___ o�  __       _     ___
+@B                 __   __   _    ________   ___ o�  __       _     ___
 @W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
 @W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
 @B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
@@ -39,3 +39,7 @@ tambem outras informacoes uteis para o jogo.
 
    @gCANCOES@n:
    Ajuda para as cancoes do MUD.
+
+   @gREPUTAÇÃO@n:
+   Para informações sobre o sistema de reputação, use: HELP REPUTACAO
+

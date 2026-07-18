@@ -34,8 +34,9 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 64
-GenLoot: 1
+GenWimpy: 100
+GenLoot: 5
+GenFollow: 13
 E
 #4202
 parda aspide cobra~
@@ -52,6 +53,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenFollow: 9
 E
 T 3008
 #4203
@@ -107,8 +110,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenRoam: 62
+GenWimpy: 15
+GenLoot: 2
+GenRoam: 79
+GenFollow: 12
 E
 #4206
 escorpiao~
@@ -125,8 +130,9 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 13
-GenRoam: 83
+GenWimpy: 20
+GenRoam: 88
+GenFollow: 12
 E
 #4207
 chefe nomade~

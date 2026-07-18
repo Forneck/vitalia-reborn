@@ -31,9 +31,10 @@ tirando um intervalo de todo aquele trabalho.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 16
-GenLoot: 3
+GenWimpy: 39
+GenLoot: 20
 GenRoam: 89
+GenFollow: 8
 E
 #2702
 ferreiro~
@@ -106,8 +107,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 69
+GenWimpy: 11
+GenLoot: 9
+GenRoam: 87
+GenFollow: 14
 E
 #2706
 nobre~
@@ -175,9 +178,10 @@ espada em punho!!
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 94
-GenLoot: 2
-GenRoam: 84
+GenWimpy: 98
+GenLoot: 53
+GenRoam: 89
+GenFollow: 15
 E
 #2710
 torturador~
@@ -296,8 +300,10 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 8
-GenRoam: 67
+GenWimpy: 26
+GenLoot: 4
+GenRoam: 88
+GenFollow: 7
 E
 #2719
 cinza raposa~
@@ -316,8 +322,10 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 59
+GenWimpy: 23
+GenLoot: 8
+GenRoam: 87
+GenFollow: 5
 E
 #2720
 passaro~
@@ -335,10 +343,10 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenLoot: 4
-GenRoam: 61
-GenGroup: 12
+GenWimpy: 23
+GenLoot: 11
+GenRoam: 87
+GenFollow: 5
 E
 #2721
 borboleta~
@@ -356,9 +364,10 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 8
-GenLoot: 1
-GenRoam: 85
+GenWimpy: 24
+GenLoot: 14
+GenRoam: 87
+GenFollow: 9
 E
 #2722
 porco~
@@ -376,8 +385,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 19
+GenWimpy: 33
 GenRoam: 88
+GenFollow: 3
 E
 #2723
 vaca~
@@ -396,6 +406,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenFollow: 10
 E
 #2724
 cavalo~
@@ -567,7 +579,9 @@ saquear um corpo do que saquear uma pessoa viva.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 11
+GenLoot: 2
+GenFollow: 8
 E
 #2734
 alguma coisa mulher~
@@ -585,8 +599,10 @@ habilidades tem sido proveitosa para ela em seus assaltos.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 14
-GenRoam: 79
+GenWimpy: 28
+GenLoot: 10
+GenRoam: 88
+GenFollow: 10
 E
 #2735
 jovem~
@@ -679,7 +695,9 @@ irá fazer algo meio duvidoso...
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 7
+GenRoam: 55
+GenFollow: 12
 E
 #2740
 distraido cavaleiro~
@@ -697,8 +715,9 @@ aprimora suas habilidades.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 8
 GenLoot: 1
+GenFollow: 9
 E
 #2741
 sanguessuga~
@@ -753,8 +772,9 @@ chifre, o cervo se tornou desconfiado quando se trata de seres humanos.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 7
+GenRoam: 82
+GenFollow: 11
 E
 #2744
 supervisor geral Rizzo~

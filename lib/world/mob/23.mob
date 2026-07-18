@@ -52,6 +52,9 @@ fechados, envolvida por profunda emoção e sensibilidade.
 15 14 -1 4d9+500 2d5+8
 498 16000
 9 9 2
+GenWimpy: 1
+GenRoam: 33
+GenFollow: 7
 E
 #2304
 vendedor tonico homem viajante uniforme~
@@ -110,6 +113,10 @@ conseguir deter!!
 11 10 1 6d3+130 2d6+2
 200 5200
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 54
+GenFollow: 12
 E
 #2308
 senhora idosa zayla madame~
@@ -124,6 +131,8 @@ pensar que talvez ela seja completamente cega.
 24 9 0 8d10+1400 2d3+14
 150 55000
 9 9 2
+GenWimpy: 2
+GenFollow: 10
 E
 #2309
 mulher quiromante tarot~
@@ -191,6 +200,9 @@ intenções.
 12 15 7 3d6+445 3d4+3
 150 40000
 9 9 1
+GenWimpy: 2
+GenRoam: 33
+GenFollow: 7
 E
 #2314
 mulher~
@@ -231,6 +243,8 @@ com sua aparentemente inofensiva rotina de caminhar.
 25 9 8 8d11+2000 4d4+15
 566 52000
 9 9 1
+GenWimpy: 14
+GenFollow: 11
 E
 #2317
 poeta tronco bardo desafinado~
@@ -521,6 +535,8 @@ parecem estar ocupados, trabalhando duro para ganhar uns cobres.
 30 6 -2 10d11+2250 2d5+20
 967 47000
 5 5 1
+GenWimpy: 21
+GenFollow: 14
 E
 #2338
 atirador facas~

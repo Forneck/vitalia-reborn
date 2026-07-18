@@ -2,6 +2,10 @@
 Vitalia~
 Os Campos de Midgaard~
 1800 1899 20 2 cdj 0 0 0 -1 -1 0
+R 0 1802 1803 -1 	(.uma luz azul brilhando forte)
+O 1 1803 1 1802 	(.uma luz azul brilhando forte)
+M 0 1899 1 1899 	(Morte)
+E 1 1899 1 20 	(a Foice da Morte)
 D 0 1890 2 1 	(A Entrada do Reino da Morte)
 D 0 1890 2 2 	(A Entrada do Reino da Morte)
 D 0 1806 3 2 	(Em Frente a uma Pequena Casa)
@@ -16,7 +20,5 @@ D 0 1892 0 1 	(A Entrada do Reino da Morte)
 R 0 1812 1802 -1 	(uma latrina)
 O 0 1802 1 1812 	(uma latrina)
 M 0 1890 1 1892 	(um espírito experiente)
-M 0 1899 1 1899 	(Morte)
-E 1 1899 1 16 	(a Foice da Morte)
 S
 $

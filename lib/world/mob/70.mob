@@ -12,9 +12,10 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
-GenWimpy: 4
-GenRoam: 61
-GenGroup: 3
+GenWimpy: 10
+GenRoam: 85
+GenGroup: 42
+GenFollow: 12
 E
 #7001
 morcego pequeno ameacador~
@@ -30,7 +31,8 @@ ossos gelam só de você pensar em acordar essa cruel criatura.
 1 20 5 5d2+6 1d5+0
 0 150
 4 9 0
-GenWimpy: 3
+GenWimpy: 7
+GenFollow: 11
 E
 #7002
 rato esgoto~
@@ -43,8 +45,10 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 24
-GenLoot: 6
+GenWimpy: 89
+GenLoot: 12
+GenRoam: 87
+GenFollow: 4
 E
 #7003
 aranha pequena peluda~
@@ -57,8 +61,10 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 98
-GenRoam: 85
+GenWimpy: 100
+GenLoot: 9
+GenRoam: 84
+GenFollow: 4
 E
 #7004
 besouro gigante terra~
@@ -71,6 +77,8 @@ An undefined string.
 8 13 3 2d10+98 2d4+2
 1000 3750
 4 9 1
+GenWimpy: 3
+GenFollow: 12
 E
 #7005
 larva gigante~
@@ -83,9 +91,10 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 59
-GenLoot: 4
-GenRoam: 87
+GenWimpy: 99
+GenLoot: 15
+GenRoam: 88
+GenFollow: 4
 E
 #7006
 cobra~
@@ -98,9 +107,10 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 97
-GenLoot: 4
-GenRoam: 86
+GenWimpy: 100
+GenLoot: 6
+GenRoam: 88
+GenFollow: 7
 E
 T 3008
 #7007
@@ -156,8 +166,10 @@ brilhantes.  A parte de baixo tem uma cor alaranjada.
 12 9 2 2d26+148 2d7+1
 1500 13000
 9 9 0
-GenWimpy: 15
-GenRoam: 88
+GenWimpy: 35
+GenLoot: 13
+GenRoam: 89
+GenFollow: 12
 E
 #7040
 dragao vermelho~
@@ -172,8 +184,9 @@ se para perto de você, 'Eu NUNCA posso dormir em paz...Hssss...'
 19 2 0 5d4+230 3d6+3
 16842 40000
 9 9 0
-GenWimpy: 4
+GenWimpy: 6
 GenLoot: 2
+GenFollow: 14
 E
 #7041
 bruxa mar~
@@ -189,10 +202,11 @@ da beleza.
 14 7 1 1d8+172 2d8+1
 0 18000
 9 9 2
-GenWimpy: 36
-GenLoot: 1
+GenWimpy: 56
+GenLoot: 6
 GenRoam: 89
-GenGroup: 9
+GenGroup: 19
+GenFollow: 16
 E
 #7042
 naga guardiao~
@@ -222,10 +236,11 @@ verde pálido.
 13 11 0 1d12+160 2d7+2
 350 16000
 9 9 0
-GenWimpy: 20
-GenLoot: 7
+GenWimpy: 46
+GenLoot: 15
 GenRoam: 89
-GenGroup: 1
+GenGroup: 2
+GenFollow: 9
 E
 #7044
 bolha lemure~
@@ -240,9 +255,10 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 83
-GenLoot: 2
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 16
+GenRoam: 89
+GenFollow: 3
 E
 #7045
 jones esmagador ettin~

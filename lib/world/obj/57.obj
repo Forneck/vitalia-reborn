@@ -154,7 +154,7 @@ A
 18 1
 #5712
 capa vermelha brasonada~
-Uma capa brasonada com a marca de Graye~
+uma capa brasonada com a marca de Graye~
 Uma capa vermelha está estendida sobre o chão.~
 ~
 9 abk 0 0 0 ac 0 0 0 0 0 0 0
@@ -258,17 +258,15 @@ mascara graye~
 a Mascara de Graye~
 A lendária máscara de Graye foi deixada aqui.~
 ~
-9 abk 0 0 0 ae 0 0 0 0 0 0 0
+9 abk 0 0 0 ar 0 0 0 0 0 0 0
 10 0 0 0
-8 100000 5000 0 0
+8 100000 5000 30 0
 E
 mascara graye~
 É uma bela máscara antiga, muito bem forjada.
 ~
 A
 19 2
-A
-17 15
 #5720
 armadura graye~
 armadura Graye~

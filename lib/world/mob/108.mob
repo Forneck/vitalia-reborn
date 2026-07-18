@@ -19,6 +19,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 15
 E
 #10801
 Tritao~
@@ -142,6 +145,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 16
+GenWimpy: 9
+GenFollow: 14
 E
 #10806
 Menelau~
@@ -210,6 +215,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 #10809
 Quiron~
@@ -367,6 +374,12 @@ Int: 13
 Wis: 15
 Con: 22
 Cha: 18
+GenWimpy: 10
+GenLoot: 37
+GenEquip: 1
+GenRoam: 6
+GenQuest: 3
+GenFollow: 14
 E
 #10816
 Ulisses~
@@ -388,6 +401,10 @@ Int: 20
 Wis: 25
 Con: 18
 Cha: 20
+GenWimpy: 5
+GenLoot: 3
+GenRoam: 5
+GenFollow: 15
 E
 #10817
 Andromaca~
@@ -600,6 +617,8 @@ Int: 18
 Wis: 14
 Con: 18
 Cha: 16
+GenWimpy: 3
+GenFollow: 15
 E
 #10827
 batalhao troiano~
@@ -621,6 +640,8 @@ Int: 20
 Wis: 18
 Con: 22
 Cha: 18
+GenWimpy: 3
+GenFollow: 11
 E
 #10828
 batalhao grego~
@@ -643,6 +664,8 @@ Int: 20
 Wis: 18
 Con: 22
 Cha: 18
+GenWimpy: 6
+GenFollow: 17
 E
 #10829
 guarda grego~
@@ -683,6 +706,8 @@ Int: 18
 Wis: 14
 Con: 18
 Cha: 16
+GenWimpy: 3
+GenFollow: 14
 E
 #10831
 batalhao etiope~
@@ -1318,7 +1343,10 @@ Int: 15
 Wis: 13
 Con: 17
 Cha: 18
-GenWimpy: 2
+GenWimpy: 32
+GenLoot: 27
+GenEquip: 1
+GenFollow: 12
 E
 #10861
 golfinho~
@@ -1351,7 +1379,7 @@ A única criatura que o faz tremer é o poderoso leviatã.  Normalmente ele usa
 para atacar outros seres, uma tinta negra, que ao misturar-se com a água,
 torna o lugar bastante escuro, deixando a vítima a mercê da sorte.
 ~
-2353202 0 0 0 17828048 0 0 0 -500 E
+2353202 0 0 0 17828048 2 0 0 -500 E
 101 -29 -60 10d5+22500 5d10+45
 0 1500000
 9 9 1
@@ -1362,6 +1390,9 @@ Int: 15
 Wis: 13
 Con: 25
 Cha: 5
+GenWimpy: 4
+GenLoot: 5
+GenFollow: 13
 E
 #10863
 tubarao~
@@ -1401,7 +1432,8 @@ Int: 7
 Wis: 7
 Con: 8
 Cha: 18
-GenWimpy: 49
+GenWimpy: 51
+GenFollow: 7
 E
 #10865
 cao pastor~
@@ -1441,7 +1473,8 @@ Int: 6
 Wis: 4
 Con: 10
 Cha: 8
-GenWimpy: 1
+GenWimpy: 3
+GenFollow: 7
 E
 #10867
 garanhao branco~
@@ -1461,7 +1494,9 @@ Int: 18
 Wis: 10
 Con: 17
 Cha: 18
-GenWimpy: 1
+GenWimpy: 11
+GenLoot: 13
+GenFollow: 8
 E
 #10868
 navio grego~

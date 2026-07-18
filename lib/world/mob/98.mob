@@ -9,7 +9,7 @@ jamais perdeu uma batalha contra os que invadem seus dominios.
 2615298 0 0 0 330064 0 0 0 -700 E
 102 -13 -75 10d20+8150 8d11+33
 30000 2300000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 25
 StrAdd: 25
@@ -30,7 +30,7 @@ sentir o cheiro de um intruso a distância, mesmo possuindo somente um olho.
 2353154 0 0 0 67920 0 0 0 -700 E
 102 -15 -75 10d20+8150 8d11+35
 30000 4000000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 25
 StrAdd: 25
@@ -39,6 +39,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #9803
 monstro pedra~
@@ -60,6 +62,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 15
 E
 #9804
 mal supremo~
@@ -74,7 +78,7 @@ criatura.
 2353158 0 0 0 330064 0 0 0 -1000 E
 105 -20 -80 8d12+11400 10d12+40
 100000 8500000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 25
 StrAdd: 25
@@ -83,6 +87,9 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 7
+GenBrave: 1
+GenFollow: 14
 E
 #9805
 dragao invisivel~
@@ -97,10 +104,12 @@ e hábil.
 2881538 0 0 0 1378564 0 0 0 -500 E
 40 -10 -28 10d20+850 6d7+27
 20000 445000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 25
 Wis: 25
+GenWimpy: 9
+GenFollow: 8
 E
 #9806
 anjo luz~
@@ -114,7 +123,7 @@ parecem preencher o vazio de seu coração.
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -30 -25 10d6+16000 9d6+49
 50000 2300000
-8 8 1
+9 9 1
 Dex: 25
 Int: 25
 Wis: 25
@@ -133,7 +142,7 @@ gigantesco clarão de luzes emitem.
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -21 -35 10d6+16000 9d6+45
 50000 3000000
-8 8 1
+9 9 1
 Dex: 25
 Int: 25
 Wis: 25
@@ -152,7 +161,7 @@ honestidade que emana desse poderoso anjo.
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -21 -45 10d6+16000 9d6+38
 50000 4000000
-8 8 1
+9 9 1
 Dex: 25
 Int: 25
 Wis: 25
@@ -171,7 +180,7 @@ digno de estar na presença dessa divindade angelical.
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -24 -45 10d6+16000 5d9+42
 50000 6000000
-8 8 1
+9 9 1
 Dex: 25
 Int: 25
 Wis: 25

@@ -2,6 +2,11 @@
 Vitalia~
 O Templo Samurai~
 15100 15199 150 1 j 0 0 0 50 -1 0
+M 0 15111 1 15135 	(Tokugawa Yoshikatsu)
+E 1 15109 10 16 	(uma Lâmina Fugu)
+E 1 15110 15 3 	(a Jóia do Sol Nascente)
+E 1 15111 15 4 	(o Amuleto de Sun Lu)
+E 1 15158 25 17 	(um par de botas samurai)
 M 0 15100 12 15103 	(um discípulo Samurai)
 E 1 15153 15 5 	(uma túnica samurai)
 E 1 15119 15 16 	(a espada Kodachi)
@@ -174,10 +179,6 @@ E 1 15121 10 16 	(a espada Iaito)
 M 0 15110 1 15134 	(o Shogum do Caridade)
 G 1 15108 15 -1 	(o Amuleto de Tei)
 E 1 15122 10 16 	(o Mandarim Dau)
-M 0 15111 1 15135 	(Tokugawa Yoshikatsu)
-E 1 15109 10 16 	(uma Lâmina Fugu)
-E 1 15110 15 3 	(a Jóia do Sol Nascente)
-E 1 15111 15 4 	(o Amuleto de Sun Lu)
 D 0 15106 4 2 	(Shogum Jin)
 D 0 15110 4 2 	(Shogum Gi)
 D 0 15114 4 2 	(Shogum Chu)

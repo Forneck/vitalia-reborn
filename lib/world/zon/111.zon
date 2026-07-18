@@ -2,13 +2,17 @@
 Vitalia~
 O Reino das Pedras~
 11100 11199 180 0 j 0 0 0 100 -1 3
+M 0 11105 1 11194 	(.um pedregulho estranho)
+O 0 11120 1 11166 	(um bau escondido)
+P 1 10721 20 11120 	(uma redoma de fogo)
+M 0 11101 1 11176 	(o Guardião de Pedra)
+G 1 11105 1 -1 	(uma chave antiga e suja)
+E 1 11107 20 19 	(um escudo negro petrificado)
+D 0 11176 3 2 	(Dentro do Portão Oeste de Midgaard)
+D 0 11176 2 2 	(Dentro do Portão Oeste de Midgaard)
 D 0 11195 5 2 	(O Depósito de Lixo)
 D 0 11193 3 2 	(Beco Miserável)
 D 0 11185 2 2 	(O Beco Escuro)
-M 0 11101 1 11176 	(o Guardião de Pedra)
-G 1 11105 1 -1 	(uma chave antiga e suja)
-D 0 11176 3 2 	(Dentro do Portão Oeste de Midgaard)
-D 0 11176 2 2 	(Dentro do Portão Oeste de Midgaard)
 O 0 5230 4 11174 	(uma pedra azul claro)
 D 1 11174 2 2 	(Rua Principal)
 D 0 11169 5 2 	(O Santuário Interno dos Clérigos)

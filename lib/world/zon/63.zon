@@ -2,6 +2,10 @@
 Vitalia~
 Arachnos~
 6300 6399 34 2 j 0 0 0 3 26 3
+M 0 6312 1 6370 	(o Guardião da Torre)
+G 1 6301 10 -1 	(uma faca muito afiada)
+G 1 6109 10 -1 	(uma poção azul)
+E 1 3814 10 21 	(o Card Carnax)
 M 0 6301 10 6301 	(uma aranha jovem)
 M 0 6301 10 6306 	(uma aranha jovem)
 M 0 6301 10 6306 	(uma aranha jovem)
@@ -33,10 +37,6 @@ G 1 6301 5 -1 	(uma faca muito afiada)
 G 1 6302 2 -1 	(um chapéu de mago)
 G 1 6303 2 -1 	(um chapéu de pontífice)
 G 1 6304 2 -1 	(uma viseira negra de cavaleiro)
-M 0 6312 1 6370 	(o Guardião da Torre)
-G 1 6301 10 -1 	(uma faca muito afiada)
-G 1 6109 10 -1 	(uma poção azul)
-E 1 3814 1 17 	(o Card Carnax)
 M 0 6313 1 6367 	(o guardião)
 M 0 6306 3 6330 	(a aranha zangão)
 M 0 6302 1 6360 	(Yevaud)

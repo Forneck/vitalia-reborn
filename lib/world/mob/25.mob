@@ -9,9 +9,11 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 57
-GenLoot: 2
+GenWimpy: 98
+GenLoot: 6
+GenEquip: 1
 GenRoam: 89
+GenFollow: 10
 E
 #2501
 aventureiro~
@@ -40,8 +42,9 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 24
-GenRoam: 86
+GenWimpy: 32
+GenRoam: 87
+GenFollow: 3
 E
 #2503
 diamante golem~
@@ -54,6 +57,9 @@ Isto parece bastante forte.
 23 5 -10 23d23+230 3d6+15
 985 15000
 9 9 0
+GenWimpy: 15
+GenLoot: 11
+GenFollow: 13
 E
 #2504
 mago jovem~
@@ -67,8 +73,10 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 6
+GenWimpy: 47
+GenLoot: 19
 GenRoam: 89
+GenFollow: 12
 E
 T 3009
 #2505
@@ -108,7 +116,8 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 1092 31300
 9 9 2
 GenWimpy: 23
-GenLoot: 4
+GenLoot: 9
+GenFollow: 13
 E
 T 3009
 #2508
@@ -123,8 +132,9 @@ panela.
 11 8 1 11d11+110 3d4+4
 116 4600
 9 9 1
-GenWimpy: 5
-GenLoot: 13
+GenWimpy: 12
+GenLoot: 39
+GenFollow: 10
 E
 T 3009
 #2509
@@ -169,6 +179,8 @@ A vassoura grita 'Tome isto, seu boçal!'
 7 10 2 7d7+70 2d4+4
 0 1600
 9 9 0
+GenWimpy: 5
+GenFollow: 9
 E
 T 3007
 #2512
@@ -182,9 +194,10 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 22
-GenLoot: 5
-GenRoam: 6
+GenWimpy: 93
+GenLoot: 17
+GenRoam: 89
+GenFollow: 5
 E
 #2513
 guardioes maiores olhos~
@@ -197,11 +210,12 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 7
-GenLoot: 82
-GenEquip: 2
-GenRoam: 86
-GenGroup: 80
+GenWimpy: 12
+GenLoot: 99
+GenEquip: 11
+GenRoam: 89
+GenGroup: 96
+GenFollow: 17
 E
 #2514
 mago visitante~
@@ -214,8 +228,9 @@ Ele parece estar bastante sonolento.
 12 8 -2 12d12+120 2d4+5
 726 6200
 4 4 1
-GenWimpy: 10
-GenLoot: 3
+GenWimpy: 34
+GenLoot: 9
+GenFollow: 9
 E
 T 3009
 #2515
@@ -230,8 +245,8 @@ Ela parece estar bastante concentrada em seus estudos.
 369 2950
 6 6 2
 GenWimpy: 100
-GenLoot: 1
-GenBrave: 1
+GenLoot: 6
+GenFollow: 9
 E
 T 3009
 #2516
@@ -246,7 +261,8 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 487 2750
 9 9 1
 GenWimpy: 100
-GenLoot: 5
+GenLoot: 16
+GenFollow: 5
 E
 T 3009
 #2517
@@ -261,8 +277,9 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 98
-GenLoot: 3
+GenWimpy: 100
+GenLoot: 10
+GenFollow: 12
 E
 T 3009
 #2518
@@ -277,7 +294,8 @@ Ele parece ser um jovem travesso.
 382 2300
 9 9 1
 GenWimpy: 100
-GenLoot: 2
+GenLoot: 7
+GenFollow: 7
 E
 T 3009
 #2519
@@ -292,7 +310,8 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 82
+GenWimpy: 99
+GenFollow: 3
 E
 #2520
 estudante~
@@ -305,8 +324,9 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
-GenWimpy: 24
-GenLoot: 1
+GenWimpy: 37
+GenLoot: 7
+GenFollow: 14
 E
 T 3009
 #2521
@@ -321,7 +341,8 @@ Ele parece estar bastante nervoso por ser interrompido por você.
 880 18500
 9 9 1
 GenWimpy: 4
-GenLoot: 1
+GenLoot: 5
+GenFollow: 14
 E
 T 3009
 #2522
@@ -335,8 +356,9 @@ Ele pisca, surgindo e voltando a desaparecer, tentando dominar o feitiço.
 8 8 -2 8d8+80 2d4+6
 198 2200
 9 9 1
-GenWimpy: 11
-GenLoot: 1
+GenWimpy: 27
+GenLoot: 3
+GenFollow: 6
 E
 T 3009
 #2523
@@ -350,7 +372,9 @@ An undefined string.
 15 5 -4 15d15+150 3d4+9
 1256 20500
 9 9 1
-GenWimpy: 3
+GenWimpy: 8
+GenLoot: 2
+GenFollow: 14
 E
 T 3009
 #2524
@@ -364,7 +388,9 @@ Ela parece não ter resistido ao tédio absoluto.
 9 11 -2 9d9+90 2d4+7
 567 3800
 4 4 2
-GenWimpy: 5
+GenWimpy: 9
+GenLoot: 4
+GenFollow: 10
 E
 T 3009
 #2525
@@ -391,7 +417,9 @@ An undefined string.
 9 11 -1 9d9+90 2d4+8
 695 3800
 9 9 1
-GenWimpy: 5
+GenWimpy: 20
+GenLoot: 1
+GenFollow: 17
 E
 T 3009
 #2527
@@ -406,7 +434,10 @@ do que com uma maga.
 17 2 -2 17d17+170 3d5+8
 3211 23050
 9 9 2
-GenWimpy: 1
+GenWimpy: 9
+GenLoot: 2
+GenEquip: 1
+GenFollow: 14
 E
 T 3009
 #2528
@@ -420,7 +451,9 @@ An undefined string.
 15 5 1 15d15+150 3d4+4
 1002 15800
 5 5 1
-GenWimpy: 11
+GenWimpy: 30
+GenLoot: 6
+GenFollow: 11
 E
 T 3009
 #2529
@@ -450,7 +483,8 @@ An undefined string.
 14 6 -1 14d14+140 3d4+4
 312 14850
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
+GenFollow: 10
 E
 T 3009
 #2531
@@ -465,7 +499,8 @@ de conhecimento que ela está traduzindo.
 15 6 -1 15d15+150 2d4+10
 684 16550
 9 9 2
-GenWimpy: 5
+GenWimpy: 7
+GenFollow: 14
 E
 T 3009
 #2532
@@ -481,6 +516,8 @@ importância???'
 22 4 -5 22d22+220 3d5+8
 5634 29500
 9 9 1
+GenWimpy: 7
+GenFollow: 12
 E
 T 3009
 #2533
@@ -494,7 +531,10 @@ An undefined string.
 16 6 -2 16d16+160 3d4+6
 1050 21300
 9 9 1
-GenWimpy: 4
+GenWimpy: 5
+GenLoot: 3
+GenEquip: 1
+GenFollow: 12
 E
 T 3009
 #2534
@@ -522,6 +562,9 @@ Isto parece bastante afiado.
 10 1 -10 10d10+100 3d5+5
 0 4000
 9 9 0
+GenWimpy: 3
+GenLoot: 3
+GenFollow: 11
 E
 #2536
 alquimista~
@@ -565,7 +608,9 @@ novo bichinho de estimação.
 23 4 -4 23d23+230 3d5+10
 4672 31050
 9 9 1
-GenWimpy: 9
+GenWimpy: 11
+GenLoot: 2
+GenFollow: 14
 E
 T 3009
 #2539
@@ -579,7 +624,9 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 25
+GenWimpy: 39
+GenLoot: 2
+GenFollow: 17
 E
 #2540
 mestre vinculador~
@@ -592,7 +639,8 @@ O Mestre Vinculador rosna para você e ataca.
 23 5 -4 23d23+230 3d5+8
 2315 30500
 9 9 1
-GenWimpy: 12
+GenWimpy: 16
+GenFollow: 14
 E
 T 3009
 #2541
@@ -606,6 +654,8 @@ An undefined string.
 21 6 -2 21d21+210 3d5+5
 2678 26850
 9 9 1
+GenWimpy: 5
+GenFollow: 14
 E
 T 3009
 #2542
@@ -621,6 +671,7 @@ desajeitado, em sua direção.
 0 25600
 9 9 0
 GenWimpy: 7
+GenFollow: 11
 E
 #2543
 golem bronze~
@@ -633,7 +684,9 @@ Ele parece ser pouco inteligente.
 18 8 -3 18d18+180 4d5+5
 0 22350
 9 9 0
-GenWimpy: 4
+GenWimpy: 8
+GenLoot: 1
+GenFollow: 11
 E
 #2544
 golem carne~
@@ -647,7 +700,9 @@ algumas nem chegam a lembrar qualquer coisa humana.
 12 9 -1 12d12+120 4d4+4
 0 8520
 9 9 0
-GenWimpy: 8
+GenWimpy: 28
+GenLoot: 1
+GenFollow: 11
 E
 #2545
 golem pano~
@@ -660,7 +715,8 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
-GenWimpy: 27
+GenWimpy: 35
+GenFollow: 6
 E
 #2546
 golem adamantite~
@@ -686,7 +742,9 @@ An undefined string.
 15 5 -1 15d15+150 4d5+3
 0 18320
 9 9 0
-GenWimpy: 1
+GenWimpy: 9
+GenLoot: 1
+GenFollow: 11
 E
 #2548
 mestre ilusionista mago dragao~
@@ -717,6 +775,8 @@ ataquem.
 25 0 -8 25d25+250 3d7+7
 11684 35250
 9 9 1
+GenWimpy: 4
+GenFollow: 14
 E
 T 3009
 #2550
@@ -743,8 +803,11 @@ zumbi.
 18 5 -4 18d18+180 3d5+10
 0 22000
 9 9 0
-GenWimpy: 20
+GenWimpy: 92
+GenLoot: 3
+GenEquip: 1
 GenRoam: 89
+GenFollow: 10
 E
 #2552
 bruxa velha feia~
@@ -760,8 +823,10 @@ revolver de repulsão.
 2150 26850
 9 9 2
 GenWimpy: 100
-GenLoot: 1
+GenLoot: 17
+GenEquip: 2
 GenRoam: 89
+GenFollow: 13
 E
 T 3009
 #2553
@@ -791,6 +856,8 @@ sozinho.
 24 -3 -12 24d24+240 3d6+6
 6723 30750
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 T 3009
 #2555
@@ -806,7 +873,9 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 26
+GenWimpy: 39
+GenLoot: 1
+GenFollow: 8
 E
 #2556
 mestre cinza~
@@ -819,6 +888,10 @@ Ele parece estar em paz.
 30 -10 -20 30d30+300 2d5+20
 15350 150000
 9 9 1
+GenWimpy: 21
+GenLoot: 7
+GenEquip: 1
+GenFollow: 12
 E
 T 3009
 #2557
@@ -834,6 +907,8 @@ carranca, faz dela uma imagem a se temer.
 20 2 -6 20d20+200 3d6+6
 13876 27800
 9 9 2
+GenWimpy: 5
+GenFollow: 14
 E
 T 3009
 #2558
@@ -860,6 +935,9 @@ O Mestre encara você.
 30 -10 -20 30d30+300 2d5+20
 22100 150000
 9 9 1
+GenWimpy: 24
+GenLoot: 1
+GenFollow: 10
 E
 T 3009
 #2560
@@ -887,7 +965,8 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 47
+GenWimpy: 57
+GenFollow: 10
 E
 #2562
 mestre branco~
@@ -900,6 +979,11 @@ Ele parece um bastardo auto-proclamado símbolo do Bem.
 30 -10 -20 30d30+300 2d5+20
 21900 150000
 9 9 1
+GenWimpy: 24
+GenLoot: 6
+GenEquip: 1
+GenBrave: 1
+GenFollow: 14
 E
 T 3009
 #2563
@@ -915,6 +999,8 @@ adorno.
 25 1 -9 25d25+250 5d5+10
 0 30000
 9 9 0
+GenWimpy: 9
+GenFollow: 9
 E
 #2564
 mestra grande soberana~
@@ -930,6 +1016,8 @@ Soberana afaga seu familiar e sorri para você em confidência.
 50 -20 -30 50d50+500 3d4+20
 50000 200000
 9 9 2
+GenWimpy: 3
+GenFollow: 14
 E
 T 3009
 $

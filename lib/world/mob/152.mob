@@ -1,0 +1,842 @@
+#15200
+alma penada espirito fantasma~
+uma alma penada~
+Flutuando a um palmo do chão coberto de folhas, uma figura translúcida e
+tremeluzente de uma alma penada chora silenciosamente.
+~
+A forma diante de si é uma ferida na realidade, um eco de uma pessoa que já não
+existe. A sua figura é vagamente humanoide, tecida a partir de fumo pálido e
+luar doentio, tremeluzindo dentro e fora da existência. 
+
+Não possui traços faciais, apenas a sugestão de dois buracos vazios onde os
+olhos deveriam estar, dos quais escorrem rios silenciosos de uma tristeza
+líquida e escura. Os seus membros alongam-se e encolhem-se sem lógica, e o
+vento passa através dela sem mover um único fio do seu ser espectral. Um frio
+que não é natural emana dela, um frio que congela a alma em vez da pele.
+~
+2746562 0 1000 0 8994872 2 0 0 0 E
+55 5 -35 10d10+1200 4d8+20
+3500 65000
+9 9 0
+BareHandAttack: 8
+Dex: 25
+GenWimpy: 37
+GenLoot: 94
+GenEquip: 3
+GenRoam: 2
+GenBrave: 75
+GenQuest: 8
+GenFollow: 13
+E
+T 15200
+T 15201
+T 15202
+#15201
+kodama desnaturado guardiao~
+o Kodama Desnaturado~
+O Kodama Desnaturado está aqui, seu corpo retorcido uma blasfêmia contra a
+natureza que ele outrora protegeu.
+~
+A criatura que guarda a passagem é uma paródia da natureza. O seu corpo, do
+tamanho de um urso, é feito de madeira de carvalho, mas está inchado e coberto
+de fungos que brilham com uma luz violeta doentia. 
+
+Veias negras pulsam sob a casca rachada. Um dos seus braços ainda retém a sua
+forma antiga, uma garra nobre, mas o outro é um pesadelo de galhos e espinhos
+que gotejam uma seiva negra e ácida. A sua face é uma máscara de casca, mas dos
+seus buracos brilha um vazio que absorve a esperança.
+~
+2222272 0 1000 0 606264 2 0 0 -1000 E
+58 8 -40 12d10+1500 6d8+30
+5000 240000
+9 9 0
+BareHandAttack: 11
+Str: 20
+Dex: 13
+Int: 13
+Wis: 15
+GenWimpy: 7
+GenFollow: 15
+E
+T 15204
+T 15205
+#15202
+alma errante espirito fantasma~
+uma alma errante~
+Flutuando a um palmo do chão coberto de folhas, uma alma errante vagueia sem
+rumo.
+~
+A forma diante de si é uma ferida na realidade, um eco de uma pessoa que já não
+existe. A sua figura é vagamente humanoide, tecida a partir de fumo pálido e
+luar doentio, tremeluzindo dentro e fora da existência. 
+
+Não possui traços faciais, apenas a sugestão de dois buracos vazios onde os
+olhos deveriam estar, dos quais escorrem rios silenciosos de uma tristeza
+líquida e escura. Os seus membros alongam-se e encolhem-se sem lógica, e o
+vento passa através dela sem mover um único fio do seu ser espectral. Um frio
+que não é natural emana dela, um frio que congela a alma em vez da pele.~
+2746432 0 1000 0 8994872 2 0 0 0 E
+55 5 -35 10d10+1200 4d8+20
+3500 65000
+9 9 0
+BareHandAttack: 8
+Str: 16
+Dex: 17
+Int: 16
+Wis: 15
+Con: 18
+GenWimpy: 8
+GenLoot: 1
+GenEquip: 1
+GenRoam: 89
+GenGroup: 2
+GenFollow: 14
+E
+#15203
+aranha cacadora sombras~
+uma Aranha-Caçadora das Sombras~
+Agarrada a uma parede, uma Aranha-Caçadora das Sombras observa-o com múltiplos
+olhos negros.
+~
+Isto não é uma aranha comum. É uma abominação do tamanho de um cão de caça, com
+pernas finas e longas que se dobram em ângulos errados, permitindo-lhe
+agarrar-se a paredes e tetos com uma facilidade profana. 
+
+O seu corpo é de um negro oleoso, sem pelos, mas o seu abdómen inchado é
+coberto por um padrão que imita um rosto humano a chorar. Ela move-se num
+silêncio absoluto, uma sombra que se destaca de outras sombras.
+~
+2226368 0 1000 0 606264 2 0 0 0 E
+57 7 -38 11d10+1400 5d8+25
+8000 75000
+9 9 0
+BareHandAttack: 4
+Str: 15
+Dex: 18
+Con: 18
+GenWimpy: 12
+GenRoam: 89
+GenFollow: 14
+E
+T 15209
+#15204
+aranha predadora jovem~
+uma Aranha-Predadora Jovem~
+Uma Aranha-Predadora Jovem sibila, suas presas a gotejar veneno.
+~
+Esta aranha é mais pequena que a sua parente caçadora, mas não menos perigosa.
+O seu corpo negro e oleoso é mais esguio, construído para a velocidade. O
+padrão de um rosto a chorar no seu abdómen é menos definido, mais como um
+borrão de pesadelo. Ela move-se com uma energia nervosa, os seus múltiplos
+olhos a dardejarem constantemente, procurando tanto por presas como por
+predadores maiores.
+~
+2226368 0 1000 0 606264 2 0 0 0 E
+56 7 -36 10d10+1300 5d8+22
+7000 70000
+9 9 0
+BareHandAttack: 4
+Str: 14
+Dex: 15
+Con: 17
+E
+T 15209
+#15205
+cria aranha faminta~
+uma Cria de Aranha Faminta~
+Uma Cria de Aranha Faminta corre pelo chão, suas pernas a estalarem.
+~
+Pouco maior que um cão de porte médio, esta cria é um pesadelo de pernas e
+presas. O seu corpo é magro, quase esquelético, e o seu abdómen ainda não
+desenvolveu completamente o padrão sinistro dos seus irmãos mais velhos. Ela
+move-se com uma fome desesperada, atacando qualquer coisa que se mova. Restos
+de outras crias, mais pequenas, ainda se agarram às suas presas.
+~
+2222272 0 1000 0 606264 2 0 0 0 E
+55 6 -34 8d10+1100 4d8+20
+5000 60000
+9 9 0
+BareHandAttack: 4
+Str: 14
+Dex: 14
+Con: 16
+E
+T 15209
+#15206
+aranha recem-nascida~
+uma Aranha Recém-Nascida~
+Uma pequena Aranha Recém-Nascida corre erraticamente pelo chão.
+~
+Esta criatura é do tamanho de um gato grande, com um corpo de quitina mole que
+ainda não endureceu completamente. Move-se de forma errática e rápida, um feixe
+de pernas e olhos famintos. Não há inteligência nos seus olhos, apenas um
+instinto voraz de devorar para sobreviver, mesmo que a sua presa seja um irmão
+que acabou de sair do mesmo ovo.~
+2226368 0 1000 0 606264 2 0 0 0 E
+54 5 -30 6d10+800 3d8+15
+2500 45000
+9 9 0
+BareHandAttack: 7
+Str: 14
+Dex: 12
+Con: 13
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenRoam: 63
+GenFollow: 14
+E
+T 15209
+#15207
+jorogumo rainha-viuva aranha~
+a Rainha-Viuva Jorogumo~
+Sentada num trono de ossos, a Rainha-Viúva Jorogumo observa-o com oito olhos
+negros.
+~
+Você olha para a Jorogumo e a sua mente luta para processar a blasfêmia que tem
+à sua frente. A sua metade humana é de uma beleza dolorosa, mas os seus olhos
+não são dois, mas oito. Oito orbes negros e multifacetados que o veem não como
+um ser, mas como carne.
+
+O seu corpo de aranha é uma obra de arte do horror, a sua carapaça de um negro
+polido reflete a luz doentia do covil, e o seu abdómen inchado pulsa num ritmo
+lento e nauseante. O cheiro no ar é uma guerra de sensações: um perfume doce e
+sedutor de orquídeas misturado com o fedor químico de veneno e sangue velho.
+~
+10610754 0 1000 0 606264 2 0 0 -1000 E
+62 12 -50 20d20+3500 10d10+50
+50000 250000
+9 9 2
+BareHandAttack: 1
+GenWimpy: 33
+GenBrave: 75
+GenQuest: 8
+GenFollow: 18
+E
+#15208
+kappa lodo tartaruga demonio~
+um Kappa do Lodo~
+Um Kappa do Lodo emerge da água escura, seus olhos negros fixos em você.
+~
+Esta criatura do tamanho de uma criança tem a pele de um verde-lodo doentio e
+um casco de tartaruga rachado. Seu rosto é uma mistura grotesca de anfíbio e
+ave de rapina, com um bico afiado e olhos negros e sem alma. A depressão no
+topo da sua cabeça está cheia da mesma água negra e oleosa do pântano. Ele
+emana um cheiro a peixe podre e a malícia pura.~
+2222272 0 1000 0 606264 2 0 0 0 E
+57 7 -35 10d10+1200 5d8+20
+1500 72000
+9 9 1
+E
+T 15206
+#15209
+eremita fragil isco~
+um eremita frágil~
+Um eremita frágil e encurvado treme num canto, murmurando para si mesmo.
+~
+Esta figura patética mal se aguenta de pé. Um manto esfarrapado e coberto de
+lodo cobre um corpo esquelético que é abalado por uma tosse húmida e constante.
+O seu rosto, escondido nas sombras do capuz, parece enrugado e sem dentes. Ele
+exala um cheiro a doença e a terra molhada, e parece completamente inofensivo.
+~
+2746562 0 1000 0 81920 0 0 0 0 E
+50 1 -10 1d1+10 1d1+0
+1 1
+9 9 1
+GenWimpy: 6
+GenFollow: 5
+E
+T 15207
+#15210
+furia pantano lodo golem~
+a Fúria do Pântano~
+Uma monstruosidade de lodo e raízes ergue-se do chão, os seus olhos a brilhar
+com uma luz morta.
+~
+Esta criatura não tem uma forma estável. É um monte de lodo negro do pântano,
+galhos retorcidos e ossos amarelados, tudo mantido coeso por uma vontade
+malévola. Dois pontos de luz doentia brilham no que seria a sua cabeça, e o seu
+corpo disforme estala e gorgoleja a cada movimento. Ela não tem boca, mas um
+rugido baixo e gutural emana do seu núcleo. É a personificação da podridão e da
+raiva do pântano.
+~
+10616642 0 1000 0 671694904 2 0 0 0 E
+61 0 -42 18d20+3000 8d10+40
+4000 230000
+9 9 0
+Str: 20
+Dex: 20
+Int: 20
+Wis: 20
+Con: 20
+Cha: 20
+GenBrave: 2
+GenFollow: 15
+E
+T 15208
+#15211
+monge corrompido espirito guardiao~
+um Monge Corrompido~
+Um Monge Corrompido está aqui, seus olhos brilhando com uma luz fria sob o
+capuz esfarrapado.
+~
+O que outrora foi um homem de fé é agora uma figura de desespero. O seu hábito
+de monge está podre e coberto de musgo, e o seu corpo por baixo é pouco mais
+que pele seca esticada sobre ossos. No entanto, ele move-se com um propósito
+sinistro, as suas mãos agarradas a um bastão de oração que parece mais uma arma
+do que um símbolo de paz. 
+
+Os seus olhos, visíveis nas profundezas do capuz, não têm vida; são dois pontos
+de luz pálida e fria, cheios de uma tristeza que se transformou em ódio ao
+longo dos séculos.
+~
+2222272 0 1000 0 606264 2 0 0 -1000 E
+59 9 -40 13d10+1600 7d8+35
+3000 95000
+9 9 1
+BareHandAttack: 13
+Wis: 25
+GenWimpy: 4
+GenFollow: 15
+E
+#15212
+inugami errante cao espirito~
+um Inugami Errante~
+Um Inugami Errante fareja o ar, seus olhos a arder com uma chama verde-doentia.
+~
+Esta criatura assemelha-se a um grande cão de caça, mas a sua forma é uma
+paródia grotesca. O seu pelo é esparso e remendado, revelando pele negra e
+esticada sobre um esqueleto que parece demasiado grande para o seu corpo.
+
+As suas patas terminam em garras de obsidiana, e a sua boca, cheia de dentes
+como agulhas, goteja uma saliva negra que queima a terra onde cai. Os seus
+olhos não são de um animal; são duas chamas de fogo infernal, brilhando com uma
+inteligência maligna e uma lealdade profana ao seu mestre.
+~
+2222272 0 1000 0 868408 2 0 0 0 E
+58 8 -38 12d10+1450 6d8+30
+1000 80000
+9 9 0
+BareHandAttack: 8
+Str: 17
+Dex: 20
+Int: 17
+Wis: 17
+Con: 25
+GenWimpy: 5
+GenLoot: 4
+GenEquip: 1
+GenRoam: 66
+GenFollow: 14
+E
+#15213
+gashadokuro esqueleto gigante guardiao~
+um Gashadokuro colossal~
+Um Gashadokuro, um esqueleto gigante de ossos amarelados, ergue-se no meio das
+ruínas.
+~
+Esta criatura é um pesadelo saído das lendas mais sombrias. É um esqueleto de
+proporções titânicas, com mais de cinco metros de altura, composto pelos ossos
+de centenas de monges e peregrinos. Os ossos não estão perfeitamente unidos;
+eles rangem e estalam a cada movimento, mantidos coesos por uma aura de luz
+pálida e fria.
+
+Na sua caixa torácica vazia, um coração de luz fantasmagórica pulsa lentamente.
+Os seus olhos são dois abismos de escuridão, e o seu rugido não é som, mas a
+libertação de toda a dor e agonia das almas que o compõem.
+~
+10610752 0 1000 0 870456 2 0 0 -1000 E
+63 13 -55 25d20+4000 10d12+60
+4000 300000
+9 9 0
+BareHandAttack: 6
+Str: 25
+E
+#15214
+oni cacador demonio~
+o Oni Caçador~
+O Oni Caçador está aqui, seus músculos a ondular com poder contido e seus olhos
+a arder com ódio puro.
+~
+Esta criatura é a encarnação da fúria da natureza. É um gigante de pele da cor
+de casca de árvore queimada, com músculos que parecem raízes retorcidas. Dois
+chifres de madeira negra e petrificada saem da sua testa, e os seus olhos são
+duas poças de seiva a ferver. A sua boca, cheia de dentes que parecem lascas de
+pedra, está permanentemente crispada num rosnado. Ele não veste armadura, pois
+a sua pele é dura como ferro, e emana um cheiro a terra molhada, ozono e sangue
+fresco.
+~
+10610752 0 1000 0 606264 2 0 0 -1000 E
+64 16 -50 22d20+3800 15d10+70
+4000 280000
+9 9 1
+BareHandAttack: 9
+Str: 25
+Dex: 25
+Int: 15
+Wis: 17
+Con: 18
+GenBrave: 8
+GenFollow: 16
+E
+#15215
+espirito vingativo fantasma odio~
+um Espírito Vingativo~
+Um Espírito Vingativo grita em silêncio, sua forma a contorcer-se de ódio.
+~
+Esta aparição é violenta. Ao contrário dos fantasmas de pura tristeza, este
+arde com uma chama negra de pura malícia. A sua forma é um turbilhão de
+farrapos espectrais e energia negativa, com uma face permanentemente congelada
+num grito de fúria.
+
+As suas mãos terminam em garras que parecem sugar a luz. Ele não vagueia
+perdido; ele patrulha, procurando vingança contra qualquer ser vivo que ouse
+entrar no seu domínio de dor.
+~
+2746560 0 1000 0 8994872 2 0 0 -1000 E
+60 10 -42 15d10+1800 9d8+40
+3000 100000
+9 9 0
+Str: 15
+Dex: 15
+Int: 15
+Wis: 15
+Con: 15
+Cha: 15
+GenWimpy: 26
+GenRoam: 81
+GenFollow: 14
+E
+#15216
+tengu demonio alado sombras~
+um Tengu das Sombras~
+Um Tengu das Sombras observa-o de cima, suas asas de corvo a agitarem-se sem
+fazer som.
+~
+Esta criatura é uma fusão profana de homem e ave de rapina. Tem o corpo de um
+guerreiro esguio, coberto por uma armadura de laca negra, mas a sua cabeça é a
+de um corvo, com um bico longo e cruel e olhos que brilham com uma inteligência
+fria.
+
+Das suas costas, um par de asas de penas negras como a noite abre-se,
+permitindo-lhe mover-se pelo ar com uma agilidade mortal. Ele não fala, mas o
+som do vento a passar pelas suas asas soa como uma promessa de morte.
+~
+11135074 0 1000 0 8994872 2 0 0 -1000 E
+62 12 -48 18d10+2500 10d8+45
+4500 150000
+9 9 1
+BareHandAttack: 11
+Str: 17
+Dex: 18
+Int: 25
+Wis: 25
+Con: 25
+GenBrave: 4
+GenFollow: 15
+E
+#15217
+artesao maldito espirito~
+um Artesão Maldito~
+Um Artesão Maldito está aqui, suas mãos a moldar eternamente objetos que nunca
+se completam.
+~
+Este espírito foi, em vida, um mestre artesão. Agora, na morte, está condenado
+a tentar reproduzir as suas obras-primas. As suas mãos, manchadas com argila
+espectral, movem-se constantemente, a moldar o ar vazio. O seu rosto reflete a
+frustração eterna de um perfeccionista que perdeu a sua habilidade. Ao seu
+redor, ocasionalmente materializam-se fragmentos das suas tentativas - pedaços
+de tigelas, espelhos rachados - que existem por um instante antes de se
+desfazerem em pó.
+~
+2746560 0 1000 0 8994872 2 0 0 -1000 E
+55 5 -10 10d10+1000 4d8+20
+500 10000
+9 9 1
+BareHandAttack: 13
+GenWimpy: 6
+GenLoot: 1
+GenFollow: 13
+E
+#15218
+coracao corrompido arvore-mae~
+o Coração Corrompido da Árvore-Mãe~
+Um nó pulsante de madeira negra e seiva corrompida emerge do tronco da
+Árvore-Mãe.
+~
+Esta protuberância grotesca é do tamanho de um homem, uma massa de madeira
+retorcida que pulsa num ritmo lento e doentio, como um coração à beira de um
+colapso. Veias negras, cheias de uma seiva espessa como alcatrão, cobrem a sua
+superfície. Ele não se move nem ataca diretamente, mas a sua mera presença é a
+fonte da dor da floresta. Um zumbido baixo e agonizante emana dele, uma canção
+de corrupção eterna.
+~
+2746562 0 1000 0 8994872 2 0 0 -1000 E
+65 20 -60 30d20+5000 10d8+45
+0 70000
+9 9 0
+BareHandAttack: 12
+GenWimpy: 5
+GenFollow: 12
+E
+#15220
+zelador portal monge homem~
+o Zelador do Portal~
+Um homem idoso, vestido como um monge, varre silenciosamente o caminho com uma
+vassoura de bambu.~
+Este homem parece tão antigo quanto as pedras do caminho que ele cuida. O seu
+rosto é um mapa de rugas profundas e serenas, e os seus olhos, quase fechados
+em constante meditação, contêm a paz de mil estações. Veste um hábito simples,
+de um cinzento desbotado, limpo e remendado em vários locais. As suas mãos,
+embora nodosas pela idade, movem-se com uma graça fluida e sem esforço.
+
+Ele não fala, nem parece notar a sua presença de forma direta. A sua existência
+está inteiramente focada na sua tarefa: varrer as folhas de bambu e as pétalas
+de cerejeira que caem, mantendo o Caminho da Purificação imaculado. Cada
+movimento da sua vassoura é lento, deliberado, não um trabalho, mas um ritual.
+Ele é a primeira personificação da filosofia de Shizuka: encontrar o sublime no
+serviço humilde.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 14
+Dex: 16
+Int: 18
+Wis: 20
+Con: 18
+E
+#15221
+peregrino cidadao homem~
+um Peregrino de Shizuka~
+Um peregrino caminha lentamente pela cidade, com uma expressão de profunda paz
+no rosto.
+~
+Este homem já viu o mundo exterior, e isso é visível nas cicatrizes desbotadas
+no seu rosto e na cautela que ainda reside no fundo dos seus olhos. Mas aqui,
+essa cautela foi suavizada por uma camada de serenidade luminosa. Veste roupas
+de viagem simples, mas ao contrário dos que vivem no medo, as suas não estão
+sujas nem rasgadas, mas sim cuidadas com esmero.
+
+Ele caminha sem destino aparente, os seus passos lentos e medidos.
+Ocasionalmente, para e inclina a cabeça para a grande Sakura, ou toca numa
+lanterna de pedra com uma reverência silenciosa. Ele é um testemunho vivo do
+propósito de Shizuka: um lugar para onde as almas feridas pelo mundo vêm para
+se curar. Ele representa a esperança, a prova de que mesmo depois do mais
+profundo terror, a paz pode ser reencontrada.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 15
+Dex: 15
+Int: 15
+Wis: 17
+Con: 16
+E
+#15222
+ferreiro artesao homem mestre~
+o Ferreiro da Chama Pura~
+Um mestre ferreiro trabalha o metal com uma calma e precisão hipnóticas.
+~
+Este não é um ferreiro de músculos protuberantes e gritos de esforço. É um
+homem de constituição delgada, cujos braços, embora fortes, são definidos pela
+precisão, não pela força bruta. O seu rosto está sempre sereno, mesmo quando o
+suor lhe escorre pela testa, e os seus olhos observam o metal incandescente com
+a concentração de um erudito a decifrar um texto sagrado.
+
+O seu martelo não bate, ele beija o aço. Cada toque é perfeitamente medido,
+cada golpe uma nota numa canção de criação. Ele não fabrica armas, pois a sua
+arte serve a vida. Das suas mãos nascem ferramentas perfeitas para o cultivo,
+delicados sinos de vento cuja melodia captura a essência da brisa, e portões de
+ferro cujos padrões em espiral falam da eternidade. A sua forja é um lugar de
+paz, onde o fogo não destrói, mas purifica e dá forma.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 18
+Dex: 15
+Int: 16
+Wis: 18
+Con: 19
+E
+T 15224
+#15223
+entalhador artesao homem mestre memorias~
+o Entalhador de Memórias~
+Um homem de mãos delicadas e olhar concentrado dá forma a um pedaço de madeira.
+~
+Este artesão parece mais um poeta do que um carpinteiro. O seu corpo é esguio,
+e os seus movimentos são de uma economia e precisão que beiram a dança. Veste
+um avental de couro macio, coberto não de serradura, mas de finas aparas de
+madeira que se parecem com letras de um alfabeto esquecido. O seu rosto está
+sempre focado na peça à sua frente, e um leve sorriso paira nos seus lábios,
+como se estivesse a ouvir uma história que só a madeira lhe conta.
+
+Ele não impõe a sua vontade à madeira; ele liberta a forma que já dorme nela.
+Das suas mãos não nascem arcos ou escudos, mas flautas que choram a canção do
+vento, pequenas estátuas que capturam a alma de um animal num único instante, e
+caixas de música cuja melodia parece vir de um sonho. Ele acredita que cada
+árvore guarda as memórias da floresta sã, e a sua arte é o ato de lhes dar voz.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 15
+Dex: 19
+Int: 18
+Wis: 19
+Con: 16
+E
+T 15223
+#15224
+mestra cha senhora chiyo mulher~
+a Mestra do Chá, Senhora Chiyo~
+Uma mulher de idade indefinível serve o chá com uma graça que acalma a alma.
+~
+A Senhora Chiyo pode ter cinquenta ou quinhentos anos; é impossível dizer. O
+seu cabelo é branco como a neve, preso num coque perfeito, mas a sua pele é
+lisa e o seu olhar é límpido e penetrante como o de uma jovem. Veste um quimono
+de seda simples, da cor do musgo após a chuva. Os seus movimentos são o epítome
+da economia e da graça; cada gesto, desde pegar na taça até verter a água, é
+uma lição de harmonia.
+
+Ela é o coração social e a guardiã das histórias de Shizuka. Falar com ela é
+mais do que uma conversa; é um ritual. As suas palavras são como as folhas de
+chá que ela serve: poucas, mas cheias de sabor e significado. Ela fala em
+metáforas e provérbios, e as suas lições sobre a cerimónia do chá são, na
+verdade, lições sobre a vida, a paciência e a forma de encontrar a beleza no
+momento presente. Muitos segredos e pedidos de ajuda começam com uma simples
+taça de chá partilhada.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 13
+Dex: 18
+Int: 22
+Wis: 25
+Con: 15
+E
+#15225
+apotecario curandeiro herbalista homem~
+o Apotecário do Jardim~
+Um homem com cheiro a terra e a ervas mói raízes num almofariz de pedra.
+~
+Este homem parece ter brotado do próprio solo do seu jardim. A sua pele é
+bronzeada pelo sol, e pequenas folhas e pétalas estão frequentemente presas no
+seu cabelo comprido e grisalho. As suas mãos estão manchadas com o sumo de
+plantas, e as suas unhas guardam a terra escura e fértil dos seus canteiros.
+Veste roupas simples de linho, práticas e sem adornos.
+
+Ele é um mestre da sabedoria da terra. Não usa feitiços ou encantamentos, mas
+sim o conhecimento profundo do espírito de cada planta. Ele sabe que raiz
+acalma uma febre, que folha fecha uma ferida e que flor afasta os pesadelos. O
+seu trabalho é uma alquimia silenciosa, uma conversa com a natureza. Ele
+representa a cura pura, o poder da vida a lutar contra a doença, um contraste
+direto com a corrupção antinatural que reside para lá do portão da cidade.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 15
+Dex: 16
+Int: 19
+Wis: 22
+Con: 17
+E
+T 15221
+#15226
+monge curandeiro silencioso homem~
+o Monge Curandeiro~
+Um monge em meditação profunda senta-se aqui, emanando uma aura de paz
+curadora.
+~
+Sentado em perfeita postura de lótus, este monge parece ser uma parte da
+própria pedra do templo. As suas vestes são da cor do açafrão desbotado, e a
+sua cabeça raspada brilha suavemente com a luz dos veios minerais da gruta. Os
+seus olhos estão fechados, não para o mundo, mas para dentro, e a sua expressão
+é de uma serenidade tão profunda que parece estar a sonhar com a criação do
+universo.
+
+Ele não fala, pois as palavras são desnecessárias para a sua arte. Ele é um
+canal para a energia pura que flui sob Shizuka. A sua presença é o seu remédio.
+Aproximar-se dele é sentir as aflições da alma - medo, raiva, tristeza - a
+acalmarem-se, como as águas de um lago tempestuoso que se tornam um espelho.
+Ele não cura com poções ou feitiços, mas com o silêncio, oferecendo aos outros
+um vislumbre da paz inabalável que encontrou dentro de si.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 14
+Dex: 16
+Int: 20
+Wis: 25
+Con: 18
+E
+#15227
+mestre caligrafo homem~
+o Mestre Calígrafo~
+Com uma concentração absoluta, um mestre desenha símbolos no ar com um pincel
+imaginário.
+~
+Este mestre é a personificação da disciplina focada. É um homem de idade
+avançada, com uma barba branca e fina que lhe chega ao peito, e olhos que veem
+para além das formas, para a essência das coisas. Veste um haori de seda negra
+sobre vestes simples, as suas roupas imaculadas, sem uma única mancha de tinta.
+As suas mãos são firmes e os seus dedos, longos e elegantes.
+
+A sua disciplina não é a da espada, mas a do pincel. Ele ensina que o controlo
+total sobre um único traço de tinta é mais difícil e mais revelador do que mil
+combates. A sua arte é a sua meditação. Ele pode passar horas em silêncio, a
+contemplar uma folha de papel em branco antes de executar um único e perfeito
+movimento. Através dele, os outros aprendem que a verdadeira força não é a
+capacidade de destruir, mas a paciência e a vontade para criar algo de beleza
+duradoura.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 15
+Dex: 20
+Int: 22
+Wis: 22
+Con: 16
+E
+#15228
+bibliotecaria mulher guardiã saber~
+a Bibliotecária dos Pergaminhos~
+Uma mulher erudita move-se silenciosamente entre as estantes, o seu toque
+reverente nos pergaminhos.
+~
+A sua beleza não é a da juventude, mas a da sabedoria. Veste um quimono de cor
+sóbria, e os seus longos cabelos escuros estão presos por um único pino de
+jade. Os seus óculos, de aros finos, repousam na ponta do nariz, e os seus
+olhos movem-se rapidamente, absorvendo textos em línguas que já morreram para o
+resto do mundo. Ela não caminha; ela desliza, os seus pés não fazendo qualquer
+som no chão de madeira da biblioteca.
+
+Ela é a memória viva de Shizuka. Conhece a história de cada pedra da cidade e o
+nome de cada espírito da floresta. O seu propósito não é apenas guardar o
+conhecimento, mas protegê-lo, partilhando-o apenas com aqueles que demonstram
+um verdadeiro desejo de compreender, e não de possuir. O seu silêncio é o de um
+vasto oceano de histórias, e cada palavra que pronuncia é escolhida com o
+cuidado de quem sabe o peso e o poder do saber.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 13
+Dex: 17
+Int: 25
+Wis: 24
+Con: 15
+E
+T 15222
+#15229
+essencia shizuka espirito luz~
+a Essência de Shizuka~
+Uma manifestação de pura luz e serenidade flutua aqui, observando
+silenciosamente.
+~
+Isto não é um ser de carne ou de espírito, mas a própria alma da cidade
+manifesta. Aparece como uma forma vagamente humanoide, tecida a partir de
+filamentos de luz prateada e das pétalas etéreas da grande Sakura. Não tem
+rosto, nem membros definidos, mas a sua presença irradia uma paz tão absoluta e
+poderosa que anula qualquer pensamento de violência ou medo.
+
+Ela não se move, mas simplesmente é, flutuando no coração do santuário. É a
+fonte e a guardiã da paz que protege Shizuka. Não fala em palavras, mas a sua
+proximidade preenche a mente com uma compreensão silenciosa da harmonia, da
+beleza e do equilíbrio. É o mistério final da cidade, a prova de que o maior
+poder não precisa de um corpo, de um nome ou de uma voz.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+100 20 100 100d10+30000 1d1+0
+1000 1000000
+9 9 1
+BareHandAttack: 3
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+E
+#15230
+jardineiro contemplativo homem~
+o Jardineiro Contemplativo~
+Um jardineiro cuida das plantas com a reverência de quem cuida de almas.
+~
+Este homem move-se pelos jardins de Shizuka como uma brisa silenciosa. As suas
+roupas de algodão simples são da cor da terra, e as suas mãos, embora
+calejadas, tocam em cada folha e pétala com uma delicadeza infinita. O seu
+rosto está quase sempre escondido por um chapéu de palha de abas largas, mas
+quando o levanta, revela um olhar que reflete a paciência das estações.
+
+Ele é o guardião da beleza terrena de Shizuka. A sua tarefa não é dominar a
+natureza, mas sim ouvi-la e ajudá-la a expressar a sua mais perfeita canção.
+Ele compreende a linguagem da água, a necessidade de cada raiz e o sonho de
+cada semente. Para ele, a jardinagem não é trabalho, é uma forma de meditação
+ativa, um diálogo constante com a vida que floresce sob os seus cuidados.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 16
+Dex: 18
+Int: 17
+Wis: 20
+Con: 17
+E
+#15231
+poeta vento homem bardo~
+o Poeta do Vento~
+Sentado sob uma cerejeira, um jovem poeta escreve num rolo de pergaminho.
+~
+Este jovem parece quase etéreo, a sua figura esguia envolta em sedas de cores
+pálidas que se agitam com a mais leve brisa. O seu cabelo escuro e comprido cai
+sobre um rosto de traços finos e pensativos. Os seus olhos não observam o
+mundo, mas parecem olhar através dele, vendo a poesia invisível que conecta
+todas as coisas. Ele não fala muito, preferindo ouvir o mundo a falar com ele.
+
+Ele é a voz da beleza de Shizuka. Enquanto outros a expressam com metal,
+madeira ou chá, ele fá-lo com palavras. Ele senta-se durante horas, a ouvir o
+sino de vento, a observar as carpas no lago ou a sentir a brisa, e depois, com
+movimentos rápidos do seu pincel, captura a essência desses momentos em versos
+que podem fazer um guerreiro chorar. Os seus poemas são tesouros, fragmentos da
+alma da cidade dados a quem tiver um coração para os ouvir.
+~
+3145794 0 1000 0 134217984 0 0 0 1000 E
+60 20 100 20d10+5000 1d1+0
+100 50000
+9 9 1
+BareHandAttack: 3
+Str: 14
+Dex: 18
+Int: 21
+Wis: 19
+Con: 15
+E
+$

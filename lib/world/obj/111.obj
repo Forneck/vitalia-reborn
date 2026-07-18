@@ -92,9 +92,9 @@ escudo negro pedra petrificado~
 um escudo negro petrificado~
 Um poderoso escudo negro esculpido em pedra foi deixado aqui.~
 ~
-9 bfgjl 0 0 0 aj 0 0 0 0 0 0 0
-10 0 0 0
-9999 5000 2000 60 0
+9 bfgj 0 0 0 aj 0 0 0 0 0 0 0
+18 0 0 0
+20 5000 2000 70 0
 E
 escudo negro~
 Este escudo negro é muito poderoso e parece ter sido feito por magos muito
@@ -161,4 +161,12 @@ A
 19 5
 A
 24 5
+#11120
+bau cofre caixa~
+um bau escondido~
+.Um bau escondido.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 15 11102 0
+9999 0 0 0 0
 $~

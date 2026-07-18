@@ -108,6 +108,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC, CMD_NOARG},
     {"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT, CMD_NOARG},
     {"autotitle", "autotitle", POS_DEAD, do_autotitle, 0, 0, CMD_NOARG},
+    {"autoexam", "autoexam", POS_DEAD, do_gen_tog, 0, SCMD_AUTOEXAM, CMD_NOARG},
     {"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK, CMD_NOARG},
     {"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB, CMD_ONEARG},
     {"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP, CMD_ONEARG},
@@ -122,6 +123,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"cast", "c", POS_SITTING, do_cast, 1, SCMD_SPELL, CMD_TWOARG},
     {"cedit", "cedit", POS_DEAD, do_oasis_cedit, LVL_IMPL, CMD_NOARG},
     {"changelog", "cha", POS_DEAD, do_changelog, LVL_IMPL, CMD_NOARG},
+    {"chansons", "chan", POS_DEAD, do_chansons, 0, 0, CMD_ONEARG},
     {"check", "ch", POS_STANDING, do_not_here, 1, CMD_NOARG},
     {"checkload", "checkl", POS_DEAD, do_checkloadstatus, LVL_GOD, CMD_TWOARG},
     {"close", "cl", POS_SITTING, do_gen_door, 0, SCMD_CLOSE, CMD_TWOARG},
@@ -139,6 +141,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"detach", "detach", POS_DEAD, do_detach, LVL_BUILDER, 0, CMD_NOARG},
     {"diagnose", "diag", POS_RESTING, do_diagnose, 0, 0, CMD_ONEARG},
     {"dig", "dig", POS_DEAD, do_dig, LVL_BUILDER, 0, CMD_ONEARG},
+    {"disable", "disable", POS_DEAD, do_disable, LVL_GRGOD, 0, CMD_ONEARG},
     {"display", "disp", POS_DEAD, do_display, 0, 0, CMD_NOARG},
     {"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE, CMD_ONEARG},
     {"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_ONEARG},
@@ -146,14 +149,19 @@ cpp_extern const struct command_info cmd_info[] = {
     {"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_ONEARG},
     {"eavesdrop", "eaves", POS_RESTING, do_cast, 1, SKILL_EAVESDROP, CMD_NOARG},
     {"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_NOARG},
+    {"emotionconfig", "emotionconfig", POS_DEAD, do_emotionconfig, LVL_GRGOD, 0, CMD_NOARG},
+    {"emotionexport", "emotionexport", POS_DEAD, do_emotionexport, LVL_GRGOD, 0, CMD_ONEARG},
+    {"emotionimport", "emotionimport", POS_DEAD, do_emotionimport, LVL_GRGOD, 0, CMD_ONEARG},
     {"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
     {":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
+    {"enable", "enable", POS_DEAD, do_enable, LVL_GRGOD, 0, CMD_ONEARG},
     {"enter", "ent", POS_STANDING, do_enter, 0, 0, CMD_ONEARG},
     {"envenom", "env", POS_FIGHTING, do_cast, 1, SKILL_ENVENOM, CMD_TWOARG},
     {"equipment", "eq", POS_SLEEPING, do_equipment, 0, 0, CMD_NOARG},
     {"evaluate", "evalu", POS_SITTING, do_evaluate, 0, 0, CMD_TWOARG},
     {"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_NOARG},
     {"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_ONEARG},
+    {"experiment", "exp", POS_RESTING, do_experiment, 0, 0, CMD_ONEARG},
     {"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0, CMD_NOARG},
     {"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_TWOARG},
     {"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_TWOARG},
@@ -252,6 +260,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0, CMD_NOARG},
     {"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK, CMD_TWOARG},
     {"practice", "pr", POS_RESTING, do_practice, 1, 0, CMD_ONEARG},
+    {"peek", "pee", POS_STANDING, do_cast, 1, SKILL_PEEK, CMD_ONEARG},
     {"page", "pag", POS_DEAD, do_page, 1, 0, CMD_NOARG},
     {"pardon", "pardon", POS_DEAD, do_wizutil, LVL_GOD, SCMD_PARDON, CMD_ONEARG},
     {"plist", "plist", POS_DEAD, do_plist, LVL_GOD, 0, CMD_NOARG},
@@ -282,7 +291,8 @@ cpp_extern const struct command_info cmd_info[] = {
     {"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
     {"receive", "rece", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
     {"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0, CMD_NOARG},
-    {"rskill", "rskill", POS_DEAD, do_rskill, LVL_GOD, 0, CMD_TWOARG},
+    {"rskill", "rskill", POS_DEAD, do_rskill, 0, 0, CMD_TWOARG},
+    {"rskills", "rskills", POS_DEAD, do_rskill, 0, 0, CMD_NOARG},
     {"rstats", "rstats", POS_DEAD, do_rstats, LVL_IMMORT, 0, CMD_TWOARG},
     {"remove", "rem", POS_RESTING, do_remove, 0, 0, CMD_ONEARG},
     {"rent", "rent", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
@@ -319,12 +329,15 @@ cpp_extern const struct command_info cmd_info[] = {
     {"shutdown", "shutdown", POS_DEAD, do_shutdown, LVL_IMPL, SCMD_SHUTDOWN, CMD_NOARG},
     {"sip", "sip", POS_RESTING, do_drink, 0, SCMD_SIP, CMD_ONEARG},
     {"sing", "sin", POS_SITTING, do_cast, 1, SCMD_CHANSON, CMD_TWOARG},
+    {"skills", "ski", POS_DEAD, do_skills, 0, 0, CMD_ONEARG},
     {"skillset", "skillset", POS_SLEEPING, do_skillset, LVL_GRGOD, 0, CMD_NOARG},
     {"sleep", "sl", POS_SLEEPING, do_sleep, 0, 0, CMD_NOARG},
     {"slist", "slist", POS_SLEEPING, do_oasis_list, LVL_BUILDER, SCMD_OASIS_SLIST, CMD_ONEARG},
     {"sneak", "sneak", POS_STANDING, do_cast, 1, SKILL_SNEAK, CMD_NOARG},
     {"snoop", "snoop", POS_DEAD, do_snoop, LVL_GOD, 0, CMD_ONEARG},
     {"spedit", "spe", POS_DEAD, do_spedit, LVL_GRGOD, 0, CMD_NOARG},
+    {"spells", "spel", POS_DEAD, do_spells, 0, 0, CMD_ONEARG},
+    {"syllables", "syl", POS_DEAD, do_syllables, 0, 0, CMD_NOARG},
     {"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0, CMD_NOARG},
     {"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS, CMD_NOARG},
     {"split", "split", POS_SITTING, do_split, 1, 0, CMD_ONEARG},
@@ -600,6 +613,8 @@ void command_interpreter(struct char_data *ch, char *argument)
         send_to_char(ch, "Sinto, mas este comando ainda não foi implementado.\r\n");
     else if (IS_NPC(ch) && complete_cmd_info[cmd].minimum_level >= LVL_IMMORT)
         send_to_char(ch, "Você não pode usar comandos de imortais enquanto incorporado.\r\n");
+    else if (is_command_disabled(cmd))
+        send_to_char(ch, "Este comando está temporariamente desabilitado.\r\n");
     else if (GET_POS(ch) < complete_cmd_info[cmd].minimum_position)
         switch (GET_POS(ch)) {
             case POS_DEAD:
@@ -669,11 +684,23 @@ ACMD(do_alias)
         if ((a = GET_ALIASES(ch)) == NULL)
             send_to_char(ch, "Não há atalhos definidos.\r\n");
         else {
-            send_to_char(ch, "\tWAtalhos definidos:\r\n");
-            while (a != NULL) {
-                send_to_char(ch, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
+            char buf[MAX_STRING_LENGTH];
+            size_t len = 0;
+
+            /* Check if player has a descriptor for pagination */
+            if (!ch->desc) {
+                send_to_char(ch, "Você não pode ver a lista de atalhos no momento.\r\n");
+                return;
+            }
+
+            len += snprintf(buf + len, sizeof(buf) - len, "\tWAtalhos definidos:\tn\r\n");
+            while (a != NULL && len < sizeof(buf) - 1) {
+                len += snprintf(buf + len, sizeof(buf) - len, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
                 a = a->next;
             }
+
+            /* Use page_string for paginated output */
+            page_string(ch->desc, buf, TRUE);
         }
     } else { /* otherwise, add or remove aliases */
         /* is this an alias we've already defined? */
@@ -1250,6 +1277,8 @@ int enter_player_game(struct descriptor_data *d)
             load_room = r_hometown_2;
         else if (GET_HOMETOWN(d->character) == 3)
             load_room = r_hometown_3;
+        else if (GET_HOMETOWN(d->character) == 4)
+            load_room = r_hometown_4;
         else
             load_room = r_hometown_1;
     }
@@ -1257,6 +1286,41 @@ int enter_player_game(struct descriptor_data *d)
         load_room = r_frozen_start_room;
     if (PLR_FLAGGED(d->character, PLR_GHOST))
         load_room = r_dead_start_room;
+
+    /* Check if living player has been offline long enough to be fully refreshed */
+    /* Skip if player is frozen, ghost, or has custom loadroom set */
+    if (!PLR_FLAGGED(d->character, PLR_GHOST) && !PLR_FLAGGED(d->character, PLR_FROZEN) &&
+        !PLR_FLAGGED(d->character, PLR_LOADROOM)) {
+        time_t offline_time = time(0) - d->character->player.time.logon;
+        time_t refresh_time = CONFIG_MAX_PC_CORPSE_TIME * SECS_PER_MUD_HOUR;
+
+        if (offline_time >= refresh_time) {
+            /* Player has been offline long enough - refresh and load at hometown */
+
+            /* Restore full HP, Mana, Move */
+            GET_HIT(d->character) = GET_MAX_HIT(d->character);
+            GET_MANA(d->character) = GET_MAX_MANA(d->character);
+            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+
+            /* Set hunger and thirst to comfortable levels */
+            if (GET_LEVEL(d->character) < LVL_IMMORT) {
+                GET_COND(d->character, HUNGER) = 24;
+                GET_COND(d->character, THIRST) = 24;
+            }
+
+            /* Load at hometown */
+            if (GET_HOMETOWN(d->character) == 1)
+                load_room = r_hometown_1;
+            else if (GET_HOMETOWN(d->character) == 2)
+                load_room = r_hometown_2;
+            else if (GET_HOMETOWN(d->character) == 3)
+                load_room = r_hometown_3;
+            else if (GET_HOMETOWN(d->character) == 4)
+                load_room = r_hometown_4;
+            else
+                load_room = r_hometown_1;
+        }
+    }
     /* copyover */
     d->character->script_id = GET_IDNUM(d->character);
     /* find_char helper */
@@ -1819,9 +1883,12 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
-            /* Save the selected skill to retained skills */
+            /* Add the selected skill to retained skills (don't clear existing retained skills) */
             if (skill_num > 0) {
                 d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
+                /* Record which incarnation this skill came from */
+                d->character->player_specials->saved.retained_skill_incarnation[skill_num] =
+                    d->character->player_specials->saved.num_incarnations;
                 write_to_output(d, "Habilidade %s será mantida.\r\n", skill_name(skill_num));
             } else {
                 write_to_output(d, "Nenhuma habilidade será mantida.\r\n");
@@ -1837,18 +1904,42 @@ void nanny(struct descriptor_data *d, char *arg)
                 write_to_output(d, "Isso não é uma classe válida.\r\nClasse: ");
                 return;
             }
-            /* Check if class was already used */
-            if (WAS_FLAGGED(d->character, load_result)) {
-                write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
+            /* Check if trying to select current class */
+            if (load_result == GET_CLASS(d->character)) {
+                write_to_output(d, "Você já é dessa classe. Escolha outra.\r\nClasse: ");
                 return;
+            }
+            /* Check if class was already used, but allow if all classes have been tried */
+            if (WAS_FLAGGED(d->character, load_result)) {
+                /* Count how many classes have been tried (including current) */
+                int classes_tried = 0;
+                for (int i = 0; i < NUM_CLASSES; i++) {
+                    if (WAS_FLAGGED(d->character, i) || i == GET_CLASS(d->character)) {
+                        classes_tried++;
+                    }
+                }
+                /* Only reject if not all classes have been tried */
+                if (classes_tried < NUM_CLASSES) {
+                    write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
+                    return;
+                }
+                /* If all classes have been tried, allow reselection (already passed current class check) */
             }
             /* Mark current class as used and add to class history */
             SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
+            {
+                const char *old_class = pc_class_types[GET_CLASS(d->character)];
+                const char *new_class = pc_class_types[load_result];
+                log1("REBEGIN: %s changed from %s (class %d) to %s (class %d). was_class[0]=0x%X",
+                     GET_NAME(d->character), old_class, GET_CLASS(d->character), new_class, load_result,
+                     WAS_FLAGS(d->character)[0]);
+            }
 
             /* Record in class history for statistics */
             int num_incarnations = d->character->player_specials->saved.num_incarnations;
             if (num_incarnations < 100) { /* Prevent overflow */
                 d->character->player_specials->saved.class_history[num_incarnations] = GET_CLASS(d->character);
+                d->character->player_specials->saved.num_incarnations++;
             }
             GET_CLASS(d->character) = load_result;
             write_to_output(d, "\r\nRolando novos atributos...\r\n");
@@ -1861,9 +1952,9 @@ void nanny(struct descriptor_data *d, char *arg)
                 GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character), GET_DEX(d->character),
                 GET_CON(d->character), GET_CHA(d->character));
             write_to_output(d, "Aceitar estes atributos? (s/N): ");
-            STATE(d) = CON_RB_QHOME;
+            STATE(d) = CON_RB_QATTRS;
             break;
-        case CON_RB_QHOME: /* rebegin: reroll or accept attributes */
+        case CON_RB_QATTRS: /* rebegin: accept or reroll attributes */
             if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
                 write_to_output(d, "Por favor, responda s ou n: ");
                 return;
@@ -1878,8 +1969,46 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
+            /* Attributes accepted, now choose hometown */
+            write_to_output(d, "\r\nEscolha sua nova cidade natal:\r\n");
+            hometown_menu(d);
+            STATE(d) = CON_RB_QHOMETOWN;
+            break;
+
+        case CON_RB_QHOMETOWN: /* rebegin: choose hometown */
+            load_result = parse_hometown(*arg);
+            if (load_result == 0) {
+                write_to_output(d, "Por favor, escolha uma cidade válida...\r\n");
+                hometown_menu(d);
+                return;
+            }
+            GET_HOMETOWN(d->character) = load_result;
+            write_to_output(d, "Cidade natal selecionada: ");
+            switch (load_result) {
+                case 1:
+                    write_to_output(d, "Midgaard\r\n");
+                    break;
+                case 2:
+                    write_to_output(d, "Nova Thalos\r\n");
+                    break;
+                case 3:
+                    write_to_output(d, "Thewster\r\n");
+                    break;
+                case 4:
+                    write_to_output(d, "Bhogavati\r\n");
+                    break;
+            }
+
             /* Finalize rebegin process */
-            GET_REMORT(d->character)++;
+            /* Note: num_incarnations was already incremented when recording class history */
+
+            /* Remove all affects before resetting (unaffect) - using optimized O(n) removal */
+
+            /* Reset reputation to initial value for new incarnation */
+            d->character->player_specials->saved.reputation = 50; /* Default reputation, matches new character */
+            d->character->player_specials->saved.last_reputation_gain = 0;
+            d->character->player_specials->saved.last_give_recipient_id = 0;
+
             GET_LEVEL(d->character) = 1;
             GET_EXP(d->character) = 1;
             GET_GOLD(d->character) = 0;
@@ -1888,19 +2017,48 @@ void nanny(struct descriptor_data *d, char *arg)
             GET_MANA(d->character) = GET_MAX_MANA(d->character);
             GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
 
-            /* Initialize character for new class */
-            do_start(d->character);
+            /* Remove transcendence flag - player must transcend again */
+            REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
 
-            /* Restore retained skills */
+            /* Initialize character for new class (without re-rolling abilities) */
+            set_title(d->character, NULL);
+
+            GET_MAX_HIT(d->character) = 10;
+            GET_MAX_MANA(d->character) = 100;
+            GET_MAX_MOVE(d->character) = 82;
+            GET_MAX_BREATH(d->character) = 15;
+            advance_level(d->character);
+
+            GET_HIT(d->character) = GET_MAX_HIT(d->character);
+            GET_MANA(d->character) = GET_MAX_MANA(d->character);
+            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+            GET_BREATH(d->character) = GET_MAX_BREATH(d->character);
+
+            update_pos(d->character);
+
+            GET_COND(d->character, THIRST) = 24;
+            GET_COND(d->character, HUNGER) = 24;
+            GET_COND(d->character, DRUNK) = 0;
+
+            if (CONFIG_SITEOK_ALL)
+                SET_BIT_AR(PLR_FLAGS(d->character), PLR_SITEOK);
+
+            GET_FIT(d->character) = 0;
+
+            /* Clear all skills and restore retained ones in a single pass */
             {
                 int i;
                 for (i = 1; i <= MAX_SKILLS; i++) {
+                    /* Clear skill first */
+                    SET_SKILL(d->character, i, 0);
+                    /* Restore retained skill if it exists */
                     if (d->character->player_specials->saved.retained_skills[i] > 0) {
                         SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
                     }
                 }
             }
 
+            affect_remove_all(d->character);
             save_char(d->character);
 
             write_to_output(d, "\r\nVocê renasceu com sucesso! Bem-vindo à sua nova vida.\r\n");
@@ -1932,6 +2090,26 @@ void nanny(struct descriptor_data *d, char *arg)
             STATE(d) = CON_RMOTD;
             break;
 
+        case CON_QACCEPT: /* quest accept: confirmation */
+            if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+                write_to_output(d, "Por favor, responda s ou n: ");
+                return;
+            }
+            if (*arg == 'n' || *arg == 'N') {
+                write_to_output(d, "\r\nBusca cancelada.\r\n");
+                d->pending_quest_vnum = NOTHING;
+                d->pending_questmaster = NULL;
+                write_to_output(d, "*** APERTE ENTER: ");
+                STATE(d) = CON_PLAYING;
+                return;
+            }
+
+            /* Accept the quest */
+            accept_pending_quest(d);
+            write_to_output(d, "\r\n*** APERTE ENTER: ");
+            STATE(d) = CON_PLAYING;
+            break;
+
         default:
             log1("SYSERR: Nanny: illegal state of con'ness (%d) for '%s'; closing connection.", STATE(d),
                  d->character ? GET_NAME(d->character) : "<unknown>");
@@ -1951,6 +2129,7 @@ void hometown_menu(struct descriptor_data *d)
     write_to_output(d, "\r\n1) Midgaard\r\n");
     write_to_output(d, "2) Nova Thalos\r\n");
     write_to_output(d, "3) Thewster\r\n");
+    write_to_output(d, "4) Bhogavati\r\n");
 }
 
 int parse_hometown(char arg)
@@ -1963,6 +2142,8 @@ int parse_hometown(char arg)
             return 2;
         case '3':
             return 3;
+        case '4':
+            return 4;
         default:
             return 0;
     }

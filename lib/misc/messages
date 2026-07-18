@@ -409,6 +409,22 @@ Sua parede de vento desaparece diante de $N.
 A parede de vento de $n desaparece para que você passe.
 $N atravessa a parede de vento de $n sem se machucar.
 
+* Thistlecoat
+M
+ 78
+$N morre ao tentar atravessar sua barreira de espinhos.
+A barreira de espinhos de $n perfura você até a morte...
+A barreira de espinhos de $n perfura $N até a morte.
+$N não é afetado por sua barreira de espinhos.
+A barreira de espinhos de $n tenta lhe perfurar, mas erra.
+$N escapa da barreira de espinhos de $n.
+$N se perfura em sua barreira de espinhos.
+A barreira de espinhos de $n rasga você!! ARRGH!
+$N é rasgad$R pela barreira de espinhos de $n.
+Sua barreira de espinhos murcha diante de $N.
+A barreira de espinhos de $n murcha para que você passe.
+$N atravessa a barreira de espinhos de $n sem se machucar.
+
 * Grito da Morte
 M
  167

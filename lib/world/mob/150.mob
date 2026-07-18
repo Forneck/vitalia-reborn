@@ -11,6 +11,8 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
+GenWimpy: 2
+GenFollow: 4
 E
 #15001
 rei welmar~
@@ -26,6 +28,9 @@ tem uma reputação tanto como sábio, como soberano.
 52 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
+GenWimpy: 37
+GenLoot: 4
+GenFollow: 15
 E
 #15002
 fantasma horrivel~
@@ -52,8 +57,10 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
-GenWimpy: 4
-GenRoam: 64
+GenWimpy: 9
+GenRoam: 87
+GenGroup: 30
+GenFollow: 4
 E
 #15004
 brian guarda real~
@@ -68,6 +75,9 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
+GenWimpy: 2
+GenLoot: 15
+GenFollow: 6
 E
 #15005
 mick guarda real~
@@ -82,6 +92,9 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
+GenWimpy: 3
+GenLoot: 7
+GenFollow: 5
 E
 #15006
 matt guarda real~
@@ -96,6 +109,11 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
+GenWimpy: 5
+GenLoot: 1
+GenRoam: 65
+GenGroup: 15
+GenFollow: 6
 E
 #15007
 jochem guarda real~
@@ -111,6 +129,10 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 6 6 1
+GenWimpy: 8
+GenLoot: 5
+GenGroup: 39
+GenFollow: 9
 E
 #15008
 anne guarda real~
@@ -126,6 +148,11 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 2
+GenWimpy: 19
+GenLoot: 16
+GenRoam: 89
+GenGroup: 69
+GenFollow: 10
 E
 #15009
 andrew guarda real~
@@ -141,8 +168,10 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 5
-GenRoam: 43
+GenWimpy: 26
+GenLoot: 29
+GenRoam: 89
+GenFollow: 9
 E
 #15010
 bertram bert guarda real~
@@ -157,6 +186,11 @@ suas cicatrizes com orgulho. Este cara parece duro...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 1
+GenWimpy: 13
+GenLoot: 1
+GenRoam: 89
+GenGroup: 3
+GenFollow: 11
 E
 #15011
 jeanette guarda real~
@@ -171,6 +205,11 @@ suas cicatrizes com orgulho. Esta garota poderia desagradável se quisesse...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 2
+GenWimpy: 25
+GenLoot: 7
+GenRoam: 89
+GenGroup: 50
+GenFollow: 12
 E
 #15012
 peter capitao guarda real~
@@ -189,8 +228,12 @@ voltar a si ao ver ele.
 19 1 -1 3d6+240 2d6+8
 1000 35000
 9 9 1
-GenWimpy: 3
-GenRoam: 51
+GenWimpy: 24
+GenLoot: 15
+GenEquip: 2
+GenRoam: 89
+GenGroup: 84
+GenFollow: 14
 E
 #15013
 mestre treinador~
@@ -204,6 +247,9 @@ de praticamente qualquer tipo de arma inventada pelo homem.
 18 1 1 2d6+220 1d8+8
 1000 30000
 9 9 1
+GenWimpy: 6
+GenLoot: 50
+GenFollow: 13
 E
 #15014
 mensageiro real~
@@ -217,8 +263,11 @@ Este é um jovem de constituição poderosa, e sua função principal
 18 1 -1 3d6+220 1d8+9
 500 30000
 9 9 1
-GenWimpy: 2
-GenRoam: 12
+GenWimpy: 18
+GenLoot: 9
+GenRoam: 89
+GenGroup: 77
+GenFollow: 13
 E
 #15015
 ergan assassino~
@@ -248,8 +297,10 @@ uma respeitável barriga.
 8 13 3 1d6+100 1d9+2
 200 3750
 9 9 1
-GenWimpy: 4
-GenRoam: 67
+GenWimpy: 10
+GenLoot: 7
+GenRoam: 89
+GenFollow: 9
 E
 #15017
 mulher limpeza~
@@ -262,8 +313,11 @@ Apesar dela ter um trabalho servil, ela parece gostar dele.
 1 20 9 4d6+1 1d5+0
 10 100
 9 9 2
-GenWimpy: 2
-GenRoam: 51
+GenWimpy: 21
+GenLoot: 12
+GenRoam: 87
+GenGroup: 21
+GenFollow: 8
 E
 #15018
 barata~
@@ -304,6 +358,9 @@ pelo Rei, se necessário.
 17 4 1 3d6+205 1d8+8
 1000 28000
 9 9 1
+GenWimpy: 7
+GenLoot: 1
+GenFollow: 11
 E
 #15021
 tom guarda guarda-costas~
@@ -318,6 +375,10 @@ pelo Rei, se necessário.
 17 4 1 3d6+205 1d8+8
 1000 28000
 9 9 1
+GenWimpy: 7
+GenLoot: 2
+GenEquip: 1
+GenFollow: 12
 E
 #15022
 chefe cozinheiro~
@@ -357,6 +418,9 @@ gentil com quem tentasse de passar por ele.
 19 2 0 2d6+235 1d7+10
 2000 35000
 9 9 1
+GenWimpy: 7
+GenLoot: 1
+GenFollow: 13
 E
 #15025
 dick homem guarda~
@@ -370,6 +434,8 @@ gentil com quem tentasse de passar por ele.
 19 2 0 2d6+235 1d7+10
 2000 35000
 9 9 1
+GenWimpy: 7
+GenFollow: 13
 E
 #15026
 jerry guarda real~
@@ -384,7 +450,10 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
-GenWimpy: 2
+GenWimpy: 18
+GenRoam: 47
+GenGroup: 6
+GenFollow: 11
 E
 #15027
 michael guarda real~
@@ -399,7 +468,8 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
-GenWimpy: 2
+GenWimpy: 13
+GenFollow: 11
 E
 #15028
 hans guarda real~
@@ -415,8 +485,9 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 8
+GenRoam: 85
+GenFollow: 9
 E
 #15029
 boris guarda real~
@@ -431,6 +502,11 @@ suas cicatrizes com orgulho. Este cara parece duro...
 15 5 1 3d6+175 1d8+7
 400 21000
 9 9 1
+GenWimpy: 23
+GenLoot: 2
+GenRoam: 89
+GenGroup: 52
+GenFollow: 12
 E
 #15030
 zumbi aldeao~
@@ -446,8 +522,10 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 86
-GenRoam: 6
+GenWimpy: 98
+GenLoot: 10
+GenRoam: 30
+GenFollow: 10
 E
 #15031
 esqueleto aldeao~
@@ -463,8 +541,9 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 88
-GenLoot: 3
+GenWimpy: 100
+GenLoot: 7
+GenFollow: 14
 E
 #15032
 poço demonio~
@@ -479,6 +558,10 @@ Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 33 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
-GenWimpy: 3
+GenWimpy: 6
+GenLoot: 96
+GenEquip: 4
+GenRoam: 8
+GenFollow: 14
 E
 $

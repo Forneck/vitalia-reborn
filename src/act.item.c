@@ -22,6 +22,7 @@
 #include "oasis.h"
 #include "act.h"
 #include "quest.h"
+#include "house.h"
 
 /* local function prototypes */
 /* do_get utility functions */
@@ -59,6 +60,14 @@ void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *co
     else if (OBJ_FLAGGED(obj, ITEM_NODROP) && IN_ROOM(cont) != NOWHERE)
         act("Você não pode se livrar de $p, parece ser uma MALDIÇÃO!", FALSE, ch, obj, NULL, TO_CHAR);
     else {
+        /* Check house object limit when putting in a container in a house room */
+        if (IN_ROOM(cont) != NOWHERE && ROOM_FLAGGED(IN_ROOM(cont), ROOM_HOUSE) && !PRF_FLAGGED(ch, PRF_NOHASSLE)) {
+            if (!House_can_add_obj(IN_ROOM(cont))) {
+                send_to_char(ch, "Esta casa atingiu o limite máximo de objetos (%d).\r\n", CONFIG_MAX_HOUSE_OBJS);
+                return;
+            }
+        }
+
         obj_from_char(obj);
         obj_to_obj(obj, cont);
 
@@ -207,7 +216,13 @@ static int can_take_obj(struct char_data *ch, struct obj_data *obj)
 
 void get_check_money(struct char_data *ch, struct obj_data *obj)
 {
-    int value = GET_OBJ_VAL(obj, 0);
+    int value;
+
+    /* Safety check: obj might be NULL if extracted by triggers */
+    if (obj == NULL)
+        return;
+
+    value = GET_OBJ_VAL(obj, 0);
 
     if (GET_OBJ_TYPE(obj) != ITEM_MONEY || value <= 0)
         return;
@@ -228,11 +243,25 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
         if (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch))
             act("$p: você não pode carregar mais coisas.", FALSE, ch, obj, 0, TO_CHAR);
         else if (get_otrigger(obj, ch)) {
+            struct obj_data *temp_obj;
+            bool obj_still_valid = FALSE;
+
             obj_from_obj(obj);
             obj_to_char(obj, ch);
             act("Você pega $p de dentro de $P.", FALSE, ch, obj, cont, TO_CHAR);
             act("$n pega $p de dentro de $P.", TRUE, ch, obj, cont, TO_ROOM);
-            get_check_money(ch, obj);
+
+            /* Check if object still exists in character's inventory after act() triggers
+             * Triggers may have extracted the object, so we must verify before accessing it */
+            for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+                if (temp_obj == obj) {
+                    obj_still_valid = TRUE;
+                    break;
+                }
+            }
+
+            if (obj_still_valid)
+                get_check_money(ch, obj);
         }
     }
 }
@@ -288,11 +317,25 @@ void get_from_container(struct char_data *ch, struct obj_data *cont, char *arg, 
 int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
 {
     if (can_take_obj(ch, obj) && get_otrigger(obj, ch)) {
+        struct obj_data *temp_obj;
+        bool obj_still_valid = FALSE;
+
         obj_from_room(obj);
         obj_to_char(obj, ch);
         act("Você pega $p.", FALSE, ch, obj, 0, TO_CHAR);
         act("$n pega $p.", TRUE, ch, obj, 0, TO_ROOM);
-        get_check_money(ch, obj);
+
+        /* Check if object still exists in character's inventory after act() triggers
+         * Triggers may have extracted the object, so we must verify before accessing it */
+        for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+            if (temp_obj == obj) {
+                obj_still_valid = TRUE;
+                break;
+            }
+        }
+
+        if (obj_still_valid)
+            get_check_money(ch, obj);
         return (1);
     }
     return (0);
@@ -481,6 +524,14 @@ int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const ch
         return (0);
     }
 
+    /* Check house object limit for drop */
+    if ((mode == SCMD_DROP) && ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) && !PRF_FLAGGED(ch, PRF_NOHASSLE)) {
+        if (!House_can_add_obj(IN_ROOM(ch))) {
+            send_to_char(ch, "Esta casa atingiu o limite máximo de objetos (%d).\r\n", CONFIG_MAX_HOUSE_OBJS);
+            return (0);
+        }
+    }
+
     snprintf(buf, sizeof(buf), "Você %s $p%s", sname, VANISH(mode));
     act(buf, FALSE, ch, obj, 0, TO_CHAR);
 
@@ -533,7 +584,7 @@ ACMD(do_drop)
             mode = SCMD_DONATE;
             /* fail + double chance for room 1 */
             num_don_rooms = (CONFIG_DON_ROOM_1 != NOWHERE) * 2 + (CONFIG_DON_ROOM_2 != NOWHERE) +
-                            (CONFIG_DON_ROOM_3 != NOWHERE) + 1;
+                            (CONFIG_DON_ROOM_3 != NOWHERE) + (CONFIG_DON_ROOM_4 != NOWHERE) + 1;
             switch (rand_number(0, num_don_rooms)) {
                 case 0:
                     mode = SCMD_JUNK;
@@ -547,6 +598,9 @@ ACMD(do_drop)
                     break;
                 case 4:
                     RDR = real_room(CONFIG_DON_ROOM_3);
+                    break;
+                case 5:
+                    RDR = real_room(CONFIG_DON_ROOM_4);
                     break;
             }
             if (RDR == NOWHERE) {
@@ -657,6 +711,31 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
         return;
     }
 
+    /* Special handling for magic stones - validate questmaster BEFORE transferring */
+    if (GET_OBJ_TYPE(obj) == ITEM_MAGIC_STONE && !IS_NPC(ch) && GET_QUEST(ch) != NOTHING) {
+        int quest_type = GET_QUEST_TYPE(ch);
+        if (quest_type == AQ_MOB_KILL || quest_type == AQ_MOB_KILL_BOUNTY) {
+            qst_rnum rnum = real_quest(GET_QUEST(ch));
+            /* Validate that vict is the correct questmaster or return mob for this quest */
+            if (rnum != NOTHING && IS_NPC(vict) &&
+                (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum))) {
+                /* Valid questmaster - transfer stone and complete quest */
+                obj_from_char(obj);
+                obj_to_char(obj, vict);
+                act("Você entrega $p para $N.", FALSE, ch, obj, vict, TO_CHAR);
+                act("$n entrega $p para você.", FALSE, ch, obj, vict, TO_VICT);
+                act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
+                /* Trigger quest completion which will extract the stone */
+                autoquest_trigger_check(ch, vict, obj, quest_type);
+                return;
+            } else {
+                /* Wrong NPC - inform player and prevent transfer */
+                send_to_char(ch, "Essa pedra mágica deve ser entregue ao responsável pela busca.\r\n");
+                return;
+            }
+        }
+    }
+
     obj_from_char(obj);
     obj_to_char(obj, vict);
     act("Você entrega $p para $N.", FALSE, ch, obj, vict, TO_CHAR);
@@ -664,6 +743,63 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+
+    /* Safety check: Quest completion may have extracted obj, ch, or vict through scripts/triggers */
+    if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+        return;
+    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+        return;
+    /* Note: We cannot safely check if obj is still valid without a more complex tracking system.
+     * If obj was extracted during quest completion, the following code may access freed memory.
+     * To prevent crashes, we return early after quest completion, skipping reputation code. */
+    if (!IS_NPC(ch) && GET_QUEST(ch) == NOTHING) {
+        /* Quest was just completed (GET_QUEST cleared), skip reputation code to avoid accessing freed obj */
+        return;
+    }
+
+    /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Gain reputation for giving valuable items */
+        if (GET_OBJ_COST(obj) >= 1000) {
+            rep_gain += rand_number(1, 2);
+        } else if (GET_OBJ_COST(obj) >= 100) {
+            rep_gain += 1;
+        }
+
+        /* Giving to high-reputation NPCs increases reputation more */
+        if (IS_NPC(vict) && GET_REPUTATION(vict) >= 60) {
+            rep_gain += 1;
+        }
+
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs also gain reputation for generosity */
+        if (GET_OBJ_COST(obj) >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
+        }
+    }
+
+    /* Update mob emotions for receiving item (experimental feature) */
+    update_mob_emotion_received_item(vict, ch);
 }
 
 /* utility function for give */
@@ -722,6 +858,44 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
 
     increase_gold(vict, amount);
     bribe_mtrigger(vict, ch, amount);
+
+    /* Reputation gain for giving gold (generosity) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Large gold donations increase reputation */
+        if (amount >= 1000) {
+            rep_gain = rand_number(2, 4);
+        } else if (amount >= 500) {
+            rep_gain = rand_number(1, 3);
+        } else if (amount >= 100) {
+            rep_gain = 1;
+        }
+
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs giving gold also gain reputation */
+        if (amount >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + rand_number(1, 2));
+        }
+    }
 }
 
 ACMD(do_give)
@@ -1184,56 +1358,33 @@ ACMD(do_pour)
 static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
 {
     const char *wear_messages[][2] = {
-        {"$n acende $p.", "Você acende $p."},
-
+        /*  0 WEAR_LIGHT   */ {"$n acende $p.", "Você acende $p."},
+        /*  1 WEAR_HEAD    */ {"$n veste $p na cabeça.", "Você veste $p na cabeça."},
+        /*  2 WEAR_EAR_R   */ {"$n veste $p em sua orelha direita.", "Você veste $p em sua orelha direita."},
+        /*  3 WEAR_EAR_L   */ {"$n veste $p em sua orelha esquerda.", "Você veste $p em sua orelha esquerda."},
+        /*  4 WEAR_FACE    */ {"$n coloca $p em seu rosto.", "Você coloca $p em seu rosto."},
+        /*  5 WEAR_NOSE    */ {"$n coloca $p em seu nariz.", "Você coloca $p em seu nariz."},
+        /*  6 WEAR_NECK_1  */ {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
+        /*  7 WEAR_NECK_2  */ {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
+        /*  8 WEAR_BODY    */ {"$n veste $p no corpo.", "Você veste $p no corpo."},
+        /*  9 WEAR_ARMS    */ {"$n veste $p nos braços.", "Você veste $p nos braços."},
+        /* 10 WEAR_HANDS   */ {"$n coloca $p nas mãos.", "Você coloca $p nas mãos."},
+        /* 11 WEAR_WRIST_R */ {"$n coloca $p em volta do pulso direito.", "Você coloca $p em seu pulso direito."},
+        /* 12 WEAR_WRIST_L */ {"$n coloca $p em volta do pulso esquerdo.", "Você coloca $p em seu pulso esquerdo."},
+        /* 13 WEAR_FINGER_R*/
         {"$n desliza $p em seu dedo anelar direito.", "Você desliza $p em seu dedo anelar direito."},
-
+        /* 14 WEAR_FINGER_L*/
         {"$n desliza $p em seu dedo anelar esquerdo.", "Você desliza $p em seu dedo anelar esquerdo."},
-
-        {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
-
-        {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
-
-        {"$n veste $p no corpo.", "Você veste $p no corpo."},
-
-        {"$n veste $p na cabeça.", "Você veste $p na cabeça."},
-
-        {"$n coloca $p nas pernas.", "Você coloca $p nas pernas."},
-
-        {"$n veste $p nos pés.", "Você veste $p nos pés."},
-
-        {"$n coloca $p nas mãos.", "Você coloca $p nas mãos."},
-
-        {"$n veste $p nos braços.", "Você veste $p nos braços."},
-
-        {"$n prende $p em volta do braço como um escudo.", "Você começa a usar $p como um escudo."},
-
-        {"$n veste $p sobre o corpo.", "Você veste $p sobre o corpo."},
-
-        {"$n veste $p em volta da cintura.", "Você veste $p em volta da cintura."},
-
-        {"$n coloca $p em volta do pulso direito.", "Você coloca $p em volta de seu pulso direito."},
-
-        {"$n coloca $p em volta do pulso esquerdo.", "Você coloca $p em volta de seu pulso esquerdo."},
-
-        {"$n empunha $p.", "Você empunha $p."},
-
-        {"$n segura $p.", "Você segura $p."},
-
-        {"$n prende $p às costas, como asas.", "Você começa a usar $p como asas."},
-
-        {"$n veste $p em sua orelha direita.", "Você veste $p em sua orelha direita."},
-
-        {"$n veste $p em sua orelha esquerda.", "Você veste $p em sua orelha esquerda."},
-
-        {"$n coloca $p em seu rosto.", "Você coloca $p em seu rosto."},
-
-        {"$n coloca $p em seu nariz.", "Você coloca $p em seu nariz."},
-
-        {"$n começa a usar $p.", "Você começa a usar $p."},
-
-        {"$n coloca $p em sua bolsa de munições.", "Você coloca $p em sua bolsa de munições."},
-    };
+        /* 15 WEAR_WAIST   */ {"$n veste $p em volta da cintura.", "Você veste $p em volta da cintura."},
+        /* 16 WEAR_LEGS    */ {"$n coloca $p nas pernas.", "Você coloca $p nas pernas."},
+        /* 17 WEAR_FEET    */ {"$n veste $p nos pés.", "Você veste $p nos pés."},
+        /* 18 WEAR_ABOUT   */ {"$n veste $p sobre o corpo.", "Você veste $p sobre o corpo."},
+        /* 19 WEAR_SHIELD  */ {"$n prende $p em seu braço como escudo.", "Você começa a usar $p como um escudo."},
+        /* 20 WEAR_WIELD   */ {"$n empunha $p.", "Você empunha $p."},
+        /* 21 WEAR_HOLD    */ {"$n segura $p.", "Você segura $p."},
+        /* 22 WEAR_WINGS   */ {"$n prende $p às costas, como asas.", "Você começa a usar $p como asas."},
+        /* 23 WEAR_INSIGNE */ {"$n começa a usar $p como insígnia.", "Você começa a usar $p como insígnia."},
+        /* 24 WEAR_QUIVER  */ {"$n prende $p na aljava.", "Você prende $p na aljava."}};
 
     act(wear_messages[where][0], TRUE, ch, obj, 0, TO_ROOM);
     act(wear_messages[where][1], FALSE, ch, obj, 0, TO_CHAR);
@@ -1246,38 +1397,59 @@ void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
      * to be put into that position (e.g. you can hold any object, not just
      * an object with a HOLD bit.)
      */
+    int wear_bitvectors[] = {
+        ITEM_WEAR_TAKE,    /*  0 - luz */
+        ITEM_WEAR_HEAD,    /*  1 - cabeça */
+        ITEM_WEAR_EAR,     /*  2 - orelha direita */
+        ITEM_WEAR_EAR,     /*  3 - orelha esquerda */
+        ITEM_WEAR_FACE,    /*  4 - rosto */
+        ITEM_WEAR_NOSE,    /*  5 - nariz */
+        ITEM_WEAR_NECK,    /*  6 - pescoço 1 */
+        ITEM_WEAR_NECK,    /*  7 - pescoço 2 */
+        ITEM_WEAR_BODY,    /*  8 - corpo */
+        ITEM_WEAR_ARMS,    /*  9 - braços */
+        ITEM_WEAR_HANDS,   /* 10 - mãos */
+        ITEM_WEAR_WRIST,   /* 11 - pulso direito */
+        ITEM_WEAR_WRIST,   /* 12 - pulso esquerdo */
+        ITEM_WEAR_FINGER,  /* 13 - dedo direito */
+        ITEM_WEAR_FINGER,  /* 14 - dedo esquerdo */
+        ITEM_WEAR_WAIST,   /* 15 - cintura */
+        ITEM_WEAR_LEGS,    /* 16 - pernas */
+        ITEM_WEAR_FEET,    /* 17 - pés */
+        ITEM_WEAR_ABOUT,   /* 18 - sobre o corpo (capa) */
+        ITEM_WEAR_SHIELD,  /* 19 - escudo */
+        ITEM_WEAR_WIELD,   /* 20 - arma empunhada */
+        ITEM_WEAR_TAKE,    /* 21 - mão secundária (segurando) */
+        ITEM_WEAR_WINGS,   /* 22 - asas */
+        ITEM_WEAR_INSIGNE, /* 23 - insígnia */
+        ITEM_WEAR_QUIVER   /* 24 - aljava / bolsa de flechas */
+    };
 
-    int wear_bitvectors[] = {ITEM_WEAR_TAKE,  ITEM_WEAR_FINGER, ITEM_WEAR_FINGER, ITEM_WEAR_NECK,    ITEM_WEAR_NECK,
-                             ITEM_WEAR_BODY,  ITEM_WEAR_HEAD,   ITEM_WEAR_LEGS,   ITEM_WEAR_FEET,    ITEM_WEAR_HANDS,
-                             ITEM_WEAR_ARMS,  ITEM_WEAR_SHIELD, ITEM_WEAR_ABOUT,  ITEM_WEAR_WAIST,   ITEM_WEAR_WRIST,
-                             ITEM_WEAR_WRIST, ITEM_WEAR_WIELD,  ITEM_WEAR_TAKE,   ITEM_WEAR_WINGS,   ITEM_WEAR_EAR,
-                             ITEM_WEAR_EAR,   ITEM_WEAR_FACE,   ITEM_WEAR_NOSE,   ITEM_WEAR_INSIGNE, ITEM_WEAR_QUIVER};
-
-    const char *already_wearing[] = {"Você já está usando uma luz.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está usando algo em ambos seus dedos anelares.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você não pode colocar mais nada em volta de seu pescoço.\r\n",
-                                     "Você já está vestindo algo em seu corpo.\r\n",
-                                     "Você já está vestindo algo em sua cabeça.\r\n",
-                                     "Você já está vestindo algo em suas pernas.\r\n",
-                                     "Você já está vestindo algo em seus pés.\r\n",
-                                     "Você já está vestindo algo em suas mãos.\r\n",
-                                     "Você já está vestindo algo em seus braços.\r\n",
-                                     "Você já está usando um escudo.\r\n",
-                                     "Você já está vestindo algo sobre seu corpo.\r\n",
-                                     "Você já está vestindo algo em volta de sua cintura.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está vestindo algo em ambos os pulsos.\r\n",
-                                     "Você já tem uma arma empunhada.\r\n",
-                                     "Você já está segurando algo.\r\n",
-                                     "Você já está usando asas.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está usando algo em ambas as orelhas.\r\n",
-                                     "Você já está usando algo em seu rosto.\r\n",
-                                     "Você já está usando algo em seu nariz.\r\n",
-                                     "Você já está usando uma insígnia.\r\n",
-                                     "Você já está usando algo na bolsa de munições.\r\n"};
+    const char *already_wearing[] = {/* 0 */ "Você já está usando uma luz.\r\n",
+                                     /* 1 */ "Você já está vestindo algo em sua cabeça.\r\n",
+                                     /* 2 */ "Você já está usando algo em sua orelha.\r\n",
+                                     /* 3 */ "Você já está usando algo em sua orelha.\r\n",
+                                     /* 4 */ "Você já está usando algo em seu rosto.\r\n",
+                                     /* 5 */ "Você já está usando algo em seu nariz.\r\n",
+                                     /* 6 */ "Você já está usando algo em seu pescoço.\r\n",
+                                     /* 7 */ "Você já está usando algo em seu pescoço.\r\n",
+                                     /* 8 */ "Você já está vestindo algo em seu corpo.\r\n",
+                                     /* 9 */ "Você já está vestindo algo em seus braços.\r\n",
+                                     /* 10 */ "Você já está vestindo algo em suas mãos.\r\n",
+                                     /* 11 */ "Você já está usando algo em seu pulso.\r\n",
+                                     /* 12 */ "Você já está usando algo em seu pulso.\r\n",
+                                     /* 13 */ "Você já está usando algo em seu dedo anelar.\r\n",
+                                     /* 14 */ "Você já está usando algo em seu dedo anelar.\r\n",
+                                     /* 15 */ "Você já está vestindo algo em sua cintura.\r\n",
+                                     /* 16 */ "Você já está vestindo algo em suas pernas.\r\n",
+                                     /* 17 */ "Você já está vestindo algo em seus pés.\r\n",
+                                     /* 18 */ "Você já está vestindo algo sobre o corpo.\r\n",
+                                     /* 19 */ "Você já está usando um escudo.\r\n",
+                                     /* 20 */ "Você já tem uma arma empunhada.\r\n",
+                                     /* 21 */ "Você já está segurando algo.\r\n",
+                                     /* 22 */ "Você já está usando asas.\r\n",
+                                     /* 23 */ "Você já está usando uma insígnia.\r\n",
+                                     /* 24 */ "Você já está usando algo na aljava.\r\n"};
 
     /* first, make sure that the wear position is valid. */
     if (!CAN_WEAR(obj, wear_bitvectors[where])) {
@@ -1325,39 +1497,39 @@ int find_eq_pos(struct char_data *ch, struct obj_data *obj, char *arg)
     if (!arg || !*arg) {
         if (CAN_WEAR(obj, ITEM_WEAR_FINGER))
             where = WEAR_FINGER_R;
-        if (CAN_WEAR(obj, ITEM_WEAR_NECK))
+        else if (CAN_WEAR(obj, ITEM_WEAR_NECK))
             where = WEAR_NECK_1;
-        if (CAN_WEAR(obj, ITEM_WEAR_BODY))
+        else if (CAN_WEAR(obj, ITEM_WEAR_BODY))
             where = WEAR_BODY;
-        if (CAN_WEAR(obj, ITEM_WEAR_HEAD))
+        else if (CAN_WEAR(obj, ITEM_WEAR_HEAD))
             where = WEAR_HEAD;
-        if (CAN_WEAR(obj, ITEM_WEAR_LEGS))
+        else if (CAN_WEAR(obj, ITEM_WEAR_LEGS))
             where = WEAR_LEGS;
-        if (CAN_WEAR(obj, ITEM_WEAR_FEET))
+        else if (CAN_WEAR(obj, ITEM_WEAR_FEET))
             where = WEAR_FEET;
-        if (CAN_WEAR(obj, ITEM_WEAR_HANDS))
+        else if (CAN_WEAR(obj, ITEM_WEAR_HANDS))
             where = WEAR_HANDS;
-        if (CAN_WEAR(obj, ITEM_WEAR_ARMS))
+        else if (CAN_WEAR(obj, ITEM_WEAR_ARMS))
             where = WEAR_ARMS;
-        if (CAN_WEAR(obj, ITEM_WEAR_SHIELD))
+        else if (CAN_WEAR(obj, ITEM_WEAR_SHIELD))
             where = WEAR_SHIELD;
-        if (CAN_WEAR(obj, ITEM_WEAR_ABOUT))
+        else if (CAN_WEAR(obj, ITEM_WEAR_ABOUT))
             where = WEAR_ABOUT;
-        if (CAN_WEAR(obj, ITEM_WEAR_WAIST))
+        else if (CAN_WEAR(obj, ITEM_WEAR_WAIST))
             where = WEAR_WAIST;
-        if (CAN_WEAR(obj, ITEM_WEAR_WRIST))
+        else if (CAN_WEAR(obj, ITEM_WEAR_WRIST))
             where = WEAR_WRIST_R;
-        if (CAN_WEAR(obj, ITEM_WEAR_WINGS))
+        else if (CAN_WEAR(obj, ITEM_WEAR_WINGS))
             where = WEAR_WINGS;
-        if (CAN_WEAR(obj, ITEM_WEAR_EAR))
+        else if (CAN_WEAR(obj, ITEM_WEAR_EAR))
             where = WEAR_EAR_R;
-        if (CAN_WEAR(obj, ITEM_WEAR_FACE))
+        else if (CAN_WEAR(obj, ITEM_WEAR_FACE))
             where = WEAR_FACE;
-        if (CAN_WEAR(obj, ITEM_WEAR_NOSE))
+        else if (CAN_WEAR(obj, ITEM_WEAR_NOSE))
             where = WEAR_NOSE;
-        if (CAN_WEAR(obj, ITEM_WEAR_INSIGNE))
+        else if (CAN_WEAR(obj, ITEM_WEAR_INSIGNE))
             where = WEAR_INSIGNE;
-        if (CAN_WEAR(obj, ITEM_WEAR_QUIVER))
+        else if (CAN_WEAR(obj, ITEM_WEAR_QUIVER))
             where = WEAR_QUIVER;
     } else if ((where = search_block(arg, keywords, FALSE)) < 0)
         send_to_char(ch, "'%s'? Que parte do corpo é esta?\r\n", arg);
@@ -1794,11 +1966,38 @@ ACMD(do_taint)
                         send_to_char(vict, "\r\n%s lhe dá uma piscadela e uma risadinha e se afasta.\r\n",
                                      GET_NAME(ch));
                         act("$n dá um sorriso malicioso ao esbarrar em $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+
+                        /* Reputation changes for successful poisoning - dynamic reputation system */
+                        if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+                            int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, vict);
+                            if (IS_EVIL(ch)) {
+                                /* Evil characters gain reputation (infamy) for poisoning */
+                                if (IS_GOOD(vict)) {
+                                    /* Poisoning good targets increases evil reputation */
+                                    modify_player_reputation(ch, rand_number(2, 3) + class_bonus);
+                                } else {
+                                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                                }
+                            } else {
+                                /* Good/Neutral characters LOSE reputation for poisoning */
+                                modify_player_reputation(ch, -rand_number(3, 6));
+                                /* Extra penalty for poisoning good targets */
+                                if (IS_GOOD(vict)) {
+                                    modify_player_reputation(ch, -rand_number(2, 4));
+                                }
+                            }
+                        }
                         return;
                     }
                     send_to_char(ch, "Uh oh. Parece que você foi pego!\r\n");
                     act("$n acabou de tentar envenenar seu $p!", FALSE, ch, target, 0, TO_VICT);
                     act("$n acabou de tentar envenenar $p de $N!", FALSE, ch, target, vict, TO_NOTVICT);
+
+                    /* Reputation penalty for getting caught poisoning - dynamic reputation system */
+                    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+                        modify_player_reputation(ch, -rand_number(4, 8));
+                    }
+
                     WAIT_STATE(ch, 10);
                     return;
                 }

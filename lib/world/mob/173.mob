@@ -12,8 +12,10 @@ escudeiro.
 70 2 -20 10d20+1200 4d6+16
 5000 99344
 9 9 1
-GenWimpy: 5
-GenRoam: 79
+GenWimpy: 20
+GenLoot: 13
+GenRoam: 89
+GenFollow: 17
 E
 T 3013
 #17302
@@ -28,8 +30,10 @@ cheirosos, seu olhar e gestos aparentam pressa.
 30 0 -10 5d15+400 6d12+8
 500 15246
 9 9 1
-GenWimpy: 4
+GenWimpy: 20
+GenLoot: 3
 GenRoam: 89
+GenFollow: 12
 E
 #17303
 cavaleiro nobre~
@@ -43,8 +47,10 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 9
-GenRoam: 83
+GenWimpy: 24
+GenLoot: 7
+GenRoam: 89
+GenFollow: 14
 E
 T 3013
 #17304
@@ -67,6 +73,11 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 76
+GenEquip: 4
+GenRoam: 24
+GenQuest: 4
+GenFollow: 14
 E
 #17305
 benlad cavaleiro~
@@ -81,9 +92,12 @@ guerra.
 80 0 -13 2d12+1400 3d8+18
 8000 100444
 9 9 1
-GenWimpy: 9
-GenRoam: 47
-GenGroup: 5
+GenWimpy: 27
+GenLoot: 12
+GenEquip: 1
+GenRoam: 89
+GenGroup: 11
+GenFollow: 14
 E
 #17306
 galahad cavaleiro~
@@ -104,6 +118,9 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 15
+GenLoot: 65
+GenFollow: 14
 E
 T 3013
 #17307
@@ -119,7 +136,8 @@ de duas mãos.
 50 2 -10 5d7+800 3d7+16
 1000 32000
 9 9 1
-GenWimpy: 13
+GenWimpy: 29
+GenFollow: 14
 E
 #17308
 gareth cavaleiro beumains~
@@ -134,7 +152,10 @@ espera ansiosamente pela oportunidade de salvar uma donzela em apuros.
 78 3 -15 5d6+1300 5d8+16
 8000 70888
 9 9 1
-GenWimpy: 3
+GenWimpy: 16
+GenLoot: 1
+GenEquip: 1
+GenFollow: 15
 E
 #17309
 garlon cavaleiro~
@@ -162,7 +183,10 @@ e carregando sua grande espada Galantine.
 82 2 -10 4d8+1000 5d8+17
 8000 74998
 9 9 1
-GenWimpy: 4
+GenWimpy: 20
+GenLoot: 12
+GenEquip: 1
+GenFollow: 14
 E
 #17311
 lamorak cavaleiro~
@@ -177,6 +201,8 @@ equipado.
 76 2 0 2d7+1456 4d10+17
 0 92103
 9 9 1
+GenWimpy: 16
+GenFollow: 11
 E
 #17312
 lancelot cavaleiro~
@@ -190,6 +216,8 @@ Sua viseira está levantada, e sua lança erguida em saudação a você.
 95 0 -21 6d8+1903 6d8+26
 1000 135000
 9 9 1
+GenWimpy: 87
+GenFollow: 11
 E
 T 3013
 #17313
@@ -206,6 +234,9 @@ azuis.
 83 2 -16 3d6+1222 4d5+19
 1000 83076
 9 9 1
+GenWimpy: 6
+GenLoot: 2
+GenFollow: 9
 E
 T 3009
 #17314
@@ -221,9 +252,9 @@ de seda, que escondem um pouco seu feio e detestável corpo retorcido.
 69 3 -14 4d6+803 5d7+17
 800 45000
 9 9 2
-GenWimpy: 2
+GenWimpy: 5
 GenLoot: 1
-GenRoam: 2
+GenFollow: 14
 E
 T 3009
 #17315
@@ -239,8 +270,9 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 10
-GenRoam: 73
+GenWimpy: 24
+GenRoam: 86
+GenFollow: 10
 E
 #17316
 besta busca criatura~
@@ -254,6 +286,8 @@ An undefined string.
 68 2 -8 6d5+1009 4d7+17
 0 34004
 9 9 0
+GenWimpy: 4
+GenFollow: 12
 E
 #17317
 tristao~
@@ -268,6 +302,9 @@ uma armadura e carrega uma espada de duas mãos.
 79 2 -16 6d8+1100 6d7+17
 0 163405
 9 9 1
+GenWimpy: 15
+GenLoot: 1
+GenFollow: 11
 E
 #17318
 mordred garoto~
@@ -282,6 +319,9 @@ dourada e sua lança profana.
 79 2 -10 4d5+1108 6d6+16
 9500 97044
 9 9 1
+GenWimpy: 13
+GenRoam: 83
+GenFollow: 14
 E
 T 3007
 #17319
@@ -297,8 +337,9 @@ vagamente em você!
 60 3 -3 20d20+550 4d4+14
 500 46088
 9 9 1
-GenWimpy: 6
-GenRoam: 19
+GenWimpy: 8
+GenRoam: 89
+GenFollow: 17
 E
 #17320
 encantado cavaleiro graduado~
@@ -312,8 +353,9 @@ olhos são vazios, sua espada quebrada e ele está muito desalinhado.
 63 3 -7 13d13+765 9d7+15
 5800 46890
 9 9 1
-GenWimpy: 1
-GenRoam: 3
+GenWimpy: 17
+GenRoam: 73
+GenFollow: 18
 E
 #17321
 dama espera~
@@ -328,8 +370,10 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 25
+GenWimpy: 58
+GenLoot: 4
 GenRoam: 89
+GenFollow: 10
 E
 #17322
 rainha guinevere~
@@ -344,7 +388,8 @@ Lancelot.
 50 4 -1 7d9+409 2d12+10
 10000 34000
 9 9 2
-GenWimpy: 6
+GenWimpy: 14
+GenFollow: 12
 E
 #17323
 escudeiro encantado~
@@ -358,8 +403,11 @@ estado de desordem.
 67 3 0 6d12+900 5d8+15
 0 56090
 9 9 1
-GenWimpy: 6
-GenRoam: 74
+GenWimpy: 15
+GenLoot: 2
+GenEquip: 1
+GenRoam: 87
+GenFollow: 18
 E
 #17324
 barant rei apres cavaleiro~
@@ -374,10 +422,11 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 24
-GenLoot: 1
-GenRoam: 85
-GenGroup: 3
+GenWimpy: 97
+GenLoot: 45
+GenRoam: 89
+GenGroup: 45
+GenFollow: 11
 E
 #17325
 bufao dagonet bobo~
@@ -421,6 +470,8 @@ ele usa o lenço vermelho de seda de Galenvine em sua manga.
 69 3 -11 6d6+965 7d7+15
 4566 78900
 9 9 1
+GenWimpy: 14
+GenFollow: 15
 E
 #17328
 donzela dama mulher angustiada~
@@ -449,9 +500,10 @@ lugar.
 56 4 0 5d20+500 4d7+12
 10000 45678
 9 9 1
-GenWimpy: 3
+GenWimpy: 10
 GenLoot: 4
-GenRoam: 66
+GenRoam: 80
+GenFollow: 14
 E
 #17330
 serviçal~
@@ -465,8 +517,10 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 8
+GenWimpy: 36
+GenLoot: 5
 GenRoam: 89
+GenFollow: 14
 E
 #17331
 mercador~
@@ -480,8 +534,10 @@ mercadorias.
 25 5 -1 7d12+600 5d6+12
 10000 39004
 9 9 1
-GenWimpy: 4
-GenRoam: 84
+GenWimpy: 17
+GenLoot: 7
+GenRoam: 89
+GenFollow: 13
 E
 #17332
 monge~
@@ -496,8 +552,10 @@ maneira dos fransciscanos.
 23 6 0 2d10+307 7d9+8
 1200 19078
 9 9 1
-GenWimpy: 13
+GenWimpy: 44
+GenLoot: 4
 GenRoam: 89
+GenFollow: 18
 E
 #17333
 trovador~
@@ -510,7 +568,10 @@ O trovador, vestido com roupas de cores festivas, está tocando um bandolim.
 15 6 0 7d8+250 4d8+8
 1090 16098
 9 9 1
-GenWimpy: 8
+GenWimpy: 16
+GenLoot: 2
+GenEquip: 1
+GenFollow: 7
 E
 #17334
 bardo~
@@ -524,7 +585,8 @@ camisa laranja.
 14 7 0 3d9+209 7d7+7
 1245 16980
 9 9 1
-GenWimpy: 16
+GenWimpy: 37
+GenFollow: 11
 E
 #17335
 artista~
@@ -538,7 +600,9 @@ vertiginosas acrobacias.
 15 6 0 6d7+290 5d9+8
 1100 19080
 9 9 1
-GenWimpy: 5
+GenWimpy: 44
+GenLoot: 5
+GenFollow: 9
 E
 #17336
 criado~
@@ -551,8 +615,11 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 34
+GenWimpy: 80
+GenLoot: 23
+GenEquip: 1
 GenRoam: 89
+GenFollow: 10
 E
 #17337
 demonio~
@@ -580,6 +647,11 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 6
+GenLoot: 99
+GenEquip: 1
+GenBrave: 3
+GenFollow: 16
 E
 #17338
 jack iron~
@@ -606,6 +678,10 @@ estábulos.
 101 0 0 6d9+2000 8d8+14
 10000 80000
 9 9 1
+GenWimpy: 6
+GenLoot: 4
+GenRoam: 5
+GenFollow: 13
 E
 #17340
 cavalo montaria~
@@ -657,8 +733,9 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 17
-GenLoot: 1
+GenWimpy: 64
+GenLoot: 25
+GenFollow: 15
 E
 #17344
 escrava~
@@ -672,7 +749,11 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 9
+GenWimpy: 45
+GenLoot: 25
+GenEquip: 2
+GenRoam: 89
+GenFollow: 10
 E
 #17345
 chefe saxao render~
@@ -687,8 +768,11 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 8
-GenLoot: 58
+GenWimpy: 6
+GenLoot: 99
+GenEquip: 4
+GenRoam: 72
+GenFollow: 15
 E
 #17346
 guarda fronteira norte~
@@ -703,7 +787,9 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
-GenWimpy: 3
+GenWimpy: 20
+GenLoot: 3
+GenFollow: 12
 E
 #17347
 comandante avancado norte~
@@ -718,7 +804,9 @@ astúcia de quem passou a vida conduzindo homens em batalhas sem fim.
 69 2 -4 5d10+1218 7d7+15
 12000 67002
 9 9 1
-GenWimpy: 3
+GenWimpy: 10
+GenLoot: 1
+GenFollow: 15
 E
 #17348
 membro escoces~
@@ -734,7 +822,9 @@ escocês de aproximadamente 4' de tamanho.
 62 3 -3 9d5+1000 8d8+14
 5890 45768
 9 9 1
-GenWimpy: 3
+GenWimpy: 12
+GenLoot: 5
+GenFollow: 18
 E
 #17349
 chefe cla escoces~
@@ -754,7 +844,9 @@ seu uísque.  Ele tem a aparência de quem...
 72 2 -5 6d12+1500 4d8+16
 10000 92001
 9 9 1
-GenWimpy: 3
+GenWimpy: 7
+GenLoot: 1
+GenFollow: 15
 E
 #17350
 servo atarefado~
@@ -767,7 +859,10 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 48
+GenWimpy: 100
+GenLoot: 18
+GenRoam: 12
+GenFollow: 10
 E
 #17351
 invasor anglo~
@@ -782,6 +877,9 @@ Sua armadura é parcialmente de couro.
 67 3 -4 7d9+1007 6d9+14
 3422 86040
 9 9 1
+GenWimpy: 4
+GenLoot: 6
+GenFollow: 16
 E
 #17352
 chefe anglo~
@@ -795,6 +893,9 @@ estrondosamente a cada morte.
 75 2 -10 6d13+1500 7d9+16
 12002 91022
 9 9 1
+GenWimpy: 4
+GenLoot: 1
+GenFollow: 16
 E
 #17353
 cavalaria unidade~
@@ -815,6 +916,9 @@ Int: 17
 Wis: 17
 Con: 17
 Cha: 17
+GenWimpy: 12
+GenLoot: 27
+GenFollow: 11
 E
 #17354
 unidade infantaria~
@@ -835,6 +939,9 @@ Int: 16
 Wis: 16
 Con: 16
 Cha: 16
+GenWimpy: 11
+GenLoot: 23
+GenFollow: 13
 E
 #17355
 horda pict picts~
@@ -855,6 +962,9 @@ Int: 17
 Wis: 17
 Con: 17
 Cha: 17
+GenWimpy: 5
+GenLoot: 45
+GenFollow: 14
 E
 #17356
 lider pict~
@@ -868,6 +978,9 @@ demoníaco, e é intensificado por seu elmo de chifres de rena.
 84 1 -20 12d12+1769 8d10+28
 8000 120566
 9 9 1
+GenWimpy: 13
+GenLoot: 4
+GenFollow: 15
 E
 #17357
 persante cavaleiro~
@@ -882,6 +995,10 @@ azul.
 87 1 -19 12d12+1890 13d9+18
 40000 150000
 9 9 1
+GenWimpy: 21
+GenLoot: 3
+GenRoam: 89
+GenFollow: 14
 E
 #17358
 dodinas cavaleiro~
@@ -895,6 +1012,9 @@ aproxima.  Ele está montado sobre seu famoso corcel Rue.
 80 1 -20 15d12+1688 8d10+27
 20000 100899
 9 9 1
+GenWimpy: 10
+GenRoam: 89
+GenFollow: 13
 E
 #17359
 lionel cavaleiro~
@@ -908,6 +1028,10 @@ cair.
 70 2 -17 12d12+1369 13d9+16
 8900 74099
 9 9 1
+GenWimpy: 12
+GenLoot: 4
+GenRoam: 82
+GenFollow: 14
 E
 #17360
 gaheris cavaleiro~
@@ -922,6 +1046,9 @@ chefe.
 82 1 -18 10d10+1490 8d10+17
 10000 100000
 9 9 1
+GenWimpy: 11
+GenLoot: 5
+GenFollow: 15
 E
 #17361
 comandante avancado sul~
@@ -936,7 +1063,10 @@ astúcia de quem passou a vida conduzindo homens em batalhas sem fim.
 69 2 -4 5d10+1218 7d7+15
 12000 67002
 9 9 1
-GenWimpy: 4
+GenWimpy: 40
+GenLoot: 17
+GenRoam: 4
+GenFollow: 14
 E
 #17362
 guarda fronteira sul~
@@ -951,7 +1081,9 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
-GenWimpy: 7
+GenWimpy: 31
+GenLoot: 31
+GenFollow: 16
 E
 #17363
 escrava~
@@ -965,8 +1097,9 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 17
-GenLoot: 2
-GenRoam: 48
+GenWimpy: 27
+GenLoot: 4
+GenRoam: 84
+GenFollow: 12
 E
 $

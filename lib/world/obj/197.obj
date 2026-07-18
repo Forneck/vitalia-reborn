@@ -67,22 +67,24 @@ martelo orc~
 um enorme martelo de orc~
 Um enorme martelo de orc foi deixado aqui~
 ~
-5 jl 0 0 0 an 0 0 0 0 0 0 0
+5 j 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 6
-7 15000 0 30 0
+7 15000 0 0 0
 E
 martelo orc~
 Um pouco de sangue manchou a ponta deste martelo.  Parece uma arma bem
 poderosa e deve ter sido usado por um orc bastante forte.
 ~
 A
-19 2
+19 4
+A
+18 3
 #19707
 machado orc~
 um grande machado de orc~
 Um machado com lâmina enferrujada foi deixado no chão~
 ~
-5 gjl 0 0 0 an 0 0 0 0 0 0 0
+5 gj 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 3
 15 12000 50 0 0
 E
@@ -102,13 +104,13 @@ Um estranho escudo negro está qui no chão~
 5 0 0 0
 12 12000 0 0 0
 E
-palavras idioma~
-/\/\/\/\-=+=-/\/\/\/\
-~
-E
 escudo negro~
 Há um desenho de um grande orc nele.  Em baixo algumas palavras num idioma
 que você não consegue decifrar...
+~
+E
+palavras idioma~
+/\/\/\/\-=+=-/\/\/\/\
 ~
 A
 1 1
@@ -253,21 +255,21 @@ Uma túnica negra foi dobrada e posta ali no canto.~
 7 0 0 0
 3 1000 0 15 0
 E
-detalhes dourados~
-@Y*.*.*.*.*.@n
-~
-E
 tunica~
 É uma túnica negra com alguns detalhes dourados.
+~
+E
+detalhes dourados~
+	Y*.*.*.*.*.	n
 ~
 #19720
 poncho la ovelha negra pele~
 um poncho de lã negra~
 Uma pele de ovelha negra foi deixada no chão~
 ~
-9 jl 0 0 0 ak 0 0 0 0 0 0 0
-9 0 0 0
-2 0 0 20 0
+9 ag 0 0 0 ak 0 0 0 0 0 0 0
+11 0 0 0
+2 0 0 0 0
 E
 poncho la pele ovelha~
 Feito com a mais pura lã de ovelha este poncho parece poder protegê-lo bastante.
