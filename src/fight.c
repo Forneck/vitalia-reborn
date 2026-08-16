@@ -28,6 +28,7 @@
 #include "genolc.h"
 #include "genzon.h"
 #include "mud_event.h"
+#include "ledger_metrics.h"
 
 /* locally defined global variables, used externally */
 /* head of l-list of fighting chars */
@@ -1317,6 +1318,7 @@ void death_cry(struct char_data *ch)
 void raw_kill(struct char_data *ch, struct char_data *killer)
 {
     struct char_data *i;
+    ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_COMBAT, LEDGER_EVENT_CHARACTER_DEATH, 192, IN_ROOM(ch));
     if (FIGHTING(ch))
         stop_fighting(ch);
     while (ch->affected)
@@ -1413,36 +1415,36 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
                 /* Evil killers gain reputation (infamy) for killing good targets */
                 if (IS_GOOD(ch)) {
                     class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
-                    modify_player_reputation(killer, rand_number(2, 4) + class_bonus);
+                    modify_player_reputation(killer, ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 2, 4) + class_bonus);
                 }
                 /* Evil killers gain small reputation for any kill */
                 else if (IS_EVIL(ch)) {
                     class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
-                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                    modify_player_reputation(killer, ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 2) + class_bonus);
                 }
             } else {
                 /* Good/Neutral killers */
                 /* Killing good-aligned mobs lowers reputation */
                 if (IS_GOOD(ch)) {
-                    modify_player_reputation(killer, -rand_number(1, 3));
+                    modify_player_reputation(killer, -ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 3));
                 }
                 /* Killing evil-aligned mobs increases reputation slightly */
                 else if (IS_EVIL(ch)) {
                     class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
-                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                    modify_player_reputation(killer, ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 2) + class_bonus);
                 }
             }
             /* Killing high-level mobs increases reputation more (for all alignments) */
             if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
                 class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
-                modify_player_reputation(killer, rand_number(1, 3) + class_bonus);
+                modify_player_reputation(killer, ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 3) + class_bonus);
             }
         } else {
             /* Player killed another player - major reputation loss */
-            modify_player_reputation(killer, -rand_number(5, 10));
+            modify_player_reputation(killer, -ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 5, 10));
             /* Killing high-reputation players causes even more loss */
             if (GET_REPUTATION(ch) >= 60) {
-                modify_player_reputation(killer, -rand_number(5, 15));
+                modify_player_reputation(killer, -ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 5, 15));
             }
         }
     }
@@ -1451,7 +1453,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         if (IS_NPC(ch)) {
             /* Mob killing high-reputation mob gains reputation */
             if (GET_MOB_REPUTATION(ch) >= 50) {
-                killer->ai_data->reputation = MIN(killer->ai_data->reputation + rand_number(2, 4), 100);
+                killer->ai_data->reputation =
+                    MIN(killer->ai_data->reputation + ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 2, 4), 100);
             }
         }
         /* Killing players handled above in bragging section */
@@ -1460,10 +1463,10 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     /* Reputation loss for the victim (dynamic reputation system) */
     if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         /* Dying lowers reputation slightly */
-        modify_player_reputation(ch, -rand_number(1, 3));
+        modify_player_reputation(ch, -ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 3));
     } else if (ch->ai_data) {
         /* Mob dying lowers its reputation */
-        ch->ai_data->reputation = MAX(0, ch->ai_data->reputation - rand_number(1, 2));
+        ch->ai_data->reputation = MAX(0, ch->ai_data->reputation - ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 1, 2));
     }
 
     /* Mob emotion updates and mourning system (experimental feature) */
@@ -1514,8 +1517,9 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
                 if (IS_GOOD(witness) && IS_EVIL(ch)) {
                     /* Enemy died - good witness might feel satisfaction */
                     if (witness->ai_data) {
-                        witness->ai_data->emotion_happiness =
-                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                        witness->ai_data->emotion_happiness = URANGE(
+                            0, witness->ai_data->emotion_happiness + ledger_rand_number(LEDGER_SUBSYSTEM_COMBAT, 5, 15),
+                            100);
                     }
                 }
             } else if (!IS_NPC(ch) && witness->ai_data) {
