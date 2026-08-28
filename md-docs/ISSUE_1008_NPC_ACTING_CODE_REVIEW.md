@@ -76,7 +76,7 @@ This document answers the issue sections with concrete code references.
 ## 6. Silence / Response Latency
 
 - **Fixed pulse vs variable delay in triggers**
-  - DG scripts support variable delay via `wait` (`src/dg_scripts.c`, `process_wait()`, `trig_wait_event()`, restart with `TRIG_RESTART`; event queue in `src/dg_event.c`).
+  - DG scripts support variable delay via `wait` (`src/dg_scripts.c`, `process_wait()`, `EVENTFUNC(trig_wait_event)` + `event_create(trig_wait_event, ...)`, restart with `TRIG_RESTART`; event queue in `src/dg_event.c`).
   - So there is already a native variable-delay mechanism.
 - **Risk of fear/trust-conditioned latency**
   - Medium/high compatibility risk if applied globally to trigger firing semantics: many scripts assume immediate flow unless they explicitly use `wait`.
