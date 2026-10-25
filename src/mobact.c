@@ -2067,8 +2067,8 @@ void mobile_activity(void)
          * This prevents all mobs from checking on the same tick */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && GET_MOB_QUEST(ch) == NOTHING &&
             ch->ai_data->current_goal == GOAL_NONE &&
-            ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) && /* Stagger: each mob checks every 20 ticks */
-            rand_number(1, 100) <= 10) {              /* 10% chance when it's their turn */
+            ((GET_MOB_RNUM(ch) + pulse) % 20 == 0) &&                     /* Stagger: each mob checks every 20 ticks */
+            rand_number(1, 100) <= 10 + mob_quest_board_pressure() / 5) { /* 10-30%: busier boards, more takers */
             mob_try_to_accept_quest(ch);
         }
 
@@ -2180,12 +2180,19 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     obj_vnum obj_target = NOTHING;
 
-                    /* Find a suitable object in the zone to search for */
+                    /* Pick a random suitable object of the zone (reservoir sampling), so every mob
+                     * doesn't ask for the zone's first object. Skip items already on the boards. */
+                    int obj_candidates = 0;
                     for (int i = zone_table[mob_zone].bot; i <= zone_table[mob_zone].top; i++) {
-                        if (real_object(i) != NOTHING) {
+                        obj_rnum candidate = real_object(i);
+                        if (candidate == NOTHING || !CAN_WEAR(&obj_proto[candidate], ITEM_WEAR_TAKE) ||
+                            GET_OBJ_TYPE(&obj_proto[candidate]) == ITEM_KEY ||
+                            OBJ_FLAGGED(&obj_proto[candidate], ITEM_QUEST))
+                            continue;
+                        if (mob_posted_quest_exists(AQ_OBJ_RETURN, i, GET_MOB_VNUM(ch)))
+                            continue;
+                        if (rand_number(1, ++obj_candidates) == 1)
                             obj_target = i;
-                            break;
-                        }
                     }
 
                     if (obj_target != NOTHING && GET_GOLD(ch) > 100) {
@@ -2208,8 +2215,9 @@ void mobile_activity(void)
                                                    rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
                         room_rnum candidate_rnum = real_room(candidate_vnum);
 
-                        if (candidate_rnum != NOWHERE && !ROOM_FLAGGED(candidate_rnum, ROOM_GODROOM) &&
-                            !ROOM_FLAGGED(candidate_rnum, ROOM_HOUSE)) {
+                        if (candidate_rnum != NOWHERE && candidate_rnum != IN_ROOM(ch) &&
+                            !ROOM_FLAGGED(candidate_rnum, ROOM_GODROOM) && !ROOM_FLAGGED(candidate_rnum, ROOM_HOUSE) &&
+                            !mob_posted_quest_exists(AQ_ROOM_FIND, candidate_vnum, GET_MOB_VNUM(ch))) {
                             room_target_rnum = candidate_rnum;
                         }
                         attempts++;
@@ -2223,8 +2231,10 @@ void mobile_activity(void)
                             continue;
                     }
                 } else {
-                    /* AQ_MOB_FIND quest - find a friendly mob */
-                    struct char_data *next_target;
+                    /* AQ_MOB_FIND quest - find a friendly mob, picked at random among the candidates
+                     * (reservoir sampling) instead of always the first one in character_list */
+                    struct char_data *next_target, *chosen = NULL;
+                    int candidates = 0;
                     for (target = character_list; target; target = next_target) {
                         next_target = target->next;
 
@@ -2242,17 +2252,18 @@ void mobile_activity(void)
                             break;
 
                         if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
-                            !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
-
-                            if (GET_GOLD(ch) > 80) {
-                                reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
-                                mob_posts_exploration_quest(ch, AQ_MOB_FIND, GET_MOB_VNUM(target), reward);
-                                /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
-                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                    break; /* Exit loop, then continue to next mob in main loop */
-                            }
-                            break; /* Only post one find quest per tick */
+                            !MOB_FLAGGED(target, MOB_AGGRESSIVE) && !is_mob_excluded_from_quests(target) &&
+                            GET_MOB_VNUM(target) != GET_MOB_VNUM(ch) &&
+                            !mob_posted_quest_exists(AQ_MOB_FIND, GET_MOB_VNUM(target), GET_MOB_VNUM(ch))) {
+                            if (rand_number(1, ++candidates) == 1)
+                                chosen = target;
                         }
+                    }
+
+                    /* Only post one find quest per tick */
+                    if (chosen && GET_GOLD(ch) > 80) {
+                        reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(chosen) * 4);
+                        mob_posts_exploration_quest(ch, AQ_MOB_FIND, GET_MOB_VNUM(chosen), reward);
                     }
                     /* Safety check after the loop in case ch was extracted */
                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -2261,8 +2272,11 @@ void mobile_activity(void)
             } else if (GET_GENBRAVE(ch) > 60 && rand_number(1, 100) <= 25) {
                 /* Post protection quests */
                 if (rand_number(1, 100) <= 60) {
-                    /* AQ_MOB_SAVE quest - protect a weak mob */
-                    struct char_data *next_target;
+                    /* AQ_MOB_SAVE quest - protect a weak mob that is actually in danger
+                     * (fighting, hurt, or sharing a room with an aggressive creature).
+                     * Picked at random among the candidates (reservoir sampling). */
+                    struct char_data *next_target, *chosen = NULL;
+                    int candidates = 0;
                     for (target = character_list; target; target = next_target) {
                         next_target = target->next;
 
@@ -2280,17 +2294,29 @@ void mobile_activity(void)
                             break;
 
                         if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                            GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
-
-                            if (GET_GOLD(ch) > 120) {
-                                reward = MIN(GET_GOLD(ch) / 5, 250 + GET_LEVEL(target) * 6);
-                                mob_posts_protection_quest(ch, AQ_MOB_SAVE, GET_MOB_VNUM(target), reward);
-                                /* Safety check: mob_posts_protection_quest calls act() which may trigger DG scripts */
-                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                    break; /* Exit loop, then continue to next mob in main loop */
+                            GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200 &&
+                            !is_mob_excluded_from_quests(target) && GET_MOB_VNUM(target) != GET_MOB_VNUM(ch) &&
+                            !mob_posted_quest_exists(AQ_MOB_SAVE, GET_MOB_VNUM(target), GET_MOB_VNUM(ch))) {
+                            bool in_danger =
+                                (FIGHTING(target) != NULL) || (GET_HIT(target) < GET_MAX_HIT(target) * 2 / 3);
+                            if (!in_danger) {
+                                struct char_data *other;
+                                for (other = world[IN_ROOM(target)].people; other; other = other->next_in_room) {
+                                    if (other != target && IS_NPC(other) && MOB_FLAGGED(other, MOB_AGGRESSIVE)) {
+                                        in_danger = TRUE;
+                                        break;
+                                    }
+                                }
                             }
-                            break; /* Only post one save quest per tick */
+                            if (in_danger && rand_number(1, ++candidates) == 1)
+                                chosen = target;
                         }
+                    }
+
+                    /* Only post one save quest per tick */
+                    if (chosen && GET_GOLD(ch) > 120) {
+                        reward = MIN(GET_GOLD(ch) / 5, 250 + GET_LEVEL(chosen) * 6);
+                        mob_posts_protection_quest(ch, AQ_MOB_SAVE, GET_MOB_VNUM(chosen), reward);
                     }
                     /* Safety check after the loop in case ch was extracted */
                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -2300,11 +2326,16 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, or PEACEFUL */
-                    for (int r = zone_table[mob_zone].bot; r <= zone_table[mob_zone].top; r++) {
+                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, or PEACEFUL.
+                     * Start the scan at a random room so different mobs pick different rooms. */
+                    int zone_span = zone_table[mob_zone].top - zone_table[mob_zone].bot + 1;
+                    int scan_offset = zone_span > 0 ? rand_number(0, zone_span - 1) : 0;
+                    for (int n = 0; n < zone_span; n++) {
+                        room_vnum r = zone_table[mob_zone].bot + (scan_offset + n) % zone_span;
                         room_rnum real_r = real_room(r);
                         if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
-                            !ROOM_FLAGGED(real_r, ROOM_HOUSE) && !ROOM_FLAGGED(real_r, ROOM_PEACEFUL)) {
+                            !ROOM_FLAGGED(real_r, ROOM_HOUSE) && !ROOM_FLAGGED(real_r, ROOM_PEACEFUL) &&
+                            !mob_posted_quest_exists(AQ_ROOM_CLEAR, r, GET_MOB_VNUM(ch))) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
                                     dangerous_room = r;
@@ -5135,20 +5166,31 @@ bool mob_try_to_accept_quest(struct char_data *ch)
         acceptance_threshold += 10; /* +10% for curious mobs */
     }
 
+    /* Greedy mobs look for paid work; crowded boards mean plenty of work to take */
+    acceptance_threshold += GET_GENLOOT(ch) / 10;           /* Up to +10% from loot tendency */
+    acceptance_threshold += mob_quest_board_pressure() / 5; /* Up to +20% when boards are full */
+
     /* Cap at reasonable maximum to avoid too aggressive quest-taking */
-    acceptance_threshold = MIN(acceptance_threshold, 60);
+    acceptance_threshold = MIN(acceptance_threshold, 80);
 
     /* Random check - do this BEFORE expensive zone/questmaster lookups */
     if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
-    /* Early exit: Don't accept new quests when near limit to reduce server load
-     * When close to max quests, the expensive pathfinding in
-     * find_accessible_questmaster_in_zone() causes severe lag.
-     * Accepting quests at 90% capacity still allows new quests while preventing
-     * the catastrophic performance hit of too many concurrent searches. */
-    if (count_mob_posted_quests() >= (CONFIG_MAX_MOB_POSTED_QUESTS * 9 / 10)) { /* 90% of max */
-        return FALSE;
+    /* Load shedding: the pathfinding in find_accessible_questmaster_in_zone() is expensive,
+     * so cap how many mobs may search per second. This used to refuse all quest-taking once
+     * the boards were 90% full, which is exactly when mobs are most needed to drain them. */
+    {
+        static time_t budget_second = 0;
+        static int searches_this_second = 0;
+        time_t now = time(0);
+
+        if (now != budget_second) {
+            budget_second = now;
+            searches_this_second = 0;
+        }
+        if (++searches_this_second > 5)
+            return FALSE;
     }
 
     /* Now do the expensive operations - look for accessible questmasters */

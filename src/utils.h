@@ -124,6 +124,14 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
 bool is_mob_excluded_from_quests(struct char_data *mob);
 int count_mob_posted_quests(void);
 bool can_add_mob_posted_quest(void);
+struct aq_data; /* defined in quest.h */
+bool mob_posted_quest_exists(int quest_type, int target_vnum, mob_vnum poster_vnum);
+int mob_quest_board_pressure(void);
+int get_zone_typical_level(zone_rnum zone);
+void set_mob_quest_level_range(struct aq_data *quest, int target_level);
+int calculate_mob_quest_gold(struct char_data *poster, int target_level, int difficulty, int offered);
+int calculate_mob_quest_exp(int target_level, int difficulty);
+int calculate_mob_quest_points(int target_level, int difficulty);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);
