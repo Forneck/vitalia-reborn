@@ -182,8 +182,37 @@ int mob_quest_reward_appeal(struct char_data *mob, qst_rnum rnum)
  * Unlike find_available_quest_by_qmnum, this checks level range compatibility,
  * skips quests the mob posted itself, and prefers quests with better rewards
  * (with some randomness so mobs don't all pick the same one).
+ * mob_posted_only restricts candidates to mob-posted quests, for autonomous
+ * callers that will check the result with mob_should_accept_quest().
  * Returns quest vnum if found, NOTHING otherwise. */
-qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
+/* The mob that posted a mob-posted quest, or NOBODY if unknown.
+ * value[5] (QST_RETURNMOB) only holds the poster for some quest types: escort
+ * quests store a destination room there, delivery/shop quests an item vnum and
+ * emotion/magic-gather quests an emotion id or counter. */
+mob_vnum get_mob_quest_poster(qst_rnum rnum)
+{
+    if (rnum == NOTHING || !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        return NOBODY;
+
+    switch (QST_TYPE(rnum)) {
+        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
+        case AQ_ROOM_FIND:
+        case AQ_MOB_FIND:
+        case AQ_MOB_KILL:
+        case AQ_MOB_KILL_BOUNTY:
+        case AQ_PLAYER_KILL:
+        case AQ_MOB_SAVE:
+        case AQ_ROOM_CLEAR:
+        case AQ_RESOURCE_GATHER:
+        case AQ_REPUTATION_BUILD:
+            return QST_RETURNMOB(rnum);
+        default:
+            return NOBODY;
+    }
+}
+
+qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, bool mob_posted_only)
 {
     qst_rnum rnum;
     qst_vnum best = NOTHING;
@@ -195,8 +224,17 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
 
     for (rnum = 0; rnum < total_quests; rnum++) {
         if (qm == QST_MASTER(rnum)) {
+            /* Autonomous callers may only accept mob-posted quests (see mob_should_accept_quest);
+             * don't let an ineligible authored quest win the ranking */
+            if (mob_posted_only && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+                continue;
+
+            /* MOB_NOKILL mobs cannot take escort quests (rejected by both acceptance checks) */
+            if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
+                continue;
+
             /* A mob doesn't take the job it is paying someone else to do */
-            if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
+            if (get_mob_quest_poster(rnum) == GET_MOB_VNUM(mob))
                 continue;
 
             quest_completed = is_complete(mob, QST_NUM(rnum));
@@ -2500,7 +2538,7 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
         return FALSE;
 
     /* Don't accept a quest the mob posted itself */
-    if (QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
+    if (get_mob_quest_poster(rnum) == GET_MOB_VNUM(mob))
         return FALSE;
 
     /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
@@ -2775,7 +2813,7 @@ void mob_complete_quest(struct char_data *mob)
     }
 
     /* Helping another mob reinforces the habit of taking quests */
-    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) != GET_MOB_VNUM(mob) &&
+    if (get_mob_quest_poster(rnum) != NOBODY && get_mob_quest_poster(rnum) != GET_MOB_VNUM(mob) &&
         mob->ai_data->genetics.quest_tendency < 100) {
         mob->ai_data->genetics.quest_tendency = MIN(100, mob->ai_data->genetics.quest_tendency + 1);
     }

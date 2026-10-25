@@ -2571,7 +2571,7 @@ int calculate_mob_quest_gold(struct char_data *poster, int target_level, int dif
     minimum = 10 + target_level;
 
     /* The poster pays up front: never promise more than 3/4 of its purse */
-    gold = MIN(gold, GET_GOLD(poster) * 3 / 4);
+    gold = MIN(gold, (int)((long long)GET_GOLD(poster) * 3 / 4));
 
     return (gold < minimum) ? 0 : MIN(gold, 20000);
 }
@@ -2784,7 +2784,8 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
     /* Valuable items are worth at least half their price, if the mob can pay it */
     if (calculated_reward > 0 && obj_rnum != NOTHING)
-        calculated_reward = MIN(MAX(calculated_reward, GET_OBJ_COST(&obj_proto[obj_rnum]) / 2), GET_GOLD(ch) * 3 / 4);
+        calculated_reward =
+            MIN(MAX(calculated_reward, GET_OBJ_COST(&obj_proto[obj_rnum]) / 2), (int)((long long)GET_GOLD(ch) * 3 / 4));
     if (calculated_reward <= 0) {
         /* Can't afford a reward; keep the wish and try hunting/buying instead */
         return;
@@ -3578,11 +3579,12 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     if (quest_type == AQ_MOB_SAVE && target_mob_rnum != NOBODY) {
         target_level = mob_proto[target_mob_rnum].player.level;
     } else if (quest_type == AQ_ROOM_CLEAR && target_room_rnum != NOWHERE) {
-        /* Room clear is as hard as the toughest hostile creature in the room */
+        /* Completion requires every NPC in the room to be gone, so the quest is as hard
+         * as the toughest creature in the room, aggressive or not */
         struct char_data *occupant;
         target_level = 0;
         for (occupant = world[target_room_rnum].people; occupant; occupant = occupant->next_in_room) {
-            if (IS_NPC(occupant) && MOB_FLAGGED(occupant, MOB_AGGRESSIVE))
+            if (IS_NPC(occupant) && !MOB_FLAGGED(occupant, MOB_NOTDEADYET))
                 target_level = MAX(target_level, GET_LEVEL(occupant));
         }
         if (target_level <= 0)

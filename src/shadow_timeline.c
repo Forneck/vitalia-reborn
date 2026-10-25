@@ -596,7 +596,7 @@ static void generate_quest_projections(struct shadow_context *ctx)
     }
 
     /* Find available quest from this questmaster */
-    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+    qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), TRUE);
     if (available_quest == NOTHING) {
         return; /* No quests available */
     }
