@@ -5111,6 +5111,8 @@ void load_config(void)
                     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_envy"))
                     CONFIG_EMOTION_DECAY_RATE_ENVY = num;
+                else if (!str_cmp(tag, "emotion_alignment_shifts"))
+                    CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
                 break;
 
             case 'f':
@@ -5245,6 +5247,10 @@ void load_config(void)
                     CONFIG_MPLP_DECAY_HALFLIFE = LIMIT(num, 1, 8760);
                 else if (!str_cmp(tag, "mob_quests_mob_posted_only"))
                     CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = num;
+                else if (!str_cmp(tag, "max_mob_posted_quests"))
+                    CONFIG_MAX_MOB_POSTED_QUESTS = num;
+                else if (!str_cmp(tag, "mob_4d_debug"))
+                    CONFIG_MOB_4D_DEBUG = num;
 
                 break;
 
@@ -5419,12 +5425,6 @@ void load_config(void)
                     CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
                 else if (!str_cmp(tag, "weather_effect_multiplier"))
                     CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
-                else if (!str_cmp(tag, "max_mob_posted_quests"))
-                    CONFIG_MAX_MOB_POSTED_QUESTS = num;
-                else if (!str_cmp(tag, "emotion_alignment_shifts"))
-                    CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
-                else if (!str_cmp(tag, "mob_4d_debug"))
-                    CONFIG_MOB_4D_DEBUG = num;
                 break;
 
             default:
