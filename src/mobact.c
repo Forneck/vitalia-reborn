@@ -1305,9 +1305,10 @@ void mobile_activity(void)
                                     qst_vnum available_quest = action.quest_vnum;
                                     qst_rnum chosen_rnum =
                                         (available_quest != NOTHING) ? real_quest(available_quest) : NOTHING;
-                                    if (chosen_rnum == NOTHING || QST_MASTER(chosen_rnum) != GET_MOB_VNUM(questmaster))
-                                        available_quest = find_mob_available_quest_by_qmnum(
-                                            ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+                                    if (chosen_rnum == NOTHING || !qm_offers_quest(questmaster, chosen_rnum))
+                                        available_quest =
+                                            find_mob_available_quest_from_qm(ch, GET_MOB_VNUM(questmaster), questmaster,
+                                                                             CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                                     if (available_quest != NOTHING) {
                                         qst_rnum quest_rnum = real_quest(available_quest);
                                         if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
@@ -1322,6 +1323,19 @@ void mobile_activity(void)
                                                 goto shadow_feedback_and_continue;
                                         }
                                     }
+                                } else if (IS_NPC(questmaster) && IN_ROOM(questmaster) != NOWHERE &&
+                                           ch->ai_data->current_goal == GOAL_NONE && !ch->master) {
+                                    /* Questmaster (regular or temporary) is elsewhere: walk there and
+                                     * accept the chosen quest on arrival, like mob_try_to_accept_quest() */
+                                    ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
+                                    ch->ai_data->goal_destination = IN_ROOM(questmaster);
+                                    ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                                    ch->ai_data->goal_item_vnum = action.quest_vnum;
+                                    ch->ai_data->goal_timer = 0;
+                                    act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
+                                    shadow_action_executed = TRUE;
+                                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                        goto shadow_feedback_and_continue;
                                 }
                             }
                         }
@@ -1874,11 +1888,12 @@ void mobile_activity(void)
                         qst_vnum chosen = ch->ai_data->goal_item_vnum;
                         qst_rnum chosen_rnum = (chosen != NOTHING) ? real_quest(chosen) : NOTHING;
                         qst_vnum available_quest;
-                        if (chosen_rnum != NOTHING && QST_MASTER(chosen_rnum) == GET_MOB_VNUM(questmaster))
+                        if (chosen_rnum != NOTHING && qm_offers_quest(questmaster, chosen_rnum))
                             available_quest = chosen;
                         else
-                            available_quest = find_mob_available_quest_by_qmnum(
-                                ch, GET_MOB_VNUM(questmaster), chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+                            available_quest = find_mob_available_quest_from_qm(
+                                ch, GET_MOB_VNUM(questmaster), questmaster,
+                                chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
                             /* mob_can_accept_quest_forced provides additional validation (existing quest, escort quest
@@ -2265,7 +2280,8 @@ void mobile_activity(void)
                         obj_rnum candidate = real_object(i);
                         if (candidate == NOTHING || !CAN_WEAR(&obj_proto[candidate], ITEM_WEAR_TAKE) ||
                             GET_OBJ_TYPE(&obj_proto[candidate]) == ITEM_KEY ||
-                            OBJ_FLAGGED(&obj_proto[candidate], ITEM_QUEST))
+                            OBJ_FLAGGED(&obj_proto[candidate], ITEM_QUEST) ||
+                            is_obj_hidden_from_mortals(&obj_proto[candidate]))
                             continue;
                         if (mob_posted_quest_exists(AQ_OBJ_RETURN, i, GET_MOB_VNUM(ch)))
                             continue;
@@ -2404,7 +2420,7 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, or PEACEFUL.
+                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, PEACEFUL, or a shop/shopkeeper room.
                      * Start the scan at a random room so different mobs pick different rooms. */
                     int zone_span = zone_table[mob_zone].top - zone_table[mob_zone].bot + 1;
                     int scan_offset = zone_span > 0 ? rand_number(0, zone_span - 1) : 0;
@@ -2413,6 +2429,7 @@ void mobile_activity(void)
                         room_rnum real_r = real_room(r);
                         if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
                             !ROOM_FLAGGED(real_r, ROOM_HOUSE) && !ROOM_FLAGGED(real_r, ROOM_PEACEFUL) &&
+                            !is_shop_room(r) && !room_has_shopkeeper(real_r) &&
                             !mob_posted_quest_exists(AQ_ROOM_CLEAR, r, GET_MOB_VNUM(ch))) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
@@ -4222,6 +4239,9 @@ bool mob_try_and_loot(struct char_data *ch)
 
         /* A IA agora procura ativamente pelo item que melhor satisfaz a sua necessidade. */
         for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+            /* Itens ocultos aos mortais ('.' na descrição) são cenário: não saquear */
+            if (is_obj_hidden_from_mortals(obj))
+                continue;
             int current_score = evaluate_item_for_mob(ch, obj);
             if (current_score > max_score) {
                 best_obj = obj;
@@ -5288,8 +5308,8 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 
     if (questmaster && questmaster != ch) {
         /* Find first quest available for mob's level range */
-        qst_vnum available_quest =
-            find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+        qst_vnum available_quest = find_mob_available_quest_from_qm(ch, GET_MOB_VNUM(questmaster), questmaster,
+                                                                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
         if (available_quest != NOTHING) {
             qst_rnum quest_rnum = real_quest(available_quest);
             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {

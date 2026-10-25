@@ -2439,6 +2439,44 @@ bool is_mob_excluded_from_quests(struct char_data *mob)
 }
 
 /**
+ * Check if an object prototype is hidden from mortals: a short or room
+ * description starting with '.' is only visible with holylight, so it
+ * must never be chosen as a quest target.
+ * @param obj The object (prototype) to check
+ * @return TRUE if the object is hidden from mortals
+ */
+bool is_obj_hidden_from_mortals(struct obj_data *obj)
+{
+    if (!obj)
+        return FALSE;
+
+    return ((obj->short_description && *obj->short_description == '.') ||
+            (obj->description && *obj->description == '.'));
+}
+
+/**
+ * Check if a room has a shopkeeper in it. Room-clear quests must not target
+ * these rooms, since they would push players to kill/drive out shopkeepers.
+ * @param room The room to check
+ * @return TRUE if a shopkeeper mob is in the room
+ */
+bool room_has_shopkeeper(room_rnum room)
+{
+    struct char_data *people;
+
+    if (room == NOWHERE || room < 0 || room > top_of_world)
+        return FALSE;
+
+    for (people = world[room].people; people; people = people->next_in_room) {
+        if (IS_NPC(people) && (is_shopkeeper(people) ||
+                               (GET_MOB_RNUM(people) != NOBODY && mob_index[GET_MOB_RNUM(people)].func == shop_keeper)))
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
  * Count the number of mob-posted quests currently in the system.
  * @return Number of quests with the AQ_MOB_POSTED flag
  */
@@ -2831,6 +2869,13 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         if (!CAN_WEAR(&obj_proto[obj_rnum], ITEM_WEAR_TAKE)) {
             log1("WISHLIST QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), item_vnum,
                  item_name);
+            remove_item_from_wishlist(ch, item_vnum);
+            return;
+        }
+
+        /* Não posta quest para itens ocultos aos mortais (descrição iniciada por '.') */
+        if (is_obj_hidden_from_mortals(&obj_proto[obj_rnum])) {
+            log1("WISHLIST QUEST: %s tried to post quest for hidden item %d (%s)", GET_NAME(ch), item_vnum, item_name);
             remove_item_from_wishlist(ch, item_vnum);
             return;
         }
@@ -3314,6 +3359,14 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
                 return;
             }
 
+            /* Não posta quest para itens ocultos aos mortais (descrição iniciada por '.') */
+            if (is_obj_hidden_from_mortals(&obj_proto[target_obj_rnum])) {
+                mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: %s tried to post quest for hidden item %d (%s)",
+                       GET_NAME(ch), target_vnum, target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
+
             /* Não posta quest para itens do tipo KEY (chaves) */
             if (GET_OBJ_TYPE(&obj_proto[target_obj_rnum]) == ITEM_KEY) {
                 mudlog(CMP, LVL_GRGOD, FALSE, "EXPLORATION QUEST: %s tried to post quest for key item %d (%s)",
@@ -3611,9 +3664,10 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     } else if (quest_type == AQ_ROOM_CLEAR) {
         target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
-            /* Não posta quest para salas GODROOM, player houses, shop rooms ou peaceful rooms */
+            /* Não posta quest para salas GODROOM, player houses, shop rooms, salas com lojista ou peaceful rooms */
             if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE) ||
-                ROOM_FLAGGED(target_room_rnum, ROOM_PEACEFUL) || is_shop_room(target_vnum)) {
+                ROOM_FLAGGED(target_room_rnum, ROOM_PEACEFUL) || is_shop_room(target_vnum) ||
+                room_has_shopkeeper(target_room_rnum)) {
                 mudlog(CMP, LVL_GRGOD, FALSE, "PROTECTION QUEST: %s tried to post quest for restricted room %d",
                        GET_NAME(ch), target_vnum);
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
@@ -4684,6 +4738,13 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
                 log1("RESOURCE QUEST: %s tried to post quest for key item %d (%s)", GET_NAME(ch), item_vnum, item_name);
                 return;
             }
+
+            /* Don't post quest for items hidden from mortals ('.' descriptions) */
+            if (is_obj_hidden_from_mortals(&obj_proto[item_rnum])) {
+                log1("RESOURCE QUEST: %s tried to post quest for hidden item %d (%s)", GET_NAME(ch), item_vnum,
+                     item_name);
+                return;
+            }
         }
     }
 
@@ -5255,8 +5316,8 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
         qm_room = IN_ROOM(qm_char);
         if (qm_room == NOWHERE || world[qm_room].zone != zone)
             continue;
-        /* Check if this mob is a questmaster using O(1) mob_index lookup */
-        if (mob_index[qm_rnum].func != questmaster && mob_index[qm_rnum].func != temp_questmaster)
+        /* Questmaster by spec proc (O(1) mob_index lookup) or temporary questmaster with open quests */
+        if (!is_active_questmaster(qm_char))
             continue;
         /* Verifica se é acessível usando pathfinding - VERY EXPENSIVE! */
         pathfinding_calls++;

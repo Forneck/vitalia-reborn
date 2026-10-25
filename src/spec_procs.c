@@ -552,7 +552,7 @@ SPECIAL(janitor)
         return (FALSE);
 
     for (i = world[IN_ROOM(ch)].contents; i; i = i->next_content) {
-        if (!CAN_WEAR(i, ITEM_WEAR_TAKE))
+        if (!CAN_WEAR(i, ITEM_WEAR_TAKE) || is_obj_hidden_from_mortals(i))
             continue;
         if (GET_OBJ_TYPE(i) != ITEM_DRINKCON && GET_OBJ_COST(i) >= 50)
             continue;
