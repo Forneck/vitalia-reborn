@@ -3502,7 +3502,7 @@ int is_empty(zone_rnum zone_nr)
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE *fl, const char *error)
 {
-    char buf[MAX_STRING_LENGTH], tmp[513];
+    char buf[MAX_STRING_LENGTH], tmp[514]; /* 511 chars from fgets + "\r\n" + '\0' */
     char *point;
     int done = 0, length = 0, templength;
 
@@ -3516,16 +3516,18 @@ char *fread_string(FILE *fl, const char *error)
         /* If there is a '~', end the string; else put an "\r\n" over the
            '\n'. */
         /* now only removes trailing ~'s -- Welcor */
+        /* Strip the line ending without walking before the start of tmp
+         * (an empty line used to read and possibly write tmp[-1]). */
         point = strchr(tmp, '\0');
-        for (point--; (*point == '\r' || *point == '\n'); point--)
-            ;
-        if (*point == '~') {
-            *point = '\0';
+        while (point > tmp && (point[-1] == '\r' || point[-1] == '\n'))
+            point--;
+        if (point > tmp && point[-1] == '~') {
+            *(--point) = '\0';
             done = 1;
         } else {
-            *(++point) = '\r';
-            *(++point) = '\n';
-            *(++point) = '\0';
+            *point++ = '\r';
+            *point++ = '\n';
+            *point = '\0';
         }
 
         templength = point - tmp;
@@ -3549,7 +3551,7 @@ char *fread_string(FILE *fl, const char *error)
    spaces */
 char *fread_clean_string(FILE *fl, const char *error)
 {
-    char buf[MAX_STRING_LENGTH], tmp[513];
+    char buf[MAX_STRING_LENGTH], tmp[514]; /* 511 chars from fgets + "\r\n" + '\0' */
     char *point, c;
     int done = 0, length = 0, templength;
 
@@ -3572,16 +3574,18 @@ char *fread_clean_string(FILE *fl, const char *error)
         /* If there is a '~', end the string; else put an "\r\n" over the
            '\n'. */
         /* now only removes trailing ~'s -- Welcor */
+        /* Strip the line ending without walking before the start of tmp
+         * (an empty line used to read and possibly write tmp[-1]). */
         point = strchr(tmp, '\0');
-        for (point--; (*point == '\r' || *point == '\n'); point--)
-            ;
-        if (*point == '~') {
-            *point = '\0';
+        while (point > tmp && (point[-1] == '\r' || point[-1] == '\n'))
+            point--;
+        if (point > tmp && point[-1] == '~') {
+            *(--point) = '\0';
             done = 1;
         } else {
-            *(++point) = '\r';
-            *(++point) = '\n';
-            *(++point) = '\0';
+            *point++ = '\r';
+            *point++ = '\n';
+            *point = '\0';
         }
 
         templength = point - tmp;
