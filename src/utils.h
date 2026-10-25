@@ -122,6 +122,8 @@ void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, 
 void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
 void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int quantity, int reward);
 bool is_mob_excluded_from_quests(struct char_data *mob);
+bool is_obj_hidden_from_mortals(struct obj_data *obj);
+bool room_has_shopkeeper(room_rnum room);
 int count_mob_posted_quests(void);
 bool can_add_mob_posted_quest(void);
 struct aq_data; /* defined in quest.h */

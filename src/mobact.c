@@ -2265,7 +2265,8 @@ void mobile_activity(void)
                         obj_rnum candidate = real_object(i);
                         if (candidate == NOTHING || !CAN_WEAR(&obj_proto[candidate], ITEM_WEAR_TAKE) ||
                             GET_OBJ_TYPE(&obj_proto[candidate]) == ITEM_KEY ||
-                            OBJ_FLAGGED(&obj_proto[candidate], ITEM_QUEST))
+                            OBJ_FLAGGED(&obj_proto[candidate], ITEM_QUEST) ||
+                            is_obj_hidden_from_mortals(&obj_proto[candidate]))
                             continue;
                         if (mob_posted_quest_exists(AQ_OBJ_RETURN, i, GET_MOB_VNUM(ch)))
                             continue;
@@ -2404,7 +2405,7 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, or PEACEFUL.
+                    /* Find a room with aggressive mobs that is not GODROOM, HOUSE, PEACEFUL, or a shop/shopkeeper room.
                      * Start the scan at a random room so different mobs pick different rooms. */
                     int zone_span = zone_table[mob_zone].top - zone_table[mob_zone].bot + 1;
                     int scan_offset = zone_span > 0 ? rand_number(0, zone_span - 1) : 0;
@@ -2413,6 +2414,7 @@ void mobile_activity(void)
                         room_rnum real_r = real_room(r);
                         if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
                             !ROOM_FLAGGED(real_r, ROOM_HOUSE) && !ROOM_FLAGGED(real_r, ROOM_PEACEFUL) &&
+                            !is_shop_room(r) && !room_has_shopkeeper(real_r) &&
                             !mob_posted_quest_exists(AQ_ROOM_CLEAR, r, GET_MOB_VNUM(ch))) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
