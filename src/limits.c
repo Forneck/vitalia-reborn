@@ -24,6 +24,7 @@
 #include "spirits.h"
 #include "mud_event.h"
 #include "act.h"
+#include "ledger_metrics.h"
 
 /* local file scope function prototypes */
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6);
@@ -324,6 +325,8 @@ void gain_exp(struct char_data *ch, int gain)
         GET_EXP(ch) += gain;
         return;
     }
+    if (gain != 0)
+        ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_EXP_DELTA, 64, IN_ROOM(ch));
     if (gain > 0) {
         if ((IS_HAPPYHOUR) && (IS_HAPPYEXP))
             gain += (int)((float)gain * ((float)HAPPY_EXP / (float)(100)));

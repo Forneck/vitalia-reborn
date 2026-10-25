@@ -86,6 +86,7 @@
 #include "ann.h"
 #include "protocol.h" /* for ProtocolNAWSAutoConfig */
 #include "auction.h"  /* for update_auctions */
+#include "ledger_metrics.h"
 
 #ifndef INVALID_SOCKET
 #    define INVALID_SOCKET (-1)
@@ -597,6 +598,7 @@ static void init_game(ush_int local_port)
     init_lookup_table();
 
     boot_db();
+    ledger_metrics_init();
 
 #if defined(CIRCLE_UNIX) || defined(CIRCLE_MACINTOSH)
     log1("Signal trapping.");
@@ -612,6 +614,7 @@ static void init_game(ush_int local_port)
     log1("Entering game loop.");
 
     game_loop(mother_desc);
+    ledger_metrics_shutdown();
 
     Crash_save_all();
 
@@ -1052,6 +1055,7 @@ void heartbeat(int heart_pulse)
     static int mins_since_crashsave = 0;
 
     event_process();
+    ledger_metrics_on_pulse(heart_pulse);
 
     if (!(heart_pulse % PULSE_DG_SCRIPT))
         script_trigger_check();

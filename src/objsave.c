@@ -23,10 +23,12 @@
 #include "modify.h"
 #include "genolc.h" /* for strip_cr and sprintascii */
 #include "quest.h"  /* for check_and_fail_quest_with_magic_stone */
+#include "ledger_metrics.h"
 
 /* these factors should be unique integers */
 #define RENT_FACTOR 1
 #define CRYO_FACTOR 4
+#define LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES 512U
 
 #define LOC_INVENTORY 0
 #define MAX_BAG_ROWS 5
@@ -797,6 +799,8 @@ void Crash_rentsave(struct char_data *ch, int cost)
     fclose(fp);
 
     Crash_extract_objs(ch->carrying);
+    ledger_metrics_record_event_in_room(LEDGER_SUBSYSTEM_LIFECYCLE, LEDGER_EVENT_RENT_SAVE,
+                                        LEDGER_RENT_SAVE_ESTIMATED_SIZE_BYTES, IN_ROOM(ch));
 }
 
 static int objsave_write_rentcode(FILE *fl, int rentcode, int cost_per_day, struct char_data *ch)
