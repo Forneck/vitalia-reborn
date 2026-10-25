@@ -807,10 +807,15 @@ int find_first_step(room_rnum src, room_rnum target)
     return (BFS_NO_PATH);
 }
 
+/* A closed and locked door: impassable for a mob without the key. */
+#define EDGE_LOCKED(x, y)                                                                                              \
+    (IS_SET(world[(x)].dir_option[(y)]->exit_info, EX_CLOSED) &&                                                       \
+     IS_SET(world[(x)].dir_option[(y)]->exit_info, EX_LOCKED))
+
 /* Calculate BFS distance (in rooms) between source and target rooms.
  * Returns the number of rooms (hops) from src to target, or BFS error codes.
  * Used for distance-based comparisons in AI decision-making. */
-int bfs_distance(room_rnum src, room_rnum target)
+static int bfs_distance_internal(room_rnum src, room_rnum target, bool skip_locked)
 {
     int curr_dir;
     room_rnum curr_room;
@@ -831,7 +836,7 @@ int bfs_distance(room_rnum src, room_rnum target)
 
     /* Enqueue the first steps with distance 1 */
     for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
-        if (VALID_EDGE(src, curr_dir)) {
+        if (VALID_EDGE(src, curr_dir) && (!skip_locked || !EDGE_LOCKED(src, curr_dir))) {
             MARK(TOROOM(src, curr_dir));
             bfs_enqueue(TOROOM(src, curr_dir), 1); /* Using dir field for distance */
         }
@@ -845,7 +850,8 @@ int bfs_distance(room_rnum src, room_rnum target)
         } else {
             int next_distance = queue_head->dir + 1;
             for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
-                if (VALID_EDGE(queue_head->room, curr_dir)) {
+                if (VALID_EDGE(queue_head->room, curr_dir) &&
+                    (!skip_locked || !EDGE_LOCKED(queue_head->room, curr_dir))) {
                     MARK(TOROOM(queue_head->room, curr_dir));
                     bfs_enqueue(TOROOM(queue_head->room, curr_dir), next_distance);
                 }
@@ -855,6 +861,12 @@ int bfs_distance(room_rnum src, room_rnum target)
 
     return (BFS_NO_PATH);
 }
+
+int bfs_distance(room_rnum src, room_rnum target) { return bfs_distance_internal(src, target, FALSE); }
+
+/* Like bfs_distance(), but treats locked doors as walls. For routes that a mob
+ * without the keys must be able to walk, such as escort quests. */
+int bfs_distance_unlocked(room_rnum src, room_rnum target) { return bfs_distance_internal(src, target, TRUE); }
 
 /* Enhanced pathfinding that considers movement costs and MV availability
  * Returns the first direction to take, and sets total_cost to the total MV needed for the path */

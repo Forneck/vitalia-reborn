@@ -4040,8 +4040,9 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         return;
     }
 
-    /* The destination must be reachable on foot; longer journeys pay more */
-    distance = bfs_distance(IN_ROOM(ch), dest_room_rnum);
+    /* The destination must be reachable on foot without keys (whoever takes the
+     * quest walks it with the escorted mob); longer journeys pay more */
+    distance = bfs_distance_unlocked(IN_ROOM(ch), dest_room_rnum);
     /* Mobs taking the quest give up on goals after 150 ticks (one step per tick) */
     if (distance < 5 || distance > 120) {
         /* No path (BFS error codes are negative), too close to need an escort, or too far.
