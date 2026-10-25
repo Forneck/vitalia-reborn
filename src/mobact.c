@@ -3354,9 +3354,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
 
-    /* Throttle pathfinding calls to prevent resource exhaustion */
+    /* Throttle pathfinding calls to prevent resource exhaustion.
+     * Mobs leading an escort are exempt: they are few, and at one step every
+     * ~4 ticks they would never finish the journey within the goal timeout. */
     roam_throttle++;
-    if (target_room != NOWHERE && roam_throttle % 4 != 0) {
+    if (target_room != NOWHERE && roam_throttle % 4 != 0 && !(ch->ai_data && ch->ai_data->escort_mob_id != NOBODY)) {
         /* Only do complex pathfinding every 4th call for goal-oriented movement */
         return FALSE;
     }
