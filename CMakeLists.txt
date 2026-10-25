@@ -247,6 +247,15 @@ find_library(MATH_LIBRARY m)
 if (MATH_LIBRARY)
     message(STATUS "Found libm: ${MATH_LIBRARY}")
     list(APPEND EXTRA_LIBS ${MATH_LIBRARY})
+else()
+    # Some toolchains (e.g. Termux/Android) keep libm outside CMake's search paths, so
+    # find_library() fails even though -lm links fine: check by name and let the linker find it.
+    include(CheckLibraryExists)
+    check_library_exists(m powf "" HAVE_LIBM)
+    if (HAVE_LIBM)
+        message(STATUS "Found libm via the linker search path")
+        list(APPEND EXTRA_LIBS m)
+    endif()
 endif()
 
 # ========== zlib library ==========
