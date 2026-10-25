@@ -2571,7 +2571,7 @@ int calculate_mob_quest_gold(struct char_data *poster, int target_level, int dif
     minimum = 10 + target_level;
 
     /* The poster pays up front: never promise more than 3/4 of its purse */
-    gold = MIN(gold, GET_GOLD(poster) * 3 / 4);
+    gold = MIN(gold, (int)((long long)GET_GOLD(poster) * 3 / 4));
 
     return (gold < minimum) ? 0 : MIN(gold, 20000);
 }
@@ -2609,6 +2609,87 @@ int calculate_mob_quest_exp(int target_level, int difficulty)
 int calculate_mob_quest_points(int target_level, int difficulty)
 {
     return URANGE(1, 1 + difficulty / 25 + target_level / 20, 15);
+}
+
+/**
+ * How much a mob wants to pay for an escort to another city, in chances per
+ * thousand per tick (0-10). Fearful mobs don't want to travel alone, merchants
+ * want to reach other markets and wanderers want to see other places.
+ * @param ch The mob
+ * @return Chance per thousand of posting an escort quest this tick
+ */
+int mob_escort_travel_desire(struct char_data *ch)
+{
+    int desire = 0;
+
+    if (!IS_NPC(ch) || !ch->ai_data)
+        return 0;
+
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return 0;
+
+    /* Only townsfolk and travellers ask for escorts: mobs in houses, cities or on roads.
+     * Keeps fish, beasts of the wild and mounts from hiring bodyguards. */
+    if (MOB_FLAGGED(ch, MOB_MOUNTABLE))
+        return 0;
+    if (SECT(IN_ROOM(ch)) != SECT_INSIDE && SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_ROAD)
+        return 0;
+
+    desire += (100 - GET_GENBRAVE(ch)) / 25; /* 0-4: afraid to travel alone */
+    desire += GET_GENTRADE(ch) / 25;         /* 0-4: merchants seek other markets */
+    desire += GET_GENROAM(ch) / 50;          /* 0-2: wanderlust */
+
+    if (GET_GENQUEST(ch) >= 50)
+        desire += 1;
+
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_fear >= 60)
+        desire += 2; /* Scared mobs want protection on the road */
+
+    return MIN(desire, 10);
+}
+
+/**
+ * Pick a destination for an escort quest: a shop room (a town) in another zone.
+ * Rate limited to one search per second, since the caller validates the route
+ * with a full BFS.
+ * @param ch The mob that wants to travel
+ * @return Destination room vnum, or NOWHERE if none was found
+ */
+room_vnum find_escort_destination(struct char_data *ch)
+{
+    static time_t last_search = 0;
+    time_t now = time(0);
+    room_rnum chosen = NOWHERE;
+    zone_rnum here;
+    int shop_nr, i, candidates = 0;
+
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world || !shop_index || top_shop < 0)
+        return NOWHERE;
+
+    if (now == last_search)
+        return NOWHERE;
+    last_search = now;
+
+    here = world[IN_ROOM(ch)].zone;
+
+    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+        if (!shop_index[shop_nr].in_room)
+            continue;
+        for (i = 0; SHOP_ROOM(shop_nr, i) != NOWHERE; i++) {
+            room_rnum r = real_room(SHOP_ROOM(shop_nr, i));
+
+            if (r == NOWHERE || world[r].zone == here)
+                continue;
+            if (ROOM_FLAGGED(r, ROOM_GODROOM) || ROOM_FLAGGED(r, ROOM_HOUSE) || ROOM_FLAGGED(r, ROOM_DEATH))
+                continue;
+            if (ZONE_FLAGGED(world[r].zone, ZONE_CLOSED) || ZONE_FLAGGED(world[r].zone, ZONE_NOIMMORT))
+                continue;
+            if (rand_number(1, ++candidates) == 1)
+                chosen = r;
+        }
+    }
+
+    return (chosen != NOWHERE) ? world[chosen].number : NOWHERE;
 }
 
 /**
@@ -2784,7 +2865,8 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
     /* Valuable items are worth at least half their price, if the mob can pay it */
     if (calculated_reward > 0 && obj_rnum != NOTHING)
-        calculated_reward = MIN(MAX(calculated_reward, GET_OBJ_COST(&obj_proto[obj_rnum]) / 2), GET_GOLD(ch) * 3 / 4);
+        calculated_reward =
+            MIN(MAX(calculated_reward, GET_OBJ_COST(&obj_proto[obj_rnum]) / 2), (int)((long long)GET_GOLD(ch) * 3 / 4));
     if (calculated_reward <= 0) {
         /* Can't afford a reward; keep the wish and try hunting/buying instead */
         return;
@@ -2838,14 +2920,10 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
 
-    /* Determina se a quest deve ser repetível baseado no tipo de item */
-    if (obj_rnum != NOTHING) {
-        int obj_type = GET_OBJ_TYPE(&obj_proto[obj_rnum]);
-        /* Quests para itens consumíveis (poções, pergaminhos, comida) são repetíveis */
-        if (obj_type == ITEM_POTION || obj_type == ITEM_SCROLL || obj_type == ITEM_FOOD || obj_type == ITEM_DRINKCON) {
-            SET_BIT(new_quest->flags, AQ_REPEATABLE);
-        }
-    }
+    /* Mob-posted quests are never repeatable: the reward is paid up front, once, so a
+     * repeatable quest minted gold on every further completion (buy a cheap potion,
+     * deliver it, collect the reward, repeat).  A mob that wants another consumable
+     * simply posts (and pays for) a new request. */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
@@ -3578,11 +3656,12 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     if (quest_type == AQ_MOB_SAVE && target_mob_rnum != NOBODY) {
         target_level = mob_proto[target_mob_rnum].player.level;
     } else if (quest_type == AQ_ROOM_CLEAR && target_room_rnum != NOWHERE) {
-        /* Room clear is as hard as the toughest hostile creature in the room */
+        /* Completion requires every NPC in the room to be gone, so the quest is as hard
+         * as the toughest creature in the room, aggressive or not */
         struct char_data *occupant;
         target_level = 0;
         for (occupant = world[target_room_rnum].people; occupant; occupant = occupant->next_in_room) {
-            if (IS_NPC(occupant) && MOB_FLAGGED(occupant, MOB_AGGRESSIVE))
+            if (IS_NPC(occupant) && !MOB_FLAGGED(occupant, MOB_NOTDEADYET))
                 target_level = MAX(target_level, GET_LEVEL(occupant));
         }
         if (target_level <= 0)
@@ -3917,8 +3996,26 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     char *dest_name = "um local seguro";
     mob_rnum escort_mob_rnum = NOBODY;
     room_rnum dest_room_rnum = NOWHERE;
+    int target_level;
+    int distance;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+        return;
+    }
+
+    /* A mob only asks for its own escort: get_mob_quest_poster() identifies the poster of an
+     * escort by its target, since value[5] holds the destination room */
+    if (escort_mob_vnum != GET_MOB_VNUM(ch)) {
+        log1("SYSERR: mob_posts_escort_quest: %s asked to escort another mob (%d)", GET_NAME(ch), escort_mob_vnum);
+        return;
+    }
+
+    /* Don't flood the boards with copies of a quest that is already posted */
+    if (mob_posted_quest_exists(AQ_MOB_ESCORT, escort_mob_vnum, GET_MOB_VNUM(ch))) {
         return;
     }
 
@@ -3942,6 +4039,9 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
             dest_name = world[dest_room_rnum].name;
         }
     }
+    if (dest_room_rnum == NOWHERE) {
+        return;
+    }
 
     /* Encontra zona do mob */
     mob_zone = world[IN_ROOM(ch)].zone;
@@ -3949,7 +4049,54 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     /* Encontra questmaster */
     questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
     if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
         return;
+    }
+
+    /* The journey starts where the quest is accepted, since that is where the escorted
+     * mob appears: at the questmaster if this mob can reach it (otherwise this mob becomes
+     * a temporary questmaster, see make_mob_temp_questmaster_if_needed()). */
+    {
+        room_rnum origin = IN_ROOM(ch);
+        struct char_data *qm;
+
+        if (mob_can_reach_questmaster(ch, questmaster_vnum)) {
+            for (qm = character_list; qm; qm = qm->next) {
+                if (IS_NPC(qm) && GET_MOB_VNUM(qm) == questmaster_vnum && !MOB_FLAGGED(qm, MOB_NOTDEADYET) &&
+                    IN_ROOM(qm) != NOWHERE) {
+                    origin = IN_ROOM(qm);
+                    break;
+                }
+            }
+        }
+
+        /* An escort to another town: the destination must not be where the journey starts */
+        if (world[origin].zone == world[dest_room_rnum].zone) {
+            return;
+        }
+
+        /* The destination must be reachable on foot without keys (whoever takes the
+         * quest walks it with the escorted mob); longer journeys pay more */
+        distance = bfs_distance_unlocked(origin, dest_room_rnum);
+    }
+    /* Mobs taking the quest give up on goals after 150 ticks (one step per tick) */
+    if (distance < 5 || distance > 120) {
+        /* No path (BFS error codes are negative), too close to need an escort, or too far.
+         * Mobs in isolated areas would otherwise retry every tick and hog the
+         * destination search, so make them wait before asking again. */
+        ch->ai_data->escort_retry_timer = 60; /* 60 ticks (~10 minutes) */
+        return;
+    }
+
+    /* Calcula dificuldade e recompensa: a jornada é tão perigosa quanto a zona
+     * mais difícil entre origem e destino, e fica mais difícil com a distância */
+    target_level = MAX(get_zone_typical_level(mob_zone), get_zone_typical_level(world[dest_room_rnum].zone));
+    difficulty = URANGE(20, 30 + distance / 2, 95);
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    if (calculated_reward <= 0) {
+        return; /* Mob não tem ouro suficiente para oferecer uma recompensa decente */
     }
 
     /* Cria uma nova quest */
@@ -3970,16 +4117,16 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     new_quest->target = escort_mob_vnum;
     new_quest->qm = questmaster_vnum;
     new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
-
-    /* Calcula dificuldade e recompensa */
-    difficulty = MAX(1, GET_LEVEL(ch) / 10);
-    calculated_reward = MAX(100, reward);
+    new_quest->prereq = NOTHING;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
 
     /* Seleciona item de recompensa baseado na dificuldade */
     reward_item = select_mob_inventory_reward(ch, difficulty);
 
     /* Configura valores da quest */
-    int base_questpoints = 10 + difficulty;
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty) + 1; /* Escorts are risky */
 
     /* Bonus para mobs corajosos */
     if (GET_GENBRAVE(ch) > 70) {
@@ -3988,27 +4135,27 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
-    new_quest->value[1] = new_quest->value[0] / 2;                 /* Penalty (questpoints) for quitting */
-    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = destination_room;                        /* Destination room in RETURNMOB field */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
+    set_mob_quest_level_range(new_quest, target_level);
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = destination_room; /* Destination room in RETURNMOB field */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 2; /* Escort quests give moderate XP */
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Escoltar %s", escort_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de escolta", escort_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Escoltar %s até %s", escort_name,
+             zone_table[world[dest_room_rnum].zone].name);
     snprintf(
         quest_info, sizeof(quest_info),
-        "%s precisa ser escoltado até %s com segurança. "
+        "%s precisa ser escoltado até %s, em %s, com segurança. "
         "Aceite esta busca e guie o viajante até o destino para receber %d moedas de ouro e %d pontos de experiência.",
-        escort_name, dest_name, calculated_reward, calculated_reward * 2);
+        escort_name, dest_name, zone_table[world[dest_room_rnum].zone].name, calculated_reward, new_quest->exp_reward);
     snprintf(quest_done, sizeof(quest_done), "Muito obrigado por me escoltar com segurança!");
 
     new_quest->name = str_udup(quest_name);
@@ -4034,6 +4181,11 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     if (ch->ai_data->genetics.quest_tendency < 100) {
         ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
     }
+
+    /* The poster never travels itself (a copy of it is escorted), so its wish to travel
+     * is never satisfied: without a pause it would re-post right after each escort ends,
+     * pumping its gold to the takers. */
+    ch->ai_data->escort_retry_timer = 360; /* 360 ticks (~1 hour) */
 
     /* Mensagens para jogadores */
     act("$n escreve um pedido de escolta e o envia para o questmaster.", FALSE, ch, 0, 0, TO_ROOM);
@@ -5733,11 +5885,10 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum)
         return; /* Quest não existe */
     }
 
-    /* Se a quest não é repetível, remove-a do sistema */
-    if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
-        log1("WISHLIST QUEST: Cleaning up completed non-repeatable quest %d", quest_vnum);
-        delete_quest(rnum);
-    }
+    /* Remove-a do sistema: a recompensa foi paga uma vez pelo mob solicitante.
+     * Inclui quests antigas salvas como repetíveis, que geravam ouro a cada conclusão. */
+    log1("WISHLIST QUEST: Cleaning up completed quest %d", quest_vnum);
+    delete_quest(rnum);
 }
 
 /**
@@ -7206,8 +7357,11 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
         add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1, NULL);
         /* MALP/MPLP: death of an ally is among the most aversive experiences
          * (Bowlby 1969, attachment and loss; grief is a high-arousal negative
-         * state; valence −0.7). */
-        apply_malp_emotion_effects(mob, dead_ally, -0.7f);
+         * state).  The memory of the ally is recalled (its emotional effects
+         * apply) but NOT reconsolidated (valence 0.0): the grief is about the
+         * loss, not about the ally, and the memory is about to be generalised
+         * to the ally's species. */
+        apply_malp_emotion_effects(mob, dead_ally, 0.0f);
         apply_mplp_nonsocial_reinforcement(mob, INTERACT_ALLY_DIED, 1);
     }
 }
@@ -8737,6 +8891,8 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     /* Store memory */
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
+    memory->entity_vnum = IS_NPC(entity) ? GET_MOB_VNUM(entity) : NOBODY;
+    memory->malp_consumed = FALSE;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
@@ -8846,6 +9002,8 @@ void add_active_emotion_memory(struct char_data *mob, struct char_data *target, 
     /* Store memory */
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
+    memory->entity_vnum = IS_NPC(target) ? GET_MOB_VNUM(target) : NOBODY;
+    memory->malp_consumed = FALSE;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);

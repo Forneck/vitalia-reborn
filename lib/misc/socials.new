@@ -154,7 +154,7 @@ $n olha freneticamente ao redor. $l parece estar com um humor violento.
 Você aponta sua arma para $N, mostrando a $L que vai matá-$r num piscar de olhos.
 $n aponta $z arma para $N. $l parece falar sério!
 $n aponta a arma para você. $l parece bastante irritad$r!
-Como vai assustar $L com isso se nem está aqui???
+Como vai assustar alguém que nem está aqui???
 Você aponta sua arma para si mesm$r. Pronto para morrer?
 $n aponta $z arma para si mesm$r, vai se matar!
 Você aponta sua arma para o $t de $L preparando-se para golpear.
@@ -349,7 +349,7 @@ $n bate os cílios e fica fofo.
 Você bate os cílios convincentemente para $L.
 $n bate os cílios para $N.
 $n bate os cílios para você, que fofo.
-$L não está aqui para ser encantado!
+Essa pessoa não está aqui para ser encantada!
 Como exatamente você pretende fazer isso?
 $n tenta bater os cílios para si mesmo. Parece estranho.
 #
@@ -6120,12 +6120,12 @@ $n vomita nas próprias roupas.
 ~spin spin 0 8 8 0
 Você gira alegremente em círculos.
 $n gira alegremente.
-Você gira alegremente em círculos.
-$n gira alegremente.
-#
 Você gira $N e o(a) puxa para os seus braços.
 $n faz $N girar e o(a) puxa para os $z braços.
 $n faz você girar e te puxa para $z caloroso abraço.
+Você não vê essa pessoa por aqui para girar.
+Você gira em torno de si mesm$r até ficar tont$r.
+$n gira em torno de si mesm$r até ficar tont$r.
 #
 #
 #
@@ -6423,7 +6423,7 @@ $n cavalga em direção ao pôr do sol.
 #
 #
 #
-Desculpe, mas $L não está aqui.
+Desculpe, mas essa pessoa não está aqui.
 Você cavalga em direção ao pôr do sol, completamente sozinho(a).
 $n cavalga, uma silhueta solitária contra o pôr do sol.
 #

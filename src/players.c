@@ -502,9 +502,16 @@ int load_char(const char *name, struct char_data *ch)
                         GET_QUEST(ch) = atoi(line);
                     else if (!strcmp(tag, "Qcnt"))
                         GET_QUEST_COUNTER(ch) = atoi(line);
-                    else if (!strcmp(tag, "Qesc"))
-                        GET_ESCORT_MOB_ID(ch) = atol(line);
-                    else if (!strcmp(tag, "Qest"))
+                    else if (!strcmp(tag, "Qesc")) {
+                        /* Escort mob ids are boot-local script ids (they restart every boot):
+                         * only trust one saved during this boot; enter_player_game() spawns a
+                         * new escort otherwise */
+                        long esc_id = 0, esc_boot = 0;
+                        if (sscanf(line, "%ld %ld", &esc_id, &esc_boot) == 2 && esc_boot == (long)boot_time)
+                            GET_ESCORT_MOB_ID(ch) = esc_id;
+                        else
+                            GET_ESCORT_MOB_ID(ch) = NOBODY;
+                    } else if (!strcmp(tag, "Qest"))
                         load_quests(fl, ch);
                     break;
 
@@ -831,7 +838,7 @@ void save_char(struct char_data *ch)
     if (GET_QUEST(ch) != PFDEF_CURRQUEST)
         fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
     if (GET_ESCORT_MOB_ID(ch) != NOBODY)
-        fprintf(fl, "Qesc: %ld\n", GET_ESCORT_MOB_ID(ch));
+        fprintf(fl, "Qesc: %ld %ld\n", GET_ESCORT_MOB_ID(ch), (long)boot_time); /* id is valid for this boot only */
 
     if (GET_DEATH(ch) != PFDEF_DEATH)
         fprintf(fl, "Dth : %d\n", GET_DEATH(ch));

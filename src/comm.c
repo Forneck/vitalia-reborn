@@ -246,10 +246,11 @@ int main(int argc, char **argv)
     CONFIG_CONFFILE = NULL;
     while ((pos < argc) && (*(argv[pos]) == '-')) {
         if (*(argv[pos] + 1) == 'f') {
+            /* strdup: CONFIG_CONFFILE is freed at shutdown, argv strings can't be */
             if (*(argv[pos] + 2))
-                CONFIG_CONFFILE = argv[pos] + 2;
+                CONFIG_CONFFILE = strdup(argv[pos] + 2);
             else if (++pos < argc)
-                CONFIG_CONFFILE = argv[pos];
+                CONFIG_CONFFILE = strdup(argv[pos]);
             else {
                 puts("SYSERR: File name to read from expected after option -f.");
                 exit(1);
@@ -274,11 +275,15 @@ int main(int argc, char **argv)
                     ++pos;
                 break;
             case 'o':
-                if (*(argv[pos] + 2))
-                    CONFIG_LOGNAME = argv[pos] + 2;
-                else if (++pos < argc)
-                    CONFIG_LOGNAME = argv[pos];
-                else {
+                /* strdup: CONFIG_LOGNAME is freed at shutdown (free_strings), argv strings can't be.
+                 * Free the value load_config() may have set from the config file. */
+                if (*(argv[pos] + 2)) {
+                    free(CONFIG_LOGNAME);
+                    CONFIG_LOGNAME = strdup(argv[pos] + 2);
+                } else if (++pos < argc) {
+                    free(CONFIG_LOGNAME);
+                    CONFIG_LOGNAME = strdup(argv[pos]);
+                } else {
                     puts("SYSERR: File name to log to expected after option -o.");
                     exit(1);
                 }

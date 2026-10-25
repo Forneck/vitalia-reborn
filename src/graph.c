@@ -807,10 +807,19 @@ int find_first_step(room_rnum src, room_rnum target)
     return (BFS_NO_PATH);
 }
 
+/* Impassable on foot for a mob without keys, boat, flight or water breathing:
+ * a closed and locked door, or deep water / underwater / air. */
+#define EDGE_LOCKED(x, y)                                                                                              \
+    (IS_SET(world[(x)].dir_option[(y)]->exit_info, EX_CLOSED) &&                                                       \
+     IS_SET(world[(x)].dir_option[(y)]->exit_info, EX_LOCKED))
+#define SECT_NEEDS_MEANS(r)                                                                                            \
+    (SECT(r) == SECT_WATER_NOSWIM || SECT(r) == SECT_UNDERWATER || SECT(r) == SECT_FLYING || SECT(r) == SECT_AIR_FLOW)
+#define EDGE_BLOCKED_ON_FOOT(x, y) (EDGE_LOCKED(x, y) || SECT_NEEDS_MEANS(TOROOM(x, y)))
+
 /* Calculate BFS distance (in rooms) between source and target rooms.
  * Returns the number of rooms (hops) from src to target, or BFS error codes.
  * Used for distance-based comparisons in AI decision-making. */
-int bfs_distance(room_rnum src, room_rnum target)
+static int bfs_distance_internal(room_rnum src, room_rnum target, bool skip_locked)
 {
     int curr_dir;
     room_rnum curr_room;
@@ -831,7 +840,7 @@ int bfs_distance(room_rnum src, room_rnum target)
 
     /* Enqueue the first steps with distance 1 */
     for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
-        if (VALID_EDGE(src, curr_dir)) {
+        if (VALID_EDGE(src, curr_dir) && (!skip_locked || !EDGE_BLOCKED_ON_FOOT(src, curr_dir))) {
             MARK(TOROOM(src, curr_dir));
             bfs_enqueue(TOROOM(src, curr_dir), 1); /* Using dir field for distance */
         }
@@ -845,7 +854,8 @@ int bfs_distance(room_rnum src, room_rnum target)
         } else {
             int next_distance = queue_head->dir + 1;
             for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
-                if (VALID_EDGE(queue_head->room, curr_dir)) {
+                if (VALID_EDGE(queue_head->room, curr_dir) &&
+                    (!skip_locked || !EDGE_BLOCKED_ON_FOOT(queue_head->room, curr_dir))) {
                     MARK(TOROOM(queue_head->room, curr_dir));
                     bfs_enqueue(TOROOM(queue_head->room, curr_dir), next_distance);
                 }
@@ -855,6 +865,54 @@ int bfs_distance(room_rnum src, room_rnum target)
 
     return (BFS_NO_PATH);
 }
+
+int bfs_distance(room_rnum src, room_rnum target) { return bfs_distance_internal(src, target, FALSE); }
+
+/* Like find_first_step(), but avoids rooms that need a boat, flight or water
+ * breathing (locked doors are left to the key collection logic).  For a mob that
+ * lacks the means to cross water or air on its usual route. */
+int find_first_step_on_foot(room_rnum src, room_rnum target)
+{
+    int curr_dir;
+    room_rnum curr_room;
+
+    if (src == NOWHERE || target == NOWHERE || src > top_of_world || target > top_of_world)
+        return (BFS_ERROR);
+    if (src == target)
+        return (BFS_ALREADY_THERE);
+
+    for (curr_room = 0; curr_room <= top_of_world; curr_room++)
+        UNMARK(curr_room);
+
+    MARK(src);
+
+    for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
+        if (VALID_EDGE(src, curr_dir) && !SECT_NEEDS_MEANS(TOROOM(src, curr_dir))) {
+            MARK(TOROOM(src, curr_dir));
+            bfs_enqueue(TOROOM(src, curr_dir), curr_dir);
+        }
+
+    while (queue_head) {
+        if (queue_head->room == target) {
+            curr_dir = queue_head->dir;
+            bfs_clear_queue();
+            return (curr_dir);
+        }
+        for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
+            if (VALID_EDGE(queue_head->room, curr_dir) && !SECT_NEEDS_MEANS(TOROOM(queue_head->room, curr_dir))) {
+                MARK(TOROOM(queue_head->room, curr_dir));
+                bfs_enqueue(TOROOM(queue_head->room, curr_dir), queue_head->dir);
+            }
+        bfs_dequeue();
+    }
+
+    return (BFS_NO_PATH);
+}
+
+/* Like bfs_distance(), but treats locked doors and rooms that need a boat, flight
+ * or water breathing as walls. For routes that a mob must be able to walk on foot,
+ * such as escort quests. */
+int bfs_distance_unlocked(room_rnum src, room_rnum target) { return bfs_distance_internal(src, target, TRUE); }
 
 /* Enhanced pathfinding that considers movement costs and MV availability
  * Returns the first direction to take, and sets total_cost to the total MV needed for the path */

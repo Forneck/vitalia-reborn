@@ -319,6 +319,10 @@ emotion_alignment_shifts = 1
 * Log 4D decision-space raw and effective values for debugging (default NO)
 mob_4d_debug = 0
 
+* Mobs seeking work on their own only take mob-posted quests? (default YES)
+* If NO, they may also take quests created by builders.
+mob_quests_mob_posted_only = 1
+
 
 
 * [ Emotion System Configuration ]

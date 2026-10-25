@@ -108,7 +108,8 @@ qst_rnum real_quest(qst_vnum vnum);
 int is_complete(struct char_data *ch, qst_vnum vnum);
 qst_vnum find_quest_by_qmnum(struct char_data *ch, mob_rnum qm, int num);
 qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num);
-qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm);
+qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, bool mob_posted_only);
+mob_vnum get_mob_quest_poster(qst_rnum rnum);
 qst_vnum find_quest_by_listnum(int num);
 void add_completed_quest(struct char_data *ch, qst_vnum vnum);
 void remove_completed_quest(struct char_data *ch, qst_vnum vnum);
@@ -121,6 +122,7 @@ ACMD(do_quest);
 bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum);
 bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum);
 void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer);
+struct char_data *find_escort_mob_by_id(long id);
 
 /* Bounty Quest Functions */
 bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum);
@@ -134,6 +136,8 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg);
 int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum);
 int mob_quest_reward_appeal(struct char_data *mob, qst_rnum rnum);
 bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum);
+bool mob_would_consider_quest(struct char_data *mob, qst_rnum rnum);
+bool mob_quest_search_budget_ok(void);
 bool mob_can_accept_quest_forced(struct char_data *mob, qst_rnum rnum);
 void set_mob_quest(struct char_data *mob, qst_rnum rnum);
 void clear_mob_quest(struct char_data *mob);

@@ -113,6 +113,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 /* Function to find where a key can be obtained */
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
+static int mob_handle_movement_need(struct char_data *ch, int direction, room_rnum to_room, room_rnum target_room);
 bool validate_goal_obj(struct char_data *ch);
 bool shadow_should_activate(struct char_data *ch);
 
@@ -1075,6 +1076,27 @@ void mobile_activity(void)
             ch->ai_data->duty_frustration_timer--;
         }
 
+        if (ch->ai_data && ch->ai_data->escort_retry_timer > 0)
+            ch->ai_data->escort_retry_timer--;
+
+        if (ch->ai_data && ch->ai_data->on_foot_route_timer > 0)
+            ch->ai_data->on_foot_route_timer--;
+
+        /* quest_tendency only rises with every quest posted or completed and falls only
+         * on some failures, and the final value is inherited by the prototype on death:
+         * without a restoring force the whole population ratchets up to 100.  Slowly
+         * regress toward the prototype's value (about 1 point per 60 ticks), so only
+         * what is reinforced more often than it fades is kept and inherited. */
+        if (ch->ai_data && GET_MOB_RNUM(ch) != NOBODY && mob_proto[GET_MOB_RNUM(ch)].ai_data &&
+            rand_number(1, 60) == 1) {
+            int base = mob_proto[GET_MOB_RNUM(ch)].ai_data->genetics.quest_tendency;
+            int *qt = &ch->ai_data->genetics.quest_tendency;
+            if (*qt > base)
+                (*qt)--;
+            else if (*qt < base)
+                (*qt)++;
+        }
+
         if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
             ch->ai_data->quest_posting_frustration_timer--;
         }
@@ -1277,9 +1299,15 @@ void mobile_activity(void)
                                 struct char_data *questmaster = (struct char_data *)action.target;
                                 /* Verify questmaster still exists and is in same room */
                                 if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
-                                    /* Find available quest from this questmaster */
-                                    qst_vnum available_quest =
-                                        find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                                    /* Accept the quest the Shadow Timeline chose (selected under the
+                                     * autonomous eligibility rules); re-rank under the same rules if it
+                                     * is gone or no longer offered by this questmaster */
+                                    qst_vnum available_quest = action.quest_vnum;
+                                    qst_rnum chosen_rnum =
+                                        (available_quest != NOTHING) ? real_quest(available_quest) : NOTHING;
+                                    if (chosen_rnum == NOTHING || QST_MASTER(chosen_rnum) != GET_MOB_VNUM(questmaster))
+                                        available_quest = find_mob_available_quest_by_qmnum(
+                                            ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                                     if (available_quest != NOTHING) {
                                         qst_rnum quest_rnum = real_quest(available_quest);
                                         if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
@@ -1445,6 +1473,28 @@ void mobile_activity(void)
             }
 
             /* Handle goals that don't require movement */
+            /* Escorts are led step by step: the generic goal walk below only processes the
+             * quest on arrival, so it would never notice the escorted mob falling behind. */
+            if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST && ch->ai_data->escort_mob_id != NOBODY &&
+                GET_MOB_QUEST(ch) != NOTHING) {
+                qst_rnum escort_rnum = real_quest(GET_MOB_QUEST(ch));
+
+                /* This branch skips the generic quest-timer countdown further below, and the
+                 * goal timer is reset whenever the pair is together: count down here, or a
+                 * stuck escort would never fail. */
+                if (ch->ai_data->quest_timer > 0 && --ch->ai_data->quest_timer <= 0) {
+                    act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
+                    fail_mob_quest(ch, "timeout");
+                    continue;
+                }
+
+                if (escort_rnum != NOTHING)
+                    mob_process_quest_completion(ch, escort_rnum);
+                else
+                    clear_mob_quest(ch);
+                continue;
+            }
+
             if (ch->ai_data->current_goal == GOAL_HUNT_TARGET || ch->ai_data->current_goal == GOAL_GET_GOLD) {
 
                 /* For hunting, implement basic hunting behavior */
@@ -1818,8 +1868,17 @@ void mobile_activity(void)
                     struct char_data *questmaster =
                         get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (questmaster && GET_MOB_QUEST(ch) == NOTHING) {
-                        /* Find first quest available for mob's level range */
-                        qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+                        /* Autonomous goal: accept the quest chosen in mob_try_to_accept_quest(), or
+                         * re-rank under the same eligibility rules if it is gone.  Builder-set goal
+                         * (no chosen quest): any quest from this questmaster, as before. */
+                        qst_vnum chosen = ch->ai_data->goal_item_vnum;
+                        qst_rnum chosen_rnum = (chosen != NOTHING) ? real_quest(chosen) : NOTHING;
+                        qst_vnum available_quest;
+                        if (chosen_rnum != NOTHING && QST_MASTER(chosen_rnum) == GET_MOB_VNUM(questmaster))
+                            available_quest = chosen;
+                        else
+                            available_quest = find_mob_available_quest_by_qmnum(
+                                ch, GET_MOB_VNUM(questmaster), chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
                             /* mob_can_accept_quest_forced provides additional validation (existing quest, escort quest
@@ -1848,6 +1907,7 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_NONE;
                     ch->ai_data->goal_destination = NOWHERE;
                     ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_item_vnum = NOTHING; /* the chosen quest, if any */
                     ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     /* Process quest completion based on quest type */
@@ -2159,6 +2219,24 @@ void mobile_activity(void)
                             continue;
                     }
                 }
+            }
+        }
+
+        /* Escort quest posting: fearful travellers, merchants and wanderers pay to be escorted
+         * to a town in another zone (not for charmed, aggressive or unkillable mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && !MOB_FLAGGED(ch, MOB_AGGRESSIVE) &&
+            !MOB_FLAGGED(ch, MOB_NOKILL) && !is_mob_excluded_from_quests(ch) && GET_GOLD(ch) > 150 &&
+            ch->ai_data->escort_retry_timer <= 0 && ch->ai_data->quest_posting_frustration_timer <= 0 &&
+            rand_number(1, 1000) <= mob_escort_travel_desire(ch) &&
+            !mob_posted_quest_exists(AQ_MOB_ESCORT, GET_MOB_VNUM(ch), GET_MOB_VNUM(ch))) {
+            room_vnum escort_dest = find_escort_destination(ch);
+
+            if (escort_dest != NOWHERE) {
+                int reward = MIN(GET_GOLD(ch) / 4, 100 + GET_LEVEL(ch) * 5);
+                mob_posts_escort_quest(ch, GET_MOB_VNUM(ch), escort_dest, reward);
+                /* Safety check: mob_posts_escort_quest calls act() which may trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
         }
 
@@ -3332,9 +3410,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
 
-    /* Throttle pathfinding calls to prevent resource exhaustion */
+    /* Throttle pathfinding calls to prevent resource exhaustion.
+     * Mobs leading an escort are exempt: they are few, and at one step every
+     * ~4 ticks they would never finish the journey within the goal timeout. */
     roam_throttle++;
-    if (target_room != NOWHERE && roam_throttle % 4 != 0) {
+    if (target_room != NOWHERE && roam_throttle % 4 != 0 && !(ch->ai_data && ch->ai_data->escort_mob_id != NOBODY)) {
         /* Only do complex pathfinding every 4th call for goal-oriented movement */
         return FALSE;
     }
@@ -3346,8 +3426,13 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 
     /* Se um destino específico foi dado, essa é a prioridade máxima. */
     if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
+        /* A mob that recently found water or air it can't cross keeps to routes on foot;
+         * otherwise the shortest path would lead it straight back to the same shore */
+        if (ch->ai_data && ch->ai_data->on_foot_route_timer > 0)
+            direction = find_first_step_on_foot(IN_ROOM(ch), target_room);
         /* Use intelligent pathfinding that compares basic vs advanced methods */
-        direction = mob_smart_pathfind(ch, target_room);
+        if (direction < 0 || direction >= DIR_COUNT)
+            direction = mob_smart_pathfind(ch, target_room);
         if (direction == -1) {
             /* Fall back to simple pathfinding if smart pathfinding fails */
             direction = find_first_step(IN_ROOM(ch), target_room);
@@ -3407,6 +3492,15 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
         struct room_direction_data *exit;
         room_rnum to_room;
 
+        /* Water or air on the way that this mob can't cross: use or want the means,
+         * and meanwhile take a route on foot (or wait) */
+        if (target_room != NOWHERE && (exit = EXIT(ch, direction)) && exit->to_room != NOWHERE && exit->to_room >= 0 &&
+            exit->to_room <= top_of_world) {
+            direction = mob_handle_movement_need(ch, direction, exit->to_room, target_room);
+            if (direction < 0)
+                return FALSE;
+        }
+
         if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) != NOWHERE && to_room >= 0 &&
             to_room <= top_of_world) {
 
@@ -3449,8 +3543,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 return FALSE;
 
             if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone)) {
-                /* For shopping goals, be more willing to cross zones */
+                /* For shopping goals, be more willing to cross zones; escorts lead to another zone by definition */
                 int zone_cross_chance = (ch->ai_data && ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) ? 25 : 1;
+                if (ch->ai_data && ch->ai_data->current_goal == GOAL_COMPLETE_QUEST &&
+                    ch->ai_data->escort_mob_id != NOBODY)
+                    zone_cross_chance = 100;
                 if (rand_number(1, 100) > zone_cross_chance) {
                     return TRUE; /* Hesitou e gastou o turno. */
                 }
@@ -5149,6 +5246,10 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (ch->ai_data->current_goal != GOAL_NONE || GET_MOB_QUEST(ch) != NOTHING)
         return FALSE;
 
+    /* Followers (including mobs being escorted) don't wander off to look for work */
+    if (ch->master)
+        return FALSE;
+
     /* Check if frustrated from recent quest activities (cheap check) */
     if (ch->ai_data->quest_posting_frustration_timer > 0)
         return FALSE;
@@ -5177,21 +5278,9 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
-    /* Load shedding: the pathfinding in find_accessible_questmaster_in_zone() is expensive,
-     * so cap how many mobs may search per second. This used to refuse all quest-taking once
-     * the boards were 90% full, which is exactly when mobs are most needed to drain them. */
-    {
-        static time_t budget_second = 0;
-        static int searches_this_second = 0;
-        time_t now = time(0);
-
-        if (now != budget_second) {
-            budget_second = now;
-            searches_this_second = 0;
-        }
-        if (++searches_this_second > 5)
-            return FALSE;
-    }
+    /* Load shedding for the expensive questmaster pathfinding (shared with the Shadow Timeline) */
+    if (!mob_quest_search_budget_ok())
+        return FALSE;
 
     /* Now do the expensive operations - look for accessible questmasters */
     mob_zone = world[IN_ROOM(ch)].zone;
@@ -5199,7 +5288,8 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 
     if (questmaster && questmaster != ch) {
         /* Find first quest available for mob's level range */
-        qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster));
+        qst_vnum available_quest =
+            find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
         if (available_quest != NOTHING) {
             qst_rnum quest_rnum = real_quest(available_quest);
             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
@@ -5207,6 +5297,9 @@ bool mob_try_to_accept_quest(struct char_data *ch)
                 ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
                 ch->ai_data->goal_destination = IN_ROOM(questmaster);
                 ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                /* Remember the chosen quest so arrival accepts it (and not an authored quest
+                 * that mob_quests_mob_posted_only excludes); builder-set goals leave this NOTHING */
+                ch->ai_data->goal_item_vnum = available_quest;
                 ch->ai_data->goal_timer = 0;
                 act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
                 return TRUE;
@@ -5568,40 +5661,73 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             }
             break;
 
-        case AQ_MOB_ESCORT:
-            /* Escort mob to destination - simplified: follow target mob */
+        case AQ_MOB_ESCORT: {
+            /* Lead the escorted mob (spawned on acceptance, following us) to the destination */
+            struct char_data *escort;
+
             /* Validate room before accessing */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
                 return FALSE;
-            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
-            if (target_mob) {
-                /* Found escort target, check if at destination */
-                target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
-                /* Validate target_mob's room before accessing */
-                if (target_room != NOWHERE && IN_ROOM(target_mob) != NOWHERE && IN_ROOM(target_mob) == target_room) {
-                    mob_complete_quest(ch);
-                    ch->ai_data->current_goal = GOAL_NONE;
-                    return TRUE;
-                }
-                /* Stay near escort target - don't move away */
-                return TRUE;
-            } else {
-                /* Lost escort target, search for them in the world */
-                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
-                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
-                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
-                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return TRUE;
-                } else {
-                    /* Escort target not found, roam to search */
-                    mob_goal_oriented_roam(ch, NOWHERE);
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return TRUE;
-                }
+
+            target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
+            escort = find_escort_mob_by_id(ch->ai_data->escort_mob_id);
+            if (!escort || target_room == NOWHERE || IN_ROOM(escort) == NOWHERE) {
+                /* Escorted mob is gone (or quest is broken): the escort failed */
+                fail_mob_quest(ch, "escort lost");
                 return TRUE;
             }
-            break;
+
+            /* Keep to routes on foot the whole way (including going back for the escort): the
+             * leader may have a boat or flight its follower lacks, and the route validated at
+             * posting is one on foot (see find_first_step_on_foot()) */
+            if (ch->ai_data->on_foot_route_timer < 2)
+                ch->ai_data->on_foot_route_timer = 2;
+
+            if (IN_ROOM(escort) != IN_ROOM(ch)) {
+                /* Got separated: go back for the escorted mob */
+                ch->ai_data->goal_destination = IN_ROOM(escort);
+                mob_goal_oriented_roam(ch, IN_ROOM(escort));
+                return TRUE;
+            }
+
+            /* Make sure the escorted mob keeps following us */
+            if (escort->master != ch) {
+                if (escort->master)
+                    stop_follower(escort);
+                add_follower(escort, ch);
+            }
+
+            /* Back together with the escorted mob: that's progress, not a stuck goal */
+            ch->ai_data->goal_timer = 0;
+
+            if (IN_ROOM(ch) == target_room) {
+                act("$N diz, 'Muito obrigado por me trazer até aqui em segurança!'", FALSE, ch, 0, escort, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
+                /* Rewards the mob; clearing the quest sends the escorted mob on its way */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            }
+
+            /* Don't walk away from a fight, the escorted mob would be left behind */
+            if (FIGHTING(ch) || FIGHTING(escort))
+                return TRUE;
+
+            /* Only standing followers follow (perform_move): get the escorted mob up first */
+            if (GET_POS(escort) < POS_STANDING) {
+                if (GET_POS(escort) > POS_STUNNED) {
+                    GET_POS(escort) = POS_STANDING;
+                    act("$n se levanta, pronto para seguir viagem.", TRUE, escort, 0, 0, TO_ROOM);
+                }
+                return TRUE; /* move on next tick */
+            }
+
+            ch->ai_data->goal_destination = target_room;
+            mob_goal_oriented_roam(ch, target_room);
+            return TRUE;
+        }
 
         case AQ_MAGIC_GATHER:
             /* Mob needs to visit locations with high magical density */
@@ -6242,6 +6368,156 @@ room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carry
  * @param original_dest The original destination
  * @return TRUE if goal was set successfully
  */
+/* ── Movement means: boats, flight, water walking ────────────────────────────
+ * Deep water (SECT_WATER_NOSWIM) needs a boat, water walking or flight; flying
+ * sectors need flight (see has_boat()/has_flight() in act.movement.c).  When a
+ * mob's route crosses such a room and it lacks the means, it uses a means it
+ * carries (potion, scroll, wand or staff of waterwalk/fly), wants one (wishlist,
+ * which then buys it, hunts for it or posts a quest), and meanwhile tries a route
+ * on foot — like the key collection logic does for locked doors. */
+#define MOVE_NEED_NONE 0
+#define MOVE_NEED_BOAT 1 /* deep water */
+#define MOVE_NEED_FLY 2  /* flying sector */
+
+static int mob_movement_need(struct char_data *ch, room_rnum to_room)
+{
+    room_rnum from = IN_ROOM(ch);
+
+    if ((SECT(from) == SECT_WATER_NOSWIM || SECT(to_room) == SECT_WATER_NOSWIM) && !has_boat(ch))
+        return MOVE_NEED_BOAT;
+    if ((SECT(from) == SECT_FLYING || SECT(to_room) == SECT_FLYING) && !has_flight(ch))
+        return MOVE_NEED_FLY;
+    return MOVE_NEED_NONE;
+}
+
+/* Does this magic item cast a spell that meets the need on its user (fly also crosses water)?
+ * Staves are excluded: mag_objectmagic() casts them on the other room occupants only. */
+static bool magic_item_grants_movement(struct obj_data *obj, int need)
+{
+    int spells[3];
+    int n;
+
+    if (GET_OBJ_TYPE(obj) == ITEM_STAFF)
+        return FALSE;
+
+    n = get_all_spells_from_item(obj, spells);
+
+    for (int i = 0; i < n; i++) {
+        if (spells[i] == SPELL_FLY)
+            return TRUE;
+        if (need == MOVE_NEED_BOAT && spells[i] == SPELL_WATERWALK)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+/* Would carrying (boats) or wearing (wings, AFF_FLYING items) this object meet the need? */
+static bool item_grants_movement(struct obj_data *obj, int need)
+{
+    if (magic_item_grants_movement(obj, need))
+        return TRUE;
+    if (need == MOVE_NEED_BOAT)
+        return GET_OBJ_TYPE(obj) == ITEM_BOAT;
+    return GET_OBJ_TYPE(obj) == ITEM_WINGS || OBJAFF_FLAGGED(obj, AFF_FLYING);
+}
+
+/* Use a carried potion/scroll/wand/staff that meets the need. Returns TRUE if one was used. */
+static bool mob_use_movement_means(struct char_data *ch, int need)
+{
+    struct obj_data *obj;
+    char self_arg[] = "self";
+
+    /* call_magic() fails in NOMAGIC rooms but the potion/scroll is still consumed */
+    if (IN_ROOM(ch) == NOWHERE || ROOM_FLAGGED(IN_ROOM(ch), ROOM_NOMAGIC))
+        return FALSE;
+
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (!magic_item_grants_movement(obj, need))
+            continue;
+        /* Items that can't work would be picked again every turn, blocking the fallbacks */
+        if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj))
+            continue;
+        if (GET_OBJ_TYPE(obj) == ITEM_WAND && GET_OBJ_VAL(obj, 2) <= 0)
+            continue; /* no charges left */
+        mag_objectmagic(ch, obj, self_arg);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+/* A takeable object prototype that meets the need, picked among the cheapest few
+ * (rebuilt hourly, since OLC can change prototypes). NOTHING if none exists. */
+static obj_vnum find_movement_means_vnum(int need)
+{
+#define MEANS_CANDIDATES 8
+    static obj_vnum cand[3][MEANS_CANDIDATES];
+    static int ncand[3];
+    static time_t built[3];
+    obj_rnum i;
+
+    if (need <= MOVE_NEED_NONE || need > MOVE_NEED_FLY)
+        return NOTHING;
+
+    if (!built[need] || time(0) - built[need] > 3600) {
+        int cost[MEANS_CANDIDATES];
+
+        ncand[need] = 0;
+        for (i = 0; i <= top_of_objt; i++) {
+            struct obj_data *o = &obj_proto[i];
+            if (!CAN_WEAR(o, ITEM_WEAR_TAKE) || OBJ_FLAGGED(o, ITEM_QUEST) || !item_grants_movement(o, need))
+                continue;
+            int c = MAX(GET_OBJ_COST(o), 1);
+            int k = ncand[need];
+            if (k < MEANS_CANDIDATES)
+                ncand[need]++;
+            else if (c >= cost[k - 1])
+                continue;
+            else
+                k--;
+            /* insertion sort by cost (cheapest first) */
+            while (k > 0 && cost[k - 1] > c) {
+                cost[k] = cost[k - 1];
+                cand[need][k] = cand[need][k - 1];
+                k--;
+            }
+            cost[k] = c;
+            cand[need][k] = obj_index[i].vnum;
+        }
+        built[need] = time(0);
+    }
+
+    return ncand[need] ? cand[need][rand_number(0, MIN(ncand[need], 3) - 1)] : NOTHING;
+#undef MEANS_CANDIDATES
+}
+
+/**
+ * The next step toward target crosses water or air the mob can't cross.
+ * Use a means it carries, or want one and look for a route on foot.
+ * @return The direction to take instead (possibly unchanged), or -1 to stay put this turn.
+ */
+static int mob_handle_movement_need(struct char_data *ch, int direction, room_rnum to_room, room_rnum target_room)
+{
+    int need = mob_movement_need(ch, to_room);
+
+    if (need == MOVE_NEED_NONE)
+        return direction;
+
+    if (mob_use_movement_means(ch, need))
+        return -1; /* turn spent using it; the next step will go through */
+
+    if (ch->ai_data)
+        ch->ai_data->on_foot_route_timer = 150; /* keep to routes on foot for a while */
+
+    if (ch->ai_data) {
+        obj_vnum means = find_movement_means_vnum(need);
+        if (means != NOTHING)
+            add_item_to_wishlist(ch, means, 150); /* bought, hunted or asked for via a quest */
+    }
+
+    int alt = find_first_step_on_foot(IN_ROOM(ch), target_room);
+    return (alt >= 0 && alt < DIR_COUNT) ? alt : -1;
+}
+
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest)
 {
     int source_type;

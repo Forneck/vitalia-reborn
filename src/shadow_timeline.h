@@ -97,6 +97,7 @@ struct shadow_action {
     int direction;                /**< For movement actions */
     int spell_num;                /**< For spell casting */
     int item_slot;                /**< For item usage */
+    qst_vnum quest_vnum;          /**< For quest acceptance: the quest chosen (NOTHING if none) */
     int cost;                     /**< Cognitive cost to simulate this action */
 };
 

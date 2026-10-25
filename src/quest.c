@@ -25,6 +25,7 @@
 #include "spells.h"          /* for calculate_mana_density */
 #include "act.h"             /* for do_tell */
 #include "dg_scripts.h"      /* for char_script_id */
+#include "graph.h"           /* for bfs_distance */
 #include "modify.h"          /* for page_string */
 #include "shadow_timeline.h" /* for cognitive capacity constants */
 #include "sec.h"             /* for sec_init */
@@ -182,8 +183,41 @@ int mob_quest_reward_appeal(struct char_data *mob, qst_rnum rnum)
  * Unlike find_available_quest_by_qmnum, this checks level range compatibility,
  * skips quests the mob posted itself, and prefers quests with better rewards
  * (with some randomness so mobs don't all pick the same one).
+ * mob_posted_only restricts candidates to mob-posted quests, for autonomous
+ * callers that will check the result with mob_should_accept_quest().
  * Returns quest vnum if found, NOTHING otherwise. */
-qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
+/* The mob that posted a mob-posted quest, or NOBODY if unknown.
+ * value[5] (QST_RETURNMOB) only holds the poster for some quest types: escort
+ * quests store a destination room there, delivery/shop quests an item vnum and
+ * emotion/magic-gather quests an emotion id or counter. */
+mob_vnum get_mob_quest_poster(qst_rnum rnum)
+{
+    if (rnum == NOTHING || !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        return NOBODY;
+
+    switch (QST_TYPE(rnum)) {
+        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
+        case AQ_ROOM_FIND:
+        case AQ_MOB_FIND:
+        case AQ_MOB_KILL:
+        case AQ_MOB_KILL_BOUNTY:
+        case AQ_PLAYER_KILL:
+        case AQ_MOB_SAVE:
+        case AQ_ROOM_CLEAR:
+        case AQ_RESOURCE_GATHER:
+        case AQ_REPUTATION_BUILD:
+            return QST_RETURNMOB(rnum);
+        case AQ_MOB_ESCORT:
+            /* value[5] holds the destination room; a mob-posted escort is always a request to
+             * escort (a copy of) the poster itself, so the target is the poster */
+            return QST_TARGET(rnum);
+        default:
+            return NOBODY;
+    }
+}
+
+qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, bool mob_posted_only)
 {
     qst_rnum rnum;
     qst_vnum best = NOTHING;
@@ -195,8 +229,17 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
 
     for (rnum = 0; rnum < total_quests; rnum++) {
         if (qm == QST_MASTER(rnum)) {
+            /* Autonomous callers may only accept mob-posted quests (see mob_should_accept_quest);
+             * don't let an ineligible authored quest win the ranking */
+            if (mob_posted_only && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+                continue;
+
+            /* MOB_NOKILL mobs cannot take escort quests (rejected by both acceptance checks) */
+            if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
+                continue;
+
             /* A mob doesn't take the job it is paying someone else to do */
-            if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
+            if (get_mob_quest_poster(rnum) == GET_MOB_VNUM(mob))
                 continue;
 
             quest_completed = is_complete(mob, QST_NUM(rnum));
@@ -206,7 +249,13 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
             if (!quest_completed || quest_repeatable) {
                 /* Check if mob's level is within the quest's level range */
                 if (GET_LEVEL(mob) >= QST_MINLEVEL(rnum) && GET_LEVEL(mob) <= QST_MAXLEVEL(rnum)) {
-                    score = (mob->ai_data ? mob_quest_reward_appeal(mob, rnum) : 0) + rand_number(0, 20);
+                    /* Deterministic per (mob, quest) jitter instead of rand_number(): spreads
+                     * different mobs over different quests without touching the world RNG,
+                     * since the Shadow Timeline also calls this (RFC-0003 §9.1). */
+                    unsigned long mix =
+                        ((unsigned long)(mob->script_id ? mob->script_id : GET_MOB_RNUM(mob)) * 2654435761UL) ^
+                        (unsigned long)QST_NUM(rnum);
+                    score = (mob->ai_data ? mob_quest_reward_appeal(mob, rnum) : 0) + (int)(mix % 21);
                     if (score > best_score) {
                         best_score = score;
                         best = QST_NUM(rnum);
@@ -780,8 +829,14 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     /* Place mob in the same room as the player */
     char_to_room(mob, IN_ROOM(ch));
 
-    /* Store the mob's ID for tracking */
-    GET_ESCORT_MOB_ID(ch) = GET_IDNUM(mob);
+    /* Store the mob's unique instance ID for tracking. Mobs don't have unique
+     * idnums (every instance shares its prototype's), so use the script id. */
+    if (IS_NPC(ch)) {
+        if (ch->ai_data)
+            ch->ai_data->escort_mob_id = char_script_id(mob);
+    } else {
+        GET_ESCORT_MOB_ID(ch) = char_script_id(mob);
+    }
 
     /* Make escort mob non-aggressive (but not invulnerable) */
     REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGRESSIVE);
@@ -855,10 +910,7 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
         return FALSE;
 
     /* Find the escort mob by ID */
-    for (escort_mob = character_list; escort_mob; escort_mob = escort_mob->next) {
-        if (IS_NPC(escort_mob) && GET_IDNUM(escort_mob) == GET_ESCORT_MOB_ID(ch))
-            break;
-    }
+    escort_mob = find_escort_mob_by_id(GET_ESCORT_MOB_ID(ch));
 
     /* If escort mob not found or not in same room, quest not complete */
     if (!escort_mob || IN_ROOM(escort_mob) != IN_ROOM(ch))
@@ -927,6 +979,24 @@ static void trigger_quest_failure_emotion(struct char_data *entity, qst_rnum rnu
     }
 }
 
+/** Find a spawned escort mob by its script id.
+ * @param id The id stored when the escort was spawned (NOBODY for none).
+ * @return The escort mob, or NULL if it no longer exists. */
+struct char_data *find_escort_mob_by_id(long id)
+{
+    struct char_data *mob;
+
+    if (id == NOBODY || id == 0)
+        return NULL;
+
+    for (mob = character_list; mob; mob = mob->next) {
+        if (IS_NPC(mob) && mob->script_id == id && !MOB_FLAGGED(mob, MOB_NOTDEADYET))
+            return mob;
+    }
+
+    return NULL;
+}
+
 /** Called when an escort mob dies - fails the escort quest.
  * @param escort_mob The escort mob that died.
  * @param killer The character who killed the mob (can be NULL). */
@@ -934,16 +1004,33 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
 {
     struct char_data *ch;
     qst_rnum rnum;
+    long escort_id;
 
     if (!IS_NPC(escort_mob))
         return;
+
+    /* Escort mobs always get a script id when spawned; a mob without one isn't escorted */
+    escort_id = escort_mob->script_id;
+    if (escort_id == 0)
+        return;
+
+    /* Find the mob escorting this mob */
+    for (ch = character_list; ch; ch = ch->next) {
+        if (IS_NPC(ch) && ch->ai_data && ch->ai_data->escort_mob_id == escort_id) {
+            /* Forget the escort first so clearing the quest doesn't try to extract it again */
+            ch->ai_data->escort_mob_id = NOBODY;
+            act("$n parece arrasado por não ter protegido quem escoltava.", TRUE, ch, NULL, NULL, TO_ROOM);
+            fail_mob_quest(ch, "escort died");
+            return;
+        }
+    }
 
     /* Find the player escorting this mob */
     for (ch = character_list; ch; ch = ch->next) {
         if (IS_NPC(ch))
             continue;
 
-        if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == GET_IDNUM(escort_mob)) {
+        if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == escort_id) {
             /* Get quest info for penalty */
             rnum = real_quest(GET_QUEST(ch));
 
@@ -2483,11 +2570,9 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
     return MAX(0, MIN(100, capability));
 }
 
-/* Check if a mob should accept a quest */
-bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
+/* Hard eligibility rules for a mob taking a quest on its own (no randomness) */
+static bool mob_quest_acceptable(struct char_data *mob, qst_rnum rnum)
 {
-    int capability, chance;
-
     if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
         return FALSE;
 
@@ -2495,25 +2580,54 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
     if (GET_MOB_QUEST(mob) != NOTHING)
         return FALSE;
 
-    /* Don't accept immortal quests (only mob-posted quests) */
-    if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+    /* Don't accept immortal quests (only mob-posted quests), unless enabled in cedit */
+    if (CONFIG_MOB_QUESTS_MOB_POSTED_ONLY && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
         return FALSE;
 
     /* Don't accept a quest the mob posted itself */
-    if (QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
+    if (get_mob_quest_poster(rnum) == GET_MOB_VNUM(mob))
         return FALSE;
 
     /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
     if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
         return FALSE;
 
-    /* Calculate capability */
-    capability = calculate_mob_quest_capability(mob, rnum);
+    return TRUE;
+}
+
+/* Check if a mob should accept a quest */
+bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
+{
+    if (!mob_quest_acceptable(mob, rnum))
+        return FALSE;
 
     /* Random chance based on capability */
-    chance = rand() % 100;
+    return (rand() % 100 < calculate_mob_quest_capability(mob, rnum));
+}
 
-    return (chance < capability);
+/* Load shedding: the pathfinding in find_accessible_questmaster_in_zone() is expensive,
+ * so cap how many mobs may search for a questmaster per second (both the classic path,
+ * mob_try_to_accept_quest(), and the Shadow Timeline).  This replaces refusing all
+ * quest-taking once the boards were 90% full, which is exactly when mobs are most
+ * needed to drain them. */
+bool mob_quest_search_budget_ok(void)
+{
+    static time_t budget_second = 0;
+    static int searches_this_second = 0;
+    time_t now = time(0);
+
+    if (now != budget_second) {
+        budget_second = now;
+        searches_this_second = 0;
+    }
+    return (++searches_this_second <= 5);
+}
+
+/* Deterministic variant for the Shadow Timeline, which must not consume the world
+ * RNG (RFC-0003 §9.1): would a mob this capable consider the quest at all? */
+bool mob_would_consider_quest(struct char_data *mob, qst_rnum rnum)
+{
+    return mob_quest_acceptable(mob, rnum) && calculate_mob_quest_capability(mob, rnum) >= 50;
 }
 
 /* Check if a mob can accept a quest when forced by builder/goal setting
@@ -2548,6 +2662,26 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
     mob->ai_data->current_quest = QST_NUM(rnum);
     mob->ai_data->quest_timer = QST_TIME(rnum);
     mob->ai_data->quest_counter = QST_QUANTITY(rnum) > 0 ? QST_QUANTITY(rnum) : 1;
+
+    /* Escort quests: the mob that accepts brings the escorted mob along, like a player does */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT) {
+        room_rnum dest = real_room(QST_RETURNMOB(rnum));
+
+        mob->ai_data->escort_mob_id = NOBODY;
+        if (dest == NOWHERE || IN_ROOM(mob) == NOWHERE || !spawn_escort_mob(mob, rnum)) {
+            mob->ai_data->current_quest = NOTHING;
+            mob->ai_data->quest_timer = 0;
+            mob->ai_data->quest_counter = 0;
+            return;
+        }
+
+        /* Escorts have no time limit for players; give mobs one proportional to the
+         * journey (one step per mobile tick) so a lost escort can't hold the mob forever */
+        if (mob->ai_data->quest_timer <= 0) {
+            int distance = bfs_distance(IN_ROOM(mob), dest);
+            mob->ai_data->quest_timer = (distance > 0) ? distance * 2 + 30 : 120;
+        }
+    }
 
     /* Automatically set the goal to GOAL_COMPLETE_QUEST so the mob actively pursues the quest.
      * This ensures that when a mob accepts a quest, it will immediately start working on it
@@ -2604,6 +2738,11 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
             mob->ai_data->goal_target_mob_rnum = NOBODY;
             break;
     }
+
+    /* Escorts: head for the destination; the goal loop only processes the quest
+     * on arrival at goal_destination (see mob_process_quest_completion) */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT)
+        mob->ai_data->goal_destination = real_room(QST_RETURNMOB(rnum));
 }
 
 /* Clear a quest from a mob */
@@ -2615,6 +2754,19 @@ void clear_mob_quest(struct char_data *mob)
     mob->ai_data->current_quest = NOTHING;
     mob->ai_data->quest_timer = 0;
     mob->ai_data->quest_counter = 0;
+
+    /* Escort quest over (completed, failed or abandoned): the escorted mob goes on its way */
+    if (mob->ai_data->escort_mob_id != NOBODY) {
+        struct char_data *escort = find_escort_mob_by_id(mob->ai_data->escort_mob_id);
+
+        /* Forget it first so its extraction doesn't fail this (already cleared) quest */
+        mob->ai_data->escort_mob_id = NOBODY;
+        if (escort) {
+            if (escort->master)
+                stop_follower(escort);
+            extract_char(escort);
+        }
+    }
 
     /* If mob was working on quest completion, clear that goal */
     if (mob->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -2664,6 +2816,7 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
         case AQ_MOB_SAVE:
         case AQ_ROOM_CLEAR:
         case AQ_OBJ_RETURN:
+        case AQ_MOB_ESCORT:
             /* All other quest failures decrease quest_tendency */
             if (mob->ai_data->genetics.quest_tendency > 0) {
                 mob->ai_data->genetics.quest_tendency = MAX(0, mob->ai_data->genetics.quest_tendency - rand() % 2 - 1);
@@ -2775,7 +2928,7 @@ void mob_complete_quest(struct char_data *mob)
     }
 
     /* Helping another mob reinforces the habit of taking quests */
-    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) != GET_MOB_VNUM(mob) &&
+    if (get_mob_quest_poster(rnum) != NOBODY && get_mob_quest_poster(rnum) != GET_MOB_VNUM(mob) &&
         mob->ai_data->genetics.quest_tendency < 100) {
         mob->ai_data->genetics.quest_tendency = MIN(100, mob->ai_data->genetics.quest_tendency + 1);
     }
@@ -2795,12 +2948,14 @@ void mob_complete_quest(struct char_data *mob)
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    /* Cleanup: If this is a mob-posted quest and not repeatable, delete it from the system
+    /* Cleanup: If this is a mob-posted quest, delete it from the system
      * to free the queue slot for another quest. This is similar to wishlist quest cleanup
      * for players (cleanup_completed_wishlist_quest). */
     {
         long quest_flags = QST_FLAGS(rnum);
-        if (IS_SET(quest_flags, AQ_MOB_POSTED) && !IS_SET(quest_flags, AQ_REPEATABLE)) {
+        /* Mob-posted quests are paid once, up front: always remove them, even if an older
+         * save marked them repeatable (each further completion would mint gold). */
+        if (IS_SET(quest_flags, AQ_MOB_POSTED)) {
             log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
             if (!delete_quest(rnum)) {
                 log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);
@@ -3553,6 +3708,7 @@ void init_mob_ai_data(struct char_data *mob)
         return;
 
     mob->ai_data->is_temp_questmaster = FALSE;
+    mob->ai_data->escort_mob_id = NOBODY;
     mob->ai_data->temp_quests = NULL;
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;

@@ -1116,6 +1116,8 @@ struct mob_wishlist_item {
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 #define ENTITY_TYPE_GLOBAL 2 /**< Sentinel for context-global MPLP traits (not agent-anchored) */
+#define ENTITY_TYPE_MOB_SPECIES                                                                                        \
+    3 /**< Mob prototype (agent id = vnum): what a mob learned about a kind of creature once the individual is gone */
 
 /* Emotional profiles for mob personality initialization */
 #define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
@@ -1219,6 +1221,8 @@ struct emotion_4d_state {
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
     long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
+    mob_vnum entity_vnum; /* Mob prototype vnum (NOBODY for players): lets MALP generalise to the species */
+    bool malp_consumed;   /* Agent gone and this episode already consolidated into MALP (transfer once) */
     int interaction_type; /* Type of interaction (INTERACT_*) */
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
@@ -1390,7 +1394,8 @@ struct malp_cache_slot {
  */
 struct malp_entry {
     long agent_id;         /**< Entity ID (GET_IDNUM for players, char_script_id for mobs; 0=unused) */
-    int agent_type;        /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int agent_type;        /**< ENTITY_TYPE_PLAYER, ENTITY_TYPE_MOB or ENTITY_TYPE_MOB_SPECIES */
+    mob_vnum agent_vnum;   /**< Mob prototype vnum of the agent (NOBODY if unknown / player) */
     int interaction_type;  /**< INTERACT_* category at consolidation time */
     int major_event;       /**< 1 = major/traumatic event; drives HIGH persistence */
     time_t timestamp;      /**< Wall-clock creation time */
@@ -1468,10 +1473,13 @@ struct mob_ai_data {
     mob_rnum original_target_mob;   /* Original target mob */
     obj_vnum original_item_vnum;    /* Original item vnum */
 
-    int reputation;         /* Reputação do mob para quests (0-100) */
-    qst_vnum current_quest; /* Quest ativa atual do mob (se houver) */
-    int quest_timer;        /* Timer para a quest atual */
-    int quest_counter;      /* Contador de progresso da quest */
+    int reputation;          /* Reputação do mob para quests (0-100) */
+    qst_vnum current_quest;  /* Quest ativa atual do mob (se houver) */
+    int quest_timer;         /* Timer para a quest atual */
+    int quest_counter;       /* Contador de progresso da quest */
+    long escort_mob_id;      /* script id do mob sendo escoltado (AQ_MOB_ESCORT), NOBODY se nenhum */
+    int escort_retry_timer;  /* Ticks até poder pedir escolta de novo (ex.: sem rota até o destino) */
+    int on_foot_route_timer; /* Ticks preferindo rotas a pé (sem barco/voo para água funda ou ar) */
 
     /* Emotion system for contextual behavior (0-100 scale) */
     /* Basic emotions */
@@ -2416,6 +2424,7 @@ struct experimental_data {
     int mob_4d_debug;              /**< Log 4D decision-space raw and effective values for debugging (default: NO) */
     int mob_gossip_chance;         /**< Probability (%) of mob gossiping per emotion tick (default: 10) */
     int mob_gossip_cooldown; /**< Seconds between gossip updates for the same listener-target pair (default: 300) */
+    int mob_quests_mob_posted_only; /**< Mobs seeking work on their own only take mob-posted quests? (default: YES) */
 };
 
 /**

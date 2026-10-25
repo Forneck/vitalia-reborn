@@ -177,6 +177,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.max_mob_posted_quests = CONFIG_MAX_MOB_POSTED_QUESTS;
     OLC_CONFIG(d)->experimental.emotion_alignment_shifts = CONFIG_EMOTION_ALIGNMENT_SHIFTS;
     OLC_CONFIG(d)->experimental.mob_4d_debug = CONFIG_MOB_4D_DEBUG;
+    OLC_CONFIG(d)->experimental.mob_quests_mob_posted_only = CONFIG_MOB_QUESTS_MOB_POSTED_ONLY;
     OLC_CONFIG(d)->experimental.mob_gossip_chance = CONFIG_MOB_GOSSIP_CHANCE;
     OLC_CONFIG(d)->experimental.mob_gossip_cooldown = CONFIG_MOB_GOSSIP_COOLDOWN;
 
@@ -463,6 +464,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_MAX_MOB_POSTED_QUESTS = OLC_CONFIG(d)->experimental.max_mob_posted_quests;
     CONFIG_EMOTION_ALIGNMENT_SHIFTS = OLC_CONFIG(d)->experimental.emotion_alignment_shifts;
     CONFIG_MOB_4D_DEBUG = OLC_CONFIG(d)->experimental.mob_4d_debug;
+    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = OLC_CONFIG(d)->experimental.mob_quests_mob_posted_only;
     CONFIG_MOB_GOSSIP_CHANCE = OLC_CONFIG(d)->experimental.mob_gossip_chance;
     CONFIG_MOB_GOSSIP_COOLDOWN = OLC_CONFIG(d)->experimental.mob_gossip_cooldown;
 
@@ -1150,6 +1152,12 @@ int save_config(IDXTYPE nowhere)
             CONFIG_MOB_4D_DEBUG);
 
     fprintf(fl,
+            "* Mobs seeking work on their own only take mob-posted quests? (default YES)\n"
+            "* If NO, they may also take quests created by builders.\n"
+            "mob_quests_mob_posted_only = %d\n\n",
+            CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+
+    fprintf(fl,
             "* Probability (%%) of mob gossiping per emotion tick (0-100, default 10)\n"
             "mob_gossip_chance = %d\n\n",
             CONFIG_MOB_GOSSIP_CHANCE);
@@ -1623,12 +1631,14 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%sA%s) Emoções Influenciam Alinhamento (Experimental) : %s%s\r\n"
                     "%sB%s) Chance de Fofoca de Mob (%%) : %s%d\r\n"
                     "%sC%s) Cooldown de Fofoca (segundos) : %s%d\r\n"
+                    "%sD%s) Mobs Autônomos Só Aceitam Quests de Mobs : %s%s\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
                     grn, nrm, cyn, OLC_CONFIG(d)->experimental.max_mob_posted_quests, grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.emotion_alignment_shifts), grn, nrm, cyn,
                     OLC_CONFIG(d)->experimental.mob_gossip_chance, grn, nrm, cyn,
-                    OLC_CONFIG(d)->experimental.mob_gossip_cooldown, grn, nrm);
+                    OLC_CONFIG(d)->experimental.mob_gossip_cooldown, grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.mob_quests_mob_posted_only), grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -3401,6 +3411,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     } else {
                         write_to_output(d, "\r\nGossip requires mob contextual socials to be enabled!\r\n");
                     }
+                    break;
+
+                case 'd':
+                case 'D':
+                    TOGGLE_VAR(OLC_CONFIG(d)->experimental.mob_quests_mob_posted_only);
                     break;
 
                 case '0':

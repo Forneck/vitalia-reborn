@@ -1426,6 +1426,14 @@ int enter_player_game(struct descriptor_data *d)
     d->character->next = character_list;
     character_list = d->character;
     char_to_room(d->character, load_room);
+    /* Escort quest whose escorted mob no longer exists (reboot, or extracted while offline):
+     * rebind it to a new escort next to the player instead of leaving the quest uncompletable */
+    if (GET_QUEST_TYPE(d->character) == AQ_MOB_ESCORT && !find_escort_mob_by_id(GET_ESCORT_MOB_ID(d->character))) {
+        qst_rnum esc_rnum = real_quest(GET_QUEST(d->character));
+        GET_ESCORT_MOB_ID(d->character) = NOBODY;
+        if (esc_rnum != NOTHING)
+            spawn_escort_mob(d->character, esc_rnum);
+    }
     load_result = Crash_load(d->character);
     /* Save the character and their object file */
     save_char(d->character);

@@ -3502,7 +3502,7 @@ int is_empty(zone_rnum zone_nr)
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE *fl, const char *error)
 {
-    char buf[MAX_STRING_LENGTH], tmp[513];
+    char buf[MAX_STRING_LENGTH], tmp[514]; /* 511 chars from fgets + "\r\n" + '\0' */
     char *point;
     int done = 0, length = 0, templength;
 
@@ -3516,16 +3516,18 @@ char *fread_string(FILE *fl, const char *error)
         /* If there is a '~', end the string; else put an "\r\n" over the
            '\n'. */
         /* now only removes trailing ~'s -- Welcor */
+        /* Strip the line ending without walking before the start of tmp
+         * (an empty line used to read and possibly write tmp[-1]). */
         point = strchr(tmp, '\0');
-        for (point--; (*point == '\r' || *point == '\n'); point--)
-            ;
-        if (*point == '~') {
-            *point = '\0';
+        while (point > tmp && (point[-1] == '\r' || point[-1] == '\n'))
+            point--;
+        if (point > tmp && point[-1] == '~') {
+            *(--point) = '\0';
             done = 1;
         } else {
-            *(++point) = '\r';
-            *(++point) = '\n';
-            *(++point) = '\0';
+            *point++ = '\r';
+            *point++ = '\n';
+            *point = '\0';
         }
 
         templength = point - tmp;
@@ -3549,7 +3551,7 @@ char *fread_string(FILE *fl, const char *error)
    spaces */
 char *fread_clean_string(FILE *fl, const char *error)
 {
-    char buf[MAX_STRING_LENGTH], tmp[513];
+    char buf[MAX_STRING_LENGTH], tmp[514]; /* 511 chars from fgets + "\r\n" + '\0' */
     char *point, c;
     int done = 0, length = 0, templength;
 
@@ -3572,16 +3574,18 @@ char *fread_clean_string(FILE *fl, const char *error)
         /* If there is a '~', end the string; else put an "\r\n" over the
            '\n'. */
         /* now only removes trailing ~'s -- Welcor */
+        /* Strip the line ending without walking before the start of tmp
+         * (an empty line used to read and possibly write tmp[-1]). */
         point = strchr(tmp, '\0');
-        for (point--; (*point == '\r' || *point == '\n'); point--)
-            ;
-        if (*point == '~') {
-            *point = '\0';
+        while (point > tmp && (point[-1] == '\r' || point[-1] == '\n'))
+            point--;
+        if (point > tmp && point[-1] == '~') {
+            *(--point) = '\0';
             done = 1;
         } else {
-            *(++point) = '\r';
-            *(++point) = '\n';
-            *(++point) = '\0';
+            *point++ = '\r';
+            *point++ = '\n';
+            *point = '\0';
         }
 
         templength = point - tmp;
@@ -4625,6 +4629,7 @@ static void load_default_config(void)
     CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;          /* Default: NO - Emotions don't affect alignment (experimental) */
     CONFIG_MOB_GOSSIP_CHANCE = MALP_GOSSIP_CHANCE; /* Default: 10% chance per tick */
     CONFIG_MOB_GOSSIP_COOLDOWN = MALP_GOSSIP_COOLDOWN_SECS; /* Default: 300 s per listener–target pair */
+    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = YES;                /* Default: autonomous mobs only take mob-posted quests */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -5106,6 +5111,8 @@ void load_config(void)
                     CONFIG_EMOTION_DECAY_RATE_HUMILIATION = num;
                 else if (!str_cmp(tag, "emotion_decay_rate_envy"))
                     CONFIG_EMOTION_DECAY_RATE_ENVY = num;
+                else if (!str_cmp(tag, "emotion_alignment_shifts"))
+                    CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
                 break;
 
             case 'f':
@@ -5238,6 +5245,12 @@ void load_config(void)
                     CONFIG_MALP_DECAY_HALFLIFE_MAJOR = LIMIT(num, 1, 2160);
                 else if (!str_cmp(tag, "mplp_decay_halflife"))
                     CONFIG_MPLP_DECAY_HALFLIFE = LIMIT(num, 1, 8760);
+                else if (!str_cmp(tag, "mob_quests_mob_posted_only"))
+                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = num;
+                else if (!str_cmp(tag, "max_mob_posted_quests"))
+                    CONFIG_MAX_MOB_POSTED_QUESTS = num;
+                else if (!str_cmp(tag, "mob_4d_debug"))
+                    CONFIG_MOB_4D_DEBUG = num;
 
                 break;
 
@@ -5412,12 +5425,6 @@ void load_config(void)
                     CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
                 else if (!str_cmp(tag, "weather_effect_multiplier"))
                     CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
-                else if (!str_cmp(tag, "max_mob_posted_quests"))
-                    CONFIG_MAX_MOB_POSTED_QUESTS = num;
-                else if (!str_cmp(tag, "emotion_alignment_shifts"))
-                    CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
-                else if (!str_cmp(tag, "mob_4d_debug"))
-                    CONFIG_MOB_4D_DEBUG = num;
                 break;
 
             default:

@@ -132,6 +132,8 @@ void set_mob_quest_level_range(struct aq_data *quest, int target_level);
 int calculate_mob_quest_gold(struct char_data *poster, int target_level, int difficulty, int offered);
 int calculate_mob_quest_exp(int target_level, int difficulty);
 int calculate_mob_quest_points(int target_level, int difficulty);
+int mob_escort_travel_desire(struct char_data *ch);
+room_vnum find_escort_destination(struct char_data *ch);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);
@@ -1436,6 +1438,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_ALIGNMENT_SHIFTS config_info.experimental.emotion_alignment_shifts
 /** Log 4D decision-space raw and effective values for debugging */
 #define CONFIG_MOB_4D_DEBUG config_info.experimental.mob_4d_debug
+#define CONFIG_MOB_QUESTS_MOB_POSTED_ONLY config_info.experimental.mob_quests_mob_posted_only
 /** Probability (%) of mob gossiping per emotion tick (default: 10) */
 #define CONFIG_MOB_GOSSIP_CHANCE config_info.experimental.mob_gossip_chance
 /** Seconds between gossip updates for the same listener-target pair (default: 300) */
