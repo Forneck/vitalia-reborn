@@ -1269,6 +1269,7 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
         struct shadow_projection *p;
         const char *action_name;
         const char *target_name = "none";
+        char move_label[48];
 
         for (int i = 0; i < ctx->num_projections && i < SHADOW_MAX_PROJECTIONS; i++) {
             if (!used[i] && ctx->projections[i].outcome.score > best_score) {
@@ -1284,7 +1285,14 @@ static void do_stat_shadow(struct char_data *ch, struct char_data *mob)
         p = &ctx->projections[best_idx];
         action_name =
             (p->action.type >= 0 && p->action.type < SHADOW_ACTION_MAX) ? action_names[p->action.type] : "UNKNOWN";
-        if (p->action.target) {
+        /* MOVE projections are one per exit: show which way and where to */
+        if (p->action.type == SHADOW_ACTION_MOVE && p->action.direction >= 0 && p->action.direction < NUM_OF_DIRS &&
+            IN_ROOM(mob) != NOWHERE && EXIT(mob, p->action.direction) &&
+            EXIT(mob, p->action.direction)->to_room != NOWHERE) {
+            snprintf(move_label, sizeof(move_label), "%s->%d", dirs_pt[p->action.direction],
+                     GET_ROOM_VNUM(EXIT(mob, p->action.direction)->to_room));
+            target_name = move_label;
+        } else if (p->action.target) {
             if (p->action.type == SHADOW_ACTION_USE_ITEM) {
                 struct obj_data *target_obj = (struct obj_data *)p->action.target;
                 if (target_obj && target_obj->short_description)
