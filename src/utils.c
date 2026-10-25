@@ -4040,18 +4040,6 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         return;
     }
 
-    /* The destination must be reachable on foot without keys (whoever takes the
-     * quest walks it with the escorted mob); longer journeys pay more */
-    distance = bfs_distance_unlocked(IN_ROOM(ch), dest_room_rnum);
-    /* Mobs taking the quest give up on goals after 150 ticks (one step per tick) */
-    if (distance < 5 || distance > 120) {
-        /* No path (BFS error codes are negative), too close to need an escort, or too far.
-         * Mobs in isolated areas would otherwise retry every tick and hog the
-         * destination search, so make them wait before asking again. */
-        ch->ai_data->escort_retry_timer = 60; /* 60 ticks (~10 minutes) */
-        return;
-    }
-
     /* Encontra zona do mob */
     mob_zone = world[IN_ROOM(ch)].zone;
 
@@ -4061,6 +4049,41 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         questmaster_vnum = find_questmaster_for_zone(mob_zone);
     }
     if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    /* The journey starts where the quest is accepted, since that is where the escorted
+     * mob appears: at the questmaster if this mob can reach it (otherwise this mob becomes
+     * a temporary questmaster, see make_mob_temp_questmaster_if_needed()). */
+    {
+        room_rnum origin = IN_ROOM(ch);
+        struct char_data *qm;
+
+        if (mob_can_reach_questmaster(ch, questmaster_vnum)) {
+            for (qm = character_list; qm; qm = qm->next) {
+                if (IS_NPC(qm) && GET_MOB_VNUM(qm) == questmaster_vnum && !MOB_FLAGGED(qm, MOB_NOTDEADYET) &&
+                    IN_ROOM(qm) != NOWHERE) {
+                    origin = IN_ROOM(qm);
+                    break;
+                }
+            }
+        }
+
+        /* An escort to another town: the destination must not be where the journey starts */
+        if (world[origin].zone == world[dest_room_rnum].zone) {
+            return;
+        }
+
+        /* The destination must be reachable on foot without keys (whoever takes the
+         * quest walks it with the escorted mob); longer journeys pay more */
+        distance = bfs_distance_unlocked(origin, dest_room_rnum);
+    }
+    /* Mobs taking the quest give up on goals after 150 ticks (one step per tick) */
+    if (distance < 5 || distance > 120) {
+        /* No path (BFS error codes are negative), too close to need an escort, or too far.
+         * Mobs in isolated areas would otherwise retry every tick and hog the
+         * destination search, so make them wait before asking again. */
+        ch->ai_data->escort_retry_timer = 60; /* 60 ticks (~10 minutes) */
         return;
     }
 
