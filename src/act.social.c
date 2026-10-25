@@ -86,8 +86,9 @@ ACMD(do_action)
                 return;
             }
         }
+        /* act(), not send_to_char(): the messages use codes like $r (o/a for the actor's gender) */
         if (action->not_found)
-            send_to_char(ch, "%s\r\n", action->not_found);
+            act(action->not_found, FALSE, ch, 0, 0, TO_CHAR);
         else
             send_to_char(ch, "Eu não vejo nada com este nome aqui.\r\n");
         return;
@@ -319,7 +320,11 @@ ACMD(do_gmote)
         }
         snprintf(buf, sizeof(buf), "Gemote: %s", action->others_no_arg);
     } else if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_WORLD))) {
-        send_to_char(ch, "%s\r\n", action->not_found);
+        /* act(), not send_to_char(): the messages use codes like $r (o/a for the actor's gender) */
+        if (action->not_found)
+            act(action->not_found, FALSE, ch, 0, 0, TO_CHAR);
+        else
+            send_to_char(ch, "Eu não vejo nada com este nome aqui.\r\n");
         return;
     } else if (vict == ch) {
         if (!action->others_auto || !*action->others_auto) {
