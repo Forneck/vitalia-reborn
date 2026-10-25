@@ -2625,6 +2625,16 @@ int mob_escort_travel_desire(struct char_data *ch)
     if (!IS_NPC(ch) || !ch->ai_data)
         return 0;
 
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return 0;
+
+    /* Only townsfolk and travellers ask for escorts: mobs in houses, cities or on roads.
+     * Keeps fish, beasts of the wild and mounts from hiring bodyguards. */
+    if (MOB_FLAGGED(ch, MOB_MOUNTABLE))
+        return 0;
+    if (SECT(IN_ROOM(ch)) != SECT_INSIDE && SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_ROAD)
+        return 0;
+
     desire += (100 - GET_GENBRAVE(ch)) / 25; /* 0-4: afraid to travel alone */
     desire += GET_GENTRADE(ch) / 25;         /* 0-4: merchants seek other markets */
     desire += GET_GENROAM(ch) / 50;          /* 0-2: wanderlust */
@@ -4032,8 +4042,13 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
 
     /* The destination must be reachable on foot; longer journeys pay more */
     distance = bfs_distance(IN_ROOM(ch), dest_room_rnum);
-    if (distance < 5) {
-        return; /* No path (BFS error codes are negative) or too close to need an escort */
+    /* Mobs taking the quest give up on goals after 150 ticks (one step per tick) */
+    if (distance < 5 || distance > 120) {
+        /* No path (BFS error codes are negative), too close to need an escort, or too far.
+         * Mobs in isolated areas would otherwise retry every tick and hog the
+         * destination search, so make them wait before asking again. */
+        ch->ai_data->escort_retry_timer = 60; /* 60 ticks (~10 minutes) */
+        return;
     }
 
     /* Encontra zona do mob */

@@ -1075,6 +1075,9 @@ void mobile_activity(void)
             ch->ai_data->duty_frustration_timer--;
         }
 
+        if (ch->ai_data && ch->ai_data->escort_retry_timer > 0)
+            ch->ai_data->escort_retry_timer--;
+
         if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
             ch->ai_data->quest_posting_frustration_timer--;
         }
@@ -2167,6 +2170,7 @@ void mobile_activity(void)
          * to a town in another zone (not for charmed, aggressive or unkillable mobs) */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && !MOB_FLAGGED(ch, MOB_AGGRESSIVE) &&
             !MOB_FLAGGED(ch, MOB_NOKILL) && !is_mob_excluded_from_quests(ch) && GET_GOLD(ch) > 150 &&
+            ch->ai_data->escort_retry_timer <= 0 && ch->ai_data->quest_posting_frustration_timer <= 0 &&
             rand_number(1, 1000) <= mob_escort_travel_desire(ch) &&
             !mob_posted_quest_exists(AQ_MOB_ESCORT, GET_MOB_VNUM(ch), GET_MOB_VNUM(ch))) {
             room_vnum escort_dest = find_escort_destination(ch);
@@ -3467,8 +3471,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 return FALSE;
 
             if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone)) {
-                /* For shopping goals, be more willing to cross zones */
+                /* For shopping goals, be more willing to cross zones; escorts lead to another zone by definition */
                 int zone_cross_chance = (ch->ai_data && ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) ? 25 : 1;
+                if (ch->ai_data && ch->ai_data->current_goal == GOAL_COMPLETE_QUEST &&
+                    ch->ai_data->escort_mob_id != NOBODY)
+                    zone_cross_chance = 100;
                 if (rand_number(1, 100) > zone_cross_chance) {
                     return TRUE; /* Hesitou e gastou o turno. */
                 }
@@ -5167,6 +5174,10 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (ch->ai_data->current_goal != GOAL_NONE || GET_MOB_QUEST(ch) != NOTHING)
         return FALSE;
 
+    /* Followers (including mobs being escorted) don't wander off to look for work */
+    if (ch->master)
+        return FALSE;
+
     /* Check if frustrated from recent quest activities (cheap check) */
     if (ch->ai_data->quest_posting_frustration_timer > 0)
         return FALSE;
@@ -5587,40 +5598,58 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             }
             break;
 
-        case AQ_MOB_ESCORT:
-            /* Escort mob to destination - simplified: follow target mob */
+        case AQ_MOB_ESCORT: {
+            /* Lead the escorted mob (spawned on acceptance, following us) to the destination */
+            struct char_data *escort;
+
             /* Validate room before accessing */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
                 return FALSE;
-            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
-            if (target_mob) {
-                /* Found escort target, check if at destination */
-                target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
-                /* Validate target_mob's room before accessing */
-                if (target_room != NOWHERE && IN_ROOM(target_mob) != NOWHERE && IN_ROOM(target_mob) == target_room) {
-                    mob_complete_quest(ch);
-                    ch->ai_data->current_goal = GOAL_NONE;
-                    return TRUE;
-                }
-                /* Stay near escort target - don't move away */
-                return TRUE;
-            } else {
-                /* Lost escort target, search for them in the world */
-                target_mob = find_mob_by_vnum(QST_TARGET(quest_rnum));
-                if (target_mob && IN_ROOM(target_mob) != NOWHERE) {
-                    ch->ai_data->goal_destination = IN_ROOM(target_mob);
-                    mob_goal_oriented_roam(ch, IN_ROOM(target_mob));
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return TRUE;
-                } else {
-                    /* Escort target not found, roam to search */
-                    mob_goal_oriented_roam(ch, NOWHERE);
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        return TRUE;
-                }
+
+            target_room = real_room(QST_RETURNMOB(quest_rnum)); /* Using RETURNMOB as destination for escort */
+            escort = find_escort_mob_by_id(ch->ai_data->escort_mob_id);
+            if (!escort || target_room == NOWHERE || IN_ROOM(escort) == NOWHERE) {
+                /* Escorted mob is gone (or quest is broken): the escort failed */
+                fail_mob_quest(ch, "escort lost");
                 return TRUE;
             }
-            break;
+
+            if (IN_ROOM(escort) != IN_ROOM(ch)) {
+                /* Got separated: go back for the escorted mob */
+                ch->ai_data->goal_destination = IN_ROOM(escort);
+                mob_goal_oriented_roam(ch, IN_ROOM(escort));
+                return TRUE;
+            }
+
+            /* Make sure the escorted mob keeps following us */
+            if (escort->master != ch) {
+                if (escort->master)
+                    stop_follower(escort);
+                add_follower(escort, ch);
+            }
+
+            /* Back together with the escorted mob: that's progress, not a stuck goal */
+            ch->ai_data->goal_timer = 0;
+
+            if (IN_ROOM(ch) == target_room) {
+                act("$N diz, 'Muito obrigado por me trazer até aqui em segurança!'", FALSE, ch, 0, escort, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
+                /* Rewards the mob; clearing the quest sends the escorted mob on its way */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            }
+
+            /* Don't walk away from a fight, the escorted mob would be left behind */
+            if (FIGHTING(ch) || FIGHTING(escort))
+                return TRUE;
+
+            ch->ai_data->goal_destination = target_room;
+            mob_goal_oriented_roam(ch, target_room);
+            return TRUE;
+        }
 
         case AQ_MAGIC_GATHER:
             /* Mob needs to visit locations with high magical density */

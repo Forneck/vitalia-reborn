@@ -122,6 +122,7 @@ ACMD(do_quest);
 bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum);
 bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum);
 void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer);
+struct char_data *find_escort_mob_by_id(long id);
 
 /* Bounty Quest Functions */
 bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum);

@@ -25,6 +25,7 @@
 #include "spells.h"          /* for calculate_mana_density */
 #include "act.h"             /* for do_tell */
 #include "dg_scripts.h"      /* for char_script_id */
+#include "graph.h"           /* for bfs_distance */
 #include "modify.h"          /* for page_string */
 #include "shadow_timeline.h" /* for cognitive capacity constants */
 #include "sec.h"             /* for sec_init */
@@ -818,8 +819,14 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     /* Place mob in the same room as the player */
     char_to_room(mob, IN_ROOM(ch));
 
-    /* Store the mob's ID for tracking */
-    GET_ESCORT_MOB_ID(ch) = GET_IDNUM(mob);
+    /* Store the mob's unique instance ID for tracking. Mobs don't have unique
+     * idnums (every instance shares its prototype's), so use the script id. */
+    if (IS_NPC(ch)) {
+        if (ch->ai_data)
+            ch->ai_data->escort_mob_id = char_script_id(mob);
+    } else {
+        GET_ESCORT_MOB_ID(ch) = char_script_id(mob);
+    }
 
     /* Make escort mob non-aggressive (but not invulnerable) */
     REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGRESSIVE);
@@ -893,10 +900,7 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
         return FALSE;
 
     /* Find the escort mob by ID */
-    for (escort_mob = character_list; escort_mob; escort_mob = escort_mob->next) {
-        if (IS_NPC(escort_mob) && GET_IDNUM(escort_mob) == GET_ESCORT_MOB_ID(ch))
-            break;
-    }
+    escort_mob = find_escort_mob_by_id(GET_ESCORT_MOB_ID(ch));
 
     /* If escort mob not found or not in same room, quest not complete */
     if (!escort_mob || IN_ROOM(escort_mob) != IN_ROOM(ch))
@@ -965,6 +969,24 @@ static void trigger_quest_failure_emotion(struct char_data *entity, qst_rnum rnu
     }
 }
 
+/** Find a spawned escort mob by its script id.
+ * @param id The id stored when the escort was spawned (NOBODY for none).
+ * @return The escort mob, or NULL if it no longer exists. */
+struct char_data *find_escort_mob_by_id(long id)
+{
+    struct char_data *mob;
+
+    if (id == NOBODY || id == 0)
+        return NULL;
+
+    for (mob = character_list; mob; mob = mob->next) {
+        if (IS_NPC(mob) && mob->script_id == id && !MOB_FLAGGED(mob, MOB_NOTDEADYET))
+            return mob;
+    }
+
+    return NULL;
+}
+
 /** Called when an escort mob dies - fails the escort quest.
  * @param escort_mob The escort mob that died.
  * @param killer The character who killed the mob (can be NULL). */
@@ -972,16 +994,33 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
 {
     struct char_data *ch;
     qst_rnum rnum;
+    long escort_id;
 
     if (!IS_NPC(escort_mob))
         return;
+
+    /* Escort mobs always get a script id when spawned; a mob without one isn't escorted */
+    escort_id = escort_mob->script_id;
+    if (escort_id == 0)
+        return;
+
+    /* Find the mob escorting this mob */
+    for (ch = character_list; ch; ch = ch->next) {
+        if (IS_NPC(ch) && ch->ai_data && ch->ai_data->escort_mob_id == escort_id) {
+            /* Forget the escort first so clearing the quest doesn't try to extract it again */
+            ch->ai_data->escort_mob_id = NOBODY;
+            act("$n parece arrasado por não ter protegido quem escoltava.", TRUE, ch, NULL, NULL, TO_ROOM);
+            fail_mob_quest(ch, "escort died");
+            return;
+        }
+    }
 
     /* Find the player escorting this mob */
     for (ch = character_list; ch; ch = ch->next) {
         if (IS_NPC(ch))
             continue;
 
-        if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == GET_IDNUM(escort_mob)) {
+        if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == escort_id) {
             /* Get quest info for penalty */
             rnum = real_quest(GET_QUEST(ch));
 
@@ -2587,6 +2626,26 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
     mob->ai_data->quest_timer = QST_TIME(rnum);
     mob->ai_data->quest_counter = QST_QUANTITY(rnum) > 0 ? QST_QUANTITY(rnum) : 1;
 
+    /* Escort quests: the mob that accepts brings the escorted mob along, like a player does */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT) {
+        room_rnum dest = real_room(QST_RETURNMOB(rnum));
+
+        mob->ai_data->escort_mob_id = NOBODY;
+        if (dest == NOWHERE || IN_ROOM(mob) == NOWHERE || !spawn_escort_mob(mob, rnum)) {
+            mob->ai_data->current_quest = NOTHING;
+            mob->ai_data->quest_timer = 0;
+            mob->ai_data->quest_counter = 0;
+            return;
+        }
+
+        /* Escorts have no time limit for players; give mobs one proportional to the
+         * journey (one step per mobile tick) so a lost escort can't hold the mob forever */
+        if (mob->ai_data->quest_timer <= 0) {
+            int distance = bfs_distance(IN_ROOM(mob), dest);
+            mob->ai_data->quest_timer = (distance > 0) ? distance * 2 + 30 : 120;
+        }
+    }
+
     /* Automatically set the goal to GOAL_COMPLETE_QUEST so the mob actively pursues the quest.
      * This ensures that when a mob accepts a quest, it will immediately start working on it
      * rather than waiting for a random chance to trigger quest processing. */
@@ -2642,6 +2701,11 @@ void set_mob_quest(struct char_data *mob, qst_rnum rnum)
             mob->ai_data->goal_target_mob_rnum = NOBODY;
             break;
     }
+
+    /* Escorts: head for the destination; the goal loop only processes the quest
+     * on arrival at goal_destination (see mob_process_quest_completion) */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT)
+        mob->ai_data->goal_destination = real_room(QST_RETURNMOB(rnum));
 }
 
 /* Clear a quest from a mob */
@@ -2653,6 +2717,19 @@ void clear_mob_quest(struct char_data *mob)
     mob->ai_data->current_quest = NOTHING;
     mob->ai_data->quest_timer = 0;
     mob->ai_data->quest_counter = 0;
+
+    /* Escort quest over (completed, failed or abandoned): the escorted mob goes on its way */
+    if (mob->ai_data->escort_mob_id != NOBODY) {
+        struct char_data *escort = find_escort_mob_by_id(mob->ai_data->escort_mob_id);
+
+        /* Forget it first so its extraction doesn't fail this (already cleared) quest */
+        mob->ai_data->escort_mob_id = NOBODY;
+        if (escort) {
+            if (escort->master)
+                stop_follower(escort);
+            extract_char(escort);
+        }
+    }
 
     /* If mob was working on quest completion, clear that goal */
     if (mob->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -3591,6 +3668,7 @@ void init_mob_ai_data(struct char_data *mob)
         return;
 
     mob->ai_data->is_temp_questmaster = FALSE;
+    mob->ai_data->escort_mob_id = NOBODY;
     mob->ai_data->temp_quests = NULL;
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;

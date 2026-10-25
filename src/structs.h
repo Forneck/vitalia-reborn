@@ -1472,6 +1472,8 @@ struct mob_ai_data {
     qst_vnum current_quest; /* Quest ativa atual do mob (se houver) */
     int quest_timer;        /* Timer para a quest atual */
     int quest_counter;      /* Contador de progresso da quest */
+    long escort_mob_id;     /* script id do mob sendo escoltado (AQ_MOB_ESCORT), NOBODY se nenhum */
+    int escort_retry_timer; /* Ticks até poder pedir escolta de novo (ex.: sem rota até o destino) */
 
     /* Emotion system for contextual behavior (0-100 scale) */
     /* Basic emotions */

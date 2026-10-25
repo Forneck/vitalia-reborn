@@ -1127,6 +1127,9 @@ void extract_char_final(struct char_data *ch)
     /* Check if this is an escort mob and fail the quest if so */
     if (IS_NPC(ch)) {
         fail_escort_quest(ch, NULL);
+        /* A mob that was escorting someone releases them (the escorted mob leaves) */
+        if (ch->ai_data && ch->ai_data->escort_mob_id != NOBODY)
+            clear_mob_quest(ch);
     }
 
     /* On with the character's assets... */
