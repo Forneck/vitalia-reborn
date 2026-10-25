@@ -1448,6 +1448,18 @@ void mobile_activity(void)
             }
 
             /* Handle goals that don't require movement */
+            /* Escorts are led step by step: the generic goal walk below only processes the
+             * quest on arrival, so it would never notice the escorted mob falling behind. */
+            if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST && ch->ai_data->escort_mob_id != NOBODY &&
+                GET_MOB_QUEST(ch) != NOTHING) {
+                qst_rnum escort_rnum = real_quest(GET_MOB_QUEST(ch));
+                if (escort_rnum != NOTHING)
+                    mob_process_quest_completion(ch, escort_rnum);
+                else
+                    clear_mob_quest(ch);
+                continue;
+            }
+
             if (ch->ai_data->current_goal == GOAL_HUNT_TARGET || ch->ai_data->current_goal == GOAL_GET_GOLD) {
 
                 /* For hunting, implement basic hunting behavior */
@@ -5647,6 +5659,15 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             /* Don't walk away from a fight, the escorted mob would be left behind */
             if (FIGHTING(ch) || FIGHTING(escort))
                 return TRUE;
+
+            /* Only standing followers follow (perform_move): get the escorted mob up first */
+            if (GET_POS(escort) < POS_STANDING) {
+                if (GET_POS(escort) > POS_STUNNED) {
+                    GET_POS(escort) = POS_STANDING;
+                    act("$n se levanta, pronto para seguir viagem.", TRUE, escort, 0, 0, TO_ROOM);
+                }
+                return TRUE; /* move on next tick */
+            }
 
             ch->ai_data->goal_destination = target_room;
             mob_goal_oriented_roam(ch, target_room);
