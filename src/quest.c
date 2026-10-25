@@ -981,19 +981,14 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
  */
 static struct char_data *find_questmaster_in_room(struct char_data *entity, qst_rnum rnum)
 {
-    mob_rnum questmaster_rnum;
     struct char_data *temp_char;
 
     if (!entity || IN_ROOM(entity) == NOWHERE || rnum == NOTHING)
         return NULL;
 
-    questmaster_rnum = real_mobile(QST_MASTER(rnum));
-    if (questmaster_rnum == NOBODY)
-        return NULL;
-
-    /* Look for questmaster in current room */
+    /* Look for the quest's questmaster (or a temporary questmaster holding it) in current room */
     for (temp_char = world[IN_ROOM(entity)].people; temp_char; temp_char = temp_char->next_in_room) {
-        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+        if (IS_NPC(temp_char) && qm_offers_quest(temp_char, rnum)) {
             /* For mob quests, skip if questmaster is the mob itself */
             if (IS_NPC(entity) && temp_char == entity)
                 continue;
@@ -2998,15 +2993,15 @@ void mob_complete_quest(struct char_data *mob)
     }
 
     /* Notify the room that the mob completed a quest (similar to player flow) */
+    struct char_data *questmaster = find_questmaster_in_room(mob, rnum);
     act("$n completou uma busca.", TRUE, mob, NULL, NULL, TO_ROOM);
+    if (questmaster)
+        act("$n presta contas da tarefa a $N.", TRUE, mob, NULL, questmaster, TO_ROOM);
     act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, NULL, NULL, TO_ROOM);
 
     /* Emotion trigger: Quest completion - update questmaster emotions if nearby */
-    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(mob) != NOWHERE) {
-        struct char_data *questmaster = find_questmaster_in_room(mob, rnum);
-        if (questmaster && questmaster->ai_data) {
-            update_mob_emotion_quest_completed(questmaster, mob);
-        }
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && questmaster && questmaster->ai_data) {
+        update_mob_emotion_quest_completed(questmaster, mob);
     }
 
     /* Clear the quest from the mob's state */

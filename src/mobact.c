@@ -1323,6 +1323,19 @@ void mobile_activity(void)
                                                 goto shadow_feedback_and_continue;
                                         }
                                     }
+                                } else if (IS_NPC(questmaster) && IN_ROOM(questmaster) != NOWHERE &&
+                                           ch->ai_data->current_goal == GOAL_NONE && !ch->master) {
+                                    /* Questmaster (regular or temporary) is elsewhere: walk there and
+                                     * accept the chosen quest on arrival, like mob_try_to_accept_quest() */
+                                    ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
+                                    ch->ai_data->goal_destination = IN_ROOM(questmaster);
+                                    ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                                    ch->ai_data->goal_item_vnum = action.quest_vnum;
+                                    ch->ai_data->goal_timer = 0;
+                                    act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
+                                    shadow_action_executed = TRUE;
+                                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                        goto shadow_feedback_and_continue;
                                 }
                             }
                         }
