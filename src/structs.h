@@ -1116,6 +1116,8 @@ struct mob_wishlist_item {
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 #define ENTITY_TYPE_GLOBAL 2 /**< Sentinel for context-global MPLP traits (not agent-anchored) */
+#define ENTITY_TYPE_MOB_SPECIES                                                                                        \
+    3 /**< Mob prototype (agent id = vnum): what a mob learned about a kind of creature once the individual is gone */
 
 /* Emotional profiles for mob personality initialization */
 #define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
@@ -1219,6 +1221,7 @@ struct emotion_4d_state {
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
     long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
+    mob_vnum entity_vnum; /* Mob prototype vnum (NOBODY for players): lets MALP generalise to the species */
     int interaction_type; /* Type of interaction (INTERACT_*) */
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
@@ -1390,7 +1393,8 @@ struct malp_cache_slot {
  */
 struct malp_entry {
     long agent_id;         /**< Entity ID (GET_IDNUM for players, char_script_id for mobs; 0=unused) */
-    int agent_type;        /**< ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    int agent_type;        /**< ENTITY_TYPE_PLAYER, ENTITY_TYPE_MOB or ENTITY_TYPE_MOB_SPECIES */
+    mob_vnum agent_vnum;   /**< Mob prototype vnum of the agent (NOBODY if unknown / player) */
     int interaction_type;  /**< INTERACT_* category at consolidation time */
     int major_event;       /**< 1 = major/traumatic event; drives HIGH persistence */
     time_t timestamp;      /**< Wall-clock creation time */

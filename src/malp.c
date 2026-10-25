@@ -502,6 +502,92 @@ static float powerlaw_intensity(time_t timestamp, int half_life_hours)
     return intensity;
 }
 
+/**
+ * Fold the memory of a mob that no longer exists into the memory of its species.
+ *
+ * A mob that got along with a dog that died becomes friendlier towards dogs in
+ * general; a bad experience makes it warier of the whole kind.  The species
+ * memory is weaker than the individual one (MALP_SPECIES_TRANSFER) and, when it
+ * already exists, is blended with the new evidence weighted by intensity.
+ *
+ * May grow (realloc) ai->malp: callers must address entries by index, not by
+ * pointer, across this call.
+ *
+ * @param mob The remembering mob.
+ * @param idx Index of the individual entry in mob->ai_data->malp (not removed here).
+ */
+static void malp_fold_into_species(struct char_data *mob, int idx)
+{
+    struct mob_ai_data *ai = mob->ai_data;
+    struct malp_entry gone = ai->malp[idx]; /* copy: malp_grow() may move the array */
+    struct malp_entry *sp = NULL;
+    int j;
+
+    if (gone.agent_vnum == NOBODY)
+        return; /* species unknown: nothing to generalise */
+
+    for (j = 0; j < ai->malp_count; j++) {
+        if (ai->malp[j].agent_type == ENTITY_TYPE_MOB_SPECIES && ai->malp[j].agent_id == (long)gone.agent_vnum) {
+            sp = &ai->malp[j];
+            break;
+        }
+    }
+
+    float carried = gone.salience * MALP_SPECIES_TRANSFER;
+
+    if (sp) {
+        /* Blend: stronger memories weigh more */
+        float w_new = gone.intensity * MALP_SPECIES_TRANSFER;
+        float w_old = sp->intensity;
+        float w = (w_new + w_old > 0.0f) ? w_new / (w_new + w_old) : 0.5f;
+
+        sp->valence = (1.0f - w) * sp->valence + w * gone.valence;
+        sp->arousal = (1.0f - w) * sp->arousal + w * gone.arousal;
+        if (carried > sp->salience)
+            sp->salience = carried;
+        if (gone.timestamp > sp->timestamp)
+            sp->timestamp = gone.timestamp; /* freshest evidence about the species */
+        if (gone.persistence > sp->persistence)
+            sp->persistence = gone.persistence;
+        if (gone.major_event)
+            sp->major_event = 1;
+        sp->interaction_type = classify_social_itype(sp->interaction_type, sp->valence);
+        return;
+    }
+
+    if (!malp_grow(mob)) {
+        log1("MALP: memory allocation failure for mob %s while generalising to species %d", GET_NAME(mob),
+             gone.agent_vnum);
+        return;
+    }
+
+    sp = &ai->malp[ai->malp_count];
+    *sp = gone;
+    sp->agent_type = ENTITY_TYPE_MOB_SPECIES;
+    sp->agent_id = (long)gone.agent_vnum;
+    sp->salience = carried;
+    sp->intensity = gone.intensity * MALP_SPECIES_TRANSFER;
+    sp->rehearsal = 0;
+    sp->recon_ticks_left = 0;
+    sp->last_retrieved = 0;
+    sp->last_applied = 0;
+    sp->first_valence = gone.valence; /* first impression of the species = what this individual left */
+    ai->malp_count++;
+}
+
+/**
+ * Last time an entry was encoded, retrieved or acted upon.
+ */
+static time_t malp_last_activity(const struct malp_entry *e)
+{
+    time_t t = e->timestamp;
+    if (e->last_retrieved > t)
+        t = e->last_retrieved;
+    if (e->last_applied > t)
+        t = e->last_applied;
+    return t;
+}
+
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
 void malp_free(struct char_data *mob)
@@ -582,6 +668,31 @@ void malp_decay_tick(struct char_data *mob)
          * which will agree to within a fraction of a second). */
         time_t now = time(0);
         float best_avail = 0.0f;
+
+        /* Forget what can no longer matter, before decaying:
+         *  - memories of mobs that no longer exist are folded into the memory of
+         *    their species and dropped (script ids are never reused within a boot,
+         *    and find_char() is an O(1) hash lookup);
+         *  - entries nobody encoded, retrieved or used for too long expire.
+         * Dropped entries get agent_id = 0 and are removed by the compaction below.
+         * Index-based on purpose: folding may append species entries (realloc). */
+        {
+            int count = ai->malp_count; /* species entries appended below are not re-examined */
+            for (i = 0; i < count; i++) {
+                struct malp_entry *e = &ai->malp[i];
+                if (e->agent_id == 0)
+                    continue;
+                if (e->agent_type == ENTITY_TYPE_MOB && !find_char(e->agent_id)) {
+                    malp_fold_into_species(mob, i);
+                    ai->malp[i].agent_id = 0;
+                    continue;
+                }
+                int max_idle = (e->major_event || e->persistence == MALP_PERSIST_HIGH) ? MALP_MAX_IDLE_HOURS_MAJOR
+                                                                                       : MALP_MAX_IDLE_HOURS_STD;
+                if (now - malp_last_activity(e) > (time_t)max_idle * 3600)
+                    e->agent_id = 0;
+            }
+        }
 
         int alive = 0;
         for (i = 0; i < ai->malp_count; i++) {
@@ -666,6 +777,10 @@ void malp_decay_tick(struct char_data *mob)
             struct mplp_trait *t = &ai->mplp[i];
             if (t->anchor_agent_id == 0)
                 continue;
+            /* Traits anchored on a mob that no longer exists can never apply again;
+             * what was learned about its kind lives on in the MALP species memory. */
+            if (t->agent_type == ENTITY_TYPE_MOB && !find_char(t->anchor_agent_id))
+                continue;
             int hl = half_mplp;
             /* Neuroticism rumination: negative-valence MPLP decays slower for high-N mobs */
             if (t->valence < 0.0f) {
@@ -749,6 +864,10 @@ void consolidator_tick(struct char_data *mob)
     do {                                                                                                               \
         if ((mem)->timestamp == 0 || (mem)->entity_id == 0)                                                            \
             break;                                                                                                     \
+        /* Episodes about a mob that no longer exists: its MALP entry was already folded                               \
+         * into its species; re-consolidating would recreate and re-fold it every tick. */                             \
+        if ((mem)->entity_type == ENTITY_TYPE_MOB && !find_char((mem)->entity_id))                                     \
+            break;                                                                                                     \
         float age_hours = (float)(now - (mem)->timestamp) / 3600.0f;                                                   \
         float arousal = slot_arousal(mem);                                                                             \
         float social_w =                                                                                               \
@@ -804,6 +923,7 @@ void consolidator_tick(struct char_data *mob)
             memset(_e, 0, sizeof(struct malp_entry));                                                                  \
             _e->agent_id = (mem)->entity_id;                                                                           \
             _e->agent_type = (mem)->entity_type;                                                                       \
+            _e->agent_vnum = ((mem)->entity_type == ENTITY_TYPE_MOB) ? (mem)->entity_vnum : NOBODY;                    \
             _e->interaction_type = classify_social_itype((mem)->interaction_type, valence);                            \
             _e->major_event = (mem)->major_event;                                                                      \
             _e->timestamp = (mem)->timestamp;                                                                          \
@@ -1003,6 +1123,29 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
     }
 
     return best;
+}
+
+struct malp_entry *get_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight)
+{
+    struct malp_entry *e;
+
+    if (weight)
+        *weight = 1.0f;
+    if (!mob || !actor)
+        return NULL;
+
+    if (!IS_NPC(actor))
+        return get_malp_by_agent(mob, GET_IDNUM(actor), ENTITY_TYPE_PLAYER);
+
+    e = get_malp_by_agent(mob, char_script_id(actor), ENTITY_TYPE_MOB);
+    if (e)
+        return e;
+
+    /* Never met this individual: fall back on what the mob learned about its kind */
+    e = get_malp_by_agent(mob, (long)GET_MOB_VNUM(actor), ENTITY_TYPE_MOB_SPECIES);
+    if (e && weight)
+        *weight = MALP_SPECIES_WEIGHT;
+    return e;
 }
 
 float get_mplp_approach_modifier(struct char_data *mob, long agent_id, int agent_type)
@@ -1559,8 +1702,11 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
     if (agent_id == 0)
         return;
 
-    /* Retrieve best MALP entry (opens reconsolidation window if P_ret >= threshold) */
-    struct malp_entry *malp = get_malp_by_agent(mob, agent_id, agent_type);
+    /* Retrieve best MALP entry (opens reconsolidation window if P_ret >= threshold).
+     * For an NPC the mob never met, this is the memory of its species (weaker). */
+    float memory_weight;
+    struct malp_entry *malp = get_malp_for_actor(mob, actor, &memory_weight);
+    bool species_memory = (malp && malp->agent_type == ENTITY_TYPE_MOB_SPECIES);
 
     /* ── Per-actor social cooldown ───────────────────────────────────────────
      * If MALP emotion effects for this actor were applied within the last
@@ -1594,7 +1740,7 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
     }
 
     if (malp) {
-        float intensity = malp->intensity * dominance_factor;
+        float intensity = malp->intensity * dominance_factor * memory_weight;
         /* Scale effect by intensity */
         int delta = (int)(intensity * (float)MALP_EMOTION_DELTA_MAX);
         if (delta < MALP_EMOTION_DELTA_MIN)
@@ -1621,7 +1767,7 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
          *
          * Passing interaction_valence = 0.0f explicitly suppresses reconsolidation
          * for neutral interactions that should not alter stored memories. */
-        if (malp->recon_ticks_left > 0 && interaction_valence != 0.0f) {
+        if (malp->recon_ticks_left > 0 && interaction_valence != 0.0f && !species_memory) {
             float social_w = (agent_type == ENTITY_TYPE_PLAYER) ? MALP_SOCIAL_WEIGHT_PLAYER : MALP_SOCIAL_WEIGHT_MOB;
             float mob_arousal = get_mob_peak_arousal(mob);
             float new_salience = compute_salience(mob_arousal, malp->rehearsal, social_w, 0.0f);
@@ -2117,6 +2263,7 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
         memset(gossip_entry, 0, sizeof(struct malp_entry));
         gossip_entry->agent_id = target_id;
         gossip_entry->agent_type = target_type;
+        gossip_entry->agent_vnum = best->agent_vnum;
         gossip_entry->interaction_type = best->interaction_type;
         gossip_entry->major_event = 0; /* second-hand knowledge is never a major event */
         gossip_entry->timestamp = now;

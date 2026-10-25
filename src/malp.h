@@ -66,6 +66,23 @@
 /** Arousal threshold above which a new MALP entry is forced to HIGH persistence */
 #define MALP_HIGH_PERSIST_AROUSAL 0.85f
 
+/* ── Species generalisation & idle expiry ─────────────────────────────────
+ * Power-law decay never brings an entry below the 0.05 removal threshold in
+ * practice, so entries about mobs that died piled up as "[gone]" until the
+ * per-mob limit.  Now, when the individual is gone, its memory is folded into
+ * a memory of its species (ENTITY_TYPE_MOB_SPECIES, keyed by vnum): a mob that
+ * got along with a dog that died becomes friendlier to dogs in general, and
+ * the same for bad experiences.  Entries nobody interacted with for too long
+ * expire. */
+/** Fraction of an individual memory's salience carried into its species memory */
+#define MALP_SPECIES_TRANSFER 0.60f
+/** Strength of a species memory when meeting another individual of that species */
+#define MALP_SPECIES_WEIGHT 0.50f
+/** Hours without encoding/retrieval/use after which a LOW/MEDIUM entry expires (7 days) */
+#define MALP_MAX_IDLE_HOURS_STD 168
+/** Same for HIGH-persistence or major-event entries (30 days) */
+#define MALP_MAX_IDLE_HOURS_MAJOR 720
+
 /* ── Dominant-actor feedback loop protection ────────────────────────────── */
 /**
  * Ratio of one actor's rehearsal to total MALP rehearsal above which that actor
@@ -471,6 +488,15 @@ void malp_decay_tick(struct char_data *mob);
  * @return           Pointer into mob->ai_data->malp (do NOT free), or NULL.
  */
 struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int agent_type);
+
+/**
+ * MALP entry that applies to actor: the memory of that individual if the mob
+ * has one, otherwise (for NPC actors) the memory of the actor's species.
+ * @param weight Set to 1.0 for an individual memory, MALP_SPECIES_WEIGHT for a
+ *               species memory; callers scale the memory's effect by it.
+ * @return The entry, or NULL if the mob remembers neither.
+ */
+struct malp_entry *get_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight);
 
 /**
  * Return the approach/avoidance modifier for an agent from MPLP.

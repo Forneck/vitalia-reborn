@@ -53,6 +53,42 @@ static void list_zone_commands_room(struct char_data *ch, room_vnum rvnum);
 static void do_stat_room(struct char_data *ch, struct room_data *rm);
 static void do_stat_object(struct char_data *ch, struct obj_data *j);
 static void do_stat_character(struct char_data *ch, struct char_data *k);
+/* Growable text buffer for long staff listings that are sent with page_string(). */
+struct stat_outbuf {
+    char *buf;
+    size_t len;
+    size_t cap;
+};
+
+static void stat_outbuf_printf(struct stat_outbuf *o, const char *fmt, ...) __attribute__((format(printf, 2, 3)));
+static void stat_outbuf_printf(struct stat_outbuf *o, const char *fmt, ...)
+{
+    va_list args;
+    int need;
+
+    va_start(args, fmt);
+    need = vsnprintf(NULL, 0, fmt, args);
+    va_end(args);
+    if (need < 0)
+        return;
+
+    if (o->len + (size_t)need + 1 > o->cap) {
+        size_t ncap = o->cap ? o->cap : 4096;
+        while (o->len + (size_t)need + 1 > ncap)
+            ncap *= 2;
+        char *nbuf = realloc(o->buf, ncap);
+        if (!nbuf)
+            return;
+        o->buf = nbuf;
+        o->cap = ncap;
+    }
+
+    va_start(args, fmt);
+    vsnprintf(o->buf + o->len, o->cap - o->len, fmt, args);
+    va_end(args);
+    o->len += (size_t)need;
+}
+
 static void do_stat_malp(struct char_data *ch, struct char_data *mob);
 static void do_stat_shadow(struct char_data *ch, struct char_data *mob);
 static void stop_snooping(struct char_data *ch);
@@ -992,18 +1028,26 @@ static void resolve_entity_label(char *buf, size_t bufsz, int etype, long eid)
     const char *suffix = (etype == ENTITY_TYPE_PLAYER) ? "[offline]" : "[gone]";
     struct char_data *found = NULL;
 
-    for (struct char_data *c = character_list; c; c = c->next) {
-        if (etype == ENTITY_TYPE_PLAYER) {
+    /* Species memory: the agent id is the mob prototype's vnum */
+    if (etype == ENTITY_TYPE_MOB_SPECIES) {
+        mob_rnum r = real_mobile((mob_vnum)eid);
+        const char *n = (r != NOBODY) ? mob_proto[r].player.short_descr : NULL;
+        snprintf(buf, bufsz, "Species:%s(v%ld)", (n && *n) ? n : "?", eid);
+        return;
+    }
+
+    if (etype == ENTITY_TYPE_PLAYER) {
+        for (struct char_data *c = character_list; c; c = c->next) {
             if (!IS_NPC(c) && GET_IDNUM(c) == eid) {
                 found = c;
                 break;
             }
-        } else {
-            if (IS_NPC(c) && char_script_id(c) == eid) {
-                found = c;
-                break;
-            }
         }
+    } else {
+        /* O(1) lookup by script id, without assigning ids to every mob as a side effect */
+        found = find_char(eid);
+        if (found && !IS_NPC(found))
+            found = NULL;
     }
 
     if (found) {
@@ -1059,17 +1103,19 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
     }
 
     time_t now = time(NULL);
+    struct stat_outbuf out = {NULL, 0, 0};
 
-    send_to_char(ch, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
-                 CCNRM(ch, C_NRM));
-    send_to_char(ch, "MALP entries: %s%d%s   MPLP traits: %s%d%s\r\n", CCCYN(ch, C_NRM), mob->ai_data->malp_count,
-                 CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), mob->ai_data->mplp_count, CCNRM(ch, C_NRM));
+    stat_outbuf_printf(&out, "\r\n%s=== MALP/MPLP Long-Term Memory: %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                       CCNRM(ch, C_NRM));
+    stat_outbuf_printf(&out, "MALP entries: %s%d%s   MPLP traits: %s%d%s\r\n", CCCYN(ch, C_NRM),
+                       mob->ai_data->malp_count, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), mob->ai_data->mplp_count,
+                       CCNRM(ch, C_NRM));
 
     /* ── MALP (explicit episodic memories) ── */
     if (mob->ai_data->malp_count == 0) {
-        send_to_char(ch, "\r\n%sMALP:%s (no explicit memories)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        stat_outbuf_printf(&out, "\r\n%sMALP:%s (no explicit memories)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
     } else {
-        send_to_char(ch, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        stat_outbuf_printf(&out, "\r\n%sMALP – Explicit Episodic Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
         for (int i = 0; i < mob->ai_data->malp_count; i++) {
             struct malp_entry *e = &mob->ai_data->malp[i];
             const char *iname = (e->interaction_type >= 0 && e->interaction_type < num_interact)
@@ -1088,8 +1134,8 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
             char agent_label[ENTITY_LABEL_SIZE];
             resolve_entity_label(agent_label, sizeof(agent_label), e->agent_type, e->agent_id);
 
-            send_to_char(ch, " [%d] %-36s Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1, agent_label, iname, pname,
-                         e->major_event ? "YES" : "no");
+            stat_outbuf_printf(&out, " [%d] %-36s Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1, agent_label, iname,
+                               pname, e->major_event ? "YES" : "no");
             send_to_char(ch,
                          "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
                          "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
@@ -1104,9 +1150,9 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 
     /* ── MPLP (implicit trait memories) ── */
     if (mob->ai_data->mplp_count == 0) {
-        send_to_char(ch, "\r\n%sMPLP:%s (no implicit traits)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        stat_outbuf_printf(&out, "\r\n%sMPLP:%s (no implicit traits)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
     } else {
-        send_to_char(ch, "\r\n%sMPLP – Implicit Trait Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        stat_outbuf_printf(&out, "\r\n%sMPLP – Implicit Trait Memories:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
         for (int i = 0; i < mob->ai_data->mplp_count; i++) {
             struct mplp_trait *t = &mob->ai_data->mplp[i];
             const char *tname =
@@ -1127,15 +1173,15 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                 snprintf(anchor_buf, sizeof(anchor_buf), "Context:global");
             else
                 resolve_entity_label(anchor_buf, sizeof(anchor_buf), t->agent_type, t->anchor_agent_id);
-            send_to_char(ch, " [%d] %-36s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname, pname,
-                         t->rehearsal_count);
-            send_to_char(ch, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
-                         (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
-                         t->base_magnitude,
-                         (t->valence < -0.1f)  ? CCRED(ch, C_NRM)
-                         : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
-                                               : "",
-                         t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
+            stat_outbuf_printf(&out, " [%d] %-36s Trait:%-24s Persist:%-6s Rehearsal:%d\r\n", i + 1, anchor_buf, tname,
+                               pname, t->rehearsal_count);
+            stat_outbuf_printf(&out, "      Mag:%s%.2f%s  BaseMag:%.2f  Val:%s%+.2f%s  Age:%ldh%ldm%lds\r\n",
+                               (t->magnitude > 0.5f) ? CCYEL(ch, C_NRM) : "", t->magnitude, CCNRM(ch, C_NRM),
+                               t->base_magnitude,
+                               (t->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                               : (t->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                                     : "",
+                               t->valence, CCNRM(ch, C_NRM), age_h, age_m, age_s);
             /* Show non-zero contextual modifiers */
             {
                 static const char *const ctx_labels[] = {"GLOBAL", "SOCIAL", "COMBAT", "TRADE", "QUEST", "MAGIC"};
@@ -1143,23 +1189,30 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
                 for (int c = 1; c < MPLP_CTX_MAX; c++) {
                     if (t->ctx[c] != 0.0f) {
                         if (!any_ctx) {
-                            send_to_char(ch, "      Ctx:");
+                            stat_outbuf_printf(&out, "      Ctx:");
                             any_ctx = TRUE;
                         }
-                        send_to_char(ch, " %s%s%+.2f%s", ctx_labels[c],
-                                     (t->ctx[c] < -0.1f)  ? CCRED(ch, C_NRM)
-                                     : (t->ctx[c] > 0.1f) ? CCGRN(ch, C_NRM)
-                                                          : "",
-                                     t->ctx[c], CCNRM(ch, C_NRM));
+                        stat_outbuf_printf(&out, " %s%s%+.2f%s", ctx_labels[c],
+                                           (t->ctx[c] < -0.1f)  ? CCRED(ch, C_NRM)
+                                           : (t->ctx[c] > 0.1f) ? CCGRN(ch, C_NRM)
+                                                                : "",
+                                           t->ctx[c], CCNRM(ch, C_NRM));
                     }
                 }
                 if (any_ctx)
-                    send_to_char(ch, "\r\n");
+                    stat_outbuf_printf(&out, "\r\n");
             }
         }
     }
 
-    send_to_char(ch, "\r\n");
+    stat_outbuf_printf(&out, "\r\n");
+
+    /* Page the listing: hundreds of entries overflow the descriptor's output buffer */
+    if (out.buf) {
+        if (ch->desc)
+            page_string(ch->desc, out.buf, TRUE);
+        free(out.buf);
+    }
 }
 
 static void do_stat_shadow(struct char_data *ch, struct char_data *mob)

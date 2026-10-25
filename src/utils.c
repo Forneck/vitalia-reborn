@@ -8881,6 +8881,7 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     /* Store memory */
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
+    memory->entity_vnum = IS_NPC(entity) ? GET_MOB_VNUM(entity) : NOBODY;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
@@ -8990,6 +8991,7 @@ void add_active_emotion_memory(struct char_data *mob, struct char_data *target, 
     /* Store memory */
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
+    memory->entity_vnum = IS_NPC(target) ? GET_MOB_VNUM(target) : NOBODY;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);

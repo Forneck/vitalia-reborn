@@ -2084,8 +2084,7 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
     float mplp_trust;
     float mplp_suspicion;
     int delta;
-    int target_type;
-    long target_id;
+    float memory_weight;
 
     if (!ch || !proj || !ch->ai_data)
         return;
@@ -2106,12 +2105,11 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
         /* Trust raises prior valence; suspicion lowers it */
         prior_valence += mplp_trust - mplp_suspicion;
 
-        /* Also consult episodic MALP if available */
-        target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
-        target_id = IS_NPC(target) ? GET_MOB_VNUM(target) : GET_IDNUM(target);
-        malp_e = get_malp_by_agent(ch, target_id, target_type);
+        /* Also consult episodic MALP if available (the individual, or its species).
+         * MALP keys mobs by script id; this used to look them up by vnum and never matched. */
+        malp_e = get_malp_for_actor(ch, target, &memory_weight);
         if (malp_e) {
-            prior_valence += malp_e->valence * malp_e->intensity;
+            prior_valence += malp_e->valence * malp_e->intensity * memory_weight;
         }
         /* Clamp to [-1, +1] */
         if (prior_valence > 1.0f)
@@ -2343,8 +2341,7 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
     float intensity_floor;
     struct char_data *target;
     struct malp_entry *malp_e;
-    int target_type;
-    long target_id;
+    float memory_weight;
     int delta;
 
     if (!ch || !proj || !ch->ai_data)
@@ -2362,14 +2359,13 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
     if (!target)
         return; /* Anchoring requires a specific character target */
 
-    target_type = IS_NPC(target) ? ENTITY_TYPE_MOB : ENTITY_TYPE_PLAYER;
-    target_id = IS_NPC(target) ? (long)GET_MOB_VNUM(target) : GET_IDNUM(target);
-
-    malp_e = get_malp_by_agent(ch, target_id, target_type);
+    /* The individual, or its species (MALP keys mobs by script id; this used to
+     * look them up by vnum and never matched) */
+    malp_e = get_malp_for_actor(ch, target, &memory_weight);
     if (!malp_e || (malp_e->first_valence > -0.01f && malp_e->first_valence < 0.01f))
         return; /* No prior history or near-neutral first impression — negligible anchor */
 
-    first_valence = malp_e->first_valence;
+    first_valence = malp_e->first_valence * memory_weight;
 
     /* Resistance to belief revision: composite of suspicion and low forgiveness.
      * suspicion_bias ∈ [0,1]: distrustful NPCs re-anchor harder on bad impressions.
