@@ -2416,6 +2416,7 @@ struct experimental_data {
     int mob_4d_debug;              /**< Log 4D decision-space raw and effective values for debugging (default: NO) */
     int mob_gossip_chance;         /**< Probability (%) of mob gossiping per emotion tick (default: 10) */
     int mob_gossip_cooldown; /**< Seconds between gossip updates for the same listener-target pair (default: 300) */
+    int mob_quests_mob_posted_only; /**< Mobs seeking work on their own only take mob-posted quests? (default: YES) */
 };
 
 /**

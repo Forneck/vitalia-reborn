@@ -4625,6 +4625,7 @@ static void load_default_config(void)
     CONFIG_EMOTION_ALIGNMENT_SHIFTS = NO;          /* Default: NO - Emotions don't affect alignment (experimental) */
     CONFIG_MOB_GOSSIP_CHANCE = MALP_GOSSIP_CHANCE; /* Default: 10% chance per tick */
     CONFIG_MOB_GOSSIP_COOLDOWN = MALP_GOSSIP_COOLDOWN_SECS; /* Default: 300 s per listener–target pair */
+    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = YES;                /* Default: autonomous mobs only take mob-posted quests */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -5418,6 +5419,8 @@ void load_config(void)
                     CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
                 else if (!str_cmp(tag, "mob_4d_debug"))
                     CONFIG_MOB_4D_DEBUG = num;
+                else if (!str_cmp(tag, "mob_quests_mob_posted_only"))
+                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = num;
                 break;
 
             default:

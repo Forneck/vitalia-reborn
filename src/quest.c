@@ -2533,8 +2533,8 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
     if (GET_MOB_QUEST(mob) != NOTHING)
         return FALSE;
 
-    /* Don't accept immortal quests (only mob-posted quests) */
-    if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+    /* Don't accept immortal quests (only mob-posted quests), unless enabled in cedit */
+    if (CONFIG_MOB_QUESTS_MOB_POSTED_ONLY && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
         return FALSE;
 
     /* Don't accept a quest the mob posted itself */

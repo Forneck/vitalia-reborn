@@ -5200,7 +5200,8 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 
     if (questmaster && questmaster != ch) {
         /* Find first quest available for mob's level range */
-        qst_vnum available_quest = find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), TRUE);
+        qst_vnum available_quest =
+            find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
         if (available_quest != NOTHING) {
             qst_rnum quest_rnum = real_quest(available_quest);
             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
