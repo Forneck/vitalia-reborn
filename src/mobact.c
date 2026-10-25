@@ -2163,6 +2163,23 @@ void mobile_activity(void)
             }
         }
 
+        /* Escort quest posting: fearful travellers, merchants and wanderers pay to be escorted
+         * to a town in another zone (not for charmed, aggressive or unkillable mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && !MOB_FLAGGED(ch, MOB_AGGRESSIVE) &&
+            !MOB_FLAGGED(ch, MOB_NOKILL) && !is_mob_excluded_from_quests(ch) && GET_GOLD(ch) > 150 &&
+            rand_number(1, 1000) <= mob_escort_travel_desire(ch) &&
+            !mob_posted_quest_exists(AQ_MOB_ESCORT, GET_MOB_VNUM(ch), GET_MOB_VNUM(ch))) {
+            room_vnum escort_dest = find_escort_destination(ch);
+
+            if (escort_dest != NOWHERE) {
+                int reward = MIN(GET_GOLD(ch) / 4, 100 + GET_LEVEL(ch) * 5);
+                mob_posts_escort_quest(ch, GET_MOB_VNUM(ch), escort_dest, reward);
+                /* Safety check: mob_posts_escort_quest calls act() which may trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
+            }
+        }
+
         /* Additional quest posting - exploration, protection, and general kill quests (not for charmed mobs) */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
             rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */

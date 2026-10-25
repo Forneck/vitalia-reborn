@@ -132,6 +132,8 @@ void set_mob_quest_level_range(struct aq_data *quest, int target_level);
 int calculate_mob_quest_gold(struct char_data *poster, int target_level, int difficulty, int offered);
 int calculate_mob_quest_exp(int target_level, int difficulty);
 int calculate_mob_quest_points(int target_level, int difficulty);
+int mob_escort_travel_desire(struct char_data *ch);
+room_vnum find_escort_destination(struct char_data *ch);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);

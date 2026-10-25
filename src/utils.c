@@ -2612,6 +2612,77 @@ int calculate_mob_quest_points(int target_level, int difficulty)
 }
 
 /**
+ * How much a mob wants to pay for an escort to another city, in chances per
+ * thousand per tick (0-10). Fearful mobs don't want to travel alone, merchants
+ * want to reach other markets and wanderers want to see other places.
+ * @param ch The mob
+ * @return Chance per thousand of posting an escort quest this tick
+ */
+int mob_escort_travel_desire(struct char_data *ch)
+{
+    int desire = 0;
+
+    if (!IS_NPC(ch) || !ch->ai_data)
+        return 0;
+
+    desire += (100 - GET_GENBRAVE(ch)) / 25; /* 0-4: afraid to travel alone */
+    desire += GET_GENTRADE(ch) / 25;         /* 0-4: merchants seek other markets */
+    desire += GET_GENROAM(ch) / 50;          /* 0-2: wanderlust */
+
+    if (GET_GENQUEST(ch) >= 50)
+        desire += 1;
+
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_fear >= 60)
+        desire += 2; /* Scared mobs want protection on the road */
+
+    return MIN(desire, 10);
+}
+
+/**
+ * Pick a destination for an escort quest: a shop room (a town) in another zone.
+ * Rate limited to one search per second, since the caller validates the route
+ * with a full BFS.
+ * @param ch The mob that wants to travel
+ * @return Destination room vnum, or NOWHERE if none was found
+ */
+room_vnum find_escort_destination(struct char_data *ch)
+{
+    static time_t last_search = 0;
+    time_t now = time(0);
+    room_rnum chosen = NOWHERE;
+    zone_rnum here;
+    int shop_nr, i, candidates = 0;
+
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world || !shop_index || top_shop < 0)
+        return NOWHERE;
+
+    if (now == last_search)
+        return NOWHERE;
+    last_search = now;
+
+    here = world[IN_ROOM(ch)].zone;
+
+    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+        if (!shop_index[shop_nr].in_room)
+            continue;
+        for (i = 0; SHOP_ROOM(shop_nr, i) != NOWHERE; i++) {
+            room_rnum r = real_room(SHOP_ROOM(shop_nr, i));
+
+            if (r == NOWHERE || world[r].zone == here)
+                continue;
+            if (ROOM_FLAGGED(r, ROOM_GODROOM) || ROOM_FLAGGED(r, ROOM_HOUSE) || ROOM_FLAGGED(r, ROOM_DEATH))
+                continue;
+            if (ZONE_FLAGGED(world[r].zone, ZONE_CLOSED) || ZONE_FLAGGED(world[r].zone, ZONE_NOIMMORT))
+                continue;
+            if (rand_number(1, ++candidates) == 1)
+                chosen = r;
+        }
+    }
+
+    return (chosen != NOWHERE) ? world[chosen].number : NOWHERE;
+}
+
+/**
  * Find a free quest VNUM in the zone's mob-posted range [bot+9000, top+9000].
  * Avoids an infinite loop when all VNUMs in the range are already taken.
  * @param mob_zone Zone rnum to search in
@@ -3919,8 +3990,19 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     char *dest_name = "um local seguro";
     mob_rnum escort_mob_rnum = NOBODY;
     room_rnum dest_room_rnum = NOWHERE;
+    int target_level;
+    int distance;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+        return;
+    }
+
+    /* Don't flood the boards with copies of a quest that is already posted */
+    if (mob_posted_quest_exists(AQ_MOB_ESCORT, escort_mob_vnum, GET_MOB_VNUM(ch))) {
         return;
     }
 
@@ -3944,6 +4026,15 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
             dest_name = world[dest_room_rnum].name;
         }
     }
+    if (dest_room_rnum == NOWHERE) {
+        return;
+    }
+
+    /* The destination must be reachable on foot; longer journeys pay more */
+    distance = bfs_distance(IN_ROOM(ch), dest_room_rnum);
+    if (distance < 5) {
+        return; /* No path (BFS error codes are negative) or too close to need an escort */
+    }
 
     /* Encontra zona do mob */
     mob_zone = world[IN_ROOM(ch)].zone;
@@ -3951,7 +4042,19 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     /* Encontra questmaster */
     questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
     if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
         return;
+    }
+
+    /* Calcula dificuldade e recompensa: a jornada é tão perigosa quanto a zona
+     * mais difícil entre origem e destino, e fica mais difícil com a distância */
+    target_level = MAX(get_zone_typical_level(mob_zone), get_zone_typical_level(world[dest_room_rnum].zone));
+    difficulty = URANGE(20, 30 + distance / 2, 95);
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    if (calculated_reward <= 0) {
+        return; /* Mob não tem ouro suficiente para oferecer uma recompensa decente */
     }
 
     /* Cria uma nova quest */
@@ -3972,16 +4075,16 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     new_quest->target = escort_mob_vnum;
     new_quest->qm = questmaster_vnum;
     new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
-
-    /* Calcula dificuldade e recompensa */
-    difficulty = MAX(1, GET_LEVEL(ch) / 10);
-    calculated_reward = MAX(100, reward);
+    new_quest->prereq = NOTHING;
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
 
     /* Seleciona item de recompensa baseado na dificuldade */
     reward_item = select_mob_inventory_reward(ch, difficulty);
 
     /* Configura valores da quest */
-    int base_questpoints = 10 + difficulty;
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty) + 1; /* Escorts are risky */
 
     /* Bonus para mobs corajosos */
     if (GET_GENBRAVE(ch) > 70) {
@@ -3990,27 +4093,27 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
-    new_quest->value[1] = new_quest->value[0] / 2;                 /* Penalty (questpoints) for quitting */
-    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = destination_room;                        /* Destination room in RETURNMOB field */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
+    set_mob_quest_level_range(new_quest, target_level);
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = destination_room; /* Destination room in RETURNMOB field */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 2; /* Escort quests give moderate XP */
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Escoltar %s", escort_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de escolta", escort_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Escoltar %s até %s", escort_name,
+             zone_table[world[dest_room_rnum].zone].name);
     snprintf(
         quest_info, sizeof(quest_info),
-        "%s precisa ser escoltado até %s com segurança. "
+        "%s precisa ser escoltado até %s, em %s, com segurança. "
         "Aceite esta busca e guie o viajante até o destino para receber %d moedas de ouro e %d pontos de experiência.",
-        escort_name, dest_name, calculated_reward, calculated_reward * 2);
+        escort_name, dest_name, zone_table[world[dest_room_rnum].zone].name, calculated_reward, new_quest->exp_reward);
     snprintf(quest_done, sizeof(quest_done), "Muito obrigado por me escoltar com segurança!");
 
     new_quest->name = str_udup(quest_name);
