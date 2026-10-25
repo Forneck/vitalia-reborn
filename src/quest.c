@@ -217,7 +217,50 @@ mob_vnum get_mob_quest_poster(qst_rnum rnum)
     }
 }
 
-qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, bool mob_posted_only)
+/* Is quest_vnum in this mob's temporary questmaster list? */
+static bool has_temp_quest(struct char_data *qm, qst_vnum quest_vnum)
+{
+    int i;
+
+    if (!qm || !IS_NPC(qm) || !IS_TEMP_QUESTMASTER(qm) || !GET_TEMP_QUESTS(qm))
+        return FALSE;
+
+    for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++)
+        if (GET_TEMP_QUESTS(qm)[i] == quest_vnum)
+            return TRUE;
+
+    return FALSE;
+}
+
+/* Does this mob hand out quests, either as a real or as a temporary questmaster? */
+bool is_active_questmaster(struct char_data *ch)
+{
+    mob_rnum rnum;
+
+    if (!ch || !IS_NPC(ch))
+        return FALSE;
+
+    rnum = GET_MOB_RNUM(ch);
+    if (rnum != NOBODY && rnum <= top_of_mobt &&
+        (mob_index[rnum].func == questmaster || mob_index[rnum].func == temp_questmaster))
+        return TRUE;
+
+    return (IS_TEMP_QUESTMASTER(ch) && GET_NUM_TEMP_QUESTS(ch) > 0);
+}
+
+/* Is this quest offered by qm, either as its assigned questmaster or as a temporary one? */
+bool qm_offers_quest(struct char_data *qm, qst_rnum rnum)
+{
+    if (!qm || !IS_NPC(qm) || rnum == NOTHING)
+        return FALSE;
+
+    return (QST_MASTER(rnum) == GET_MOB_VNUM(qm) || has_temp_quest(qm, QST_NUM(rnum)));
+}
+
+/* Best quest for mob offered by questmaster qm (vnum) and, when qm_char is given,
+ * also by its temporary quest list. */
+qst_vnum find_mob_available_quest_from_qm(struct char_data *mob, mob_vnum qm, struct char_data *qm_char,
+                                          bool mob_posted_only)
 {
     qst_rnum rnum;
     qst_vnum best = NOTHING;
@@ -228,7 +271,7 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, b
         return NOTHING;
 
     for (rnum = 0; rnum < total_quests; rnum++) {
-        if (qm == QST_MASTER(rnum)) {
+        if (qm == QST_MASTER(rnum) || (qm_char && has_temp_quest(qm_char, QST_NUM(rnum)))) {
             /* Autonomous callers may only accept mob-posted quests (see mob_should_accept_quest);
              * don't let an ineligible authored quest win the ranking */
             if (mob_posted_only && !IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
@@ -2359,10 +2402,31 @@ ACMD(do_quest)
     else {
         switch (tp) {
             case SCMD_QUEST_LIST:
-            case SCMD_QUEST_JOIN:
-                /* list, join should hve been handled by questmaster spec proc */
-                send_to_char(ch, "Desculpe, mas você não oode fazer isto aqui!\r\n");
+            case SCMD_QUEST_JOIN: {
+                /* list, join should have been handled by questmaster spec proc; temporary
+                 * questmasters have no spec proc of their own, so look for one here */
+                struct char_data *qm = NULL;
+                if (IN_ROOM(ch) != NOWHERE)
+                    for (qm = world[IN_ROOM(ch)].people; qm; qm = qm->next_in_room)
+                        if (qm != ch && IS_NPC(qm) && IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0 &&
+                            CAN_SEE(ch, qm))
+                            break;
+                if (!qm) {
+                    send_to_char(ch, "Desculpe, mas você não pode fazer isto aqui!\r\n");
+                } else if (tp == SCMD_QUEST_LIST) {
+                    char arg2buf[MAX_INPUT_LENGTH];
+                    one_argument(arg2, arg2buf);
+                    if (!*arg2buf)
+                        quest_show_unified(ch, qm);
+                    else
+                        quest_list(ch, qm, arg2buf);
+                } else {
+                    char arg2buf[MAX_INPUT_LENGTH];
+                    one_argument(arg2, arg2buf);
+                    quest_join_unified(ch, qm, arg2buf);
+                }
                 break;
+            }
             case SCMD_QUEST_HISTORY:
                 quest_hist(ch);
                 break;

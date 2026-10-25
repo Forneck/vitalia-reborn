@@ -1305,9 +1305,10 @@ void mobile_activity(void)
                                     qst_vnum available_quest = action.quest_vnum;
                                     qst_rnum chosen_rnum =
                                         (available_quest != NOTHING) ? real_quest(available_quest) : NOTHING;
-                                    if (chosen_rnum == NOTHING || QST_MASTER(chosen_rnum) != GET_MOB_VNUM(questmaster))
-                                        available_quest = find_mob_available_quest_by_qmnum(
-                                            ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+                                    if (chosen_rnum == NOTHING || !qm_offers_quest(questmaster, chosen_rnum))
+                                        available_quest =
+                                            find_mob_available_quest_from_qm(ch, GET_MOB_VNUM(questmaster), questmaster,
+                                                                             CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                                     if (available_quest != NOTHING) {
                                         qst_rnum quest_rnum = real_quest(available_quest);
                                         if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
@@ -1874,11 +1875,12 @@ void mobile_activity(void)
                         qst_vnum chosen = ch->ai_data->goal_item_vnum;
                         qst_rnum chosen_rnum = (chosen != NOTHING) ? real_quest(chosen) : NOTHING;
                         qst_vnum available_quest;
-                        if (chosen_rnum != NOTHING && QST_MASTER(chosen_rnum) == GET_MOB_VNUM(questmaster))
+                        if (chosen_rnum != NOTHING && qm_offers_quest(questmaster, chosen_rnum))
                             available_quest = chosen;
                         else
-                            available_quest = find_mob_available_quest_by_qmnum(
-                                ch, GET_MOB_VNUM(questmaster), chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+                            available_quest = find_mob_available_quest_from_qm(
+                                ch, GET_MOB_VNUM(questmaster), questmaster,
+                                chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
                             /* mob_can_accept_quest_forced provides additional validation (existing quest, escort quest
@@ -5290,8 +5292,8 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 
     if (questmaster && questmaster != ch) {
         /* Find first quest available for mob's level range */
-        qst_vnum available_quest =
-            find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
+        qst_vnum available_quest = find_mob_available_quest_from_qm(ch, GET_MOB_VNUM(questmaster), questmaster,
+                                                                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
         if (available_quest != NOTHING) {
             qst_rnum quest_rnum = real_quest(available_quest);
             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {

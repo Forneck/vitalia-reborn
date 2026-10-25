@@ -5316,8 +5316,8 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
         qm_room = IN_ROOM(qm_char);
         if (qm_room == NOWHERE || world[qm_room].zone != zone)
             continue;
-        /* Check if this mob is a questmaster using O(1) mob_index lookup */
-        if (mob_index[qm_rnum].func != questmaster && mob_index[qm_rnum].func != temp_questmaster)
+        /* Questmaster by spec proc (O(1) mob_index lookup) or temporary questmaster with open quests */
+        if (!is_active_questmaster(qm_char))
             continue;
         /* Verifica se é acessível usando pathfinding - VERY EXPENSIVE! */
         pathfinding_calls++;

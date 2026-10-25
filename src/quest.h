@@ -108,7 +108,10 @@ qst_rnum real_quest(qst_vnum vnum);
 int is_complete(struct char_data *ch, qst_vnum vnum);
 qst_vnum find_quest_by_qmnum(struct char_data *ch, mob_rnum qm, int num);
 qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num);
-qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, bool mob_posted_only);
+qst_vnum find_mob_available_quest_from_qm(struct char_data *mob, mob_vnum qm, struct char_data *qm_char,
+                                          bool mob_posted_only);
+bool qm_offers_quest(struct char_data *qm, qst_rnum rnum);
+bool is_active_questmaster(struct char_data *ch);
 mob_vnum get_mob_quest_poster(qst_rnum rnum);
 qst_vnum find_quest_by_listnum(int num);
 void add_completed_quest(struct char_data *ch, qst_vnum vnum);
