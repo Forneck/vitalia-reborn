@@ -1078,6 +1078,21 @@ void mobile_activity(void)
         if (ch->ai_data && ch->ai_data->escort_retry_timer > 0)
             ch->ai_data->escort_retry_timer--;
 
+        /* quest_tendency only rises with every quest posted or completed and falls only
+         * on some failures, and the final value is inherited by the prototype on death:
+         * without a restoring force the whole population ratchets up to 100.  Slowly
+         * regress toward the prototype's value (about 1 point per 60 ticks), so only
+         * what is reinforced more often than it fades is kept and inherited. */
+        if (ch->ai_data && GET_MOB_RNUM(ch) != NOBODY && mob_proto[GET_MOB_RNUM(ch)].ai_data &&
+            rand_number(1, 60) == 1) {
+            int base = mob_proto[GET_MOB_RNUM(ch)].ai_data->genetics.quest_tendency;
+            int *qt = &ch->ai_data->genetics.quest_tendency;
+            if (*qt > base)
+                (*qt)--;
+            else if (*qt < base)
+                (*qt)++;
+        }
+
         if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
             ch->ai_data->quest_posting_frustration_timer--;
         }
@@ -5220,21 +5235,9 @@ bool mob_try_to_accept_quest(struct char_data *ch)
     if (rand() % 100 > acceptance_threshold)
         return FALSE;
 
-    /* Load shedding: the pathfinding in find_accessible_questmaster_in_zone() is expensive,
-     * so cap how many mobs may search per second. This used to refuse all quest-taking once
-     * the boards were 90% full, which is exactly when mobs are most needed to drain them. */
-    {
-        static time_t budget_second = 0;
-        static int searches_this_second = 0;
-        time_t now = time(0);
-
-        if (now != budget_second) {
-            budget_second = now;
-            searches_this_second = 0;
-        }
-        if (++searches_this_second > 5)
-            return FALSE;
-    }
+    /* Load shedding for the expensive questmaster pathfinding (shared with the Shadow Timeline) */
+    if (!mob_quest_search_budget_ok())
+        return FALSE;
 
     /* Now do the expensive operations - look for accessible questmasters */
     mob_zone = world[IN_ROOM(ch)].zone;

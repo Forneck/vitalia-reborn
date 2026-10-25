@@ -575,11 +575,9 @@ static void generate_quest_projections(struct shadow_context *ctx)
         return;
     }
 
-    /* Performance optimization: Early exit to prevent expensive questmaster search
-     * Similar to mob_try_to_accept_quest() load-shedding to avoid lag.
-     * When close to max quests, the expensive pathfinding in
-     * find_accessible_questmaster_in_zone() causes severe lag. */
-    if (count_mob_posted_quests() >= (CONFIG_MAX_MOB_POSTED_QUESTS * 9 / 10)) { /* 90% of max */
+    /* Load shedding for the expensive questmaster search, shared with
+     * mob_try_to_accept_quest() so both paths react the same way to crowded boards. */
+    if (!mob_quest_search_budget_ok()) {
         return;
     }
 
@@ -603,7 +601,8 @@ static void generate_quest_projections(struct shadow_context *ctx)
     }
 
     qst_rnum quest_rnum = real_quest(available_quest);
-    if (quest_rnum == NOTHING || !mob_should_accept_quest(ch, quest_rnum)) {
+    /* Deterministic: the projection must not consume the world RNG (RFC-0003 §9.1) */
+    if (quest_rnum == NOTHING || !mob_would_consider_quest(ch, quest_rnum)) {
         return; /* Quest not suitable or mob doesn't want it */
     }
 
@@ -2080,7 +2079,7 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
     float bias;
     float prior_valence;
     struct char_data *target;
-    struct malp_entry *malp_e;
+    const struct malp_entry *malp_e;
     float mplp_trust;
     float mplp_suspicion;
     int delta;
@@ -2107,7 +2106,7 @@ static void apply_confirmation_bias(struct char_data *ch, struct shadow_projecti
 
         /* Also consult episodic MALP if available (the individual, or its species).
          * MALP keys mobs by script id; this used to look them up by vnum and never matched. */
-        malp_e = get_malp_for_actor(ch, target, &memory_weight);
+        malp_e = peek_malp_for_actor(ch, target, &memory_weight); /* read-only: RFC-0003 */
         if (malp_e) {
             prior_valence += malp_e->valence * malp_e->intensity * memory_weight;
         }
@@ -2340,7 +2339,7 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
     float resistance;
     float intensity_floor;
     struct char_data *target;
-    struct malp_entry *malp_e;
+    const struct malp_entry *malp_e;
     float memory_weight;
     int delta;
 
@@ -2361,7 +2360,7 @@ static void apply_anchoring_bias(struct char_data *ch, struct shadow_projection 
 
     /* The individual, or its species (MALP keys mobs by script id; this used to
      * look them up by vnum and never matched) */
-    malp_e = get_malp_for_actor(ch, target, &memory_weight);
+    malp_e = peek_malp_for_actor(ch, target, &memory_weight); /* read-only: RFC-0003 */
     if (!malp_e || (malp_e->first_valence > -0.01f && malp_e->first_valence < 0.01f))
         return; /* No prior history or near-neutral first impression — negligible anchor */
 

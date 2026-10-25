@@ -245,7 +245,13 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm, b
             if (!quest_completed || quest_repeatable) {
                 /* Check if mob's level is within the quest's level range */
                 if (GET_LEVEL(mob) >= QST_MINLEVEL(rnum) && GET_LEVEL(mob) <= QST_MAXLEVEL(rnum)) {
-                    score = (mob->ai_data ? mob_quest_reward_appeal(mob, rnum) : 0) + rand_number(0, 20);
+                    /* Deterministic per (mob, quest) jitter instead of rand_number(): spreads
+                     * different mobs over different quests without touching the world RNG,
+                     * since the Shadow Timeline also calls this (RFC-0003 §9.1). */
+                    unsigned long mix =
+                        ((unsigned long)(mob->script_id ? mob->script_id : GET_MOB_RNUM(mob)) * 2654435761UL) ^
+                        (unsigned long)QST_NUM(rnum);
+                    score = (mob->ai_data ? mob_quest_reward_appeal(mob, rnum) : 0) + (int)(mix % 21);
                     if (score > best_score) {
                         best_score = score;
                         best = QST_NUM(rnum);
@@ -2560,11 +2566,9 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
     return MAX(0, MIN(100, capability));
 }
 
-/* Check if a mob should accept a quest */
-bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
+/* Hard eligibility rules for a mob taking a quest on its own (no randomness) */
+static bool mob_quest_acceptable(struct char_data *mob, qst_rnum rnum)
 {
-    int capability, chance;
-
     if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
         return FALSE;
 
@@ -2584,13 +2588,42 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
     if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
         return FALSE;
 
-    /* Calculate capability */
-    capability = calculate_mob_quest_capability(mob, rnum);
+    return TRUE;
+}
+
+/* Check if a mob should accept a quest */
+bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
+{
+    if (!mob_quest_acceptable(mob, rnum))
+        return FALSE;
 
     /* Random chance based on capability */
-    chance = rand() % 100;
+    return (rand() % 100 < calculate_mob_quest_capability(mob, rnum));
+}
 
-    return (chance < capability);
+/* Load shedding: the pathfinding in find_accessible_questmaster_in_zone() is expensive,
+ * so cap how many mobs may search for a questmaster per second (both the classic path,
+ * mob_try_to_accept_quest(), and the Shadow Timeline).  This replaces refusing all
+ * quest-taking once the boards were 90% full, which is exactly when mobs are most
+ * needed to drain them. */
+bool mob_quest_search_budget_ok(void)
+{
+    static time_t budget_second = 0;
+    static int searches_this_second = 0;
+    time_t now = time(0);
+
+    if (now != budget_second) {
+        budget_second = now;
+        searches_this_second = 0;
+    }
+    return (++searches_this_second <= 5);
+}
+
+/* Deterministic variant for the Shadow Timeline, which must not consume the world
+ * RNG (RFC-0003 §9.1): would a mob this capable consider the quest at all? */
+bool mob_would_consider_quest(struct char_data *mob, qst_rnum rnum)
+{
+    return mob_quest_acceptable(mob, rnum) && calculate_mob_quest_capability(mob, rnum) >= 50;
 }
 
 /* Check if a mob can accept a quest when forced by builder/goal setting
@@ -2779,6 +2812,7 @@ void fail_mob_quest(struct char_data *mob, const char *reason)
         case AQ_MOB_SAVE:
         case AQ_ROOM_CLEAR:
         case AQ_OBJ_RETURN:
+        case AQ_MOB_ESCORT:
             /* All other quest failures decrease quest_tendency */
             if (mob->ai_data->genetics.quest_tendency > 0) {
                 mob->ai_data->genetics.quest_tendency = MAX(0, mob->ai_data->genetics.quest_tendency - rand() % 2 - 1);
@@ -2910,12 +2944,14 @@ void mob_complete_quest(struct char_data *mob)
     /* Clear the quest from the mob's state */
     clear_mob_quest(mob);
 
-    /* Cleanup: If this is a mob-posted quest and not repeatable, delete it from the system
+    /* Cleanup: If this is a mob-posted quest, delete it from the system
      * to free the queue slot for another quest. This is similar to wishlist quest cleanup
      * for players (cleanup_completed_wishlist_quest). */
     {
         long quest_flags = QST_FLAGS(rnum);
-        if (IS_SET(quest_flags, AQ_MOB_POSTED) && !IS_SET(quest_flags, AQ_REPEATABLE)) {
+        /* Mob-posted quests are paid once, up front: always remove them, even if an older
+         * save marked them repeatable (each further completion would mint gold). */
+        if (IS_SET(quest_flags, AQ_MOB_POSTED)) {
             log1("MOB QUEST: Mob %s completed quest %d, removing from queue", GET_NAME(mob), vnum);
             if (!delete_quest(rnum)) {
                 log1("SYSERR: MOB QUEST: Failed to delete quest %d from queue", vnum);

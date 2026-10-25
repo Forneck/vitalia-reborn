@@ -405,6 +405,10 @@ static float compute_peak_end_valence(struct char_data *mob, long agent_id, int 
         const struct emotion_memory *m = &ai->memories[i];
         if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
             continue;
+        /* Grief over an ally's death is about the loss, not about the ally: it must not
+         * turn the memory of a friend negative (and, once gone, its whole species). */
+        if (m->interaction_type == INTERACT_ALLY_DIED)
+            continue;
         float a = slot_arousal(m);
         float v = slot_valence(m);
         if (a > peak_arousal) {
@@ -420,6 +424,10 @@ static float compute_peak_end_valence(struct char_data *mob, long agent_id, int 
     for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
         const struct emotion_memory *m = &ai->active_memories[i];
         if (m->timestamp == 0 || m->entity_id != agent_id || m->entity_type != agent_type)
+            continue;
+        /* Grief over an ally's death is about the loss, not about the ally: it must not
+         * turn the memory of a friend negative (and, once gone, its whole species). */
+        if (m->interaction_type == INTERACT_ALLY_DIED)
             continue;
         float a = slot_arousal(m);
         float v = slot_valence(m);
@@ -545,8 +553,9 @@ static void malp_fold_into_species(struct char_data *mob, int idx)
         sp->arousal = (1.0f - w) * sp->arousal + w * gone.arousal;
         if (carried > sp->salience)
             sp->salience = carried;
-        if (gone.timestamp > sp->timestamp)
-            sp->timestamp = gone.timestamp; /* freshest evidence about the species */
+        /* Age = intensity-weighted mean of both: taking the newest timestamp would
+         * restart the power-law decay on every death, so common species never fade */
+        sp->timestamp = sp->timestamp + (time_t)(w * (float)(gone.timestamp - sp->timestamp));
         if (gone.persistence > sp->persistence)
             sp->persistence = gone.persistence;
         if (gone.major_event)
@@ -864,6 +873,9 @@ void consolidator_tick(struct char_data *mob)
     do {                                                                                                               \
         if ((mem)->timestamp == 0 || (mem)->entity_id == 0)                                                            \
             break;                                                                                                     \
+        /* Grief episodes describe the loss, not the ally (see compute_peak_end_valence) */                            \
+        if ((mem)->interaction_type == INTERACT_ALLY_DIED)                                                             \
+            break;                                                                                                     \
         /* Episodes about a mob that no longer exists: its MALP entry was already folded                               \
          * into its species; re-consolidating would recreate and re-fold it every tick. */                             \
         if ((mem)->entity_type == ENTITY_TYPE_MOB && !find_char((mem)->entity_id))                                     \
@@ -1048,7 +1060,8 @@ void consolidator_tick(struct char_data *mob)
     malp_decay_tick(mob);
 }
 
-struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int agent_type)
+/* Strongest entry for an agent, without any side effect (no retrieval). */
+static struct malp_entry *malp_find_best(struct char_data *mob, long agent_id, int agent_type)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !mob->ai_data->malp || agent_id == 0)
         return NULL;
@@ -1067,6 +1080,13 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
             best = e;
         }
     }
+
+    return best;
+}
+
+struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int agent_type)
+{
+    struct malp_entry *best = malp_find_best(mob, agent_id, agent_type);
 
     if (!best)
         return NULL;
@@ -1123,6 +1143,29 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
     }
 
     return best;
+}
+
+const struct malp_entry *peek_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight)
+{
+    const struct malp_entry *e;
+
+    if (weight)
+        *weight = 1.0f;
+    if (!mob || !actor)
+        return NULL;
+
+    if (!IS_NPC(actor))
+        return malp_find_best(mob, GET_IDNUM(actor), ENTITY_TYPE_PLAYER);
+
+    /* script_id read directly: char_script_id() would assign one (a side effect) */
+    e = actor->script_id ? malp_find_best(mob, actor->script_id, ENTITY_TYPE_MOB) : NULL;
+    if (e)
+        return e;
+
+    e = malp_find_best(mob, (long)GET_MOB_VNUM(actor), ENTITY_TYPE_MOB_SPECIES);
+    if (e && weight)
+        *weight = MALP_SPECIES_WEIGHT;
+    return e;
 }
 
 struct malp_entry *get_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight)
@@ -1778,6 +1821,20 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
         malp->last_applied = time(NULL);
     }
 
+    /* Contact hypothesis (Allport 1954): every real interaction with a member of a
+     * species the mob holds a memory of nudges that memory toward the experience,
+     * so a generalisation can be corrected by contact and not only by deaths. */
+    if (IS_NPC(actor) && interaction_valence != 0.0f) {
+        struct malp_entry *sp = malp_find_best(mob, (long)GET_MOB_VNUM(actor), ENTITY_TYPE_MOB_SPECIES);
+        if (sp) {
+            sp->valence += MALP_SPECIES_CONTACT_RATE * (interaction_valence - sp->valence);
+            if (sp->valence > 1.0f)
+                sp->valence = 1.0f;
+            if (sp->valence < -1.0f)
+                sp->valence = -1.0f;
+        }
+    }
+
     /* Apply MPLP approach/avoidance modifier (dampened for dominant actors) */
     float approach = get_mplp_approach_modifier(mob, agent_id, agent_type) * dominance_factor;
     if (approach < -0.15f) {
@@ -2061,6 +2118,8 @@ bool try_social_gossip(struct char_data *source, struct char_data *listener)
             continue;
         if (e->agent_id == listener_id && e->agent_type == ENTITY_TYPE_MOB)
             continue; /* don't gossip about the person you're talking to */
+        if (e->agent_type == ENTITY_TYPE_MOB_SPECIES && e->agent_id == (long)GET_MOB_VNUM(listener))
+            continue; /* nor about the listener's own kind */
 
         score = e->intensity;
 

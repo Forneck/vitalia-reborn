@@ -2920,14 +2920,10 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
 
-    /* Determina se a quest deve ser repetível baseado no tipo de item */
-    if (obj_rnum != NOTHING) {
-        int obj_type = GET_OBJ_TYPE(&obj_proto[obj_rnum]);
-        /* Quests para itens consumíveis (poções, pergaminhos, comida) são repetíveis */
-        if (obj_type == ITEM_POTION || obj_type == ITEM_SCROLL || obj_type == ITEM_FOOD || obj_type == ITEM_DRINKCON) {
-            SET_BIT(new_quest->flags, AQ_REPEATABLE);
-        }
-    }
+    /* Mob-posted quests are never repeatable: the reward is paid up front, once, so a
+     * repeatable quest minted gold on every further completion (buy a cheap potion,
+     * deliver it, collect the reward, repeat).  A mob that wants another consumable
+     * simply posts (and pays for) a new request. */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
@@ -4178,6 +4174,11 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     if (ch->ai_data->genetics.quest_tendency < 100) {
         ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
     }
+
+    /* The poster never travels itself (a copy of it is escorted), so its wish to travel
+     * is never satisfied: without a pause it would re-post right after each escort ends,
+     * pumping its gold to the takers. */
+    ch->ai_data->escort_retry_timer = 360; /* 360 ticks (~1 hour) */
 
     /* Mensagens para jogadores */
     act("$n escreve um pedido de escolta e o envia para o questmaster.", FALSE, ch, 0, 0, TO_ROOM);
@@ -5877,11 +5878,10 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum)
         return; /* Quest não existe */
     }
 
-    /* Se a quest não é repetível, remove-a do sistema */
-    if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
-        log1("WISHLIST QUEST: Cleaning up completed non-repeatable quest %d", quest_vnum);
-        delete_quest(rnum);
-    }
+    /* Remove-a do sistema: a recompensa foi paga uma vez pelo mob solicitante.
+     * Inclui quests antigas salvas como repetíveis, que geravam ouro a cada conclusão. */
+    log1("WISHLIST QUEST: Cleaning up completed quest %d", quest_vnum);
+    delete_quest(rnum);
 }
 
 /**
@@ -7350,8 +7350,11 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
         add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1, NULL);
         /* MALP/MPLP: death of an ally is among the most aversive experiences
          * (Bowlby 1969, attachment and loss; grief is a high-arousal negative
-         * state; valence −0.7). */
-        apply_malp_emotion_effects(mob, dead_ally, -0.7f);
+         * state).  The memory of the ally is recalled (its emotional effects
+         * apply) but NOT reconsolidated (valence 0.0): the grief is about the
+         * loss, not about the ally, and the memory is about to be generalised
+         * to the ally's species. */
+        apply_malp_emotion_effects(mob, dead_ally, 0.0f);
         apply_mplp_nonsocial_reinforcement(mob, INTERACT_ALLY_DIED, 1);
     }
 }

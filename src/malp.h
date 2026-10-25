@@ -78,6 +78,9 @@
 #define MALP_SPECIES_TRANSFER 0.60f
 /** Strength of a species memory when meeting another individual of that species */
 #define MALP_SPECIES_WEIGHT 0.50f
+/** Contact hypothesis: how far each real interaction with any member of a species
+ *  moves the species memory toward that interaction's valence */
+#define MALP_SPECIES_CONTACT_RATE 0.05f
 /** Hours without encoding/retrieval/use after which a LOW/MEDIUM entry expires (7 days) */
 #define MALP_MAX_IDLE_HOURS_STD 168
 /** Same for HIGH-persistence or major-event entries (30 days) */
@@ -497,6 +500,13 @@ struct malp_entry *get_malp_by_agent(struct char_data *mob, long agent_id, int a
  * @return The entry, or NULL if the mob remembers neither.
  */
 struct malp_entry *get_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight);
+
+/**
+ * Read-only variant of get_malp_for_actor(): no retrieval side effects (no
+ * rehearsal, reconsolidation window or last_retrieved update).  Required by
+ * the Shadow Timeline, which must never mutate live state (RFC-0003 §4.2).
+ */
+const struct malp_entry *peek_malp_for_actor(struct char_data *mob, struct char_data *actor, float *weight);
 
 /**
  * Return the approach/avoidance modifier for an agent from MPLP.
