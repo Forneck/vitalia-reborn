@@ -4239,6 +4239,9 @@ bool mob_try_and_loot(struct char_data *ch)
 
         /* A IA agora procura ativamente pelo item que melhor satisfaz a sua necessidade. */
         for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+            /* Itens ocultos aos mortais ('.' na descrição) são cenário: não saquear */
+            if (is_obj_hidden_from_mortals(obj))
+                continue;
             int current_score = evaluate_item_for_mob(ch, obj);
             if (current_score > max_score) {
                 best_obj = obj;
