@@ -1468,6 +1468,16 @@ void mobile_activity(void)
             if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST && ch->ai_data->escort_mob_id != NOBODY &&
                 GET_MOB_QUEST(ch) != NOTHING) {
                 qst_rnum escort_rnum = real_quest(GET_MOB_QUEST(ch));
+
+                /* This branch skips the generic quest-timer countdown further below, and the
+                 * goal timer is reset whenever the pair is together: count down here, or a
+                 * stuck escort would never fail. */
+                if (ch->ai_data->quest_timer > 0 && --ch->ai_data->quest_timer <= 0) {
+                    act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
+                    fail_mob_quest(ch, "timeout");
+                    continue;
+                }
+
                 if (escort_rnum != NOTHING)
                     mob_process_quest_completion(ch, escort_rnum);
                 else
