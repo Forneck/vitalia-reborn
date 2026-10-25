@@ -578,8 +578,8 @@ static void malp_fold_into_species(struct char_data *mob, int idx)
     sp->intensity = gone.intensity * MALP_SPECIES_TRANSFER;
     sp->rehearsal = 0;
     sp->recon_ticks_left = 0;
-    sp->last_retrieved = 0;
-    sp->last_applied = 0;
+    /* last_retrieved / last_applied are kept from the individual (copied above): resetting
+     * them would make a memory in active use look idle and expire on the next decay tick */
     sp->first_valence = gone.valence; /* first impression of the species = what this individual left */
     ai->malp_count++;
 }
@@ -838,6 +838,19 @@ void malp_decay_tick(struct char_data *mob)
     }
 }
 
+/* Mark every episodic slot about a gone mob as consolidated (see CONSOLIDATE_SLOT) */
+static void malp_mark_agent_consumed(struct mob_ai_data *ai, long agent_id)
+{
+    int i;
+
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        if (ai->memories[i].entity_type == ENTITY_TYPE_MOB && ai->memories[i].entity_id == agent_id)
+            ai->memories[i].malp_consumed = TRUE;
+        if (ai->active_memories[i].entity_type == ENTITY_TYPE_MOB && ai->active_memories[i].entity_id == agent_id)
+            ai->active_memories[i].malp_consumed = TRUE;
+    }
+}
+
 void consolidator_tick(struct char_data *mob)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
@@ -876,9 +889,11 @@ void consolidator_tick(struct char_data *mob)
         /* Grief episodes describe the loss, not the ally (see compute_peak_end_valence) */                            \
         if ((mem)->interaction_type == INTERACT_ALLY_DIED)                                                             \
             break;                                                                                                     \
-        /* Episodes about a mob that no longer exists: its MALP entry was already folded                               \
-         * into its species; re-consolidating would recreate and re-fold it every tick. */                             \
-        if ((mem)->entity_type == ENTITY_TYPE_MOB && !find_char((mem)->entity_id))                                     \
+        /* Episodes about a mob that no longer exists are consolidated once (the entry is then                         \
+         * folded into its species by the decay pass below) and marked consumed: re-consolidating                      \
+         * them would recreate and re-fold the entry every tick. */                                                    \
+        bool _gone_agent = ((mem)->entity_type == ENTITY_TYPE_MOB && !find_char((mem)->entity_id));                    \
+        if (_gone_agent && (mem)->malp_consumed)                                                                       \
             break;                                                                                                     \
         float age_hours = (float)(now - (mem)->timestamp) / 3600.0f;                                                   \
         float arousal = slot_arousal(mem);                                                                             \
@@ -956,6 +971,12 @@ void consolidator_tick(struct char_data *mob)
             ai->malp_count++;                                                                                          \
             /* Warm the cache so the next consolidation for this agent is O(1). */                                     \
             malp_cache_insert(ai, (mem)->entity_id, (mem)->entity_type, ai->malp_count - 1);                           \
+        }                                                                                                              \
+        if (_gone_agent) {                                                                                             \
+            /* Transferred: mark every episode about this agent, and skip MPLP traits                                  \
+             * anchored on a mob that can never be met again */                                                        \
+            malp_mark_agent_consumed(ai, (mem)->entity_id);                                                            \
+            break;                                                                                                     \
         }                                                                                                              \
         /* Hebbian MPLP trait formation */                                                                             \
         if (rehearsal >= rehearsal_threshold) {                                                                        \
@@ -1828,6 +1849,9 @@ void apply_malp_emotion_effects(struct char_data *mob, struct char_data *actor, 
         struct malp_entry *sp = malp_find_best(mob, (long)GET_MOB_VNUM(actor), ENTITY_TYPE_MOB_SPECIES);
         if (sp) {
             sp->valence += MALP_SPECIES_CONTACT_RATE * (interaction_valence - sp->valence);
+            /* Contact is use: keep it from idle expiry (last_applied is left alone, it drives
+             * the per-actor effect cooldown) */
+            sp->last_retrieved = time(NULL);
             if (sp->valence > 1.0f)
                 sp->valence = 1.0f;
             if (sp->valence < -1.0f)

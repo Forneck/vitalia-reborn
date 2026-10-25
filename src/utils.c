@@ -4007,6 +4007,13 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
         return;
     }
 
+    /* A mob only asks for its own escort: get_mob_quest_poster() identifies the poster of an
+     * escort by its target, since value[5] holds the destination room */
+    if (escort_mob_vnum != GET_MOB_VNUM(ch)) {
+        log1("SYSERR: mob_posts_escort_quest: %s asked to escort another mob (%d)", GET_NAME(ch), escort_mob_vnum);
+        return;
+    }
+
     /* Don't flood the boards with copies of a quest that is already posted */
     if (mob_posted_quest_exists(AQ_MOB_ESCORT, escort_mob_vnum, GET_MOB_VNUM(ch))) {
         return;
@@ -8885,6 +8892,7 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
     memory->entity_vnum = IS_NPC(entity) ? GET_MOB_VNUM(entity) : NOBODY;
+    memory->malp_consumed = FALSE;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
@@ -8995,6 +9003,7 @@ void add_active_emotion_memory(struct char_data *mob, struct char_data *target, 
     memory->entity_type = entity_type;
     memory->entity_id = entity_id;
     memory->entity_vnum = IS_NPC(target) ? GET_MOB_VNUM(target) : NOBODY;
+    memory->malp_consumed = FALSE;
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);

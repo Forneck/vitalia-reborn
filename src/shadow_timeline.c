@@ -609,7 +609,8 @@ static void generate_quest_projections(struct shadow_context *ctx)
     /* Set up quest acceptance action */
     memset(&action, 0, sizeof(struct shadow_action));
     action.type = SHADOW_ACTION_QUEST;
-    action.target = questmaster; /* Target is the questmaster to talk to */
+    action.target = questmaster;         /* Target is the questmaster to talk to */
+    action.quest_vnum = available_quest; /* chosen under the autonomous eligibility rules */
     action.cost = SHADOW_BASE_COST;
 
     /* Validate action */

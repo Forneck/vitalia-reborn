@@ -1127,9 +1127,15 @@ void extract_char_final(struct char_data *ch)
     /* Check if this is an escort mob and fail the quest if so */
     if (IS_NPC(ch)) {
         fail_escort_quest(ch, NULL);
-        /* A mob that was escorting someone releases them (the escorted mob leaves) */
-        if (ch->ai_data && ch->ai_data->escort_mob_id != NOBODY)
-            clear_mob_quest(ch);
+        /* Escort leaders release their escort in extract_char(), before the pending-extraction
+         * pass: marking it from here could hit a character the pass already visited.  Only
+         * a direct final extraction gets here with an escort: just let it go. */
+        if (ch->ai_data && ch->ai_data->escort_mob_id != NOBODY) {
+            struct char_data *escort = find_escort_mob_by_id(ch->ai_data->escort_mob_id);
+            ch->ai_data->escort_mob_id = NOBODY;
+            if (escort && escort->master == ch)
+                stop_follower(escort);
+        }
     }
 
     /* On with the character's assets... */
@@ -1248,6 +1254,11 @@ void extract_char(struct char_data *ch)
 {
     char_from_furniture(ch);
     clear_char_event_list(ch);
+
+    /* A mob leading an escort releases it now (the escorted mob leaves too), so both are
+     * marked before extract_pending_chars() walks the list */
+    if (IS_NPC(ch) && ch->ai_data && ch->ai_data->escort_mob_id != NOBODY && !MOB_FLAGGED(ch, MOB_NOTDEADYET))
+        clear_mob_quest(ch);
 
     if (IS_NPC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
         SET_BIT_AR(MOB_FLAGS(ch), MOB_NOTDEADYET);

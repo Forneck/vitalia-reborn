@@ -1136,15 +1136,15 @@ static void do_stat_malp(struct char_data *ch, struct char_data *mob)
 
             stat_outbuf_printf(&out, " [%d] %-36s Itype:%-22s Persist:%-6s MajorEvt:%s\r\n", i + 1, agent_label, iname,
                                pname, e->major_event ? "YES" : "no");
-            send_to_char(ch,
-                         "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
-                         "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
-                         (e->valence < -0.1f)  ? CCRED(ch, C_NRM)
-                         : (e->valence > 0.1f) ? CCGRN(ch, C_NRM)
-                                               : "",
-                         e->valence, CCNRM(ch, C_NRM), (e->intensity > 0.6f) ? CCYEL(ch, C_NRM) : "", e->intensity,
-                         CCNRM(ch, C_NRM), e->salience, e->arousal, e->rehearsal, e->recon_ticks_left, age_h, age_m,
-                         age_s);
+            stat_outbuf_printf(&out,
+                               "      Val:%s%+.2f%s  Int:%s%.2f%s  Sal:%.2f  Arousal:%.2f  "
+                               "Rehearsal:%d  Recon:%d ticks  Age:%ldh%ldm%lds\r\n",
+                               (e->valence < -0.1f)  ? CCRED(ch, C_NRM)
+                               : (e->valence > 0.1f) ? CCGRN(ch, C_NRM)
+                                                     : "",
+                               e->valence, CCNRM(ch, C_NRM), (e->intensity > 0.6f) ? CCYEL(ch, C_NRM) : "",
+                               e->intensity, CCNRM(ch, C_NRM), e->salience, e->arousal, e->rehearsal,
+                               e->recon_ticks_left, age_h, age_m, age_s);
         }
     }
 

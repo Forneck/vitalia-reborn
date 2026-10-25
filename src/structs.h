@@ -1222,6 +1222,7 @@ struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
     long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
     mob_vnum entity_vnum; /* Mob prototype vnum (NOBODY for players): lets MALP generalise to the species */
+    bool malp_consumed;   /* Agent gone and this episode already consolidated into MALP (transfer once) */
     int interaction_type; /* Type of interaction (INTERACT_*) */
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */

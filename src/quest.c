@@ -208,6 +208,10 @@ mob_vnum get_mob_quest_poster(qst_rnum rnum)
         case AQ_RESOURCE_GATHER:
         case AQ_REPUTATION_BUILD:
             return QST_RETURNMOB(rnum);
+        case AQ_MOB_ESCORT:
+            /* value[5] holds the destination room; a mob-posted escort is always a request to
+             * escort (a copy of) the poster itself, so the target is the poster */
+            return QST_TARGET(rnum);
         default:
             return NOBODY;
     }

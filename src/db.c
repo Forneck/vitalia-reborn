@@ -5243,6 +5243,8 @@ void load_config(void)
                     CONFIG_MALP_DECAY_HALFLIFE_MAJOR = LIMIT(num, 1, 2160);
                 else if (!str_cmp(tag, "mplp_decay_halflife"))
                     CONFIG_MPLP_DECAY_HALFLIFE = LIMIT(num, 1, 8760);
+                else if (!str_cmp(tag, "mob_quests_mob_posted_only"))
+                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = num;
 
                 break;
 
@@ -5423,8 +5425,6 @@ void load_config(void)
                     CONFIG_EMOTION_ALIGNMENT_SHIFTS = num;
                 else if (!str_cmp(tag, "mob_4d_debug"))
                     CONFIG_MOB_4D_DEBUG = num;
-                else if (!str_cmp(tag, "mob_quests_mob_posted_only"))
-                    CONFIG_MOB_QUESTS_MOB_POSTED_ONLY = num;
                 break;
 
             default:

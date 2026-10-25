@@ -1299,9 +1299,15 @@ void mobile_activity(void)
                                 struct char_data *questmaster = (struct char_data *)action.target;
                                 /* Verify questmaster still exists and is in same room */
                                 if (IN_ROOM(questmaster) == IN_ROOM(ch) && IS_NPC(questmaster)) {
-                                    /* Find available quest from this questmaster */
-                                    qst_vnum available_quest =
-                                        find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), FALSE);
+                                    /* Accept the quest the Shadow Timeline chose (selected under the
+                                     * autonomous eligibility rules); re-rank under the same rules if it
+                                     * is gone or no longer offered by this questmaster */
+                                    qst_vnum available_quest = action.quest_vnum;
+                                    qst_rnum chosen_rnum =
+                                        (available_quest != NOTHING) ? real_quest(available_quest) : NOTHING;
+                                    if (chosen_rnum == NOTHING || QST_MASTER(chosen_rnum) != GET_MOB_VNUM(questmaster))
+                                        available_quest = find_mob_available_quest_by_qmnum(
+                                            ch, GET_MOB_VNUM(questmaster), CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                                     if (available_quest != NOTHING) {
                                         qst_rnum quest_rnum = real_quest(available_quest);
                                         if (quest_rnum != NOTHING && mob_can_accept_quest_forced(ch, quest_rnum)) {
@@ -1862,9 +1868,17 @@ void mobile_activity(void)
                     struct char_data *questmaster =
                         get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (questmaster && GET_MOB_QUEST(ch) == NOTHING) {
-                        /* Find first quest available for mob's level range */
-                        qst_vnum available_quest =
-                            find_mob_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), FALSE);
+                        /* Autonomous goal: accept the quest chosen in mob_try_to_accept_quest(), or
+                         * re-rank under the same eligibility rules if it is gone.  Builder-set goal
+                         * (no chosen quest): any quest from this questmaster, as before. */
+                        qst_vnum chosen = ch->ai_data->goal_item_vnum;
+                        qst_rnum chosen_rnum = (chosen != NOTHING) ? real_quest(chosen) : NOTHING;
+                        qst_vnum available_quest;
+                        if (chosen_rnum != NOTHING && QST_MASTER(chosen_rnum) == GET_MOB_VNUM(questmaster))
+                            available_quest = chosen;
+                        else
+                            available_quest = find_mob_available_quest_by_qmnum(
+                                ch, GET_MOB_VNUM(questmaster), chosen != NOTHING && CONFIG_MOB_QUESTS_MOB_POSTED_ONLY);
                         if (available_quest != NOTHING) {
                             qst_rnum quest_rnum = real_quest(available_quest);
                             /* mob_can_accept_quest_forced provides additional validation (existing quest, escort quest
@@ -1893,6 +1907,7 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_NONE;
                     ch->ai_data->goal_destination = NOWHERE;
                     ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_item_vnum = NOTHING; /* the chosen quest, if any */
                     ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     /* Process quest completion based on quest type */
@@ -5282,6 +5297,9 @@ bool mob_try_to_accept_quest(struct char_data *ch)
                 ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
                 ch->ai_data->goal_destination = IN_ROOM(questmaster);
                 ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                /* Remember the chosen quest so arrival accepts it (and not an authored quest
+                 * that mob_quests_mob_posted_only excludes); builder-set goals leave this NOTHING */
+                ch->ai_data->goal_item_vnum = available_quest;
                 ch->ai_data->goal_timer = 0;
                 act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
                 return TRUE;
@@ -5658,6 +5676,12 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 fail_mob_quest(ch, "escort lost");
                 return TRUE;
             }
+
+            /* Keep to routes on foot the whole way (including going back for the escort): the
+             * leader may have a boat or flight its follower lacks, and the route validated at
+             * posting is one on foot (see find_first_step_on_foot()) */
+            if (ch->ai_data->on_foot_route_timer < 2)
+                ch->ai_data->on_foot_route_timer = 2;
 
             if (IN_ROOM(escort) != IN_ROOM(ch)) {
                 /* Got separated: go back for the escorted mob */
@@ -6366,11 +6390,17 @@ static int mob_movement_need(struct char_data *ch, room_rnum to_room)
     return MOVE_NEED_NONE;
 }
 
-/* Does this magic item cast a spell that meets the need (fly also crosses water)? */
+/* Does this magic item cast a spell that meets the need on its user (fly also crosses water)?
+ * Staves are excluded: mag_objectmagic() casts them on the other room occupants only. */
 static bool magic_item_grants_movement(struct obj_data *obj, int need)
 {
     int spells[3];
-    int n = get_all_spells_from_item(obj, spells);
+    int n;
+
+    if (GET_OBJ_TYPE(obj) == ITEM_STAFF)
+        return FALSE;
+
+    n = get_all_spells_from_item(obj, spells);
 
     for (int i = 0; i < n; i++) {
         if (spells[i] == SPELL_FLY)
@@ -6402,10 +6432,15 @@ static bool mob_use_movement_means(struct char_data *ch, int need)
         return FALSE;
 
     for (obj = ch->carrying; obj; obj = obj->next_content) {
-        if (magic_item_grants_movement(obj, need)) {
-            mag_objectmagic(ch, obj, self_arg);
-            return TRUE;
-        }
+        if (!magic_item_grants_movement(obj, need))
+            continue;
+        /* Items that can't work would be picked again every turn, blocking the fallbacks */
+        if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj))
+            continue;
+        if (GET_OBJ_TYPE(obj) == ITEM_WAND && GET_OBJ_VAL(obj, 2) <= 0)
+            continue; /* no charges left */
+        mag_objectmagic(ch, obj, self_arg);
+        return TRUE;
     }
     return FALSE;
 }
