@@ -113,6 +113,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 /* Function to find where a key can be obtained */
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
+static int mob_handle_movement_need(struct char_data *ch, int direction, room_rnum to_room, room_rnum target_room);
 bool validate_goal_obj(struct char_data *ch);
 bool shadow_should_activate(struct char_data *ch);
 
@@ -1077,6 +1078,9 @@ void mobile_activity(void)
 
         if (ch->ai_data && ch->ai_data->escort_retry_timer > 0)
             ch->ai_data->escort_retry_timer--;
+
+        if (ch->ai_data && ch->ai_data->on_foot_route_timer > 0)
+            ch->ai_data->on_foot_route_timer--;
 
         /* quest_tendency only rises with every quest posted or completed and falls only
          * on some failures, and the final value is inherited by the prototype on death:
@@ -3407,8 +3411,13 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 
     /* Se um destino específico foi dado, essa é a prioridade máxima. */
     if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
+        /* A mob that recently found water or air it can't cross keeps to routes on foot;
+         * otherwise the shortest path would lead it straight back to the same shore */
+        if (ch->ai_data && ch->ai_data->on_foot_route_timer > 0)
+            direction = find_first_step_on_foot(IN_ROOM(ch), target_room);
         /* Use intelligent pathfinding that compares basic vs advanced methods */
-        direction = mob_smart_pathfind(ch, target_room);
+        if (direction < 0 || direction >= DIR_COUNT)
+            direction = mob_smart_pathfind(ch, target_room);
         if (direction == -1) {
             /* Fall back to simple pathfinding if smart pathfinding fails */
             direction = find_first_step(IN_ROOM(ch), target_room);
@@ -3467,6 +3476,15 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
     if (has_goal && direction >= 0 && direction < DIR_COUNT) { /* Verificação de segurança para direction */
         struct room_direction_data *exit;
         room_rnum to_room;
+
+        /* Water or air on the way that this mob can't cross: use or want the means,
+         * and meanwhile take a route on foot (or wait) */
+        if (target_room != NOWHERE && (exit = EXIT(ch, direction)) && exit->to_room != NOWHERE && exit->to_room >= 0 &&
+            exit->to_room <= top_of_world) {
+            direction = mob_handle_movement_need(ch, direction, exit->to_room, target_room);
+            if (direction < 0)
+                return FALSE;
+        }
 
         if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) != NOWHERE && to_room >= 0 &&
             to_room <= top_of_world) {
@@ -6326,6 +6344,145 @@ room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carry
  * @param original_dest The original destination
  * @return TRUE if goal was set successfully
  */
+/* ── Movement means: boats, flight, water walking ────────────────────────────
+ * Deep water (SECT_WATER_NOSWIM) needs a boat, water walking or flight; flying
+ * sectors need flight (see has_boat()/has_flight() in act.movement.c).  When a
+ * mob's route crosses such a room and it lacks the means, it uses a means it
+ * carries (potion, scroll, wand or staff of waterwalk/fly), wants one (wishlist,
+ * which then buys it, hunts for it or posts a quest), and meanwhile tries a route
+ * on foot — like the key collection logic does for locked doors. */
+#define MOVE_NEED_NONE 0
+#define MOVE_NEED_BOAT 1 /* deep water */
+#define MOVE_NEED_FLY 2  /* flying sector */
+
+static int mob_movement_need(struct char_data *ch, room_rnum to_room)
+{
+    room_rnum from = IN_ROOM(ch);
+
+    if ((SECT(from) == SECT_WATER_NOSWIM || SECT(to_room) == SECT_WATER_NOSWIM) && !has_boat(ch))
+        return MOVE_NEED_BOAT;
+    if ((SECT(from) == SECT_FLYING || SECT(to_room) == SECT_FLYING) && !has_flight(ch))
+        return MOVE_NEED_FLY;
+    return MOVE_NEED_NONE;
+}
+
+/* Does this magic item cast a spell that meets the need (fly also crosses water)? */
+static bool magic_item_grants_movement(struct obj_data *obj, int need)
+{
+    int spells[3];
+    int n = get_all_spells_from_item(obj, spells);
+
+    for (int i = 0; i < n; i++) {
+        if (spells[i] == SPELL_FLY)
+            return TRUE;
+        if (need == MOVE_NEED_BOAT && spells[i] == SPELL_WATERWALK)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+/* Would carrying (boats) or wearing (wings, AFF_FLYING items) this object meet the need? */
+static bool item_grants_movement(struct obj_data *obj, int need)
+{
+    if (magic_item_grants_movement(obj, need))
+        return TRUE;
+    if (need == MOVE_NEED_BOAT)
+        return GET_OBJ_TYPE(obj) == ITEM_BOAT;
+    return GET_OBJ_TYPE(obj) == ITEM_WINGS || OBJAFF_FLAGGED(obj, AFF_FLYING);
+}
+
+/* Use a carried potion/scroll/wand/staff that meets the need. Returns TRUE if one was used. */
+static bool mob_use_movement_means(struct char_data *ch, int need)
+{
+    struct obj_data *obj;
+    char self_arg[] = "self";
+
+    /* call_magic() fails in NOMAGIC rooms but the potion/scroll is still consumed */
+    if (IN_ROOM(ch) == NOWHERE || ROOM_FLAGGED(IN_ROOM(ch), ROOM_NOMAGIC))
+        return FALSE;
+
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (magic_item_grants_movement(obj, need)) {
+            mag_objectmagic(ch, obj, self_arg);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+/* A takeable object prototype that meets the need, picked among the cheapest few
+ * (rebuilt hourly, since OLC can change prototypes). NOTHING if none exists. */
+static obj_vnum find_movement_means_vnum(int need)
+{
+#define MEANS_CANDIDATES 8
+    static obj_vnum cand[3][MEANS_CANDIDATES];
+    static int ncand[3];
+    static time_t built[3];
+    obj_rnum i;
+
+    if (need <= MOVE_NEED_NONE || need > MOVE_NEED_FLY)
+        return NOTHING;
+
+    if (!built[need] || time(0) - built[need] > 3600) {
+        int cost[MEANS_CANDIDATES];
+
+        ncand[need] = 0;
+        for (i = 0; i <= top_of_objt; i++) {
+            struct obj_data *o = &obj_proto[i];
+            if (!CAN_WEAR(o, ITEM_WEAR_TAKE) || OBJ_FLAGGED(o, ITEM_QUEST) || !item_grants_movement(o, need))
+                continue;
+            int c = MAX(GET_OBJ_COST(o), 1);
+            int k = ncand[need];
+            if (k < MEANS_CANDIDATES)
+                ncand[need]++;
+            else if (c >= cost[k - 1])
+                continue;
+            else
+                k--;
+            /* insertion sort by cost (cheapest first) */
+            while (k > 0 && cost[k - 1] > c) {
+                cost[k] = cost[k - 1];
+                cand[need][k] = cand[need][k - 1];
+                k--;
+            }
+            cost[k] = c;
+            cand[need][k] = obj_index[i].vnum;
+        }
+        built[need] = time(0);
+    }
+
+    return ncand[need] ? cand[need][rand_number(0, MIN(ncand[need], 3) - 1)] : NOTHING;
+#undef MEANS_CANDIDATES
+}
+
+/**
+ * The next step toward target crosses water or air the mob can't cross.
+ * Use a means it carries, or want one and look for a route on foot.
+ * @return The direction to take instead (possibly unchanged), or -1 to stay put this turn.
+ */
+static int mob_handle_movement_need(struct char_data *ch, int direction, room_rnum to_room, room_rnum target_room)
+{
+    int need = mob_movement_need(ch, to_room);
+
+    if (need == MOVE_NEED_NONE)
+        return direction;
+
+    if (mob_use_movement_means(ch, need))
+        return -1; /* turn spent using it; the next step will go through */
+
+    if (ch->ai_data)
+        ch->ai_data->on_foot_route_timer = 150; /* keep to routes on foot for a while */
+
+    if (ch->ai_data) {
+        obj_vnum means = find_movement_means_vnum(need);
+        if (means != NOTHING)
+            add_item_to_wishlist(ch, means, 150); /* bought, hunted or asked for via a quest */
+    }
+
+    int alt = find_first_step_on_foot(IN_ROOM(ch), target_room);
+    return (alt >= 0 && alt < DIR_COUNT) ? alt : -1;
+}
+
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest)
 {
     int source_type;
