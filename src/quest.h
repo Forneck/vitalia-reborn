@@ -132,6 +132,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg);
 
 /* Mob Quest Functions */
 int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum);
+int mob_quest_reward_appeal(struct char_data *mob, qst_rnum rnum);
 bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum);
 bool mob_can_accept_quest_forced(struct char_data *mob, qst_rnum rnum);
 void set_mob_quest(struct char_data *mob, qst_rnum rnum);

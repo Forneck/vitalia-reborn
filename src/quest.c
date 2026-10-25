@@ -150,19 +150,55 @@ qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int nu
     return NOTHING;
 }
 
-/* Find the first available quest for a mob that matches level requirements.
- * Unlike find_available_quest_by_qmnum, this checks level range compatibility.
+/* How attractive a quest's rewards are to a given mob (0-40).
+ * Poorer mobs value gold more; greedy (loot) mobs value it more as well. */
+int mob_quest_reward_appeal(struct char_data *mob, qst_rnum rnum)
+{
+    int appeal = 0;
+    long purse;
+
+    if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
+        return 0;
+
+    /* Gold relative to what the mob already owns: 25 when the reward doubles its purse */
+    purse = MAX(GET_GOLD(mob), 0) + 50;
+    appeal += (int)MIN(25L, (long)QST_GOLD(rnum) * 25 / purse);
+
+    /* Greed makes any paid quest more tempting */
+    if (QST_GOLD(rnum) > 0)
+        appeal += GET_GENLOOT(mob) / 10;
+
+    /* An item reward is always a nice incentive */
+    if (QST_OBJ(rnum) != NOTHING)
+        appeal += 5;
+
+    /* Questpoints build reputation among questmasters */
+    appeal += MIN(QST_POINTS(rnum), 10) / 2;
+
+    return MIN(appeal, 40);
+}
+
+/* Find the most attractive available quest for a mob that matches level requirements.
+ * Unlike find_available_quest_by_qmnum, this checks level range compatibility,
+ * skips quests the mob posted itself, and prefers quests with better rewards
+ * (with some randomness so mobs don't all pick the same one).
  * Returns quest vnum if found, NOTHING otherwise. */
 qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
 {
     qst_rnum rnum;
+    qst_vnum best = NOTHING;
     int quest_completed, quest_repeatable;
+    int score, best_score = -1;
 
     if (!IS_NPC(mob))
         return NOTHING;
 
     for (rnum = 0; rnum < total_quests; rnum++) {
         if (qm == QST_MASTER(rnum)) {
+            /* A mob doesn't take the job it is paying someone else to do */
+            if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
+                continue;
+
             quest_completed = is_complete(mob, QST_NUM(rnum));
             quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
 
@@ -170,12 +206,16 @@ qst_vnum find_mob_available_quest_by_qmnum(struct char_data *mob, mob_vnum qm)
             if (!quest_completed || quest_repeatable) {
                 /* Check if mob's level is within the quest's level range */
                 if (GET_LEVEL(mob) >= QST_MINLEVEL(rnum) && GET_LEVEL(mob) <= QST_MAXLEVEL(rnum)) {
-                    return QST_NUM(rnum);
+                    score = (mob->ai_data ? mob_quest_reward_appeal(mob, rnum) : 0) + rand_number(0, 20);
+                    if (score > best_score) {
+                        best_score = score;
+                        best = QST_NUM(rnum);
+                    }
                 }
             }
         }
     }
-    return NOTHING;
+    return best;
 }
 
 /* Find quest by list position number in the global quest list - for immortals */
@@ -2378,6 +2418,13 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
     /* Reputation consideration */
     capability += GET_MOB_REPUTATION(mob);
 
+    /* Reward incentive: good pay convinces mobs to do work posted by other mobs */
+    capability += mob_quest_reward_appeal(mob, rnum);
+
+    /* Crowded boards: mobs feel the community needs help */
+    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        capability += mob_quest_board_pressure() / 10;
+
     /* Adjust based on quest difficulty */
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
@@ -2450,6 +2497,10 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
 
     /* Don't accept immortal quests (only mob-posted quests) */
     if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        return FALSE;
+
+    /* Don't accept a quest the mob posted itself */
+    if (QST_RETURNMOB(rnum) == GET_MOB_VNUM(mob))
         return FALSE;
 
     /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
@@ -2721,6 +2772,12 @@ void mob_complete_quest(struct char_data *mob)
                 mob->ai_data->genetics.adventurer_tendency = MIN(100, mob->ai_data->genetics.adventurer_tendency + 1);
             }
             break;
+    }
+
+    /* Helping another mob reinforces the habit of taking quests */
+    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && QST_RETURNMOB(rnum) != GET_MOB_VNUM(mob) &&
+        mob->ai_data->genetics.quest_tendency < 100) {
+        mob->ai_data->genetics.quest_tendency = MIN(100, mob->ai_data->genetics.quest_tendency + 1);
     }
 
     /* Notify the room that the mob completed a quest (similar to player flow) */

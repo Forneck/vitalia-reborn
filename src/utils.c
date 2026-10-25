@@ -2463,6 +2463,155 @@ int count_mob_posted_quests(void)
 bool can_add_mob_posted_quest(void) { return (count_mob_posted_quests() < CONFIG_MAX_MOB_POSTED_QUESTS); }
 
 /**
+ * Check if an equivalent mob-posted quest is already on the boards.
+ * Prevents the quest list from filling up with copies of the same request
+ * ("Buscar uma laranja" x12) posted by different mobs.
+ * @param quest_type Quest type (AQ_*)
+ * @param target_vnum Quest target; NOTHING for targetless quests (e.g. AQ_PLAYER_KILL)
+ * @param poster_vnum Requesting mob; only used to tell targetless quests apart
+ * @return TRUE if a quest with the same type and target already exists
+ */
+bool mob_posted_quest_exists(int quest_type, int target_vnum, mob_vnum poster_vnum)
+{
+    qst_rnum rnum;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) || QST_TYPE(rnum) != quest_type)
+            continue;
+        if (target_vnum == NOTHING) {
+            if (QST_RETURNMOB(rnum) == poster_vnum)
+                return TRUE;
+        } else if (QST_TARGET(rnum) == target_vnum) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
+/**
+ * How full the mob-posted quest boards are, cached once per second.
+ * Used to push idle mobs into taking quests when the boards are crowded.
+ * @return 0 (empty) to 100 (at CONFIG_MAX_MOB_POSTED_QUESTS)
+ */
+int mob_quest_board_pressure(void)
+{
+    static time_t last_check = 0;
+    static int cached_pressure = 0;
+    time_t now = time(0);
+
+    if (now != last_check) {
+        last_check = now;
+        if (CONFIG_MAX_MOB_POSTED_QUESTS > 0)
+            cached_pressure = URANGE(0, count_mob_posted_quests() * 100 / CONFIG_MAX_MOB_POSTED_QUESTS, 100);
+        else
+            cached_pressure = 0;
+    }
+
+    return cached_pressure;
+}
+
+/**
+ * Typical level of a zone, from the average level of its mob prototypes.
+ * Used to rate quests whose target has no level of its own (rooms, cheap items).
+ * @param zone Zone rnum
+ * @return Average mob level in the zone, or 1 if the zone has no mobs
+ */
+int get_zone_typical_level(zone_rnum zone)
+{
+    mob_rnum i;
+    long total = 0;
+    int count = 0;
+
+    if (zone == NOWHERE || zone < 0 || zone > top_of_zone_table)
+        return 1;
+
+    for (i = 0; i <= top_of_mobt; i++) {
+        if (mob_index[i].vnum >= zone_table[zone].bot && mob_index[i].vnum <= zone_table[zone].top) {
+            total += GET_LEVEL(&mob_proto[i]);
+            count++;
+        }
+    }
+
+    return count ? URANGE(1, (int)(total / count), LVL_IMMORT - 1) : 1;
+}
+
+/**
+ * Set a mob-posted quest's level range from the level of what the quest
+ * asks for, not from the level of whoever posted it. A level 150 mob asking
+ * for an orange no longer produces an 85-100 "Extrema" quest.
+ * @param quest Quest being built
+ * @param target_level Level of the target (mob, item or zone)
+ */
+void set_mob_quest_level_range(struct aq_data *quest, int target_level)
+{
+    target_level = URANGE(1, target_level, LVL_IMMORT - 1);
+
+    quest->value[2] = MAX(1, target_level - 5);               /* Min level */
+    quest->value[3] = MIN(LVL_IMMORT - 1, target_level + 15); /* Max level */
+}
+
+/**
+ * Gold reward for a mob-posted quest, scaled by target level and difficulty
+ * and limited by what the poster can actually pay.
+ * @param poster The mob posting the quest (pays the reward up front)
+ * @param target_level Level of the quest target
+ * @param difficulty Quest difficulty (0-100)
+ * @param offered Gold the poster decided to offer on top of the base
+ * @return Gold reward, or 0 if the poster cannot afford a meaningful reward
+ */
+int calculate_mob_quest_gold(struct char_data *poster, int target_level, int difficulty, int offered)
+{
+    int gold, minimum;
+
+    target_level = URANGE(1, target_level, LVL_IMMORT - 1);
+    difficulty = URANGE(10, difficulty, 100);
+
+    gold = (30 + target_level * 12) * difficulty / 50 + MAX(0, offered) / 2;
+    minimum = 10 + target_level;
+
+    /* The poster pays up front: never promise more than 3/4 of its purse */
+    gold = MIN(gold, GET_GOLD(poster) * 3 / 4);
+
+    return (gold < minimum) ? 0 : MIN(gold, 20000);
+}
+
+/**
+ * Experience reward for a mob-posted quest: a fraction of the experience
+ * needed to advance from the target level, so the reward stays relevant
+ * at every level instead of being a flat multiple of the gold.
+ * @param target_level Level of the quest target
+ * @param difficulty Quest difficulty (0-100)
+ * @return Experience reward (2% to 12% of a level)
+ */
+int calculate_mob_quest_exp(int target_level, int difficulty)
+{
+    long gap, exp;
+
+    target_level = URANGE(1, target_level, LVL_IMMORT - 2);
+    difficulty = URANGE(0, difficulty, 100);
+
+    gap = level_exp(CLASS_WARRIOR, target_level + 1) - level_exp(CLASS_WARRIOR, target_level);
+    /* Some levels are remort walls with a huge jump; don't let them inflate rewards */
+    gap = MIN(gap, level_exp(CLASS_WARRIOR, target_level) / 5 + 2000);
+
+    exp = gap * (2 + difficulty / 10) / 100;
+
+    return (int)URANGE(50, exp, 5000000);
+}
+
+/**
+ * Questpoint reward for a mob-posted quest.
+ * @param target_level Level of the quest target
+ * @param difficulty Quest difficulty (0-100)
+ * @return Questpoints (1-15)
+ */
+int calculate_mob_quest_points(int target_level, int difficulty)
+{
+    return URANGE(1, 1 + difficulty / 25 + target_level / 20, 15);
+}
+
+/**
  * Find a free quest VNUM in the zone's mob-posted range [bot+9000, top+9000].
  * Avoids an infinite loop when all VNUMs in the range are already taken.
  * @param mob_zone Zone rnum to search in
@@ -2566,6 +2715,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     struct aq_data *new_quest;
     int difficulty;
     int calculated_reward;
+    int target_level;
     zone_rnum mob_zone;
     char quest_name[MAX_QUEST_NAME];
     char quest_desc[MAX_QUEST_DESC];
@@ -2585,13 +2735,10 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         return;
     }
 
-    /* Check if there's already an active quest for this item from this mob */
-    for (int i = 0; i < total_quests; i++) {
-        if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == item_vnum && QST_TYPE(i) == AQ_OBJ_RETURN) {
-            /* Already have an active quest for this item from this mob */
-            /* Don't remove from wishlist - let mob try other methods (hunt/buy) */
-            return;
-        }
+    /* Check if any mob already posted a quest for this item */
+    if (mob_posted_quest_exists(AQ_OBJ_RETURN, item_vnum, GET_MOB_VNUM(ch))) {
+        /* Don't remove from wishlist - let mob try other methods (hunt/buy) */
+        return;
     }
 
     /* Obtém informações sobre o item */
@@ -2629,15 +2776,22 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 
     /* Calcula dificuldade e recompensa adequada */
     difficulty = calculate_quest_difficulty(item_vnum);
-    calculated_reward = calculate_quest_reward(ch, item_vnum, difficulty);
+    if (obj_rnum != NOTHING && GET_OBJ_LEVEL(&obj_proto[obj_rnum]) > 0)
+        target_level = GET_OBJ_LEVEL(&obj_proto[obj_rnum]);
+    else
+        target_level = get_zone_typical_level(mob_zone);
+
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    /* Valuable items are worth at least half their price, if the mob can pay it */
+    if (calculated_reward > 0 && obj_rnum != NOTHING)
+        calculated_reward = MIN(MAX(calculated_reward, GET_OBJ_COST(&obj_proto[obj_rnum]) / 2), GET_GOLD(ch) * 3 / 4);
+    if (calculated_reward <= 0) {
+        /* Can't afford a reward; keep the wish and try hunting/buying instead */
+        return;
+    }
 
     /* Enhancement 1: Select item reward from mob's inventory */
     reward_item = select_mob_inventory_reward(ch, difficulty);
-
-    /* Verifica se o mob tem ouro suficiente */
-    if (GET_GOLD(ch) < calculated_reward) {
-        calculated_reward = MAX(50, GET_GOLD(ch) / 2);
-    }
 
     /* Cria uma nova quest */
     CREATE(new_quest, struct aq_data, 1);
@@ -2662,14 +2816,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->func = NULL;
 
     /* Enhancement 6: Questpoints as rewards for high difficulty + reputation */
-    int base_questpoints = calculated_reward / 10;
-
-    /* Enhancement 6: Bonus questpoints for high difficulty quests */
-    if (difficulty >= 80) {
-        base_questpoints += 3; /* High difficulty bonus */
-    } else if (difficulty >= 60) {
-        base_questpoints += 2; /* Medium difficulty bonus */
-    }
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty);
 
     /* Enhancement 6: Additional questpoints for requesting mob with good karma */
     if (GET_KARMA(ch) > 500) {
@@ -2684,16 +2831,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     }
 
     /* Configura valores da quest */
-    new_quest->value[0] = URANGE(1, base_questpoints, 10); /* Enhanced Questpoints reward */
+    new_quest->value[0] = URANGE(1, base_questpoints, 12); /* Enhanced Questpoints reward */
     new_quest->value[1] = 0;                               /* Penalty */
-    /* For mobs above level 100, fix level range to 85-100 */
-    if (GET_LEVEL(ch) > 100) {
-        new_quest->value[2] = 85;  /* Min level */
-        new_quest->value[3] = 100; /* Max level */
-    } else {
-        new_quest->value[2] = MAX(1, GET_LEVEL(ch) - 10);              /* Min level */
-        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
-    }
+    set_mob_quest_level_range(new_quest, target_level);
     new_quest->value[4] = -1;               /* No time limit */
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
@@ -2709,7 +2849,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
 
     /* Cria strings da quest */
@@ -2742,7 +2882,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
                      "Alguém está procurando por %s. Se você encontrar este item, "
                      "traga-o para mim ou diretamente para o solicitante para receber %d moedas de ouro, "
                      "%d pontos de experiência e %s como recompensa.",
-                     item_name, calculated_reward, calculated_reward * 2, reward_item_name);
+                     item_name, calculated_reward, new_quest->exp_reward, reward_item_name);
         } else {
             snprintf(quest_info, sizeof(quest_info),
                      "Alguém está procurando por %s. Se você encontrar este item, "
@@ -2755,7 +2895,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
                      "Alguém está procurando por %s. Se você encontrar este item, "
                      "traga-o de volta ao solicitante para receber %d moedas de ouro, "
                      "%d pontos de experiência e %s como recompensa.",
-                     item_name, calculated_reward, calculated_reward * 2, reward_item_name);
+                     item_name, calculated_reward, new_quest->exp_reward, reward_item_name);
         } else {
             snprintf(quest_info, sizeof(quest_info),
                      "Alguém está procurando por %s. Se você encontrar este item, "
@@ -2841,6 +2981,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     obj_vnum reward_item = NOTHING;
     char *target_name = "alvo desconhecido";
     mob_rnum target_mob_rnum = NOBODY;
+    int target_level;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -2859,6 +3000,11 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     /* Validar tipo de quest */
     if (quest_type != AQ_PLAYER_KILL && quest_type != AQ_MOB_KILL_BOUNTY) {
         log1("SYSERR: Invalid combat quest type %d from %s", quest_type, GET_NAME(ch));
+        return;
+    }
+
+    /* Don't flood the boards with copies of a quest that is already posted */
+    if (mob_posted_quest_exists(quest_type, target_vnum, GET_MOB_VNUM(ch))) {
         return;
     }
 
@@ -2897,16 +3043,20 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         }
     }
 
+    /* Nível do alvo: o mob caçado, ou o próprio solicitante para vingança */
+    if (target_mob_rnum != NOBODY)
+        target_level = mob_proto[target_mob_rnum].player.level;
+    else
+        target_level = MIN(GET_LEVEL(ch), LVL_IMMORT - 1);
+
     /* Calcula recompensa adequada */
-    calculated_reward = reward + (difficulty * 2);
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    if (calculated_reward <= 0) {
+        return; /* Mob não tem ouro suficiente para oferecer uma recompensa decente */
+    }
 
     /* Seleciona item de recompensa do inventário do mob */
     reward_item = select_mob_inventory_reward(ch, difficulty);
-
-    /* Verifica se o mob tem ouro suficiente */
-    if (GET_GOLD(ch) < calculated_reward) {
-        calculated_reward = MAX(100, GET_GOLD(ch) / 2); /* Quests de combate têm recompensa mínima maior */
-    }
 
     /* Cria uma nova quest */
     CREATE(new_quest, struct aq_data, 1);
@@ -2931,14 +3081,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     new_quest->func = NULL;
 
     /* Configura valores da quest */
-    int base_questpoints = calculated_reward / 15;
-
-    /* Bonus para quests de combate difíceis */
-    if (difficulty >= 80) {
-        base_questpoints += 4;
-    } else if (difficulty >= 60) {
-        base_questpoints += 2;
-    }
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty) + 1;
 
     /* Bonus para mobs com boa reputação */
     if (GET_MOB_REPUTATION(ch) > 70) {
@@ -2948,22 +3091,15 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
-    /* For mobs above level 100, fix level range to 85-100 */
-    if (GET_LEVEL(ch) > 100) {
-        new_quest->value[2] = 85;  /* Min level */
-        new_quest->value[3] = 100; /* Max level */
-    } else {
-        new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
-        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
-    }
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
+    set_mob_quest_level_range(new_quest, target_level);
     new_quest->value[4] = -1;               /* No time limit */
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 3; /* Quests de combate dão mais XP */
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest baseadas no tipo */
@@ -2973,7 +3109,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         snprintf(quest_info, sizeof(quest_info),
                  "Alguém foi atacado por assassinos e busca vingança. Elimine qualquer "
                  "assassino de jogadores para receber %d moedas de ouro e %d pontos de experiência.",
-                 calculated_reward, calculated_reward * 3);
+                 calculated_reward, new_quest->exp_reward);
         snprintf(quest_done, sizeof(quest_done), "Excelente! Você eliminou um assassino. A justiça foi feita!");
     } else {
         snprintf(quest_name, sizeof(quest_name), "Caça %s", target_name);
@@ -2982,7 +3118,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
                  "Alguém está oferecendo uma recompensa pela eliminação de %s. "
                  "Encontre e elimine este alvo para receber %d moedas de ouro e %d pontos de experiência. "
                  "Se o alvo já foi eliminado, procure pela pedra mágica que ele pode ter deixado e a traga de volta.",
-                 target_name, calculated_reward, calculated_reward * 3);
+                 target_name, calculated_reward, new_quest->exp_reward);
         snprintf(quest_done, sizeof(quest_done), "Fantástico! Você eliminou o alvo. Aqui está sua recompensa!");
     }
 
@@ -3059,6 +3195,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     obj_rnum target_obj_rnum = NOTHING;
     mob_rnum target_mob_rnum = NOBODY;
     room_rnum target_room_rnum = NOWHERE;
+    int target_level;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -3078,6 +3215,11 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Convert AQ_OBJ_FIND to AQ_OBJ_RETURN to require delivery instead of just finding */
     if (quest_type == AQ_OBJ_FIND) {
         quest_type = AQ_OBJ_RETURN;
+    }
+
+    /* Don't flood the boards with copies of a quest that is already posted */
+    if (mob_posted_quest_exists(quest_type, target_vnum, GET_MOB_VNUM(ch))) {
+        return;
     }
 
     /* Obter nome do alvo */
@@ -3160,16 +3302,25 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             break;
     }
 
+    /* Nível do alvo define faixa de níveis e recompensas */
+    if (quest_type == AQ_MOB_FIND && target_mob_rnum != NOBODY)
+        target_level = mob_proto[target_mob_rnum].player.level;
+    else if (quest_type == AQ_OBJ_RETURN && target_obj_rnum != NOTHING &&
+             GET_OBJ_LEVEL(&obj_proto[target_obj_rnum]) > 0)
+        target_level = GET_OBJ_LEVEL(&obj_proto[target_obj_rnum]);
+    else if (quest_type == AQ_ROOM_FIND && target_room_rnum != NOWHERE)
+        target_level = get_zone_typical_level(world[target_room_rnum].zone);
+    else
+        target_level = get_zone_typical_level(mob_zone);
+
     /* Calcula recompensa adequada */
-    calculated_reward = reward + (difficulty * 1.5);
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    if (calculated_reward <= 0) {
+        return; /* Mob não tem ouro suficiente para oferecer uma recompensa decente */
+    }
 
     /* Seleciona item de recompensa do inventário do mob */
     reward_item = select_mob_inventory_reward(ch, difficulty);
-
-    /* Verifica se o mob tem ouro suficiente */
-    if (GET_GOLD(ch) < calculated_reward) {
-        calculated_reward = MAX(75, GET_GOLD(ch) / 2);
-    }
 
     /* Cria uma nova quest */
     CREATE(new_quest, struct aq_data, 1);
@@ -3194,14 +3345,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     new_quest->func = NULL;
 
     /* Configura valores da quest */
-    int base_questpoints = calculated_reward / 20;
-
-    /* Bonus para quests de exploração difíceis */
-    if (difficulty >= 70) {
-        base_questpoints += 3;
-    } else if (difficulty >= 50) {
-        base_questpoints += 2;
-    }
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty);
 
     /* Bonus para mobs aventureiros */
     if (GET_GENADVENTURER(ch) > 70) {
@@ -3211,22 +3355,15 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     }
 
     new_quest->value[0] = URANGE(1, base_questpoints, 12); /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 5;           /* Penalty for failure */
-    /* For mobs above level 100, fix level range to 85-100 */
-    if (GET_LEVEL(ch) > 100) {
-        new_quest->value[2] = 85;  /* Min level */
-        new_quest->value[3] = 100; /* Max level */
-    } else {
-        new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);              /* Min level */
-        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
-    }
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
+    set_mob_quest_level_range(new_quest, target_level);
     new_quest->value[4] = -1;               /* No time limit */
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 2; /* Quests de exploração dão menos XP que combate */
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest baseadas no tipo */
@@ -3241,8 +3378,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Perfeito! Você encontrou o que eu estava procurando!");
             break;
         case AQ_ROOM_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Explorar local");
-            snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
+            snprintf(quest_name, sizeof(quest_name), "Explorar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Explorar %s", target_name);
             /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
             snprintf(quest_info, sizeof(quest_info),
                      "Alguém precisa que alguém explore um local específico (%d). "
@@ -3328,6 +3465,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     char *target_name = "alvo desconhecido";
     mob_rnum target_mob_rnum = NOBODY;
     room_rnum target_room_rnum = NOWHERE;
+    int target_level;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -3341,6 +3479,11 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     /* Validar tipo de quest */
     if (quest_type != AQ_MOB_SAVE && quest_type != AQ_ROOM_CLEAR) {
         log1("SYSERR: Invalid protection quest type %d from %s", quest_type, GET_NAME(ch));
+        return;
+    }
+
+    /* Don't flood the boards with copies of a quest that is already posted */
+    if (mob_posted_quest_exists(quest_type, target_vnum, GET_MOB_VNUM(ch))) {
         return;
     }
 
@@ -3431,16 +3574,31 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         difficulty = 65 + rand_number(0, 25); /* Room clear é naturalmente difícil */
     }
 
+    /* Nível do alvo define faixa de níveis e recompensas */
+    if (quest_type == AQ_MOB_SAVE && target_mob_rnum != NOBODY) {
+        target_level = mob_proto[target_mob_rnum].player.level;
+    } else if (quest_type == AQ_ROOM_CLEAR && target_room_rnum != NOWHERE) {
+        /* Room clear is as hard as the toughest hostile creature in the room */
+        struct char_data *occupant;
+        target_level = 0;
+        for (occupant = world[target_room_rnum].people; occupant; occupant = occupant->next_in_room) {
+            if (IS_NPC(occupant) && MOB_FLAGGED(occupant, MOB_AGGRESSIVE))
+                target_level = MAX(target_level, GET_LEVEL(occupant));
+        }
+        if (target_level <= 0)
+            target_level = get_zone_typical_level(world[target_room_rnum].zone);
+    } else {
+        target_level = get_zone_typical_level(mob_zone);
+    }
+
     /* Calcula recompensa adequada */
-    calculated_reward = reward + (difficulty * 1.8);
+    calculated_reward = calculate_mob_quest_gold(ch, target_level, difficulty, reward);
+    if (calculated_reward <= 0) {
+        return; /* Mob não tem ouro suficiente para oferecer uma recompensa decente */
+    }
 
     /* Seleciona item de recompensa do inventário do mob */
     reward_item = select_mob_inventory_reward(ch, difficulty);
-
-    /* Verifica se o mob tem ouro suficiente */
-    if (GET_GOLD(ch) < calculated_reward) {
-        calculated_reward = MAX(80, GET_GOLD(ch) / 2);
-    }
 
     /* Cria uma nova quest */
     CREATE(new_quest, struct aq_data, 1);
@@ -3465,14 +3623,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     new_quest->func = NULL;
 
     /* Configura valores da quest */
-    int base_questpoints = calculated_reward / 18;
-
-    /* Bonus para quests de proteção difíceis */
-    if (difficulty >= 75) {
-        base_questpoints += 3;
-    } else if (difficulty >= 55) {
-        base_questpoints += 2;
-    }
+    int base_questpoints = calculate_mob_quest_points(target_level, difficulty);
 
     /* Bonus para mobs corajosos */
     if (GET_GENBRAVE(ch) > 70) {
@@ -3482,22 +3633,15 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 14); /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
-    /* For mobs above level 100, fix level range to 85-100 */
-    if (GET_LEVEL(ch) > 100) {
-        new_quest->value[2] = 85;  /* Min level */
-        new_quest->value[3] = 100; /* Max level */
-    } else {
-        new_quest->value[2] = MAX(8, GET_LEVEL(ch) - 8);               /* Min level */
-        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 18); /* Max level */
-    }
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
+    set_mob_quest_level_range(new_quest, target_level);
     new_quest->value[4] = -1;               /* No time limit */
     new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
     new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
-    new_quest->exp_reward = calculated_reward * 2.5; /* Quests de proteção dão XP moderado */
+    new_quest->exp_reward = calculate_mob_quest_exp(target_level, difficulty);
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest baseadas no tipo */
@@ -3510,7 +3654,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
                  GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Limpar área");
+        snprintf(quest_name, sizeof(quest_name), "Limpar %s", target_name);
         snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
         /* Use room vnum in quest_info so format_quest_info() can replace it with "room name em zone name" */
         snprintf(quest_info, sizeof(quest_info),
@@ -3682,7 +3826,7 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
+    new_quest->value[1] = new_quest->value[0] / 2;         /* Penalty (questpoints) for quitting */
     /* For mobs above level 100, fix level range to 85-100 */
     if (GET_LEVEL(ch) > 100) {
         new_quest->value[2] = 85;  /* Min level */
@@ -3845,7 +3989,7 @@ void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
+    new_quest->value[1] = new_quest->value[0] / 2;                 /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
     new_quest->value[4] = -1;                                      /* No time limit */
@@ -4014,7 +4158,7 @@ void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int
 
     int base_questpoints = calculated_reward / 20 + 2;
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4140,7 +4284,7 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4286,7 +4430,7 @@ void mob_posts_delivery_quest(struct char_data *ch, mob_vnum target_mob_vnum, ob
 
     int base_questpoints = calculated_reward / 20 + 2;
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4429,7 +4573,7 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
 
     int base_questpoints = calculated_reward / 20 + 2;
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4565,7 +4709,7 @@ void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, 
     }
 
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4726,7 +4870,7 @@ void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quan
 
     int base_questpoints = calculated_reward / 20 + 2;
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
@@ -4877,7 +5021,7 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
 
     int base_questpoints = calculated_reward / 20 + 2;
     new_quest->value[0] = URANGE(2, base_questpoints, 12);
-    new_quest->value[1] = calculated_reward / 5;
+    new_quest->value[1] = new_quest->value[0] / 2; /* Penalty (questpoints) for quitting */
     new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15);
     new_quest->value[4] = -1;
