@@ -752,6 +752,10 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
                 send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
         }
 
+        /* Questmaster indicator (permanent or temporary) */
+        if (!IS_NPC(ch) && is_active_questmaster(i))
+            send_to_char(ch, "%s(Quest) ", CBGRN(ch, C_NRM));
+
         /* Check if this mob is a bounty target for the viewer */
         if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
             GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
@@ -876,6 +880,10 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     }
 
     if (IS_NPC(i)) {
+        /* Questmaster indicator (permanent or temporary) */
+        if (!IS_NPC(ch) && is_active_questmaster(i))
+            send_to_char(ch, "%s(Quest) ", CBGRN(ch, C_NRM));
+
         /* Check if this mob is a bounty target for the viewer */
         if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
             GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
